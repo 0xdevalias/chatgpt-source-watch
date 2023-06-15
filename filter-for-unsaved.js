@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-// TODO: Save this somewhere useful:
+// TODO: Save these scripts somewhere useful:
 //   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("_next/" + .) | .[]' | ./filter-for-unsaved.js | pbcopy
+//   pbpaste | ./filter-for-unsaved.js | pbcopy
 
 const fs = require('fs');
 const path = require('path');
@@ -15,7 +16,8 @@ const rl = readline.createInterface({
   terminal: false
 });
 
-rl.on('line', function(filePath) {
+rl.on('line', function(rawInputPath) {
+  const filePath = rawInputPath.replace('https://chat.openai.com/', '');
   const fullPath = path.join(basePath, filePath);
 
   // check if file does not exist

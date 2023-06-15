@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-// TODO: Save this command somewhere useful:
+// TODO: Save these commands somewhere useful:
 //   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("_next/" + .) | .[]' | pbcopy
+//   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("https://chat.openai.com/_next/" + .) | .[]' | pbcopy
 
 global.self = {};
 
