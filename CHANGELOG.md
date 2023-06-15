@@ -1,15 +1,23 @@
 # Changelog
 
-## 2023-06-15 (or thereabouts..)
+## 2023-06-15 (`Sz5I5M8XqNP7c6HNKaN0U`) (or thereabouts..)
 
+### Not From Build Manifest
+
+```
 https://chat.openai.com/_next/static/chunks/webpack-38f4f99a26e93577.js
 https://chat.openai.com/_next/static/chunks/pages/_app-af7a10d1c668b26a.js
-https://chat.openai.com/_next/static/chunks/97-a81c56d0288837cb.js
-https://chat.openai.com/_next/static/chunks/734-2c7c6bff3bb729e8.js
 https://chat.openai.com/_next/static/Sz5I5M8XqNP7c6HNKaN0U/_buildManifest.js
 https://chat.openai.com/_next/static/Sz5I5M8XqNP7c6HNKaN0U/_ssgManifest.js
-https://chat.openai.com/_next/static/chunks/pages/_error-433a1bbdb23dd341.js
+```
+
+### From Build Manifest
+
+```
+https://chat.openai.com/_next/static/chunks/734-2c7c6bff3bb729e8.js
+https://chat.openai.com/_next/static/chunks/97-a81c56d0288837cb.js
 https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-669339ba2153c0d5.js
+```
 
 ## 2023-06-14 (`a3Jc7aP-UMfeR9s4-iLvW`) (or thereabouts.. might include stuff from earlier too)
 
