@@ -1,5 +1,36 @@
 # Changelog
 
+
+## 2023-06-18Z (`2zx-gqs4DHnXCij8pMcM3`)
+
+### Not From Build Manifest
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/chunks/webpack-903914f4d31f626d.js
+https://chat.openai.com/_next/static/chunks/pages/_app-8a1a6cb86aab622f.js
+https://chat.openai.com/_next/static/chunks/2802bd5f-c955b1c4ddd1fafa.js
+https://chat.openai.com/_next/static/chunks/706-e33bcf27ab9ae69b.js
+https://chat.openai.com/_next/static/chunks/724-7e5ae5baa21b3987.js
+https://chat.openai.com/_next/static/chunks/97-f77b35921b7168e1.js
+https://chat.openai.com/_next/static/chunks/734-33a2d229b27343b9.js
+https://chat.openai.com/_next/static/chunks/pages/index-6081460d01aa4d00.js
+https://chat.openai.com/_next/static/2zx-gqs4DHnXCij8pMcM3/_buildManifest.js
+https://chat.openai.com/_next/static/2zx-gqs4DHnXCij8pMcM3/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/chunks/778-70237646364794cd.js
+https://chat.openai.com/_next/static/chunks/pages/admin-85c2b8121aef57bc.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-9622de1930d02aae.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-b2e331698a452053.js
+```
+
 ## 2023-06-16Z (`Wnd5NrsJwJ8L-68NTfmnl`)
 
 ### Not From Build Manifest
