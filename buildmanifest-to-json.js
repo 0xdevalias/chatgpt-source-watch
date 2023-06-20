@@ -6,8 +6,10 @@
 
 global.self = {};
 
-// require('./orig/_next/static/a3Jc7aP-UMfeR9s4-iLvW/__buildManifest.js');
-require('./orig/_next/static/Sz5I5M8XqNP7c6HNKaN0U/__buildManifest.js');
+// require('./orig/_next/static/a3Jc7aP-UMfeR9s4-iLvW/_buildManifest.js');
+// require('./orig/_next/static/Sz5I5M8XqNP7c6HNKaN0U/_buildManifest.js');
+// require('./orig/_next/static/Wnd5NrsJwJ8L-68NTfmnl/_buildManifest.js');
+require('./orig/_next/static/2zx-gqs4DHnXCij8pMcM3/_buildManifest.js');
 
 const buildManifestJSON = JSON.stringify(self.__BUILD_MANIFEST, null, 2);
 
