@@ -1,5 +1,20 @@
 # Changelog
 
+## 2023-06-15Z (`OYOAZ1aqhcJ0ghEfSRnPf`)
+
+### Not From Build Manifest
+
+#### Missing
+
+```
+https://chat.openai.com/_next/static/chunks/webpack-811addf93867c009.js
+https://chat.openai.com/_next/static/chunks/pages/_app-b505480c5fdf1ff2.js
+https://chat.openai.com/_next/static/chunks/97-864d9cafbfb4c1dc.js
+https://chat.openai.com/_next/static/chunks/734-03d9df820e6eda51.js
+https://chat.openai.com/_next/static/OYOAZ1aqhcJ0ghEfSRnPf/_buildManifest.js
+https://chat.openai.com/_next/static/OYOAZ1aqhcJ0ghEfSRnPf/_ssgManifest.js
+```
+
 ## 2023-06-15 (`Sz5I5M8XqNP7c6HNKaN0U`) (or thereabouts..)
 
 ### Not From Build Manifest
