@@ -28650,7 +28650,7 @@ Error:`,
         tu = G(68555),
         tc = G(70079),
         td = G(1454);
-      G(1328), G(11724), G(94981), G(59835);
+      G(1328), G(11724), G(94981), G(59835), G(18996);
       var tf = G(66958),
         th = G(59114),
         tp = G(48727),
@@ -31115,7 +31115,7 @@ Error:`,
     },
     32402: function (U, B, G) {
       "use strict";
-      var Y, V, Z;
+      var Y, V, Z, J;
       G.d(B, {
         Ei: function () {
           return V;
@@ -31137,7 +31137,10 @@ Error:`,
         })(V || (V = {})),
         (function (U) {
           (U.Success = "success"), (U.Retry = "retry"), (U.Error = "error");
-        })(Z || (Z = {}));
+        })(Z || (Z = {})),
+        (function (U) {
+          (U.Success = "success"), (U.Failed = "failed");
+        })(J || (J = {}));
     },
     55989: function (U, B, G) {
       "use strict";
@@ -33324,6 +33327,26 @@ Error:`,
                 });
               })();
             }),
+            (U.addWorkspaceUsers = function (U, B, G) {
+              var V = this;
+              return (0, Y._)(function () {
+                return (0, tt.Jh)(this, function (Y) {
+                  return [
+                    2,
+                    V.fetch("".concat(tE, "/accounts/").concat(B, "/invites"), {
+                      method: "POST",
+                      headers: (0, J._)((0, Z._)({}, V.getAuthHeader(U)), {
+                        "Content-Type": "application/json",
+                      }),
+                      body: JSON.stringify({
+                        email_addresses: G,
+                        role: tm.r3.STANDARD,
+                      }),
+                    }),
+                  ];
+                });
+              })();
+            }),
             (U.deleteMfa = function () {
               return this.fetch("/api/auth/mfa", {
                 method: "DELETE",
@@ -33375,7 +33398,7 @@ Error:`,
                 });
               })();
             }),
-            (U.uploadFileToFileService = function (U, B) {
+            (U.uploadFileToAzureStorage = function (U, B) {
               return (0, Y._)(function () {
                 var G;
                 return (0, tt.Jh)(this, function (Y) {
@@ -33422,16 +33445,6 @@ Error:`,
                   );
                 });
               })();
-            }),
-            (U.fetchInterpreterFileForDownload = function (U, B) {
-              var G = new URLSearchParams({ path: B });
-              return fetch(
-                ""
-                  .concat(tE, "/conversation/")
-                  .concat(U, "/download?")
-                  .concat(G),
-                { method: "GET", headers: (0, Z._)({}, this.getAuthHeader()) }
-              );
             }),
             (U.getInterpreterState = function (U) {
               return this.fetch(
@@ -34304,7 +34317,7 @@ Error:`,
                             .concat(Z, ", upload_url=")
                             .concat(J)
                         );
-                      return [4, U.uploadFileToFileService(B, J)];
+                      return [4, U.uploadFileToAzureStorage(B, J)];
                     case 2:
                       return tt.sent(), [4, U.markFileUploadComplete(Z)];
                     case 3:
@@ -34375,20 +34388,6 @@ Error:`,
                     G.fetch("".concat(tE, "/files/").concat(U), {
                       method: "DELETE",
                       headers: (0, Z._)({}, G.getAuthHeader(B)),
-                    }),
-                  ];
-                });
-              })();
-            }),
-            (U.deleteAllFilesFromFileService = function (U) {
-              var B = this;
-              return (0, Y._)(function () {
-                return (0, tt.Jh)(this, function (G) {
-                  return [
-                    2,
-                    B.fetch("".concat(tE, "/files/delete_all_user_data"), {
-                      method: "DELETE",
-                      headers: (0, Z._)({}, B.getAuthHeader(U)),
                     }),
                   ];
                 });
@@ -34571,78 +34570,74 @@ Error:`,
       "use strict";
       G.d(B, {
         DY: function () {
-          return ta;
-        },
-        FZ: function () {
-          return Q;
-        },
-        G_: function () {
-          return td;
-        },
-        Id: function () {
-          return Y;
-        },
-        PL: function () {
-          return tc;
-        },
-        Pt: function () {
-          return Z;
-        },
-        RJ: function () {
-          return tt;
-        },
-        Tx: function () {
-          return tn;
-        },
-        UG: function () {
           return ti;
         },
-        Ud: function () {
-          return V;
-        },
-        Ue: function () {
-          return tr;
-        },
-        Vn: function () {
-          return te;
-        },
-        Wk: function () {
-          return tu;
-        },
-        YI: function () {
-          return ts;
-        },
-        b5: function () {
-          return tf;
-        },
-        i: function () {
-          return th;
-        },
-        st: function () {
-          return J;
-        },
-        uj: function () {
+        FZ: function () {
           return X;
         },
+        G_: function () {
+          return tc;
+        },
+        PL: function () {
+          return tu;
+        },
+        Pt: function () {
+          return V;
+        },
+        RJ: function () {
+          return Q;
+        },
+        Tx: function () {
+          return te;
+        },
+        UG: function () {
+          return tr;
+        },
+        Ud: function () {
+          return Y;
+        },
+        Ue: function () {
+          return tn;
+        },
+        Vn: function () {
+          return tt;
+        },
+        Wk: function () {
+          return ts;
+        },
+        YI: function () {
+          return ta;
+        },
+        b5: function () {
+          return td;
+        },
+        i: function () {
+          return tf;
+        },
+        st: function () {
+          return Z;
+        },
+        uj: function () {
+          return J;
+        },
       });
-      var Y = "oneoff_status_account",
-        V = "disable_history",
-        Z = "dfw_message_feedback",
-        J = "dfw_inline_message_regen_comparison",
-        X = "prompt_suggestions",
-        Q = "message_style_202305",
-        tt = "shareable_links",
-        te = "show_existing_user_age_confirmation_modal",
-        tn = "i18n",
-        tr = "layout_may_2023",
-        ti = "browsing_inner_monologue",
-        ta = "infinite_scroll_history",
-        ts = "plugin_review_tools",
-        tu = "tools3_dev",
-        tc = "arkose_enabled",
-        td = "june_23_survey",
-        tf = "message_debug_info",
-        th = "mfa";
+      var Y = "disable_history",
+        V = "dfw_message_feedback",
+        Z = "dfw_inline_message_regen_comparison",
+        J = "prompt_suggestions",
+        X = "message_style_202305",
+        Q = "shareable_links",
+        tt = "show_existing_user_age_confirmation_modal",
+        te = "i18n",
+        tn = "layout_may_2023",
+        tr = "browsing_inner_monologue",
+        ti = "infinite_scroll_history",
+        ta = "plugin_review_tools",
+        ts = "tools3_dev",
+        tu = "arkose_enabled",
+        tc = "june_23_survey",
+        td = "message_debug_info",
+        tf = "mfa";
     },
     32983: function (U, B, G) {
       "use strict";
@@ -34953,9 +34948,6 @@ Error:`,
           },
           accountUpgradeFullpageLoaded: function (U) {
             return "".concat(U, "Account Pay: Full Page Account Upgrade Modal");
-          },
-          oneOffStatusMessageShown: function (U) {
-            return "".concat(U, "Account Pay: Showed Message One Off");
           },
           clickSidebarAccountPortalMenuItem: function (U) {
             return "".concat(U, "Account Portal: Click Sidebar Account Portal");
@@ -45022,7 +45014,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "4367ac0993cca499ef9bb63a1b60a5199046a1ff" }),
+        (Z.SENTRY_RELEASE = { id: "824cf6133cc1a0c05b6c483afc063c7910d07c1b" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({
@@ -45469,6 +45461,7 @@ Error:`,
     11724: function () {},
     94981: function () {},
     59835: function () {},
+    18996: function () {},
     5437: function (U, B, G) {
       U.exports = G(39198);
     },

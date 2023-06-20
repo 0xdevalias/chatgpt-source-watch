@@ -1,219 +1,375 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [964],
   {
-    17149: function (e, n, r) {
+    17149: function (e, a, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin",
         function () {
-          return r(88574);
+          return n(10256);
         },
       ]);
     },
-    88574: function (e, n, r) {
+    10256: function (e, a, n) {
       "use strict";
-      r.r(n),
-        r.d(n, {
+      n.r(a),
+        n.d(a, {
           __N_SSP: function () {
-            return ec;
+            return eT;
           },
           default: function () {
-            return eu;
+            return eP;
           },
         });
-      var a = r(39324),
-        t = r(35250),
-        s = r(4337),
-        o = r(16266),
-        i = r(5437),
-        l = r.n(i),
-        d = r(68555),
-        c = r(70079),
-        u = r(1454),
-        m = r(75908),
-        f = r(35290),
-        x = r(3001),
-        g = r(34303),
-        h = r(11626),
-        p = r(38317),
-        v = r(94860),
-        M = r(19265),
-        j = r(62059),
-        b = r(21722),
-        Z = r(71209),
-        k = r(22830),
-        U = r(39889),
-        C = r(24396),
-        _ = r(13451),
-        N = r(35448),
-        P = r(19841),
-        T = r(76150),
-        w = r(81292),
-        R = r(32787),
-        D = r(32402),
-        I = r(24274),
-        y = r(70216),
-        A = r(68789),
-        S = r(62440),
-        B = {
-          Root: A.fC,
-          Trigger: function (e) {
-            return (0, t.jsx)(S.J7, (0, a._)({ $as: A.xz }, e));
+      var t = n(39324),
+        r = n(35250),
+        i = n(71209),
+        s = n(22830),
+        o = n(4337),
+        l = n(16266),
+        d = n(13451),
+        c = n(91530),
+        m = n.n(c),
+        u = n(5437),
+        f = n.n(u),
+        v = n(68555),
+        p = n(70079),
+        h = n(1454),
+        x = n(75908),
+        g = n(35290),
+        b = n(3001),
+        M = n(34303),
+        j = n(32787),
+        k = n(24274),
+        Z = n(32689),
+        C = n(11626),
+        N = n(66958),
+        T = n(59114),
+        P = n(48727),
+        _ = n(81949),
+        w = n(19841),
+        I = n(30016),
+        U = n(32075),
+        y = n(38317),
+        D = n(57924),
+        B =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      function A(e) {
+        return e.split(/[\s,]+/);
+      }
+      function R(e) {
+        var a = e.value,
+          n = e.onChange,
+          t = e.className,
+          i = (0, x.Z)(),
+          o = (0, s._)((0, p.useState)(""), 2),
+          l = o[0],
+          d = o[1],
+          c = (0, p.useCallback)(
+            function (e) {
+              if (l)
+                switch (e.key) {
+                  case "Enter":
+                  case ",":
+                  case " ":
+                    var t = A(l);
+                    n((0, _._)(a).concat((0, _._)(t.map(E)))),
+                      d(""),
+                      e.preventDefault();
+                }
+            },
+            [l, n, a]
+          );
+        return (0, r.jsx)(I.ZP, {
+          className: (0, w.Z)("react-select-container", t),
+          isMulti: !0,
+          onBlur: function (e) {
+            if (l) {
+              var t = A(l);
+              n((0, _._)(a).concat((0, _._)(t.map(E)))),
+                d(l),
+                e.preventDefault();
+            }
           },
-          Portal: A.Uv,
-          Content: function (e) {
-            return (0, t.jsx)(
-              S.ay,
-              (0, a._)({ $as: A.VY, sideOffset: 4, align: "start" }, e)
+          classNamePrefix: "react-select",
+          components: S,
+          inputValue: l,
+          isClearable: !0,
+          menuIsOpen: !1,
+          onChange: n,
+          onInputChange: d,
+          onKeyDown: c,
+          placeholder: i.formatMessage(F.placeholder),
+          value: a,
+          "aria-labelledby": "add-emails-label",
+          name: "add-member-emails",
+        });
+      }
+      var E = function (e) {
+          return { label: e, value: e, isValid: B.test(e) };
+        },
+        S = {
+          DropdownIndicator: function () {
+            return null;
+          },
+          IndicatorsContainer: function () {
+            return null;
+          },
+          ClearIndicator: function () {
+            return null;
+          },
+          MultiValueRemove: function () {
+            return null;
+          },
+          MultiValue: function (e) {
+            var a = (0, x.Z)(),
+              n = (0, r.jsxs)("span", {
+                className: "flex items-center gap-1",
+                children: [
+                  (0, r.jsx)("span", { children: e.children }),
+                  (0, r.jsx)(y.ZP, { icon: h.q5L, size: "small" }),
+                ],
+              }),
+              s = e.data.isValid
+                ? n
+                : (0, r.jsx)(D.u, {
+                    label: a.formatMessage(F.tooltipInvalidEmail, {
+                      email: e.data.value,
+                    }),
+                    side: "top",
+                    children: n,
+                  });
+            return (0, r.jsx)(
+              U.c.MultiValue,
+              (0, i._)((0, t._)({}, e), {
+                children: (0, r.jsx)("button", {
+                  className: (0, w.Z)(
+                    "m-1 cursor-pointer rounded-full border border-transparent py-1 pl-3 pr-2 text-sm dark:text-gray-300",
+                    e.data.isValid
+                      ? "bg-gray-50 hover:border-gray-300 hover:bg-gray-100 dark:bg-gray-800 dark:hover:border-gray-600 dark:hover:bg-gray-700"
+                      : "bg-red-200 text-red-500 dark:text-red-500"
+                  ),
+                  onClick: function (a) {
+                    var n, t;
+                    null === (t = (n = e.removeProps).onClick) ||
+                      void 0 === t ||
+                      t.call(n, a),
+                      a.preventDefault();
+                  },
+                  "aria-label": a.formatMessage(F.removeMember, {
+                    member: e.data.value,
+                  }),
+                  children: s,
+                }),
+              })
             );
           },
-          Item: c.forwardRef(function (e, n) {
-            var r = e.children,
+        },
+        F = (0, b.vU)({
+          membersAdded: {
+            id: "emailsTextarea.membersAdded",
+            defaultMessage:
+              "+{count} {count, plural, one {member} other {members}}",
+            description:
+              "Current number of members that will be added to the workspace",
+          },
+          removeMember: {
+            id: "emailsTextarea.removeMember",
+            defaultMessage: "Remove {member}",
+            description: "Remove a member from the list of members to be added",
+          },
+          tooltipInvalidEmail: {
+            id: "emailsTextarea.tooltipInvalidEmail",
+            defaultMessage: '"{email}" may not be a valid email',
+            description: "Tooltip for invalid email addresses",
+          },
+          clearAllEntries: {
+            id: "emailsTextarea.clearAllEntries",
+            defaultMessage: "Clear all",
+            description: "Clear all entries in the list of members to be added",
+          },
+          placeholder: {
+            id: "emailsTextarea.placeholder",
+            defaultMessage: "Type an email and press enter...",
+            description: "Placeholder for the insert emails textarea",
+          },
+        }),
+        W = n(94860),
+        z = n(19265),
+        V = n(62059),
+        O = n(97688),
+        H = n(21722),
+        J = n(39889),
+        q = n(24396),
+        $ = n(35448),
+        K = n(76150),
+        L = n(81292),
+        X = n(32402),
+        Y = n(70216),
+        G = n(68789),
+        Q = n(62440),
+        ee = {
+          Root: G.fC,
+          Trigger: function (e) {
+            return (0, r.jsx)(Q.J7, (0, t._)({ $as: G.xz }, e));
+          },
+          Portal: G.Uv,
+          Content: function (e) {
+            return (0, r.jsx)(
+              Q.ay,
+              (0, t._)({ $as: G.VY, sideOffset: 4, align: "start" }, e)
+            );
+          },
+          Item: p.forwardRef(function (e, a) {
+            var n = e.children,
               s = e.onSelect,
-              o = (0, y._)(e, ["children", "onSelect"]);
+              o = (0, Y._)(e, ["children", "onSelect"]);
             return (0,
-            t.jsx)(S.mS, (0, Z._)((0, a._)({ $as: A.ck, ref: n, onSelect: s }, o), { children: r }));
+            r.jsx)(Q.mS, (0, i._)((0, t._)({ $as: G.ck, ref: a, onSelect: s }, o), { children: n }));
           }),
         },
-        E = r(59114),
-        F = r(48727),
-        H = r(25422),
-        J = r(25345),
-        W = r(85449),
-        q = r(97688),
-        O = (0, w.ZP)(function () {
+        ea = n(25422),
+        en = n(25345),
+        et = n(85449),
+        er = (0, L.ZP)(function () {
           return { confirmModalUserData: null };
         }),
-        V = {
+        ei = {
           openModalForUser: function (e) {
-            O.setState({ confirmModalUserData: e });
+            er.setState({ confirmModalUserData: e });
           },
           closeModal: function () {
-            O.setState({ confirmModalUserData: null });
+            er.setState({ confirmModalUserData: null });
           },
         };
-      function K(e) {
-        var n,
-          r,
-          s,
+      function es(e) {
+        var a,
+          n,
+          i,
           o,
-          i = e.workspaceId,
-          l = (0, k._)((0, c.useState)(0), 2),
-          d = l[0],
-          u = l[1],
-          m = z(i, d).data,
-          x = (0, R.kP)().session,
-          g =
-            null == x
+          l = e.workspaceId,
+          c = (0, s._)((0, p.useState)(0), 2),
+          m = c[0],
+          u = c[1],
+          f = eu(l, m).data,
+          v = (0, j.kP)().session,
+          x =
+            null == v
               ? void 0
-              : null === (o = x.user) || void 0 === o
+              : null === (o = v.user) || void 0 === o
               ? void 0
               : o.id,
-          p = Math.ceil(G(i) / Y),
-          v = (0, h.bE)(i),
-          M =
-            ((n = (0, R.kP)().session),
-            (0, _.D)({
+          b = Math.ceil(ef(l) / em),
+          M = (0, C.bE)(l),
+          T =
+            ((a = (0, j.kP)().session),
+            (0, d.D)({
               mutationFn: function (e) {
-                var r = e.userId,
-                  a = e.workspaceId,
-                  t = e.value;
-                return I.ZP.updateWorkspaceUserRole(
-                  n.accessToken,
-                  a,
-                  r,
-                  t
+                var n = e.userId,
+                  t = e.workspaceId,
+                  r = e.value;
+                return k.ZP.updateWorkspaceUserRole(
+                  a.accessToken,
+                  t,
+                  n,
+                  r
                 ).catch(function (e) {
-                  q.m.danger(
+                  O.m.danger(
                     "Unable to update user ("
-                      .concat(r, ") role: ")
+                      .concat(n, ") role: ")
                       .concat(e.message)
                   );
                 });
               },
             })),
-          j =
-            ((r = (0, R.kP)().session),
-            (s = (0, N.NL)()),
-            (0, _.D)({
+          P =
+            ((n = (0, j.kP)().session),
+            (i = (0, $.NL)()),
+            (0, d.D)({
               mutationFn: function (e) {
-                var n = e.userId,
-                  a = e.workspaceId;
-                return I.ZP.removeWorkspaceUser(r.accessToken, a, n).catch(
+                var a = e.userId,
+                  t = e.workspaceId;
+                return k.ZP.removeWorkspaceUser(n.accessToken, t, a).catch(
                   function (e) {
-                    q.m.danger(
+                    O.m.danger(
                       "Unable to remove user ("
-                        .concat(n, ") from workspace: ")
+                        .concat(a, ") from workspace: ")
                         .concat(e.message)
                     );
                   }
                 );
               },
               onSuccess: function () {
-                s.invalidateQueries({ queryKey: ["workspace", i] });
+                i.invalidateQueries({ queryKey: ["workspace", l] });
               },
             })),
-          b = (0, c.useCallback)(function (e) {
-            V.openModalForUser(e);
+          _ = (0, p.useCallback)(function (e) {
+            ei.openModalForUser(e);
           }, []),
-          Z = (0, c.useCallback)(
+          w = (0, p.useCallback)(
             function () {
               var e,
-                n =
-                  null === (e = O.getState().confirmModalUserData) ||
+                a =
+                  null === (e = er.getState().confirmModalUserData) ||
                   void 0 === e
                     ? void 0
                     : e.id;
-              void 0 !== n && j.mutate({ userId: n, workspaceId: i }),
-                V.closeModal();
+              void 0 !== a && P.mutate({ userId: a, workspaceId: l }),
+                ei.closeModal();
             },
-            [j, i]
+            [P, l]
           ),
-          U = (0, c.useCallback)(
-            function (e, n) {
-              M.mutate({ userId: e, value: n, workspaceId: i });
+          I = (0, p.useCallback)(
+            function (e, a) {
+              T.mutate({ userId: e, value: a, workspaceId: l });
             },
-            [M, i]
+            [T, l]
           );
-        return void 0 === m || (null == m ? void 0 : m.items.length) === 0
+        return void 0 === f || (null == f ? void 0 : f.items.length) === 0
           ? null
-          : (0, t.jsxs)(t.Fragment, {
+          : (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, t.jsxs)(J.Z.Root, {
+                (0, r.jsxs)(en.Z.Root, {
                   className: "text-sm",
+                  fixed: !0,
                   children: [
-                    (0, t.jsxs)(J.Z.Header, {
+                    (0, r.jsxs)(en.Z.Header, {
                       children: [
-                        (0, t.jsx)(J.Z.HeaderCell, {
-                          children: (0, t.jsx)(f.Z, (0, a._)({}, Q.name)),
+                        (0, r.jsx)(en.Z.HeaderCell, {
+                          children: (0, r.jsx)(g.Z, (0, t._)({}, ev.name)),
                         }),
-                        (0, t.jsx)(J.Z.HeaderCell, {
-                          children: (0, t.jsx)(f.Z, (0, a._)({}, Q.email)),
+                        (0, r.jsx)(en.Z.HeaderCell, {
+                          children: (0, r.jsx)(g.Z, (0, t._)({}, ev.email)),
                         }),
-                        (0, t.jsx)(J.Z.HeaderCell, {
-                          children: (0, t.jsx)(f.Z, (0, a._)({}, Q.role)),
+                        (0, r.jsx)(en.Z.HeaderCell, {
+                          className: "w-28",
+                          children: (0, r.jsx)("span", {
+                            className: M ? "pl-3" : "",
+                            children: (0, r.jsx)(g.Z, (0, t._)({}, ev.role)),
+                          }),
                         }),
+                        M && (0, r.jsx)(en.Z.HeaderCell, { className: "w-16" }),
                       ],
                     }),
-                    (0, t.jsx)(J.Z.Body, {
-                      children: m.items.map(function (e) {
-                        return (0, t.jsx)(
-                          L,
+                    (0, r.jsx)(en.Z.Body, {
+                      children: f.items.map(function (e) {
+                        return (0, r.jsx)(
+                          el,
                           {
-                            isCurrentUser: void 0 !== g && e.id === g,
+                            isCurrentUser: void 0 !== x && e.id === x,
                             userId: e.id,
                             name: e.name,
                             role: e.role,
-                            canEdit: v,
+                            canEdit: M,
                             email: e.email,
                             onRemoveUserClick: function () {
-                              return b({
+                              return _({
                                 id: e.id,
                                 name: e.name,
                                 email: e.email,
                                 created_time: e.created_time,
                               });
                             },
-                            onUpdateUserRole: U,
+                            onUpdateUserRole: I,
                           },
                           e.id
                         );
@@ -221,66 +377,83 @@
                     }),
                   ],
                 }),
-                p > 1 &&
-                  (0, t.jsx)("div", {
-                    className: "mb-9 mt-4 flex justify-center",
-                    children: (0, t.jsx)(W.Z, {
-                      currentPage: d,
-                      onChangeIndex: u,
-                      length: p,
-                    }),
-                  }),
-                (0, t.jsx)($, { onDeleteConfirm: Z }),
+                (0, r.jsxs)("div", {
+                  className: "relative mb-9 mt-2 min-h-[20px]",
+                  children: [
+                    M &&
+                      (0, r.jsxs)(N.z, {
+                        color: "none",
+                        onClick: function () {
+                          return Z.vm.openModal(Z.B.InviteUsersToWorkspace);
+                        },
+                        children: [
+                          (0, r.jsx)(y.ZP, { icon: h.OvN }),
+                          (0, r.jsx)(g.Z, (0, t._)({}, ev.inviteMemberButton)),
+                        ],
+                      }),
+                    b > 1 &&
+                      (0, r.jsx)("div", {
+                        className:
+                          "absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 justify-center",
+                        children: (0, r.jsx)(et.Z, {
+                          currentPage: m,
+                          onChangeIndex: u,
+                          length: b,
+                        }),
+                      }),
+                  ],
+                }),
+                (0, r.jsx)(eo, { onDeleteConfirm: w }),
               ],
             });
       }
-      function $(e) {
-        var n,
-          r = e.onDeleteConfirm,
-          s = (0, m.Z)(),
-          o = O(function (e) {
+      function eo(e) {
+        var a,
+          n = e.onDeleteConfirm,
+          s = (0, x.Z)(),
+          o = er(function (e) {
             return null !== e.confirmModalUserData;
           }),
-          i = O(function (e) {
+          l = er(function (e) {
             return null === e.confirmModalUserData
               ? {}
               : {
                   userId: e.confirmModalUserData.id,
                   email: e.confirmModalUserData.email,
                   name: e.confirmModalUserData.name,
-                  dateAdded: (0, T.Z)(e.confirmModalUserData.created_time),
+                  dateAdded: (0, K.Z)(e.confirmModalUserData.created_time),
                 };
           });
-        return (0, t.jsx)(F.Z, {
+        return (0, r.jsx)(P.Z, {
           isOpen: o,
-          title: s.formatMessage(Q.removeMemberModalTitle),
+          title: s.formatMessage(ev.removeMemberModalTitle),
           onClose: function () {
-            return V.closeModal();
+            return ei.closeModal();
           },
           type: "success",
-          primaryButton: (0, t.jsx)(E.ZP.Button, {
-            title: s.formatMessage(Q.removeMemberModalConfirm),
+          primaryButton: (0, r.jsx)(T.ZP.Button, {
+            title: s.formatMessage(ev.removeMemberModalConfirm),
             color: "danger",
-            onClick: r,
+            onClick: n,
           }),
-          secondaryButton: (0, t.jsx)(E.ZP.Button, {
-            title: s.formatMessage(Q.removeMemberModalCancel),
+          secondaryButton: (0, r.jsx)(T.ZP.Button, {
+            title: s.formatMessage(ev.removeMemberModalCancel),
             color: "neutral",
             onClick: function () {
-              return V.closeModal();
+              return ei.closeModal();
             },
           }),
-          children: (0, t.jsxs)("div", {
+          children: (0, r.jsxs)("div", {
             className: "flex flex-col items-center gap-2",
             children: [
-              null !== (n = i.name) && void 0 !== n ? n : i.email,
-              (0, t.jsx)("div", {
+              null !== (a = l.name) && void 0 !== a ? a : l.email,
+              (0, r.jsx)("div", {
                 className: "text-sm text-gray-500",
-                children: (0, t.jsx)(
-                  f.Z,
-                  (0, Z._)((0, a._)({}, Q.dateJoined), {
+                children: (0, r.jsx)(
+                  g.Z,
+                  (0, i._)((0, t._)({}, ev.dateJoined), {
                     values: {
-                      dateAdded: s.formatDate(i.dateAdded, {
+                      dateAdded: s.formatDate(l.dateAdded, {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
@@ -293,152 +466,156 @@
           }),
         });
       }
-      function L(e) {
-        var n = e.userId,
-          r = e.name,
-          s = e.email,
-          o = e.role,
-          i = e.canEdit,
+      function el(e) {
+        var a = e.userId,
+          n = e.name,
+          i = e.email,
+          s = e.role,
+          o = e.canEdit,
           l = e.isCurrentUser,
           d = e.onRemoveUserClick,
           c = e.onUpdateUserRole,
-          u = (0, h.Ap)(),
-          m = o === D.r3.ADMIN ? u[D.r3.ADMIN] : u[D.r3.STANDARD];
-        return (0, t.jsxs)(J.Z.Row, {
+          m = (0, C.Ap)(),
+          u = s === X.r3.ADMIN ? m[X.r3.ADMIN] : m[X.r3.STANDARD];
+        return (0, r.jsxs)(en.Z.Row, {
           children: [
-            (0, t.jsx)(J.Z.Cell, {
-              children: (0, t.jsxs)("span", {
-                className: (0, P.Z)(
+            (0, r.jsx)(en.Z.Cell, {
+              children: (0, r.jsxs)("span", {
+                className: (0, w.Z)(
                   "flex items-center gap-2",
-                  null === r || "" === r ? "text-gray-500" : ""
+                  null === n || "" === n ? "text-gray-500" : ""
                 ),
                 children: [
-                  (0, t.jsx)("span", {
+                  (0, r.jsx)("span", {
                     children:
-                      null != r
-                        ? r
-                        : (0, t.jsx)(f.Z, (0, a._)({}, Q.missingName)),
+                      null != n
+                        ? n
+                        : (0, r.jsx)(g.Z, (0, t._)({}, ev.missingName)),
                   }),
-                  (0, t.jsx)("span", {
+                  (0, r.jsx)("span", {
                     children:
-                      l && (0, t.jsx)(f.Z, (0, a._)({}, Q.youSpecifier)),
+                      l && (0, r.jsx)(g.Z, (0, t._)({}, ev.youSpecifier)),
                   }),
                 ],
               }),
             }),
-            (0, t.jsx)(J.Z.Cell, { children: s }),
-            (0, t.jsx)(J.Z.Cell, {
-              children: i
-                ? (0, t.jsx)(X, {
-                    currentRole: o,
-                    userId: n,
-                    onRemoveUserClick: d,
+            (0, r.jsx)(en.Z.Cell, { children: i }),
+            (0, r.jsx)(en.Z.Cell, {
+              children: o
+                ? (0, r.jsx)(ed, {
+                    currentRole: s,
+                    userId: a,
                     onUpdateUserRole: c,
                     disabled: l,
                   })
-                : m,
+                : u,
             }),
-          ],
-        });
-      }
-      function X(e) {
-        var n = e.currentRole,
-          r = e.userId,
-          s = e.onRemoveUserClick,
-          o = e.onUpdateUserRole,
-          i = e.disabled,
-          l = (0, h.Ap)();
-        return (0, t.jsxs)("div", {
-          className: "flex gap-2",
-          children: [
-            (0, t.jsxs)(H.Z.Root, {
-              disabled: i,
-              defaultValue: n,
-              onValueChange: function (e) {
-                o(r, e);
-              },
-              children: [
-                (0, t.jsxs)(H.Z.Trigger, {
-                  children: [
-                    (0, t.jsx)(H.Z.Value, {}),
-                    (0, t.jsx)(H.Z.Icon, {}),
-                  ],
+            o &&
+              (0, r.jsx)(en.Z.Cell, {
+                children: (0, r.jsx)(ec, {
+                  userId: a,
+                  onRemoveUserClick: d,
+                  disabled: l,
                 }),
-                (0, t.jsx)(H.Z.Portal, {
-                  children: (0, t.jsxs)(H.Z.Content, {
-                    children: [
-                      (0, t.jsx)(H.Z.Item, {
-                        value: D.r3.STANDARD,
-                        children: l[D.r3.STANDARD],
-                      }),
-                      (0, t.jsx)(H.Z.Item, {
-                        value: D.r3.ADMIN,
-                        children: l[D.r3.ADMIN],
-                      }),
-                    ],
-                  }),
-                }),
-              ],
-            }),
-            !i &&
-              (0, t.jsxs)(B.Root, {
-                children: [
-                  (0, t.jsx)(B.Trigger, {
-                    children: (0, t.jsx)(p.ZP, { icon: u.K9M }),
-                  }),
-                  (0, t.jsx)(B.Portal, {
-                    children: (0, t.jsx)(B.Content, {
-                      children: (0, t.jsx)(B.Item, {
-                        onClick: function () {
-                          s(r);
-                        },
-                        children: (0, t.jsx)(
-                          f.Z,
-                          (0, a._)({}, Q.removeMemberModalTitle)
-                        ),
-                      }),
-                    }),
-                  }),
-                ],
               }),
           ],
         });
       }
-      var Y = 50;
-      function z(e) {
-        var n =
+      function ed(e) {
+        var a = e.currentRole,
+          n = e.userId,
+          t = e.onUpdateUserRole,
+          i = e.disabled,
+          s = (0, C.Ap)();
+        return (0, r.jsxs)(ea.Z.Root, {
+          disabled: i,
+          defaultValue: a,
+          onValueChange: function (e) {
+            t(n, e);
+          },
+          children: [
+            (0, r.jsxs)(ea.Z.Trigger, {
+              children: [(0, r.jsx)(ea.Z.Value, {}), (0, r.jsx)(ea.Z.Icon, {})],
+            }),
+            (0, r.jsx)(ea.Z.Portal, {
+              children: (0, r.jsxs)(ea.Z.Content, {
+                children: [
+                  (0, r.jsx)(ea.Z.Item, {
+                    value: X.r3.STANDARD,
+                    children: s[X.r3.STANDARD],
+                  }),
+                  (0, r.jsx)(ea.Z.Item, {
+                    value: X.r3.ADMIN,
+                    children: s[X.r3.ADMIN],
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      function ec(e) {
+        var a = e.disabled,
+          n = e.onRemoveUserClick,
+          i = e.userId;
+        return a
+          ? null
+          : (0, r.jsxs)(ee.Root, {
+              children: [
+                (0, r.jsx)(ee.Trigger, {
+                  children: (0, r.jsx)(y.ZP, { icon: h.K9M }),
+                }),
+                (0, r.jsx)(ee.Portal, {
+                  children: (0, r.jsx)(ee.Content, {
+                    children: (0, r.jsx)(ee.Item, {
+                      onClick: function () {
+                        n(i);
+                      },
+                      children: (0, r.jsx)(
+                        g.Z,
+                        (0, t._)({}, ev.removeMemberModalTitle)
+                      ),
+                    }),
+                  }),
+                }),
+              ],
+            });
+      }
+      var em = 50;
+      function eu(e) {
+        var a =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          r = (0, R.kP)().session;
-        return (0, C.a)({
-          queryKey: ["workspace", e, n],
-          queryFn: (0, b._)(function () {
-            return (0, U.Jh)(this, function (a) {
-              switch (a.label) {
+          n = (0, j.kP)().session;
+        return (0, q.a)({
+          queryKey: ["workspace", e, a],
+          queryFn: (0, H._)(function () {
+            return (0, J.Jh)(this, function (t) {
+              switch (t.label) {
                 case 0:
                   return [
                     4,
-                    I.ZP.getWorkspaceUsers(r.accessToken, e, n * Y, Y),
+                    k.ZP.getWorkspaceUsers(n.accessToken, e, a * em, em),
                   ];
                 case 1:
-                  return [2, a.sent()];
+                  return [2, t.sent()];
               }
             });
           }),
           getNextPageParam: function (e) {
-            var n = e.offset + Y;
-            return { offset: n < e.total ? n : void 0, total: e.total };
+            var a = e.offset + em;
+            return { offset: a < e.total ? a : void 0, total: e.total };
           },
-          enabled: !!(null == r ? void 0 : r.accessToken),
+          enabled: !!(null == n ? void 0 : n.accessToken),
         });
       }
-      function G(e) {
-        var n,
-          r = z(e).data;
-        return null !== (n = null == r ? void 0 : r.total) && void 0 !== n
-          ? n
+      function ef(e) {
+        var a,
+          n = eu(e).data;
+        return null !== (a = null == n ? void 0 : n.total) && void 0 !== a
+          ? a
           : 0;
       }
-      var Q = (0, x.vU)({
+      var ev = (0, b.vU)({
         name: {
           id: "UserManager.name",
           defaultMessage: "Name",
@@ -489,133 +666,162 @@
           defaultMessage: "Joined workspace on {dateAdded}",
           description: "Date user joined the current workspace",
         },
+        inviteMemberButton: {
+          id: "UserManager.inviteMemberButton",
+          defaultMessage: "Invite member",
+          description: "The title of the invite member button",
+        },
       });
-      function ee() {
-        var e = (0, s._)(["p-4 max-w-5xl mx-auto w-full"]);
+      function ep() {
+        var e = (0, o._)(["max-w-5xl mx-auto w-full"]);
         return (
-          (ee = function () {
+          (ep = function () {
             return e;
           }),
           e
         );
       }
-      function en() {
-        var e = (0, s._)(["mb-8 px-4 py-7"]);
+      function eh() {
+        var e = (0, o._)(["mb-8 px-4 py-7 flex justify-between items-center"]);
         return (
-          (en = function () {
+          (eh = function () {
             return e;
           }),
           e
         );
       }
-      function er() {
-        var e = (0, s._)(["font-medium text-xl"]);
+      function ex() {
+        var e = (0, o._)(["font-medium text-xl"]);
         return (
-          (er = function () {
+          (ex = function () {
             return e;
           }),
           e
         );
       }
-      function ea() {
-        var e = (0, s._)(["text-gray-500 text-sm font-normal"]);
+      function eg() {
+        var e = (0, o._)(["text-gray-500 text-sm font-normal"]);
         return (
-          (ea = function () {
+          (eg = function () {
             return e;
           }),
           e
         );
       }
-      function et(e) {
-        var n,
-          r = e.currentWorkspaceId,
-          s = (0, m.Z)(),
-          i = (0, d.useRouter)(),
-          x = (0, h.Hj)(function (e) {
+      function eb(e) {
+        var a,
+          n = e.currentWorkspaceId,
+          i = (0, x.Z)(),
+          s = (0, v.useRouter)(),
+          o = (0, C.Hj)(function (e) {
             return e.items.find(function (e) {
-              return e.id === r;
+              return e.id === n;
             });
           }),
-          g = x.data,
-          b = x.isLoading,
-          Z = null !== (n = G(r)) && void 0 !== n ? n : "?",
-          k = (0, h.Ix)(null != g ? g : null),
-          U = (0, h.qH)(null != g ? g : null),
-          C = (0, c.useCallback)(
+          d = o.data,
+          c = o.isLoading,
+          m = (0, C.bE)(n),
+          u = null !== (a = ef(n)) && void 0 !== a ? a : "?",
+          b = (0, C.Ix)(null != d ? d : null),
+          M = (0, C.qH)(null != d ? d : null),
+          j = (0, p.useCallback)(
             function () {
-              i.push("/");
+              s.push("/");
             },
-            [i]
+            [s]
           );
-        return (0, t.jsxs)(j.Z, {
+        return (0, r.jsxs)(V.Z, {
           showNavigation: !0,
-          renderTitle: (0, t.jsx)(f.Z, (0, a._)({}, ed.adminPageTitle)),
+          renderTitle: (0, r.jsx)(g.Z, (0, t._)({}, eN.adminPageTitle)),
           children: [
-            (0, t.jsx)(l(), {
-              children: (0, t.jsx)("title", {
-                children: s.formatMessage(ed.adminBrowserPageTitle),
+            (0, r.jsx)(f(), {
+              children: (0, r.jsx)("title", {
+                children: i.formatMessage(eN.adminBrowserPageTitle),
               }),
             }),
-            (0, t.jsxs)(j.Z.NavigationPrimaryActionDesktop, {
-              onClick: C,
+            (0, r.jsxs)(V.Z.NavigationPrimaryActionDesktop, {
+              onClick: j,
               children: [
-                (0, t.jsx)(p.ZP, { icon: u.Ao2 }),
-                (0, t.jsx)(f.Z, (0, a._)({}, ed.backToChat)),
+                (0, r.jsx)(y.ZP, { icon: h.Ao2 }),
+                (0, r.jsx)(g.Z, (0, t._)({}, eN.backToChat)),
               ],
             }),
-            (0, t.jsx)(j.Z.NavigationContent, {
-              children: (0, t.jsxs)("div", {
+            (0, r.jsx)(V.Z.NavigationContent, {
+              children: (0, r.jsxs)("div", {
                 className: "flex flex-col gap-2 py-4",
                 children: [
-                  (0, t.jsx)("h2", {
+                  (0, r.jsx)("h2", {
                     className: "mb-3 px-2 text-lg text-gray-100",
-                    children: k,
+                    children: b,
                   }),
-                  (0, t.jsxs)(v.ZB, {
+                  (0, r.jsxs)(W.ZB, {
                     className: "cursor-auto rounded-md bg-gray-700",
                     children: [
-                      (0, t.jsx)(p.ZP, { icon: o.Z }),
-                      (0, t.jsx)(f.Z, (0, a._)({}, ed.membersPageTitle)),
+                      (0, r.jsx)(y.ZP, { icon: l.Z }),
+                      (0, r.jsx)(g.Z, (0, t._)({}, eN.membersPageTitle)),
                     ],
                   }),
                 ],
               }),
             }),
-            (0, t.jsxs)(es, {
+            (0, r.jsxs)(ej, {
               children: [
-                b &&
-                  (0, t.jsx)("div", {
+                c &&
+                  (0, r.jsx)("div", {
                     className: "flex min-h-screen items-center justify-center",
-                    children: (0, t.jsx)(M.Z, {}),
+                    children: (0, r.jsx)(z.Z, {}),
                   }),
-                !b &&
-                  !g &&
-                  (0, t.jsx)("div", {
+                !c &&
+                  !d &&
+                  (0, r.jsx)("div", {
                     className: "flex min-h-screen items-center justify-center",
-                    children: (0, t.jsx)(
-                      f.Z,
-                      (0, a._)({}, ed.workspaceNotFound)
+                    children: (0, r.jsx)(
+                      g.Z,
+                      (0, t._)({}, eN.workspaceNotFound)
                     ),
                   }),
-                !b &&
-                  g &&
-                  (0, t.jsxs)(t.Fragment, {
+                !c &&
+                  d &&
+                  (0, r.jsxs)("div", {
+                    className: "p-4",
                     children: [
-                      (0, t.jsxs)(eo, {
+                      (0, r.jsxs)(ek, {
                         children: [
-                          (0, t.jsx)(ei, { children: k }),
-                          (0, t.jsx)(el, {
-                            children: (0, t.jsx)(
-                              f.Z,
-                              (0, a._)(
-                                { values: { totalMembers: Z, planName: U } },
-                                ed.totalMembers
-                              )
-                            ),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)(eZ, { children: b }),
+                              (0, r.jsx)(eC, {
+                                children: (0, r.jsx)(
+                                  g.Z,
+                                  (0, t._)(
+                                    {
+                                      values: { totalMembers: u, planName: M },
+                                    },
+                                    eN.totalMembers
+                                  )
+                                ),
+                              }),
+                            ],
                           }),
+                          m &&
+                            (0, r.jsxs)(N.z, {
+                              onClick: function () {
+                                return Z.vm.openModal(
+                                  Z.B.InviteUsersToWorkspace
+                                );
+                              },
+                              children: [
+                                (0, r.jsx)(y.ZP, { icon: h.OvN }),
+                                (0, r.jsx)(
+                                  g.Z,
+                                  (0, t._)({}, eN.inviteMemberButton)
+                                ),
+                              ],
+                            }),
                         ],
                       }),
-                      (0, t.jsx)(K, { workspaceId: r }),
+                      (0, r.jsx)(es, { workspaceId: n }),
+                      (0, r.jsx)(eM, { workspaceName: b, workspace: d }),
                     ],
                   }),
               ],
@@ -623,11 +829,127 @@
           ],
         });
       }
-      var es = g.Z.div(ee()),
-        eo = g.Z.div(en()),
-        ei = g.Z.h1(er()),
-        el = g.Z.span(ea()),
-        ed = (0, x.vU)({
+      function eM(e) {
+        var a,
+          n,
+          o = e.workspace,
+          l = e.workspaceName,
+          c = (0, x.Z)(),
+          u = (0, Z.tN)(function (e) {
+            return e.activeModals.has(Z.B.InviteUsersToWorkspace);
+          }),
+          f = (0, s._)((0, p.useState)([]), 2),
+          v = f[0],
+          h = f[1],
+          b = ((a = (0, p.useCallback)(function () {
+            h([]);
+          }, [])),
+          (n = (0, j.kP)().session),
+          (0, d.D)({
+            mutationFn: function (e) {
+              var t = e.workspaceId,
+                r = e.emails;
+              return k.ZP.addWorkspaceUsers(n.accessToken, t, r)
+                .then(function (e) {
+                  return (
+                    O.m.success(
+                      "Invited ".concat(e.length, " user(s) to ").concat(l)
+                    ),
+                    a(),
+                    e
+                  );
+                })
+                .catch(function (e) {
+                  throw (O.m.danger(e.message), e);
+                });
+            },
+          })).mutate,
+          M = v.length > 30,
+          C = (0, p.useCallback)(
+            function () {
+              var e = v.map(function (e) {
+                return e.value;
+              });
+              b({ workspaceId: o.id, emails: e });
+            },
+            [b, v, o.id]
+          );
+        return (0, r.jsx)(P.Z, {
+          closeButton: (0, r.jsx)(T.ZP.CloseButton, {
+            onClose: function () {
+              Z.vm.closeModal(Z.B.InviteUsersToWorkspace);
+            },
+          }),
+          isOpen: u,
+          onClose: m(),
+          type: "success",
+          title:
+            (null == o ? void 0 : o.name) != null
+              ? c.formatMessage(eN.inviteMemberModalTitle, { workspaceName: l })
+              : c.formatMessage(eN.inviteMemberModalTitleUntitledWorkspace),
+          primaryButton: (0, r.jsx)(T.ZP.Button, {
+            title: c.formatMessage(eN.inviteMemberInviteSubmitButton),
+            color: "primary",
+            disabled: M || 0 === v.length,
+            onClick: C,
+          }),
+          secondaryButton: (0, r.jsx)(T.ZP.Button, {
+            title: c.formatMessage(eN.inviteMemberInviteCancelButton),
+            color: "neutral",
+            onClick: function () {
+              return Z.vm.closeModal(Z.B.InviteUsersToWorkspace);
+            },
+          }),
+          children: (0, r.jsxs)("div", {
+            className: "flex flex-col text-sm",
+            children: [
+              (0, r.jsx)("div", {
+                className: "mb-3 text-gray-500 dark:text-gray-400",
+                children: (0, r.jsx)(
+                  g.Z,
+                  (0, t._)({}, eN.inviteMemberModalDescription)
+                ),
+              }),
+              (0, r.jsx)("label", {
+                className: "mb-2",
+                htmlFor: "add-member-emails",
+                id: "add-emails-label",
+                children: (0, r.jsx)(g.Z, (0, t._)({}, eN.addEmailsFieldName)),
+              }),
+              (0, r.jsx)(R, {
+                value: v,
+                onChange: h,
+                className: M ? "react-select--invalid" : "",
+              }),
+              (0, r.jsxs)("div", {
+                className: "flex items-center justify-between",
+                children: [
+                  (0, r.jsx)("span", {
+                    className: M
+                      ? "text-red-500"
+                      : "text-gray-500 dark:text-gray-200",
+                    children: (0, r.jsx)(
+                      g.Z,
+                      (0, i._)((0, t._)({}, eN.maxInvitesCounter), {
+                        values: { num: v.length, max: 30 },
+                      })
+                    ),
+                  }),
+                  (0, r.jsx)(N.z, {
+                    color: "none",
+                    children: (0, r.jsx)(g.Z, (0, t._)({}, eN.clearAllEntries)),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      var ej = M.Z.div(ep()),
+        ek = M.Z.div(eh()),
+        eZ = M.Z.h1(ex()),
+        eC = M.Z.span(eg()),
+        eN = (0, b.vU)({
           adminBrowserPageTitle: {
             id: "adminPage.adminBrowserPageTitle",
             defaultMessage: "ChatGPT - Member admin",
@@ -659,15 +981,62 @@
             defaultMessage: "Members",
             description: "The title of the members page",
           },
+          inviteMemberButton: {
+            id: "adminPage.inviteMemberButton",
+            defaultMessage: "Invite member",
+            description: "The title of the invite member button",
+          },
+          inviteMemberModalTitle: {
+            id: "adminPage.inviteMemberModalTitle",
+            defaultMessage: "Invite members to the {workspaceName} workspace",
+            description: "The title of the invite member modal",
+          },
+          inviteMemberModalTitleUntitledWorkspace: {
+            id: "adminPage.inviteMemberModalTitleUntitledWorkspace",
+            defaultMessage: "Invite members to this workspace",
+            description:
+              "The title of the invite member modal when a workspace has no name",
+          },
+          inviteMemberInviteSubmitButton: {
+            id: "adminPage.inviteMemberInviteSubmitButton",
+            defaultMessage: "Send invites",
+            description: "The title of the invite member modal submit button",
+          },
+          inviteMemberInviteCancelButton: {
+            id: "adminPage.inviteMemberInviteCancelButton",
+            defaultMessage: "Cancel",
+            description: "The title of the invite member modal cancel button",
+          },
+          inviteMemberModalDescription: {
+            id: "adminPage.inviteMemberModalDescription",
+            defaultMessage:
+              "This workspace is private, only select members and roles can use this workspace. This workspace is opted out of training.",
+            description: "The description of the invite member modal",
+          },
+          maxInvitesCounter: {
+            id: "adminPage.maxInvitesCounter",
+            defaultMessage: "{num}/{max} invites at a time",
+            description: "The description of the invite member modal",
+          },
+          clearAllEntries: {
+            id: "adminPage.clearAllEntries",
+            defaultMessage: "Clear all",
+            description: "Clear all entries in the list of members to be added",
+          },
+          addEmailsFieldName: {
+            id: "adminPage.addEmailsFieldName",
+            defaultMessage: "Emails",
+            description: "Name of input for adding emails to workspace",
+          },
         }),
-        ec = !0;
-      function eu(e) {
-        return (0, t.jsx)(et, (0, a._)({}, e));
+        eT = !0;
+      function eP(e) {
+        return (0, r.jsx)(eb, (0, t._)({}, e));
       }
     },
   },
   function (e) {
-    e.O(0, [960, 246, 798, 692, 361, 97, 774, 888, 179], function () {
+    e.O(0, [960, 246, 798, 706, 778, 97, 774, 888, 179], function () {
       return e((e.s = 17149));
     }),
       (_N_E = e.O());

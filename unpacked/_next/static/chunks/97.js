@@ -842,8 +842,8 @@
         N = n(36112),
         P = n(71209),
         I = n(70216),
-        S = n(22830),
-        Z = n(37812),
+        Z = n(22830),
+        S = n(37812),
         F = n(19841),
         D = n(75908),
         E = n(88038),
@@ -933,7 +933,9 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (0, B.setCookie)("_account", a.id),
+                      "workspace" === a.structure
+                        ? (0, B.setCookie)("_account", a.id)
+                        : (0, B.setCookie)("_account", ""),
                       K.w_.setCurrentWorkspace(a),
                       [4, d()]
                     );
@@ -1359,8 +1361,14 @@
             [r, a, s, t, n, d]
           );
         return (0, l.jsxs)(eh.Z.Row, {
+          disabled: t.state === i.Uploading,
           children: [
-            (0, l.jsx)(eh.Z.Cell, { children: t.name }),
+            (0, l.jsx)(eh.Z.Cell, {
+              children: (0, l.jsx)("div", {
+                className: "w-full",
+                children: t.name,
+              }),
+            }),
             (0, l.jsx)(eh.Z.Cell, { children: t.state !== i.Uploading && o }),
             (0, l.jsx)(eh.Z.Cell, { children: t.state !== i.Uploading && c }),
             (0, l.jsx)(eh.Z.Cell, {
@@ -1440,7 +1448,7 @@
           m = g.data,
           p = g.isLoading,
           v = g.refetch,
-          b = (0, S._)((0, u.useState)([]), 2),
+          b = (0, Z._)((0, u.useState)([]), 2),
           y = b[0],
           w = b[1],
           j = (0, J.kP)().session,
@@ -1526,7 +1534,7 @@
             }),
             [k, f, N]
           ),
-          Z = (0, u.useCallback)(
+          S = (0, u.useCallback)(
             (0, A._)(function () {
               return (0, R.Jh)(this, function (e) {
                 switch (e.label) {
@@ -1576,7 +1584,21 @@
                   case 1:
                     return (
                       t.trys.push([1, 4, , 5]),
-                      [4, C.ZP.deleteAllFilesFromFileService(j.accessToken)]
+                      [
+                        4,
+                        Promise.all(
+                          e
+                            .filter(function (e) {
+                              return e.use_case === ef.Ei.MyFiles;
+                            })
+                            .map(function (e) {
+                              return C.ZP.deleteFileFromFileService(
+                                j.accessToken,
+                                e.id
+                              );
+                            })
+                        ),
+                      ]
                     );
                   case 2:
                     return (
@@ -1673,11 +1695,12 @@
                 })
               : q.length > 0
               ? (0, l.jsxs)(eh.Z.Root, {
-                  className: "max-h-[28rem] text-xs",
+                  className: "max-h-[28rem] w-full text-xs",
                   children: [
                     (0, l.jsxs)(eh.Z.Header, {
                       children: [
                         (0, l.jsx)(eh.Z.HeaderCell, {
+                          className: "w-9/12",
                           children: f.formatMessage(ey.name),
                         }),
                         (0, l.jsx)(eh.Z.HeaderCell, {
@@ -1714,7 +1737,7 @@
                                       "flex flex-col items-start space-y-2",
                                     children: [
                                       (0, l.jsxs)("button", {
-                                        onClick: Z,
+                                        onClick: S,
                                         className:
                                           "flex w-full items-center gap-2",
                                         children: [
@@ -1781,8 +1804,8 @@
         eN = n(21437),
         eP = n(86433),
         eI = n(25422),
-        eS = n(10604),
-        eZ = n(61119),
+        eZ = n(10604),
+        eS = n(61119),
         eF = n(44925),
         eD = n(68789),
         eE = n(57924),
@@ -2131,25 +2154,25 @@
           o = (0, D.Z)(),
           c = (0, N.MO)().conversations.length > 0,
           d = (0, f.w$)(),
-          g = (0, S._)((0, u.useState)(!1), 2),
+          g = (0, Z._)((0, u.useState)(!1), 2),
           m = g[0],
           p = g[1],
-          v = (0, S._)((0, u.useState)(!1), 2),
+          v = (0, Z._)((0, u.useState)(!1), 2),
           x = v[0],
           y = v[1],
-          w = (0, S._)((0, u.useState)(!1), 2),
+          w = (0, Z._)((0, u.useState)(!1), 2),
           j = w[0],
           C = w[1],
-          k = (0, S._)((0, u.useState)(!1), 2),
+          k = (0, Z._)((0, u.useState)(!1), 2),
           M = k[0],
           T = k[1],
-          I = (0, S._)((0, u.useState)(s.General), 2),
-          Z = I[0],
+          I = (0, Z._)((0, u.useState)(s.General), 2),
+          S = I[0],
           A = I[1],
           R = (0, u.useContext)(L.QL),
           B = R.historyDisabled,
           U = R.toggleHistoryDisabled,
-          q = (0, eZ.OS)(function (e) {
+          q = (0, eS.OS)(function (e) {
             return e.isOpen;
           }),
           z = (0, _.hz)(),
@@ -2210,7 +2233,7 @@
               closeButton: (0, l.jsx)(O.ZP.CloseButton, { onClose: r }),
               children: (0, l.jsxs)(eM.fC, {
                 className: "flex flex-col gap-6 md:flex-row",
-                defaultValue: Z,
+                defaultValue: S,
                 orientation: d ? "vertical" : void 0,
                 onValueChange: function (e) {
                   A(e);
@@ -2255,7 +2278,7 @@
                           children: (0, l.jsx)(eG, {
                             label: o.formatMessage(e3.openPluginDevtools),
                             enabled: q,
-                            onChange: eZ.Ds.setIsOpen,
+                            onChange: eS.Ds.setIsOpen,
                           }),
                         }),
                       (0, l.jsx)(e0, {
@@ -2691,10 +2714,10 @@
               : null === (t = a.user) || void 0 === t
               ? void 0
               : t.email,
-          o = (0, S._)((0, u.useState)(""), 2),
+          o = (0, Z._)((0, u.useState)(""), 2),
           c = o[0],
           d = o[1],
-          f = (0, S._)((0, u.useState)(""), 2),
+          f = (0, Z._)((0, u.useState)(""), 2),
           g = f[0],
           m = f[1],
           p = (0, u.useCallback)(
@@ -2733,7 +2756,7 @@
             (0, J.w7)();
           }, []),
           w = "DELETE" === g && (void 0 === s || c === s),
-          j = (0, S._)(
+          j = (0, Z._)(
             (0, u.useState)(function () {
               return p();
             }),
@@ -2799,7 +2822,7 @@
                                   (0, h._)({}, e3.typeEmailLabel)
                                 ),
                               }),
-                              (0, l.jsx)(eS.Z, {
+                              (0, l.jsx)(eZ.Z, {
                                 value: c,
                                 placeholder: s,
                                 name: "email",
@@ -2819,7 +2842,7 @@
                               (0, h._)({}, e3.typeDeleteInputLabel)
                             ),
                           }),
-                          (0, l.jsx)(eS.Z, {
+                          (0, l.jsx)(eZ.Z, {
                             value: g,
                             onChange: function (e) {
                               m(e.target.value);
@@ -3409,10 +3432,10 @@
             i = e.className,
             s = (0, u.useRef)(null),
             o = !(0, f.oc)(),
-            c = (0, S._)((0, u.useState)(!1), 2),
+            c = (0, Z._)((0, u.useState)(!1), 2),
             d = c[0],
             h = c[1],
-            g = (0, S._)((0, u.useState)(o), 2),
+            g = (0, Z._)((0, u.useState)(o), 2),
             m = g[0],
             p = g[1],
             v = te(r);
@@ -3673,7 +3696,7 @@
       function tv() {
         var e = (0, D.Z)(),
           t = (0, f.w$)(),
-          n = (0, S._)((0, u.useState)(!1), 2),
+          n = (0, Z._)((0, u.useState)(!1), 2),
           r = n[0],
           a = n[1],
           i = tu.m.getItem(tp);
@@ -3743,7 +3766,7 @@
           r = e.onClickSettings,
           a = e.onDeleteHistory,
           i = (0, w.WS)(),
-          s = (0, S._)((0, u.useState)(!1), 2),
+          s = (0, Z._)((0, u.useState)(!1), 2),
           o = s[0],
           c = s[1],
           f = (0, u.useCallback)(
@@ -3996,7 +4019,7 @@
           p = (0, f.w$)(),
           y = (0, v.useRouter)(),
           w = (0, u.useRef)(null),
-          j = (0, S._)((0, u.useState)(!1), 2),
+          j = (0, Z._)((0, u.useState)(!1), 2),
           C = j[0],
           k = j[1],
           T = (0, u.useContext)(L.QL),
@@ -4005,7 +4028,7 @@
           A = T.getModifiedSettings,
           R = T.unsetModifiedSettings,
           B = A(),
-          U = (0, S._)((0, u.useState)(B), 2),
+          U = (0, Z._)((0, u.useState)(B), 2),
           O = U[0],
           q = U[1],
           z = (0, u.useCallback)(function () {
@@ -4130,7 +4153,7 @@
               className:
                 "scrollbar-trigger relative h-full w-full flex-1 items-start border-white/20",
               children: [
-                (0, l.jsx)(Z.f, {
+                (0, l.jsx)(S.f, {
                   asChild: !0,
                   children: (0, l.jsx)("h2", {
                     children: (0, l.jsx)(
@@ -4158,7 +4181,7 @@
                                 "w-11 flex-shrink-0 items-center justify-center",
                               children: [
                                 (0, l.jsx)(M.ZP, { icon: x.iYc }),
-                                (0, l.jsx)(Z.f, {
+                                (0, l.jsx)(S.f, {
                                   children: (0, l.jsx)(
                                     b.Z,
                                     (0, h._)({}, tM.closeSidebar)
@@ -4403,7 +4426,7 @@
                                     className: "sr-only",
                                     children: (0, l.jsx)(
                                       b.Z,
-                                      (0, h._)({}, tS.closeSidebar)
+                                      (0, h._)({}, tZ.closeSidebar)
                                     ),
                                   }),
                                   (0, l.jsx)(M.ZP, {
@@ -4451,7 +4474,7 @@
                 children: [
                   (0, l.jsx)("span", {
                     className: "sr-only",
-                    children: (0, l.jsx)(b.Z, (0, h._)({}, tS.openSidebar)),
+                    children: (0, l.jsx)(b.Z, (0, h._)({}, tZ.openSidebar)),
                   }),
                   (0, l.jsx)(M.ZP, {
                     icon: x.cur,
@@ -4517,7 +4540,7 @@
           I = (0, k.g)(function (e) {
             return e.flags.isUserInCanPayGroup;
           }),
-          S = !1 === g && I;
+          Z = !1 === g && I;
         return i
           ? (0, l.jsx)(p.E.div, {
               className: "dark flex-shrink-0 overflow-x-hidden bg-gray-900",
@@ -4537,7 +4560,7 @@
                 className: "h-full w-[260px]",
                 children: (0, l.jsx)(tT, {
                   onClickAccountPayment: y,
-                  showAccountPaymentMenuItem: S,
+                  showAccountPaymentMenuItem: Z,
                   onClickCustomerPortal: M,
                   showCustomerPortalMenuItem: m,
                   onDeleteHistory: P,
@@ -4552,7 +4575,7 @@
               },
               sidebarOpen: "mobile-nav" === h,
               onClickAccountPayment: y,
-              showAccountPaymentMenuItem: S,
+              showAccountPaymentMenuItem: Z,
               onClickCustomerPortal: M,
               showCustomerPortalMenuItem: m,
               onDeleteHistory: P,
@@ -4560,7 +4583,7 @@
               children: n,
             });
       }
-      var tS = (0, y.vU)({
+      var tZ = (0, y.vU)({
           closeSidebar: {
             id: "navigation.closeSidebar",
             defaultMessage: "Close sidebar",
@@ -4572,7 +4595,7 @@
             description: "Open sidebar button label",
           },
         }),
-        tZ = n(37541);
+        tS = n(37541);
       function tF() {
         var e = (0, o._)(["overflow-hidden w-full h-full relative flex z-0"]);
         return (
@@ -4638,7 +4661,7 @@
         return (0, l.jsxs)(tL, {
           children: [
             r &&
-              (0, l.jsx)(tZ.Z, {
+              (0, l.jsx)(tS.Z, {
                 children: (0, l.jsxs)(tI, {
                   onResetThread: t,
                   children: [g, c],
@@ -4653,7 +4676,7 @@
                   children: [
                     !i &&
                       r &&
-                      (0, l.jsx)(tZ.Z, {
+                      (0, l.jsx)(tS.Z, {
                         children: (0, l.jsx)(tP, {
                           onClickOpenSidebar: function () {
                             return d.vm.toggleActiveSidebar("mobile-nav");
@@ -4771,7 +4794,7 @@
           return N;
         },
         Ap: function () {
-          return S;
+          return Z;
         },
         bE: function () {
           return E;
@@ -4783,7 +4806,7 @@
           return M;
         },
         qH: function () {
-          return Z;
+          return S;
         },
         _O: function () {
           return D;
@@ -4902,7 +4925,7 @@
           ? (0, o.jsx)(C, { children: "Plus" })
           : null;
       };
-      function S() {
+      function Z() {
         var e = (0, f.Z)(),
           t = e.formatMessage(L.adminRoleName),
           n = e.formatMessage(L.standardRoleName);
@@ -4919,7 +4942,7 @@
           [t, n]
         );
       }
-      function Z(e) {
+      function S(e) {
         var t = (0, f.Z)();
         return e
           ? "personal" === e.structure
@@ -5050,7 +5073,7 @@
         a = n(71209),
         i = n(70216),
         s = n(35250),
-        o = n(53293),
+        o = n(26828),
         l = n(70079),
         u = n(1454),
         c = n(38317),
@@ -5117,14 +5140,18 @@
       t.Z = {
         Root: function (e) {
           var t = e.children,
-            n = e.className;
+            n = e.fixed,
+            r = e.className;
           return (0, i.jsx)("div", {
             className: (0, s.Z)(
-              "overflow-y-auto rounded-md border border-black/10 dark:border-white/10",
-              n
+              "rounded-md border border-black/10 dark:border-white/10",
+              r
             ),
             children: (0, i.jsx)("table", {
-              className: "w-full border-separate border-spacing-0",
+              className: (0, s.Z)(
+                "w-full border-separate border-spacing-0",
+                void 0 !== n && n && "table-fixed"
+              ),
               children: t,
             }),
           });
@@ -5168,13 +5195,15 @@
         },
         Cell: function (e) {
           var t = e.textAlign,
-            n = e.children;
+            n = e.children,
+            r = e.className;
           return (0, i.jsx)("td", {
             className: (0, s.Z)(
               "border-b border-black/10 text-gray-600 dark:border-white/10 dark:text-gray-300 [tr:last-child_&]:border-b-0",
               "left" === (void 0 === t ? "left" : t)
                 ? "text-left"
-                : "text-right"
+                : "text-right",
+              r
             ),
             children: (0, i.jsx)("div", {
               className: "px-4 py-2 [tr[data-disabled=true]_&]:opacity-50",
@@ -5241,6 +5270,28 @@
       var l = a.Z.button(i()),
         u = a.Z.div(s()),
         c = a.Z.div(o());
+    },
+    25094: function (e, t, n) {
+      function r(e) {
+        return e.replace("file-service://", "");
+      }
+      function a(e) {
+        return "file-service://" + e;
+      }
+      function i(e) {
+        return e.startsWith("file-service://");
+      }
+      n.d(t, {
+        $H: function () {
+          return i;
+        },
+        Iy: function () {
+          return r;
+        },
+        L8: function () {
+          return a;
+        },
+      });
     },
     87105: function (e, t, n) {
       n.d(t, {
@@ -5611,8 +5662,8 @@
       }
       var P = n(67726),
         I = n(9871),
-        S = n(93362),
-        Z = n(45369),
+        Z = n(93362),
+        S = n(45369),
         F = n(42426),
         D = n(65028),
         E = n(88366),
@@ -5954,7 +6005,7 @@
         ],
         er = [
           [
-            S.Z,
+            Z.Z,
             {
               languages: { mathematica: P.Z },
               detect: !0,
@@ -6006,7 +6057,7 @@
               aliases: { mathematica: "wolfram" },
             },
           ],
-          Z.Z,
+          S.Z,
           [F.Z, { newlines: !0 }],
         ],
         ea = {
@@ -6101,16 +6152,16 @@
         });
       }
     },
-    99585: function (e, t, n) {
+    63390: function (e, t, n) {
       n.d(t, {
         Cf: function () {
-          return em;
+          return eM;
         },
         ZP: function () {
-          return eg;
+          return ek;
         },
         xz: function () {
-          return ep;
+          return eT;
         },
       });
       var r,
@@ -6179,7 +6230,7 @@
         (0, c.useEffect)(function () {
           f(a, x, null != t ? t : "", g ? { attachments: g } : void 0);
         }, []);
-        var Z = (0, c.useCallback)(function (e) {
+        var S = (0, c.useCallback)(function (e) {
             N(e.currentTarget.value);
           }, []),
           F = (0, c.useCallback)(
@@ -6225,12 +6276,12 @@
             (0, o.jsx)(C.ZP, {
               ref: I,
               value: T,
-              onChange: Z,
+              onChange: S,
               className:
                 "m-0 resize-none border-0 bg-transparent p-0 focus:ring-0 focus-visible:ring-0",
             }),
             E &&
-              (0, o.jsx)(S, {
+              (0, o.jsx)(Z, {
                 children: g.map(function (e) {
                   return (0, o.jsx)(y.Z, { file: e.name }, e.url);
                 }),
@@ -6255,8 +6306,8 @@
           ],
         });
       }
-      var S = d.Z.div(N()),
-        Z = n(21722),
+      var Z = d.Z.div(N()),
+        S = n(21722),
         F = n(39889),
         D = n(10642),
         E = n(47635),
@@ -6542,7 +6593,7 @@
                 queries: r.map(function (e) {
                   return {
                     queryKey: ["opengraph", e],
-                    queryFn: (0, Z._)(function () {
+                    queryFn: (0, S._)(function () {
                       return (0, F.Jh)(this, function (t) {
                         switch (t.label) {
                           case 0:
@@ -6635,17 +6686,131 @@
             ? null
             : (0, o.jsx)(ei, { loop: !1, children: u });
         }),
-        ed = n(5046);
-      function ef() {
-        var e = (0, s._)(["flex gap-2 flex-wrap"]);
+        ed = n(5046),
+        ef = n(24396),
+        eh = n(19208),
+        eg = n.n(eh),
+        em = n(75908),
+        ep = n(3001),
+        ev = n(25094),
+        ex = n(19265);
+      function eb() {
+        var e = (0, s._)([
+          "max-w-lg dark:bg-gray-700 dark:text-gray-400 bg-gray-100 text-gray-500 h-auto rounded-md overflow-hidden flex items-center justify-center",
+        ]);
         return (
-          (ef = function () {
+          (eb = function () {
             return e;
           }),
           e
         );
       }
-      function eh() {
+      function ey(e) {
+        var t,
+          n = e.asset,
+          r = n.asset_pointer,
+          a = n.width,
+          i = n.height,
+          s = (0, em.Z)(),
+          u =
+            ((t = (0, ev.Iy)(r)),
+            (0, ef.a)({
+              queryKey: ["getFileDownloadLink", t],
+              queryFn: (0, S._)(function () {
+                return (0, F.Jh)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return [
+                        4,
+                        A.ZP.getFileDownloadLink(t).catch(function (e) {
+                          throw (
+                            (console.error(
+                              "Could not fetch file with ID ".concat(
+                                t,
+                                " from file service"
+                              ),
+                              e.message
+                            ),
+                            e)
+                          );
+                        }),
+                      ];
+                    case 1:
+                      return [2, e.sent()];
+                  }
+                });
+              }),
+            })),
+          d = u.data,
+          f = u.isLoading,
+          h = null == d ? void 0 : d.download_url,
+          g = (0, c.useRef)(null),
+          m = (0, j._)((0, c.useState)(!1), 2),
+          p = m[0],
+          v = m[1];
+        (0, c.useEffect)(
+          function () {
+            var e;
+            (null === (e = g.current) || void 0 === e ? void 0 : e.complete) ||
+              v(!1);
+          },
+          [r]
+        );
+        var x = f || !p;
+        return "string" == typeof h
+          ? (0, o.jsx)(ew, {
+              children: (0, o.jsx)(eg(), {
+                alt: s.formatMessage(ej.alt),
+                src: h,
+                width: a,
+                height: i,
+                unoptimized: !0,
+                ref: g,
+                onLoadingComplete: function () {
+                  return v(!0);
+                },
+                className: (0, l.Z)(
+                  "max-w-lg rounded-md transition-opacity duration-300",
+                  p ? "opacity-100" : "opacity-0"
+                ),
+              }),
+            })
+          : (0, o.jsx)(ew, {
+              style: { aspectRatio: "".concat(a, " / ").concat(i), width: a },
+              title: x
+                ? s.formatMessage(ej.loading)
+                : s.formatMessage(ej.error),
+              children: x ? (0, o.jsx)(ex.Z, {}) : (0, o.jsx)(Y.BJv, {}),
+            });
+      }
+      var ew = d.Z.div(eb()),
+        ej = (0, ep.vU)({
+          loading: {
+            id: "imageAsset.loading",
+            defaultMessage: "Loading...",
+            description: "Text that describes a loading image",
+          },
+          error: {
+            id: "imageAsset.error",
+            defaultMessage: "Could not load image",
+            description: "Text that describes an image that failed to load",
+          },
+          alt: {
+            id: "imageAsset.alt",
+            defaultMessage: "Uploaded image",
+            description: "Alt text for image asset",
+          },
+        });
+      function eC() {
+        var e = (0, s._)(["flex gap-2 flex-wrap"]);
+        return (
+          (eC = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function e_() {
         var e = (0, s._)([
           "\npy-2 px-3 border text-gray-600 rounded-md text-sm dark:text-gray-100\n",
           "\n",
@@ -6653,24 +6818,24 @@
           "\n",
         ]);
         return (
-          (eh = function () {
+          (e_ = function () {
             return e;
           }),
           e
         );
       }
-      var eg = c.memo(function (e) {
+      var ek = c.memo(function (e) {
         var t,
           n,
           r,
           s = e.message,
           l = e.isEditing,
           u = e.format,
-          c = e.isCompletionInProgress,
-          d = e.className,
-          f = e.isCompletion,
-          h = e.isResponseToPluginMessage,
-          g = (0, i._)(e, [
+          d = e.isCompletionInProgress,
+          f = e.className,
+          h = e.isCompletion,
+          g = e.isResponseToPluginMessage,
+          m = (0, i._)(e, [
             "message",
             "isEditing",
             "format",
@@ -6678,7 +6843,15 @@
             "className",
             "isCompletion",
             "isResponseToPluginMessage",
-          ]);
+          ]),
+          p = (0, c.useMemo)(
+            function () {
+              return "parts" in s.message.content
+                ? s.message.content.parts
+                : [(0, x.RR)(s.message)];
+            },
+            [s]
+          );
         return l
           ? (0, o.jsx)(
               I,
@@ -6692,17 +6865,17 @@
                       ? void 0
                       : r.attachments,
                 },
-                g
+                m
               )
             )
-          : (0, o.jsx)(em, {
-              text: (0, x.RR)(s.message),
+          : (0, o.jsx)(eM, {
+              parts: p,
               errCode: s.errCode,
               err: s.err,
               flag: s.errType,
-              isCompletionInProgress: c,
+              isCompletionInProgress: d,
               format: u,
-              className: d,
+              className: f,
               citations:
                 null === (t = s.message.metadata) || void 0 === t
                   ? void 0
@@ -6711,14 +6884,14 @@
                 null === (n = s.message.metadata) || void 0 === n
                   ? void 0
                   : n.attachments,
-              isCompletion: f,
+              isCompletion: h,
               id: s.nodeId,
-              onRequestMoreCompletions: g.onRequestMoreCompletions,
-              clientThreadId: g.clientThreadId,
-              showExtractedLinkCards: h,
+              onRequestMoreCompletions: m.onRequestMoreCompletions,
+              clientThreadId: m.clientThreadId,
+              showExtractedLinkCards: g,
             });
       });
-      function em(e) {
+      function eM(e) {
         var t,
           n,
           r,
@@ -6731,16 +6904,26 @@
           x = e.format,
           b = e.isCompletionInProgress,
           j = e.size,
-          C = e.text,
-          _ = e.isCompletion,
-          k = e.id,
-          M = e.onRequestMoreCompletions,
-          T = e.clientThreadId,
-          N = e.showExtractedLinkCards,
-          P = d === f.Dd,
-          I = (0, h.hz)(),
-          S =
-            ((n = (t = { text: C, isCompletionInProgress: b }).text),
+          C = void 0 === j ? "medium" : j,
+          _ = e.parts,
+          k = e.isCompletion,
+          M = e.id,
+          T = e.onRequestMoreCompletions,
+          N = e.clientThreadId,
+          P = e.showExtractedLinkCards,
+          I = !_.some(function (e) {
+            return "" !== e;
+          }),
+          Z = u && I,
+          S = d === f.Dd,
+          F = (0, h.hz)(),
+          D =
+            ((n = (t = {
+              text: _.map(function (e) {
+                return "string" == typeof e ? e : "";
+              }).join(""),
+              isCompletionInProgress: b,
+            }).text),
             (r = t.isCompletionInProgress),
             (0, c.useMemo)(
               function () {
@@ -6750,73 +6933,83 @@
               },
               [r, n]
             )),
-          Z = (0, c.useMemo)(
+          E = (0, c.useMemo)(
             function () {
               switch (d) {
                 case f.Dd:
-                  return (0, o.jsx)(ey, {
+                  return (0, o.jsx)(eZ, {
                     $flag: m,
-                    children: (0, o.jsx)(ex, {}),
+                    children: (0, o.jsx)(eP, {}),
                   });
                 case ed.uU:
-                  if (I.has("model_preview"))
-                    return (0, o.jsx)(ev, {
-                      id: k,
-                      onRequestMoreCompletions: M,
+                  if (F.has("model_preview"))
+                    return (0, o.jsx)(eN, {
+                      id: M,
+                      onRequestMoreCompletions: T,
                       flag: m,
-                      clientThreadId: T,
+                      clientThreadId: N,
                     });
-                  return (0, o.jsx)(ey, { $flag: m, children: u });
+                  return (0, o.jsx)(eZ, { $flag: m, children: u });
                 case v.wp:
-                  return (0, o.jsx)(ey, {
+                  return (0, o.jsx)(eZ, {
                     $flag: m,
                     children:
                       "Sorry, conversations created when Chat History is off expire after 6 hours of inactivity. Please start a new conversation to continue using ChatGPT.",
                   });
                 default:
-                  return (0, o.jsx)(ey, { $flag: m, children: u });
+                  return (0, o.jsx)(eZ, { $flag: m, children: u });
               }
             },
-            [u, d, I, m, k, M, T]
+            [u, d, F, m, M, T, N]
           ),
-          F = (0, h.hz)().has(g.FZ),
-          D = a && a.length > 0 && !_;
+          L = (0, h.hz)().has(g.FZ),
+          A = a && a.length > 0 && !k;
         return (0, o.jsxs)("div", {
           className: (0, l.Z)(
             s,
             "flex flex-col items-start gap-4 whitespace-pre-wrap break-words",
             "danger" === m && "flex flex-row gap-2 text-red-500",
             "warning" === m && "text-orange-500",
-            F && "text-base"
+            L && "text-base"
           ),
           children: [
-            (u && !C) || P || !x
-              ? "danger" === m && P
-                ? null
-                : C
-              : (0, o.jsx)(w.Z, {
-                  clientThreadId: T,
-                  messageId: k,
-                  size: void 0 === j ? "medium" : j,
-                  className: (0, l.Z)(
-                    "danger" !== m && b && "result-streaming",
-                    "danger" === m && "text-red-500",
-                    "warning" === m && "text-orange-500"
-                  ),
-                  children: "" === C ? "&#8203;" : (0, p.Qd)(C, i),
-                }),
-            D &&
-              (0, o.jsx)(eb, {
+            _.map(function (e, t) {
+              return "string" == typeof e
+                ? Z || S || !x
+                  ? (0, o.jsx)(
+                      "div",
+                      { children: "danger" === m && S ? null : e },
+                      t
+                    )
+                  : (0, o.jsx)(
+                      w.Z,
+                      {
+                        clientThreadId: N,
+                        messageId: M,
+                        size: C,
+                        className: (0, l.Z)(
+                          "danger" !== m && b && "result-streaming",
+                          "danger" === m && "text-red-500",
+                          "warning" === m && "text-orange-500"
+                        ),
+                        children: "" === e ? "&#8203;" : (0, p.Qd)(e, i),
+                      },
+                      t
+                    )
+                : (0, o.jsx)(ey, { asset: e }, t);
+            }),
+            A &&
+              (0, o.jsx)(eI, {
                 children: a.map(function (e) {
                   return (0, o.jsx)(y.Z, { file: e.name }, e.url);
                 }),
               }),
-            _ && N && S.length > 0 && (0, o.jsx)(ec, { urls: S }),
-            m && Z,
+            k && P && D.length > 0 && (0, o.jsx)(ec, { urls: D }),
+            m && E,
           ],
         });
       }
-      function ep(e) {
+      function eT(e) {
         var t = e && new Date(e),
           n = t && new Date(t);
         return n
@@ -6827,7 +7020,7 @@
               .concat(n.getHours() >= 12 ? "PM" : "AM")
           : "later";
       }
-      function ev(e) {
+      function eN(e) {
         var t = e.id,
           n = e.onRequestMoreCompletions,
           r = e.flag,
@@ -6836,7 +7029,7 @@
           s = (0, ed.Y8)(function (e) {
             return e.isoDate;
           }),
-          l = ep(s),
+          l = eT(s),
           d = (0, c.useCallback)(
             function () {
               n(t, { eventSource: "mouse" }, !0, "none", !1);
@@ -6871,7 +7064,7 @@
                 ],
               })
             : "You previously reached your usage cap for GPT-4, but you can now try sending your message again";
-        return (0, o.jsx)(ey, {
+        return (0, o.jsx)(eZ, {
           $flag: !!s && r,
           children: (0, o.jsxs)("div", {
             className: "flex items-center gap-6",
@@ -6895,7 +7088,7 @@
           }),
         });
       }
-      function ex() {
+      function eP() {
         return (0, o.jsxs)(o.Fragment, {
           children: [
             "This content may violate our",
@@ -6921,9 +7114,9 @@
           ],
         });
       }
-      var eb = d.Z.div(ef()),
-        ey = d.Z.div(
-          eh(),
+      var eI = d.Z.div(eC()),
+        eZ = d.Z.div(
+          e_(),
           function (e) {
             return (
               "warning" === e.$flag && "border-orange-500 bg-orange-500/10"
@@ -7053,10 +7246,10 @@
           N = M[1],
           P = (0, a._)((0, l.useState)(!1), 2),
           I = P[0],
-          S = P[1],
-          Z = (0, a._)((0, l.useState)(!1), 2),
-          F = Z[0],
-          D = Z[1],
+          Z = P[1],
+          S = (0, a._)((0, l.useState)(!1), 2),
+          F = S[0],
+          D = S[1],
           E = (0, d.kP)().session,
           L = (0, f.hz)(),
           A =
@@ -7155,7 +7348,7 @@
                                           apiValidationInfo:
                                             c.apiValidationInfo,
                                           expanded: I,
-                                          onChangeExpanded: S,
+                                          onChangeExpanded: Z,
                                         }),
                                         (0, s.jsx)(w.bf, {
                                           apiValidationInfo:
@@ -8730,7 +8923,7 @@
         i = n(32787),
         s = n(24274),
         o = n(64135),
-        l = n(99585),
+        l = n(63390),
         u = n(5046),
         c = { textarea: "", "model-switcher": "" };
       function d() {
@@ -8791,16 +8984,16 @@
     97732: function (e, t, n) {
       n.d(t, {
         Ri: function () {
-          return j;
+          return w;
         },
         ZP: function () {
-          return _;
+          return C;
         },
         dN: function () {
           return a;
         },
         i0: function () {
-          return C;
+          return j;
         },
       });
       var r,
@@ -8813,21 +9006,20 @@
         c = n(35250),
         d = n(41170),
         f = n(70079),
-        h = n(32787),
-        g = n(64135),
-        m = n(21437),
-        p = n(38317),
-        v = n(5046),
-        x = n(66523),
-        b = n(90076);
+        h = n(64135),
+        g = n(21437),
+        m = n(38317),
+        p = n(5046),
+        v = n(66523),
+        x = n(90076);
       ((r = a || (a = {})).BROWSING = "browsing_model"),
         (r.CODE_INTERPRETER = "code_interpreter_model"),
         (r.PLUGINS = "plugins_model");
-      var y =
+      var b =
           ((i = {}),
           (0, o._)(i, "gpt_3.5", {
-            icon: p.jr,
-            activeIcon: p.jr,
+            icon: m.jr,
+            activeIcon: m.jr,
             backgroundColor: "#19c37d",
             buttonActiveClass: "text-brand-green",
             buttonHoverClass: "group-hover/button:text-brand-green",
@@ -8837,8 +9029,8 @@
             showSelectedValueBelow: !1,
           }),
           (0, o._)(i, "gpt_4", {
-            icon: p.Bj,
-            activeIcon: p.MP,
+            icon: m.Bj,
+            activeIcon: m.MP,
             backgroundColor: "#AB68FF",
             buttonActiveClass: "text-brand-purple",
             buttonHoverClass: "group-hover/button:text-brand-purple",
@@ -8850,22 +9042,23 @@
           (0, o._)(i, "other", {
             icon: d.Z,
             activeIcon: d.Z,
+            backgroundColor: "#E06C2B",
             buttonActiveClass: "text-orange-500",
             buttonHoverClass: "group-hover/button:text-orange-500",
             showSelectedValueBelow: !0,
           }),
           i),
-        w =
+        y =
           ((s = {}),
           (0, o._)(s, a.BROWSING, {
-            icon: p.xx,
-            activeIcon: p.jZ,
+            icon: m.xx,
+            activeIcon: m.jZ,
             name: (0, c.jsxs)("span", {
               children: [
                 "Browse with",
                 " ",
-                (0, c.jsx)(p.ZP, {
-                  icon: p.jE,
+                (0, c.jsx)(m.ZP, {
+                  icon: m.jE,
                   className: "-mt-[3px] inline-block",
                 }),
                 " ",
@@ -8874,18 +9067,18 @@
             }),
           }),
           (0, o._)(s, a.CODE_INTERPRETER, {
-            icon: p.dY,
-            activeIcon: p.b3,
+            icon: m.dY,
+            activeIcon: m.b3,
             name: "Code Interpreter",
           }),
           (0, o._)(s, a.PLUGINS, {
-            icon: p.oV,
-            activeIcon: p.Z8,
+            icon: m.oV,
+            activeIcon: m.Z8,
             name: "Plugins",
           }),
           s);
-      function j(e) {
-        var t = _();
+      function w(e) {
+        var t = C();
         return (0, f.useMemo)(
           function () {
             return (function (e, t) {
@@ -8902,7 +9095,7 @@
                       return {
                         item: s,
                         categoryId: r.categoryId,
-                        backgroundColor: y[r.categoryId].backgroundColor,
+                        backgroundColor: b[r.categoryId].backgroundColor,
                         icon:
                           null !==
                             (i =
@@ -8910,7 +9103,7 @@
                                 ? a
                                 : r.icon) && void 0 !== i
                             ? i
-                            : y[r.categoryId].icon,
+                            : b[r.categoryId].icon,
                       };
                   }
                 }
@@ -8919,41 +9112,39 @@
           [t, e]
         );
       }
-      function C(e, t) {
-        return (0, b.OX)().some(function (n) {
+      function j(e, t) {
+        return (0, x.OX)().some(function (n) {
           return n[t] === e;
         });
       }
-      function _() {
-        var e = (0, b.OX)(),
-          t = (0, b.B9)(),
-          n = (0, h.kP)().session,
-          r = (0, v.BT)(),
-          i = (0, m.Fl)(),
-          s = (0, x.Z)().modelSwitcherDisclaimer,
-          o = (0, g.hz)(),
-          l = (null == n ? void 0 : n.user) != null && (0, h.yl)(n.user),
-          c = (0, b.B8)(),
-          d = c.enabledModelsInCategoriesById,
-          p = c.enabledModelsNotInCategoriesById;
+      function C() {
+        var e = (0, x.OX)(),
+          t = (0, x.B9)(),
+          n = (0, p.BT)(),
+          r = (0, g.Fl)(),
+          i = (0, v.Z)().modelSwitcherDisclaimer,
+          s = (0, h.hz)(),
+          o = (0, x.B8)(),
+          l = o.enabledModelsInCategoriesById,
+          c = o.enabledModelsNotInCategoriesById;
         return (0, f.useMemo)(
           function () {
-            var n = [],
-              c = !0,
+            var o = [],
+              d = !0,
               f = !1,
               h = void 0;
             try {
               for (
                 var g, m = e[Symbol.iterator]();
-                !(c = (g = m.next()).done);
-                c = !0
+                !(d = (g = m.next()).done);
+                d = !0
               ) {
-                var v = g.value;
-                if (d.has(v.default_model)) {
-                  var x = y[v.category] || {},
-                    b = r === v.default_model,
-                    j = t.get(v.default_model),
-                    C = b
+                var p = g.value;
+                if (l.has(p.default_model)) {
+                  var v = b[p.category] || {},
+                    x = n === p.default_model,
+                    w = t.get(p.default_model),
+                    j = x
                       ? []
                       : (function (e, t, n, r, i) {
                           var s = e.isBrowsingEnabled,
@@ -8965,9 +9156,9 @@
                             null != n[a.BROWSING] &&
                             r.has(n[a.BROWSING])
                           ) {
-                            var c = w[a.BROWSING];
+                            var c = y[a.BROWSING];
                             u.push(
-                              k(i.get(n[a.BROWSING]), {
+                              _(i.get(n[a.BROWSING]), {
                                 icon: c.icon,
                                 name: c.name,
                                 disabled: t.has("browsing_disabled"),
@@ -8980,9 +9171,9 @@
                             null != n[a.CODE_INTERPRETER] &&
                             r.has(n[a.CODE_INTERPRETER])
                           ) {
-                            var d = w[a.CODE_INTERPRETER];
+                            var d = y[a.CODE_INTERPRETER];
                             u.push(
-                              k(i.get(n[a.CODE_INTERPRETER]), {
+                              _(i.get(n[a.CODE_INTERPRETER]), {
                                 icon: d.icon,
                                 name: d.name,
                                 activeIcon: d.activeIcon,
@@ -8994,9 +9185,9 @@
                             null != n[a.PLUGINS] &&
                             r.has(n[a.PLUGINS])
                           ) {
-                            var f = w[a.PLUGINS];
+                            var f = y[a.PLUGINS];
                             u.push(
-                              k(i.get(n[a.PLUGINS]), {
+                              _(i.get(n[a.PLUGINS]), {
                                 icon: f.icon,
                                 name: f.name,
                                 disabled: t.has("plugins_disabled"),
@@ -9005,26 +9196,26 @@
                             );
                           }
                           return u;
-                        })(i, o, v, d, t);
-                  n.push({
-                    categoryId: v.category,
-                    value: j.id,
-                    name: v.human_category_name,
-                    description: b ? s : j.description,
-                    disclaimer: x.disclaimer,
-                    buttonActiveClass: x.buttonActiveClass,
-                    buttonHoverClass: x.buttonHoverClass,
-                    iconClass: x.iconClass,
-                    icon: x.icon,
-                    activeIcon: x.activeIcon,
+                        })(r, s, p, l, t);
+                  o.push({
+                    categoryId: p.category,
+                    value: w.id,
+                    name: p.human_category_name,
+                    description: x ? i : w.description,
+                    disclaimer: v.disclaimer,
+                    buttonActiveClass: v.buttonActiveClass,
+                    buttonHoverClass: v.buttonHoverClass,
+                    iconClass: v.iconClass,
+                    icon: v.icon,
+                    activeIcon: v.activeIcon,
                     options: [
-                      k(j, {
-                        icon: x.icon,
-                        activeIcon: x.activeIcon,
+                      _(w, {
+                        icon: v.icon,
+                        activeIcon: v.activeIcon,
                         name: "Default",
                       }),
-                    ].concat((0, u._)(C)),
-                    disabled: b,
+                    ].concat((0, u._)(j)),
+                    disabled: x,
                     showSelectedValueBelow: !1,
                   });
                 }
@@ -9033,37 +9224,37 @@
               (f = !0), (h = e);
             } finally {
               try {
-                c || null == m.return || m.return();
+                d || null == m.return || m.return();
               } finally {
                 if (f) throw h;
               }
             }
-            var _ = Array.from(p).map(function (e) {
+            var C = Array.from(c).map(function (e) {
               return t.get(e);
             });
-            if (_.length > 0 && l) {
-              var M = _[0],
-                T = y.other;
-              n.push({
+            if (C.length > 0) {
+              var k = C[0],
+                M = b.other;
+              o.push({
                 categoryId: "other",
-                value: null == M ? void 0 : M.id,
+                value: null == k ? void 0 : k.id,
                 name: "Alpha",
-                buttonActiveClass: T.buttonActiveClass,
-                buttonHoverClass: T.buttonHoverClass,
-                options: _.map(function (e) {
-                  return k(e);
+                buttonActiveClass: M.buttonActiveClass,
+                buttonHoverClass: M.buttonHoverClass,
+                options: C.map(function (e) {
+                  return _(e);
                 }),
                 showSelectedValueBelow: !0,
-                icon: T.icon,
-                activeIcon: T.activeIcon,
+                icon: M.icon,
+                activeIcon: M.activeIcon,
               });
             }
-            return n;
+            return o;
           },
-          [p, l, e, d, r, t, i, o, s]
+          [c, e, l, n, t, r, s, i]
         );
       }
-      function k(e) {
+      function _(e) {
         var t =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (0, l._)({ value: e.id, name: e.title, tags: e.tags }, t);
@@ -9078,7 +9269,7 @@
           return N;
         },
         Bv: function () {
-          return S;
+          return Z;
         },
         Gg: function () {
           return P;
@@ -9093,7 +9284,7 @@
           return a;
         },
         Xy: function () {
-          return Z;
+          return S;
         },
         ZL: function () {
           return k;
@@ -9250,7 +9441,7 @@
           [t, e]
         );
       }
-      function S(e, t) {
+      function Z(e, t) {
         var n,
           r = decodeURIComponent(
             null !== (n = (0, d.useRouter)().query.model) && void 0 !== n
@@ -9284,8 +9475,8 @@
           [l, c, e, r, u, a, o]
         );
       }
-      function Z(e, t) {
-        var n = S(e, t),
+      function S(e, t) {
+        var n = Z(e, t),
           r = N();
         return (0, f.useMemo)(
           function () {
@@ -9389,7 +9580,6 @@
           tags: e.tags,
           enabledTools: e.enabled_tools,
           capabilities: e.capabilities,
-          properties: e.qualitative_properties,
         };
       }
     },
@@ -9423,7 +9613,7 @@
     75527: function (e, t, n) {
       n.d(t, {
         tQ: function () {
-          return S;
+          return Z;
         },
         iN: function () {
           return I;
@@ -9438,7 +9628,7 @@
           return k;
         },
         ax: function () {
-          return Z;
+          return S;
         },
         r7: function () {
           return Q;
@@ -9617,12 +9807,12 @@
               : n.createTime;
           },
         },
-        S = {
+        Z = {
           getOrInitThread: function (e) {
-            var t = S.resolveThreadId(e);
+            var t = Z.resolveThreadId(e);
             return null != N().threads[t]
               ? N().threads[t]
-              : (S.resetThread(e), N().threads[e]);
+              : (Z.resetThread(e), N().threads[e]);
           },
           getServerThreadId: function (e) {
             return k(e) ? N().clientNewThreadIdToServerIdMapping[e] : e;
@@ -9652,7 +9842,7 @@
                 arguments.length > 3 && void 0 !== arguments[3]
                   ? arguments[3]
                   : void 0,
-              w = S.resolveThreadId(e);
+              w = Z.resolveThreadId(e);
             if (null != N().threads[w] || x) {
               var j =
                 ((r =
@@ -9766,7 +9956,7 @@
                     }
                   );
                 }),
-                  S.recomputeConversationTurns(
+                  Z.recomputeConversationTurns(
                     w,
                     N().threads[w].currentLeafId,
                     []
@@ -9784,7 +9974,7 @@
               pluginIds: [],
               authorName: void 0,
             };
-            S.deleteThread(e),
+            Z.deleteThread(e),
               P(function (n) {
                 n.threads[e] = {
                   initialThreadData: t,
@@ -9806,7 +9996,7 @@
           getThreadCurrentLeafId: function (e) {
             var t,
               n,
-              r = S.resolveThreadId(e);
+              r = Z.resolveThreadId(e);
             return null !==
               (n =
                 null === (t = N().threads[r]) || void 0 === t
@@ -9818,13 +10008,13 @@
           setThreadCurrentLeafId: function (e, t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = Z.resolveThreadId(e);
             if (null != N().threads[a]) {
               P(function (e) {
                 e.threads[a].currentLeafId = t;
               });
               var i = N();
-              S.recomputeConversationTurns(
+              Z.recomputeConversationTurns(
                 a,
                 t,
                 null !==
@@ -9838,7 +10028,7 @@
             }
           },
           setTitle: function (e, t, n) {
-            var r = S.resolveThreadId(e);
+            var r = Z.resolveThreadId(e);
             null != N().threads[r] &&
               P(function (e) {
                 (e.threads[r].title = t), (e.threads[r].titleSource = n);
@@ -9865,12 +10055,12 @@
               r,
               a,
               i,
-              s = S.resolveThreadId(e);
+              s = Z.resolveThreadId(e);
             if (!(null != N().threads[s])) {
               console.warn("Thread does not exist, cannot update tree: ", s);
               return;
             }
-            t(S.getTree(e));
+            t(Z.getTree(e));
             var o = N(),
               l =
                 null !==
@@ -9888,12 +10078,12 @@
                       : r.conversationTurns) && void 0 !== i
                   ? i
                   : [];
-            S.recomputeConversationTurns(s, l, u);
+            Z.recomputeConversationTurns(s, l, u);
           },
           getTree: function (e) {
             var t,
               n,
-              r = S.resolveThreadId(e);
+              r = Z.resolveThreadId(e);
             return null !==
               (n =
                 null === (t = N().threads[r]) || void 0 === t
@@ -9906,16 +10096,16 @@
             return I.resolveThreadId(e);
           },
           recomputeConversationTurns: function (e, t, n) {
-            var r = S.resolveThreadId(e);
+            var r = Z.resolveThreadId(e);
             P(function (e) {
               e.threads[r] &&
                 (e.threads[r].conversationTurns =
-                  S.computeThreadConversationTurns(r, t, n));
+                  Z.computeThreadConversationTurns(r, t, n));
             });
           },
           computeThreadConversationTurns: function (e, t, n) {
-            var r = S.resolveThreadId(e);
-            return S.getTree(r)
+            var r = Z.resolveThreadId(e);
+            return Z.getTree(r)
               .getConversationTurns(t)
               .map(function (e, t) {
                 var r = null == n ? void 0 : n[t];
@@ -9927,7 +10117,7 @@
               a,
               i,
               s,
-              o = S.resolveThreadId(e),
+              o = Z.resolveThreadId(e),
               l =
                 null !==
                   (i =
@@ -9937,7 +10127,7 @@
                   ? i
                   : "root";
             return null != t && t !== l
-              ? S.computeThreadConversationTurns(o, t, null != n ? n : [])
+              ? Z.computeThreadConversationTurns(o, t, null != n ? n : [])
               : null !==
                   (s =
                     null === (a = N().threads[o]) || void 0 === a
@@ -9948,13 +10138,13 @@
           },
           getThreadModel: function (e) {
             var t,
-              n = S.resolveThreadId(e);
+              n = Z.resolveThreadId(e);
             return null === (t = N().threads[n]) || void 0 === t
               ? void 0
               : t.initialThreadData.model;
           },
           removeContinuingFromSharedConversationId: function (e) {
-            var t = S.resolveThreadId(e);
+            var t = Z.resolveThreadId(e);
             P(function (e) {
               var n;
               (null === (n = e.threads[t]) || void 0 === n
@@ -9995,11 +10185,11 @@
                 (M[e] = setTimeout(function () {
                   null == N().threads[e] ||
                     N().threadRetainCounts[e] > 0 ||
-                    S.deleteThread(e);
+                    Z.deleteThread(e);
                 }, 3e4))));
           },
         },
-        Z = function (e, t) {
+        S = function (e, t) {
           var n = (0, u.useRouter)(),
             r = (0, h.kP)().session,
             a = (0, c.useContext)(w.QL).historyDisabled;
@@ -10022,13 +10212,13 @@
                   x.m.danger("Unable to load conversation ".concat(e));
               },
               onSuccess: function (t) {
-                t && S.initThreadFromServerData(e, t);
+                t && Z.initThreadFromServerData(e, t);
               },
             }
           ),
             (0, c.useEffect)(
               function () {
-                S.getOrInitThread(e);
+                Z.getOrInitThread(e);
               },
               [e, n]
             );
@@ -10042,7 +10232,7 @@
           return T(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = Z.resolveThreadId(e);
             return null !==
               (r =
                 null === (n = t.threads[a]) || void 0 === n
@@ -10062,7 +10252,7 @@
           return T(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = Z.resolveThreadId(e);
             return (
               null !==
                 (r =
@@ -10078,7 +10268,7 @@
           var t = T(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = Z.resolveThreadId(e);
             return null === (n = t.threads[a]) || void 0 === n
               ? void 0
               : null === (r = n.initialThreadData) || void 0 === r
@@ -10094,19 +10284,19 @@
         },
         A = function (e) {
           return T(function () {
-            return S.getThreadCurrentLeafId(e);
+            return Z.getThreadCurrentLeafId(e);
           });
         },
         R = function (e) {
           return T(function () {
-            return S.getThreadModel(e);
+            return Z.getThreadModel(e);
           });
         },
         B = function (e, t) {
           var n = (0, c.useRef)([]);
           return T(function () {
             var r,
-              a = S.getThreadConversationTurns(e, t, n.current);
+              a = Z.getThreadConversationTurns(e, t, n.current);
             return (
               (n.current = a),
               null !== (r = null == a ? void 0 : a.length) && void 0 !== r
@@ -10118,14 +10308,14 @@
         U = function (e, t) {
           var n = (0, c.useRef)([]);
           return T(function () {
-            var r = S.getThreadConversationTurns(e, t, n.current);
+            var r = Z.getThreadConversationTurns(e, t, n.current);
             return (n.current = r), r;
           });
         },
         O = function (e, t, n) {
           var r = (0, c.useRef)([]);
           return T(function () {
-            var a = S.getThreadConversationTurns(e, n, r.current);
+            var a = Z.getThreadConversationTurns(e, n, r.current);
             return (r.current = a), a[t];
           });
         },
@@ -10135,7 +10325,7 @@
             function () {
               var n,
                 r,
-                a = S.getThreadConversationTurns(e, t, []),
+                a = Z.getThreadConversationTurns(e, t, []),
                 i =
                   null !== (n = null == a ? void 0 : a.length) && void 0 !== n
                     ? n
@@ -10151,18 +10341,18 @@
         },
         z = function (e) {
           return T(function () {
-            return S.getTitle(e);
+            return Z.getTitle(e);
           });
         },
         W = function (e) {
           return T(function () {
-            return S.getTitleAndSource(e);
+            return Z.getTitleAndSource(e);
           });
         },
         H = function (e) {
           return T(function () {
             var t,
-              n = S.resolveThreadId(e);
+              n = Z.resolveThreadId(e);
             return null === (t = N().threads[n]) || void 0 === t
               ? void 0
               : t.continuingFromSharedConversationId;
@@ -10172,7 +10362,7 @@
           return T(function () {
             var t,
               n,
-              r = S.resolveThreadId(e);
+              r = Z.resolveThreadId(e);
             return null === (t = N().threads[r]) || void 0 === t
               ? void 0
               : null === (n = t.initialThreadData) || void 0 === n
@@ -10182,7 +10372,7 @@
         },
         G = function (e, t) {
           return T(function () {
-            return S.getTree(e).getNode(t);
+            return Z.getTree(e).getNode(t);
           });
         },
         J = function (e, t) {
@@ -10191,7 +10381,7 @@
             return (
               null !==
                 (r =
-                  null === (n = S.getTree(e)) || void 0 === n
+                  null === (n = Z.getTree(e)) || void 0 === n
                     ? void 0
                     : n.getHasErrorFromNode(t)) &&
               void 0 !== r &&
@@ -10205,7 +10395,7 @@
             return (
               null !==
                 (r =
-                  null === (n = S.getTree(e)) || void 0 === n
+                  null === (n = Z.getTree(e)) || void 0 === n
                     ? void 0
                     : n.isMessageIncomplete(t)) &&
               void 0 !== r &&
@@ -10215,7 +10405,7 @@
         },
         Y = function (e, t) {
           return T(function () {
-            var n = S.getTree(e);
+            var n = Z.getTree(e);
             return null == n
               ? []
               : n
@@ -10231,7 +10421,7 @@
         Q = function (e) {
           return T(function () {
             var t,
-              n = S.resolveThreadId(e);
+              n = Z.resolveThreadId(e);
             return (
               (null === (t = N().threads[n]) || void 0 === t
                 ? void 0
@@ -10260,7 +10450,8 @@
         l = n(85023);
       ((r = a || (a = {})).AccountPortal = "account-portal"),
         (r.UserContext = "user-context"),
-        (r.DownloadMessages = "download-messages");
+        (r.DownloadMessages = "download-messages"),
+        (r.InviteUsersToWorkspace = "invite-users-to-workspace");
       var u = "UiState.isNavigationCollapsed.1",
         c = {
           isDesktopNavCollapsed:
@@ -10715,7 +10906,7 @@
             "browser_one_box" === e.author.name
           )
             return a.BrowseTool;
-          if ("execution_output" === e.content.content_type)
+          if (e.content.content_type === i.PX.ExecutionOutput)
             return a.CodeExecutionOutput;
           if (
             (null === (n = e.author.name) || void 0 === n
@@ -10725,7 +10916,10 @@
           )
             return a.PluginTool;
         }
-        return "text" === e.content.content_type ? a.Text : a.Unknown;
+        return e.content.content_type === i.PX.Text ||
+          e.content.content_type === i.PX.MultimodalText
+          ? a.Text
+          : a.Unknown;
       }
       function o(e) {
         var t;
@@ -10783,6 +10977,14 @@
         switch (e.content.content_type) {
           case "text":
             return e.content.parts.join("");
+          case "multimodal_text":
+            return e.content.parts
+              .map(function (e) {
+                return "string" == typeof e
+                  ? e
+                  : '[media pointer="'.concat(e.asset_pointer, '"]');
+              })
+              .join("\n");
           case "tether_browsing_code":
           case "code":
           case "execution_output":
@@ -10826,9 +11028,10 @@
         (r[(r.BrowseTool = 2)] = "BrowseTool"),
         (r[(r.Code = 3)] = "Code"),
         (r[(r.CodeExecutionOutput = 4)] = "CodeExecutionOutput"),
-        (r[(r.Plugin = 5)] = "Plugin"),
-        (r[(r.PluginTool = 6)] = "PluginTool"),
-        (r[(r.Unknown = 7)] = "Unknown");
+        (r[(r.MultimodalText = 5)] = "MultimodalText"),
+        (r[(r.Plugin = 6)] = "Plugin"),
+        (r[(r.PluginTool = 7)] = "PluginTool"),
+        (r[(r.Unknown = 8)] = "Unknown");
     },
     57311: function (e, t, n) {
       n.d(t, {

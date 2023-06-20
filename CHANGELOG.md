@@ -1,7 +1,15 @@
 # Changelog
 
-
 ## 2023-06-18Z (`2zx-gqs4DHnXCij8pMcM3`)
+
+### Notes
+
+- Chunks added:
+  - `_next/static/chunks/2802bd5f-c955b1c4ddd1fafa.js` (aka: `741`)
+- Chunks renamed:
+  - `_next/static/chunks/692-a1e5a91f2cd1f1d0.js` -> `_next/static/chunks/706-e33bcf27ab9ae69b.js`
+  - `_next/static/chunks/434-6f11f27f549beeab.js` -> `_next/static/chunks/724-7e5ae5baa21b3987.js`
+  - `_next/static/chunks/361-60e0aba55566c224.js` -> `_next/static/chunks/778-70237646364794cd.js`
 
 ### Not From Build Manifest
 

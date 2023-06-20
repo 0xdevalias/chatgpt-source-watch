@@ -14,13 +14,13 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return C;
+            return w;
           },
           config: function () {
-            return k;
+            return C;
           },
           default: function () {
-            return D;
+            return O;
           },
         });
       var r = n(39324),
@@ -37,30 +37,28 @@
         h = n(21172),
         p = n(38317),
         v = n(37541),
-        m = n(5914),
-        y = n(32983),
-        g = n(82841),
-        b = n(36218),
-        x = n(75527),
-        j = n(71047),
-        P = n(86412);
-      function w(e) {
+        m = n(32983),
+        y = n(82841),
+        g = n(36218),
+        b = n(75527),
+        x = n(71047),
+        j = n(16280);
+      function P(e) {
         var t = e.sharedConversationId,
           n = e.userCountry,
           r = e.initiallyHighlightedMessageId,
           a = e.continueConversationUrl,
           o = (0, d.useMemo)(function () {
-            return { app: b.VY, origin: "chat" };
+            return { app: g.VY, origin: "chat" };
           }, []),
-          u = (0, x.GR)(t);
-        return (0, i.jsx)(g.Af.Provider, {
+          u = (0, b.GR)(t);
+        return (0, i.jsx)(y.Af.Provider, {
           value: o,
-          children: (0, i.jsxs)(y.XA.Provider, {
+          children: (0, i.jsxs)(m.XA.Provider, {
             value: u,
             children: [
-              (0, i.jsx)(j.Z, { userCountry: n }),
-              (0, i.jsx)(m.j, {}),
-              (0, i.jsx)(P.Z, {
+              (0, i.jsx)(x.Z, { userCountry: n }),
+              (0, i.jsx)(j.Z, {
                 clientThreadId: t,
                 setClientThreadId: function () {},
                 initiallyHighlightedMessageId: r,
@@ -71,35 +69,35 @@
           }),
         });
       }
-      var C = !0,
-        k = { runtime: "nodejs" },
-        O = (0, f.vU)({
+      var w = !0,
+        C = { runtime: "nodejs" },
+        k = (0, f.vU)({
           home: {
             id: "sharedConversation.home",
             defaultMessage: "Home",
             description: "Home link text in error message",
           },
         });
-      function D(e) {
+      function O(e) {
         if ("error" === e.serverResponse.type)
-          return (0, i.jsx)(N, { error: e.serverResponse.error });
+          return (0, i.jsx)(M, { error: e.serverResponse.error });
         var t = (0, a._)((0, r._)({}, e), {
           conversationData: e.serverResponse.data,
         });
         return e.continueMode
-          ? (0, i.jsx)(T, (0, r._)({}, t))
+          ? (0, i.jsx)(D, (0, r._)({}, t))
           : e.moderationMode
-          ? (0, i.jsx)(v.Z, { children: (0, i.jsx)(M, (0, r._)({}, t)) })
-          : (0, i.jsx)(M, (0, r._)({}, t));
+          ? (0, i.jsx)(v.Z, { children: (0, i.jsx)(T, (0, r._)({}, t)) })
+          : (0, i.jsx)(T, (0, r._)({}, t));
       }
-      function T(e) {
+      function D(e) {
         var t = (0, o._)(
           (0, d.useState)(function () {
-            return (0, x.OX)();
+            return (0, b.OX)();
           }),
           1
         )[0];
-        x.tQ.initThreadFromServerData(
+        b.tQ.initThreadFromServerData(
           t,
           e.conversationData,
           !0,
@@ -120,8 +118,8 @@
             )
           : null;
       }
-      function M(e) {
-        x.tQ.initThreadFromServerData(
+      function T(e) {
+        b.tQ.initThreadFromServerData(
           e.sharedConversationId,
           e.conversationData,
           !0
@@ -136,7 +134,7 @@
               e.plugins
             ),
           (0, i.jsx)(
-            w,
+            P,
             (0, a._)((0, r._)({}, e), {
               initiallyHighlightedMessageId:
                 e.conversationData.highlighted_message_id,
@@ -146,7 +144,7 @@
           )
         );
       }
-      function N(e) {
+      function M(e) {
         var t = e.error;
         return (0, i.jsx)("div", {
           className: "mx-8 mt-8 flex flex-col items-center sm:mt-16",
@@ -162,7 +160,7 @@
                   className: "flex items-center gap-2",
                   children: [
                     (0, i.jsx)(p.ZP, { icon: c.m6D }),
-                    (0, i.jsx)(_.Z, (0, r._)({}, O.home)),
+                    (0, i.jsx)(_.Z, (0, r._)({}, k.home)),
                   ],
                 }),
               }),
@@ -513,9 +511,13 @@
     },
   },
   function (e) {
-    e.O(0, [960, 246, 798, 786, 692, 434, 97, 734, 774, 888, 179], function () {
-      return e((e.s = 34537));
-    }),
+    e.O(
+      0,
+      [960, 246, 798, 741, 786, 706, 724, 97, 734, 774, 888, 179],
+      function () {
+        return e((e.s = 34537));
+      }
+    ),
       (_N_E = e.O());
   },
 ]);
