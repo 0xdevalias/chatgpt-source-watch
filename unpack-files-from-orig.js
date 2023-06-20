@@ -38,7 +38,7 @@ rl.on('line', function(rawInputPath) {
     : origDirectoryName;
 
   // Use regex to strip the hash from the filename
-  const destFileName = origFileNameWithHash.replace(/-\w+\./, '.');
+  const destFileName = origFileNameWithHash.replace(/(-|\.)\w+(\.)/, '$2');
 
   const destFullPath = path.join(destPath, destDirectoryName, destFileName);
 
