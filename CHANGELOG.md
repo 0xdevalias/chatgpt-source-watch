@@ -66,7 +66,7 @@ https://chat.openai.com/_next/static/css/86fd2ba616a5af70.css
 
 ## 2023-06-22Z (`kwYJPc99Lx-XLUrLes-Se`)
 
-## Notes
+### Notes
 
 The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
 
