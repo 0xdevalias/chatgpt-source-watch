@@ -12,12 +12,19 @@ Or, to put it more poetically, in the eloquent words of ChatGPT itself:
 
 ## Table of Contents
 
+- [tl;dr](#tldr)
 - [Repository Structure](#repository-structure)
 - [Helper Scripts](#helper-scripts)
 - [Getting Started](#getting-started)
 - [Related Research and Notes](#related-research-and-notes)
 - [License](#license)
 - [Responsible Usage](#responsible-usage)
+
+## tl;dr
+
+If you're looking for a concise summary of the changes and updates in ChatGPT's codebase over time, the [`CHANGELOG.md`](./CHANGELOG.md) is probably what you need. It's a comprehensive record of changes made in each build version and serves as a quick reference.
+
+For those interested in a more detailed analysis or diving into the code, the repository also contains the original webpack chunks and unpacked, formatted versions of the chunk files.
 
 ## Repository Structure
 
