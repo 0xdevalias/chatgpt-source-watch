@@ -202,6 +202,14 @@ https://chat.openai.com/_next/static/chunks/97-a81c56d0288837cb.js
 https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-669339ba2153c0d5.js
 ```
 
+### From `_next/static/chunks/webpack-38f4f99a26e93577.js`
+
+#### Missing
+
+```
+https://chat.openai.com/_next/static/css/45bab00d63da782d.css
+```
+
 ## 2023-06-14 (`a3Jc7aP-UMfeR9s4-iLvW`) (or thereabouts.. might include stuff from earlier too)
 
 ### Not From Build Manifest
@@ -278,4 +286,5 @@ https://chat.openai.com/_next/static/chunks/746.8d5b3a415019d67f.js
 https://chat.openai.com/_next/static/chunks/826.c915ad5cbd3a254b.js
 https://chat.openai.com/_next/static/chunks/875.baf2f7fc433709e3.js
 https://chat.openai.com/_next/static/chunks/952.da89f65bb2251a73.js
+https://chat.openai.com/_next/static/css/dad3a532a4da363e.css
 ```
