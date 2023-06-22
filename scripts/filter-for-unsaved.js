@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const basePath = path.join(__dirname, 'orig');
+const basePath = path.join(__dirname, '..', 'orig');
 
 // Define URL prefix
 const urlPrefix = 'https://chat.openai.com/';

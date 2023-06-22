@@ -8,7 +8,7 @@ const path = require('path');
 const readline = require('readline');
 
 // Load CHANGELOG
-const changelogPath = path.join(__dirname, 'CHANGELOG.md');
+const changelogPath = path.join(__dirname, '..', 'CHANGELOG.md');
 const changelogContent = fs.readFileSync(changelogPath, 'utf8');
 
 // Define a set to store all output URLs
