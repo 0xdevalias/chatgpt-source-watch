@@ -15,6 +15,7 @@ const destPath = path.join(__dirname, 'unpacked');
 const urlPrefix = 'https://chat.openai.com/';
 const pathPrefix = "_next";
 const filesToReplaceHashInPath = ['_buildManifest.js', '_ssgManifest.js'];
+const specialCssPath = '_next/static/css';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -39,7 +40,12 @@ rl.on('line', function(rawInputPath) {
     : origDirectoryName;
 
   // Use regex to strip the hash from the filename
-  const destFileName = origFileNameWithHash.replace(/(-|\.)\w+(\.)/, '$2');
+  let destFileName = origFileNameWithHash.replace(/(-|\.)\w+(\.)/, '$2');
+
+  // Check if it's in _next/static/css, and rename .css file if needed
+  if (origDirectoryName.includes(specialCssPath) && path.extname(origFileNameWithHash) === '.css') {
+    destFileName = 'miniCssF.css';
+  }
 
   const destFullPath = path.join(destPath, destDirectoryName, destFileName);
 
@@ -60,8 +66,8 @@ rl.on('line', function(rawInputPath) {
 
 rl.on('close', () => {
   // Message to say we are about to run prettier
-  console.log("\nRunning Prettier on the unpacked .js files...");
+  console.log("\nRunning Prettier on all unpacked files...");
 
-  // Run prettier on all .js files in the unpacked directory
-  childProcess.spawn('prettier', ['--write', `${destPath}/**/*.js`], { stdio: 'inherit' });
+  // Run prettier on all files in the unpacked directory
+  childProcess.spawn('prettier', ['--write', `${destPath}/**/*`], { stdio: 'inherit' });
 });
