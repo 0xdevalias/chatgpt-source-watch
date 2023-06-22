@@ -95,6 +95,17 @@ cd unpacked
 git diff <build_hash_1>..<build_hash_2> -- <filename>
 ```
 
+## Related Research and Notes
+
+For additional context and a deeper understanding of the underlying concepts and techniques that could be useful from here, you may find the following resources useful:
+
+- [**Reverse Engineering ChatGPT's Frontend Web App**](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code): A detailed exploration of ChatGPT's frontend web application and insights into its codebase.
+- [**Reverse Engineering Webpack Apps**](https://gist.github.com/0xdevalias/8c621c5d09d780b1d321bfdb86d67cdd#reverse-engineering-webpack-apps): A guide to understanding and reverse engineering applications built with Webpack.
+- [**Deobfuscating/Unminifying Obfuscated Web App Code**](https://gist.github.com/0xdevalias/d8b743efb82c0e9406fc69da0d6c6581#deobfuscating--unminifying-obfuscated-web-app-code): Techniques for deobfuscating and unminifying code to make it more readable and understandable.
+- [**Debugging Electron Apps**](https://gist.github.com/0xdevalias/428e56a146e3c09ec129ee58584583ba#debugging-electron-apps-and-related-memory-issues): A guide focused on debugging Electron applications, including insights on memory issues and how to address them.
+
+These resources offer useful insights and should be used with responsibility, adhering to legal and ethical considerations.
+
 ## License
 
 This project is subject to multiple licenses with specific exceptions. For details, please refer to the [`LICENSE.md`](./LICENSE.md) file.
