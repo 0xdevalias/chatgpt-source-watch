@@ -10,6 +10,15 @@ Or, to put it more poetically, in the eloquent words of ChatGPT itself:
 >
 > ChatGPT Source Watch stands as a beacon of transparency and a portal to discovery.
 
+## Table of Contents
+
+- [Repository Structure](#repository-structure)
+- [Helper Scripts](#helper-scripts)
+- [Getting Started](#getting-started)
+- [Related Research and Notes](#related-research-and-notes)
+- [License](#license)
+- [Responsible Usage](#responsible-usage)
+
 ## Repository Structure
 
 - [`CHANGELOG.md`](./CHANGELOG.md): A record of changes made in each build version.
