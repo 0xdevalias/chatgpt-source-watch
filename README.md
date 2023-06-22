@@ -97,7 +97,7 @@ git diff <build_hash_1>..<build_hash_2> -- <filename>
 
 ## License
 
-This project is subject to multiple licenses with specific exceptions. For details, please refer to the [`LICENSE`](./LICENSE) file.
+This project is subject to multiple licenses with specific exceptions. For details, please refer to the [`LICENSE.md`](./LICENSE.md) file.
 
 ## Responsible Usage
 
