@@ -36,7 +36,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/pages/_app-a444a84230b84b44.js
@@ -47,7 +47,7 @@ https://chat.openai.com/_next/static/CTxpiEb45oE7hUCOWm4Jq/_ssgManifest.js
 
 ### From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/734-c9a43325ee64d37c.js
@@ -58,7 +58,7 @@ https://chat.openai.com/_next/static/chunks/pages/admin-04e18953a86ba790.js
 
 ### From `_next/static/chunks/webpack-56ce76d9c59bf528.js`
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/css/86fd2ba616a5af70.css
@@ -107,7 +107,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/68a27ff6-276464568c486afd.js
@@ -125,7 +125,7 @@ N/A
 
 ### From `_next/static/chunks/webpack-e726f3523118b318.js`
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/css/badc091b46b76790.css
@@ -135,7 +135,7 @@ https://chat.openai.com/_next/static/css/badc091b46b76790.css
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/2802bd5f-15923fb46be55b45.js
@@ -168,7 +168,7 @@ N/A
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/webpack-903914f4d31f626d.js
@@ -185,7 +185,7 @@ https://chat.openai.com/_next/static/2zx-gqs4DHnXCij8pMcM3/_ssgManifest.js
 
 ### From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/778-70237646364794cd.js
@@ -196,7 +196,7 @@ https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-b2e33
 
 ### From `_next/static/chunks/webpack-903914f4d31f626d.js`
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/css/dc06f43874f6f09a.css
@@ -206,7 +206,7 @@ https://chat.openai.com/_next/static/css/dc06f43874f6f09a.css
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/Wnd5NrsJwJ8L-68NTfmnl/_buildManifest.js
@@ -278,7 +278,7 @@ https://chat.openai.com/_next/static/css/45bab00d63da782d.css
 
 ### Not From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js
@@ -297,7 +297,7 @@ https://chat.openai.com/_next/static/chunks/pages/_app-0df67bf7d9e6e732.js
 
 ### From Build Manifest
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/012ff928-bcfa62e3ac82441c.js
@@ -338,7 +338,7 @@ https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-44619
 
 ### From `_next/static/chunks/webpack-1eeae5c7aedde088.js`
 
-#### Captured
+#### Archived
 
 ```
 https://chat.openai.com/_next/static/chunks/178.222b639d19105c6f.js
