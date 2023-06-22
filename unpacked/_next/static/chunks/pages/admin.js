@@ -5,19 +5,19 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin",
         function () {
-          return n(10256);
+          return n(50280);
         },
       ]);
     },
-    10256: function (e, a, n) {
+    50280: function (e, a, n) {
       "use strict";
       n.r(a),
         n.d(a, {
           __N_SSP: function () {
-            return eT;
+            return eZ;
           },
           default: function () {
-            return eP;
+            return eC;
           },
         });
       var t = n(39324),
@@ -33,9 +33,9 @@
         f = n.n(u),
         v = n(68555),
         p = n(70079),
-        h = n(1454),
-        x = n(75908),
-        g = n(35290),
+        g = n(1454),
+        h = n(75908),
+        x = n(35290),
         b = n(3001),
         M = n(34303),
         j = n(32787),
@@ -45,11 +45,11 @@
         N = n(66958),
         T = n(59114),
         P = n(48727),
-        _ = n(81949),
-        w = n(19841),
-        I = n(30016),
-        U = n(32075),
-        y = n(38317),
+        w = n(81949),
+        I = n(19841),
+        U = n(30016),
+        y = n(32075),
+        _ = n(38317),
         D = n(57924),
         B =
           /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -60,7 +60,7 @@
         var a = e.value,
           n = e.onChange,
           t = e.className,
-          i = (0, x.Z)(),
+          i = (0, h.Z)(),
           o = (0, s._)((0, p.useState)(""), 2),
           l = o[0],
           d = o[1],
@@ -72,20 +72,20 @@
                   case ",":
                   case " ":
                     var t = A(l);
-                    n((0, _._)(a).concat((0, _._)(t.map(E)))),
+                    n((0, w._)(a).concat((0, w._)(t.map(E)))),
                       d(""),
                       e.preventDefault();
                 }
             },
             [l, n, a]
           );
-        return (0, r.jsx)(I.ZP, {
-          className: (0, w.Z)("react-select-container", t),
+        return (0, r.jsx)(U.ZP, {
+          className: (0, I.Z)("react-select-container", t),
           isMulti: !0,
           onBlur: function (e) {
             if (l) {
               var t = A(l);
-              n((0, _._)(a).concat((0, _._)(t.map(E)))),
+              n((0, w._)(a).concat((0, w._)(t.map(E)))),
                 d(l),
                 e.preventDefault();
             }
@@ -121,12 +121,12 @@
             return null;
           },
           MultiValue: function (e) {
-            var a = (0, x.Z)(),
+            var a = (0, h.Z)(),
               n = (0, r.jsxs)("span", {
                 className: "flex items-center gap-1",
                 children: [
                   (0, r.jsx)("span", { children: e.children }),
-                  (0, r.jsx)(y.ZP, { icon: h.q5L, size: "small" }),
+                  (0, r.jsx)(_.ZP, { icon: g.q5L, size: "small" }),
                 ],
               }),
               s = e.data.isValid
@@ -139,10 +139,10 @@
                     children: n,
                   });
             return (0, r.jsx)(
-              U.c.MultiValue,
+              y.c.MultiValue,
               (0, i._)((0, t._)({}, e), {
                 children: (0, r.jsx)("button", {
-                  className: (0, w.Z)(
+                  className: (0, I.Z)(
                     "m-1 cursor-pointer rounded-full border border-transparent py-1 pl-3 pr-2 text-sm dark:text-gray-300",
                     e.data.isValid
                       ? "bg-gray-50 hover:border-gray-300 hover:bg-gray-100 dark:bg-gray-800 dark:hover:border-gray-600 dark:hover:bg-gray-700"
@@ -196,52 +196,30 @@
         W = n(94860),
         z = n(19265),
         V = n(62059),
-        O = n(97688),
-        H = n(21722),
-        J = n(39889),
-        q = n(24396),
-        $ = n(35448),
-        K = n(76150),
-        L = n(81292),
-        X = n(32402),
-        Y = n(70216),
-        G = n(68789),
-        Q = n(62440),
-        ee = {
-          Root: G.fC,
-          Trigger: function (e) {
-            return (0, r.jsx)(Q.J7, (0, t._)({ $as: G.xz }, e));
-          },
-          Portal: G.Uv,
-          Content: function (e) {
-            return (0, r.jsx)(
-              Q.ay,
-              (0, t._)({ $as: G.VY, sideOffset: 4, align: "start" }, e)
-            );
-          },
-          Item: p.forwardRef(function (e, a) {
-            var n = e.children,
-              s = e.onSelect,
-              o = (0, Y._)(e, ["children", "onSelect"]);
-            return (0,
-            r.jsx)(Q.mS, (0, i._)((0, t._)({ $as: G.ck, ref: a, onSelect: s }, o), { children: n }));
-          }),
-        },
-        ea = n(25422),
-        en = n(25345),
-        et = n(85449),
-        er = (0, L.ZP)(function () {
+        H = n(97688),
+        O = n(21722),
+        q = n(39889),
+        J = n(24396),
+        K = n(35448),
+        L = n(76150),
+        X = n(81292),
+        $ = n(32402),
+        G = n(870),
+        Q = n(25422),
+        Y = n(25345),
+        ee = n(85449),
+        ea = (0, X.ZP)(function () {
           return { confirmModalUserData: null };
         }),
-        ei = {
+        en = {
           openModalForUser: function (e) {
-            er.setState({ confirmModalUserData: e });
+            ea.setState({ confirmModalUserData: e });
           },
           closeModal: function () {
-            er.setState({ confirmModalUserData: null });
+            ea.setState({ confirmModalUserData: null });
           },
         };
-      function es(e) {
+      function et(e) {
         var a,
           n,
           i,
@@ -250,15 +228,15 @@
           c = (0, s._)((0, p.useState)(0), 2),
           m = c[0],
           u = c[1],
-          f = eu(l, m).data,
+          f = ed(l, m).data,
           v = (0, j.kP)().session,
-          x =
+          h =
             null == v
               ? void 0
               : null === (o = v.user) || void 0 === o
               ? void 0
               : o.id,
-          b = Math.ceil(ef(l) / em),
+          b = Math.ceil(ec(l) / el),
           M = (0, C.bE)(l),
           T =
             ((a = (0, j.kP)().session),
@@ -273,7 +251,7 @@
                   n,
                   r
                 ).catch(function (e) {
-                  O.m.danger(
+                  H.m.danger(
                     "Unable to update user ("
                       .concat(n, ") role: ")
                       .concat(e.message)
@@ -283,14 +261,14 @@
             })),
           P =
             ((n = (0, j.kP)().session),
-            (i = (0, $.NL)()),
+            (i = (0, K.NL)()),
             (0, d.D)({
               mutationFn: function (e) {
                 var a = e.userId,
                   t = e.workspaceId;
                 return k.ZP.removeWorkspaceUser(n.accessToken, t, a).catch(
                   function (e) {
-                    O.m.danger(
+                    H.m.danger(
                       "Unable to remove user ("
                         .concat(a, ") from workspace: ")
                         .concat(e.message)
@@ -302,23 +280,23 @@
                 i.invalidateQueries({ queryKey: ["workspace", l] });
               },
             })),
-          _ = (0, p.useCallback)(function (e) {
-            ei.openModalForUser(e);
+          w = (0, p.useCallback)(function (e) {
+            en.openModalForUser(e);
           }, []),
-          w = (0, p.useCallback)(
+          I = (0, p.useCallback)(
             function () {
               var e,
                 a =
-                  null === (e = er.getState().confirmModalUserData) ||
+                  null === (e = ea.getState().confirmModalUserData) ||
                   void 0 === e
                     ? void 0
                     : e.id;
               void 0 !== a && P.mutate({ userId: a, workspaceId: l }),
-                ei.closeModal();
+                en.closeModal();
             },
             [P, l]
           ),
-          I = (0, p.useCallback)(
+          U = (0, p.useCallback)(
             function (e, a) {
               T.mutate({ userId: e, value: a, workspaceId: l });
             },
@@ -328,48 +306,53 @@
           ? null
           : (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsxs)(en.Z.Root, {
-                  className: "text-sm",
+                (0, r.jsxs)(Y.Z.Root, {
                   fixed: !0,
+                  size: "normal",
                   children: [
-                    (0, r.jsxs)(en.Z.Header, {
+                    (0, r.jsxs)(Y.Z.Header, {
                       children: [
-                        (0, r.jsx)(en.Z.HeaderCell, {
-                          children: (0, r.jsx)(g.Z, (0, t._)({}, ev.name)),
+                        (0, r.jsx)(Y.Z.HeaderCell, {
+                          className: "dark:bg-gray-800",
+                          children: (0, r.jsx)(x.Z, (0, t._)({}, em.name)),
                         }),
-                        (0, r.jsx)(en.Z.HeaderCell, {
-                          children: (0, r.jsx)(g.Z, (0, t._)({}, ev.email)),
+                        (0, r.jsx)(Y.Z.HeaderCell, {
+                          className: "dark:bg-gray-800",
+                          children: (0, r.jsx)(x.Z, (0, t._)({}, em.email)),
                         }),
-                        (0, r.jsx)(en.Z.HeaderCell, {
-                          className: "w-28",
+                        (0, r.jsx)(Y.Z.HeaderCell, {
+                          className: "w-28 dark:bg-gray-800",
                           children: (0, r.jsx)("span", {
                             className: M ? "pl-3" : "",
-                            children: (0, r.jsx)(g.Z, (0, t._)({}, ev.role)),
+                            children: (0, r.jsx)(x.Z, (0, t._)({}, em.role)),
                           }),
                         }),
-                        M && (0, r.jsx)(en.Z.HeaderCell, { className: "w-16" }),
+                        M &&
+                          (0, r.jsx)(Y.Z.HeaderCell, {
+                            className: "w-16 dark:bg-gray-800",
+                          }),
                       ],
                     }),
-                    (0, r.jsx)(en.Z.Body, {
+                    (0, r.jsx)(Y.Z.Body, {
                       children: f.items.map(function (e) {
                         return (0, r.jsx)(
-                          el,
+                          ei,
                           {
-                            isCurrentUser: void 0 !== x && e.id === x,
+                            isCurrentUser: void 0 !== h && e.id === h,
                             userId: e.id,
                             name: e.name,
                             role: e.role,
                             canEdit: M,
                             email: e.email,
                             onRemoveUserClick: function () {
-                              return _({
+                              return w({
                                 id: e.id,
                                 name: e.name,
                                 email: e.email,
                                 created_time: e.created_time,
                               });
                             },
-                            onUpdateUserRole: I,
+                            onUpdateUserRole: U,
                           },
                           e.id
                         );
@@ -387,15 +370,15 @@
                           return Z.vm.openModal(Z.B.InviteUsersToWorkspace);
                         },
                         children: [
-                          (0, r.jsx)(y.ZP, { icon: h.OvN }),
-                          (0, r.jsx)(g.Z, (0, t._)({}, ev.inviteMemberButton)),
+                          (0, r.jsx)(_.ZP, { icon: g.OvN }),
+                          (0, r.jsx)(x.Z, (0, t._)({}, em.inviteMemberButton)),
                         ],
                       }),
                     b > 1 &&
                       (0, r.jsx)("div", {
                         className:
                           "absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 justify-center",
-                        children: (0, r.jsx)(et.Z, {
+                        children: (0, r.jsx)(ee.Z, {
                           currentPage: m,
                           onChangeIndex: u,
                           length: b,
@@ -403,44 +386,44 @@
                       }),
                   ],
                 }),
-                (0, r.jsx)(eo, { onDeleteConfirm: w }),
+                (0, r.jsx)(er, { onDeleteConfirm: I }),
               ],
             });
       }
-      function eo(e) {
+      function er(e) {
         var a,
           n = e.onDeleteConfirm,
-          s = (0, x.Z)(),
-          o = er(function (e) {
+          s = (0, h.Z)(),
+          o = ea(function (e) {
             return null !== e.confirmModalUserData;
           }),
-          l = er(function (e) {
+          l = ea(function (e) {
             return null === e.confirmModalUserData
               ? {}
               : {
                   userId: e.confirmModalUserData.id,
                   email: e.confirmModalUserData.email,
                   name: e.confirmModalUserData.name,
-                  dateAdded: (0, K.Z)(e.confirmModalUserData.created_time),
+                  dateAdded: (0, L.Z)(e.confirmModalUserData.created_time),
                 };
           });
         return (0, r.jsx)(P.Z, {
           isOpen: o,
-          title: s.formatMessage(ev.removeMemberModalTitle),
+          title: s.formatMessage(em.removeMemberModalTitle),
           onClose: function () {
-            return ei.closeModal();
+            return en.closeModal();
           },
           type: "success",
           primaryButton: (0, r.jsx)(T.ZP.Button, {
-            title: s.formatMessage(ev.removeMemberModalConfirm),
+            title: s.formatMessage(em.removeMemberModalConfirm),
             color: "danger",
             onClick: n,
           }),
           secondaryButton: (0, r.jsx)(T.ZP.Button, {
-            title: s.formatMessage(ev.removeMemberModalCancel),
+            title: s.formatMessage(em.removeMemberModalCancel),
             color: "neutral",
             onClick: function () {
-              return ei.closeModal();
+              return en.closeModal();
             },
           }),
           children: (0, r.jsxs)("div", {
@@ -448,10 +431,10 @@
             children: [
               null !== (a = l.name) && void 0 !== a ? a : l.email,
               (0, r.jsx)("div", {
-                className: "text-sm text-gray-500",
+                className: "text-gray-500",
                 children: (0, r.jsx)(
-                  g.Z,
-                  (0, i._)((0, t._)({}, ev.dateJoined), {
+                  x.Z,
+                  (0, i._)((0, t._)({}, em.dateJoined), {
                     values: {
                       dateAdded: s.formatDate(l.dateAdded, {
                         year: "numeric",
@@ -466,7 +449,7 @@
           }),
         });
       }
-      function el(e) {
+      function ei(e) {
         var a = e.userId,
           n = e.name,
           i = e.email,
@@ -476,12 +459,12 @@
           d = e.onRemoveUserClick,
           c = e.onUpdateUserRole,
           m = (0, C.Ap)(),
-          u = s === X.r3.ADMIN ? m[X.r3.ADMIN] : m[X.r3.STANDARD];
-        return (0, r.jsxs)(en.Z.Row, {
+          u = s === $.r3.ADMIN ? m[$.r3.ADMIN] : m[$.r3.STANDARD];
+        return (0, r.jsxs)(Y.Z.Row, {
           children: [
-            (0, r.jsx)(en.Z.Cell, {
+            (0, r.jsx)(Y.Z.Cell, {
               children: (0, r.jsxs)("span", {
-                className: (0, w.Z)(
+                className: (0, I.Z)(
                   "flex items-center gap-2",
                   null === n || "" === n ? "text-gray-500" : ""
                 ),
@@ -490,19 +473,19 @@
                     children:
                       null != n
                         ? n
-                        : (0, r.jsx)(g.Z, (0, t._)({}, ev.missingName)),
+                        : (0, r.jsx)(x.Z, (0, t._)({}, em.missingName)),
                   }),
                   (0, r.jsx)("span", {
                     children:
-                      l && (0, r.jsx)(g.Z, (0, t._)({}, ev.youSpecifier)),
+                      l && (0, r.jsx)(x.Z, (0, t._)({}, em.youSpecifier)),
                   }),
                 ],
               }),
             }),
-            (0, r.jsx)(en.Z.Cell, { children: i }),
-            (0, r.jsx)(en.Z.Cell, {
+            (0, r.jsx)(Y.Z.Cell, { children: i }),
+            (0, r.jsx)(Y.Z.Cell, {
               children: o
-                ? (0, r.jsx)(ed, {
+                ? (0, r.jsx)(es, {
                     currentRole: s,
                     userId: a,
                     onUpdateUserRole: c,
@@ -511,8 +494,8 @@
                 : u,
             }),
             o &&
-              (0, r.jsx)(en.Z.Cell, {
-                children: (0, r.jsx)(ec, {
+              (0, r.jsx)(Y.Z.Cell, {
+                children: (0, r.jsx)(eo, {
                   userId: a,
                   onRemoveUserClick: d,
                   disabled: l,
@@ -521,32 +504,32 @@
           ],
         });
       }
-      function ed(e) {
+      function es(e) {
         var a = e.currentRole,
           n = e.userId,
           t = e.onUpdateUserRole,
           i = e.disabled,
           s = (0, C.Ap)();
-        return (0, r.jsxs)(ea.Z.Root, {
+        return (0, r.jsxs)(Q.Z.Root, {
           disabled: i,
           defaultValue: a,
           onValueChange: function (e) {
             t(n, e);
           },
           children: [
-            (0, r.jsxs)(ea.Z.Trigger, {
-              children: [(0, r.jsx)(ea.Z.Value, {}), (0, r.jsx)(ea.Z.Icon, {})],
+            (0, r.jsxs)(Q.Z.Trigger, {
+              children: [(0, r.jsx)(Q.Z.Value, {}), (0, r.jsx)(Q.Z.Icon, {})],
             }),
-            (0, r.jsx)(ea.Z.Portal, {
-              children: (0, r.jsxs)(ea.Z.Content, {
+            (0, r.jsx)(Q.Z.Portal, {
+              children: (0, r.jsxs)(Q.Z.Content, {
                 children: [
-                  (0, r.jsx)(ea.Z.Item, {
-                    value: X.r3.STANDARD,
-                    children: s[X.r3.STANDARD],
+                  (0, r.jsx)(Q.Z.Item, {
+                    value: $.r3.STANDARD,
+                    children: s[$.r3.STANDARD],
                   }),
-                  (0, r.jsx)(ea.Z.Item, {
-                    value: X.r3.ADMIN,
-                    children: s[X.r3.ADMIN],
+                  (0, r.jsx)(Q.Z.Item, {
+                    value: $.r3.ADMIN,
+                    children: s[$.r3.ADMIN],
                   }),
                 ],
               }),
@@ -554,26 +537,26 @@
           ],
         });
       }
-      function ec(e) {
+      function eo(e) {
         var a = e.disabled,
           n = e.onRemoveUserClick,
           i = e.userId;
         return a
           ? null
-          : (0, r.jsxs)(ee.Root, {
+          : (0, r.jsxs)(G.Z.Root, {
               children: [
-                (0, r.jsx)(ee.Trigger, {
-                  children: (0, r.jsx)(y.ZP, { icon: h.K9M }),
+                (0, r.jsx)(G.Z.Trigger, {
+                  children: (0, r.jsx)(_.ZP, { icon: g.K9M }),
                 }),
-                (0, r.jsx)(ee.Portal, {
-                  children: (0, r.jsx)(ee.Content, {
-                    children: (0, r.jsx)(ee.Item, {
+                (0, r.jsx)(G.Z.Portal, {
+                  children: (0, r.jsx)(G.Z.Content, {
+                    children: (0, r.jsx)(G.Z.Item, {
                       onClick: function () {
                         n(i);
                       },
                       children: (0, r.jsx)(
-                        g.Z,
-                        (0, t._)({}, ev.removeMemberModalTitle)
+                        x.Z,
+                        (0, t._)({}, em.removeMemberModalTitle)
                       ),
                     }),
                   }),
@@ -581,20 +564,20 @@
               ],
             });
       }
-      var em = 50;
-      function eu(e) {
+      var el = 50;
+      function ed(e) {
         var a =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
           n = (0, j.kP)().session;
-        return (0, q.a)({
+        return (0, J.a)({
           queryKey: ["workspace", e, a],
-          queryFn: (0, H._)(function () {
-            return (0, J.Jh)(this, function (t) {
+          queryFn: (0, O._)(function () {
+            return (0, q.Jh)(this, function (t) {
               switch (t.label) {
                 case 0:
                   return [
                     4,
-                    k.ZP.getWorkspaceUsers(n.accessToken, e, a * em, em),
+                    k.ZP.getWorkspaceUsers(n.accessToken, e, a * el, el),
                   ];
                 case 1:
                   return [2, t.sent()];
@@ -602,20 +585,20 @@
             });
           }),
           getNextPageParam: function (e) {
-            var a = e.offset + em;
+            var a = e.offset + el;
             return { offset: a < e.total ? a : void 0, total: e.total };
           },
           enabled: !!(null == n ? void 0 : n.accessToken),
         });
       }
-      function ef(e) {
+      function ec(e) {
         var a,
-          n = eu(e).data;
+          n = ed(e).data;
         return null !== (a = null == n ? void 0 : n.total) && void 0 !== a
           ? a
           : 0;
       }
-      var ev = (0, b.vU)({
+      var em = (0, b.vU)({
         name: {
           id: "UserManager.name",
           defaultMessage: "Name",
@@ -672,8 +655,35 @@
           description: "The title of the invite member button",
         },
       });
-      function ep() {
+      function eu() {
         var e = (0, o._)(["max-w-5xl mx-auto w-full"]);
+        return (
+          (eu = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function ef() {
+        var e = (0, o._)(["mb-8 px-4 py-7 flex justify-between items-center"]);
+        return (
+          (ef = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function ev() {
+        var e = (0, o._)(["font-medium text-xl"]);
+        return (
+          (ev = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function ep() {
+        var e = (0, o._)(["text-gray-500 text-sm font-normal"]);
         return (
           (ep = function () {
             return e;
@@ -681,37 +691,10 @@
           e
         );
       }
-      function eh() {
-        var e = (0, o._)(["mb-8 px-4 py-7 flex justify-between items-center"]);
-        return (
-          (eh = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function ex() {
-        var e = (0, o._)(["font-medium text-xl"]);
-        return (
-          (ex = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function eg() {
-        var e = (0, o._)(["text-gray-500 text-sm font-normal"]);
-        return (
-          (eg = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function eb(e) {
+      function eg(e) {
         var a,
           n = e.currentWorkspaceId,
-          i = (0, x.Z)(),
+          i = (0, h.Z)(),
           s = (0, v.useRouter)(),
           o = (0, C.Hj)(function (e) {
             return e.items.find(function (e) {
@@ -721,7 +704,7 @@
           d = o.data,
           c = o.isLoading,
           m = (0, C.bE)(n),
-          u = null !== (a = ef(n)) && void 0 !== a ? a : "?",
+          u = null !== (a = ec(n)) && void 0 !== a ? a : "?",
           b = (0, C.Ix)(null != d ? d : null),
           M = (0, C.qH)(null != d ? d : null),
           j = (0, p.useCallback)(
@@ -732,18 +715,18 @@
           );
         return (0, r.jsxs)(V.Z, {
           showNavigation: !0,
-          renderTitle: (0, r.jsx)(g.Z, (0, t._)({}, eN.adminPageTitle)),
+          renderTitle: (0, r.jsx)(x.Z, (0, t._)({}, ek.adminPageTitle)),
           children: [
             (0, r.jsx)(f(), {
               children: (0, r.jsx)("title", {
-                children: i.formatMessage(eN.adminBrowserPageTitle),
+                children: i.formatMessage(ek.adminBrowserPageTitle),
               }),
             }),
             (0, r.jsxs)(V.Z.NavigationPrimaryActionDesktop, {
               onClick: j,
               children: [
-                (0, r.jsx)(y.ZP, { icon: h.Ao2 }),
-                (0, r.jsx)(g.Z, (0, t._)({}, eN.backToChat)),
+                (0, r.jsx)(_.ZP, { icon: g.Ao2 }),
+                (0, r.jsx)(x.Z, (0, t._)({}, ek.backToChat)),
               ],
             }),
             (0, r.jsx)(V.Z.NavigationContent, {
@@ -757,14 +740,14 @@
                   (0, r.jsxs)(W.ZB, {
                     className: "cursor-auto rounded-md bg-gray-700",
                     children: [
-                      (0, r.jsx)(y.ZP, { icon: l.Z }),
-                      (0, r.jsx)(g.Z, (0, t._)({}, eN.membersPageTitle)),
+                      (0, r.jsx)(_.ZP, { icon: l.Z }),
+                      (0, r.jsx)(x.Z, (0, t._)({}, ek.membersPageTitle)),
                     ],
                   }),
                 ],
               }),
             }),
-            (0, r.jsxs)(ej, {
+            (0, r.jsxs)(ex, {
               children: [
                 c &&
                   (0, r.jsx)("div", {
@@ -776,8 +759,8 @@
                   (0, r.jsx)("div", {
                     className: "flex min-h-screen items-center justify-center",
                     children: (0, r.jsx)(
-                      g.Z,
-                      (0, t._)({}, eN.workspaceNotFound)
+                      x.Z,
+                      (0, t._)({}, ek.workspaceNotFound)
                     ),
                   }),
                 !c &&
@@ -785,19 +768,19 @@
                   (0, r.jsxs)("div", {
                     className: "p-4",
                     children: [
-                      (0, r.jsxs)(ek, {
+                      (0, r.jsxs)(eb, {
                         children: [
                           (0, r.jsxs)("div", {
                             children: [
-                              (0, r.jsx)(eZ, { children: b }),
-                              (0, r.jsx)(eC, {
+                              (0, r.jsx)(eM, { children: b }),
+                              (0, r.jsx)(ej, {
                                 children: (0, r.jsx)(
-                                  g.Z,
+                                  x.Z,
                                   (0, t._)(
                                     {
                                       values: { totalMembers: u, planName: M },
                                     },
-                                    eN.totalMembers
+                                    ek.totalMembers
                                   )
                                 ),
                               }),
@@ -811,17 +794,17 @@
                                 );
                               },
                               children: [
-                                (0, r.jsx)(y.ZP, { icon: h.OvN }),
+                                (0, r.jsx)(_.ZP, { icon: g.OvN }),
                                 (0, r.jsx)(
-                                  g.Z,
-                                  (0, t._)({}, eN.inviteMemberButton)
+                                  x.Z,
+                                  (0, t._)({}, ek.inviteMemberButton)
                                 ),
                               ],
                             }),
                         ],
                       }),
-                      (0, r.jsx)(es, { workspaceId: n }),
-                      (0, r.jsx)(eM, { workspaceName: b, workspace: d }),
+                      (0, r.jsx)(et, { workspaceId: n }),
+                      (0, r.jsx)(eh, { workspaceName: b, workspace: d }),
                     ],
                   }),
               ],
@@ -829,20 +812,20 @@
           ],
         });
       }
-      function eM(e) {
+      function eh(e) {
         var a,
           n,
           o = e.workspace,
           l = e.workspaceName,
-          c = (0, x.Z)(),
+          c = (0, h.Z)(),
           u = (0, Z.tN)(function (e) {
             return e.activeModals.has(Z.B.InviteUsersToWorkspace);
           }),
           f = (0, s._)((0, p.useState)([]), 2),
           v = f[0],
-          h = f[1],
+          g = f[1],
           b = ((a = (0, p.useCallback)(function () {
-            h([]);
+            g([]);
           }, [])),
           (n = (0, j.kP)().session),
           (0, d.D)({
@@ -852,7 +835,7 @@
               return k.ZP.addWorkspaceUsers(n.accessToken, t, r)
                 .then(function (e) {
                   return (
-                    O.m.success(
+                    H.m.success(
                       "Invited ".concat(e.length, " user(s) to ").concat(l)
                     ),
                     a(),
@@ -860,7 +843,7 @@
                   );
                 })
                 .catch(function (e) {
-                  throw (O.m.danger(e.message), e);
+                  throw (H.m.danger(e.message), e);
                 });
             },
           })).mutate,
@@ -885,16 +868,16 @@
           type: "success",
           title:
             (null == o ? void 0 : o.name) != null
-              ? c.formatMessage(eN.inviteMemberModalTitle, { workspaceName: l })
-              : c.formatMessage(eN.inviteMemberModalTitleUntitledWorkspace),
+              ? c.formatMessage(ek.inviteMemberModalTitle, { workspaceName: l })
+              : c.formatMessage(ek.inviteMemberModalTitleUntitledWorkspace),
           primaryButton: (0, r.jsx)(T.ZP.Button, {
-            title: c.formatMessage(eN.inviteMemberInviteSubmitButton),
+            title: c.formatMessage(ek.inviteMemberInviteSubmitButton),
             color: "primary",
             disabled: M || 0 === v.length,
             onClick: C,
           }),
           secondaryButton: (0, r.jsx)(T.ZP.Button, {
-            title: c.formatMessage(eN.inviteMemberInviteCancelButton),
+            title: c.formatMessage(ek.inviteMemberInviteCancelButton),
             color: "neutral",
             onClick: function () {
               return Z.vm.closeModal(Z.B.InviteUsersToWorkspace);
@@ -906,19 +889,19 @@
               (0, r.jsx)("div", {
                 className: "mb-3 text-gray-500 dark:text-gray-400",
                 children: (0, r.jsx)(
-                  g.Z,
-                  (0, t._)({}, eN.inviteMemberModalDescription)
+                  x.Z,
+                  (0, t._)({}, ek.inviteMemberModalDescription)
                 ),
               }),
               (0, r.jsx)("label", {
                 className: "mb-2",
                 htmlFor: "add-member-emails",
                 id: "add-emails-label",
-                children: (0, r.jsx)(g.Z, (0, t._)({}, eN.addEmailsFieldName)),
+                children: (0, r.jsx)(x.Z, (0, t._)({}, ek.addEmailsFieldName)),
               }),
               (0, r.jsx)(R, {
                 value: v,
-                onChange: h,
+                onChange: g,
                 className: M ? "react-select--invalid" : "",
               }),
               (0, r.jsxs)("div", {
@@ -929,15 +912,15 @@
                       ? "text-red-500"
                       : "text-gray-500 dark:text-gray-200",
                     children: (0, r.jsx)(
-                      g.Z,
-                      (0, i._)((0, t._)({}, eN.maxInvitesCounter), {
+                      x.Z,
+                      (0, i._)((0, t._)({}, ek.maxInvitesCounter), {
                         values: { num: v.length, max: 30 },
                       })
                     ),
                   }),
                   (0, r.jsx)(N.z, {
                     color: "none",
-                    children: (0, r.jsx)(g.Z, (0, t._)({}, eN.clearAllEntries)),
+                    children: (0, r.jsx)(x.Z, (0, t._)({}, ek.clearAllEntries)),
                   }),
                 ],
               }),
@@ -945,11 +928,11 @@
           }),
         });
       }
-      var ej = M.Z.div(ep()),
-        ek = M.Z.div(eh()),
-        eZ = M.Z.h1(ex()),
-        eC = M.Z.span(eg()),
-        eN = (0, b.vU)({
+      var ex = M.Z.div(eu()),
+        eb = M.Z.div(ef()),
+        eM = M.Z.h1(ev()),
+        ej = M.Z.span(ep()),
+        ek = (0, b.vU)({
           adminBrowserPageTitle: {
             id: "adminPage.adminBrowserPageTitle",
             defaultMessage: "ChatGPT - Member admin",
@@ -1029,9 +1012,9 @@
             description: "Name of input for adding emails to workspace",
           },
         }),
-        eT = !0;
-      function eP(e) {
-        return (0, r.jsx)(eb, (0, t._)({}, e));
+        eZ = !0;
+      function eC(e) {
+        return (0, r.jsx)(eg, (0, t._)({}, e));
       }
     },
   },

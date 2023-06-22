@@ -1,5 +1,69 @@
 # Changelog
 
+## 2023-06-22Z (`CTxpiEb45oE7hUCOWm4Jq`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- `unpacked/_next/static/chunks/97.js`
+  - `W = (0, K.sN)(K.F_.isBusinessWorkspace),`
+  - `k = v.has("business_seats") && C.length > 1,`
+  - ```js
+    (0, l.jsxs)(tp, {
+      href: "/admin?workspaceId=".concat(p),
+      children: [
+        (0, l.jsx)(M.ZP, { icon: to.Z }),
+        (0, l.jsx)(b.Z, (0, h._)({}, tC.myWorkspaceSettings)),
+      ],
+    }),
+    ```
+  - ```js
+    g.has("files_list_ui") && K && (0, l.jsx)(e_, {}),
+    g.has("system_message2") && (0, l.jsx)(e9, {}),
+    ```
+    - These weren't newly added in this release, but I hadn't called them out before
+  - Added function: `870: function (e, t, n) {`
+    - Not sure what this is doing, but it has keys in it like `Root`, `Trigger`, `Portal`, `Content`, `Item`, etc
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/734.js`
+  - `unpacked/_next/static/chunks/pages/account/upgrade.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+
+### Not From Build Manifest
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/chunks/pages/_app-a444a84230b84b44.js
+https://chat.openai.com/_next/static/chunks/webpack-56ce76d9c59bf528.js
+https://chat.openai.com/_next/static/CTxpiEb45oE7hUCOWm4Jq/_buildManifest.js
+https://chat.openai.com/_next/static/CTxpiEb45oE7hUCOWm4Jq/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/chunks/734-c9a43325ee64d37c.js
+https://chat.openai.com/_next/static/chunks/97-46cf8196eb1aa6a0.js
+https://chat.openai.com/_next/static/chunks/pages/account/upgrade-820ccb7a4eab8bde.js
+https://chat.openai.com/_next/static/chunks/pages/admin-04e18953a86ba790.js
+```
+
+### From `_next/static/chunks/webpack-56ce76d9c59bf528.js`
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/css/86fd2ba616a5af70.css
+```
+
 ## 2023-06-22Z (`kwYJPc99Lx-XLUrLes-Se`)
 
 ## Notes

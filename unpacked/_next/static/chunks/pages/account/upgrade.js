@@ -42,7 +42,7 @@
           f = e.userCountry,
           h = e.cohort,
           x = (0, s.useRouter)(),
-          b = (0, u.nR)(),
+          v = (0, u.nR)(),
           g = (0, d.g)(function (e) {
             return e.updateFlagValue;
           });
@@ -55,11 +55,11 @@
           (0, i.useEffect)(
             function () {
               (null == t ? void 0 : t.type) &&
-                void 0 !== b &&
-                !b &&
+                void 0 !== v &&
+                !v &&
                 l.m.warning(t.message, { hasCloseButton: !0, duration: 5 });
             },
-            [b, null == t ? void 0 : t.message, null == t ? void 0 : t.type]
+            [v, null == t ? void 0 : t.message, null == t ? void 0 : t.type]
           );
         var y = (0, i.useMemo)(function () {
             return { app: m.VY, origin: "chat" };
@@ -74,14 +74,14 @@
         );
         return (0, a.jsx)(p.Af.Provider, {
           value: y,
-          children: (0, a.jsx)(v, {
+          children: (0, a.jsx)(b, {
             cohort: h,
             userCountry: f,
             children: (0, a.jsx)(o.Z, { isOpen: !0, onClose: j }),
           }),
         });
       }
-      var v = function (e) {
+      var b = function (e) {
         var n = e.children,
           r = e.cohort,
           t = e.userCountry,
@@ -116,7 +116,7 @@
       var o = r(34303);
       function l() {
         var e = (0, t._)([
-          "relative top-[-3px] h-2 w-2 rotate-45 transform border-r border-b border-black/10 bg-gray-900 shadow-xs",
+          "relative top-[-3px] h-2 w-2 rotate-45 transform border-r border-b border-black/10 bg-black shadow-xs",
         ]);
         return (
           (l = function () {
@@ -147,7 +147,7 @@
               side: void 0 === r ? "bottom" : r,
               sideOffset: void 0 === t ? 14 : t,
               className: (0, i.Z)(
-                "relative rounded-lg border border-black/10 bg-gray-900 p-1 shadow-xs transition-opacity",
+                "relative rounded-lg border border-black/10 bg-black p-1 shadow-xs transition-opacity",
                 void 0 !== l && l ? "max-w-sm" : "max-w-xs"
               ),
               children: [
@@ -198,8 +198,8 @@
         f = r(24274),
         h = r(64135),
         x = r(97688),
-        v = r(44925),
-        b = r(74853),
+        b = r(44925),
+        v = r(74853),
         g = r(99652),
         y = r(1220);
       function w(e) {
@@ -288,7 +288,7 @@
           ),
           T = (0, h.YD)(),
           Z = o.has("disable_upgrade_ui");
-        return (0, i.jsxs)(b.x, {
+        return (0, i.jsxs)(v.x, {
           isOpen: n,
           onClose: r,
           children: [
@@ -415,7 +415,7 @@
                         l(),
                         {
                           target: "_blank",
-                          href: v.ti,
+                          href: b.ti,
                           passHref: !0,
                           children: (0, i.jsx)(
                             g.nR,
@@ -496,7 +496,7 @@
           return h;
         },
         hi: function () {
-          return b;
+          return v;
         },
         nR: function () {
           return y;
@@ -561,14 +561,14 @@
             children: [(0, a.jsx)("span", { children: r }), t],
           });
         },
-        v = {
+        b = {
           "primary-disabled":
             "border-none bg-gray-200 py-3 font-semibold hover:bg-gray-200",
           primary: "border-none py-3 font-semibold",
           disabled:
             "dark:text-gray-white border-none bg-gray-300 py-3 font-semibold text-gray-800 hover:bg-gray-300 dark:bg-gray-500 dark:opacity-100",
         },
-        b = (0, i.forwardRef)(function (e, n) {
+        v = (0, i.forwardRef)(function (e, n) {
           var r = e.isLoading,
             t = void 0 !== r && r,
             i = e.disabled,
@@ -589,7 +589,7 @@
                     ref: n,
                     as: "button",
                     color: "disabled",
-                    className: (0, s.Z)("w-full", v[m]),
+                    className: (0, s.Z)("w-full", b[m]),
                     children: [
                       f,
                       t &&
@@ -606,7 +606,7 @@
                 onClick: l,
                 ref: n,
                 as: "button",
-                className: (0, s.Z)(v[m]),
+                className: (0, s.Z)(b[m]),
                 children: [
                   (0, a.jsx)("span", {
                     className: (0, s.Z)("inline-block", {
@@ -623,7 +623,7 @@
                 ],
               });
         });
-      b.displayName = "PricingPlanButton";
+      v.displayName = "PricingPlanButton";
       var g = function (e) {
           var n = e.variant,
             r = void 0 === n ? "primary" : n,
