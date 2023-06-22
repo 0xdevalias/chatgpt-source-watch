@@ -2,6 +2,7 @@
 
 // TODO: Save these scripts somewhere useful:
 //   pbpaste | ./unpack-files-from-orig.js
+//   prettier --write unpacked/**/*
 
 const fs = require('fs');
 const path = require('path');

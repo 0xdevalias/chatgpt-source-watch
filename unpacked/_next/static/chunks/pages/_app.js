@@ -5116,6 +5116,9 @@
     37812: function (U, B, G) {
       "use strict";
       G.d(B, {
+        T: function () {
+          return J;
+        },
         f: function () {
           return X;
         },
@@ -33064,7 +33067,7 @@ Error:`,
                     : {},
                 V = this;
               return (0, Y._)(function () {
-                var Y, X, Q, te, tn, tr, ti, ta, ts, tu, tc, td, tf;
+                var Y, X, Q, te, tn, tr, ti, ta, ts, tu, tc, td, tf, th, tp, tg;
                 return (0, tt.Jh)(this, function (tt) {
                   switch (tt.label) {
                     case 0:
@@ -33201,20 +33204,36 @@ Error:`,
                         ),
                         (tt.label = 16);
                     case 16:
-                      if (null == ts ? void 0 : ts.type)
+                      if (
+                        ((tg =
+                          "string" == typeof ts
+                            ? ts
+                            : null !==
+                                (tp =
+                                  null !==
+                                    (th = null == ts ? void 0 : ts.message) &&
+                                  void 0 !== th
+                                    ? th
+                                    : null == ts
+                                    ? void 0
+                                    : ts.description) && void 0 !== tp
+                            ? tp
+                            : ty.I),
+                        null == ts ? void 0 : ts.type)
+                      )
                         throw (
                           (G.intercomEventOnError &&
                             (0, tb.LJ)(G.intercomEventOnError, {
                               url: U,
                               status: X.status.toString(),
-                              message: (null == ts ? void 0 : ts.message) || ts,
+                              message: tg,
                             }),
                           t_.U.addAction("fetch_user_error_".concat(X.status), {
                             url: U,
                             error: ts,
                           }),
                           new ty.gK(
-                            (null == ts ? void 0 : ts.message) || ts,
+                            tg,
                             X.status,
                             null == ts ? void 0 : ts.code,
                             null == ts ? void 0 : ts.type
@@ -33225,7 +33244,7 @@ Error:`,
                           url: U,
                           error: ts,
                         }),
-                        new ty.Q0("string" == typeof ts ? ts : void 0))
+                        new ty.Q0(tg))
                       );
                     case 17:
                       if (204 === X.status) return [2, {}];
@@ -34292,6 +34311,24 @@ Error:`,
                       method: "POST",
                       headers: (0, Z._)({}, B.getAuthHeader()),
                     }),
+                  ];
+                });
+              })();
+            }),
+            (U.markFileUploadFailed = function (U, B) {
+              var G = this;
+              return (0, Y._)(function () {
+                return (0, tt.Jh)(this, function (Y) {
+                  return [
+                    2,
+                    G.fetch(
+                      "".concat(tE, "/files/").concat(U, "/upload-failed"),
+                      {
+                        method: "POST",
+                        headers: (0, Z._)({}, G.getAuthHeader()),
+                        body: JSON.stringify({ error: B }),
+                      }
+                    ),
                   ];
                 });
               })();
@@ -45014,7 +45051,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "824cf6133cc1a0c05b6c483afc063c7910d07c1b" }),
+        (Z.SENTRY_RELEASE = { id: "4a8c98f24a6576477c1dc11d21280154e0ee452c" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

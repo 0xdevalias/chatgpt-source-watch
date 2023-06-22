@@ -317,11 +317,11 @@
             },
             [t, n]
           );
-        return (0, a.jsxs)(q, {
+        return (0, a.jsxs)(O, {
           children: [
             0 === s && (0, a.jsx)(B, { onChangePage: l }),
             1 === s && (0, a.jsx)(L, { onChangePage: l }),
-            2 === s && (0, a.jsx)(O, { onChangePage: l, onSubmit: u }),
+            2 === s && (0, a.jsx)(q, { onChangePage: l, onSubmit: u }),
           ],
         });
       }
@@ -382,7 +382,7 @@
             ],
           });
         },
-        O = function (e) {
+        q = function (e) {
           var t = e.onChangePage,
             n = e.onSubmit,
             r = (0, o.useRef)(null);
@@ -428,7 +428,7 @@
             ],
           });
         },
-        q = M.Z.div(S()),
+        O = M.Z.div(S()),
         U = M.Z.h4(R()),
         z = function (e) {
           var t = e.onClose;
@@ -612,7 +612,7 @@
       "use strict";
       n.d(t, {
         Z: function () {
-          return ov;
+          return ob;
         },
       });
       var r,
@@ -712,7 +712,7 @@
       }
       var B = n(51217),
         L = n(86526);
-      function O(e) {
+      function q(e) {
         var t = e.text,
           n = (0, L.Z)(),
           r = (0, b._)((0, w.useState)(!0), 2),
@@ -723,7 +723,7 @@
           l = o[1],
           u = (0, w.useMemo)(
             function () {
-              return new q().humanTypingDelaysQuertyDistance(t);
+              return new O().humanTypingDelaysQuertyDistance(t);
             },
             [t]
           );
@@ -746,7 +746,7 @@
           })
         );
       }
-      var q = (function () {
+      var O = (function () {
           function e() {
             (0, B._)(this, e);
           }
@@ -1027,8 +1027,8 @@
         eF = n(54655),
         eB = n(75955),
         eL = n(69403),
-        eO = n(56244),
-        eq = n(57311),
+        eq = n(56244),
+        eO = n(57311),
         eU = n(46110),
         ez = n(13282),
         eQ = n(47635),
@@ -1249,7 +1249,7 @@
                     });
                   if (!n) return null;
                   for (
-                    var r = (0, eO.RR)(n), a = /^#\s*(.*)/gm, i = [];
+                    var r = (0, eq.RR)(n), a = /^#\s*(.*)/gm, i = [];
                     null !== (t = a.exec(r));
 
                   )
@@ -1586,7 +1586,7 @@
             function () {
               return [
                 t.reduce(function (e, t) {
-                  return null == t.err ? e + (0, eO.RR)(t.message) : e;
+                  return null == t.err ? e + (0, eq.RR)(t.message) : e;
                 }, ""),
               ];
             },
@@ -1605,7 +1605,7 @@
       var tu = n(2368),
         tc = n(86573);
       function td(e) {
-        return (0, eO.qi)(e) && !(0, eO.oH)(e);
+        return (0, eq.qi)(e) && !(0, eq.oH)(e);
       }
       function tm() {
         var e = (0, U._)(["grid gap-4\n", ""]);
@@ -1925,8 +1925,8 @@
         var t = e.pluginName,
           n = e.pluginMessage,
           r = e.toolMessage,
-          a = (0, eO.RR)(n.message),
-          i = r ? (0, eO.RR)(r.message) : null;
+          a = (0, eq.RR)(n.message),
+          i = r ? (0, eq.RR)(r.message) : null;
         try {
           (a = JSON.stringify(JSON.parse(a), null, 2)),
             null != i && (i = JSON.stringify(JSON.parse(i), null, 2));
@@ -2023,22 +2023,22 @@
           e
         );
       }
-      function tO() {
+      function tq() {
         var e = (0, U._)(["p-1 ", ""]);
         return (
-          (tO = function () {
+          (tq = function () {
             return e;
           }),
           e
         );
       }
-      function tq() {
+      function tO() {
         var e = (0, U._)([
           "text-gray-400 flex self-end lg:self-center justify-center mt-2 gap-2 md:gap-3 lg:gap-1 lg:absolute lg:top-0 lg:translate-x-full lg:right-0 lg:mt-0 lg:pl-2\n",
           "",
         ]);
         return (
-          (tq = function () {
+          (tO = function () {
             return e;
           }),
           e
@@ -2105,8 +2105,8 @@
             F = S.messages,
             B = S.variantIds,
             L = (0, ep.kP)().session,
-            O = (0, E.x_)(),
-            q = (0, en.WS)(),
+            q = (0, E.x_)(),
+            O = (0, en.WS)(),
             U = (0, b._)((0, w.useState)(!1), 2),
             Q = U[0],
             H = U[1],
@@ -2159,7 +2159,7 @@
                 return (
                   (G &&
                     (null == F ? void 0 : F[0]) != null &&
-                    (0, eO.Rc)(F[0].message)) ||
+                    (0, eq.Rc)(F[0].message)) ||
                   _
                 );
               },
@@ -2168,13 +2168,13 @@
             ev = (0, w.useCallback)(
               function () {
                 1 === F.length &&
-                  (q(
+                  (O(
                     R === eL.uU.User ? er.s6.editPrompt : er.s6.editCompletion,
                     { id: F[0].message.id, threadId: N.tQ.getServerThreadId(l) }
                   ),
                   H(!0));
               },
-              [F, q, R, l]
+              [F, O, R, l]
             ),
             ex = (0, w.useCallback)(function () {
               H(!1);
@@ -2186,10 +2186,10 @@
                     t.message.author.role !== eL.uU.Assistant ||
                     "all" !== t.message.recipient
                     ? e
-                    : e + (e ? "\n\n" : "") + (0, eO.RR)(t.message);
+                    : e + (e ? "\n\n" : "") + (0, eq.RR)(t.message);
                 }, "");
                 navigator.clipboard.writeText(e),
-                  q(er.s6.copyToClipboard, {
+                  O(er.s6.copyToClipboard, {
                     threadId: N.tQ.getServerThreadId(l),
                     id: F[0].message.id,
                     eventSource: "mouse",
@@ -2197,7 +2197,7 @@
                   }),
                   eB.m.logEvent("chatgpt_copy_to_clipboard");
               },
-              [eg, q, F, l]
+              [eg, O, F, l]
             ),
             ey = (0, w.useCallback)(
               function (e) {
@@ -2221,7 +2221,7 @@
           );
           var e_ = (0, w.useMemo)(
               function () {
-                return eq.Cv.getRequestIdFromConversationTurn(S);
+                return eO.Cv.getRequestIdFromConversationTurn(S);
               },
               [S]
             ),
@@ -2289,22 +2289,22 @@
                 if (!ea) return { avatarIcon: t$, avatarColor: tH };
                 if (eM && F.length > 0) {
                   var e = F[F.length - 1],
-                    t = (0, eO.rH)(e.message);
+                    t = (0, eq.rH)(e.message);
                   switch (t) {
-                    case eO.Cs.Text:
-                      if ((0, eO.RR)(e.message).length > 0 || F.length > 1)
+                    case eq.Cs.Text:
+                      if ((0, eq.RR)(e.message).length > 0 || F.length > 1)
                         return { avatarIcon: "text", avatarColor: tG };
                       break;
-                    case eO.Cs.Browsing:
-                    case eO.Cs.BrowseTool:
+                    case eq.Cs.Browsing:
+                    case eq.Cs.BrowseTool:
                       return { avatarIcon: "browsing", avatarColor: tG };
-                    case eO.Cs.Code:
-                    case eO.Cs.CodeExecutionOutput:
+                    case eq.Cs.Code:
+                    case eq.Cs.CodeExecutionOutput:
                       return { avatarIcon: "code", avatarColor: tG };
-                    case eO.Cs.Plugin:
-                    case eO.Cs.PluginTool:
+                    case eq.Cs.Plugin:
+                    case eq.Cs.PluginTool:
                       var n =
-                          t === eO.Cs.Plugin
+                          t === eq.Cs.Plugin
                             ? e.message.recipient
                             : e.message.author.name,
                         r = null == n ? void 0 : n.split(".")[0],
@@ -2336,26 +2336,26 @@
                 var e = [];
                 return (
                   F.forEach(function (t, n) {
-                    var r = (0, eO.rH)(t.message),
+                    var r = (0, eq.rH)(t.message),
                       a = null == F ? void 0 : F[n - 1],
                       i =
                         null != a &&
-                        ((0, eO.lD)(a.message) || (0, eO.qs)(t.message)),
-                      o = r === eO.Cs.Text && (0, eO.RR)(t.message);
-                    if (r === eO.Cs.Browsing || r === eO.Cs.BrowseTool) {
+                        ((0, eq.lD)(a.message) || (0, eq.qs)(t.message)),
+                      o = r === eq.Cs.Text && (0, eq.RR)(t.message);
+                    if (r === eq.Cs.Browsing || r === eq.Cs.BrowseTool) {
                       var s = e[e.length - 1];
                       (null == s ? void 0 : s.type) === d.Browsing
                         ? s.messages.push(t)
                         : e.push({ type: d.Browsing, messages: [t] });
-                    } else if (r === eO.Cs.Plugin || r === eO.Cs.PluginTool) {
+                    } else if (r === eq.Cs.Plugin || r === eq.Cs.PluginTool) {
                       var l = e[e.length - 1];
-                      r === eO.Cs.PluginTool &&
+                      r === eq.Cs.PluginTool &&
                       (null == l ? void 0 : l.type) === d.Plugin
                         ? l.messages.push(t)
                         : e.push({ type: d.Plugin, messages: [t] });
-                    } else if (r === eO.Cs.Code)
+                    } else if (r === eq.Cs.Code)
                       e.push({ type: d.Code, message: t });
-                    else if (r === eO.Cs.CodeExecutionOutput)
+                    else if (r === eq.Cs.CodeExecutionOutput)
                       e.push({ type: d.CodeExecutionOutput, message: t });
                     else if (i && null != o) {
                       var u = e.pop();
@@ -2410,7 +2410,7 @@
             eQ =
               !I &&
               !eE &&
-              O &&
+              q &&
               G &&
               !k &&
               !Q &&
@@ -2524,7 +2524,7 @@
                   $isMessageRedesign: V,
                   onClick: ev,
                   className: (0, z.Z)(
-                    !V && O && "md:invisible md:group-hover:visible"
+                    !V && q && "md:invisible md:group-hover:visible"
                   ),
                   children: (0, y.jsx)(el.ZP, { icon: C.vPQ }),
                 })
@@ -2722,7 +2722,7 @@
                       }),
                       !V &&
                         eY &&
-                        O &&
+                        q &&
                         (0, y.jsx)(tR.Z, {
                           currentPage: $,
                           onChangeIndex: function (e) {
@@ -2752,7 +2752,7 @@
                         }),
                       (0, y.jsx)(tJ, { children: eD }),
                       V
-                        ? (!O || e3 || null != e5) &&
+                        ? (!q || e3 || null != e5) &&
                           !k &&
                           (0, y.jsxs)("div", {
                             className: "mt-2 flex flex-col gap-4",
@@ -2770,7 +2770,7 @@
                                       className:
                                         "rounded-xl border border-gray-100 bg-white p-1 dark:border-gray-600 dark:bg-gray-700",
                                     }),
-                                  !O && e4(),
+                                  !q && e4(),
                                 ],
                               }),
                               e5,
@@ -2779,7 +2779,7 @@
                         : (0, y.jsxs)(y.Fragment, {
                             children: [
                               eK &&
-                                O &&
+                                q &&
                                 (0, y.jsx)(t1, {
                                   $hidden: 0 !== x.size,
                                   children: eX,
@@ -2788,7 +2788,7 @@
                                 (0, y.jsxs)("div", {
                                   className: "flex justify-between lg:block",
                                   children: [
-                                    !O &&
+                                    !q &&
                                       eY &&
                                       (0, y.jsx)(tR.Z, {
                                         currentPage: $,
@@ -2804,7 +2804,7 @@
                                         ),
                                       }),
                                     eK &&
-                                      !O &&
+                                      !q &&
                                       (0, y.jsx)(t1, {
                                         $hidden: eM,
                                         children: eX,
@@ -2822,7 +2822,7 @@
                     ],
                   }),
                   V &&
-                    O &&
+                    q &&
                     !Q &&
                     !k &&
                     (!I || G) &&
@@ -2847,12 +2847,12 @@
         }),
         tK = et.Z.div(tB()),
         tX = et.Z.button(tL()),
-        t0 = et.Z.button(tO(), function (e) {
+        t0 = et.Z.button(tq(), function (e) {
           return e.$isMessageRedesign
             ? "text-gray-500 enabled:hover:text-gray-700 enabled:dark:hover:text-gray-400 rounded-sm"
             : "rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400";
         }),
-        t1 = et.Z.div(tq(), function (e) {
+        t1 = et.Z.div(tO(), function (e) {
           return e.$hidden ? "invisible" : "visible";
         }),
         t2 = et.Z.div(tU()),
@@ -3065,23 +3065,24 @@
           ],
         });
       }
-      var nh = n(75515),
-        ng = n(96237),
-        np = n(90209),
-        nv = n(68789),
-        nx = n(7137),
-        nb = n(76483),
-        ny = n(97739),
-        nj = n(2827),
-        nk = n(32402),
-        nw = n(27009);
-      function nC(e) {
+      var nh = n(37812),
+        ng = n(75515),
+        np = n(96237),
+        nv = n(90209),
+        nx = n(68789),
+        nb = n(7137),
+        ny = n(76483),
+        nj = n(97739),
+        nk = n(2827),
+        nw = n(32402),
+        nC = n(27009);
+      function n_(e) {
         var t = e.disabled,
           n = e.getInputProps,
           r = e.onClick,
           a = (0, ee.Z)();
         return (0, y.jsxs)(tI.u, {
-          label: a.formatMessage(n_.uploadFile),
+          label: a.formatMessage(nM.uploadFile),
           side: "top",
           sideOffset: 4,
           children: [
@@ -3093,14 +3094,14 @@
               color: "none",
               className:
                 "rounded-full bg-gray-500 p-0 text-white hover:bg-black",
-              "aria-label": a.formatMessage(n_.uploadFile),
+              "aria-label": a.formatMessage(nM.uploadFile),
               children: (0, y.jsx)(el.ZP, { icon: C.OvN, size: "small" }),
             }),
             (0, y.jsx)("input", (0, v._)({}, n({ className: "hidden" }))),
           ],
         });
       }
-      var n_ = (0, M.vU)({
+      var nM = (0, M.vU)({
           uploadFile: {
             id: "PromptFilePicker.uploadFile",
             defaultMessage: "Upload file",
@@ -3117,27 +3118,18 @@
             description: "Error message when too many files are uploaded",
           },
         }),
-        nM = n(97688),
-        nT = Math.floor(Math.log(1501) / Math.log(1.5)),
-        nN = { duration: 20, hasCloseButton: !0 },
-        nI = n(56115),
-        nZ = Math.floor(Math.log(1201) / Math.log(2)),
-        nP = { duration: 20, hasCloseButton: !0 },
-        nS = n(30931),
-        nR = n(97732);
-      function nD() {
+        nT = n(97688),
+        nN = Math.floor(Math.log(1501) / Math.log(1.5)),
+        nI = { duration: 20, hasCloseButton: !0 },
+        nZ = n(56115),
+        nP = Math.floor(Math.log(1201) / Math.log(2)),
+        nS = { duration: 20, hasCloseButton: !0 },
+        nR = n(30931),
+        nD = n(97732);
+      function nA() {
         var e = (0, U._)([
           "absolute inset-0 bg-gray-100 opacity-80 flex gap-2 justify-center items-center rounded-xl dark:bg-gray-800 dark:text-gray-100",
         ]);
-        return (
-          (nD = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function nA() {
-        var e = (0, U._)(["mb-3 mx-[10px] md:mx-0"]);
         return (
           (nA = function () {
             return e;
@@ -3146,9 +3138,7 @@
         );
       }
       function nE() {
-        var e = (0, U._)([
-          "absolute p-1 rounded-md bottom-[10px] md:bottom-3 md:p-2 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 disabled:text-gray-400 enabled:bg-brand-purple text-white",
-        ]);
+        var e = (0, U._)(["mb-3 mx-[10px] md:mx-0"]);
         return (
           (nE = function () {
             return e;
@@ -3157,7 +3147,9 @@
         );
       }
       function nF() {
-        var e = (0, U._)(["absolute left-4 bottom-2 md:left-4 md:bottom-3.5"]);
+        var e = (0, U._)([
+          "absolute p-1 rounded-md bottom-[10px] md:bottom-3 md:p-2 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 disabled:text-gray-400 enabled:bg-brand-purple text-white",
+        ]);
         return (
           (nF = function () {
             return e;
@@ -3166,11 +3158,7 @@
         );
       }
       function nB() {
-        var e = (0, U._)([
-          "\nflex flex-col w-full py-[10px] flex-grow md:py-4 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-xl shadow-xs dark:shadow-xs\n",
-          "\n",
-          "\n",
-        ]);
+        var e = (0, U._)(["absolute left-4 bottom-2 md:left-4 md:bottom-3.5"]);
         return (
           (nB = function () {
             return e;
@@ -3180,11 +3168,24 @@
       }
       function nL() {
         var e = (0, U._)([
+          "\nflex flex-col w-full py-[10px] flex-grow md:py-4 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-xl shadow-xs dark:shadow-xs\n",
+          "\n",
+          "\n",
+        ]);
+        return (
+          (nL = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function nq() {
+        var e = (0, U._)([
           "",
           " flex ml-1 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center",
         ]);
         return (
-          (nL = function () {
+          (nq = function () {
             return e;
           }),
           e
@@ -3222,8 +3223,8 @@
           F,
           B,
           L,
-          O,
           q,
+          O,
           U,
           Q,
           H,
@@ -3249,109 +3250,105 @@
           ew,
           eC,
           e_,
-          eM,
-          eT,
-          eN,
-          eI,
-          eZ = e.onAbortCompletion,
-          eP = e.onCreateNewCompletion,
-          eS = e.onRequestMoreCompletions,
-          eR = e.onContinueGenerating,
-          eD = e.currentModelId,
-          eE = e.clientThreadId,
-          eF = e.isCompletionInProgress,
-          eO = e.className,
-          eq = e.disabled,
-          eU = void 0 !== eq && eq,
-          ez = e.shouldRetry,
-          eQ = e.canPause,
-          eH = void 0 !== eQ && eQ,
-          e$ = e.canContinue,
-          eG = void 0 !== e$ && e$,
-          eW = e.suggestions,
-          eV = e.isInteractableSharedThread,
-          eJ = (0, ee.Z)(),
-          eY = (0, N.oq)(eE),
-          eK = (0, N.Hk)(eE),
-          eX = (0, nR.Ri)(eD),
-          e0 = (0, E.w$)(),
-          e1 = (0, en.WS)(),
-          e2 = (0, w.useContext)(A.gt).serviceStatus,
-          e5 = (0, w.useContext)(A.QL).historyDisabled,
-          e3 = (0, w.useRef)(null),
-          e4 = (0, b._)((0, w.useState)(""), 2),
-          e6 = e4[0],
-          e7 = e4[1],
-          e8 = (0, b._)((0, w.useState)(null), 2),
-          e9 = e8[0],
-          te = e8[1],
-          tt = (0, tD.B9)(),
-          tn = null !== eD ? tt.get(eD) : void 0,
-          tr =
+          eM = e.onAbortCompletion,
+          eT = e.onCreateNewCompletion,
+          eN = e.onRequestMoreCompletions,
+          eI = e.onContinueGenerating,
+          eZ = e.currentModelId,
+          eP = e.clientThreadId,
+          eS = e.isCompletionInProgress,
+          eR = e.className,
+          eD = e.disabled,
+          eE = void 0 !== eD && eD,
+          eF = e.shouldRetry,
+          eq = e.canPause,
+          eO = void 0 !== eq && eq,
+          eU = e.canContinue,
+          ez = void 0 !== eU && eU,
+          eQ = e.suggestions,
+          eH = e.isInteractableSharedThread,
+          e$ = (0, ee.Z)(),
+          eG = (0, N.oq)(eP),
+          eW = (0, N.Hk)(eP),
+          eV = (0, nD.Ri)(eZ),
+          eJ = (0, E.w$)(),
+          eY = (0, en.WS)(),
+          eK = (0, w.useContext)(A.gt).serviceStatus,
+          eX = (0, w.useContext)(A.QL).historyDisabled,
+          e0 = (0, w.useRef)(null),
+          e1 = (0, b._)((0, w.useState)(""), 2),
+          e2 = e1[0],
+          e5 = e1[1],
+          e3 = (0, b._)((0, w.useState)(null), 2),
+          e4 = e3[0],
+          e6 = e3[1],
+          e7 = (0, tD.B9)(),
+          e8 = null !== eZ ? e7.get(eZ) : void 0,
+          e9 =
             (0, eA.Fl)().isCodeInterpreterAvailable &&
-            (null == tn
+            (null == e8
               ? void 0
-              : null === (eM = tn.enabledTools) || void 0 === eM
+              : null === (ey = e8.enabledTools) || void 0 === ey
               ? void 0
-              : eM.includes("tools2"))
+              : ey.includes("tools2"))
               ? 2
-              : (null == tn
+              : (null == e8
                   ? void 0
-                  : null === (eT = tn.capabilities) || void 0 === eT
+                  : null === (ew = e8.capabilities) || void 0 === ew
                   ? void 0
-                  : eT.multimodal) !== void 0 ||
-                (null == tn
+                  : ew.multimodal) !== void 0 ||
+                (null == e8
                   ? void 0
-                  : null === (eN = tn.enabledTools) || void 0 === eN
+                  : null === (eC = e8.enabledTools) || void 0 === eC
                   ? void 0
-                  : eN.includes(
+                  : eC.includes(
                       "Hi Jane, come visit us for lunch at OpenAI? \uD83D\uDC9C"
                     ))
               ? 1
               : 0,
-          ta = 0 !== tr,
-          ti = (0, w.useCallback)(
+          te = 0 !== e9,
+          tt = (0, w.useCallback)(
             function (e, t) {
               null === t
-                ? e1(er.s6.uploadFile, { eventSource: "mouse" })
-                : e1(er.s6.uploadFile, { eventSource: "drag" }),
-                e.length > 0 && te(e[0]);
+                ? eY(er.s6.uploadFile, { eventSource: "mouse" })
+                : eY(er.s6.uploadFile, { eventSource: "drag" }),
+                e.length > 0 && e6(e[0]);
             },
-            [e1]
+            [eY]
           ),
-          to = (0, w.useCallback)(
+          tn = (0, w.useCallback)(
             function (e) {
               e[0].errors.forEach(function (e) {
                 var t = (function (e) {
                   var t = e.code,
                     n = e.message;
                   switch (t) {
-                    case nw.jK.FileTooLarge:
-                      return n_.errorFileTooLarge;
-                    case nw.jK.TooManyFiles:
-                      return n_.errorTooManyFiles;
+                    case nC.jK.FileTooLarge:
+                      return nM.errorFileTooLarge;
+                    case nC.jK.TooManyFiles:
+                      return nM.errorTooManyFiles;
                     default:
                       return n;
                   }
                 })(e);
                 "string" == typeof t
-                  ? nM.m.danger(t)
-                  : nM.m.danger(eJ.formatMessage(t, { size: 512 }));
+                  ? nT.m.danger(t)
+                  : nT.m.danger(e$.formatMessage(t, { size: 512 }));
               });
             },
-            [eJ]
+            [e$]
           ),
-          ts = (0, w.useCallback)(function () {
-            te(null);
+          tr = (0, w.useCallback)(function () {
+            e6(null), td(new Date().toString());
           }, []),
-          tl = (0, nb.uI)(
+          ta = (0, ny.uI)(
             (0, v._)(
               {
                 maxFiles: 1,
-                disabled: eU || !ta,
+                disabled: eE || !te,
                 noClick: !0,
-                onDropAccepted: ti,
-                onDropRejected: to,
+                onDropAccepted: tt,
+                onDropRejected: tn,
                 multiple: !1,
                 maxSize: 536870912,
               },
@@ -3363,9 +3360,9 @@
                     r =
                       null !==
                         (n =
-                          null == tn
+                          null == e8
                             ? void 0
-                            : null === (e = tn.capabilities) || void 0 === e
+                            : null === (e = e8.capabilities) || void 0 === e
                             ? void 0
                             : null === (t = e.multimodal) || void 0 === t
                             ? void 0
@@ -3389,40 +3386,45 @@
                     }, {}),
                   };
                 },
-                [tn]
+                [e8]
               )
             )
           ),
-          tu = tl.getRootProps,
-          tc = tl.getInputProps,
-          td = tl.isDragActive,
-          tm = tl.open,
+          ti = ta.getRootProps,
+          to = ta.getInputProps,
+          ts = ta.isDragActive,
+          tl = ta.open,
+          tu = (0, b._)((0, w.useState)(new Date().toString()), 2),
+          tc = tu[0],
+          td = tu[1],
+          tm =
+            null !== e4
+              ? JSON.stringify({
+                  file: e4.name,
+                  modified: e4.lastModified,
+                  size: e4.size,
+                  queryHash: tc,
+                })
+              : null,
           tf =
-            ((u = ((s = o =
-              null !== (i = 2 === tr ? e9 : null)
-                ? JSON.stringify({
-                    file: i.name,
-                    modified: i.lastModified,
-                    size: i.size,
-                  })
-                : null),
-            (l = (0, ej.a)({
-              queryKey: ["interpreterUploadLink", s],
+            ((i = 2 === e9 ? e4 : null),
+            (s = (o = (0, ej.a)({
+              queryKey: ["interpreterUploadLink", tm],
               queryFn: (0, ed._)(function () {
                 return (0, ef.Jh)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        ea.ZP.createFile(i.name, i.size, nk.Ei.AceUpload).catch(
+                        ea.ZP.createFile(i.name, i.size, nw.Ei.AceUpload).catch(
                           function (e) {
                             return (
-                              nM.m.danger(
+                              nT.m.danger(
                                 "Failed to get upload link for file ".concat(
                                   null == i ? void 0 : i.name,
                                   ". Please try again."
                                 ),
-                                nN
+                                nI
                               ),
                               e
                             );
@@ -3435,20 +3437,20 @@
                 });
               }),
               enabled: !!i,
-            }))).data),
-            (c = l.isLoading),
-            (d = l.isError),
-            (h = ((m = null == u ? void 0 : u.upload_url),
-            (f = (0, ej.a)({
-              queryKey: ["startFileUpload", o],
+            })).data),
+            (l = o.isLoading),
+            (u = o.isError),
+            (m = ((c = null == s ? void 0 : s.upload_url),
+            (d = (0, ej.a)({
+              queryKey: ["startFileUpload", tm],
               queryFn: (0, ed._)(function () {
                 return (0, ef.Jh)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        ea.ZP.uploadFileToAzureStorage(i, m).then(function (e) {
-                          if (e.ok) return m;
+                        ea.ZP.uploadFileToAzureStorage(i, c).then(function (e) {
+                          if (e.ok) return c;
                         }),
                       ];
                     case 1:
@@ -3456,14 +3458,14 @@
                   }
                 });
               }),
-              enabled: !!(i && m),
+              enabled: !!(i && c),
             }))).data),
-            (g = f.isLoading),
-            (p = f.isError),
-            (M = ((x = null == u ? void 0 : u.file_id),
-            (j = N.tQ.getServerThreadId(eE)),
-            (k = (0, ej.a)({
-              queryKey: ["startInterpreterUpload", o],
+            (f = d.isLoading),
+            (h = d.isError),
+            (j = ((g = null == s ? void 0 : s.file_id),
+            (p = N.tQ.getServerThreadId(eP)),
+            (x = (0, ej.a)({
+              queryKey: ["startInterpreterUpload", tm],
               queryFn: (0, ed._)(function () {
                 return (0, ef.Jh)(this, function (e) {
                   switch (e.label) {
@@ -3471,16 +3473,16 @@
                       return [
                         4,
                         ea.ZP.startInterpreterUpload(
-                          null != j ? j : null,
-                          x,
-                          eD
+                          null != p ? p : null,
+                          g,
+                          eZ
                         ).catch(function (e) {
                           return (
-                            nM.m.danger(
+                            nT.m.danger(
                               "Failed to start interpreter upload for file ".concat(
                                 null == i ? void 0 : i.name
                               ),
-                              nN
+                              nI
                             ),
                             e
                           );
@@ -3492,32 +3494,32 @@
                 });
               }),
               enabled: !!(
-                null !== x &&
+                null !== g &&
                 null !== i &&
-                void 0 !== h &&
-                null !== eD
+                void 0 !== m &&
+                null !== eZ
               ),
             }))).data),
-            (I = k.isLoading),
-            (Z = k.isError),
-            (R = ((P = null == u ? void 0 : u.file_id),
-            (S = (0, ej.a)({
-              queryKey: ["interpreterFileStatus", o],
+            (k = x.isLoading),
+            (M = x.isError),
+            (P = ((I = null == s ? void 0 : s.file_id),
+            (Z = (0, ej.a)({
+              queryKey: ["interpreterFileStatus", tm],
               queryFn: (0, ed._)(function () {
                 return (0, ef.Jh)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        ea.ZP.getFileDownloadLink(P).catch(function (e) {
+                        ea.ZP.getFileDownloadLink(I).catch(function (e) {
                           return (
-                            nM.m.danger(
+                            nT.m.danger(
                               "Failed to get interpreter upload status for file ".concat(
                                 null == i ? void 0 : i.name
                               ),
-                              nN
+                              nI
                             ),
-                            null == ts || ts(null == i ? void 0 : i.name),
+                            null == tr || tr(null == i ? void 0 : i.name),
                             e
                           );
                         }),
@@ -3527,95 +3529,87 @@
                   }
                 });
               }),
-              enabled: !!(void 0 !== M && i && P),
+              enabled: !!(void 0 !== j && i && I),
               refetchInterval: function (e, t) {
                 var n = t.state.dataUpdateCount;
                 return (null == e ? void 0 : e.status) === "error"
-                  ? (nM.m.danger("File upload failed. Please try again", nN),
-                    null == ts || ts(null == i ? void 0 : i.name),
+                  ? (nT.m.danger("File upload failed. Please try again", nI),
+                    null == tr || tr(null == i ? void 0 : i.name),
                     !1)
-                  : n > nT
-                  ? (nM.m.danger("File upload timed out. Please try again", nN),
-                    null == ts || ts(null == i ? void 0 : i.name),
+                  : n > nN
+                  ? (nT.m.danger("File upload timed out. Please try again", nI),
+                    null == tr || tr(null == i ? void 0 : i.name),
                     !1)
                   : (null == e ? void 0 : e.status) === "retry" &&
                     100 * Math.pow(1.5, n);
               },
             }))).data),
-            (D = S.isLoading),
-            (F = S.isError),
-            (B = (0, w.useMemo)(
+            (S = Z.isLoading),
+            (R = Z.isError),
+            (D = (0, w.useMemo)(
               function () {
-                return M ? 50 : void 0 !== h ? 30 : u ? 10 : void 0;
+                return j ? 50 : void 0 !== m ? 30 : s ? 10 : void 0;
               },
-              [h, M, u]
+              [m, j, s]
             )),
-            (L = d || p || Z || F),
-            (O =
-              c ||
-              g ||
-              I ||
-              D ||
-              (null == R ? void 0 : R.status) !== "success"),
+            (F = u || h || M || R),
+            (B =
+              l ||
+              f ||
+              k ||
+              S ||
+              (null == P ? void 0 : P.status) !== "success"),
             (0, w.useEffect)(
               function () {
-                if (L) {
+                if (F) {
                   var e;
-                  ts(
+                  tr(
                     null !== (e = null == i ? void 0 : i.name) && void 0 !== e
                       ? e
                       : ""
                   );
                 }
               },
-              [null == i ? void 0 : i.name, L, ts]
+              [null == i ? void 0 : i.name, F, tr]
             ),
             (0, w.useMemo)(
               function () {
                 var e =
                     null !== i &&
                     (null == i ? void 0 : i.name) &&
-                    (null == R ? void 0 : R.status) === "success" &&
-                    void 0 !== h,
-                  t = e ? { name: i.name, url: h } : null;
+                    (null == P ? void 0 : P.status) === "success" &&
+                    void 0 !== m,
+                  t = e ? { name: i.name, url: m } : null;
                 return {
-                  isLoading: O,
-                  loadingPercentage: L || e ? void 0 : B,
-                  isError: L,
+                  isLoading: B,
+                  loadingPercentage: F || e ? void 0 : D,
+                  isError: F,
                   uploadedFile: t,
                 };
               },
-              [i, null == R ? void 0 : R.status, h, L, O, B]
+              [i, null == P ? void 0 : P.status, m, F, B, D]
             )),
           th =
-            ((q = 1 === tr ? e9 : null),
-            (U = nk.Ei.Multimodal),
-            (G = ((H = Q =
-              null !== q
-                ? JSON.stringify({
-                    file: q.name,
-                    modified: q.lastModified,
-                    size: q.size,
-                  })
-                : null),
-            ($ = (0, ej.a)({
-              queryKey: ["createFile", H],
+            ((L = 1 === e9 ? e4 : null),
+            (q = nw.Ei.Multimodal),
+            (U = (O = (0, ej.a)({
+              queryKey: ["createFile", tm],
               queryFn: (0, ed._)(function () {
                 var e, t, n;
                 return (0, ef.Jh)(this, function (r) {
                   switch (r.label) {
                     case 0:
                       return (
-                        (e = (0, nI.Z)(new Date(), "yyyy-MM-dd_HH-mm-ss")),
-                        (t = q.name.split(".").pop()),
+                        (e = (0, nZ.Z)(new Date(), "yyyy-MM-dd_HH-mm-ss")),
+                        (t = L.name.split(".").pop()),
                         (n = "chatgpt-file-".concat(e, ".").concat(t)),
                         [
                           4,
-                          ea.ZP.createFile(n, q.size, U).catch(function (e) {
+                          ea.ZP.createFile(n, L.size, q).catch(function (e) {
                             throw (
                               (console.error(
                                 "Failed to create file for ".concat(
-                                  null == q ? void 0 : q.name
+                                  null == L ? void 0 : L.name
                                 ),
                                 e.message
                               ),
@@ -3629,78 +3623,79 @@
                   }
                 });
               }),
-              enabled: !!q,
-            }))).data),
-            (W = $.isLoading),
-            (V = $.isError),
-            (J = null == G ? void 0 : G.file_id),
-            (Y = null == G ? void 0 : G.upload_url),
-            (X = (K = (0, ej.a)({
-              queryKey: ["uploadFile", Q],
+              enabled: !!L,
+            })).data),
+            (Q = O.isLoading),
+            (H = O.isError),
+            ($ = null == U ? void 0 : U.file_id),
+            (G = null == U ? void 0 : U.upload_url),
+            (V = (W = (0, ej.a)({
+              queryKey: ["uploadFile", tm],
               queryFn: (0, ed._)(function () {
-                return (0, ef.Jh)(this, function (e) {
-                  switch (e.label) {
+                var e, t, n, r;
+                return (0, ef.Jh)(this, function (a) {
+                  switch (a.label) {
                     case 0:
-                      var t;
-                      return [
-                        4,
-                        ea.ZP.uploadFileToAzureStorage(q, Y).then(
-                          ((t = (0, ed._)(function (e) {
-                            var t;
-                            return (0, ef.Jh)(this, function (n) {
-                              switch (n.label) {
-                                case 0:
-                                  if (e.ok) return [2];
-                                  (t = "Unknown error"), (n.label = 1);
-                                case 1:
-                                  return (
-                                    n.trys.push([1, 3, , 4]), [4, e.text()]
-                                  );
-                                case 2:
-                                  return (t = n.sent()), [3, 4];
-                                case 3:
-                                  return n.sent(), [3, 4];
-                                case 4:
-                                  throw (
-                                    (console.error(
-                                      "File upload failed at blobstore upload step",
-                                      e.status,
-                                      t
-                                    ),
-                                    Error("File upload failed"))
-                                  );
-                              }
-                            });
-                          })),
-                          function (e) {
-                            return t.apply(this, arguments);
-                          })
-                        ),
-                      ];
+                      return (
+                        a.trys.push([0, 7, , 8]),
+                        [4, ea.ZP.uploadFileToAzureStorage(L, G)]
+                      );
                     case 1:
-                      return e.sent(), [4, ea.ZP.markFileUploadComplete(J)];
+                      if ((e = a.sent()).ok) return [3, 6];
+                      (t = "Unknown error"), (a.label = 2);
                     case 2:
-                      return e.sent(), [2, { success: !0 }];
+                      return a.trys.push([2, 4, , 5]), [4, e.text()];
+                    case 3:
+                      return (t = a.sent()), [3, 5];
+                    case 4:
+                      return a.sent(), [3, 5];
+                    case 5:
+                      return (
+                        console.error(
+                          "File upload failed at blobstore upload step",
+                          e.status,
+                          t
+                        ),
+                        ea.ZP.markFileUploadFailed($, t),
+                        [2, { success: !1 }]
+                      );
+                    case 6:
+                      return [3, 8];
+                    case 7:
+                      throw (
+                        (console.error(
+                          "File upload failed due to a network error",
+                          (n = a.sent())
+                        ),
+                        (r = "Unknown error"),
+                        n instanceof Error && (r = n.message),
+                        ea.ZP.markFileUploadFailed($, r),
+                        n)
+                      );
+                    case 8:
+                      return [4, ea.ZP.markFileUploadComplete($)];
+                    case 9:
+                      return a.sent(), [2, { success: !0 }];
                   }
                 });
               }),
-              enabled: !!(q && J && Y),
+              enabled: !!(L && $ && G),
             })).data),
-            (et = K.isLoading),
-            (eo = K.isError),
-            (ec = (eu = (0, ej.a)({
-              queryKey: ["pollForFileReady", Q],
+            (J = W.isLoading),
+            (Y = W.isError),
+            (X = (K = (0, ej.a)({
+              queryKey: ["pollForFileReady", tm],
               queryFn: (0, ed._)(function () {
                 return (0, ef.Jh)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        ea.ZP.getFileDownloadLink(J).catch(function (e) {
+                        ea.ZP.getFileDownloadLink($).catch(function (e) {
                           throw (
                             (console.error(
                               "Filed upload failed during processing ".concat(
-                                null == q ? void 0 : q.name
+                                null == L ? void 0 : L.name
                               ),
                               e.message
                             ),
@@ -3713,53 +3708,50 @@
                   }
                 });
               }),
-              enabled: !!(X && q && J),
+              enabled: !!(V && L && $),
               refetchInterval: function (e, t) {
-                if ((null == e ? void 0 : e.status) === nk.KF.Retry) {
+                if ((null == e ? void 0 : e.status) === nw.KF.Retry) {
                   var n = t.state.dataUpdateCount;
-                  return n > nZ
-                    ? (null == ts || ts(null == q ? void 0 : q.name), !1)
+                  return n > nP
+                    ? (null == tr || tr(null == L ? void 0 : L.name), !1)
                     : 500 * Math.pow(2, n);
                 }
                 return !1;
               },
             })).data),
-            (eh = eu.isLoading),
-            (eg = eu.isError),
-            (ep = null == ec ? void 0 : ec.download_url),
-            (ev = null !== q && "string" == typeof ep && !!J),
-            (ex = V || eo || eg),
-            (eb =
-              W ||
-              et ||
-              eh ||
-              (null == ec ? void 0 : ec.status) === nk.KF.Retry),
-            (ey = (0, w.useMemo)(
+            (et = K.isLoading),
+            (eo = K.isError),
+            (eu = null == X ? void 0 : X.download_url),
+            (ec = null !== L && "string" == typeof eu && !!$),
+            (eh = H || Y || eo),
+            (eg =
+              Q || J || et || (null == X ? void 0 : X.status) === nw.KF.Retry),
+            (ep = (0, w.useMemo)(
               function () {
-                return ev ? 100 : X ? 50 : G ? 10 : 0;
+                return ec ? 100 : V ? 50 : U ? 10 : 0;
               },
-              [ev, X, G]
+              [ec, V, U]
             )),
             (0, w.useEffect)(
               function () {
-                if (ex) {
+                if (eh) {
                   var e;
-                  nM.m.danger("File upload failed", nP),
-                    ts(
-                      null !== (e = null == q ? void 0 : q.name) && void 0 !== e
+                  nT.m.danger("File upload failed", nS),
+                    tr(
+                      null !== (e = null == L ? void 0 : L.name) && void 0 !== e
                         ? e
                         : ""
                     );
                 }
               },
-              [null == q ? void 0 : q.name, ex, ts]
+              [null == L ? void 0 : L.name, eh, tr]
             ),
-            (eC = (ew = (0, b._)(
+            (ex = (ev = (0, b._)(
               ((r = (n = (0, b._)((0, w.useState)([null, null]), 2))[0]),
               (a = n[1]),
               (0, w.useEffect)(
                 function () {
-                  if (!q) {
+                  if (!L) {
                     a([null, null]);
                     return;
                   }
@@ -3771,67 +3763,67 @@
                     }),
                       (t.src = e.result);
                   }),
-                    e.readAsDataURL(q);
+                    e.readAsDataURL(L);
                 },
-                [q]
+                [L]
               ),
               r),
               2
             ))[0]),
-            (e_ = ew[1]),
+            (eb = ev[1]),
             (0, w.useMemo)(
               function () {
-                var e = ev
-                  ? null !== eC && null !== e_
+                var e = ec
+                  ? null !== ex && null !== eb
                     ? {
-                        id: J,
-                        name: q.name,
-                        size: q.size,
-                        url: ep,
-                        width: eC,
-                        height: e_,
+                        id: $,
+                        name: L.name,
+                        size: L.size,
+                        url: eu,
+                        width: ex,
+                        height: eb,
                       }
-                    : { id: J, name: q.name, size: q.size, url: ep }
+                    : { id: $, name: L.name, size: L.size, url: eu }
                   : null;
                 return {
-                  isLoading: eb,
-                  loadingPercentage: ex || ev ? void 0 : ey,
-                  isError: ex,
+                  isLoading: eg,
+                  loadingPercentage: eh || ec ? void 0 : ep,
+                  isError: eh,
                   uploadedFile: e,
                 };
               },
-              [ev, q, J, ep, ex, eb, ey, eC, e_]
+              [ec, L, $, eu, eh, eg, ep, ex, eb]
             )),
           tg = (0, w.useMemo)(
             function () {
-              return 2 === tr ? tf : th;
+              return 2 === e9 ? tf : th;
             },
-            [tr, tf, th]
+            [e9, tf, th]
           ),
           tp = tg.isLoading,
           tv = tg.isError,
           tx = tg.loadingPercentage,
           tb = tg.uploadedFile,
           ty = (0, w.useCallback)(function () {
-            e7(""), te(null), (0, nj.SI)(1, e3.current);
+            e5(""), e6(null), (0, nk.SI)(1, e0.current);
           }, []),
-          tj = "root" !== eY && !eF && !(null == e2 ? void 0 : e2.oof),
-          tk = !!(null === (eI = e3.current) || void 0 === eI
+          tj = "root" !== eG && !eS && !(null == eK ? void 0 : eK.oof),
+          tk = !!(null === (e_ = e0.current) || void 0 === e_
             ? void 0
-            : eI.value),
-          tw = null === e9 ? tk : !tp && !tv,
-          tC = tw && !eU && !eF,
+            : e_.value),
+          tw = null === e4 ? tk : !tp && !tv,
+          tC = tw && !eE && !eS,
           t_ = (0, w.useCallback)(
             function (e, t) {
-              if ((null == e || e.preventDefault(), !eU)) {
+              if ((null == e || e.preventDefault(), !eE)) {
                 var n,
                   r,
                   a =
-                    null === (n = e3.current) || void 0 === n
+                    null === (n = e0.current) || void 0 === n
                       ? void 0
                       : n.value,
                   i = "".concat(
-                    null === (r = e3.current) || void 0 === r
+                    null === (r = e0.current) || void 0 === r
                       ? void 0
                       : r.dataset.id,
                     "-nextPrompt"
@@ -3840,9 +3832,9 @@
                   var o = null != a ? a : "",
                     s = [];
                   tb &&
-                    (2 === tr
+                    (2 === e9
                       ? s.push(tb)
-                      : 1 === tr &&
+                      : 1 === e9 &&
                         "width" in tb &&
                         (o = {
                           content_type: eL.PX.MultimodalText,
@@ -3856,14 +3848,14 @@
                             null != a ? a : "",
                           ],
                         })),
-                    eP(
+                    eT(
                       i,
                       { content: o, attachments: s },
                       { eventSource: e ? "mouse" : "keyboard" },
-                      { suggestions: eW }
+                      { suggestions: eQ }
                     ),
                     ty(),
-                    void 0 !== eW &&
+                    void 0 !== eQ &&
                       (void 0 !== t
                         ? eB.m.logEvent("chatgpt_prompt_use_suggestion", a, {
                             index: "".concat(t),
@@ -3872,29 +3864,29 @@
                 }
               }
             },
-            [eU, ty, tw, eP, eW, tb, tr]
+            [eE, ty, tw, eT, eQ, tb, e9]
           ),
           tM = (0, w.useCallback)(
             function () {
-              eZ("", eK), eS(eY, { eventSource: "mouse" });
+              eM("", eW), eN(eG, { eventSource: "mouse" });
             },
-            [eY, eK, eZ, eS]
+            [eG, eW, eM, eN]
           ),
           tT = (0, w.useCallback)(
             function () {
-              eZ("", eK),
-                e1(er.s6.pauseCompletion, {
-                  threadId: N.tQ.getServerThreadId(eE),
+              eM("", eW),
+                eY(er.s6.pauseCompletion, {
+                  threadId: N.tQ.getServerThreadId(eP),
                   eventSource: "mouse",
                 });
             },
-            [eK, eE, e1, eZ]
+            [eW, eP, eY, eM]
           ),
           tN = (0, w.useCallback)(
             function () {
-              eR(eY);
+              eI(eG);
             },
-            [eY, eR]
+            [eG, eI]
           ),
           tZ = (0, w.useMemo)(
             function () {
@@ -3905,25 +3897,25 @@
                   },
                   handler: function (e) {
                     (e.metaKey ||
-                      (e0 && !e.shiftKey && !e.nativeEvent.isComposing)) &&
+                      (eJ && !e.shiftKey && !e.nativeEvent.isComposing)) &&
                       (e.preventDefault(), t_());
                   },
                 },
                 Escape: {
                   validator: function () {
-                    return eH && eF;
+                    return eO && eS;
                   },
                   handler: function () {
-                    eZ("", eK),
-                      e1(er.s6.pauseCompletion, {
-                        threadId: N.tQ.getServerThreadId(eE),
+                    eM("", eW),
+                      eY(er.s6.pauseCompletion, {
+                        threadId: N.tQ.getServerThreadId(eP),
                         eventSource: "keyboard",
                       });
                   },
                 },
               };
             },
-            [tC, e0, eF, t_, eH, eZ, eK, e1, eE]
+            [tC, eJ, eS, t_, eO, eM, eW, eY, eP]
           ),
           tP = (0, w.useCallback)(
             function (e) {
@@ -3936,7 +3928,7 @@
           ),
           tS = (0, w.useCallback)(
             function (e) {
-              if (e.clipboardData.files.length > 0 && 1 === tr) {
+              if (e.clipboardData.files.length > 0 && 1 === e9) {
                 var t,
                   n,
                   r,
@@ -3945,9 +3937,9 @@
                   !(
                     null !==
                       (r =
-                        null == tn
+                        null == e8
                           ? void 0
-                          : null === (t = tn.capabilities) || void 0 === t
+                          : null === (t = e8.capabilities) || void 0 === t
                           ? void 0
                           : null === (n = t.multimodal) || void 0 === n
                           ? void 0
@@ -3956,80 +3948,80 @@
                       : []
                   ).includes(a.type)
                 ) {
-                  nM.m.danger(
-                    eJ.formatMessage(nJ.unsupportedFileType, {
+                  nT.m.danger(
+                    e$.formatMessage(nY.unsupportedFileType, {
                       file_type: a.type,
                     })
                   ),
                     e.preventDefault();
                   return;
                 }
-                te(a);
+                e6(a);
               }
             },
-            [tn, te, tr, eJ]
+            [e8, e6, e9, e$]
           );
         (0, w.useEffect)(function () {
           var e;
-          null === (e = e3.current) || void 0 === e || e.focus();
+          null === (e = e0.current) || void 0 === e || e.focus();
         }, []),
           (0, w.useEffect)(
             function () {
-              te(null);
+              e6(null);
             },
-            [eD]
+            [eZ]
           );
         var tR = (0, T.hz)().has(ei.uj),
-          tA = ez || tj || eG || eH,
-          tE = e0 ? "neutral" : "none",
+          tA = eF || tj || ez || eO,
+          tE = eJ ? "neutral" : "none",
           tF = (0, w.useMemo)(
             function () {
               return (0, y.jsxs)("div", {
-                className: ez ? "w-full" : "",
+                className: eF ? "w-full" : "",
                 children: [
-                  ez &&
+                  eF &&
                     (0, y.jsx)("div", {
                       className: "mb-3 text-center text-xs",
                       children: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, nJ.errorGeneratingResponse)
+                        (0, v._)({}, nY.errorGeneratingResponse)
                       ),
                     }),
-                  (0, y.jsxs)(nV, {
-                    $shouldRetry: ez,
+                  (0, y.jsxs)(nJ, {
+                    $shouldRetry: eF,
                     children: [
-                      !ez &&
+                      !eF &&
                         tR &&
-                        eW &&
-                        (0, y.jsx)(nU, {
-                          suggestions: eW,
-                          shouldRetry: ez,
-                          currentInputRef: e3,
-                          onSelectSuggestion: e7,
+                        eQ &&
+                        (0, y.jsx)(nz, {
+                          suggestions: eQ,
+                          shouldRetry: eF,
+                          currentInputRef: e0,
+                          onSelectSuggestion: e5,
                           handleCreateNewCompletion: t_,
                         }),
                       tj &&
                         (0, y.jsxs)(es.z, {
                           as: "button",
-                          color: ez ? "primary" : tE,
+                          color: eF ? "primary" : tE,
                           onClick: tM,
                           className: (0, z.Z)(
-                            ez ? "m-auto" : "-z-0 border-0 md:border"
+                            eF ? "m-auto" : "-z-0 border-0 md:border"
                           ),
                           children: [
                             (0, y.jsx)(el.ZP, {
                               icon: C.Qxo,
-                              size: e0 ? "xsmall" : "small",
+                              size: eJ ? "xsmall" : "small",
                               className: "flex-shrink-0",
                             }),
-                            (e0 || ez) &&
+                            (eJ || eF) &&
                               (0, y.jsx)(
                                 _.Z,
-                                (0, v._)({}, nJ.regenerateResponse)
+                                (0, v._)({}, nY.regenerateResponse)
                               ),
                           ],
                         }),
-                      eG &&
+                      ez &&
                         (0, y.jsxs)(es.z, {
                           as: "button",
                           color: "neutral",
@@ -4039,17 +4031,17 @@
                             (0, y.jsx)(el.ZP, {
                               icon: C.lV_,
                               className: "-rotate-180",
-                              size: e0 ? "xsmall" : "small",
+                              size: eJ ? "xsmall" : "small",
                             }),
-                            e0 &&
+                            eJ &&
                               (0, y.jsx)(
                                 _.Z,
-                                (0, v._)({}, nJ.continueGenerating)
+                                (0, v._)({}, nY.continueGenerating)
                               ),
                           ],
                         }),
-                      eH &&
-                        eF &&
+                      eO &&
+                        eS &&
                         (0, y.jsxs)(es.z, {
                           as: "button",
                           color: "neutral",
@@ -4058,10 +4050,10 @@
                           children: [
                             (0, y.jsx)(el.ZP, {
                               icon: C.jxP,
-                              size: e0 ? "xsmall" : "small",
+                              size: eJ ? "xsmall" : "small",
                             }),
-                            e0 &&
-                              (0, y.jsx)(_.Z, (0, v._)({}, nJ.stopGenerating)),
+                            eJ &&
+                              (0, y.jsx)(_.Z, (0, v._)({}, nY.stopGenerating)),
                           ],
                         }),
                     ],
@@ -4069,16 +4061,16 @@
                 ],
               });
             },
-            [ez, tR, eW, t_, tj, tE, tM, e0, eG, tN, eH, eF, tT]
+            [eF, tR, eQ, t_, tj, tE, tM, eJ, ez, tN, eO, eS, tT]
           );
         (0, w.useImperativeHandle)(t, function () {
-          return { setInputValue: e7 };
+          return { setInputValue: e5 };
         });
         var tB = tC
-          ? { backgroundColor: null == eX ? void 0 : eX.backgroundColor }
+          ? { backgroundColor: null == eV ? void 0 : eV.backgroundColor }
           : {};
         return (0, y.jsx)("form", {
-          className: eO,
+          className: eR,
           onSubmit: t_,
           children: (0, y.jsxs)(
             "div",
@@ -4088,75 +4080,75 @@
                   className:
                     "relative flex h-full flex-1 items-stretch md:flex-col",
                 },
-                tu()
+                ti()
               ),
               {
                 children: [
-                  e0 && tA && tF,
-                  !ez &&
-                    (0, y.jsxs)(nW, {
-                      $disabled: ez,
-                      $historyDisabled: e5,
+                  eJ && tA && tF,
+                  !eF &&
+                    (0, y.jsxs)(nV, {
+                      $disabled: eF,
+                      $historyDisabled: eX,
                       children: [
-                        e9 &&
-                          (0, y.jsx)(nH, {
-                            children: (0, y.jsx)(nS.Z, {
+                        e4 &&
+                          (0, y.jsx)(n$, {
+                            children: (0, y.jsx)(nR.Z, {
                               onRemoveFileClick: function () {
-                                return te(null);
+                                return e6(null);
                               },
-                              file: e9,
+                              file: e4,
                               loadingPercentage: tx,
                             }),
                           }),
-                        (0, y.jsx)(nj.ZP, {
-                          id: nz,
+                        (0, y.jsx)(nk.ZP, {
+                          id: nQ,
                           tabIndex: 0,
-                          value: e6,
-                          "data-id": eY,
-                          ref: e3,
+                          value: e2,
+                          "data-id": eG,
+                          ref: e0,
                           style: { maxHeight: "200px" },
                           rows: 1,
                           onKeyDown: tP,
                           onChange: function (e) {
-                            e7(e.target.value);
+                            e5(e.target.value);
                           },
                           onPaste: tS,
-                          placeholder: eV
-                            ? eJ.formatMessage(
-                                nJ.continueSharedConversationPlaceholder
+                          placeholder: eH
+                            ? e$.formatMessage(
+                                nY.continueSharedConversationPlaceholder
                               )
-                            : eJ.formatMessage(nJ.placeholder),
+                            : e$.formatMessage(nY.placeholder),
                           className: (0, z.Z)(
                             "m-0 w-full resize-none border-0 bg-transparent p-0 pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pr-12",
-                            !e9 && ta ? "pl-12 md:pl-[30px]" : "pl-3 md:pl-0"
+                            !e4 && te ? "pl-12 md:pl-[30px]" : "pl-3 md:pl-0"
                           ),
-                          disabled: ez,
+                          disabled: eF,
                         }),
-                        !e9 &&
-                          ta &&
-                          (0, y.jsx)(nG, {
-                            children: (0, y.jsx)(nC, {
-                              onClick: tm,
-                              disabled: ez,
-                              getInputProps: tc,
+                        !e4 &&
+                          te &&
+                          (0, y.jsx)(nW, {
+                            children: (0, y.jsx)(n_, {
+                              onClick: tl,
+                              disabled: eF,
+                              getInputProps: to,
                             }),
                           }),
-                        (0, y.jsx)(n$, {
-                          disabled: !tC || ez,
+                        (0, y.jsx)(nG, {
+                          disabled: !tC || eF,
                           style: tB,
                           className: (0, z.Z)(
                             "bottom-1.5",
-                            eF
+                            eS
                               ? "disabled:bottom-0.5 md:disabled:bottom-0"
                               : "transition-colors disabled:opacity-40"
                           ),
-                          children: eF
+                          children: eS
                             ? (0, y.jsx)("div", {
                                 className: "text-2xl",
-                                children: (0, y.jsx)(nq, {}),
+                                children: (0, y.jsx)(nU, {}),
                               })
                             : (0, y.jsx)(tI.u, {
-                                label: eJ.formatMessage(nJ.sendMessageTooltip),
+                                label: e$.formatMessage(nY.sendMessageTooltip),
                                 children: (0, y.jsx)(el.ZP, {
                                   icon: el.IX,
                                   size: "small",
@@ -4164,23 +4156,23 @@
                                 }),
                               }),
                         }),
-                        td &&
-                          (0, y.jsxs)(nQ, {
+                        ts &&
+                          (0, y.jsxs)(nH, {
                             children: [
                               (0, y.jsx)(el.ZP, { icon: C.tHe }),
-                              eJ.formatMessage(nJ.dragInstructions),
+                              e$.formatMessage(nY.dragInstructions),
                             ],
                           }),
                       ],
                     }),
-                  !e0 && tA && tF,
+                  !eJ && tA && tF,
                 ],
               }
             )
           ),
         });
       });
-      function nq() {
+      function nU() {
         var e = (0, b._)((0, w.useState)(0), 2),
           t = e[0],
           n = e[1];
@@ -4204,7 +4196,7 @@
           );
         return (0, y.jsx)(y.Fragment, { children: r });
       }
-      function nU(e) {
+      function nz(e) {
         var t = e.suggestions,
           n = e.shouldRetry,
           r = e.currentInputRef,
@@ -4247,10 +4239,10 @@
                             className:
                               "absolute bottom-0 right-0 top-0 flex items-center bg-gradient-to-l from-gray-100 from-[60%] pl-6 pr-2 text-gray-700 opacity-0 group-hover:opacity-100 dark:from-gray-700 dark:text-gray-200",
                             children: (0, y.jsx)(tI.u, {
-                              label: o.formatMessage(nJ.suggestionTooltip),
+                              label: o.formatMessage(nY.suggestionTooltip),
                               side: "top",
                               children: (0, y.jsx)(el.ZP, {
-                                icon: ny.Z,
+                                icon: nj.Z,
                                 size: "small",
                               }),
                             }),
@@ -4263,13 +4255,13 @@
           })
         );
       }
-      var nz = "prompt-textarea",
-        nQ = et.Z.div(nD()),
+      var nQ = "prompt-textarea",
         nH = et.Z.div(nA()),
-        n$ = et.Z.button(nE()),
-        nG = et.Z.div(nF()),
-        nW = et.Z.div(
-          nB(),
+        n$ = et.Z.div(nE()),
+        nG = et.Z.button(nF()),
+        nW = et.Z.div(nB()),
+        nV = et.Z.div(
+          nL(),
           function (e) {
             return e.$historyDisabled
               ? "bg-gray-900 text-white shadow-xs dark:bg-gray-900 dark:text-white dark:shadow-xs"
@@ -4279,10 +4271,10 @@
             return e.$disabled && "bg-gray-100";
           }
         ),
-        nV = et.Z.div(nL(), function (e) {
+        nJ = et.Z.div(nq(), function (e) {
           return e.$shouldRetry ? "" : "h-full";
         }),
-        nJ = (0, M.vU)({
+        nY = (0, M.vU)({
           errorGeneratingResponse: {
             id: "PromptTextarea.errorGeneratingResponse",
             defaultMessage: "There was an error generating a response",
@@ -4343,20 +4335,9 @@
             description: "Error shown when an invalid file type is uploaded",
           },
         });
-      function nY() {
-        var e = (0, U._)([
-          "absolute w-[2.5px] h-5 -rotate-45 -top-0.5 left-1.5 bg-gray-500 border-[0.5px] border-gray-100 group-hover/toggle:bg-red-500 dark:border-[#4E4F60]",
-        ]);
-        return (
-          (nY = function () {
-            return e;
-          }),
-          e
-        );
-      }
       function nK() {
         var e = (0, U._)([
-          "group/options flex flex-col rounded-xl border border-gray-100 bg-white text-left shadow-xxs dark:text-gray-100 dark:bg-gray-900 dark:border-gray-800 dark:shadow-xs mx-2 sm:mx-1 overflow-hidden",
+          "absolute w-[2.5px] h-5 -rotate-45 -top-0.5 left-1.5 bg-gray-500 border-[0.5px] border-gray-100 group-hover/toggle:bg-red-500 dark:border-[#4E4F60]",
         ]);
         return (
           (nK = function () {
@@ -4367,7 +4348,7 @@
       }
       function nX() {
         var e = (0, U._)([
-          "px-5 flex gap-2.5 flex-col py-4 whitespace-pre-line",
+          "group/options flex flex-col rounded-xl border border-gray-100 bg-white text-left shadow-xxs dark:text-gray-100 dark:bg-gray-900 dark:border-gray-800 dark:shadow-xs mx-2 sm:mx-1 overflow-hidden",
         ]);
         return (
           (nX = function () {
@@ -4377,7 +4358,9 @@
         );
       }
       function n0() {
-        var e = (0, U._)(["block dark:text-white text-gray-900"]);
+        var e = (0, U._)([
+          "px-5 flex gap-2.5 flex-col py-4 whitespace-pre-line",
+        ]);
         return (
           (n0 = function () {
             return e;
@@ -4386,7 +4369,7 @@
         );
       }
       function n1() {
-        var e = (0, U._)(["block text-xs text-gray-500"]);
+        var e = (0, U._)(["block dark:text-white text-gray-900"]);
         return (
           (n1 = function () {
             return e;
@@ -4394,11 +4377,20 @@
           e
         );
       }
-      function n2(e) {
+      function n2() {
+        var e = (0, U._)(["block text-xs text-gray-500"]);
+        return (
+          (n2 = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function n5(e) {
         var t = e.items,
           n = e.value,
           r = e.onChange,
-          a = n8(),
+          a = n9(),
           i = (0, b._)(
             (0, w.useState)(function () {
               return t.reduce(function (e, t) {
@@ -4446,7 +4438,7 @@
                 (u = void 0 !== f ? f : m ? o[e] : e) !== n &&
                   (r(u),
                   s(function (t) {
-                    return (0, em._)((0, v._)({}, t), (0, ng._)({}, e, u));
+                    return (0, em._)((0, v._)({}, t), (0, np._)({}, e, u));
                   }));
             },
             [a, t, o, r, n]
@@ -4503,12 +4495,12 @@
                     ? d
                     : null;
               return (0,
-              y.jsx)(n3, { onToggleItemOpenChanged: m, item: e, isSelected: h, isOtherToggleDropdownOpen: c.size > 0 && !c.has(e.categoryId), currentValue: n, defaultOption: null == v ? void 0 : v.value, onChange: l, currentIcon: x, displayCurrentValue: h && e.showSelectedValueBelow && null !== (f = null == v ? void 0 : v.name) && void 0 !== f ? f : "", contentAlign: ((a = t.length), 0 === r ? "start" : r === a - 1 ? "end" : "center") }, r);
+              y.jsx)(n4, { onToggleItemOpenChanged: m, item: e, isSelected: h, isOtherToggleDropdownOpen: c.size > 0 && !c.has(e.categoryId), currentValue: n, defaultOption: null == v ? void 0 : v.value, onChange: l, currentIcon: x, displayCurrentValue: h && e.showSelectedValueBelow && null !== (f = null == v ? void 0 : v.name) && void 0 !== f ? f : "", contentAlign: ((a = t.length), 0 === r ? "start" : r === a - 1 ? "end" : "center") }, r);
             }),
           }),
         });
       }
-      function n5(e) {
+      function n3(e) {
         var t = e.item,
           n = e.isSelected,
           r = e.isOtherToggleDropdownOpen,
@@ -4518,7 +4510,7 @@
           s = e.displayCurrentValue,
           l = null != o ? o : t.icon,
           u = t.options.length > 1,
-          c = n8();
+          c = n9();
         return (0, y.jsxs)("div", {
           className: (0, z.Z)(
             "group/button",
@@ -4547,7 +4539,7 @@
                       n ? t.buttonActiveClass : t.buttonHoverClass
                     ),
                   }),
-                t.disabled && (0, y.jsx)(rt, {}),
+                t.disabled && (0, y.jsx)(rn, {}),
               ],
             }),
             (0, y.jsx)("span", {
@@ -4560,12 +4552,12 @@
             c &&
               n &&
               (0, y.jsx)(el.ZP, {
-                icon: u ? nx.NR5 : nx.DAO,
+                icon: u ? C.bTu : nb.DAO,
                 className: "toggle-item-button-open ml-0.5 text-gray-500",
               }),
             c &&
               (0, y.jsx)(el.ZP, {
-                icon: nx.UdN,
+                icon: C.rH8,
                 className: "toggle-item-button-closed ml-0.5 text-gray-500",
               }),
             null != s &&
@@ -4578,7 +4570,7 @@
           ],
         });
       }
-      function n3(e) {
+      function n4(e) {
         var t = e.item,
           n = e.isSelected,
           r = e.defaultOption,
@@ -4595,14 +4587,14 @@
           h = (0, w.useRef)(null),
           g = t.options.length > 1,
           p = !(void 0 === t.description && void 0 === t.disclaimer),
-          v = n8(),
+          v = n9(),
           x = (0, w.useCallback)(
             function (e) {
               f(e), u(t.categoryId, !!e);
             },
             [t.categoryId, u]
           );
-        return (0, y.jsx)(nv.fC, {
+        return (0, y.jsx)(nx.fC, {
           open: m,
           modal: !1,
           children: (0, y.jsxs)("li", {
@@ -4614,14 +4606,14 @@
               return !v && x(void 0);
             },
             children: [
-              (0, y.jsx)(nv.xz, {
+              (0, y.jsx)(nx.xz, {
                 ref: h,
                 className: "w-full cursor-pointer",
                 disabled: v && !n,
                 onClick: function (e) {
                   v && (e.stopPropagation(), e.preventDefault());
                 },
-                children: (0, y.jsx)(n5, {
+                children: (0, y.jsx)(n3, {
                   isOpen: !!m,
                   isOtherToggleDropdownOpen: c,
                   item: t,
@@ -4632,16 +4624,15 @@
                 }),
               }),
               (0, y.jsx)(
-                nv.Uv,
+                nx.Uv,
                 {
-                  children: (0, y.jsx)(nv.VY, {
+                  children: (0, y.jsx)(nx.VY, {
                     className: (0, z.Z)(
-                      "w-full min-w-[100vw] max-w-[100vw] select-none pt-4 font-medium sm:w-[312px] sm:min-w-[312px] md:max-w-none",
+                      "w-full min-w-[100vw] max-w-[100vw] select-none pt-3 font-medium sm:w-[312px] sm:min-w-[312px] md:max-w-none",
                       "will-change-[opacity,transform] radix-side-bottom:animate-slideDownAndFade radix-side-left:animate-slideLeftAndFade radix-side-right:animate-slideRightAndFade radix-side-top:animate-slideUpAndFade",
                       { "sm:min-w-[420px]": "Alpha" === t.name }
                     ),
                     align: l,
-                    alignOffset: -6,
                     onCloseAutoFocus: function (e) {
                       m || e.preventDefault();
                     },
@@ -4650,11 +4641,11 @@
                       e.preventDefault(),
                         null === (t = h.current) || void 0 === t || t.focus();
                     },
-                    children: (0, y.jsxs)(rn, {
+                    children: (0, y.jsxs)(rr, {
                       children: [
-                        p && (0, y.jsx)(n4, { item: t }),
-                        (g || !m) &&
-                          (0, y.jsx)(n6, {
+                        p && (0, y.jsx)(n6, { item: t }),
+                        (g || (!m && !v)) &&
+                          (0, y.jsx)(n7, {
                             defaultOption: n ? o : r,
                             item: t,
                             currentValue: o,
@@ -4662,7 +4653,7 @@
                               var n;
                               a(e, t),
                                 x(void 0),
-                                null === (n = document.getElementById(nz)) ||
+                                null === (n = document.getElementById(nQ)) ||
                                   void 0 === n ||
                                   n.focus();
                             },
@@ -4682,31 +4673,31 @@
           }),
         });
       }
-      function n4(e) {
+      function n6(e) {
         var t = e.item;
-        return (0, y.jsxs)(rr, {
+        return (0, y.jsxs)(ra, {
           className: "text-sm sm:text-base",
           children: [
             void 0 !== t.description &&
-              (0, y.jsx)(ra, { children: t.description }),
+              (0, y.jsx)(ri, { children: t.description }),
             void 0 !== t.disclaimer &&
-              (0, y.jsx)(ri, { children: t.disclaimer }),
+              (0, y.jsx)(ro, { children: t.disclaimer }),
           ],
         });
       }
-      function n6(e) {
+      function n7(e) {
         var t = e.item,
           n = e.className,
           r = e.onChange,
           a = e.currentValue,
           i = e.defaultOption;
-        return (0, y.jsx)(nv.Ee, {
+        return (0, y.jsx)(nx.Ee, {
           defaultValue: i,
           value: a,
           className: n,
           children: t.options.map(function (e, n) {
             return (0, y.jsx)(
-              n7,
+              n8,
               {
                 option: e,
                 selected: a === e.value,
@@ -4724,7 +4715,7 @@
           }),
         });
       }
-      function n7(e) {
+      function n8(e) {
         var t,
           n = e.option,
           r = e.selected,
@@ -4735,7 +4726,7 @@
           l = e.onChange,
           u = e.showBorder,
           c = null !== (t = n.activeIcon) && void 0 !== t ? t : n.icon;
-        return (0, y.jsx)(nv.Rk, {
+        return (0, y.jsx)(nx.Rk, {
           asChild: !0,
           value: n.value,
           onClick: l,
@@ -4772,7 +4763,7 @@
                 children: n.name,
               }),
               n.tags.map(function (e) {
-                return re(e);
+                return rt(e);
               }),
               (0, y.jsx)("span", {
                 className: (0, z.Z)({
@@ -4782,7 +4773,7 @@
                   "text-red-500": s,
                 }),
                 children: (0, y.jsx)(el.ZP, {
-                  icon: s ? np.Z : el.nQ,
+                  icon: s ? nv.Z : el.nQ,
                   className: "h-5 w-5",
                 }),
               }),
@@ -4790,13 +4781,13 @@
           }),
         });
       }
-      var n8 = function () {
+      var n9 = function () {
           return !(0, E.w$)();
         },
-        n9 = new Set(["beta", "confidential", "alpha"]),
-        re = function (e) {
+        re = new Set(["beta", "confidential", "alpha"]),
+        rt = function (e) {
           return (
-            n9.has(e) &&
+            re.has(e) &&
             (0, y.jsx)(
               "span",
               {
@@ -4812,49 +4803,38 @@
             )
           );
         },
-        rt = et.Z.span(nY()),
-        rn = et.Z.div(nK()),
+        rn = et.Z.span(nK()),
         rr = et.Z.div(nX()),
-        ra = et.Z.span(n0()),
+        ra = et.Z.div(n0()),
         ri = et.Z.span(n1()),
-        ro = n(5046);
-      function rs(e) {
+        ro = et.Z.span(n2()),
+        rs = n(5046);
+      function rl(e) {
         var t = e.onModelChange,
           n = e.currentModel,
           r = (0, en.WS)(),
-          a = (0, ro.BT)(),
-          i = (0, nR.ZP)(),
+          a = (0, rs.BT)(),
+          i = (0, nD.ZP)(),
           o = (0, w.useCallback)(
             function (e) {
               a !== e && (t(e), r(er.s6.toggleModel, { model: e }));
             },
             [a, r, t]
           );
-        return (0, y.jsx)(n2, {
+        return (0, y.jsx)(n5, {
           value: null == n ? void 0 : n.id,
           onChange: o,
           items: i,
         });
       }
-      var rl = n(20485),
-        ru = n(12285),
-        rc = n(40638),
-        rd = n(57526),
-        rm = n(99581);
-      function rf() {
-        var e = (0, U._)([
-          "rounded-lg bg-white ring-1 ring-black/10 dark:bg-gray-800 dark:ring-white/20 shadow-[0_1px_7px_0_rgba(0,0,0,0.03)]",
-        ]);
-        return (
-          (rf = function () {
-            return e;
-          }),
-          e
-        );
-      }
+      var ru = n(20485),
+        rc = n(12285),
+        rd = n(40638),
+        rm = n(57526),
+        rf = n(99581);
       function rh() {
         var e = (0, U._)([
-          "absolute z-[17] mt-2 flex max-h-60 w-full flex-col overflow-hidden text-base focus:outline-none dark:last:border-0 sm:text-sm md:w-[100%]",
+          "rounded-lg bg-white ring-1 ring-black/10 dark:bg-gray-800 dark:ring-white/20 shadow-[0_1px_7px_0_rgba(0,0,0,0.03)]",
         ]);
         return (
           (rh = function () {
@@ -4865,7 +4845,7 @@
       }
       function rg() {
         var e = (0, U._)([
-          "absolute z-[17] -ml-[1px] flex flex-col gap-2 p-3 sm:p-4",
+          "absolute z-[17] mt-2 flex max-h-60 w-full flex-col overflow-hidden text-base focus:outline-none dark:last:border-0 sm:text-sm md:w-[100%]",
         ]);
         return (
           (rg = function () {
@@ -4875,7 +4855,9 @@
         );
       }
       function rp() {
-        var e = (0, U._)(["flex items-center gap-2 truncate"]);
+        var e = (0, U._)([
+          "absolute z-[17] -ml-[1px] flex flex-col gap-2 p-3 sm:p-4",
+        ]);
         return (
           (rp = function () {
             return e;
@@ -4884,7 +4866,7 @@
         );
       }
       function rv() {
-        var e = (0, U._)(["h-6 w-6 shrink-0"]);
+        var e = (0, U._)(["flex items-center gap-2 truncate"]);
         return (
           (rv = function () {
             return e;
@@ -4893,9 +4875,7 @@
         );
       }
       function rx() {
-        var e = (0, U._)([
-          "absolute inset-y-0 right-0 flex items-center pr-5 text-gray-800 dark:text-gray-100",
-        ]);
+        var e = (0, U._)(["h-6 w-6 shrink-0"]);
         return (
           (rx = function () {
             return e;
@@ -4905,7 +4885,7 @@
       }
       function rb() {
         var e = (0, U._)([
-          "absolute inset-y-0 right-0 flex items-center pr-3 text-gray-800 dark:text-gray-100",
+          "absolute inset-y-0 right-0 flex items-center pr-5 text-gray-800 dark:text-gray-100",
         ]);
         return (
           (rb = function () {
@@ -4914,8 +4894,19 @@
           e
         );
       }
-      var ry = ["confidential", "alpha", "plus"];
-      function rj(e) {
+      function ry() {
+        var e = (0, U._)([
+          "absolute inset-y-0 right-0 flex items-center pr-3 text-gray-800 dark:text-gray-100",
+        ]);
+        return (
+          (ry = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var rj = ["confidential", "alpha", "plus"];
+      function rk(e) {
         var t = e.selectedOptions,
           n = e.selectedLabel,
           r = e.onChange,
@@ -4947,7 +4938,7 @@
             },
             [r, a]
           );
-        return (0, y.jsx)(ru.R, {
+        return (0, y.jsx)(rc.R, {
           value: t.map(function (e) {
             return e.value;
           }),
@@ -4956,7 +4947,7 @@
           children: function (e) {
             var r = e.open;
             return (0, y.jsx)(
-              rk,
+              rw,
               (0, v._)(
                 {
                   ref: s,
@@ -4972,7 +4963,7 @@
           },
         });
       }
-      var rk = (0, w.forwardRef)(function (e, t) {
+      var rw = (0, w.forwardRef)(function (e, t) {
         var n = e.name,
           r = e.selectedLabel,
           a = e.open,
@@ -5017,12 +5008,12 @@
           : (0, y.jsxs)(y.Fragment, {
               children: [
                 c,
-                (0, y.jsxs)(ru.R.Options, {
+                (0, y.jsxs)(rc.R.Options, {
                   className: "overflow-auto",
                   children: [
                     i.map(function (e, t) {
                       return (0, y.jsx)(
-                        rw,
+                        rC,
                         {
                           value: e.value,
                           disabled: e.disabled,
@@ -5032,11 +5023,11 @@
                               r = t.active;
                             return (0, y.jsxs)(y.Fragment, {
                               children: [
-                                (0, y.jsxs)(rD, {
+                                (0, y.jsxs)(rA, {
                                   children: [
                                     e.imageUrl &&
-                                      (0, y.jsx)(rA, {
-                                        children: (0, y.jsx)(nh.Z, {
+                                      (0, y.jsx)(rE, {
+                                        children: (0, y.jsx)(ng.Z, {
                                           url: e.imageUrl,
                                           name: e.title,
                                           size: "100%",
@@ -5050,7 +5041,7 @@
                                       children: [
                                         e.title,
                                         e.tags.map(function (e) {
-                                          return rN(e);
+                                          return rI(e);
                                         }),
                                         e.customTags,
                                       ],
@@ -5058,22 +5049,22 @@
                                   ],
                                 }),
                                 s && !e.disabled
-                                  ? (0, y.jsx)(r_, { theme: f, selected: n })
+                                  ? (0, y.jsx)(rM, { theme: f, selected: n })
                                   : n &&
-                                    (0, y.jsx)(rC, {
+                                    (0, y.jsx)(r_, {
                                       theme: f,
                                       icon: "mini" === f ? el.HQ : C.UgA,
                                     }),
                                 e.disabled &&
-                                  (0, y.jsx)(rC, {
+                                  (0, y.jsx)(r_, {
                                     theme: f,
-                                    icon: rd.Z,
+                                    icon: rm.Z,
                                     className: "text-red-700 dark:text-red-500",
                                   }),
                                 r &&
                                   p &&
-                                  (0, rm.createPortal)(
-                                    (0, y.jsx)(rT, {
+                                  (0, rf.createPortal)(
+                                    (0, y.jsx)(rN, {
                                       option: e,
                                       dropdownRef: g,
                                     }),
@@ -5090,7 +5081,7 @@
                       ? void 0
                       : o.map(function (e, t) {
                           return (0, y.jsx)(
-                            rw,
+                            rC,
                             {
                               value: e.id,
                               theme: f,
@@ -5102,7 +5093,7 @@
                                         "text-gray-800 dark:text-gray-100",
                                       children: e.label,
                                     }),
-                                    (0, y.jsx)(rC, { theme: f, icon: e.icon }),
+                                    (0, y.jsx)(r_, { theme: f, icon: e.icon }),
                                   ],
                                 });
                               },
@@ -5115,18 +5106,18 @@
               ],
             });
         return (0,
-        y.jsxs)("div", { className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4", children: [(0, y.jsxs)(ru.R.Button, { ref: h, onClick: a ? m : d, className: (0, z.Z)("relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm", "mini" === f ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10" : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20"), children: ["mini" !== f && (0, y.jsx)(ru.R.Label, { className: "block text-xs text-gray-700 dark:text-gray-500", children: n }), (0, y.jsx)("span", { className: "inline-flex w-full truncate", children: (0, y.jsx)("span", { className: "flex h-6 items-center gap-1 truncate", children: r }) }), (0, y.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2", children: (0, y.jsx)(el.ZP, { icon: C.bTu, className: " text-gray-400", "aria-hidden": "true" }) })] }), (0, y.jsx)(rc.u, { show: a, as: w.Fragment, leave: "transition ease-in duration-100", leaveFrom: "opacity-100", leaveTo: "opacity-0", children: (0, y.jsx)(rZ, { ref: g, children: v }) })] });
+        y.jsxs)("div", { className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4", children: [(0, y.jsxs)(rc.R.Button, { ref: h, onClick: a ? m : d, className: (0, z.Z)("relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm", "mini" === f ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10" : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20"), children: ["mini" !== f && (0, y.jsx)(rc.R.Label, { className: "block text-xs text-gray-700 dark:text-gray-500", children: n }), (0, y.jsx)("span", { className: "inline-flex w-full truncate", children: (0, y.jsx)("span", { className: "flex h-6 items-center gap-1 truncate", children: r }) }), (0, y.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2", children: (0, y.jsx)(el.ZP, { icon: C.bTu, className: " text-gray-400", "aria-hidden": "true" }) })] }), (0, y.jsx)(rd.u, { show: a, as: w.Fragment, leave: "transition ease-in duration-100", leaveFrom: "opacity-100", leaveTo: "opacity-0", children: (0, y.jsx)(rP, { ref: g, children: v }) })] });
       });
-      function rw(e) {
+      function rC(e) {
         var t = e.value,
           n = e.disabled,
           r = e.children,
           a = e.theme;
-        return (0, y.jsx)(ru.R.Option, {
+        return (0, y.jsx)(rc.R.Option, {
           className: function (e) {
             var t = e.active;
             return (0, z.Z)(
-              "mini" === a ? rS : rR,
+              "mini" === a ? rR : rD,
               t && !n ? "bg-gray-100 dark:bg-gray-700" : "text-gray-900",
               n &&
                 "cursor-auto bg-gray-50 text-gray-400 dark:bg-gray-700 dark:text-gray-100"
@@ -5136,11 +5127,11 @@
           children: r,
         });
       }
-      function rC(e) {
+      function r_(e) {
         var t = e.icon,
           n = e.className,
           r = e.theme;
-        return (0, y.jsx)("mini" === r ? rE : rF, {
+        return (0, y.jsx)("mini" === r ? rF : rB, {
           children: (0, y.jsx)(el.ZP, {
             icon: t,
             className: (0, z.Z)("h-5 w-5", n),
@@ -5148,11 +5139,11 @@
           }),
         });
       }
-      function r_(e) {
+      function rM(e) {
         var t = e.selected,
           n = e.disabled;
         return "mini" === e.theme
-          ? (0, y.jsxs)(rE, {
+          ? (0, y.jsxs)(rF, {
               children: [
                 (0, y.jsx)(el.ZP, {
                   icon: t ? el.HQ : el.i9,
@@ -5169,7 +5160,7 @@
                   }),
               ],
             })
-          : (0, y.jsx)(rF, {
+          : (0, y.jsx)(rB, {
               children: (0, y.jsx)("div", {
                 className: (0, z.Z)(
                   "flex h-6 w-6 items-center justify-center rounded-full border transition-colors",
@@ -5191,15 +5182,15 @@
               }),
             });
       }
-      function rM(e) {
+      function rT(e) {
         var t = e.showCheckbox,
           n = e.theme;
         return (0, y.jsxs)("div", {
-          className: (0, z.Z)("mini" === n ? rS : rR, "cursor-auto"),
+          className: (0, z.Z)("mini" === n ? rR : rD, "cursor-auto"),
           children: [
-            (0, y.jsxs)(rD, {
+            (0, y.jsxs)(rA, {
               children: [
-                (0, y.jsx)(rA, {
+                (0, y.jsx)(rE, {
                   children: (0, y.jsx)("div", {
                     className: "h-full w-full rounded-sm bg-gray-200",
                   }),
@@ -5209,11 +5200,11 @@
                 }),
               ],
             }),
-            t && (0, y.jsx)(r_, { theme: n, selected: !1, disabled: !0 }),
+            t && (0, y.jsx)(rM, { theme: n, selected: !1, disabled: !0 }),
           ],
         });
       }
-      function rT(e) {
+      function rN(e) {
         var t = e.option,
           n = e.dropdownRef,
           r = (0, b._)((0, w.useState)(), 2),
@@ -5238,7 +5229,7 @@
           [n]
         ),
         a)
-          ? (0, y.jsxs)(rP, {
+          ? (0, y.jsxs)(rS, {
               style: {
                 width: 260,
                 minHeight: a.minHeight,
@@ -5248,12 +5239,12 @@
               children: [
                 t.disabled &&
                   (0, y.jsx)(el.ZP, {
-                    icon: rd.Z,
+                    icon: rm.Z,
                     size: "medium",
                     className: "text-red-700 dark:text-red-500",
                   }),
                 t.imageUrl &&
-                  (0, y.jsx)(nh.Z, {
+                  (0, y.jsx)(ng.Z, {
                     url: t.imageUrl,
                     name: t.title,
                     size: 70,
@@ -5264,7 +5255,7 @@
                     t.title,
                     " ",
                     t.tags.map(function (e) {
-                      return rN(e);
+                      return rI(e);
                     }),
                     " ",
                     t.customTags,
@@ -5278,9 +5269,9 @@
             })
           : null;
       }
-      var rN = function (e) {
+      var rI = function (e) {
           return (
-            ry.includes(e) &&
+            rj.includes(e) &&
             (0, y.jsx)(
               "span",
               {
@@ -5296,33 +5287,24 @@
             )
           );
         },
-        rI = et.Z.div(rf()),
-        rZ = (0, et.Z)(rI)(rh()),
-        rP = (0, et.Z)(rI)(rg()),
-        rS =
-          "group relative flex h-[50px] cursor-pointer select-none items-center overflow-hidden border-b border-black/10 pl-5 pr-12 last:border-0 dark:border-white/20",
+        rZ = et.Z.div(rh()),
+        rP = (0, et.Z)(rZ)(rg()),
+        rS = (0, et.Z)(rZ)(rp()),
         rR =
+          "group relative flex h-[50px] cursor-pointer select-none items-center overflow-hidden border-b border-black/10 pl-5 pr-12 last:border-0 dark:border-white/20",
+        rD =
           "group relative flex h-[42px] cursor-pointer select-none items-center overflow-hidden border-b border-black/10 pl-3 pr-9 last:border-0 dark:border-white/20",
-        rD = et.Z.span(rp()),
         rA = et.Z.span(rv()),
         rE = et.Z.span(rx()),
         rF = et.Z.span(rb()),
-        rB = n(697),
-        rL = n(10604),
+        rB = et.Z.span(ry()),
+        rL = n(697),
+        rq = n(10604),
         rO = n(5759),
-        rq = n(17915),
-        rU = n(38631);
-      function rz() {
-        var e = (0, U._)(["mt-4 flex flex-col gap-4"]);
-        return (
-          (rz = function () {
-            return e;
-          }),
-          e
-        );
-      }
+        rU = n(17915),
+        rz = n(38631);
       function rQ() {
-        var e = (0, U._)(["text-sm text-red-500"]);
+        var e = (0, U._)(["mt-4 flex flex-col gap-4"]);
         return (
           (rQ = function () {
             return e;
@@ -5330,10 +5312,19 @@
           e
         );
       }
-      var rH = et.Z.div(rz()),
-        r$ = et.Z.div(rQ()),
-        rG = n(49910);
-      function rW(e) {
+      function rH() {
+        var e = (0, U._)(["text-sm text-red-500"]);
+        return (
+          (rH = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var r$ = et.Z.div(rQ()),
+        rG = et.Z.div(rH()),
+        rW = n(49910);
+      function rV(e) {
         var t = e.onClickInstall,
           n = e.onInstallLocalhost,
           r = e.onClose,
@@ -5353,13 +5344,13 @@
             m(!0);
           }, []);
         return d && (null == i ? void 0 : i.scrapeManifestResponse.plugin)
-          ? (0, y.jsx)(rX, {
+          ? (0, y.jsx)(r0, {
               plugin: null == i ? void 0 : i.scrapeManifestResponse.plugin,
               onClickInstall: t,
               onClose: r,
             })
           : l && (null == i ? void 0 : i.scrapeManifestResponse.plugin)
-          ? (0, y.jsx)(rK, {
+          ? (0, y.jsx)(rX, {
               plugin: i.scrapeManifestResponse.plugin,
               manifestAccessToken: i.manifestAccessToken,
               verificationTokens: l,
@@ -5367,7 +5358,7 @@
               onClose: r,
             })
           : i
-          ? (0, y.jsx)(rY, {
+          ? (0, y.jsx)(rK, {
               loadManifestResult: i,
               onRefetch: f,
               onSubmitAuthInfo: u,
@@ -5375,9 +5366,9 @@
               onInstallLocalhost: n,
               onClose: r,
             })
-          : (0, y.jsx)(rV, { onFetch: f, onClose: r });
+          : (0, y.jsx)(rJ, { onFetch: f, onClose: r });
       }
-      function rV(e) {
+      function rJ(e) {
         var t = e.onFetch,
           n = e.onClose,
           r = (0, ep.kP)().session,
@@ -5392,7 +5383,7 @@
           m = c[1],
           f = (0, w.useRef)(null),
           h = (0, w.useRef)(null),
-          g = (0, rq.sd)(),
+          g = (0, rU.sd)(),
           p = g.fetchManifestAndSpec,
           v = g.isLoading;
         (0, w.useEffect)(function () {
@@ -5454,7 +5445,7 @@
             color: "neutral",
             onClick: n,
           }),
-          children: (0, y.jsxs)(rH, {
+          children: (0, y.jsxs)(r$, {
             children: [
               (0, y.jsx)("a", {
                 href: "https://platform.openai.com/docs/plugins/getting-started",
@@ -5481,7 +5472,7 @@
                   ".",
                 ],
               }),
-              (0, y.jsx)(rL.Z, {
+              (0, y.jsx)(rq.Z, {
                 ref: f,
                 name: "url",
                 displayName: "Domain",
@@ -5517,13 +5508,13 @@
                               (0, y.jsxs)("div", {
                                 className: "flex gap-6",
                                 children: [
-                                  (0, y.jsx)(rJ, {
+                                  (0, y.jsx)(rY, {
                                     label: "Bearer",
                                     value: "bearer",
                                     checked: "bearer" === l,
                                     onChange: j,
                                   }),
-                                  (0, y.jsx)(rJ, {
+                                  (0, y.jsx)(rY, {
                                     label: "Basic",
                                     value: "basic",
                                     checked: "basic" === l,
@@ -5537,7 +5528,7 @@
                             className: "flex flex-col gap-2 text-sm",
                             children: [
                               (0, y.jsx)("div", { children: "Access token" }),
-                              (0, y.jsx)(rL.Z, {
+                              (0, y.jsx)(rq.Z, {
                                 ref: h,
                                 name: "manifestToken",
                                 onPressEnter: k,
@@ -5548,12 +5539,12 @@
                       }),
                   ],
                 }),
-              d && (0, y.jsx)(r$, { children: d }),
+              d && (0, y.jsx)(rG, { children: d }),
             ],
           }),
         });
       }
-      function rJ(e) {
+      function rY(e) {
         var t = e.label,
           n = e.value,
           r = e.checked,
@@ -5573,7 +5564,7 @@
           ],
         });
       }
-      function rY(e) {
+      function rK(e) {
         var t = e.loadManifestResult,
           n = e.onRefetch,
           r = e.onSubmitAuthInfo,
@@ -5595,7 +5586,7 @@
           k = (0, w.useRef)(null),
           C = (0, w.useRef)(null),
           _ = (0, w.useRef)(null),
-          M = (0, rq.sd)(),
+          M = (0, rU.sd)(),
           T = M.fetchManifestAndSpec,
           N = M.isLoading,
           I = (0, j.NL)(),
@@ -5629,7 +5620,7 @@
                     );
                   case 1:
                     if (!Z) return [3, 2];
-                    return (0, rq.GI)(d, I, ["installedAip"]), i(d), [3, 15];
+                    return (0, rU.GI)(d, I, ["installedAip"]), i(d), [3, 15];
                   case 2:
                     if (!P) return [3, 8];
                     if (
@@ -5729,11 +5720,11 @@
               color: "neutral",
               onClick: o,
             }),
-          children: (0, y.jsxs)(rH, {
+          children: (0, y.jsxs)(r$, {
             children: [
-              (0, y.jsx)(rG.rC, { manifestValidationInfo: m }),
-              c && (0, y.jsx)(rG.q6, { apiValidationInfo: c }),
-              d && (0, y.jsx)(rU.Z, { plugin: d }),
+              (0, y.jsx)(rW.rC, { manifestValidationInfo: m }),
+              c && (0, y.jsx)(rW.q6, { apiValidationInfo: c }),
+              d && (0, y.jsx)(rz.Z, { plugin: d }),
               P &&
                 !R &&
                 (0, y.jsxs)("div", {
@@ -5744,7 +5735,7 @@
                     }),
                     (0, y.jsx)("div", {
                       className: "mt-2",
-                      children: (0, y.jsx)(rL.Z, {
+                      children: (0, y.jsx)(rq.Z, {
                         ref: k,
                         name: "serviceToken",
                         placeholder: "Service access token",
@@ -5765,7 +5756,7 @@
                     }),
                     (0, y.jsx)("div", {
                       className: "mt-2",
-                      children: (0, y.jsx)(rL.Z, {
+                      children: (0, y.jsx)(rq.Z, {
                         ref: C,
                         name: "clientId",
                         placeholder: "Client ID",
@@ -5776,7 +5767,7 @@
                     }),
                     (0, y.jsx)("div", {
                       className: "mt-2",
-                      children: (0, y.jsx)(rL.Z, {
+                      children: (0, y.jsx)(rq.Z, {
                         ref: _,
                         type: "password",
                         name: "clientSecret",
@@ -5787,12 +5778,12 @@
                     }),
                   ],
                 }),
-              h && (0, y.jsx)(r$, { children: h }),
+              h && (0, y.jsx)(rG, { children: h }),
             ],
           }),
         });
       }
-      function rK(e) {
+      function rX(e) {
         var t = e.plugin,
           n = e.manifestAccessToken,
           r = e.verificationTokens,
@@ -5869,9 +5860,9 @@
             color: "neutral",
             onClick: i,
           }),
-          children: (0, y.jsxs)(rH, {
+          children: (0, y.jsxs)(r$, {
             children: [
-              (0, y.jsx)(rU.Z, { plugin: t }),
+              (0, y.jsx)(rz.Z, { plugin: t }),
               (0, y.jsx)("div", {
                 className: "text-sm",
                 children:
@@ -5881,12 +5872,12 @@
                 className: "text-sm",
                 children: JSON.stringify(r, null),
               }),
-              s && (0, y.jsx)(r$, { children: s }),
+              s && (0, y.jsx)(rG, { children: s }),
             ],
           }),
         });
       }
-      function rX(e) {
+      function r0(e) {
         var t = e.plugin,
           n = e.onClickInstall,
           r = e.onClose,
@@ -5911,7 +5902,7 @@
             color: "neutral",
             onClick: r,
           }),
-          children: (0, y.jsx)(rH, {
+          children: (0, y.jsx)(r$, {
             children: (0, y.jsxs)("div", {
               className: "text-sm",
               children: [
@@ -5941,7 +5932,7 @@
           }),
         });
       }
-      function r0(e) {
+      function r1(e) {
         var t = e.onConfirm,
           n = e.onClose;
         return (0, y.jsx)(eP.Z, {
@@ -5959,7 +5950,7 @@
             color: "neutral",
             onClick: n,
           }),
-          children: (0, y.jsx)(rH, {
+          children: (0, y.jsx)(r$, {
             children: (0, y.jsx)(rO.I, {
               children: (0, y.jsx)(rO.Z, {
                 icon: "\uD83D\uDEA8",
@@ -5970,7 +5961,7 @@
           }),
         });
       }
-      function r1(e) {
+      function r2(e) {
         var t = e.plugin,
           n = e.onInstall,
           r = e.onClose,
@@ -5985,11 +5976,11 @@
           }, []);
         return l
           ? i
-            ? (0, y.jsx)(r5, { plugin: l, onInstall: n, onClose: r })
-            : (0, y.jsx)(r0, { onConfirm: c, onClose: r })
-          : (0, y.jsx)(r2, { onLoad: u, onClose: r });
+            ? (0, y.jsx)(r3, { plugin: l, onInstall: n, onClose: r })
+            : (0, y.jsx)(r1, { onConfirm: c, onClose: r })
+          : (0, y.jsx)(r5, { onLoad: u, onClose: r });
       }
-      function r2(e) {
+      function r5(e) {
         var t = e.onLoad,
           n = e.onClose,
           r = (0, w.useRef)(null),
@@ -6064,24 +6055,24 @@
             color: "neutral",
             onClick: n,
           }),
-          children: (0, y.jsxs)(rH, {
+          children: (0, y.jsxs)(r$, {
             children: [
               (0, y.jsx)("div", {
                 children:
                   "Please provide the website domain of the unverified plugin you'd like to install.",
               }),
-              (0, y.jsx)(rL.Z, {
+              (0, y.jsx)(rq.Z, {
                 ref: r,
                 name: "url",
                 placeholder: "openai.com",
                 onPressEnter: c,
               }),
-              l && (0, y.jsx)(r$, { children: l }),
+              l && (0, y.jsx)(rG, { children: l }),
             ],
           }),
         });
       }
-      function r5(e) {
+      function r3(e) {
         var t = e.plugin,
           n = e.onInstall,
           r = e.onClose,
@@ -6092,7 +6083,7 @@
           l = s[0],
           u = s[1],
           c = (0, w.useRef)(null),
-          d = (0, rq.U$)({
+          d = (0, rU.U$)({
             onSuccess: function (e) {
               n(e), r();
             },
@@ -6111,7 +6102,7 @@
                   case 0:
                     if (!h) return [3, 1];
                     return (
-                      (e = (0, rq.nT)(t))
+                      (e = (0, rU.nT)(t))
                         ? (window.location.href = e)
                         : o("Missing plugin configuration for ".concat(m, ".")),
                       [3, 8]
@@ -6177,9 +6168,9 @@
             color: "neutral",
             onClick: r,
           }),
-          children: (0, y.jsxs)(rH, {
+          children: (0, y.jsxs)(r$, {
             children: [
-              (0, y.jsx)(rU.Z, { plugin: t }),
+              (0, y.jsx)(rz.Z, { plugin: t }),
               f &&
                 (0, y.jsxs)("div", {
                   children: [
@@ -6191,7 +6182,7 @@
                     }),
                     (0, y.jsx)("div", {
                       className: "mt-2",
-                      children: (0, y.jsx)(rL.Z, {
+                      children: (0, y.jsx)(rq.Z, {
                         ref: c,
                         type: "password",
                         name: "token",
@@ -6214,19 +6205,19 @@
                     " to log in.",
                   ],
                 }),
-              i && (0, y.jsx)(r$, { children: i }),
+              i && (0, y.jsx)(rG, { children: i }),
             ],
           }),
         });
       }
-      var r3 = n(95552),
-        r4 = n.n(r3),
-        r6 = n(86433),
-        r7 = n(76559),
-        r8 = n(74437);
-      function r9(e) {
+      var r4 = n(95552),
+        r6 = n.n(r4),
+        r7 = n(86433),
+        r8 = n(76559),
+        r9 = n(74437);
+      function ae(e) {
         var t = e.onClose,
-          n = (0, r6.S)().setupMfa;
+          n = (0, r7.S)().setupMfa;
         return (0, y.jsx)(eP.Z, {
           isOpen: !0,
           onClose: t,
@@ -6242,7 +6233,7 @@
             color: "neutral",
             onClick: t,
           }),
-          children: (0, y.jsx)(rH, {
+          children: (0, y.jsx)(r$, {
             children: (0, y.jsx)(rO.I, {
               children: (0, y.jsx)(rO.Z, {
                 icon: "\uD83D\uDEA8",
@@ -6253,21 +6244,10 @@
           }),
         });
       }
-      function ae() {
+      function at() {
         var e = (0, U._)([
           "text-sm text-black/70 dark:text-white/70 whitespace-nowrap ",
           "",
-        ]);
-        return (
-          (ae = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function at() {
-        var e = (0, U._)([
-          "hidden h-4 border-l border-black/30 dark:border-white/30 sm:block",
         ]);
         return (
           (at = function () {
@@ -6276,19 +6256,30 @@
           e
         );
       }
-      var an =
+      function an() {
+        var e = (0, U._)([
+          "hidden h-4 border-l border-black/30 dark:border-white/30 sm:block",
+        ]);
+        return (
+          (an = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var ar =
         ((f = {}),
-        (0, ng._)(f, E._G.Mobile, 8),
-        (0, ng._)(f, E._G.Small, 4),
-        (0, ng._)(f, E._G.Medium, 4),
-        (0, ng._)(f, E._G.Large, 6),
-        (0, ng._)(f, E._G.XLarge, 8),
+        (0, np._)(f, E._G.Mobile, 8),
+        (0, np._)(f, E._G.Small, 4),
+        (0, np._)(f, E._G.Medium, 4),
+        (0, np._)(f, E._G.Large, 6),
+        (0, np._)(f, E._G.XLarge, 8),
         f);
       ((o = h || (h = {}))[(o.All = 0)] = "All"),
         (o[(o.Installed = 1)] = "Installed"),
         ((s = g || (g = {})).New = "newly_added"),
         (s.Popular = "most_popular");
-      var ar = (0, M.vU)({
+      var aa = (0, M.vU)({
           searchPlaceholder: {
             id: "PluginStoreModal.search_placeholder",
             defaultMessage: "Search plugins",
@@ -6307,13 +6298,13 @@
               "Hint shown when no plugins are found for a search query",
           },
         }),
-        aa = [
+        ai = [
           { id: g.Popular, title: "Popular" },
           { id: g.New, title: "New" },
           { id: h.All, title: "All" },
           { id: h.Installed, title: "Installed" },
         ];
-      function ai(e) {
+      function ao(e) {
         var t,
           n,
           r,
@@ -6344,8 +6335,8 @@
           F,
           B = e.onInstallWithAuthRequired,
           L = e.onClickInstallDeveloper,
-          O = e.onClickDevelop,
-          q = e.onClickAbout,
+          q = e.onClickDevelop,
+          O = e.onClickAbout,
           U = e.onClose,
           z = (0, ee.Z)(),
           Q = (0, T.hz)(),
@@ -6355,16 +6346,16 @@
           W = (0, b._)((0, w.useState)(""), 2),
           V = W[0],
           J = W[1],
-          Y = an[(0, E.dQ)()],
+          Y = ar[(0, E.dQ)()],
           K =
             ((r = (t = { numItemsPerPage: Y, filter: $, query: V })
               .numItemsPerPage),
             (a = t.filter),
             (i = t.query),
             (o = (0, ep.kP)().session),
-            (l = (s = (0, r8.C)()).installedPlugins),
+            (l = (s = (0, r9.C)()).installedPlugins),
             (u = s.isLoading),
-            (d = (c = (0, r7.Z)()).approvedPlugins),
+            (d = (c = (0, r8.Z)()).approvedPlugins),
             (m = c.isLoading),
             (f = c.approvedPluginsByCategory),
             (p = (0, w.useMemo)(
@@ -6375,7 +6366,7 @@
                   r = void 0;
                 try {
                   for (
-                    var a, i = aa[Symbol.iterator]();
+                    var a, i = ai[Symbol.iterator]();
                     !(t = (a = i.next()).done);
                     t = !0
                   ) {
@@ -6404,7 +6395,7 @@
             )),
             (j = (function (e, t) {
               for (
-                var n = (0, eR._)(e), r = r4()(t), a = n.length - 1;
+                var n = (0, eR._)(e), r = r6()(t), a = n.length - 1;
                 a > 0;
                 a--
               ) {
@@ -6413,13 +6404,13 @@
                 (i = [n[o], n[a]]), (n[a] = i[0]), (n[o] = i[1]);
               }
               return (
-                af("retrieval.apps.openai.com", n),
-                af("retrieval-browsing.apps.openai.com", n),
-                af("api.openai.com", n),
+                ah("retrieval.apps.openai.com", n),
+                ah("retrieval-browsing.apps.openai.com", n),
+                ah("api.openai.com", n),
                 n
               );
             })(
-              (v = ao(
+              (v = as(
                 (0, w.useMemo)(
                   function () {
                     if (a === h.All) return d;
@@ -6445,7 +6436,7 @@
                 ? void 0
                 : n.id) || ""
             )),
-            (k = ao(l, i)),
+            (k = as(l, i)),
             (_ = []),
             (M = !1),
             a === h.Installed
@@ -6479,7 +6470,7 @@
           ea = er.page,
           ei = er.numPages,
           eo = er.goToPage,
-          es = (0, r8.C)().installedPlugins;
+          es = (0, r9.C)().installedPlugins;
         (0, w.useEffect)(
           function () {
             $ === h.Installed && 0 === es.length && (G(X[0].id), eo(0));
@@ -6502,7 +6493,7 @@
             [eo]
           );
         return ec
-          ? (0, y.jsx)(r9, {
+          ? (0, y.jsx)(ae, {
               onClose: function () {
                 ed(!1);
               },
@@ -6516,7 +6507,7 @@
               type: "success",
               title: "Plugin store",
               closeButton: (0, y.jsx)(eZ.ZP.CloseButton, { onClose: U }),
-              children: (0, y.jsxs)(rH, {
+              children: (0, y.jsxs)(r$, {
                 children: [
                   !et &&
                     X.length > 1 &&
@@ -6525,7 +6516,7 @@
                       children: [
                         X.map(function (e) {
                           return (0, y.jsx)(
-                            as,
+                            al,
                             {
                               selected: $ === e.id,
                               onClick: function () {
@@ -6548,12 +6539,12 @@
                                   "h-5 w-5 text-gray-500 dark:text-gray-400",
                               }),
                             }),
-                            (0, y.jsx)(rL.Z, {
+                            (0, y.jsx)(rq.Z, {
                               className: "pl-10",
                               autoFocus: !0,
                               type: "search",
                               placeholder: z.formatMessage(
-                                ar.searchPlaceholder
+                                aa.searchPlaceholder
                               ),
                               value: V,
                               onChange: function (e) {
@@ -6565,7 +6556,7 @@
                         }),
                       ],
                     }),
-                  (0, y.jsx)(al, {
+                  (0, y.jsx)(au, {
                     plugins: en,
                     numSkeletons: Y,
                     query: V,
@@ -6584,7 +6575,7 @@
                           "flex flex-1 justify-start max-lg:justify-center",
                         children:
                           ei > 1 &&
-                          (0, y.jsx)(am, {
+                          (0, y.jsx)(af, {
                             page: ea,
                             numPages: ei,
                             goToPage: eo,
@@ -6597,20 +6588,20 @@
                           Q.has("tools3_dev") &&
                             (0, y.jsxs)(y.Fragment, {
                               children: [
-                                (0, y.jsx)(ah, {
+                                (0, y.jsx)(ag, {
                                   onClick: L,
                                   children: "Install an unverified plugin",
                                 }),
-                                (0, y.jsx)(ag, {}),
-                                (0, y.jsx)(ah, {
-                                  onClick: O,
+                                (0, y.jsx)(ap, {}),
+                                (0, y.jsx)(ag, {
+                                  onClick: q,
                                   children: "Develop your own plugin",
                                 }),
-                                (0, y.jsx)(ag, {}),
+                                (0, y.jsx)(ap, {}),
                               ],
                             }),
-                          (0, y.jsx)(ah, {
-                            onClick: q,
+                          (0, y.jsx)(ag, {
+                            onClick: O,
                             children: "About plugins",
                           }),
                         ],
@@ -6621,7 +6612,7 @@
               }),
             });
       }
-      function ao(e, t) {
+      function as(e, t) {
         return (0, w.useMemo)(
           function () {
             return "" !== t
@@ -6686,7 +6677,7 @@
           [e, t]
         );
       }
-      function as(e) {
+      function al(e) {
         var t = e.selected,
           n = e.onClick,
           r = e.children;
@@ -6701,7 +6692,7 @@
           children: r,
         });
       }
-      function al(e) {
+      function au(e) {
         var t = e.plugins,
           n = e.numSkeletons,
           r = e.isLoading,
@@ -6717,14 +6708,14 @@
                 className: "text-lg font-medium",
                 children: (0, y.jsx)(
                   _.Z,
-                  (0, em._)((0, v._)({}, ar.noSearchResultsTitle), {
+                  (0, em._)((0, v._)({}, aa.noSearchResultsTitle), {
                     values: { query: o },
                   })
                 ),
               }),
               (0, y.jsx)("div", {
                 className: "text-sm text-black/50",
-                children: (0, y.jsx)(_.Z, (0, v._)({}, ar.noSearchResultsHint)),
+                children: (0, y.jsx)(_.Z, (0, v._)({}, aa.noSearchResultsHint)),
               }),
             ],
           });
@@ -6732,11 +6723,11 @@
           ? Array(n)
               .fill(0)
               .map(function (e, t) {
-                return (0, y.jsx)(ac, {}, t);
+                return (0, y.jsx)(ad, {}, t);
               })
           : t.map(function (e) {
               return (0,
-              y.jsx)(au, { plugin: e, onInstallWithAuthRequired: a, onRequestMfa: i }, e.id);
+              y.jsx)(ac, { plugin: e, onInstallWithAuthRequired: a, onRequestMfa: i }, e.id);
             });
         return (0, y.jsx)("div", {
           className:
@@ -6744,7 +6735,7 @@
           children: s,
         });
       }
-      function au(e) {
+      function ac(e) {
         var t,
           n,
           r = e.plugin,
@@ -6756,13 +6747,13 @@
           u = (0, b._)((0, w.useState)(!1), 2),
           c = u[0],
           d = u[1],
-          m = (0, rq.U$)({
+          m = (0, rU.U$)({
             onSuccess: function (e) {
-              (0, rB.wu)(e.id);
+              (0, rL.wu)(e.id);
             },
             onError: function (e) {
               console.error(e),
-                nM.m.danger(
+                nT.m.danger(
                   "Error installing ".concat(r.manifest.name_for_human, ".")
                 );
             },
@@ -6770,11 +6761,11 @@
               l(!1);
             },
           }),
-          f = (0, rq.qo)({
+          f = (0, rU.qo)({
             onSuccess: function () {},
             onError: function (e) {
               console.error(e),
-                nM.m.danger(
+                nT.m.danger(
                   "Error uninstalling ".concat(r.manifest.name_for_human, ".")
                 );
             },
@@ -6784,7 +6775,7 @@
           }),
           h = (0, ep.kP)().session,
           g = (0, T.hz)(),
-          p = (0, r6.S)().isUsernamePassword,
+          p = (0, r7.S)().isUsernamePassword,
           v = (0, w.useCallback)(
             function () {
               var e,
@@ -6803,10 +6794,10 @@
                 return;
               }
               if ("oauth" === t) {
-                var n = (0, rq.nT)(r);
+                var n = (0, rU.nT)(r);
                 n
                   ? (window.location.href = n)
-                  : nM.m.danger(
+                  : nT.m.danger(
                       "Missing plugin configuration for ".concat(
                         r.manifest.name_for_human,
                         "."
@@ -6848,8 +6839,8 @@
                   onClick: v,
                   children: ["Install", (0, y.jsx)(el.ZP, { icon: C.wzc })],
                 })),
-          (0, y.jsx)(ad, {
-            logo: (0, y.jsx)(nh.Z, {
+          (0, y.jsx)(am, {
+            logo: (0, y.jsx)(ng.Z, {
               url: r.manifest.logo_url,
               name: r.manifest.name_for_human,
               size: "100%",
@@ -6869,8 +6860,8 @@
           })
         );
       }
-      function ac() {
-        return (0, y.jsx)(ad, {
+      function ad() {
+        return (0, y.jsx)(am, {
           logo: (0, y.jsx)("div", {
             className: "h-full w-full rounded-[5px] bg-gray-300",
           }),
@@ -6896,7 +6887,7 @@
           }),
         });
       }
-      function ad(e) {
+      function am(e) {
         var t = e.logo,
           n = e.tag,
           r = e.title,
@@ -6936,12 +6927,12 @@
           ],
         });
       }
-      function am(e) {
+      function af(e) {
         for (
           var t = function (e) {
               u.push(
                 (0, y.jsx)(
-                  ah,
+                  ag,
                   {
                     role: "button",
                     className: (0, z.Z)(
@@ -6985,7 +6976,7 @@
           className:
             "flex flex-wrap gap-2 text-sm text-black/60 dark:text-white/70",
           children: [
-            (0, y.jsxs)(ah, {
+            (0, y.jsxs)(ag, {
               role: "button",
               className: (0, z.Z)("flex items-center", !i && "opacity-50"),
               onClick: s,
@@ -6993,7 +6984,7 @@
               children: [(0, y.jsx)(el.ZP, { icon: C.YFh }), "Prev"],
             }),
             u,
-            (0, y.jsxs)(ah, {
+            (0, y.jsxs)(ag, {
               role: "button",
               className: (0, z.Z)("flex items-center", !o && "opacity-50"),
               onClick: l,
@@ -7003,7 +6994,7 @@
           ],
         });
       }
-      function af(e, t) {
+      function ah(e, t) {
         var n = t.findIndex(function (t) {
           return t.domain === e;
         });
@@ -7012,13 +7003,13 @@
           t.unshift(r);
         }
       }
-      var ah = et.Z.button(ae(), function (e) {
+      var ag = et.Z.button(at(), function (e) {
           return e.$disabled
             ? "opacity-50 cursor-default"
             : "hover:text-black/50 dark:hover:text-white/50";
         }),
-        ag = et.Z.div(at());
-      function ap(e) {
+        ap = et.Z.div(an());
+      function av(e) {
         var t = e.allowClose,
           n = e.onConfirm,
           r = e.onClose;
@@ -7039,7 +7030,7 @@
               color: "neutral",
               onClick: r,
             }),
-          children: (0, y.jsx)(rH, {
+          children: (0, y.jsx)(r$, {
             children: (0, y.jsxs)(rO.I, {
               children: [
                 (0, y.jsx)(rO.Z, {
@@ -7050,7 +7041,7 @@
                 (0, y.jsx)(rO.Z, {
                   icon: "\uD83C\uDF10",
                   children:
-                    "Plugins connect ChatGPT to external apps. If you enable a plugin, ChatGPT may send parts of your conversation and the country or state you're in to the plugin to enhance your conversation.",
+                    "Plugins connect ChatGPT to external apps. If you enable a plugin, ChatGPT may send your conversation and the country or state you're in to the plugin.",
                 }),
                 (0, y.jsx)(rO.Z, {
                   icon: "\uD83E\uDDE0",
@@ -7062,11 +7053,11 @@
           }),
         });
       }
-      var av = "oai/apps/hasSeenPluginsDisclaimer";
-      function ax(e) {
+      var ax = "oai/apps/hasSeenPluginsDisclaimer";
+      function ab(e) {
         var t = e.onInstall,
           n = e.onClose,
-          r = (0, b._)((0, w.useState)(!!ec.m.getItem(av)), 2),
+          r = (0, b._)((0, w.useState)(!!ec.m.getItem(ax)), 2),
           a = r[0],
           i = r[1],
           o = (0, b._)((0, w.useState)(!1), 2),
@@ -7082,7 +7073,7 @@
           p = g[0],
           v = g[1],
           x = (0, w.useCallback)(function () {
-            i(!0), l(!1), ec.m.setItem(av, !0);
+            i(!0), l(!1), ec.m.setItem(ax, !0);
           }, []),
           j = (0, w.useCallback)(function (e) {
             h(e), d(!0);
@@ -7098,7 +7089,7 @@
           }, []),
           M = (0, w.useCallback)(
             function (e) {
-              (0, rB.wu)(e.id), n(), t(e);
+              (0, rL.wu)(e.id), n(), t(e);
             },
             [t, n]
           ),
@@ -7115,16 +7106,16 @@
             [n]
           );
         return !a || s
-          ? (0, y.jsx)(ap, { allowClose: !a, onConfirm: x, onClose: n })
+          ? (0, y.jsx)(av, { allowClose: !a, onConfirm: x, onClose: n })
           : c
-          ? (0, y.jsx)(r1, { plugin: f, onInstall: M, onClose: T })
+          ? (0, y.jsx)(r2, { plugin: f, onInstall: M, onClose: T })
           : p
-          ? (0, y.jsx)(rW, {
+          ? (0, y.jsx)(rV, {
               onClickInstall: j,
               onInstallLocalhost: M,
               onClose: N,
             })
-          : (0, y.jsx)(ai, {
+          : (0, y.jsx)(ao, {
               onInstallWithAuthRequired: j,
               onClickInstallDeveloper: k,
               onClickDevelop: C,
@@ -7132,18 +7123,18 @@
               onClose: n,
             });
       }
-      function ab() {
+      function ay() {
         var e = (0, U._)([
           "flex h-8 flex-shrink-0 items-center justify-center border-b border-black/10 bg-gray-50 text-xs text-gray-800 dark:border-white/20 dark:bg-[#272832] dark:text-white",
         ]);
         return (
-          (ab = function () {
+          (ay = function () {
             return e;
           }),
           e
         );
       }
-      function ay(e) {
+      function aj(e) {
         var t,
           n = e.theme,
           r = void 0 === n ? "default" : n,
@@ -7154,10 +7145,10 @@
           l = s[0],
           u = s[1],
           c = (0, k.useRouter)(),
-          d = (0, r8.C)(),
+          d = (0, r9.C)(),
           m = d.installedPlugins,
           f = d.isLoading,
-          h = (0, rB.p0)(),
+          h = (0, rL.p0)(),
           g = (0, w.useRef)(null);
         (0, w.useEffect)(
           function () {
@@ -7173,9 +7164,9 @@
                     return e.id === t;
                   });
                 o && "true" === n
-                  ? ((0, rB.wu)(c.query.loginAip),
+                  ? ((0, rL.wu)(c.query.loginAip),
                     null === (a = g.current) || void 0 === a || a.open())
-                  : nM.m.warning(
+                  : nT.m.warning(
                       "Couldn't log in with ".concat(
                         null !==
                           (i =
@@ -7204,7 +7195,7 @@
           M = j[1],
           T = (0, w.useCallback)(
             function (e) {
-              if (e.length > rB.hZ)
+              if (e.length > rL.hZ)
                 u(!0),
                   setTimeout(function () {
                     u(!1);
@@ -7220,7 +7211,7 @@
                   a = void 0;
                 try {
                   for (
-                    var i, o = rB.iO[Symbol.iterator]();
+                    var i, o = rL.iO[Symbol.iterator]();
                     !(n = (i = o.next()).done);
                     n = !0
                   ) {
@@ -7238,7 +7229,7 @@
                           });
                         if (a)
                           return (
-                            nM.m.warning(
+                            nT.m.warning(
                               "You can't enable "
                                 .concat(a.manifest.name_for_human, " while ")
                                 .concat(
@@ -7250,7 +7241,7 @@
                           );
                       }
                     })();
-                    if ("object" === (0, rl._)(s)) return s.v;
+                    if ("object" === (0, ru._)(s)) return s.v;
                   }
                 } catch (e) {
                   (r = !0), (a = e);
@@ -7261,7 +7252,7 @@
                     if (r) throw a;
                   }
                 }
-                (0, rB.dT)(
+                (0, rL.dT)(
                   e.map(function (e) {
                     return e.id;
                   })
@@ -7368,32 +7359,32 @@
         if (h.length > 0 && h.length < 6) {
           var D = h.map(function (e, t) {
             return (0,
-            y.jsx)(nh.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 24 }, t);
+            y.jsx)(ng.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 24 }, t);
           });
           R = (0, y.jsx)("div", { className: "flex gap-2", children: D });
         }
         var A = [{ id: "store", label: "Plugin store", icon: C.Rgz }];
-        m.length > rB.hZ &&
-          (t = (0, y.jsxs)(aj, {
+        m.length > rL.hZ &&
+          (t = (0, y.jsxs)(ak, {
             className: (0, z.Z)(
               "transition-colors duration-300",
               l && "bg-red-200 text-red-800 dark:bg-red-200 dark:text-red-800"
             ),
-            children: [h.length, "/", rB.hZ, " Enabled"],
+            children: [h.length, "/", rL.hZ, " Enabled"],
           }));
         var E = (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, y.jsx)(aj, { children: "Loading..." }),
-            (0, y.jsx)(rM, { showCheckbox: !0, theme: r }),
-            (0, y.jsx)(rM, { showCheckbox: !0, theme: r }),
-            (0, y.jsx)(rM, { showCheckbox: !0, theme: r }),
-            (0, y.jsx)(rM, { showCheckbox: !0, theme: r }),
-            (0, y.jsx)(rM, { showCheckbox: !0, theme: r }),
+            (0, y.jsx)(ak, { children: "Loading..." }),
+            (0, y.jsx)(rT, { showCheckbox: !0, theme: r }),
+            (0, y.jsx)(rT, { showCheckbox: !0, theme: r }),
+            (0, y.jsx)(rT, { showCheckbox: !0, theme: r }),
+            (0, y.jsx)(rT, { showCheckbox: !0, theme: r }),
+            (0, y.jsx)(rT, { showCheckbox: !0, theme: r }),
           ],
         });
         return (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, y.jsx)(rj, {
+            (0, y.jsx)(rk, {
               name: "Plugins",
               selectedOptions: S,
               selectedLabel: R,
@@ -7409,13 +7400,13 @@
               header: t,
               theme: "mini" === r ? "mini" : "default",
             }),
-            i && (0, y.jsx)(ax, { onInstall: p, onClose: v }),
+            i && (0, y.jsx)(ab, { onInstall: p, onClose: v }),
           ],
         });
       }
-      var aj = et.Z.div(ab()),
-        ak = n(48101);
-      function aw(e) {
+      var ak = et.Z.div(ay()),
+        aw = n(48101);
+      function aC(e) {
         var t,
           n = e.currentModelId,
           r = (0, T.hz)(),
@@ -7429,159 +7420,203 @@
               className:
                 "relative flex flex-col items-stretch justify-center gap-2 sm:items-center",
               children: [
-                (0, y.jsx)(rs, { currentModel: o, onModelChange: a }),
+                (0, y.jsx)(rl, { currentModel: o, onModelChange: a }),
                 s &&
                   (null == o
                     ? void 0
                     : null === (t = o.enabledTools) || void 0 === t
                     ? void 0
                     : t.includes("tools3")) &&
-                  (0, y.jsx)(ay, { theme: "mini" }),
+                  (0, y.jsx)(aj, { theme: "mini" }),
               ],
             })
           : null;
       }
-      var aC = function (e) {
-        var t,
-          n,
-          r,
-          a = e.currentModelConfig,
-          i = e.clientThreadId,
-          o = e.isStaticSharedThread,
-          s = e.icon,
-          l = (0, T.hz)().has(ei.b5),
-          u = (0, N.Ro)(i);
-        void 0 === u && (u = a);
-        var c = u.tags
-            .filter(function (e) {
-              return ry.includes(e);
-            })
-            .map(function (e) {
-              return rN(e);
+      var a_ = function (e) {
+          var t,
+            n,
+            r,
+            a = e.currentModelConfig,
+            i = e.clientThreadId,
+            o = e.isStaticSharedThread,
+            s = e.icon,
+            l = (0, N.aS)(i),
+            u = (0, T.hz)().has(ei.b5),
+            c = (0, N.Ro)(i);
+          void 0 === c && (c = a);
+          var d = c.tags
+              .filter(function (e) {
+                return rj.includes(e);
+              })
+              .map(function (e) {
+                return rI(e);
+              }),
+            m = (0, tN.v)();
+          if (m.length > 0) {
+            var f = m.map(function (e, t) {
+              return (0,
+              y.jsx)(ng.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 16 }, t);
+            });
+            r = (0, y.jsxs)(y.Fragment, {
+              children: [
+                (0, y.jsx)("div", { children: "Enabled plugins:" }),
+                f,
+              ],
+            });
+          }
+          var h = (0, k.useRouter)(),
+            g =
+              o &&
+              (null === (t = h.query) || void 0 === t
+                ? void 0
+                : null === (n = t.shareParams) || void 0 === n
+                ? void 0
+                : n[1]) === "moderate",
+            p = (0, D.tN)(function (e) {
+              return e.activeModals.has(D.B.DownloadMessages);
             }),
-          d = (0, tN.v)();
-        if (d.length > 0) {
-          var m = d.map(function (e, t) {
-            return (0,
-            y.jsx)(nh.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 16 }, t);
-          });
-          r = (0, y.jsxs)(y.Fragment, {
-            children: [(0, y.jsx)("div", { children: "Enabled plugins:" }), m],
-          });
-        }
-        var f = (0, k.useRouter)(),
-          h =
-            o &&
-            (null === (t = f.query) || void 0 === t
-              ? void 0
-              : null === (n = t.shareParams) || void 0 === n
-              ? void 0
-              : n[1]) === "moderate",
-          g = (0, D.tN)(function (e) {
-            return e.activeModals.has(D.B.DownloadMessages);
-          }),
-          p = N.tQ.getThreadCurrentLeafId(i),
-          v = (0, N.u9)(i, p),
-          x = (0, w.useCallback)(
-            function () {
-              l && (0, ak.Ub)(i, v);
-            },
-            [i, l, v]
-          );
-        return (0, y.jsxs)(y.Fragment, {
-          children: [
-            l &&
-              (0, y.jsx)(eP.Z, {
-                type: "success",
-                isOpen: g,
-                onClose: function () {
-                  D.vm.closeModal(D.B.DownloadMessages);
-                },
-                closeButton: (0, y.jsx)(eZ.ZP.CloseButton, {
+            v = N.tQ.getThreadCurrentLeafId(i),
+            x = (0, N.u9)(i, v),
+            b = (0, w.useCallback)(
+              function () {
+                u && (0, aw.Ub)(i, x);
+              },
+              [i, u, x]
+            );
+          return (0, y.jsxs)(y.Fragment, {
+            children: [
+              u &&
+                (0, y.jsx)(eP.Z, {
+                  type: "success",
+                  isOpen: p,
                   onClose: function () {
                     D.vm.closeModal(D.B.DownloadMessages);
                   },
-                }),
-                primaryButton: (0, y.jsx)(eZ.ZP.Button, {
-                  onClick: x,
-                  children: "Download",
-                }),
-                title: "Download chat debug info",
-                secondaryButton: (0, y.jsx)(eZ.ZP.Button, {
-                  onClick: function () {
-                    D.vm.closeModal(D.B.DownloadMessages);
-                  },
-                  children: "Cancel",
-                }),
-              }),
-            (0, y.jsxs)("div", {
-              className: (0, z.Z)(
-                "flex items-center justify-center gap-1 border-b border-black/10 bg-gray-50 p-3 text-gray-500 dark:border-gray-900/50 dark:bg-gray-700 dark:text-gray-300",
-                o ? "sticky top-0 z-50" : ""
-              ),
-              onClick: function (e) {
-                l &&
-                  !o &&
-                  3 === e.detail &&
-                  D.vm.openModal(D.B.DownloadMessages);
-              },
-              children: [
-                o &&
-                  (0, y.jsxs)(y.Fragment, {
-                    children: [
-                      (0, y.jsx)("span", { children: "Shared Chat" }),
-                      (0, y.jsx)("span", { className: "px-1", children: "•" }),
-                    ],
+                  closeButton: (0, y.jsx)(eZ.ZP.CloseButton, {
+                    onClose: function () {
+                      D.vm.closeModal(D.B.DownloadMessages);
+                    },
                   }),
-                !o && void 0 !== s && (0, y.jsx)(el.ZP, { icon: s }),
-                "Model: ",
-                a.title,
-                c,
-                r
-                  ? (0, y.jsxs)(y.Fragment, {
+                  primaryButton: (0, y.jsx)(eZ.ZP.Button, {
+                    onClick: b,
+                    children: "Download",
+                  }),
+                  title: "Download chat debug info",
+                  secondaryButton: (0, y.jsx)(eZ.ZP.Button, {
+                    onClick: function () {
+                      D.vm.closeModal(D.B.DownloadMessages);
+                    },
+                    children: "Cancel",
+                  }),
+                }),
+              (0, y.jsxs)("div", {
+                className: (0, z.Z)(
+                  "flex flex-wrap items-center justify-center gap-1 border-b border-black/10 bg-gray-50 p-3 text-gray-500 dark:border-gray-900/50 dark:bg-gray-700 dark:text-gray-300",
+                  o ? "sticky top-0 z-50" : ""
+                ),
+                onClick: function (e) {
+                  u &&
+                    !o &&
+                    3 === e.detail &&
+                    D.vm.openModal(D.B.DownloadMessages);
+                },
+                children: [
+                  o &&
+                    (0, y.jsxs)("div", {
+                      className: "flex items-center justify-center gap-1",
+                      children: [
+                        (0, y.jsx)("span", { children: "Shared Chat" }),
+                        (0, y.jsx)("span", {
+                          className: "px-1",
+                          children: "•",
+                        }),
+                      ],
+                    }),
+                  !o && void 0 !== s && (0, y.jsx)(el.ZP, { icon: s }),
+                  "Model: ",
+                  a.title,
+                  d,
+                  r
+                    ? (0, y.jsxs)("div", {
+                        className: "flex items-center justify-center gap-1",
+                        children: [
+                          (0, y.jsx)("span", {
+                            className: "px-1",
+                            children: "•",
+                          }),
+                          r,
+                        ],
+                      })
+                    : null,
+                  g &&
+                    (0, y.jsxs)("div", {
+                      className: "flex items-center justify-center gap-1",
                       children: [
                         (0, y.jsx)("span", {
                           className: "px-1",
                           children: "•",
                         }),
-                        r,
+                        (0, y.jsx)("strong", { children: "MODERATION VIEW" }),
                       ],
-                    })
-                  : null,
-                h &&
-                  (0, y.jsxs)(y.Fragment, {
-                    children: [
-                      (0, y.jsx)("span", { className: "px-1", children: "•" }),
-                      (0, y.jsx)("strong", { children: "MODERATION VIEW" }),
-                    ],
-                  }),
-              ],
-            }),
-          ],
-        });
-      };
-      function a_() {
-        var e = (0, U._)(["flex flex-col text-sm dark:bg-gray-800"]);
-        return (
-          (a_ = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function aM() {
-        var e = (0, U._)(["h-32 md:h-48 flex-shrink-0"]);
-        return (
-          (aM = function () {
-            return e;
-          }),
-          e
-        );
-      }
+                    }),
+                  !o &&
+                    l &&
+                    (0, y.jsxs)("div", {
+                      className: "flex items-center justify-center gap-1",
+                      children: [
+                        (0, y.jsx)("span", {
+                          className: "px-1",
+                          children: "•",
+                        }),
+                        (0, y.jsx)("span", { children: "Custom user info" }),
+                        (0, y.jsx)(aM, { clientThreadId: i }),
+                      ],
+                    }),
+                ],
+              }),
+            ],
+          });
+        },
+        aM = function (e) {
+          var t = e.clientThreadId,
+            n = (0, N.Qi)(t),
+            r = null != n ? (0, eq.RR)(n) : "";
+          return (0, y.jsxs)(eu.fC, {
+            children: [
+              (0, y.jsx)(eu.xz, {
+                asChild: !0,
+                children: (0, y.jsxs)("div", {
+                  className: "cursor-pointer pt-0.5",
+                  children: [
+                    (0, y.jsx)(el.ZP, {
+                      className: "text-gray-500 dark:text-gray-300",
+                      strokeWidth: 0,
+                      icon: eg.frK,
+                    }),
+                    (0, y.jsx)(nh.T, { children: "Custom user info details" }),
+                  ],
+                }),
+              }),
+              (0, y.jsx)(eu.h_, {
+                children: (0, y.jsx)(eu.VY, {
+                  side: "bottom",
+                  sideOffset: 8,
+                  className:
+                    "relative max-w-md animate-slideDownAndFade select-none rounded-xl border-gray-100 bg-white p-4 text-sm text-gray-600 shadow-xs dark:bg-gray-900 dark:text-white",
+                  onOpenAutoFocus: function (e) {
+                    e.preventDefault();
+                  },
+                  onCloseAutoFocus: function (e) {
+                    e.preventDefault();
+                  },
+                  children: r,
+                }),
+              }),
+            ],
+          });
+        };
       function aT() {
-        var e = (0, U._)([
-          "cursor-pointer absolute right-6 bottom-[124px] md:bottom-[120px] z-10 rounded-full border border-gray-200 bg-gray-50 text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-200",
-        ]);
+        var e = (0, U._)(["flex flex-col text-sm dark:bg-gray-800"]);
         return (
           (aT = function () {
             return e;
@@ -7590,9 +7625,7 @@
         );
       }
       function aN() {
-        var e = (0, U._)([
-          "px-2 relative w-full flex flex-col h-full py-2 md:py-6",
-        ]);
+        var e = (0, U._)(["h-32 md:h-48 flex-shrink-0"]);
         return (
           (aN = function () {
             return e;
@@ -7602,7 +7635,7 @@
       }
       function aI() {
         var e = (0, U._)([
-          "text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center flex-grow",
+          "cursor-pointer absolute right-6 bottom-[124px] md:bottom-[120px] z-10 rounded-full border border-gray-200 bg-gray-50 text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-200",
         ]);
         return (
           (aI = function () {
@@ -7611,7 +7644,29 @@
           e
         );
       }
-      var aZ = (0, M.vU)({
+      function aZ() {
+        var e = (0, U._)([
+          "px-2 relative w-full flex flex-col h-full py-2 md:py-6",
+        ]);
+        return (
+          (aZ = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function aP() {
+        var e = (0, U._)([
+          "text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center flex-grow",
+        ]);
+        return (
+          (aP = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var aS = (0, M.vU)({
         codeInterpreterSupportDisclaimer: {
           id: "sharedConversation.codeInterpreterSupportDisclaimer",
           defaultMessage:
@@ -7620,7 +7675,7 @@
             "Disclaimer about our lack of support for Code Interpreter inline images and file downloads with shared links",
         },
       });
-      function aP(e) {
+      function aR(e) {
         var t = e.clientThreadId,
           n = (0, N.qA)(t),
           r = (0, N.je)(t),
@@ -7667,14 +7722,14 @@
                   className: "mt-4 rounded-md bg-[#FFF3C9] p-4 text-[#756B5C]",
                   children: (0, y.jsx)(
                     _.Z,
-                    (0, v._)({}, aZ.codeInterpreterSupportDisclaimer)
+                    (0, v._)({}, aS.codeInterpreterSupportDisclaimer)
                   ),
                 }),
             }),
           ],
         });
       }
-      function aS(e) {
+      function aD(e) {
         var t,
           n = e.onChangeItemInView,
           r = e.onRequestMoreCompletions,
@@ -7709,8 +7764,8 @@
           F = (0, b._)((0, w.useState)(!1), 2),
           B = F[0],
           L = F[1],
-          O = (0, nR.Ri)(S.id),
-          q = (0, N.U0)(u, c);
+          q = (0, nD.Ri)(S.id),
+          O = (0, N.U0)(u, c);
         (0, w.useEffect)(
           function () {
             if (M) {
@@ -7729,34 +7784,34 @@
           Q =
             !_ && S.tags.includes(tD.S.GPT_4)
               ? "black"
-              : null !== (t = null == O ? void 0 : O.backgroundColor) &&
+              : null !== (t = null == q ? void 0 : q.backgroundColor) &&
                 void 0 !== t
               ? t
               : void 0,
-          H = (0, eR._)(Array(q).keys()).map(function (e) {
+          H = (0, eR._)(Array(O).keys()).map(function (e) {
             return (0,
-            y.jsx)(tW, { isFinalTurn: e === q - 1, turnIndex: e, clientThreadId: u, conversationLeafId: c, onChangeItemInView: n, onChangeRating: i, onRequestMoreCompletions: r, onDeleteNode: o, onRequestCompletion: s, onUpdateNode: a, onHandleChangeVariantFeedbackInlineComparisonRating: l, activeRequests: m, currentModelId: S.id, isStaticSharedThread: h, showInlineEmbeddedDisplay: g, initiallyHighlightedMessageId: p, avatarColor: Q }, e);
+            y.jsx)(tW, { isFinalTurn: e === O - 1, turnIndex: e, clientThreadId: u, conversationLeafId: c, onChangeItemInView: n, onChangeRating: i, onRequestMoreCompletions: r, onDeleteNode: o, onRequestCompletion: s, onUpdateNode: a, onHandleChangeVariantFeedbackInlineComparisonRating: l, activeRequests: m, currentModelId: S.id, isStaticSharedThread: h, showInlineEmbeddedDisplay: g, initiallyHighlightedMessageId: p, avatarColor: Q }, e);
           });
         return (0, y.jsxs)(y.Fragment, {
           children: [
             E &&
-              (0, y.jsxs)(aE, {
+              (0, y.jsxs)(aB, {
                 children: [
-                  (0, y.jsx)(aw, { currentModelId: S.id }),
-                  (0, y.jsxs)(aF, {
+                  (0, y.jsx)(aC, { currentModelId: S.id }),
+                  (0, y.jsxs)(aL, {
                     children: ["ChatGPT", (0, y.jsx)(eE.IS, {})],
                   }),
                 ],
               }),
-            (0, y.jsxs)(aR, {
+            (0, y.jsxs)(aA, {
               children: [
                 d && !I && !P && !A && (0, y.jsx)(nf, { promptTextareaRef: v }),
                 B && (0, y.jsx)(eS.Z, { className: "mt-4 self-center" }),
                 !d &&
                   (h || (!I && A)) &&
                   !g &&
-                  (0, y.jsx)(aC, {
-                    icon: _ ? (null == O ? void 0 : O.icon) : void 0,
+                  (0, y.jsx)(a_, {
+                    icon: _ ? (null == q ? void 0 : q.icon) : void 0,
                     currentModelConfig: S,
                     clientThreadId: u,
                     isStaticSharedThread: h,
@@ -7771,7 +7826,7 @@
                       children: (0, y.jsxs)("div", {
                         className: "w-full max-w-[44rem] pt-4",
                         children: [
-                          h && !g && (0, y.jsx)(aP, { clientThreadId: u }),
+                          h && !g && (0, y.jsx)(aR, { clientThreadId: u }),
                           H,
                         ],
                       }),
@@ -7783,63 +7838,31 @@
                           (0, y.jsx)("div", {
                             className:
                               "mx-auto w-full p-4 md:max-w-2xl lg:max-w-xl lg:px-0 xl:max-w-3xl",
-                            children: (0, y.jsx)(aP, { clientThreadId: u }),
+                            children: (0, y.jsx)(aR, { clientThreadId: u }),
                           }),
                         H,
                       ],
                     }),
-                !E && !g && (0, y.jsx)(aD, {}),
+                !E && !g && (0, y.jsx)(aE, {}),
               ],
             }),
             !j &&
               !g &&
-              (0, y.jsx)(aA, {
+              (0, y.jsx)(aF, {
                 onClick: x,
                 children: (0, y.jsx)(el.ZP, { icon: C.tv1, className: "m-1" }),
               }),
           ],
         });
       }
-      var aR = et.Z.div(a_()),
-        aD = et.Z.div(aM()),
-        aA = et.Z.button(aT()),
+      var aA = et.Z.div(aT()),
         aE = et.Z.div(aN()),
-        aF = et.Z.h1(aI());
-      function aB() {
-        var e = (0, U._)([
-          "relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch",
-        ]);
-        return (
-          (aB = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function aL() {
-        var e = (0, U._)(["grow flex-1 overflow-hidden"]);
-        return (
-          (aL = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function aO() {
-        var e = (0, U._)([
-          "w-full mb-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.08)] dark:bg-gray-800/90 rounded-lg border border-gray-100 dark:border-gray-700 overflow-hidden bg-gray-50",
-        ]);
-        return (
-          (aO = function () {
-            return e;
-          }),
-          e
-        );
-      }
+        aF = et.Z.button(aI()),
+        aB = et.Z.div(aZ()),
+        aL = et.Z.h1(aP());
       function aq() {
         var e = (0, U._)([
-          "flex p-4 bg-white dark:bg-gray-800/90 border-t border-gray-100 dark:border-gray-700 rounded-b-lg w-full h-full\n",
-          "\n",
+          "relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch",
         ]);
         return (
           (aq = function () {
@@ -7848,9 +7871,18 @@
           e
         );
       }
+      function aO() {
+        var e = (0, U._)(["grow flex-1 overflow-hidden"]);
+        return (
+          (aO = function () {
+            return e;
+          }),
+          e
+        );
+      }
       function aU() {
         var e = (0, U._)([
-          "flex w-full items-center justify-left gap-2 min-h-[1.5rem]",
+          "w-full mb-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.08)] dark:bg-gray-800/90 rounded-lg border border-gray-100 dark:border-gray-700 overflow-hidden bg-gray-50",
         ]);
         return (
           (aU = function () {
@@ -7861,7 +7893,8 @@
       }
       function az() {
         var e = (0, U._)([
-          "border-none focus:ring-gray-200 dark:focus:ring-gray-600 bg-transparent py-0.5 -my-0.5 pl-1 -ml-1 w-full",
+          "flex p-4 bg-white dark:bg-gray-800/90 border-t border-gray-100 dark:border-gray-700 rounded-b-lg w-full h-full\n",
+          "\n",
         ]);
         return (
           (az = function () {
@@ -7871,7 +7904,9 @@
         );
       }
       function aQ() {
-        var e = (0, U._)(["flex-none h-full mt-auto mb-auto"]);
+        var e = (0, U._)([
+          "flex w-full items-center justify-left gap-2 min-h-[1.5rem]",
+        ]);
         return (
           (aQ = function () {
             return e;
@@ -7879,7 +7914,27 @@
           e
         );
       }
-      var aH = (0, M.vU)({
+      function aH() {
+        var e = (0, U._)([
+          "border-none focus:ring-gray-200 dark:focus:ring-gray-600 bg-transparent py-0.5 -my-0.5 pl-1 -ml-1 w-full",
+        ]);
+        return (
+          (aH = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function a$() {
+        var e = (0, U._)(["flex-none h-full mt-auto mb-auto"]);
+        return (
+          (a$ = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var aG = (0, M.vU)({
         sharingModalTitle: {
           id: "thread.sharingModal.title",
           defaultMessage: "Share Link to Chat",
@@ -7931,7 +7986,7 @@
             "Disclaimer about our lack of support for Code Interpreter inline images and file downloads with shared links",
         },
       });
-      function a$(e) {
+      function aW(e) {
         var t = e.serverThreadId,
           n = e.activeRequests,
           r = (0, N.oq)(t),
@@ -7988,7 +8043,7 @@
                   .catch(function (e) {
                     e instanceof ey.Q0 && "string" == typeof e.message
                       ? a.setState({ linkError: e.message })
-                      : (nM.m.danger(
+                      : (nT.m.danger(
                           "Failed to copy link to clipboard - could not create link"
                         ),
                         D.vm.closeSharingModal());
@@ -7999,20 +8054,20 @@
           ),
           (0, y.jsx)(ex.Provider, {
             value: a,
-            children: (0, y.jsx)(aV, (0, v._)({}, e)),
+            children: (0, y.jsx)(aY, (0, v._)({}, e)),
           })
         );
       }
-      function aG(e) {
+      function aV(e) {
         return (
           !0 === e.has_been_auto_blocked ||
           !0 === e.has_been_auto_moderated ||
           !0 === e.has_been_blocked
         );
       }
-      var aW =
+      var aJ =
         "https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq";
-      function aV(e) {
+      function aY(e) {
         var t,
           n,
           r,
@@ -8023,7 +8078,7 @@
           l = e.currentThreadModel,
           u = function () {
             (!V ||
-              window.confirm(c.formatMessage(aH.confirmCloseWithChanges))) &&
+              window.confirm(c.formatMessage(aG.confirmCloseWithChanges))) &&
               D.vm.closeSharingModal();
           },
           c = (0, ee.Z)(),
@@ -8066,10 +8121,10 @@
           L = eb(function (e) {
             return e.linkError;
           }),
-          O = eb(function (e) {
+          q = eb(function (e) {
             return e.moderationState;
           }),
-          q = null != O && aG(O),
+          O = null != q && aV(q),
           U = (0, w.useRef)(),
           Q = (0, w.useRef)();
         (0, w.useEffect)(
@@ -8102,7 +8157,7 @@
                     } catch (e) {
                       return (
                         console.warn("Could not copy link to clipboard: " + e),
-                        nM.m.warning("Failed to copy link to clipboard"),
+                        nT.m.warning("Failed to copy link to clipboard"),
                         x(!1),
                         [2]
                       );
@@ -8124,14 +8179,14 @@
                       ]
                     );
                   case 2:
-                    if (aG((s = u.sent().moderation_state)))
+                    if (aV((s = u.sent().moderation_state)))
                       return I.setState({ moderationState: s }), [2];
                     return (
                       I.setState({ isPublic: !0, moderationState: s }),
                       T(!0),
                       setTimeout(function () {
                         D.vm.closeSharingModal(),
-                          nM.m.success(
+                          nT.m.success(
                             "Copied shared conversation URL to clipboard!"
                           );
                       }, 500),
@@ -8160,7 +8215,7 @@
               return W(P, S);
             },
             color: "primary",
-            disabled: p || k || null == P || null == S || null != L || q,
+            disabled: p || k || null == P || null == S || null != L || O,
             children: [
               k
                 ? (0, y.jsx)(el.ZP, { icon: C.LSm })
@@ -8205,7 +8260,7 @@
                         share_id: I.getState().shareLinkId,
                       })
                         .catch(function (e) {
-                          nM.m.danger("Failed to delete shared link");
+                          nT.m.danger("Failed to delete shared link");
                         })
                         .then(function () {
                           D.vm.closeSharingModal();
@@ -8255,7 +8310,7 @@
             function () {
               return a.apply(this, arguments);
             }),
-          ei = (0, y.jsxs)(aX, {
+          ei = (0, y.jsxs)(a1, {
             $active: f,
             children: [
               (0, y.jsxs)("div", {
@@ -8263,7 +8318,7 @@
                 children: [
                   void 0 !== Z
                     ? f
-                      ? (0, y.jsx)(a1, {
+                      ? (0, y.jsx)(a5, {
                           ref: d,
                           type: "text",
                           defaultValue: null != Z ? Z : "",
@@ -8271,7 +8326,7 @@
                           onKeyDown: K,
                           onBlur: Y,
                         })
-                      : (0, y.jsxs)(a0, {
+                      : (0, y.jsxs)(a2, {
                           onDoubleClick: function () {
                             return h(!0);
                           },
@@ -8316,7 +8371,7 @@
                   }),
                 ],
               }),
-              (0, y.jsx)(a2, {
+              (0, y.jsx)(a3, {
                 children: (0, y.jsxs)(eu.fC, {
                   children: [
                     (0, y.jsx)(eu.xz, {
@@ -8405,10 +8460,10 @@
           eo = L;
         return (
           null == eo &&
-            ((null == O ? void 0 : O.has_been_auto_blocked) ||
-              (null == O ? void 0 : O.has_been_auto_moderated) ||
-              (null == O ? void 0 : O.has_been_blocked)) &&
-            (eo = (0, y.jsx)(_.Z, (0, v._)({}, aH.moderationBlocked))),
+            ((null == q ? void 0 : q.has_been_auto_blocked) ||
+              (null == q ? void 0 : q.has_been_auto_moderated) ||
+              (null == q ? void 0 : q.has_been_blocked)) &&
+            (eo = (0, y.jsx)(_.Z, (0, v._)({}, aG.moderationBlocked))),
           (0, y.jsxs)(eP.Z, {
             isOpen: !0,
             onClose: function () {
@@ -8417,7 +8472,7 @@
             size: "custom",
             className: "max-w-[550px]",
             type: "success",
-            title: c.formatMessage(aH.sharingModalTitle),
+            title: c.formatMessage(aG.sharingModalTitle),
             closeButton: (0, y.jsx)(eZ.ZP.CloseButton, {
               onClose: function () {
                 u();
@@ -8436,7 +8491,7 @@
                   children: B
                     ? (0, y.jsx)(
                         _.Z,
-                        (0, em._)((0, v._)({}, aH.existingShareDescription), {
+                        (0, em._)((0, v._)({}, aG.existingShareDescription), {
                           values: {
                             existingLink: function (e) {
                               return (0, y.jsx)("a", {
@@ -8453,7 +8508,7 @@
                                 onClick: function (e) {
                                   e.preventDefault(),
                                     window.confirm(
-                                      c.formatMessage(aH.confirmDeleteLink)
+                                      c.formatMessage(aG.confirmDeleteLink)
                                     ) && et();
                                 },
                                 className: "underline",
@@ -8463,7 +8518,7 @@
                           },
                         })
                       )
-                    : (0, y.jsx)(_.Z, (0, v._)({}, aH.sharingModalDescription)),
+                    : (0, y.jsx)(_.Z, (0, v._)({}, aG.sharingModalDescription)),
                 }),
               }),
               (0, y.jsx)(y.Fragment, {
@@ -8474,22 +8529,22 @@
                       "mb-4 rounded-md bg-[#FFF3C9] p-4 text-[#756B5C]",
                     children: (0, y.jsx)(
                       _.Z,
-                      (0, v._)({}, aH.codeInterpreterSupportDisclaimer)
+                      (0, v._)({}, aG.codeInterpreterSupportDisclaimer)
                     ),
                   }),
               }),
-              (0, y.jsx)(aK, {
+              (0, y.jsx)(a0, {
                 children: (0, y.jsx)("div", {
                   className: "flex h-full max-w-full flex-1 flex-col",
-                  children: (0, y.jsx)(aJ, {
-                    children: (0, y.jsxs)(aY, {
+                  children: (0, y.jsx)(aK, {
+                    children: (0, y.jsxs)(aX, {
                       children: [
                         (0, y.jsx)(eh.f, {
                           ratio: 1.9,
                           className: "overflow-auto bg-white dark:bg-gray-800",
                           children:
                             null != E
-                              ? (0, y.jsx)(aS, {
+                              ? (0, y.jsx)(aD, {
                                   onChangeItemInView: X(),
                                   onRequestMoreCompletions: X(),
                                   onUpdateNode: X(),
@@ -8527,13 +8582,13 @@
                 primaryButton: J,
                 secondaryButton: (0, y.jsx)("div", {
                   children: (0, y.jsxs)("a", {
-                    href: aW,
+                    href: aJ,
                     className:
                       "flex items-center gap-2 text-gray-500 hover:text-gray-600 dark:hover:text-gray-400",
                     target: "_blank",
                     rel: "noreferrer",
                     children: [
-                      c.formatMessage(aH.sharingModalMoreInfo),
+                      c.formatMessage(aG.sharingModalMoreInfo),
                       (0, y.jsx)(el.ZP, { icon: C.AlO }),
                     ],
                   }),
@@ -8543,27 +8598,27 @@
           })
         );
       }
-      var aJ = et.Z.main(aB()),
-        aY = et.Z.div(aL()),
-        aK = et.Z.div(aO()),
-        aX = et.Z.div(aq(), function (e) {
+      var aK = et.Z.main(aq()),
+        aX = et.Z.div(aO()),
+        a0 = et.Z.div(aU()),
+        a1 = et.Z.div(az(), function (e) {
           return e.$active, "";
         }),
-        a0 = et.Z.div(aU()),
-        a1 = et.Z.input(az()),
-        a2 = et.Z.div(aQ());
-      function a5() {
+        a2 = et.Z.div(aQ()),
+        a5 = et.Z.input(aH()),
+        a3 = et.Z.div(a$());
+      function a4() {
         var e = (0, U._)([
           "bg-green-500 text-white py-0.5 px-1.5 text-[10px] leading-normal font-semibold rounded uppercase",
         ]);
         return (
-          (a5 = function () {
+          (a4 = function () {
             return e;
           }),
           e
         );
       }
-      var a3 = (0, M.vU)({
+      var a6 = (0, M.vU)({
           learnMore: {
             id: "sharedConversationAnnouncement.learnMore",
             defaultMessage: "Learn more",
@@ -8581,17 +8636,17 @@
             description: "New badge text",
           },
         }),
-        a4 = "oai/apps/announcement/sharedConversations";
-      function a6(e) {
+        a7 = "oai/apps/announcement/sharedConversations";
+      function a8(e) {
         var t = e.children,
           n = function () {
             var e = Date.now();
-            ec.m.setItem(a4, e), o(e);
+            ec.m.setItem(a7, e), o(e);
           },
           r = (0, E.w$)(),
           a = (0, b._)(
             (0, w.useState)(function () {
-              var e = ec.m.getItem(a4);
+              var e = ec.m.getItem(a7);
               return "number" == typeof e && e;
             }),
             2
@@ -8634,14 +8689,14 @@
                       (0, y.jsxs)("div", {
                         className: "mb-0.5 flex items-center gap-2",
                         children: [
-                          (0, y.jsx)(a7, {
-                            children: (0, y.jsx)(_.Z, (0, v._)({}, a3.new)),
+                          (0, y.jsx)(a9, {
+                            children: (0, y.jsx)(_.Z, (0, v._)({}, a6.new)),
                           }),
                           (0, y.jsx)("div", {
                             className: "font-medium",
                             children: (0, y.jsx)(
                               _.Z,
-                              (0, v._)({}, a3.shareConversations)
+                              (0, v._)({}, a6.shareConversations)
                             ),
                           }),
                           (0, y.jsx)(eu.x8, {
@@ -8652,13 +8707,13 @@
                         ],
                       }),
                       (0, y.jsxs)("a", {
-                        href: aW,
+                        href: aJ,
                         className:
                           "inline-flex items-center gap-1.5 opacity-70 transition hover:opacity-100",
                         target: "_blank",
                         rel: "noreferrer",
                         children: [
-                          l.formatMessage(a3.learnMore),
+                          l.formatMessage(a6.learnMore),
                           (0, y.jsx)(el.ZP, { icon: C.AlO, size: "xsmall" }),
                         ],
                       }),
@@ -8677,38 +8732,12 @@
           ],
         });
       }
-      var a7 = et.Z.span(a5()),
-        a8 = n(36112);
-      function a9() {
+      var a9 = et.Z.span(a4()),
+        ie = n(36112);
+      function it() {
         var e = (0, U._)([
           "flex flex-col gap-2 pb-2 text-gray-100 text-sm\n",
           "",
-        ]);
-        return (
-          (a9 = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function ie() {
-        var e = (0, U._)([
-          "flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all\n",
-          ")}\n",
-          ")}\n",
-          "\n",
-        ]);
-        return (
-          (ie = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function it() {
-        var e = (0, U._)([
-          "flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer hover:pr-14 break-all\n",
-          "\n",
         ]);
         return (
           (it = function () {
@@ -8718,7 +8747,12 @@
         );
       }
       function ir() {
-        var e = (0, U._)(["text-sm border-none bg-transparent p-0 m-0 w-full"]);
+        var e = (0, U._)([
+          "flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all\n",
+          ")}\n",
+          ")}\n",
+          "\n",
+        ]);
         return (
           (ir = function () {
             return e;
@@ -8728,7 +8762,8 @@
       }
       function ia() {
         var e = (0, U._)([
-          "flex-1 text-ellipsis max-h-5 overflow-hidden break-all relative",
+          "flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer hover:pr-14 break-all\n",
+          "\n",
         ]);
         return (
           (ia = function () {
@@ -8738,9 +8773,7 @@
         );
       }
       function ii() {
-        var e = (0, U._)([
-          "h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-gray-900",
-        ]);
+        var e = (0, U._)(["text-sm border-none bg-transparent p-0 m-0 w-full"]);
         return (
           (ii = function () {
             return e;
@@ -8750,8 +8783,7 @@
       }
       function io() {
         var e = (0, U._)([
-          "absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l\n",
-          "",
+          "flex-1 text-ellipsis max-h-5 overflow-hidden break-all relative",
         ]);
         return (
           (io = function () {
@@ -8761,7 +8793,9 @@
         );
       }
       function is() {
-        var e = (0, U._)(["absolute flex right-1 z-10 text-gray-300\n", ""]);
+        var e = (0, U._)([
+          "h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-gray-900",
+        ]);
         return (
           (is = function () {
             return e;
@@ -8770,7 +8804,10 @@
         );
       }
       function il() {
-        var e = (0, U._)(["p-1 hover:text-white"]);
+        var e = (0, U._)([
+          "absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l\n",
+          "",
+        ]);
         return (
           (il = function () {
             return e;
@@ -8778,7 +8815,25 @@
           e
         );
       }
-      var iu = (0, M.vU)({
+      function iu() {
+        var e = (0, U._)(["absolute flex right-1 z-10 text-gray-300\n", ""]);
+        return (
+          (iu = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function ic() {
+        var e = (0, U._)(["p-1 hover:text-white"]);
+        return (
+          (ic = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var id = (0, M.vU)({
           historyBucketToday: {
             id: "history.bucket.today",
             defaultMessage: "Today",
@@ -8815,7 +8870,7 @@
             description: "Button to show more history items",
           },
         }),
-        ic = {
+        im = {
           initial: function (e) {
             return e.isNew ? { opacity: 0, height: 0, overflow: "hidden" } : {};
           },
@@ -8826,7 +8881,7 @@
             return { opacity: 0, height: 0 };
           },
         };
-      function id(e) {
+      function ih(e) {
         var t,
           n,
           r = e.activeId,
@@ -8840,7 +8895,7 @@
           d = c[0],
           m = c[1],
           f = (0, eo.Z)(),
-          h = (0, a8.MO)(),
+          h = (0, ie.MO)(),
           g = h.conversations,
           p = h.hasNextPage,
           x = h.fetchNextPage,
@@ -8869,8 +8924,8 @@
             null === (e = N.current) || void 0 === e || e.disconnect();
           };
         }, []);
-        var Z = (0, a8.iF)();
-        (0, a8.Od)();
+        var Z = (0, ie.iF)();
+        (0, ie.Od)();
         var P =
           ((t = (0, w.useRef)()),
           (n = (0, w.useRef)()),
@@ -8939,28 +8994,28 @@
                     today: {
                       label: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, iu.historyBucketToday)
+                        (0, v._)({}, id.historyBucketToday)
                       ),
                       items: [],
                     },
                     yesterday: {
                       label: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, iu.historyBucketYesterday)
+                        (0, v._)({}, id.historyBucketYesterday)
                       ),
                       items: [],
                     },
                     lastSeven: {
                       label: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, iu.historyBucketLastSeven)
+                        (0, v._)({}, id.historyBucketLastSeven)
                       ),
                       items: [],
                     },
                     lastThirty: {
                       label: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, iu.historyBucketLastThirty)
+                        (0, v._)({}, id.historyBucketLastThirty)
                       ),
                       items: [],
                     },
@@ -8972,7 +9027,7 @@
             },
             [d, g]
           );
-        return (0, y.jsxs)(im, {
+        return (0, y.jsxs)(ig, {
           $centered: j || (C && S),
           children: [
             S && j && (0, y.jsx)(eS.Z, { className: "m-auto" }),
@@ -8981,7 +9036,7 @@
               (0, y.jsxs)("div", {
                 className: "p-3 text-center italic text-gray-500",
                 children: [
-                  (0, y.jsx)(_.Z, (0, v._)({}, iu.unableToLoadHistory)),
+                  (0, y.jsx)(_.Z, (0, v._)({}, id.unableToLoadHistory)),
                   !l &&
                     (0, y.jsx)("div", {
                       className: "mt-1",
@@ -8993,7 +9048,7 @@
                         onClick: function () {
                           u(!0), Z();
                         },
-                        children: (0, y.jsx)(_.Z, (0, v._)({}, iu.retryButton)),
+                        children: (0, y.jsx)(_.Z, (0, v._)({}, id.retryButton)),
                       }),
                     }),
                 ],
@@ -9049,7 +9104,7 @@
                                       ),
                                       layoutId: "bucketTitle-".concat(n),
                                       layout: "position",
-                                      children: (0, y.jsx)(ib, { children: l }),
+                                      children: (0, y.jsx)(ij, { children: l }),
                                     }),
                                   (0, y.jsx)("ol", {
                                     children: s.map(function (e, t) {
@@ -9061,7 +9116,7 @@
                                                 return t.id === e.id;
                                               });
                                       return (0,
-                                      y.jsx)(Y.E.li, { className: (0, z.Z)("relative", u && 0 === t ? "z-[15]" : ""), layoutId: "".concat(e.id), layout: "position", custom: { isNew: !o }, variants: ic, initial: "initial", animate: "animate", exit: "exit", children: (0, y.jsx)(ih, { id: e.id, title: e.title, active: n, onNewThread: a, setActiveRequests: i, forwardRef: p && g[g.length - 5 - 1].id === e.id ? I : void 0 }) }, "history-item-".concat(e.id));
+                                      y.jsx)(Y.E.li, { className: (0, z.Z)("relative", u && 0 === t ? "z-[15]" : ""), layoutId: "".concat(e.id), layout: "position", custom: { isNew: !o }, variants: im, initial: "initial", animate: "animate", exit: "exit", children: (0, y.jsx)(ip, { id: e.id, title: e.title, active: n, onNewThread: a, setActiveRequests: i, forwardRef: p && g[g.length - 5 - 1].id === e.id ? I : void 0 }) }, "history-item-".concat(e.id));
                                     }),
                                   }),
                                 ],
@@ -9096,17 +9151,17 @@
                       loading: k,
                       children: (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, iu.showMoreButton)
+                        (0, v._)({}, id.showMoreButton)
                       ),
                     }),
                 }),
           ],
         });
       }
-      var im = et.Z.div(a9(), function (e) {
+      var ig = et.Z.div(it(), function (e) {
         return e.$centered && "h-full justify-center items-center";
       });
-      function ih(e) {
+      function ip(e) {
         var t = e.id,
           n = e.title,
           r = e.active,
@@ -9123,9 +9178,11 @@
           h = (0, b._)((0, w.useState)(!1), 2),
           g = h[0],
           p = h[1],
-          v = (0, T.hz)().has(ei.RJ) && r,
-          x = (0, a8.iF)(),
-          j = (0, w.useCallback)(
+          v = (0, T.hz)(),
+          x = (0, N.cj)(t),
+          j = v.has(ei.RJ) && r && !x,
+          _ = (0, ie.iF)(),
+          M = (0, w.useCallback)(
             function (e) {
               var r, a;
               if (
@@ -9140,27 +9197,27 @@
                 ea.ZP.patchConversation(t, { title: i }),
                   N.tQ.setTitle(t, i, N._L.User),
                   l(er.s6.renameThread, { threadId: t, content: i }),
-                  x();
+                  _();
               }
             },
-            [l, t, x, n]
+            [l, t, _, n]
           ),
-          _ = (0, w.useCallback)(
+          I = (0, w.useCallback)(
             function (e) {
-              "Enter" === e.key && j();
+              "Enter" === e.key && M();
             },
-            [j]
+            [M]
           ),
-          M = (0, w.useCallback)(
+          Z = (0, w.useCallback)(
             function () {
               ea.ZP.patchConversation(t, { is_visible: !1 }).then(function () {
-                x();
+                _();
               }),
                 a();
             },
-            [t, a, x]
+            [t, a, _]
           ),
-          I = (0, w.useCallback)(
+          P = (0, w.useCallback)(
             function (e) {
               R.abortAllAndReset(),
                 o(new Set()),
@@ -9170,31 +9227,31 @@
             },
             [l, t, u, o]
           ),
-          Z = F(t, n, r),
-          P = Z.resolvedTitle,
-          S = Z.isTypingEffect;
+          S = F(t, n, r),
+          A = S.resolvedTitle,
+          B = S.isTypingEffect;
         if (d)
-          return (0, y.jsxs)(ip, {
+          return (0, y.jsxs)(ix, {
             $active: r,
             children: [
               (0, y.jsx)(el.ZP, { icon: C.IC0, className: "flex-shrink-0" }),
-              (0, y.jsx)(iv, {
+              (0, y.jsx)(ib, {
                 ref: f,
                 type: "text",
-                defaultValue: null != P ? P : "",
+                defaultValue: null != A ? A : "",
                 autoFocus: !0,
-                onKeyDown: _,
+                onKeyDown: I,
                 className: "mr-0",
-                onBlur: j,
+                onBlur: M,
               }),
-              (0, y.jsxs)(ij, {
+              (0, y.jsxs)(iw, {
                 $active: !0,
                 children: [
-                  (0, y.jsx)(ik, {
-                    onClick: j,
+                  (0, y.jsx)(iC, {
+                    onClick: M,
                     children: (0, y.jsx)(el.ZP, { icon: C.UgA }),
                   }),
-                  (0, y.jsx)(ik, {
+                  (0, y.jsx)(iC, {
                     onClick: function (e) {
                       e.preventDefault(), m(!1);
                     },
@@ -9204,34 +9261,34 @@
               }),
             ],
           });
-        var A = S && r && s;
-        return (0, y.jsxs)(ig, {
-          onClick: r ? X() : I,
+        var L = B && r && s;
+        return (0, y.jsxs)(iv, {
+          onClick: r ? X() : P,
           $active: r,
-          $sharing: v,
-          className: (0, z.Z)("group", A && "animate-flash"),
+          $sharing: j,
+          className: (0, z.Z)("group", L && "animate-flash"),
           ref: i,
           children: [
             (0, y.jsx)(el.ZP, { icon: g ? C.Ybf : C.IC0 }),
-            (0, y.jsxs)(ix, {
+            (0, y.jsxs)(iy, {
               children: [
-                A
-                  ? (0, y.jsx)(O, { text: null != P ? P : "" })
+                L
+                  ? (0, y.jsx)(q, { text: null != A ? A : "" })
                   : g
-                  ? 'Delete "'.concat(P, '"?')
-                  : P,
-                (!S || !r) && (0, y.jsx)(iy, { $active: r }),
+                  ? 'Delete "'.concat(A, '"?')
+                  : A,
+                (!B || !r) && (0, y.jsx)(ik, { $active: r }),
               ],
             }),
             g &&
-              (0, y.jsxs)(ij, {
+              (0, y.jsxs)(iw, {
                 $active: !0,
                 children: [
-                  (0, y.jsx)(ik, {
-                    onClick: M,
+                  (0, y.jsx)(iC, {
+                    onClick: Z,
                     children: (0, y.jsx)(el.ZP, { icon: C.UgA }),
                   }),
-                  (0, y.jsx)(ik, {
+                  (0, y.jsx)(iC, {
                     onClick: function () {
                       p(!1);
                     },
@@ -9241,25 +9298,25 @@
               }),
             r &&
               !g &&
-              (0, y.jsxs)(ij, {
+              (0, y.jsxs)(iw, {
                 $active: r,
                 children: [
-                  (0, y.jsx)(ik, {
+                  (0, y.jsx)(iC, {
                     onClick: function (e) {
                       e.preventDefault(), m(!0);
                     },
                     children: (0, y.jsx)(el.ZP, { icon: C.Nte }),
                   }),
-                  v &&
-                    (0, y.jsx)(a6, {
-                      children: (0, y.jsx)(ik, {
+                  j &&
+                    (0, y.jsx)(a8, {
+                      children: (0, y.jsx)(iC, {
                         onClick: function (e) {
                           e.preventDefault(), D.vm.openSharingModal(t);
                         },
                         children: (0, y.jsx)(el.ZP, { icon: C.A8q }),
                       }),
                     }),
-                  (0, y.jsx)(ik, {
+                  (0, y.jsx)(iC, {
                     onClick: function () {
                       return p(!0);
                     },
@@ -9270,8 +9327,8 @@
           ],
         });
       }
-      var ig = et.Z.a(
-          ie(),
+      var iv = et.Z.a(
+          ir(),
           function (e) {
             var t = e.$active,
               n = e.$sharing;
@@ -9288,33 +9345,33 @@
               : "hover:pr-4 bg-gray-900";
           }
         ),
-        ip = et.Z.div(it(), function (e) {
+        ix = et.Z.div(ia(), function (e) {
           return e.$active
             ? "pr-14 bg-gray-800 hover:bg-gray-800"
             : "bg-gray-900";
         }),
-        iv = et.Z.input(ir()),
-        ix = et.Z.div(ia()),
-        ib = et.Z.h3(ii()),
-        iy = et.Z.div(io(), function (e) {
+        ib = et.Z.input(ii()),
+        iy = et.Z.div(io()),
+        ij = et.Z.h3(is()),
+        ik = et.Z.div(il(), function (e) {
           return e.$active
             ? "from-gray-800"
             : "from-gray-900 group-hover:from-[#2A2B32]";
         }),
-        ij = et.Z.div(is(), function (e) {
+        iw = et.Z.div(iu(), function (e) {
           return e.$active ? "visible" : "invisible group-hover:visible";
         }),
-        ik = et.Z.button(il()),
-        iw = n(61119),
-        iC = n(62059),
-        i_ = n(6128),
-        iM = n(5437),
-        iT = n.n(iM),
-        iN = n(11253),
+        iC = et.Z.button(ic()),
+        i_ = n(61119),
+        iM = n(62059),
+        iT = n(6128),
+        iN = n(5437),
         iI = n.n(iN),
-        iZ = n(15300),
-        iP = n(44675),
-        iS = "https://tcr9i.chat.openai.com/v2/".concat(
+        iZ = n(11253),
+        iP = n.n(iZ),
+        iS = n(15300),
+        iR = n(44675),
+        iD = "https://tcr9i.chat.openai.com/v2/".concat(
           "35536E1E-65B4-4D96-9D97-6ADB7EFF8147",
           "/api.js"
         );
@@ -9326,7 +9383,7 @@
         (l.Error = "error"),
         (l.Failed = "failed"),
         (l.CAPTCHA = "captcha");
-      var iR = new ((function () {
+      var iA = new ((function () {
           function e() {
             (0, B._)(this, e), (this.status = p.Idle);
             var t,
@@ -9350,9 +9407,9 @@
                               n.setOnError(function (i) {
                                 if (e) {
                                   var o, s, l, u, c;
-                                  iZ.U.addAction("arkose_get_token_error", {
+                                  iS.U.addAction("arkose_get_token_error", {
                                     app_release:
-                                      null !== (l = iP.env.APP_RELEASE) &&
+                                      null !== (l = iR.env.APP_RELEASE) &&
                                       void 0 !== l
                                         ? l
                                         : "",
@@ -9379,11 +9436,11 @@
                               }),
                               n.setOnFailed(function () {
                                 var e;
-                                iZ.U.addAction(
+                                iS.U.addAction(
                                   "arkose_failed_to_get_challenge",
                                   {
                                     app_release:
-                                      null !== (e = iP.env.APP_RELEASE) &&
+                                      null !== (e = iR.env.APP_RELEASE) &&
                                       void 0 !== e
                                         ? e
                                         : "",
@@ -9413,7 +9470,7 @@
                     (window.useArkoseSetupEnforcement = void 0),
                       t.setStatus(p.Loading);
                     var a = document.createElement("script");
-                    (a.src = iS),
+                    (a.src = iD),
                       (a.async = !0),
                       (a.defer = !0),
                       a.setAttribute("data-status", p.Loading),
@@ -9446,9 +9503,9 @@
                       else if ("error" === o.type) {
                         if ((t.setStatus(p.Error), e)) {
                           var s;
-                          iZ.U.addAction("arkose_script_load_error", {
+                          iS.U.addAction("arkose_script_load_error", {
                             app_release:
-                              null !== (s = iP.env.APP_RELEASE) && void 0 !== s
+                              null !== (s = iR.env.APP_RELEASE) && void 0 !== s
                                 ? s
                                 : "",
                           }),
@@ -9473,9 +9530,9 @@
               setTimeout(function () {
                 if (e.status === p.ScriptLoaded) {
                   var t;
-                  iZ.U.addAction("arkose_script_ready_timeout", {
+                  iS.U.addAction("arkose_script_ready_timeout", {
                     app_release:
-                      null !== (t = iP.env.APP_RELEASE) && void 0 !== t
+                      null !== (t = iR.env.APP_RELEASE) && void 0 !== t
                         ? t
                         : "",
                   }),
@@ -9484,7 +9541,7 @@
               }, 15e3);
             }),
             (t._showUserError = function () {
-              nM.m.danger(
+              nT.m.danger(
                 "There was a problem preparing your chat. Please refresh the page and try again."
               );
             }),
@@ -9527,9 +9584,9 @@
             e
           );
         })())(),
-        iD = n(75179),
-        iA = n(87316);
-      function iE(e) {
+        iE = n(75179),
+        iF = n(87316);
+      function iB(e) {
         var t = e.id,
           n = e.label,
           r = e.disabled;
@@ -9552,28 +9609,8 @@
           ],
         });
       }
-      function iF() {
-        var e = (0, U._)(["mb-2 mt-auto ml-auto mr-auto"]);
-        return (
-          (iF = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function iB() {
-        var e = (0, U._)([
-          "relative rounded-md border border-black/10 bg-gray-50 dark:border-gray-900/50 dark:bg-[#444654] flex flex-col overflow-hidden",
-        ]);
-        return (
-          (iB = function () {
-            return e;
-          }),
-          e
-        );
-      }
       function iL() {
-        var e = (0, U._)(["mb-5 border dark:bg-gray-800 overflow-hidden"]);
+        var e = (0, U._)(["mb-2 mt-auto ml-auto mr-auto"]);
         return (
           (iL = function () {
             return e;
@@ -9581,8 +9618,19 @@
           e
         );
       }
+      function iq() {
+        var e = (0, U._)([
+          "relative rounded-md border border-black/10 bg-gray-50 dark:border-gray-900/50 dark:bg-[#444654] flex flex-col overflow-hidden",
+        ]);
+        return (
+          (iq = function () {
+            return e;
+          }),
+          e
+        );
+      }
       function iO() {
-        var e = (0, U._)([""]);
+        var e = (0, U._)(["mb-5 border dark:bg-gray-800 overflow-hidden"]);
         return (
           (iO = function () {
             return e;
@@ -9590,7 +9638,16 @@
           e
         );
       }
-      var iq = (0, M.vU)({
+      function iU() {
+        var e = (0, U._)([""]);
+        return (
+          (iU = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var iz = (0, M.vU)({
         submitFeedback: {
           id: "feedbackModal.submitFeedback",
           defaultMessage: "Submit feedback",
@@ -9728,7 +9785,7 @@
           description: "Information text for user during comparison",
         },
       });
-      function iU(e) {
+      function iQ(e) {
         var t,
           n,
           r,
@@ -9753,11 +9810,11 @@
                 : null === (r = e.messages) || void 0 === r
                 ? void 0
                 : r.length) === 1 &&
-              (0, eO.RR)(null == e ? void 0 : e.messages[0].message).length < 20
+              (0, eq.RR)(null == e ? void 0 : e.messages[0].message).length < 20
             ))
         );
       }
-      function iz(e) {
+      function iH(e) {
         var t,
           n,
           r = e.ratingModalNodeId,
@@ -9792,9 +9849,9 @@
           D = R[0],
           A = R[1],
           F = (0, E.w$)(),
-          B = (0, T.hz)().has(ei.Pt) && iU(P, !0) && F,
+          B = (0, T.hz)().has(ei.Pt) && iQ(P, !0) && F,
           L = (0, en.WS)(),
-          O = (0, w.useMemo)(
+          q = (0, w.useMemo)(
             function () {
               return {
                 id: r || "root",
@@ -9805,11 +9862,11 @@
             },
             [r, u, a, d]
           ),
-          q =
+          O =
             null == I
               ? void 0
               : I[(null == I ? void 0 : I.length) - 1].variantIds,
-          U = null == q ? void 0 : q[(null == q ? void 0 : q.length) - 1],
+          U = null == O ? void 0 : O[(null == O ? void 0 : O.length) - 1],
           Q = (n = (t = null == j ? void 0 : j.getConversationTurns(U))[
             t.length - 1
           ]).messages[n.messages.length - 1].nodeId,
@@ -9818,7 +9875,7 @@
             function () {
               var e =
                 null == H ? void 0 : H[(null == H ? void 0 : H.length) - 1];
-              return "thumbsDown" === a && B && iU(e) && iU(P);
+              return "thumbsDown" === a && B && iQ(e) && iQ(P);
             },
             [a, B, H, P]
           ),
@@ -9829,10 +9886,10 @@
         (0, w.useEffect)(
           function () {
             "compare" === D
-              ? ((W.current = Date.now()), L(er.s6.displayedComparisonUIV0, O))
+              ? ((W.current = Date.now()), L(er.s6.displayedComparisonUIV0, q))
               : "critique" === D &&
                 "thumbsDown" === a &&
-                L(er.s6.displayedThumbsDownFeedbackForm, O);
+                L(er.s6.displayedThumbsDownFeedbackForm, q);
           },
           [D]
         );
@@ -9841,7 +9898,7 @@
           et = H[H.length - 1],
           eo = (0, w.useMemo)(
             function () {
-              return et && eq.Cv.getRequestIdFromConversationTurn(et);
+              return et && eO.Cv.getRequestIdFromConversationTurn(et);
             },
             [et]
           ),
@@ -9870,9 +9927,9 @@
           ey =
             "critique" === D
               ? "report" === a
-                ? x.formatMessage(iq.provideReportModalTitle)
-                : x.formatMessage(iq.provideAdditionalFeedback)
-              : x.formatMessage(iq.pickBestAnswer),
+                ? x.formatMessage(iz.provideReportModalTitle)
+                : x.formatMessage(iz.provideAdditionalFeedback)
+              : x.formatMessage(iz.pickBestAnswer),
           ej = (0, w.useRef)([]),
           ek = (0, w.useRef)(""),
           ew = (0, w.useCallback)(
@@ -9901,10 +9958,10 @@
             function () {
               ew(),
                 o(ek.current, ej.current),
-                "thumbsDown" === a && L(er.s6.submitThumbsDownFeedbackForm, O),
+                "thumbsDown" === a && L(er.s6.submitThumbsDownFeedbackForm, q),
                 $ ? A("compare") : i();
             },
-            [ew, o, a, $, L, O, i]
+            [ew, o, a, $, L, q, i]
           ),
           e_ = (0, w.useCallback)(
             function (e, t) {
@@ -9918,10 +9975,10 @@
                   tags: t,
                 })
                   .then(function () {
-                    nM.m.success("Moderation logged successfully");
+                    nT.m.success("Moderation logged successfully");
                   })
                   .catch(function () {
-                    nM.m.danger(
+                    nT.m.danger(
                       "Moderation NOT logged successfully! Please try again"
                     );
                   }),
@@ -9951,12 +10008,12 @@
               ? (0, y.jsxs)(y.Fragment, {
                   children: [
                     (0, y.jsx)(eZ.ZP.Button, {
-                      title: x.formatMessage(iq.submitRejectModeration),
+                      title: x.formatMessage(iz.submitRejectModeration),
                       color: "danger",
                       onClick: eM,
                     }),
                     (0, y.jsx)(eZ.ZP.Button, {
-                      title: x.formatMessage(iq.submitAcceptModeration),
+                      title: x.formatMessage(iz.submitAcceptModeration),
                       color: "primary",
                       onClick: eT,
                     }),
@@ -9965,7 +10022,7 @@
               : "critique" === D
               ? (0, y.jsx)(eZ.ZP.Button, {
                   title: x.formatMessage(
-                    "report" === a ? iq.submitReport : iq.submitFeedback
+                    "report" === a ? iz.submitReport : iz.submitFeedback
                   ),
                   onClick: eC,
                 })
@@ -9974,25 +10031,25 @@
           eS = eI ? "new" : "original",
           eD = eI ? "original" : "new",
           eA = eI
-            ? x.formatMessage(iq.newAnswer)
-            : x.formatMessage(iq.originalAnswer),
+            ? x.formatMessage(iz.newAnswer)
+            : x.formatMessage(iz.originalAnswer),
           eE = eI
-            ? x.formatMessage(iq.originalAnswer)
-            : x.formatMessage(iq.newAnswer),
+            ? x.formatMessage(iz.originalAnswer)
+            : x.formatMessage(iz.newAnswer),
           eF = eI
-            ? x.formatMessage(iq.newAnswerBetter)
-            : x.formatMessage(iq.originalAnswerBetter),
+            ? x.formatMessage(iz.newAnswerBetter)
+            : x.formatMessage(iz.originalAnswerBetter),
           eB = eI
-            ? x.formatMessage(iq.originalAnswerBetter)
-            : x.formatMessage(iq.newAnswerBetter),
+            ? x.formatMessage(iz.originalAnswerBetter)
+            : x.formatMessage(iz.newAnswerBetter),
           eL = a && "report" !== a && "moderate" !== a,
-          eO = (0, w.useCallback)(
+          eq = (0, w.useCallback)(
             function (e) {
               var t = "left" === e ? eS : "right" === e ? eD : "same";
               if (
                 (L(
                   er.s6.submittedComparisonUIV0,
-                  Object.assign({}, O, { choice: t })
+                  Object.assign({}, q, { choice: t })
                 ),
                 eL)
               ) {
@@ -10030,18 +10087,18 @@
               N.tQ.setThreadCurrentLeafId(u, e === M.current ? eb.id : ef.id),
                 i();
             },
-            [eS, eD, L, O, eL, u, eb.id, ef.id, i, ed, ex, s, ec, ev, a]
+            [eS, eD, L, q, eL, u, eb.id, ef.id, i, ed, ex, s, ec, ev, a]
           ),
           eU = !es && null != J.current && $,
           ez = (0, w.useCallback)(
             function () {
               i(),
                 "critique" === D
-                  ? L(er.s6.skippedThumbsDownFeedbackForm, Object.assign({}, O))
+                  ? L(er.s6.skippedThumbsDownFeedbackForm, Object.assign({}, q))
                   : "compare" === D &&
-                    L(er.s6.skippedComparisonUIV0, Object.assign({}, O));
+                    L(er.s6.skippedComparisonUIV0, Object.assign({}, q));
             },
-            [i, L, O, D]
+            [i, L, q, D]
           ),
           eQ = (0, b._)((0, w.useState)([]), 2),
           eH = eQ[0],
@@ -10080,16 +10137,16 @@
                   (0, y.jsxs)("form", {
                     ref: l,
                     children: [
-                      (0, y.jsx)(nj.ZP, {
+                      (0, y.jsx)(nk.ZP, {
                         id: "feedback-other",
                         placeholder:
                           "thumbsUp" === a
-                            ? x.formatMessage(iq.thumbsUpPlaceholder)
+                            ? x.formatMessage(iz.thumbsUpPlaceholder)
                             : "report" === a
                             ? x.formatMessage(
-                                iq.reportContentExplanationPlaceholder
+                                iz.reportContentExplanationPlaceholder
                               )
-                            : x.formatMessage(iq.thumbsDownPlaceholder),
+                            : x.formatMessage(iz.thumbsDownPlaceholder),
                         rows: 3,
                         className:
                           "mb-1 mt-4 w-full rounded-md dark:bg-gray-800 dark:focus:border-white dark:focus:ring-white",
@@ -10098,17 +10155,17 @@
                         (0, y.jsxs)("div", {
                           className: "mb-4",
                           children: [
-                            (0, y.jsx)(iE, {
+                            (0, y.jsx)(iB, {
                               id: "feedback-harmful",
-                              label: x.formatMessage(iq.harmfulUnsafe),
+                              label: x.formatMessage(iz.harmfulUnsafe),
                             }),
-                            (0, y.jsx)(iE, {
+                            (0, y.jsx)(iB, {
                               id: "feedback-false",
-                              label: x.formatMessage(iq.notTrue),
+                              label: x.formatMessage(iz.notTrue),
                             }),
-                            (0, y.jsx)(iE, {
+                            (0, y.jsx)(iB, {
                               id: "feedback-not-helpful",
-                              label: x.formatMessage(iq.notHelpful),
+                              label: x.formatMessage(iz.notHelpful),
                             }),
                           ],
                         }),
@@ -10121,27 +10178,27 @@
                               "report" === a &&
                                 (0, y.jsxs)(y.Fragment, {
                                   children: [
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-dont-like-this",
-                                      label: x.formatMessage(iq.dontLikeThis),
+                                      label: x.formatMessage(iz.dontLikeThis),
                                     }),
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-false",
-                                      label: x.formatMessage(iq.notTrue),
+                                      label: x.formatMessage(iz.notTrue),
                                     }),
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-not-helpful",
-                                      label: x.formatMessage(iq.notHelpful),
+                                      label: x.formatMessage(iz.notHelpful),
                                     }),
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-harmful-offensive",
                                       label: x.formatMessage(
-                                        iq.harmfulOffensive
+                                        iz.harmfulOffensive
                                       ),
                                     }),
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-sexual-abuse",
-                                      label: x.formatMessage(iq.sexualAbuse),
+                                      label: x.formatMessage(iz.sexualAbuse),
                                     }),
                                   ],
                                 }),
@@ -10153,19 +10210,19 @@
                                         n = t[0],
                                         r = t[1];
                                       return (0,
-                                      y.jsx)(iE, { id: "feedback-" + n, label: r }, n);
+                                      y.jsx)(iB, { id: "feedback-" + n, label: r }, n);
                                     }),
-                                    (0, y.jsx)(iE, {
+                                    (0, y.jsx)(iB, {
                                       id: "feedback-copyright",
                                       label: x.formatMessage(
-                                        iq.copyrightContent
+                                        iz.copyrightContent
                                       ),
                                     }),
                                   ],
                                 }),
-                              (0, y.jsx)(iE, {
+                              (0, y.jsx)(iB, {
                                 id: "feedback-content-other",
-                                label: x.formatMessage(iq.reportOtherContent),
+                                label: x.formatMessage(iz.reportOtherContent),
                               }),
                             ],
                           }),
@@ -10182,12 +10239,12 @@
                         className: (0, z.Z)("mb-7 mt-3"),
                         children: (0, y.jsx)(
                           _.Z,
-                          (0, v._)({}, iq.continueWithChosenAnswer)
+                          (0, v._)({}, iz.continueWithChosenAnswer)
                         ),
                       }),
-                      (0, y.jsx)(i$, {
+                      (0, y.jsx)(iW, {
                         className: S ? "rounded-2xl" : "rounded-md",
-                        children: (0, y.jsx)(iG, {
+                        children: (0, y.jsx)(iV, {
                           children: (0, y.jsx)(tW, {
                             currentModelId: d,
                             turnIndex: Y,
@@ -10233,9 +10290,9 @@
                               "mb-5 grid w-full grid-cols-2 gap-5"
                             ),
                             children: [
-                              (0, y.jsxs)(iH, {
+                              (0, y.jsxs)(iG, {
                                 children: [
-                                  (0, y.jsx)(iG, {
+                                  (0, y.jsx)(iV, {
                                     children: (0, y.jsx)(tW, {
                                       currentModelId: d,
                                       turnIndex: eI ? K : Z,
@@ -10254,21 +10311,21 @@
                                         X(),
                                     }),
                                   }),
-                                  (0, y.jsx)(iQ, {
+                                  (0, y.jsx)(i$, {
                                     children: (0, y.jsx)(eZ.ZP.Button, {
                                       disabled: !eU,
                                       title: eF,
                                       onClick: function () {
-                                        return eO("left");
+                                        return eq("left");
                                       },
                                       color: "dark",
                                     }),
                                   }),
                                 ],
                               }),
-                              (0, y.jsxs)(iH, {
+                              (0, y.jsxs)(iG, {
                                 children: [
-                                  (0, y.jsx)(iG, {
+                                  (0, y.jsx)(iV, {
                                     children: (0, y.jsx)(tW, {
                                       currentModelId: d,
                                       turnIndex: eI ? Z : K,
@@ -10287,12 +10344,12 @@
                                         X(),
                                     }),
                                   }),
-                                  (0, y.jsx)(iQ, {
+                                  (0, y.jsx)(i$, {
                                     children: (0, y.jsx)(eZ.ZP.Button, {
                                       disabled: !eU,
                                       title: eB,
                                       onClick: function () {
-                                        return eO("right");
+                                        return eq("right");
                                       },
                                       color: "dark",
                                     }),
@@ -10309,16 +10366,16 @@
                                 (0, y.jsx)(eZ.ZP.Button, {
                                   disabled: !eU,
                                   title: x.formatMessage(
-                                    iq.neitherAnswerBetter
+                                    iz.neitherAnswerBetter
                                   ),
                                   color: "primary",
                                   onClick: function () {
-                                    return eO("same");
+                                    return eq("same");
                                   },
                                   className: (0, z.Z)("mr-2"),
                                 }),
                                 (0, y.jsx)(eZ.ZP.Button, {
-                                  title: x.formatMessage(iq.skipStep),
+                                  title: x.formatMessage(iz.skipStep),
                                   onClick: function () {
                                     return i();
                                   },
@@ -10337,12 +10394,12 @@
           )
         );
       }
-      var iQ = et.Z.div(iF()),
-        iH = et.Z.div(iB()),
-        i$ = et.Z.div(iL()),
-        iG = et.Z.div(iO()),
-        iW = n(37541);
-      function iV() {
+      var i$ = et.Z.div(iL()),
+        iG = et.Z.div(iq()),
+        iW = et.Z.div(iO()),
+        iV = et.Z.div(iU()),
+        iJ = n(37541);
+      function iY() {
         var e,
           t,
           n,
@@ -10350,10 +10407,10 @@
           a,
           i,
           o =
-            ((t = (e = (0, r6.S)()).isLoggedInWithMfa),
+            ((t = (e = (0, r7.S)()).isLoggedInWithMfa),
             (n = e.isUsernamePassword),
             (r = e.setupMfa),
-            (i = (a = (0, rB.p0)()).filter(function (e) {
+            (i = (a = (0, rL.p0)()).filter(function (e) {
               return !(
                 "none" === e.manifest.auth.type ||
                 "service_http" === e.manifest.auth.type
@@ -10368,7 +10425,7 @@
                     "service_http" === e.manifest.auth.type
                   );
                 });
-                (0, rB.dT)(
+                (0, rL.dT)(
                   e.map(function (e) {
                     return e.id;
                   })
@@ -10406,18 +10463,18 @@
                 className: "flex flex-col gap-2 py-4",
                 children: l.map(function (e) {
                   return (0,
-                  y.jsx)("div", { className: "w-full", children: (0, y.jsx)(rU.Z, { plugin: e }) }, e.id);
+                  y.jsx)("div", { className: "w-full", children: (0, y.jsx)(rz.Z, { plugin: e }) }, e.id);
                 }),
               }),
             });
       }
-      var iJ = n(16578),
-        iY = n.n(iJ),
-        iK = n(44925),
-        iX = n(74853),
-        i0 = n(99652),
-        i1 = n(1220);
-      function i2(e) {
+      var iK = n(16578),
+        iX = n.n(iK),
+        i0 = n(44925),
+        i1 = n(74853),
+        i2 = n(99652),
+        i5 = n(1220);
+      function i3(e) {
         var t = e.isOpen,
           n = e.onClose,
           r = (0, en.WS)(),
@@ -10448,7 +10505,7 @@
                   case 3:
                     return (
                       t.sent(),
-                      nM.m.warning(
+                      nT.m.warning(
                         "The account management page encountered an error. Please try again. If the problem continues, please visit help.openai.com.",
                         { hasCloseButton: !0 }
                       ),
@@ -10478,7 +10535,7 @@
           m = (0, T.hz)(),
           f = (0, T.e2)(),
           h = (0, T.YD)();
-        return (0, y.jsxs)(iX.x, {
+        return (0, y.jsxs)(i1.x, {
           isOpen: t,
           onClose: n,
           children: [
@@ -10502,86 +10559,86 @@
               className: "grid",
               children: (0, y.jsx)("div", {
                 className: "relative order-1 col-span-1 sm:order-2",
-                children: (0, y.jsx)(i0.Oi, {
+                children: (0, y.jsx)(i2.Oi, {
                   rowElements: [
                     (0, y.jsx)(
-                      i0.Cu,
+                      i2.Cu,
                       {
-                        text: i1.S.plus.name,
+                        text: i5.S.plus.name,
                         children: (0, y.jsx)("span", {
                           className: "font-semibold text-gray-500",
-                          children: i1.S.plus.costInDollars,
+                          children: i5.S.plus.costInDollars,
                         }),
                       },
                       "row-plus-plan-name"
                     ),
                     (0, y.jsx)(
-                      i0.hi,
+                      i2.hi,
                       {
                         disabled: !0,
                         variant: "primary-disabled",
-                        text: i1.S.plus.callToAction.active,
+                        text: i5.S.plus.callToAction.active,
                       },
                       "row-plus-plan-button"
                     ),
                     (0, y.jsx)(
-                      i0.G,
-                      { text: i1.S.plus.demandAccess },
+                      i2.G,
+                      { text: i5.S.plus.demandAccess },
                       "row-plus-plan-demand"
                     ),
                     (0, y.jsx)(
-                      i0.G,
-                      { text: i1.S.plus.responseSpeed },
+                      i2.G,
+                      { text: i5.S.plus.responseSpeed },
                       "row-plus-plan-speed"
                     ),
                     (0, y.jsx)(
-                      i0.G,
-                      { className: "sm:pb-1", text: i1.S.plus.modelFeatures },
+                      i2.G,
+                      { className: "sm:pb-1", text: i5.S.plus.modelFeatures },
                       "row-plus-plan-feathers"
                     ),
                     (null == f ? void 0 : f.purchase_origin_platform) ===
-                      iK._4.MOBILE_IOS &&
+                      i0._4.MOBILE_IOS &&
                       (0, y.jsx)(
-                        iY(),
+                        iX(),
                         {
-                          href: iK.m1,
+                          href: i0.m1,
                           target: "_blank",
                           passHref: !0,
-                          children: (0, y.jsx)(i0.nR, {
+                          children: (0, y.jsx)(i2.nR, {
                             className: "sm:pb-1",
                             isLoading: !1,
-                            text: i1.S.manageSubscriptionIos.callToAction,
+                            text: i5.S.manageSubscriptionIos.callToAction,
                             onClick: d,
                           }),
                         },
                         "row-plus-plan-manage-ios"
                       ),
                     (!f ||
-                      f.purchase_origin_platform === iK._4.WEBAPP ||
-                      f.purchase_origin_platform === iK._4.GRANTED) &&
+                      f.purchase_origin_platform === i0._4.WEBAPP ||
+                      f.purchase_origin_platform === i0._4.GRANTED) &&
                       h &&
                       (0, y.jsx)(
-                        i0.nR,
+                        i2.nR,
                         {
                           className: "sm:pb-1",
                           isLoading: i,
-                          text: i1.S.manageSubscriptionWeb.callToAction,
+                          text: i5.S.manageSubscriptionWeb.callToAction,
                           onClick: u,
                         },
                         "row-plus-plan-manage"
                       ),
                     (0, y.jsx)(
-                      iY(),
+                      iX(),
                       {
-                        href: iK.ti,
+                        href: i0.ti,
                         target: "_blank",
                         passHref: !0,
                         children: (0, y.jsx)(
-                          i0.nR,
+                          i2.nR,
                           {
                             className: "sm:pb-1",
                             isLoading: !1,
-                            text: i1.S.getHelp.callToAction,
+                            text: i5.S.getHelp.callToAction,
                             onClick: c,
                           },
                           "row-plus-plan-help"
@@ -10591,17 +10648,17 @@
                     ),
                     m.has("business_seats")
                       ? (0, y.jsx)(
-                          iY(),
+                          iX(),
                           {
                             href: "/payments/business",
                             target: "_blank",
                             passHref: !0,
                             children: (0, y.jsx)(
-                              i0.nR,
+                              i2.nR,
                               {
                                 className: "sm:pb-1",
                                 isLoading: !1,
-                                text: i1.S.business.callToAction,
+                                text: i5.S.business.callToAction,
                                 onClick: c,
                               },
                               "row-plus-plan-help"
@@ -10617,20 +10674,20 @@
           ],
         });
       }
-      var i5 = n(48432),
-        i3 = n(24148);
-      function i4() {
+      var i4 = n(48432),
+        i6 = n(24148);
+      function i7() {
         var e = (0, U._)([
           "flex p-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border bg-white dark:bg-gray-800 border-black/10 dark:border-white/20 hover:bg-gray-50 dark:hover:bg-gray-700 h-11",
         ]);
         return (
-          (i4 = function () {
+          (i7 = function () {
             return e;
           }),
           e
         );
       }
-      var i6 = (0, M.vU)({
+      var i8 = (0, M.vU)({
         newChat: {
           defaultMessage: "New chat",
           id: "Stage.newChat",
@@ -10647,7 +10704,7 @@
           description: "Open debug sidebar button tooltip",
         },
       });
-      function i7(e) {
+      function i9(e) {
         var t = e.isStaticSharedThread,
           n = (0, ee.Z)(),
           r = (0, D.tN)(function (e) {
@@ -10680,10 +10737,10 @@
                       },
                       children: (0, y.jsx)(tI.u, {
                         side: "right",
-                        label: n.formatMessage(i6.openSidebar),
-                        children: (0, y.jsx)(i8, {
+                        label: n.formatMessage(i8.openSidebar),
+                        children: (0, y.jsx)(oe, {
                           onClick: D.vm.toggleDesktopNavCollapsed,
-                          "aria-label": n.formatMessage(i6.openSidebar),
+                          "aria-label": n.formatMessage(i8.openSidebar),
                           children: (0, y.jsx)(el.ZP, {
                             className: "text-black dark:text-white",
                             icon: C.iYc,
@@ -10699,12 +10756,12 @@
                     l &&
                     (0, y.jsx)(tI.u, {
                       side: "left",
-                      label: n.formatMessage(i6.openDebug),
-                      children: (0, y.jsx)(i8, {
+                      label: n.formatMessage(i8.openDebug),
+                      children: (0, y.jsx)(oe, {
                         onClick: function () {
                           return D.vm.toggleActiveSidebar("debug");
                         },
-                        "aria-label": n.formatMessage(i6.openDebug),
+                        "aria-label": n.formatMessage(i8.openDebug),
                         children: (0, y.jsx)(el.ZP, {
                           className: "text-black dark:text-white",
                           icon: C.cDN,
@@ -10715,12 +10772,12 @@
               ],
             });
       }
-      var i8 = et.Z.button(i4()),
-        i9 = n(89678),
-        oe = n.n(i9),
-        ot = n(55989),
-        on = n(66523),
-        or = [
+      var oe = et.Z.button(i7()),
+        ot = n(89678),
+        on = n.n(ot),
+        or = n(55989),
+        oa = n(66523),
+        oi = [
           /\bnigger\w*/i,
           /\bfaggot\w*/i,
           /\bkike\w*/i,
@@ -10735,11 +10792,11 @@
           /\bspicks?\b/i,
           /\bshemales?\b/i,
         ];
-      function oa(e) {
-        return oi.apply(this, arguments);
+      function oo(e) {
+        return os.apply(this, arguments);
       }
-      function oi() {
-        return (oi = (0, ed._)(function (e) {
+      function os() {
+        return (os = (0, ed._)(function (e) {
           var t, n;
           return (0, ef.Jh)(this, function (r) {
             switch (r.label) {
@@ -10753,7 +10810,7 @@
                       return (
                         0 === e.time_remaining_ms &&
                           e.kernel_started &&
-                          nM.m.warning(
+                          nT.m.warning(
                             "This code interpreter (beta) chat has timed out. You may continue the conversation, but previous files, links, and code blocks below may not work as expected.",
                             { hasCloseButton: !0, duration: 0 }
                           ),
@@ -10768,8 +10825,8 @@
           });
         })).apply(this, arguments);
       }
-      var oo = n(70060),
-        os = n.n(oo)()(
+      var ol = n(70060),
+        ou = n.n(ol)()(
           function () {
             return Promise.resolve().then(n.bind(n, 49218));
           },
@@ -10782,36 +10839,36 @@
             ssr: !1,
           }
         );
-      function ol(e) {
+      function oc(e) {
         var t = e.children;
-        return (0, y.jsx)(os, {
+        return (0, y.jsx)(ou, {
           className: "h-full dark:bg-gray-800",
           followButtonClassName: "scroll-convo",
           initialScrollBehavior: "auto",
           children: t,
         });
       }
-      function ou() {
+      function od() {
         var e = (0, U._)(["grow flex-1 overflow-hidden"]);
         return (
-          (ou = function () {
+          (od = function () {
             return e;
           }),
           e
         );
       }
-      function oc() {
+      function om() {
         var e = (0, U._)([
           "absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:bg-vert-light-gradient bg-white dark:bg-gray-800 md:!bg-transparent dark:md:bg-vert-dark-gradient pt-2 md:-left-2",
         ]);
         return (
-          (oc = function () {
+          (om = function () {
             return e;
           }),
           e
         );
       }
-      var od = (0, M.vU)({
+      var of = (0, M.vU)({
         contentPolicyViolation: {
           id: "thread.modal.restrictedTerms.title",
           defaultMessage: "This prompt may violate our content policy.",
@@ -10906,7 +10963,7 @@
           description: "Privacy policy footer link text",
         },
       });
-      function om(e) {
+      function oh(e) {
         var t = e.onClickReportSharedConversation;
         return (0, y.jsxs)("div", {
           className: "flex justify-center gap-3 text-gray-500",
@@ -10917,7 +10974,7 @@
               },
               children: (0, y.jsx)(
                 _.Z,
-                (0, v._)({}, od.reportSharedConversation)
+                (0, v._)({}, of.reportSharedConversation)
               ),
             }),
             (0, y.jsx)("span", { children: "|" }),
@@ -10925,19 +10982,19 @@
               href: "https://openai.com/policies/terms-of-use",
               target: "_blank",
               rel: "noreferrer",
-              children: (0, y.jsx)(_.Z, (0, v._)({}, od.termsOfUse)),
+              children: (0, y.jsx)(_.Z, (0, v._)({}, of.termsOfUse)),
             }),
             (0, y.jsx)("span", { children: "|" }),
             (0, y.jsx)("a", {
               href: "https://openai.com/policies/privacy-policy",
               target: "_blank",
               rel: "noreferrer",
-              children: (0, y.jsx)(_.Z, (0, v._)({}, od.privacyPolicy)),
+              children: (0, y.jsx)(_.Z, (0, v._)({}, of.privacyPolicy)),
             }),
           ],
         });
       }
-      var of = function (e) {
+      var og = function (e) {
           var t,
             n,
             r,
@@ -10963,8 +11020,8 @@
             F,
             B,
             L,
-            O,
             q,
+            O,
             U,
             Q,
             H,
@@ -11026,7 +11083,7 @@
             e6 = e3[1],
             e7 = (0, w.useRef)(null),
             e8 = (0, T.nR)(),
-            e9 = (0, iA.g)(function (e) {
+            e9 = (0, iF.g)(function (e) {
               return e.flags.isUserInCanPayGroup;
             }),
             te = ew.has(ei.FZ),
@@ -11055,7 +11112,7 @@
                 checkRestrictedTerms: (0, w.useCallback)(
                   function (e) {
                     var t;
-                    return (or.some(function (n) {
+                    return (oi.some(function (n) {
                       var r = n.exec(e);
                       return r && (t = r[0]), r;
                     }),
@@ -11075,7 +11132,7 @@
             tm = td[0],
             tf = td[1],
             th = (0, tD.iu)(),
-            tg = (0, rB.p0)(),
+            tg = (0, rL.p0)(),
             tp = (0, tD.Gg)(th, !0),
             tv =
               null !== (eo = (0, tD.Bv)(el.lastModelUsed, eu)) && void 0 !== eo
@@ -11083,7 +11140,7 @@
                 : tp,
             tx = (0, tD.B9)(),
             tb = void 0 !== tv ? tx.get(tv) : void 0,
-            ty = (0, a8.iF)(),
+            ty = (0, ie.iF)(),
             tj = (0, w.useCallback)(
               function () {
                 ty(), eM(er.s6.newThread);
@@ -11122,8 +11179,8 @@
                 eN ||
                   !r ||
                   void 0 === n ||
-                  (0, eO.lD)(n) ||
-                  (0, eO.JD)(n) ||
+                  (0, eq.lD)(n) ||
+                  (0, eq.JD)(n) ||
                   ea.ZP.generateSuggestions(e, t, tv)
                     .then(function (e) {
                       t_({ messageId: t, suggestions: e.suggestions });
@@ -11150,10 +11207,10 @@
               (m = (d = (0, T.hz)()).has(ei.PL)),
               (f = (0, w.useId)()),
               (h = (0, en.WS)()),
-              (g = (0, ro.Y8)(function (e) {
+              (g = (0, rs.Y8)(function (e) {
                 return null == e ? void 0 : e.setCapTimeout;
               })),
-              (p = (0, ro.Y8)(function (e) {
+              (p = (0, rs.Y8)(function (e) {
                 return null == e ? void 0 : e.clearCapTimeout;
               })),
               (x = (0, w.useContext)(A.QL).historyDisabled),
@@ -11187,7 +11244,7 @@
                     w = l.getIsBlockedFromNode(c),
                     C = !1,
                     _ = !1,
-                    M = oe()(
+                    M = on()(
                       function () {
                         w ||
                           C ||
@@ -11214,7 +11271,7 @@
                           case 1:
                             return (
                               c.trys.push([1, 3, , 4]),
-                              [4, (0, iD._I)(n, !1, e, l.getMessageId(t))]
+                              [4, (0, iE._I)(n, !1, e, l.getMessageId(t))]
                             );
                           case 2:
                             return (
@@ -11230,7 +11287,7 @@
                                         content: { parts: { $set: [""] } },
                                       },
                                       metadata: {
-                                        $set: (0, em._)((0, v._)({}, iD.sK), {
+                                        $set: (0, em._)((0, v._)({}, iE.sK), {
                                           completionSampleFinishTime:
                                             Date.now(),
                                         }),
@@ -11246,7 +11303,7 @@
                                 : o
                                 ? (N.tQ.updateTree(eu, function (e) {
                                     e.updateNode(t, {
-                                      metadata: { $set: iD.Mf },
+                                      metadata: { $set: iE.Mf },
                                     });
                                   }),
                                   h(
@@ -11281,7 +11338,7 @@
                                 threadId: e,
                                 content: JSON.stringify(s || ""),
                               }),
-                              iI().publish("UnrecoverableError"),
+                              iP().publish("UnrecoverableError"),
                               [3, 4]
                             );
                           case 4:
@@ -11292,7 +11349,7 @@
                   }
                   return (
                     (a = (0, ed._)(function (r) {
-                      var a, Z, P, S, D, A, E, B, L, O, q, U, z, Q, H, $, G, W;
+                      var a, Z, P, S, D, A, E, B, L, q, O, U, z, Q, H, $, G, W;
                       return (0, ef.Jh)(this, function (V) {
                         switch (V.label) {
                           case 0:
@@ -11309,15 +11366,15 @@
                                       $set: {
                                         err: Z,
                                         errType: "danger",
-                                        errCode: ((0, ot.T)(a) && a.code) || "",
+                                        errCode: ((0, or.T)(a) && a.code) || "",
                                         completionSampleFinishTime: Date.now(),
                                       },
                                     },
                                   });
                                 }),
                                 s(),
-                                (0, ot.T)(a) &&
-                                  (null == a ? void 0 : a.code) === ro.uU &&
+                                (0, or.T)(a) &&
+                                  (null == a ? void 0 : a.code) === rs.uU &&
                                   (null == a ? void 0 : a.clearsIn) &&
                                   (g(
                                     new Date(
@@ -11344,7 +11401,7 @@
                                       },
                                       metadata: {
                                         $set: (0, em._)(
-                                          (0, v._)({}, E ? iD.sK : iD.Mf),
+                                          (0, v._)({}, E ? iE.sK : iE.Mf),
                                           {
                                             completionSampleFinishTime:
                                               Date.now(),
@@ -11383,18 +11440,18 @@
                                   return [2];
                               }
                               x
-                                ? ((q =
+                                ? ((O =
                                     (null ===
-                                      (O = N.qN.getState().threads[eu]) ||
-                                    void 0 === O
+                                      (q = N.qN.getState().threads[eu]) ||
+                                    void 0 === q
                                       ? void 0
-                                      : O.continuingFromSharedConversationId) !=
+                                      : q.continuingFromSharedConversationId) !=
                                     null),
                                   N.tQ.removeContinuingFromSharedConversationId(
                                     eu
                                   ),
                                   (x = !1),
-                                  (b = l.isFirstCompletion || q),
+                                  (b = l.isFirstCompletion || O),
                                   (null == B ? void 0 : B.id) && k.add(n),
                                   void 0 !== L &&
                                     ((i = L),
@@ -11456,7 +11513,7 @@
                                   null === (z = j.get(e)) || void 0 === z
                                     ? void 0
                                     : z.tags.includes(tD.S.GPT_4)),
-                                m && Q && iR.gatherData(),
+                                m && Q && iA.gatherData(),
                                 !(H = (0, tc.wR)(y))))
                             )
                               return [3, 4];
@@ -11495,7 +11552,7 @@
                               !(m && Q))
                             )
                               return [3, 3];
-                            return [4, iR.getEnforcementToken()];
+                            return [4, iA.getEnforcementToken()];
                           case 2:
                             (W = V.sent()), (V.label = 3);
                           case 3:
@@ -11536,7 +11593,7 @@
                           (u = N.tQ.getTree(eu)),
                           N.tQ.retainThread(eu),
                           (d = ""
-                            .concat(eq.Vh)
+                            .concat(eO.Vh)
                             .concat(f, "-")
                             .concat(M.current++)),
                           eg(function (e) {
@@ -11617,7 +11674,7 @@
             tS = ew.has(ei.PL);
           (0, w.useEffect)(
             function () {
-              tS && tP && iR.gatherData();
+              tS && tP && iA.gatherData();
             },
             [tS, tP]
           );
@@ -11653,7 +11710,7 @@
                         !(tS && c))
                       )
                         return [3, 2];
-                      return [4, iR.getEnforcementToken()];
+                      return [4, iA.getEnforcementToken()];
                     case 1:
                       (d = f.sent()), (f.label = 2);
                     case 2:
@@ -11710,21 +11767,21 @@
                       : e.err) &&
                     (null === (t = tF.metadata) || void 0 === t
                       ? void 0
-                      : t.errCode) !== iD.Dd;
+                      : t.errCode) !== iE.Dd;
                 return !!(n || r) && 0 === eh.size;
               },
               [eh.size, tF]
             ),
-            tL = (0, ro.Y8)(function (e) {
+            tL = (0, rs.Y8)(function (e) {
               return e.isoDate;
             }),
-            tO = (0, w.useMemo)(
+            tq = (0, w.useMemo)(
               function () {
                 var e,
                   t =
                     (null === (e = tF.metadata) || void 0 === e
                       ? void 0
-                      : e.errCode) === ro.uU;
+                      : e.errCode) === rs.uU;
                 return tB && t && null != tL && "" !== tL;
               },
               [
@@ -11733,7 +11790,7 @@
                 tL,
               ]
             ),
-            tq = (0, w.useCallback)(
+            tO = (0, w.useCallback)(
               function (e, t) {
                 var n =
                     !(arguments.length > 2) ||
@@ -11801,8 +11858,8 @@
                   "thumbsDown" === n && eT)
                 ) {
                   var a = N.tQ.getTree(eu).getConversationTurns(e || "root");
-                  iU(a[a.length - 1]) &&
-                    tq(
+                  iQ(a[a.length - 1]) &&
+                    tO(
                       e,
                       { eventSource: "mouse", intent: "comparison" },
                       !1,
@@ -11810,7 +11867,7 @@
                     );
                 }
               },
-              [eM, eu, tv, eT, tq]
+              [eM, eu, tv, eT, tO]
             ),
             t$ = (0, w.useCallback)(
               function (e, t) {
@@ -11898,7 +11955,7 @@
               [eu]
             ),
             tV = (0, w.useCallback)(
-              ((O = (0, ed._)(function (e, t, n, r, a, i, o) {
+              ((q = (0, ed._)(function (e, t, n, r, a, i, o) {
                 return (0, ef.Jh)(this, function (s) {
                   switch (s.label) {
                     case 0:
@@ -11928,7 +11985,7 @@
                 });
               })),
               function (e, t, n, r, a, i, o) {
-                return O.apply(this, arguments);
+                return q.apply(this, arguments);
               }),
               [eu]
             ),
@@ -11940,7 +11997,7 @@
                       ? void 0
                       : n[(null == n ? void 0 : n.length) - 1].variantIds,
                   a = (null == r ? void 0 : r.length) === 1;
-                tq(
+                tO(
                   e,
                   a
                     ? (0, em._)((0, v._)({}, t), {
@@ -11951,7 +12008,7 @@
                   a ? "comparison_implicit" : "none"
                 );
               },
-              [tq, eu]
+              [tO, eu]
             ),
             tY = (0, w.useCallback)(
               function (e) {
@@ -11964,7 +12021,7 @@
             tK = (0, w.useCallback)(function () {
               D.vm.closeModal(D.B.AccountPortal);
             }, []),
-            tX = (0, i3.t)(function (e) {
+            tX = (0, i6.t)(function (e) {
               return {
                 setShowAccountPaymentModal: e.setShowAccountPaymentModal,
                 showAccountPaymentModal: e.showAccountPaymentModal,
@@ -11986,7 +12043,7 @@
                     a = n.getParent(t);
                   (null === (r = a.metadata) || void 0 === r
                     ? void 0
-                    : r.errCode) !== iD.Dd &&
+                    : r.errCode) !== iE.Dd &&
                     setTimeout(function () {
                       tM(a.message.id);
                     }, 500);
@@ -12010,10 +12067,10 @@
             }, []);
           (0, w.useEffect)(
             function () {
-              var e = iI().subscribe("AbortCompletion", t5),
-                t = iI().subscribe("UnrecoverableError", t3);
+              var e = iP().subscribe("AbortCompletion", t5),
+                t = iP().subscribe("UnrecoverableError", t3);
               return function () {
-                iI().unsubscribe(e), iI().unsubscribe(t);
+                iP().unsubscribe(e), iP().unsubscribe(t);
               };
             },
             [t5, t3]
@@ -12042,31 +12099,31 @@
             ni = (0, D.tN)(function (e) {
               return e.activeModals.has(D.B.AccountPortal);
             }),
-            no = (0, on.Z)(),
+            no = (0, oa.Z)(),
             ns = (0, N.XK)(eu),
             nl = (0, D.tN)(function (e) {
               return e.sharingModalThreadId === ns;
             });
-          (U = (q = {
+          (U = (O = {
             clientThreadId: eu,
             currentModelId: tv,
             isStaticSharedThread: ex,
           }).clientThreadId),
-            (Q = q.currentModelId),
-            (H = q.isStaticSharedThread),
-            (t = (0, nR.i0)(Q, nR.dN.CODE_INTERPRETER)),
+            (Q = O.currentModelId),
+            (H = O.isStaticSharedThread),
+            (t = (0, nD.i0)(Q, nD.dN.CODE_INTERPRETER)),
             (n = (0, ep.kP)().session),
             (r = N.tQ.getServerThreadId(U)),
             (0, ej.a)({
               queryKey: ["interpreterState", r],
-              queryFn: oa,
+              queryFn: oo,
               enabled: !!(t && r && !H && (null == n ? void 0 : n.accessToken)),
               cacheTime: 0,
             });
           var nu = (0, N.r7)(eu);
           return (0, y.jsxs)(y.Fragment, {
             children: [
-              (0, y.jsxs)(iT(), {
+              (0, y.jsxs)(iI(), {
                 children: [
                   null != tk && (0, y.jsx)("title", { children: tk }),
                   ex &&
@@ -12101,18 +12158,18 @@
                     }),
                 ],
               }),
-              ew.has(ei.i) ? (0, y.jsx)(iV, {}) : null,
+              ew.has(ei.i) ? (0, y.jsx)(iY, {}) : null,
               !tl &&
                 (0, y.jsx)(
                   eP.Z,
                   {
                     isOpen: !0,
                     onClose: t8,
-                    icon: i_.Z,
-                    title: ek.formatMessage(od.doNotShareSensitive),
+                    icon: iT.Z,
+                    title: ek.formatMessage(of.doNotShareSensitive),
                     primaryButton: (0, y.jsx)(eZ.ZP.Button, {
                       onClick: t8,
-                      title: ek.formatMessage(od.acknowledge),
+                      title: ek.formatMessage(of.acknowledge),
                     }),
                     type: "danger",
                   },
@@ -12126,10 +12183,10 @@
                     isOpen: !0,
                     onClose: t9,
                     icon: C.U0j,
-                    title: ek.formatMessage(od.contentPolicyViolation),
+                    title: ek.formatMessage(of.contentPolicyViolation),
                     primaryButton: (0, y.jsx)(eZ.ZP.Button, {
                       onClick: t9,
-                      title: ek.formatMessage(od.acknowledge),
+                      title: ek.formatMessage(of.acknowledge),
                     }),
                     type: "danger",
                   },
@@ -12137,13 +12194,13 @@
                 ),
               nl &&
                 null != ns &&
-                (0, y.jsx)(a$, {
+                (0, y.jsx)(aW, {
                   serverThreadId: ns,
                   activeRequests: eh,
                   currentThreadModel: el.lastModelUsed,
                 }),
               null != eX &&
-                (0, y.jsx)(iz, {
+                (0, y.jsx)(iH, {
                   ratingModalNodeId: e2,
                   ratingModalOpen: eX,
                   onCloseRatingModal: function () {
@@ -12156,14 +12213,14 @@
                   clientThreadId: eu,
                   activeRequests: eh,
                   onChangeItemInView: tz,
-                  onRequestMoreCompletions: tq,
+                  onRequestMoreCompletions: tO,
                   onUpdateNode: tQ,
                   onChangeRating: tH,
                   onDeleteNode: tY,
                   onRequestCompletion: tR,
                 }),
               eB &&
-                (0, y.jsx)(iz, {
+                (0, y.jsx)(iH, {
                   ratingModalNodeId: eG,
                   ratingModalOpen: "report",
                   onCloseRatingModal: function () {
@@ -12176,7 +12233,7 @@
                   clientThreadId: eu,
                   activeRequests: eh,
                   onChangeItemInView: tz,
-                  onRequestMoreCompletions: tq,
+                  onRequestMoreCompletions: tO,
                   onUpdateNode: tQ,
                   onChangeRating: tH,
                   onDeleteNode: tY,
@@ -12188,21 +12245,21 @@
                     return eH(!1);
                   },
                   isOpen: !0,
-                  icon: i_.Z,
-                  title: ek.formatMessage(od.reportModalThankYouTitle),
+                  icon: iT.Z,
+                  title: ek.formatMessage(of.reportModalThankYouTitle),
                   description: ek.formatMessage(
-                    od.reportModalThankYouDescription
+                    of.reportModalThankYouDescription
                   ),
                   primaryButton: (0, y.jsx)(eZ.ZP.Button, {
                     onClick: function () {
                       return eH(!1);
                     },
-                    title: ek.formatMessage(od.reportModalThankYouDismiss),
+                    title: ek.formatMessage(of.reportModalThankYouDismiss),
                   }),
                   type: "danger",
                 }),
               eJ &&
-                (0, y.jsx)(iz, {
+                (0, y.jsx)(iH, {
                   ratingModalNodeId: eE,
                   ratingModalOpen: "moderate",
                   onCloseRatingModal: function () {
@@ -12215,22 +12272,22 @@
                   clientThreadId: eu,
                   activeRequests: eh,
                   onChangeItemInView: tz,
-                  onRequestMoreCompletions: tq,
+                  onRequestMoreCompletions: tO,
                   onUpdateNode: tQ,
                   onChangeRating: tH,
                   onDeleteNode: tY,
                   onRequestCompletion: tR,
                 }),
-              (0, y.jsx)(i7, { isStaticSharedThread: ex }),
-              (0, y.jsx)(oh, {
+              (0, y.jsx)(i9, { isStaticSharedThread: ex }),
+              (0, y.jsx)(op, {
                 children:
                   !eD &&
                   (t7 || t6) &&
                   (($ = (0, y.jsx)(
-                    aS,
+                    aD,
                     {
                       onChangeItemInView: tz,
-                      onRequestMoreCompletions: tq,
+                      onRequestMoreCompletions: tO,
                       onUpdateNode: tQ,
                       onChangeRating: tH,
                       onDeleteNode: tY,
@@ -12252,9 +12309,9 @@
                         className: "h-full overflow-auto dark:bg-gray-800",
                         children: $,
                       })
-                    : (0, y.jsx)(ol, { children: $ })),
+                    : (0, y.jsx)(oc, { children: $ })),
               }),
-              (0, y.jsxs)(og, {
+              (0, y.jsxs)(ov, {
                 children: [
                   ew.has("model_preview") &&
                     t7 &&
@@ -12264,9 +12321,9 @@
                         "stretch mx-2 mb-2 text-center text-xs text-gray-600 dark:text-gray-200 md:mx-4 md:text-sm lg:mx-auto lg:max-w-3xl",
                       children: no.textareaDisclaimer,
                     }),
-                  !tO &&
+                  !tq &&
                     !ex &&
-                    (0, y.jsx)(iW.Z, {
+                    (0, y.jsx)(iJ.Z, {
                       children: (0, y.jsx)(
                         nO,
                         {
@@ -12317,7 +12374,7 @@
                             as: "link",
                             to: ey,
                             children: ek.formatMessage(
-                              od.sharedConversationContinueConversation
+                              of.sharedConversationContinueConversation
                             ),
                           }),
                           eS &&
@@ -12326,7 +12383,7 @@
                                 eY(!0);
                               },
                               children: ek.formatMessage(
-                                od.sharedConversationModerateConversation
+                                of.sharedConversationModerateConversation
                               ),
                             }),
                         ],
@@ -12336,7 +12393,7 @@
                     className:
                       "px-3 pb-3 pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-4 md:pb-6 md:pt-3",
                     children: ex
-                      ? (0, y.jsx)(om, {
+                      ? (0, y.jsx)(oh, {
                           onClickReportSharedConversation: function () {
                             eW(eE), eU(!0);
                           },
@@ -12346,7 +12403,7 @@
                           children: (0, y.jsx)(
                             _.Z,
                             (0, em._)(
-                              (0, v._)({}, od.mayProduceInaccurateInformation),
+                              (0, v._)({}, of.mayProduceInaccurateInformation),
                               {
                                 values: {
                                   link: function (e) {
@@ -12366,7 +12423,7 @@
                       : (0, y.jsx)("span", {
                           children: (0, y.jsx)(
                             _.Z,
-                            (0, em._)((0, v._)({}, od.freeResearchPreview), {
+                            (0, em._)((0, v._)({}, of.freeResearchPreview), {
                               values: {
                                 link: function (e) {
                                   return (0, y.jsx)("a", {
@@ -12384,24 +12441,24 @@
                   }),
                 ],
               }),
-              e9 && (0, y.jsx)(i5.Z, { isOpen: t0, onClose: t2 }),
+              e9 && (0, y.jsx)(i4.Z, { isOpen: t0, onClose: t2 }),
               void 0 !== e8 &&
                 e8 &&
-                (0, y.jsx)(i2, { isOpen: ni, onClose: tK }),
+                (0, y.jsx)(i3, { isOpen: ni, onClose: tK }),
               tm &&
                 (0, y.jsx)(
                   eP.Z,
                   {
                     onClose: X(),
                     isOpen: !0,
-                    icon: i_.Z,
-                    title: ek.formatMessage(od.somethingWentWrong),
-                    description: ek.formatMessage(od.tryAgainLater),
+                    icon: iT.Z,
+                    title: ek.formatMessage(of.somethingWentWrong),
+                    description: ek.formatMessage(of.tryAgainLater),
                     primaryButton: (0, y.jsx)(eZ.ZP.Button, {
                       onClick: function () {
                         ev(), tf(!1);
                       },
-                      title: ek.formatMessage(od.resetThread),
+                      title: ek.formatMessage(of.resetThread),
                     }),
                     type: "danger",
                   },
@@ -12410,9 +12467,9 @@
             ],
           });
         },
-        oh = et.Z.div(ou()),
-        og = et.Z.div(oc());
-      function op(e) {
+        op = et.Z.div(od()),
+        ov = et.Z.div(om());
+      function ox(e) {
         var t,
           n = e.clientThreadId,
           r = null !== (t = N.tQ.getTitle(n)) && void 0 !== t ? t : "New chat",
@@ -12432,17 +12489,17 @@
                 },
                 children: [
                   (0, y.jsx)(el.ZP, { icon: C.$IY }),
-                  (0, y.jsx)(_.Z, (0, v._)({}, ox.enableChatHistory)),
+                  (0, y.jsx)(_.Z, (0, v._)({}, oy.enableChatHistory)),
                 ],
               })
             : o && null != i
-            ? (0, y.jsx)(O, { text: i })
+            ? (0, y.jsx)(q, { text: i })
             : null != i
             ? i
-            : (0, y.jsx)(_.Z, (0, v._)({}, ox.newChat)),
+            : (0, y.jsx)(_.Z, (0, v._)({}, oy.newChat)),
         });
       }
-      var ov =
+      var ob =
           ((u = function (e) {
             var t = e.clientThreadId,
               n = e.setClientThreadId,
@@ -12502,37 +12559,37 @@
                 },
                 [o, t]
               ),
-              (0, y.jsxs)(iC.Z, {
+              (0, y.jsxs)(iM.Z, {
                 onResetThread: f,
                 showNavigation: !r,
-                renderTitle: (0, y.jsx)(op, { clientThreadId: t }),
+                renderTitle: (0, y.jsx)(ox, { clientThreadId: t }),
                 children: [
-                  (0, y.jsxs)(iC.Z.NavigationPrimaryActionDesktop, {
+                  (0, y.jsxs)(iM.Z.NavigationPrimaryActionDesktop, {
                     onClick: f,
                     children: [
                       (0, y.jsx)(el.ZP, { icon: c ? C.Bw1 : C.OvN }),
                       (0, y.jsx)(
                         _.Z,
-                        (0, v._)({}, c ? ox.clearChat : ox.newChat)
+                        (0, v._)({}, c ? oy.clearChat : oy.newChat)
                       ),
                     ],
                   }),
-                  (0, y.jsx)(iC.Z.NavigationPrimaryActionMobile, {
+                  (0, y.jsx)(iM.Z.NavigationPrimaryActionMobile, {
                     onClick: f,
                     children: (0, y.jsx)(el.ZP, {
                       icon: c ? C.Bw1 : C.OvN,
                       size: "medium",
                     }),
                   }),
-                  (0, y.jsx)(iC.Z.NavigationContent, {
-                    children: (0, y.jsx)(id, {
+                  (0, y.jsx)(iM.Z.NavigationContent, {
+                    children: (0, y.jsx)(ih, {
                       activeId: c ? void 0 : s,
                       onNewThread: f,
                       setActiveRequests: o,
                     }),
                   }),
                   (0, y.jsx)(
-                    of,
+                    og,
                     (0, v._)(
                       {
                         initialThreadData: i,
@@ -12544,11 +12601,11 @@
                     ),
                     t
                   ),
-                  (0, y.jsxs)(iC.Z.Sidebars, {
+                  (0, y.jsxs)(iM.Z.Sidebars, {
                     children: [
                       u.has("debug") &&
                         "debug" === h &&
-                        (0, y.jsx)(ak.fv, {
+                        (0, y.jsx)(aw.fv, {
                           clientThreadId: t,
                           slideOver: !g,
                           onClose: function () {
@@ -12557,7 +12614,7 @@
                           isOpen: !0,
                         }),
                       u.has("tools3_dev") &&
-                        (0, y.jsx)(iw.ZP, { slideOver: !g }),
+                        (0, y.jsx)(i_.ZP, { slideOver: !g }),
                     ],
                   }),
                 ],
@@ -12585,7 +12642,7 @@
               )
             );
           }),
-        ox = (0, M.vU)({
+        oy = (0, M.vU)({
           enableChatHistory: {
             id: "navigation.enableChatHistory",
             defaultMessage: "Enable chat history",

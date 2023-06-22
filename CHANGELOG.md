@@ -1,5 +1,72 @@
 # Changelog
 
+## 2023-06-22Z (`kwYJPc99Lx-XLUrLes-Se`)
+
+## Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- `unpacked/_next/static/chunks/68a27ff6.js`
+  - An 'info icon' svg was added
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added a `markFileUploadFailed` function
+    - ```js
+      G.fetch(
+        "".concat(tE, "/files/").concat(U, "/upload-failed"),
+        {
+          method: "POST",
+          headers: (0, Z._)({}, G.getAuthHeader()),
+          body: JSON.stringify({ error: B }),
+        }
+      )
+      ```
+- `unpacked/_next/static/chunks/734.js`
+  - Text changed:
+    - From: `Plugins connect ChatGPT to external apps. If you enable a plugin, ChatGPT may send parts of your conversation and the country or state you're in to the plugin to enhance your conversation.`
+    - To: `Plugins connect ChatGPT to external apps. If you enable a plugin, ChatGPT may send your conversation and the country or state you're in to the plugin.`
+- `unpacked/_next/static/chunks/97.js`
+  - Added:
+    - ```js
+      (f.TetherBrowsingDisplay = "tether_browsing_display"),
+      (f.TetherQuote = "tether_quote"),
+      ```
+  - Added strings for:
+    - `userContextModal.ok`: `"OK"`
+    - `userContextModal.messageLimitError`: `"Please limit your responses to {limit} characters or less."`
+    - `userContextModal.showTips`: `"Show tips"`
+    - `userContextModal.hideTips`: `"Hide tips"`
+  - `Z.getTree(e).getUserContext()` / `t.getUserContext = function ()`
+  - ```js
+    "tether_browsing_display" === n ||
+    "tether_quote" === n
+    ```
+
+### Not From Build Manifest
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/chunks/68a27ff6-276464568c486afd.js
+https://chat.openai.com/_next/static/chunks/734-906e48db04732907.js
+https://chat.openai.com/_next/static/chunks/97-3e768f0e33305034.js
+https://chat.openai.com/_next/static/chunks/pages/_app-408f9162aa0da5db.js
+https://chat.openai.com/_next/static/chunks/webpack-e726f3523118b318.js
+https://chat.openai.com/_next/static/kwYJPc99Lx-XLUrLes-Se/_buildManifest.js
+https://chat.openai.com/_next/static/kwYJPc99Lx-XLUrLes-Se/_ssgManifest.js
+```
+
+### From Build Manifest
+
+N/A
+
+### From `_next/static/chunks/webpack-e726f3523118b318.js`
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/css/badc091b46b76790.css
+```
+
 ## 2023-06-21Z (`9rHv4XACEoIItIhKMAq4_`)
 
 ### Not From Build Manifest
@@ -61,6 +128,14 @@ https://chat.openai.com/_next/static/chunks/778-70237646364794cd.js
 https://chat.openai.com/_next/static/chunks/pages/admin-85c2b8121aef57bc.js
 https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-9622de1930d02aae.js
 https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-b2e331698a452053.js
+```
+
+### From `_next/static/chunks/webpack-903914f4d31f626d.js`
+
+#### Captured
+
+```
+https://chat.openai.com/_next/static/css/dc06f43874f6f09a.css
 ```
 
 ## 2023-06-16Z (`Wnd5NrsJwJ8L-68NTfmnl`)
