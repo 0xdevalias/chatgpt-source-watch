@@ -15,6 +15,7 @@ The following notes are not necessarily comprehensive, but just things of potent
     - There is at least 1 known usage of this currently: `GET /api/content/vision`
   - References to a seemingly new feature: `visionContent`, that uses a lab beaker and crossed out face svg's (upcoming/unreleased feature?)
   - Refinement of error messages relating to `fileUpload` (another upcoming/unreleased feature?)
+  - **Twitter thread:** https://twitter.com/_devalias/status/1672097784336617477
 - `unpacked/_next/static/[buildHash]/_buildManifest.js`
   - New chunk `882` added: `static/chunks/97c719b8-881a2d42a6930388.js`
 - `unpacked/_next/static/chunks/webpack.js`
@@ -168,6 +169,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - There seem to be updates related to custom user contexts, some disclaimers around shared links, and a new oauth redirect endpoint/flow for plugin auth
+  - **Twitter thread:** https://twitter.com/_devalias/status/1672097784336617477
 - `unpacked/_next/static/chunks/734.js`
   - `if (m.has("new_plugin_oauth_endpoint"))`
   - `if (g.has("new_plugin_oauth_endpoint"))`

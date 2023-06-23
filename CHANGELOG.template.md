@@ -6,6 +6,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - TODO high level summary of the technical changes listed below
+  - **Twitter thread:** TODO
 - `TODO unpacked file paths here`
   - TODO notes about the file here
 - The following files had nothing much of note:
