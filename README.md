@@ -13,6 +13,7 @@ Or, to put it more poetically, in the eloquent words of ChatGPT itself:
 ## Table of Contents
 
 - [tl;dr](#tldr)
+- [Announcement](#announcement)
 - [Repository Structure](#repository-structure)
 - [Helper Scripts](#helper-scripts)
 - [Getting Started](#getting-started)
@@ -25,6 +26,16 @@ Or, to put it more poetically, in the eloquent words of ChatGPT itself:
 If you're looking for a concise summary of the changes and updates in ChatGPT's codebase over time, the [`CHANGELOG.md`](./CHANGELOG.md) is probably what you need. It's a comprehensive record of changes made in each build version and serves as a quick reference.
 
 For those interested in a more detailed analysis or diving into the code, the repository also contains the original webpack chunks and unpacked, formatted versions of the chunk files.
+
+## Announcement
+
+A couple of the places we first announced this project:
+
+- Twitter: https://twitter.com/_devalias/status/1672108774432321536
+- Reddit: https://www.reddit.com/r/ChatGPT/comments/14gp7gr/ive_just_released_chatgpt_source_watch_dedicated/
+- HackerNews: https://news.ycombinator.com/item?id=36442959
+
+Feel free to join in on the discussions or share your own thoughts and experiences with the repository. We value your feedback and contributions!
 
 ## Repository Structure
 
