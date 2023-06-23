@@ -34463,6 +34463,20 @@ Error:`,
                 });
               })();
             }),
+            (U.getContent = function (U) {
+              var B = this;
+              return (0, Y._)(function () {
+                return (0, tt.Jh)(this, function (G) {
+                  return [
+                    2,
+                    B.fetch("/api/content/".concat(U), {
+                      method: "GET",
+                      headers: (0, Z._)({}, B.getAuthHeader()),
+                    }),
+                  ];
+                });
+              })();
+            }),
             U
           );
         })();
@@ -45070,7 +45084,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "d0439e3581a38474145f3ec587cd3a769e9c0a77" }),
+        (Z.SENTRY_RELEASE = { id: "9be302a5eaca407f7753a059288d0eed87dd273d" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

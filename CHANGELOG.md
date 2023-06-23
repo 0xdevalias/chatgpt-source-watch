@@ -4,6 +4,160 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-23Z (`6tvBacVQggsxEa50Su7EW`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - There seems to be a new `GET /api/content` endpoint
+  - References to a seemingly new feature: `visionContent`, that uses a lab beaker and crossed out face svg's (upcoming/unreleased feature?)
+  - Refinement of error messages relating to `fileUpload` (another upcoming/unreleased feature?)
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - New chunk `882` added: `static/chunks/97c719b8-881a2d42a6930388.js`
+- `unpacked/_next/static/chunks/webpack.js`
+  - Despite the large amount of diff churn here, the main changes seem to be:
+    - Chunk `97` hash changed to `3a8e822067f27ef6`
+    - Chunk `734` hash changed to `5b153bb5492b0994`
+    - Chunk `798` with name prefix `68a27ff6` hash changed to `c22fcee210a6c939`
+    - New chunk added `882` with name prefix `97c719b8` hash `881a2d42a6930388`
+    - CSS hash changed to `de85cdd511acf762`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added `U.getContent` function:
+    - ```js
+      B.fetch("/api/content/".concat(U), {
+        method: "GET",
+        headers: (0, Z._)({}, B.getAuthHeader()),
+      }),
+      ```
+- `unpacked/_next/static/chunks/68a27ff6.js`
+  - Added an svg of a lab beaker containing some liquid
+- `unpacked/_next/static/chunks/97c719b8.js`
+  - Added an svg of a face with a line crossed through it
+- `unpacked/_next/static/chunks/734.js`
+  - `nE = "oai/apps/hasSeenVisionOnboarding";`
+    - Lots of content around this section of the diff relating to `visionContent`..
+    - `var nB = { beaker: ep.uv5, face: nA.vm9 };`
+      - There's the usage of the beaker (`68a27ff6.js`) and face (`97c719b8.js`) svg's included in some of the other changed chunks
+    - `ea.ZP.getContent("vision").catch(function () {`
+    - Some refinement/cleanup of error messages around file upload/download/etc to follow their standard patterns
+      - ```js
+        var t = o("default_create_entry_error", {
+          fileName: null == i ? void 0 : i.name,
+        });
+        ```
+      - ```js
+        void 0 !== e.code && (t = o(e.code)),
+          nN.m.danger(t, nI),
+        ```
+      - ```js
+        ea.ZP.getFileDownloadLink(p).catch(function (e) {
+          var t = S("default_download_link_error", {
+            fileName: null == i ? void 0 : i.name,
+          });
+          throw (
+            (void 0 !== e.code && (t = S(e.code)),
+            nN.m.danger(t, nI),
+            null == to || to(null == i ? void 0 : i.name),
+            new ej.gK(t, void 0, e.code))
+          );
+        }),
+        ```
+      - ```js
+        ea.ZP.getFileDownloadLink(G).catch(function (e) {
+          var t = X("default_download_link_error", {
+            fileName: null == O ? void 0 : O.name,
+          });
+        ```
+      - etc
+- `unpacked/_next/static/chunks/97.js`
+  - Changes within `25094: function (e, t, n) {`
+    - Added a number of error messages related to handling of `file-service://`
+      - ```js
+        var u = (0, n(3001).vU)({
+          defaultCreateEntryError: {
+            id: "fileUpload.defaultCreateEntryError",
+            defaultMessage: "Unable to upload file",
+            description: "Error message when file upload fails",
+          },
+          defaultDownloadLinkError: {
+            id: "fileUpload.defaultDownloadLinkError",
+            defaultMessage: "Failed to get upload status for {fileName}",
+            description: "Error message when file download link fails",
+          },
+          unknownError: {
+            id: "fileUpload.unknownError",
+            defaultMessage: "Unknown error occurred",
+            description: "Error message when file upload fails",
+          },
+          fileTooLarge: {
+            id: "fileUpload.fileTooLarge",
+            defaultMessage: "File is too large",
+            description: "Error message when file is too large to upload",
+          },
+          overUserQuota: {
+            id: "fileUpload.overUserQuota",
+            defaultMessage: "User quota exceeded",
+            description:
+              "Error message when user storage space (quote) has been exceeded",
+          },
+          fileNotFound: {
+            id: "fileUpload.fileNotFound",
+            defaultMessage: "File not found",
+            description: "Error message when file was not found",
+          },
+          fileTimedOut: {
+            id: "fileUpload.fileTimedOut",
+            defaultMessage: "File upload timed out. Please try again.",
+            description: "Error message when file upload timed out",
+          },
+          codeInterpreterSessionTimeout: {
+            id: "fileUpload.codeInterpreterSessionTimeout",
+            defaultMessage: "Code interpreter session expired",
+            description: "Error message when code interpreter session expired",
+          },
+        });
+        ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+  - `unpacked/_next/static/css/miniCssF.css`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/68a27ff6-c22fcee210a6c939.js
+https://chat.openai.com/_next/static/chunks/734-5b153bb5492b0994.js
+https://chat.openai.com/_next/static/chunks/97-3a8e822067f27ef6.js
+https://chat.openai.com/_next/static/chunks/97c719b8-881a2d42a6930388.js
+https://chat.openai.com/_next/static/chunks/pages/_app-165e157a34a00cb3.js
+https://chat.openai.com/_next/static/chunks/pages/index-8859e7d8d8d02e0a.js
+https://chat.openai.com/_next/static/chunks/webpack-efad5f8368f3cf1b.js
+https://chat.openai.com/_next/static/6tvBacVQggsxEa50Su7EW/_buildManifest.js
+https://chat.openai.com/_next/static/6tvBacVQggsxEa50Su7EW/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-f8e28b466b1a7b05.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-18ed836654c46a16.js
+```
+
+### From `_next/static/chunks/webpack-efad5f8368f3cf1b.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/de85cdd511acf762.css
+```
+
 ## 2023-06-22Z (`4OtK2GZhlDGpQWluC3GLQ`)
 
 ### Notes

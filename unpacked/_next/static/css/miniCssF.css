@@ -1791,6 +1791,10 @@ textarea:focus {
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 }
+.my-4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 .-ml-0 {
   margin-left: 0;
 }
@@ -2108,6 +2112,9 @@ textarea:focus {
 }
 .max-h-72 {
   max-height: 18rem;
+}
+.max-h-96 {
+  max-height: 24rem;
 }
 .max-h-\[28rem\] {
   max-height: 28rem;
@@ -3236,6 +3243,9 @@ textarea:focus {
 }
 .pl-12 {
   padding-left: 3rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .pl-3 {
   padding-left: 0.75rem;
@@ -4503,6 +4513,10 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-text-opacity: 1 !important;
   color: rgba(171, 104, 255, var(--tw-text-opacity)) !important;
 }
+.group\/option:hover .group-hover\/option\:text-brand-purple {
+  --tw-text-opacity: 1;
+  color: rgba(171, 104, 255, var(--tw-text-opacity));
+}
 .group\/option:hover .group-hover\/option\:text-gray-100 {
   --tw-text-opacity: 1;
   color: rgba(236, 236, 241, var(--tw-text-opacity));
@@ -4510,6 +4524,10 @@ button[data-state="open"] .toggle-item-button-open {
 .group\/option:hover .group-hover\/option\:text-gray-800 {
   --tw-text-opacity: 1;
   color: rgba(52, 53, 65, var(--tw-text-opacity));
+}
+.group\/option:hover .group-hover\/option\:text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 .group:hover .group-hover\:text-gray-500,
 .group\/options:hover .group-hover\/options\:text-gray-500 {
