@@ -2904,10 +2904,6 @@ textarea:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 119, 255, var(--tw-bg-opacity));
 }
-.bg-\[\#FFF3C9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 243, 201, var(--tw-bg-opacity));
-}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -3033,6 +3029,10 @@ textarea:focus {
 .bg-yellow-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(250, 230, 158, var(--tw-bg-opacity));
+}
+.bg-yellow-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 243, 201, var(--tw-bg-opacity));
 }
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;

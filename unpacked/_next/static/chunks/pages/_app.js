@@ -34180,20 +34180,39 @@ Error:`,
                 ),
               });
             }),
-            (U.pluginOauthCallback = function (U, B, G, Y) {
-              var V = new URLSearchParams({ code: B, redirect_uri: G });
+            (U.pluginOauthRedirect = function (U, B, G) {
+              var Y = new URLSearchParams({ redirect_uri: B });
               return this.fetch(
                 ""
                   .concat(tE, "/aip/p/")
-                  .concat(U, "/user-settings/oauth/callback?")
-                  .concat(V),
+                  .concat(U, "/user-settings/oauth/redirect?")
+                  .concat(Y),
                 {
                   method: "GET",
                   headers: (0, Z._)(
                     { "Content-Type": "application/json" },
-                    this.getAuthHeader(Y)
+                    this.getAuthHeader(G)
                   ),
                 }
+              );
+            }),
+            (U.pluginOauthCallback = function (U, B, G, Y, V) {
+              var J = new URLSearchParams({ code: B, redirect_uri: G });
+              return (
+                null != Y && J.append("state", Y),
+                this.fetch(
+                  ""
+                    .concat(tE, "/aip/p/")
+                    .concat(U, "/user-settings/oauth/callback?")
+                    .concat(J),
+                  {
+                    method: "GET",
+                    headers: (0, Z._)(
+                      { "Content-Type": "application/json" },
+                      this.getAuthHeader(V)
+                    ),
+                  }
+                )
               );
             }),
             (U.getPageMetadata = function (U) {
@@ -45051,7 +45070,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "133a6f10cbb6fe144d2bfa881b61cacaccf14ed7" }),
+        (Z.SENTRY_RELEASE = { id: "d0439e3581a38474145f3ec587cd3a769e9c0a77" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

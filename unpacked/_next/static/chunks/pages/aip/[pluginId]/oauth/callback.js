@@ -1,18 +1,18 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [758],
   {
-    49363: function (n, u, c) {
+    49363: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/aip/[pluginId]/oauth/callback",
         function () {
-          return c(51261);
+          return t(51261);
         },
       ]);
     },
-    51261: function (n, u, c) {
+    51261: function (n, u, t) {
       "use strict";
-      c.r(u),
-        c.d(u, {
+      t.r(u),
+        t.d(u, {
           __N_SSP: function () {
             return p;
           },
@@ -20,53 +20,55 @@
             return f;
           },
         });
-      var t = c(21722),
-        e = c(39324),
-        o = c(39889),
-        i = c(35250),
-        s = c(68555),
-        r = c(70079),
-        a = c(24274),
-        l = c(32787),
+      var c = t(21722),
+        e = t(39324),
+        o = t(39889),
+        s = t(35250),
+        i = t(68555),
+        a = t(70079),
+        r = t(24274),
+        l = t(32787),
         p = !0;
       function f(n) {
-        return (0, i.jsx)(_, (0, e._)({}, n));
+        return (0, s.jsx)(_, (0, e._)({}, n));
       }
       function _(n) {
         var u = n.pluginId,
-          c = n.code,
-          e = (0, s.useRouter)(),
-          p = (0, l.kP)().session;
+          t = n.code,
+          e = n.state,
+          p = (0, i.useRouter)(),
+          f = (0, l.kP)().session;
         return (
-          (0, r.useEffect)(
+          (0, a.useEffect)(
             function () {
               function n() {
-                return (n = (0, t._)(function () {
+                return (n = (0, c._)(function () {
                   var n;
-                  return (0, o.Jh)(this, function (t) {
-                    switch (t.label) {
+                  return (0, o.Jh)(this, function (c) {
+                    switch (c.label) {
                       case 0:
                         (n = ""
                           .concat(window.location.origin, "/aip/")
                           .concat(u, "/oauth/callback")),
-                          (t.label = 1);
+                          (c.label = 1);
                       case 1:
                         return (
-                          t.trys.push([1, 3, , 4]),
+                          c.trys.push([1, 3, , 4]),
                           [
                             4,
-                            a.ZP.pluginOauthCallback(
+                            r.ZP.pluginOauthCallback(
                               u,
-                              c,
+                              t,
                               n,
-                              null == p ? void 0 : p.accessToken
+                              e,
+                              null == f ? void 0 : f.accessToken
                             ),
                           ]
                         );
                       case 2:
                         return (
-                          t.sent(),
-                          e.push(
+                          c.sent(),
+                          p.push(
                             "/?model=gpt-4-plugins&loginAip=".concat(
                               u,
                               "&loginSuccess=true"
@@ -76,8 +78,8 @@
                         );
                       case 3:
                         return (
-                          console.error(t.sent()),
-                          e.push(
+                          console.error(c.sent()),
+                          p.push(
                             "/?model=gpt-4-plugins&loginAip=".concat(
                               u,
                               "&loginSuccess=false"
@@ -91,14 +93,14 @@
                   });
                 })).apply(this, arguments);
               }
-              (null == p ? void 0 : p.accessToken) &&
+              (null == f ? void 0 : f.accessToken) &&
                 (function () {
                   n.apply(this, arguments);
                 })();
             },
-            [u, c, e, null == p ? void 0 : p.accessToken]
+            [u, t, e, p, null == f ? void 0 : f.accessToken]
           ),
-          (0, i.jsx)("div", {})
+          (0, s.jsx)("div", {})
         );
       }
     },

@@ -4,6 +4,159 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-22Z (`4OtK2GZhlDGpQWluC3GLQ`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - There seem to be updates related to custom user contexts, some disclaimers around shared links, and a new oauth redirect endpoint/flow for plugin auth
+- `unpacked/_next/static/chunks/734.js`
+  - `if (m.has("new_plugin_oauth_endpoint"))`
+  - `if (g.has("new_plugin_oauth_endpoint"))`
+  - ```js
+    userContextCustomProfileDisclaimer: {
+      id: "sharedConversation.userContextCustomProfileDisclaimer",
+      defaultMessage:
+        "The creator of this chat is using a custom profile, which can meaningfully change how the model responds.",
+      description:
+        "Disclaimer about our lack of support for custom profiles with shared links",
+    },
+    userContextCustomProfileAndCodeInterpreterSupportDisclaimer: {
+      id: "sharedConversation.userContextCustomProfileAndCodeInterpreterSupportDisclaimer",
+      defaultMessage:
+        "The creator of this chat is using a custom profile, which can meaningfully change how the model responds. The chat contains files or images produced by Code Interpreter which are not yet visible in Shared Chats.",
+      description:
+        "Disclaimer about our lack of support for Code Interpreter inline images and file downloads with shared links and not sharing custom profile data",
+    },
+    ```
+  - ```js
+    shouldShowCodeInterpreterDisclaimer: o,
+    shouldShowUserContextCustomProfileDisclaimer: s,
+    ```
+  - ```js
+    var t = e.shouldShowCodeInterpreterDisclaimer,
+    n = e.shouldShowUserContextCustomProfileDisclaimer;
+    ```
+  - ```js
+    userContextCustomProfileDisclaimer: {
+      id: "sharingModal.userContextCustomProfileDisclaimer",
+      defaultMessage:
+        "Your custom profile data won’t be shared with recipients.",
+      description:
+        "Disclaimer about our policy to not copy over custom profile data which could have PII",
+    },
+    userContextCustomProfileAndCodeInterpreterSupportDisclaimer: {
+      id: "sharingModal.userContextCustomProfileAndCodeInterpreterSupportDisclaimer",
+      defaultMessage:
+        "Recipients won’t be able to view images, download files, or custom profiles.",
+      description:
+        "Disclaimer about our lack of support for Code Interpreter inline images and file downloads with shared links and not sharing custom profile data",
+    },
+    ```
+  - ```js
+    shouldShowCodeInterpreterDisclaimer: G,
+    shouldShowUserContextCustomProfileDisclaimer: W,
+    ```
+  - ```js
+    var t = e.shouldShowCodeInterpreterDisclaimer,
+    n = e.shouldShowUserContextCustomProfileDisclaimer;
+    ```
+- `unpacked/_next/static/chunks/97.js`
+  - ```js
+    function v() {
+      return (v = (0, r._)(function (e, t) {
+        var n, r;
+        return (0, o.Jh)(this, function (a) {
+          switch (a.label) {
+            case 0:
+              return (
+                (n = ""
+                  .concat(window.location.origin, "/aip/")
+                  .concat(e.id, "/oauth/callback")),
+                [4, c.ZP.pluginOauthRedirect(e.id, n, t)]
+              );
+            case 1:
+              return (
+                (r = a.sent()), (window.location.href = r.redirect_uri), [2]
+              );
+          }
+        });
+      })).apply(this, arguments);
+    }
+    ```
+  - ```js
+    (null === (e = n.message.metadata) || void 0 === e
+      ? void 0
+      : e.is_user_system_message)
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (U.pluginOauthRedirect = function (U, B, G) {
+      var Y = new URLSearchParams({ redirect_uri: B });
+      return this.fetch(
+        ""
+          .concat(tE, "/aip/p/")
+          .concat(U, "/user-settings/oauth/redirect?")
+    ```
+    - Changed from `/user-settings/oauth/callback?` to `/user-settings/oauth/redirect?` and added `redirect_uri` to the URL params
+  - ```js
+    (U.pluginOauthCallback = function (U, B, G, Y, V) {
+      var J = new URLSearchParams({ code: B, redirect_uri: G });
+      return (
+        null != Y && J.append("state", Y),
+        this.fetch(
+          ""
+            .concat(tE, "/aip/p/")
+            .concat(U, "/user-settings/oauth/callback?")
+            .concat(J),
+          {
+            method: "GET",
+            headers: (0, Z._)(
+              { "Content-Type": "application/json" },
+              this.getAuthHeader(V)
+            ),
+          }
+        )
+      );
+    }),
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/aip/[pluginId]/oauth/callback.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/734-83a5aa60b258146b.js
+https://chat.openai.com/_next/static/chunks/97-f3a02ec205a1c717.js
+https://chat.openai.com/_next/static/chunks/pages/_app-c44676992fc5202a.js
+https://chat.openai.com/_next/static/chunks/webpack-b5b8e60204a3dd72.js
+https://chat.openai.com/_next/static/4OtK2GZhlDGpQWluC3GLQ/_buildManifest.js
+https://chat.openai.com/_next/static/4OtK2GZhlDGpQWluC3GLQ/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-46435bdb0df161ef.js
+```
+
+### From `_next/static/chunks/webpack-b5b8e60204a3dd72.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/f7d82a9bec741d6c.css
+```
+
 ## 2023-06-22Z (`CTxpiEb45oE7hUCOWm4Jq`)
 
 ### Notes
