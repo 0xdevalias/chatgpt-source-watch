@@ -11,7 +11,8 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
 
 - **tl;dr**
-  - There seems to be a new `GET /api/content` endpoint
+  - There seems to be a new `GET /api/content/*` endpoint
+    - There is at least 1 known usage of this currently: `GET /api/content/vision`
   - References to a seemingly new feature: `visionContent`, that uses a lab beaker and crossed out face svg's (upcoming/unreleased feature?)
   - Refinement of error messages relating to `fileUpload` (another upcoming/unreleased feature?)
 - `unpacked/_next/static/[buildHash]/_buildManifest.js`
@@ -41,6 +42,7 @@ The following notes are not necessarily comprehensive, but just things of potent
     - `var nB = { beaker: ep.uv5, face: nA.vm9 };`
       - There's the usage of the beaker (`68a27ff6.js`) and face (`97c719b8.js`) svg's included in some of the other changed chunks
     - `ea.ZP.getContent("vision").catch(function () {`
+      - Looking at the definition of `getContent` above, we can see that this will access an endpoint of `GET /api/content/vision`
     - Some refinement/cleanup of error messages around file upload/download/etc to follow their standard patterns
       - ```js
         var t = o("default_create_entry_error", {
