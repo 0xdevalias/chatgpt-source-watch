@@ -1619,6 +1619,9 @@ textarea:focus {
 .right-1 {
   right: 0.25rem;
 }
+.right-12 {
+  right: 3rem;
+}
 .right-2 {
   right: 0.5rem;
 }
@@ -2008,6 +2011,9 @@ textarea:focus {
 .h-12 {
   height: 3rem;
 }
+.h-14 {
+  height: 3.5rem;
+}
 .h-16 {
   height: 4rem;
 }
@@ -2028,6 +2034,9 @@ textarea:focus {
 }
 .h-5 {
   height: 1.25rem;
+}
+.h-52 {
+  height: 13rem;
 }
 .h-6 {
   height: 1.5rem;
@@ -2527,6 +2536,22 @@ textarea:focus {
 .animate-slideLeftAndFade {
   -webkit-animation: slideLeftAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   animation: slideLeftAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@-webkit-keyframes slideUpAndFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.animate-slideUpAndFade {
+  -webkit-animation: slideUpAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideUpAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @-webkit-keyframes spin {
   to {
@@ -3117,6 +3142,9 @@ textarea:focus {
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-7 {
+  padding: 1.75rem;
 }
 .p-\[5px\] {
   padding: 5px;
@@ -3866,21 +3894,6 @@ html {
 #root {
   height: 100%;
 }
-.markdown ol {
-  counter-reset: item;
-}
-.markdown ul li {
-  display: block;
-  margin: 0;
-  position: relative;
-}
-.markdown ul li:before {
-  content: "•";
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  margin-left: -1rem;
-  position: absolute;
-}
 .markdown {
   max-width: none;
 }
@@ -3913,21 +3926,50 @@ html {
   line-height: 1rem;
   padding-left: 1rem;
 }
-.markdown ol,
+.markdown ol {
+  counter-reset: list-number;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+}
+.markdown ol > li {
+  counter-increment: list-number;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.markdown ol > li:before {
+  --tw-text-opacity: 1;
+  color: rgba(142, 142, 160, var(--tw-text-opacity));
+  content: counters(list-number, ".") ".";
+  margin-right: 0.5rem;
+}
+:is(.dark .markdown ol > li):before {
+  --tw-text-opacity: 1;
+  color: rgba(172, 172, 190, var(--tw-text-opacity));
+}
 .markdown ul {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
+  padding-left: 0;
 }
-.markdown ol li,
-.markdown ol li > p,
+.markdown ul > li {
+  display: block;
+  margin: 0;
+}
+.markdown ul > li:before {
+  content: "•";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-right: 0.5rem;
+}
 .markdown ol ol,
 .markdown ol ul,
-.markdown ul li,
-.markdown ul li > p,
 .markdown ul ol,
 .markdown ul ul {
-  margin: 0;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  margin-top: 0;
 }
 .markdown table {
   --tw-border-spacing-x: 0px;
@@ -4484,6 +4526,10 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
+.group:hover .group-hover\:bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 236, 241, var(--tw-bg-opacity));
+}
 .group:hover .group-hover\:from-\[\#2A2B32\] {
   --tw-gradient-from: #2a2b32 var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(42, 43, 50, 0) var(--tw-gradient-to-position);
@@ -4611,18 +4657,6 @@ button[data-state="open"] .toggle-item-button-open {
 .radix-side-bottom\:animate-slideDownAndFade[data-side="bottom"] {
   -webkit-animation: slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   animation: slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@-webkit-keyframes slideUpAndFade {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 .radix-side-bottom\:animate-slideUpAndFade[data-side="bottom"] {
   -webkit-animation: slideUpAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -4956,6 +4990,10 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-bg-opacity: 1;
   background-color: rgba(52, 53, 65, var(--tw-bg-opacity));
 }
+:is(.dark .focus\:dark\:bg-gray-700):focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(64, 65, 79, var(--tw-bg-opacity));
+}
 .dark .dark\:focus\:ring-gray-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(86, 88, 105, var(--tw-ring-opacity));
@@ -4990,6 +5028,10 @@ button[data-state="open"] .toggle-item-button-open {
 :is(.dark .disabled\:dark\:hover\:text-gray-400:hover):disabled {
   --tw-text-opacity: 1;
   color: rgba(172, 172, 190, var(--tw-text-opacity));
+}
+.dark .group:hover .dark\:group-hover\:bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(64, 65, 79, var(--tw-bg-opacity));
 }
 .dark .group\/option:hover .dark\:group-hover\/option\:text-gray-100 {
   --tw-text-opacity: 1;

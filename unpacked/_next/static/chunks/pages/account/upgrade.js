@@ -137,7 +137,8 @@
             m = e.children,
             f = e.delayDuration,
             h = e.closeOnOutsideClick,
-            x = (0, a.jsxs)(s.VY, {
+            x = e.open,
+            b = (0, a.jsxs)(s.VY, {
               onPointerDownOutside:
                 void 0 === h || h
                   ? void 0
@@ -166,12 +167,13 @@
           return (0, a.jsxs)(s.fC, {
             delayDuration: void 0 === f ? 300 : f,
             disableHoverableContent: !(void 0 !== c && c),
+            open: x,
             children: [
               (0, a.jsx)(s.xz, {
                 asChild: !0,
                 children: (0, a.jsx)("span", { className: p, children: m }),
               }),
-              void 0 === d || d ? (0, a.jsx)(s.h_, { children: x }) : x,
+              void 0 === d || d ? (0, a.jsx)(s.h_, { children: b }) : b,
             ],
           });
         },

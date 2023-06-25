@@ -4,6 +4,163 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-24Z (`49Xsx1Peja-HtEBNEMSwO`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some changes around `jupyterMessage` (`CodeExecutionOutputMessage`) and `vision` (`VisionExamplePicker`), etc; changes to flags that sound like code interpreter might be getting ready for a wider release at some point; a few new svg's (mountain with sun, wand with sparkles)
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added an svg of a ?mountain with a sun?
+- `unpacked/_next/static/chunks/bd26816a.js`
+  - Added an svg of a magic wand with some sparkles
+- `unpacked/_next/static/css/miniCssF.css`
+  - Some changes relating to markdown list formatting and a `slideUpAndFade` animation, plus a few other small things
+- `unpacked/_next/static/chunks/734.js`
+  - ```js
+    return (0, y.jsx)("div", { className: "empty:hidden", children: (0, y.jsx)(eI, { jupyterMessage: e }) }, t);
+    ```
+  - ```js
+    function eI(e) {
+      var t = e.jupyterMessage;
+      if ((0, w.useContext)(A.gB))
+        return (0, y.jsxs)("div", {
+          className:
+            "flex h-52 w-full max-w-xs flex-col items-center justify-center gap-2 rounded-md border-black/5 bg-gray-100 p-7 text-center text-gray-500 dark:border-white/10",
+          children: [
+            (0, y.jsx)(eu.ZP, { icon: C.LFN, size: "medium" }),
+            (0, y.jsx)(_.Z, (0, x._)({}, eS.imageNotSupported)),
+          ],
+        });
+      if (null != t.image_payload)
+        return (0, y.jsx)("img", {
+          src: "data:image/png;base64,".concat(t.image_payload),
+        });
+      if (null != t.image_url) {
+        var n = (0, ew.Iy)(t.image_url);
+        return (0, y.jsx)(eN, { fileId: n });
+      }
+      return null;
+    }
+    ```
+  - ```js
+    imageNotSupported: {
+      id: "CodeExecutionOutputMessage.imageNotSupported",
+      defaultMessage: "Image output is not supported in a shared chat",
+      description:
+        "Message shown when an image is output in a shared thread",
+    },
+    ```
+  - Lots of other code changes related to 'vision' in a similar section of this file..
+    - ```js
+      function nF() {
+        return (0, ek.a)(
+          ["visionContent"],
+          (0, em._)(function () {
+            return (0, ef.Jh)(this, function (e) {
+              switch (e.label) {
+                case 0:
+                  return [
+                    4,
+                    ea.ZP.getContent("vision").catch(function () {
+                      return (
+                        nI.m.danger("Failed to load content"),
+                        { onboarding: { title: "", content: [] } }
+                      );
+                    }),
+                  ];
+                case 1:
+                  return [2, e.sent()];
+              }
+            });
+          })
+        );
+      }
+      ```
+    - ```js
+      var nU = (0, M.vU)({
+        tryAnExample: {
+          id: "VisionExamplePicker.tryAnExample",
+          defaultMessage: "Try an example",
+          description: "Label for examples popover",
+        },
+      }),
+      nO = n(12063),
+      nq = "oai/apps/hasSeenVisionOnboarding";
+      ```
+    - etc
+- `unpacked/_next/static/chunks/97.js`
+  - ```js
+    M = "_account",
+    ```
+  - ```js
+    (N.setCurrentWorkspace(t),
+        (0, u.setCookie)(M, "personal" === t.structure ? "" : t.id))
+      : (0, u.setCookie)(M, "");
+    ```
+  - ```js
+    downloadUnavailable: {
+      id: "SandboxDownload.downloadUnavailable",
+      defaultMessage: "File download not supported in a shared chat",
+      description:
+        "Tooltip label indicating file is unavailable to download for shared conversations",
+    },
+    ```
+  - ```js
+    disabled: t.has("code_interpreter_disabled"),
+    ```
+  - ```js
+    isCodeInterpreterAvailable:
+      t.has("code_interpreter_available") || t.has("tools2"),
+    ```
+  - Removed
+    - ```js
+      isLegacyToolsUser:
+        (t.has("tools") && t.has("browsing_available")) ||
+        (t.has("tools3") && t.has("plugins_available")),
+      isNewToolsUser:
+        (t.has("browsing_available") && !t.has("tools")) ||
+        (t.has("plugins_available") && !t.has("tools3")),
+      ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/pages/account/upgrade.js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/734-8e0c25058c95ce44.js
+https://chat.openai.com/_next/static/chunks/97-3d9fd5bcf0fd6a21.js
+https://chat.openai.com/_next/static/chunks/bd26816a-7ae54dd3357d90b4.js
+https://chat.openai.com/_next/static/chunks/pages/_app-59d846923f87d462.js
+https://chat.openai.com/_next/static/chunks/webpack-4010643a9c03835f.js
+https://chat.openai.com/_next/static/49Xsx1Peja-HtEBNEMSwO/_buildManifest.js
+https://chat.openai.com/_next/static/49Xsx1Peja-HtEBNEMSwO/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/account/upgrade-63dd9b63394db521.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-f603afd8962d8951.js
+```
+
+### From `_next/static/chunks/webpack-4010643a9c03835f.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/1a5339f5692fe49a.css
+```
+
 ## 2023-06-23Z (`6tvBacVQggsxEa50Su7EW`)
 
 ### Notes
