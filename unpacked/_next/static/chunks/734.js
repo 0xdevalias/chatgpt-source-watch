@@ -4887,7 +4887,7 @@
               children: t.name,
             }),
             c &&
-              n &&
+              (n || u) &&
               (0, y.jsx)(eu.ZP, {
                 icon: u ? C.bTu : nj.DAO,
                 className: "toggle-item-button-open ml-0.5 text-gray-500",
@@ -4946,7 +4946,6 @@
               (0, y.jsx)(ny.xz, {
                 ref: f,
                 className: "w-full cursor-pointer",
-                disabled: x && !n,
                 onClick: function (e) {
                   x && (e.stopPropagation(), e.preventDefault());
                 },
@@ -13695,33 +13694,6 @@
         getHelp: { callToAction: "I need help with a billing issue" },
         business: { callToAction: "Buy for my team" },
       };
-    },
-    19051: function (e, t, n) {
-      "use strict";
-      n.d(t, {
-        Z: function () {
-          return a;
-        },
-      });
-      var r = n(70079);
-      function a() {
-        var e = (0, r.useRef)([]),
-          t = (0, r.useRef)(function (t, n) {
-            var r = setTimeout(t, n);
-            return e.current.push(r), r;
-          });
-        return (
-          (0, r.useEffect)(function () {
-            var t = e.current;
-            return function () {
-              t.forEach(function (e) {
-                clearTimeout(e);
-              });
-            };
-          }, []),
-          t.current
-        );
-      }
     },
     41402: function () {},
   },

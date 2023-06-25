@@ -31126,6 +31126,9 @@ Error:`,
         KF: function () {
           return Z;
         },
+        Xf: function () {
+          return J;
+        },
         r3: function () {
           return Y;
         },
@@ -33106,20 +33109,20 @@ Error:`,
                               null !==
                                 (ti =
                                   null ==
-                                  (tr =
+                                  (te =
                                     null !==
-                                      (tn =
-                                        null == (te = Q.sent())
+                                      (tr =
+                                        null == (tn = Q.sent())
                                           ? void 0
-                                          : te.detail) && void 0 !== tn
-                                      ? tn
-                                      : null == te
+                                          : tn.detail) && void 0 !== tr
+                                      ? tr
+                                      : null == tn
                                       ? void 0
-                                      : te.error)
+                                      : tn.error)
                                     ? void 0
-                                    : tr.message) && void 0 !== ti
+                                    : te.message) && void 0 !== ti
                                 ? ti
-                                : tr) && void 0 !== ta
+                                : te) && void 0 !== ta
                             ? ta
                             : "Unknown server error"),
                         [3, 5]
@@ -33136,9 +33139,9 @@ Error:`,
                       throw (
                         (tg.U.addAction("fetch_error_".concat(X.status), {
                           url: U,
-                          errorMessage: tt,
+                          errorMessage: null != tt ? tt : "",
                         }),
-                        new tv.Q0(tt))
+                        new tv.Q0(tt, "fetch_error_5XX", null != te ? te : {}))
                       );
                     case 6:
                       if (!(X.status >= 400)) return [3, 17];
@@ -33257,7 +33260,7 @@ Error:`,
                           url: U,
                           error: ts,
                         }),
-                        new tv.Q0(t_))
+                        new tv.Q0(t_, "fetch_error_4XX", null != ts ? ts : {}))
                       );
                     case 17:
                       if (204 === X.status) return [2, {}];
@@ -34384,7 +34387,14 @@ Error:`,
                       return [4, U.getFileDownloadLink(Z, V)];
                     case 5:
                       if ((tn = Q.sent()).status === t_.KF.Success)
-                        return [2, tn];
+                        return [
+                          2,
+                          {
+                            file_id: Z,
+                            upload_url: tn.download_url,
+                            status: t_.KF.Success,
+                          },
+                        ];
                       if (Date.now() > X)
                         throw Error(
                           "Timeout occurred waiting for file to be uploaded."
@@ -34401,6 +34411,20 @@ Error:`,
                     case 10:
                       return [2];
                   }
+                });
+              })();
+            }),
+            (U.getFileInfo = function (U, B) {
+              var G = this;
+              return (0, Y._)(function () {
+                return (0, Q.Jh)(this, function (Y) {
+                  return [
+                    2,
+                    G.fetch("".concat(tb, "/files/").concat(U), {
+                      method: "GET",
+                      headers: (0, Z._)({}, G.getAuthHeader(B)),
+                    }),
+                  ];
                 });
               })();
             }),
@@ -45082,7 +45106,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "0a1f0f795fce34f4ae9efd1a7c40467a50df3fa6" }),
+        (Z.SENTRY_RELEASE = { id: "a32a2f6b061410fb173d0db78d45a3b899ca9952" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

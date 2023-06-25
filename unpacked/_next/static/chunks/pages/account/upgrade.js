@@ -131,16 +131,18 @@
             t = e.sideOffset,
             o = e.withArrow,
             l = e.wide,
-            c = e.interactive,
-            d = e.usePortal,
-            p = e.className,
-            m = e.children,
-            f = e.delayDuration,
-            h = e.closeOnOutsideClick,
-            x = e.open,
-            b = (0, a.jsxs)(s.VY, {
+            c = e.size,
+            d = void 0 === c ? "small" : c,
+            p = e.interactive,
+            m = e.usePortal,
+            f = e.className,
+            h = e.children,
+            x = e.delayDuration,
+            b = e.closeOnOutsideClick,
+            v = e.open,
+            g = (0, a.jsxs)(s.VY, {
               onPointerDownOutside:
-                void 0 === h || h
+                void 0 === b || b
                   ? void 0
                   : function (e) {
                       return e.preventDefault();
@@ -149,12 +151,15 @@
               sideOffset: void 0 === t ? 14 : t,
               className: (0, i.Z)(
                 "relative rounded-lg border border-black/10 bg-black p-1 shadow-xs transition-opacity",
-                void 0 !== l && l ? "max-w-sm" : "max-w-xs"
+                void 0 !== l && l ? "max-w-sm" : "max-w-xs",
+                f
               ),
               children: [
                 (0, a.jsx)("span", {
-                  className:
-                    "flex items-center whitespace-pre-wrap px-2 py-1 text-center text-sm font-medium normal-case text-white",
+                  className: (0, i.Z)(
+                    "flex items-center whitespace-pre-wrap px-2 py-1 text-center font-medium normal-case text-white",
+                    { "text-xs": "xsmall" === d, "text-sm": "small" === d }
+                  ),
                   children: n,
                 }),
                 (void 0 === o || o) &&
@@ -165,15 +170,15 @@
               ],
             });
           return (0, a.jsxs)(s.fC, {
-            delayDuration: void 0 === f ? 300 : f,
-            disableHoverableContent: !(void 0 !== c && c),
-            open: x,
+            delayDuration: void 0 === x ? 300 : x,
+            disableHoverableContent: !(void 0 !== p && p),
+            open: v,
             children: [
               (0, a.jsx)(s.xz, {
                 asChild: !0,
-                children: (0, a.jsx)("span", { className: p, children: m }),
+                children: (0, a.jsx)("span", { className: f, children: h }),
               }),
-              void 0 === d || d ? (0, a.jsx)(s.h_, { children: b }) : b,
+              void 0 === m || m ? (0, a.jsx)(s.h_, { children: g }) : g,
             ],
           });
         },
@@ -288,8 +293,8 @@
             },
             [w]
           ),
-          T = (0, h.YD)(),
-          Z = o.has("disable_upgrade_ui");
+          Z = (0, h.YD)(),
+          T = o.has("disable_upgrade_ui");
         return (0, i.jsxs)(v.x, {
           isOpen: n,
           onClose: r,
@@ -373,7 +378,7 @@
                         g.hi,
                         {
                           variant: "primary",
-                          disabledText: Z
+                          disabledText: T
                             ? "Due to high demand, we've temporarily paused upgrades."
                             : "",
                           disabled: C,
@@ -402,7 +407,7 @@
                         },
                         "row-plus-plan-updates"
                       ),
-                      T &&
+                      Z &&
                         (0, i.jsx)(
                           g.nR,
                           {

@@ -4,6 +4,276 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-25Z (`5oNaFu0A1xunXHmq5l70K`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A whole bunch of changes related to 'user context' (`userContextModal`) and 'embedding files' (`filesModal`)
+  - **Twitter thread:** TODO
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    new tv.Q0(tt, "fetch_error_5XX", null != te ? te : {}))
+    ```
+  - ```js
+    new tv.Q0(t_, "fetch_error_4XX", null != ts ? ts : {}))
+    ```
+  - ```js
+    case 5:
+      if ((tn = Q.sent()).status === t_.KF.Success)
+        return [
+          2,
+          {
+            file_id: Z,
+            upload_url: tn.download_url,
+            status: t_.KF.Success,
+          },
+        ];
+    ```
+  - ```js
+    (U.getFileInfo = function (U, B) {
+      var G = this;
+      return (0, Y._)(function () {
+        return (0, Q.Jh)(this, function (Y) {
+          return [
+            2,
+            G.fetch("".concat(tb, "/files/").concat(U), {
+              method: "GET",
+              headers: (0, Z._)({}, G.getAuthHeader(B)),
+            }),
+          ];
+        });
+      })();
+    }),
+    ```
+- `unpacked/_next/static/chunks/97.js`
+  - ```js
+    successfullyEmbeddedFileTooltip: {
+      id: "filesModal.successfullyEmbeddedFileTooltip",
+      defaultMessage: "Successfully processed file for searching",
+      description: "Tooltip for the successfully embedded file icon",
+    },
+    failedToEmbedFileTooltip: {
+      id: "filesModal.failedToEmbedFileTooltip",
+      defaultMessage:
+        "Failed to process file for searching,\nplease try deleting and re-uploading",
+      description: "Tooltip for the failed to embed file icon",
+    },
+    embeddingFileTooltip: {
+      id: "filesModal.embeddingFileTooltip",
+      defaultMessage: "Processing file for searching...",
+      description: "Tooltip for the embedding file icon",
+    },
+    ```
+  - ```js
+    s = e.downloadedFiles,
+    d = e.setDownloadedFiles,
+    ```
+  - ```js
+    switch (e.label) {
+      case 0:
+        if (!o) return [2];
+        return [4, ej(o.accessToken, t, h)];
+      case 1:
+        return e.sent(), d((0, es._)(s).concat([t.id])), [2];
+    }
+    ```
+  - A chunk of code that renders the above 'embedded file' messages
+    - ```js
+      // ..snip..
+      t.retrieval_index_status === ed.Xf.Success
+        ? (0, l.jsx)(eM, {
+            label: h.formatMessage(
+              ew.successfullyEmbeddedFileTooltip
+            ),
+            children: (0, l.jsx)(k.ZP, {
+              icon: x._rq,
+              size: "xsmall",
+              className: "text-green-600",
+            }),
+          })
+        : t.retrieval_index_status === ed.Xf.Failed
+        ? (0, l.jsx)(eM, {
+            label: h.formatMessage(ew.failedToEmbedFileTooltip),
+            children: (0, l.jsx)(k.ZP, {
+              icon: x.$Rx,
+              size: "xsmall",
+              className: "text-red-500",
+            }),
+          })
+        : (0, l.jsx)(eM, {
+            label: h.formatMessage(ew.embeddingFileTooltip),
+            children: (0, l.jsx)(eg.Z, {
+              className: "text-gray-500",
+            }),
+          }),
+      // ..snip..
+      ```
+  - A chunk of code that `switch`es on `n.label` and does various things seemingly related to files
+    - ```js
+      switch (n.label) {
+        // ..snip..
+        case 1:
+          return (
+            n.trys.push([1, 6, , 7]),
+            [4, C.ZP.getFileInfo(e, Z.accessToken)]
+          );
+        // ..snip..
+      }
+      // ..snip..
+      ```
+  - ```js
+    (e = I.filter(function (e) {
+      return e.use_case === ed.Ei.MyFiles;
+    })),
+    ```
+  - `userContextModal.aboutYouHelpText` changed
+    - From: `"What should ChatGPT know about you to provide better responses?"`
+    - To: `"What would you like ChatGPT to know about you to provide better responses?"`
+  - `userContextModal.title` changed
+    - From: `"Help ChatGPT get to know you better"`
+    - To: `"Help ChatGPT provide better responses"`
+  - ```js
+    confirmCloseTitle: {
+      id: "userContextModal.confirmCloseTitle",
+      defaultMessage: "You have unsaved changes.",
+      description: "title for confirm close modal",
+    },
+    ```
+  - ```js
+    confirmCloseBody: {
+      id: "userContextModal.confirmCloseBody",
+      defaultMessage:
+        "Are you sure you want to exit? Any changes you made will be permanently lost.",
+      description: "confirm close modal",
+    },
+    ```
+  - ```js
+    confirmCloseCancel: {
+      id: "userContextModal.confirmCloseCancel",
+      defaultMessage: "Back",
+      description: "cancel button for confirm close modal",
+    },
+    ```
+  - ```js
+    confirmCloseOk: {
+      id: "userContextModal.confirmCloseOk",
+      defaultMessage: "Exit",
+      description: "ok button for confirm close modal",
+    },
+    ```
+  - ```js
+    e9 = function () {
+      var e =
+        arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return ["userContext", e];
+    },
+    e6 = { aboutUserMessage: void 0, aboutModelMessage: void 0 };
+    ```
+  - ```js
+    x = (0, c.tN)(function (e) {
+      return e.activeModals.has(c.B.UserContext);
+    }),
+    ```
+  - ```js
+    y =
+      ((e = (0, _.hz)()),
+      (t = (0, J.kP)().session),
+      (0, ex.a)(
+        e9(null == t ? void 0 : t.accessToken),
+        function () {
+          return C.ZP.getUserSystemMessage(
+            (null == t ? void 0 : t.accessToken) || ""
+          ).catch(function () {
+            ep.m.danger("Failed to get your system instructions");
+          });
+        },
+        {
+          enabled: !!(
+            x &&
+            !v &&
+            (null == t ? void 0 : t.accessToken) &&
+            e.has("system_message2")
+          ),
+          select: function (e) {
+            var t, n;
+            return {
+              aboutUserMessage:
+                null !==
+                  (t = null == e ? void 0 : e.about_user_message) &&
+                void 0 !== t
+                  ? t
+                  : "",
+              aboutModelMessage:
+                null !==
+                  (n = null == e ? void 0 : e.about_model_message) &&
+                void 0 !== n
+                  ? n
+                  : "",
+            };
+          },
+    ```
+  - ```js
+    (0, el.D)({
+      mutationFn: function (e) {
+        var t = e.userContext;
+        return C.ZP.createOrUpdateUserSystemMessage(
+          (null == i ? void 0 : i.accessToken) || "",
+          t
+        );
+      },
+      onSettled: function () {
+        s.invalidateQueries({
+          queryKey: e9(null == o ? void 0 : o.accessToken),
+        });
+      },
+      onSuccess: r,
+      onError: a,
+    })),
+    ```
+  - ```js
+    z({
+      userContext: {
+        aboutUserMessage:
+          null !== (e = I.aboutUserMessage) && void 0 !== e
+            ? e
+            : "",
+        aboutModelMessage:
+          null !== (t = I.aboutModelMessage) && void 0 !== t
+            ? t
+            : "",
+      },
+    }),
+    ```
+  - A whole lot of code related to `"user-context"`
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/pages/account/upgrade.js`
+  - `unpacked/_next/static/chunks/734.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/734-624ee145d8611d2b.js
+https://chat.openai.com/_next/static/chunks/97-dc9dfe30bc664184.js
+https://chat.openai.com/_next/static/chunks/pages/_app-de11afa369c8a1b8.js
+https://chat.openai.com/_next/static/chunks/webpack-30b12cca34e8b5ae.js
+https://chat.openai.com/_next/static/5oNaFu0A1xunXHmq5l70K/_buildManifest.js
+https://chat.openai.com/_next/static/5oNaFu0A1xunXHmq5l70K/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/account/upgrade-52d8c653cac049bd.js
+```
+
 ## 2023-06-24Z (`49Xsx1Peja-HtEBNEMSwO`)
 
 ### Notes
