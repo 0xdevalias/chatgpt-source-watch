@@ -1,0 +1,26 @@
+{
+  "name": "chatgpt-source-watch",
+  "version": "0.0.1",
+  "description": "Analyzing the evolution of ChatGPT's codebase through time with curated archives and scripts",
+  "author": "Glenn 'devalias' Grant (https://devalias.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/0xdevalias/chatgpt-source-watch#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/0xdevalias/chatgpt-source-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0xdevalias/chatgpt-source-watch/issues"
+  },
+  "keywords": [
+    "chatgpt",
+    "webpack",
+    "archive"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
