@@ -8047,7 +8047,7 @@
                   side: "bottom",
                   sideOffset: 8,
                   className:
-                    "relative max-w-md animate-slideDownAndFade select-none rounded-xl border-gray-100 bg-white p-4 text-sm text-gray-600 shadow-xs dark:bg-gray-900 dark:text-white",
+                    "relative mx-4 max-w-xs animate-slideDownAndFade select-none rounded-xl border-gray-100 bg-white p-4 text-sm text-gray-600 shadow-xs dark:bg-gray-900 dark:text-white sm:max-w-md",
                   onOpenAutoFocus: function (e) {
                     e.preventDefault();
                   },

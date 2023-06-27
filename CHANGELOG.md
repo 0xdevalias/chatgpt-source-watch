@@ -4,6 +4,238 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-27Z (`xNQaMU5Ofw4qA7ejTH2hq`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Chunks renamed (`706->386`, `724->293`)
+  - New strings added for `userContextModal` related to 'tips'
+  - Strings changed for `userContextModal` / related to rename it from 'user context modal' to 'chat preferences modal', and to rename 'system instructions' to 'chat preferences'
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - Chunk `706` renamed to `386`
+  - Chunk `724` renamed to `293`
+- `unpacked/_next/static/chunks/167.js`
+  - ```js
+    tipsHeader: {
+      id: "userContextModal.tipsHeader",
+      defaultMessage: "Thought starters",
+      description: "header for chat preferences tips",
+    },
+    aboutUserTip1: {
+      id: "userContextModal.aboutUserTip1",
+      defaultMessage: "Where are you based?",
+      description: "tips for chat preferences about you",
+    },
+    aboutUserTip2: {
+      id: "userContextModal.aboutUserTip2",
+      defaultMessage: "What do you do for work?",
+      description: "tips for chat preferences about you",
+    },
+    aboutUserTip3: {
+      id: "userContextModal.aboutUserTip3",
+      defaultMessage: "What are your hobbies and interests?",
+      description: "tips for chat preferences about you",
+    },
+    aboutUserTip4: {
+      id: "userContextModal.aboutUserTip4",
+      defaultMessage: "What subjects can you talk about for hours?",
+      description: "tips for chat preferences about you",
+    },
+    aboutUserTip5: {
+      id: "userContextModal.aboutUserTip5",
+      defaultMessage: "What are some goals you have?",
+      description: "tips for chat preferences about you",
+    },
+    modelTip1: {
+      id: "userContextModal.modelTip1",
+      defaultMessage: "How formal or casual should ChatGPT be?",
+      description: "tips for chat preferences about model",
+    },
+    modelTip2: {
+      id: "userContextModal.modelTip2",
+      defaultMessage: "How long or short should responses generally be?",
+      description: "tips for chat preferences about model",
+    },
+    modelTip3: {
+      id: "userContextModal.modelTip3",
+      defaultMessage: "How do you want to be addressed?",
+      description: "tips for chat preferences about model",
+    },
+    modelTip4: {
+      id: "userContextModal.modelTip4",
+      defaultMessage:
+        "Should ChatGPT have opinions on topics or remain neutral?",
+      description: "tips for chat preferences about model",
+    },
+    ```
+  - Changed text for `userContextModal.cancel`
+    - From: `"Cancel button for user context modal"`
+    - To: ` "Cancel button for chat preferences modal"`
+  - Changed text for `userContextModal.ok`
+    - From: `"OK button for user context modal"`
+    - To: `"OK button for chat preferences modal"`
+  - Changed text for `userContextModal.aboutYouHelpText`
+    - From: `"help text for about you section of user context"`
+    - To: `"help text for about you section of chat preferences"`
+  - Changed text for `userContextModal.title`
+    - From: `defaultMessage: "Help ChatGPT provide better responses", description: "title for user context modal"`
+    - To: `defaultMessage: "Chat preferences", description: "title for chat preferences modal",`
+  - Changed text for `userContextModal.messageLimitError`
+    - From: `"error message for user context modal"`
+    - To: `"error message for chat preferences modal"`
+  - Changed text for `userContextModal.showTips`
+    - From: `"show tips button for user context modal"`
+    - To: `"show tips button for chat preferences modal"`
+  - Changed text for `userContextModal.hideTips`
+    - From: `"hide tips button for user context modal"`
+    - To: `"hide tips button for chat preferences modal"`
+  - Changed text
+    - From: `em.m.danger("Failed to get your system instructions");`
+    - To: `em.m.danger("Failed to get your chat preferences");`
+  - Changed text
+    - From: `"Failed to update user context."`
+    - To: `"Failed to update chat preferences."`
+  - ```js
+    tip: (0, l.jsx)(tn, {
+      children: (0, l.jsxs)("ul", {
+        className: "list-disc pl-5",
+        children: [
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.aboutUserTip1)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.aboutUserTip2)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.aboutUserTip3)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.aboutUserTip4)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.aboutUserTip5)
+            ),
+          }),
+        ],
+      }),
+    }),
+    ```
+  - ```js
+    tip: (0, l.jsx)(tn, {
+      children: (0, l.jsxs)("ul", {
+        className: "list-disc pl-5",
+        children: [
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.modelTip1)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.modelTip2)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.modelTip3)
+            ),
+          }),
+          (0, l.jsx)("li", {
+            children: (0, l.jsx)(
+              b.Z,
+              (0, h._)({}, e9.modelTip4)
+            ),
+          }),
+        ],
+      }),
+    }),
+    ```
+  - ```js
+    (0, l.jsx)(w.ZP, { icon: x.yK7 }),
+    (0, l.jsx)(b.Z, (0, h._)({}, th.chatPreferences)),
+    ```
+    - Changed from `th.myProfile`
+  - ```js
+    chatPreferences: {
+      id: "popoverNavigation.chatPreferences",
+      defaultMessage: "Chat Preferences",
+      description: "Chat preferences menu item",
+    },
+    ```
+    - Change from `myProfile`
+- `unpacked/_next/static/chunks/293.js`
+  - Chunk renamed from `724` -> `293`
+  - Removed function `75861: function (t, e, n) {`
+    - This seems to have been moved into chunk `386` (see below)
+- `unpacked/_next/static/chunks/386.js`
+  - Chunk renamed from `706` -> `386`
+  - Added new function `75861: function (e, t, n) {`
+    - This seems to have been moved here from chunk `293` (see above)
+    - Looks like it might be a React component or similar, with a number of features related to stylesheets and maybe some animations to do with popping or similar
+- The following files had nothing much of note:
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+  - `unpacked/_next/static/chunks/709.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/167-d8b2347ea95bd65f.js
+https://chat.openai.com/_next/static/chunks/293-defd068c38bd0c8d.js
+https://chat.openai.com/_next/static/chunks/386-0a1e4f86c7a1f79c.js
+https://chat.openai.com/_next/static/chunks/709-9a5517af45603d46.js
+https://chat.openai.com/_next/static/chunks/pages/_app-6cb0d68c102a249a.js
+https://chat.openai.com/_next/static/chunks/pages/index-363d92a6ae5fd204.js
+https://chat.openai.com/_next/static/chunks/webpack-10026ec020bb0a9d.js
+https://chat.openai.com/_next/static/xNQaMU5Ofw4qA7ejTH2hq/_buildManifest.js
+https://chat.openai.com/_next/static/xNQaMU5Ofw4qA7ejTH2hq/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/admin-77d4b3189e3e5aed.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-dabd66874a5b08d4.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-4357f9e8b141887a.js
+```
+
+### From `_next/static/chunks/webpack-10026ec020bb0a9d.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/d5831e1d899bc371.css
+```
+
 ## 2023-06-27Z (`gO1nFWbowxDf-s-g3QRWc`)
 
 ### Notes

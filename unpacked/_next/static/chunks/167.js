@@ -92,13 +92,13 @@
     46110: function (e, t, n) {
       n.d(t, {
         Ph: function () {
-          return j;
+          return w;
         },
         Yt: function () {
           return k;
         },
         k$: function () {
-          return w;
+          return j;
         },
       });
       var r = n(4337),
@@ -172,7 +172,7 @@
             return "danger" === e.$type && "bg-red-500 text-white";
           }
         ),
-        w = function (e) {
+        j = function (e) {
           var t = e.iconName,
             n = e.background,
             r = e.notice,
@@ -213,7 +213,7 @@
             ],
           });
         },
-        j = function (e) {
+        w = function (e) {
           var t = e.plugin,
             n = e.notice,
             r = (0, c.hz)().has(f.FZ);
@@ -542,8 +542,8 @@
           x = e.file,
           b = e.loadingPercentage,
           y = e.onDownloadClick,
-          w = (0, u.Z)(),
-          j = null != y,
+          j = (0, u.Z)(),
+          w = null != y,
           _ = g(x) ? x.name : x,
           C = !!g(x) && x.type.startsWith("image/"),
           M =
@@ -567,24 +567,24 @@
         return (0, a.jsxs)("div", {
           className: "group relative inline-block text-xs text-gray-900",
           children: [
-            (0, a.jsx)(j ? "button" : "span", {
+            (0, a.jsx)(w ? "button" : "span", {
               className: "flex items-stretch justify-center",
               onClick: function () {
-                return j && (null == y ? void 0 : y());
+                return w && (null == y ? void 0 : y());
               },
               children:
                 C && null != M
                   ? (0, a.jsx)("span", {
                       className: (0, s.Z)(
                         "h-10 w-10 rounded-md bg-gray-500 bg-cover bg-center dark:bg-gray-500",
-                        j && "group-hover:bg-black"
+                        w && "group-hover:bg-black"
                       ),
                       style: {
                         backgroundImage:
                           void 0 !== M ? "url(".concat(M, ")") : "none",
                       },
                       children:
-                        j &&
+                        w &&
                         (0, a.jsx)(c.ZP, {
                           icon: l._hL,
                           className: (0, s.Z)(
@@ -598,17 +598,17 @@
                         (0, a.jsxs)("span", {
                           className: (0, s.Z)(
                             "rounded-l-md bg-gray-500 px-2 py-2 text-white transition-colors dark:bg-gray-500",
-                            j && "group-hover:bg-black"
+                            w && "group-hover:bg-black"
                           ),
                           children: [
                             (0, a.jsx)(c.ZP, {
                               icon: i.Z,
                               className: (0, s.Z)(
                                 "h-5 w-5",
-                                j && "group-hover:hidden"
+                                w && "group-hover:hidden"
                               ),
                             }),
-                            j &&
+                            w &&
                               (0, a.jsx)(c.ZP, {
                                 icon: l._hL,
                                 className: (0, s.Z)(
@@ -645,7 +645,7 @@
                 className:
                   "absolute right-1 top-1 -translate-y-1/2 translate-x-1/2 rounded-full border border-white bg-gray-500 p-0.5 text-white transition-colors hover:bg-black hover:opacity-100 group-hover:opacity-100 md:opacity-0",
                 children: (0, a.jsx)(h.u, {
-                  label: w.formatMessage(p.removeFile),
+                  label: j.formatMessage(p.removeFile),
                   side: "top",
                   sideOffset: 4,
                   children: (0, a.jsx)(c.ZP, { icon: l.q5L }),
@@ -693,8 +693,8 @@
           x = e.onInputIconClick,
           b = e.className,
           y = e.autoComplete,
-          w = e.autoFocus,
-          j = e.onPressEnter,
+          j = e.autoFocus,
+          w = e.onPressEnter,
           _ = (0, a._)((0, l.useState)(m), 2),
           C = _[0],
           M = _[1],
@@ -712,9 +712,9 @@
           ),
           N = (0, l.useCallback)(
             function (e) {
-              "Enter" === e.key && j && (e.preventDefault(), j());
+              "Enter" === e.key && w && (e.preventDefault(), w());
             },
-            [j]
+            [w]
           );
         (0, l.useEffect)(
           function () {
@@ -724,7 +724,7 @@
         );
         var P = (0, r._)({}, p ? {} : { value: m }, p ? { value: C } : {});
         return (0,
-        s.jsxs)("div", { className: (0, o.Z)("rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600 dark:bg-gray-700", b), children: [(0, s.jsx)("label", { htmlFor: n, className: "block text-xs font-medium text-gray-900 dark:text-gray-100", children: c }), (0, s.jsxs)("div", { className: (0, o.Z)(c && "mt-1", "relative"), children: [(0, s.jsx)("input", (0, r._)({ ref: t, type: u, name: n, id: n, className: (0, o.Z)("block w-full border-0 p-0 text-gray-900 placeholder-gray-500 outline-none focus:ring-0 dark:bg-gray-700 dark:text-gray-100 sm:text-sm", v && "pr-6"), placeholder: i, onBlur: k, onChange: T, onKeyDown: N, autoComplete: y, autoFocus: w }, P)), v && (0, s.jsx)(f, { onClick: x, children: (0, s.jsx)(d.ZP, { icon: v }) })] })] });
+        s.jsxs)("div", { className: (0, o.Z)("rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600 dark:bg-gray-700", b), children: [(0, s.jsx)("label", { htmlFor: n, className: "block text-xs font-medium text-gray-900 dark:text-gray-100", children: c }), (0, s.jsxs)("div", { className: (0, o.Z)(c && "mt-1", "relative"), children: [(0, s.jsx)("input", (0, r._)({ ref: t, type: u, name: n, id: n, className: (0, o.Z)("block w-full border-0 p-0 text-gray-900 placeholder-gray-500 outline-none focus:ring-0 dark:bg-gray-700 dark:text-gray-100 sm:text-sm", v && "pr-6"), placeholder: i, onBlur: k, onChange: T, onKeyDown: N, autoComplete: y, autoFocus: j }, P)), v && (0, s.jsx)(f, { onClick: x, children: (0, s.jsx)(d.ZP, { icon: v }) })] })] });
       });
       var f = u.Z.button(c());
     },
@@ -822,7 +822,7 @@
     4935: function (e, t, n) {
       n.d(t, {
         Z: function () {
-          return tU;
+          return tB;
         },
       });
       var r,
@@ -843,8 +843,8 @@
         x = n(1454),
         b = n(35290),
         y = n(3001),
-        w = n(24274),
-        j = n(38317),
+        j = n(24274),
+        w = n(38317),
         _ = n(36112),
         C = n(71209),
         M = n(70216),
@@ -874,12 +874,12 @@
         $ = n(48727),
         Q = n(35448),
         Y = n(11626),
-        X = (0, W.ZP)(function () {
+        K = (0, W.ZP)(function () {
           return { isModalOpen: !1 };
         }),
-        K = {
+        X = {
           setIsModalOpen: function (e) {
-            X.setState({ isModalOpen: e });
+            K.setState({ isModalOpen: e });
           },
         };
       function ee(e) {
@@ -898,7 +898,7 @@
               className:
                 "flex items-center justify-center rounded-full bg-blue-100 " +
                 t,
-              children: (0, l.jsx)(j.ZP, {
+              children: (0, l.jsx)(w.ZP, {
                 icon: R.Z,
                 size: void 0 === n ? "small" : n,
                 className: "text-blue-400",
@@ -944,7 +944,7 @@
                   case 2:
                     return [4, d()];
                   case 3:
-                    return e.sent(), K.setIsModalOpen(!1), [2];
+                    return e.sent(), X.setIsModalOpen(!1), [2];
                 }
               });
             }),
@@ -955,7 +955,7 @@
           m = (0, l.jsx)("div", {
             className:
               "flex h-10 w-10 items-center justify-center rounded-full bg-blue-100",
-            children: (0, l.jsx)(j.ZP, {
+            children: (0, l.jsx)(w.ZP, {
               icon: R.Z,
               size: "small",
               className: "text-blue-400",
@@ -1009,7 +1009,7 @@
                 o &&
                 (0, l.jsx)("div", {
                   className: "",
-                  children: (0, l.jsx)(j.ZP, { icon: U.Z, size: "medium" }),
+                  children: (0, l.jsx)(w.ZP, { icon: U.Z, size: "medium" }),
                 }),
             }),
           ],
@@ -1028,13 +1028,13 @@
       }
       function er(e) {
         var t = e.onResetThread,
-          n = X().isModalOpen,
+          n = K().isModalOpen,
           r = (0, Y._O)(),
           a = r.data,
           i = r.isLoading,
           s = (0, P.Z)(),
           o = (0, u.useCallback)(function () {
-            K.setIsModalOpen(!1);
+            X.setIsModalOpen(!1);
           }, []);
         return i || 0 === a.length
           ? null
@@ -1100,7 +1100,7 @@
                 children: [
                   r
                     ? (0, l.jsx)(eh.Z, { className: "h-4 w-4" })
-                    : (0, l.jsx)(j.ZP, { icon: x.OvN, size: "small" }),
+                    : (0, l.jsx)(w.ZP, { icon: x.OvN, size: "small" }),
                   s && (0, l.jsx)("span", { children: s }),
                 ],
               }),
@@ -1238,18 +1238,18 @@
             description: "Tooltip for the embedding file icon",
           },
         });
-      function ew(e, t, n) {
-        return ej.apply(this, arguments);
+      function ej(e, t, n) {
+        return ew.apply(this, arguments);
       }
-      function ej() {
-        return (ej = (0, L._)(function (e, t, n) {
+      function ew() {
+        return (ew = (0, L._)(function (e, t, n) {
           var r, a, i, s, o;
           return (0, A.Jh)(this, function (l) {
             switch (l.label) {
               case 0:
                 return (
                   l.trys.push([0, 3, , 4]),
-                  [4, w.ZP.getFileDownloadLink(t.id, e)]
+                  [4, j.ZP.getFileDownloadLink(t.id, e)]
                 );
               case 1:
                 if (!(r = l.sent()).download_url)
@@ -1303,7 +1303,7 @@
                   4,
                   Promise.all(
                     e.slice(a, a + t).map(function (e) {
-                      return ew(n.accessToken, e, r);
+                      return ej(n.accessToken, e, r);
                     })
                   ),
                 ];
@@ -1358,7 +1358,7 @@
                 switch (e.label) {
                   case 0:
                     if (!s) return [2];
-                    return [4, ew(s.accessToken, t, h)];
+                    return [4, ej(s.accessToken, t, h)];
                   case 1:
                     return e.sent(), d((0, es._)(o).concat([t.id])), [2];
                 }
@@ -1376,7 +1376,7 @@
                   case 1:
                     return (
                       e.trys.push([1, 4, , 5]),
-                      [4, w.ZP.deleteFileFromFileService(t.id, s.accessToken)]
+                      [4, j.ZP.deleteFileFromFileService(t.id, s.accessToken)]
                     );
                   case 2:
                     return (
@@ -1412,7 +1412,7 @@
                         label: h.formatMessage(
                           ey.successfullyEmbeddedFileTooltip
                         ),
-                        children: (0, l.jsx)(j.ZP, {
+                        children: (0, l.jsx)(w.ZP, {
                           icon: x._rq,
                           size: "xsmall",
                           className: "text-green-600",
@@ -1421,7 +1421,7 @@
                     : t.retrieval_index_status === eu.Xf.Failed
                     ? (0, l.jsx)(eC, {
                         label: h.formatMessage(ey.failedToEmbedFileTooltip),
-                        children: (0, l.jsx)(j.ZP, {
+                        children: (0, l.jsx)(w.ZP, {
                           icon: x.$Rx,
                           size: "xsmall",
                           className: "text-red-500",
@@ -1457,7 +1457,7 @@
                       (0, l.jsx)("button", {
                         className: "text-gray-500 hover:text-gray-600",
                         onClick: g,
-                        children: (0, l.jsx)(j.ZP, {
+                        children: (0, l.jsx)(w.ZP, {
                           icon: x._hL,
                           size: "small",
                         }),
@@ -1465,7 +1465,7 @@
                       (0, l.jsx)("button", {
                         className: "text-gray-500 hover:text-gray-600",
                         onClick: m,
-                        children: (0, l.jsx)(j.ZP, {
+                        children: (0, l.jsx)(w.ZP, {
                           icon: x.Ybf,
                           size: "small",
                         }),
@@ -1502,7 +1502,7 @@
                     case 0:
                       return [
                         4,
-                        w.ZP.listFiles(t.accessToken).catch(function () {
+                        j.ZP.listFiles(t.accessToken).catch(function () {
                           return (
                             em.m.danger(a.formatMessage(ex.errorLoadingFiles)),
                             { files: [] }
@@ -1549,7 +1549,7 @@
           ),
           B = (0, eo.D)({
             mutationFn: function (e) {
-              return w.ZP.uploadFileUsingFileService(
+              return j.ZP.uploadFileUsingFileService(
                 e,
                 eu.Ei.MyFiles,
                 S.accessToken
@@ -1603,7 +1603,7 @@
                   case 1:
                     return (
                       n.trys.push([1, 6, , 7]),
-                      [4, w.ZP.getFileInfo(e, S.accessToken)]
+                      [4, j.ZP.getFileInfo(e, S.accessToken)]
                     );
                   case 2:
                     if (
@@ -1761,7 +1761,7 @@
                               return e.use_case === eu.Ei.MyFiles;
                             })
                             .map(function (e) {
-                              return w.ZP.deleteFileFromFileService(
+                              return j.ZP.deleteFileFromFileService(
                                 e.id,
                                 S.accessToken
                               );
@@ -1888,7 +1888,7 @@
                           children: (0, l.jsxs)(ec.Z.Root, {
                             children: [
                               (0, l.jsx)(ec.Z.Trigger, {
-                                children: (0, l.jsx)(j.ZP, { icon: x.K9M }),
+                                children: (0, l.jsx)(w.ZP, { icon: x.K9M }),
                               }),
                               (0, l.jsx)(ec.Z.Portal, {
                                 children: (0, l.jsxs)(ec.Z.Content, {
@@ -1897,7 +1897,7 @@
                                       onClick: z,
                                       className: "flex gap-2",
                                       children: [
-                                        (0, l.jsx)(j.ZP, {
+                                        (0, l.jsx)(w.ZP, {
                                           icon: x._hL,
                                           size: "small",
                                         }),
@@ -1912,7 +1912,7 @@
                                       onClick: H,
                                       className: "flex gap-2",
                                       children: [
-                                        (0, l.jsx)(j.ZP, {
+                                        (0, l.jsx)(w.ZP, {
                                           icon: x.Ybf,
                                           size: "small",
                                         }),
@@ -2037,7 +2037,7 @@
           t = (0, P.Z)(),
           n = (0, eo.D)({
             mutationFn: function () {
-              return w.ZP.deleteAllSharedConversations();
+              return j.ZP.deleteAllSharedConversations();
             },
             onSettled: function () {
               e.invalidateQueries(eA);
@@ -2053,7 +2053,7 @@
               children: (0, l.jsx)("button", {
                 className:
                   "text-gray-500 hover:text-gray-600 radix-state-open:text-gray-600 dark:hover:text-gray-400 dark:radix-state-open:text-gray-400",
-                children: (0, l.jsx)(j.ZP, { icon: x.K9M }),
+                children: (0, l.jsx)(w.ZP, { icon: x.K9M }),
               }),
             }),
             (0, l.jsx)(eL.Uv, {
@@ -2081,7 +2081,7 @@
         });
       }
       function eB() {
-        return w.ZP.getSharedConversations();
+        return j.ZP.getSharedConversations();
       }
       function eO(e) {
         var t,
@@ -2095,7 +2095,7 @@
                 return (0, A.Jh)(this, function (n) {
                   return (
                     (t = e.sharedConversationId),
-                    [2, w.ZP.deleteShareLink({ share_id: t })]
+                    [2, j.ZP.deleteShareLink({ share_id: t })]
                   );
                 });
               })),
@@ -2122,7 +2122,7 @@
                 className:
                   "inline-flex items-center gap-2 align-top text-blue-500 dark:text-blue-400",
                 children: [
-                  (0, l.jsx)(j.ZP, { icon: x.XKb, className: "flex-shrink-0" }),
+                  (0, l.jsx)(w.ZP, { icon: x.XKb, className: "flex-shrink-0" }),
                   n.title,
                 ],
               }),
@@ -2152,7 +2152,7 @@
                       "aria-label": r.formatMessage(eR.goToOriginConversation),
                       className:
                         "cursor-pointer text-gray-500 hover:text-gray-600 dark:hover:text-gray-400",
-                      children: (0, l.jsx)(j.ZP, { icon: x.IC0 }),
+                      children: (0, l.jsx)(w.ZP, { icon: x.IC0 }),
                     }),
                   }),
                   (0, l.jsx)(ep.u, {
@@ -2166,7 +2166,7 @@
                       "aria-label": r.formatMessage(eR.deleteSharedLink),
                       className:
                         "text-gray-500 hover:text-gray-600 dark:hover:text-gray-400",
-                      children: (0, l.jsx)(j.ZP, { icon: x.Ybf }),
+                      children: (0, l.jsx)(w.ZP, { icon: x.Ybf }),
                     }),
                   }),
                 ],
@@ -2315,9 +2315,9 @@
           v = (0, k._)((0, u.useState)(!1), 2),
           x = v[0],
           y = v[1],
-          w = (0, k._)((0, u.useState)(!1), 2),
-          j = w[0],
-          M = w[1],
+          j = (0, k._)((0, u.useState)(!1), 2),
+          w = j[0],
+          M = j[1],
           T = (0, k._)((0, u.useState)(!1), 2),
           Z = T[0],
           S = T[1],
@@ -2336,8 +2336,8 @@
           W = (0, V.kP)().session,
           J = (0, eZ.Fl)(),
           Q = J.isBetaFeaturesUiEnabled,
-          X = J.isPluginsAvailable,
-          K = J.isBrowsingAvailable,
+          K = J.isPluginsAvailable,
+          X = J.isBrowsingAvailable,
           ee = J.isCodeInterpreterAvailable,
           et = (0, u.useCallback)(function () {
             p(!1);
@@ -2368,10 +2368,10 @@
           ed = el.isUsernamePassword,
           ec = el.removeMfa;
         return m
-          ? (0, l.jsx)(eX, { onClose: et })
+          ? (0, l.jsx)(eK, { onClose: et })
           : x
           ? (0, l.jsx)(eY, { onClose: en, onDeleteHistory: i })
-          : j
+          : w
           ? (0, l.jsx)(e2, { onClose: er })
           : Z
           ? (0, l.jsx)(eq, {
@@ -2403,19 +2403,19 @@
                         : "flex-row rounded-lg bg-gray-100 p-1 dark:bg-gray-800/30"
                     ),
                     children: [
-                      (0, l.jsx)(eK, {
+                      (0, l.jsx)(eX, {
                         value: s.General,
                         icon: eP.oq2,
                         label: (0, l.jsx)(b.Z, (0, h._)({}, e4.generalTab)),
                       }),
                       Q &&
-                        (K || X || ee) &&
-                        (0, l.jsx)(eK, {
+                        (X || K || ee) &&
+                        (0, l.jsx)(eX, {
                           value: s.BetaFeatures,
                           icon: eP.rTN,
                           label: (0, l.jsx)(b.Z, (0, h._)({}, e4.betaTab)),
                         }),
-                      (0, l.jsx)(eK, {
+                      (0, l.jsx)(eX, {
                         value: s.DataControls,
                         icon: eP.tQn,
                         label: (0, l.jsx)(
@@ -2559,7 +2559,7 @@
             mutationFn: function (t) {
               var r = t.feature,
                 a = t.enabled;
-              return w.ZP.setUserSettingsBetaFeature(
+              return j.ZP.setUserSettingsBetaFeature(
                 null !== (e = null == n ? void 0 : n.accessToken) &&
                   void 0 !== e
                   ? e
@@ -2749,7 +2749,7 @@
           }),
         });
       }
-      function eX(e) {
+      function eK(e) {
         var t = e.onClose,
           n = (0, P.Z)(),
           r = (0, V.kP)().session,
@@ -2757,7 +2757,7 @@
           i = (0, u.useCallback)(
             function () {
               try {
-                w.ZP.submitDataExport(a).then(function () {
+                j.ZP.submitDataExport(a).then(function () {
                   em.m.success(n.formatMessage(e4.dataExportRequested)), t();
                 });
               } catch (e) {
@@ -2819,7 +2819,7 @@
           }),
         });
       }
-      function eK(e) {
+      function eX(e) {
         var t = e.value,
           n = e.icon,
           r = e.label,
@@ -2831,7 +2831,7 @@
           ),
           value: t,
           children: [
-            (0, l.jsx)(j.ZP, {
+            (0, l.jsx)(w.ZP, {
               icon: n,
               strokeWidth: 0,
               className:
@@ -2897,7 +2897,7 @@
             function () {
               try {
                 p()
-                  ? w.ZP.deactivateAccount(i).then(function () {
+                  ? j.ZP.deactivateAccount(i).then(function () {
                       (0, V.w7)();
                     })
                   : em.m.warning(
@@ -3020,7 +3020,7 @@
                         children: _
                           ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                (0, l.jsx)(j.ZP, { icon: x.BJv }),
+                                (0, l.jsx)(w.ZP, { icon: x.BJv }),
                                 " ",
                                 (0, l.jsx)(
                                   b.Z,
@@ -3030,7 +3030,7 @@
                             })
                           : (0, l.jsxs)(l.Fragment, {
                               children: [
-                                (0, l.jsx)(j.ZP, { icon: x.UIZ }),
+                                (0, l.jsx)(w.ZP, { icon: x.UIZ }),
                                 " ",
                                 (0, l.jsx)(
                                   b.Z,
@@ -3387,23 +3387,58 @@
         }),
         e5 = n(24148),
         e7 = n(56060),
-        e8 = (0, y.vU)({
+        e8 = n(75861),
+        e9 = (0, y.vU)({
           tipsHeader: {
             id: "userContextModal.tipsHeader",
             defaultMessage: "Thought starters",
-            description: "header for user context tips",
+            description: "header for chat preferences tips",
           },
-          aboutUserTips: {
-            id: "userContextModal.aboutUserTip",
-            defaultMessage:
-              "• Where do you live?\n• What do you do for work?\n• What are your hobbies and interests?\n• What are your dietary preferences?\n• What subjects can you talk about for hours?\n• What are some goals you have?",
-            description: "tips for user context about you",
+          aboutUserTip1: {
+            id: "userContextModal.aboutUserTip1",
+            defaultMessage: "Where are you based?",
+            description: "tips for chat preferences about you",
           },
-          modelTips: {
-            id: "userContextModal.modelTip",
+          aboutUserTip2: {
+            id: "userContextModal.aboutUserTip2",
+            defaultMessage: "What do you do for work?",
+            description: "tips for chat preferences about you",
+          },
+          aboutUserTip3: {
+            id: "userContextModal.aboutUserTip3",
+            defaultMessage: "What are your hobbies and interests?",
+            description: "tips for chat preferences about you",
+          },
+          aboutUserTip4: {
+            id: "userContextModal.aboutUserTip4",
+            defaultMessage: "What subjects can you talk about for hours?",
+            description: "tips for chat preferences about you",
+          },
+          aboutUserTip5: {
+            id: "userContextModal.aboutUserTip5",
+            defaultMessage: "What are some goals you have?",
+            description: "tips for chat preferences about you",
+          },
+          modelTip1: {
+            id: "userContextModal.modelTip1",
+            defaultMessage: "How formal or casual should ChatGPT be?",
+            description: "tips for chat preferences about model",
+          },
+          modelTip2: {
+            id: "userContextModal.modelTip2",
+            defaultMessage: "How long or short should responses generally be?",
+            description: "tips for chat preferences about model",
+          },
+          modelTip3: {
+            id: "userContextModal.modelTip3",
+            defaultMessage: "How do you want to be addressed?",
+            description: "tips for chat preferences about model",
+          },
+          modelTip4: {
+            id: "userContextModal.modelTip4",
             defaultMessage:
-              "• How formal or casual should ChatGPT be?\n• How long or short should responses generally be?\n• How do you want to be addressed?\n• Should ChatGPT have opinions on topics or remain neutral?",
-            description: "tips for user context about you",
+              "Should ChatGPT have opinions on topics or remain neutral?",
+            description: "tips for chat preferences about model",
           },
           save: {
             id: "userContextModal.save",
@@ -3413,44 +3448,44 @@
           cancel: {
             id: "userContextModal.cancel",
             defaultMessage: "Cancel",
-            description: "Cancel button for user context modal",
+            description: "Cancel button for chat preferences modal",
           },
           ok: {
             id: "userContextModal.ok",
             defaultMessage: "OK",
-            description: "OK button for user context modal",
+            description: "OK button for chat preferences modal",
           },
           aboutYouHelpText: {
             id: "userContextModal.aboutYouHelpText",
             defaultMessage:
               "What would you like ChatGPT to know about you to provide better responses?",
-            description: "help text for about you section of user context",
+            description: "help text for about you section of chat preferences",
           },
           modelHelpText: {
             id: "userContextModal.modelHelpText",
             defaultMessage: "How would you like ChatGPT to respond?",
-            description: "help text for about you section of user context",
+            description: "help text for about you section of chat preferences",
           },
           profileTitle: {
             id: "userContextModal.title",
-            defaultMessage: "Help ChatGPT provide better responses",
-            description: "title for user context modal",
+            defaultMessage: "Chat preferences",
+            description: "title for chat preferences modal",
           },
           messageLimitError: {
             id: "userContextModal.messageLimitError",
             defaultMessage:
               "Please limit your responses to {limit} characters or less.",
-            description: "error message for user context modal",
+            description: "error message for chat preferences modal",
           },
           showTips: {
             id: "userContextModal.showTips",
             defaultMessage: "Show tips",
-            description: "show tips button for user context modal",
+            description: "show tips button for chat preferences modal",
           },
           hideTips: {
             id: "userContextModal.hideTips",
             defaultMessage: "Hide tips",
-            description: "hide tips button for user context modal",
+            description: "hide tips button for chat preferences modal",
           },
           confirmCloseTitle: {
             id: "userContextModal.confirmCloseTitle",
@@ -3474,13 +3509,13 @@
             description: "ok button for confirm close modal",
           },
         }),
-        e9 = function () {
+        e6 = function () {
           var e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
           return ["userContext", e];
         },
-        e6 = { aboutUserMessage: void 0, aboutModelMessage: void 0 };
-      function te() {
+        te = { aboutUserMessage: void 0, aboutModelMessage: void 0 };
+      function tt() {
         var e,
           t,
           n,
@@ -3502,12 +3537,12 @@
             ((e = (0, I.hz)()),
             (t = (0, V.kP)().session),
             (0, ev.a)(
-              e9(null == t ? void 0 : t.accessToken),
+              e6(null == t ? void 0 : t.accessToken),
               function () {
-                return w.ZP.getUserSystemMessage(
+                return j.ZP.getUserSystemMessage(
                   (null == t ? void 0 : t.accessToken) || ""
                 ).catch(function () {
-                  em.m.danger("Failed to get your system instructions");
+                  em.m.danger("Failed to get your chat preferences");
                 });
               },
               {
@@ -3536,21 +3571,21 @@
                 },
               }
             )),
-          j = y.isLoading,
+          w = y.isLoading,
           _ = y.data,
           C = null != _ ? _ : {},
           M = C.aboutUserMessage,
           T = void 0 === M ? "" : M,
           N = C.aboutModelMessage,
           Z = void 0 === N ? "" : N,
-          S = (0, k._)((0, u.useState)(e6), 2),
+          S = (0, k._)((0, u.useState)(te), 2),
           F = S[0],
           E = S[1],
           D = (0, k._)((0, u.useState)(null), 2),
           R = D[0],
           U = D[1],
           B = (0, u.useCallback)(function () {
-            c.vm.closeModal(c.B.UserContext), E(e6), U(null);
+            c.vm.closeModal(c.B.UserContext), E(te), U(null);
           }, []),
           O =
             ((r = (n = {
@@ -3572,7 +3607,7 @@
                     : em.m.danger(
                         null !== (a = e.message) && void 0 !== a
                           ? a
-                          : "Failed to update user context."
+                          : "Failed to update chat preferences."
                       ),
                   e
                 );
@@ -3585,14 +3620,14 @@
             (0, eo.D)({
               mutationFn: function (e) {
                 var t = e.userContext;
-                return w.ZP.createOrUpdateUserSystemMessage(
+                return j.ZP.createOrUpdateUserSystemMessage(
                   (null == i ? void 0 : i.accessToken) || "",
                   t
                 );
               },
               onSettled: function () {
                 o.invalidateQueries({
-                  queryKey: e9(null == s ? void 0 : s.accessToken),
+                  queryKey: e6(null == s ? void 0 : s.accessToken),
                 });
               },
               onSuccess: r,
@@ -3603,15 +3638,15 @@
           H = (0, k._)((0, u.useState)(!1), 2),
           W = H[0],
           J = H[1],
-          Y = tr(T) || tr(Z),
-          X =
+          Y = ta(T) || ta(Z),
+          K =
             (void 0 !== F.aboutModelMessage && F.aboutModelMessage !== Z) ||
             (void 0 !== F.aboutUserMessage && F.aboutUserMessage !== T),
-          K = (0, u.useCallback)(
+          X = (0, u.useCallback)(
             function () {
-              X ? J(!0) : B();
+              K ? J(!0) : B();
             },
-            [B, X]
+            [B, K]
           ),
           ee = (0, u.useCallback)(
             (0, L._)(function () {
@@ -3646,33 +3681,46 @@
               });
             }),
             [q, F, z]
+          ),
+          et = (0, u.useCallback)(
+            function () {
+              if (Y) {
+                em.m.danger(
+                  p.formatMessage(e9.messageLimitError, { limit: tr }),
+                  { duration: 4, hasCloseButton: !0 }
+                );
+                return;
+              }
+              ee();
+            },
+            [p, Y, ee]
           );
         if (x && W) {
-          var et = function () {
+          var en = function () {
             J(!1);
           };
           return (0, l.jsx)(
             $.Z,
             {
               isOpen: !0,
-              onClose: et,
+              onClose: en,
               type: "success",
-              title: p.formatMessage(e8.confirmCloseTitle),
+              title: p.formatMessage(e9.confirmCloseTitle),
               primaryButton: (0, l.jsx)(G.ZP.Button, {
-                title: p.formatMessage(e8.confirmCloseOk),
+                title: p.formatMessage(e9.confirmCloseOk),
                 color: "danger",
                 onClick: function () {
-                  B(), et();
+                  B(), en();
                 },
               }),
               secondaryButton: (0, l.jsx)(G.ZP.Button, {
-                title: p.formatMessage(e8.confirmCloseCancel),
+                title: p.formatMessage(e9.confirmCloseCancel),
                 color: "neutral",
-                onClick: et,
+                onClick: en,
               }),
               children: (0, l.jsx)("div", {
                 className: "text-sm",
-                children: (0, l.jsx)(b.Z, (0, h._)({}, e8.confirmCloseBody)),
+                children: (0, l.jsx)(b.Z, (0, h._)({}, e9.confirmCloseBody)),
               }),
             },
             "confirm-close"
@@ -3682,12 +3730,12 @@
           $.Z,
           {
             isOpen: x,
-            onClose: K,
+            onClose: X,
             type: "success",
             size: "custom",
-            className: "max-w-2xl",
-            title: p.formatMessage(e8.profileTitle),
-            closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: K }),
+            className: "max-w-lg xl:max-w-xl",
+            title: p.formatMessage(e9.profileTitle),
+            closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: X }),
             secondaryButton: (0, l.jsxs)("div", {
               className: "flex flex-grow items-center justify-between gap-3",
               children: [
@@ -3698,30 +3746,21 @@
                     })
                   : (0, l.jsx)("div", {}),
                 (0, l.jsx)(G.ZP.Button, {
-                  onClick: K,
-                  children: (0, l.jsx)(b.Z, (0, h._)({}, e8.cancel)),
+                  onClick: X,
+                  children: (0, l.jsx)(b.Z, (0, h._)({}, e9.cancel)),
                 }),
               ],
             }),
             primaryButton: (0, l.jsx)(G.ZP.Button, {
               loading: q,
-              onClick: function () {
-                if (Y) {
-                  em.m.danger(
-                    p.formatMessage(e8.messageLimitError, { limit: tn }),
-                    { duration: 20, hasCloseButton: !0 }
-                  );
-                  return;
-                }
-                ee();
-              },
+              onClick: et,
               color: "primary",
               visuallyDisabled: Y,
-              disabled: !X,
-              children: (0, l.jsx)(b.Z, (0, h._)({}, e8.save)),
+              disabled: !K,
+              children: (0, l.jsx)(b.Z, (0, h._)({}, e9.save)),
             }),
             children:
-              v || j
+              v || w
                 ? (0, l.jsx)("div", {
                     className: "flex h-14 items-center justify-center",
                     children: (0, l.jsx)(eh.Z, {}),
@@ -3732,16 +3771,48 @@
                         className: "text-muted pb-3 pt-2 text-sm text-gray-600",
                         children: (0, l.jsx)(
                           b.Z,
-                          (0, h._)({}, e8.aboutYouHelpText)
+                          (0, h._)({}, e9.aboutYouHelpText)
                         ),
                       }),
-                      (0, l.jsx)(ta, {
+                      (0, l.jsx)(ti, {
                         className: "mb-3",
-                        tip: (0, l.jsx)(tt, {
-                          children: (0, l.jsx)(
-                            b.Z,
-                            (0, h._)({}, e8.aboutUserTips)
-                          ),
+                        onSubmit: et,
+                        tip: (0, l.jsx)(tn, {
+                          children: (0, l.jsxs)("ul", {
+                            className: "list-disc pl-5",
+                            children: [
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.aboutUserTip1)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.aboutUserTip2)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.aboutUserTip3)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.aboutUserTip4)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.aboutUserTip5)
+                                ),
+                              }),
+                            ],
+                          }),
                         }),
                         hasError: "about_user_message" === R,
                         value:
@@ -3765,12 +3836,41 @@
                         className: "text-muted py-3 text-sm text-gray-600",
                         children: (0, l.jsx)(
                           b.Z,
-                          (0, h._)({}, e8.modelHelpText)
+                          (0, h._)({}, e9.modelHelpText)
                         ),
                       }),
-                      (0, l.jsx)(ta, {
-                        tip: (0, l.jsx)(tt, {
-                          children: (0, l.jsx)(b.Z, (0, h._)({}, e8.modelTips)),
+                      (0, l.jsx)(ti, {
+                        onSubmit: et,
+                        tip: (0, l.jsx)(tn, {
+                          children: (0, l.jsxs)("ul", {
+                            className: "list-disc pl-5",
+                            children: [
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.modelTip1)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.modelTip2)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.modelTip3)
+                                ),
+                              }),
+                              (0, l.jsx)("li", {
+                                children: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e9.modelTip4)
+                                ),
+                              }),
+                            ],
+                          }),
                         }),
                         hasError: "about_model_message" === R,
                         value:
@@ -3796,133 +3896,170 @@
           "user-context"
         );
       }
-      var tt = function (e) {
+      var tn = function (e) {
           var t = e.children;
-          return (0, l.jsxs)("div", {
+          return (0, l.jsx)("div", {
             className: "whitespace-pre-line",
-            children: [
-              (0, l.jsx)("strong", {
-                children: (0, l.jsx)(b.Z, (0, h._)({}, e8.tipsHeader)),
-              }),
-              (0, l.jsx)("br", {}),
-              t,
-            ],
+            children: t,
           });
         },
-        tn = 1500,
-        tr = function (e) {
-          return e.length > tn;
-        },
+        tr = 1500,
         ta = function (e) {
+          return e.length > tr;
+        },
+        ti = function (e) {
           var t = e.onChange,
-            n = e.placeholder,
-            r = e.value,
-            a = e.tip,
-            i = e.hasError,
-            s = e.className,
-            o = (0, u.useRef)(null),
-            d = !(0, f.oc)(),
-            c = (0, k._)((0, u.useState)(!1), 2),
-            g = c[0],
-            m = c[1],
-            p = (0, k._)((0, u.useState)(d), 2),
-            v = p[0],
-            y = p[1],
-            w = tr(r);
+            n = e.onSubmit,
+            r = e.placeholder,
+            a = e.value,
+            i = e.tip,
+            s = e.hasError,
+            o = e.className,
+            d = (0, P.Z)(),
+            c = (0, u.useRef)(null),
+            g = !(0, f.x_)(),
+            m = (0, k._)((0, u.useState)(!1), 2),
+            v = m[0],
+            y = m[1],
+            j = (0, k._)((0, u.useState)(g), 2),
+            _ = j[0],
+            C = j[1],
+            M = ta(a);
           return (0, l.jsxs)(l.Fragment, {
             children: [
               (0, l.jsx)($.Z, {
-                isOpen: d && !v,
+                isOpen: g && !_,
                 type: "success",
                 size: "custom",
                 className: "max-w-lg",
-                title: "",
+                title: d.formatMessage(e9.tipsHeader),
                 closeButton: (0, l.jsx)(G.ZP.CloseButton, {
                   onClose: function () {
-                    y(!0);
+                    C(!0);
                   },
                 }),
                 onClose: function () {
-                  y(!0);
+                  C(!0);
                 },
                 primaryButton: (0, l.jsx)(G.ZP.Button, {
                   color: "primary",
                   onClick: function () {
-                    return y(!0);
+                    return C(!0);
                   },
-                  children: (0, l.jsx)(b.Z, (0, h._)({}, e8.ok)),
+                  children: (0, l.jsx)(b.Z, (0, h._)({}, e9.ok)),
                 }),
-                children: a,
+                children: i,
               }),
               (0, l.jsxs)(e7.fC, {
-                open: !d && g && !v,
+                open: !g && v && !_,
                 children: [
                   (0, l.jsxs)("div", {
-                    className: s,
+                    className: o,
                     children: [
                       (0, l.jsx)(e7.xz, {
                         asChild: !0,
                         children: (0, l.jsx)("textarea", {
-                          ref: o,
+                          ref: c,
                           className: (0, N.Z)(
                             "w-full	resize-none rounded p-4 placeholder:text-gray-300 dark:bg-gray-800",
                             {
-                              "border-orange-400 focus:border-orange-400": i,
-                              "border-red-500 focus:border-red-500": w && !i,
+                              "border-orange-400 focus:border-orange-400": s,
+                              "border-red-500 focus:border-red-500": M && !s,
                               "border-gray-100 focus:border-brand-green":
-                                !w && !i,
+                                !M && !s,
                             }
                           ),
-                          placeholder: n,
+                          placeholder: r,
+                          onKeyDown: function (e) {
+                            "Enter" !== e.key ||
+                              !e.metaKey ||
+                              e.shiftKey ||
+                              e.nativeEvent.isComposing ||
+                              (e.preventDefault(), n());
+                          },
                           rows: 6,
-                          value: r,
+                          value: a,
                           onChange: t,
                           onBlur: function () {
-                            m(!1);
+                            y(!1);
                           },
                           onFocus: function () {
-                            m(!0);
+                            y(!0);
                           },
                         }),
                       }),
                       (0, l.jsxs)("div", {
                         className: (0, N.Z)(
                           "flex items-center justify-between px-1 text-xs",
-                          w ? "text-red-600" : "text-gray-400"
+                          M ? "text-red-600" : "text-gray-400"
                         ),
                         children: [
-                          (0, l.jsxs)("div", { children: [r.length, "/", tn] }),
+                          (0, l.jsxs)("div", { children: [a.length, "/", tr] }),
                           (0, l.jsx)("button", {
                             className: (0, N.Z)(
                               "flex items-center gap-1",
-                              g ? "text-gray-400" : "text-gray-200"
+                              v ? "text-gray-400" : "text-gray-200"
                             ),
                             onClick: function () {
                               var e;
-                              null === (e = o.current) ||
+                              null === (e = c.current) ||
                                 void 0 === e ||
                                 e.focus(),
-                                y(!v);
+                                C(!_);
                             },
-                            children: v
-                              ? (0, l.jsxs)(l.Fragment, {
-                                  children: [
-                                    (0, l.jsx)(b.Z, (0, h._)({}, e8.showTips)),
-                                    (0, l.jsx)(j.ZP, {
-                                      size: "xsmall",
-                                      icon: x.rDJ,
-                                    }),
-                                  ],
-                                })
-                              : (0, l.jsxs)(l.Fragment, {
-                                  children: [
-                                    (0, l.jsx)(b.Z, (0, h._)({}, e8.hideTips)),
-                                    (0, l.jsx)(j.ZP, {
-                                      size: "xsmall",
-                                      icon: x.rzC,
-                                    }),
-                                  ],
-                                }),
+                            tabIndex: -1,
+                            children: (0, l.jsx)(e8.M, {
+                              initial: !1,
+                              children:
+                                v &&
+                                (0, l.jsx)(
+                                  p.E.div,
+                                  {
+                                    className: "flex items-center gap-1",
+                                    initial: { opacity: 0 },
+                                    animate: {
+                                      opacity: 1,
+                                      transition: {
+                                        duration: 0.2,
+                                        ease: "easeIn",
+                                      },
+                                    },
+                                    exit: {
+                                      opacity: 0,
+                                      transition: {
+                                        duration: 0.2,
+                                        ease: "easeIn",
+                                      },
+                                    },
+                                    children: _
+                                      ? (0, l.jsxs)(l.Fragment, {
+                                          children: [
+                                            (0, l.jsx)(
+                                              b.Z,
+                                              (0, h._)({}, e9.showTips)
+                                            ),
+                                            (0, l.jsx)(w.ZP, {
+                                              size: "xsmall",
+                                              icon: x.rDJ,
+                                            }),
+                                          ],
+                                        })
+                                      : (0, l.jsxs)(l.Fragment, {
+                                          children: [
+                                            (0, l.jsx)(
+                                              b.Z,
+                                              (0, h._)({}, e9.hideTips)
+                                            ),
+                                            (0, l.jsx)(w.ZP, {
+                                              size: "xsmall",
+                                              icon: x.rzC,
+                                            }),
+                                          ],
+                                        }),
+                                  },
+                                  "show-hide"
+                                ),
+                            }),
                           }),
                         ],
                       }),
@@ -3931,16 +4068,28 @@
                   (0, l.jsx)(e7.h_, {
                     children: (0, l.jsx)(e7.VY, {
                       side: "right",
+                      align: "start",
                       sideOffset: 12,
                       className:
-                        "relative animate-slideLeftAndFade select-none rounded-xl border-gray-100 bg-white p-4 text-sm text-gray-600 shadow-[0px_4px_14px_rgba(0,0,0,0.06)] dark:bg-gray-900 dark:text-white",
+                        "relative max-w-[220px] animate-slideLeftAndFade select-none rounded-xl border-gray-100 bg-white p-4 text-sm text-gray-600 shadow-[0px_4px_14px_rgba(0,0,0,0.06)] dark:bg-gray-900 dark:text-white xl:max-w-xs",
                       onOpenAutoFocus: function (e) {
                         e.preventDefault();
                       },
                       onCloseAutoFocus: function (e) {
                         e.preventDefault();
                       },
-                      children: a,
+                      children: (0, l.jsxs)("div", {
+                        className: "flex flex-col gap-1",
+                        children: [
+                          (0, l.jsx)("strong", {
+                            children: (0, l.jsx)(
+                              b.Z,
+                              (0, h._)({}, e9.tipsHeader)
+                            ),
+                          }),
+                          i,
+                        ],
+                      }),
                     }),
                   }),
                 ],
@@ -3948,12 +4097,12 @@
             ],
           });
         },
-        ti = new Set(["/admin"]),
-        ts = n(94860),
-        to = n(9849),
-        tl = n(70788),
-        tu = n(85023);
-      function td(e) {
+        ts = new Set(["/admin"]),
+        to = n(94860),
+        tl = n(9849),
+        tu = n(70788),
+        td = n(85023);
+      function tc(e) {
         var t = e.children;
         return (0, l.jsx)(g.u, {
           as: u.Fragment,
@@ -3966,7 +4115,7 @@
           children: t,
         });
       }
-      function tc(e) {
+      function tf(e) {
         var t = e.onDeleteHistory,
           n = e.isConfirmingDeleteHistory,
           r = (0, Z.WS)(),
@@ -3984,53 +4133,53 @@
           f = (0, eZ.Fl)().isPluginsAvailable;
         return (0, l.jsxs)(l.Fragment, {
           children: [
-            o && (0, l.jsx)(ts.R, {}),
-            (0, l.jsx)(ts.DM, {
+            o && (0, l.jsx)(to.R, {}),
+            (0, l.jsx)(to.DM, {
               onDeleteHistory: t,
               isConfirmingDeleteHistory: n,
             }),
             !0 === a &&
-              (0, l.jsxs)(ts.ZP, {
+              (0, l.jsxs)(to.ZP, {
                 onClick: d,
                 children: [
-                  (0, l.jsx)(j.ZP, { icon: x.fzv }),
-                  (0, l.jsx)(b.Z, (0, h._)({}, tf.myPlan)),
+                  (0, l.jsx)(w.ZP, { icon: x.fzv }),
+                  (0, l.jsx)(b.Z, (0, h._)({}, th.myPlan)),
                 ],
               }),
             i.has("system_message2") &&
-              (0, l.jsxs)(ts.ZP, {
+              (0, l.jsxs)(to.ZP, {
                 onClick: function () {
                   return c.vm.openModal(c.B.UserContext);
                 },
                 children: [
-                  (0, l.jsx)(j.ZP, { icon: x.yK7 }),
-                  (0, l.jsx)(b.Z, (0, h._)({}, tf.myProfile)),
+                  (0, l.jsx)(w.ZP, { icon: x.yK7 }),
+                  (0, l.jsx)(b.Z, (0, h._)({}, th.chatPreferences)),
                 ],
               }),
             i.has("files_list_ui") &&
               f &&
-              (0, l.jsxs)(ts.ZP, {
+              (0, l.jsxs)(to.ZP, {
                 onClick: function () {
                   return c.vm.openFilesModal();
                 },
                 children: [
-                  (0, l.jsx)(j.ZP, { icon: x.NOg }),
-                  (0, l.jsx)(b.Z, (0, h._)({}, tf.myFiles)),
+                  (0, l.jsx)(w.ZP, { icon: x.NOg }),
+                  (0, l.jsx)(b.Z, (0, h._)({}, th.myFiles)),
                 ],
               }),
           ],
         });
       }
-      var tf = (0, y.vU)({
+      var th = (0, y.vU)({
           myPlan: {
             id: "popoverNavigation.myPlan",
             defaultMessage: "My plan",
             description: "My plan menu item",
           },
-          myProfile: {
-            id: "popoverNavigation.myProfile",
-            defaultMessage: "My profile",
-            description: "Profile menu item",
+          chatPreferences: {
+            id: "popoverNavigation.chatPreferences",
+            defaultMessage: "Chat Preferences",
+            description: "Chat preferences menu item",
           },
           myFiles: {
             id: "popoverNavigation.myFiles",
@@ -4038,10 +4187,10 @@
             description: "Files menu item",
           },
         }),
-        th = n(57101),
-        tg = n(16578),
-        tm = n.n(tg);
-      function tp(e) {
+        tg = n(57101),
+        tm = n(16578),
+        tp = n.n(tm);
+      function tv(e) {
         var t = e.onDeleteHistory,
           n = e.isConfirmingDeleteHistory,
           r = (0, I.hz)(),
@@ -4050,31 +4199,31 @@
           s = r.has("business_seats") && a.length > 1;
         return (0, l.jsxs)(l.Fragment, {
           children: [
-            (0, l.jsxs)(tv, {
+            (0, l.jsxs)(tx, {
               href: "/admin?workspaceId=".concat(i),
               children: [
-                (0, l.jsx)(j.ZP, { icon: th.Z }),
-                (0, l.jsx)(b.Z, (0, h._)({}, tx.myWorkspaceSettings)),
+                (0, l.jsx)(w.ZP, { icon: tg.Z }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tb.myWorkspaceSettings)),
               ],
             }),
-            s && (0, l.jsx)(ts.R, {}),
-            (0, l.jsx)(ts.DM, {
+            s && (0, l.jsx)(to.R, {}),
+            (0, l.jsx)(to.DM, {
               onDeleteHistory: t,
               isConfirmingDeleteHistory: n,
             }),
           ],
         });
       }
-      function tv(e) {
+      function tx(e) {
         var t = e.href,
           n = e.children;
-        return (0, l.jsx)(to.v.Item, {
+        return (0, l.jsx)(tl.v.Item, {
           children: function (e) {
             var r = e.active;
-            return (0, l.jsx)(tm(), {
+            return (0, l.jsx)(tp(), {
               href: t,
               legacyBehavior: !0,
-              children: (0, l.jsx)(ts.ZB, {
+              children: (0, l.jsx)(to.ZB, {
                 className: (0, N.Z)(r ? "bg-gray-700" : "hover:bg-gray-700"),
                 children: n,
               }),
@@ -4082,26 +4231,26 @@
           },
         });
       }
-      var tx = (0, y.vU)({
+      var tb = (0, y.vU)({
         myWorkspaceSettings: {
           id: "workspacePopoverNavigation.myWorkspaceSettings",
           defaultMessage: "Workspace settings",
           description: "Workspace settings menu item",
         },
       });
-      function tb(e) {
+      function ty(e) {
         var t = e.onClickSettings,
           n = e.onDeleteHistory;
-        return (0, l.jsxs)(to.v, {
+        return (0, l.jsxs)(tl.v, {
           as: "div",
           className: "group relative",
           children: [
-            (0, l.jsx)(tC, {}),
-            (0, l.jsx)(td, {
-              children: (0, l.jsx)(to.v.Items, {
+            (0, l.jsx)(tM, {}),
+            (0, l.jsx)(tc, {
+              children: (0, l.jsx)(tl.v.Items, {
                 className:
                   "absolute bottom-full left-0 z-20 mb-2 w-full overflow-hidden rounded-md bg-gray-950 pb-1.5 pt-1 outline-none",
-                children: (0, l.jsx)(t_, {
+                children: (0, l.jsx)(tC, {
                   onClickSettings: t,
                   onDeleteHistory: n,
                 }),
@@ -4110,15 +4259,15 @@
           ],
         });
       }
-      function ty() {
+      function tj() {
         var e = (0, V.kP)().session,
           t = null == e ? void 0 : e.user,
           n = (0, Y.Ix)();
         return t
           ? (0, l.jsx)(l.Fragment, {
-              children: (0, l.jsx)(ts.ZP, {
+              children: (0, l.jsx)(to.ZP, {
                 onClick: function () {
-                  K.setIsModalOpen(!0);
+                  X.setIsModalOpen(!0);
                 },
                 children: (0, l.jsxs)("div", {
                   className: "flex w-full flex-col gap-2",
@@ -4142,8 +4291,8 @@
                           ],
                         }),
                         (0, l.jsx)("div", {
-                          children: (0, l.jsx)(j.ZP, {
-                            icon: tl.Z,
+                          children: (0, l.jsx)(w.ZP, {
+                            icon: tu.Z,
                             size: "small",
                           }),
                         }),
@@ -4156,13 +4305,13 @@
           : null;
       }
       var tw = "oai/apps/hasSeenUserSurvey6_23";
-      function tj() {
+      function t_() {
         var e = (0, P.Z)(),
           t = (0, f.w$)(),
           n = (0, k._)((0, u.useState)(!1), 2),
           r = n[0],
           a = n[1],
-          i = tu.m.getItem(tw);
+          i = td.m.getItem(tw);
         return r || i
           ? null
           : (0, l.jsx)("div", {
@@ -4181,13 +4330,13 @@
                             className: "font-bold",
                             children: (0, l.jsx)(
                               b.Z,
-                              (0, h._)({}, tk.surveyTitle)
+                              (0, h._)({}, tT.surveyTitle)
                             ),
                           }),
                           (0, l.jsx)("div", {
                             children: (0, l.jsx)(
                               b.Z,
-                              (0, h._)({}, tk.surveyDescription)
+                              (0, h._)({}, tT.surveyDescription)
                             ),
                           }),
                         ],
@@ -4195,10 +4344,10 @@
                       (0, l.jsx)("button", {
                         className: "text-white/25 hover:text-white/40",
                         onClick: function () {
-                          a(!0), tu.m.setItem(tw, !0);
+                          a(!0), td.m.setItem(tw, !0);
                         },
-                        "aria-label": e.formatMessage(tk.surveyDismiss),
-                        children: (0, l.jsx)(j.QF, {
+                        "aria-label": e.formatMessage(tT.surveyDismiss),
+                        children: (0, l.jsx)(w.QF, {
                           width: t ? "20px" : "24px",
                           height: t ? "20px" : "24px",
                         }),
@@ -4212,18 +4361,18 @@
                       "flex w-full flex-row items-center justify-center gap-2 rounded-[4px] bg-white/25 p-2 hover:bg-white/40",
                     rel: "noreferrer",
                     onClick: function () {
-                      tu.m.setItem(tw, !0), a(!0);
+                      td.m.setItem(tw, !0), a(!0);
                     },
                     children: [
-                      (0, l.jsx)(j.ZP, { size: "small", icon: x.AlO }),
-                      (0, l.jsx)(b.Z, (0, h._)({}, tk.takeSurveyButton)),
+                      (0, l.jsx)(w.ZP, { size: "small", icon: x.AlO }),
+                      (0, l.jsx)(b.Z, (0, h._)({}, tT.takeSurveyButton)),
                     ],
                   }),
                 ],
               }),
             });
       }
-      function t_(e) {
+      function tC(e) {
         var t = e.onClickSettings,
           n = e.onDeleteHistory,
           r = (0, Z.WS)(),
@@ -4243,18 +4392,18 @@
           m = c.has("business_seats") && g.length > 1;
         return (0, l.jsxs)("nav", {
           children: [
-            f && (0, l.jsx)(tj, {}),
-            m && (0, l.jsx)(ty, {}),
+            f && (0, l.jsx)(t_, {}),
+            m && (0, l.jsx)(tj, {}),
             d
-              ? (0, l.jsx)(tp, {
+              ? (0, l.jsx)(tv, {
                   onDeleteHistory: o,
                   isConfirmingDeleteHistory: i,
                 })
-              : (0, l.jsx)(tc, {
+              : (0, l.jsx)(tf, {
                   onDeleteHistory: o,
                   isConfirmingDeleteHistory: i,
                 }),
-            (0, l.jsxs)(ts.ZP, {
+            (0, l.jsxs)(to.ZP, {
               as: "a",
               href: "https://help.openai.com/en/collections/3742473-chatgpt",
               target: "_blank",
@@ -4262,36 +4411,36 @@
                 r(S.s6.clickFaqLink);
               },
               children: [
-                (0, l.jsx)(j.ZP, { icon: x.AlO }),
-                (0, l.jsx)(b.Z, (0, h._)({}, tk.helpAndFaq)),
+                (0, l.jsx)(w.ZP, { icon: x.AlO }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tT.helpAndFaq)),
               ],
             }),
-            (0, l.jsxs)(ts.ZP, {
+            (0, l.jsxs)(to.ZP, {
               onClick: t,
               children: [
-                (0, l.jsx)(j.ZP, { icon: x.nbt }),
-                (0, l.jsx)(b.Z, (0, h._)({}, tk.settings)),
+                (0, l.jsx)(w.ZP, { icon: x.nbt }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tT.settings)),
               ],
             }),
-            (0, l.jsx)(ts.R, {}),
-            (0, l.jsxs)(ts.ZP, {
+            (0, l.jsx)(to.R, {}),
+            (0, l.jsxs)(to.ZP, {
               onClick: function () {
                 r(S.s6.clickLogOut, { eventSource: "mouse" }), (0, V.w7)();
               },
               children: [
-                (0, l.jsx)(j.ZP, { icon: x.xqh }),
-                (0, l.jsx)(b.Z, (0, h._)({}, tk.logOut)),
+                (0, l.jsx)(w.ZP, { icon: x.xqh }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tT.logOut)),
               ],
             }),
           ],
         });
       }
-      function tC() {
+      function tM() {
         var e = (0, V.kP)().session;
         return (0, I.hz)().has("business_seats")
-          ? (0, l.jsx)(tM, {})
+          ? (0, l.jsx)(tk, {})
           : (null == e ? void 0 : e.user)
-          ? (0, l.jsxs)(to.v.Button, {
+          ? (0, l.jsxs)(tl.v.Button, {
               className:
                 "flex w-full items-center gap-2.5 rounded-md px-3 py-3 text-sm transition-colors duration-200 hover:bg-gray-800 group-ui-open:bg-gray-800",
               children: [
@@ -4304,7 +4453,7 @@
                     "grow overflow-hidden text-ellipsis whitespace-nowrap text-left text-white",
                   children: e.user.name,
                 }),
-                (0, l.jsx)(j.ZP, {
+                (0, l.jsx)(w.ZP, {
                   icon: x.K9M,
                   size: "small",
                   className: "flex-shrink-0 text-gray-500",
@@ -4313,9 +4462,9 @@
             })
           : null;
       }
-      function tM() {
+      function tk() {
         var e = (0, Y.Ix)();
-        return (0, l.jsxs)(to.v.Button, {
+        return (0, l.jsxs)(tl.v.Button, {
           className:
             "flex w-full items-center gap-2.5 rounded-md px-3 py-3 text-sm transition-colors duration-200 hover:bg-gray-800 group-ui-open:bg-gray-800",
           children: [
@@ -4331,7 +4480,7 @@
                 "grow overflow-hidden text-ellipsis whitespace-nowrap text-left capitalize text-white",
               children: e,
             }),
-            (0, l.jsx)(j.ZP, {
+            (0, l.jsx)(w.ZP, {
               icon: x.K9M,
               size: "small",
               className: "flex-shrink-0 text-gray-500",
@@ -4339,7 +4488,7 @@
           ],
         });
       }
-      var tk = (0, y.vU)({
+      var tT = (0, y.vU)({
         helpAndFaq: {
           id: "navigation.helpAndFaq",
           defaultMessage: "Help & FAQ",
@@ -4376,20 +4525,20 @@
           description: "Survey offer title",
         },
       });
-      function tT() {
+      function tN() {
         var e = (0, o._)([
           "flex-col flex-1 transition-opacity duration-500\n  ",
           "\n  ",
           "",
         ]);
         return (
-          (tT = function () {
+          (tN = function () {
             return e;
           }),
           e
         );
       }
-      function tN(e) {
+      function tP(e) {
         var t = e.onDeleteHistory,
           n = e.onNewThread,
           r = e.children,
@@ -4406,7 +4555,7 @@
           y = (0, e5.t)(function (e) {
             return { setShowAccountPaymentModal: e.setShowAccountPaymentModal };
           }).setShowAccountPaymentModal,
-          w = (0, u.useCallback)(
+          j = (0, u.useCallback)(
             function () {
               y(!0, function () {
                 s(S.s6.clickSidebarAccountPaymentMenuItem);
@@ -4457,14 +4606,14 @@
                         className: "p-1 text-sm text-gray-100",
                         children: (0, l.jsx)(
                           b.Z,
-                          (0, h._)({}, tZ.chatHistoryOff)
+                          (0, h._)({}, tS.chatHistoryOff)
                         ),
                       }),
                       (0, l.jsx)("div", {
                         className: "p-1 text-xs text-gray-500",
                         children: (0, l.jsx)(
                           b.Z,
-                          (0, C._)((0, h._)({}, tZ.chatHistoryOffDescription), {
+                          (0, C._)((0, h._)({}, tS.chatHistoryOffDescription), {
                             values: {
                               learnMore: (0, l.jsx)("a", {
                                 href: "https://help.openai.com/en/articles/7730893",
@@ -4473,7 +4622,7 @@
                                 rel: "noreferrer",
                                 children: (0, l.jsx)(
                                   b.Z,
-                                  (0, h._)({}, tZ.learnMore)
+                                  (0, h._)({}, tS.learnMore)
                                 ),
                               }),
                               b: function (e) {
@@ -4489,8 +4638,8 @@
                         color: "primary",
                         size: "medium",
                         children: [
-                          (0, l.jsx)(j.ZP, { icon: x.$IY }),
-                          (0, l.jsx)(b.Z, (0, h._)({}, tZ.enableChatHistory)),
+                          (0, l.jsx)(w.ZP, { icon: x.$IY }),
+                          (0, l.jsx)(b.Z, (0, h._)({}, tS.enableChatHistory)),
                         ],
                       }),
                     ],
@@ -4511,15 +4660,15 @@
               return (
                 u.Children.forEach(r, function (n) {
                   u.isValidElement(n) &&
-                    (n.type === tN.PrimaryActionDesktop ? (t = n) : e.push(n));
+                    (n.type === tP.PrimaryActionDesktop ? (t = n) : e.push(n));
                 }),
                 { primaryActionButton: t, navigationContent: e }
               );
             },
             [r]
           ),
-          X = Y.primaryActionButton,
-          K = Y.navigationContent;
+          K = Y.primaryActionButton,
+          X = Y.navigationContent;
         (0, u.useEffect)(
           function () {
             var e;
@@ -4539,7 +4688,7 @@
           ea = (0, u.useMemo)(
             function () {
               var e = g.route;
-              return !ti.has(e);
+              return !ts.has(e);
             },
             [g.route]
           );
@@ -4554,33 +4703,33 @@
                   children: (0, l.jsx)("h2", {
                     children: (0, l.jsx)(
                       b.Z,
-                      (0, h._)({}, tZ.chatHistoryLabel)
+                      (0, h._)({}, tS.chatHistoryLabel)
                     ),
                   }),
                 }),
                 (0, l.jsxs)("nav", {
                   className: "flex h-full w-full flex-col p-2",
-                  "aria-label": a.formatMessage(tZ.chatHistoryLabel),
+                  "aria-label": a.formatMessage(tS.chatHistoryLabel),
                   children: [
                     (0, l.jsxs)("div", {
                       className: "mb-1 flex flex-row gap-2",
                       children: [
-                        X,
+                        K,
                         o &&
                           d &&
                           (0, l.jsx)(ep.u, {
                             side: "right",
-                            label: a.formatMessage(tZ.closeSidebar),
-                            children: (0, l.jsxs)(ts.zV, {
+                            label: a.formatMessage(tS.closeSidebar),
+                            children: (0, l.jsxs)(to.zV, {
                               onClick: c.vm.toggleDesktopNavCollapsed,
                               className:
                                 "w-11 flex-shrink-0 items-center justify-center",
                               children: [
-                                (0, l.jsx)(j.ZP, { icon: x.iYc }),
+                                (0, l.jsx)(w.ZP, { icon: x.iYc }),
                                 (0, l.jsx)(T.f, {
                                   children: (0, l.jsx)(
                                     b.Z,
-                                    (0, h._)({}, tZ.closeSidebar)
+                                    (0, h._)({}, tS.closeSidebar)
                                   ),
                                 }),
                               ],
@@ -4589,19 +4738,19 @@
                       ],
                     }),
                     Q,
-                    (0, l.jsx)(tP, {
+                    (0, l.jsx)(tZ, {
                       ref: _,
                       $offsetScrollbar: L,
                       $disableScroll: U,
-                      children: K,
+                      children: X,
                     }),
                     (0, l.jsxs)("div", {
                       className: "border-t border-white/20 pt-2 empty:hidden",
                       children: [
                         !1 === m &&
                           p &&
-                          (0, l.jsx)(ts.Vq, {
-                            onClick: w,
+                          (0, l.jsx)(to.Vq, {
+                            onClick: j,
                             className: "rounded-md",
                             children: (0, l.jsxs)("span", {
                               className: "flex w-full flex-row justify-between",
@@ -4610,15 +4759,15 @@
                                   className:
                                     "gold-new-button flex items-center gap-3",
                                   children: [
-                                    (0, l.jsx)(j.ZP, { icon: x.fzv }),
+                                    (0, l.jsx)(w.ZP, { icon: x.fzv }),
                                     et
                                       ? (0, l.jsx)(
                                           b.Z,
-                                          (0, h._)({}, tZ.renewPlus)
+                                          (0, h._)({}, tS.renewPlus)
                                         )
                                       : (0, l.jsx)(
                                           b.Z,
-                                          (0, h._)({}, tZ.upgradeToPlus)
+                                          (0, h._)({}, tS.upgradeToPlus)
                                         ),
                                   ],
                                 }),
@@ -4629,14 +4778,14 @@
                                       "rounded-md bg-yellow-200 px-1.5 py-0.5 text-xs font-medium uppercase text-gray-800",
                                     children: (0, l.jsx)(
                                       b.Z,
-                                      (0, h._)({}, tZ.newLabel)
+                                      (0, h._)({}, tS.newLabel)
                                     ),
                                   }),
                               ],
                             }),
                           }),
                         ea &&
-                          (0, l.jsx)(tb, {
+                          (0, l.jsx)(ty, {
                             onClickSettings: J,
                             onDeleteHistory: t,
                           }),
@@ -4653,20 +4802,20 @@
                 onDeleteHistory: t,
               }),
             i.has("files_list_ui") && en && (0, l.jsx)(ek, {}),
-            i.has("system_message2") && (0, l.jsx)(te, {}),
+            i.has("system_message2") && (0, l.jsx)(tt, {}),
             i.has("business_seats") && (0, l.jsx)(er, { onResetThread: n }),
           ],
         });
       }
-      (tN.PrimaryActionDesktop = function (e) {
+      (tP.PrimaryActionDesktop = function (e) {
         var t = e.onClick,
           n = (0, M._)(e, ["onClick"]);
         return (0, l.jsx)(
-          ts.zV,
+          to.zV,
           (0, h._)({ onClick: t, className: "flex-shrink-0 flex-grow" }, n)
         );
       }),
-        (tN.PrimaryButtonMobile = function (e) {
+        (tP.PrimaryButtonMobile = function (e) {
           var t = e.onClick,
             n = (0, M._)(e, ["onClick"]);
           return (0, l.jsx)(
@@ -4674,8 +4823,8 @@
             (0, h._)({ type: "button", className: "px-3", onClick: t }, n)
           );
         });
-      var tP = d.Z.div(
-          tT(),
+      var tZ = d.Z.div(
+          tN(),
           function (e) {
             return e.$disableScroll
               ? "overflow-y-hidden opacity-20 pointer-events-none"
@@ -4685,7 +4834,7 @@
             return e.$offsetScrollbar && "-mr-2";
           }
         ),
-        tZ = (0, y.vU)({
+        tS = (0, y.vU)({
           upgradeToPlus: {
             id: "navigation.upgradeToPlus",
             defaultMessage: "Upgrade to Plus",
@@ -4733,14 +4882,14 @@
             description: "Label for new features or items",
           },
         }),
-        tS = function (e) {
+        tI = function (e) {
           var t = e.onDeleteHistory,
             n = e.onNewThread,
             r = e.children;
           return (0, l.jsx)(l.Fragment, {
             children: (0, l.jsx)("div", {
               className: "flex h-full min-h-0 flex-col ",
-              children: (0, l.jsx)(tN, {
+              children: (0, l.jsx)(tP, {
                 onDeleteHistory: t,
                 onNewThread: n,
                 children: r,
@@ -4748,7 +4897,7 @@
             }),
           });
         },
-        tI = function (e) {
+        tF = function (e) {
           var t = e.onDeleteHistory,
             n = e.onClose,
             r = e.sidebarOpen,
@@ -4809,10 +4958,10 @@
                                     className: "sr-only",
                                     children: (0, l.jsx)(
                                       b.Z,
-                                      (0, h._)({}, tD.closeSidebar)
+                                      (0, h._)({}, tL.closeSidebar)
                                     ),
                                   }),
-                                  (0, l.jsx)(j.ZP, {
+                                  (0, l.jsx)(w.ZP, {
                                     icon: x.q5L,
                                     size: "medium",
                                     className: "text-white",
@@ -4822,7 +4971,7 @@
                               }),
                             }),
                           }),
-                          (0, l.jsx)(tN, {
+                          (0, l.jsx)(tP, {
                             onDeleteHistory: t,
                             onNewThread: a,
                             children: i,
@@ -4837,7 +4986,7 @@
             }),
           });
         },
-        tF = function (e) {
+        tE = function (e) {
           var t = e.onClickOpenSidebar,
             n = e.renderTitle,
             r = e.children;
@@ -4853,9 +5002,9 @@
                 children: [
                   (0, l.jsx)("span", {
                     className: "sr-only",
-                    children: (0, l.jsx)(b.Z, (0, h._)({}, tD.openSidebar)),
+                    children: (0, l.jsx)(b.Z, (0, h._)({}, tL.openSidebar)),
                   }),
-                  (0, l.jsx)(j.ZP, {
+                  (0, l.jsx)(w.ZP, {
                     icon: x.cur,
                     "aria-hidden": "true",
                     size: "medium",
@@ -4870,7 +5019,7 @@
             ],
           });
         };
-      function tE(e) {
+      function tD(e) {
         var t = e.onResetThread,
           n = e.children,
           r = (0, v.useRouter)(),
@@ -4887,7 +5036,7 @@
           h = o.activeSidebar,
           g = (0, u.useCallback)(
             function () {
-              w.ZP.deleteConversations().then(function () {
+              j.ZP.deleteConversations().then(function () {
                 s();
               }),
                 null == t || t(),
@@ -4912,14 +5061,14 @@
               },
               children: (0, l.jsx)("div", {
                 className: "h-full w-[260px]",
-                children: (0, l.jsx)(tS, {
+                children: (0, l.jsx)(tI, {
                   onDeleteHistory: g,
                   onNewThread: t,
                   children: n,
                 }),
               }),
             })
-          : (0, l.jsx)(tI, {
+          : (0, l.jsx)(tF, {
               onClose: function () {
                 return c.vm.toggleActiveSidebar("mobile-nav");
               },
@@ -4929,7 +5078,7 @@
               children: n,
             });
       }
-      var tD = (0, y.vU)({
+      var tL = (0, y.vU)({
           closeSidebar: {
             id: "navigation.closeSidebar",
             defaultMessage: "Close sidebar",
@@ -4941,20 +5090,9 @@
             description: "Open sidebar button label",
           },
         }),
-        tL = n(37541);
-      function tA() {
-        var e = (0, o._)(["overflow-hidden w-full h-full relative flex z-0"]);
-        return (
-          (tA = function () {
-            return e;
-          }),
-          e
-        );
-      }
+        tA = n(37541);
       function tR() {
-        var e = (0, o._)([
-          "relative h-full w-full transition-width flex flex-col overflow-auto items-stretch",
-        ]);
+        var e = (0, o._)(["overflow-hidden w-full h-full relative flex z-0"]);
         return (
           (tR = function () {
             return e;
@@ -4962,7 +5100,18 @@
           e
         );
       }
-      function tU(e) {
+      function tU() {
+        var e = (0, o._)([
+          "relative h-full w-full transition-width flex flex-col overflow-auto items-stretch",
+        ]);
+        return (
+          (tU = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function tB(e) {
         var t = e.onResetThread,
           n = e.children,
           r = e.showNavigation,
@@ -4978,13 +5127,13 @@
               return (
                 u.Children.forEach(n, function (n) {
                   u.isValidElement(n) &&
-                    (n.type === tU.NavigationContent
+                    (n.type === tB.NavigationContent
                       ? (t = n)
-                      : n.type === tU.Sidebars
+                      : n.type === tB.Sidebars
                       ? (r = n)
-                      : n.type === tU.NavigationPrimaryActionDesktop
+                      : n.type === tB.NavigationPrimaryActionDesktop
                       ? (a = n)
-                      : n.type === tU.NavigationPrimaryActionMobile
+                      : n.type === tB.NavigationPrimaryActionMobile
                       ? (i = n)
                       : e.push(n));
                 }),
@@ -5004,11 +5153,11 @@
           h = s.sidebars,
           g = s.primaryAction,
           m = s.primaryActionMobile;
-        return (0, l.jsxs)(tB, {
+        return (0, l.jsxs)(tO, {
           children: [
             r &&
-              (0, l.jsx)(tL.Z, {
-                children: (0, l.jsxs)(tE, {
+              (0, l.jsx)(tA.Z, {
+                children: (0, l.jsxs)(tD, {
                   onResetThread: t,
                   children: [g, d],
                 }),
@@ -5022,8 +5171,8 @@
                   children: [
                     !i &&
                       r &&
-                      (0, l.jsx)(tL.Z, {
-                        children: (0, l.jsx)(tF, {
+                      (0, l.jsx)(tA.Z, {
+                        children: (0, l.jsx)(tE, {
                           onClickOpenSidebar: function () {
                             return c.vm.toggleActiveSidebar("mobile-nav");
                           },
@@ -5031,7 +5180,7 @@
                           children: m,
                         }),
                       }),
-                    (0, l.jsx)(tO, { className: "flex-1", children: o }),
+                    (0, l.jsx)(tq, { className: "flex-1", children: o }),
                   ],
                 }),
                 h,
@@ -5040,18 +5189,18 @@
           ],
         });
       }
-      var tB = d.Z.div(tA()),
-        tO = d.Z.main(tR());
-      (tU.NavigationContent = function (e) {
+      var tO = d.Z.div(tR()),
+        tq = d.Z.main(tU());
+      (tB.NavigationContent = function (e) {
         var t = e.children;
         return (0, l.jsx)(l.Fragment, { children: t });
       }),
-        (tU.Sidebars = function (e) {
+        (tB.Sidebars = function (e) {
           var t = e.children;
           return (0, l.jsx)(l.Fragment, { children: t });
         }),
-        (tU.NavigationPrimaryActionDesktop = tN.PrimaryActionDesktop),
-        (tU.NavigationPrimaryActionMobile = tN.PrimaryButtonMobile);
+        (tB.NavigationPrimaryActionDesktop = tP.PrimaryActionDesktop),
+        (tB.NavigationPrimaryActionMobile = tP.PrimaryButtonMobile);
     },
     57924: function (e, t, n) {
       n.d(t, {
@@ -5189,19 +5338,10 @@
         x = n(64135),
         b = n(4337),
         y = n(34303);
-      function w() {
+      function j() {
         var e = (0, b._)([
           "bg-yellow-200 text-yellow-900 py-0.5 px-1.5 text-xs md:text-sm rounded-md uppercase",
         ]);
-        return (
-          (w = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function j() {
-        var e = (0, b._)(["bg-blue-200 text-blue-700"]);
         return (
           (j = function () {
             return e;
@@ -5209,8 +5349,17 @@
           e
         );
       }
-      var _ = y.Z.span(w()),
-        C = (0, y.Z)(_)(j()),
+      function w() {
+        var e = (0, b._)(["bg-blue-200 text-blue-700"]);
+        return (
+          (w = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      var _ = y.Z.span(j()),
+        C = (0, y.Z)(_)(w()),
         M = n(97688),
         k = "_account",
         T = (0, g.ZP)(function () {
@@ -5871,7 +6020,7 @@
                         ? u(n)
                         : (0, v.Ch)(n)
                         ? e.attempt(
-                            w,
+                            j,
                             e.attempt(
                               { tokenize: d, partial: !0 },
                               u,
@@ -5922,7 +6071,7 @@
           },
           concrete: !0,
         },
-        w = {
+        j = {
           tokenize: function (e, t, n) {
             let r = this;
             return function (t) {
@@ -5936,7 +6085,7 @@
           },
           partial: !0,
         },
-        j = {
+        w = {
           tokenize: function (e, t, n) {
             let r = this,
               a = r.events[r.events.length - 1],
@@ -6187,8 +6336,8 @@
         $ = n(25094),
         Q = n(19265),
         Y = n(97688),
-        X = n(57924),
-        K = "sandbox:";
+        K = n(57924),
+        X = "sandbox:";
       function ee(e) {
         var t,
           n,
@@ -6202,10 +6351,10 @@
           p = (0, B._)((0, d.useState)(!1), 2),
           v = p[0],
           x = p[1],
-          b = c.substring(K.length),
+          b = c.substring(X.length),
           y = G.tQ.getServerThreadId(u),
-          w = (0, H.Z)(),
-          j = (0, d.useCallback)(function (e) {
+          j = (0, H.Z)(),
+          w = (0, d.useCallback)(function (e) {
             var t = document.createElement("a");
             (t.href = e), t.click(), x(!1);
           }, []),
@@ -6220,7 +6369,7 @@
                 .then(function (e) {
                   return (
                     (null == e ? void 0 : e.status) === "success" &&
-                      j(e.download_url),
+                      w(e.download_url),
                     e
                   );
                 })
@@ -6244,7 +6393,7 @@
                       m.invalidateQueries({ queryKey: en(l, b) }),
                     (null == _ ? void 0 : _.status) == "success" &&
                     (null == _ ? void 0 : _.download_url)
-                      ? j(_.download_url)
+                      ? w(_.download_url)
                       : x(!0)),
                   [2]
                 );
@@ -6253,17 +6402,17 @@
             function (e) {
               return o.apply(this, arguments);
             }),
-            [u, _, b, j, l, m]
+            [u, _, b, w, l, m]
           );
-        return (0, s.jsx)(X.u, {
+        return (0, s.jsx)(K.u, {
           closeOnOutsideClick: !1,
           delayDuration: 0,
           label: (0, s.jsxs)("span", {
             className: "flex items-center gap-1",
             children: [
               v
-                ? w.formatMessage(er.startingDownload)
-                : w.formatMessage(er.downloadFile),
+                ? j.formatMessage(er.startingDownload)
+                : j.formatMessage(er.downloadFile),
               v && (0, s.jsx)(Q.Z, {}),
             ],
           }),
@@ -6281,7 +6430,7 @@
         });
       }
       function et(e) {
-        return (0, s.jsx)(X.u, {
+        return (0, s.jsx)(K.u, {
           closeOnOutsideClick: !1,
           delayDuration: 0,
           label: (0, s.jsx)("span", {
@@ -6322,7 +6471,7 @@
           },
         }),
         ea = function (e) {
-          return e.startsWith(K) ? e : (0, S.A)(e);
+          return e.startsWith(X) ? e : (0, S.A)(e);
         },
         ei = [
           D.Z,
@@ -6334,7 +6483,7 @@
                 r.push(n);
               }
               t("micromarkExtensions", {
-                flow: { [m.q.dollarSign]: j, [m.q.backslash]: y },
+                flow: { [m.q.dollarSign]: w, [m.q.backslash]: y },
                 text: {
                   [m.q.dollarSign]: {
                     tokenize: function (e, t, n) {
@@ -6640,9 +6789,9 @@
                   var t = e.node,
                     n = (0, i._)(e, ["node"]),
                     a = t.properties.href;
-                  return b && a.startsWith(K)
+                  return b && a.startsWith(X)
                     ? (0, s.jsx)(et, (0, r._)({}, n))
-                    : x && a.startsWith(K)
+                    : x && a.startsWith(X)
                     ? (0, s.jsx)(
                         ee,
                         (0, r._)({ clientThreadId: m, messageId: p }, n)
@@ -6653,7 +6802,7 @@
                   var t = e.node,
                     n = (0, i._)(e, ["node"]),
                     a = t.properties.src;
-                  return a.startsWith(K) || a.startsWith("attachment:")
+                  return a.startsWith(X) || a.startsWith("attachment:")
                     ? null
                     : (0, s.jsx)("img", (0, r._)({}, n));
                 },
@@ -6712,8 +6861,8 @@
         x = n(56244),
         b = n(66958),
         y = n(30931),
-        w = n(87105),
-        j = n(22830),
+        j = n(87105),
+        w = n(22830),
         _ = n(2827),
         C = n(82841),
         M = n(36218),
@@ -6753,9 +6902,9 @@
           p = (0, C.WS)(),
           v = (0, d.useId)(),
           x = "".concat(a, "-").concat(v),
-          w = (0, j._)((0, d.useState)(null != t ? t : ""), 2),
-          T = w[0],
-          N = w[1],
+          j = (0, w._)((0, d.useState)(null != t ? t : ""), 2),
+          T = j[0],
+          N = j[1],
           Z = (0, d.useRef)(null);
         (0, d.useEffect)(function () {
           f(a, x, null != t ? t : "", g ? { attachments: g } : void 0);
@@ -6941,8 +7090,8 @@
         $ = n.n(G),
         Q = n(1454),
         Y = n(77442),
-        X = n(38317);
-      function K(e) {
+        K = n(38317);
+      function X(e) {
         var t = e.disabled,
           n = e.onClick,
           r = e.left,
@@ -7000,7 +7149,7 @@
           a = e.className,
           i = (0, V.c)(0),
           s = (0, d.useRef)(null),
-          u = (0, j._)((0, d.useState)(0), 2),
+          u = (0, w._)((0, d.useState)(0), 2),
           c = u[0],
           f = u[1],
           h = ea[(0, Y.dQ)()] || 1,
@@ -7042,7 +7191,7 @@
             },
             [v]
           ),
-          y = (0, j._)(
+          y = (0, w._)(
             (0, d.useMemo)(
               function () {
                 if (r) return [!0, !0];
@@ -7053,7 +7202,7 @@
             ),
             2
           ),
-          w = y[0],
+          j = y[0],
           _ = y[1];
         return (
           (0, d.useEffect)(
@@ -7078,16 +7227,16 @@
               g &&
                 (0, o.jsxs)(o.Fragment, {
                   children: [
-                    (0, o.jsx)(K, {
+                    (0, o.jsx)(X, {
                       onClick: b,
                       left: !0,
-                      disabled: !w,
-                      children: (0, o.jsx)(X.ZP, { icon: Q.YFh }),
+                      disabled: !j,
+                      children: (0, o.jsx)(K.ZP, { icon: Q.YFh }),
                     }),
-                    (0, o.jsx)(K, {
+                    (0, o.jsx)(X, {
                       onClick: x,
                       disabled: !_,
-                      children: (0, o.jsx)(X.ZP, { icon: Q.Tfp }),
+                      children: (0, o.jsx)(K.ZP, { icon: Q.Tfp }),
                     }),
                   ],
                 }),
@@ -7275,7 +7424,7 @@
           f = u.isLoading,
           h = null == c ? void 0 : c.download_url,
           g = (0, d.useRef)(null),
-          m = (0, j._)((0, d.useState)(!1), 2),
+          m = (0, w._)((0, d.useState)(!1), 2),
           p = m[0],
           v = m[1];
         (0, d.useEffect)(
@@ -7288,9 +7437,9 @@
         );
         var x = f || !p;
         return "string" == typeof h
-          ? (0, o.jsx)(ew, {
+          ? (0, o.jsx)(ej, {
               children: (0, o.jsx)(eg(), {
-                alt: s.formatMessage(ej.alt),
+                alt: s.formatMessage(ew.alt),
                 src: h,
                 width: a,
                 height: i,
@@ -7305,16 +7454,16 @@
                 ),
               }),
             })
-          : (0, o.jsx)(ew, {
+          : (0, o.jsx)(ej, {
               style: { aspectRatio: "".concat(a, " / ").concat(i), width: a },
               title: x
-                ? s.formatMessage(ej.loading)
-                : s.formatMessage(ej.error),
+                ? s.formatMessage(ew.loading)
+                : s.formatMessage(ew.error),
               children: x ? (0, o.jsx)(ex.Z, {}) : (0, o.jsx)(Q.BJv, {}),
             });
       }
-      var ew = c.Z.div(eb()),
-        ej = (0, ep.vU)({
+      var ej = c.Z.div(eb()),
+        ew = (0, ep.vU)({
           loading: {
             id: "imageAsset.loading",
             defaultMessage: "Loading...",
@@ -7433,8 +7582,8 @@
           m = e.flag,
           x = e.format,
           b = e.isCompletionInProgress,
-          j = e.size,
-          _ = void 0 === j ? "medium" : j,
+          w = e.size,
+          _ = void 0 === w ? "medium" : w,
           C = e.parts,
           M = e.isCompletion,
           k = e.id,
@@ -7515,7 +7664,7 @@
                       t
                     )
                   : (0, o.jsx)(
-                      w.Z,
+                      j.Z,
                       {
                         clientThreadId: N,
                         messageId: k,
@@ -7675,13 +7824,13 @@
           return C;
         },
         ZB: function () {
-          return w;
+          return j;
         },
         ZP: function () {
           return b;
         },
         zV: function () {
-          return j;
+          return w;
         },
       });
       var r = n(39324),
@@ -7754,7 +7903,7 @@
         return (0, i.jsx)(s.v.Item, {
           children: function (e) {
             var s = e.active;
-            return (0, i.jsx)(w, {
+            return (0, i.jsx)(j, {
               as: void 0 !== n ? "a" : "button",
               onClick: t,
               href: n,
@@ -7784,10 +7933,10 @@
         });
       }
       c.Z.a(g());
-      var w = c.Z.a(m()),
-        j = (0, c.Z)(w)(p()),
+      var j = c.Z.a(m()),
+        w = (0, c.Z)(j)(p()),
         _ = c.Z.div(v()),
-        C = (0, c.Z)(w)(x(), function (e) {
+        C = (0, c.Z)(j)(x(), function (e) {
           return e.$active ? "bg-gray-800" : "hover:bg-gray-800";
         }),
         M = (0, d.vU)({
@@ -7833,8 +7982,8 @@
         x = n(17915),
         b = n(86573),
         y = n(38631),
-        w = n(49910),
-        j = n(697),
+        j = n(49910),
+        w = n(697),
         _ = (0, d.ZP)(function () {
           return { isOpen: !1 };
         }),
@@ -7869,7 +8018,7 @@
           U = _(function (e) {
             return e.isOpen;
           }),
-          B = (0, j.p0)(),
+          B = (0, w.p0)(),
           O = (0, x.sd)().fetchManifestAndSpec,
           q = (0, l.useMemo)(
             function () {
@@ -7945,7 +8094,7 @@
                                   (0, s.jsxs)("div", {
                                     children: ["Plugin id: ", q.id],
                                   }),
-                                  (0, s.jsx)(w.rC, {
+                                  (0, s.jsx)(j.rC, {
                                     manifestValidationInfo:
                                       d.manifestValidationInfo,
                                     expanded: T,
@@ -7954,13 +8103,13 @@
                                   null != d.apiValidationInfo &&
                                     (0, s.jsxs)(s.Fragment, {
                                       children: [
-                                        (0, s.jsx)(w.q6, {
+                                        (0, s.jsx)(j.q6, {
                                           apiValidationInfo:
                                             d.apiValidationInfo,
                                           expanded: Z,
                                           onChangeExpanded: S,
                                         }),
-                                        (0, s.jsx)(w.bf, {
+                                        (0, s.jsx)(j.bf, {
                                           apiValidationInfo:
                                             d.apiValidationInfo,
                                           expanded: F,
@@ -9096,7 +9245,7 @@
           return _;
         },
         ZP: function () {
-          return j;
+          return w;
         },
         Ub: function () {
           return C;
@@ -9184,18 +9333,18 @@
           e
         );
       }
-      function w() {
+      function j() {
         var e = (0, a._)([
           "px-6 py-4 flex flex-col gap-1 hover:bg-gray-50 dark:hover:bg-gray-500/10 cursor-pointer border-b dark:border-white/10 border-gray-200",
         ]);
         return (
-          (w = function () {
+          (j = function () {
             return e;
           }),
           e
         );
       }
-      function j(e) {
+      function w(e) {
         var t = e.children,
           n = e.title,
           r = e.icon,
@@ -9257,7 +9406,7 @@
           y = (0, s.useCallback)(function () {
             x(void 0);
           }, []),
-          w = (0, s.useCallback)(
+          j = (0, s.useCallback)(
             function () {
               var e = d.tQ.getTree(t);
               navigator.clipboard.writeText(e.getTextFromThread(f));
@@ -9292,7 +9441,7 @@
             e.id
           );
         });
-        return (0, i.jsxs)(j, {
+        return (0, i.jsxs)(w, {
           icon: o.cDN,
           title: "Debug",
           isOpen: n,
@@ -9306,7 +9455,7 @@
                 (0, i.jsx)(M, { clientThreadId: t, messages: m }),
                 (0, i.jsx)("div", {
                   children: (0, i.jsx)(h.Z, {
-                    onCopy: w,
+                    onCopy: j,
                     buttonText: "Copy text",
                   }),
                 }),
@@ -9365,7 +9514,7 @@
       }
       var k = l.Z.div(b()),
         T = l.Z.pre(y()),
-        N = l.Z.div(w());
+        N = l.Z.div(j());
     },
     36112: function (e, t, n) {
       n.d(t, {
@@ -9605,7 +9754,7 @@
     97732: function (e, t, n) {
       n.d(t, {
         Ri: function () {
-          return w;
+          return j;
         },
         ZP: function () {
           return _;
@@ -9614,7 +9763,7 @@
           return a;
         },
         i0: function () {
-          return j;
+          return w;
         },
       });
       var r,
@@ -9698,7 +9847,7 @@
             name: "Plugins",
           }),
           s);
-      function w(e) {
+      function j(e) {
         var t = _();
         return (0, f.useMemo)(
           function () {
@@ -9733,7 +9882,7 @@
           [t, e]
         );
       }
-      function j(e, t) {
+      function w(e, t) {
         return (0, x.OX)().some(function (n) {
           return n[t] === e;
         });
@@ -9764,8 +9913,8 @@
                 if (l.has(p.default_model)) {
                   var v = b[p.category] || {},
                     x = n === p.default_model,
-                    w = t.get(p.default_model),
-                    j = x
+                    j = t.get(p.default_model),
+                    w = x
                       ? []
                       : (function (e, t, n, r, i) {
                           var s = e.isBrowsingEnabled,
@@ -9821,9 +9970,9 @@
                         })(r, s, p, l, t);
                   o.push({
                     categoryId: p.category,
-                    value: w.id,
+                    value: j.id,
                     name: p.human_category_name,
-                    description: x ? i : w.description,
+                    description: x ? i : j.description,
                     disclaimer: v.disclaimer,
                     buttonActiveClass: v.buttonActiveClass,
                     buttonHoverClass: v.buttonHoverClass,
@@ -9831,12 +9980,12 @@
                     icon: v.icon,
                     activeIcon: v.activeIcon,
                     options: [
-                      C(w, {
+                      C(j, {
                         icon: v.icon,
                         activeIcon: v.activeIcon,
                         name: "Default",
                       }),
-                    ].concat((0, u._)(j)),
+                    ].concat((0, u._)(w)),
                     disabled: x,
                     showSelectedValueBelow: !1,
                   });
@@ -9940,12 +10089,12 @@
         x = n(32983),
         b = n(5046),
         y = n(97732),
-        w = "text-davinci-002-render-sha";
+        j = "text-davinci-002-render-sha";
       ((r = a || (a = {})).GPT_3_5 = "gpt3.5"),
         (r.GPT_4 = "gpt4"),
         (r.MOBILE = "mobile");
-      var j = E({
-          slug: w,
+      var w = E({
+          slug: j,
           max_tokens: 4097,
           title: "Default",
           description: "",
@@ -9995,7 +10144,7 @@
                 ? e.map(function (e) {
                     return e.slug;
                   })
-                : [w]
+                : [j]
             );
           },
           [e]
@@ -10012,7 +10161,7 @@
                 ? e.map(function (e) {
                     return [e.slug, E(e)];
                   })
-                : [[w, j]]
+                : [[j, w]]
             );
           },
           [e]
@@ -10105,10 +10254,10 @@
           function () {
             var e;
             return null == n
-              ? j
+              ? w
               : null !== (e = r.get(n)) && void 0 !== e
               ? e
-              : j;
+              : w;
           },
           [n, r]
         );
@@ -10251,13 +10400,13 @@
           return M;
         },
         aS: function () {
-          return X;
+          return K;
         },
         ax: function () {
           return I;
         },
         r7: function () {
-          return K;
+          return X;
         },
         XK: function () {
           return F;
@@ -10343,14 +10492,14 @@
         x = n(97688),
         b = n(90076),
         y = n(24274),
-        w = n(32983),
-        j = "NEW:",
+        j = n(32983),
+        w = "NEW:",
         _ = 0;
       function C() {
-        return "".concat(j).concat(_++);
+        return "".concat(w).concat(_++);
       }
       function M(e) {
-        return e.startsWith(j);
+        return e.startsWith(w);
       }
       ((r = a || (a = {})).NewChat = "NewChat"),
         (r.Server = "Server"),
@@ -10471,12 +10620,12 @@
               x,
               y =
                 arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              w =
+              j =
                 arguments.length > 3 && void 0 !== arguments[3]
                   ? arguments[3]
                   : void 0,
-              j = S.resolveThreadId(e);
-            if (null != N().threads[j] || y) {
+              w = S.resolveThreadId(e);
+            if (null != N().threads[w] || y) {
               var _ =
                 ((r =
                   null ===
@@ -10519,7 +10668,7 @@
                   authorName: t.author_name,
                 });
               if (
-                (null === (u = N().threads[j]) || void 0 === u
+                (null === (u = N().threads[w]) || void 0 === u
                   ? void 0
                   : u.isLoading) !== !1
               ) {
@@ -10537,7 +10686,7 @@
                             : _.rootId) && void 0 !== f
                         ? f
                         : "root",
-                    threadId: j,
+                    threadId: w,
                     title: null !== (h = t.title) && void 0 !== h ? h : null,
                     lastModelUsed: (function e(t, n) {
                       var r,
@@ -10577,10 +10726,10 @@
                   T = M.initialCurrentLeafId;
                 P(function (e) {
                   var t;
-                  e.threads[j] = (0, s._)(
+                  e.threads[w] = (0, s._)(
                     (0, i._)(
                       {},
-                      null !== (t = e.threads[j]) && void 0 !== t ? t : {}
+                      null !== (t = e.threads[w]) && void 0 !== t ? t : {}
                     ),
                     {
                       initialThreadData: M,
@@ -10589,13 +10738,13 @@
                       tree: k,
                       currentLeafId: T,
                       isLoading: !1,
-                      continuingFromSharedConversationId: w,
+                      continuingFromSharedConversationId: j,
                     }
                   );
                 }),
                   S.recomputeConversationTurns(
-                    j,
-                    N().threads[j].currentLeafId,
+                    w,
+                    N().threads[w].currentLeafId,
                     []
                   );
               }
@@ -10829,8 +10978,8 @@
         I = function (e) {
           var t = (0, u.useRouter)(),
             n = (0, h.kP)().session,
-            r = (0, d.useContext)(w.QL).historyDisabled,
-            a = (0, d.useContext)(w.gB);
+            r = (0, d.useContext)(j.QL).historyDisabled,
+            a = (0, d.useContext)(j.gB);
           (0, o.a)(
             ["conversation", e],
             function () {
@@ -11060,7 +11209,7 @@
           var t = S.getTree(e).getUserContext();
           return null == t ? null : t.message;
         },
-        X = function (e) {
+        K = function (e) {
           var t = T(function (t) {
             var n,
               r,
@@ -11073,7 +11222,7 @@
           });
           return null != Y(e) || !!t;
         },
-        K = function (e) {
+        X = function (e) {
           return T(function () {
             var t,
               n = S.resolveThreadId(e);
@@ -11193,7 +11342,7 @@
           return _;
         },
         N2: function () {
-          return j;
+          return w;
         },
         tr: function () {
           return a;
@@ -11264,17 +11413,17 @@
             }, {});
           },
         },
-        w = function () {
+        j = function () {
           var e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
           return ["userSettings", e];
         };
-      function j() {
+      function w() {
         var e = (0, g.kP)().session,
           t = (0, d.NL)();
         return function () {
           return t.invalidateQueries({
-            queryKey: w(null == e ? void 0 : e.accessToken),
+            queryKey: j(null == e ? void 0 : e.accessToken),
           });
         };
       }
@@ -11284,7 +11433,7 @@
           n = t.has("beta_features");
         return (
           (0, c.a)(
-            w(null == e ? void 0 : e.accessToken),
+            j(null == e ? void 0 : e.accessToken),
             function () {
               return m.ZP.getUserSettingBetaFeatures(e.accessToken).then(
                 function (e) {
@@ -11358,12 +11507,12 @@
           var b = !1;
           if (f > 0) {
             var y,
-              w,
-              j = t[f - 1];
-            (null === (y = j.metadata) || void 0 === y ? void 0 : y.url) ===
-              (null === (w = h.metadata) || void 0 === w ? void 0 : w.url) &&
-              0 === e.slice(j.end_ix, h.start_ix).trim().length &&
-              ((e = e.slice(0, j.end_ix) + e.slice(h.end_ix)), (b = !0));
+              j,
+              w = t[f - 1];
+            (null === (y = w.metadata) || void 0 === y ? void 0 : y.url) ===
+              (null === (j = h.metadata) || void 0 === j ? void 0 : j.url) &&
+              0 === e.slice(w.end_ix, h.start_ix).trim().length &&
+              ((e = e.slice(0, w.end_ix) + e.slice(h.end_ix)), (b = !0));
           }
           b ||
             (e =
@@ -11734,7 +11883,7 @@
           return T;
         },
         Vh: function () {
-          return w;
+          return j;
         },
         uV: function () {
           return _;
@@ -11758,8 +11907,8 @@
         x = n(75179),
         b = n(69403),
         y = n(56244),
-        w = "request-",
-        j =
+        j = "request-",
+        w =
           ((r = {}),
           (0, d._)(r, b.Jq.Root, b.uU.Unknown),
           (0, d._)(r, b.Jq.Prompt, b.uU.User),
@@ -12248,14 +12397,14 @@
             (e.createRootMessage = function () {
               return {
                 id: C("aaa1"),
-                author: { role: j[b.Jq.Root] },
+                author: { role: w[b.Jq.Root] },
                 content: { content_type: b.PX.Text, parts: [] },
               };
             }),
             (e.getRequestIdFromConversationTurn = function (e) {
               for (var t = e.messages.length - 1; t >= 0; t--) {
                 var n = e.messages[t];
-                if (n.nodeId.startsWith(w)) return n.nodeId;
+                if (n.nodeId.startsWith(j)) return n.nodeId;
               }
               return e.messages[0].nodeId;
             }),
@@ -12266,7 +12415,7 @@
             (e.getContentAsMessage = function (e, t, n) {
               return {
                 id: C("aaa2"),
-                author: { role: j[t] },
+                author: { role: w[t] },
                 content: e,
                 metadata: n,
               };

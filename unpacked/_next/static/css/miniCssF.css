@@ -1758,6 +1758,10 @@ textarea:focus {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -2269,9 +2273,6 @@ textarea:focus {
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
-.max-w-2xl {
-  max-width: 42rem;
-}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -2280,6 +2281,9 @@ textarea:focus {
 }
 .max-w-\[100vw\] {
   max-width: 100vw;
+}
+.max-w-\[220px\] {
+  max-width: 220px;
 }
 .max-w-\[400px\] {
   max-width: 400px;
@@ -5705,6 +5709,12 @@ button[data-state="open"] .toggle-item-button-open {
   }
   .xl\:max-w-6xl {
     max-width: 72rem;
+  }
+  .xl\:max-w-xl {
+    max-width: 36rem;
+  }
+  .xl\:max-w-xs {
+    max-width: 20rem;
   }
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));

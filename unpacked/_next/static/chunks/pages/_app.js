@@ -45120,7 +45120,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "7df9692b34c0170191a9d5504542b4952ca2742f" }),
+        (Z.SENTRY_RELEASE = { id: "270d1b81a5102fa0e3915c4bf0c9ef43d0cce58a" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({
