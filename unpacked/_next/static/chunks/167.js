@@ -1762,8 +1762,8 @@
                             })
                             .map(function (e) {
                               return w.ZP.deleteFileFromFileService(
-                                S.accessToken,
-                                e.id
+                                e.id,
+                                S.accessToken
                               );
                             })
                         ),
@@ -6184,108 +6184,104 @@
         V = n(3001),
         J = n(24274),
         G = n(75527),
-        $ = n(19265),
-        Q = n(97688),
-        Y = n(57924),
-        X = "sandbox:";
-      function K(e) {
+        $ = n(25094),
+        Q = n(19265),
+        Y = n(97688),
+        X = n(57924),
+        K = "sandbox:";
+      function ee(e) {
         var t,
           n,
-          o = e.messageId,
-          l = e.clientThreadId,
-          u = e.href,
-          c = (0, i._)(e, ["messageId", "clientThreadId", "href"]),
-          f = (0, d.useContext)(h.gB),
-          g = (0, q.NL)(),
-          m = (0, B._)((0, d.useState)(!1), 2),
-          p = m[0],
-          v = m[1],
-          x = u.substring(X.length),
-          b = G.tQ.getServerThreadId(l),
-          y = (0, H.Z)(),
-          w = (0, d.useCallback)(function (e) {
+          o,
+          l = e.messageId,
+          u = e.clientThreadId,
+          c = e.href,
+          f = (0, i._)(e, ["messageId", "clientThreadId", "href"]),
+          g = (0, d.useContext)(h.gB),
+          m = (0, q.NL)(),
+          p = (0, B._)((0, d.useState)(!1), 2),
+          v = p[0],
+          x = p[1],
+          b = c.substring(K.length),
+          y = G.tQ.getServerThreadId(u),
+          w = (0, H.Z)(),
+          j = (0, d.useCallback)(function (e) {
             var t = document.createElement("a");
-            (t.href = e), t.click(), v(!1);
+            (t.href = e), t.click(), x(!1);
           }, []),
-          j = ((t = (0, d.useCallback)(function (e) {
-            v(!1), Q.m.danger(e);
+          _ = ((t = (0, d.useCallback)(function (e) {
+            x(!1), Y.m.danger(e);
           }, [])),
+          (n = (0, $.VF)()),
           (0, z.a)({
-            queryKey: en(o, x),
+            queryKey: en(l, b),
             queryFn: function () {
-              return J.ZP.downloadFromSandbox(o, b, x)
+              return J.ZP.downloadFromInterpreter(l, y, b)
                 .then(function (e) {
                   return (
                     (null == e ? void 0 : e.status) === "success" &&
-                      w(e.download_url),
-                    (null == e ? void 0 : e.status) === "error" &&
-                      t("File download failed - chat may be expired"),
+                      j(e.download_url),
                     e
                   );
                 })
                 .catch(function (e) {
-                  return t(e.message), e;
+                  var r = n("default_download_link_error", { fileName: b });
+                  throw (
+                    (void 0 !== e.code && (r = n(e.code)), null == t || t(r), e)
+                  );
                 });
             },
-            enabled: !!(p && !f && o && b && x),
-            refetchInterval: function (e, n) {
-              var r = n.state.dataUpdateCount;
-              return (
-                (null == e ? void 0 : e.status) !== "success" &&
-                (r > et
-                  ? (t("File download timed out. Please try again"), !1)
-                  : 100 * Math.pow(1.5, r))
-              );
-            },
+            enabled: !!(v && !g && l && y && b),
           })).data,
-          _ = (0, d.useCallback)(
-            ((n = (0, U._)(function (e) {
+          C = (0, d.useCallback)(
+            ((o = (0, U._)(function (e) {
               return (0, O.Jh)(this, function (t) {
                 return (
-                  void 0 !== l &&
+                  void 0 !== u &&
                     (e.preventDefault(),
-                    (void 0 === j ||
-                      (null == j ? void 0 : j.state) === "failed") &&
-                      g.invalidateQueries({ queryKey: en(o, x) }),
-                    (null == j ? void 0 : j.download_url)
-                      ? w(j.download_url)
-                      : v(!0)),
+                    (void 0 === _ ||
+                      (null == _ ? void 0 : _.status) === "error") &&
+                      m.invalidateQueries({ queryKey: en(l, b) }),
+                    (null == _ ? void 0 : _.status) == "success" &&
+                    (null == _ ? void 0 : _.download_url)
+                      ? j(_.download_url)
+                      : x(!0)),
                   [2]
                 );
               });
             })),
             function (e) {
-              return n.apply(this, arguments);
+              return o.apply(this, arguments);
             }),
-            [l, j, x, w, o, g]
+            [u, _, b, j, l, m]
           );
-        return (0, s.jsx)(Y.u, {
+        return (0, s.jsx)(X.u, {
           closeOnOutsideClick: !1,
           delayDuration: 0,
           label: (0, s.jsxs)("span", {
             className: "flex items-center gap-1",
             children: [
-              p
-                ? y.formatMessage(er.startingDownload)
-                : y.formatMessage(er.downloadFile),
-              p && (0, s.jsx)($.Z, {}),
+              v
+                ? w.formatMessage(er.startingDownload)
+                : w.formatMessage(er.downloadFile),
+              v && (0, s.jsx)(Q.Z, {}),
             ],
           }),
           side: "top",
           sideOffset: 4,
           children: (0, s.jsx)(
             "a",
-            (0, a._)((0, r._)({}, c), {
+            (0, a._)((0, r._)({}, f), {
               className: "cursor-pointer",
               onClick: function (e) {
-                return !p && _(e);
+                return !v && C(e);
               },
             })
           ),
         });
       }
-      function ee(e) {
-        return (0, s.jsx)(Y.u, {
+      function et(e) {
+        return (0, s.jsx)(X.u, {
           closeOnOutsideClick: !1,
           delayDuration: 0,
           label: (0, s.jsx)("span", {
@@ -6303,7 +6299,6 @@
           ),
         });
       }
-      var et = Math.log(1501) / Math.log(1.5);
       function en(e, t) {
         return ["downloadSandboxLink", e, t];
       }
@@ -6327,7 +6322,7 @@
           },
         }),
         ea = function (e) {
-          return e.startsWith(X) ? e : (0, S.A)(e);
+          return e.startsWith(K) ? e : (0, S.A)(e);
         },
         ei = [
           D.Z,
@@ -6645,11 +6640,11 @@
                   var t = e.node,
                     n = (0, i._)(e, ["node"]),
                     a = t.properties.href;
-                  return b && a.startsWith(X)
-                    ? (0, s.jsx)(ee, (0, r._)({}, n))
-                    : x && a.startsWith(X)
+                  return b && a.startsWith(K)
+                    ? (0, s.jsx)(et, (0, r._)({}, n))
+                    : x && a.startsWith(K)
                     ? (0, s.jsx)(
-                        K,
+                        ee,
                         (0, r._)({ clientThreadId: m, messageId: p }, n)
                       )
                     : (0, s.jsx)("a", (0, r._)({}, n));
@@ -6658,7 +6653,7 @@
                   var t = e.node,
                     n = (0, i._)(e, ["node"]),
                     a = t.properties.src;
-                  return a.startsWith(X) || a.startsWith("attachment:")
+                  return a.startsWith(K) || a.startsWith("attachment:")
                     ? null
                     : (0, s.jsx)("img", (0, r._)({}, n));
                 },
@@ -10831,26 +10826,27 @@
                 }, 3e4))));
           },
         },
-        I = function (e, t) {
-          var n = (0, u.useRouter)(),
-            r = (0, h.kP)().session,
-            a = (0, d.useContext)(w.QL).historyDisabled;
+        I = function (e) {
+          var t = (0, u.useRouter)(),
+            n = (0, h.kP)().session,
+            r = (0, d.useContext)(w.QL).historyDisabled,
+            a = (0, d.useContext)(w.gB);
           (0, o.a)(
             ["conversation", e],
             function () {
               return y.ZP.getConversation(
                 e,
-                null == r ? void 0 : r.accessToken
+                null == n ? void 0 : n.accessToken
               );
             },
             {
               enabled:
                 !M(e) &&
-                (null == r ? void 0 : r.accessToken) !== void 0 &&
-                !a &&
-                !t,
+                (null == n ? void 0 : n.accessToken) !== void 0 &&
+                !r &&
+                !a,
               onError: function () {
-                n.replace("/"),
+                t.replace("/"),
                   x.m.danger("Unable to load conversation ".concat(e));
               },
               onSuccess: function (t) {
@@ -10862,7 +10858,7 @@
               function () {
                 S.getOrInitThread(e);
               },
-              [e, n]
+              [e, t]
             );
         },
         F = function (e) {

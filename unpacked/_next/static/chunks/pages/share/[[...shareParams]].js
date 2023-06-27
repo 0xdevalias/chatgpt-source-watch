@@ -61,7 +61,6 @@
                 setClientThreadId: function () {},
                 initiallyHighlightedMessageId: n,
                 continueConversationUrl: r,
-                isStaticSharedThread: !0,
               }),
             }),
           }),

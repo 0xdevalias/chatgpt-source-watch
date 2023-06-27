@@ -4,6 +4,102 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-27Z (`gO1nFWbowxDf-s-g3QRWc`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A number of minor changes to features around code interpreter, file upload/downloads, etc; including renaming some functions, and changing some backend API endpoint paths.
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Changed:
+    - From: `(U.startInterpreterUpload = function (U, B, G) {`
+    - To: `(U.processCodeInterpeterUpload = function (U, B, G) {`
+  - ```js
+    return (0, Q.Jh)(this, function (Y) {
+      return [
+        2,
+        V.fetch(
+          "".concat(tb, "/conversation/interpreter/process_upload"),
+          {
+            method: "POST",
+            headers: (0, Z._)(
+              { "Content-Type": "application/json" },
+              V.getAuthHeader()
+            ),
+            body: JSON.stringify({
+              conversation_id: U,
+              file_id: B,
+              file_name: G,
+            }),
+          }
+        ).then(function (U) {
+          if (U.status === t_.KF.Success) return U;
+          throw new tv.gK(
+            "Could not process code interpreter upload",
+            void 0,
+            "error_code" in U ? U.error_code : "unknown_error"
+          );
+        }),
+      ];
+    ```
+    - Path in `.fetch` used to be `"".concat(tb, "/conversation/handle_upload_event")`
+  - Changed:
+    - From: `(U.downloadFromSandbox = function (U, B, G) {`
+    - To: `(U.downloadFromInterpreter = function (U, B, G) {`
+  - Changed:
+    - From: `.concat(B, "/download_from_sandbox/v2?")`
+    - To: `.concat(B, "/interpreter/download?")`
+  - ```js
+    ).then(function (U) {
+      if (U.status === t_.KF.Success) return U;
+      throw new tv.gK(
+        "Could not download file from code interpreter",
+        void 0,
+        "error_code" in U ? U.error_code : "unknown_error"
+      );
+    }),
+    ```
+- `unpacked/_next/static/chunks/167.js`
+  - Changed:
+    - From: `return J.ZP.downloadFromSandbox(o, b, x)`
+    - To: `return J.ZP.downloadFromInterpreter(l, y, b)`
+  - ```js
+    var r = n("default_download_link_error", { fileName: b });
+    throw (
+      (void 0 !== e.code && (r = n(e.code)), null == t || t(r), e)
+    );
+    ```
+- `unpacked/_next/static/chunks/709.js`
+  - Removed: `isStaticSharedThread: ev,`
+    - And numerous other references to `isStaticSharedThread` across the code
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/167-121de668c4456907.js
+https://chat.openai.com/_next/static/chunks/709-4ebfa2df2ea4eb5f.js
+https://chat.openai.com/_next/static/chunks/pages/_app-da0c75d1d952dc0a.js
+https://chat.openai.com/_next/static/chunks/webpack-4ad844c7c7c34654.js
+https://chat.openai.com/_next/static/gO1nFWbowxDf-s-g3QRWc/_buildManifest.js
+https://chat.openai.com/_next/static/gO1nFWbowxDf-s-g3QRWc/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-cdb49e3d53fb940a.js
+```
+
 ## 2023-06-26Z (`F2_bAYHO9NlBwvfiLPAW3`)
 
 ### Notes
