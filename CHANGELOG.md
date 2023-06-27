@@ -4,6 +4,353 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-26Z (`F2_bAYHO9NlBwvfiLPAW3`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some of the diff was complicated as it seems some sections got moved around when the chunks were renamed (`97->167`, `734->709`), so not everything mentioned below may be strictly new.
+  - New strings/descriptions for `WorkspaceOnboarding`
+  - A bunch of new message types that seem like they're probably related to Browsing =
+    - `"search"`, `"click"`, `"open_url"`, `"quote"`, `"quote_full"`, `"back"`, `"scroll"`, `"running"`, `"finished"`
+  - Some changes to content under the 3 upcoming / unreleased feature flags
+    - `business_seats`: 'Business' mode / Workspaces
+    - `system_message2`: User Profile / Context
+    - `files_list_ui`: File Upload / Embedding
+  - Navigation labels prefix has been changed from `navigation` to `popoverNavigation` and `workspacePopoverNavigation`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - Chunk `97` renamed to `167`
+  - Chunk `734` renamed to `709`
+- `unpacked/_next/static/chunks/webpack.js`
+  - Chunk `97` renamed to `167`
+  - Chunk `734` renamed to `709`
+- `unpacked/_next/static/chunks/709.js`
+  - ```js
+    ee = (0, p.vU)({
+      page0Subtitle: {
+        id: "WorkspaceOnboarding.page0Subtitle",
+        defaultMessage: "Welcome to the {workspaceName} workspace",
+        description:
+          "Subtitle for the first page of the business onboarding flow",
+      },
+      page0Disclaimer1: {
+        id: "WorkspaceOnboarding.page0Disclaimer1",
+        defaultMessage:
+          "This workspace is private, only select members and roles can use it.",
+        description:
+          "First disclaimer for the first page of the business onboarding flow",
+      },
+      page0Disclaimer2: {
+        id: "WorkspaceOnboarding.page0Disclaimer2",
+        defaultMessage:
+          "While we have safeguards in place, the system may occasionally generate incorrect or misleading information and produce offensive or biased content. It is not intended to give advice.",
+        description:
+          "Second disclaimer for the first page of the business onboarding flow",
+      },
+      page1Subtitle: {
+        id: "WorkspaceOnboarding.page1Subtitle",
+        defaultMessage: "Data management",
+        description:
+          "Subtitle for the second page of the business onboarding flow",
+      },
+      page1Disclaimer1: {
+        id: "WorkspaceOnboarding.page1Disclaimer1",
+        defaultMessage:
+          "Conversations in this workspace are opted out of training and not available to other users.",
+        description:
+          "First disclaimer for the second page of the business onboarding flow",
+      },
+      page1Disclaimer2: {
+        id: "WorkspaceOnboarding.page1Disclaimer2",
+        defaultMessage:
+          "Chats are securely stored for 30 days for <link>Trust and Safety Protocols</link>.",
+        description:
+          "Second disclaimer for the second page of the business onboarding flow",
+      },
+    }),
+    ```
+- `unpacked/_next/static/chunks/167.js`
+  - ```js
+    ((m = l || (l = {})).Search = "search"),
+    (m.Click = "click"),
+    (m.OpenUrl = "open_url"),
+    (m.Quote = "quote"),
+    (m.QuoteFull = "quote_full"),
+    (m.Back = "back"),
+    (m.Scroll = "scroll"),
+    ((p = u || (u = {})).Running = "running"),
+    (p.Finished = "finished"),
+    ```
+  - ```js
+    function tc(e) {
+      var t = e.onDeleteHistory,
+        n = e.isConfirmingDeleteHistory,
+        r = (0, Z.WS)(),
+        a = (0, I.nR)(),
+        i = (0, I.hz)(),
+        s = (0, Y._O)().data,
+        o = i.has("business_seats") && s.length > 1,
+        d = (0, u.useCallback)(
+          function () {
+            r(S.s6.clickSidebarAccountPortalMenuItem),
+              c.vm.openModal(c.B.AccountPortal);
+          },
+          [r]
+        ),
+        f = (0, eZ.Fl)().isPluginsAvailable;
+      return (0, l.jsxs)(l.Fragment, {
+        children: [
+          o && (0, l.jsx)(ts.R, {}),
+          (0, l.jsx)(ts.DM, {
+            onDeleteHistory: t,
+            isConfirmingDeleteHistory: n,
+          }),
+          !0 === a &&
+            (0, l.jsxs)(ts.ZP, {
+              onClick: d,
+              children: [
+                (0, l.jsx)(j.ZP, { icon: x.fzv }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tf.myPlan)),
+              ],
+            }),
+          i.has("system_message2") &&
+            (0, l.jsxs)(ts.ZP, {
+              onClick: function () {
+                return c.vm.openModal(c.B.UserContext);
+              },
+              children: [
+                (0, l.jsx)(j.ZP, { icon: x.yK7 }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tf.myProfile)),
+              ],
+            }),
+          i.has("files_list_ui") &&
+            f &&
+            (0, l.jsxs)(ts.ZP, {
+              onClick: function () {
+                return c.vm.openFilesModal();
+              },
+              children: [
+                (0, l.jsx)(j.ZP, { icon: x.NOg }),
+                (0, l.jsx)(b.Z, (0, h._)({}, tf.myFiles)),
+              ],
+            }),
+        ],
+      });
+    ```
+    - We can see 3 upcoming / unreleased feature flags here:
+      - `business_seats`: 'Business' mode / Workspaces
+      - `system_message2`: User Profile / Context
+      - `files_list_ui`: File Upload / Embedding
+  - ```js
+    var tf = (0, y.vU)({
+      myPlan: {
+        id: "popoverNavigation.myPlan",
+        defaultMessage: "My plan",
+        description: "My plan menu item",
+      },
+      myProfile: {
+        id: "popoverNavigation.myProfile",
+        defaultMessage: "My profile",
+        description: "Profile menu item",
+      },
+      myFiles: {
+        id: "popoverNavigation.myFiles",
+        defaultMessage: "My files",
+        description: "Files menu item",
+      },
+    }),
+    ```
+  - ```js
+    function tp(e) {
+      var t = e.onDeleteHistory,
+        n = e.isConfirmingDeleteHistory,
+        r = (0, I.hz)(),
+        a = (0, Y._O)().data,
+        i = (0, Y.sN)(Y.F_.workspaceId),
+        s = r.has("business_seats") && a.length > 1;
+      return (0, l.jsxs)(l.Fragment, {
+        children: [
+          (0, l.jsxs)(tv, {
+            href: "/admin?workspaceId=".concat(i),
+            children: [
+              (0, l.jsx)(j.ZP, { icon: th.Z }),
+              (0, l.jsx)(b.Z, (0, h._)({}, tx.myWorkspaceSettings)),
+            ],
+          }),
+          s && (0, l.jsx)(ts.R, {}),
+          (0, l.jsx)(ts.DM, {
+            onDeleteHistory: t,
+            isConfirmingDeleteHistory: n,
+          }),
+        ],
+      });
+    }
+    ```
+  - ```js
+    var tx = (0, y.vU)({
+      myWorkspaceSettings: {
+        id: "workspacePopoverNavigation.myWorkspaceSettings",
+        defaultMessage: "Workspace settings",
+        description: "Workspace settings menu item",
+      },
+    });
+    ```
+  - ```js
+    m = c.has("business_seats") && g.length > 1;
+    ```
+  - Seemingly removed a bunch of labels, but I think this might be because the prefix changed from `navigation` to `popoverNavigation` (see above) / `workspacePopoverNavigation` (see below)
+    - `navigation.confirmClearConversations`
+    - `navigation.clearConversations`
+    - `navigation.myWorkspaceSettings`
+    - `navigation.myPlan`
+    - `navigation.myProfile`
+    - `navigation.myFiles`
+  - ```js
+    i.has("files_list_ui") && en && (0, l.jsx)(ek, {}),
+    i.has("system_message2") && (0, l.jsx)(te, {}),
+    i.has("business_seats") && (0, l.jsx)(er, { onResetThread: n }),
+    ```
+  - ```js
+    M = (0, d.vU)({
+      confirmClearConversations: {
+        id: "workspacePopoverNavigation.confirmClearConversations",
+        defaultMessage: "Confirm clear conversations",
+        description: "Confirmation text for clearing conversations",
+      },
+      clearConversations: {
+        id: "workspacePopoverNavigation.clearConversations",
+        defaultMessage: "Clear conversations",
+        description: "Clear conversations menu item",
+      },
+    });
+    ```
+  - ```js
+    hasUserEditableContextFlag:
+      null !== (v = t.has_user_editable_context) &&
+      void 0 !== v &&
+      v,
+    ```
+  - ```js
+    var t = T(function (t) {
+      var n,
+        r,
+        a = S.resolveThreadId(e);
+      return null === (n = t.threads[a]) || void 0 === n
+        ? void 0
+        : null === (r = n.initialThreadData) || void 0 === r
+        ? void 0
+        : r.hasUserEditableContextFlag;
+    });
+    return null != Y(e) || !!t;
+    ```
+  - ```js
+    getUserSettingsFromFeatures: function (e, t) {
+      return Object.entries(e).reduce(function (e, n) {
+        var r = (0, u._)(n, 2),
+          a = r[0],
+          i = r[1],
+          d = x[a],
+          c = !1;
+        return ((("isBrowsingEnabled" === d && t.isBrowsingAvailable) ||
+          ("isCodeInterpreterEnabled" === d &&
+            t.isCodeInterpreterAvailable) ||
+          ("isPluginsEnabled" === d && t.isPluginsAvailable)) &&
+          (c = i),
+        d)
+          ? (0, l._)((0, o._)({}, e), (0, s._)({}, d, c))
+          : e;
+    ```
+  - ```js
+    ((r = a || (a = {}))[(r.Text = 0)] = "Text"),
+      (r[(r.Browsing = 1)] = "Browsing"),
+      (r[(r.BrowseTool = 2)] = "BrowseTool"),
+      (r[(r.Code = 3)] = "Code"),
+      (r[(r.CodeExecutionOutput = 4)] = "CodeExecutionOutput"),
+      (r[(r.MultimodalText = 5)] = "MultimodalText"),
+      (r[(r.Plugin = 6)] = "Plugin"),
+      (r[(r.PluginTool = 7)] = "PluginTool"),
+      (r[(r.Unknown = 8)] = "Unknown");
+    ```
+  - ```js
+    if (e.author.role === s.uU.Assistant) {
+      var t = v(e.recipient);
+      if (
+        "browser" === e.recipient ||
+        "browser_one_box" === e.recipient ||
+        (null != t && o.includes(t.pluginNamespace))
+      )
+        return a.Browsing;
+      if ("python" === e.recipient) return a.Code;
+      if (null != t) return a.Plugin;
+      if ("browsing_team" === e.recipient) return a.Text;
+    } else if (e.author.role === s.uU.Tool) {
+      var n = v(e.author.name);
+      if (
+        "browser" === e.author.name ||
+        "browser_one_box" === e.author.name ||
+        "browsing_team" === e.author.name ||
+        (null != n && o.includes(n.pluginNamespace))
+      )
+        return a.BrowseTool;
+      if (e.content.content_type === s.PX.ExecutionOutput)
+        return a.CodeExecutionOutput;
+      if (null != n || "plugin_service" === e.author.name)
+        return a.PluginTool;
+    }
+    return e.content.content_type === s.PX.Text ||
+      e.content.content_type === s.PX.MultimodalText
+      ? a.Text
+      : a.Unknown;
+    ```
+  - ```js
+    function v(e) {
+      if (null == e || !e.includes(".")) return null;
+      var t = (0, i._)(e.split("."), 2);
+      return { pluginNamespace: t[0], pluginFunctionName: t[1] };
+    }
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/167-f9af0280d3150ee2.js
+https://chat.openai.com/_next/static/chunks/709-2d4517948ff4a094.js
+https://chat.openai.com/_next/static/chunks/pages/_app-79ed905692efddfc.js
+https://chat.openai.com/_next/static/chunks/pages/index-cd815c007b0cc93d.js
+https://chat.openai.com/_next/static/chunks/webpack-3b8f9d7d8285e5db.js
+https://chat.openai.com/_next/static/F2_bAYHO9NlBwvfiLPAW3/_buildManifest.js
+https://chat.openai.com/_next/static/F2_bAYHO9NlBwvfiLPAW3/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/admin-36c3d4673e7f8c0a.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-1ec82c90f4f41cbf.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-49400585bd1b7bdf.js
+```
+
+### From `_next/static/chunks/webpack-3b8f9d7d8285e5db.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/867145de23deaf27.css
+```
+
 ## 2023-06-25Z (`5oNaFu0A1xunXHmq5l70K`)
 
 ### Notes

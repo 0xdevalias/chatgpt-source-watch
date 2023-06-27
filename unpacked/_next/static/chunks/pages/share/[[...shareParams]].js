@@ -1,79 +1,74 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [165],
   {
-    34537: function (e, t, r) {
+    34537: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/share/[[...shareParams]]",
         function () {
-          return r(74387);
+          return n(74387);
         },
       ]);
     },
-    74387: function (e, t, r) {
+    74387: function (e, t, n) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      n.r(t),
+        n.d(t, {
           __N_SSP: function () {
-            return w;
+            return P;
           },
           config: function () {
-            return C;
+            return w;
           },
           default: function () {
-            return O;
+            return C;
           },
         });
-      var n = r(39324),
-        a = r(71209),
-        i = r(22830),
-        o = r(35250),
-        u = r(35448),
-        l = r(16578),
-        s = r.n(l),
-        d = r(70079),
-        c = r(1454),
-        f = r(3001),
-        _ = r(35290),
-        h = r(21172),
-        v = r(38317),
-        p = r(37541),
-        m = r(32983),
-        y = r(82841),
-        g = r(36218),
-        b = r(75527),
-        x = r(71047),
-        j = r(9356);
-      function P(e) {
+      var r = n(39324),
+        a = n(71209),
+        i = n(22830),
+        o = n(35250),
+        u = n(35448),
+        l = n(16578),
+        s = n.n(l),
+        d = n(70079),
+        c = n(1454),
+        f = n(3001),
+        _ = n(35290),
+        h = n(80852),
+        v = n(38317),
+        p = n(37541),
+        m = n(32983),
+        y = n(82841),
+        g = n(36218),
+        b = n(75527),
+        x = n(9356);
+      function j(e) {
         var t = e.sharedConversationId,
-          r = e.userCountry,
           n = e.initiallyHighlightedMessageId,
-          a = e.continueConversationUrl,
-          i = (0, d.useMemo)(function () {
+          r = e.continueConversationUrl,
+          a = (0, d.useMemo)(function () {
             return { app: g.VY, origin: "chat" };
           }, []),
-          u = (0, b.GR)(t);
+          i = (0, b.GR)(t);
         return (0, o.jsx)(y.Af.Provider, {
-          value: i,
+          value: a,
           children: (0, o.jsx)(m.gB.Provider, {
             value: !0,
-            children: (0, o.jsxs)(m.XA.Provider, {
-              value: u,
-              children: [
-                (0, o.jsx)(x.Z, { userCountry: r }),
-                (0, o.jsx)(j.Z, {
-                  clientThreadId: t,
-                  setClientThreadId: function () {},
-                  initiallyHighlightedMessageId: n,
-                  continueConversationUrl: a,
-                  isStaticSharedThread: !0,
-                }),
-              ],
+            children: (0, o.jsx)(m.XA.Provider, {
+              value: i,
+              children: (0, o.jsx)(x.Z, {
+                clientThreadId: t,
+                setClientThreadId: function () {},
+                initiallyHighlightedMessageId: n,
+                continueConversationUrl: r,
+                isStaticSharedThread: !0,
+              }),
             }),
           }),
         });
       }
-      var w = !0,
-        C = { runtime: "nodejs" },
+      var P = !0,
+        w = { runtime: "nodejs" },
         k = (0, f.vU)({
           home: {
             id: "sharedConversation.home",
@@ -81,19 +76,19 @@
             description: "Home link text in error message",
           },
         });
-      function O(e) {
+      function C(e) {
         if ("error" === e.serverResponse.type)
-          return (0, o.jsx)(M, { error: e.serverResponse.error });
-        var t = (0, a._)((0, n._)({}, e), {
+          return (0, o.jsx)(T, { error: e.serverResponse.error });
+        var t = (0, a._)((0, r._)({}, e), {
           conversationData: e.serverResponse.data,
         });
         return e.continueMode
-          ? (0, o.jsx)(D, (0, n._)({}, t))
+          ? (0, o.jsx)(O, (0, r._)({}, t))
           : e.moderationMode
-          ? (0, o.jsx)(p.Z, { children: (0, o.jsx)(T, (0, n._)({}, t)) })
-          : (0, o.jsx)(T, (0, n._)({}, t));
+          ? (0, o.jsx)(p.Z, { children: (0, o.jsx)(D, (0, r._)({}, t)) })
+          : (0, o.jsx)(D, (0, r._)({}, t));
       }
-      function D(e) {
+      function O(e) {
         var t = (0, i._)(
           (0, d.useState)(function () {
             return (0, b.OX)();
@@ -106,9 +101,9 @@
           !0,
           e.sharedConversationId
         );
-        var r = (0, u.NL)();
+        var n = (0, u.NL)();
         return (null != e.plugins &&
-          r.setQueryData(
+          n.setQueryData(
             e.plugins.map(function (e) {
               return e.id;
             }),
@@ -117,11 +112,11 @@
         null != e.chatPageProps)
           ? (0, o.jsx)(
               h.default,
-              (0, a._)((0, n._)({}, e.chatPageProps), { clientThreadId: t })
+              (0, a._)((0, r._)({}, e.chatPageProps), { clientThreadId: t })
             )
           : null;
       }
-      function T(e) {
+      function D(e) {
         b.tQ.initThreadFromServerData(
           e.sharedConversationId,
           e.conversationData,
@@ -137,8 +132,8 @@
               e.plugins
             ),
           (0, o.jsx)(
-            P,
-            (0, a._)((0, n._)({}, e), {
+            j,
+            (0, a._)((0, r._)({}, e), {
               initiallyHighlightedMessageId:
                 e.conversationData.highlighted_message_id,
               continueConversationUrl:
@@ -147,7 +142,7 @@
           )
         );
       }
-      function M(e) {
+      function T(e) {
         var t = e.error;
         return (0, o.jsx)("div", {
           className: "mx-8 mt-8 flex flex-col items-center sm:mt-16",
@@ -163,7 +158,7 @@
                   className: "flex items-center gap-2",
                   children: [
                     (0, o.jsx)(v.ZP, { icon: c.m6D }),
-                    (0, o.jsx)(_.Z, (0, n._)({}, k.home)),
+                    (0, o.jsx)(_.Z, (0, r._)({}, k.home)),
                   ],
                 }),
               }),
@@ -172,15 +167,15 @@
         });
       }
     },
-    21654: function (e, t, r) {
+    21654: function (e, t, n) {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
-      var n = r(39324),
-        a = r(71209);
+      var r = n(39324),
+        a = n(71209);
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (function (e, t) {
-          for (var r in t)
-            Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+          for (var n in t)
+            Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
         })(t, {
           noSSR: function () {
             return l;
@@ -189,8 +184,8 @@
             return s;
           },
         });
-      var i = r(64838),
-        o = (r(70079), i._(r(1905)));
+      var i = n(64838),
+        o = (n(70079), i._(n(1905)));
       function u(e) {
         return { default: (null == e ? void 0 : e.default) || e };
       }
@@ -198,7 +193,7 @@
         return delete t.webpack, delete t.modules, e(t);
       }
       function s(e, t) {
-        var r = o.default,
+        var n = o.default,
           i = {
             loading: function (e) {
               return e.error, e.isLoading, e.pastDelay, null;
@@ -210,13 +205,13 @@
             })
           : "function" == typeof e
           ? (i.loader = e)
-          : "object" == typeof e && (i = n._({}, i, e));
-        var s = (i = n._({}, i, t)).loader;
+          : "object" == typeof e && (i = r._({}, i, e));
+        var s = (i = r._({}, i, t)).loader;
         return (i.loadableGenerated &&
-          ((i = n._({}, i, i.loadableGenerated)), delete i.loadableGenerated),
+          ((i = r._({}, i, i.loadableGenerated)), delete i.loadableGenerated),
         "boolean" != typeof i.ssr || i.ssr)
-          ? r(
-              a._(n._({}, i), {
+          ? n(
+              a._(r._({}, i), {
                 loader: function () {
                   return null != s
                     ? s().then(u)
@@ -228,7 +223,7 @@
                 },
               })
             )
-          : (delete i.webpack, delete i.modules, l(r, i));
+          : (delete i.webpack, delete i.modules, l(n, i));
       }
       ("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -237,24 +232,24 @@
         Object.assign(t.default, t),
         (e.exports = t.default));
     },
-    48326: function (e, t, r) {
+    48326: function (e, t, n) {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "LoadableContext", {
           enumerable: !0,
           get: function () {
-            return n;
+            return r;
           },
         });
-      var n = r(64838)._(r(70079)).default.createContext(null);
+      var r = n(64838)._(n(70079)).default.createContext(null);
     },
-    1905: function (e, t, r) {
+    1905: function (e, t, n) {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
-      var n = r(51217),
-        a = r(31819),
-        i = r(39324),
-        o = r(71209);
+      var r = n(51217),
+        a = n(31819),
+        i = n(39324),
+        o = n(71209);
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "default", {
           enumerable: !0,
@@ -262,30 +257,30 @@
             return p;
           },
         });
-      var u = r(64838)._(r(70079)),
-        l = r(48326),
+      var u = n(64838)._(n(70079)),
+        l = n(48326),
         s = [],
         d = [],
         c = !1;
       function f(e) {
         var t = e(),
-          r = { loading: !0, loaded: null, error: null };
+          n = { loading: !0, loaded: null, error: null };
         return (
-          (r.promise = t
+          (n.promise = t
             .then(function (e) {
-              return (r.loading = !1), (r.loaded = e), e;
+              return (n.loading = !1), (n.loaded = e), e;
             })
             .catch(function (e) {
-              throw ((r.loading = !1), (r.error = e), e);
+              throw ((n.loading = !1), (n.error = e), e);
             })),
-          r
+          n
         );
       }
       var _ = (function () {
-        function e(t, r) {
-          n._(this, e),
+        function e(t, n) {
+          r._(this, e),
             (this._loadFn = t),
-            (this._opts = r),
+            (this._opts = n),
             (this._callbacks = new Set()),
             (this._delay = null),
             (this._timeout = null),
@@ -307,18 +302,18 @@
                   (this._res = this._loadFn(this._opts.loader)),
                   (this._state = { pastDelay: !1, timedOut: !1 });
                 var t = this._res,
-                  r = this._opts;
+                  n = this._opts;
                 t.loading &&
-                  ("number" == typeof r.delay &&
-                    (0 === r.delay
+                  ("number" == typeof n.delay &&
+                    (0 === n.delay
                       ? (this._state.pastDelay = !0)
                       : (this._delay = setTimeout(function () {
                           e._update({ pastDelay: !0 });
-                        }, r.delay))),
-                  "number" == typeof r.timeout &&
+                        }, n.delay))),
+                  "number" == typeof n.timeout &&
                     (this._timeout = setTimeout(function () {
                       e._update({ timedOut: !0 });
-                    }, r.timeout))),
+                    }, n.timeout))),
                   this._res.promise
                     .then(function () {
                       e._update({}), e._clearTimeouts();
@@ -375,7 +370,7 @@
       })();
       function h(e) {
         return (function (e, t) {
-          var r = function () {
+          var n = function () {
               if (!o) {
                 var t = new _(e, i);
                 o = {
@@ -387,8 +382,8 @@
               }
               return o.promise();
             },
-            n = function () {
-              r();
+            r = function () {
+              n();
               var e = u.default.useContext(l.LoadableContext);
               e &&
                 Array.isArray(i.modules) &&
@@ -397,8 +392,8 @@
                 });
             },
             a = function (e, t) {
-              n();
-              var r = u.default.useSyncExternalStore(
+              r();
+              var n = u.default.useSyncExternalStore(
                 o.subscribe,
                 o.getCurrentValue,
                 o.getCurrentValue
@@ -414,22 +409,22 @@
                 u.default.useMemo(
                   function () {
                     var t;
-                    return r.loading || r.error
+                    return n.loading || n.error
                       ? u.default.createElement(i.loading, {
-                          isLoading: r.loading,
-                          pastDelay: r.pastDelay,
-                          timedOut: r.timedOut,
-                          error: r.error,
+                          isLoading: n.loading,
+                          pastDelay: n.pastDelay,
+                          timedOut: n.timedOut,
+                          error: n.error,
                           retry: o.retry,
                         })
-                      : r.loaded
+                      : n.loaded
                       ? u.default.createElement(
-                          (t = r.loaded) && t.default ? t.default : t,
+                          (t = n.loaded) && t.default ? t.default : t,
                           e
                         )
                       : null;
                   },
-                  [e, r]
+                  [e, n]
                 )
               );
             },
@@ -450,7 +445,7 @@
             s &&
               d.push(function (e) {
                 var t = !0,
-                  n = !1,
+                  r = !1,
                   a = void 0;
                 try {
                   for (
@@ -459,22 +454,22 @@
                     t = !0
                   ) {
                     var u = i.value;
-                    if (-1 !== e.indexOf(u)) return r();
+                    if (-1 !== e.indexOf(u)) return n();
                   }
                 } catch (e) {
-                  (n = !0), (a = e);
+                  (r = !0), (a = e);
                 } finally {
                   try {
                     t || null == o.return || o.return();
                   } finally {
-                    if (n) throw a;
+                    if (r) throw a;
                   }
                 }
               });
           }
           return (
             (a.preload = function () {
-              return r();
+              return n();
             }),
             (a.displayName = "LoadableComponent"),
             u.default.forwardRef(a)
@@ -482,11 +477,11 @@
         })(f, e);
       }
       function v(e, t) {
-        for (var r = []; e.length; ) {
-          var n = e.pop();
-          r.push(n(t));
+        for (var n = []; e.length; ) {
+          var r = e.pop();
+          n.push(r(t));
         }
-        return Promise.all(r).then(function () {
+        return Promise.all(n).then(function () {
           if (e.length) return v(e, t);
         });
       }
@@ -499,24 +494,24 @@
           return (
             void 0 === e && (e = []),
             new Promise(function (t) {
-              var r = function () {
+              var n = function () {
                 return (c = !0), t();
               };
-              v(d, e).then(r, r);
+              v(d, e).then(n, n);
             })
           );
         }),
         (window.__NEXT_PRELOADREADY = h.preloadReady);
       var p = h;
     },
-    70060: function (e, t, r) {
-      e.exports = r(21654);
+    70060: function (e, t, n) {
+      e.exports = n(21654);
     },
   },
   function (e) {
     e.O(
       0,
-      [960, 246, 798, 882, 741, 786, 706, 724, 97, 734, 774, 888, 179],
+      [960, 246, 798, 882, 741, 786, 706, 724, 167, 709, 774, 888, 179],
       function () {
         return e((e.s = 34537));
       }
