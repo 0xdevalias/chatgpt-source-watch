@@ -4,6 +4,225 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-29Z (`wzq04J4IxM11RTl64R6wV`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - It looks like workspaces will be coming for both personal and business accounts
+  - A number of features/routes/chunks related to business accounts (eg. `/payments/business`) seem to have been removed from this build (including some things behind the `business_seats` flag)
+  - Some old `tools2` feature flag references to 'Code Interpreter' have been changed to `isCodeInterpreterAvailable`, which may imply that the feature will be released more widely at some (soon?) point in the future
+  - `isBrowsingAvailable` (`browsing_available` / `tools`) / `isCodeInterpreterAvailable` (`code_interpreter_available` / `tools2`) / `isPluginsAvailable` (`plugins_available` / `tools3`) have all been changed so that they aren't available when `isBusinessWorkspace`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - the `/payments/business` route/chunk was removed (`static/chunks/pages/payments/business-ef9abcf545cb03c1.js`)
+  - chunk `167` renamed to `496`
+- `unpacked/_next/static/chunks/webpack.js`
+  - chunk `167` renamed to `496`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Removed `64135: function (U, B, G)`
+  - Added `59110: function (U, B, G) {`
+    - ```js
+      tr = (0, Q.ZP)(function () {
+        return {
+          currentWorkspace: null,
+          subscriptionStatus: null,
+          features: new Set(),
+          workspaces: [],
+        };
+      }),
+      ti = {
+        setCurrentWorkspace: function (U) {
+          tr.setState({ currentWorkspace: U });
+        },
+      },
+      ta = {
+        hasMultipleWorkspaces: function (U) {
+          return U.workspaces.length > 1;
+        },
+        isPersonalWorkspace: function (U) {
+          var B = U.currentWorkspace;
+          return null != B && "personal" === B.structure;
+        },
+        isBusinessWorkspace: function (U) {
+          var B = U.currentWorkspace;
+          return null != B && "workspace" === B.structure;
+        },
+        isAdmin: function (U) {
+          var B = U.currentWorkspace;
+          return null != B && B.role === te.r3.ADMIN;
+        },
+        workspaceId: function (U) {
+          var B = U.currentWorkspace;
+          return null != B ? B.id : null;
+        },
+        hasPaidSubscription: function (U) {
+          var B = U.subscriptionStatus;
+          return null != B && B.hasPaidSubscription;
+        },
+        wasPaidCustomer: function (U) {
+          var B = U.subscriptionStatus;
+          return null != B && B.wasPaidCustomer;
+        },
+        hasCustomerObject: function (U) {
+          var B = U.subscriptionStatus;
+          return null != B && B.hasCustomerObject;
+        },
+        lastActiveSubscription: function (U) {
+          var B = U.subscriptionStatus;
+          return null != B ? B.lastActiveSubscription : null;
+        },
+        features: function (U) {
+          return U.features;
+        },
+        workspaces: function (U) {
+          return U.workspaces;
+        },
+      },
+      ts = "_account",
+      tu = "chatgptfreeplan",
+      tc = te.r3.ADMIN,
+      td = "default";
+      ```
+    - ```js
+      null !== G
+        ? (ti.setCurrentWorkspace(G),
+          (0, X.setCookie)(
+            ts,
+            "personal" === G.structure ? "" : G.id
+          ))
+        : (0, X.setCookie)(ts, "");
+      ```
+- `unpacked/_next/static/chunks/496.js`
+  - Removed
+    - `i.has("business_seats") && (0, l.jsx)(er, { onResetThread: n }),`
+  - Changed
+    - From `x = (0, f.hz)().has("tools2"),`
+    - To `x = (0, f.Fl)().isCodeInterpreterAvailable,`
+  - ```js
+    initialConversationTurns: null,
+    ```
+  - ```js
+    r = (0, p.ec)(p.F_.isBusinessWorkspace);
+    ```
+  - Changed `isBrowsingAvailable`
+    - From: `t.has("browsing_available") || t.has("tools"),`
+    - To: `!r && (t.has("browsing_available") || t.has("tools")),`
+  - Changed `isCodeInterpreterAvailable:`
+    - From: `t.has("code_interpreter_available") || t.has("tools2"),`
+    - To: `!r && (t.has("code_interpreter_available") || t.has("tools2")),`
+  - Changed `isPluginsAvailable`:
+    - From: `t.has("plugins_available") || t.has("tools3"),`
+    - To: `!r && (t.has("plugins_available") || t.has("tools3")),`
+- `unpacked/_next/static/chunks/709.js`
+  - Added `78251: function (e, t, n)`
+    - ```js
+      t.ZP = function () {
+        var e = (0, l.ec)(function (e) {
+            return e.currentWorkspace;
+          }),
+          t = (0, l.WY)();
+        return (null == e ? void 0 : e.structure) === "workspace"
+          ? (0, i.jsx)(f, {
+              children: (0, i.jsx)(o.Z, (0, r._)({}, h.businessPlanName)),
+            })
+          : (null == e ? void 0 : e.structure) === "personal" && t
+          ? (0, i.jsx)(m, { children: "Plus" })
+          : null;
+      };
+      var h = (0, s.vU)({
+        businessPlanName: {
+          id: "badge.businessPlanName",
+          defaultMessage: "Business",
+          description: "label for business tier account",
+        },
+      });
+      ```
+  - ```js
+    Z = e.includeChatPreferencesMismatchDisclaimer,
+    ```
+  - ```js
+    I = (0, R.ec)(R.F_.isBusinessWorkspace),
+    ```
+  - ```js
+    tY = function (e) {
+      var t = e.isPostMessage;
+      return (0, y.jsx)(t4, {
+        $isPostMessage: t,
+        children:
+          "Your info has changed since the start of this chat. Please start a new chat to see changes reflected",
+      });
+    },
+    ```
+  - ```js
+    Q = (0, N.UL)(u).initialConversationTurns,
+    ```
+  - Removed
+    - ```js
+      m.has("business_seats")
+        ? (0, y.jsx)(
+            ol(),
+            {
+              href: "/payments/business",
+              target: "_blank",
+              passHref: !0,
+              children: (0, y.jsx)(
+                od.nR,
+                {
+                  className: "sm:pb-1",
+                  isLoading: !1,
+                  text: om.S.business.callToAction,
+                  onClick: c,
+                },
+                "row-plus-plan-help"
+              ),
+            },
+            "row-plus-plan-create-business-team"
+          )
+        : null,
+      ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+  - `unpacked/_next/static/chunks/pages/account/upgrade.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-23d12839c0a43dc3.js
+https://chat.openai.com/_next/static/chunks/709-9dd3e92dd8327ba4.js
+https://chat.openai.com/_next/static/chunks/pages/_app-a9d5984f60aac0bd.js
+https://chat.openai.com/_next/static/chunks/pages/index-ba8edbd15bfbb3a1.js
+https://chat.openai.com/_next/static/chunks/webpack-030e472186109ba3.js
+https://chat.openai.com/_next/static/wzq04J4IxM11RTl64R6wV/_buildManifest.js
+https://chat.openai.com/_next/static/wzq04J4IxM11RTl64R6wV/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/account/upgrade-01689ac51125da14.js
+https://chat.openai.com/_next/static/chunks/pages/admin-96ad1db7a0d41241.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-92e3c83878b7fde1.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-f2c05a366478888e.js
+```
+
+### From `_next/static/chunks/webpack-030e472186109ba3.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/4c11e279de7cf83b.css
+```
+
 ## 2023-06-28Z (`QvBTYln7NSxjxlNyZ4qN0`)
 
 ### Notes

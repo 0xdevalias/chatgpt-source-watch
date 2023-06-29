@@ -29372,8 +29372,8 @@ Error:`,
             B
           );
         })(tc.PureComponent),
-        eh = G(64135),
-        ep = G(88038),
+        eh = G(88038),
+        ep = G(59110),
         eg = "en-US",
         e_ = [
           "de-DE",
@@ -29487,7 +29487,7 @@ Error:`,
           var B,
             G = U.locale,
             Y = U.children,
-            V = (0, eh.hz)(),
+            V = (0, ep.hz)(),
             X = (0, tc.useMemo)(
               function () {
                 return ey(G);
@@ -29528,7 +29528,7 @@ Error:`,
                     tA.Tb("Issue importing locale: ".concat(U));
                   };
                 return (
-                  V.has(ep.Tx) && ew(te, B, G, Y),
+                  V.has(eh.Tx) && ew(te, B, G, Y),
                   function () {
                     U.abort();
                   }
@@ -32940,69 +32940,78 @@ Error:`,
       "use strict";
       G.d(B, {
         Z: function () {
-          return ts;
+          return tu;
         },
       });
       var Y = G(39324),
-        V = G(94209),
-        Z = G(60986),
-        J = G(70079),
-        X = G(82841),
-        Q = G(36218),
-        tt = G(32787),
-        te = G(15300),
-        tn = G(75955),
-        tr = G(64135),
-        ti = G(31241),
-        ta = !1;
-      function ts(U, B, G, ts) {
-        var tu = (0, tr.Xj)().data,
-          tc = (0, tt.kP)().session,
-          td = (0, X.WS)(G);
-        (0, J.useEffect)(
+        V = G(71209),
+        Z = G(94209),
+        J = G(60986),
+        X = G(70079),
+        Q = G(82841),
+        tt = G(36218),
+        te = G(32787),
+        tn = G(15300),
+        tr = G(75955),
+        ti = G(59110),
+        ta = G(31241),
+        ts = !1;
+      function tu(U, B, G, tu) {
+        var tc = (0, ti.ec)(function (U) {
+            return {
+              subscriptionStatus: U.subscriptionStatus,
+              features: U.features,
+              currentWorkspace: U.currentWorkspace,
+            };
+          }),
+          td = tc.subscriptionStatus,
+          tf = tc.features,
+          th = tc.currentWorkspace,
+          tp = (0, te.kP)().session,
+          tg = (0, Q.WS)(G);
+        (0, X.useEffect)(
           function () {
-            null != tu &&
+            if (null != td && null != th) {
+              var U = (0, V._)((0, Y._)({}, td), { accountUserRole: th.role });
               B.id &&
-              (X.ZP.setUser(B, Array.from(tu.features), tu.accountPlan, ts),
-              (tu.features.has("log_statsig_events") || ta) &&
-                tn.m.setUser(B, tu.accountPlan),
-              tu.features.has("log_intercom_events") &&
-                (0, ti.u$)(B, tu.accountPlan),
-              te.U.setUser(B, Array.from(tu.features), tu.accountPlan, ts),
-              null == V ||
-                Z.av({
-                  id: B.id,
-                  segment: tu.accountPlan.hasPaidSubscription ? "paid" : "free",
-                }),
-              null == V ||
-                Z.v("features", (0, Y._)({}, Array.from(tu.features))),
-              null == V || Z.v("accountPlan", tu.accountPlan),
-              null == V || Z.v("idp", { idp: B.idp }));
+                (Q.ZP.setUser(B, Array.from(tf), U, tu),
+                (tf.has("log_statsig_events") || ts) && tr.m.setUser(B, U),
+                tf.has("log_intercom_events") && (0, ta.u$)(B, U),
+                tn.U.setUser(B, Array.from(tf), U, tu),
+                null == Z ||
+                  J.av({
+                    id: B.id,
+                    segment: td.hasPaidSubscription ? "paid" : "free",
+                  }),
+                null == Z || J.v("features", (0, Y._)({}, Array.from(tf))),
+                null == Z || J.v("accountPlan", td),
+                null == Z || J.v("idp", { idp: B.idp }));
+            }
           },
-          [tu, B.id]
+          [td, B.id]
         ),
-          (0, J.useEffect)(
+          (0, X.useEffect)(
             function () {
-              td(Q.s6.pageLoad);
+              tg(tt.s6.pageLoad);
             },
-            [td]
+            [tg]
           ),
-          (0, ti.oG)(),
-          (0, J.useEffect)(
+          (0, ta.oG)(),
+          (0, X.useEffect)(
             function () {
-              (null == tc ? void 0 : tc.error) === "RefreshAccessTokenError" &&
-                window._oaiHandleSessionExpired("page load", tc.error);
+              (null == tp ? void 0 : tp.error) === "RefreshAccessTokenError" &&
+                window._oaiHandleSessionExpired("page load", tp.error);
             },
-            [tc, B.id]
+            [tp, B.id]
           ),
-          (0, J.useEffect)(
+          (0, X.useEffect)(
             function () {
               document.title = U;
             },
             [U]
           );
       }
-      te.U.initialize();
+      tn.U.initialize();
     },
     24274: function (U, B, G) {
       "use strict";
@@ -34716,157 +34725,6 @@ Error:`,
       })();
       var tE = tw;
     },
-    64135: function (U, B, G) {
-      "use strict";
-      G.d(B, {
-        KQ: function () {
-          return tp;
-        },
-        Xj: function () {
-          return tc;
-        },
-        YD: function () {
-          return th;
-        },
-        e2: function () {
-          return tf;
-        },
-        hz: function () {
-          return t_;
-        },
-        nR: function () {
-          return td;
-        },
-      });
-      var Y = G(21722),
-        V = G(22830),
-        Z = G(39889),
-        J = G(24396),
-        X = G(32787),
-        Q = G(32402),
-        tt = G(24274),
-        te = "chatgptfreeplan",
-        tn = Q.r3.ADMIN,
-        tr = "default";
-      function ti(U) {
-        if (null != U) {
-          var B = Date.parse(U);
-          if (!isNaN(B)) return B / 1e3;
-        }
-      }
-      function ta(U) {
-        if (0 === Object.keys(U.accounts).length)
-          throw Error("No accounts found");
-        var B,
-          G,
-          Y,
-          V,
-          Z,
-          J,
-          X = U.accounts[tr];
-        return {
-          accountPlan: {
-            hasPaidSubscription: X.entitlement.has_active_subscription || !1,
-            subscriptionPlan:
-              null !== (G = X.entitlement.subscription_plan) && void 0 !== G
-                ? G
-                : te,
-            subscriptionExpiresAt: ti(X.entitlement.expires_at),
-            accountUserRole:
-              null !== (Y = X.account.account_user_role) && void 0 !== Y
-                ? Y
-                : tn,
-            wasPaidCustomer:
-              null !== (V = X.account.has_previously_paid_subscription) &&
-              void 0 !== V &&
-              V,
-            hasCustomerObject:
-              null !==
-                (Z =
-                  null === (B = X.account.processor) || void 0 === B
-                    ? void 0
-                    : B.a001.has_customer_object) &&
-              void 0 !== Z &&
-              Z,
-            lastActiveSubscription:
-              null !== (J = X.last_active_subscription) && void 0 !== J
-                ? J
-                : void 0,
-          },
-          features: new Set(X.features),
-        };
-      }
-      function ts(U) {
-        return tu.apply(this, arguments);
-      }
-      function tu() {
-        return (tu = (0, Y._)(function (U) {
-          var B, G, Y, J;
-          return (0, Z.Jh)(this, function (Z) {
-            switch (Z.label) {
-              case 0:
-                (G = (B = (0, V._)(U.queryKey, 2))[0]),
-                  (Y = B[1].accessToken),
-                  (Z.label = 1);
-              case 1:
-                return (
-                  Z.trys.push([1, 3, , 4]), [4, tt.ZP.getAccountStatusV4(Y)]
-                );
-              case 2:
-                return [2, ta(Z.sent())];
-              case 3:
-                throw (
-                  ((J = Z.sent()), console.log("Unable to load account"), J)
-                );
-              case 4:
-                return [2];
-            }
-          });
-        })).apply(this, arguments);
-      }
-      function tc(U) {
-        var B = (0, X.kP)().session,
-          G = null == B ? void 0 : B.accessToken;
-        return (0, J.a)({
-          queryKey: ["account-status", { accessToken: G }],
-          queryFn: ts,
-          enabled: null != G,
-          select: U,
-          refetchOnWindowFocus: !0,
-          staleTime: 6e5,
-        });
-      }
-      function td() {
-        return tc(function (U) {
-          return U.accountPlan.hasPaidSubscription;
-        }).data;
-      }
-      function tf() {
-        return tc(function (U) {
-          return U.accountPlan.lastActiveSubscription;
-        }).data;
-      }
-      function th() {
-        return tc(function (U) {
-          return U.accountPlan.hasCustomerObject;
-        }).data;
-      }
-      function tp() {
-        return tc(function (U) {
-          return U.accountPlan.wasPaidCustomer;
-        }).data;
-      }
-      var tg = new Set();
-      function t_() {
-        var U;
-        return null !==
-          (U = tc(function (U) {
-            return U.features;
-          }).data) && void 0 !== U
-          ? U
-          : tg;
-      }
-    },
     88038: function (U, B, G) {
       "use strict";
       G.d(B, {
@@ -34939,6 +34797,268 @@ Error:`,
         tc = "june_23_survey",
         td = "message_debug_info",
         tf = "mfa";
+    },
+    59110: function (U, B, G) {
+      "use strict";
+      G.d(B, {
+        $T: function () {
+          return tg;
+        },
+        F_: function () {
+          return ta;
+        },
+        KQ: function () {
+          return ty;
+        },
+        WY: function () {
+          return t_;
+        },
+        YD: function () {
+          return tv;
+        },
+        Yl: function () {
+          return ts;
+        },
+        e2: function () {
+          return tm;
+        },
+        ec: function () {
+          return tr;
+        },
+        hz: function () {
+          return tb;
+        },
+        w_: function () {
+          return ti;
+        },
+      });
+      var Y = G(21722),
+        V = G(22830),
+        Z = G(39889),
+        J = G(24396),
+        X = G(44544),
+        Q = G(81292),
+        tt = G(32787),
+        te = G(32402),
+        tn = G(24274),
+        tr = (0, Q.ZP)(function () {
+          return {
+            currentWorkspace: null,
+            subscriptionStatus: null,
+            features: new Set(),
+            workspaces: [],
+          };
+        }),
+        ti = {
+          setCurrentWorkspace: function (U) {
+            tr.setState({ currentWorkspace: U });
+          },
+        },
+        ta = {
+          hasMultipleWorkspaces: function (U) {
+            return U.workspaces.length > 1;
+          },
+          isPersonalWorkspace: function (U) {
+            var B = U.currentWorkspace;
+            return null != B && "personal" === B.structure;
+          },
+          isBusinessWorkspace: function (U) {
+            var B = U.currentWorkspace;
+            return null != B && "workspace" === B.structure;
+          },
+          isAdmin: function (U) {
+            var B = U.currentWorkspace;
+            return null != B && B.role === te.r3.ADMIN;
+          },
+          workspaceId: function (U) {
+            var B = U.currentWorkspace;
+            return null != B ? B.id : null;
+          },
+          hasPaidSubscription: function (U) {
+            var B = U.subscriptionStatus;
+            return null != B && B.hasPaidSubscription;
+          },
+          wasPaidCustomer: function (U) {
+            var B = U.subscriptionStatus;
+            return null != B && B.wasPaidCustomer;
+          },
+          hasCustomerObject: function (U) {
+            var B = U.subscriptionStatus;
+            return null != B && B.hasCustomerObject;
+          },
+          lastActiveSubscription: function (U) {
+            var B = U.subscriptionStatus;
+            return null != B ? B.lastActiveSubscription : null;
+          },
+          features: function (U) {
+            return U.features;
+          },
+          workspaces: function (U) {
+            return U.workspaces;
+          },
+        },
+        ts = "_account",
+        tu = "chatgptfreeplan",
+        tc = te.r3.ADMIN,
+        td = "default";
+      function tf(U) {
+        return th.apply(this, arguments);
+      }
+      function th() {
+        return (th = (0, Y._)(function (U) {
+          var B, G, Y, J;
+          return (0, Z.Jh)(this, function (Z) {
+            switch (Z.label) {
+              case 0:
+                (G = (B = (0, V._)(U.queryKey, 2))[0]),
+                  (Y = B[1].accessToken),
+                  (Z.label = 1);
+              case 1:
+                return (
+                  Z.trys.push([1, 3, , 4]),
+                  [
+                    4,
+                    tn.ZP.getAccountStatusV4(Y).then(function (U) {
+                      var B = (0, X.getCookie)(ts),
+                        G = null,
+                        Y = tw(U);
+                      if ("string" == typeof B && "" !== B) {
+                        var V = Y.find(function (U) {
+                          return U.id === B;
+                        });
+                        V && (G = V);
+                      }
+                      if (null === G) {
+                        var Z,
+                          J = Y.find(function (U) {
+                            return "personal" === U.structure;
+                          });
+                        J
+                          ? (G = J)
+                          : (null === (Z = Y[0]) || void 0 === Z
+                              ? void 0
+                              : Z.id) && (G = Y[0]);
+                      }
+                      null !== G
+                        ? (ti.setCurrentWorkspace(G),
+                          (0, X.setCookie)(
+                            ts,
+                            "personal" === G.structure ? "" : G.id
+                          ))
+                        : (0, X.setCookie)(ts, "");
+                      var Q = tS(U),
+                        tt = Q.accountPlan,
+                        te = Q.features;
+                      return (
+                        tr.setState({
+                          subscriptionStatus: tt,
+                          features: te,
+                          workspaces: Y,
+                        }),
+                        U
+                      );
+                    }),
+                  ]
+                );
+              case 2:
+                return [2, Z.sent()];
+              case 3:
+                throw (
+                  ((J = Z.sent()), console.log("Unable to load account"), J)
+                );
+              case 4:
+                return [2];
+            }
+          });
+        })).apply(this, arguments);
+      }
+      function tp(U) {
+        var B = (0, tt.kP)().session,
+          G = null == B ? void 0 : B.accessToken;
+        return (0, J.a)({
+          queryKey: ["account-status", { accessToken: G }],
+          queryFn: tf,
+          enabled: null != G,
+          select: U,
+          refetchOnWindowFocus: !0,
+          staleTime: 6e5,
+        });
+      }
+      function tg() {
+        return tp().isLoading;
+      }
+      function t_() {
+        return tr(ta.hasPaidSubscription);
+      }
+      function tm() {
+        return tr(ta.lastActiveSubscription);
+      }
+      function tv() {
+        return tr(ta.hasCustomerObject);
+      }
+      function ty() {
+        return tr(ta.wasPaidCustomer);
+      }
+      function tb() {
+        return tr(ta.features);
+      }
+      function tw(U) {
+        var B, G;
+        return Object.values(U.accounts).map(function (U) {
+          return {
+            id: U.account.account_id,
+            name: null !== (B = U.account.name) && void 0 !== B ? B : null,
+            structure: U.account.structure,
+            role:
+              null !== (G = U.account.account_user_role) && void 0 !== G
+                ? G
+                : tc,
+          };
+        });
+      }
+      function tE(U) {
+        if (null != U) {
+          var B = Date.parse(U);
+          if (!isNaN(B)) return B / 1e3;
+        }
+      }
+      function tS(U) {
+        if (0 === Object.keys(U.accounts).length)
+          throw Error("No accounts found");
+        var B,
+          G,
+          Y,
+          V,
+          Z,
+          J = U.accounts[td];
+        return {
+          accountPlan: {
+            hasPaidSubscription: J.entitlement.has_active_subscription || !1,
+            subscriptionPlan:
+              null !== (G = J.entitlement.subscription_plan) && void 0 !== G
+                ? G
+                : tu,
+            subscriptionExpiresAt: tE(J.entitlement.expires_at),
+            wasPaidCustomer:
+              null !== (Y = J.account.has_previously_paid_subscription) &&
+              void 0 !== Y &&
+              Y,
+            hasCustomerObject:
+              null !==
+                (V =
+                  null === (B = J.account.processor) || void 0 === B
+                    ? void 0
+                    : B.a001.has_customer_object) &&
+              void 0 !== V &&
+              V,
+            lastActiveSubscription:
+              null !== (Z = J.last_active_subscription) && void 0 !== Z
+                ? Z
+                : void 0,
+          },
+          features: new Set(J.features),
+        };
+      }
     },
     32983: function (U, B, G) {
       "use strict";
@@ -45319,7 +45439,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "4360fd88ceea71c18d73f77ae83ce3e5b6ec2d11" }),
+        (Z.SENTRY_RELEASE = { id: "43fb1608ac72ca06a5f52ecde77acd704e87ea1d" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({
