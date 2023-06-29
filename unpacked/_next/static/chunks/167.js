@@ -8587,16 +8587,20 @@
         var t,
           n,
           r,
-          a =
-            (null === (t = e.metadata) || void 0 === t
+          a,
+          i =
+            null !==
+              (a =
+                null === (t = e.metadata) || void 0 === t
+                  ? void 0
+                  : null === (n = t.invoked_plugin) || void 0 === n
+                  ? void 0
+                  : n.http_api_call_data) && void 0 !== a
+              ? a
+              : null === (r = e.metadata) || void 0 === r
               ? void 0
-              : null === (n = t.invoked_plugin) || void 0 === n
-              ? void 0
-              : n.http_api_call_data) ||
-            (null === (r = e.metadata) || void 0 === r
-              ? void 0
-              : r.http_api_call_data);
-        if (void 0 !== a) {
+              : r.http_api_call_data;
+        if (void 0 !== i) {
           if (e.author.role !== l.uU.Assistant) {
             console.error(
               "Refusing to make localhost plugin HTTP call from non-assistant message",
@@ -8605,19 +8609,19 @@
             return;
           }
           if (
-            "object" != typeof a ||
-            "string" != typeof a.namespace ||
-            0 === a.namespace.length ||
-            "string" != typeof a.function_name ||
-            0 === a.function_name.length ||
-            "string" != typeof a.parent_message_id ||
-            0 === a.parent_message_id.length ||
-            "string" != typeof a.url ||
-            0 === a.url.length ||
-            "string" != typeof a.method ||
-            !["get", "post", "put", "delete", "patch"].includes(a.method) ||
-            !Array.isArray(a.qs_params) ||
-            a.qs_params.some(function (e) {
+            "object" != typeof i ||
+            "string" != typeof i.namespace ||
+            0 === i.namespace.length ||
+            "string" != typeof i.function_name ||
+            0 === i.function_name.length ||
+            "string" != typeof i.parent_message_id ||
+            0 === i.parent_message_id.length ||
+            "string" != typeof i.url ||
+            0 === i.url.length ||
+            "string" != typeof i.method ||
+            !["get", "post", "put", "delete", "patch"].includes(i.method) ||
+            !Array.isArray(i.qs_params) ||
+            i.qs_params.some(function (e) {
               return (
                 !Array.isArray(e) ||
                 2 !== e.length ||
@@ -8625,22 +8629,22 @@
                 "string" != typeof e[1]
               );
             }) ||
-            "object" != typeof a.headers ||
-            Object.keys(a.headers).some(function (e) {
+            "object" != typeof i.headers ||
+            Object.keys(i.headers).some(function (e) {
               return "string" != typeof e;
             }) ||
-            Object.values(a.headers).some(function (e) {
+            Object.values(i.headers).some(function (e) {
               return "string" != typeof e;
             }) ||
             !(
-              null === a.body ||
-              ("object" == typeof a.body &&
-                Object.keys(a.body).every(function (e) {
+              null === i.body ||
+              ("object" == typeof i.body &&
+                Object.keys(i.body).every(function (e) {
                   return "string" == typeof e;
                 }))
             ) ||
-            "string" != typeof a.api_function_type ||
-            !["kwargs", "chat"].includes(a.api_function_type)
+            "string" != typeof i.api_function_type ||
+            !["kwargs", "chat"].includes(i.api_function_type)
           ) {
             console.error(
               "Refusing to make localhost plugin HTTP call with invalid metadata",
@@ -8648,14 +8652,14 @@
             );
             return;
           }
-          if (!/^https?:\/\/localhost:/.test(a.url)) {
+          if (!/^https?:\/\/localhost:/.test(i.url)) {
             console.error(
               "Refusing to make localhost plugin HTTP call with non-localhost URL",
               e
             );
             return;
           }
-          return a;
+          return i;
         }
       }
       function f(e) {
@@ -8697,10 +8701,6 @@
                               t
                             ),
                           ],
-                        },
-                        metadata: {
-                          parent_message_id: e.parent_message_id,
-                          is_complete: !0,
                         },
                         recipient: "all",
                       },
@@ -8766,10 +8766,6 @@
                             .concat(e.function_name),
                         },
                         content: { content_type: l.PX.Text, parts: [o] },
-                        metadata: {
-                          parent_message_id: e.parent_message_id,
-                          is_complete: !0,
-                        },
                         recipient: "all",
                       },
                     ],
@@ -9754,42 +9750,48 @@
     97732: function (e, t, n) {
       n.d(t, {
         Ri: function () {
-          return j;
+          return T;
         },
         ZP: function () {
-          return _;
+          return P;
         },
         dN: function () {
           return a;
         },
         i0: function () {
-          return w;
+          return N;
         },
       });
       var r,
         a,
         i,
         s,
-        o = n(96237),
-        l = n(39324),
-        u = n(81949),
-        d = n(35250),
-        c = n(41170),
-        f = n(70079),
-        h = n(64135),
-        g = n(21437),
-        m = n(38317),
-        p = n(5046),
-        v = n(66523),
-        x = n(90076);
+        o,
+        l,
+        u,
+        d,
+        c,
+        f,
+        h = n(96237),
+        g = n(39324),
+        m = n(81949),
+        p = n(35250),
+        v = n(41170),
+        x = n(70079),
+        b = n(64135),
+        y = n(21437),
+        j = n(38317),
+        w = n(5046),
+        _ = n(66523),
+        C = n(90076);
       ((r = a || (a = {})).BROWSING = "browsing_model"),
         (r.CODE_INTERPRETER = "code_interpreter_model"),
         (r.PLUGINS = "plugins_model");
-      var b =
+      var M =
           ((i = {}),
-          (0, o._)(i, "gpt_3.5", {
-            icon: m.jr,
-            activeIcon: m.jr,
+          (0, h._)(i, "gpt_3.5", {
+            icon: j.jr,
+            activeIcon: j.jr,
             backgroundColor: "#19c37d",
             buttonActiveClass: "text-brand-green",
             buttonHoverClass: "group-hover/button:text-brand-green",
@@ -9798,9 +9800,9 @@
             disclaimer: "Available to Free and Plus users",
             showSelectedValueBelow: !1,
           }),
-          (0, o._)(i, "gpt_4", {
-            icon: m.Bj,
-            activeIcon: m.MP,
+          (0, h._)(i, "gpt_4", {
+            icon: j.Bj,
+            activeIcon: j.MP,
             backgroundColor: "#AB68FF",
             buttonActiveClass: "text-brand-purple",
             buttonHoverClass: "group-hover/button:text-brand-purple",
@@ -9809,26 +9811,34 @@
             disclaimer: "Available exclusively to Plus users",
             showSelectedValueBelow: !1,
           }),
-          (0, o._)(i, "other", {
-            icon: c.Z,
-            activeIcon: c.Z,
+          (0, h._)(i, "other", {
+            icon: v.Z,
+            activeIcon: v.Z,
             backgroundColor: "#E06C2B",
             buttonActiveClass: "text-orange-500",
             buttonHoverClass: "group-hover/button:text-orange-500",
             showSelectedValueBelow: !0,
           }),
           i),
-        y =
-          ((s = {}),
-          (0, o._)(s, a.BROWSING, {
-            icon: m.xx,
-            activeIcon: m.jZ,
-            name: (0, d.jsxs)("span", {
+        k =
+          ((f = {}),
+          (0, h._)(f, a.BROWSING, {
+            iconByCategory:
+              ((s = {}),
+              (0, h._)(s, "gpt_3.5", j.O1),
+              (0, h._)(s, "gpt_4", j.Fz),
+              s),
+            activeIconByCategory:
+              ((o = {}),
+              (0, h._)(o, "gpt_3.5", j.X7),
+              (0, h._)(o, "gpt_4", j.Ae),
+              o),
+            name: (0, p.jsxs)("span", {
               children: [
                 "Browse with",
                 " ",
-                (0, d.jsx)(m.ZP, {
-                  icon: m.jE,
+                (0, p.jsx)(j.ZP, {
+                  icon: j.jE,
                   className: "-mt-[3px] inline-block",
                 }),
                 " ",
@@ -9836,20 +9846,36 @@
               ],
             }),
           }),
-          (0, o._)(s, a.CODE_INTERPRETER, {
-            icon: m.dY,
-            activeIcon: m.b3,
+          (0, h._)(f, a.CODE_INTERPRETER, {
+            iconByCategory:
+              ((l = {}),
+              (0, h._)(l, "gpt_3.5", j.lv),
+              (0, h._)(l, "gpt_4", j.Q$),
+              l),
+            activeIconByCategory:
+              ((u = {}),
+              (0, h._)(u, "gpt_3.5", j.vy),
+              (0, h._)(u, "gpt_4", j.$V),
+              u),
             name: "Code Interpreter",
           }),
-          (0, o._)(s, a.PLUGINS, {
-            icon: m.oV,
-            activeIcon: m.Z8,
+          (0, h._)(f, a.PLUGINS, {
+            iconByCategory:
+              ((d = {}),
+              (0, h._)(d, "gpt_3.5", j.AQ),
+              (0, h._)(d, "gpt_4", j.IT),
+              d),
+            activeIconByCategory:
+              ((c = {}),
+              (0, h._)(c, "gpt_3.5", j.Np),
+              (0, h._)(c, "gpt_4", j.j3),
+              c),
             name: "Plugins",
           }),
-          s);
-      function j(e) {
-        var t = _();
-        return (0, f.useMemo)(
+          f);
+      function T(e) {
+        var t = P();
+        return (0, x.useMemo)(
           function () {
             return (function (e, t) {
               if (t)
@@ -9865,7 +9891,7 @@
                       return {
                         item: s,
                         categoryId: r.categoryId,
-                        backgroundColor: b[r.categoryId].backgroundColor,
+                        backgroundColor: M[r.categoryId].backgroundColor,
                         icon:
                           null !==
                             (i =
@@ -9873,7 +9899,7 @@
                                 ? a
                                 : r.icon) && void 0 !== i
                             ? i
-                            : b[r.categoryId].icon,
+                            : M[r.categoryId].icon,
                       };
                   }
                 }
@@ -9882,39 +9908,39 @@
           [t, e]
         );
       }
-      function w(e, t) {
-        return (0, x.OX)().some(function (n) {
+      function N(e, t) {
+        return (0, C.OX)().some(function (n) {
           return n[t] === e;
         });
       }
-      function _() {
-        var e = (0, x.OX)(),
-          t = (0, x.B9)(),
-          n = (0, p.BT)(),
-          r = (0, g.Fl)(),
-          i = (0, v.Z)().modelSwitcherDisclaimer,
-          s = (0, h.hz)(),
-          o = (0, x.B8)(),
+      function P() {
+        var e = (0, C.OX)(),
+          t = (0, C.B9)(),
+          n = (0, w.BT)(),
+          r = (0, y.Fl)(),
+          i = (0, _.Z)().modelSwitcherDisclaimer,
+          s = (0, b.hz)(),
+          o = (0, C.B8)(),
           l = o.enabledModelsInCategoriesById,
-          d = o.enabledModelsNotInCategoriesById;
-        return (0, f.useMemo)(
+          u = o.enabledModelsNotInCategoriesById;
+        return (0, x.useMemo)(
           function () {
             var o = [],
-              c = !0,
-              f = !1,
-              h = void 0;
+              d = !0,
+              c = !1,
+              f = void 0;
             try {
               for (
-                var g, m = e[Symbol.iterator]();
-                !(c = (g = m.next()).done);
-                c = !0
+                var h, g = e[Symbol.iterator]();
+                !(d = (h = g.next()).done);
+                d = !0
               ) {
-                var p = g.value;
+                var p = h.value;
                 if (l.has(p.default_model)) {
-                  var v = b[p.category] || {},
+                  var v = M[p.category] || {},
                     x = n === p.default_model,
-                    j = t.get(p.default_model),
-                    w = x
+                    b = t.get(p.default_model),
+                    y = x
                       ? []
                       : (function (e, t, n, r, i) {
                           var s = e.isBrowsingEnabled,
@@ -9926,12 +9952,12 @@
                             null != n[a.BROWSING] &&
                             r.has(n[a.BROWSING])
                           ) {
-                            var d = y[a.BROWSING];
+                            var d = k[a.BROWSING];
                             u.push(
-                              C(i.get(n[a.BROWSING]), {
-                                icon: d.icon,
+                              Z(i.get(n[a.BROWSING]), {
+                                icon: d.iconByCategory[n.category],
                                 name: d.name,
-                                activeIcon: d.activeIcon,
+                                activeIcon: d.activeIconByCategory[n.category],
                                 disabled: t.has("browsing_disabled"),
                               })
                             );
@@ -9941,12 +9967,12 @@
                             null != n[a.CODE_INTERPRETER] &&
                             r.has(n[a.CODE_INTERPRETER])
                           ) {
-                            var c = y[a.CODE_INTERPRETER];
+                            var c = k[a.CODE_INTERPRETER];
                             u.push(
-                              C(i.get(n[a.CODE_INTERPRETER]), {
-                                icon: c.icon,
+                              Z(i.get(n[a.CODE_INTERPRETER]), {
+                                icon: c.iconByCategory[n.category],
                                 name: c.name,
-                                activeIcon: c.activeIcon,
+                                activeIcon: c.activeIconByCategory[n.category],
                                 disabled: t.has("code_interpreter_disabled"),
                               })
                             );
@@ -9956,13 +9982,13 @@
                             null != n[a.PLUGINS] &&
                             r.has(n[a.PLUGINS])
                           ) {
-                            var f = y[a.PLUGINS];
+                            var f = k[a.PLUGINS];
                             u.push(
-                              C(i.get(n[a.PLUGINS]), {
-                                icon: f.icon,
+                              Z(i.get(n[a.PLUGINS]), {
+                                icon: f.iconByCategory[n.category],
                                 name: f.name,
+                                activeIcon: f.activeIconByCategory[n.category],
                                 disabled: t.has("plugins_disabled"),
-                                activeIcon: f.activeIcon,
                               })
                             );
                           }
@@ -9970,9 +9996,9 @@
                         })(r, s, p, l, t);
                   o.push({
                     categoryId: p.category,
-                    value: j.id,
+                    value: b.id,
                     name: p.human_category_name,
-                    description: x ? i : j.description,
+                    description: x ? i : b.description,
                     disclaimer: v.disclaimer,
                     buttonActiveClass: v.buttonActiveClass,
                     buttonHoverClass: v.buttonHoverClass,
@@ -9980,56 +10006,56 @@
                     icon: v.icon,
                     activeIcon: v.activeIcon,
                     options: [
-                      C(j, {
+                      Z(b, {
                         icon: v.icon,
                         activeIcon: v.activeIcon,
                         name: "Default",
                       }),
-                    ].concat((0, u._)(w)),
+                    ].concat((0, m._)(y)),
                     disabled: x,
                     showSelectedValueBelow: !1,
                   });
                 }
               }
             } catch (e) {
-              (f = !0), (h = e);
+              (c = !0), (f = e);
             } finally {
               try {
-                c || null == m.return || m.return();
+                d || null == g.return || g.return();
               } finally {
-                if (f) throw h;
+                if (c) throw f;
               }
             }
-            var _ = Array.from(d).map(function (e) {
+            var j = Array.from(u).map(function (e) {
               return t.get(e);
             });
-            if (_.length > 0) {
-              var M = _[0],
-                k = b.other;
+            if (j.length > 0) {
+              var w = j[0],
+                _ = M.other;
               o.push({
                 categoryId: "other",
-                value: null == M ? void 0 : M.id,
+                value: null == w ? void 0 : w.id,
                 name: "Alpha",
-                buttonActiveClass: k.buttonActiveClass,
-                buttonHoverClass: k.buttonHoverClass,
-                options: _.map(function (e) {
-                  return C(e);
+                buttonActiveClass: _.buttonActiveClass,
+                buttonHoverClass: _.buttonHoverClass,
+                options: j.map(function (e) {
+                  return Z(e);
                 }),
                 showSelectedValueBelow: !0,
-                icon: k.icon,
-                activeIcon: k.activeIcon,
+                icon: _.icon,
+                activeIcon: _.activeIcon,
                 alwaysShowOptions: !0,
               });
             }
             return o;
           },
-          [d, e, l, n, t, r, s, i]
+          [u, e, l, n, t, r, s, i]
         );
       }
-      function C(e) {
+      function Z(e) {
         var t =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (0, l._)({ value: e.id, name: e.title, tags: e.tags }, t);
+        return (0, g._)({ value: e.id, name: e.title, tags: e.tags }, t);
       }
     },
     90076: function (e, t, n) {
@@ -10385,91 +10411,91 @@
     75527: function (e, t, n) {
       n.d(t, {
         tQ: function () {
-          return S;
+          return I;
         },
         iN: function () {
-          return Z;
+          return S;
         },
         _L: function () {
           return a;
         },
         OX: function () {
-          return C;
-        },
-        Zz: function () {
           return M;
         },
+        Zz: function () {
+          return k;
+        },
         aS: function () {
-          return K;
-        },
-        ax: function () {
-          return I;
-        },
-        r7: function () {
           return X;
         },
-        XK: function () {
+        ax: function () {
           return F;
         },
-        je: function () {
-          return V;
-        },
-        Uy: function () {
-          return W;
-        },
-        GD: function () {
-          return O;
-        },
-        JI: function () {
-          return B;
-        },
-        U0: function () {
-          return U;
-        },
-        oq: function () {
-          return A;
-        },
-        Hk: function () {
-          return q;
-        },
-        UL: function () {
-          return E;
-        },
-        Kt: function () {
-          return D;
-        },
-        cj: function () {
+        r7: function () {
           return ee;
         },
-        Ro: function () {
-          return R;
+        XK: function () {
+          return E;
         },
-        GR: function () {
-          return L;
-        },
-        qA: function () {
-          return z;
-        },
-        XL: function () {
-          return H;
-        },
-        u9: function () {
-          return Q;
-        },
-        nh: function () {
+        je: function () {
           return J;
         },
-        lA: function () {
-          return G;
+        Uy: function () {
+          return V;
         },
-        dz: function () {
-          return $;
+        GD: function () {
+          return q;
         },
-        Qi: function () {
+        JI: function () {
+          return O;
+        },
+        U0: function () {
+          return B;
+        },
+        oq: function () {
+          return R;
+        },
+        Hk: function () {
+          return z;
+        },
+        UL: function () {
+          return D;
+        },
+        Kt: function () {
+          return L;
+        },
+        cj: function () {
+          return et;
+        },
+        Ro: function () {
+          return U;
+        },
+        GR: function () {
+          return A;
+        },
+        qA: function () {
+          return H;
+        },
+        XL: function () {
+          return W;
+        },
+        u9: function () {
           return Y;
         },
+        nh: function () {
+          return G;
+        },
+        lA: function () {
+          return $;
+        },
+        dz: function () {
+          return Q;
+        },
+        Qi: function () {
+          return K;
+        },
         qN: function () {
-          return T;
+          return N;
         },
       });
       var r,
@@ -10493,21 +10519,22 @@
         b = n(90076),
         y = n(24274),
         j = n(32983),
-        w = "NEW:",
-        _ = 0;
-      function C() {
-        return "".concat(w).concat(_++);
+        w = n(56244),
+        _ = "NEW:",
+        C = 0;
+      function M() {
+        return "".concat(_).concat(C++);
       }
-      function M(e) {
-        return e.startsWith(w);
+      function k(e) {
+        return e.startsWith(_);
       }
       ((r = a || (a = {})).NewChat = "NewChat"),
         (r.Server = "Server"),
         (r.User = "User"),
         (r.Generated = "Generated"),
         (r.Unknown = "Unknown");
-      var k = {},
-        T = (0, c.ZP)(
+      var T = {},
+        N = (0, c.ZP)(
           (0, f.n)(function () {
             return {
               threads: {},
@@ -10516,15 +10543,15 @@
             };
           })
         ),
-        N = T.getState,
-        P = T.setState,
-        Z = {
+        P = N.getState,
+        Z = N.setState,
+        S = {
           resolveThreadId: function (e) {
             var t,
               n =
                 arguments.length > 1 && void 0 !== arguments[1]
                   ? arguments[1]
-                  : N();
+                  : P();
             return null !== (t = n.clientNewThreadIdToServerIdMapping[e]) &&
               void 0 !== t
               ? t
@@ -10536,8 +10563,8 @@
               r =
                 arguments.length > 1 && void 0 !== arguments[1]
                   ? arguments[1]
-                  : N(),
-              a = Z.resolveThreadId(e, r);
+                  : P(),
+              a = S.resolveThreadId(e, r);
             return null !==
               (n =
                 null === (t = r.threads[a]) || void 0 === t
@@ -10553,8 +10580,8 @@
               a =
                 arguments.length > 1 && void 0 !== arguments[1]
                   ? arguments[1]
-                  : N(),
-              i = Z.resolveThreadId(e, a);
+                  : P(),
+              i = S.resolveThreadId(e, a);
             return null !==
               (r =
                 null === (t = a.threads[i]) || void 0 === t
@@ -10569,8 +10596,8 @@
             var t =
                 arguments.length > 1 && void 0 !== arguments[1]
                   ? arguments[1]
-                  : N(),
-              n = Z.resolveThreadId(e, t);
+                  : P(),
+              n = S.resolveThreadId(e, t);
             return null != t.threads[n] ? t.threads[n].titleSource : a.Unknown;
           },
           getThreadCreateTime: function (e) {
@@ -10579,8 +10606,8 @@
               r =
                 arguments.length > 1 && void 0 !== arguments[1]
                   ? arguments[1]
-                  : N(),
-              a = Z.resolveThreadId(e, r);
+                  : P(),
+              a = S.resolveThreadId(e, r);
             return null === (t = r.threads[a]) || void 0 === t
               ? void 0
               : null === (n = t.initialThreadData) || void 0 === n
@@ -10588,19 +10615,19 @@
               : n.createTime;
           },
         },
-        S = {
+        I = {
           getOrInitThread: function (e) {
-            var t = S.resolveThreadId(e);
-            return null != N().threads[t]
-              ? N().threads[t]
-              : (S.resetThread(e), N().threads[e]);
+            var t = I.resolveThreadId(e);
+            return null != P().threads[t]
+              ? P().threads[t]
+              : (I.resetThread(e), P().threads[e]);
           },
           getServerThreadId: function (e) {
-            return M(e) ? N().clientNewThreadIdToServerIdMapping[e] : e;
+            return k(e) ? P().clientNewThreadIdToServerIdMapping[e] : e;
           },
           setServerIdForNewThread: function (e, t) {
-            void 0 === N().clientNewThreadIdToServerIdMapping[e] &&
-              P(function (n) {
+            void 0 === P().clientNewThreadIdToServerIdMapping[e] &&
+              Z(function (n) {
                 (n.threads[t] = n.threads[e]),
                   delete n.threads[e],
                   (n.clientNewThreadIdToServerIdMapping[e] = t);
@@ -10624,8 +10651,8 @@
                 arguments.length > 3 && void 0 !== arguments[3]
                   ? arguments[3]
                   : void 0,
-              w = S.resolveThreadId(e);
-            if (null != N().threads[w] || y) {
+              w = I.resolveThreadId(e);
+            if (null != P().threads[w] || y) {
               var _ =
                 ((r =
                   null ===
@@ -10668,7 +10695,7 @@
                   authorName: t.author_name,
                 });
               if (
-                (null === (u = N().threads[w]) || void 0 === u
+                (null === (u = P().threads[w]) || void 0 === u
                   ? void 0
                   : u.isLoading) !== !1
               ) {
@@ -10724,7 +10751,7 @@
                   },
                   k = new m.Cv(C),
                   T = M.initialCurrentLeafId;
-                P(function (e) {
+                Z(function (e) {
                   var t;
                   e.threads[w] = (0, s._)(
                     (0, i._)(
@@ -10742,9 +10769,9 @@
                     }
                   );
                 }),
-                  S.recomputeConversationTurns(
+                  I.recomputeConversationTurns(
                     w,
-                    N().threads[w].currentLeafId,
+                    P().threads[w].currentLeafId,
                     []
                   );
               }
@@ -10760,8 +10787,8 @@
               pluginIds: [],
               authorName: void 0,
             };
-            S.deleteThread(e),
-              P(function (n) {
+            I.deleteThread(e),
+              Z(function (n) {
                 n.threads[e] = {
                   initialThreadData: t,
                   tree: new m.Cv(t.thread),
@@ -10769,12 +10796,12 @@
                   titleSource: a.NewChat,
                   currentLeafId: t.initialCurrentLeafId,
                   conversationTurns: [],
-                  isLoading: !M(e),
+                  isLoading: !k(e),
                 };
               });
           },
           updateInitialThreadDataForNewThread: function (e, t, n) {
-            P(function (r) {
+            Z(function (r) {
               (r.threads[e].initialThreadData.lastModelUsed = t),
                 (r.threads[e].initialThreadData.pluginIds = n);
             });
@@ -10782,10 +10809,10 @@
           getThreadCurrentLeafId: function (e) {
             var t,
               n,
-              r = S.resolveThreadId(e);
+              r = I.resolveThreadId(e);
             return null !==
               (n =
-                null === (t = N().threads[r]) || void 0 === t
+                null === (t = P().threads[r]) || void 0 === t
                   ? void 0
                   : t.currentLeafId) && void 0 !== n
               ? n
@@ -10794,13 +10821,13 @@
           setThreadCurrentLeafId: function (e, t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
-            if (null != N().threads[a]) {
-              P(function (e) {
+              a = I.resolveThreadId(e);
+            if (null != P().threads[a]) {
+              Z(function (e) {
                 e.threads[a].currentLeafId = t;
               });
-              var i = N();
-              S.recomputeConversationTurns(
+              var i = P();
+              I.recomputeConversationTurns(
                 a,
                 t,
                 null !==
@@ -10814,26 +10841,26 @@
             }
           },
           setTitle: function (e, t, n) {
-            var r = S.resolveThreadId(e);
-            null != N().threads[r] &&
-              P(function (e) {
+            var r = I.resolveThreadId(e);
+            null != P().threads[r] &&
+              Z(function (e) {
                 (e.threads[r].title = t), (e.threads[r].titleSource = n);
               });
           },
           getTitle: function (e) {
             var t;
-            return null !== (t = Z.getThreadCustomTitle(e)) && void 0 !== t
+            return null !== (t = S.getThreadCustomTitle(e)) && void 0 !== t
               ? t
-              : Z.getThreadDataTitle(e);
+              : S.getThreadDataTitle(e);
           },
           getTitleAndSource: function (e) {
             var t;
             return {
               title:
-                null !== (t = Z.getThreadCustomTitle(e)) && void 0 !== t
+                null !== (t = S.getThreadCustomTitle(e)) && void 0 !== t
                   ? t
-                  : Z.getThreadDataTitle(e),
-              titleSource: Z.getThreadTitleSource(e),
+                  : S.getThreadDataTitle(e),
+              titleSource: S.getThreadTitleSource(e),
             };
           },
           updateTree: function (e, t) {
@@ -10841,13 +10868,13 @@
               r,
               a,
               i,
-              s = S.resolveThreadId(e);
-            if (!(null != N().threads[s])) {
+              s = I.resolveThreadId(e);
+            if (!(null != P().threads[s])) {
               console.warn("Thread does not exist, cannot update tree: ", s);
               return;
             }
-            t(S.getTree(e));
-            var o = N(),
+            t(I.getTree(e));
+            var o = P(),
               l =
                 null !==
                   (a =
@@ -10864,34 +10891,34 @@
                       : r.conversationTurns) && void 0 !== i
                   ? i
                   : [];
-            S.recomputeConversationTurns(s, l, u);
+            I.recomputeConversationTurns(s, l, u);
           },
           getTree: function (e) {
             var t,
               n,
-              r = S.resolveThreadId(e);
+              r = I.resolveThreadId(e);
             return null !==
               (n =
-                null === (t = N().threads[r]) || void 0 === t
+                null === (t = P().threads[r]) || void 0 === t
                   ? void 0
                   : t.tree) && void 0 !== n
               ? n
               : new m.Cv();
           },
           resolveThreadId: function (e) {
-            return Z.resolveThreadId(e);
+            return S.resolveThreadId(e);
           },
           recomputeConversationTurns: function (e, t, n) {
-            var r = S.resolveThreadId(e);
-            P(function (e) {
+            var r = I.resolveThreadId(e);
+            Z(function (e) {
               e.threads[r] &&
                 (e.threads[r].conversationTurns =
-                  S.computeThreadConversationTurns(r, t, n));
+                  I.computeThreadConversationTurns(r, t, n));
             });
           },
           computeThreadConversationTurns: function (e, t, n) {
-            var r = S.resolveThreadId(e);
-            return S.getTree(r)
+            var r = I.resolveThreadId(e);
+            return I.getTree(r)
               .getConversationTurns(t)
               .map(function (e, t) {
                 var r = null == n ? void 0 : n[t];
@@ -10903,20 +10930,20 @@
               a,
               i,
               s,
-              o = S.resolveThreadId(e),
+              o = I.resolveThreadId(e),
               l =
                 null !==
                   (i =
-                    null === (r = N().threads[o]) || void 0 === r
+                    null === (r = P().threads[o]) || void 0 === r
                       ? void 0
                       : r.currentLeafId) && void 0 !== i
                   ? i
                   : "root";
             return null != t && t !== l
-              ? S.computeThreadConversationTurns(o, t, null != n ? n : [])
+              ? I.computeThreadConversationTurns(o, t, null != n ? n : [])
               : null !==
                   (s =
-                    null === (a = N().threads[o]) || void 0 === a
+                    null === (a = P().threads[o]) || void 0 === a
                       ? void 0
                       : a.conversationTurns) && void 0 !== s
               ? s
@@ -10924,14 +10951,14 @@
           },
           getThreadModel: function (e) {
             var t,
-              n = S.resolveThreadId(e);
-            return null === (t = N().threads[n]) || void 0 === t
+              n = I.resolveThreadId(e);
+            return null === (t = P().threads[n]) || void 0 === t
               ? void 0
               : t.initialThreadData.model;
           },
           removeContinuingFromSharedConversationId: function (e) {
-            var t = S.resolveThreadId(e);
-            P(function (e) {
+            var t = I.resolveThreadId(e);
+            Z(function (e) {
               var n;
               (null === (n = e.threads[t]) || void 0 === n
                 ? void 0
@@ -10940,24 +10967,24 @@
             });
           },
           deleteThread: function (e) {
-            P(function (t) {
+            Z(function (t) {
               delete t.threads[e],
                 delete t.clientNewThreadIdToServerIdMapping[e];
             });
           },
           retainThread: function (e) {
-            P(function (t) {
+            Z(function (t) {
               var n;
               t.threadRetainCounts[e] =
                 (null !== (n = t.threadRetainCounts[e]) && void 0 !== n
                   ? n
                   : 0) + 1;
             }),
-              clearTimeout(k[e]);
+              clearTimeout(T[e]);
           },
           releaseThread: function (e) {
-            null != N().threads[e] &&
-              (P(function (t) {
+            null != P().threads[e] &&
+              (Z(function (t) {
                 var n;
                 t.threadRetainCounts[e] = Math.max(
                   (null !== (n = t.threadRetainCounts[e]) && void 0 !== n
@@ -10966,16 +10993,16 @@
                   0
                 );
               }),
-              N().threadRetainCounts[e] > 0 ||
-                (clearTimeout(k[e]),
-                (k[e] = setTimeout(function () {
-                  null == N().threads[e] ||
-                    N().threadRetainCounts[e] > 0 ||
-                    S.deleteThread(e);
+              P().threadRetainCounts[e] > 0 ||
+                (clearTimeout(T[e]),
+                (T[e] = setTimeout(function () {
+                  null == P().threads[e] ||
+                    P().threadRetainCounts[e] > 0 ||
+                    I.deleteThread(e);
                 }, 3e4))));
           },
         },
-        I = function (e) {
+        F = function (e) {
           var t = (0, u.useRouter)(),
             n = (0, h.kP)().session,
             r = (0, d.useContext)(j.QL).historyDisabled,
@@ -10990,7 +11017,7 @@
             },
             {
               enabled:
-                !M(e) &&
+                !k(e) &&
                 (null == n ? void 0 : n.accessToken) !== void 0 &&
                 !r &&
                 !a,
@@ -10999,27 +11026,27 @@
                   x.m.danger("Unable to load conversation ".concat(e));
               },
               onSuccess: function (t) {
-                t && S.initThreadFromServerData(e, t);
+                t && I.initThreadFromServerData(e, t);
               },
             }
           ),
             (0, d.useEffect)(
               function () {
-                S.getOrInitThread(e);
+                I.getOrInitThread(e);
               },
               [e, t]
             );
         },
-        F = function (e) {
-          return T(function (t) {
-            return M(e) ? t.clientNewThreadIdToServerIdMapping[e] : e;
+        E = function (e) {
+          return N(function (t) {
+            return k(e) ? t.clientNewThreadIdToServerIdMapping[e] : e;
           });
         },
-        E = function (e) {
-          return T(function (t) {
+        D = function (e) {
+          return N(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = I.resolveThreadId(e);
             return null !==
               (r =
                 null === (n = t.threads[a]) || void 0 === n
@@ -11035,11 +11062,11 @@
                 });
           });
         },
-        D = function (e) {
-          return T(function (t) {
+        L = function (e) {
+          return N(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = I.resolveThreadId(e);
             return (
               null !==
                 (r =
@@ -11051,11 +11078,11 @@
             );
           });
         },
-        L = function (e) {
-          var t = T(function (t) {
+        A = function (e) {
+          var t = N(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = I.resolveThreadId(e);
             return null === (n = t.threads[a]) || void 0 === n
               ? void 0
               : null === (r = n.initialThreadData) || void 0 === r
@@ -11069,21 +11096,21 @@
             [t]
           );
         },
-        A = function (e) {
-          return T(function () {
-            return S.getThreadCurrentLeafId(e);
-          });
-        },
         R = function (e) {
-          return T(function () {
-            return S.getThreadModel(e);
+          return N(function () {
+            return I.getThreadCurrentLeafId(e);
           });
         },
-        U = function (e, t) {
+        U = function (e) {
+          return N(function () {
+            return I.getThreadModel(e);
+          });
+        },
+        B = function (e, t) {
           var n = (0, d.useRef)([]);
-          return T(function () {
+          return N(function () {
             var r,
-              a = S.getThreadConversationTurns(e, t, n.current);
+              a = I.getThreadConversationTurns(e, t, n.current);
             return (
               (n.current = a),
               null !== (r = null == a ? void 0 : a.length) && void 0 !== r
@@ -11092,27 +11119,27 @@
             );
           });
         },
-        B = function (e, t) {
+        O = function (e, t) {
           var n = (0, d.useRef)([]);
-          return T(function () {
-            var r = S.getThreadConversationTurns(e, t, n.current);
+          return N(function () {
+            var r = I.getThreadConversationTurns(e, t, n.current);
             return (n.current = r), r;
           });
         },
-        O = function (e, t, n) {
+        q = function (e, t, n) {
           var r = (0, d.useRef)([]);
-          return T(function () {
-            var a = S.getThreadConversationTurns(e, n, r.current);
+          return N(function () {
+            var a = I.getThreadConversationTurns(e, n, r.current);
             return (r.current = a), a[t];
           });
         },
-        q = function (e) {
-          var t = A(e);
+        z = function (e) {
+          var t = R(e);
           return (0, d.useMemo)(
             function () {
               var n,
                 r,
-                a = S.getThreadConversationTurns(e, t, []),
+                a = I.getThreadConversationTurns(e, t, []),
                 i =
                   null !== (n = null == a ? void 0 : a.length) && void 0 !== n
                     ? n
@@ -11126,49 +11153,49 @@
             [t, e]
           );
         },
-        z = function (e) {
-          return T(function () {
-            return S.getTitle(e);
-          });
-        },
         H = function (e) {
-          return T(function () {
-            return S.getTitleAndSource(e);
+          return N(function () {
+            return I.getTitle(e);
           });
         },
         W = function (e) {
-          return T(function () {
+          return N(function () {
+            return I.getTitleAndSource(e);
+          });
+        },
+        V = function (e) {
+          return N(function () {
             var t,
-              n = S.resolveThreadId(e);
-            return null === (t = N().threads[n]) || void 0 === t
+              n = I.resolveThreadId(e);
+            return null === (t = P().threads[n]) || void 0 === t
               ? void 0
               : t.continuingFromSharedConversationId;
           });
         },
-        V = function (e) {
-          return T(function () {
+        J = function (e) {
+          return N(function () {
             var t,
               n,
-              r = S.resolveThreadId(e);
-            return null === (t = N().threads[r]) || void 0 === t
+              r = I.resolveThreadId(e);
+            return null === (t = P().threads[r]) || void 0 === t
               ? void 0
               : null === (n = t.initialThreadData) || void 0 === n
               ? void 0
               : n.authorName;
           });
         },
-        J = function (e, t) {
-          return T(function () {
-            return S.getTree(e).getNode(t);
+        G = function (e, t) {
+          return N(function () {
+            return I.getTree(e).getNode(t);
           });
         },
-        G = function (e, t) {
-          return T(function () {
+        $ = function (e, t) {
+          return N(function () {
             var n, r;
             return (
               null !==
                 (r =
-                  null === (n = S.getTree(e)) || void 0 === n
+                  null === (n = I.getTree(e)) || void 0 === n
                     ? void 0
                     : n.getHasErrorFromNode(t)) &&
               void 0 !== r &&
@@ -11176,13 +11203,13 @@
             );
           });
         },
-        $ = function (e, t) {
-          return T(function () {
+        Q = function (e, t) {
+          return N(function () {
             var n, r;
             return (
               null !==
                 (r =
-                  null === (n = S.getTree(e)) || void 0 === n
+                  null === (n = I.getTree(e)) || void 0 === n
                     ? void 0
                     : n.isMessageIncomplete(t)) &&
               void 0 !== r &&
@@ -11190,9 +11217,9 @@
             );
           });
         },
-        Q = function (e, t) {
-          return T(function () {
-            var n = S.getTree(e);
+        Y = function (e, t) {
+          return N(function () {
+            var n = I.getTree(e);
             return null == n
               ? []
               : n
@@ -11205,39 +11232,47 @@
                   });
           });
         },
-        Y = function (e) {
-          var t = S.getTree(e).getUserContext();
-          return null == t ? null : t.message;
-        },
         K = function (e) {
-          var t = T(function (t) {
+          var t,
+            n = I.getTree(e).getUserContext();
+          if (null == n) return null;
+          var r = n.message;
+          return (null === (t = r.metadata) || void 0 === t
+            ? void 0
+            : t.user_context_message_parts) &&
+            r.metadata.user_context_message_parts.length > 0
+            ? r.metadata.user_context_message_parts.join("\n")
+            : (0, w.RR)(r);
+        },
+        X = function (e) {
+          var t = N(function (t) {
             var n,
               r,
-              a = S.resolveThreadId(e);
+              a = I.resolveThreadId(e);
             return null === (n = t.threads[a]) || void 0 === n
               ? void 0
               : null === (r = n.initialThreadData) || void 0 === r
               ? void 0
               : r.hasUserEditableContextFlag;
           });
-          return null != Y(e) || !!t;
+          return null != K(e) || !!t;
         },
-        X = function (e) {
-          return T(function () {
+        ee = function (e) {
+          return N(function () {
             var t,
-              n = S.resolveThreadId(e);
+              n = I.resolveThreadId(e);
             return (
-              (null === (t = N().threads[n]) || void 0 === t
+              (null === (t = P().threads[n]) || void 0 === t
                 ? void 0
                 : t.continuingFromSharedConversationId) != null
             );
           });
         },
-        ee = function (e) {
+        et = function (e) {
           var t,
             n,
             r,
-            a = E(e),
+            a = D(e),
             i =
               null !==
                 (r =

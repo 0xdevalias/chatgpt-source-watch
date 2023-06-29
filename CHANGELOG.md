@@ -4,6 +4,210 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-28Z (`QvBTYln7NSxjxlNyZ4qN0`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - `BROWSING`, `CODE_INTERPRETER` and `PLUGINS` were updated to support showing icons for both `gpt_3.5` and `gpt_4` models (potentially implies that at some stage `gpt_3.5` is going to gain access to these features maybe..?)
+  - Some more minor tweaks related to 'user context'
+  - Some changes to strings related to `PluginStoreModal`
+  - 3 new svg images with 2 colour variations each (presumably corresponding with the `BROWSING`, `CODE_INTERPRETER` and `PLUGINS` features for `gpt_3.5` and `gpt_4` models)
+    - Images
+      - world with a lightning bolt in the top right corner
+      - rounded square emoji face (`>_<`) with a lightning bolt in the top right corner
+      - puzzle piece with a lightning bolt in the top right corner
+    - Colours
+      - black base image, black lightning bolt
+      - grey (`#86909D`) base image, black lightning bolt
+  - **Twitter thread:** https://twitter.com/_devalias/status/1674241584723021824
+  - **Reddit post:** https://www.reddit.com/r/ChatGPT/comments/14lsduz/upcoming_chatgpt_features_gpt35_getting_access_to/
+- `unpacked/_next/static/chunks/167.js`
+  - Removed
+    - ```js
+      metadata: {
+        parent_message_id: e.parent_message_id,
+        is_complete: !0,
+      },
+      ```
+  - ```js
+    (0, h._)(f, a.BROWSING, {
+      iconByCategory:
+        ((s = {}),
+        (0, h._)(s, "gpt_3.5", j.O1),
+        (0, h._)(s, "gpt_4", j.Fz),
+        s),
+      activeIconByCategory:
+        ((o = {}),
+        (0, h._)(o, "gpt_3.5", j.X7),
+        (0, h._)(o, "gpt_4", j.Ae),
+        o),
+    ```
+  - ```js
+    (0, h._)(f, a.CODE_INTERPRETER, {
+      iconByCategory:
+        ((l = {}),
+        (0, h._)(l, "gpt_3.5", j.lv),
+        (0, h._)(l, "gpt_4", j.Q$),
+        l),
+      activeIconByCategory:
+        ((u = {}),
+        (0, h._)(u, "gpt_3.5", j.vy),
+        (0, h._)(u, "gpt_4", j.$V),
+        u),
+    ```
+  - ```js
+    (0, h._)(f, a.PLUGINS, {
+      iconByCategory:
+        ((d = {}),
+        (0, h._)(d, "gpt_3.5", j.AQ),
+        (0, h._)(d, "gpt_4", j.IT),
+        d),
+      activeIconByCategory:
+        ((c = {}),
+        (0, h._)(c, "gpt_3.5", j.Np),
+        (0, h._)(c, "gpt_4", j.j3),
+        c),
+    ```
+  - ```js
+    Z(i.get(n[a.BROWSING]), {
+      icon: d.iconByCategory[n.category],
+      name: d.name,
+      activeIcon: d.activeIconByCategory[n.category],
+    ```
+  - ```js
+    Z(i.get(n[a.CODE_INTERPRETER]), {
+      icon: c.iconByCategory[n.category],
+      name: c.name,
+      activeIcon: c.activeIconByCategory[n.category],
+    ```
+  - ```js
+    Z(i.get(n[a.PLUGINS]), {
+      icon: f.iconByCategory[n.category],
+      name: f.name,
+      activeIcon: f.activeIconByCategory[n.category],
+    ```
+  - ```js
+    var t,
+        n = I.getTree(e).getUserContext();
+      if (null == n) return null;
+      var r = n.message;
+      return (null === (t = r.metadata) || void 0 === t
+        ? void 0
+        : t.user_context_message_parts) &&
+        r.metadata.user_context_message_parts.length > 0
+        ? r.metadata.user_context_message_parts.join("\n")
+        : (0, w.RR)(r);
+    ```
+- `unpacked/_next/static/chunks/709.js`
+  - Big section of diff churn that started with this content, but it may have just been moved around, isn't necessarily all new
+    - ```js
+       ((o = f || (f = {}))[(o.All = 0)] = "All"),
+        (o[(o.Installed = 1)] = "Installed"),
+        ((s = h || (h = {})).New = "newly_added"),
+        (s.Popular = "most_popular");
+      var af = [
+        { id: h.Popular, title: "Popular" },
+        { id: h.New, title: "New" },
+        { id: f.All, title: "All" },
+        { id: f.Installed, title: "Installed" },
+      ];
+      ```
+  - `searchPlaceholder` `id` changed
+    - From: `PluginStoreModal.search_placeholder`
+    - To: `PluginStoreModal.searchPlaceholder`
+  - `noSearchResultsTitle` `id` changed
+    - From: `PluginStoreModal.no_search_results`
+    - To: `PluginStoreModal.noSearchResults`
+  - `noSearchResultsHint` `id` changed
+    - From: `PluginStoreModal.no_search_results_hint`
+    - To: `PluginStoreModal.noSearchResultsHint`
+  - ```js
+    installUnverifiedPlugin: {
+      id: "PluginStoreModal.installUnverifiedPlugin",
+      defaultMessage: "Install an unverified plugin",
+      description: "Link to dialog to install an unverified plugin",
+    },
+    developPlugin: {
+      id: "PluginStoreModal.developPlugin",
+      defaultMessage: "Develop your own plugin",
+      description: "Link to dialog to develop your own plugin",
+    },
+    aboutPlugins: {
+      id: "PluginStoreModal.aboutPlugins",
+      defaultMessage: "About plugins",
+      description: "Link to learn more about plugins",
+    },
+    ```
+  - ```js
+    children: [
+      c.has("tools3_dev") &&
+        (0, y.jsxs)(y.Fragment, {
+          children: [
+            (0, y.jsx)(aZ, {
+              onClick: i,
+              children: (0, y.jsx)(
+                _.Z,
+                (0, x._)({}, ak.installUnverifiedPlugin)
+              ),
+            }),
+            (0, y.jsx)(aS, {}),
+            (0, y.jsx)(aZ, {
+              onClick: o,
+              children: (0, y.jsx)(
+                _.Z,
+                (0, x._)({}, ak.developPlugin)
+              ),
+            }),
+            (0, y.jsx)(aS, {}),
+          ],
+        }),
+    ```
+    - Here we can see that the `tools3_dev` flag is what controls whether you get access to the frontend `installUnverifiedPlugin` / `developPlugin` features
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added an svg of a world with a lightning bolt in the top right corner (black world, black lightning bolt)
+  - Added an svg of a world with a lightning bolt in the top right corner (grey (`#86909D`) world, black lightning bolt)
+  - Added an svg of a rounded square emoji face (`>_<`) with a lightning bolt in the top right corner (black face, black lightning bolt)
+  - Added an svg of a rounded square emoji face (`>_<`) with a lightning bolt in the top right corner (grey (`#86909D`) face, black lightning bolt)
+  - Added an svg of a puzzle piece with a lightning bolt in the top right corner (black puzzle piece, black lightning bolt)
+  - Added an svg of a puzzle piece with a lightning bolt in the top right corner (grey (`#86909D`) puzzle piece, black lightning bolt)
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/167-8734b7c69f1e2cd4.js
+https://chat.openai.com/_next/static/chunks/709-99fc8e8475cb41ba.js
+https://chat.openai.com/_next/static/chunks/pages/_app-fe112e1742f5076a.js
+https://chat.openai.com/_next/static/chunks/webpack-8cb4a50c226ebf0d.js
+https://chat.openai.com/_next/static/QvBTYln7NSxjxlNyZ4qN0/_buildManifest.js
+https://chat.openai.com/_next/static/QvBTYln7NSxjxlNyZ4qN0/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-f5c4af167faf011e.js
+```
+
+### From `_next/static/chunks/webpack-8cb4a50c226ebf0d.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/2703ac51e681baff.css
+```
+
 ## 2023-06-27Z (`xNQaMU5Ofw4qA7ejTH2hq`)
 
 ### Notes
