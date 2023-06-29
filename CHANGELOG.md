@@ -4,6 +4,106 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-29Z (`Qr8FFr6F9GQHixKSXgAke`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Not much changed in this build, the most notable thing was probably extracting the URL for bing into `getBingLink`, which removed the domain prefix, implying that it's now using a route on the ChatGPT site itself. Playing around a little, this seems to exist at the following URL:
+    - https://chat.openai.com/backend-api/bing/redirect?query=
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (U.getBingLink = function (U) {
+      var B = new URLSearchParams({ query: U.query });
+      return "".concat(tb, "/bing/redirect?").concat(B);
+    }),
+    ```
+- `unpacked/_next/static/chunks/496.js`
+  - Removed
+    - ```js
+      ok: {
+        id: "userContextModal.ok",
+        defaultMessage: "OK",
+        description: "OK button for chat preferences modal",
+      },
+      ```
+  - ```js
+    j.m.logEvent(
+      "chatgpt_user_context_modal__message_past_limit",
+      void 0,
+      {
+        type: "about_user_message",
+        limit: A.toString(),
+        character_length:
+          null !==
+            (e = null == G ? void 0 : G.length.toString()) &&
+          void 0 !== e
+            ? e
+            : "",
+      }
+    ),
+    ```
+  - ```js
+    j.m.logEvent(
+      "chatgpt_user_context_modal__message_past_limit",
+      void 0,
+      {
+        type: "about_model_message",
+        limit: A.toString(),
+        character_length:
+          null !==
+            (t = null == $ ? void 0 : $.length.toString()) &&
+          void 0 !== t
+            ? t
+            : "",
+      }
+    ),
+    ```
+  - Removed
+    - ```js
+      primaryButton: (0, s.jsx)(M.ZP.Button, {
+        color: "primary",
+        onClick: function () {
+          return I(!0);
+        },
+        children: (0, s.jsx)(b.Z, (0, a._)({}, Z.ok)),
+      }),
+      ```
+- `unpacked/_next/static/chunks/709.js`
+  - ```diff
+    - var n = "https://www.bing.com/search?q=".concat(
+    -   encodeURIComponent(t)
+    - );
+    + var n = ea.ZP.getBingLink({ query: t });
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/259.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-40c423232458bf30.js
+https://chat.openai.com/_next/static/chunks/709-2241f1fa9eb7c72c.js
+https://chat.openai.com/_next/static/chunks/pages/_app-cbf3145722ad53e4.js
+https://chat.openai.com/_next/static/chunks/webpack-381bb6c9ae19a9a1.js
+https://chat.openai.com/_next/static/Qr8FFr6F9GQHixKSXgAke/_buildManifest.js
+https://chat.openai.com/_next/static/Qr8FFr6F9GQHixKSXgAke/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/259-9eec5b7917dedb5d.js
+```
+
 ## 2023-06-29Z (`IMPCGbhyMemq6LQoEyhI5`)
 
 ### Notes

@@ -860,8 +860,8 @@
         D = n(32983),
         L = n(21722),
         A = n(39889),
-        U = n(33733),
-        R = n(25260),
+        R = n(33733),
+        U = n(25260),
         B = n(44544),
         O = n(91530),
         q = n.n(O),
@@ -894,14 +894,12 @@
           ? (0, l.jsx)(J.Yt, {
               user: null == i ? void 0 : i.user,
               size: "redesign",
-              rounded: !0,
             })
           : (0, l.jsx)("div", {
               className:
-                "flex items-center justify-center rounded-full bg-blue-100 " +
-                t,
+                "flex items-center justify-center rounded-md bg-blue-100 " + t,
               children: (0, l.jsx)(w.ZP, {
-                icon: U.Z,
+                icon: R.Z,
                 size: void 0 === n ? "small" : n,
                 className: "text-blue-400",
               }),
@@ -958,9 +956,9 @@
           g = (0, Y.qH)(r),
           m = (0, l.jsx)("div", {
             className:
-              "flex h-10 w-10 items-center justify-center rounded-full bg-blue-100",
+              "flex h-10 w-10 items-center justify-center rounded-md bg-blue-100",
             children: (0, l.jsx)(w.ZP, {
-              icon: U.Z,
+              icon: R.Z,
               size: "small",
               className: "text-blue-400",
             }),
@@ -975,7 +973,7 @@
               width: 32,
               height: 32,
               className:
-                "flex h-10 w-10 items-center justify-center rounded-full",
+                "flex h-10 w-10 items-center justify-center rounded-md",
             }),
           });
         }
@@ -1013,7 +1011,7 @@
                 s &&
                 (0, l.jsx)("div", {
                   className: "",
-                  children: (0, l.jsx)(w.ZP, { icon: R.Z, size: "medium" }),
+                  children: (0, l.jsx)(w.ZP, { icon: U.Z, size: "medium" }),
                 }),
             }),
           ],
@@ -1542,8 +1540,8 @@
           ),
           F = (0, k._)((0, u.useState)([]), 2),
           D = F[0],
-          U = F[1],
-          R = (0, u.useCallback)(
+          R = F[1],
+          U = (0, u.useCallback)(
             function () {
               c.vm.closeFilesModal(), M.length > 0 && y();
             },
@@ -1713,7 +1711,7 @@
                   case 2:
                     return (
                       t.sent(),
-                      U(
+                      R(
                         (0, eo._)(D).concat(
                           (0, eo._)(
                             e.map(function (e) {
@@ -1735,7 +1733,7 @@
                 }
               });
             }),
-            [S, I, m, D, U]
+            [S, I, m, D, R]
           ),
           H = (0, u.useCallback)(
             (0, L._)(function () {
@@ -1856,12 +1854,12 @@
           );
         return (0, l.jsxs)($.Z, {
           isOpen: !0,
-          onClose: R,
+          onClose: U,
           size: "custom",
           className: "max-w-5xl",
           type: "success",
           title: m.formatMessage(ey.myFiles),
-          closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: R }),
+          closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: U }),
           children: [
             b
               ? (0, l.jsx)("div", {
@@ -1936,7 +1934,7 @@
                     (0, l.jsx)(ef.Z.Body, {
                       children: Y.map(function (e, t) {
                         return (0,
-                        l.jsx)(eM, { file: e, refetch: y, handleFileDelete: J, handleFileDeleteFailed: Q, session: S, downloadedFiles: D, setDownloadedFiles: U }, t);
+                        l.jsx)(eM, { file: e, refetch: y, handleFileDelete: J, handleFileDeleteFailed: Q, session: S, downloadedFiles: D, setDownloadedFiles: R }, t);
                       }),
                     }),
                   ],
@@ -1966,7 +1964,7 @@
         eD = n(44925),
         eL = n(68789),
         eA = ["sharedConversations"],
-        eU = (0, y.vU)({
+        eR = (0, y.vU)({
           name: {
             id: "sharedConversationModal.name",
             defaultMessage: "Name",
@@ -2034,7 +2032,7 @@
             description: "Toaster message when deleting all share links fails",
           },
         });
-      function eR() {
+      function eU() {
         var e = (0, Q.NL)(),
           t = (0, P.Z)(),
           n = (0, es.D)({
@@ -2045,7 +2043,7 @@
               e.invalidateQueries(eA);
             },
             onError: function () {
-              em.m.danger(t.formatMessage(eU.deleteAllSharedLinksFailed));
+              em.m.danger(t.formatMessage(eR.deleteAllSharedLinksFailed));
             },
           }).mutate;
         return (0, l.jsxs)(eL.fC, {
@@ -2067,14 +2065,14 @@
                 children: (0, l.jsx)(eL.ck, {
                   onClick: function () {
                     window.confirm(
-                      t.formatMessage(eU.deleteAllSharedLinksConfirm)
+                      t.formatMessage(eR.deleteAllSharedLinksConfirm)
                     ) && n();
                   },
                   className:
                     "cursor-pointer select-none px-2 py-1 text-red-500 radix-highlighted:bg-gray-50 dark:radix-highlighted:bg-gray-700",
                   children: (0, l.jsx)(
                     b.Z,
-                    (0, h._)({}, eU.deleteAllSharedLinks)
+                    (0, h._)({}, eR.deleteAllSharedLinks)
                   ),
                 }),
               }),
@@ -2108,7 +2106,7 @@
               a.invalidateQueries(eA);
             },
             onError: function () {
-              em.m.danger(r.formatMessage(eU.deleteSharedLinkFailed));
+              em.m.danger(r.formatMessage(eR.deleteSharedLinkFailed));
             },
           }),
           o = i.mutate,
@@ -2144,28 +2142,28 @@
               children: (0, l.jsxs)(ef.Z.Actions, {
                 children: [
                   (0, l.jsx)(ep.u, {
-                    label: r.formatMessage(eU.goToOriginConversation),
+                    label: r.formatMessage(eR.goToOriginConversation),
                     sideOffset: 4,
                     side: "top",
                     children: (0, l.jsx)("a", {
                       href: "/c/".concat(n.conversation_id),
                       target: "_blank",
                       rel: "noreferrer",
-                      "aria-label": r.formatMessage(eU.goToOriginConversation),
+                      "aria-label": r.formatMessage(eR.goToOriginConversation),
                       className:
                         "cursor-pointer text-gray-500 hover:text-gray-600 dark:hover:text-gray-400",
                       children: (0, l.jsx)(w.ZP, { icon: x.IC0 }),
                     }),
                   }),
                   (0, l.jsx)(ep.u, {
-                    label: r.formatMessage(eU.deleteSharedLink),
+                    label: r.formatMessage(eR.deleteSharedLink),
                     sideOffset: 4,
                     side: "top",
                     children: (0, l.jsx)("button", {
                       onClick: function () {
                         o({ sharedConversationId: n.id });
                       },
-                      "aria-label": r.formatMessage(eU.deleteSharedLink),
+                      "aria-label": r.formatMessage(eR.deleteSharedLink),
                       className:
                         "text-gray-500 hover:text-gray-600 dark:hover:text-gray-400",
                       children: (0, l.jsx)(w.ZP, { icon: x.Ybf }),
@@ -2194,7 +2192,7 @@
           (t = i
             ? (0, l.jsx)("div", {
                 className: "pb-8 text-gray-400 dark:text-gray-600",
-                children: (0, l.jsx)(b.Z, (0, h._)({}, eU.loading)),
+                children: (0, l.jsx)(b.Z, (0, h._)({}, eR.loading)),
               })
             : o
             ? (0, l.jsxs)("div", {
@@ -2203,7 +2201,7 @@
                     className: "mb-4 text-red-500",
                     children: (0, l.jsx)(
                       b.Z,
-                      (0, h._)({}, eU.somethingWentWrong)
+                      (0, h._)({}, eR.somethingWentWrong)
                     ),
                   }),
                   (0, l.jsx)("div", {
@@ -2212,7 +2210,7 @@
                       onClick: function () {
                         s();
                       },
-                      children: (0, l.jsx)(b.Z, (0, h._)({}, eU.retry)),
+                      children: (0, l.jsx)(b.Z, (0, h._)({}, eR.retry)),
                     }),
                   }),
                 ],
@@ -2222,7 +2220,7 @@
                 className: "pb-8 text-gray-600 dark:text-gray-400",
                 children: (0, l.jsx)(
                   b.Z,
-                  (0, h._)({}, eU.noSharedConversations)
+                  (0, h._)({}, eR.noSharedConversations)
                 ),
               })
             : (0, l.jsxs)(ef.Z.Root, {
@@ -2232,14 +2230,14 @@
                   (0, l.jsxs)(ef.Z.Header, {
                     children: [
                       (0, l.jsx)(ef.Z.HeaderCell, {
-                        children: (0, l.jsx)(b.Z, (0, h._)({}, eU.name)),
+                        children: (0, l.jsx)(b.Z, (0, h._)({}, eR.name)),
                       }),
                       (0, l.jsx)(ef.Z.HeaderCell, {
-                        children: (0, l.jsx)(b.Z, (0, h._)({}, eU.dateShared)),
+                        children: (0, l.jsx)(b.Z, (0, h._)({}, eR.dateShared)),
                       }),
                       (0, l.jsx)(ef.Z.HeaderCell, {
                         textAlign: "right",
-                        children: (0, l.jsx)(eR, {}),
+                        children: (0, l.jsx)(eU, {}),
                       }),
                     ],
                   }),
@@ -2256,7 +2254,7 @@
             size: "custom",
             className: "max-w-5xl",
             type: "success",
-            title: u.formatMessage(eU.title),
+            title: u.formatMessage(eR.title),
             closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: n }),
             children: t,
           })
@@ -2326,9 +2324,9 @@
           F = (0, k._)((0, u.useState)(o.General), 2),
           L = F[0],
           A = F[1],
-          U = (0, u.useContext)(D.QL),
-          R = U.historyDisabled,
-          B = U.toggleHistoryDisabled,
+          R = (0, u.useContext)(D.QL),
+          U = R.historyDisabled,
+          B = R.toggleHistoryDisabled,
           O = (0, eE.OS)(function (e) {
             return e.isOpen;
           }),
@@ -2462,7 +2460,7 @@
                         (0, l.jsx)(e1, {
                           children: (0, l.jsx)(eG, {
                             label: s.formatMessage(e4.chatHistoryToggleLabel),
-                            enabled: !R,
+                            enabled: !U,
                             onChange: eo,
                             description: (0, l.jsx)(
                               b.Z,
@@ -3832,12 +3830,12 @@
           M = (0, u.useRef)(null),
           L = (0, k._)((0, u.useState)(!1), 2),
           A = L[0],
-          U = L[1],
-          R = (0, u.useContext)(D.QL),
-          B = R.historyDisabled,
-          O = R.toggleHistoryDisabled,
-          q = R.getModifiedSettings,
-          z = R.unsetModifiedSettings,
+          R = L[1],
+          U = (0, u.useContext)(D.QL),
+          B = U.historyDisabled,
+          O = U.toggleHistoryDisabled,
+          q = U.getModifiedSettings,
+          z = U.unsetModifiedSettings,
           H = q(),
           W = (0, k._)((0, u.useState)(H), 2),
           V = W[0],
@@ -3939,7 +3937,7 @@
           function () {
             var e;
             M.current &&
-              U(
+              R(
                 (e = M.current).scrollHeight > e.clientHeight ||
                   e.scrollWidth > e.clientWidth
               );
@@ -4554,10 +4552,10 @@
     9309: function (e, t, n) {
       n.d(t, {
         Xu: function () {
-          return I;
+          return F;
         },
         wm: function () {
-          return E;
+          return D;
         },
       });
       var r = n(21722),
@@ -4578,16 +4576,17 @@
         x = n(75908),
         b = n(35290),
         y = n(32787),
-        j = n(24274),
-        w = n(32689),
-        _ = n(59110),
-        C = n(77442),
-        M = n(59114),
-        k = n(48727),
-        T = n(38317),
-        N = n(19265),
-        P = n(97688),
-        Z = (0, v.vU)({
+        j = n(75955),
+        w = n(24274),
+        _ = n(32689),
+        C = n(59110),
+        M = n(77442),
+        k = n(59114),
+        T = n(48727),
+        N = n(38317),
+        P = n(19265),
+        Z = n(97688),
+        S = (0, v.vU)({
           tipsHeader: {
             id: "userContextModal.tipsHeader",
             defaultMessage: "Thought starters",
@@ -4649,11 +4648,6 @@
             defaultMessage: "Cancel",
             description: "Cancel button for chat preferences modal",
           },
-          ok: {
-            id: "userContextModal.ok",
-            defaultMessage: "OK",
-            description: "OK button for chat preferences modal",
-          },
           aboutYouHelpText: {
             id: "userContextModal.aboutYouHelpText",
             defaultMessage:
@@ -4708,21 +4702,21 @@
             description: "ok button for confirm close modal",
           },
         }),
-        S = function () {
+        I = function () {
           var e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
           return ["userContext", e];
         };
-      function I(e) {
-        var t = (0, _.hz)(),
+      function F(e) {
+        var t = (0, C.hz)(),
           n = (0, y.kP)().session;
         return (0, c.a)(
-          S(null == n ? void 0 : n.accessToken),
+          I(null == n ? void 0 : n.accessToken),
           function () {
-            return j.ZP.getUserSystemMessage(
+            return w.ZP.getUserSystemMessage(
               (null == n ? void 0 : n.accessToken) || ""
             ).catch(function () {
-              P.m.danger("Failed to get your chat preferences");
+              Z.m.danger("Failed to get your chat preferences");
             });
           },
           {
@@ -4749,8 +4743,8 @@
           }
         );
       }
-      var F = { aboutUserMessage: void 0, aboutModelMessage: void 0 };
-      function E() {
+      var E = { aboutUserMessage: void 0, aboutModelMessage: void 0 };
+      function D() {
         var e,
           t,
           n,
@@ -4759,34 +4753,34 @@
           f,
           h,
           g,
-          p,
-          v,
-          _ = (0, x.Z)(),
-          C = (0, y.kP)().loading,
-          T = (0, w.tN)(function (e) {
-            return e.activeModals.has(w.B.UserContext);
+          p = (0, x.Z)(),
+          v = (0, y.kP)().loading,
+          C = (0, _.tN)(function (e) {
+            return e.activeModals.has(_.B.UserContext);
           }),
-          E = I(T && !C),
-          R = E.isLoading,
-          B = E.data,
-          O = null != B ? B : {},
-          q = O.aboutUserMessage,
-          z = void 0 === q ? "" : q,
-          H = O.aboutModelMessage,
-          W = void 0 === H ? "" : H,
-          V = (0, i._)((0, m.useState)(F), 2),
-          J = V[0],
-          G = V[1],
-          $ = (0, i._)((0, m.useState)(null), 2),
-          Q = $[0],
-          Y = $[1],
-          X = (0, m.useCallback)(function () {
-            w.vm.closeModal(w.B.UserContext), G(F), Y(null);
+          M = F(C && !v),
+          N = M.isLoading,
+          D = M.data,
+          B = null != D ? D : {},
+          O = B.aboutUserMessage,
+          q = void 0 === O ? "" : O,
+          z = B.aboutModelMessage,
+          H = void 0 === z ? "" : z,
+          W = (0, i._)((0, m.useState)(E), 2),
+          V = W[0],
+          J = W[1],
+          G = V.aboutUserMessage,
+          $ = V.aboutModelMessage,
+          Q = (0, i._)((0, m.useState)(null), 2),
+          Y = Q[0],
+          X = Q[1],
+          K = (0, m.useCallback)(function () {
+            _.vm.closeModal(_.B.UserContext), J(E), X(null);
           }, []),
-          K =
+          ee =
             ((t = (e = {
               onSuccess: function () {
-                X();
+                K();
               },
               onError: function (e) {
                 var t, n, r, a;
@@ -4795,12 +4789,12 @@
                     ? void 0
                     : t.reason) === "content_policy" &&
                   (null === (n = e.response) || void 0 === n ? void 0 : n.field)
-                    ? Y(
+                    ? X(
                         null === (r = e.response) || void 0 === r
                           ? void 0
                           : r.field
                       )
-                    : P.m.danger(
+                    : Z.m.danger(
                         null !== (a = e.message) && void 0 !== a
                           ? a
                           : "Failed to update chat preferences."
@@ -4816,127 +4810,152 @@
             (0, d.D)({
               mutationFn: function (e) {
                 var t = e.userContext;
-                return j.ZP.createOrUpdateUserSystemMessage(
+                return w.ZP.createOrUpdateUserSystemMessage(
                   (null == l ? void 0 : l.accessToken) || "",
                   t
                 );
               },
               onSettled: function () {
                 f.invalidateQueries({
-                  queryKey: S(null == c ? void 0 : c.accessToken),
+                  queryKey: I(null == c ? void 0 : c.accessToken),
                 });
               },
               onSuccess: t,
               onError: n,
             })),
-          ee = K.isLoading,
-          et = K.mutate,
-          en = (0, i._)((0, m.useState)(!1), 2),
-          er = en[0],
-          ea = en[1],
-          ei = A(z) || A(W),
-          eo =
-            (void 0 !== J.aboutModelMessage && J.aboutModelMessage !== W) ||
-            (void 0 !== J.aboutUserMessage && J.aboutUserMessage !== z),
-          es = (0, m.useCallback)(
-            function () {
-              eo ? ea(!0) : X();
-            },
-            [X, eo]
-          ),
+          et = ee.isLoading,
+          en = ee.mutate,
+          er = (0, i._)((0, m.useState)(!1), 2),
+          ea = er[0],
+          ei = er[1],
+          eo = R(null != G ? G : "") || R(null != $ ? $ : ""),
+          es = (void 0 !== $ && $ !== H) || (void 0 !== G && G !== q),
           el = (0, m.useCallback)(
+            function () {
+              es ? ei(!0) : K();
+            },
+            [K, es]
+          ),
+          eu = (0, m.useCallback)(
             (0, r._)(function () {
-              var e, t;
-              return (0, o.Jh)(this, function (n) {
-                switch (n.label) {
+              return (0, o.Jh)(this, function (e) {
+                switch (e.label) {
                   case 0:
-                    if (ee) return [3, 2];
+                    if (et) return [3, 2];
                     return (
-                      Y(null),
+                      X(null),
                       [
                         4,
-                        et({
+                        en({
                           userContext: {
-                            aboutUserMessage:
-                              null !== (e = J.aboutUserMessage) && void 0 !== e
-                                ? e
-                                : "",
-                            aboutModelMessage:
-                              null !== (t = J.aboutModelMessage) && void 0 !== t
-                                ? t
-                                : "",
+                            aboutUserMessage: null != G ? G : "",
+                            aboutModelMessage: null != $ ? $ : "",
                           },
                         }),
                       ]
                     );
                   case 1:
-                    n.sent(), (n.label = 2);
+                    e.sent(), (e.label = 2);
                   case 2:
                     return [2];
                 }
               });
             }),
-            [ee, J, et]
+            [et, $, G, en]
           ),
-          eu = (0, m.useCallback)(
+          ed = (0, m.useCallback)(
             function () {
-              if (ei) {
-                P.m.danger(_.formatMessage(Z.messageLimitError, { limit: L }), {
-                  duration: 4,
-                  hasCloseButton: !0,
-                });
+              if (eo) {
+                var e,
+                  t,
+                  n = R(null != G ? G : ""),
+                  r = R(null != $ ? $ : "");
+                n &&
+                  j.m.logEvent(
+                    "chatgpt_user_context_modal__message_past_limit",
+                    void 0,
+                    {
+                      type: "about_user_message",
+                      limit: A.toString(),
+                      character_length:
+                        null !==
+                          (e = null == G ? void 0 : G.length.toString()) &&
+                        void 0 !== e
+                          ? e
+                          : "",
+                    }
+                  ),
+                  r &&
+                    j.m.logEvent(
+                      "chatgpt_user_context_modal__message_past_limit",
+                      void 0,
+                      {
+                        type: "about_model_message",
+                        limit: A.toString(),
+                        character_length:
+                          null !==
+                            (t = null == $ ? void 0 : $.length.toString()) &&
+                          void 0 !== t
+                            ? t
+                            : "",
+                      }
+                    ),
+                  Z.m.danger(
+                    p.formatMessage(S.messageLimitError, { limit: A }),
+                    { duration: 4, hasCloseButton: !0 }
+                  );
                 return;
               }
-              el();
+              eu();
             },
-            [_, ei, el]
+            [p, eo, $, G, eu]
           );
-        if (T && er) {
-          var ed = function () {
-            ea(!1);
+        if (C && ea) {
+          var ec = function () {
+            ei(!1);
           };
           return (0, s.jsx)(
-            k.Z,
+            T.Z,
             {
               isOpen: !0,
-              onClose: ed,
+              onClose: ec,
               type: "success",
-              title: _.formatMessage(Z.confirmCloseTitle),
-              primaryButton: (0, s.jsx)(M.ZP.Button, {
-                title: _.formatMessage(Z.confirmCloseOk),
+              title: p.formatMessage(S.confirmCloseTitle),
+              primaryButton: (0, s.jsx)(k.ZP.Button, {
+                title: p.formatMessage(S.confirmCloseOk),
                 color: "danger",
                 onClick: function () {
-                  X(), ed();
+                  K(), ec();
                 },
               }),
-              secondaryButton: (0, s.jsx)(M.ZP.Button, {
-                title: _.formatMessage(Z.confirmCloseCancel),
+              secondaryButton: (0, s.jsx)(k.ZP.Button, {
+                title: p.formatMessage(S.confirmCloseCancel),
                 color: "neutral",
-                onClick: ed,
+                onClick: ec,
               }),
               children: (0, s.jsx)("div", {
                 className: "text-sm",
-                children: (0, s.jsx)(b.Z, (0, a._)({}, Z.confirmCloseBody)),
+                children: (0, s.jsx)(b.Z, (0, a._)({}, S.confirmCloseBody)),
               }),
             },
             "confirm-close"
           );
         }
         return (0, s.jsxs)(
-          k.Z,
+          T.Z,
           {
-            isOpen: T,
-            onClose: es,
+            isOpen: C,
+            onClose: el,
             type: "success",
             size: "custom",
             className: "max-w-lg xl:max-w-xl",
-            title: _.formatMessage(Z.profileTitle),
-            closeButton: (0, s.jsx)(M.ZP.CloseButton, { onClose: es }),
+            title: p.formatMessage(S.profileTitle),
+            closeButton: (0, s.jsx)(k.ZP.CloseButton, { onClose: el }),
             children: [
-              C || R
+              v || N
                 ? (0, s.jsx)("div", {
                     className: "flex h-14 items-center justify-center",
-                    children: (0, s.jsx)(N.Z, {}),
+                    children: (0, s.jsx)(P.Z, {}),
                   })
                 : (0, s.jsxs)(s.Fragment, {
                     children: [
@@ -4944,62 +4963,59 @@
                         className: "text-muted pb-3 pt-2 text-sm text-gray-600",
                         children: (0, s.jsx)(
                           b.Z,
-                          (0, a._)({}, Z.aboutYouHelpText)
+                          (0, a._)({}, S.aboutYouHelpText)
                         ),
                       }),
                       (0, s.jsx)(U, {
                         className: "mb-3",
-                        onSubmit: eu,
-                        tip: (0, s.jsx)(D, {
+                        onSubmit: ed,
+                        tip: (0, s.jsx)(L, {
                           children: (0, s.jsxs)("ul", {
                             className: "list-disc pl-5",
                             children: [
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.aboutUserTip1)
+                                  (0, a._)({}, S.aboutUserTip1)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.aboutUserTip2)
+                                  (0, a._)({}, S.aboutUserTip2)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.aboutUserTip3)
+                                  (0, a._)({}, S.aboutUserTip3)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.aboutUserTip4)
+                                  (0, a._)({}, S.aboutUserTip4)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.aboutUserTip5)
+                                  (0, a._)({}, S.aboutUserTip5)
                                 ),
                               }),
                             ],
                           }),
                         }),
-                        hasError: "about_user_message" === Q,
-                        value:
-                          null !== (h = J.aboutUserMessage) && void 0 !== h
-                            ? h
-                            : z,
+                        hasError: "about_user_message" === Y,
+                        value: null != G ? G : q,
                         onChange: function (e) {
-                          return G(function (t) {
+                          return J(function (t) {
                             return {
                               aboutModelMessage:
-                                null !== (g = t.aboutModelMessage) &&
-                                void 0 !== g
-                                  ? g
-                                  : W,
+                                null !== (h = t.aboutModelMessage) &&
+                                void 0 !== h
+                                  ? h
+                                  : H,
                               aboutUserMessage: e.target.value,
                             };
                           });
@@ -5009,55 +5025,52 @@
                         className: "text-muted py-3 text-sm text-gray-600",
                         children: (0, s.jsx)(
                           b.Z,
-                          (0, a._)({}, Z.modelHelpText)
+                          (0, a._)({}, S.modelHelpText)
                         ),
                       }),
                       (0, s.jsx)(U, {
-                        onSubmit: eu,
-                        tip: (0, s.jsx)(D, {
+                        onSubmit: ed,
+                        tip: (0, s.jsx)(L, {
                           children: (0, s.jsxs)("ul", {
                             className: "list-disc pl-5",
                             children: [
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.modelTip1)
+                                  (0, a._)({}, S.modelTip1)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.modelTip2)
+                                  (0, a._)({}, S.modelTip2)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.modelTip3)
+                                  (0, a._)({}, S.modelTip3)
                                 ),
                               }),
                               (0, s.jsx)("li", {
                                 children: (0, s.jsx)(
                                   b.Z,
-                                  (0, a._)({}, Z.modelTip4)
+                                  (0, a._)({}, S.modelTip4)
                                 ),
                               }),
                             ],
                           }),
                         }),
-                        hasError: "about_model_message" === Q,
-                        value:
-                          null !== (p = J.aboutModelMessage) && void 0 !== p
-                            ? p
-                            : W,
+                        hasError: "about_model_message" === Y,
+                        value: null != $ ? $ : H,
                         onChange: function (e) {
-                          return G(function (t) {
+                          return J(function (t) {
                             return {
                               aboutUserMessage:
-                                null !== (v = t.aboutUserMessage) &&
-                                void 0 !== v
-                                  ? v
-                                  : z,
+                                null !== (g = t.aboutUserMessage) &&
+                                void 0 !== g
+                                  ? g
+                                  : q,
                               aboutModelMessage: e.target.value,
                             };
                           });
@@ -5075,24 +5088,24 @@
                       className:
                         "visible mt-5 text-center text-xs text-orange-400 empty:mt-0 sm:mt-4 sm:text-left ",
                       children:
-                        Q &&
+                        Y &&
                         (0, s.jsx)(s.Fragment, {
                           children:
                             "Your input violates our content guidelines.",
                         }),
                     }),
-                    (0, s.jsx)(M.ZP.Actions, {
-                      secondaryButton: (0, s.jsx)(M.ZP.Button, {
-                        onClick: es,
-                        children: (0, s.jsx)(b.Z, (0, a._)({}, Z.cancel)),
+                    (0, s.jsx)(k.ZP.Actions, {
+                      secondaryButton: (0, s.jsx)(k.ZP.Button, {
+                        onClick: el,
+                        children: (0, s.jsx)(b.Z, (0, a._)({}, S.cancel)),
                       }),
-                      primaryButton: (0, s.jsx)(M.ZP.Button, {
-                        loading: ee,
-                        onClick: eu,
+                      primaryButton: (0, s.jsx)(k.ZP.Button, {
+                        loading: et,
+                        onClick: ed,
                         color: "primary",
-                        visuallyDisabled: ei,
-                        disabled: !eo,
-                        children: (0, s.jsx)(b.Z, (0, a._)({}, Z.save)),
+                        visuallyDisabled: eo,
+                        disabled: !es,
+                        children: (0, s.jsx)(b.Z, (0, a._)({}, S.save)),
                       }),
                     }),
                   ],
@@ -5103,16 +5116,16 @@
           "user-context"
         );
       }
-      var D = function (e) {
+      var L = function (e) {
           var t = e.children;
           return (0, s.jsx)("div", {
             className: "whitespace-pre-line",
             children: t,
           });
         },
-        L = 1500,
-        A = function (e) {
-          return e.length > L;
+        A = 1500,
+        R = function (e) {
+          return e.length > A;
         },
         U = function (e) {
           var t = e.onChange,
@@ -5124,41 +5137,36 @@
             c = e.className,
             v = (0, x.Z)(),
             y = (0, m.useRef)(null),
-            j = !(0, C.x_)(),
-            w = (0, i._)((0, m.useState)(!1), 2),
-            _ = w[0],
-            N = w[1],
-            P = (0, i._)((0, m.useState)(j), 2),
-            S = P[0],
-            I = P[1],
-            F = A(o);
+            j = (0, M.x_)(),
+            w = (0, M.aj)(),
+            _ = !j,
+            C = (0, i._)((0, m.useState)(!1), 2),
+            P = C[0],
+            Z = C[1],
+            I = (0, i._)((0, m.useState)(_), 2),
+            F = I[0],
+            E = I[1],
+            D = R(o);
           return (0, s.jsxs)(s.Fragment, {
             children: [
-              (0, s.jsx)(k.Z, {
-                isOpen: j && !S,
+              (0, s.jsx)(T.Z, {
+                isOpen: _ && !F,
                 type: "success",
                 size: "custom",
                 className: "max-w-lg",
-                title: v.formatMessage(Z.tipsHeader),
-                closeButton: (0, s.jsx)(M.ZP.CloseButton, {
+                title: v.formatMessage(S.tipsHeader),
+                closeButton: (0, s.jsx)(k.ZP.CloseButton, {
                   onClose: function () {
-                    I(!0);
+                    E(!0);
                   },
                 }),
                 onClose: function () {
-                  I(!0);
+                  E(!0);
                 },
-                primaryButton: (0, s.jsx)(M.ZP.Button, {
-                  color: "primary",
-                  onClick: function () {
-                    return I(!0);
-                  },
-                  children: (0, s.jsx)(b.Z, (0, a._)({}, Z.ok)),
-                }),
                 children: u,
               }),
               (0, s.jsxs)(l.fC, {
-                open: !j && _ && !S,
+                open: !_ && P && !F,
                 children: [
                   (0, s.jsxs)("div", {
                     className: c,
@@ -5171,9 +5179,9 @@
                             "w-full	resize-none rounded p-4 placeholder:text-gray-300 dark:bg-gray-800",
                             {
                               "border-orange-400 focus:border-orange-400": d,
-                              "border-red-500 focus:border-red-500": F && !d,
+                              "border-red-500 focus:border-red-500": D && !d,
                               "border-gray-100 focus:border-brand-green":
-                                !F && !d,
+                                !D && !d,
                             }
                           ),
                           placeholder: r,
@@ -5184,41 +5192,41 @@
                               e.nativeEvent.isComposing ||
                               (e.preventDefault(), n());
                           },
-                          rows: 6,
+                          rows: j && !w ? 8 : 6,
                           value: o,
                           onChange: t,
                           onBlur: function () {
-                            N(!1);
+                            Z(!1);
                           },
                           onFocus: function () {
-                            N(!0);
+                            Z(!0);
                           },
                         }),
                       }),
                       (0, s.jsxs)("div", {
                         className: (0, f.Z)(
                           "flex items-center justify-between px-1 text-xs",
-                          F ? "text-red-600" : "text-gray-400"
+                          D ? "text-red-600" : "text-gray-400"
                         ),
                         children: [
-                          (0, s.jsxs)("div", { children: [o.length, "/", L] }),
+                          (0, s.jsxs)("div", { children: [o.length, "/", A] }),
                           (0, s.jsx)("button", {
                             className: (0, f.Z)(
                               "flex items-center gap-1",
-                              _ ? "text-gray-400" : "text-gray-200"
+                              P ? "text-gray-400" : "text-gray-200"
                             ),
                             onClick: function () {
                               var e;
                               null === (e = y.current) ||
                                 void 0 === e ||
                                 e.focus(),
-                                I(!S);
+                                E(!F);
                             },
                             tabIndex: -1,
                             children: (0, s.jsx)(h.M, {
                               initial: !1,
                               children:
-                                _ &&
+                                P &&
                                 (0, s.jsx)(
                                   g.E.div,
                                   {
@@ -5238,14 +5246,14 @@
                                         ease: "easeIn",
                                       },
                                     },
-                                    children: S
+                                    children: F
                                       ? (0, s.jsxs)(s.Fragment, {
                                           children: [
                                             (0, s.jsx)(
                                               b.Z,
-                                              (0, a._)({}, Z.showTips)
+                                              (0, a._)({}, S.showTips)
                                             ),
-                                            (0, s.jsx)(T.ZP, {
+                                            (0, s.jsx)(N.ZP, {
                                               size: "xsmall",
                                               icon: p.rDJ,
                                             }),
@@ -5255,9 +5263,9 @@
                                           children: [
                                             (0, s.jsx)(
                                               b.Z,
-                                              (0, a._)({}, Z.hideTips)
+                                              (0, a._)({}, S.hideTips)
                                             ),
-                                            (0, s.jsx)(T.ZP, {
+                                            (0, s.jsx)(N.ZP, {
                                               size: "xsmall",
                                               icon: p.rzC,
                                             }),
@@ -5291,7 +5299,7 @@
                           (0, s.jsx)("strong", {
                             children: (0, s.jsx)(
                               b.Z,
-                              (0, a._)({}, Z.tipsHeader)
+                              (0, a._)({}, S.tipsHeader)
                             ),
                           }),
                           u,
@@ -6176,8 +6184,8 @@
         D = n(65028),
         L = n(88366),
         A = n(36716),
-        U = n(2368),
-        R = n(21722),
+        R = n(2368),
+        U = n(21722),
         B = n(22830),
         O = n(39889),
         q = n(35448),
@@ -6237,7 +6245,7 @@
             enabled: !!(v && !g && l && y && b),
           })).data,
           C = (0, d.useCallback)(
-            ((s = (0, R._)(function (e) {
+            ((s = (0, U._)(function (e) {
               return (0, O.Jh)(this, function (t) {
                 return (
                   void 0 !== u &&
@@ -6619,7 +6627,7 @@
                   ? void 0
                   : f[0],
               g = h ? h.split("-")[1] : "";
-            return (0, o.jsx)(U.Z, {
+            return (0, o.jsx)(R.Z, {
               language: g,
               className: s,
               content: (0, L.B)(n),
@@ -6847,8 +6855,8 @@
         D = n(47635),
         L = n(32787),
         A = n(24274),
-        U = n(75515),
-        R = n(180);
+        R = n(75515),
+        U = n(180);
       function B() {
         var e = (0, o._)(["text-xs text-black\n", ""]);
         return (
@@ -6920,8 +6928,8 @@
                   className: "flex items-center gap-1",
                   children: [
                     i
-                      ? (0, s.jsx)(U.Z, { url: i, name: t, size: 13 })
-                      : (0, s.jsx)(R.Z, { url: r, size: 13 }),
+                      ? (0, s.jsx)(R.Z, { url: i, name: t, size: 13 })
+                      : (0, s.jsx)(U.Z, { url: r, size: 13 }),
                     (0, s.jsx)("div", {
                       className:
                         "text-[10px] leading-3 text-gray-500 line-clamp-1",
@@ -7230,7 +7238,7 @@
         ex = n(19265);
       function eb() {
         var e = (0, o._)([
-          "max-w-lg dark:bg-gray-700 dark:text-gray-400 bg-gray-100 text-gray-500 h-auto rounded-md overflow-hidden flex items-center justify-center",
+          "w-full max-w-lg dark:bg-gray-700 dark:text-gray-400 bg-gray-100 text-gray-500 h-auto rounded-md overflow-hidden flex items-center justify-center",
         ]);
         return (
           (eb = function () {
@@ -7304,7 +7312,7 @@
                   return v(!0);
                 },
                 className: (0, l.Z)(
-                  "max-w-lg rounded-md transition-opacity duration-300",
+                  "max-w-full rounded-md transition-opacity duration-300",
                   p ? "opacity-100" : "opacity-0"
                 ),
               }),
@@ -7869,8 +7877,8 @@
           A =
             ((null == D ? void 0 : D.user) != null && (0, c.yl)(D.user)) ||
             L.has(f.YI),
-          U = (0, s.NL)(),
-          R = _(function (e) {
+          R = (0, s.NL)(),
+          U = _(function (e) {
             return e.isOpen;
           }),
           B = (0, w.p0)(),
@@ -7896,7 +7904,7 @@
                           apiValidationInfo: e.apiValidationInfo,
                         }),
                           null != e.scrapeManifestResponse.plugin &&
-                            (0, x.aU)(e.scrapeManifestResponse.plugin, U, [
+                            (0, x.aU)(e.scrapeManifestResponse.plugin, R, [
                               "installedAip",
                             ]);
                       },
@@ -7911,19 +7919,19 @@
                 );
               });
             }),
-            [q, U, O]
+            [q, R, O]
           );
         return ((0, l.useEffect)(
           function () {
-            R && z();
+            U && z();
           },
-          [R, z]
+          [U, z]
         ),
         L.has(f.Wk))
           ? (0, o.jsx)(m.ZP, {
               icon: u.V7f,
               title: "Plugin devtools",
-              isOpen: R,
+              isOpen: U,
               slideOver: t,
               onClose: C.close,
               children: (0, o.jsx)("div", {
@@ -10311,7 +10319,7 @@
           return O;
         },
         oq: function () {
-          return R;
+          return U;
         },
         Hk: function () {
           return H;
@@ -10329,7 +10337,7 @@
           return B;
         },
         GR: function () {
-          return U;
+          return R;
         },
         qA: function () {
           return W;
@@ -10945,7 +10953,7 @@
             );
           });
         },
-        U = function (e) {
+        R = function (e) {
           var t = P(function (t) {
             var n,
               r,
@@ -10963,7 +10971,7 @@
             [t]
           );
         },
-        R = function (e) {
+        U = function (e) {
           return P(function () {
             return F.getThreadCurrentLeafId(e);
           });
@@ -11001,7 +11009,7 @@
           });
         },
         H = function (e) {
-          var t = R(e);
+          var t = U(e);
           return (0, d.useMemo)(
             function () {
               var n,
@@ -11546,8 +11554,11 @@
         _G: function () {
           return a;
         },
-        dQ: function () {
+        aj: function () {
           return g;
+        },
+        dQ: function () {
+          return m;
         },
         oc: function () {
           return c;
@@ -11618,10 +11629,13 @@
         return d("(min-width: ".concat(u[a.Large], "px)"));
       }
       function g() {
+        return d("(min-width: ".concat(u[a.XLarge], "px)"));
+      }
+      function m() {
         var e = c(),
           t = f(),
           n = h();
-        return d("(min-width: ".concat(u[a.XLarge], "px)"))
+        return g()
           ? a.XLarge
           : n
           ? a.Large

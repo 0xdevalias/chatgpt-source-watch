@@ -34461,6 +34461,10 @@ Error:`,
                 }
               );
             }),
+            (U.getBingLink = function (U) {
+              var B = new URLSearchParams({ query: U.query });
+              return "".concat(tb, "/bing/redirect?").concat(B);
+            }),
             (U.createShareLink = function (U) {
               return this.fetch("".concat(tb, "/share/create"), {
                 method: "POST",
@@ -45439,7 +45443,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "910e879f269b58884f6ee6ddadfe17e25d6470c3" }),
+        (Z.SENTRY_RELEASE = { id: "339455d64a999ad7cce137acf41730d4aebc63d5" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({
