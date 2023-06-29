@@ -4,6 +4,46 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-29Z (`IMPCGbhyMemq6LQoEyhI5`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Very little of importance seems to have changed in this build, with the most notable thing seeming to be maybe just rendering a section differently when `aboutModelMessage` / `aboutUserMessage` are blank
+- `unpacked/_next/static/chunks/496.js`
+  - ```js
+    !(t && "" === n.aboutModelMessage && "" === n.aboutUserMessage) &&
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/709.js`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-77b4c7f233263bfd.js
+https://chat.openai.com/_next/static/chunks/709-4cdd51bedb744a2e.js
+https://chat.openai.com/_next/static/chunks/pages/_app-5c1f9bf4f972992a.js
+https://chat.openai.com/_next/static/chunks/webpack-05077d02aace6912.js
+https://chat.openai.com/_next/static/IMPCGbhyMemq6LQoEyhI5/_buildManifest.js
+https://chat.openai.com/_next/static/IMPCGbhyMemq6LQoEyhI5/_ssgManifest.js
+```
+
+### From `_next/static/chunks/webpack-05077d02aace6912.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/dd7418835a1febfc.css
+```
+
 ## 2023-06-29Z (`wzq04J4IxM11RTl64R6wV`)
 
 ### Notes

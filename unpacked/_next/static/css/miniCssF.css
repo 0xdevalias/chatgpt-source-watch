@@ -2610,8 +2610,8 @@ textarea:focus {
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.grid-cols-\[minmax\(10px\2c 30px\)_1fr_minmax\(10px\2c 30px\)\] {
-  grid-template-columns: minmax(10px, 30px) 1fr minmax(10px, 30px);
+.grid-cols-\[10px_1fr_10px\] {
+  grid-template-columns: 10px 1fr 10px;
 }
 .grid-rows-\[minmax\(10px\2c _1fr\)_auto_minmax\(10px\2c _1fr\)\] {
   grid-template-rows: minmax(10px, 1fr) auto minmax(10px, 1fr);
@@ -4221,6 +4221,9 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-content: '"';
   content: var(--tw-content);
 }
+.last\:mb-0:last-child {
+  margin-bottom: 0;
+}
 .last\:mb-2:last-child {
   margin-bottom: 0.5rem;
 }
@@ -4240,6 +4243,9 @@ button[data-state="open"] .toggle-item-button-open {
 .checked\:bg-blue-600:checked {
   --tw-bg-opacity: 1;
   background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+.empty\:mt-0:empty {
+  margin-top: 0;
 }
 .empty\:hidden:empty {
   display: none;
@@ -5202,6 +5208,9 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:items-center {
     align-items: center;
   }
+  .sm\:gap-3 {
+    gap: 0.75rem;
+  }
   .sm\:rounded-2xl {
     border-radius: 1rem;
   }
@@ -5236,11 +5245,11 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:pb-1 {
     padding-bottom: 0.25rem;
   }
-  .sm\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
   .sm\:pb-2 {
     padding-bottom: 0.5rem;
+  }
+  .sm\:pb-6 {
+    padding-bottom: 1.5rem;
   }
   .sm\:pl-3 {
     padding-left: 0.75rem;

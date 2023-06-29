@@ -32598,7 +32598,7 @@ Error:`,
         t3 = G(38317);
       function t6() {
         var U = (0, J._)([
-          "grid-cols-[minmax(10px,30px)_1fr_minmax(10px,30px)] grid h-full w-full grid-rows-[minmax(10px,_1fr)_auto_minmax(10px,_1fr)] md:grid-rows-[minmax(20px,_1fr)_auto_minmax(20px,_1fr)] overflow-y-auto",
+          "grid-cols-[10px_1fr_10px] grid h-full w-full grid-rows-[minmax(10px,_1fr)_auto_minmax(10px,_1fr)] md:grid-rows-[minmax(20px,_1fr)_auto_minmax(20px,_1fr)] overflow-y-auto",
         ]);
         return (
           (t6 = function () {
@@ -45439,7 +45439,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "43fb1608ac72ca06a5f52ecde77acd704e87ea1d" }),
+        (Z.SENTRY_RELEASE = { id: "910e879f269b58884f6ee6ddadfe17e25d6470c3" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

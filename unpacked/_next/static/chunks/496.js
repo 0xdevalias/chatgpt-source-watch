@@ -4922,7 +4922,7 @@
             "confirm-close"
           );
         }
-        return (0, s.jsx)(
+        return (0, s.jsxs)(
           k.Z,
           {
             isOpen: T,
@@ -4932,30 +4932,7 @@
             className: "max-w-lg xl:max-w-xl",
             title: _.formatMessage(Z.profileTitle),
             closeButton: (0, s.jsx)(M.ZP.CloseButton, { onClose: es }),
-            secondaryButton: (0, s.jsxs)("div", {
-              className: "flex flex-grow items-center justify-between gap-3",
-              children: [
-                Q
-                  ? (0, s.jsx)("div", {
-                      className: "text-xs text-orange-400",
-                      children: "Your input violates our content guidelines.",
-                    })
-                  : (0, s.jsx)("div", {}),
-                (0, s.jsx)(M.ZP.Button, {
-                  onClick: es,
-                  children: (0, s.jsx)(b.Z, (0, a._)({}, Z.cancel)),
-                }),
-              ],
-            }),
-            primaryButton: (0, s.jsx)(M.ZP.Button, {
-              loading: ee,
-              onClick: eu,
-              color: "primary",
-              visuallyDisabled: ei,
-              disabled: !eo,
-              children: (0, s.jsx)(b.Z, (0, a._)({}, Z.save)),
-            }),
-            children:
+            children: [
               C || R
                 ? (0, s.jsx)("div", {
                     className: "flex h-14 items-center justify-center",
@@ -5088,6 +5065,40 @@
                       }),
                     ],
                   }),
+              (0, s.jsx)("div", {
+                className: "mt-5 sm:mt-4",
+                children: (0, s.jsxs)("div", {
+                  className:
+                    "flex flex-grow flex-col items-stretch justify-between gap-0 sm:flex-row sm:items-center sm:gap-3",
+                  children: [
+                    (0, s.jsx)("div", {
+                      className:
+                        "visible mt-5 text-center text-xs text-orange-400 empty:mt-0 sm:mt-4 sm:text-left ",
+                      children:
+                        Q &&
+                        (0, s.jsx)(s.Fragment, {
+                          children:
+                            "Your input violates our content guidelines.",
+                        }),
+                    }),
+                    (0, s.jsx)(M.ZP.Actions, {
+                      secondaryButton: (0, s.jsx)(M.ZP.Button, {
+                        onClick: es,
+                        children: (0, s.jsx)(b.Z, (0, a._)({}, Z.cancel)),
+                      }),
+                      primaryButton: (0, s.jsx)(M.ZP.Button, {
+                        loading: ee,
+                        onClick: eu,
+                        color: "primary",
+                        visuallyDisabled: ei,
+                        disabled: !eo,
+                        children: (0, s.jsx)(b.Z, (0, a._)({}, Z.save)),
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+            ],
           },
           "user-context"
         );
@@ -11095,6 +11106,7 @@
             a = r.data,
             i = r.isLoading;
           return (
+            !(t && "" === n.aboutModelMessage && "" === n.aboutUserMessage) &&
             t &&
             !i &&
             null != a &&
