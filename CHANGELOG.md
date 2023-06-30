@@ -4,6 +4,407 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-29Z (`HIPozMBuTaTl2Vucglu5e`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Added a new `oai/apps/hasUserContextFirstTime/2023-06-29` section + a number of changes related to `UserContextFirstTimeModal`, and some more changes to `userContextModal`
+  - Link to a FAQ on how data is used: https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq
+  - Links to usage policies and 'ChatGPT — Feedback' form:
+    - https://platform.openai.com/docs/usage-policies/content-policy
+    - https://forms.gle/3gyAMj5r5rTEcgbs5
+  - A number of changes related to `BrowsingPluginTool` / `BrowsingPlugin` (`PluginTool`), which seems to suggest that perhaps there will be an upcoming feature allowing 'Browsing' mode to be used at the same time as 'Plugins'? (or alternatively, this may related to the 'file search/open' features mentioned below)
+  - Some changes related to `myfilesbrowsing`, and the `browsingMessage` namespace; with changes seeming to relate to an upcoming feature for searching and opening files
+  - Some changes around `invoked_plugin`/etc to add a new `parsed_function_call`, as well as a number of changes related to `isPlugin`; I wonder if this means that there might be some upcoming support for generic 'function calling' features that recently got added to the OpenAI API models? ([Ref](https://openai.com/blog/function-calling-and-other-api-updates))
+    - This seems to be added in the message metadata, which sounds like it will be a feature related to plugins: `metadata?.invoked_plugin?.parsed_function_call?.kwargs?.query`
+  - More minor tweaks/refinements to some of the text related to the upcoming 'user context' / 'chat preferences' feature
+- `unpacked/_next/static/chunks/496.js`
+  - ```diff
+    - className: "inline align-top font-medium capitalize",
+    + className: "inline align-top font-medium",
+    ```
+  - ```diff
+    - className: "text-base capitalize text-white",
+    + className: "text-base text-white",
+    ```
+  - ```diff
+    - "grow overflow-hidden text-ellipsis whitespace-nowrap text-left capitalize text-white",
+    + "grow overflow-hidden text-ellipsis whitespace-nowrap text-left text-white",
+    ```
+  - The following changes are all in the same diff block, but i'm leaving out large chunks of uninteresting looking bits:
+    - ```js
+      D = ""
+        .concat("oai/apps/hasUserContextFirstTime", "/")
+        .concat("2023-06-29"),
+      ```
+    - ```js
+      U = (0, x.vU)({
+        title: {
+          id: "UserContextFirstTimeModal.title",
+          defaultMessage: "Tell ChatGPT how to improve its responses for you",
+          description: "Title of the UserContextFirstTimeModal",
+        },
+        body1: {
+          id: "UserContextFirstTimeModal.body1",
+          defaultMessage:
+            "Share anything you’d like for ChatGPT to consider in forming its responses.",
+          description:
+            "Body of the first paragraph UserContextFirstTimeModal",
+        },
+        body2: {
+          id: "UserContextFirstTimeModal.body2",
+          defaultMessage:
+            "Your instructions will be added to the conversations you start going forward, and you can edit or delete it at any time.",
+          description:
+            "Body of the second paragraph UserContextFirstTimeModal",
+        },
+        legal1: {
+          id: "UserContextFirstTimeModal.legal1",
+          defaultMessage:
+            "<strong>Important:</strong> This information will also be used to improve model performance – like teaching the model how to adapt its responses to your instructions without overdoing it.",
+          description:
+            "Legal text of the first paragraph UserContextFirstTimeModal",
+        },
+        legal2: {
+          id: "UserContextFirstTimeModal.legal2",
+          defaultMessage:
+            "<article>Learn more</article> about how we use your data and how you can opt out.",
+          description:
+            "Legal text of the second paragraph UserContextFirstTimeModal",
+        },
+        ok: {
+          id: "UserContextFirstTimeModal.ok",
+          defaultMessage: "OK",
+          description: "Button to close the UserContextFirstTimeModal",
+        },
+      }),
+      ```
+  - ```js
+    profileSubhead: {
+      id: "userContextModal.subhead",
+      defaultMessage:
+        "<article>Learn more</article> about chat preferences and how they’re used to help ChatGPT provide better responses.",
+      description: "subhead for chat preferences modal",
+    },
+    ```
+  - ```js
+    modApiVoilation: {
+      id: "userContextModal.modApiVoilation",
+      defaultMessage:
+        "This content may violate our <policyLink>content policy</policyLink>. If you believe this to be in error, please <feedbackLink>submit your feedback</feedbackLink> — your input will aid our research in this area.",
+      description: "error message for mod api voilation",
+    },
+    ```
+  - ```js
+     R = "https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq",
+    ```
+  - ```js
+    (0, i._)((0, a._)({}, A.modApiVoilation), {
+      values: {
+        policyLink: function (e) {
+          return (0, l.jsx)("a", {
+            href: "https://platform.openai.com/docs/usage-policies/content-policy",
+            className: "underline",
+            target: "_blank",
+            rel: "noreferrer",
+            children: e,
+          });
+        },
+        feedbackLink: function (e) {
+          return (0, l.jsx)("a", {
+            href: "https://forms.gle/3gyAMj5r5rTEcgbs5",
+            className: "underline",
+            target: "_blank",
+            rel: "noreferrer",
+            children: e,
+          });
+        },
+      },
+    }),
+    ```
+  - ```diff
+    -   (r[(r.Unknown = 8)] = "Unknown");
+    - var s = [];
+    +   (r[(r.BrowsingPlugin = 8)] = "BrowsingPlugin"),
+    +   (r[(r.BrowsingPluginTool = 9)] = "BrowsingPluginTool"),
+    +   (r[(r.Unknown = 10)] = "Unknown");
+    + var s = ["myfilesbrowsing"];
+    ```
+  - ```diff
+    - if (
+    -   "browser" === e.recipient ||
+    -   "browser_one_box" === e.recipient ||
+    -   (null != t && s.includes(t.pluginNamespace))
+    - )
+    + if ("browser" === e.recipient || "browser_one_box" === e.recipient)
+    ```
+  - ```diff
+    - if (null != t) return a.Plugin;
+    + if (null != t)
+    +   return s.includes(t.pluginNamespace) ? a.BrowsingPlugin : a.Plugin;
+    ```
+  - ```diff
+    - "browsing_team" === e.author.name ||
+    - (null != n && s.includes(n.pluginNamespace))
+    + "browsing_team" === e.author.name
+    ```
+  - ```diff
+    - return a.PluginTool;
+    + return null != n && s.includes(n.pluginNamespace)
+    +   ? a.BrowsingPluginTool
+    +   : a.PluginTool;
+    ```
+- `unpacked/_next/static/chunks/709.js`
+  - ```js
+    startingFileSearch: {
+      id: "browsingMessage.startingFileSearch",
+      defaultMessage: "Searching files...",
+      description: "Status message when searching files is starting",
+    },
+    ```
+  - ```js
+    finishedFileSearch: {
+      id: "browsingMessage.finishedFileSearch",
+      defaultMessage: "Finished searching files",
+      description: "Status message when searching files is finished",
+    },
+    ```
+  - ```diff
+    - searchInProgress: {
+    -   id: "browsingMessage.command.search.inProgress",
+    + searchInProgressWeb: {
+    +  id: "browsingMessage.command.search.inProgress.web",
+    ```
+  - ```js
+    searchInProgressFiles: {
+      id: "browsingMessage.command.search.inProgress.files",
+      defaultMessage: "Searching files: <bold>“{searchQuery}”</bold>",
+      description: "Browsing command to search files is in progress",
+    },
+    ```
+  - ```diff
+    - searchFinished: {
+    -  id: "browsingMessage.command.search.finished",
+    + searchFinishedWeb: {
+    +   id: "browsingMessage.command.search.finished.web",
+    ```
+  - ```js
+    searchFinishedFiles: {
+      id: "browsingMessage.command.search.finished.files",
+      defaultMessage: "Searched files: <bold>“{searchQuery}”</bold>",
+      description: "Browsing command to search files finished",
+    },
+    ```
+  - ```js
+    openFileInProgress: {
+      id: "browsingMessage.command.openFile.inProgress",
+      defaultMessage: "Opening a file...",
+      description: "Browsing command to click on a link is in progress",
+    },
+    ```
+  - ```js
+    openFileFinished: {
+      id: "browsingMessage.command.openFile.finished",
+      defaultMessage: "Opened a file",
+      description: "Browsing command to click on a link finished",
+    },
+    ```
+  - ```js
+    openFileError: {
+      id: "browsingMessage.command.openFile.error",
+      defaultMessage: "Opening file failed",
+      description: "Browsing command to click on a link failed",
+    },
+    ```
+  - ```js
+    return l
+      ? (a
+          ? (t =
+              null === (i = l.invoked_plugin) || void 0 === i
+                ? void 0
+                : null === (o = i.parsed_function_call) ||
+                  void 0 === o
+                ? void 0
+                : o.name)
+          : ((t = l.command), (r = l.status)),
+        null == t)
+        ? null
+        : {
+            type: t,
+            status: r,
+            didError: "system_error" === e.content.content_type,
+            message: e,
+          }
+      : null;
+    ```
+  - ```diff
+    - ? (o.push((0, y.jsx)(tt, {}, "finished")),
+    -   (t = (0, y.jsx)(tt, { compact: !0 })))
+    - : 0 === o.length
+    - ? (o.push((0, y.jsx)(te, {}, "waiting")),
+    -   (t = (0, y.jsx)(te, { compact: !0 })))
+    - : "finished" === s[s.length - 1].status &&
+    + ? (l.push((0, y.jsx)(nn, { isPlugin: a }, "finished")),
+    +   (n = (0, y.jsx)(nn, { isPlugin: a, compact: !0 })))
+    + : 0 === l.length
+    + ? (l.push((0, y.jsx)(ne, { isPlugin: a }, "waiting")),
+    +   (n = (0, y.jsx)(ne, { isPlugin: a, compact: !0 })))
+    + : "finished" === o[o.length - 1].status &&
+    ```
+    - Basically added the `isPlugin` part to this check
+  - ```js
+    n ||
+      (n = (0, y.jsx)(e5, {
+        command: o[o.length - 1],
+        isPlugin: a,
+        compact: !0,
+      }));
+    ```
+  - ```diff
+      var n = e.command,
+    +     t = e.isPlugin,
+          r = e.compact;
+    ```
+  - ```diff
+    + (a = t
+    +     ? null === (i = n.message.metadata) || void 0 === i
+          ? void 0
+    -     : null === (s = i.args) || void 0 === s
+    +     : null === (s = i.invoked_plugin) || void 0 === s
+          ? void 0
+    -      : s[0];
+    - if (null == o) return null;
+    +     : null === (o = s.parsed_function_call) || void 0 === o
+    +     ? void 0
+    +     : null === (l = o.kwargs) || void 0 === l
+    +     ? void 0
+    +     : l.query
+    +   : "browser_one_box" === n.message.author.name
+    +   ? null === (u = n.message.metadata) || void 0 === u
+    +     ? void 0
+    +     : null === (c = u._cite_metadata) || void 0 === c
+    +     ? void 0
+    +     : c.original_query
+    +   : null === (d = n.message.metadata) || void 0 === d
+    +   ? void 0
+    +   : null === (m = d.args) || void 0 === m
+    +   ? void 0
+    +   : m[0])
+    ```
+    - To break that down and make it more readable, here is a reformatted snippet of code that does basically the same thing:
+      - ```js
+        let metadata = n.message?.metadata;
+
+        if (t) {
+            a = metadata?.invoked_plugin?.parsed_function_call?.kwargs?.query;
+        } else if (n.message?.author?.name === "browser_one_box") {
+            a = metadata?._cite_metadata?.original_query;
+        } else {
+            a = metadata?.args?.[0];
+        }
+        ```
+  - ```diff
+      searchQuery: a,
+      isComplete: "finished" === n.status,
+    + isPlugin: t,
+      compact: r,
+    ```
+  - ```js
+    s = r ? e1.searchInProgressFiles : e1.searchInProgressWeb,
+    o = r ? e1.searchFinishedFiles : e1.searchFinishedWeb;
+    ```
+  - ```diff
+      var n,
+    +     t = e.isPlugin,
+          r = e.pageInfo,
+          a = e.compact,
+    +     i = t ? e1.openFileInProgress : e1.clickInProgress,
+    +     s = t ? e1.openFileFinished : e1.clickFinished;
+    ```
+  - ```diff
+    + var n = e.isPlugin,
+          t = e.compact,
+    +     r = n ? e1.startingFileSearch : e1.startingBrowsing;
+    ```
+  - ```js
+    (a[(a.BrowsingPlugin = 6)] = "BrowsingPlugin");
+    ```
+  - ```diff
+    - } else if (r === eq.Cs.Plugin || r === eq.Cs.PluginTool) {
+    + } else if (
+    +             r === eq.Cs.BrowsingPlugin ||
+    +             r === eq.Cs.BrowsingPluginTool
+    +           ) {
+        var l = e[e.length - 1];
+    +   (null == l ? void 0 : l.type) === d.BrowsingPlugin
+    +     ? l.messages.push(n)
+    +     : e.push({ type: d.BrowsingPlugin, messages: [n] });
+    +} else if (r === eq.Cs.Plugin || r === eq.Cs.PluginTool) {
+    +   var u = e[e.length - 1];
+    ```
+  - ```diff
+      case d.Browsing:
+    + case d.BrowsingPlugin:
+        var i = n.messages[n.messages.length - 1];
+    ```
+  - ```diff
+      userContextCustomProfileDisclaimer: {
+        id: "sharedConversation.userContextCustomProfileDisclaimer",
+        defaultMessage:
+    -     "The creator of this chat is using a custom profile, which can meaningfully change how the model responds.",
+    +     "This conversation may reflect the link creator’s chat preferences, which aren’t shared and can meaningfully change how the model responds.",
+    ```
+  - ```diff
+      userContextCustomProfileAndCodeInterpreterSupportDisclaimer: {
+        id: "sharedConversation.userContextCustomProfileAndCodeInterpreterSupportDisclaimer",
+        defaultMessage:
+    -     "The creator of this chat is using a custom profile, which can meaningfully change how the model responds. The chat contains files or images produced by Code Interpreter which are not yet visible in Shared Chats.",
+    +     "This conversation may reflect the link creator’s chat preferences, which aren’t shared and can meaningfully change how the model responds. The chat contains files or images produced by Code Interpreter which are not yet visible in Shared Chats.",
+    ```
+  - ```diff
+      userContextCustomProfileDisclaimer: {
+            id: "sharingModal.userContextCustomProfileDisclaimer",
+    -       defaultMessage:
+    -         "Your custom profile data won’t be shared with recipients.",
+    +       defaultMessage: "Your chat preferences won’t be shared with viewers.",
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-ae0fa506c31a3f33.js
+https://chat.openai.com/_next/static/chunks/709-a9fffc6ae6d7aceb.js
+https://chat.openai.com/_next/static/chunks/pages/_app-86cc76d98e277e37.js
+https://chat.openai.com/_next/static/chunks/webpack-2a2d7d1690339bba.js
+https://chat.openai.com/_next/static/HIPozMBuTaTl2Vucglu5e/_buildManifest.js
+https://chat.openai.com/_next/static/HIPozMBuTaTl2Vucglu5e/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+TODO (anything that was captured after processing the _buildManifest.js to find all files regardless of whether we had loaded them)
+```
+
+### From `_next/static/chunks/webpack-TODOHASH.js`
+
+#### Archived
+
+```
+TODO (or remove this whole section if no relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)
+```
+
 ## 2023-06-29Z (`Qr8FFr6F9GQHixKSXgAke`)
 
 ### Notes
