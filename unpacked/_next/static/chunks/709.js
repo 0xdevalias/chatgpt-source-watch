@@ -2305,7 +2305,7 @@
         );
       }
       function nL() {
-        var e = (0, q._)(["flex p-4 gap-4 ", ""]);
+        var e = (0, q._)(["flex p-4 gap-4 ", "\n  ", ""]);
         return (
           (nL = function () {
             return e;
@@ -2377,7 +2377,7 @@
           e
         );
       }
-      var nH = ["#ab68ff"];
+      var nH = ["#7989FF"];
       ((a = d || (d = {}))[(a.Text = 0)] = "Text"),
         (a[(a.MultiText = 1)] = "MultiText"),
         (a[(a.Browsing = 2)] = "Browsing"),
@@ -3010,6 +3010,7 @@
             children: [
               eZ && (0, y.jsx)(n4, { children: eZ }),
               (0, y.jsxs)(n0, {
+                $isStaticSharedThread: T,
                 $isDesktopNavCollapsed: en,
                 $isMessageRedesign: J,
                 className: (0, z.Z)(k ? "ml-5" : "m-auto"),
@@ -3175,13 +3176,19 @@
         },
         nK = en.Z.div(nB()),
         nX = en.Z.div(nE()),
-        n0 = en.Z.div(nL(), function (e) {
-          return e.$isMessageRedesign
-            ? "relative"
-            : e.$isDesktopNavCollapsed
-            ? "text-base md:gap-6 md:max-w-3xl md:py-6 lg:px-0"
-            : "text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0";
-        }),
+        n0 = en.Z.div(
+          nL(),
+          function (e) {
+            return e.$isMessageRedesign
+              ? "relative"
+              : e.$isDesktopNavCollapsed
+              ? "text-base md:gap-6 md:max-w-3xl md:py-6 lg:px-0"
+              : "text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0";
+          },
+          function (e) {
+            return e.$isStaticSharedThread ? "pl-0 pr-4" : "";
+          }
+        ),
         n1 = en.Z.div(nO()),
         n2 = en.Z.button(nU()),
         n5 = en.Z.button(nq(), function (e) {

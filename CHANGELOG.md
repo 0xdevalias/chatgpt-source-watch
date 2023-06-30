@@ -4,6 +4,306 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-06-30Z (`WLHd8p-1ysAW_5sZZPJIy`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A bunch of polish type changes related to `filesModal` and file uploads in general, including limits to the number of files that can be uploaded at once (10), and the total size of files being uploaded (2GB)
+  - Something changed from a more purple colour (`#ab68ff`) to a more blueish colour (`#7989FF`)
+- `unpacked/_next/static/chunks/496.js`
+  - ```diff
+      return (0, a.jsxs)(_, {
+        className: (0, i.Z)(
+    +     "bg-blue-300",
+          "redesign" === r
+            ? "h-7 w-7 text-xs"
+            : "small" === r
+            ? "h-5 w-5 text-xs"
+    -       : "h-[30px] w-[30px] text-lg",
+    +       : "h-[30px] w-[30px] text-sm",
+    ```
+  - ```js
+    s = e.multiple,
+    ```
+  - Removed
+    - ```js
+      fileAlreadyExists: {
+        id: "filesModal.fileAlreadyExists",
+        defaultMessage:
+          "A file with the same name already exists. Please delete the existing file before uploading.",
+        description:
+          "Warning message when a file with the same name already exists",
+      },
+      ```
+  - ```js
+    deleteHistoryModalCancel: {
+      id: "filesModal.deleteHistoryModalCancel",
+      defaultMessage: "Cancel",
+      description: "Label for the cancel button",
+    },
+    confirmDownloadAll: {
+      id: "filesModal.confirmDownloadAll",
+      defaultMessage: "Are you sure you want to download all files?",
+      description: "Confirmation message for downloading all files",
+    },
+    confirmCancelDownloadAll: {
+      id: "filesModal.confirmCancelDownloadAll",
+      defaultMessage: "Cancel Download All",
+      description:
+        "Label for the cancel download all button in the confirmation modal",
+    },
+    tooManyFilesWithSameName: {
+      id: "filesModal.tooManyFilesWithSameName",
+      defaultMessage:
+        "Too many files with the same name. Please rename your file.",
+      description: "Error message when too many files have the same name",
+    },
+    tooManyFilesUploadedAtOnce: {
+      id: "filesModal.tooManyFilesUploadedAtOnce",
+      defaultMessage:
+        "You can only upload up to {maxFiles} files at a time.",
+      description:
+        "Error message when too many files are uploaded at once",
+    },
+    totalFileSizeExceedsLimit: {
+      id: "filesModal.totalFileSizeExceedsLimit",
+      defaultMessage:
+        "The total size of the files exceeds the limit of {maxSize}.",
+      description:
+        "Error message when the total file size exceeds the limit",
+    },
+    filesModalDescription: {
+      id: "filesModal.filesModalDescription",
+      defaultMessage:
+        "Files can be used with the My Files Browsing model. {totalUploadedSize} / {maxFileSize} of storage used.",
+      description: "Description for the files modal",
+    },
+    ```
+  - ```js
+    ((r = i || (i = {})).Uploading = "uploading"), (r.Deleting = "deleting");
+    ```
+  - Removed
+    - ```js
+      !window.confirm(m.formatMessage(ey.confirmDeleteAll)) ||
+      ```
+  - The following snippets are all from the same larger chunk of diff churn:
+    - ```js
+      eP = (0, u.useMemo)(
+        function () {
+          return eN.reduce(function (e, t) {
+            return e + (t.size || 0);
+          }, 0);
+        },
+        [eN]
+      ),
+      eZ = (0, u.useMemo)(
+        function () {
+          return eP / 1073741824;
+        },
+        [eP]
+      ),
+      ```
+    - ```js
+      if (e.length > 10)
+        return (
+          em.m.warning(
+            m.formatMessage(ey.tooManyFilesUploadedAtOnce, {
+              maxFiles: 10,
+            })
+          ),
+          [2]
+        );
+      ```
+      - Can upload max of 10 files at once
+    - ```js
+      if (((l = s.value), (t += l.size) > 2147483648)) {
+        em.m.warning(
+          m.formatMessage(ey.totalFileSizeExceedsLimit, {
+            maxSize: "".concat(2, "GB"),
+          })
+        );
+        break;
+      }
+      ```
+      - Total cumulative file sizes can't exceed 2GB
+    - ```js
+      if (
+        ((u = l.name),
+        B.filter(function (e) {
+          return e.use_case === eu.Ei.MyFiles;
+        }).find(function (e) {
+          return e.name === u;
+        }))
+      )
+        try {
+          u = eC(u, B);
+        } catch (e) {
+          em.m.warning(
+            m.formatMessage(ey.tooManyFilesWithSameName)
+          );
+          break;
+        }
+      ```
+    - ```js
+      (d = {
+        id: "",
+        name: u,
+        ready_time: new Date().toISOString(),
+        use_case: eu.Ei.MyFiles,
+        size: l.size,
+        state: i.Uploading,
+      }),
+        N(function (e) {
+          return (0, eo._)(e).concat([d]);
+        }),
+        (c = new File([l], u, { type: l.type })),
+        K.mutate(c);
+      ```
+  - ```js
+    (0, C._)((0, h._)({}, ey.filesModalDescription), {
+      values: {
+        totalUploadedSize: (0, l.jsx)("span", {
+          className: "font-bold",
+          children: "".concat(
+            Number(eZ).toPrecision(2),
+            "GB"
+          ),
+        }),
+        maxFileSize: "".concat(2, "GB"),
+      },
+    })
+    ```
+  - ```js
+    children: [
+      (0, l.jsxs)(ec.Z.Item, {
+        onClick: ea,
+        className: "flex gap-2",
+        children: [
+          (0, l.jsx)(w.ZP, {
+            icon: x._hL,
+            size: "small",
+          }),
+          (0, l.jsx)("span", {
+            children: m.formatMessage(
+              ey.downloadAll
+            ),
+          }),
+        ],
+      }),
+      (0, l.jsxs)(ec.Z.Item, {
+        onClick: er,
+        className: "flex gap-2",
+        children: [
+          (0, l.jsx)(w.ZP, {
+            icon: x.Ybf,
+            size: "small",
+          }),
+          (0, l.jsx)("span", {
+            children: m.formatMessage(
+              ey.deleteAll
+            ),
+          }),
+        ],
+      }),
+    ],
+    ```
+  - ```js
+    (0, l.jsx)($.Z, {
+      isOpen: H,
+      onClose: function () {
+        return W(!1);
+      },
+      type: "danger",
+      title: m.formatMessage(ey.confirmDeleteAll),
+      primaryButton: (0, l.jsx)(J.ZP.Button, {
+        title: m.formatMessage(ey.deleteAll),
+        color: "danger",
+        onClick: ei,
+      }),
+      secondaryButton: (0, l.jsx)(J.ZP.Button, {
+        title: m.formatMessage(ey.deleteHistoryModalCancel),
+        color: "neutral",
+        onClick: el,
+      }),
+    }),
+    (0, l.jsx)($.Z, {
+      isOpen: Q,
+      onClose: function () {
+        return Y(!1);
+      },
+      type: "success",
+      title: m.formatMessage(ey.confirmDownloadAll),
+      primaryButton: (0, l.jsx)(J.ZP.Button, {
+        title: m.formatMessage(ey.downloadAll),
+        color: "primary",
+        onClick: ep,
+      }),
+      secondaryButton: (0, l.jsx)(J.ZP.Button, {
+        title: m.formatMessage(ey.confirmCancelDownloadAll),
+        color: "neutral",
+        onClick: ej,
+      }),
+    }),
+    ```
+  - This part about 'plugin reviewer' isn't new, but I hadn't noticed it before:
+    - ```js
+      children: [
+        "Please enable a localhost plugin",
+        " ",
+        A && " (or any plugin if you're a plugin reviewer) ",
+        "to use devtools.",
+      ],
+      ```
+- `unpacked/_next/static/chunks/709.js`
+  - ```diff
+    - var nH = ["#ab68ff"];
+    + var nH = ["#7989FF"];
+    ```
+  - ```diff
+      (0, y.jsxs)(n0, {
+    +   $isStaticSharedThread: T,
+        $isDesktopNavCollapsed: en,
+        $isMessageRedesign: J,
+    ```
+  - ```js
+    function (e) {
+      return e.$isStaticSharedThread ? "pl-0 pr-4" : "";
+    }
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-a3bbd8997fe0f8e4.js
+https://chat.openai.com/_next/static/chunks/709-74a24b5cf35d07f9.js
+https://chat.openai.com/_next/static/chunks/pages/_app-12cc5faa218e237a.js
+https://chat.openai.com/_next/static/chunks/webpack-a3f803c49aba2f8d.js
+https://chat.openai.com/_next/static/WLHd8p-1ysAW_5sZZPJIy/_buildManifest.js
+https://chat.openai.com/_next/static/WLHd8p-1ysAW_5sZZPJIy/_ssgManifest.js
+```
+
+### From Build Manifest
+
+N/A
+
+### From `_next/static/chunks/webpack-a3f803c49aba2f8d.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/2ae5d0bc3600f3f7.css
+```
+
 ## 2023-06-29Z (`HIPozMBuTaTl2Vucglu5e`)
 
 ### Notes
