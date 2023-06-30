@@ -74,7 +74,7 @@ echo "And of those, these are the URLs that haven't yet been saved:"
 echo "$unsaved_urls_from_filtered_data"
 echo
 
-urls_from_build_manifest_not_in_changelog=$(./scripts/buildmanifest-to-json.js "$buildhash" | jq -r '[.. | strings | select(startswith("static"))] | unique | map("https://chat.openai.com/_next/" + .) | .[]' | ./scripts/filter-urls-not-in-changelog.js)
+urls_from_build_manifest_not_in_changelog=$(./scripts/buildmanifest-to-json.js "$buildhash" --extract-urls | ./scripts/filter-urls-not-in-changelog.js)
 echo "These are the URLs from the _buildManifest that aren't already in the CHANGELOG:"
 echo "$urls_from_build_manifest_not_in_changelog"
 echo

@@ -89,10 +89,10 @@ Use the [`buildmanifest-to-json.js`](./scripts/buildmanifest-to-json.js) script 
 
 ```shell
 # Run the script with a build hash
-./scripts/buildmanifest-to-json.js <build-hash> | jq -r '[.. | strings | select(startswith("static"))] | unique | map("https://chat.openai.com/_next/" + .) | .[]'
+./scripts/buildmanifest-to-json.js <build-hash> --extract-urls
 
 # Or run the script with a full URL to a _buildManifest.js file
-./scripts/buildmanifest-to-json.js <url-to-buildmanifest> | jq -r '[.. | strings | select(startswith("static"))] | unique | map("https://chat.openai.com/_next/" + .) | .[]'
+./scripts/buildmanifest-to-json.js <url-to-buildmanifest> --extract-urls
 ```
 
 Use the [`unpack-files-from-orig.js`](./scripts/unpack-files-from-orig.js) script to unpack, normalize, and format files from the `orig/` directory. Pass the list of URLs (or URL file paths) that need to be unpacked as input:

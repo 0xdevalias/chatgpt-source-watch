@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // TODO: Save these scripts somewhere useful:
-//   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("_next/" + .) | .[]' | ./filter-for-unsaved.js | pbcopy
+//   BUILDHASH='TODO'; ./scripts/buildmanifest-to-json.js "$BUILDHASH" --extract-urls | ./filter-for-unsaved.js | pbcopy
 //   pbpaste | ./filter-for-unsaved.js | pbcopy
 
 const fs = require('fs');

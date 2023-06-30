@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-// TODO: Save these commands somewhere useful:
-//   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("_next/" + .) | .[]' | pbcopy
-//   ./buildmanifest-to-json.js | jq -r '[.. | strings | select(startswith("static"))] | unique | map("https://chat.openai.com/_next/" + .) | .[]' | pbcopy
-
 const path = require('path');
+const fs = require('fs');
 
 global.self = {};
 
@@ -27,8 +24,27 @@ function extractBuildHashFromURL(url) {
   return match ? match[1] : null;
 }
 
-// Get the input argument
+/**
+ * Helper function to recursively find all strings starting with a given prefix in an object
+ * @param {Object} obj - The object to search through
+ * @param {string} prefix - The prefix to search for in strings
+ * @return {Array<string>} - The array of strings starting with the given prefix
+ */
+function findStringsStartingWith(obj, prefix) {
+  let results = [];
+  for (const key in obj) {
+    if (typeof obj[key] === 'string' && obj[key].startsWith(prefix)) {
+      results.push(obj[key]);
+    } else if (typeof obj[key] === 'object') {
+      results = results.concat(findStringsStartingWith(obj[key], prefix));
+    }
+  }
+  return results;
+}
+
+// Get the input arguments
 const inputArg = process.argv[2];
+const outputMode = process.argv.includes('--extract-urls') ? 'extract-urls' : 'json';
 
 // Validate the input argument
 if (!inputArg) {
@@ -49,6 +65,23 @@ const buildManifestPath = getBuildManifestPath(buildHash);
 // Load the build manifest file
 require(buildManifestPath);
 
-// Output the JSON representation of the build manifest
-const buildManifestJSON = JSON.stringify(self.__BUILD_MANIFEST, null, 2);
-console.log(buildManifestJSON);
+if (outputMode === 'extract-urls') {
+  // Recursively find all strings starting with "static"
+  const staticStrings = findStringsStartingWith(self.__BUILD_MANIFEST, 'static');
+
+  // Deduplicate the static strings
+  const uniqueStaticStrings = [...new Set(staticStrings)];
+
+  // Map and join the unique static strings
+  const mappedStrings = uniqueStaticStrings.map(s => `https://chat.openai.com/_next/${s}`).join('\n');
+
+  // Output the result
+  console.log(mappedStrings);
+
+  // Optionally, you can also copy the result to the clipboard (uncomment if needed)
+  // require('child_process').execSync(`echo "${mappedStrings}" | pbcopy`);
+} else {
+  // Output the basic JSON
+  const buildManifestJSON = JSON.stringify(self.__BUILD_MANIFEST, null, 2);
+  console.log(buildManifestJSON);
+}
