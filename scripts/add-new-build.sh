@@ -44,7 +44,7 @@ filtered_json=$(echo "$json_input" | jq --argjson urls "$filtered_urls_json" '
 
 # Process the filtered JSON data to extract the build hash and date from any _buildManifest URL
 output=$(echo "$filtered_json" | jq -c '
-    map(select(.url | contains("_buildManifest")) | {buildhash: (.url | split("/")[5]), date: .date})
+  map(select(.url | contains("_buildManifest")) | {buildhash: (.url | split("/")[5]), date: ((.date | split("T")[0]) + "Z")})
 ')
 
 echo "The following unsaved builds seem to exist in the data:"
