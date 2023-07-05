@@ -4,6 +4,144 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-04Z (`f9C5QIWDB4PeBMNfQPho6`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A few chunks were renamed (`293` -> `597`, `386` -> `653`)
+  - Chunk `882` (aka `97c719b8`) was removed (which only contained an SVG image of 'a face with a line slashed through it')
+  - A few other SVG images changed/were added
+    - SVG image of a 'lab beaker with liquid in it' changed to a 'black padlock'
+    - SVG image of 'two pluse signs on the left + large star on the right (magic sparkles?)' added
+  - A few changes related to 'browsing mode disabled'
+  - A LOT of diff churn, so there may have been other changes missed among it all
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - Chunk renamed from `293` -> `597`
+  - Chunk renamed from `386` -> `653`
+  - Chunk `882` (aka `97c719b8`) removed
+- `unpacked/_next/static/chunks/webpack.js`
+  - Chunk renamed from `293` -> `597`
+  - Chunk renamed from `386` -> `653`
+  - Chunk `882` (aka `97c719b8`) removed
+- `unpacked/_next/static/chunks/97c719b8.js`
+  - Chunk 882 (aka `97c719b8`) removed
+  - This used to contain an SVG image of 'a face with a line slashed through it'
+- `unpacked/_next/static/chunks/68a27ff6.js`
+  - SVG image of a 'lab beaker with liquid in it' changed to a 'black padlock'
+  - SVG image of 'two pluse signs on the left + large star on the right (magic sparkles?)' added
+- `unpacked/_next/static/chunks/496.js`
+  - ```js
+    (r.TempBrowseToast = "temp-browse-toast");
+    ```
+  - ```js
+    var M = "oai/apps/hasSeenBrowsingDisabledJuly2023";
+    ```
+  - ```js
+    var t = !!m.m.getItem(M);
+    return (
+      e.browsing && !t && v.vm.openModal(v.B.TempBrowseToast), e
+    );
+    ```
+  - ```diff
+      w.updateUserSettings({
+        isBetaFeaturesUiEnabled: n,
+    -   isBrowsingAvailable:
+    -     !r && (t.has("browsing_available") || t.has("tools")),
+    +   isBrowsingAvailable: !r && !1,
+    ```
+    - This disables browsing via the frontend.. but I wonder if it's still accessible via the backend if we modify this frontend state?
+- `unpacked/_next/static/chunks/597.js`
+  - Chunk renamed from `293` -> `597`
+  - Added new function `71389: function (t, e, n) {`
+    - Has a bunch of code related to mount/unmount animations
+    - Has a bunch of code related to `Toast` / `ToastProvider`
+    - This seems to all be related to adding the toast notification used for `hasSeenBrowsingDisabledJuly2023` (see above)
+- `unpacked/_next/static/chunks/653.js`
+  - Chunk renamed from `386` -> `653`
+  - While there were some large chunks of diff churn here, none of it jumped out at me as being overly interesting. I think some functions might have got moved around as there were definitely chunks that were coloured as unchanged when using `git diff --color-moved`
+- `unpacked/_next/static/chunks/709.js`
+  - There are lots of huge sections of diff churn in this file, so while i've tried to guess at what has just been refactored/moved around based on `git diff --color-moved`, it's highly likely that I have missed aspects along the way
+  - The following sections are all snippets from the same larger diff chunk
+    - ```js
+      var P = (0, m.tN)(function (e) {
+        return e.activeModals.has(m.B.TempBrowseToast);
+      });
+      ```
+    - ```js
+      (0, a.jsxs)(i.Dx, {
+        className:
+          "text-slate12 mb-[5px] text-[15px] font-medium [grid-area:_title]",
+        children: [
+          "We've temporarily disabled the Browse with Bing ",
+          (0, eu.V)("beta"),
+          " feature",
+        ],
+      }),
+      (0, a.jsxs)(i.dk, {
+        className:
+          "text-slate11 m-0 text-[13px] leading-[1.3] [grid-area:_description]",
+        children: [
+          "Read the",
+          " ",
+          (0, a.jsx)("a", {
+            href: "https://help.openai.com/articles/8077698-how-do-i-use-chatgpt-browse-with-bing-to-search-the-web",
+            target: "_blank",
+            rel: "noreferrer",
+            className: "cursor-pointer underline",
+            children: "Help Center article",
+          }),
+          ".",
+        ],
+      }),
+      ```
+      - https://help.openai.com/articles/8077698-how-do-i-use-chatgpt-browse-with-bing-to-search-the-web
+    - There was WAY more diff churn here.. but not sure what else to mention.. It looks like a huge chunk of code was either moved around in the churn, or potentially actually refactored. You can find it in the huge chunk of removed code, and the huge chunk of added code. One of the diff hunk headers for the added section was `@@ -13402,6 +11469,2080 @@`
+- The following files had nothing much of note:
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-649c262260f890b5.js
+https://chat.openai.com/_next/static/chunks/597-ed3dbaa450c308e5.js
+https://chat.openai.com/_next/static/chunks/653-787f97cc056c5d35.js
+https://chat.openai.com/_next/static/chunks/68a27ff6-6aa8414ae135245e.js
+https://chat.openai.com/_next/static/chunks/709-63f54d43205a5aee.js
+https://chat.openai.com/_next/static/chunks/pages/_app-5aa27dc312fc926f.js
+https://chat.openai.com/_next/static/chunks/pages/index-9f0df292d5056775.js
+https://chat.openai.com/_next/static/chunks/webpack-abe2324d74082022.js
+https://chat.openai.com/_next/static/f9C5QIWDB4PeBMNfQPho6/_buildManifest.js
+https://chat.openai.com/_next/static/f9C5QIWDB4PeBMNfQPho6/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/admin-ac1e7fb0ac94aa9e.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-fd124e55fafc653d.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-e8d8dc9c9f4455ce.js
+```
+
+### From `_next/static/chunks/webpack-abe2324d74082022.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/76b9661cdb7aed92.css
+```
+
 ## 2023-06-30Z (`WLHd8p-1ysAW_5sZZPJIy`)
 
 ### Notes

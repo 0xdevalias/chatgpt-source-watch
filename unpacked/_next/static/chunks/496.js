@@ -577,7 +577,7 @@
                 C && null != M
                   ? (0, a.jsx)("span", {
                       className: (0, o.Z)(
-                        "h-10 w-10 rounded-md bg-gray-500 bg-cover bg-center dark:bg-gray-500",
+                        "box-border h-10 w-10 rounded-md border border-black/5 bg-cover bg-center dark:border-white/20",
                         w && "group-hover:bg-black"
                       ),
                       style: {
@@ -870,8 +870,8 @@
         H = n.n(z),
         W = n(81292),
         V = n(32787),
-        G = n(46110),
-        J = n(59114),
+        J = n(46110),
+        G = n(59114),
         $ = n(48727),
         Q = n(35448),
         Y = n(32165),
@@ -892,7 +892,7 @@
           a = (0, E.ec)(E.F_.isPersonalWorkspace),
           i = (0, V.kP)().session;
         return !r || (a && (null == i ? void 0 : i.user) !== void 0)
-          ? (0, l.jsx)(G.Yt, {
+          ? (0, l.jsx)(J.Yt, {
               user: null == i ? void 0 : i.user,
               size: "redesign",
             })
@@ -1041,7 +1041,7 @@
           ? null
           : (0, l.jsx)($.Z, {
               onClose: i,
-              closeButton: (0, l.jsx)(J.ZP.CloseButton, { onClose: i }),
+              closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: i }),
               type: "success",
               isOpen: n,
               size: "normal",
@@ -1614,9 +1614,9 @@
           z = (0, k._)((0, u.useState)(!1), 2),
           H = z[0],
           W = z[1],
-          G = (0, k._)((0, u.useState)(!1), 2),
-          Q = G[0],
-          Y = G[1],
+          J = (0, k._)((0, u.useState)(!1), 2),
+          Q = J[0],
+          Y = J[1],
           X = (0, u.useCallback)(
             function () {
               c.vm.closeFilesModal(), T.length > 0 && _();
@@ -2024,7 +2024,7 @@
               className: "max-w-5xl",
               type: "success",
               title: m.formatMessage(ey.myFiles),
-              closeButton: (0, l.jsx)(J.ZP.CloseButton, { onClose: X }),
+              closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: X }),
               children: [
                 y
                   ? (0, l.jsx)("div", {
@@ -2154,12 +2154,12 @@
               },
               type: "danger",
               title: m.formatMessage(ey.confirmDeleteAll),
-              primaryButton: (0, l.jsx)(J.ZP.Button, {
+              primaryButton: (0, l.jsx)(G.ZP.Button, {
                 title: m.formatMessage(ey.deleteAll),
                 color: "danger",
                 onClick: ei,
               }),
-              secondaryButton: (0, l.jsx)(J.ZP.Button, {
+              secondaryButton: (0, l.jsx)(G.ZP.Button, {
                 title: m.formatMessage(ey.deleteHistoryModalCancel),
                 color: "neutral",
                 onClick: el,
@@ -2172,12 +2172,12 @@
               },
               type: "success",
               title: m.formatMessage(ey.confirmDownloadAll),
-              primaryButton: (0, l.jsx)(J.ZP.Button, {
+              primaryButton: (0, l.jsx)(G.ZP.Button, {
                 title: m.formatMessage(ey.downloadAll),
                 color: "primary",
                 onClick: ep,
               }),
-              secondaryButton: (0, l.jsx)(J.ZP.Button, {
+              secondaryButton: (0, l.jsx)(G.ZP.Button, {
                 title: m.formatMessage(ey.confirmCancelDownloadAll),
                 color: "neutral",
                 onClick: ej,
@@ -2488,7 +2488,7 @@
             className: "max-w-5xl",
             type: "success",
             title: u.formatMessage(eB.title),
-            closeButton: (0, l.jsx)(J.ZP.CloseButton, { onClose: n }),
+            closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: n }),
             children: t,
           })
         );
@@ -2533,7 +2533,7 @@
           e
         );
       }
-      function eG(e) {
+      function eJ(e) {
         var t,
           n,
           r = e.onClose,
@@ -2567,11 +2567,11 @@
           z = (0, E.ec)(E.F_.isBusinessWorkspace),
           H = !z && q.has(F.RJ),
           W = (0, V.kP)().session,
-          G = (0, eS.Fl)(),
-          Q = G.isBetaFeaturesUiEnabled,
-          Y = G.isPluginsAvailable,
-          X = G.isBrowsingAvailable,
-          K = G.isCodeInterpreterAvailable,
+          J = (0, eS.Fl)(),
+          Q = J.isBetaFeaturesUiEnabled,
+          Y = J.isPluginsAvailable,
+          X = J.isBrowsingAvailable,
+          K = J.isCodeInterpreterAvailable,
           ee = (0, u.useCallback)(function () {
             p(!1);
           }, []),
@@ -2619,7 +2619,7 @@
               className: "md:max-w-[680px]",
               type: "success",
               title: s.formatMessage(e5.settings),
-              closeButton: (0, l.jsx)(J.ZP.CloseButton, { onClose: r }),
+              closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: r }),
               children: (0, l.jsxs)(eN.fC, {
                 className: "flex flex-col gap-6 md:flex-row",
                 defaultValue: L,
@@ -2684,7 +2684,7 @@
                   }),
                   (0, l.jsx)(e1, {
                     value: o.BetaFeatures,
-                    children: (0, l.jsx)(eJ, {}),
+                    children: (0, l.jsx)(eG, {}),
                   }),
                   (0, l.jsxs)(e1, {
                     value: o.DataControls,
@@ -2777,7 +2777,7 @@
               }),
             });
       }
-      function eJ() {
+      function eG() {
         var e,
           t = (0, P.Z)(),
           n = (0, V.kP)().session,
@@ -2969,14 +2969,14 @@
           onClose: t,
           type: "success",
           title: r.formatMessage(e5.deleteHistoryModalTitle),
-          primaryButton: (0, l.jsx)(J.ZP.Button, {
+          primaryButton: (0, l.jsx)(G.ZP.Button, {
             title: r.formatMessage(e5.deleteHistoryModalConfirm),
             color: "primary",
             onClick: function () {
               n(), t();
             },
           }),
-          secondaryButton: (0, l.jsx)(J.ZP.Button, {
+          secondaryButton: (0, l.jsx)(G.ZP.Button, {
             title: r.formatMessage(e5.deleteHistoryModalCancel),
             color: "neutral",
             onClick: t,
@@ -3007,12 +3007,12 @@
           onClose: t,
           type: "success",
           title: n.formatMessage(e5.dataExportModalTitle),
-          primaryButton: (0, l.jsx)(J.ZP.Button, {
+          primaryButton: (0, l.jsx)(G.ZP.Button, {
             title: n.formatMessage(e5.dataExportModalConfirm),
             color: "primary",
             onClick: i,
           }),
-          secondaryButton: (0, l.jsx)(J.ZP.Button, {
+          secondaryButton: (0, l.jsx)(G.ZP.Button, {
             title: n.formatMessage(e5.dataExportModalCancel),
             color: "neutral",
             onClick: t,
@@ -3162,7 +3162,7 @@
           onClose: n,
           type: "success",
           title: r.formatMessage(e5.deleteAccountTitle),
-          closeButton: (0, l.jsx)(J.ZP.CloseButton, { onClose: n }),
+          closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: n }),
           children: (0, l.jsxs)("div", {
             className: "text-sm",
             children: [
@@ -4046,54 +4046,55 @@
           g = (0, v.useRouter)(),
           m = (0, E.WY)(),
           p = (0, E.$T)(),
-          y = (0, I.g)(function (e) {
+          y = (0, E.ec)(E.F_.isBusinessWorkspace),
+          j = (0, I.g)(function (e) {
             return e.flags.isUserInCanPayGroup;
           }),
-          j = (0, e7.t)(function (e) {
+          _ = (0, e7.t)(function (e) {
             return { setShowAccountPaymentModal: e.setShowAccountPaymentModal };
           }).setShowAccountPaymentModal,
-          _ = (0, u.useCallback)(
+          M = (0, u.useCallback)(
             function () {
-              j(!0, function () {
+              _(!0, function () {
                 o(S.s6.clickSidebarAccountPaymentMenuItem);
               });
             },
-            [o, j]
+            [o, _]
           ),
-          M = (0, u.useRef)(null),
-          L = (0, k._)((0, u.useState)(!1), 2),
-          A = L[0],
-          U = L[1],
-          B = (0, u.useContext)(D.QL),
-          R = B.historyDisabled,
-          O = B.toggleHistoryDisabled,
-          q = B.getModifiedSettings,
-          z = B.unsetModifiedSettings,
-          H = q(),
-          W = (0, k._)((0, u.useState)(H), 2),
-          V = W[0],
-          G = W[1],
-          J = (0, u.useCallback)(function () {
+          L = (0, u.useRef)(null),
+          A = (0, k._)((0, u.useState)(!1), 2),
+          U = A[0],
+          B = A[1],
+          R = (0, u.useContext)(D.QL),
+          O = R.historyDisabled,
+          q = R.toggleHistoryDisabled,
+          z = R.getModifiedSettings,
+          H = R.unsetModifiedSettings,
+          W = z(),
+          V = (0, k._)((0, u.useState)(W), 2),
+          J = V[0],
+          G = V[1],
+          $ = (0, u.useCallback)(function () {
             G(!0);
           }, []),
-          $ = (0, u.useCallback)(
-            function () {
-              G(!1), z();
-            },
-            [z]
-          ),
           Q = (0, u.useCallback)(
             function () {
-              null == n || n(), O();
+              G(!1), H();
             },
-            [n, O]
+            [H]
           ),
-          Y = (0, u.useMemo)(
+          Y = (0, u.useCallback)(
+            function () {
+              null == n || n(), q();
+            },
+            [n, q]
+          ),
+          X = (0, u.useMemo)(
             function () {
               return (0, l.jsxs)("div", {
                 className: (0, N.Z)(
                   "absolute left-0 top-14 z-20 overflow-hidden transition-all duration-500",
-                  R ? "visible max-h-72" : "invisible max-h-0"
+                  O ? "visible max-h-72" : "invisible max-h-0"
                 ),
                 children: [
                   (0, l.jsxs)("div", {
@@ -4131,7 +4132,7 @@
                       }),
                       (0, l.jsxs)(ei.z, {
                         className: "mt-4 w-full",
-                        onClick: Q,
+                        onClick: Y,
                         color: "primary",
                         size: "medium",
                         children: [
@@ -4148,9 +4149,9 @@
                 ],
               });
             },
-            [R, Q]
+            [O, Y]
           ),
-          X = (0, u.useMemo)(
+          K = (0, u.useMemo)(
             function () {
               var e = [],
                 t = null;
@@ -4164,25 +4165,25 @@
             },
             [r]
           ),
-          K = X.primaryActionButton,
-          ee = X.navigationContent;
+          ee = K.primaryActionButton,
+          et = K.navigationContent;
         (0, u.useEffect)(
           function () {
             var e;
-            M.current &&
-              U(
-                (e = M.current).scrollHeight > e.clientHeight ||
+            L.current &&
+              B(
+                (e = L.current).scrollHeight > e.clientHeight ||
                   e.scrollWidth > e.clientWidth
               );
           },
           [r]
         );
-        var et = !(0, E.WY)() && !i.has("disable_upgrade_ui"),
-          en = (0, E.KQ)(),
-          ea = (0, c.tN)(function (e) {
+        var en = !(0, E.WY)() && !i.has("disable_upgrade_ui"),
+          ea = (0, E.KQ)(),
+          eo = (0, c.tN)(function (e) {
             return e.isFilesModalOpen;
           }),
-          eo = (0, u.useMemo)(
+          es = (0, u.useMemo)(
             function () {
               var e = g.route;
               return !e9.has(e);
@@ -4211,7 +4212,7 @@
                     (0, l.jsxs)("div", {
                       className: "mb-1 flex flex-row gap-2",
                       children: [
-                        K,
+                        ee,
                         s &&
                           d &&
                           (0, l.jsx)(ep.u, {
@@ -4234,21 +4235,22 @@
                           }),
                       ],
                     }),
-                    Y,
+                    X,
                     (0, l.jsx)(tw, {
-                      ref: M,
-                      $offsetScrollbar: A,
-                      $disableScroll: R,
-                      children: ee,
+                      ref: L,
+                      $offsetScrollbar: U,
+                      $disableScroll: O,
+                      children: et,
                     }),
                     (0, l.jsxs)("div", {
                       className: "border-t border-white/20 pt-2 empty:hidden",
                       children: [
                         !p &&
                           !1 === m &&
-                          y &&
+                          j &&
+                          !y &&
                           (0, l.jsx)(e6.Vq, {
-                            onClick: _,
+                            onClick: M,
                             className: "rounded-md",
                             children: (0, l.jsxs)("span", {
                               className: "flex w-full flex-row justify-between",
@@ -4258,7 +4260,7 @@
                                     "gold-new-button flex items-center gap-3",
                                   children: [
                                     (0, l.jsx)(w.ZP, { icon: x.fzv }),
-                                    en
+                                    ea
                                       ? (0, l.jsx)(
                                           b.Z,
                                           (0, h._)({}, t_.renewPlus)
@@ -4269,8 +4271,8 @@
                                         ),
                                   ],
                                 }),
-                                et &&
-                                  !en &&
+                                en &&
+                                  !ea &&
                                   (0, l.jsx)("span", {
                                     className:
                                       "rounded-md bg-yellow-200 px-1.5 py-0.5 text-xs font-medium uppercase text-gray-800",
@@ -4282,9 +4284,9 @@
                               ],
                             }),
                           }),
-                        eo &&
+                        es &&
                           (0, l.jsx)(tf, {
-                            onClickSettings: J,
+                            onClickSettings: $,
                             onDeleteHistory: t,
                           }),
                       ],
@@ -4293,13 +4295,13 @@
                 }),
               ],
             }),
-            V &&
-              (0, l.jsx)(eG, {
-                onClose: $,
+            J &&
+              (0, l.jsx)(eJ, {
+                onClose: Q,
                 onToggleHistoryDisabled: n,
                 onDeleteHistory: t,
               }),
-            i.has("files_list_ui") && ea && (0, l.jsx)(eT, {}),
+            i.has("files_list_ui") && eo && (0, l.jsx)(eT, {}),
             i.has("system_message2") && (0, l.jsx)(e8.wm, {}),
             (0, l.jsx)(er, { onResetThread: n }),
           ],
@@ -5127,10 +5129,10 @@
           I = k[0],
           A = k[1],
           z = (0, j.kP)().loading,
-          J = (0, C.tN)(function (e) {
+          G = (0, C.tN)(function (e) {
             return e.activeModals.has(C.B.UserContext);
           }),
-          $ = O(J && !z),
+          $ = O(G && !z),
           Q = $.isLoading,
           Y = $.data,
           X = null != Y ? Y : {},
@@ -5282,13 +5284,13 @@
             },
             [x, ex, es, eo, ej]
           );
-        if (J && M && !I)
+        if (G && M && !I)
           return (0, l.jsx)(L, {
             onClose: function () {
               A(!0);
             },
           });
-        if (J && ep) {
+        if (G && ep) {
           var e_ = function () {
             ev(!1);
           };
@@ -5322,7 +5324,7 @@
         return (0, l.jsxs)(
           N.Z,
           {
-            isOpen: J,
+            isOpen: G,
             onClose: ey,
             type: "success",
             size: "custom",
@@ -5371,7 +5373,7 @@
                           (0, a._)({}, U.aboutYouHelpText)
                         ),
                       }),
-                      (0, l.jsx)(G, {
+                      (0, l.jsx)(J, {
                         className: "mb-3",
                         onSubmit: ew,
                         tip: (0, l.jsx)(H, {
@@ -5433,7 +5435,7 @@
                           (0, a._)({}, U.modelHelpText)
                         ),
                       }),
-                      (0, l.jsx)(G, {
+                      (0, l.jsx)(J, {
                         onSubmit: ew,
                         tip: (0, l.jsx)(H, {
                           children: (0, l.jsxs)("ul", {
@@ -5553,7 +5555,7 @@
         V = function (e) {
           return e.length > W;
         },
-        G = function (e) {
+        J = function (e) {
           var t = e.onChange,
             n = e.onSubmit,
             r = e.placeholder,
@@ -5909,7 +5911,7 @@
         a = n(71209),
         i = n(70216),
         o = n(35250),
-        s = n(26828),
+        s = n(15228),
         l = n(70079),
         u = n(1454),
         d = n(38317),
@@ -6619,8 +6621,8 @@
         H = n(75908),
         W = n(35290),
         V = n(3001),
-        G = n(24274),
-        J = n(75527),
+        J = n(24274),
+        G = n(75527),
         $ = n(25094),
         Q = n(19265),
         Y = n(97688),
@@ -6640,7 +6642,7 @@
           v = p[0],
           x = p[1],
           b = c.substring(K.length),
-          y = J.tQ.getServerThreadId(u),
+          y = G.tQ.getServerThreadId(u),
           j = (0, H.Z)(),
           w = (0, d.useCallback)(function (e) {
             var t = document.createElement("a");
@@ -6653,7 +6655,7 @@
           (0, z.a)({
             queryKey: en(l, b),
             queryFn: function () {
-              return G.ZP.downloadFromInterpreter(l, y, b)
+              return J.ZP.downloadFromInterpreter(l, y, b)
                 .then(function (e) {
                   return (
                     (null == e ? void 0 : e.status) === "success" &&
@@ -7374,9 +7376,9 @@
         H = c.Z.div(O()),
         W = n(96237),
         V = n(21260),
-        G = n(52422),
-        J = n(95182),
-        $ = n.n(J),
+        J = n(52422),
+        G = n(95182),
+        $ = n.n(G),
         Q = n(1454),
         Y = n(77442),
         X = n(38317);
@@ -7496,7 +7498,7 @@
         return (
           (0, d.useEffect)(
             function () {
-              return (0, G.j)(i, p(), en).stop;
+              return (0, J.j)(i, p(), en).stop;
             },
             [p, c, i]
           ),
@@ -10730,10 +10732,10 @@
           return D;
         },
         je: function () {
-          return J;
+          return G;
         },
         Uy: function () {
-          return G;
+          return J;
         },
         GD: function () {
           return z;
@@ -11464,7 +11466,7 @@
             return I.getTitleAndSource(e);
           });
         },
-        G = function (e) {
+        J = function (e) {
           return P(function () {
             var t,
               n = I.resolveThreadId(e);
@@ -11473,7 +11475,7 @@
               : t.continuingFromSharedConversationId;
           });
         },
-        J = function (e) {
+        G = function (e) {
           return P(function () {
             var t,
               n,
@@ -11661,7 +11663,8 @@
       ((r = a || (a = {})).AccountPortal = "account-portal"),
         (r.UserContext = "user-context"),
         (r.DownloadMessages = "download-messages"),
-        (r.InviteUsersToWorkspace = "invite-users-to-workspace");
+        (r.InviteUsersToWorkspace = "invite-users-to-workspace"),
+        (r.TempBrowseToast = "temp-browse-toast");
       var u = "UiState.isNavigationCollapsed.1",
         d = {
           isDesktopNavCollapsed:
@@ -11717,11 +11720,14 @@
     },
     21437: function (e, t, n) {
       n.d(t, {
+        DN: function () {
+          return M;
+        },
         Fl: function () {
-          return _;
+          return k;
         },
         N2: function () {
-          return w;
+          return C;
         },
         tr: function () {
           return a;
@@ -11739,9 +11745,11 @@
         f = n(70079),
         h = n(81292),
         g = n(32787),
-        m = n(24274),
-        p = n(59110),
-        v = {
+        m = n(85023),
+        p = n(24274),
+        v = n(32689),
+        x = n(59110),
+        b = {
           isBetaFeaturesUiEnabled: !1,
           isBrowsingAvailable: !1,
           isBrowsingEnabled: !1,
@@ -11753,24 +11761,24 @@
       ((r = a || (a = {})).BROWSING = "browsing"),
         (r.CODE_INTERPRETER = "code_interpreter"),
         (r.PLUGINS = "plugins");
-      var x =
+      var y =
           ((i = {}),
           (0, o._)(i, a.BROWSING, "isBrowsingEnabled"),
           (0, o._)(i, a.CODE_INTERPRETER, "isCodeInterpreterEnabled"),
           (0, o._)(i, a.PLUGINS, "isPluginsEnabled"),
           i),
-        b = (0, h.ZP)()(function () {
-          return v;
+        j = (0, h.ZP)()(function () {
+          return b;
         }),
-        y = {
+        w = {
           updateUserSettings: function (e) {
-            b.setState(function (t) {
+            j.setState(function (t) {
               return (0, s._)({}, t, e);
             });
           },
           updateUserSettingsFromFeatures: function (e) {
-            b.setState(function (t) {
-              var n = y.getUserSettingsFromFeatures(e, t);
+            j.setState(function (t) {
+              var n = w.getUserSettingsFromFeatures(e, t);
               return (0, s._)({}, t, n);
             });
           },
@@ -11779,7 +11787,7 @@
               var r = (0, u._)(n, 2),
                 a = r[0],
                 i = r[1],
-                d = x[a],
+                d = y[a],
                 c = !1;
               return ((("isBrowsingEnabled" === d && t.isBrowsingAvailable) ||
                 ("isCodeInterpreterEnabled" === d &&
@@ -11792,32 +11800,37 @@
             }, {});
           },
         },
-        j = function () {
+        _ = function () {
           var e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
           return ["userSettings", e];
         };
-      function w() {
+      function C() {
         var e = (0, g.kP)().session,
           t = (0, d.NL)();
         return function () {
           return t.invalidateQueries({
-            queryKey: j(null == e ? void 0 : e.accessToken),
+            queryKey: _(null == e ? void 0 : e.accessToken),
           });
         };
       }
-      function _() {
+      var M = "oai/apps/hasSeenBrowsingDisabledJuly2023";
+      function k() {
         var e = (0, g.kP)().session,
-          t = (0, p.hz)(),
+          t = (0, x.hz)(),
           n = t.has("beta_features"),
-          r = (0, p.ec)(p.F_.isBusinessWorkspace);
+          r = (0, x.ec)(x.F_.isBusinessWorkspace);
         return (
           (0, c.a)(
-            j(null == e ? void 0 : e.accessToken),
+            _(null == e ? void 0 : e.accessToken),
             function () {
-              return m.ZP.getUserSettingBetaFeatures(e.accessToken).then(
+              return p.ZP.getUserSettingBetaFeatures(e.accessToken).then(
                 function (e) {
-                  return null != e && y.updateUserSettingsFromFeatures(e), e;
+                  null != e && w.updateUserSettingsFromFeatures(e);
+                  var t = !!m.m.getItem(M);
+                  return (
+                    e.browsing && !t && v.vm.openModal(v.B.TempBrowseToast), e
+                  );
                 }
               );
             },
@@ -11825,10 +11838,9 @@
           ),
           (0, f.useEffect)(
             function () {
-              y.updateUserSettings({
+              w.updateUserSettings({
                 isBetaFeaturesUiEnabled: n,
-                isBrowsingAvailable:
-                  !r && (t.has("browsing_available") || t.has("tools")),
+                isBrowsingAvailable: !r && !1,
                 isCodeInterpreterAvailable:
                   !r &&
                   (t.has("code_interpreter_available") || t.has("tools2")),
@@ -11838,7 +11850,7 @@
             },
             [t, n, r]
           ),
-          b(function (e) {
+          j(function (e) {
             return e;
           })
         );
