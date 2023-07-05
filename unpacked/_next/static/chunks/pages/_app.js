@@ -34733,16 +34733,16 @@ Error:`,
       "use strict";
       G.d(B, {
         DY: function () {
-          return ti;
+          return tr;
         },
         FZ: function () {
           return X;
         },
         G_: function () {
-          return tc;
+          return tu;
         },
         PL: function () {
-          return tu;
+          return ts;
         },
         Pt: function () {
           return V;
@@ -34751,31 +34751,28 @@ Error:`,
           return Q;
         },
         Tx: function () {
-          return te;
+          return tt;
         },
         UG: function () {
-          return tr;
+          return tn;
         },
         Ud: function () {
           return Y;
         },
         Ue: function () {
-          return tn;
-        },
-        Vn: function () {
-          return tt;
+          return te;
         },
         Wk: function () {
-          return ts;
-        },
-        YI: function () {
           return ta;
         },
+        YI: function () {
+          return ti;
+        },
         b5: function () {
-          return td;
+          return tc;
         },
         i: function () {
-          return tf;
+          return td;
         },
         st: function () {
           return Z;
@@ -34790,17 +34787,16 @@ Error:`,
         J = "prompt_suggestions",
         X = "message_style_202305",
         Q = "shareable_links",
-        tt = "show_existing_user_age_confirmation_modal",
-        te = "i18n",
-        tn = "layout_may_2023",
-        tr = "browsing_inner_monologue",
-        ti = "infinite_scroll_history",
-        ta = "plugin_review_tools",
-        ts = "tools3_dev",
-        tu = "arkose_enabled",
-        tc = "june_23_survey",
-        td = "message_debug_info",
-        tf = "mfa";
+        tt = "i18n",
+        te = "layout_may_2023",
+        tn = "browsing_inner_monologue",
+        tr = "infinite_scroll_history",
+        ti = "plugin_review_tools",
+        ta = "tools3_dev",
+        ts = "arkose_enabled",
+        tu = "june_23_survey",
+        tc = "message_debug_info",
+        td = "mfa";
     },
     59110: function (U, B, G) {
       "use strict";
@@ -45443,7 +45439,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "a0aac0cdd02be3205aeced1fa6a6dbf48271f765" }),
+        (Z.SENTRY_RELEASE = { id: "77c69cee9a48c07c429826c0576452f11dbf76fd" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({

@@ -58,7 +58,7 @@
       t.r(n),
         t.d(n, {
           default: function () {
-            return ec;
+            return eu;
           },
         });
       var r = t(22830),
@@ -84,9 +84,8 @@
         w = t(82841),
         C = t(36218),
         _ = t(32787),
-        M = t(88038),
-        N = t(59114),
-        P = (0, y.vU)({
+        M = t(59114),
+        N = (0, y.vU)({
           welcomeBack: {
             id: "existingUserAgeConfirmationModal.welcomeBack",
             defaultMessage: "Welcome back, Italy!",
@@ -130,45 +129,45 @@
               "Second paragraph of the announcement, providing links to more information",
           },
         }),
-        Z = "2023-04-25",
-        T = "".concat("oai/apps/hasSeenAgeConfirmationModal", "/").concat(Z);
-      function I(e) {
+        P = "2023-04-25",
+        Z = "".concat("oai/apps/hasSeenAgeConfirmationModal", "/").concat(P);
+      function T(e) {
         var n = e.onClose,
           t = (0, j.Z)(),
           r = (0, s.useCallback)(
             function () {
-              c.m.setItem(T, !0), n();
+              c.m.setItem(Z, !0), n();
             },
             [n]
           ),
           i = (0, w.WS)();
         return (
           (0, s.useEffect)(function () {
-            i && i(C.s6.ageConfirmationModal, { content: Z });
+            i && i(C.s6.ageConfirmationModal, { content: P });
           }, []),
           (0, a.jsx)(x.Z, {
             isOpen: !0,
             onClose: g.noop,
             type: "success",
-            title: t.formatMessage(P.welcomeBack),
-            primaryButton: (0, a.jsx)(N.ZP.Button, {
-              title: t.formatMessage(P.ageRequirementsButton),
+            title: t.formatMessage(N.welcomeBack),
+            primaryButton: (0, a.jsx)(M.ZP.Button, {
+              title: t.formatMessage(N.ageRequirementsButton),
               color: "primary",
               onClick: r,
             }),
-            secondaryButton: (0, a.jsx)(N.ZP.Button, {
-              title: t.formatMessage(P.logoutButton),
+            secondaryButton: (0, a.jsx)(M.ZP.Button, {
+              title: t.formatMessage(N.logoutButton),
               color: "light",
               onClick: function () {
                 i(C.s6.clickLogOut, { eventSource: "mouse" }), (0, _.w7)();
               },
               className: "border-gray-800 hover:border-gray-700",
             }),
-            children: (0, a.jsx)(S, {}),
+            children: (0, a.jsx)(I, {}),
           })
         );
       }
-      var S = function () {
+      var I = function () {
           var e = (0, j.Z)();
           return (0, a.jsx)("div", {
             className: "mb-6 mt-4 sm:mt-6",
@@ -178,27 +177,27 @@
                 (0, a.jsx)("p", {
                   children: (0, a.jsx)(
                     k.Z,
-                    (0, v._)({}, P.announcementParagraph1)
+                    (0, v._)({}, N.announcementParagraph1)
                   ),
                 }),
                 (0, a.jsx)("p", {
                   children: (0, a.jsx)(
                     k.Z,
-                    (0, b._)((0, v._)({}, P.announcementParagraph2), {
+                    (0, b._)((0, v._)({}, N.announcementParagraph2), {
                       values: {
                         privacyPolicyLink: (0, a.jsx)("a", {
                           href: "https://openai.com/policies/privacy-policy",
                           target: "_blank",
                           className: "text-gray-500 underline",
                           rel: "noreferrer",
-                          children: e.formatMessage(P.privacyPolicyLink),
+                          children: e.formatMessage(N.privacyPolicyLink),
                         }),
                         helpCenterArticleLink: (0, a.jsx)("a", {
                           href: "https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed",
                           target: "_blank",
                           className: "text-gray-500 underline",
                           rel: "noreferrer",
-                          children: e.formatMessage(P.helpCenterArticleLink),
+                          children: e.formatMessage(N.helpCenterArticleLink),
                         }),
                       },
                     })
@@ -208,12 +207,21 @@
             }),
           });
         },
-        D = t(5759),
-        R = t(4337),
-        A = t(34303),
-        F = t(66958);
+        S = t(5759),
+        D = t(4337),
+        R = t(34303),
+        A = t(66958);
+      function F() {
+        var e = (0, D._)(["flex gap-4 mt-6"]);
+        return (
+          (F = function () {
+            return e;
+          }),
+          e
+        );
+      }
       function B() {
-        var e = (0, R._)(["flex gap-4 mt-6"]);
+        var e = (0, D._)(["prose dark:prose-invert"]);
         return (
           (B = function () {
             return e;
@@ -222,7 +230,7 @@
         );
       }
       function E() {
-        var e = (0, R._)(["prose dark:prose-invert"]);
+        var e = (0, D._)(["mb-4"]);
         return (
           (E = function () {
             return e;
@@ -230,22 +238,13 @@
           e
         );
       }
-      function L() {
-        var e = (0, R._)(["mb-4"]);
-        return (
-          (L = function () {
-            return e;
-          }),
-          e
-        );
-      }
-      function O(e) {
+      function L(e) {
         var n = e.pages,
           t = e.onSubmit,
           i = (0, r._)((0, s.useState)(0), 2),
           o = i[0],
           l = i[1];
-        return (0, a.jsx)(z, {
+        return (0, a.jsx)(q, {
           children: n.map(function (e, n) {
             return o === n
               ? (0, a.jsx)(e, { onChangePage: l, onSubmit: t })
@@ -253,21 +252,21 @@
           }),
         });
       }
-      function U(e) {
+      function O(e) {
         var n = e.onBack,
           t = e.onNext,
           r = e.onSubmit;
-        return (0, a.jsxs)(q, {
+        return (0, a.jsxs)(U, {
           children: [
             n &&
-              (0, a.jsx)(F.z, {
+              (0, a.jsx)(A.z, {
                 as: "button",
                 color: "neutral",
                 onClick: n,
                 children: "Back",
               }),
             t &&
-              (0, a.jsx)(F.z, {
+              (0, a.jsx)(A.z, {
                 as: "button",
                 onClick: t,
                 color: "neutral",
@@ -275,7 +274,7 @@
                 children: "Next",
               }),
             r &&
-              (0, a.jsx)(F.z, {
+              (0, a.jsx)(A.z, {
                 as: "button",
                 onClick: r,
                 color: "primary",
@@ -285,16 +284,16 @@
           ],
         });
       }
-      var q = A.Z.div(B()),
-        z = A.Z.div(E()),
-        Q = A.Z.h4(L()),
-        W = "oai/apps/hasSeenOnboarding",
-        H = "chat",
-        $ = function (e) {
+      var U = R.Z.div(F()),
+        q = R.Z.div(B()),
+        z = R.Z.h4(E()),
+        Q = "oai/apps/hasSeenOnboarding",
+        W = "chat",
+        H = function (e) {
           var n = (0, s.useCallback)(
               function () {
                 c.m.setItem(
-                  "".concat(W, "/").concat(e),
+                  "".concat(Q, "/").concat(e),
                   new Date().toLocaleDateString("en-CA", {
                     year: "numeric",
                     month: "2-digit",
@@ -309,7 +308,7 @@
             i = t[1];
           (0, s.useEffect)(
             function () {
-              var n = c.m.getItem("".concat(W, "/").concat(e));
+              var n = c.m.getItem("".concat(Q, "/").concat(e));
               i(!!n && n);
             },
             [e]
@@ -327,37 +326,37 @@
             [o, n]
           );
         };
-      function G(e) {
+      function $(e) {
         var n = e.onClose,
-          t = $(H).setHasSeenOnboarding,
+          t = H(W).setHasSeenOnboarding,
           r = (0, s.useCallback)(
             function () {
               n(!0), t();
             },
             [n, t]
           );
-        return (0, a.jsx)(O, { pages: [V, J, Y], onSubmit: r });
+        return (0, a.jsx)(L, { pages: [G, V, J], onSubmit: r });
       }
-      var V = function (e) {
+      var G = function (e) {
           var n = e.onChangePage;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(Q, {
-                children: (0, a.jsx)(k.Z, (0, v._)({}, K.page0Subtitle)),
+              (0, a.jsx)(z, {
+                children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page0Subtitle)),
               }),
-              (0, a.jsxs)(D.I, {
+              (0, a.jsxs)(S.I, {
                 children: [
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDD2C",
-                    children: (0, a.jsx)(k.Z, (0, v._)({}, K.page0Disclaimer1)),
+                    children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page0Disclaimer1)),
                   }),
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDEA8",
-                    children: (0, a.jsx)(k.Z, (0, v._)({}, K.page0Disclaimer2)),
+                    children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page0Disclaimer2)),
                   }),
                 ],
               }),
-              (0, a.jsx)(U, {
+              (0, a.jsx)(O, {
                 onNext: function () {
                   return n(1);
                 },
@@ -365,26 +364,26 @@
             ],
           });
         },
-        J = function (e) {
+        V = function (e) {
           var n = e.onChangePage;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(Q, {
-                children: (0, a.jsx)(k.Z, (0, v._)({}, K.page1Subtitle)),
+              (0, a.jsx)(z, {
+                children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page1Subtitle)),
               }),
-              (0, a.jsxs)(D.I, {
+              (0, a.jsxs)(S.I, {
                 children: [
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83E\uDDBE",
-                    children: (0, a.jsx)(k.Z, (0, v._)({}, K.page1Disclaimer1)),
+                    children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page1Disclaimer1)),
                   }),
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDD10",
-                    children: (0, a.jsx)(k.Z, (0, v._)({}, K.page1Disclaimer2)),
+                    children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page1Disclaimer2)),
                   }),
                 ],
               }),
-              (0, a.jsx)(U, {
+              (0, a.jsx)(O, {
                 onBack: function () {
                   return n(0);
                 },
@@ -395,26 +394,26 @@
             ],
           });
         },
-        Y = function (e) {
+        J = function (e) {
           var n = e.onChangePage,
             t = e.onSubmit,
             r = (0, s.useRef)(null);
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(Q, {
-                children: (0, a.jsx)(k.Z, (0, v._)({}, K.page2Subtitle)),
+              (0, a.jsx)(z, {
+                children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page2Subtitle)),
               }),
-              (0, a.jsxs)(D.I, {
+              (0, a.jsxs)(S.I, {
                 children: [
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDC4D",
-                    children: (0, a.jsx)(k.Z, (0, v._)({}, K.page2Disclaimer1)),
+                    children: (0, a.jsx)(k.Z, (0, v._)({}, Y.page2Disclaimer1)),
                   }),
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDCAC",
                     children: (0, a.jsx)(
                       k.Z,
-                      (0, b._)((0, v._)({}, K.page2Disclaimer2), {
+                      (0, b._)((0, v._)({}, Y.page2Disclaimer2), {
                         values: {
                           link: function (e) {
                             return (0, a.jsx)("a", {
@@ -430,7 +429,7 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(U, {
+              (0, a.jsx)(O, {
                 onBack: function () {
                   return n(1);
                 },
@@ -441,7 +440,7 @@
             ],
           });
         },
-        K = (0, y.vU)({
+        Y = (0, y.vU)({
           keepInMind: {
             id: "onboarding.keepInMind",
             defaultMessage:
@@ -500,51 +499,51 @@
             description: "Disclaimer 2 for Page 2, with link to Discord",
           },
         }),
-        X = t(32165),
-        ee = "workspace";
-      function en(e) {
+        K = t(32165),
+        X = "workspace";
+      function ee(e) {
         var n = e.onClose,
-          t = $(ee).setHasSeenOnboarding,
+          t = H(X).setHasSeenOnboarding,
           r = (0, s.useCallback)(
             function () {
               n(!0), t();
             },
             [n, t]
           );
-        return (0, a.jsx)(O, { pages: [et, er], onSubmit: r });
+        return (0, a.jsx)(L, { pages: [en, et], onSubmit: r });
       }
-      var et = function (e) {
+      var en = function (e) {
           var n = e.onChangePage,
-            t = (0, X.Ix)();
+            t = (0, K.Ix)();
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(Q, {
+              (0, a.jsx)(z, {
                 children: (0, a.jsx)(
                   k.Z,
-                  (0, b._)((0, v._)({}, ea.page0Subtitle), {
+                  (0, b._)((0, v._)({}, er.page0Subtitle), {
                     values: { workspaceName: t },
                   })
                 ),
               }),
-              (0, a.jsxs)(D.I, {
+              (0, a.jsxs)(S.I, {
                 children: [
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83C\uDFE2",
                     children: (0, a.jsx)(
                       k.Z,
-                      (0, v._)({}, ea.page0Disclaimer1)
+                      (0, v._)({}, er.page0Disclaimer1)
                     ),
                   }),
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDEA8",
                     children: (0, a.jsx)(
                       k.Z,
-                      (0, v._)({}, ea.page0Disclaimer2)
+                      (0, v._)({}, er.page0Disclaimer2)
                     ),
                   }),
                 ],
               }),
-              (0, a.jsx)(U, {
+              (0, a.jsx)(O, {
                 onNext: function () {
                   return n(1);
                 },
@@ -552,29 +551,29 @@
             ],
           });
         },
-        er = function (e) {
+        et = function (e) {
           var n = e.onChangePage,
             t = e.onSubmit,
             r = (0, s.useRef)(null);
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(Q, {
-                children: (0, a.jsx)(k.Z, (0, v._)({}, ea.page1Subtitle)),
+              (0, a.jsx)(z, {
+                children: (0, a.jsx)(k.Z, (0, v._)({}, er.page1Subtitle)),
               }),
-              (0, a.jsxs)(D.I, {
+              (0, a.jsxs)(S.I, {
                 children: [
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDED1",
                     children: (0, a.jsx)(
                       k.Z,
-                      (0, v._)({}, ea.page1Disclaimer1)
+                      (0, v._)({}, er.page1Disclaimer1)
                     ),
                   }),
-                  (0, a.jsx)(D.Z, {
+                  (0, a.jsx)(S.Z, {
                     icon: "\uD83D\uDD12",
                     children: (0, a.jsx)(
                       k.Z,
-                      (0, b._)((0, v._)({}, ea.page1Disclaimer2), {
+                      (0, b._)((0, v._)({}, er.page1Disclaimer2), {
                         values: {
                           link: function (e) {
                             return (0, a.jsx)("a", {
@@ -590,7 +589,7 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(U, {
+              (0, a.jsx)(O, {
                 onBack: function () {
                   return n(0);
                 },
@@ -601,7 +600,7 @@
             ],
           });
         },
-        ea = (0, y.vU)({
+        er = (0, y.vU)({
           page0Subtitle: {
             id: "WorkspaceOnboarding.page0Subtitle",
             defaultMessage: "Welcome to the {workspaceName} workspace",
@@ -643,7 +642,7 @@
               "Second disclaimer for the second page of the business onboarding flow",
           },
         }),
-        ei = function (e) {
+        ea = function (e) {
           var n = e.onClose;
           return (0, a.jsx)(x.Z, {
             isOpen: !0,
@@ -651,10 +650,10 @@
             type: "success",
             primaryButton: void 0,
             title: "ChatGPT",
-            children: (0, a.jsx)(G, { onClose: n }),
+            children: (0, a.jsx)($, { onClose: n }),
           });
         },
-        es = function (e) {
+        ei = function (e) {
           var n = e.onClose;
           return (0, a.jsx)(x.Z, {
             isOpen: !0,
@@ -664,91 +663,84 @@
             title: (0, a.jsxs)("span", {
               children: ["ChatGPT ", (0, a.jsx)(p.ZP, {})],
             }),
-            children: (0, a.jsx)(en, { onClose: n }),
+            children: (0, a.jsx)(ee, { onClose: n }),
           });
         };
-      function eo(e) {
+      function es(e) {
         var n,
           t,
-          i,
-          o = e.userCountry,
-          l = (0, r._)((0, s.useState)(0), 2),
-          u = l[0],
-          d = l[1],
-          m = $(H).getHasSeenOnboardingDate,
-          f = $(ee).getHasSeenOnboardingDate,
-          g = (0, h.ec)(h.F_.isBusinessWorkspace),
-          p =
-            ((t = (n = (0, h.hz)()).has(M.Vn)),
-            (i = !!c.m.getItem(T)),
-            0 === n.size
-              ? "loading"
-              : "IT" !== o || i
-              ? "hide"
-              : t
-              ? "show"
-              : "hide"),
-          x = (0, s.useMemo)(
+          i = e.userCountry,
+          o = (0, r._)((0, s.useState)(0), 2),
+          l = o[0],
+          u = o[1],
+          d = H(W).getHasSeenOnboardingDate,
+          m = H(X).getHasSeenOnboardingDate,
+          f = (0, h.ec)(h.F_.isBusinessWorkspace),
+          g =
+            ((n = (0, h.hz)()),
+            (t = !!c.m.getItem(Z)),
+            0 === n.size ? "loading" : "IT" !== i || t ? "hide" : "show"),
+          p = (0, s.useMemo)(
             function () {
               return [
                 {
-                  Modal: I,
+                  Modal: T,
                   getModalState: function () {
-                    return p;
+                    return g;
+                  },
+                },
+                {
+                  Modal: ea,
+                  getModalState: function () {
+                    if (f) return "hide";
+                    var e = d();
+                    return null === e ? "loading" : !1 === e ? "show" : "hide";
                   },
                 },
                 {
                   Modal: ei,
                   getModalState: function () {
-                    if (g) return "hide";
+                    if (!f) return "hide";
                     var e = m();
-                    return null === e ? "loading" : !1 === e ? "show" : "hide";
-                  },
-                },
-                {
-                  Modal: es,
-                  getModalState: function () {
-                    if (!g) return "hide";
-                    var e = f();
                     return null === e ? "loading" : !1 === e ? "show" : "hide";
                   },
                 },
               ];
             },
-            [m, f, g, p]
+            [d, m, f, g]
           );
         (0, s.useEffect)(
           function () {
-            x[u] &&
-              "hide" === x[u].getModalState() &&
-              d(
-                x.findIndex(function (e) {
+            p[l] &&
+              "hide" === p[l].getModalState() &&
+              u(
+                p.findIndex(function (e) {
                   return "hide" !== e.getModalState();
                 })
               );
           },
-          [u, x]
+          [l, p]
         );
-        var v = x[u];
-        if (!v) return null;
-        var b = v.getModalState();
-        if ("loading" === b) return null;
-        "hide" === b &&
-          d(function (e) {
+        var x = p[l];
+        if (!x) return null;
+        var v = x.getModalState();
+        if ("loading" === v) return null;
+        "hide" === v &&
+          u(function (e) {
             return e + 1;
           });
-        var y = x[u].Modal;
-        return (0, a.jsx)(y, {
+        var b = p[l].Modal;
+        return (0, a.jsx)(b, {
           onClose: function () {
-            d(function (e) {
+            u(function (e) {
               return e + 1;
             });
           },
         });
       }
-      var el = t(37386),
-        eu = t(99453);
-      function ec(e) {
+      var eo = t(37386),
+        el = t(99453);
+      function eu(e) {
         var n = e.urlThreadId,
           t = e.clientThreadId,
           g = e.isUserInCanPayGroup,
@@ -822,8 +814,8 @@
           children: (0, a.jsxs)(u.gB.Provider, {
             value: !1,
             children: [
-              (0, a.jsx)(eo, { userCountry: v }, C),
-              (0, a.jsx)(el.Z, { clientThreadId: y, setClientThreadId: j }),
+              (0, a.jsx)(es, { userCountry: v }, C),
+              (0, a.jsx)(eo.Z, { clientThreadId: y, setClientThreadId: j }),
               (0, a.jsxs)(i.zt, {
                 children: [
                   (0, a.jsxs)(i.fC, {
@@ -836,7 +828,7 @@
                           "text-slate12 mb-[5px] text-[15px] font-medium [grid-area:_title]",
                         children: [
                           "We've temporarily disabled the Browse with Bing ",
-                          (0, eu.V)("beta"),
+                          (0, el.V)("beta"),
                           " feature",
                         ],
                       }),
@@ -859,7 +851,7 @@
                       (0, a.jsx)(i.aU, {
                         altText: "Dismiss notification",
                         asChild: !0,
-                        children: (0, a.jsx)(F.z, {
+                        children: (0, a.jsx)(A.z, {
                           color: "neutral",
                           size: "small",
                           onClick: function () {

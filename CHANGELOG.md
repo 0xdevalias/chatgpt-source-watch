@@ -4,6 +4,48 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-05Z (`jNdBFo8LxuQBj6E3aaAOe`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - There didn't seem to be much changed in this build that I noticed.
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Removed
+    - ```js
+      tt = "show_existing_user_age_confirmation_modal",
+      ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/709.js`
+
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/_app-92de2a78110bfef9.js
+https://chat.openai.com/_next/static/chunks/webpack-42949d6eec31655f.js
+https://chat.openai.com/_next/static/jNdBFo8LxuQBj6E3aaAOe/_buildManifest.js
+https://chat.openai.com/_next/static/jNdBFo8LxuQBj6E3aaAOe/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/709-6c1ff4a80576f13c.js
+```
+
+### From `_next/static/chunks/webpack-42949d6eec31655f.js`
+
+N/A
+
 ## 2023-07-04Z (`f9C5QIWDB4PeBMNfQPho6`)
 
 ### Notes
