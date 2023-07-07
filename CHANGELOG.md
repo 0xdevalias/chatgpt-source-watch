@@ -4,6 +4,85 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-07Z (`DWP_u3zVBg1e7X-f6lt0k`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Strings for `navigation` had their prefix changed to `NavigationContent`
+- `unpacked/_next/static/chunks/496.js`
+  - ```diff
+      upgradeToPlus: {
+    -   id: "navigation.upgradeToPlus",
+    +   id: "NavigationContent.upgradeToPlus",
+    ```
+  - ```diff
+      renewPlus: {
+    -   id: "navigation.renewPlus",
+    +   id: "NavigationContent.renewPlus",
+    ```
+  - ```diff
+      closeSidebar: {
+    -   id: "navigation.closeSidebar",
+    +   id: "NavigationContent.closeSidebar",
+    ```
+  - ```diff
+      chatHistoryLabel: {
+    -   id: "navigation.chatHistoryLabel",
+    +   id: "NavigationContent.chatHistoryLabel",
+    ```
+  - ```diff
+      chatHistoryOff: {
+    -   id: "navigation.chatHistoryOff",
+    +   id: "NavigationContent.chatHistoryOff",
+    ```
+  - ```diff
+      chatHistoryOffDescription: {
+    -   id: "navigation.chatHistoryOffDescription",
+    +   id: "NavigationContent.chatHistoryOffDescription",
+    ```
+  - ```diff
+      learnMore: {
+    -   id: "navigation.learnMore",
+    +   id: "NavigationContent.learnMore",
+    ```
+  - ```diff
+      enableChatHistory: {
+    -   id: "navigation.enableChatHistory",
+    +   id: "NavigationContent.enableChatHistory",
+    ```
+  - ```diff
+      newLabel: {
+    -   id: "navigation.newLabel",
+    +   id: "NavigationContent.newLabel",
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-e25244fd42246575.js
+https://chat.openai.com/_next/static/chunks/pages/_app-d3c65a981101e89b.js
+https://chat.openai.com/_next/static/chunks/webpack-6ff8840c63652a00.js
+https://chat.openai.com/_next/static/DWP_u3zVBg1e7X-f6lt0k/_buildManifest.js
+https://chat.openai.com/_next/static/DWP_u3zVBg1e7X-f6lt0k/_ssgManifest.js
+```
+
+### From Build Manifest
+
+N/A
+
+### From `_next/static/chunks/webpack-6ff8840c63652a00.js`
+
+N/A
+
 ## 2023-07-07Z
 
 - ChatGPT Code Interpreter being generally released to all ChatGPT Plus users over the next week: https://twitter.com/OpenAI/status/1677015057316872192

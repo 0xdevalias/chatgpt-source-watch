@@ -4272,32 +4272,32 @@
         ),
         tw = (0, y.vU)({
           upgradeToPlus: {
-            id: "navigation.upgradeToPlus",
+            id: "NavigationContent.upgradeToPlus",
             defaultMessage: "Upgrade to Plus",
             description: "Upgrade to Plus menu item",
           },
           renewPlus: {
-            id: "navigation.renewPlus",
+            id: "NavigationContent.renewPlus",
             defaultMessage: "Renew Plus",
             description: "Renew Plus menu item",
           },
           closeSidebar: {
-            id: "navigation.closeSidebar",
+            id: "NavigationContent.closeSidebar",
             defaultMessage: "Hide sidebar",
             description: "Hide sidebar button label",
           },
           chatHistoryLabel: {
-            id: "navigation.chatHistoryLabel",
+            id: "NavigationContent.chatHistoryLabel",
             defaultMessage: "Chat history",
             description: "Chat history label heading",
           },
           chatHistoryOff: {
-            id: "navigation.chatHistoryOff",
+            id: "NavigationContent.chatHistoryOff",
             defaultMessage: "Chat History is off for this browser.",
             description: "Text indicating that chat history is turned off",
           },
           chatHistoryOffDescription: {
-            id: "navigation.chatHistoryOffDescription",
+            id: "NavigationContent.chatHistoryOffDescription",
             defaultMessage:
               "When history is turned off, new chats on this browser won't appear in your history on any of your devices, be used to train our models, or stored for longer than 30 days. <b>This setting does not sync across browsers or devices.</b> {learnMore}",
             description: "Description for chat history being off",
@@ -4309,17 +4309,17 @@
             description: "Description for chat history being off",
           },
           learnMore: {
-            id: "navigation.learnMore",
+            id: "NavigationContent.learnMore",
             defaultMessage: "Learn more",
             description: "Learn more link text",
           },
           enableChatHistory: {
-            id: "navigation.enableChatHistory",
+            id: "NavigationContent.enableChatHistory",
             defaultMessage: "Enable chat history",
             description: "Enable chat history button label",
           },
           newLabel: {
-            id: "navigation.newLabel",
+            id: "NavigationContent.newLabel",
             defaultMessage: "NEW",
             description: "Label for new features or items",
           },
