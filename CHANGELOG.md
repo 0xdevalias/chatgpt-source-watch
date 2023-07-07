@@ -96,7 +96,6 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - Removed `model_preview` feature flag
-  - **Twitter thread:** TODO
 - `unpacked/_next/static/chunks/496.js`
   - ```diff
     - if (I.has("model_preview"))
@@ -1274,19 +1273,11 @@ https://chat.openai.com/_next/static/HIPozMBuTaTl2Vucglu5e/_ssgManifest.js
 
 ### From Build Manifest
 
-#### Archived
+N/A
 
-```
-TODO (anything that was captured after processing the _buildManifest.js to find all files regardless of whether we had loaded them)
-```
+### From `_next/static/chunks/webpack-2a2d7d1690339bba.js`
 
-### From `_next/static/chunks/webpack-TODOHASH.js`
-
-#### Archived
-
-```
-TODO (or remove this whole section if no relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)
-```
+N/A
 
 ## 2023-06-29Z (`Qr8FFr6F9GQHixKSXgAke`)
 
@@ -2534,7 +2525,6 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - A whole bunch of changes related to 'user context' (`userContextModal`) and 'embedding files' (`filesModal`)
-  - **Twitter thread:** TODO
 - `unpacked/_next/static/chunks/pages/_app.js`
   - ```js
     new tv.Q0(tt, "fetch_error_5XX", null != te ? te : {}))
