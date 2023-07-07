@@ -4,6 +4,75 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-05Z (`R7pUM1N0nPGQARjIff8eg`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - TODO
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - Added new chunk `984`
+- `unpacked/_next/static/chunks/webpack.js`
+  - Added new chunks `271` / `984`
+- `unpacked/_next/static/chunks/271.js`
+  - TODO: New chunk, maybe with code moved from elsewhere?
+    - `19271: function (e, t, r) {`
+- `unpacked/_next/static/chunks/496.js`
+  - TODO: from a quick skim, nothing overly major seems like it changed, except one block of code that seems to have just been moved around
+- `unpacked/_next/static/chunks/653.js`
+  - TODO: a big chunk of code seems to have been removed from here.. was that moved into chunk `271` / `984`?
+    - `32093: function (e, t) {` was also removed from here
+- `unpacked/_next/static/chunks/709.js`
+  - TODO: masssive chunk to look through the changes for
+    - Seem to be at least some useful changes like `BrowsingPlugin` being renamed `RetrievalBrowsing`, etc
+- `unpacked/_next/static/chunks/984.js`
+  - TODO: Newly added chunk, maybe with code moved from other areas
+    - `50683: function (t, e) {`
+    - `14984: function (t, e, r) {`
+    - `32093: function (t, e) {`
+- The following files had nothing much of note:
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/chunks/pages/admin.js`
+  - `unpacked/_next/static/chunks/pages/c/[chatId].js`
+  - `unpacked/_next/static/chunks/pages/index.js`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-8171a3e74326d4cd.js
+https://chat.openai.com/_next/static/chunks/653-4cb05ee80f77e17d.js
+https://chat.openai.com/_next/static/chunks/709-e920cff84918c112.js
+https://chat.openai.com/_next/static/chunks/984-1278472924e49180.js
+https://chat.openai.com/_next/static/chunks/pages/_app-0731dc326f248181.js
+https://chat.openai.com/_next/static/chunks/pages/index-5b58f27ddbccf6fb.js
+https://chat.openai.com/_next/static/chunks/webpack-2e7df2ef946b2629.js
+https://chat.openai.com/_next/static/R7pUM1N0nPGQARjIff8eg/_buildManifest.js
+https://chat.openai.com/_next/static/R7pUM1N0nPGQARjIff8eg/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/admin-c735765aaacbd59c.js
+https://chat.openai.com/_next/static/chunks/pages/c/[chatId]-f5225e7483c086c9.js
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-4b5c3fb3ff117c21.js
+```
+
+### From `_next/static/chunks/webpack-2e7df2ef946b2629.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/271.f8fe486a0f5b221c.js
+```
+
 ## 2023-07-05Z (`jNdBFo8LxuQBj6E3aaAOe`)
 
 ### Notes

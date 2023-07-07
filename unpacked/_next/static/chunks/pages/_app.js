@@ -33648,22 +33648,35 @@ Error:`,
                 });
               })();
             }),
-            (U.uploadFileToAzureStorage = function (U, B) {
+            (U.uploadFileToAzureStorage = function (U, B, V) {
               return (0, Y._)(function () {
-                var G;
                 return (0, Q.Jh)(this, function (Y) {
                   switch (Y.label) {
                     case 0:
-                      return (
-                        (G = new Headers()).append(
-                          "x-ms-blob-type",
-                          "BlockBlob"
+                      return [
+                        4,
+                        Promise.all([G.e(984), G.e(271)]).then(
+                          G.bind(G, 19271)
                         ),
-                        G.append("x-ms-version", "2020-04-08"),
-                        G.append("Content-Type", U.type),
-                        [4, fetch(B, { method: "PUT", headers: G, body: U })]
-                      );
+                      ];
                     case 1:
+                      return [
+                        4,
+                        Y.sent().default.request({
+                          method: "put",
+                          url: B,
+                          data: U,
+                          headers: {
+                            "x-ms-blob-type": "BlockBlob",
+                            "x-ms-version": "2020-04-08",
+                            "Content-Type": U.type,
+                          },
+                          onUploadProgress: function (U) {
+                            void 0 !== U.progress && V && V(U.progress);
+                          },
+                        }),
+                      ];
+                    case 2:
                       return [2, Y.sent()];
                   }
                 });
@@ -45439,7 +45452,7 @@ Error:`,
         V = G(44675),
         Z = window;
       (Z.__sentryRewritesTunnelPath__ = void 0),
-        (Z.SENTRY_RELEASE = { id: "77c69cee9a48c07c429826c0576452f11dbf76fd" }),
+        (Z.SENTRY_RELEASE = { id: "e637d10604ee9fd995eac8e8db29d261cb4c2262" }),
         (Z.__rewriteFramesAssetPrefixPath__ = "");
       var J = V.env.SENTRY_DSN || V.env.NEXT_PUBLIC_SENTRY_DSN;
       Y.S1({
