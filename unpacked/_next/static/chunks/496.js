@@ -7927,8 +7927,7 @@
           }),
           P = u && Z,
           F = c === f.Dd,
-          I = (0, m.hz)(),
-          D =
+          I =
             ((n = (t = {
               text: C.map(function (e) {
                 return "string" == typeof e ? e : "";
@@ -7944,7 +7943,7 @@
               },
               [r, n]
             )),
-          E = (0, d.useMemo)(
+          D = (0, d.useMemo)(
             function () {
               switch (c) {
                 case f.Dd:
@@ -7953,14 +7952,12 @@
                     children: (0, s.jsx)(eS, {}),
                   });
                 case ec.uU:
-                  if (I.has("model_preview"))
-                    return (0, s.jsx)(eN, {
-                      id: k,
-                      onRequestMoreCompletions: T,
-                      flag: g,
-                      clientThreadId: N,
-                    });
-                  return (0, s.jsx)(eP, { $flag: g, children: u });
+                  return (0, s.jsx)(eN, {
+                    id: k,
+                    onRequestMoreCompletions: T,
+                    flag: g,
+                    clientThreadId: N,
+                  });
                 case v.wp:
                   return (0, s.jsx)(eP, {
                     $flag: g,
@@ -7971,17 +7968,17 @@
                   return (0, s.jsx)(eP, { $flag: g, children: u });
               }
             },
-            [u, c, I, g, k, T, N]
+            [u, c, g, k, T, N]
           ),
-          L = (0, m.hz)().has(h.FZ),
-          U = a && a.length > 0 && !M;
+          E = (0, m.hz)().has(h.FZ),
+          L = a && a.length > 0 && !M;
         return (0, s.jsxs)("div", {
           className: (0, l.Z)(
             o,
             "flex items-start overflow-x-auto whitespace-pre-wrap break-words",
             "danger" === g ? "flex-row gap-2 text-red-500" : "flex-col gap-4",
             "warning" === g && "text-orange-500",
-            L && "text-base"
+            E && "text-base"
           ),
           children: [
             C.map(function (e, t) {
@@ -8012,14 +8009,14 @@
                     )
                 : (0, s.jsx)(ey, { asset: e }, t);
             }),
-            U &&
+            L &&
               (0, s.jsx)(eZ, {
                 children: a.map(function (e) {
                   return (0, s.jsx)(y.Z, { file: e.name }, e.url);
                 }),
               }),
-            M && S && D.length > 0 && (0, s.jsx)(ed, { urls: D }),
-            g && E,
+            M && S && I.length > 0 && (0, s.jsx)(ed, { urls: I }),
+            g && D,
           ],
         });
       }
@@ -10026,7 +10023,7 @@
         d = { textarea: "", "model-switcher": "" };
       function c() {
         var e = (0, i.kP)().session,
-          t = (0, s.hz)(),
+          t = (0, s.WY)(),
           n = (0, u.Y8)(function (e) {
             return e.isoDate;
           }),
@@ -10036,11 +10033,7 @@
             function () {
               return o.ZP.getModelMessageCap();
             },
-            {
-              enabled:
-                (null == e ? void 0 : e.accessToken) != null &&
-                t.has("model_preview"),
-            }
+            { enabled: (null == e ? void 0 : e.accessToken) != null && t }
           ).data;
         return (0, a.useMemo)(
           function () {

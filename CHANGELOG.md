@@ -4,6 +4,54 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-07Z (`vCNVkHIoC4nD6VRPE34vP`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Removed `model_preview` feature flag
+  - **Twitter thread:** TODO
+- `unpacked/_next/static/chunks/496.js`
+  - ```diff
+    - if (I.has("model_preview"))
+    ```
+  - ```diff
+    - {
+    -   enabled:
+    -     (null == e ? void 0 : e.accessToken) != null &&
+    -     t.has("model_preview"),
+    - }
+    + { enabled: (null == e ? void 0 : e.accessToken) != null && t }
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+  - `unpacked/_next/static/chunks/709.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-7e3343e030973b2c.js
+https://chat.openai.com/_next/static/chunks/709-689ee6f83ac15203.js
+https://chat.openai.com/_next/static/chunks/pages/_app-01eb398e74f33071.js
+https://chat.openai.com/_next/static/chunks/webpack-c176c4f4c76960d2.js
+https://chat.openai.com/_next/static/vCNVkHIoC4nD6VRPE34vP/_buildManifest.js
+https://chat.openai.com/_next/static/vCNVkHIoC4nD6VRPE34vP/_ssgManifest.js
+```
+
+### From Build Manifest
+
+N/A
+
+### From `_next/static/chunks/webpack-c176c4f4c76960d2.js`
+
+N/A
+
 ## 2023-07-07Z (`WZIQpxJRN2JuwynD95fGL`)
 
 ### Notes
