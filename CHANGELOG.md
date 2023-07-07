@@ -4,6 +4,208 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-07Z (`WZIQpxJRN2JuwynD95fGL`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Changes to SVG's
+    - Added 'information I in circle' (dark 'i' on black unfilled circle)
+    - Added 'information I in circlular arrow looping backwards' (dark 'i' on black unfilled circular arrow)
+    - Removed 'information I in circle' (light 'i' on black filled circle)
+  - A number of changes to strings related to upcoming/unreleased 'User Context' / 'Chat Preferences' feature
+    - Including a help article about it: https://help.openai.com/en/articles/8096356-chat-preference-for-chatgpt
+  - Some tweaks to `filesModal` related to upcoming/unreleased 'file downloads' feature
+  - **Reddit thread:** https://www.reddit.com/r/ChatGPT/comments/14srmnf/help_article_for_upcomingunreleased_chatgpt/
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added an SVG of an 'information I in circle' (dark 'i' on black unfilled circle)
+  - Added an SVG of an 'information I in circlular arrow looping backwards' (dark 'i' on black unfilled circular arrow)
+- `unpacked/_next/static/chunks/68a27ff6.js`
+  - Removed an SVG of an 'information I in circle' (light 'i' on black filled circle)
+- `unpacked/_next/static/chunks/496.js`
+  - ```js
+    chatHistoryOffWithChatPrefsDescription: {
+      id: "navigation.chatHistoryOffWithChatPrefsDescription",
+      defaultMessage:
+        "When history is turned off, new chats on this browser won't appear in your history on any of your devices, be used to train our models, or stored for longer than 30 days. Your chat preferences will also be disabled. <b>This setting does not sync across browsers or devices.</b> {learnMore}",
+      description: "Description for chat history being off",
+    },
+    ```
+  - ```diff
+      title: {
+        id: "UserContextFirstTimeModal.title",
+    -   defaultMessage: "Tell ChatGPT how to improve its responses for you",
+    +   defaultMessage: "Introducing Chat preferences",
+        description: "Title of the UserContextFirstTimeModal",
+      },
+      body1: {
+        id: "UserContextFirstTimeModal.body1",
+       defaultMessage:
+    -     "Share anything you’d like for ChatGPT to consider in forming its responses.",
+    +     "Chat preferences let you share anything you'd like ChatGPT to consider in its response.",
+        description:
+          "Body of the first paragraph UserContextFirstTimeModal",
+      },
+      body2: {
+        id: "UserContextFirstTimeModal.body2",
+        defaultMessage:
+    -     "Your instructions will be added to the conversations you start going forward, and you can edit or delete it at any time.",
+    +     "Your instructions will be added to new conversations going forward, and you can edit or delete them at any time.",
+        description:
+          "Body of the second paragraph UserContextFirstTimeModal",
+      },
+      legal1: {
+        id: "UserContextFirstTimeModal.legal1",
+       defaultMessage:
+    -    "<strong>Important:</strong> This information will also be used to improve model performance – like teaching the model how to adapt its responses to your instructions without overdoing it.",
+    +     "<strong>Important:</strong> This information will also be used to improve model performance and shared with plugin developers – visit our <article>Help Center</article> to learn more.",
+        description:
+          "Legal text of the first paragraph UserContextFirstTimeModal",
+      },
+    - legal2: {
+    -   id: "UserContextFirstTimeModal.legal2",
+    -   defaultMessage:
+    -     "<article>Learn more</article> about how we use your data and how you can opt out.",
+    -   description:
+    -     "Legal text of the second paragraph UserContextFirstTimeModal",
+    - },
+    ```
+  - ```diff
+    - B = "https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq",
+    + R = "https://help.openai.com/en/articles/8096356-chat-preference-for-chatgpt",
+    ```
+    - https://help.openai.com/en/articles/8096356-chat-preference-for-chatgpt
+  - ```js
+    fileDownloadFailed: {
+      id: "filesModal.fileDownloadFailed",
+      defaultMessage: "File download failed. Please try again.",
+      description: "Error message when file download fails",
+    },
+    ```
+  - ```js
+    var r,
+        a,
+        i,
+        o = n.metadata.user_context_message_data,
+        s = o.about_user_message,
+        l = o.about_model_message;
+      return {
+        aboutUserMessage:
+          null !== (a = null == s ? void 0 : s.trim()) && void 0 !== a
+            ? a
+            : "",
+        aboutModelMessage:
+          null !== (i = null == l ? void 0 : l.trim()) && void 0 !== i
+            ? i
+            : "",
+        fallback: null,
+      };
+    }
+    return {
+      aboutUserMessage: null,
+      aboutModelMessage: null,
+      fallback: (0, _.RR)(n),
+    };
+    ```
+  - ```diff
+      label: (0, r.jsx)(g, {
+    -   pageInfo: n.metadata,
+    +   citationMetadata: i.metadata,
+        invalidReason: i.invalid_reason,
+    ```
+- `unpacked/_next/static/chunks/709.js`
+  - ```diff
+      return (0, v.jsx)(e5, {
+        isRetrieval: n,
+    -   pageInfo: d,
+    +   citationMetadata: d,
+        compact: r,
+      });
+    ```
+  - Added (or moved?) a relatively large chunk of code related to user/model messages; the below are some snippets from it
+    - ```js
+      var e = r.aboutUserMessage,
+          t = r.aboutModelMessage,
+          n = r.fallback;
+      ```
+    - ```js
+      (0, g._)({}, rz.sY.aboutYouHelpText)
+      ```
+    - ```js
+      (0, g._)({}, rz.sY.modelHelpText)
+      ```
+  - ```diff
+    - children: "Custom user info details",
+    + children: (0, v.jsx)(
+    +   w.Z,
+    +   (0, g._)({}, r$.chatPreferencesInfoLabel)
+    + ),
+    ```
+  - ```js
+     (0, g._)(
+        {},
+        r$.chatPreferencesMismatchWarning
+      )
+    ```
+  - ```js
+    r$ = (0, C.vU)({
+      chatPreferences: {
+        id: "ThreadSettings.chatPreferences",
+        defaultMessage: "Chat preferences: On",
+        description: "Label in the thread header for Chat preferences",
+      },
+      chatPreferencesInfoLabel: {
+        id: "ThreadSettings.chatPreferencesInfoLabel",
+        defaultMessage: "Chat preferences details",
+        description: "Label for the Chat preferences info icon",
+      },
+      chatPreferencesMismatchWarning: {
+        id: "ThreadSettings.chatPreferencesMismatchWarning",
+        defaultMessage:
+          "Note: your current chat preferences will not be reflected in this chat.",
+        description:
+          "Label in the popover for Chat preferences when there is a mismatch between the Chat preferences used to start the thread and the Chat preferences currently enabled",
+      },
+    });
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-0655c71d4780e053.js
+https://chat.openai.com/_next/static/chunks/68a27ff6-b1db347c50639918.js
+https://chat.openai.com/_next/static/chunks/709-21d2cd9ca7ec8f17.js
+https://chat.openai.com/_next/static/chunks/pages/_app-0bef444fae784f5a.js
+https://chat.openai.com/_next/static/chunks/webpack-4fb6c7d10053f3c0.js
+https://chat.openai.com/_next/static/WZIQpxJRN2JuwynD95fGL/_buildManifest.js
+https://chat.openai.com/_next/static/WZIQpxJRN2JuwynD95fGL/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/pages/share/[[...shareParams]]-14f558285dd72252.js
+```
+
+### From `_next/static/chunks/webpack-4fb6c7d10053f3c0.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/430c31dd7d59f6e0.css
+```
+
 ## 2023-07-05Z (`R7pUM1N0nPGQARjIff8eg`)
 
 ### Notes

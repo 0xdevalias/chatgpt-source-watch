@@ -1921,6 +1921,12 @@ textarea:focus {
 .mr-auto {
   margin-right: auto;
 }
+.mt-0 {
+  margin-top: 0;
+}
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -2131,11 +2137,11 @@ textarea:focus {
 .max-h-72 {
   max-height: 18rem;
 }
-.max-h-96 {
-  max-height: 24rem;
-}
 .max-h-\[28rem\] {
   max-height: 28rem;
+}
+.max-h-\[450px\] {
+  max-height: 450px;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -2298,6 +2304,9 @@ textarea:focus {
 }
 .max-w-\[220px\] {
   max-width: 220px;
+}
+.max-w-\[350px\] {
+  max-width: 350px;
 }
 .max-w-\[400px\] {
   max-width: 400px;
@@ -5257,6 +5266,12 @@ button[data-state="open"] .toggle-item-button-open {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
   }
+  .sm\:mb-0 {
+    margin-bottom: 0;
+  }
+  .sm\:mb-0\.5 {
+    margin-bottom: 0.125rem;
+  }
   .sm\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -5284,8 +5299,14 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:h-10 {
     height: 2.5rem;
   }
+  .sm\:h-5 {
+    height: 1.25rem;
+  }
   .sm\:w-10 {
     width: 2.5rem;
+  }
+  .sm\:w-5 {
+    width: 1.25rem;
   }
   .sm\:w-\[312px\] {
     width: 312px;
@@ -5304,6 +5325,9 @@ button[data-state="open"] .toggle-item-button-open {
   }
   .sm\:min-w-\[420px\] {
     min-width: 420px;
+  }
+  .sm\:max-w-lg {
+    max-width: 32rem;
   }
   .sm\:max-w-md {
     max-width: 28rem;
@@ -5498,6 +5522,9 @@ button[data-state="open"] .toggle-item-button-open {
   }
   .md\:max-w-none {
     max-width: none;
+  }
+  .md\:max-w-xl {
+    max-width: 36rem;
   }
   .md\:grid-rows-\[minmax\(20px\2c _1fr\)_auto_minmax\(20px\2c _1fr\)\] {
     grid-template-rows: minmax(20px, 1fr) auto minmax(20px, 1fr);
