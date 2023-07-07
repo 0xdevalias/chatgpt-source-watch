@@ -4,6 +4,11 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-07Z
+
+- ChatGPT Code Interpreter being generally released to all ChatGPT Plus users over the next week: https://twitter.com/OpenAI/status/1677015057316872192
+- GPT 4 API general availability: https://openai.com/blog/gpt-4-api-general-availability
+
 ## 2023-07-07Z (`vCNVkHIoC4nD6VRPE34vP`)
 
 ### Notes
