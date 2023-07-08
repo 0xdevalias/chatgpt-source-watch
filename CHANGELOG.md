@@ -4,6 +4,159 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-07Z (`CGRk_Om_aEGLXXSCuMmxw`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Removed some things related to `initialConversationTurns` / `conversationTurns` / `isPostMessage` / `includeChatPreferencesMismatchDisclaimer` / etc
+  - Added `isDesktopNavCollapsed` + `isThreadHeaderVisible` / `hideThreadHeader` / `showThreadHeader`
+- `unpacked/_next/static/chunks/496.js`
+  - It looks like conversation threads might be getting collapsible headers?
+  - ```diff
+    - initialConversationTurns: null,
+    ```
+  - ```diff
+    - (e.threads[r].conversationTurns = a),
+    -   null ==
+    -     e.threads[r].initialThreadData.initialConversationTurns &&
+    -     a.length > 1 &&
+    -     (e.threads[r].initialThreadData.initialConversationTurns =
+    -       a);
+    + e.threads[r].conversationTurns = a;
+    ```
+  - ```js
+    isThreadHeaderVisible: !0,
+    ```
+  - ```js
+    isDesktopNavCollapsed: function (e) {
+      return e.isDesktopNavCollapsed;
+    },
+    isThreadHeaderVisible: function (e) {
+      return e.isThreadHeaderVisible;
+    },
+    ```
+  - ```js
+    hideThreadHeader: function () {
+      c.setState({ isThreadHeaderVisible: !1 });
+    },
+    showThreadHeader: function () {
+      c.setState({ isThreadHeaderVisible: !0 });
+    },
+    ```
+- `unpacked/_next/static/chunks/709.js`
+  - ```diff
+    - l = c.WIDE;
+    + l = c.SQUARE;
+    ```
+  - ```diff
+    - if (B.role === eO.uU.Unknown || B.role === eO.uU.System)
+    -    return Z ? (0, v.jsx)(tY, { isPostMessage: !1 }) : null;
+    + if (A.role === eO.uU.Unknown || A.role === eO.uU.System) return null;
+    ```
+  - ```diff
+    - Z && (0, v.jsx)(tY, { isPostMessage: !0 }),
+    ```
+  - ```diff
+    - tY = function (e) {
+    -   var t = e.isPostMessage;
+    -   return (0, v.jsx)(t5, {
+    -     $isPostMessage: t,
+    -     children:
+    -       "Your info has changed since the start of this chat. Please start a new chat to see changes reflected",
+    -   });
+    - },
+    ```
+  - ```diff
+    - t5 = X.Z.div(tz(), function (e) {
+    -   return e.$isPostMessage ? "border-t" : "border-b";
+    - }),
+    ```
+  - ```js
+      l = (0, S.tN)(S.bM.isThreadHeaderVisible),
+      c = (0, x._)((0, j.useState)(!1), 2),
+      u = c[0],
+      d = c[1],
+      m = (0, j.useRef)(0),
+      f = (0, j.useRef)(0),
+      h = (0, x._)((0, eA.useAtTop)(), 1)[0],
+      p = (0, x._)((0, eA.useAnimating)(), 1)[0],
+      b = (0, j.useCallback)(function (e) {
+        var t = e.scrollTop,
+          n = f.current > m.current;
+        (f.current = m.current), (m.current = t);
+        var r = f.current > m.current;
+        r && S.vm.showThreadHeader(), n !== r && d(r);
+      }, []);
+    (0, j.useEffect)(function () {
+      S.vm.showThreadHeader();
+    }, []),
+      (0, eA.useObserveScrollPosition)(o ? void 0 : b);
+    ```
+  - ```js
+    (0, v.jsx)(V.E.header, {
+      animate: {
+        top: k ? 0 : "-50px",
+        transition: { duration: 0.2, ease: "easeIn" },
+      },
+      style: {
+        boxShadow: !h && k ? "0px 4px 24px 0px #0000000D" : void 0,
+      },
+      className: "sticky top-0 z-[9] w-full",
+      children: (0, v.jsxs)("div", {
+        className:
+    ```
+  - ```diff
+    - disableHoverableContent: !0,
+    ```
+  - ```diff
+    - Q = (0, _.UL)(c).initialConversationTurns,
+    ```
+  - ```diff
+    - includeChatPreferencesMismatchDisclaimer: null != Q && H && e === Q.length - 1 },
+    ```
+  - ```js
+    N.vm.hideThreadHeader(), tT(a);
+    ```
+  - ```diff
+    onChange: function (e) {
+    -  t_(e.target.value);
+    +  N.vm.hideThreadHeader(), tM(e.target.value);
+    },
+    ```
+- The following files had nothing much of note:
+  - `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - `unpacked/_next/static/chunks/webpack.js`
+  - `unpacked/_next/static/css/miniCssF.css`
+  - `unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/chunks/496-cb3e2b679437e27d.js
+https://chat.openai.com/_next/static/chunks/709-33cf407bcca55d8c.js
+https://chat.openai.com/_next/static/chunks/pages/_app-b2ac725b208f2161.js
+https://chat.openai.com/_next/static/chunks/webpack-fa117e61bb9c0646.js
+https://chat.openai.com/_next/static/CGRk_Om_aEGLXXSCuMmxw/_buildManifest.js
+https://chat.openai.com/_next/static/CGRk_Om_aEGLXXSCuMmxw/_ssgManifest.js
+```
+
+### From Build Manifest
+
+N/A
+
+### From `_next/static/chunks/webpack-fa117e61bb9c0646.js`
+
+#### Archived
+
+```
+https://chat.openai.com/_next/static/css/29b1eb48bbd0fef8.css
+```
+
 ## 2023-07-07Z (`DWP_u3zVBg1e7X-f6lt0k`)
 
 ### Notes

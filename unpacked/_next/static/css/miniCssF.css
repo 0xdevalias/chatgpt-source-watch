@@ -1671,9 +1671,6 @@ textarea:focus {
 .z-20 {
   z-index: 20;
 }
-.z-50 {
-  z-index: 50;
-}
 .z-\[14\] {
   z-index: 14;
 }
@@ -1691,6 +1688,9 @@ textarea:focus {
 }
 .z-\[60\] {
   z-index: 60;
+}
+.z-\[9\] {
+  z-index: 9;
 }
 .order-1 {
   order: 1;

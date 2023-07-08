@@ -11042,7 +11042,6 @@
                             : _.rootId) && void 0 !== f
                         ? f
                         : "root",
-                    initialConversationTurns: null,
                     threadId: j,
                     title: null !== (h = t.title) && void 0 !== h ? h : null,
                     lastModelUsed: (function e(t, n) {
@@ -11111,7 +11110,6 @@
             var t = {
               thread: m.Cv.createTree(),
               initialCurrentLeafId: "root",
-              initialConversationTurns: null,
               threadId: null,
               title: null,
               lastModelUsed: null,
@@ -11244,12 +11242,7 @@
             P(function (e) {
               if (e.threads[r]) {
                 var a = I.computeThreadConversationTurns(r, t, n);
-                (e.threads[r].conversationTurns = a),
-                  null ==
-                    e.threads[r].initialThreadData.initialConversationTurns &&
-                    a.length > 1 &&
-                    (e.threads[r].initialThreadData.initialConversationTurns =
-                      a);
+                e.threads[r].conversationTurns = a;
               }
             });
           },
@@ -11703,11 +11696,14 @@
         B: function () {
           return a;
         },
+        bM: function () {
+          return f;
+        },
         tN: function () {
           return c;
         },
         vm: function () {
-          return f;
+          return h;
         },
       });
       var r,
@@ -11723,6 +11719,7 @@
         (r.TempBrowseToast = "temp-browse-toast");
       var u = "UiState.isNavigationCollapsed.1",
         d = {
+          isThreadHeaderVisible: !0,
           isDesktopNavCollapsed:
             null !== (i = l.m.getItem(u)) && void 0 !== i && i,
           sharingModalThreadId: void 0,
@@ -11734,11 +11731,25 @@
           return (0, o._)({}, d);
         }),
         f = {
+          isDesktopNavCollapsed: function (e) {
+            return e.isDesktopNavCollapsed;
+          },
+          isThreadHeaderVisible: function (e) {
+            return e.isThreadHeaderVisible;
+          },
+        },
+        h = {
           toggleDesktopNavCollapsed: function () {
             c.setState(function (e) {
               var t = !e.isDesktopNavCollapsed;
               return l.m.setItem(u, t), { isDesktopNavCollapsed: t };
             });
+          },
+          hideThreadHeader: function () {
+            c.setState({ isThreadHeaderVisible: !1 });
+          },
+          showThreadHeader: function () {
+            c.setState({ isThreadHeaderVisible: !0 });
           },
           openSharingModal: function (e) {
             c.setState({ sharingModalThreadId: e });
