@@ -23,7 +23,7 @@ TODO (anything that was originally noted/captured by our userscript)
 #### Missing
 
 ```
-TODO (or remove this section of nothing missing)
+TODO (or remove this section if nothing missing)
 ```
 
 ### From Build Manifest
@@ -37,19 +37,19 @@ TODO (anything that was captured after processing the _buildManifest.js to find 
 #### Missing
 
 ```
-TODO (or remove this section of nothing missing)
+TODO (or remove this section if nothing missing)
 ```
 
-### From `_next/static/chunks/webpack-TODOHASH.js`
+### From `_next/static/chunks/webpack-TODOWEBPACKHASH.js`
 
 #### Archived
 
 ```
-TODO (or remove this whole section if no relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)
+TODO (relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)
 ```
 
 #### Missing
 
 ```
-TODO (or remove this section of nothing missing)
+TODO (or remove this section if nothing missing)
 ```

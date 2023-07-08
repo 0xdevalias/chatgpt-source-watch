@@ -16,6 +16,13 @@ const changelogPath = path.join(__dirname, '..', 'CHANGELOG.md');
 const buildHashPattern = /^[A-Za-z0-9\-_]{21}$/;
 const webpackChunkPattern = /_next\/static\/chunks\/webpack-([a-zA-Z0-9]+)\.js/;
 const sectionHeaderPattern = /(## \d{4}-\d{2}-\d{2}Z)/;
+const missingSectionPattern = /\n*#### Missing[\s\S]*?(?=\n#{2,}|$)/g;
+const naSectionPattern = /#### .+\n\n```\nN\/A\n```/g;
+
+const userScriptTodoSectionPattern = /TODO \(anything that was originally noted\/captured by our userscript\)/;
+const buildManifestTodoSectionPattern = /TODO \(anything that was captured after processing the _buildManifest.js to find all files regardless of whether we had loaded them\)/;
+const webpackJsSectionPattern = /TODO \(relevant changes from the webpack\.js file\.\. usually it will only be \.css file changes I believe\)/;
+const webpackHashTodoPattern = "TODOWEBPACKHASH"
 
 // Check if the required command line arguments are provided
 if (process.argv.length < 4 || process.stdin.isTTY) {
@@ -123,10 +130,7 @@ rl.on('close', () => {
 
   // Remove "Missing" sections if --keep-missing argument not supplied
   if (!keepMissing) {
-    updatedTemplate = updatedTemplate.replace(
-      /\n*#### Missing[\s\S]*?(?=\n#{2,}|$)/g,
-      "\n"
-    );
+    updatedTemplate = updatedTemplate.replace(missingSectionPattern, "\n");
   }
 
   // Flatten the chunks array and extract file paths prefixed with 'unpacked'
@@ -178,39 +182,32 @@ rl.on('close', () => {
 
   const numberOfChunks = chunks.length;
 
-  if (numberOfChunks >= 1) {
-    updatedTemplate = updatedTemplate.replace(
-      "TODO (anything that was originally noted/captured by our userscript)",
-      chunks[0].join("\n")
-    );
-  }
-
-  if (numberOfChunks >= 2) {
-    updatedTemplate = updatedTemplate.replace(
-      "TODO (anything that was captured after processing the _buildManifest.js to find all files regardless of whether we had loaded them)",
-      chunks[1].join("\n")
-    );
-  }
-
-  if (numberOfChunks >= 3) {
-    if (webpackHash) {
+  const replaceTodoSection = (regex, chunkIndex) => {
+    if (numberOfChunks >= chunkIndex + 1) {
       updatedTemplate = updatedTemplate.replace(
-        "_next/static/chunks/webpack-TODOHASH.js",
-        `_next/static/chunks/webpack-${webpackHash}.js`
-      );
-      updatedTemplate = updatedTemplate.replace(
-        "TODO (or remove this whole section if no relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)",
-        chunks[2].join("\n")
+        regex,
+        chunks[chunkIndex].length ? chunks[chunkIndex].join("\n") : "N/A"
       );
     } else {
-      console.warn("Warning: No webpack hash found in the URLs.");
+      updatedTemplate = updatedTemplate.replace(regex, "N/A");
+    }
+  };
+
+  replaceTodoSection(userScriptTodoSectionPattern, 0);
+  replaceTodoSection(buildManifestTodoSectionPattern, 1);
+  replaceTodoSection(webpackJsSectionPattern, 2);
+
+  // Post-processing to remove headers and code block when content is N/A
+  updatedTemplate = updatedTemplate.replace(naSectionPattern, 'N/A');
+
+  if (webpackHash) {
+    updatedTemplate = updatedTemplate.replace(webpackHashTodoPattern, webpackHash);
+  } else {
+    console.warn("Warning: No webpack hash found in the URLs.");
+
+    if (numberOfChunks >= 3) {
       console.warn("The URLs in the third chunk are:");
       console.warn(chunks[2].join("\n"));
-
-      updatedTemplate = updatedTemplate.replace(
-        /\s*### From `_next\/static\/chunks\/webpack-TODOHASH\.js`[\s\S]*/m,
-        ""
-      );
     }
   }
 
