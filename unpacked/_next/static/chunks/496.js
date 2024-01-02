@@ -269,8 +269,8 @@
               "redesign" === r
                 ? "h-7 w-7 text-xs"
                 : "small" === r
-                ? "h-5 w-5 text-xs"
-                : "h-[30px] w-[30px] text-sm",
+                  ? "h-5 w-5 text-xs"
+                  : "h-[30px] w-[30px] text-sm",
               h ? "rounded-full" : "rounded-sm"
             ),
             children: [
@@ -724,8 +724,52 @@
           [m]
         );
         var S = (0, r._)({}, p ? {} : { value: m }, p ? { value: C } : {});
-        return (0,
-        o.jsxs)("div", { className: (0, s.Z)("rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600 dark:bg-gray-700", b), children: [(0, o.jsx)("label", { htmlFor: n, className: "block text-xs font-medium text-gray-900 dark:text-gray-100", children: c }), (0, o.jsxs)("div", { className: (0, s.Z)(c && "mt-1", "relative"), children: [(0, o.jsx)("input", (0, r._)({ ref: t, type: u, name: n, id: n, className: (0, s.Z)("block w-full border-0 p-0 text-gray-900 placeholder-gray-500 outline-none focus:ring-0 dark:bg-gray-700 dark:text-gray-100 sm:text-sm", v && "pr-6"), placeholder: i, onBlur: k, onChange: T, onKeyDown: N, autoComplete: y, autoFocus: w }, S)), v && (0, o.jsx)(f, { onClick: x, children: (0, o.jsx)(d.ZP, { icon: v }) })] })] });
+        return (0, o.jsxs)("div", {
+          className: (0, s.Z)(
+            "rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600 dark:bg-gray-700",
+            b
+          ),
+          children: [
+            (0, o.jsx)("label", {
+              htmlFor: n,
+              className:
+                "block text-xs font-medium text-gray-900 dark:text-gray-100",
+              children: c,
+            }),
+            (0, o.jsxs)("div", {
+              className: (0, s.Z)(c && "mt-1", "relative"),
+              children: [
+                (0, o.jsx)(
+                  "input",
+                  (0, r._)(
+                    {
+                      ref: t,
+                      type: u,
+                      name: n,
+                      id: n,
+                      className: (0, s.Z)(
+                        "block w-full border-0 p-0 text-gray-900 placeholder-gray-500 outline-none focus:ring-0 dark:bg-gray-700 dark:text-gray-100 sm:text-sm",
+                        v && "pr-6"
+                      ),
+                      placeholder: i,
+                      onBlur: k,
+                      onChange: T,
+                      onKeyDown: N,
+                      autoComplete: y,
+                      autoFocus: w,
+                    },
+                    S
+                  )
+                ),
+                v &&
+                  (0, o.jsx)(f, {
+                    onClick: x,
+                    children: (0, o.jsx)(d.ZP, { icon: v }),
+                  }),
+              ],
+            }),
+          ],
+        });
       });
       var f = u.Z.button(c());
     },
@@ -1290,7 +1334,6 @@
           t.find(function (e) {
             return e.name === a;
           }) && r <= n;
-
         )
           (a = "".concat(o, " (").concat(r, ")").concat(s)), r++;
         if (r > n) throw Error();
@@ -1398,21 +1441,21 @@
                         }),
                       })
                     : t.retrieval_index_status === eu.Xf.Failed
-                    ? (0, l.jsx)(e_, {
-                        label: h.formatMessage(ew.failedToEmbedFileTooltip),
-                        children: (0, l.jsx)(j.ZP, {
-                          icon: x.$Rx,
-                          size: "xsmall",
-                          className: "mt-1.5 flex-shrink-0 text-red-500",
+                      ? (0, l.jsx)(e_, {
+                          label: h.formatMessage(ew.failedToEmbedFileTooltip),
+                          children: (0, l.jsx)(j.ZP, {
+                            icon: x.$Rx,
+                            size: "xsmall",
+                            className: "mt-1.5 flex-shrink-0 text-red-500",
+                          }),
+                        })
+                      : (0, l.jsx)(e_, {
+                          label: h.formatMessage(ew.embeddingFileTooltip),
+                          children: (0, l.jsx)(eh.Z, {
+                            className:
+                              "mt-1 flex-shrink-0 text-gray-500 dark:text-gray-100",
+                          }),
                         }),
-                      })
-                    : (0, l.jsx)(e_, {
-                        label: h.formatMessage(ew.embeddingFileTooltip),
-                        children: (0, l.jsx)(eh.Z, {
-                          className:
-                            "mt-1 flex-shrink-0 text-gray-500 dark:text-gray-100",
-                        }),
-                      }),
                   (0, l.jsx)("button", {
                     className: (0, N.Z)(
                       s.includes(t.id)
@@ -1821,20 +1864,20 @@
                       }),
                       !1)
                     : e.state === i.Deleting &&
-                      -1 ===
+                        -1 ===
+                          n.findIndex(function (t) {
+                            return t.name === e.name && t.state !== i.Deleting;
+                          })
+                      ? (N(function (t) {
+                          return t.filter(function (t) {
+                            return t.name !== e.name;
+                          });
+                        }),
+                        !1)
+                      : -1 ===
                         n.findIndex(function (t) {
-                          return t.name === e.name && t.state !== i.Deleting;
-                        })
-                    ? (N(function (t) {
-                        return t.filter(function (t) {
-                          return t.name !== e.name;
+                          return t.name === e.name && t.state === i.Deleting;
                         });
-                      }),
-                      !1)
-                    : -1 ===
-                      n.findIndex(function (t) {
-                        return t.name === e.name && t.state === i.Deleting;
-                      });
                 })
                 .sort(function (e, t) {
                   return (
@@ -1953,107 +1996,118 @@
                       }),
                     })
                   : eS.length > 0
-                  ? (0, l.jsxs)("div", {
-                      className: "flex flex-col",
-                      children: [
-                        (0, l.jsx)("div", {
-                          className:
-                            "mb-2 text-xs text-gray-600 dark:text-gray-300",
-                          children: (0, l.jsx)(
-                            b.Z,
-                            (0, C._)((0, h._)({}, ew.filesModalDescription), {
-                              values: {
-                                totalUploadedSize: (0, l.jsx)("span", {
-                                  className: "font-bold",
-                                  children: "".concat(
-                                    Number(eP).toPrecision(2),
-                                    "GB"
-                                  ),
-                                }),
-                                maxFileSize: "".concat(2, "GB"),
-                              },
-                            })
-                          ),
-                        }),
-                        (0, l.jsxs)(ef.Z.Root, {
-                          className: "max-h-[28rem]",
-                          fixed: !0,
-                          size: "compact",
-                          children: [
-                            (0, l.jsxs)(ef.Z.Header, {
-                              children: [
-                                (0, l.jsx)(ef.Z.HeaderCell, {
-                                  className:
-                                    "max-w-8/12 w-8/12 dark:bg-gray-900",
-                                  children: m.formatMessage(ew.name),
-                                }),
-                                (0, l.jsx)(ef.Z.HeaderCell, {
-                                  children: m.formatMessage(ew.date),
-                                }),
-                                (0, l.jsx)(ef.Z.HeaderCell, {
-                                  children: m.formatMessage(ew.size),
-                                }),
-                                (0, l.jsx)(ef.Z.HeaderCell, {
-                                  textAlign: "right",
-                                  children: (0, l.jsxs)(ec.Z.Root, {
-                                    children: [
-                                      (0, l.jsx)(ec.Z.Trigger, {
-                                        children: (0, l.jsx)(j.ZP, {
-                                          icon: x.K9M,
-                                        }),
-                                      }),
-                                      (0, l.jsx)(ec.Z.Portal, {
-                                        children: (0, l.jsxs)(ec.Z.Content, {
-                                          children: [
-                                            (0, l.jsxs)(ec.Z.Item, {
-                                              onClick: ei,
-                                              className: "flex gap-2",
-                                              children: [
-                                                (0, l.jsx)(j.ZP, {
-                                                  icon: x._hL,
-                                                  size: "small",
-                                                }),
-                                                (0, l.jsx)("span", {
-                                                  children: m.formatMessage(
-                                                    ew.downloadAll
-                                                  ),
-                                                }),
-                                              ],
-                                            }),
-                                            (0, l.jsxs)(ec.Z.Item, {
-                                              onClick: ea,
-                                              className: "flex gap-2",
-                                              children: [
-                                                (0, l.jsx)(j.ZP, {
-                                                  icon: x.Ybf,
-                                                  size: "small",
-                                                }),
-                                                (0, l.jsx)("span", {
-                                                  children: m.formatMessage(
-                                                    ew.deleteAll
-                                                  ),
-                                                }),
-                                              ],
-                                            }),
-                                          ],
-                                        }),
-                                      }),
-                                    ],
+                    ? (0, l.jsxs)("div", {
+                        className: "flex flex-col",
+                        children: [
+                          (0, l.jsx)("div", {
+                            className:
+                              "mb-2 text-xs text-gray-600 dark:text-gray-300",
+                            children: (0, l.jsx)(
+                              b.Z,
+                              (0, C._)((0, h._)({}, ew.filesModalDescription), {
+                                values: {
+                                  totalUploadedSize: (0, l.jsx)("span", {
+                                    className: "font-bold",
+                                    children: "".concat(
+                                      Number(eP).toPrecision(2),
+                                      "GB"
+                                    ),
                                   }),
-                                }),
-                              ],
-                            }),
-                            (0, l.jsx)(ef.Z.Body, {
-                              children: eS.map(function (e, t) {
-                                return (0,
-                                l.jsx)(eC, { file: e, refetch: _, handleFileDelete: eT, handleFileDeleteFailed: eN, session: A, downloadedFiles: O, setDownloadedFiles: q }, t);
+                                  maxFileSize: "".concat(2, "GB"),
+                                },
+                              })
+                            ),
+                          }),
+                          (0, l.jsxs)(ef.Z.Root, {
+                            className: "max-h-[28rem]",
+                            fixed: !0,
+                            size: "compact",
+                            children: [
+                              (0, l.jsxs)(ef.Z.Header, {
+                                children: [
+                                  (0, l.jsx)(ef.Z.HeaderCell, {
+                                    className:
+                                      "max-w-8/12 w-8/12 dark:bg-gray-900",
+                                    children: m.formatMessage(ew.name),
+                                  }),
+                                  (0, l.jsx)(ef.Z.HeaderCell, {
+                                    children: m.formatMessage(ew.date),
+                                  }),
+                                  (0, l.jsx)(ef.Z.HeaderCell, {
+                                    children: m.formatMessage(ew.size),
+                                  }),
+                                  (0, l.jsx)(ef.Z.HeaderCell, {
+                                    textAlign: "right",
+                                    children: (0, l.jsxs)(ec.Z.Root, {
+                                      children: [
+                                        (0, l.jsx)(ec.Z.Trigger, {
+                                          children: (0, l.jsx)(j.ZP, {
+                                            icon: x.K9M,
+                                          }),
+                                        }),
+                                        (0, l.jsx)(ec.Z.Portal, {
+                                          children: (0, l.jsxs)(ec.Z.Content, {
+                                            children: [
+                                              (0, l.jsxs)(ec.Z.Item, {
+                                                onClick: ei,
+                                                className: "flex gap-2",
+                                                children: [
+                                                  (0, l.jsx)(j.ZP, {
+                                                    icon: x._hL,
+                                                    size: "small",
+                                                  }),
+                                                  (0, l.jsx)("span", {
+                                                    children: m.formatMessage(
+                                                      ew.downloadAll
+                                                    ),
+                                                  }),
+                                                ],
+                                              }),
+                                              (0, l.jsxs)(ec.Z.Item, {
+                                                onClick: ea,
+                                                className: "flex gap-2",
+                                                children: [
+                                                  (0, l.jsx)(j.ZP, {
+                                                    icon: x.Ybf,
+                                                    size: "small",
+                                                  }),
+                                                  (0, l.jsx)("span", {
+                                                    children: m.formatMessage(
+                                                      ew.deleteAll
+                                                    ),
+                                                  }),
+                                                ],
+                                              }),
+                                            ],
+                                          }),
+                                        }),
+                                      ],
+                                    }),
+                                  }),
+                                ],
                               }),
-                            }),
-                          ],
-                        }),
-                      ],
-                    })
-                  : (0, l.jsx)(b.Z, (0, h._)({}, ew.noFilesFound)),
+                              (0, l.jsx)(ef.Z.Body, {
+                                children: eS.map(function (e, t) {
+                                  return (0, l.jsx)(
+                                    eC,
+                                    {
+                                      file: e,
+                                      refetch: _,
+                                      handleFileDelete: eT,
+                                      handleFileDeleteFailed: eN,
+                                      session: A,
+                                      downloadedFiles: O,
+                                      setDownloadedFiles: q,
+                                    },
+                                    t
+                                  );
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      })
+                    : (0, l.jsx)(b.Z, (0, h._)({}, ew.noFilesFound)),
                 (0, l.jsx)(eg, {
                   accept: ey.join(","),
                   onFilePicked: eF,
@@ -2347,59 +2401,66 @@
                 children: (0, l.jsx)(b.Z, (0, h._)({}, eU.loading)),
               })
             : o
-            ? (0, l.jsxs)("div", {
-                children: [
-                  (0, l.jsx)("div", {
-                    className: "mb-4 text-red-500",
+              ? (0, l.jsxs)("div", {
+                  children: [
+                    (0, l.jsx)("div", {
+                      className: "mb-4 text-red-500",
+                      children: (0, l.jsx)(
+                        b.Z,
+                        (0, h._)({}, eU.somethingWentWrong)
+                      ),
+                    }),
+                    (0, l.jsx)("div", {
+                      children: (0, l.jsx)(ei.z, {
+                        color: "neutral",
+                        onClick: function () {
+                          s();
+                        },
+                        children: (0, l.jsx)(b.Z, (0, h._)({}, eU.retry)),
+                      }),
+                    }),
+                  ],
+                })
+              : 0 === a.total
+                ? (0, l.jsx)("div", {
+                    className: "pb-8 text-gray-600 dark:text-gray-400",
                     children: (0, l.jsx)(
                       b.Z,
-                      (0, h._)({}, eU.somethingWentWrong)
+                      (0, h._)({}, eU.noSharedConversations)
                     ),
-                  }),
-                  (0, l.jsx)("div", {
-                    children: (0, l.jsx)(ei.z, {
-                      color: "neutral",
-                      onClick: function () {
-                        s();
-                      },
-                      children: (0, l.jsx)(b.Z, (0, h._)({}, eU.retry)),
-                    }),
-                  }),
-                ],
-              })
-            : 0 === a.total
-            ? (0, l.jsx)("div", {
-                className: "pb-8 text-gray-600 dark:text-gray-400",
-                children: (0, l.jsx)(
-                  b.Z,
-                  (0, h._)({}, eU.noSharedConversations)
-                ),
-              })
-            : (0, l.jsxs)(ef.Z.Root, {
-                className: "max-h-[28rem]",
-                size: "compact",
-                children: [
-                  (0, l.jsxs)(ef.Z.Header, {
+                  })
+                : (0, l.jsxs)(ef.Z.Root, {
+                    className: "max-h-[28rem]",
+                    size: "compact",
                     children: [
-                      (0, l.jsx)(ef.Z.HeaderCell, {
-                        children: (0, l.jsx)(b.Z, (0, h._)({}, eU.name)),
+                      (0, l.jsxs)(ef.Z.Header, {
+                        children: [
+                          (0, l.jsx)(ef.Z.HeaderCell, {
+                            children: (0, l.jsx)(b.Z, (0, h._)({}, eU.name)),
+                          }),
+                          (0, l.jsx)(ef.Z.HeaderCell, {
+                            children: (0, l.jsx)(
+                              b.Z,
+                              (0, h._)({}, eU.dateShared)
+                            ),
+                          }),
+                          (0, l.jsx)(ef.Z.HeaderCell, {
+                            textAlign: "right",
+                            children: (0, l.jsx)(eA, {}),
+                          }),
+                        ],
                       }),
-                      (0, l.jsx)(ef.Z.HeaderCell, {
-                        children: (0, l.jsx)(b.Z, (0, h._)({}, eU.dateShared)),
-                      }),
-                      (0, l.jsx)(ef.Z.HeaderCell, {
-                        textAlign: "right",
-                        children: (0, l.jsx)(eA, {}),
+                      (0, l.jsx)(ef.Z.Body, {
+                        children: a.items.map(function (e) {
+                          return (0, l.jsx)(
+                            eB,
+                            { sharedConversation: e },
+                            e.id
+                          );
+                        }),
                       }),
                     ],
-                  }),
-                  (0, l.jsx)(ef.Z.Body, {
-                    children: a.items.map(function (e) {
-                      return (0, l.jsx)(eB, { sharedConversation: e }, e.id);
-                    }),
-                  }),
-                ],
-              })),
+                  })),
           (0, l.jsx)($.Z, {
             isOpen: !0,
             onClose: n,
@@ -2522,179 +2583,193 @@
         return m
           ? (0, l.jsx)(eY, { onClose: ee })
           : x
-          ? (0, l.jsx)(eQ, { onClose: et, onDeleteHistory: i })
-          : j
-          ? (0, l.jsx)(e1, { onClose: en })
-          : Z
-          ? (0, l.jsx)(eO, {
-              onClose: function () {
-                P(!1);
-              },
-            })
-          : (0, l.jsx)($.Z, {
-              isOpen: !0,
-              onClose: r,
-              size: "custom",
-              className: "md:max-w-[680px]",
-              type: "success",
-              title: s.formatMessage(e3.settings),
-              closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: r }),
-              children: (0, l.jsxs)(ek.fC, {
-                className: "flex flex-col gap-6 md:flex-row",
-                defaultValue: L,
-                orientation: c ? "vertical" : void 0,
-                onValueChange: function (e) {
-                  U(e);
-                },
-                children: [
-                  (0, l.jsxs)(ek.aV, {
-                    className: (0, N.Z)(
-                      "-ml-[8px] flex min-w-[180px] flex-shrink-0",
-                      c
-                        ? "flex-col"
-                        : "flex-row rounded-lg bg-gray-100 p-1 dark:bg-gray-800/30"
-                    ),
-                    children: [
-                      (0, l.jsx)(eX, {
-                        value: o.General,
-                        icon: eN.oq2,
-                        label: (0, l.jsx)(b.Z, (0, h._)({}, e3.generalTab)),
-                      }),
-                      Q &&
-                        (X || Y || K) &&
-                        (0, l.jsx)(eX, {
+            ? (0, l.jsx)(eQ, { onClose: et, onDeleteHistory: i })
+            : j
+              ? (0, l.jsx)(e1, { onClose: en })
+              : Z
+                ? (0, l.jsx)(eO, {
+                    onClose: function () {
+                      P(!1);
+                    },
+                  })
+                : (0, l.jsx)($.Z, {
+                    isOpen: !0,
+                    onClose: r,
+                    size: "custom",
+                    className: "md:max-w-[680px]",
+                    type: "success",
+                    title: s.formatMessage(e3.settings),
+                    closeButton: (0, l.jsx)(G.ZP.CloseButton, { onClose: r }),
+                    children: (0, l.jsxs)(ek.fC, {
+                      className: "flex flex-col gap-6 md:flex-row",
+                      defaultValue: L,
+                      orientation: c ? "vertical" : void 0,
+                      onValueChange: function (e) {
+                        U(e);
+                      },
+                      children: [
+                        (0, l.jsxs)(ek.aV, {
+                          className: (0, N.Z)(
+                            "-ml-[8px] flex min-w-[180px] flex-shrink-0",
+                            c
+                              ? "flex-col"
+                              : "flex-row rounded-lg bg-gray-100 p-1 dark:bg-gray-800/30"
+                          ),
+                          children: [
+                            (0, l.jsx)(eX, {
+                              value: o.General,
+                              icon: eN.oq2,
+                              label: (0, l.jsx)(
+                                b.Z,
+                                (0, h._)({}, e3.generalTab)
+                              ),
+                            }),
+                            Q &&
+                              (X || Y || K) &&
+                              (0, l.jsx)(eX, {
+                                value: o.BetaFeatures,
+                                icon: eN.rTN,
+                                label: (0, l.jsx)(
+                                  b.Z,
+                                  (0, h._)({}, e3.betaTab)
+                                ),
+                              }),
+                            (0, l.jsx)(eX, {
+                              value: o.DataControls,
+                              icon: eN.tQn,
+                              label: (0, l.jsx)(
+                                b.Z,
+                                (0, h._)({}, e3.dataControlsTab)
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, l.jsxs)(eK, {
+                          value: o.General,
+                          children: [
+                            (0, l.jsx)(e0, { children: (0, l.jsx)(e$, {}) }),
+                            !z &&
+                              q.has("tools3_dev") &&
+                              (0, l.jsx)(e0, {
+                                children: (0, l.jsx)(eJ, {
+                                  label: s.formatMessage(e3.openPluginDevtools),
+                                  enabled: O,
+                                  onChange: eI.Ds.setIsOpen,
+                                }),
+                              }),
+                            (0, l.jsx)(e0, {
+                              children: (0, l.jsx)(eG, {
+                                color: "danger",
+                                disabled: !d,
+                                label: s.formatMessage(e3.clearChatLabel),
+                                buttonLabel: s.formatMessage(
+                                  e3.clearChatButton
+                                ),
+                                onClick: ea,
+                              }),
+                            }),
+                          ],
+                        }),
+                        (0, l.jsx)(eK, {
                           value: o.BetaFeatures,
-                          icon: eN.rTN,
-                          label: (0, l.jsx)(b.Z, (0, h._)({}, e3.betaTab)),
+                          children: (0, l.jsx)(eV, {}),
                         }),
-                      (0, l.jsx)(eX, {
-                        value: o.DataControls,
-                        icon: eN.tQn,
-                        label: (0, l.jsx)(
-                          b.Z,
-                          (0, h._)({}, e3.dataControlsTab)
-                        ),
-                      }),
-                    ],
-                  }),
-                  (0, l.jsxs)(eK, {
-                    value: o.General,
-                    children: [
-                      (0, l.jsx)(e0, { children: (0, l.jsx)(e$, {}) }),
-                      !z &&
-                        q.has("tools3_dev") &&
-                        (0, l.jsx)(e0, {
-                          children: (0, l.jsx)(eJ, {
-                            label: s.formatMessage(e3.openPluginDevtools),
-                            enabled: O,
-                            onChange: eI.Ds.setIsOpen,
-                          }),
-                        }),
-                      (0, l.jsx)(e0, {
-                        children: (0, l.jsx)(eG, {
-                          color: "danger",
-                          disabled: !d,
-                          label: s.formatMessage(e3.clearChatLabel),
-                          buttonLabel: s.formatMessage(e3.clearChatButton),
-                          onClick: ea,
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, l.jsx)(eK, {
-                    value: o.BetaFeatures,
-                    children: (0, l.jsx)(eV, {}),
-                  }),
-                  (0, l.jsxs)(eK, {
-                    value: o.DataControls,
-                    children: [
-                      !z &&
-                        (0, l.jsx)(e0, {
-                          children: (0, l.jsx)(eJ, {
-                            label: s.formatMessage(e3.chatHistoryToggleLabel),
-                            enabled: !R,
-                            onChange: eo,
-                            description: (0, l.jsx)(
-                              b.Z,
-                              (0, C._)(
-                                (0, h._)({}, e3.chatHistoryDescription),
-                                {
-                                  values: {
-                                    link: function (e) {
-                                      return (0, l.jsx)("a", {
-                                        href: "https://help.openai.com/en/articles/7730893 ",
-                                        target: "_blank",
-                                        className: "underline",
-                                        rel: "noreferrer",
-                                        children: e,
-                                      });
-                                    },
+                        (0, l.jsxs)(eK, {
+                          value: o.DataControls,
+                          children: [
+                            !z &&
+                              (0, l.jsx)(e0, {
+                                children: (0, l.jsx)(eJ, {
+                                  label: s.formatMessage(
+                                    e3.chatHistoryToggleLabel
+                                  ),
+                                  enabled: !R,
+                                  onChange: eo,
+                                  description: (0, l.jsx)(
+                                    b.Z,
+                                    (0, C._)(
+                                      (0, h._)({}, e3.chatHistoryDescription),
+                                      {
+                                        values: {
+                                          link: function (e) {
+                                            return (0, l.jsx)("a", {
+                                              href: "https://help.openai.com/en/articles/7730893 ",
+                                              target: "_blank",
+                                              className: "underline",
+                                              rel: "noreferrer",
+                                              children: e,
+                                            });
+                                          },
+                                        },
+                                      }
+                                    )
+                                  ),
+                                }),
+                              }),
+                            H &&
+                              (0, l.jsx)(e0, {
+                                children: (0, l.jsx)(eG, {
+                                  label: s.formatMessage(
+                                    e3.sharedConversations
+                                  ),
+                                  buttonLabel: s.formatMessage(
+                                    e3.sharedConversationsButton
+                                  ),
+                                  onClick: function () {
+                                    P(!0);
                                   },
-                                }
-                              )
-                            ),
-                          }),
+                                }),
+                              }),
+                            (0, l.jsx)(e0, {
+                              children: (0, l.jsx)(eG, {
+                                label: s.formatMessage(e3.exportData),
+                                buttonLabel: s.formatMessage(e3.exportButton),
+                                onClick: er,
+                              }),
+                            }),
+                            (0, l.jsx)(e0, {
+                              children: (0, l.jsx)(eG, {
+                                label: s.formatMessage(e3.deleteAccount),
+                                buttonLabel: s.formatMessage(
+                                  e3.deleteAccountButton
+                                ),
+                                color: "danger",
+                                onClick: ei,
+                              }),
+                            }),
+                            q.has(F.i) &&
+                              !(null == W
+                                ? void 0
+                                : null === (t = W.user) || void 0 === t
+                                  ? void 0
+                                  : t.mfa) &&
+                              eu &&
+                              (0, l.jsx)(e0, {
+                                children: (0, l.jsx)(eG, {
+                                  label: s.formatMessage(e3.enable2fa),
+                                  buttonLabel: s.formatMessage(e3.enable),
+                                  onClick: el,
+                                }),
+                              }),
+                            (null == W
+                              ? void 0
+                              : null === (n = W.user) || void 0 === n
+                                ? void 0
+                                : n.mfa) &&
+                              eu &&
+                              (0, l.jsx)(e0, {
+                                children: (0, l.jsx)(eG, {
+                                  label: s.formatMessage(e3.disable2fa),
+                                  buttonLabel: s.formatMessage(e3.disable),
+                                  onClick: ed,
+                                  color: "danger",
+                                }),
+                              }),
+                          ],
                         }),
-                      H &&
-                        (0, l.jsx)(e0, {
-                          children: (0, l.jsx)(eG, {
-                            label: s.formatMessage(e3.sharedConversations),
-                            buttonLabel: s.formatMessage(
-                              e3.sharedConversationsButton
-                            ),
-                            onClick: function () {
-                              P(!0);
-                            },
-                          }),
-                        }),
-                      (0, l.jsx)(e0, {
-                        children: (0, l.jsx)(eG, {
-                          label: s.formatMessage(e3.exportData),
-                          buttonLabel: s.formatMessage(e3.exportButton),
-                          onClick: er,
-                        }),
-                      }),
-                      (0, l.jsx)(e0, {
-                        children: (0, l.jsx)(eG, {
-                          label: s.formatMessage(e3.deleteAccount),
-                          buttonLabel: s.formatMessage(e3.deleteAccountButton),
-                          color: "danger",
-                          onClick: ei,
-                        }),
-                      }),
-                      q.has(F.i) &&
-                        !(null == W
-                          ? void 0
-                          : null === (t = W.user) || void 0 === t
-                          ? void 0
-                          : t.mfa) &&
-                        eu &&
-                        (0, l.jsx)(e0, {
-                          children: (0, l.jsx)(eG, {
-                            label: s.formatMessage(e3.enable2fa),
-                            buttonLabel: s.formatMessage(e3.enable),
-                            onClick: el,
-                          }),
-                        }),
-                      (null == W
-                        ? void 0
-                        : null === (n = W.user) || void 0 === n
-                        ? void 0
-                        : n.mfa) &&
-                        eu &&
-                        (0, l.jsx)(e0, {
-                          children: (0, l.jsx)(eG, {
-                            label: s.formatMessage(e3.disable2fa),
-                            buttonLabel: s.formatMessage(e3.disable),
-                            onClick: ed,
-                            color: "danger",
-                          }),
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-            });
+                      ],
+                    }),
+                  });
       }
       function eV() {
         var e,
@@ -2714,7 +2789,7 @@
                 a = t.enabled;
               return w.ZP.setUserSettingsBetaFeature(
                 null !== (e = null == n ? void 0 : n.accessToken) &&
-                  void 0 !== e
+                void 0 !== e
                   ? e
                   : "",
                 r,
@@ -3025,8 +3100,8 @@
             null == a
               ? void 0
               : null === (t = a.user) || void 0 === t
-              ? void 0
-              : t.email,
+                ? void 0
+                : t.email,
           s = (0, k._)((0, u.useState)(""), 2),
           d = s[0],
           c = s[1],
@@ -3040,8 +3115,8 @@
                   null == a
                     ? void 0
                     : null === (e = a.user) || void 0 === e
-                    ? void 0
-                    : e.iat;
+                      ? void 0
+                      : e.iat;
               return void 0 === t || Date.now() / 1e3 - t < 600;
             },
             [a]
@@ -4572,12 +4647,12 @@
                     (n.type === tZ.NavigationContent
                       ? (t = n)
                       : n.type === tZ.Sidebars
-                      ? (r = n)
-                      : n.type === tZ.NavigationPrimaryActionDesktop
-                      ? (a = n)
-                      : n.type === tZ.NavigationPrimaryActionMobile
-                      ? (i = n)
-                      : e.push(n));
+                        ? (r = n)
+                        : n.type === tZ.NavigationPrimaryActionDesktop
+                          ? (a = n)
+                          : n.type === tZ.NavigationPrimaryActionMobile
+                            ? (i = n)
+                            : e.push(n));
                 }),
                 {
                   pageContent: e,
@@ -5743,14 +5818,14 @@
                     null == d
                       ? void 0
                       : null === (r = d.user) || void 0 === r
-                      ? void 0
-                      : r.name) && void 0 !== o
+                        ? void 0
+                        : r.name) && void 0 !== o
                   ? o
                   : null == d
-                  ? void 0
-                  : null === (a = d.user) || void 0 === a
-                  ? void 0
-                  : a.email) && void 0 !== l
+                    ? void 0
+                    : null === (a = d.user) || void 0 === a
+                      ? void 0
+                      : a.email) && void 0 !== l
               ? l
               : null;
         return e && !h
@@ -5758,10 +5833,10 @@
             ? p
             : e.name
           : c
-          ? f
-            ? p
-            : g
-          : p;
+            ? f
+              ? p
+              : g
+            : p;
       }
       function h() {
         return (0, u.ec)(function (e) {
@@ -5826,8 +5901,12 @@
             var n = e.children,
               l = e.onSelect,
               d = (0, i._)(e, ["children", "onSelect"]);
-            return (0,
-            o.jsx)(u.mS, (0, a._)((0, r._)({ $as: s.ck, ref: t, onSelect: l }, d), { children: n }));
+            return (0, o.jsx)(
+              u.mS,
+              (0, a._)((0, r._)({ $as: s.ck, ref: t, onSelect: l }, d), {
+                children: n,
+              })
+            );
           }),
         };
       t.Z = d;
@@ -5890,8 +5969,12 @@
           Item: l.forwardRef(function (e, t) {
             var n = e.children,
               l = (0, i._)(e, ["children"]);
-            return (0,
-            o.jsx)(c.mS, (0, a._)((0, r._)({ $as: s.ck, ref: t }, l), { children: (0, o.jsx)(s.eT, { children: n }) }));
+            return (0, o.jsx)(
+              c.mS,
+              (0, a._)((0, r._)({ $as: s.ck, ref: t }, l), {
+                children: (0, o.jsx)(s.eT, { children: n }),
+              })
+            );
           }),
         };
       t.Z = f;
@@ -6337,8 +6420,8 @@
                         e.exit("mathFlowFenceMeta"),
                         l(r))
                       : r === m.q.rightSquareBracket
-                      ? n(r)
-                      : (e.consume(r), t);
+                        ? n(r)
+                        : (e.consume(r), t);
                   })(t));
             }
             function l(n) {
@@ -6350,21 +6433,21 @@
                       return n === m.q.eof
                         ? u(n)
                         : (0, v.Ch)(n)
-                        ? e.attempt(
-                            w,
-                            e.attempt(
-                              { tokenize: d, partial: !0 },
-                              u,
-                              i ? (0, p.f)(e, t, b.V.linePrefix, i + 1) : t
-                            ),
-                            u
-                          )(n)
-                        : (e.enter("mathFlowValue"),
-                          (function n(r) {
-                            return r === m.q.eof || (0, v.Ch)(r)
-                              ? (e.exit("mathFlowValue"), t(r))
-                              : (e.consume(r), n);
-                          })(n));
+                          ? e.attempt(
+                              w,
+                              e.attempt(
+                                { tokenize: d, partial: !0 },
+                                u,
+                                i ? (0, p.f)(e, t, b.V.linePrefix, i + 1) : t
+                              ),
+                              u
+                            )(n)
+                          : (e.enter("mathFlowValue"),
+                            (function n(r) {
+                              return r === m.q.eof || (0, v.Ch)(r)
+                                ? (e.exit("mathFlowValue"), t(r))
+                                : (e.consume(r), n);
+                            })(n));
                     })(n)
               );
             }
@@ -6384,9 +6467,9 @@
                         (i === m.q.rightSquareBracket && r[0] === m.q.backslash)
                         ? (e.consume(i), r.push(i), t)
                         : r < o
-                        ? n(i)
-                        : (e.exit("mathFlowFenceSequence"),
-                          (0, p.f)(e, a, b.V.whitespace)(i));
+                          ? n(i)
+                          : (e.exit("mathFlowFenceSequence"),
+                            (0, p.f)(e, a, b.V.whitespace)(i));
                     })(t)
                   );
                 },
@@ -6452,8 +6535,8 @@
                         e.exit("mathFlowFenceMeta"),
                         l(r))
                       : r === m.q.dollarSign
-                      ? n(r)
-                      : (e.consume(r), t);
+                        ? n(r)
+                        : (e.consume(r), t);
                   })(t));
             }
             function l(n) {
@@ -6465,21 +6548,21 @@
                       return n === m.q.eof
                         ? u(n)
                         : (0, v.Ch)(n)
-                        ? e.attempt(
-                            _,
-                            e.attempt(
-                              { tokenize: d, partial: !0 },
-                              u,
-                              i ? (0, p.f)(e, t, b.V.linePrefix, i + 1) : t
-                            ),
-                            u
-                          )(n)
-                        : (e.enter("mathFlowValue"),
-                          (function n(r) {
-                            return r === m.q.eof || (0, v.Ch)(r)
-                              ? (e.exit("mathFlowValue"), t(r))
-                              : (e.consume(r), n);
-                          })(n));
+                          ? e.attempt(
+                              _,
+                              e.attempt(
+                                { tokenize: d, partial: !0 },
+                                u,
+                                i ? (0, p.f)(e, t, b.V.linePrefix, i + 1) : t
+                              ),
+                              u
+                            )(n)
+                          : (e.enter("mathFlowValue"),
+                            (function n(r) {
+                              return r === m.q.eof || (0, v.Ch)(r)
+                                ? (e.exit("mathFlowValue"), t(r))
+                                : (e.consume(r), n);
+                            })(n));
                     })(n)
               );
             }
@@ -6498,9 +6581,9 @@
                       return i === m.q.dollarSign
                         ? (e.consume(i), r++, t)
                         : r < o
-                        ? n(i)
-                        : (e.exit("mathFlowFenceSequence"),
-                          (0, p.f)(e, a, b.V.whitespace)(i));
+                          ? n(i)
+                          : (e.exit("mathFlowFenceSequence"),
+                            (0, p.f)(e, a, b.V.whitespace)(i));
                     })(t)
                   );
                 },
@@ -6829,8 +6912,8 @@
                             return r === m.q.dollarSign
                               ? (e.consume(r), i++, t)
                               : i < 2
-                              ? n(r)
-                              : (e.exit("mathTextSequence"), o(r));
+                                ? n(r)
+                                : (e.exit("mathTextSequence"), o(r));
                           })(t)
                         );
                       };
@@ -6838,25 +6921,28 @@
                         return l === m.q.eof
                           ? n(l)
                           : l === m.q.dollarSign
-                          ? ((a = e.enter("mathTextSequence")),
-                            (r = 0),
-                            (function n(o) {
-                              return o === m.q.dollarSign
-                                ? (e.consume(o), r++, n)
-                                : r === i
-                                ? (e.exit("mathTextSequence"),
-                                  e.exit("mathText"),
-                                  t(o))
-                                : ((a.type = "mathTextData"), s(o));
-                            })(l))
-                          : l === m.q.space
-                          ? (e.enter("space"), e.consume(l), e.exit("space"), o)
-                          : (0, v.Ch)(l)
-                          ? (e.enter(b.V.lineEnding),
-                            e.consume(l),
-                            e.exit(b.V.lineEnding),
-                            o)
-                          : (e.enter("mathTextData"), s(l));
+                            ? ((a = e.enter("mathTextSequence")),
+                              (r = 0),
+                              (function n(o) {
+                                return o === m.q.dollarSign
+                                  ? (e.consume(o), r++, n)
+                                  : r === i
+                                    ? (e.exit("mathTextSequence"),
+                                      e.exit("mathText"),
+                                      t(o))
+                                    : ((a.type = "mathTextData"), s(o));
+                              })(l))
+                            : l === m.q.space
+                              ? (e.enter("space"),
+                                e.consume(l),
+                                e.exit("space"),
+                                o)
+                              : (0, v.Ch)(l)
+                                ? (e.enter(b.V.lineEnding),
+                                  e.consume(l),
+                                  e.exit(b.V.lineEnding),
+                                  o)
+                                : (e.enter("mathTextData"), s(l));
                       }
                       function s(t) {
                         return t === m.q.eof ||
@@ -6889,8 +6975,8 @@
                                 (r === m.q.leftParenthesis && 1 === a.length))
                                 ? (e.consume(r), a.push(r), t)
                                 : a.length < 2
-                                ? n(r)
-                                : (e.exit("mathTextSequence"), s(r));
+                                  ? n(r)
+                                  : (e.exit("mathTextSequence"), s(r));
                             })(t)
                           );
                         };
@@ -6898,31 +6984,31 @@
                           return o === m.q.eof
                             ? n(o)
                             : o === m.q.backslash
-                            ? ((r = e.enter("mathTextSequence")),
-                              (i = []),
-                              (function n(o) {
-                                return (a.join(","),
-                                (o === m.q.backslash && 0 === i.length) ||
-                                  (o === m.q.rightParenthesis &&
-                                    1 === i.length))
-                                  ? (e.consume(o), i.push(o), n)
-                                  : i.length === a.length
-                                  ? (e.exit("mathTextSequence"),
-                                    e.exit("mathText"),
-                                    t(o))
-                                  : ((r.type = "mathTextData"), l(o));
-                              })(o))
-                            : o === m.q.space
-                            ? (e.enter("space"),
-                              e.consume(o),
-                              e.exit("space"),
-                              s)
-                            : (0, v.Ch)(o)
-                            ? (e.enter(b.V.lineEnding),
-                              e.consume(o),
-                              e.exit(b.V.lineEnding),
-                              s)
-                            : (e.enter("mathTextData"), l(o));
+                              ? ((r = e.enter("mathTextSequence")),
+                                (i = []),
+                                (function n(o) {
+                                  return (a.join(","),
+                                  (o === m.q.backslash && 0 === i.length) ||
+                                    (o === m.q.rightParenthesis &&
+                                      1 === i.length))
+                                    ? (e.consume(o), i.push(o), n)
+                                    : i.length === a.length
+                                      ? (e.exit("mathTextSequence"),
+                                        e.exit("mathText"),
+                                        t(o))
+                                      : ((r.type = "mathTextData"), l(o));
+                                })(o))
+                              : o === m.q.space
+                                ? (e.enter("space"),
+                                  e.consume(o),
+                                  e.exit("space"),
+                                  s)
+                                : (0, v.Ch)(o)
+                                  ? (e.enter(b.V.lineEnding),
+                                    e.consume(o),
+                                    e.exit(b.V.lineEnding),
+                                    s)
+                                  : (e.enter("mathTextData"), l(o));
                         }
                         function l(t) {
                           return t === m.q.eof ||
@@ -6954,8 +7040,8 @@
                                 (r === m.q.leftSquareBracket && 1 === a.length))
                                 ? (e.consume(r), a.push(r), t)
                                 : a.length < 2
-                                ? n(r)
-                                : (e.exit("mathTextSequence"), s(r));
+                                  ? n(r)
+                                  : (e.exit("mathTextSequence"), s(r));
                             })(t)
                           );
                         };
@@ -6963,31 +7049,31 @@
                           return o === m.q.eof
                             ? n(o)
                             : o === m.q.backslash
-                            ? ((r = e.enter("mathTextSequence")),
-                              (i = []),
-                              (function n(o) {
-                                return (a.join(","),
-                                (o === m.q.backslash && 0 === i.length) ||
-                                  (o === m.q.rightSquareBracket &&
-                                    1 === i.length))
-                                  ? (e.consume(o), i.push(o), n)
-                                  : i.length === a.length
-                                  ? (e.exit("mathTextSequence"),
-                                    e.exit("mathText"),
-                                    t(o))
-                                  : ((r.type = "mathTextData"), l(o));
-                              })(o))
-                            : o === m.q.space
-                            ? (e.enter("space"),
-                              e.consume(o),
-                              e.exit("space"),
-                              s)
-                            : (0, v.Ch)(o)
-                            ? (e.enter(b.V.lineEnding),
-                              e.consume(o),
-                              e.exit(b.V.lineEnding),
-                              s)
-                            : (e.enter("mathTextData"), l(o));
+                              ? ((r = e.enter("mathTextSequence")),
+                                (i = []),
+                                (function n(o) {
+                                  return (a.join(","),
+                                  (o === m.q.backslash && 0 === i.length) ||
+                                    (o === m.q.rightSquareBracket &&
+                                      1 === i.length))
+                                    ? (e.consume(o), i.push(o), n)
+                                    : i.length === a.length
+                                      ? (e.exit("mathTextSequence"),
+                                        e.exit("mathText"),
+                                        t(o))
+                                      : ((r.type = "mathTextData"), l(o));
+                                })(o))
+                              : o === m.q.space
+                                ? (e.enter("space"),
+                                  e.consume(o),
+                                  e.exit("space"),
+                                  s)
+                                : (0, v.Ch)(o)
+                                  ? (e.enter(b.V.lineEnding),
+                                    e.consume(o),
+                                    e.exit(b.V.lineEnding),
+                                    s)
+                                  : (e.enter("mathTextData"), l(o));
                         }
                         function l(t) {
                           return t === m.q.eof ||
@@ -7123,11 +7209,11 @@
                     ? b
                       ? (0, o.jsx)(et, (0, r._)({}, n))
                       : x
-                      ? (0, o.jsx)(
-                          ee,
-                          (0, r._)({ clientThreadId: m, messageId: p }, n)
-                        )
-                      : null
+                        ? (0, o.jsx)(
+                            ee,
+                            (0, r._)({ clientThreadId: m, messageId: p }, n)
+                          )
+                        : null
                     : (0, o.jsx)("a", (0, r._)({}, n));
                 },
                 img: function (e) {
@@ -7462,8 +7548,14 @@
         },
         en = { type: "spring", bounce: 0 },
         er = (0, d.forwardRef)(function (e, t) {
-          return (0,
-          s.jsx)("div", { ref: t, className: (0, l.Z)("relative flex h-full w-full overflow-hidden", e.className), children: e.children });
+          return (0, s.jsx)("div", {
+            ref: t,
+            className: (0, l.Z)(
+              "relative flex h-full w-full overflow-hidden",
+              e.className
+            ),
+            children: e.children,
+          });
         });
       er.displayName = "CarouselContainer";
       var ea =
@@ -8638,13 +8730,19 @@
                     children: [
                       d &&
                         d.map(function (e, t) {
-                          return (0,
-                          o.jsx)("div", { className: "text-red-500", children: e }, t);
+                          return (0, o.jsx)(
+                            "div",
+                            { className: "text-red-500", children: e },
+                            t
+                          );
                         }),
                       a &&
                         a.map(function (e, t) {
-                          return (0,
-                          o.jsx)("div", { className: "text-yellow-500", children: e }, t);
+                          return (0, o.jsx)(
+                            "div",
+                            { className: "text-yellow-500", children: e },
+                            t
+                          );
                         }),
                     ],
                   }),
@@ -8923,12 +9021,12 @@
                 null === (t = e.metadata) || void 0 === t
                   ? void 0
                   : null === (n = t.invoked_plugin) || void 0 === n
-                  ? void 0
-                  : n.http_api_call_data) && void 0 !== a
+                    ? void 0
+                    : n.http_api_call_data) && void 0 !== a
               ? a
               : null === (r = e.metadata) || void 0 === r
-              ? void 0
-              : r.http_api_call_data;
+                ? void 0
+                : r.http_api_call_data;
         if (void 0 !== i) {
           if (e.author.role !== l.uU.Assistant) {
             console.error(
@@ -9111,8 +9209,8 @@
         return /^localhost:\d+$/.test(e)
           ? "http://".concat(e)
           : /^https?:\/\/localhost:\d+$/.test(e)
-          ? e
-          : null;
+            ? e
+            : null;
       }
       function v(e) {
         return x.apply(this, arguments);
@@ -9146,8 +9244,8 @@
                     null == n
                       ? void 0
                       : null === (t = n.api) || void 0 === t
-                      ? void 0
-                      : t.url)
+                        ? void 0
+                        : t.url)
                 )
                   return (
                     d.m.danger(
@@ -9387,10 +9485,10 @@
                                 })) && void 0 !== t
                           ? t
                           : null == r
-                          ? void 0
-                          : r.find(function (e) {
-                              return e.id === n;
-                            });
+                            ? void 0
+                            : r.find(function (e) {
+                                return e.id === n;
+                              });
                     if (null == a) return { v: void 0 };
                     i.push(a);
                   })();
@@ -9714,8 +9812,8 @@
         return o
           ? (0, i.jsx)(x, { sidebarOpen: a, onClose: l, children: u })
           : a
-          ? u
-          : null;
+            ? u
+            : null;
       }
       function _(e) {
         var t = e.clientThreadId,
@@ -10530,8 +10628,8 @@
                   null == r
                     ? void 0
                     : null === (t = r.tags) || void 0 === t
-                    ? void 0
-                    : t.includes(a.GPT_3_5)) &&
+                      ? void 0
+                      : t.includes(a.GPT_3_5)) &&
               void 0 !== n &&
               n
             );
@@ -10587,12 +10685,12 @@
                   ? e
                   : void 0
                 : !t && r && u.has(r)
-                ? null != r
-                  ? r
-                  : void 0
-                : null != d
-                ? d
-                : void 0;
+                  ? null != r
+                    ? r
+                    : void 0
+                  : null != d
+                    ? d
+                    : void 0;
             }
           },
           [l, d, e, r, u, a, s]
@@ -10607,8 +10705,8 @@
             return null == n
               ? j
               : null !== (e = r.get(n)) && void 0 !== e
-              ? e
-              : j;
+                ? e
+                : j;
           },
           [n, r]
         );
@@ -10916,8 +11014,8 @@
                 null === (t = a.threads[i]) || void 0 === t
                   ? void 0
                   : null === (n = t.initialThreadData) || void 0 === n
-                  ? void 0
-                  : n.title) && void 0 !== r
+                    ? void 0
+                    : n.title) && void 0 !== r
               ? r
               : void 0;
           },
@@ -10940,8 +11038,8 @@
             return null === (t = r.threads[a]) || void 0 === t
               ? void 0
               : null === (n = t.initialThreadData) || void 0 === n
-              ? void 0
-              : n.createTime;
+                ? void 0
+                : n.createTime;
           },
         },
         I = {
@@ -11052,15 +11150,15 @@
                         null == i
                           ? void 0
                           : null === (r = i.message) || void 0 === r
-                          ? void 0
-                          : null === (a = r.metadata) || void 0 === a
-                          ? void 0
-                          : a.model_slug
+                            ? void 0
+                            : null === (a = r.metadata) || void 0 === a
+                              ? void 0
+                              : a.model_slug
                       )
                         ? i.message.metadata.model_slug
                         : (null == i ? void 0 : i.parentId)
-                        ? e(t, i.parentId)
-                        : null;
+                          ? e(t, i.parentId)
+                          : null;
                     })(_.mapping, _.initialCurrentLeafId),
                     hasUserEditableContextFlag:
                       null !== (v = t.has_user_editable_context) &&
@@ -11272,12 +11370,12 @@
             return null != t && t !== l
               ? I.computeThreadConversationTurns(s, t, null != n ? n : [])
               : null !==
-                  (o =
-                    null === (a = Z().threads[s]) || void 0 === a
-                      ? void 0
-                      : a.conversationTurns) && void 0 !== o
-              ? o
-              : [];
+                    (o =
+                      null === (a = Z().threads[s]) || void 0 === a
+                        ? void 0
+                        : a.conversationTurns) && void 0 !== o
+                ? o
+                : [];
           },
           getThreadModel: function (e) {
             var t,
@@ -11416,8 +11514,8 @@
             return null === (n = t.threads[a]) || void 0 === n
               ? void 0
               : null === (r = n.initialThreadData) || void 0 === r
-              ? void 0
-              : r.pluginIds;
+                ? void 0
+                : r.pluginIds;
           });
           return (0, d.useMemo)(
             function () {
@@ -11510,8 +11608,8 @@
             return null === (t = Z().threads[r]) || void 0 === t
               ? void 0
               : null === (n = t.initialThreadData) || void 0 === n
-              ? void 0
-              : n.authorName;
+                ? void 0
+                : n.authorName;
           });
         },
         $ = function (e, t) {
@@ -11647,8 +11745,8 @@
             return null === (n = t.threads[a]) || void 0 === n
               ? void 0
               : null === (r = n.initialThreadData) || void 0 === r
-              ? void 0
-              : r.hasUserEditableContextFlag;
+                ? void 0
+                : r.hasUserEditableContextFlag;
           });
           return null != et(e) || !!t;
         },
@@ -11674,20 +11772,20 @@
                   null == a
                     ? void 0
                     : null === (t = a.model) || void 0 === t
-                    ? void 0
-                    : t.id) && void 0 !== r
+                      ? void 0
+                      : t.id) && void 0 !== r
                 ? r
                 : null == a
-                ? void 0
-                : a.lastModelUsed,
+                  ? void 0
+                  : a.lastModelUsed,
             o = (0, b.B9)(),
             s = void 0 != i ? o.get(i) : void 0;
           return (
             (null == s
               ? void 0
               : null === (n = s.capabilities) || void 0 === n
-              ? void 0
-              : n.multimodal) !== void 0
+                ? void 0
+                : n.multimodal) !== void 0
           );
         };
     },
@@ -12203,12 +12301,12 @@
         return g()
           ? a.XLarge
           : n
-          ? a.Large
-          : t
-          ? a.Medium
-          : e
-          ? a.Small
-          : a.Mobile;
+            ? a.Large
+            : t
+              ? a.Medium
+              : e
+                ? a.Small
+                : a.Mobile;
       }
     },
     56244: function (e, t, n) {
@@ -12292,8 +12390,8 @@
           (null === (t = e.metadata) || void 0 === t
             ? void 0
             : null === (n = t.finish_details) || void 0 === n
-            ? void 0
-            : n.type) === "stop"
+              ? void 0
+              : n.type) === "stop"
         );
       }
       function d(e) {
@@ -12302,8 +12400,8 @@
           (null === (t = e.metadata) || void 0 === t
             ? void 0
             : null === (n = t.finish_details) || void 0 === n
-            ? void 0
-            : n.type) === "max_tokens"
+              ? void 0
+              : n.type) === "max_tokens"
         );
       }
       function c(e) {
@@ -12312,8 +12410,8 @@
           (null === (t = e.metadata) || void 0 === t
             ? void 0
             : null === (n = t.finish_details) || void 0 === n
-            ? void 0
-            : n.type) === "interrupted"
+              ? void 0
+              : n.type) === "interrupted"
         );
       }
       function f(e) {
@@ -12545,7 +12643,6 @@
                       ? t
                       : this.getNodeByMessageId(e);
                 null != r;
-
               ) {
                 if (n.includes(r)) {
                   console.error("Infinite loop detected in getBranchFromLeaf.");
@@ -12653,8 +12750,8 @@
                   "string" == typeof n
                     ? e.getTextAsMessage(n, a, o)
                     : "content_type" in n
-                    ? e.getContentAsMessage(n, a, o)
-                    : n,
+                      ? e.getContentAsMessage(n, a, o)
+                      : n,
                 l = (0, c._)(
                   { id: t, children: [], parentId: r, type: a, message: s },
                   i ? { nodeMetadata: i } : {}
@@ -12729,13 +12826,13 @@
                 (null == r
                   ? void 0
                   : null === (t = r.metadata) || void 0 === t
-                  ? void 0
-                  : t.errType) === "danger" ||
+                    ? void 0
+                    : t.errType) === "danger" ||
                 (null == r
                   ? void 0
                   : null === (n = r.metadata) || void 0 === n
-                  ? void 0
-                  : n.errType) === "warning"
+                    ? void 0
+                    : n.errType) === "warning"
               );
             }),
             (t.getIsBlockedFromNode = function (e) {
@@ -12746,13 +12843,13 @@
                 (null == r
                   ? void 0
                   : null === (t = r.metadata) || void 0 === t
-                  ? void 0
-                  : t.errCode) === x.Dd &&
+                    ? void 0
+                    : t.errCode) === x.Dd &&
                 (null == r
                   ? void 0
                   : null === (n = r.metadata) || void 0 === n
-                  ? void 0
-                  : n.errType) === "danger"
+                    ? void 0
+                    : n.errType) === "danger"
               );
             }),
             (t.getTextFromThread = function (e) {
@@ -12853,7 +12950,6 @@
                 null != n &&
                 (null === (t = n.metadata) || void 0 === t ? void 0 : t.err) !=
                   null;
-
               )
                 n = this.getNode(n.parentId);
               return n;
@@ -12866,7 +12962,6 @@
                 (null === (t = n.message) || void 0 === t
                   ? void 0
                   : t.author.role) !== b.uU.User;
-
               )
                 n = this.getNode(n.parentId);
               return n;
@@ -13004,13 +13099,13 @@
             (null == f
               ? void 0
               : null === (e = f.user) || void 0 === e
-              ? void 0
-              : e.idp) === "auth0",
+                ? void 0
+                : e.idp) === "auth0",
           g = !!(null == f
             ? void 0
             : null === (t = f.user) || void 0 === t
-            ? void 0
-            : t.mfa),
+              ? void 0
+              : t.mfa),
           m = (0, i._)((0, u.useState)(!1), 2),
           p = m[0],
           v = m[1],

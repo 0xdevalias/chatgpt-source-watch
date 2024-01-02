@@ -277,10 +277,10 @@
                   return 0 === t
                     ? e
                     : t === r
-                    ? e + o
-                    : (t /= r / 2) < 1
-                    ? (o / 2) * Math.pow(2, 10 * (t - 1)) + e
-                    : (o / 2) * (2 - Math.pow(2, -10 * --t)) + e;
+                      ? e + o
+                      : (t /= r / 2) < 1
+                        ? (o / 2) * Math.pow(2, 10 * (t - 1)) + e
+                        : (o / 2) * (2 - Math.pow(2, -10 * --t)) + e;
                 },
                 easeInCirc: function (t, e, n, r) {
                   return -(n - e) * (Math.sqrt(1 - (t /= r) * t) - 1) + e;
@@ -304,16 +304,16 @@
                     0 === t
                       ? e
                       : 1 == (t /= r)
-                      ? e + c
-                      : ((i = 0),
-                        (i = 0.3 * r),
-                        (o = c) < Math.abs(c)
-                          ? ((o = c), (a = i / 4))
-                          : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
-                        -o *
-                          Math.pow(2, 10 * (t -= 1)) *
-                          Math.sin(((t * r - a) * (2 * Math.PI)) / i) +
-                          e)
+                        ? e + c
+                        : ((i = 0),
+                          (i = 0.3 * r),
+                          (o = c) < Math.abs(c)
+                            ? ((o = c), (a = i / 4))
+                            : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
+                          -o *
+                            Math.pow(2, 10 * (t -= 1)) *
+                            Math.sin(((t * r - a) * (2 * Math.PI)) / i) +
+                            e)
                   );
                 },
                 easeOutElastic: function (t, e, n, r) {
@@ -326,17 +326,17 @@
                     0 === t
                       ? e
                       : 1 == (t /= r)
-                      ? e + c
-                      : ((i = 0),
-                        (i = 0.3 * r),
-                        (o = c) < Math.abs(c)
-                          ? ((o = c), (a = i / 4))
-                          : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
-                        o *
-                          Math.pow(2, -10 * t) *
-                          Math.sin(((t * r - a) * (2 * Math.PI)) / i) +
-                          c +
-                          e)
+                        ? e + c
+                        : ((i = 0),
+                          (i = 0.3 * r),
+                          (o = c) < Math.abs(c)
+                            ? ((o = c), (a = i / 4))
+                            : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
+                          o *
+                            Math.pow(2, -10 * t) *
+                            Math.sin(((t * r - a) * (2 * Math.PI)) / i) +
+                            c +
+                            e)
                   );
                 },
                 easeInOutElastic: function (t, e, n, r) {
@@ -349,25 +349,25 @@
                     0 === t
                       ? e
                       : 2 == (t /= r / 2)
-                      ? e + c
-                      : ((i = 0),
-                        (i = r * (0.3 * 1.5)),
-                        (o = c) < Math.abs(c)
-                          ? ((o = c), (a = i / 4))
-                          : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
-                        t < 1
-                          ? -(
-                              o *
-                              Math.pow(2, 10 * (t -= 1)) *
-                              Math.sin(((t * r - a) * (2 * Math.PI)) / i) *
-                              0.5
-                            ) + e
-                          : o *
-                              Math.pow(2, -10 * (t -= 1)) *
-                              Math.sin(((t * r - a) * (2 * Math.PI)) / i) *
-                              0.5 +
-                            c +
-                            e)
+                        ? e + c
+                        : ((i = 0),
+                          (i = r * (0.3 * 1.5)),
+                          (o = c) < Math.abs(c)
+                            ? ((o = c), (a = i / 4))
+                            : (a = (i / (2 * Math.PI)) * Math.asin(c / o)),
+                          t < 1
+                            ? -(
+                                o *
+                                Math.pow(2, 10 * (t -= 1)) *
+                                Math.sin(((t * r - a) * (2 * Math.PI)) / i) *
+                                0.5
+                              ) + e
+                            : o *
+                                Math.pow(2, -10 * (t -= 1)) *
+                                Math.sin(((t * r - a) * (2 * Math.PI)) / i) *
+                                0.5 +
+                              c +
+                              e)
                   );
                 },
                 easeInBack: function (t, e, n, r, o) {
@@ -402,10 +402,10 @@
                   return (t /= r) < 1 / 2.75
                     ? o * (7.5625 * t * t) + e
                     : t < 2 / 2.75
-                    ? o * (7.5625 * (t -= 1.5 / 2.75) * t + 0.75) + e
-                    : t < 2.5 / 2.75
-                    ? o * (7.5625 * (t -= 2.25 / 2.75) * t + 0.9375) + e
-                    : o * (7.5625 * (t -= 2.625 / 2.75) * t + 0.984375) + e;
+                      ? o * (7.5625 * (t -= 1.5 / 2.75) * t + 0.75) + e
+                      : t < 2.5 / 2.75
+                        ? o * (7.5625 * (t -= 2.25 / 2.75) * t + 0.9375) + e
+                        : o * (7.5625 * (t -= 2.625 / 2.75) * t + 0.984375) + e;
                 },
                 easeInOutBounce: function (t, e, n, o) {
                   var i = n - e;
@@ -704,17 +704,17 @@
                         g(t, e, n[e]);
                       })
                     : Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(
-                        t,
-                        Object.getOwnPropertyDescriptors(n)
-                      )
-                    : b(Object(n)).forEach(function (e) {
-                        Object.defineProperty(
+                      ? Object.defineProperties(
                           t,
-                          e,
-                          Object.getOwnPropertyDescriptor(n, e)
-                        );
-                      });
+                          Object.getOwnPropertyDescriptors(n)
+                        )
+                      : b(Object(n)).forEach(function (e) {
+                          Object.defineProperty(
+                            t,
+                            e,
+                            Object.getOwnPropertyDescriptor(n, e)
+                          );
+                        });
                 }
                 return t;
               }
@@ -921,17 +921,17 @@
                         F(t, e, n[e]);
                       })
                     : Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(
-                        t,
-                        Object.getOwnPropertyDescriptors(n)
-                      )
-                    : j(Object(n)).forEach(function (e) {
-                        Object.defineProperty(
+                      ? Object.defineProperties(
                           t,
-                          e,
-                          Object.getOwnPropertyDescriptor(n, e)
-                        );
-                      });
+                          Object.getOwnPropertyDescriptors(n)
+                        )
+                      : j(Object(n)).forEach(function (e) {
+                          Object.defineProperty(
+                            t,
+                            e,
+                            Object.getOwnPropertyDescriptor(n, e)
+                          );
+                        });
                 }
                 return t;
               }
@@ -944,9 +944,9 @@
                     "Map" === n || "Set" === n
                       ? Array.from(t)
                       : "Arguments" === n ||
-                        /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                      ? I(t, e)
-                      : void 0
+                          /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+                        ? I(t, e)
+                        : void 0
                   );
                 }
               }
@@ -1201,8 +1201,8 @@
                   o.includes(a)
                     ? (n[a] = c)
                     : i.includes(a)
-                    ? (i[a] = c)
-                    : (r[a] = c);
+                      ? (i[a] = c)
+                      : (r[a] = c);
                 }
                 return [n, r, {}];
               }
@@ -1454,8 +1454,8 @@
             i < 3
               ? e
               : null === r
-              ? (r = Object.getOwnPropertyDescriptor(e, n))
-              : r;
+                ? (r = Object.getOwnPropertyDescriptor(e, n))
+                : r;
         if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
           a = Reflect.decorate(t, e, n, r);
         else
@@ -1538,8 +1538,8 @@
                         2 & i[0]
                           ? r.return
                           : i[0]
-                          ? r.throw || ((o = r.return) && o.call(r), 0)
-                          : r.next) &&
+                            ? r.throw || ((o = r.return) && o.call(r), 0)
+                            : r.next) &&
                       !(o = o.call(r, i[1])).done)
                   )
                     return o;
@@ -1740,8 +1740,8 @@
                 return (n = !n)
                   ? { value: m(t[r](e)), done: "return" === r }
                   : o
-                  ? o(e)
-                  : e;
+                    ? o(e)
+                    : e;
               }
             : o;
         }

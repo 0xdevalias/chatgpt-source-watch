@@ -535,12 +535,12 @@
         return u("(min-width: ".concat(l[o.XLarge], "px)"))
           ? o.XLarge
           : n
-          ? o.Large
-          : t
-          ? o.Medium
-          : e
-          ? o.Small
-          : o.Mobile;
+            ? o.Large
+            : t
+              ? o.Medium
+              : e
+                ? o.Small
+                : o.Mobile;
       }
     },
     19051: function (e, t, n) {

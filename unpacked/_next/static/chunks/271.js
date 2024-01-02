@@ -135,10 +135,10 @@
           "undefined" != typeof globalThis
             ? globalThis
             : "undefined" != typeof self
-            ? self
-            : "undefined" != typeof window
-            ? window
-            : global,
+              ? self
+              : "undefined" != typeof window
+                ? window
+                : global,
         x = (e) => !f(e) && e !== v,
         j = (e, t, r, { allOwnKeys: n } = {}) => (
           C(
@@ -330,10 +330,10 @@
                 y(r[i]) && y(n)
                   ? (r[i] = e(r[i], n))
                   : y(n)
-                  ? (r[i] = e({}, n))
-                  : c(n)
-                  ? (r[i] = n.slice())
-                  : (r[i] = n);
+                    ? (r[i] = e({}, n))
+                    : c(n)
+                      ? (r[i] = n.slice())
+                      : (r[i] = n);
               };
             for (let e = 0, t = arguments.length; e < t; e++)
               arguments[e] && C(arguments[e], n);
@@ -584,8 +584,8 @@
           (n = i
             ? i(t, r)
             : en.isURLSearchParams(t)
-            ? t.toString()
-            : new eh(t, r).toString(o))
+              ? t.toString()
+              : new eh(t, r).toString(o))
         ) {
           let t = e.indexOf("#");
           -1 !== t && (e = e.slice(0, t)),
@@ -869,8 +869,8 @@
         return !1 === e || null == e
           ? e
           : en.isArray(e)
-          ? e.map(eU)
-          : String(e);
+            ? e.map(eU)
+            : String(e);
       }
       let eF = (e) => /^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(e.trim());
       function eD(e, t, r, n, o) {
@@ -901,8 +901,8 @@
             en.isPlainObject(e) || e instanceof this.constructor
               ? i(e, t)
               : en.isString(e) && (e = e.trim()) && !eF(e)
-              ? i(ej(e), t)
-              : null != e && o(t, e, r),
+                ? i(ej(e), t)
+                : null != e && o(t, e, r),
             this
           );
         }
@@ -1425,10 +1425,10 @@
           return en.isPlainObject(e) && en.isPlainObject(t)
             ? en.merge.call({ caseless: r }, e, t)
             : en.isPlainObject(t)
-            ? en.merge({}, t)
-            : en.isArray(t)
-            ? t.slice()
-            : t;
+              ? en.merge({}, t)
+              : en.isArray(t)
+                ? t.slice()
+                : t;
         }
         function o(e, t, r) {
           return en.isUndefined(t)
@@ -1619,7 +1619,6 @@
                 o = e.length,
                 n = Promise.resolve(t);
               f < o;
-
             )
               n = n.then(e[f++], e[f++]);
             return n;

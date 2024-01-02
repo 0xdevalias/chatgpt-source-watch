@@ -253,8 +253,8 @@
           (null == s
             ? void 0
             : null == (r = s.tagName)
-            ? void 0
-            : r.toLowerCase()) === e && c.push(s);
+              ? void 0
+              : r.toLowerCase()) === e && c.push(s);
         var f = t.map(o).filter(function (e) {
           for (var t = 0, r = c.length; t < r; t++)
             if (a(c[t], e)) return c.splice(t, 1), !1;
@@ -1124,8 +1124,8 @@
                     (t = e.skipInterpolation
                       ? y
                       : (0, s.isDynamicRoute)(_)
-                      ? (0, u.interpolateAs)(h, y, v).result
-                      : _),
+                        ? (0, u.interpolateAs)(h, y, v).result
+                        : _),
                     (r = (0, c.default)(
                       (0, d.removeTrailingSlash)((0, l.addLocale)(t, a)),
                       ".json"
@@ -1407,8 +1407,8 @@
                       (null != (t = null == r ? void 0 : r.innerText)
                         ? t
                         : null == r
-                        ? void 0
-                        : r.textContent) || e
+                          ? void 0
+                          : r.textContent) || e
                     );
                   }
                 }
@@ -1971,14 +1971,14 @@
             c
               ? ((b.innerHTML = c.__html || ""), g())
               : s
-              ? ((b.textContent =
-                  "string" == typeof s
-                    ? s
-                    : Array.isArray(s)
-                    ? s.join("")
-                    : ""),
-                g())
-              : t && ((b.src = t), h.set(t, P));
+                ? ((b.textContent =
+                    "string" == typeof s
+                      ? s
+                      : Array.isArray(s)
+                        ? s.join("")
+                        : ""),
+                  g())
+                : t && ((b.src = t), h.set(t, P));
             var w = !0,
               O = !1,
               j = void 0;
@@ -2096,8 +2096,8 @@
                 ])),
                 b(P))
               : w && w()
-              ? v.add(t || a)
-              : w && !w() && y(e)),
+                ? v.add(t || a)
+                : w && !w() && y(e)),
           O)
         ) {
           if ("beforeInteractive" === h)
@@ -2561,18 +2561,17 @@
         return "string" == typeof t || "number" == typeof t
           ? e
           : t.type === a.default.Fragment
-          ? e.concat(
-              a.default.Children.toArray(t.props.children).reduce(function (
-                e,
-                t
-              ) {
-                return "string" == typeof t || "number" == typeof t
-                  ? e
-                  : e.concat(t);
-              },
-              [])
-            )
-          : e.concat(t);
+            ? e.concat(
+                a.default.Children.toArray(t.props.children).reduce(function (
+                  e,
+                  t
+                ) {
+                  return "string" == typeof t || "number" == typeof t
+                    ? e
+                    : e.concat(t);
+                }, [])
+              )
+            : e.concat(t);
       }
       r(86463);
       var d = ["name", "httpEquiv", "charSet", "itemProp"];
@@ -2840,8 +2839,8 @@
         return t.startsWith("/index/") && !(0, n.isDynamicRoute)(t)
           ? t.slice(6)
           : "/index" !== t
-          ? t
-          : "/";
+            ? t
+            : "/";
       }
     },
     76612: function (e, t) {
@@ -3397,8 +3396,8 @@
               return (n[f] = Promise.resolve(e)), e;
             })
           : void 0 !== n[f]
-          ? n[f]
-          : (n[f] = d(l ? { method: "HEAD" } : {}));
+            ? n[f]
+            : (n[f] = d(l ? { method: "HEAD" } : {}));
       }
       function Z() {
         return Math.random().toString(36).slice(2, 10);
@@ -4060,8 +4059,8 @@
                               (null == (ey = self.__NEXT_DATA__.props)
                                 ? void 0
                                 : null == (e_ = ey.pageProps)
-                                ? void 0
-                                : e_.statusCode) === 500 &&
+                                  ? void 0
+                                  : e_.statusCode) === 500 &&
                               (null == (eg = eb.props)
                                 ? void 0
                                 : eg.pageProps) &&
@@ -4107,8 +4106,8 @@
                             (null == (eH = self.__NEXT_DATA__.props)
                               ? void 0
                               : null == (eq = eH.pageProps)
-                              ? void 0
-                              : eq.statusCode) === 500 &&
+                                ? void 0
+                                : eq.statusCode) === 500 &&
                             (null == (eF = eb.props) ? void 0 : eF.pageProps) &&
                             (eb.props.pageProps.statusCode = 500),
                             (l.label = 25);
@@ -4407,21 +4406,21 @@
                             (null == I
                               ? void 0
                               : null == (O = I.effect)
-                              ? void 0
-                              : O.type) === "redirect-internal" ||
+                                ? void 0
+                                : O.type) === "redirect-internal" ||
                               (null == I
                                 ? void 0
                                 : null == (j = I.effect)
-                                ? void 0
-                                : j.type) === "redirect-external")
+                                  ? void 0
+                                  : j.type) === "redirect-external")
                           )
                             return [2, I.effect];
                           if (
                             (null == I
                               ? void 0
                               : null == (E = I.effect)
-                              ? void 0
-                              : E.type) !== "rewrite"
+                                ? void 0
+                                : E.type) !== "rewrite"
                           )
                             return [3, 6];
                           return (
@@ -4475,8 +4474,8 @@
                               null == I
                                 ? void 0
                                 : null == (x = I.response)
-                                ? void 0
-                                : x.headers.get("x-middleware-skip")),
+                                  ? void 0
+                                  : x.headers.get("x-middleware-skip")),
                             (U = H.__N_SSG || H.__N_SSP),
                             F &&
                               (null == I ? void 0 : I.dataHref) &&
@@ -4502,7 +4501,9 @@
                                           4,
                                           Q({
                                             dataHref: (
-                                              null == I ? void 0 : I.dataHref
+                                              null == I
+                                                ? void 0
+                                                : I.dataHref
                                             )
                                               ? I.dataHref
                                               : t.pageLoader.getDataHref({
@@ -5157,8 +5158,8 @@
           ("/" === e
             ? "/index"
             : /^\/index(\/|$)/.test(e)
-            ? "/index" + e
-            : "" + e) + t
+              ? "/index" + e
+              : "" + e) + t
         );
       }
       Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -5409,8 +5410,8 @@
           a = t
             ? new URL(t, r)
             : e.startsWith(".")
-            ? new URL(window.location.href)
-            : r,
+              ? new URL(window.location.href)
+              : r,
           i = new URL(e, a),
           u = i.pathname,
           c = i.searchParams,
@@ -5455,8 +5456,8 @@
             void 0 === t[r]
               ? (t[r] = e)
               : Array.isArray(t[r])
-              ? t[r].push(e)
-              : (t[r] = [t[r], e]);
+                ? t[r].push(e)
+                : (t[r] = [t[r], e]);
           }),
           t
         );
@@ -5645,8 +5646,8 @@
                       return a(e);
                     })
                   : t.repeat
-                  ? [a(n)]
-                  : a(n));
+                    ? [a(n)]
+                    : a(n));
             }),
             i
           );
@@ -6476,8 +6477,8 @@
                 (u = t.value) > r[1]
                   ? "poor"
                   : u > r[0]
-                  ? "needs-improvement"
-                  : "good"),
+                    ? "needs-improvement"
+                    : "good"),
               e(t));
           };
         }),
@@ -6807,14 +6808,14 @@
                 !0
               )
             : "complete" !== document.readyState
-            ? addEventListener(
-                "load",
-                function () {
-                  return e(t);
-                },
-                !0
-              )
-            : setTimeout(t, 0);
+              ? addEventListener(
+                  "load",
+                  function () {
+                    return e(t);
+                  },
+                  !0
+                )
+              : setTimeout(t, 0);
         }),
         (V = function (e, t) {
           t = t || {};
@@ -7021,8 +7022,8 @@
                         2 & u[0]
                           ? n.return
                           : u[0]
-                          ? n.throw || ((o = n.return) && o.call(n), 0)
-                          : n.next) &&
+                            ? n.throw || ((o = n.return) && o.call(n), 0)
+                            : n.next) &&
                       !(o = o.call(n, u[1])).done)
                   )
                     return o;

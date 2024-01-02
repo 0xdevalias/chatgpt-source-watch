@@ -84,8 +84,8 @@
         return e.continueMode
           ? (0, o.jsx)(O, (0, r._)({}, t))
           : e.moderationMode
-          ? (0, o.jsx)(p.Z, { children: (0, o.jsx)(D, (0, r._)({}, t)) })
-          : (0, o.jsx)(D, (0, r._)({}, t));
+            ? (0, o.jsx)(p.Z, { children: (0, o.jsx)(D, (0, r._)({}, t)) })
+            : (0, o.jsx)(D, (0, r._)({}, t));
       }
       function O(e) {
         var t = (0, i._)(
@@ -203,8 +203,8 @@
               return e;
             })
           : "function" == typeof e
-          ? (i.loader = e)
-          : "object" == typeof e && (i = r._({}, i, e));
+            ? (i.loader = e)
+            : "object" == typeof e && (i = r._({}, i, e));
         var s = (i = r._({}, i, t)).loader;
         return (i.loadableGenerated &&
           ((i = r._({}, i, i.loadableGenerated)), delete i.loadableGenerated),
@@ -417,11 +417,11 @@
                           retry: o.retry,
                         })
                       : n.loaded
-                      ? u.default.createElement(
-                          (t = n.loaded) && t.default ? t.default : t,
-                          e
-                        )
-                      : null;
+                        ? u.default.createElement(
+                            (t = n.loaded) && t.default ? t.default : t,
+                            e
+                          )
+                        : null;
                   },
                   [e, n]
                 )

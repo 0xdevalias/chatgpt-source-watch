@@ -42,8 +42,8 @@
               children: (0, i.jsx)(s.Z, (0, r._)({}, h.businessPlanName)),
             })
           : (null == e ? void 0 : e.structure) === "personal" && t
-          ? (0, i.jsx)(m, { children: "Plus" })
-          : null;
+            ? (0, i.jsx)(m, { children: "Plus" })
+            : null;
       };
       var h = (0, o.vU)({
         businessPlanName: {
@@ -1087,8 +1087,8 @@
                     0 === o
                       ? this.getRandomInt(t, Math.floor(n / 2))
                       : 1 === o
-                      ? this.getRandomInt(t, Math.floor((2 * n) / 3))
-                      : this.getRandomInt(t, n);
+                        ? this.getRandomInt(t, Math.floor((2 * n) / 3))
+                        : this.getRandomInt(t, n);
                 } else s = this.getRandomInt(t, n);
                 a.push(s + r), (r += s);
               }
@@ -1158,8 +1158,15 @@
                 (0, v.jsx)(ek, {
                   label: "STDOUT/STDERR",
                   output: i.map(function (e, t) {
-                    return (0,
-                    v.jsx)("span", { className: "stderr" === e.stream_name ? "text-red-500" : "", children: e.text }, "".concat(t));
+                    return (0, v.jsx)(
+                      "span",
+                      {
+                        className:
+                          "stderr" === e.stream_name ? "text-red-500" : "",
+                        children: e.text,
+                      },
+                      "".concat(t)
+                    );
                   }),
                 }),
               o &&
@@ -1185,8 +1192,14 @@
                 }),
               c &&
                 a.messages.filter(e_).map(function (e, t) {
-                  return (0,
-                  v.jsx)("div", { className: "empty:hidden", children: (0, v.jsx)(eM, { jupyterMessage: e }) }, t);
+                  return (0, v.jsx)(
+                    "div",
+                    {
+                      className: "empty:hidden",
+                      children: (0, v.jsx)(eM, { jupyterMessage: e }),
+                    },
+                    t
+                  );
                 }),
             ],
           });
@@ -1292,8 +1305,8 @@
                   : t.aggregate_result)
                 ? void 0
                 : null === (n = r.messages) || void 0 === n
-                ? void 0
-                : n.some(e_)) ||
+                  ? void 0
+                  : n.some(e_)) ||
               ("parts" in (a = e.message.content)
                 ? a.parts.join("")
                 : ""
@@ -1388,8 +1401,40 @@
               },
               [l]
             );
-          return (0,
-          v.jsxs)(eY, { children: [(0, v.jsxs)(eK, { $complete: n, children: [(0, v.jsx)("div", { children: t }), !n && (0, v.jsx)(eR.Z, { className: (0, U.Z)("shrink-0", null != s ? "ml-1" : "ml-12") }), null != s && (0, v.jsxs)("div", { className: "ml-12 flex items-center gap-2", role: "button", onClick: m, children: [null != a && null != r && (0, v.jsx)("div", { className: "text-xs text-gray-600", children: u ? a : r }), !u && i, (0, v.jsx)(es.ZP, { icon: u ? k.rH8 : k.bTu })] })] }), u && s] });
+          return (0, v.jsxs)(eY, {
+            children: [
+              (0, v.jsxs)(eK, {
+                $complete: n,
+                children: [
+                  (0, v.jsx)("div", { children: t }),
+                  !n &&
+                    (0, v.jsx)(eR.Z, {
+                      className: (0, U.Z)(
+                        "shrink-0",
+                        null != s ? "ml-1" : "ml-12"
+                      ),
+                    }),
+                  null != s &&
+                    (0, v.jsxs)("div", {
+                      className: "ml-12 flex items-center gap-2",
+                      role: "button",
+                      onClick: m,
+                      children: [
+                        null != a &&
+                          null != r &&
+                          (0, v.jsx)("div", {
+                            className: "text-xs text-gray-600",
+                            children: u ? a : r,
+                          }),
+                        !u && i,
+                        (0, v.jsx)(es.ZP, { icon: u ? k.rH8 : k.bTu }),
+                      ],
+                    }),
+                ],
+              }),
+              u && s,
+            ],
+          });
         }),
         eY = X.Z.div(e$()),
         eK = X.Z.div(eG(), function (e) {
@@ -1562,19 +1607,19 @@
             ? (l.push((0, v.jsx)(te, { isRetrieval: a }, "finished")),
               (t = (0, v.jsx)(te, { isRetrieval: a, compact: !0 })))
             : 0 === l.length
-            ? (l.push((0, v.jsx)(e9, { isRetrieval: a }, "waiting")),
-              (t = (0, v.jsx)(e9, { isRetrieval: a, compact: !0 })))
-            : "finished" === o[o.length - 1].status &&
-              l.push(
-                (0, v.jsx)(
-                  tt,
-                  {
-                    icon: k.Wqx,
-                    children: (0, v.jsx)(w.Z, (0, g._)({}, e0.thinking)),
-                  },
-                  "thinking"
-                )
-              ),
+              ? (l.push((0, v.jsx)(e9, { isRetrieval: a }, "waiting")),
+                (t = (0, v.jsx)(e9, { isRetrieval: a, compact: !0 })))
+              : "finished" === o[o.length - 1].status &&
+                l.push(
+                  (0, v.jsx)(
+                    tt,
+                    {
+                      icon: k.Wqx,
+                      children: (0, v.jsx)(w.Z, (0, g._)({}, e0.thinking)),
+                    },
+                    "thinking"
+                  )
+                ),
             t ||
               (t = (0, v.jsx)(e2, {
                 command: o[o.length - 1],
@@ -1592,14 +1637,23 @@
                   for (
                     var r = (0, eU.RR)(n), a = /^#\s*(.*)/gm, i = [];
                     null !== (t = a.exec(r));
-
                   )
                     i.push(t[1]);
                   return i.length > 0 ? i.join("\n") : null;
                 })(s)
               : null;
-          return (0,
-          v.jsxs)(eJ, { isComplete: r, results: (0, v.jsx)(eX, { className: "text-xs", children: l }), children: [null != c && (0, v.jsx)("div", { className: "mb-2 whitespace-pre-wrap font-medium", children: c }), t] });
+          return (0, v.jsxs)(eJ, {
+            isComplete: r,
+            results: (0, v.jsx)(eX, { className: "text-xs", children: l }),
+            children: [
+              null != c &&
+                (0, v.jsx)("div", {
+                  className: "mb-2 whitespace-pre-wrap font-medium",
+                  children: c,
+                }),
+              t,
+            ],
+          });
         });
       function e2(e) {
         var t = e.command,
@@ -1617,13 +1671,13 @@
                   ? null === (a = t.message.metadata) || void 0 === a
                     ? void 0
                     : null === (i = a._cite_metadata) || void 0 === i
-                    ? void 0
-                    : i.original_query
+                      ? void 0
+                      : i.original_query
                   : null === (s = t.message.metadata) || void 0 === s
-                  ? void 0
-                  : null === (o = s.args) || void 0 === o
-                  ? void 0
-                  : o[0];
+                    ? void 0
+                    : null === (o = s.args) || void 0 === o
+                      ? void 0
+                      : o[0];
             if (null == l) return null;
             return (0, v.jsx)(e3, {
               searchQuery: l,
@@ -1639,8 +1693,8 @@
                 null === (c = t.message.metadata) || void 0 === c
                   ? void 0
                   : null === (u = c._cite_metadata) || void 0 === u
-                  ? void 0
-                  : u.metadata_list[0];
+                    ? void 0
+                    : u.metadata_list[0];
             return (0, v.jsx)(e5, {
               isRetrieval: n,
               citationMetadata: d,
@@ -2241,8 +2295,8 @@
               null != i
                 ? (0, v.jsxs)("div", { children: ["Used ", d] })
                 : u
-                ? (0, v.jsxs)("div", { children: ["Tried to use ", d] })
-                : (0, v.jsxs)("div", { children: ["Using ", d, "..."] });
+                  ? (0, v.jsxs)("div", { children: ["Tried to use ", d] })
+                  : (0, v.jsxs)("div", { children: ["Using ", d, "..."] });
           return (
             l &&
               ((0, td.cf)(l)
@@ -2736,16 +2790,56 @@
                       a = n === e.length - 1;
                     switch (t.type) {
                       case u.Text:
-                        return (0,
-                        v.jsx)(tl.ZP, { className: "min-h-[20px]", message: t.message, isEditing: H, format: $, isCompletionInProgress: a && eM, onCreateEditNode: eR, clientThreadId: l, onUpdateNode: p, onDeleteNode: f, onChangeItemInView: c, onRequestCompletion: h, onExitEdit: ev, disabled: 0 !== y.size, isCompletion: $, onRequestMoreCompletions: m, isResponseToPluginMessage: (null === (r = e[n - 1]) || void 0 === r ? void 0 : r.type) === u.Plugin }, t.message.nodeId);
+                        return (0, v.jsx)(
+                          tl.ZP,
+                          {
+                            className: "min-h-[20px]",
+                            message: t.message,
+                            isEditing: H,
+                            format: $,
+                            isCompletionInProgress: a && eM,
+                            onCreateEditNode: eR,
+                            clientThreadId: l,
+                            onUpdateNode: p,
+                            onDeleteNode: f,
+                            onChangeItemInView: c,
+                            onRequestCompletion: h,
+                            onExitEdit: ev,
+                            disabled: 0 !== y.size,
+                            isCompletion: $,
+                            onRequestMoreCompletions: m,
+                            isResponseToPluginMessage:
+                              (null === (r = e[n - 1]) || void 0 === r
+                                ? void 0
+                                : r.type) === u.Plugin,
+                          },
+                          t.message.nodeId
+                        );
                       case u.MultiText:
-                        return (0,
-                        v.jsx)(tc, { clientThreadId: l, messages: t.messages, isCompletionInProgress: a && eM, isCompletion: $, onRequestMoreCompletions: m }, n);
+                        return (0, v.jsx)(
+                          tc,
+                          {
+                            clientThreadId: l,
+                            messages: t.messages,
+                            isCompletionInProgress: a && eM,
+                            isCompletion: $,
+                            onRequestMoreCompletions: m,
+                          },
+                          n
+                        );
                       case u.Browsing:
                       case u.RetrievalBrowsing:
                         var i = t.messages[t.messages.length - 1];
-                        return (0,
-                        v.jsx)(e1, { messages: t.messages, isComplete: !o || !a || 0 === y.size || tm(i.message), isRetrieval: t.type === u.RetrievalBrowsing }, t.messages[0].nodeId);
+                        return (0, v.jsx)(
+                          e1,
+                          {
+                            messages: t.messages,
+                            isComplete:
+                              !o || !a || 0 === y.size || tm(i.message),
+                            isRetrieval: t.type === u.RetrievalBrowsing,
+                          },
+                          t.messages[0].nodeId
+                        );
                       case u.Code:
                         var s,
                           d,
@@ -2754,14 +2848,44 @@
                             g && g.type === u.CodeExecutionOutput
                               ? g.message
                               : void 0;
-                        return (0,
-                        v.jsx)(to, { clientThreadId: l, message: t.message, outputMessage: x, isComplete: !o || !a || 0 === y.size || ((null == (d = null === (s = null == x ? void 0 : x.message.metadata) || void 0 === s ? void 0 : s.aggregate_result) ? void 0 : d.status) !== void 0 && (null == d ? void 0 : d.status) !== "running") || tm(t.message.message) }, t.message.nodeId);
+                        return (0, v.jsx)(
+                          to,
+                          {
+                            clientThreadId: l,
+                            message: t.message,
+                            outputMessage: x,
+                            isComplete:
+                              !o ||
+                              !a ||
+                              0 === y.size ||
+                              ((null ==
+                              (d =
+                                null ===
+                                  (s =
+                                    null == x ? void 0 : x.message.metadata) ||
+                                void 0 === s
+                                  ? void 0
+                                  : s.aggregate_result)
+                                ? void 0
+                                : d.status) !== void 0 &&
+                                (null == d ? void 0 : d.status) !==
+                                  "running") ||
+                              tm(t.message.message),
+                          },
+                          t.message.nodeId
+                        );
                       case u.CodeExecutionOutput:
-                        return (0,
-                        v.jsx)(ej, { message: t.message, isCollapsed: !1 }, t.message.nodeId);
+                        return (0, v.jsx)(
+                          ej,
+                          { message: t.message, isCollapsed: !1 },
+                          t.message.nodeId
+                        );
                       case u.Plugin:
-                        return (0,
-                        v.jsx)(tS, { messages: t.messages }, t.messages[0].nodeId);
+                        return (0, v.jsx)(
+                          tS,
+                          { messages: t.messages },
+                          t.messages[0].nodeId
+                        );
                       default:
                         return null;
                     }
@@ -2820,8 +2944,8 @@
                       (null == c
                         ? void 0
                         : null === (t = c.message) || void 0 === t
-                        ? void 0
-                        : t.id) || "",
+                          ? void 0
+                          : t.id) || "",
                     d = E[1] || "",
                     m = (null == r ? void 0 : r.getConversationTurns(d)) || [],
                     f = m[m.length - 1],
@@ -2832,8 +2956,8 @@
                     (null == p
                       ? void 0
                       : null === (n = p.message) || void 0 === n
-                      ? void 0
-                      : n.id) || "",
+                        ? void 0
+                        : n.id) || "",
                     e,
                     eQ.current,
                     eQ.current,
@@ -3069,23 +3193,24 @@
                                 notice: eN || void 0,
                               })
                           : e6 || C
-                          ? (0, v.jsx)(ez.k$, {
-                              background:
-                                tQ[
-                                  (null !==
-                                    (t =
-                                      null == e7 ? void 0 : e7.charCodeAt(0)) &&
-                                  void 0 !== t
-                                    ? t
-                                    : 0) % tQ.length
-                                ],
-                              iconName: "user",
-                            })
-                          : (0, v.jsx)(ez.Yt, {
-                              user: null == L ? void 0 : L.user,
-                              notice: eN || void 0,
-                              size: V ? "redesign" : "medium",
-                            }),
+                            ? (0, v.jsx)(ez.k$, {
+                                background:
+                                  tQ[
+                                    (null !==
+                                      (t =
+                                        null == e7
+                                          ? void 0
+                                          : e7.charCodeAt(0)) && void 0 !== t
+                                      ? t
+                                      : 0) % tQ.length
+                                  ],
+                                iconName: "user",
+                              })
+                            : (0, v.jsx)(ez.Yt, {
+                                user: null == L ? void 0 : L.user,
+                                notice: eN || void 0,
+                                size: V ? "redesign" : "medium",
+                              }),
                       }),
                       !V &&
                         eY &&
@@ -3211,8 +3336,8 @@
             return e.$isMessageRedesign
               ? "relative"
               : e.$isDesktopNavCollapsed
-              ? "text-base md:gap-6 md:max-w-3xl md:py-6 lg:px-0"
-              : "text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0";
+                ? "text-base md:gap-6 md:max-w-3xl md:py-6 lg:px-0"
+                : "text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0";
           },
           function (e) {
             return e.$isStaticSharedThread ? "pl-0 pr-4" : "";
@@ -3740,8 +3865,52 @@
                 }),
               ],
             });
-        return (0,
-        v.jsxs)("div", { className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4", children: [(0, v.jsxs)(nw.R.Button, { ref: h, onClick: a ? m : d, className: (0, U.Z)("relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm", "mini" === f ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10" : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20"), children: ["mini" !== f && (0, v.jsx)(nw.R.Label, { className: "block text-xs text-gray-700 dark:text-gray-500", children: n }), (0, v.jsx)("span", { className: "inline-flex w-full truncate", children: (0, v.jsx)("span", { className: "flex h-6 items-center gap-1 truncate", children: r }) }), (0, v.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2", children: (0, v.jsx)(es.ZP, { icon: k.bTu, className: " text-gray-400", "aria-hidden": "true" }) })] }), (0, v.jsx)(nC.u, { show: a, as: j.Fragment, leave: "transition ease-in duration-100", leaveFrom: "opacity-100", leaveTo: "opacity-0", children: (0, v.jsx)(nH, { ref: g, children: x }) })] });
+        return (0, v.jsxs)("div", {
+          className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4",
+          children: [
+            (0, v.jsxs)(nw.R.Button, {
+              ref: h,
+              onClick: a ? m : d,
+              className: (0, U.Z)(
+                "relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm",
+                "mini" === f
+                  ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10"
+                  : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20"
+              ),
+              children: [
+                "mini" !== f &&
+                  (0, v.jsx)(nw.R.Label, {
+                    className: "block text-xs text-gray-700 dark:text-gray-500",
+                    children: n,
+                  }),
+                (0, v.jsx)("span", {
+                  className: "inline-flex w-full truncate",
+                  children: (0, v.jsx)("span", {
+                    className: "flex h-6 items-center gap-1 truncate",
+                    children: r,
+                  }),
+                }),
+                (0, v.jsx)("span", {
+                  className:
+                    "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2",
+                  children: (0, v.jsx)(es.ZP, {
+                    icon: k.bTu,
+                    className: " text-gray-400",
+                    "aria-hidden": "true",
+                  }),
+                }),
+              ],
+            }),
+            (0, v.jsx)(nC.u, {
+              show: a,
+              as: j.Fragment,
+              leave: "transition ease-in duration-100",
+              leaveFrom: "opacity-100",
+              leaveTo: "opacity-0",
+              children: (0, v.jsx)(nH, { ref: g, children: x }),
+            }),
+          ],
+        });
       });
       function nF(e) {
         var t = e.value,
@@ -3986,23 +4155,23 @@
               onClose: r,
             })
           : l && (null == i ? void 0 : i.scrapeManifestResponse.plugin)
-          ? (0, v.jsx)(rr, {
-              plugin: i.scrapeManifestResponse.plugin,
-              manifestAccessToken: i.manifestAccessToken,
-              verificationTokens: l,
-              onReadyToInstall: h,
-              onClose: r,
-            })
-          : i
-          ? (0, v.jsx)(rn, {
-              loadManifestResult: i,
-              onRefetch: f,
-              onSubmitAuthInfo: c,
-              onReadyToInstall: h,
-              onInstallLocalhost: n,
-              onClose: r,
-            })
-          : (0, v.jsx)(re, { onFetch: f, onClose: r });
+            ? (0, v.jsx)(rr, {
+                plugin: i.scrapeManifestResponse.plugin,
+                manifestAccessToken: i.manifestAccessToken,
+                verificationTokens: l,
+                onReadyToInstall: h,
+                onClose: r,
+              })
+            : i
+              ? (0, v.jsx)(rn, {
+                  loadManifestResult: i,
+                  onRefetch: f,
+                  onSubmitAuthInfo: c,
+                  onReadyToInstall: h,
+                  onInstallLocalhost: n,
+                  onClose: r,
+                })
+              : (0, v.jsx)(re, { onFetch: f, onClose: r });
       }
       function re(e) {
         var t = e.onFetch,
@@ -4343,8 +4512,8 @@
             title: R
               ? "Refetch manifest"
               : Z
-              ? "Install localhost plugin"
-              : "Next",
+                ? "Install localhost plugin"
+                : "Next",
             color: "primary",
             onClick: D,
             loading: y || P,
@@ -5373,8 +5542,8 @@
               (null == g
                 ? void 0
                 : null === (l = g.user) || void 0 === l
-                ? void 0
-                : l.id) || ""
+                  ? void 0
+                  : l.id) || ""
             )),
             (T = rx(y, u)),
             (Z = []),
@@ -5382,8 +5551,8 @@
             c === d.Installed
               ? ((Z = T), (S = k))
               : u
-              ? ((Z = N), (S = _))
-              : ((Z = P), (S = _)),
+                ? ((Z = N), (S = _))
+                : ((Z = P), (S = _)),
             {
               isLoading: S,
               items: ((n = (t = { page: f, items: Z, pageSize: h }).page),
@@ -5490,8 +5659,11 @@
                 return (0, v.jsx)(rS, {}, t);
               })
           : t.map(function (e) {
-              return (0,
-              v.jsx)(rZ, { plugin: e, onInstallWithAuthRequired: a, onRequestMfa: i }, e.id);
+              return (0, v.jsx)(
+                rZ,
+                { plugin: e, onInstallWithAuthRequired: a, onRequestMfa: i },
+                e.id
+              );
             });
         return (0, v.jsx)("div", {
           className:
@@ -5549,8 +5721,8 @@
                 !(null == h
                   ? void 0
                   : null === (e = h.user) || void 0 === e
-                  ? void 0
-                  : e.mfa) &&
+                    ? void 0
+                    : e.mfa) &&
                 g.has(er.i) &&
                 p
               ) {
@@ -5593,20 +5765,20 @@
                   ],
                 })
               : (
-                  null === (t = r.user_settings) || void 0 === t
-                    ? void 0
-                    : t.is_installed
-                )
-              ? (0, v.jsxs)(ei.z, {
-                  color: "light",
-                  className: "hover:bg-gray-200",
-                  onClick: y,
-                  children: ["Uninstall", (0, v.jsx)(es.ZP, { icon: k.$Rx })],
-                })
-              : (0, v.jsxs)(ei.z, {
-                  onClick: b,
-                  children: ["Install", (0, v.jsx)(es.ZP, { icon: k.wzc })],
-                })),
+                    null === (t = r.user_settings) || void 0 === t
+                      ? void 0
+                      : t.is_installed
+                  )
+                ? (0, v.jsxs)(ei.z, {
+                    color: "light",
+                    className: "hover:bg-gray-200",
+                    onClick: y,
+                    children: ["Uninstall", (0, v.jsx)(es.ZP, { icon: k.$Rx })],
+                  })
+                : (0, v.jsxs)(ei.z, {
+                    onClick: b,
+                    children: ["Install", (0, v.jsx)(es.ZP, { icon: k.wzc })],
+                  })),
           (0, v.jsx)(rI, {
             logo: (0, v.jsx)(nx.Z, {
               url: r.manifest.logo_url,
@@ -5617,8 +5789,8 @@
             tag: (0, td.cf)(r)
               ? (0, v.jsx)(t_, {})
               : "approved" !== r.status
-              ? (0, v.jsx)(tC, {})
-              : void 0,
+                ? (0, v.jsx)(tC, {})
+                : void 0,
             title: (0, v.jsx)("div", {
               className: "max-w-full truncate text-lg leading-6",
               children: r.manifest.name_for_human,
@@ -5800,20 +5972,20 @@
         return !a || o
           ? (0, v.jsx)(rA, { allowClose: !a, onConfirm: y, onClose: n })
           : u
-          ? (0, v.jsx)(rs, { plugin: f, onInstall: M, onClose: N })
-          : p
-          ? (0, v.jsx)(n9, {
-              onClickInstall: k,
-              onInstallLocalhost: M,
-              onClose: P,
-            })
-          : (0, v.jsx)(rM, {
-              onInstallWithAuthRequired: k,
-              onClickInstallDeveloper: w,
-              onClickDevelop: C,
-              onClickAbout: _,
-              onClose: n,
-            });
+            ? (0, v.jsx)(rs, { plugin: f, onInstall: M, onClose: N })
+            : p
+              ? (0, v.jsx)(n9, {
+                  onClickInstall: k,
+                  onInstallLocalhost: M,
+                  onClose: P,
+                })
+              : (0, v.jsx)(rM, {
+                  onInstallWithAuthRequired: k,
+                  onClickInstallDeveloper: w,
+                  onClickDevelop: C,
+                  onClickAbout: _,
+                  onClose: n,
+                });
       }
       function rE() {
         var e = (0, O._)([
@@ -5863,7 +6035,7 @@
                         null !==
                           (i =
                             null == s ? void 0 : s.manifest.name_for_human) &&
-                          void 0 !== i
+                        void 0 !== i
                           ? i
                           : "plugin",
                         "."
@@ -6037,8 +6209,8 @@
               customTags: (0, td.cf)(e)
                 ? (0, v.jsx)(t_, {})
                 : "approved" !== e.status
-                ? (0, v.jsx)(tC, {})
-                : void 0,
+                  ? (0, v.jsx)(tC, {})
+                  : void 0,
               imageUrl: e.manifest.logo_url,
             };
           }),
@@ -6050,8 +6222,15 @@
           R = "".concat(0 === h.length ? "No" : h.length, " plugins enabled");
         if (h.length > 0 && h.length < 6) {
           var D = h.map(function (e, t) {
-            return (0,
-            v.jsx)(nx.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 24 }, t);
+            return (0, v.jsx)(
+              nx.Z,
+              {
+                url: e.manifest.logo_url,
+                name: e.manifest.name_for_human,
+                size: 24,
+              },
+              t
+            );
           });
           R = (0, v.jsx)("div", { className: "flex gap-2", children: D });
         }
@@ -6118,8 +6297,8 @@
                   (null == s
                     ? void 0
                     : null === (t = s.enabledTools) || void 0 === t
-                    ? void 0
-                    : t.includes("tools3")) &&
+                      ? void 0
+                      : t.includes("tools3")) &&
                   (0, v.jsx)(rL, { theme: "mini" }),
               ],
             })
@@ -6167,8 +6346,15 @@
             T = (0, tT.v)();
           if (T.length > 0) {
             var Z = T.map(function (e, t) {
-              return (0,
-              v.jsx)(nx.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 16 }, t);
+              return (0, v.jsx)(
+                nx.Z,
+                {
+                  url: e.manifest.logo_url,
+                  name: e.manifest.name_for_human,
+                  size: 16,
+                },
+                t
+              );
             });
             r = (0, v.jsxs)(v.Fragment, {
               children: [
@@ -6183,8 +6369,8 @@
               (null === (t = D.query) || void 0 === t
                 ? void 0
                 : null === (n = t.shareParams) || void 0 === n
-                ? void 0
-                : n[1]) === "moderate",
+                  ? void 0
+                  : n[1]) === "moderate",
             B = (0, S.tN)(function (e) {
               return e.activeModals.has(S.B.DownloadMessages);
             }),
@@ -6369,8 +6555,8 @@
                       ],
                     })
                   : null != n
-                  ? n
-                  : null;
+                    ? n
+                    : null;
               },
               [r]
             );
@@ -6677,12 +6863,32 @@
             !M && D.tags.includes(tA.S.GPT_4)
               ? "black"
               : null !== (t = null == q ? void 0 : q.backgroundColor) &&
-                void 0 !== t
-              ? t
-              : void 0,
+                  void 0 !== t
+                ? t
+                : void 0,
           W = (0, eD._)(Array(z).keys()).map(function (e) {
-            return (0,
-            v.jsx)(tV, { isFinalTurn: e === z - 1, turnIndex: e, clientThreadId: c, conversationLeafId: u, onChangeItemInView: n, onChangeRating: i, onRequestMoreCompletions: r, onDeleteNode: s, onRequestCompletion: o, onUpdateNode: a, onHandleChangeVariantFeedbackInlineComparisonRating: l, activeRequests: m, currentModelId: D.id, showInlineEmbeddedDisplay: h, initiallyHighlightedMessageId: g, avatarColor: Q }, e);
+            return (0, v.jsx)(
+              tV,
+              {
+                isFinalTurn: e === z - 1,
+                turnIndex: e,
+                clientThreadId: c,
+                conversationLeafId: u,
+                onChangeItemInView: n,
+                onChangeRating: i,
+                onRequestMoreCompletions: r,
+                onDeleteNode: s,
+                onRequestCompletion: o,
+                onUpdateNode: a,
+                onHandleChangeVariantFeedbackInlineComparisonRating: l,
+                activeRequests: m,
+                currentModelId: D.id,
+                showInlineEmbeddedDisplay: h,
+                initiallyHighlightedMessageId: g,
+                avatarColor: Q,
+              },
+              e
+            );
           });
         return (0, v.jsxs)(v.Fragment, {
           children: [
@@ -7125,15 +7331,15 @@
               N
                 ? (0, v.jsx)(es.ZP, { icon: k.LSm })
                 : b
-                ? (0, v.jsx)(eR.Z, {})
-                : (0, v.jsx)(es.ZP, { icon: k.XKb }),
+                  ? (0, v.jsx)(eR.Z, {})
+                  : (0, v.jsx)(es.ZP, { icon: k.XKb }),
               N
                 ? "Copied!"
                 : b
-                ? "Copying..."
-                : X
-                ? "Update and Copy Link"
-                : "Copy Link",
+                  ? "Copying..."
+                  : X
+                    ? "Update and Copy Link"
+                    : "Copy Link",
             ],
           }),
           et = (0, j.useCallback)(
@@ -7205,8 +7411,8 @@
                       null == W
                         ? void 0
                         : null === (t = W.user) || void 0 === t
-                        ? void 0
-                        : t.name;
+                          ? void 0
+                          : t.name;
                   }),
                   [2]
                 );
@@ -7261,8 +7467,8 @@
                             null == W
                               ? void 0
                               : null === (i = W.user) || void 0 === i
-                              ? void 0
-                              : i.name,
+                                ? void 0
+                                : i.name,
                             " \xb7 ",
                           ],
                         }),
@@ -7881,9 +8087,12 @@
             : n.current);
         (0, j.useEffect)(
           function () {
-            f(function () {
-              m(d + 1);
-            }, (0, z.Z)((0, H.Z)(), Date.now()) + 1e3);
+            f(
+              function () {
+                m(d + 1);
+              },
+              (0, z.Z)((0, H.Z)(), Date.now()) + 1e3
+            );
           },
           [d, f]
         );
@@ -8056,8 +8265,35 @@
                                             : Z.find(function (t) {
                                                 return t.id === e.id;
                                               });
-                                      return (0,
-                                      v.jsx)(V.E.li, { className: (0, U.Z)("relative", c && 0 === t ? "z-[15]" : ""), layoutId: "".concat(e.id), layout: "position", custom: { isNew: !s }, variants: aR, initial: "initial", animate: "animate", exit: "exit", children: (0, v.jsx)(aB, { id: e.id, title: e.title, active: n, onNewThread: a, setActiveRequests: i, forwardRef: b && p[p.length - 5 - 1].id === e.id ? P : void 0 }) }, "history-item-".concat(e.id));
+                                      return (0, v.jsx)(
+                                        V.E.li,
+                                        {
+                                          className: (0, U.Z)(
+                                            "relative",
+                                            c && 0 === t ? "z-[15]" : ""
+                                          ),
+                                          layoutId: "".concat(e.id),
+                                          layout: "position",
+                                          custom: { isNew: !s },
+                                          variants: aR,
+                                          initial: "initial",
+                                          animate: "animate",
+                                          exit: "exit",
+                                          children: (0, v.jsx)(aB, {
+                                            id: e.id,
+                                            title: e.title,
+                                            active: n,
+                                            onNewThread: a,
+                                            setActiveRequests: i,
+                                            forwardRef:
+                                              b &&
+                                              p[p.length - 5 - 1].id === e.id
+                                                ? P
+                                                : void 0,
+                                          }),
+                                        },
+                                        "history-item-".concat(e.id)
+                                      );
                                     }),
                                   }),
                                 ],
@@ -8217,8 +8453,8 @@
                 q
                   ? (0, v.jsx)(E, { text: null != L ? L : "" })
                   : g
-                  ? 'Delete "'.concat(L, '"?')
-                  : L,
+                    ? 'Delete "'.concat(L, '"?')
+                    : L,
                 (!O || !r) && (0, v.jsx)(aq, { $active: r }),
               ],
             }),
@@ -8374,7 +8610,9 @@
                                         : "Unknown Arkose error"
                                     ),
                                     n._showUserError();
-                                } else t.reset(), n.getEnforcementToken(!0).then(r, a);
+                                } else
+                                  t.reset(),
+                                    n.getEnforcementToken(!0).then(r, a);
                               }),
                               n.setOnFailed(function () {
                                 var e;
@@ -8737,22 +8975,22 @@
           (null == e
             ? void 0
             : null === (t = e.messages) || void 0 === t
-            ? void 0
-            : t.length) === 1 &&
+              ? void 0
+              : t.length) === 1 &&
           !(null == e
             ? void 0
             : null === (n = e.messages) || void 0 === n
-            ? void 0
-            : n.some(function (e) {
-                return "error" in e;
-              })) &&
+              ? void 0
+              : n.some(function (e) {
+                  return "error" in e;
+                })) &&
           (!a ||
             !(
               (null == e
                 ? void 0
                 : null === (r = e.messages) || void 0 === r
-                ? void 0
-                : r.length) === 1 &&
+                  ? void 0
+                  : r.length) === 1 &&
               (0, eU.RR)(null == e ? void 0 : e.messages[0].message).length < 20
             ))
         );
@@ -8963,13 +9201,13 @@
                   ],
                 })
               : "critique" === A
-              ? (0, v.jsx)(eS.ZP.Button, {
-                  title: y.formatMessage(
-                    "report" === a ? ie.submitReport : ie.submitFeedback
-                  ),
-                  onClick: eC,
-                })
-              : null,
+                ? (0, v.jsx)(eS.ZP.Button, {
+                    title: y.formatMessage(
+                      "report" === a ? ie.submitReport : ie.submitFeedback
+                    ),
+                    onClick: eC,
+                  })
+                : null,
           eT = "left" === N.current,
           eZ = eT ? "new" : "original",
           eR = eT ? "original" : "new",
@@ -9086,10 +9324,10 @@
                           "thumbsUp" === a
                             ? y.formatMessage(ie.thumbsUpPlaceholder)
                             : "report" === a
-                            ? y.formatMessage(
-                                ie.reportContentExplanationPlaceholder
-                              )
-                            : y.formatMessage(ie.thumbsDownPlaceholder),
+                              ? y.formatMessage(
+                                  ie.reportContentExplanationPlaceholder
+                                )
+                              : y.formatMessage(ie.thumbsDownPlaceholder),
                         rows: 3,
                         className:
                           "mb-1 mt-4 w-full rounded-md dark:bg-gray-800 dark:focus:border-white dark:focus:ring-white",
@@ -9152,8 +9390,11 @@
                                       var t = (0, x._)(e, 2),
                                         n = t[0],
                                         r = t[1];
-                                      return (0,
-                                      v.jsx)(a4, { id: "feedback-" + n, label: r }, n);
+                                      return (0, v.jsx)(
+                                        a4,
+                                        { id: "feedback-" + n, label: r },
+                                        n
+                                      );
                                     }),
                                     (0, v.jsx)(a4, {
                                       id: "feedback-copyright",
@@ -9405,8 +9646,14 @@
               children: (0, v.jsx)("div", {
                 className: "flex flex-col gap-2 py-4",
                 children: l.map(function (e) {
-                  return (0,
-                  v.jsx)("div", { className: "w-full", children: (0, v.jsx)(n3.Z, { plugin: e }) }, e.id);
+                  return (0, v.jsx)(
+                    "div",
+                    {
+                      className: "w-full",
+                      children: (0, v.jsx)(n3.Z, { plugin: e }),
+                    },
+                    e.id
+                  );
                 }),
               }),
             });
@@ -9977,8 +10224,8 @@
               (null === ($ = eT.query) || void 0 === $
                 ? void 0
                 : null === (G = $.shareParams) || void 0 === G
-                ? void 0
-                : G[1]) === "moderate",
+                  ? void 0
+                  : G[1]) === "moderate",
             eR = (0, _.U0)(ef),
             eD = (0, _.Kt)(ef),
             eA = (0, _.oq)(ef),
@@ -10120,8 +10367,8 @@
                 (null == tb
                   ? void 0
                   : null === (V = tb.enabledTools) || void 0 === V
-                  ? void 0
-                  : V.includes("tools3"))
+                    ? void 0
+                    : V.includes("tools3"))
                   ? tg.map(function (e) {
                       return e.id;
                     })
@@ -10223,22 +10470,22 @@
                                     { threadId: e, id: t }
                                   ))
                                 : s
-                                ? (_.tQ.updateTree(ef, function (e) {
-                                    e.updateNode(t, {
-                                      metadata: { $set: a2.Mf },
-                                    });
-                                  }),
-                                  p(
-                                    r
-                                      ? et.s6.completionFlaggedByModeration
-                                      : et.s6.promptFlaggedByModeration,
-                                    { threadId: e, id: t }
-                                  ))
-                                : r &&
-                                  j &&
-                                  _.tQ.updateTree(ef, function (e) {
-                                    e.updateNodeMessage(t, v);
-                                  }),
+                                  ? (_.tQ.updateTree(ef, function (e) {
+                                      e.updateNode(t, {
+                                        metadata: { $set: a2.Mf },
+                                      });
+                                    }),
+                                    p(
+                                      r
+                                        ? et.s6.completionFlaggedByModeration
+                                        : et.s6.promptFlaggedByModeration,
+                                      { threadId: e, id: t }
+                                    ))
+                                  : r &&
+                                    j &&
+                                    _.tQ.updateTree(ef, function (e) {
+                                      e.updateNodeMessage(t, v);
+                                    }),
                               [3, 4]
                             );
                           case 3:
@@ -10339,8 +10586,8 @@
                                         ? et.s6.completionBlockedByModeration
                                         : et.s6.completionFlaggedByModeration
                                       : B
-                                      ? et.s6.promptBlockedByModeration
-                                      : et.s6.promptFlaggedByModeration,
+                                        ? et.s6.promptBlockedByModeration
+                                        : et.s6.promptFlaggedByModeration,
                                     { threadId: R, id: I }
                                   )),
                               "message" === r.type)
@@ -11267,8 +11514,8 @@
                               void 0 === ea
                                 ? void 0
                                 : null === (es = ea.message) || void 0 === es
-                                ? void 0
-                                : es.id)
+                                  ? void 0
+                                  : es.id)
                               ? null == tC
                                 ? void 0
                                 : tC.suggestions
@@ -11316,12 +11563,34 @@
                           },
                         })
                       : e8
-                      ? (0, v.jsx)("span", {
-                          children: (0, v.jsx)(
-                            w.Z,
-                            (0, eu._)(
-                              (0, g._)({}, iF.mayProduceInaccurateInformation),
-                              {
+                        ? (0, v.jsx)("span", {
+                            children: (0, v.jsx)(
+                              w.Z,
+                              (0, eu._)(
+                                (0, g._)(
+                                  {},
+                                  iF.mayProduceInaccurateInformation
+                                ),
+                                {
+                                  values: {
+                                    link: function (e) {
+                                      return (0, v.jsx)("a", {
+                                        href: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        className: "underline",
+                                        children: e,
+                                      });
+                                    },
+                                  },
+                                }
+                              )
+                            ),
+                          })
+                        : (0, v.jsx)("span", {
+                            children: (0, v.jsx)(
+                              w.Z,
+                              (0, eu._)((0, g._)({}, iF.freeResearchPreview), {
                                 values: {
                                   link: function (e) {
                                     return (0, v.jsx)("a", {
@@ -11333,28 +11602,9 @@
                                     });
                                   },
                                 },
-                              }
-                            )
-                          ),
-                        })
-                      : (0, v.jsx)("span", {
-                          children: (0, v.jsx)(
-                            w.Z,
-                            (0, eu._)((0, g._)({}, iF.freeResearchPreview), {
-                              values: {
-                                link: function (e) {
-                                  return (0, v.jsx)("a", {
-                                    href: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-                                    target: "_blank",
-                                    rel: "noreferrer",
-                                    className: "underline",
-                                    children: e,
-                                  });
-                                },
-                              },
-                            })
-                          ),
-                        }),
+                              })
+                            ),
+                          }),
                   }),
                 ],
               }),
@@ -11410,10 +11660,10 @@
                 ],
               })
             : s && null != i
-            ? (0, v.jsx)(E, { text: i })
-            : null != i
-            ? i
-            : (0, v.jsx)(w.Z, (0, g._)({}, iH.newChat)),
+              ? (0, v.jsx)(E, { text: i })
+              : null != i
+                ? i
+                : (0, v.jsx)(w.Z, (0, g._)({}, iH.newChat)),
         });
       }
       var iz =
@@ -11760,8 +12010,17 @@
                       (0, c.jsx)("div", {
                         className: "flex flex-col gap-2",
                         children: m.map(function (e) {
-                          return (0,
-                          c.jsx)(er, { imageUrl: e.imageUrl, thumbnailUrl: e.thumbnailUrl, label: e.label, prompt: e.prompt, onPick: s }, e.imageUrl);
+                          return (0, c.jsx)(
+                            er,
+                            {
+                              imageUrl: e.imageUrl,
+                              thumbnailUrl: e.thumbnailUrl,
+                              label: e.label,
+                              prompt: e.prompt,
+                              onPick: s,
+                            },
+                            e.imageUrl
+                          );
                         }),
                       }),
                     ],
@@ -11871,8 +12130,8 @@
         return (null == n
           ? void 0
           : null === (t = n.capabilities) || void 0 === t
-          ? void 0
-          : t.multimodal) === void 0 ||
+            ? void 0
+            : t.multimodal) === void 0 ||
           r ||
           !1 !== i
           ? null
@@ -12132,23 +12391,23 @@
             (null == tS
               ? void 0
               : null === (e5 = tS.enabledTools) || void 0 === e5
-              ? void 0
-              : e5.includes("tools2"))
+                ? void 0
+                : e5.includes("tools2"))
               ? 2
               : (null == tS
-                  ? void 0
-                  : null === (e4 = tS.capabilities) || void 0 === e4
-                  ? void 0
-                  : e4.multimodal) !== void 0 ||
-                (null == tS
-                  ? void 0
-                  : null === (e7 = tS.enabledTools) || void 0 === e7
-                  ? void 0
-                  : e7.includes(
-                      "Hi Jane, come visit us for lunch at OpenAI? \uD83D\uDC9C"
-                    ))
-              ? 1
-              : 0,
+                    ? void 0
+                    : null === (e4 = tS.capabilities) || void 0 === e4
+                      ? void 0
+                      : e4.multimodal) !== void 0 ||
+                  (null == tS
+                    ? void 0
+                    : null === (e7 = tS.enabledTools) || void 0 === e7
+                      ? void 0
+                      : e7.includes(
+                          "Hi Jane, come visit us for lunch at OpenAI? \uD83D\uDC9C"
+                        ))
+                ? 1
+                : 0,
           tR = 0 !== tI,
           tD = (0, d.useCallback)(
             function (e, t) {
@@ -12206,10 +12465,10 @@
                           null == tS
                             ? void 0
                             : null === (e = tS.capabilities) || void 0 === e
-                            ? void 0
-                            : null === (t = e.multimodal) || void 0 === t
-                            ? void 0
-                            : t.accepted_mime_types) && void 0 !== n
+                              ? void 0
+                              : null === (t = e.multimodal) || void 0 === t
+                                ? void 0
+                                : t.accepted_mime_types) && void 0 !== n
                         ? n
                         : [];
                   if (void 0 === r) return {};
@@ -12553,7 +12812,7 @@
                   z.m.danger("File upload failed", G),
                     tB(
                       null !== (e = null == e_ ? void 0 : e_.name) &&
-                        void 0 !== e
+                      void 0 !== e
                         ? e
                         : ""
                     );
@@ -12756,10 +13015,10 @@
                         null == tS
                           ? void 0
                           : null === (t = tS.capabilities) || void 0 === t
-                          ? void 0
-                          : null === (n = t.multimodal) || void 0 === n
-                          ? void 0
-                          : n.accepted_mime_types) && void 0 !== r
+                            ? void 0
+                            : null === (n = t.multimodal) || void 0 === n
+                              ? void 0
+                              : n.accepted_mime_types) && void 0 !== r
                       ? r
                       : []
                   ).includes(a.type)
@@ -13299,9 +13558,9 @@
                 (p = h
                   ? d[e]
                   : null !== (l = null == m ? void 0 : m.options[0].value) &&
-                    void 0 !== l
-                  ? l
-                  : void 0),
+                      void 0 !== l
+                    ? l
+                    : void 0),
                 (u = void 0 !== p ? p : g ? d[e] : e) !== n &&
                   (o(u),
                   f(function (t) {
@@ -13346,10 +13605,10 @@
                   null != f
                     ? f
                     : null === (i = e.options) || void 0 === i
-                    ? void 0
-                    : null === (s = i[0]) || void 0 === s
-                    ? void 0
-                    : s.value,
+                      ? void 0
+                      : null === (s = i[0]) || void 0 === s
+                        ? void 0
+                        : s.value,
                 x =
                   null !==
                     (o = e.options.find(function (e) {
@@ -13361,8 +13620,30 @@
                   null !== (c = null == x ? void 0 : x.icon) && void 0 !== c
                     ? c
                     : null;
-              return (0,
-              l.jsx)(M, { onToggleItemOpenChanged: v, item: e, isSelected: m, isOtherToggleDropdownOpen: p.size > 0 && !p.has(e.categoryId), currentValue: n, defaultOption: null == x ? void 0 : x.value, onChange: h, currentIcon: b, displayCurrentValue: m && e.showSelectedValueBelow && null !== (u = null == x ? void 0 : x.name) && void 0 !== u ? u : "", contentAlign: ((a = t.length), 0 === r ? "start" : r === a - 1 ? "end" : "center") }, r);
+              return (0, l.jsx)(
+                M,
+                {
+                  onToggleItemOpenChanged: v,
+                  item: e,
+                  isSelected: m,
+                  isOtherToggleDropdownOpen: p.size > 0 && !p.has(e.categoryId),
+                  currentValue: n,
+                  defaultOption: null == x ? void 0 : x.value,
+                  onChange: h,
+                  currentIcon: b,
+                  displayCurrentValue:
+                    m &&
+                    e.showSelectedValueBelow &&
+                    null !== (u = null == x ? void 0 : x.name) &&
+                    void 0 !== u
+                      ? u
+                      : "",
+                  contentAlign:
+                    ((a = t.length),
+                    0 === r ? "start" : r === a - 1 ? "end" : "center"),
+                },
+                r
+              );
             }),
           }),
         });

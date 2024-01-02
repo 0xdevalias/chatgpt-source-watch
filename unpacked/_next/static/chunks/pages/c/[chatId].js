@@ -89,8 +89,8 @@
               return e;
             })
           : "function" == typeof e
-          ? (a.loader = e)
-          : "object" == typeof e && (a = r._({}, a, e));
+            ? (a.loader = e)
+            : "object" == typeof e && (a = r._({}, a, e));
         var d = (a = r._({}, a, t)).loader;
         return (a.loadableGenerated &&
           ((a = r._({}, a, a.loadableGenerated)), delete a.loadableGenerated),
@@ -303,11 +303,11 @@
                           retry: o.retry,
                         })
                       : n.loaded
-                      ? l.default.createElement(
-                          (t = n.loaded) && t.default ? t.default : t,
-                          e
-                        )
-                      : null;
+                        ? l.default.createElement(
+                            (t = n.loaded) && t.default ? t.default : t,
+                            e
+                          )
+                        : null;
                   },
                   [e, n]
                 )

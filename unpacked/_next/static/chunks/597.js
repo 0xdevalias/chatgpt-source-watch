@@ -54,8 +54,8 @@
             return "." === e.charAt(0)
               ? r.toLowerCase().endsWith(e)
               : e.endsWith("/*")
-              ? i === e.replace(/\/.*$/, "")
-              : o === e;
+                ? i === e.replace(/\/.*$/, "")
+                : o === e;
           });
         }
         return !0;
@@ -695,14 +695,14 @@
             return void 0 === t
               ? "Undefined"
               : null === t
-              ? "Null"
-              : "string" == typeof (n = s((e = u(t)), a))
-              ? n
-              : c
-              ? i(e)
-              : "Object" == (r = i(e)) && o(e.callee)
-              ? "Arguments"
-              : r;
+                ? "Null"
+                : "string" == typeof (n = s((e = u(t)), a))
+                  ? n
+                  : c
+                    ? i(e)
+                    : "Object" == (r = i(e)) && o(e.callee)
+                      ? "Arguments"
+                      : r;
           };
     },
     57381: function (t, e, n) {
@@ -940,10 +940,10 @@
                 t.bind && n
                   ? l(m, r)
                   : t.wrap && n
-                  ? v(m)
-                  : O && a(m)
-                  ? i(m)
-                  : m),
+                    ? v(m)
+                    : O && a(m)
+                      ? i(m)
+                      : m),
               (t.sham || (m && m.sham) || (y && y.sham)) && f(h, "sham", !0),
               f(T, d, h),
               O &&
@@ -985,10 +985,10 @@
           void 0 === e
             ? t
             : i
-            ? a(t, e)
-            : function () {
-                return t.apply(e, arguments);
-              }
+              ? a(t, e)
+              : function () {
+                  return t.apply(e, arguments);
+                }
         );
       };
     },
@@ -1725,8 +1725,8 @@
             return o(n) && e instanceof n
               ? n.prototype
               : e instanceof s
-              ? l
-              : null;
+                ? l
+                : null;
           };
     },
     44948: function (t, e, n) {
@@ -1941,16 +1941,16 @@
                 ? ""
                 : void 0
               : (r = c(f, p)) < 55296 ||
-                r > 56319 ||
-                p + 1 === v ||
-                (l = c(f, p + 1)) < 56320 ||
-                l > 57343
-              ? t
-                ? u(f, p)
-                : r
-              : t
-              ? s(f, p, p + 2)
-              : ((r - 55296) << 10) + (l - 56320) + 65536;
+                  r > 56319 ||
+                  p + 1 === v ||
+                  (l = c(f, p + 1)) < 56320 ||
+                  l > 57343
+                ? t
+                  ? u(f, p)
+                  : r
+                : t
+                  ? s(f, p, p + 2)
+                  : ((r - 55296) << 10) + (l - 56320) + 65536;
           };
         };
       t.exports = { codeAt: l(!1), charAt: l(!0) };
@@ -2294,10 +2294,10 @@
           return !e || r >= e.length
             ? ((t.target = void 0), s(void 0, !0))
             : "keys" == n
-            ? s(r, !1)
-            : "values" == n
-            ? s(e[r], !1)
-            : s([r, e[r]], !1);
+              ? s(r, !1)
+              : "values" == n
+                ? s(e[r], !1)
+                : s([r, e[r]], !1);
         },
         "values"
       );
@@ -2389,8 +2389,8 @@
               0 === S
                 ? (n = r = 0)
                 : 1 === S
-                ? ((n = 0), (r = x - w))
-                : ((n = S - 2), (r = m(d(a(e), 0), x - w))),
+                  ? ((n = 0), (r = x - w))
+                  : ((n = S - 2), (r = m(d(a(e), 0), x - w))),
                 s(x + n - r),
                 v = l(b, r),
                 y = 0;
@@ -2562,7 +2562,6 @@
             for (
               var e, n, r = a(t), o = u.f, s = i(r), l = {}, f = 0;
               s.length > f;
-
             )
               void 0 !== (n = o(r, (e = s[f++]))) && c(l, e, n);
             return l;
@@ -3179,14 +3178,14 @@
             return void 0 === t
               ? "Undefined"
               : null === t
-              ? "Null"
-              : "string" == typeof (n = c((e = Object(t)), a))
-              ? n
-              : u
-              ? i(e)
-              : "Object" == (r = i(e)) && o(e.callee)
-              ? "Arguments"
-              : r;
+                ? "Null"
+                : "string" == typeof (n = c((e = Object(t)), a))
+                  ? n
+                  : u
+                    ? i(e)
+                    : "Object" == (r = i(e)) && o(e.callee)
+                      ? "Arguments"
+                      : r;
           };
     },
     84255: function (t, e, n) {
@@ -4087,16 +4086,16 @@
                 ? ""
                 : void 0
               : (a = c.charCodeAt(s)) < 55296 ||
-                a > 56319 ||
-                s + 1 === l ||
-                (u = c.charCodeAt(s + 1)) < 56320 ||
-                u > 57343
-              ? t
-                ? c.charAt(s)
-                : a
-              : t
-              ? c.slice(s, s + 2)
-              : ((a - 55296) << 10) + (u - 56320) + 65536;
+                  a > 56319 ||
+                  s + 1 === l ||
+                  (u = c.charCodeAt(s + 1)) < 56320 ||
+                  u > 57343
+                ? t
+                  ? c.charAt(s)
+                  : a
+                : t
+                  ? c.slice(s, s + 2)
+                  : ((a - 55296) << 10) + (u - 56320) + 65536;
           };
         };
       t.exports = { codeAt: a(!1), charAt: a(!0) };
@@ -4697,7 +4696,6 @@
                         n = a(e) || a("*"),
                         r = e.lastIndexOf(".");
                       !n && -1 !== r;
-
                     )
                       (r = (e = e.substr(0, r)).lastIndexOf(".")), (n = a(e));
                     return n;
@@ -4927,8 +4925,8 @@
               "string" == typeof e
                 ? e
                 : "string" == typeof r && r.length > 0
-                ? r
-                : t.name,
+                  ? r
+                  : t.name,
             writable: !1,
             configurable: !1,
             enumerable: !0,
@@ -5136,14 +5134,14 @@
                 j(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : T(Object(n)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(n, e)
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+              : T(Object(n)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(n, e)
+                  );
+                });
         }
         return t;
       }
@@ -5230,8 +5228,13 @@
                                 f(
                                   (function t(e) {
                                     return e.reduce(function (e, n) {
-                                      return (0,
-                                      a.ev)((0, a.ev)([], (0, a.CR)(e), !1), (0, a.CR)(Array.isArray(n) ? t(n) : [n]), !1);
+                                      return (0, a.ev)(
+                                        (0, a.ev)([], (0, a.CR)(e), !1),
+                                        (0, a.CR)(
+                                          Array.isArray(n) ? t(n) : [n]
+                                        ),
+                                        !1
+                                      );
                                     }, []);
                                   })(r.sent())
                                 ),
@@ -5251,44 +5254,44 @@
                     })(t.dataTransfer, t.type),
                   ]
                 : l(t) && l(t.target)
-                ? [
-                    2,
-                    p(t.target.files).map(function (t) {
-                      return c(t);
-                    }),
-                  ]
-                : Array.isArray(t) &&
-                  t.every(function (t) {
-                    return "getFile" in t && "function" == typeof t.getFile;
-                  })
-                ? [
-                    2,
-                    (function (t) {
-                      return (0, a.mG)(this, void 0, void 0, function () {
-                        return (0, a.Jh)(this, function (e) {
-                          switch (e.label) {
-                            case 0:
-                              return [
-                                4,
-                                Promise.all(
-                                  t.map(function (t) {
-                                    return t.getFile();
-                                  })
-                                ),
-                              ];
-                            case 1:
-                              return [
-                                2,
-                                e.sent().map(function (t) {
-                                  return c(t);
-                                }),
-                              ];
-                          }
-                        });
-                      });
-                    })(t),
-                  ]
-                : [2, []];
+                  ? [
+                      2,
+                      p(t.target.files).map(function (t) {
+                        return c(t);
+                      }),
+                    ]
+                  : Array.isArray(t) &&
+                      t.every(function (t) {
+                        return "getFile" in t && "function" == typeof t.getFile;
+                      })
+                    ? [
+                        2,
+                        (function (t) {
+                          return (0, a.mG)(this, void 0, void 0, function () {
+                            return (0, a.Jh)(this, function (e) {
+                              switch (e.label) {
+                                case 0:
+                                  return [
+                                    4,
+                                    Promise.all(
+                                      t.map(function (t) {
+                                        return t.getFile();
+                                      })
+                                    ),
+                                  ];
+                                case 1:
+                                  return [
+                                    2,
+                                    e.sent().map(function (t) {
+                                      return c(t);
+                                    }),
+                                  ];
+                              }
+                            });
+                          });
+                        })(t),
+                      ]
+                    : [2, []];
             });
           });
         },
@@ -5619,15 +5622,15 @@
                       (0, g.PQ)(t)
                         ? (Z(t), G({ type: "closeDialog" }))
                         : (0, g.c_)(t)
-                        ? ((X.current = !1),
-                          W.current
-                            ? ((W.current.value = null), W.current.click())
-                            : te(
-                                Error(
-                                  "Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided."
-                                )
-                              ))
-                        : te(t);
+                          ? ((X.current = !1),
+                            W.current
+                              ? ((W.current.value = null), W.current.click())
+                              : te(
+                                  Error(
+                                    "Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided."
+                                  )
+                                ))
+                          : te(t);
                     });
                 return;
               }
@@ -5896,14 +5899,14 @@
                 u(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : i(Object(n)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(n, e)
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+              : i(Object(n)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(n, e)
+                  );
+                });
         }
         return t;
       }
@@ -6610,9 +6613,12 @@
                     u - n > e
                       ? (t.apply(void 0, i), (n = u))
                       : (clearTimeout(r),
-                        (r = tw()(function () {
-                          t.apply(void 0, i), (n = U()());
-                        }, Math.max(0, e - u + n))));
+                        (r = tw()(
+                          function () {
+                            t.apply(void 0, i), (n = U()());
+                          },
+                          Math.max(0, e - u + n)
+                        )));
                   };
                 })(function (t) {
                   var e = i.current;
@@ -6755,10 +6761,10 @@
                     : (n[e] = r);
               })
             : tn()
-            ? to()(t, tn()(o))
-            : $()((r = tA(Object(o)))).call(r, function (e) {
-                ta()(t, e, tt()(o, e));
-              });
+              ? to()(t, tn()(o))
+              : $()((r = tA(Object(o)))).call(r, function (e) {
+                  ta()(t, e, tt()(o, e));
+                });
         }
         return t;
       }
@@ -6827,13 +6833,16 @@
                                 )
                               )
                             : n
-                            ? (i = console).log.apply(i, M(tg()(e) ? e : [e]))
-                            : (u = console).groupCollapsed.apply(
-                                u,
-                                M(
-                                  tb.apply(void 0, V()((c = [t])).call(c, M(e)))
-                                )
-                              );
+                              ? (i = console).log.apply(i, M(tg()(e) ? e : [e]))
+                              : (u = console).groupCollapsed.apply(
+                                  u,
+                                  M(
+                                    tb.apply(
+                                      void 0,
+                                      V()((c = [t])).call(c, M(e))
+                                    )
+                                  )
+                                );
                         }),
                           a || console.groupEnd();
                       }
@@ -7235,20 +7244,20 @@
                       ? tD({ mode: a, target: t }).atEnd
                         ? (n = !1)
                         : n
-                        ? U()() - n > 34 &&
-                          (e ||
-                            ((P.current = t.scrollTop),
-                            s(function () {
-                              var t;
-                              return V()(
-                                (t = [
-                                  "%cInterval check%c: Should sticky but not at end, calling %cscrollToSticky()%c to scroll",
-                                ])
-                              ).call(t, M(th("navy")), M(th("orange")));
-                            }),
-                            tu()),
-                          (n = !1))
-                        : (n = U()())
+                          ? U()() - n > 34 &&
+                            (e ||
+                              ((P.current = t.scrollTop),
+                              s(function () {
+                                var t;
+                                return V()(
+                                  (t = [
+                                    "%cInterval check%c: Should sticky but not at end, calling %cscrollToSticky()%c to scroll",
+                                  ])
+                                ).call(t, M(th("navy")), M(th("orange")));
+                              }),
+                              tu()),
+                            (n = !1))
+                          : (n = U()())
                       : t.scrollHeight <= t.offsetHeight &&
                         !J.current &&
                         (s(function () {
@@ -7530,9 +7539,12 @@
               'react-scroll-to-bottom: Second argument passed to "useObserveScrollPosition" must be an array if specified.'
             );
         var r = A().observeScrollPosition;
-        (0, m.useEffect)(function () {
-          return t && r(t);
-        }, V()((e = [])).call(e, M(n), [!t, r]));
+        (0, m.useEffect)(
+          function () {
+            return t && r(t);
+          },
+          V()((e = [])).call(e, M(n), [!t, r])
+        );
       }
       function tq() {
         return h().scrollTo;
@@ -7666,11 +7678,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.alea = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.alea = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     82690: function (t, e, n) {
@@ -7735,11 +7747,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.tychei = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.tychei = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     63656: function (t, e, n) {
@@ -7795,11 +7807,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.xor128 = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.xor128 = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     130: function (t, e, n) {
@@ -7900,11 +7912,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.xor4096 = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.xor4096 = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     68458: function (t, e, n) {
@@ -7985,11 +7997,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.xorshift7 = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.xorshift7 = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     21689: function (t, e, n) {
@@ -8059,11 +8071,11 @@
         o && o.exports
           ? (o.exports = c)
           : n.amdD && n.amdO
-          ? void 0 !==
-              (r = function () {
-                return c;
-              }.call(e, n, e, o)) && (o.exports = r)
-          : (this.xorwow = c);
+            ? void 0 !==
+                (r = function () {
+                  return c;
+                }.call(e, n, e, o)) && (o.exports = r)
+            : (this.xorwow = c);
       })(0, (t = n.nmd(t)), n.amdD);
     },
     26804: function (t, e, n) {
@@ -8090,23 +8102,23 @@
                 (e = !0 == e ? { entropy: !0 } : e || {}).entropy
                   ? [t, m(i)]
                   : null == t
-                  ? (function () {
-                      try {
-                        var t;
-                        return (
-                          u && (t = u.randomBytes)
-                            ? (t = t(256))
-                            : ((t = new Uint8Array(256)),
-                              (o.crypto || o.msCrypto).getRandomValues(t)),
-                          m(t)
-                        );
-                      } catch (t) {
-                        var e = o.navigator,
-                          n = e && e.plugins;
-                        return [+new Date(), o, n, o.screen, m(i)];
-                      }
-                    })()
-                  : t,
+                    ? (function () {
+                        try {
+                          var t;
+                          return (
+                            u && (t = u.randomBytes)
+                              ? (t = t(256))
+                              : ((t = new Uint8Array(256)),
+                                (o.crypto || o.msCrypto).getRandomValues(t)),
+                            m(t)
+                          );
+                        } catch (t) {
+                          var e = o.navigator,
+                            n = e && e.plugins;
+                          return [+new Date(), o, n, o.screen, m(i)];
+                        }
+                      })()
+                    : t,
                 3
               ),
               r
@@ -8535,14 +8547,14 @@
                         o instanceof Date
                           ? n.push([r, o.toISOString()])
                           : "boolean" == typeof o
-                          ? n.push([r, o ? "1" : "0"])
-                          : "string" == typeof o
-                          ? n.push([r, o])
-                          : "number" == typeof o
-                          ? n.push([r, `${o}`])
-                          : null == o
-                          ? n.push([r, ""])
-                          : t(o, r, n);
+                            ? n.push([r, o ? "1" : "0"])
+                            : "string" == typeof o
+                              ? n.push([r, o])
+                              : "number" == typeof o
+                                ? n.push([r, `${o}`])
+                                : null == o
+                                  ? n.push([r, ""])
+                                  : t(o, r, n);
                     })(r, T(n, o), i);
                   return r;
                 })({ [o]: h }).map(([t, e]) =>
@@ -8637,8 +8649,13 @@
               onKeyUp: m,
               onClick: y,
             };
-          return (0,
-          d.sY)({ ourProps: O, theirProps: t, slot: w, defaultTag: "button", name: "Listbox.Button" });
+          return (0, d.sY)({
+            ourProps: O,
+            theirProps: t,
+            slot: w,
+            defaultTag: "button",
+            name: "Listbox.Button",
+          });
         }),
         B = (0, d.yV)(function (t, e) {
           let [n] = F("Listbox.Label"),
@@ -8654,8 +8671,13 @@
               () => ({ open: 0 === n.listboxState, disabled: n.disabled }),
               [n]
             );
-          return (0,
-          d.sY)({ ourProps: { ref: o, id: r, onClick: i }, theirProps: t, slot: a, defaultTag: "label", name: "Listbox.Label" });
+          return (0, d.sY)({
+            ourProps: { ref: o, id: r, onClick: i },
+            theirProps: t,
+            slot: a,
+            defaultTag: "label",
+            name: "Listbox.Label",
+          });
         }),
         H = d.AN.RenderStrategy | d.AN.Static,
         V = Object.assign(_, {
@@ -8764,8 +8786,8 @@
                   (n = null == (t = r.labelRef.current) ? void 0 : t.id)
                   ? n
                   : null == (e = r.buttonRef.current)
-                  ? void 0
-                  : e.id;
+                    ? void 0
+                    : e.id;
               }, [r.labelRef.current, r.buttonRef.current]),
               E = (0, u.useMemo)(() => ({ open: 0 === r.listboxState }), [r]),
               T = {
@@ -8783,8 +8805,15 @@
                 tabIndex: 0,
                 ref: i,
               };
-            return (0,
-            d.sY)({ ourProps: T, theirProps: t, slot: E, defaultTag: "ul", features: H, visible: x, name: "Listbox.Options" });
+            return (0, d.sY)({
+              ourProps: T,
+              theirProps: t,
+              slot: E,
+              defaultTag: "ul",
+              features: H,
+              visible: x,
+              name: "Listbox.Options",
+            });
           }),
           Option: (0, d.yV)(function (t, e) {
             let { disabled: n = !1, value: r, ...o } = t,
@@ -8813,7 +8842,13 @@
                 }),
                 t.dispose
               );
-            }, [x, f, i.listboxState, i.activationTrigger, i.activeOptionIndex]);
+            }, [
+              x,
+              f,
+              i.listboxState,
+              i.activationTrigger,
+              i.activeOptionIndex,
+            ]);
             let S = (0, u.useRef)({ disabled: n, value: r, domRef: x });
             (0, l.e)(() => {
               S.current.disabled = n;
@@ -8829,8 +8864,12 @@
                     : e.toLowerCase();
               }, [S, x]);
             let O = (0, j.z)(() => i.propsRef.current.onChange(r));
-            (0,
-            l.e)(() => (a({ type: 7, id: c, dataRef: S }), () => a({ type: 8, id: c })), [S, c]);
+            (0, l.e)(
+              () => (
+                a({ type: 7, id: c, dataRef: S }), () => a({ type: 8, id: c })
+              ),
+              [S, c]
+            );
             let E = (0, j.z)((t) => {
                 if (n) return t.preventDefault();
                 O(),
@@ -8859,8 +8898,27 @@
                 () => ({ active: f, selected: b, disabled: n }),
                 [f, b, n]
               );
-            return (0,
-            d.sY)({ ourProps: { id: c, ref: w, role: "option", tabIndex: !0 === n ? void 0 : -1, "aria-disabled": !0 === n || void 0, "aria-selected": b, disabled: void 0, onClick: E, onFocus: T, onPointerMove: P, onMouseMove: P, onPointerLeave: A, onMouseLeave: A }, theirProps: o, slot: C, defaultTag: "li", name: "Listbox.Option" });
+            return (0, d.sY)({
+              ourProps: {
+                id: c,
+                ref: w,
+                role: "option",
+                tabIndex: !0 === n ? void 0 : -1,
+                "aria-disabled": !0 === n || void 0,
+                "aria-selected": b,
+                disabled: void 0,
+                onClick: E,
+                onFocus: T,
+                onPointerMove: P,
+                onMouseMove: P,
+                onPointerLeave: A,
+                onMouseLeave: A,
+              },
+              theirProps: o,
+              slot: C,
+              defaultTag: "li",
+              name: "Listbox.Option",
+            });
           }),
         });
     },
@@ -9077,11 +9135,11 @@
                   t
                     ? l("MOUNT")
                     : "none" === o ||
-                      (null == e ? void 0 : e.display) === "none"
-                    ? l("UNMOUNT")
-                    : n && r !== o
-                    ? l("ANIMATION_OUT")
-                    : l("UNMOUNT"),
+                        (null == e ? void 0 : e.display) === "none"
+                      ? l("UNMOUNT")
+                      : n && r !== o
+                        ? l("ANIMATION_OUT")
+                        : l("UNMOUNT"),
                     (u.current = t);
                 }
               }, [t, l]),
@@ -9275,8 +9333,8 @@
                                 return t.disabled || t.hidden || e
                                   ? NodeFilter.FILTER_SKIP
                                   : t.tabIndex >= 0
-                                  ? NodeFilter.FILTER_ACCEPT
-                                  : NodeFilter.FILTER_SKIP;
+                                    ? NodeFilter.FILTER_ACCEPT
+                                    : NodeFilter.FILTER_SKIP;
                               },
                             }
                           );
@@ -9313,8 +9371,8 @@
                     $(c.slice(s + 1))
                       ? e.preventDefault()
                       : r
-                      ? null === (i = v.current) || void 0 === i || i.focus()
-                      : null === (a = d.current) || void 0 === a || a.focus();
+                        ? null === (i = v.current) || void 0 === i || i.focus()
+                        : null === (a = d.current) || void 0 === a || a.focus();
                   }
                 };
                 return (
@@ -9638,13 +9696,13 @@
                                       discrete: !1,
                                     }))
                                   : W(s, E.swipeDirection, c)
-                                  ? ((k.current = s),
-                                    U("toast.swipeStart", h, l, {
-                                      discrete: !1,
-                                    }),
-                                    t.target.setPointerCapture(t.pointerId))
-                                  : (Math.abs(e) > c || Math.abs(n) > c) &&
-                                    (D.current = null);
+                                    ? ((k.current = s),
+                                      U("toast.swipeStart", h, l, {
+                                        discrete: !1,
+                                      }),
+                                      t.target.setPointerCapture(t.pointerId))
+                                    : (Math.abs(e) > c || Math.abs(n) > c) &&
+                                      (D.current = null);
                               }),
                               onPointerUp: (0, a.M)(t.onPointerUp, (t) => {
                                 let e = k.current,

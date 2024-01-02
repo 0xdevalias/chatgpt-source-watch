@@ -184,8 +184,8 @@
               ? f(0)
               : a(t)
             : "Buffer" === t.type && Array.isArray(t.data)
-            ? a(t.data)
-            : void 0;
+              ? a(t.data)
+              : void 0;
         })(t);
         if (i) return i;
         if (
@@ -228,8 +228,8 @@
               void 0 === e && void 0 === r
                 ? new Uint8Array(t)
                 : void 0 === r
-                ? new Uint8Array(t, e)
-                : new Uint8Array(t, e, r)),
+                  ? new Uint8Array(t, e)
+                  : new Uint8Array(t, e, r)),
             u.prototype
           ),
           n
@@ -351,8 +351,8 @@
           ("string" == typeof r
             ? ((n = r), (r = 0))
             : r > 2147483647
-            ? (r = 2147483647)
-            : r < -2147483648 && (r = -2147483648),
+              ? (r = 2147483647)
+              : r < -2147483648 && (r = -2147483648),
           (o = r = +r) != o && (r = i ? 0 : t.length - 1),
           r < 0 && (r = t.length + r),
           r >= t.length)
@@ -597,10 +597,10 @@
           return (h(t), t <= 0)
             ? f(t)
             : void 0 !== e
-            ? "string" == typeof r
-              ? f(t).fill(e, r)
-              : f(t).fill(e)
-            : f(t);
+              ? "string" == typeof r
+                ? f(t).fill(e, r)
+                : f(t).fill(e)
+              : f(t);
         }),
         (u.allocUnsafe = function (t) {
           return l(t);
@@ -702,8 +702,8 @@
           return 0 === t
             ? ""
             : 0 == arguments.length
-            ? B(this, 0, t)
-            : g.apply(this, arguments);
+              ? B(this, 0, t)
+              : g.apply(this, arguments);
         }),
         (u.prototype.toLocaleString = u.prototype.toString),
         (u.prototype.equals = function (t) {
@@ -1548,8 +1548,8 @@
                 f + a >= l
                   ? ((u = 0), (f = l))
                   : f + a >= 1
-                  ? ((u = (e * s - 1) * Math.pow(2, i)), (f += a))
-                  : ((u = e * Math.pow(2, a - 1) * Math.pow(2, i)), (f = 0)));
+                    ? ((u = (e * s - 1) * Math.pow(2, i)), (f += a))
+                    : ((u = e * Math.pow(2, a - 1) * Math.pow(2, i)), (f = 0)));
             i >= 8;
             t[r + c] = 255 & u, c += y, u /= 256, i -= 8
           );
