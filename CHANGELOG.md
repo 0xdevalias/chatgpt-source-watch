@@ -4,6 +4,29 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-07-18Z (`CIOQyz3i61JmlV427-WV2`) `[not archived]`
+
+### Notes
+
+The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.
+
+### Not From Build Manifest
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/297-c8dcf63d9241b2bb.js
+https://cdn.oaistatic.com/_next/static/chunks/435-a9eb835d01784e6b.js
+https://cdn.oaistatic.com/_next/static/chunks/694-e08b5432db8f1aae.js
+https://cdn.oaistatic.com/_next/static/chunks/911-d77139d6623ff794.js
+https://cdn.oaistatic.com/_next/static/chunks/937-3084f74c792bbe14.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-5b34794815ee3133.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/index-6406d5ed611f99e5.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-1ec6196bf15a7702.js
+https://cdn.oaistatic.com/_next/static/CIOQyz3i61JmlV427-WV2/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/CIOQyz3i61JmlV427-WV2/_ssgManifest.js
+```
+
 ## 2023-07-17Z (`g50f5u-HEuvS0R11uCbQH`) `[not archived]`
 
 ### Notes
