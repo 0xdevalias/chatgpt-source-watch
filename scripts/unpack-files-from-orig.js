@@ -2,7 +2,7 @@
 
 // TODO: Save these scripts somewhere useful:
 //   pbpaste | ./unpack-files-from-orig.js
-//   prettier --write unpacked/**/*
+//   npx biome format --write unpacked/
 
 const fs = require('fs');
 const path = require('path');
@@ -65,9 +65,10 @@ rl.on('line', function(rawInputPath) {
 });
 
 rl.on('close', () => {
-  // Message to say we are about to run prettier
-  console.log("\nRunning Prettier on all unpacked files...");
+  console.log("\nRunning formatter on all unpacked files...");
 
-  // Run prettier on all files in the unpacked directory
-  childProcess.spawn('prettier', ['--write', `${destPath}/**/*`], { stdio: 'inherit' });
+  // Run formatter on all files in the unpacked directory
+  // TODO: Replace this with using the biome formatter API directly?
+  //   https://github.com/biomejs/biome/tree/main/packages/%40biomejs/js-api#usage
+  childProcess.spawn('npx', ['biome', 'format', '--write', destPath], { stdio: 'inherit' });
 });

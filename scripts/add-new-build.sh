@@ -99,14 +99,14 @@ combined_urls="$filtered_urls"$'\n'"$unsaved_urls_from_build_manifest"
 echo "Unpacking and formatting the combined URLs..."
 echo "$combined_urls" | ./scripts/unpack-files-from-orig.js
 echo
-echo "Running prettier again to be sure..."
-prettier --write unpacked/**/*
+echo "Running formatter again to be sure..."
+npx biome format --write unpacked/
 echo
 
 echo "Next we should check the diffs of what has changed (eg. in the webpack file), and decide if we need to go and download anything else (eg. css assets, etc)"
 echo "If there are new assets, download and save them, copy all of the URLs for files changed in this build to the clipboard, then you can run the following command again (repeating as many times as needed):"
 echo
-echo 'pbpaste | ./scripts/unpack-files-from-orig.js && echo && echo "Running prettier again to be sure" && prettier --write unpacked/**/*'
+echo 'pbpaste | ./scripts/unpack-files-from-orig.js && echo && echo "Running formatter again to be sure" && npx biome format --write unpacked/'
 echo
 
 echo "Once you are happy that all of the data is downloaded, copy all of the URLs for each section to the clipboard (with sections separated by a blank line) and then run one of the following:"

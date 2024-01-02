@@ -42,7 +42,7 @@ Feel free to join in on the discussions or share your own thoughts and experienc
 - [`CHANGELOG.md`](./CHANGELOG.md): A record of changes made in each build version.
 - [`scripts/`](./scripts/): Helper scripts to streamline various tasks in the repository.
 - [`orig/`](./orig/): This directory contains the raw unmodified webpack chunks from each build, saved for historical reference.
-- [`unpacked/`](./unpacked/): This directory contains the unpacked and [`prettier`](https://prettier.io/) formatted version of the chunk files, for easier diffing and analysis.
+- [`unpacked/`](./unpacked/): This directory contains the unpacked and [`biome`](https://biomejs.dev/reference/cli/#biome-format) formatted version of the chunk files, for easier diffing and analysis.
 
 ## Helper Scripts
 
@@ -50,7 +50,7 @@ The [`scripts/`](./scripts/) directory is home to a collection of helper scripts
 
 - [`filter-for-unsaved.js`](./scripts/filter-for-unsaved.js): A Node.js script that takes input URLs from stdin and outputs URLs of webpack chunks that are not already saved in the local orig directory. Ensures no duplicates in the output. Useful for fetching new chunks.
 - [`buildmanifest-to-json.js`](./scripts/buildmanifest-to-json.js): A Node.js script that converts a build manifest file to JSON. When piped with the second `jq` command, it extracts and prefixes static asset URLs with `https://chat.openai.com/_next/`, ready for fetching.
-- [`unpack-files-from-orig.js`](./scripts/unpack-files-from-orig.js): A Node.js script that processes input file paths from stdin, copies the corresponding files from the [`orig/`](./orig/) directory to an [`unpacked/`](./unpacked/) directory, and normalizes directory names and file names by removing hashes. It then runs [`prettier`](https://prettier.io/) on all the files in the [`unpacked/`](./unpacked/) directory for formatting. Useful for preparing files for easier diffing between builds.
+- [`unpack-files-from-orig.js`](./scripts/unpack-files-from-orig.js): A Node.js script that processes input file paths from stdin, copies the corresponding files from the [`orig/`](./orig/) directory to an [`unpacked/`](./unpacked/) directory, and normalizes directory names and file names by removing hashes. It then runs [`biome format`](https://biomejs.dev/reference/cli/#biome-format) on all the files in the [`unpacked/`](./unpacked/) directory for formatting. Useful for preparing files for easier diffing between builds.
 - [`filter-urls-not-in-changelog.js`](./scripts/filter-urls-not-in-changelog.js): A Node.js script that filters input URLs from stdin and outputs only those URLs that are not already present in the [`CHANGELOG.md`](./CHANGELOG.md). Useful for identifying new URLs that have not been logged.
 
 Please carefully read and comprehend the contents of each script, as detailed documentation is not provided. Understanding how the scripts operate is essential before executing them.
@@ -101,10 +101,10 @@ Use the [`unpack-files-from-orig.js`](./scripts/unpack-files-from-orig.js) scrip
 echo "<list_of_urls_or_file_paths>" | ./scripts/unpack-files-from-orig.js
 ```
 
-It's recommended to run [`prettier`](https://prettier.io/) multiple times to ensure complete formatting, as one pass may not address all complexities. Keep executing the following command until files stay unchanged:
+It's recommended to run [`biome format`](https://biomejs.dev/reference/cli/#biome-format) multiple times to ensure complete formatting, as one pass may not address all complexities. Keep executing the following command until files stay unchanged:
 
 ```shell
-prettier --write unpacked/**/*
+npx biome format --write unpacked/
 ```
 
 Manually update the [`CHANGELOG.md`](./CHANGELOG.md) file with the information about the new build and changes observed. Ensure that you follow the existing format and include relevant details such as the build version, date, and a summary of the changes.
