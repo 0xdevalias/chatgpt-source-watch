@@ -4,6 +4,31 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-08-04Z (`37G8pTNKx251duVfzpNCz`) `[not archived]`
+
+### Notes
+
+The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.
+
+### Not From Build Manifest
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/webpack-9a9140e9b6741713.js
+https://cdn.oaistatic.com/_next/static/chunks/1230-04040ad560463a89.js
+https://cdn.oaistatic.com/_next/static/chunks/2231-5270b0cf7f1f48cb.js
+https://cdn.oaistatic.com/_next/static/chunks/3494-21197371881a8adf.js
+https://cdn.oaistatic.com/_next/static/chunks/3504-a12ba7bcff4f7847.js
+https://cdn.oaistatic.com/_next/static/chunks/3551-b3787b4957be36b0.js
+https://cdn.oaistatic.com/_next/static/chunks/7851-acd5f0d7727988d3.js
+https://cdn.oaistatic.com/_next/static/chunks/8937-79338342125ac632.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-695c0ff86878a9c6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/index-9a069bf3e61a2166.js
+https://cdn.oaistatic.com/_next/static/37G8pTNKx251duVfzpNCz/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/37G8pTNKx251duVfzpNCz/_ssgManifest.js
+```
+
 ## 2023-08-03Z (`PurMkNIQjqUSFMyVMhlHV`) `[not archived]`
 
 ### Notes
