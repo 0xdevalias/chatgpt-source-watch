@@ -1,114 +1,158 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [758],
+  [2758],
   {
-    49363: function (n, u, t) {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/aip/[pluginId]/oauth/callback",
-        function () {
-          return t(51261);
-        },
-      ]);
-    },
-    51261: function (n, u, t) {
+    39636: function (e, t, n) {
       "use strict";
-      t.r(u),
-        t.d(u, {
+      n.r(t),
+        n.d(t, {
           __N_SSP: function () {
-            return p;
+            return O;
           },
           default: function () {
-            return f;
+            return h;
           },
         });
-      var c = t(21722),
-        e = t(39324),
-        o = t(39889),
-        s = t(35250),
-        i = t(68555),
-        a = t(70079),
-        r = t(24274),
-        l = t(32787),
-        p = !0;
-      function f(n) {
-        return (0, s.jsx)(_, (0, e._)({}, n));
+      var r = n(50134),
+        c = n(36112),
+        u = n(4399),
+        o = n.n(u),
+        i = n(85958),
+        s = n(66027),
+        a = n(10721),
+        p = n(70079),
+        f = n(35250);
+      function l(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
       }
-      function _(n) {
-        var u = n.pluginId,
-          t = n.code,
-          e = n.state,
-          p = (0, i.useRouter)(),
-          f = (0, l.kP)().session;
+      var O = !0;
+      function h(e) {
+        return (0, f.jsx)(
+          b,
+          (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+              var n = null != arguments[t] ? arguments[t] : {};
+              t % 2
+                ? l(Object(n), !0).forEach(function (t) {
+                    (0, c.Z)(e, t, n[t]);
+                  })
+                : Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(
+                      e,
+                      Object.getOwnPropertyDescriptors(n)
+                    )
+                  : l(Object(n)).forEach(function (t) {
+                      Object.defineProperty(
+                        e,
+                        t,
+                        Object.getOwnPropertyDescriptor(n, t)
+                      );
+                    });
+            }
+            return e;
+          })({}, e)
+        );
+      }
+      function b(e) {
+        var t = e.pluginId,
+          n = e.code,
+          c = e.state,
+          u = (0, a.useRouter)(),
+          l = (0, p.useRef)(!1);
         return (
-          (0, a.useEffect)(
+          (0, p.useEffect)(
             function () {
-              function n() {
-                return (n = (0, c._)(function () {
-                  var n;
-                  return (0, o.Jh)(this, function (c) {
-                    switch (c.label) {
-                      case 0:
-                        (n = ""
-                          .concat(window.location.origin, "/aip/")
-                          .concat(u, "/oauth/callback")),
-                          (c.label = 1);
-                      case 1:
-                        return (
-                          c.trys.push([1, 3, , 4]),
-                          [
-                            4,
-                            r.ZP.pluginOauthCallback(
-                              u,
-                              t,
-                              n,
-                              e,
-                              null == f ? void 0 : f.accessToken
-                            ),
-                          ]
-                        );
-                      case 2:
-                        return (
-                          c.sent(),
-                          p.push(
-                            "/?model=gpt-4-plugins&loginAip=".concat(
-                              u,
-                              "&loginSuccess=true"
-                            )
-                          ),
-                          [3, 4]
-                        );
-                      case 3:
-                        return (
-                          console.error(c.sent()),
-                          p.push(
-                            "/?model=gpt-4-plugins&loginAip=".concat(
-                              u,
-                              "&loginSuccess=false"
-                            )
-                          ),
-                          [3, 4]
-                        );
-                      case 4:
-                        return [2];
-                    }
-                  });
-                })).apply(this, arguments);
-              }
-              (null == f ? void 0 : f.accessToken) &&
+              !0 !== l.current &&
+                ((l.current = !0),
                 (function () {
-                  n.apply(this, arguments);
-                })();
+                  e.apply(this, arguments);
+                })());
+              function e() {
+                return (e = (0, r.Z)(
+                  o().mark(function e() {
+                    var r, a, p, f;
+                    return o().wrap(
+                      function (e) {
+                        for (;;)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (r = ""
+                                  .concat(window.location.origin, "/aip/")
+                                  .concat(t, "/oauth/callback")),
+                                (e.prev = 1),
+                                (e.next = 4),
+                                s.ZP.pluginOauthCallback(t, n, r, c)
+                              );
+                            case 4:
+                              (a = e.sent).success
+                                ? ((p = new URL(
+                                    (0, i.M5)(
+                                      i.LT.OAUTH_SUCCESS,
+                                      a.redirect_path
+                                    )
+                                  )).searchParams.set("oauth_success", "true"),
+                                  u.push(p.toString()))
+                                : u.push(
+                                    (0, i.M5)(
+                                      i.LT.CUSTOM_ERROR,
+                                      a.redirect_path,
+                                      null !== (f = a.error) && void 0 !== f
+                                        ? f
+                                        : a.message
+                                    )
+                                  ),
+                                (e.next = 11);
+                              break;
+                            case 8:
+                              (e.prev = 8),
+                                (e.t0 = e.catch(1)),
+                                u.push(
+                                  "/?model=gpt-4-plugins&loginAip=".concat(
+                                    t,
+                                    "&loginSuccess=false"
+                                  )
+                                );
+                            case 11:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      null,
+                      [[1, 8]]
+                    );
+                  })
+                )).apply(this, arguments);
+              }
             },
-            [u, t, e, p, null == f ? void 0 : f.accessToken]
+            [t, n, c, u]
           ),
-          (0, s.jsx)("div", {})
+          (0, f.jsx)("div", {})
         );
       }
     },
+    69613: function (e, t, n) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/aip/[pluginId]/oauth/callback",
+        function () {
+          return n(39636);
+        },
+      ]);
+    },
   },
-  function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return n((n.s = 49363));
+  function (e) {
+    e.O(0, [9774, 2888, 179], function () {
+      return e((e.s = 69613));
     }),
-      (_N_E = n.O());
+      (_N_E = e.O());
   },
 ]);

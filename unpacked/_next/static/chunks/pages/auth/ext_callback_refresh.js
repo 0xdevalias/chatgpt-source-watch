@@ -1,15 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [905],
+  [1905],
   {
-    37441: function (n, t, u) {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/auth/ext_callback_refresh",
-        function () {
-          return u(22026);
-        },
-      ]);
-    },
-    22026: function (n, t, u) {
+    80633: function (n, t, u) {
       "use strict";
       u.r(t),
         u.d(t, {
@@ -20,19 +12,19 @@
             return c;
           },
         });
-      var e = u(35250),
-        r = u(68555),
-        f = u(70079),
+      var e = u(10721),
+        r = u(70079),
+        f = u(35250),
         _ = !0;
       function c() {
-        return (0, e.jsx)(i, {});
+        return (0, f.jsx)(i, {});
       }
       function i() {
-        var n = (0, r.useRouter)(),
+        var n = (0, e.useRouter)(),
           t = n.query.next,
           u = "string" == typeof t && t.startsWith("/") ? t : "/";
         return (
-          (0, f.useEffect)(
+          (0, r.useEffect)(
             function () {
               n.push(u);
             },
@@ -42,10 +34,18 @@
         );
       }
     },
+    44e3: function (n, t, u) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/auth/ext_callback_refresh",
+        function () {
+          return u(80633);
+        },
+      ]);
+    },
   },
   function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return n((n.s = 37441));
+    n.O(0, [9774, 2888, 179], function () {
+      return n((n.s = 44e3));
     }),
       (_N_E = n.O());
   },

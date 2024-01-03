@@ -1,15 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [156],
+  [7156],
   {
-    17895: function (n, u, t) {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/account/manage",
-        function () {
-          return t(3022);
-        },
-      ]);
-    },
-    3022: function (n, u, t) {
+    10015: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
@@ -26,10 +18,18 @@
         return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)("div", {}) });
       }
     },
+    16186: function (n, u, t) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/account/manage",
+        function () {
+          return t(10015);
+        },
+      ]);
+    },
   },
   function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return n((n.s = 17895));
+    n.O(0, [9774, 2888, 179], function () {
+      return n((n.s = 16186));
     }),
       (_N_E = n.O());
   },

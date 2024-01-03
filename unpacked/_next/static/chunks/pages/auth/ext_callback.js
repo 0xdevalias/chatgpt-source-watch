@@ -1,15 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [191],
+  [4191],
   {
-    80213: function (n, t, u) {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/auth/ext_callback",
-        function () {
-          return u(24848);
-        },
-      ]);
-    },
-    24848: function (n, t, u) {
+    77897: function (n, t, u) {
       "use strict";
       u.r(t),
         u.d(t, {
@@ -17,32 +9,40 @@
             return o;
           },
         });
-      var e = u(35250),
-        r = u(14412),
-        c = u(68555),
-        f = u(70079);
+      var e = u(20225),
+        r = u(10721),
+        c = u(70079),
+        f = u(35250);
       function o() {
-        return (0, e.jsx)(a, {});
+        return (0, f.jsx)(a, {});
       }
       function a() {
-        var n = (0, c.useRouter)().query.next,
+        var n = (0, r.useRouter)().query.next,
           t =
             "/auth/ext_callback_refresh?next=" +
             encodeURIComponent(
               "string" == typeof n && n.startsWith("/") ? n : "/"
             );
         return (
-          (0, f.useEffect)(function () {
-            (0, r.signIn)("auth0", { callbackUrl: t || "/" });
+          (0, c.useEffect)(function () {
+            (0, e.signIn)("auth0", { callbackUrl: t || "/" });
           }, []),
           null
         );
       }
     },
+    85169: function (n, t, u) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/auth/ext_callback",
+        function () {
+          return u(77897);
+        },
+      ]);
+    },
   },
   function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return n((n.s = 80213));
+    n.O(0, [9774, 2888, 179], function () {
+      return n((n.s = 85169));
     }),
       (_N_E = n.O());
   },

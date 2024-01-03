@@ -1,51 +1,91 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [825],
+  [7825],
   {
-    61304: function (n, u, t) {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/auth/logout",
-        function () {
-          return t(72864);
-        },
-      ]);
-    },
-    72864: function (n, u, t) {
+    8995: function (t, e, n) {
       "use strict";
-      t.r(u),
-        t.d(u, {
+      n.r(e),
+        n.d(e, {
           __N_SSP: function () {
-            return e;
+            return s;
           },
           default: function () {
-            return f;
+            return O;
           },
         });
-      var o = t(39324),
-        r = t(35250),
-        i = t(14412),
-        c = t(70079),
-        e = !0;
-      function f(n) {
-        return (0, r.jsx)(_, (0, o._)({}, n));
+      var r = n(36112),
+        o = n(40318),
+        c = n(20225),
+        u = n(70079),
+        i = n(35250);
+      function f(t, e) {
+        var n = Object.keys(t);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(t);
+          e &&
+            (r = r.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
       }
-      function _(n) {
-        var u = n.federatedLogoutUri;
+      var s = !0;
+      function O(t) {
+        return (0, i.jsx)(
+          a,
+          (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+              var n = null != arguments[e] ? arguments[e] : {};
+              e % 2
+                ? f(Object(n), !0).forEach(function (e) {
+                    (0, r.Z)(t, e, n[e]);
+                  })
+                : Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(
+                      t,
+                      Object.getOwnPropertyDescriptors(n)
+                    )
+                  : f(Object(n)).forEach(function (e) {
+                      Object.defineProperty(
+                        t,
+                        e,
+                        Object.getOwnPropertyDescriptor(n, e)
+                      );
+                    });
+            }
+            return t;
+          })({}, t)
+        );
+      }
+      function a(t) {
+        var e = t.federatedLogoutUri;
         return (
-          (0, c.useEffect)(
+          (0, u.useEffect)(
             function () {
-              (0, i.signOut)({ callbackUrl: u || window.location.origin });
+              (0, c.signOut)({ callbackUrl: e || window.location.origin });
             },
-            [u]
+            [e]
           ),
+          (0, u.useEffect)(function () {
+            (0, o.I)();
+          }, []),
           null
         );
       }
     },
+    3499: function (t, e, n) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/auth/logout",
+        function () {
+          return n(8995);
+        },
+      ]);
+    },
   },
-  function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return n((n.s = 61304));
+  function (t) {
+    t.O(0, [9774, 2888, 179], function () {
+      return t((t.s = 3499));
     }),
-      (_N_E = n.O());
+      (_N_E = t.O());
   },
 ]);
