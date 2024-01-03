@@ -12,7 +12,7 @@ const childProcess = require('child_process');
 const basePath = path.join(__dirname, '..', 'orig');
 const destPath = path.join(__dirname, '..', 'unpacked');
 
-const urlPrefix = 'https://chat.openai.com/';
+const urlPrefix = 'https://cdn.oaistatic.com/';
 const pathPrefix = "_next";
 const filesToReplaceHashInPath = ['_buildManifest.js', '_ssgManifest.js'];
 const specialCssPath = '_next/static/css';

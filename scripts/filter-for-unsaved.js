@@ -11,7 +11,8 @@ const readline = require('readline');
 const basePath = path.join(__dirname, '..', 'orig');
 
 // Define URL prefix
-const urlPrefix = 'https://chat.openai.com/';
+const oldUrlPrefix = 'https://chat.openai.com/';
+const urlPrefix = 'https://cdn.oaistatic.com/';
 
 // Define a set to store all output URLs
 let outputUrls = new Set();
@@ -23,7 +24,7 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function(rawInputPath) {
-  const filePath = rawInputPath.replace(urlPrefix, '');
+  const filePath = rawInputPath.replace(oldUrlPrefix, '').replace(urlPrefix, '');
   const fullPath = path.join(basePath, filePath);
   const outputUrl = `${urlPrefix}${filePath}`;
 

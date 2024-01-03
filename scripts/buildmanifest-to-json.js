@@ -73,7 +73,7 @@ if (outputMode === 'extract-urls') {
   const uniqueStaticStrings = [...new Set(staticStrings)];
 
   // Map and join the unique static strings
-  const mappedStrings = uniqueStaticStrings.map(s => `https://chat.openai.com/_next/${s}`).join('\n');
+  const mappedStrings = uniqueStaticStrings.map(s => `https://cdn.oaistatic.com/_next/${s}`).join('\n');
 
   // Output the result
   console.log(mappedStrings);
