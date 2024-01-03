@@ -4,6 +4,26 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-08-03Z (`QrTcOt7XatF0UtTGkJiqj`) `[not archived]`
+
+### Notes
+
+The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.
+
+### Not From Build Manifest
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1836-f36c6a4e1cb31680.js
+https://cdn.oaistatic.com/_next/static/chunks/7851-1ada54827998db22.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-8669c392cbfb2100.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/index-4ea15b8d8b9a53b3.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-3b6f179cb52163b3.js
+https://cdn.oaistatic.com/_next/static/QrTcOt7XatF0UtTGkJiqj/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/QrTcOt7XatF0UtTGkJiqj/_ssgManifest.js
+```
+
 ## 2023-08-02Z (`9Y1CKRR2ktnFqbtMySwcl`) `[partial archive]`
 
 ### Notes
