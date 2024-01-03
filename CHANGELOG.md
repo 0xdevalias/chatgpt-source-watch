@@ -148,6 +148,26 @@ https://cdn.oaistatic.com/_next/static/chunks/9826.d9d67e7d2c47379d.js
 https://cdn.oaistatic.com/_next/static/css/73fc0a5f171c2f83.css
 ```
 
+## 2023-09-16Z to 2024-01-01Z `[not archived]`
+
+### Notes
+
+The URLs and assets from the builds between `2023-09-16Z` to `2024-01-01Z` weren't archived at the time. It may be possible to find some of the assets via the Wayback Machine/etc. You can try checking the following:
+
+- Original URL: https://web.archive.org/web/*/https://chat.openai.com/_next/*
+- New CDN URL: https://web.archive.org/web/*/https://cdn.oaistatic.com/*
+
+You could also use the WayBack Machine APIs if you wanted to search more specifically:
+
+- https://archive.org/help/wayback_api.php
+- https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server
+
+For example, here is a query that should return all the matching results between `2023-09-16Z` to `2024-01-01Z`:
+
+```bash
+⇒ .curl --silent 'http://web.archive.org/cdx/search/cdx?url=https://cdn.oaistatic.com/&matchType=prefix&filter=mimetype:application/javascript&filter=!statuscode:404&output=json&fl=original,timestamp&collapse=urlkey&from=20230916&to=20240101&limit='
+```
+
 ## 2023-09-15Z (`0S-3OY79q4frbRmxZL8PL`) `[partial archive]`
 
 ### Notes
