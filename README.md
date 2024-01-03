@@ -27,6 +27,11 @@ If you're looking for a concise summary of the changes and updates in ChatGPT's 
 
 For those interested in a more detailed analysis or diving into the code, the repository also contains the original webpack chunks and unpacked, formatted versions of the chunk files.
 
+If the particular build/chunk version you're looking for isn't archived in this repo, you could also try checking the WayBack Machine to see if they have captured it:
+
+- Original URL: https://web.archive.org/web/*/https://chat.openai.com/_next/*
+- New CDN URL: https://web.archive.org/web/*/https://cdn.oaistatic.com/*
+
 ## Announcement
 
 A couple of the places we first announced this project:
