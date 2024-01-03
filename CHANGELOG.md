@@ -4,6 +4,39 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-09-06Z (`HbvObI9-beBZWMNcbKblk`) `[not archived]`
+
+### Notes
+
+The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.
+
+### Not From Build Manifest
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1139-84ba204a037b8626.js
+https://cdn.oaistatic.com/_next/static/chunks/1230-f9369c9e9f308ae2.js
+https://cdn.oaistatic.com/_next/static/chunks/2536-e062008d5f70c441.js
+https://cdn.oaistatic.com/_next/static/chunks/2802bd5f-7a16e4a96d790774.js
+https://cdn.oaistatic.com/_next/static/chunks/3392-ef510942534eb9af.js
+https://cdn.oaistatic.com/_next/static/chunks/4094-35f7eb42db55d8c9.js
+https://cdn.oaistatic.com/_next/static/chunks/4212-a72eb27aa077a503.js
+https://cdn.oaistatic.com/_next/static/chunks/4484-dd952ac85e06b3ce.js
+https://cdn.oaistatic.com/_next/static/chunks/4662-1c96e2e8aaa33187.js
+https://cdn.oaistatic.com/_next/static/chunks/5274-e3f93d2068bc940a.js
+https://cdn.oaistatic.com/_next/static/chunks/5849-9d1d1fb665033d45.js
+https://cdn.oaistatic.com/_next/static/chunks/6739-e9d8c90a499bfb18.js
+https://cdn.oaistatic.com/_next/static/chunks/7594-47ff20acfe359841.js
+https://cdn.oaistatic.com/_next/static/chunks/8152-3a3d4677fa83a664.js
+https://cdn.oaistatic.com/_next/static/chunks/8937-d3d5d4cedbf2f3b9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-a76c492388302155.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-59e995f0713e9331.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-917fdeded1d1cf08.js
+https://cdn.oaistatic.com/_next/static/HbvObI9-beBZWMNcbKblk/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/HbvObI9-beBZWMNcbKblk/_ssgManifest.js
+```
+
 ## 2023-08-23Z (`L-nRdgPrZn7iyMiVgf6ia`) `[not archived]`
 
 ### Notes
