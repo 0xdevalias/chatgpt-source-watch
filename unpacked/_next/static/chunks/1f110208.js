@@ -1,6 +1,6 @@
 "use strict";
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [960],
+  [5960],
   {
     75927: function (e, t, r) {
       r.d(t, {

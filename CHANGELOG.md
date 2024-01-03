@@ -4,6 +4,43 @@ Note that while the contents within this CHANGELOG will be kept up to date with 
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2023-08-02Z (`9Y1CKRR2ktnFqbtMySwcl`) `[partial archive]`
+
+### Notes
+
+The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1f110208-24bf6c2e080e0308.js
+https://cdn.oaistatic.com/_next/static/chunks/bd26816a-796eab5008811694.js
+https://cdn.oaistatic.com/_next/static/chunks/framework-10a404587b40544b.js
+https://cdn.oaistatic.com/_next/static/chunks/main-664b20fa39df3103.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/012ff928-385705181ba431e9.js
+https://cdn.oaistatic.com/_next/static/chunks/2378-46cd95ca8d559832.js
+https://cdn.oaistatic.com/_next/static/chunks/2802bd5f-2db666e4606fc7ff.js
+https://cdn.oaistatic.com/_next/static/chunks/4984-2164c4b7cb3aea91.js
+https://cdn.oaistatic.com/_next/static/chunks/5924-2e4a249c9d20d18a.js
+https://cdn.oaistatic.com/_next/static/chunks/6493-694ff37420ef30dc.js
+https://cdn.oaistatic.com/_next/static/chunks/68a27ff6-f9f204be935e10d1.js
+https://cdn.oaistatic.com/_next/static/chunks/7851-25cb2569cc5b0e4c.js
+https://cdn.oaistatic.com/_next/static/chunks/8937-3ea143c3835bb425.js
+https://cdn.oaistatic.com/_next/static/chunks/8983-7972313cb81a7751.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-a36323cf5dad9506.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/index-d3b3031e7ceeab3b.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-9e9ecf18b064e989.js
+https://cdn.oaistatic.com/_next/static/9Y1CKRR2ktnFqbtMySwcl/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/9Y1CKRR2ktnFqbtMySwcl/_ssgManifest.js
+```
+
 ## 2023-08-01Z (`VArZIFjnQVe75R3PSp8rf`) `[not archived]`
 
 ### Notes
