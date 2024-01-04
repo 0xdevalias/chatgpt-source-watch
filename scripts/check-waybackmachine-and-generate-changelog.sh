@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: extract URLs from build manifest, download them if needed, and generate corresponding CHANGELOG section for them
+
 # TODO: detect the difference between a found URL that was downloaded with wget, and one found on waybackmachine that hasn't been downloaded yet
 
 # TODO: Autogenerate command to download latest waybackmachine chunks for found URLs (and/or run it)
