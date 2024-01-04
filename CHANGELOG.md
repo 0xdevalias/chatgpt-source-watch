@@ -8,6 +8,39 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-04Z (`wvxlBkHE5usnj-32Td8Nr`)
+
+### Notes
+
+- App release version (Git SHA?): `4172b73bd5822a266abda2f7afb829f413761521`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-c65a674674e57418.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-e3ee114076ef4ad4.js
+https://cdn.oaistatic.com/_next/static/wvxlBkHE5usnj-32Td8Nr/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/wvxlBkHE5usnj-32Td8Nr/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/3754-a18653d9d4bfd554.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-d11db11603a1a477.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-b5a277fa600c8450.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-8c7558ce5704445d.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-29906ee73c008f82.js
+https://cdn.oaistatic.com/_next/static/chunks/192-865b00edd7c32b95.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-8ad7cd389335ca03.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-63420656fb636203.js
+```
+
 ## 2024-01-02Z (`aNEO7zh0z5I01hzE5e-99`) `[as well as earlier missing changes]`
 
 ### Notes

@@ -30,8 +30,8 @@
         f = n(15136),
         x = n(25349),
         m = n(99893),
-        v = n(14765),
-        b = n(70671),
+        b = n(14765),
+        v = n(70671),
         j = n(32004),
         y = n(94968),
         w = n(62906),
@@ -72,7 +72,7 @@
           n = e.enableNewAuthFlow,
           r = e.nextUrl,
           i = e.isStorageComplianceEnabled,
-          a = (0, b.Z)();
+          a = (0, v.Z)();
         return (0, O.jsx)(O.Fragment, {
           children: (0, O.jsxs)("div", {
             className:
@@ -109,10 +109,10 @@
                               (0, O.jsx)(P, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cpath id='a' d='M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z'/%3E%3C/defs%3E%3CclipPath id='b'%3E%3Cuse xlink:href='%23a' overflow='visible'/%3E%3C/clipPath%3E%3Cpath clip-path='url(%23b)' fill='%23FBBC05' d='M0 37V11l17 13z'/%3E%3Cpath clip-path='url(%23b)' fill='%23EA4335' d='M0 11l17 13 7-6.1L48 14V0H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%2334A853' d='M0 37l30-23 7.9 1L48 0v48H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%234285F4' d='M48 48L17 24l-4-3 35-10z'/%3E%3C/svg%3E\")",
                                 onClick: function () {
-                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "google",
                                   }),
-                                    x.A.logEvent(m.M.authLogin, {
+                                    x.A.publicEvent(m.M.authLogin, {
                                       provider: "google",
                                     }),
                                     (0, l.signIn)(
@@ -134,10 +134,10 @@
                               (0, O.jsx)(P, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9h-9z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9h-9z'/%3E%3C/svg%3E\")",
                                 onClick: function () {
-                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "microsoft",
                                   }),
-                                    x.A.logEvent(m.M.authLogin, {
+                                    x.A.publicEvent(m.M.authLogin, {
                                       provider: "microsoft",
                                     }),
                                     (0, l.signIn)(
@@ -167,12 +167,12 @@
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: function () {
-                                      v.m9.logEvent(
+                                      b.m9.logEvent(
                                         "chatgpt_auth_log_in",
                                         null,
                                         { provider: "openai" }
                                       ),
-                                        x.A.logEvent(m.M.authLogin, {
+                                        x.A.publicEvent(m.M.authLogin, {
                                           provider: "openai",
                                         }),
                                         (0, l.signIn)(
@@ -192,12 +192,12 @@
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: function () {
-                                      v.m9.logEvent(
+                                      b.m9.logEvent(
                                         "chatgpt_auth_sign_up",
                                         null,
                                         { provider: "openai" }
                                       ),
-                                        x.A.logEvent(m.M.authSignup, {
+                                        x.A.publicEvent(m.M.authSignup, {
                                           provider: "openai",
                                         }),
                                         (0, l.signIn)(
@@ -228,10 +228,10 @@
                                 primary: !0,
                                 testid: "login-button",
                                 onClick: function () {
-                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "auth0",
                                   }),
-                                    x.A.logEvent(m.M.authLogin, {
+                                    x.A.publicEvent(m.M.authLogin, {
                                       provider: "auth0",
                                     }),
                                     (0, l.signIn)(
@@ -246,10 +246,10 @@
                                 primary: !0,
                                 as: "button",
                                 onClick: function () {
-                                  v.m9.logEvent("chatgpt_auth_sign_up", null, {
+                                  b.m9.logEvent("chatgpt_auth_sign_up", null, {
                                     provider: "auth0",
                                   }),
-                                    x.A.logEvent(m.M.authSignup, {
+                                    x.A.publicEvent(m.M.authSignup, {
                                       provider: "auth0",
                                     }),
                                     (0, l.signIn)(
@@ -404,22 +404,22 @@
           h = g.query.next,
           f = "string" == typeof h && h.startsWith("/") ? h : "/";
         g.asPath.includes("#") && (f += "#" + g.asPath.split("#")[1]);
-        var v = !!(null == n ? void 0 : n.oof),
-          b =
+        var b = !!(null == n ? void 0 : n.oof),
+          v =
             "sso" in g.query &&
             (null === (t = g.query.sso) || void 0 === t || t),
-          j = b ? g.query.connection : void 0;
+          j = v ? g.query.connection : void 0;
         return ((0, d.useEffect)(
           function () {
-            b &&
-              !v &&
+            v &&
+              !b &&
               (0, l.signIn)(
-                "openai" === b ? "openai" : "auth0",
+                "openai" === v ? "openai" : "auth0",
                 { callbackUrl: f },
                 j && { connection: j }
               );
           },
-          [f, b, j, v]
+          [f, v, j, b]
         ),
         (0, d.useEffect)(
           function () {
@@ -433,9 +433,9 @@
           "#pricing" === window.location.hash &&
             M.bX.setCookie(M.cn.ShowPaymentModal, !0, { maxAge: 21600 });
         }, []),
-        v)
+        b)
           ? (0, O.jsx)(i.Z, {})
-          : b
+          : v
             ? null
             : (0, O.jsxs)(O.Fragment, {
                 children: [
@@ -570,7 +570,7 @@
           return x;
         },
         jI: function () {
-          return b;
+          return v;
         },
         xh: function () {
           return f;
@@ -648,7 +648,7 @@
               openNewTab: !0,
               children: (0, p.jsx)(l.Z, h({}, j.terms)),
             }),
-            (0, p.jsx)(v, {}),
+            (0, p.jsx)(b, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
@@ -658,7 +658,7 @@
             t &&
               (0, p.jsxs)(p.Fragment, {
                 children: [
-                  (0, p.jsx)(v, {}),
+                  (0, p.jsx)(b, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
                     onClick: function () {
@@ -671,13 +671,13 @@
           ],
         });
       }
-      var v = function () {
+      var b = function () {
         return (0, p.jsx)("span", {
           className: "text-gray-600",
           children: "|",
         });
       };
-      function b() {
+      function v() {
         return (0, p.jsx)("div", {
           className: "mb-5",
           children: (0, p.jsx)(u.nI, {}),

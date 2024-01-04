@@ -16,8 +16,8 @@
         s = r(7144),
         o = r(1890),
         i = r(83380),
-        a = r(10721),
-        l = r(70079),
+        l = r(10721),
+        a = r(70079),
         c = r(32004),
         u = r(94968),
         d = r(91559),
@@ -41,9 +41,9 @@
       function h() {
         var e,
           t = (0, s.t)(),
-          r = (0, a.useRouter)(),
+          r = (0, l.useRouter)(),
           n = (0, p.Yp)(),
-          l = n.data,
+          a = n.data,
           c = n.isLoading;
         if (
           ((0, i.yx)({
@@ -57,9 +57,9 @@
         var u =
           null !==
             (e =
-              null == l
+              null == a
                 ? void 0
-                : l.cuts.map(function (e) {
+                : a.cuts.map(function (e) {
                     return {
                       cutId: e.info.id,
                       title: e.info.title,
@@ -143,9 +143,9 @@
         var t = e.cutId,
           r = e.cursor,
           s = e.fetchOnMount,
-          o = (0, l.useState)(s),
+          o = (0, a.useState)(s),
           i = o[0],
-          a = o[1],
+          l = o[1],
           u = (0, p.Fi)(t, 8, r, i),
           f = u.data,
           v = u.hasNextPage,
@@ -172,7 +172,7 @@
               ? (0, x.jsx)(d.z, {
                   color: "neutral",
                   onClick: function () {
-                    i ? h() : a(!0);
+                    i ? h() : l(!0);
                   },
                   loading: y,
                   className: "w-full",
@@ -276,8 +276,8 @@
         s = r(29703),
         o = r(14972),
         i = r(73040),
-        a = r.n(i),
-        l = r(2454),
+        l = r.n(i),
+        a = r(2454),
         c = r(67404),
         u = r(35250);
       function d(e) {
@@ -297,7 +297,7 @@
                 children: (0, u.jsxs)("div", {
                   className: "mt-7 flex flex-col gap-4",
                   children: [
-                    (0, u.jsx)(l.p, {
+                    (0, u.jsx)(a.p, {
                       href: "/auth/login?next=".concat(r),
                       children: "Sign up to chat",
                     }),
@@ -318,7 +318,7 @@
           className: "flex items-center justify-between px-7 py-4",
           children: [
             (0, u.jsx)(m, {}),
-            (0, u.jsx)(a(), {
+            (0, u.jsx)(l(), {
               href: null != t ? "/auth/login?next=".concat(t) : "/auth/login",
               className:
                 "flex items-center rounded-lg bg-green-600 px-4 py-2 font-medium text-white transition hover:opacity-70",
@@ -328,7 +328,7 @@
         });
       }
       function m() {
-        return (0, u.jsx)(a(), {
+        return (0, u.jsx)(l(), {
           href: "/",
           children: (0, u.jsx)(o.nI, { className: "h-8 w-8" }),
         });
@@ -347,8 +347,8 @@
         s,
         o,
         i,
-        a = r(36112),
-        l = r(90038),
+        l = r(36112),
+        a = r(90038),
         c = r(91559),
         u = r(37097),
         d = r(49668),
@@ -399,21 +399,21 @@
             e.panelId === t.panelId ? e : { ...e, panelId: t.panelId },
         },
         _ = (0, x.createContext)(null);
-      function F(e) {
+      function G(e) {
         let t = (0, x.useContext)(_);
         if (null === t) {
           let t = Error(`<${e} /> is missing a parent <Popover /> component.`);
-          throw (Error.captureStackTrace && Error.captureStackTrace(t, F), t);
+          throw (Error.captureStackTrace && Error.captureStackTrace(t, G), t);
         }
         return t;
       }
       _.displayName = "PopoverContext";
       let D = (0, x.createContext)(null);
-      function G(e) {
+      function F(e) {
         let t = (0, x.useContext)(D);
         if (null === t) {
           let t = Error(`<${e} /> is missing a parent <Popover /> component.`);
-          throw (Error.captureStackTrace && Error.captureStackTrace(t, G), t);
+          throw (Error.captureStackTrace && Error.captureStackTrace(t, F), t);
         }
         return t;
       }
@@ -439,7 +439,7 @@
                 o.current = e;
               })
             ),
-            a = (0, x.useReducer)(B, {
+            l = (0, x.useReducer)(B, {
               popoverState: 1,
               button: null,
               buttonId: n,
@@ -450,14 +450,14 @@
             }),
             [
               {
-                popoverState: l,
+                popoverState: a,
                 button: c,
                 panel: u,
                 beforePanelSentinel: d,
                 afterPanelSentinel: f,
               },
               m,
-            ] = a,
+            ] = l,
             p = (0, C.i)(null != (r = o.current) ? r : c);
           (0, x.useEffect)(() => m({ type: 3, buttonId: n }), [n, m]),
             (0, x.useEffect)(() => m({ type: 5, panelId: s }), [s, m]);
@@ -492,7 +492,7 @@
               "focus",
               (e) => {
                 var t, r, n, s;
-                0 === l &&
+                0 === a &&
                   (z() ||
                     !c ||
                     !u ||
@@ -513,7 +513,7 @@
                   (0, P.sP)(t, P.tJ.Loose) ||
                     (e.preventDefault(), null == c || c.focus());
               },
-              0 === l
+              0 === a
             );
           let T = (0, O.z)((e) => {
               m({ type: 1 });
@@ -527,16 +527,16 @@
               null == t || t.focus();
             }),
             R = (0, x.useMemo)(() => ({ close: T, isPortalled: v }), [T, v]),
-            M = (0, x.useMemo)(() => ({ open: 0 === l, close: T }), [l, T]);
+            M = (0, x.useMemo)(() => ({ open: 0 === a, close: T }), [a, T]);
           return x.createElement(
             _.Provider,
-            { value: a },
+            { value: l },
             x.createElement(
               D.Provider,
               { value: R },
               x.createElement(
                 w.up,
-                { value: (0, g.E)(l, { 0: w.ZM.Open, 1: w.ZM.Closed }) },
+                { value: (0, g.E)(a, { 0: w.ZM.Open, 1: w.ZM.Closed }) },
                 (0, h.sY)({
                   ourProps: { ref: i },
                   theirProps: e,
@@ -549,12 +549,12 @@
           );
         }),
         Y = (0, h.yV)(function (e, t) {
-          let [r, n] = F("Popover.Button"),
-            { isPortalled: s } = G("Popover.Button"),
+          let [r, n] = G("Popover.Button"),
+            { isPortalled: s } = F("Popover.Button"),
             o = (0, x.useRef)(null),
             i = `headlessui-focus-sentinel-${(0, b.M)()}`,
-            a = L(),
-            l = null == a ? void 0 : a.closeOthers,
+            l = L(),
+            a = null == l ? void 0 : l.closeOthers,
             c = (0, x.useContext)(U),
             u = null !== c && c === r.panelId,
             d = (0, y.T)(o, t, u ? null : (e) => n({ type: 2, button: e })),
@@ -578,12 +578,12 @@
                   case j.R.Enter:
                     e.preventDefault(),
                       e.stopPropagation(),
-                      1 === r.popoverState && (null == l || l(r.buttonId)),
+                      1 === r.popoverState && (null == a || a(r.buttonId)),
                       n({ type: 0 });
                     break;
                   case j.R.Escape:
                     if (0 !== r.popoverState)
-                      return null == l ? void 0 : l(r.buttonId);
+                      return null == a ? void 0 : a(r.buttonId);
                     if (
                       !o.current ||
                       ((null == m ? void 0 : m.activeElement) &&
@@ -604,7 +604,7 @@
                   ? (n({ type: 1 }), null == (s = r.button) || s.focus())
                   : (t.preventDefault(),
                     t.stopPropagation(),
-                    1 === r.popoverState && (null == l || l(r.buttonId)),
+                    1 === r.popoverState && (null == a || a(r.buttonId)),
                     n({ type: 0 }),
                     null == (o = r.button) || o.focus()));
             }),
@@ -660,35 +660,35 @@
         }),
         V = h.AN.RenderStrategy | h.AN.Static,
         W = (0, h.yV)(function (e, t) {
-          let [{ popoverState: r }, n] = F("Popover.Overlay"),
+          let [{ popoverState: r }, n] = G("Popover.Overlay"),
             s = (0, y.T)(t),
             o = `headlessui-popover-overlay-${(0, b.M)()}`,
             i = (0, w.oJ)(),
-            a = null !== i ? i === w.ZM.Open : 0 === r,
-            l = (0, O.z)((e) => {
+            l = null !== i ? i === w.ZM.Open : 0 === r,
+            a = (0, O.z)((e) => {
               if ((0, N.P)(e.currentTarget)) return e.preventDefault();
               n({ type: 1 });
             }),
             c = (0, x.useMemo)(() => ({ open: 0 === r }), [r]);
           return (0, h.sY)({
-            ourProps: { ref: s, id: o, "aria-hidden": !0, onClick: l },
+            ourProps: { ref: s, id: o, "aria-hidden": !0, onClick: a },
             theirProps: e,
             slot: c,
             defaultTag: "div",
             features: V,
-            visible: a,
+            visible: l,
             name: "Popover.Overlay",
           });
         }),
-        H = h.AN.RenderStrategy | h.AN.Static,
-        X = Object.assign($, {
+        q = h.AN.RenderStrategy | h.AN.Static,
+        H = Object.assign($, {
           Button: Y,
           Overlay: W,
           Panel: (0, h.yV)(function (e, t) {
             let { focus: r = !1, ...n } = e,
-              [s, o] = F("Popover.Panel"),
-              { close: i, isPortalled: a } = G("Popover.Panel"),
-              l = `headlessui-focus-sentinel-before-${(0, b.M)()}`,
+              [s, o] = G("Popover.Panel"),
+              { close: i, isPortalled: l } = F("Popover.Panel"),
+              a = `headlessui-focus-sentinel-before-${(0, b.M)()}`,
               c = `headlessui-focus-sentinel-after-${(0, b.M)()}`,
               u = (0, x.useRef)(null),
               d = (0, y.T)(u, t, (e) => {
@@ -736,11 +736,11 @@
                 onBlur:
                   r && 0 === s.popoverState
                     ? (e) => {
-                        var t, r, n, i, a;
-                        let l = e.relatedTarget;
-                        !l ||
+                        var t, r, n, i, l;
+                        let a = e.relatedTarget;
+                        !a ||
                           !u.current ||
-                          (null != (t = u.current) && t.contains(l)) ||
+                          (null != (t = u.current) && t.contains(a)) ||
                           (o({ type: 1 }),
                           ((null ==
                           (n =
@@ -748,15 +748,15 @@
                               ? void 0
                               : r.contains)
                             ? void 0
-                            : n.call(r, l)) ||
+                            : n.call(r, a)) ||
                             (null ==
-                            (a =
+                            (l =
                               null == (i = s.afterPanelSentinel.current)
                                 ? void 0
                                 : i.contains)
                               ? void 0
-                              : a.call(i, l))) &&
-                            l.focus({ preventScroll: !0 }));
+                              : l.call(i, a))) &&
+                            a.focus({ preventScroll: !0 }));
                       }
                     : void 0,
                 tabIndex: -1,
@@ -785,8 +785,8 @@
                       let n = (0, P.GO)(),
                         o = n.indexOf(s.button),
                         i = n.slice(0, o + 1),
-                        a = [...n.slice(o + 1), ...i];
-                      for (let n of a.slice())
+                        l = [...n.slice(o + 1), ...i];
+                      for (let n of l.slice())
                         if (
                           (null ==
                           (t =
@@ -797,10 +797,10 @@
                             : t.call(e, "headlessui-focus-sentinel-")) ||
                           (null == (r = s.panel) ? void 0 : r.contains(n))
                         ) {
-                          let e = a.indexOf(n);
-                          -1 !== e && a.splice(e, 1);
+                          let e = l.indexOf(n);
+                          -1 !== e && l.splice(e, 1);
                         }
-                      (0, P.jA)(a, P.TO.First, !1);
+                      (0, P.jA)(l, P.TO.First, !1);
                     },
                     [R.N.Backwards]: () => (0, P.jA)(e, P.TO.Last),
                   });
@@ -809,9 +809,9 @@
               U.Provider,
               { value: s.panelId },
               p &&
-                a &&
+                l &&
                 x.createElement(T._, {
-                  id: l,
+                  id: a,
                   ref: s.beforePanelSentinel,
                   features: T.A.Focusable,
                   as: "button",
@@ -823,12 +823,12 @@
                 theirProps: n,
                 slot: N,
                 defaultTag: "div",
-                features: H,
+                features: q,
                 visible: p,
                 name: "Popover.Panel",
               }),
               p &&
-                a &&
+                l &&
                 x.createElement(T._, {
                   id: c,
                   ref: s.afterPanelSentinel,
@@ -853,8 +853,8 @@
                   return t;
                 });
               }),
-              a = (0, O.z)((e) => (o((t) => [...t, e]), () => i(e))),
-              l = (0, O.z)(() => {
+              l = (0, O.z)((e) => (o((t) => [...t, e]), () => i(e))),
+              a = (0, O.z)(() => {
                 var e;
                 let t = (0, z.r)(r);
                 if (!t) return !1;
@@ -879,12 +879,12 @@
               }),
               u = (0, x.useMemo)(
                 () => ({
-                  registerPopover: a,
+                  registerPopover: l,
                   unregisterPopover: i,
-                  isFocusWithinPopoverGroup: l,
+                  isFocusWithinPopoverGroup: a,
                   closeOthers: c,
                 }),
-                [a, i, l, c]
+                [l, i, a, c]
               ),
               d = (0, x.useMemo)(() => ({}), []);
             return x.createElement(
@@ -900,7 +900,7 @@
             );
           }),
         });
-      var q = r(19841),
+      var X = r(19841),
         K = r(43356),
         J = r(61888),
         Q = r(73040),
@@ -911,8 +911,8 @@
         es = r(70671),
         eo = r(94968),
         ei = r(21389),
-        ea = r(218),
-        el = r(41202),
+        el = r(218),
+        ea = r(41202),
         ec = r(56685),
         eu = r(85528),
         ed = r(65865),
@@ -936,7 +936,7 @@
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? ev(Object(r), !0).forEach(function (t) {
-                (0, a.Z)(e, t, r[t]);
+                (0, l.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -957,7 +957,7 @@
       }
       var eh = ei.Z.div(
         o ||
-          (o = (0, l.Z)([
+          (o = (0, a.Z)([
             "grid grid-cols-1 gap-x-1.5 gap-y-1 md:gap-x-2 md:gap-y-1.5 lg:grid-cols-2 lg:gap-x-3 lg:gap-y-2.5",
           ]))
       );
@@ -968,24 +968,32 @@
           s = (0, u.z5)(),
           o = s.data,
           i = s.isLoading,
-          l = (0, x.useState)({}),
-          c = l[0],
-          d = l[1],
+          a = (0, x.useState)({}),
+          c = a[0],
+          d = a[1],
           f = (0, x.useState)({}),
           p = f[0],
           g = f[1],
-          h = (0, J.compact)(
-            null == o
-              ? void 0
-              : o.cuts.map(function (e) {
-                  return e.info.title;
-                })
+          h = (0, x.useMemo)(
+            function () {
+              return (0, J.uniqBy)(
+                (0, J.compact)(
+                  null == o
+                    ? void 0
+                    : o.cuts.map(function (e) {
+                        return { id: e.info.id, name: e.info.display_group };
+                      })
+                ),
+                "name"
+              );
+            },
+            [o]
           ),
           y = (0, x.useRef)(null),
           b =
             null !==
               (t = h.find(function (e) {
-                return p[e];
+                return p[e.id];
               })) && void 0 !== t
               ? t
               : h[0];
@@ -994,21 +1002,19 @@
             d(function (e) {
               var t = {};
               return (
-                null == o ||
-                  o.cuts.forEach(function (r) {
-                    var n,
-                      s = r.info.category;
-                    null != s &&
-                      (t[s] =
-                        null !== (n = e[s]) && void 0 !== n
-                          ? n
-                          : (0, x.createRef)());
-                  }),
+                h.forEach(function (r) {
+                  var n;
+                  null != r.name &&
+                    (t[r.id] =
+                      null !== (n = e[r.id]) && void 0 !== n
+                        ? n
+                        : (0, x.createRef)());
+                }),
                 t
               );
             });
           },
-          [o]
+          [h]
         ),
           (0, x.useEffect)(
             function () {
@@ -1069,7 +1075,7 @@
                         }
                         var o,
                           i = !0,
-                          a = !1;
+                          l = !1;
                         return {
                           s: function () {
                             r = r.call(e);
@@ -1079,13 +1085,13 @@
                             return (i = e.done), e;
                           },
                           e: function (e) {
-                            (a = !0), (o = e);
+                            (l = !0), (o = e);
                           },
                           f: function () {
                             try {
                               i || null == r.return || r.return();
                             } finally {
-                              if (a) throw o;
+                              if (l) throw o;
                             }
                           },
                         };
@@ -1094,15 +1100,16 @@
                       for (r.s(); !(t = r.n()).done; ) {
                         var n = (function () {
                           var r = t.value,
-                            n = c[r];
-                          if ("function" == typeof n) return { v: void 0 };
+                            n = c[r.id];
+                          if (null == n || "function" == typeof n)
+                            return { v: void 0 };
                           (null == n ? void 0 : n.current) != null &&
                             e.target === n.current &&
                             g(function (t) {
                               return ex(
                                 ex({}, t),
                                 {},
-                                (0, a.Z)({}, r, e.isIntersecting)
+                                (0, l.Z)({}, r.id, e.isIntersecting)
                               );
                             });
                         })();
@@ -1159,12 +1166,12 @@
                       }),
                     h.length > 1 &&
                       (0, ep.jsx)(ej, {
-                        categories: h,
-                        currentCategory: b,
-                        scrollToCategory: function (e) {
+                        displayGroups: h,
+                        currentDisplayGroup: b,
+                        scrollToDisplayGroup: function (e) {
                           var t,
                             r,
-                            n = null !== (t = c[e]) && void 0 !== t ? t : y;
+                            n = null !== (t = c[e.id]) && void 0 !== t ? t : y;
                           "function" != typeof n &&
                             (null == n ||
                               null === (r = n.current) ||
@@ -1181,7 +1188,7 @@
                         null == o
                           ? void 0
                           : o.cuts.map(function (e) {
-                              var t;
+                              var t, r, n;
                               return "featured" === e.info.display_type
                                 ? (0, ep.jsx)(
                                     ew,
@@ -1189,6 +1196,11 @@
                                       title: e.info.title,
                                       description: e.info.description,
                                       items: e.list.items,
+                                      ref:
+                                        null !== (t = c[e.info.id]) &&
+                                        void 0 !== t
+                                          ? t
+                                          : void 0,
                                     },
                                     e.info.id
                                   )
@@ -1199,15 +1211,16 @@
                                       description: e.info.description,
                                       items: e.list.items,
                                       cutId: e.info.id,
-                                      category: e.info.category,
                                       cursor:
-                                        null !== (t = e.list.cursor) &&
-                                        void 0 !== t
-                                          ? t
+                                        null !== (r = e.list.cursor) &&
+                                        void 0 !== r
+                                          ? r
                                           : void 0,
-                                      ref: e.info.category
-                                        ? c[e.info.category]
-                                        : void 0,
+                                      ref:
+                                        null !== (n = c[e.info.id]) &&
+                                        void 0 !== n
+                                          ? n
+                                          : void 0,
                                     },
                                     e.info.id
                                   );
@@ -1242,23 +1255,23 @@
         });
       }
       function ej(e) {
-        var t = e.categories,
-          r = e.currentCategory,
-          n = e.scrollToCategory,
+        var t = e.displayGroups,
+          r = e.currentDisplayGroup,
+          n = e.scrollToDisplayGroup,
           s = (0, x.useRef)(null),
           o = (0, x.useState)(!1),
           i = o[0],
-          a = o[1],
-          l = (0, x.useState)(!1),
-          c = l[0],
-          u = l[1];
+          l = o[1],
+          a = (0, x.useState)(!1),
+          c = a[0],
+          u = a[1];
         return (
           (0, x.useEffect)(
             function () {
               var e = s.current,
                 t = function () {
                   null != e &&
-                    (a(e.scrollLeft > 0),
+                    (l(e.scrollLeft > 0),
                     u(e.scrollLeft + e.clientWidth < e.scrollWidth));
                 };
               return (
@@ -1286,31 +1299,31 @@
                       "mt-2 rounded-full bg-gray-100 p-1 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600",
                     onClick: function () {
                       null != s.current &&
-                        s.current.scrollBy({ left: -200, behavior: "smooth" });
+                        s.current.scrollBy({ left: -400, behavior: "smooth" });
                     },
                     children: (0, ep.jsx)(em.FX, { className: "icon-sm" }),
                   }),
                 }),
               (0, ep.jsx)("div", {
                 className:
-                  "no-scrollbar flex scroll-m-5 gap-2 overflow-x-auto md:overflow-hidden",
+                  "no-scrollbar flex scroll-m-5 gap-1.5 overflow-x-auto md:overflow-hidden",
                 ref: s,
                 children: t.map(function (e) {
                   return (0, ep.jsx)(
                     "div",
                     {
-                      className: (0, q.default)(
+                      className: (0, X.default)(
                         "cursor-pointer whitespace-nowrap rounded-3xl px-3 py-2 md:px-2",
-                        e === r
+                        e.id === (null == r ? void 0 : r.id)
                           ? "border-token-text-primary bg-black text-white dark:bg-gray-100 dark:text-gray-800 md:rounded-none md:border-b-2 md:bg-transparent md:text-black dark:md:bg-transparent dark:md:text-white"
                           : "bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 md:rounded-lg md:bg-transparent md:text-token-text-tertiary md:hover:bg-gray-50 dark:md:bg-transparent dark:md:hover:bg-gray-700"
                       ),
                       onClick: function () {
                         n(e);
                       },
-                      children: e,
+                      children: e.name,
                     },
-                    e
+                    e.id
                   );
                 }),
               }),
@@ -1323,7 +1336,7 @@
                       "mt-2 rounded-full bg-gray-100 p-1 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600",
                     onClick: function () {
                       null != s.current &&
-                        s.current.scrollBy({ left: 100, behavior: "smooth" });
+                        s.current.scrollBy({ left: 400, behavior: "smooth" });
                     },
                     children: (0, ep.jsx)(em.Gb, { className: "icon-sm" }),
                   }),
@@ -1334,12 +1347,12 @@
       }
       function eN() {
         var e = (0, es.Z)(),
-          t = (0, ea.$3)(),
+          t = (0, el.$3)(),
           r = (0, p.tN)(function (e) {
             return e.isDesktopNavCollapsed;
           });
         return (0, ep.jsxs)("div", {
-          className: (0, q.default)(
+          className: (0, X.default)(
             "fixed bottom-0 flex w-full items-center justify-center gap-2 bg-gray-100 p-3 text-sm text-token-text-tertiary dark:bg-gray-700",
             !r && "md:w-[calc(100%-16rem)]"
           ),
@@ -1391,7 +1404,7 @@
                 (0, ep.jsx)("div", { className: "w-[calc((100%-768px)/2)]" }),
                 (0, ep.jsx)(eC, {
                   className: "max-w-3xl flex-grow",
-                  inputClassName: (0, q.default)(
+                  inputClassName: (0, X.default)(
                     "h-10 text-sm pl-9",
                     !o && "hidden"
                   ),
@@ -1428,15 +1441,16 @@
           })
         );
       }
-      function ew(e) {
-        var t = e.title,
-          r = e.description,
-          n = e.items;
+      var ew = (0, x.forwardRef)(function (e, t) {
+        var r = e.title,
+          n = e.description,
+          s = e.items;
         return (0, ep.jsx)(eM, {
-          title: t,
-          description: r,
+          title: r,
+          description: n,
+          ref: t,
           children: (0, ep.jsx)(eh, {
-            children: n.map(function (e, t) {
+            children: s.map(function (e, t) {
               return (0, ep.jsx)(
                 ek,
                 { resource: e.resource },
@@ -1445,7 +1459,7 @@
             }),
           }),
         });
-      }
+      });
       function ek(e) {
         var t,
           r,
@@ -1517,11 +1531,11 @@
           s = e.title,
           o = e.description,
           i = e.cutId,
-          a = e.cursor,
-          l = (0, x.useState)(0 === n.length),
-          d = l[0],
-          f = l[1],
-          p = (0, u.Fi)(i, 5, a, d),
+          l = e.cursor,
+          a = (0, x.useState)(0 === n.length),
+          d = a[0],
+          f = a[1],
+          p = (0, u.Fi)(i, 5, l, d),
           v = p.data,
           g = p.hasNextPage,
           h = p.fetchNextPage,
@@ -1561,13 +1575,13 @@
                           return "last" === e ? r : r / 2;
                         }
                       })(r, o),
-                a = e * Math.abs(i - s);
+                l = e * Math.abs(i - s);
               if (n) {
                 let t = o * e,
                   r = (0, K.R)(n);
-                a = r(a / t) * t;
+                l = r(l / t) * t;
               }
-              return t + a;
+              return t + l;
             };
           })(0.1);
         return (
@@ -1611,7 +1625,7 @@
                 ],
               }),
               (!d || g || y) &&
-                null != a &&
+                null != l &&
                 (0, ep.jsx)(c.z, {
                   color: "neutral",
                   onClick: function () {
@@ -1635,7 +1649,7 @@
           s = e.resource,
           o = e.rank,
           i = e.delay,
-          a =
+          l =
             null === (t = s.gizmo.vanity_metrics) || void 0 === t
               ? void 0
               : t.num_conversations_str;
@@ -1692,7 +1706,7 @@
                               gizmo: s,
                               className: "text-xs",
                             }),
-                            a &&
+                            l &&
                               (0, ep.jsxs)(ep.Fragment, {
                                 children: [
                                   (0, ep.jsx)("span", {
@@ -1700,7 +1714,7 @@
                                     children: "•",
                                   }),
                                   (0, ep.jsx)(em.M4, { className: "h-3 w-3" }),
-                                  a,
+                                  l,
                                 ],
                               }),
                           ],
@@ -1721,25 +1735,25 @@
             s = e.iconClassName,
             o = (0, es.Z)(),
             i = (0, x.useState)(""),
-            a = i[0],
-            l = i[1],
+            l = i[0],
+            a = i[1],
             c = (0, x.useState)(!1),
             u = c[0],
             d = c[1];
-          return (0, ep.jsxs)(X, {
+          return (0, ep.jsxs)(H, {
             as: "div",
-            className: (0, q.default)("group relative rounded-xl", r),
+            className: (0, X.default)("group relative rounded-xl", r),
             ref: t,
             children: [
               (0, ep.jsx)(er.jRj, {
-                className: (0, q.default)(
+                className: (0, X.default)(
                   "pointer-none absolute left-3 top-0 mr-2 h-full text-gray-500",
                   s
                 ),
                 size: 16,
               }),
               (0, ep.jsx)("input", {
-                className: (0, q.default)(
+                className: (0, X.default)(
                   "hover:dark-border-gray-500 z-10 w-full rounded-xl border border-gray-200 py-2 pr-3 font-normal outline-0 delay-100",
                   u
                     ? "border-gray-300 dark:border-gray-600 dark:bg-gray-700"
@@ -1747,9 +1761,9 @@
                   n
                 ),
                 placeholder: o.formatMessage(eI.discoverySearch),
-                value: a,
+                value: l,
                 onChange: function (e) {
-                  return l(e.target.value);
+                  return a(e.target.value);
                 },
                 onFocus: function () {
                   return d(!0);
@@ -1765,13 +1779,13 @@
                     d(!1);
                 },
               }),
-              (0, ep.jsx)(el.m, {
+              (0, ep.jsx)(ea.m, {
                 show: u,
-                children: (0, ep.jsx)(X.Panel, {
+                children: (0, ep.jsx)(H.Panel, {
                   static: !0,
                   className:
                     "absolute top-[calc(100%-10px)] max-h-[calc(100vh-320px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
-                  children: (0, ep.jsx)(eO, { query: a }),
+                  children: (0, ep.jsx)(eO, { query: l }),
                 }),
               }),
             ],
@@ -1779,7 +1793,7 @@
         }),
         eE = ei.Z.div(
           i ||
-            (i = (0, l.Z)([
+            (i = (0, a.Z)([
               "pb-2 px-4 text-xs font-medium text-token-text-tertiary",
             ]))
         );
@@ -1807,10 +1821,10 @@
         );
         var o = (0, u.K9)(n),
           i = o.data,
-          a = o.isLoading,
-          l = (0, u.Fi)("recent", 3),
-          c = l.data,
-          d = l.isLoading;
+          l = o.isLoading,
+          a = (0, u.Fi)("recent", 3),
+          c = a.data,
+          d = a.isLoading;
         if ("" === t) {
           if (d) return (0, ep.jsx)(eT, {});
           if (null != c) {
@@ -1843,7 +1857,7 @@
                 });
           }
         }
-        return a
+        return l
           ? (0, ep.jsx)(eT, {})
           : i && 0 !== i.items.length
             ? (0, ep.jsxs)(ep.Fragment, {
@@ -1965,7 +1979,7 @@
                 ],
               }),
               (0, ep.jsx)("div", {
-                className: (0, q.default)("mb-10 mt-4", s),
+                className: (0, X.default)("mb-10 mt-4", s),
                 children: o,
               }),
             ],
@@ -2034,8 +2048,8 @@
         s = r(4399),
         o = r.n(s),
         i = r(3554),
-        a = r(21120),
-        l = r(37097),
+        l = r(21120),
+        a = r(37097),
         c = r(4748),
         u = r(35250);
       function d(e) {
@@ -2043,7 +2057,7 @@
           r = e.gizmoId,
           s = e.onSuccess,
           d = e.onClose,
-          f = (0, l.kb)(),
+          f = (0, a.kb)(),
           m =
             ((t = (0, n.Z)(
               o().mark(function e() {
@@ -2080,7 +2094,7 @@
             function () {
               return t.apply(this, arguments);
             });
-        return (0, u.jsx)(a.Z, {
+        return (0, u.jsx)(l.Z, {
           isOpen: !0,
           onClose: d,
           type: "danger",
@@ -2116,20 +2130,20 @@
         s = r(83562),
         o = r(35212),
         i = r(10721),
-        a = r(17080),
-        l = r(35250);
+        l = r(17080),
+        a = r(35250);
       function c(e) {
         var t = e.children,
           r = (0, i.useRouter)();
-        return (0, l.jsx)(o.Z, {
+        return (0, a.jsx)(o.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, l.jsxs)(s.ZP, {
+          sidebar: (0, a.jsxs)(s.ZP, {
             onNewThread: function () {
               r.push("/");
             },
             children: [
-              (0, l.jsx)(a.Dy, {}),
-              (0, l.jsx)(n.Z, { activeId: void 0 }),
+              (0, a.jsx)(l.Dy, {}),
+              (0, a.jsx)(n.Z, { activeId: void 0 }),
             ],
           }),
           children: t,
@@ -2142,7 +2156,7 @@
           return i;
         },
         at: function () {
-          return F;
+          return G;
         },
         h9: function () {
           return R;
@@ -2155,8 +2169,8 @@
         s,
         o,
         i,
-        a = r(90038),
-        l = r(90166),
+        l = r(90038),
+        a = r(90166),
         c = r(79505),
         u = r(25736),
         d = r(37097),
@@ -2213,7 +2227,7 @@
               ? r
               : v.Zz.Private,
           i = (0, x.XA)(o),
-          a = (0, S.Z)();
+          l = (0, S.Z)();
         return (0, O.jsxs)("div", {
           children: [
             n.gizmo.share_recipient !== v.Zz.Private && null != s
@@ -2222,7 +2236,7 @@
                   children: [
                     (0, O.jsx)(f.M4, { className: "icon-sm" }),
                     (0, O.jsx)("span", {
-                      children: a.formatMessage(A.conversationCountStrLabel, {
+                      children: l.formatMessage(A.conversationCountStrLabel, {
                         numConvos: s,
                       }),
                     }),
@@ -2250,7 +2264,7 @@
           s = e.gizmoResource,
           o = e.canRemoveRecent,
           i = (0, w.useRouter)(),
-          a = (0, x.XX)(s),
+          l = (0, x.XX)(s),
           m = (0, d.Sg)(s),
           p = !!(null === (t = s.gizmo.tags) || void 0 === t
             ? void 0
@@ -2272,13 +2286,13 @@
           isDraft: m,
           description:
             null !== (n = s.gizmo.display.description) && void 0 !== n ? n : "",
-          byline: a
+          byline: l
             ? (0, O.jsx)(M, { gizmoResource: s })
             : (0, O.jsx)(E.ZP, { gizmo: s }),
           buttons: (0, O.jsxs)(O.Fragment, {
             children: [
-              a &&
-                (0, O.jsx)(l.u, {
+              l &&
+                (0, O.jsx)(a.u, {
                   label: "Edit GPT",
                   className: "flex justify-center",
                   side: "top",
@@ -2291,9 +2305,9 @@
                     children: (0, O.jsx)(f.eu, { className: "icon-sm" }),
                   }),
                 }),
-              (0, O.jsx)(G, {
+              (0, O.jsx)(F, {
                 gizmoResource: s,
-                isOwner: a,
+                isOwner: l,
                 canRemoveRecent: o,
               }),
             ],
@@ -2312,7 +2326,7 @@
         (n.ComingSoon = "coming-soon");
       var _ = C.Z.div(
         s ||
-          (s = (0, a.Z)([
+          (s = (0, l.Z)([
             "flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-full border border-dashed\n",
             "",
           ])),
@@ -2322,11 +2336,11 @@
             : "border-black bg-white dark:border-gray-500 dark:bg-gray-700";
         }
       );
-      function F(e) {
+      function G(e) {
         var t = e.type,
           r = (0, h.J8)(),
           n = t === i.ComingSoon;
-        return (0, O.jsxs)(l.E, {
+        return (0, O.jsxs)(a.E, {
           disabled: !n,
           label: "GPT creation will be available in the coming weeks",
           children: [
@@ -2368,7 +2382,7 @@
           s = e.isDraft,
           o = e.description,
           i = e.byline,
-          a = e.buttons,
+          l = e.buttons,
           c = e.disabled,
           u = e.className,
           d = (0, b.default)(
@@ -2398,7 +2412,7 @@
                           }),
                           void 0 !== s &&
                             s &&
-                            (0, O.jsx)(l.u, {
+                            (0, O.jsx)(a.u, {
                               label: "Draft",
                               className: "flex justify-center",
                               side: "top",
@@ -2430,7 +2444,7 @@
                     "hidden flex-1 text-ellipsis text-sm text-gray-500 md:block",
                   children: i,
                 }),
-              null != a &&
+              null != l &&
                 (0, O.jsx)("div", {
                   onClick: function (e) {
                     e.preventDefault();
@@ -2440,7 +2454,7 @@
                   },
                   className:
                     "flex h-9 shrink-0 justify-end gap-2 font-medium md:w-[100px]",
-                  children: a,
+                  children: l,
                 }),
             ],
           });
@@ -2459,21 +2473,21 @@
               }),
             });
       }
-      function G(e) {
+      function F(e) {
         var t = e.gizmoResource,
           r = e.isOwner,
           n = e.canRemoveRecent,
           s = (0, k.useState)(!1),
           o = s[0],
           i = s[1],
-          a = (0, k.useState)(!1),
-          l = a[0],
-          c = a[1];
+          l = (0, k.useState)(!1),
+          a = l[0],
+          c = l[1];
         return r || n
           ? (0, O.jsxs)(O.Fragment, {
               children: [
                 (0, O.jsxs)(y.fC, {
-                  open: l,
+                  open: a,
                   onOpenChange: function (e) {
                     return c(e);
                   },

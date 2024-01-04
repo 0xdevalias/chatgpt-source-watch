@@ -6,18 +6,20 @@
       n.r(e),
         n.d(e, {
           __N_SSP: function () {
-            return s;
+            return a;
           },
           default: function () {
-            return O;
+            return p;
           },
         });
       var r = n(36112),
         o = n(40318),
-        c = n(20225),
-        u = n(70079),
-        i = n(35250);
-      function f(t, e) {
+        c = n(78762),
+        u = n(25349),
+        i = n(20225),
+        f = n(70079),
+        s = n(35250);
+      function O(t, e) {
         var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(t);
@@ -29,15 +31,15 @@
         }
         return n;
       }
-      var s = !0;
-      function O(t) {
-        return (0, i.jsx)(
-          a,
+      var a = !0;
+      function p(t) {
+        return (0, s.jsx)(
+          l,
           (function (t) {
             for (var e = 1; e < arguments.length; e++) {
               var n = null != arguments[e] ? arguments[e] : {};
               e % 2
-                ? f(Object(n), !0).forEach(function (e) {
+                ? O(Object(n), !0).forEach(function (e) {
                     (0, r.Z)(t, e, n[e]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -45,7 +47,7 @@
                       t,
                       Object.getOwnPropertyDescriptors(n)
                     )
-                  : f(Object(n)).forEach(function (e) {
+                  : O(Object(n)).forEach(function (e) {
                       Object.defineProperty(
                         t,
                         e,
@@ -57,16 +59,16 @@
           })({}, t)
         );
       }
-      function a(t) {
-        var e = t.federatedLogoutUri;
+      function l(t) {
+        var e = t.federatedLogoutUri,
+          n = (0, c.H)(function () {
+            u.A.reset(function () {
+              (0, i.signOut)({ callbackUrl: e || window.location.origin });
+            });
+          });
         return (
-          (0, u.useEffect)(
-            function () {
-              (0, c.signOut)({ callbackUrl: e || window.location.origin });
-            },
-            [e]
-          ),
-          (0, u.useEffect)(function () {
+          (0, f.useEffect)(n, [n]),
+          (0, f.useEffect)(function () {
             (0, o.I)();
           }, []),
           null
