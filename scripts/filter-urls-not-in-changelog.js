@@ -7,12 +7,20 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-// Load CHANGELOG
-const changelogPath = path.join(__dirname, '..', 'CHANGELOG.md');
-const changelogContent = fs.readFileSync(changelogPath, 'utf8');
+// List of changelog filenames
+const changelogFilenames = ['CHANGELOG.md', 'CHANGELOG-2023.md'];
+
+// Load and combine content of all changelogs
+const changelogDirectory = path.join(__dirname, '..');
+const combinedChangelogContent = changelogFilenames
+  .map(filename => {
+    const changelogPath = path.join(changelogDirectory, filename);
+    return fs.existsSync(changelogPath) ? fs.readFileSync(changelogPath, 'utf8') : '';
+  })
+  .join('\n');
 
 // Define a set to store all output URLs
-let outputUrls = new Set();
+const outputUrls = new Set();
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -23,8 +31,8 @@ const rl = readline.createInterface({
 rl.on('line', function(inputUrl) {
   // Check if the URL has already been output
   if (!outputUrls.has(inputUrl)) {
-    // check if URL does not exist in changelog
-    if (!changelogContent.includes(inputUrl)) {
+    // Check if URL does not exist in combined changelog content
+    if (!combinedChangelogContent.includes(inputUrl)) {
       console.log(inputUrl);
 
       // Add the URL to the set
