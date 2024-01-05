@@ -79,7 +79,10 @@ main() {
 
   filter_and_extract_build_hash
   print_urls filtered_urls "Filtered URLs for first found build"
-  echo "Build Hash: $build_hash\n"
+  echo "Build Hash: $build_hash"
+  echo "  Remember to run the following, and manually ensure they are all downloaded/included properly:"
+  echo "    ./scripts/buildmanifest-to-json.js $build_hash --extract-urls | ./scripts/filter-for-unsaved.js"
+  echo
 
   process_urls
   print_urls already_downloaded_urls "Already saved URLs"
