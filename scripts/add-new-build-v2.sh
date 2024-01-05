@@ -134,7 +134,7 @@ print_urls() {
     output_fd=2  # Redirect to stderr
   fi
 
-  echo "$message:" >&$output_fd
+  echo "$message (${#arr[@]}):" >&$output_fd
 
   if [[ ${#arr[@]} -eq 0 ]]; then
     echo "  <none>" >&$output_fd
