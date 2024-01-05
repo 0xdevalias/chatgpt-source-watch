@@ -24,7 +24,7 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function(rawInputPath) {
-  const filePath = rawInputPath.replace(oldUrlPrefix, '').replace(urlPrefix, '');
+  const filePath = rawInputPath.trim().replace(oldUrlPrefix, '').replace(urlPrefix, '');
   const fullPath = path.join(basePath, filePath);
   const outputUrl = `${urlPrefix}${filePath}`;
 
