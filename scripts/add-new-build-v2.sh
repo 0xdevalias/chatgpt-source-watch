@@ -87,6 +87,10 @@ main() {
   echo "Build Hash: $build_hash"
   echo "  Remember to run the following, and manually ensure they are all downloaded/included properly:"
   echo "    ./scripts/buildmanifest-to-json.js $build_hash --extract-urls | ./scripts/filter-for-unsaved.js"
+  echo "  Remember to run the following after downloading files:"
+  echo "    pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
+  echo "  If there is a webpack*.js file, remember to manually extract/download/include entries from it (eg *.css) properly:"
+  echo "    pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
   echo
 
   process_urls
