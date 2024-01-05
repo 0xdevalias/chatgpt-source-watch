@@ -157,9 +157,12 @@ read_urls_from_stdin() {
   fi
 
   while IFS= read -r line || [[ -n $line ]]; do
-    # Check if the line starts with http:// or https://
-    if [[ $line =~ ^https?:// ]]; then
-      input_urls+=("$line")
+    # Trim leading and trailing whitespace using awk
+    trimmed_line=$(echo "$line" | awk '{$1=$1;print}')
+
+    # Check if the trimmed line starts with http:// or https://
+    if [[ $trimmed_line =~ ^https?:// ]]; then
+      input_urls+=("$trimmed_line")
     fi
   done
 
