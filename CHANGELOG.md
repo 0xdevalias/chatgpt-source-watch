@@ -8,6 +8,100 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-05Z (`-ush58uailrg9NaSp6Olq`)
+
+### Notes
+
+- A lot of the files changed in this version only had a `sourceMappingURL` appended to them, but the sourcemap file it points to wasn't able to be downloaded. I suspect this was unintentional:
+  - eg. `//# sourceMappingURL=main-abb0536823058f9d.js.map`
+- App release version (Git SHA?): `852018811988005c25380d3d1b8647b695d5f0f9`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/framework-31ffa51d236da229.js
+https://cdn.oaistatic.com/_next/static/chunks/main-abb0536823058f9d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-cc9d416427190a04.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-d3a435e20d062ea2.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-c82c25c608202a42.js
+https://cdn.oaistatic.com/_next/static/-ush58uailrg9NaSp6Olq/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/-ush58uailrg9NaSp6Olq/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_error-dfd7db9208d5bc06.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/account/cancel-92d8ce0316071915.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/account/manage-d6c22d23218f3753.js
+https://cdn.oaistatic.com/_next/static/chunks/5017-0a08fd85cfa9ab00.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-39c2ae0afab0be67.js
+https://cdn.oaistatic.com/_next/static/chunks/3a34cc27-e83cff9ee2ba2afc.js
+https://cdn.oaistatic.com/_next/static/chunks/7549-122f729dc49e6850.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/analytics-d2b18f0d4a4ace1d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-3460394477b79220.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-218afc4729fd8fe7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-6f7bbe791acce9c8.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-c02c08f2e2c17ef9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-8b94460bec0887ad.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/error-a9f157429575d195.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/ext_callback-c7e9292cfb6c0c0b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/ext_callback_refresh-6c967c6bb3c60b1d.js
+https://cdn.oaistatic.com/_next/static/chunks/3975-41d682cd3b400211.js
+https://cdn.oaistatic.com/_next/static/chunks/3754-2a73b1394b439d25.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/login-001159e4899e6e7a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-83b0ce66a0f7311e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/mocked_login-93f5191aa551662a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/bypass-4782eea63108c9bc.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-5a880474edd89882.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-871a5686c4458639.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-3569bf96f185cf3c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/discovery-1adcbd1503d5106b.js
+https://cdn.oaistatic.com/_next/static/chunks/192-af400bcd8b47f7a3.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor-072951efa1e8a25c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor/[slug]-f65318b3e7e56625.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-0b23c86464417b3f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/accepted-e76cf8d6bd8ad095.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-30b96390f59bab0a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-eaec433589ea05de.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-d006f4e1e72ce6c0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-d13a6df60456b624.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-ef6fcdc77eae779e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-d2c277e4dbba655d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/status-155fd86ce86ecc55.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/workspace/deactivated-8521e44b668891fc.js
+```
+
+### From `_next/static/chunks/webpack-c82c25c608202a42.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/queryString.df174924c6968fe4.js
+https://cdn.oaistatic.com/_next/static/chunks/tsub-middleware.50753041151f9c21.js
+https://cdn.oaistatic.com/_next/static/chunks/30750f44.d4730e5f8b65e198.js
+https://cdn.oaistatic.com/_next/static/chunks/schemaFilter.3a60974229840ffd.js
+https://cdn.oaistatic.com/_next/static/chunks/auto-track.fa6fc1112abad268.js
+https://cdn.oaistatic.com/_next/static/chunks/legacyVideos.87e726622393959c.js
+https://cdn.oaistatic.com/_next/static/chunks/remoteMiddleware.32ab39c72c4d4509.js
+https://cdn.oaistatic.com/_next/static/chunks/ajs-destination.d9cd2d046a23b656.js
+https://cdn.oaistatic.com/_next/static/chunks/119.0844e4df93c5188c.js
+https://cdn.oaistatic.com/_next/static/chunks/1802.c8bf7a6f2417514c.js
+https://cdn.oaistatic.com/_next/static/chunks/1966.63f2f6562c459b3e.js
+https://cdn.oaistatic.com/_next/static/chunks/1994.9ac177279866526d.js
+https://cdn.oaistatic.com/_next/static/chunks/2186.34fe7ff92a4f6a1f.js
+https://cdn.oaistatic.com/_next/static/chunks/4113.0c0ee75dab4b3a1d.js
+https://cdn.oaistatic.com/_next/static/chunks/4114.a1302f6d61ae32c1.js
+https://cdn.oaistatic.com/_next/static/chunks/8009.c6c0f36a9a82d8dd.js
+https://cdn.oaistatic.com/_next/static/chunks/9387.218c2da8808ec9c3.js
+https://cdn.oaistatic.com/_next/static/css/8f2a2da44b8da8d5.css
+```
+
 ## 2024-01-05Z (`PEO14vuOqqjOQtCs82SgS`)
 
 ### Notes
