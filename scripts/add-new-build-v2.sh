@@ -4,7 +4,14 @@
 
 # TODO: refactor to read the build date from args/similar
 
+# TODO: add an arg that allows us to skip the 'stop at first buildmanifest' check (aka: assume all urls are for a single build)
+
 # TODO: add automation that calls buildmanifest-to-json.js --extract-urls
+
+# TODO: automatically identify the webpack entry and extract the path to the webpack file to use in the changelog generation template
+
+# TODO: add automation that calls unpack-files-from-orig.js ?
+#   pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked
 
 # TODO: improve usage docs to include name/description/example showing that it reads from STDIN
 
@@ -13,8 +20,6 @@
 # TODO: detect if there is a webpack entry file chunk, and if so, tell the user they need to manually extract/download the URL references from it
 # TODO: also generate placeholder sections in the CHANGELOG if there is a webpack entry file url detected
 # TODO: can we automate extracting the references from webpack entry file by parsing the AST?
-
-# TODO: add automation that calls unpack-files-from-orig.js ?
 
 # Extract the script name
 SCRIPT_NAME="$(basename "$0")"
