@@ -183,8 +183,8 @@
         });
       }
       var G = n(52336),
-        M = n(63866),
-        E = n(4748),
+        E = n(63866),
+        M = n(4748),
         D = n(7144),
         Z = n(1890),
         A = n(19954),
@@ -471,10 +471,10 @@
         return (0, O.jsx)("div", {
           className:
             "relative flex h-full w-full items-center justify-center rounded-full border-2 border-dashed border-black border-token-border-medium",
-          children: (0, O.jsx)(M.Z, { className: "h-1/4 w-1/4" }),
+          children: (0, O.jsx)(E.Z, { className: "h-1/4 w-1/4" }),
         });
       }
-      function eM(e) {
+      function eE(e) {
         var t = e.gizmoEditorData,
           n = e.onFileChange,
           r = e.generateProfilePic,
@@ -663,7 +663,7 @@
           }),
         });
       }
-      var eE = n(46514),
+      var eM = n(46514),
         eD = n(66027),
         eZ = n(70737),
         eA = n(97296),
@@ -1226,7 +1226,7 @@
             return (0, eQ.Z)(e), "";
         }
       }
-      function e4(e, t, n) {
+      function e3(e, t, n) {
         var r = e.name.length > ex.aI,
           i =
             (null !==
@@ -1376,7 +1376,7 @@
           t === G.Zz.Marketplace && null == n && l.push(s.MissingCategory), l
         );
       }
-      function e3(e, t) {
+      function e4(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -1392,12 +1392,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? e3(Object(n), !0).forEach(function (t) {
+            ? e4(Object(n), !0).forEach(function (t) {
                 (0, b.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : e3(Object(n)).forEach(function (t) {
+              : e4(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1575,7 +1575,7 @@
                                         "/oauth/callback"
                                       ),
                                     onCopied: function () {
-                                      E.m.success("Copied to clipboard", {
+                                      M.m.success("Copied to clipboard", {
                                         duration: 3,
                                       });
                                     },
@@ -1639,8 +1639,8 @@
           b = e.setIsGeneratingProfilePic,
           y = e.requireGizmoId,
           k = e.onShowActionsEditor,
-          N = (0, eE.B9)(),
-          T = eE.mx,
+          N = (0, eM.B9)(),
+          T = eM.mx,
           z =
             null !== (o = null == p ? void 0 : p.tools) && void 0 !== o
               ? o
@@ -1650,8 +1650,8 @@
           _ = I[0],
           S = I[1],
           G = (0, q.useState)(!1),
-          M = G[0],
-          E = G[1],
+          E = G[0],
+          M = G[1],
           D = (0, q.useState)(!0),
           A = D[0],
           U = D[1],
@@ -1660,7 +1660,7 @@
               ? a
               : [],
           V = [].concat((0, x.Z)(R), (0, x.Z)(R.length < 12 ? [""] : [])),
-          F = e4(p),
+          F = e3(p),
           B = (0, L.ec)(L.F_.isBusinessWorkspace),
           W = (0, P.C)(Z.L0.WorkspaceGPTCustomActions),
           J = (0, X.Z)();
@@ -1673,7 +1673,7 @@
               children: [
                 (0, O.jsxs)(e6, {
                   children: [
-                    (0, O.jsx)(eM, {
+                    (0, O.jsx)(eE, {
                       gizmoEditorData: p,
                       generateProfilePic: m,
                       isGeneratingProfilePic: g,
@@ -1893,7 +1893,7 @@
                           className:
                             "absolute bottom-3 right-2 text-token-text-tertiary",
                           onClick: function () {
-                            return E(!0);
+                            return M(!0);
                           },
                           children: (0, O.jsx)(et.j5, { className: "icon-sm" }),
                         }),
@@ -2081,14 +2081,14 @@
                   }),
               ],
             }),
-            M &&
+            E &&
               (0, O.jsx)(eH, {
                 text: null !== (u = p.welcomeMessage) && void 0 !== u ? u : "",
                 onChange: function (e) {
                   f({ welcomeMessage: e });
                 },
                 onClose: function () {
-                  return E(!1);
+                  return M(!1);
                 },
                 placeholder: "How this GPT starts conversations.",
               }),
@@ -2185,7 +2185,7 @@
         });
       }
       var tp = n(75499),
-        tf = n(82282),
+        tf = n(59730),
         tm = n(13366),
         th = n(18008),
         tg = n(58272),
@@ -2271,9 +2271,9 @@
               function () {
                 (0, A.Zz)(l) &&
                   A.iN.hasThread(l) &&
-                  m.lastModelUsed !== eE.mx &&
+                  m.lastModelUsed !== eM.mx &&
                   (A.tQ.getOrInitThread(l),
-                  A.tQ.updateInitialThreadDataForNewThread(l, eE.mx, []));
+                  A.tQ.updateInitialThreadDataForNewThread(l, eM.mx, []));
               },
               [l, m, i]
             );
@@ -2347,7 +2347,7 @@
                                   gizmo_id: t,
                                 },
                               }),
-                              (c = [eE.S.GPT_4]),
+                              (c = [eM.S.GPT_4]),
                               (u = (0, tx.Rr)((0, D.N$)(), c, $.OL.GizmoTest)),
                               (d = null),
                               !u)
@@ -2360,7 +2360,7 @@
                             d = e.sent;
                           case 11:
                             n({
-                              model: eE.mx,
+                              model: eM.mx,
                               completionType: $.Os.Next,
                               parentNodeId: a,
                               metadata: {},
@@ -2929,7 +2929,7 @@
           ],
         });
       }
-      function tM(e) {
+      function tE(e) {
         var t = e.rootDomain,
           n = e.operations;
         return null == n || 0 === n.length
@@ -3002,12 +3002,12 @@
               }),
             });
       }
-      function tE(e) {
+      function tM(e) {
         var t = e.validationResponse;
         return (0, O.jsxs)("div", {
           children: [
             (0, O.jsx)(tn, { label: "Available actions" }),
-            (0, O.jsx)(tM, {
+            (0, O.jsx)(tE, {
               rootDomain: t.success ? t.spec.root_domain : void 0,
               operations: t.success ? t.spec.operations : void 0,
             }),
@@ -3101,8 +3101,8 @@
           });
         }
         var G = (0, q.useState)(),
-          M = G[0],
-          E = G[1],
+          E = G[0],
+          M = G[1],
           D = (0, q.useState)(function () {
             var e;
             return (0, K.debounce)(
@@ -3116,7 +3116,7 @@
                           return (e.next = 2), T.U.validateOpenAPISpec(t);
                         case 2:
                           if (
-                            (E((n = e.sent)),
+                            (M((n = e.sent)),
                             !(r = n.success ? n.spec.root_domain : void 0))
                           ) {
                             e.next = 13;
@@ -3139,7 +3139,7 @@
                             break;
                           }
                           return (
-                            E({
+                            M({
                               success: !1,
                               errors: [
                                 "Action sets cannot have duplicate domains - ".concat(
@@ -3203,10 +3203,10 @@
               1e3
             );
           })[0],
-          Z = null != M ? (M.success ? M.warnings : M.errors) : void 0;
+          Z = null != E ? (E.success ? E.warnings : E.errors) : void 0;
         (0, q.useEffect)(
           function () {
-            "" === P ? (E(void 0), D.cancel()) : D(P);
+            "" === P ? (M(void 0), D.cancel()) : D(P);
           },
           [D, P]
         );
@@ -3449,7 +3449,7 @@
                 }),
               ],
             }),
-            null != M && (0, O.jsx)(tE, { validationResponse: M }),
+            null != E && (0, O.jsx)(tM, { validationResponse: E }),
             (0, O.jsxs)("div", {
               className: "mt-4",
               children: [
@@ -3569,7 +3569,7 @@
               ? void 0
               : m.formatMessage(t2.displayNameRequiredHint);
         x === G.Zz.Marketplace && null != S && b(G.Zz.Link);
-        var M =
+        var E =
             f &&
             !(
               null !== (t = i.allowedSharingRecipients) &&
@@ -3578,8 +3578,8 @@
                 return e === G.Zz.Link;
               })
             ),
-          E = e4(i, x, k),
-          A = E.includes(s.MissingPublicActionPrivacyPolicyURL),
+          M = e3(i, x, k),
+          A = M.includes(s.MissingPublicActionPrivacyPolicyURL),
           U = i.tools.find(function (e) {
             return e.type === w.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url;
           }),
@@ -3588,240 +3588,236 @@
           }),
           V = (0, D.hz)(),
           B = (0, g.Z1)();
-        return (
-          (0, q.useEffect)(
-            function () {
-              if (!(null != V && V.includes(Z.L0.GizmoStore))) {
-                N("other");
-                return;
-              }
-              var e = !0;
-              return (
-                (0, v.Z)(
-                  j().mark(function t() {
-                    var n;
-                    return j().wrap(
-                      function (t) {
-                        for (;;)
-                          switch ((t.prev = t.next)) {
-                            case 0:
-                              if (((t.prev = 0), !(null != k))) {
-                                t.next = 3;
-                                break;
-                              }
-                              return t.abrupt("return");
-                            case 3:
-                              return (
-                                (t.next = 5), _.current(i.name, i.instructions)
-                              );
-                            case 5:
-                              (n = t.sent),
-                                e && null == k && (n ? N(n.id) : I(!0)),
-                                (t.next = 12);
+        (0, q.useEffect)(
+          function () {
+            if (!(null != V && V.includes(Z.L0.GizmoStore))) {
+              N("other");
+              return;
+            }
+            var e = !0;
+            return (
+              (0, v.Z)(
+                j().mark(function t() {
+                  var n;
+                  return j().wrap(
+                    function (t) {
+                      for (;;)
+                        switch ((t.prev = t.next)) {
+                          case 0:
+                            if (((t.prev = 0), !(null != k))) {
+                              t.next = 3;
                               break;
-                            case 9:
-                              (t.prev = 9),
-                                (t.t0 = t.catch(0)),
-                                e && null == k && I(!0);
-                            case 12:
-                            case "end":
-                              return t.stop();
-                          }
-                      },
-                      t,
-                      null,
-                      [[0, 9]]
-                    );
-                  })
-                )(),
-                function () {
-                  e = !1;
-                }
-              );
-            },
-            [i.instructions, i.name, V, k]
-          ),
-          (0, O.jsxs)("div", {
-            children: [
-              (0, O.jsx)("div", {
-                className: "mb-2 text-sm font-medium text-token-text-tertiary",
-                children: (0, O.jsx)(en.Z, tq({}, t2.publishTo)),
-              }),
-              (0, O.jsxs)("div", {
-                className: "flex flex-col gap-3 text-sm",
-                children: [
-                  (0, O.jsxs)(F.fC, {
-                    value: x,
-                    onValueChange: function (e) {
-                      return b(e);
+                            }
+                            return t.abrupt("return");
+                          case 3:
+                            return (
+                              (t.next = 5), _.current(i.name, i.instructions)
+                            );
+                          case 5:
+                            (n = t.sent),
+                              e && null == k && (n ? N(n.id) : I(!0)),
+                              (t.next = 12);
+                            break;
+                          case 9:
+                            (t.prev = 9),
+                              (t.t0 = t.catch(0)),
+                              e && null == k && I(!0);
+                          case 12:
+                          case "end":
+                            return t.stop();
+                        }
                     },
-                    className: "space-y-2",
-                    children: [
-                      i.allowedSharingRecipients &&
-                        i.allowedSharingRecipients.map(function (e, t) {
-                          return (0, O.jsx)(
-                            eI.Xb,
-                            {
-                              value: e,
-                              disabled: e === G.Zz.Marketplace && null != S,
-                              tooltipText:
-                                e === G.Zz.Marketplace
-                                  ? null != S
-                                    ? S
-                                    : m.formatMessage(t2.publicSharingHint)
-                                  : void 0,
-                              label: (0, tl.MI)(e, R, m),
-                            },
-                            t
-                          );
-                        }),
-                      M &&
-                        (0, O.jsxs)(O.Fragment, {
-                          children: [
-                            (0, O.jsx)(eI.Xb, {
-                              value: G.Zz.Link,
-                              disabled: !0,
-                              tooltipText: m.formatMessage(
-                                t2.workspaceDisabledHint
-                              ),
-                              label: (0, tl.MI)(G.Zz.Link, R, m),
-                            }),
-                            (0, O.jsx)(eI.Xb, {
-                              value: G.Zz.Marketplace,
-                              disabled: !0,
-                              tooltipText: m.formatMessage(
-                                t2.workspaceDisabledHint
-                              ),
-                              label: (0, tl.MI)(G.Zz.Marketplace, R, m),
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
-                  A &&
-                    (0, O.jsx)("div", {
-                      className: "text-xs text-red-500",
-                      children: (0, O.jsx)(
-                        en.Z,
-                        tq(
-                          tq({}, t2.actionNeedsPrivacyPolicyURL),
-                          {},
-                          {
-                            values: {
-                              fixlink: function (e) {
-                                return (0, O.jsx)("button", {
-                                  onClick: function () {
-                                    c(
-                                      null == U ? void 0 : U.metadata.action_id
-                                    );
-                                  },
-                                  className: "underline",
-                                  children: e,
-                                });
-                              },
-                            },
-                          }
-                        )
-                      ),
-                    }),
-                  x !== G.Zz.Private &&
-                    (0, O.jsx)(tR.QT, {
-                      gizmoAvatar: i.profilePictureUrl,
-                      gizmoName: i.name,
-                      canEdit: !0,
-                    }),
-                  x === G.Zz.Marketplace &&
-                    (null == V ? void 0 : V.includes(Z.L0.GizmoStore)) &&
-                    (C
-                      ? (0, O.jsx)("div", {
-                          className: "text-xs text-red-500",
-                          children: (0, O.jsx)(en.Z, tq({}, t2.categoryError)),
-                        })
-                      : (0, O.jsxs)(O.Fragment, {
-                          children: [
-                            (0, O.jsxs)("div", {
-                              className:
-                                "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
-                              children: [
-                                (0, O.jsx)(en.Z, tq({}, t2.categoryLabel)),
-                                (0, O.jsx)(ev.u, {
-                                  label: (0, O.jsx)("span", {
-                                    className: "w-36 text-xs",
-                                    children: (0, O.jsx)(
-                                      en.Z,
-                                      tq({}, t2.categoryLabelTooltip)
-                                    ),
-                                  }),
-                                  side: "top",
-                                  children: (0, O.jsx)(et.VX, {
-                                    className: "icon-sm",
-                                  }),
-                                }),
-                              ],
-                            }),
-                            (0, O.jsx)(t0, {
-                              category: null != k ? k : "",
-                              categories:
-                                null !==
-                                  (n =
-                                    null === (r = B.data) || void 0 === r
-                                      ? void 0
-                                      : r.categories) && void 0 !== n
-                                  ? n
-                                  : [],
-                              setCategory: N,
-                            }),
-                          ],
-                        })),
-                  (0, O.jsx)(eI.cY, {
-                    color: "primary",
-                    disabled: E.length > 0,
-                    loading: d,
-                    onClick: (0, v.Z)(
-                      j().mark(function e() {
-                        var t;
-                        return j().wrap(
-                          function (e) {
-                            for (;;)
-                              switch ((e.prev = e.next)) {
-                                case 0:
-                                  return (
-                                    (e.prev = 0), p(!0), (e.next = 4), a(x, k)
-                                  );
-                                case 4:
-                                  if (null != (t = e.sent)) {
-                                    e.next = 7;
-                                    break;
-                                  }
-                                  return e.abrupt("return");
-                                case 7:
-                                  1 === t.gizmo.live_version
-                                    ? Y().push((0, g.m_)(t))
-                                    : l({
-                                        type: "published",
-                                        publishedGizmo: t,
-                                      });
-                                case 8:
-                                  return (e.prev = 8), p(!1), e.finish(8);
-                                case 11:
-                                case "end":
-                                  return e.stop();
-                              }
-                          },
-                          e,
-                          null,
-                          [[0, , 8, 11]]
-                        );
-                      })
-                    ),
-                    className: "w-full",
-                    children: (0, O.jsx)(en.Z, tq({}, t2.privacyConfirm)),
-                  }),
-                ],
-              }),
-            ],
-          })
+                    t,
+                    null,
+                    [[0, 9]]
+                  );
+                })
+              )(),
+              function () {
+                e = !1;
+              }
+            );
+          },
+          [i.instructions, i.name, V, k]
         );
+        var W = null == V ? void 0 : V.includes(Z.L0.GizmoStore);
+        return (0, O.jsxs)("div", {
+          children: [
+            (0, O.jsx)("div", {
+              className: "mb-2 text-sm font-medium text-token-text-tertiary",
+              children: (0, O.jsx)(en.Z, tq({}, t2.publishTo)),
+            }),
+            (0, O.jsxs)("div", {
+              className: "flex flex-col gap-3 text-sm",
+              children: [
+                (0, O.jsxs)(F.fC, {
+                  value: x,
+                  onValueChange: function (e) {
+                    return b(e);
+                  },
+                  className: "space-y-2",
+                  children: [
+                    i.allowedSharingRecipients &&
+                      i.allowedSharingRecipients.map(function (e, t) {
+                        return (0, O.jsx)(
+                          eI.Xb,
+                          {
+                            value: e,
+                            disabled: e === G.Zz.Marketplace && null != S,
+                            tooltipText:
+                              e === G.Zz.Marketplace
+                                ? (null != S ? S : W)
+                                  ? m.formatMessage(
+                                      t2.publicSharingHintStoreEnabled
+                                    )
+                                  : m.formatMessage(t2.publicSharingHint)
+                                : void 0,
+                            label: (0, tl.MI)(e, R, m),
+                          },
+                          t
+                        );
+                      }),
+                    E &&
+                      (0, O.jsxs)(O.Fragment, {
+                        children: [
+                          (0, O.jsx)(eI.Xb, {
+                            value: G.Zz.Link,
+                            disabled: !0,
+                            tooltipText: m.formatMessage(
+                              t2.workspaceDisabledHint
+                            ),
+                            label: (0, tl.MI)(G.Zz.Link, R, m),
+                          }),
+                          (0, O.jsx)(eI.Xb, {
+                            value: G.Zz.Marketplace,
+                            disabled: !0,
+                            tooltipText: m.formatMessage(
+                              t2.workspaceDisabledHint
+                            ),
+                            label: (0, tl.MI)(G.Zz.Marketplace, R, m),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+                A &&
+                  (0, O.jsx)("div", {
+                    className: "text-xs text-red-500",
+                    children: (0, O.jsx)(
+                      en.Z,
+                      tq(
+                        tq({}, t2.actionNeedsPrivacyPolicyURL),
+                        {},
+                        {
+                          values: {
+                            fixlink: function (e) {
+                              return (0, O.jsx)("button", {
+                                onClick: function () {
+                                  c(null == U ? void 0 : U.metadata.action_id);
+                                },
+                                className: "underline",
+                                children: e,
+                              });
+                            },
+                          },
+                        }
+                      )
+                    ),
+                  }),
+                x !== G.Zz.Private &&
+                  (0, O.jsx)(tR.QT, {
+                    gizmoAvatar: i.profilePictureUrl,
+                    gizmoName: i.name,
+                    canEdit: !0,
+                  }),
+                x === G.Zz.Marketplace &&
+                  (null == V ? void 0 : V.includes(Z.L0.GizmoStore)) &&
+                  (C
+                    ? (0, O.jsx)("div", {
+                        className: "text-xs text-red-500",
+                        children: (0, O.jsx)(en.Z, tq({}, t2.categoryError)),
+                      })
+                    : (0, O.jsxs)(O.Fragment, {
+                        children: [
+                          (0, O.jsxs)("div", {
+                            className:
+                              "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
+                            children: [
+                              (0, O.jsx)(en.Z, tq({}, t2.categoryLabel)),
+                              (0, O.jsx)(ev.u, {
+                                label: (0, O.jsx)("span", {
+                                  className: "w-36 text-xs",
+                                  children: (0, O.jsx)(
+                                    en.Z,
+                                    tq({}, t2.categoryLabelTooltip)
+                                  ),
+                                }),
+                                side: "top",
+                                children: (0, O.jsx)(et.VX, {
+                                  className: "icon-sm",
+                                }),
+                              }),
+                            ],
+                          }),
+                          (0, O.jsx)(t0, {
+                            category: null != k ? k : "",
+                            categories:
+                              null !==
+                                (n =
+                                  null === (r = B.data) || void 0 === r
+                                    ? void 0
+                                    : r.categories) && void 0 !== n
+                                ? n
+                                : [],
+                            setCategory: N,
+                          }),
+                        ],
+                      })),
+                (0, O.jsx)(eI.cY, {
+                  color: "primary",
+                  disabled: M.length > 0,
+                  loading: d,
+                  onClick: (0, v.Z)(
+                    j().mark(function e() {
+                      var t;
+                      return j().wrap(
+                        function (e) {
+                          for (;;)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return (
+                                  (e.prev = 0), p(!0), (e.next = 4), a(x, k)
+                                );
+                              case 4:
+                                if (null != (t = e.sent)) {
+                                  e.next = 7;
+                                  break;
+                                }
+                                return e.abrupt("return");
+                              case 7:
+                                1 === t.gizmo.live_version
+                                  ? Y().push((0, g.m_)(t))
+                                  : l({ type: "published", publishedGizmo: t });
+                              case 8:
+                                return (e.prev = 8), p(!1), e.finish(8);
+                              case 11:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        null,
+                        [[0, , 8, 11]]
+                      );
+                    })
+                  ),
+                  className: "w-full",
+                  children: (0, O.jsx)(en.Z, tq({}, t2.privacyConfirm)),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function tW(e) {
         return "".concat("https://chat.openai.com").concat((0, g.m_)(e));
@@ -3897,7 +3893,7 @@
           l = e.promoteGizmo,
           c = e.hasUnpublishedChanges,
           u = e.showActionsModal,
-          d = null != n ? e4(n) : [],
+          d = null != n ? e3(n) : [],
           p = (0, X.Z)();
         (null == n || i) && d.push(s.Loading),
           o && d.push(s.UploadingProfilePic),
@@ -4143,7 +4139,7 @@
                   })
                 : (0, O.jsx)("div", {
                     className: "flex w-full justify-center",
-                    children: (0, O.jsx)(M.Z, {}),
+                    children: (0, O.jsx)(E.Z, {}),
                   }),
             }),
             (0, O.jsx)(tL.h_, {
@@ -4247,10 +4243,14 @@
           id: "gizmo.publicSharingHint",
           defaultMessage: "This GPT may appear in the GPT Store (coming soon)",
         },
+        publicSharingHintStoreEnabled: {
+          id: "gizmo.publicSharingHintStoreEnabled",
+          defaultMessage: "Your GPT will appear in the Explore GPTs page",
+        },
         displayNameRequiredHint: {
           id: "gizmo.displayNameRequiredHint",
           defaultMessage:
-            "To make your GPT public, set up your builder profile.",
+            "To publish your GPTs to the Explore GPTs page, set up your builder profile.",
         },
         save: { id: "gizmo.save", defaultMessage: "Save" },
         publishChanges: {
@@ -4278,7 +4278,7 @@
           id: "gizmo.anyoneWithLink",
           defaultMessage: "Anyone with a link",
         },
-        public: { id: "gizmo.public", defaultMessage: "Public" },
+        public: { id: "gizmo.public", defaultMessage: "Everyone" },
         newGPT: { id: "gizmo.newGPT", defaultMessage: "New GPT" },
         draft: { id: "gizmo.draft", defaultMessage: "Draft" },
         published: { id: "gizmo.published", defaultMessage: "Published" },
@@ -4294,14 +4294,15 @@
         },
         categoryLabelTooltip: {
           id: "gizmo.categoryLabelTooltip",
-          defaultMessage: "Your GPT may appear in this category on Explore",
+          defaultMessage:
+            "Your GPT may appear in this category on the Explore page",
         },
         categoryError: {
           id: "gizmo.categoryError",
           defaultMessage: "Error generating category",
         },
       });
-      function t4(e, t) {
+      function t3(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -4313,7 +4314,7 @@
         }
         return n;
       }
-      function t3(e) {
+      function t4(e) {
         var t = (function (e, t) {
           var n = e.response,
             r = (0, U.Ot)(e);
@@ -4358,7 +4359,7 @@
                   for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {};
                     t % 2
-                      ? t4(Object(n), !0).forEach(function (t) {
+                      ? t3(Object(n), !0).forEach(function (t) {
                           (0, b.Z)(e, t, n[t]);
                         })
                       : Object.getOwnPropertyDescriptors
@@ -4366,7 +4367,7 @@
                             e,
                             Object.getOwnPropertyDescriptors(n)
                           )
-                        : t4(Object(n)).forEach(function (t) {
+                        : t3(Object(n)).forEach(function (t) {
                             Object.defineProperty(
                               e,
                               t,
@@ -4392,7 +4393,7 @@
           r = e.upsertDraftError,
           i = e.className;
         return r instanceof U.Q0
-          ? (0, O.jsx)(t3, { upsertDraftError: r })
+          ? (0, O.jsx)(t4, { upsertDraftError: r })
           : n
             ? (0, O.jsxs)("div", {
                 className: (0, H.default)("flex items-center gap-2", i),
@@ -4403,7 +4404,7 @@
                   }),
                   (0, O.jsx)("div", {
                     className: "w-4 text-token-text-tertiary",
-                    children: t && (0, O.jsx)(M.Z, {}),
+                    children: t && (0, O.jsx)(E.Z, {}),
                   }),
                 ],
               })
@@ -4666,7 +4667,7 @@
                             e.t0
                           )
                         ),
-                        E.m.warning(
+                        M.m.warning(
                           "Something went wrong updating your GPT's profile picture.",
                           { duration: 3 }
                         );
@@ -4948,9 +4949,9 @@
             function () {
               (0, A.Zz)(r) &&
                 A.iN.hasThread(r) &&
-                c.lastModelUsed !== eE.Mw &&
+                c.lastModelUsed !== eM.Mw &&
                 (A.tQ.getOrInitThread(r),
-                A.tQ.updateInitialThreadDataForNewThread(r, eE.Mw, []));
+                A.tQ.updateInitialThreadDataForNewThread(r, eM.Mw, []));
             },
             [r, c, c.lastModelUsed]
           );
@@ -5248,7 +5249,7 @@
           }),
           _ = I[0];
         I[1];
-        var M = (0, g.kg)(y.current.id).data,
+        var E = (0, g.kg)(y.current.id).data,
           L = (0, g.N_)(),
           R = L.isPending,
           V = L.error,
@@ -5257,14 +5258,14 @@
             function () {
               var e, t, n, r, i, o;
               return (
-                null != M &&
+                null != E &&
                 (!(
-                  T.name === M.gizmo.display.name &&
-                  T.description === M.gizmo.display.description &&
-                  T.welcomeMessage === M.gizmo.display.welcome_message &&
-                  T.instructions === M.gizmo.instructions &&
+                  T.name === E.gizmo.display.name &&
+                  T.description === E.gizmo.display.description &&
+                  T.welcomeMessage === E.gizmo.display.welcome_message &&
+                  T.instructions === E.gizmo.instructions &&
                   ((i = T.tools),
-                  (o = M.tools),
+                  (o = E.tools),
                   i.length === o.length &&
                     i.every(function (e) {
                       return o.some(function (t) {
@@ -5283,7 +5284,7 @@
                       : [],
                     null !==
                       (n =
-                        null === (r = M.files) || void 0 === r
+                        null === (r = E.files) || void 0 === r
                           ? void 0
                           : r.map(function (e) {
                               return e.file_id;
@@ -5292,10 +5293,10 @@
                       : []
                   )
                 ) ||
-                  T.profilePictureUrl != M.gizmo.display.profile_picture_url)
+                  T.profilePictureUrl != E.gizmo.display.profile_picture_url)
               );
             },
-            [T, M]
+            [T, E]
           ),
           Y =
             (null == f
@@ -5345,7 +5346,7 @@
                               null !== (i = (0, U.Ot)(e.t0)) && void 0 !== i
                                 ? i
                                 : b.formatMessage(t8.errorSavingDraft)),
-                            E.m.warning(o, { duration: 2 }),
+                            M.m.warning(o, { duration: 2 }),
                             e.t0)
                           );
                         case 15:
@@ -5514,7 +5515,7 @@
                           (e.prev = 10),
                             (e.t0 = e.catch(3)),
                             console.error(e.t0),
-                            E.m.warning(
+                            M.m.warning(
                               "Something went wrong generating your GPT",
                               { duration: 3 }
                             );
@@ -5597,7 +5598,7 @@
                               behavior_overrides: ei,
                             },
                           }),
-                          (p = [eE.S.GPT_4]),
+                          (p = [eM.S.GPT_4]),
                           (f = (0, tx.Rr)(o, p, $.OL.GizmoMagicCreate)),
                           (m = null),
                           !f)
@@ -5610,7 +5611,7 @@
                         m = e.sent;
                       case 15:
                         i({
-                          model: eE.Mw,
+                          model: eM.Mw,
                           completionType: $.Os.Next,
                           parentNodeId: u,
                           metadata: {},
@@ -5648,12 +5649,12 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if (!((r = e4(y.current, t, n)).length > 0)) {
+                          if (!((r = e3(y.current, t, n)).length > 0)) {
                             e.next = 4;
                             break;
                           }
                           return (
-                            E.m.warning(
+                            M.m.warning(
                               "Could not save GPT:\n\n".concat(
                                 r
                                   .map(function (e) {
@@ -5710,7 +5711,7 @@
                               ? (eu(!!e.t0.response.is_flagged_brand_name),
                                 ef(!0))
                               : (console.error(e.t0),
-                                E.m.warning("Error saving GPT", {
+                                M.m.warning("Error saving GPT", {
                                   duration: 2,
                                 }));
                         case 19:
@@ -5773,7 +5774,7 @@
               hasUnpublishedChanges: J,
               isUploadingProfilePic: ek,
               isGeneratingProfilePic: eO,
-              publishedGizmo: M,
+              publishedGizmo: E,
               promoteGizmo:
                 ((d = (0, v.Z)(
                   j().mark(function e(t, n) {
@@ -5806,7 +5807,7 @@
                   return d.apply(this, arguments);
                 }),
               revertDraft:
-                null != M && J
+                null != E && J
                   ? function () {
                       var e = W.E.getQueryData(
                         (0, g.Vw)(y.current.id).queryKey
@@ -5987,7 +5988,7 @@
                   })
                 : (0, O.jsx)("div", {
                     className: "flex min-h-screen items-center justify-center",
-                    children: (0, O.jsx)(M.Z, {}),
+                    children: (0, O.jsx)(E.Z, {}),
                   }),
           })
         );
@@ -6113,3 +6114,4 @@
     },
   },
 ]);
+//# sourceMappingURL=192-af400bcd8b47f7a3.js.map
