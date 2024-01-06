@@ -10,9 +10,6 @@
 
 # TODO: automatically identify the webpack entry and extract the path to the webpack file to use in the changelog generation template
 
-# TODO: add automation that calls unpack-files-from-orig.js ?
-#   pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked
-
 # TODO: improve usage docs to include name/description/example showing that it reads from STDIN
 
 # TODO: add support for reading json from STDIN, and if so, extracting the date from it rather than prompting the user
@@ -101,6 +98,8 @@ main() {
 
   combine_found_urls
   print_urls found_urls "Combined 'found' URLs (not from build manifest)"
+
+  unpack_and_format_files
 
   generate_changelog_and_commit_message
 }
@@ -432,6 +431,28 @@ download_or_show_wayback_commands() {
     echo "The following Wayback Machine URLs failed to download. Manual intervention required:"
     printf '%s\n' "${failed_downloads[@]}"
   fi
+}
+
+# Function to call unpack-files-from-orig.js with found URLs and then run npm script
+unpack_and_format_files() {
+  echo "Unpacking found_urls:"
+
+  # Ensure there are URLs in the found_urls array
+  if [[ ${#found_urls[@]} -eq 0 ]]; then
+    echo "Error: No URLs found to unpack." >&2
+    return 1
+  fi
+
+  # Convert the found URLs array to a newline-separated string
+  local urls_to_unpack=$(printf "%s\n" "${found_urls[@]}")
+
+  # Call unpack-files-from-orig.js with the found URLs
+  echo "$urls_to_unpack" | "${CURRENT_SCRIPT_DIR}/unpack-files-from-orig.js"
+
+  # Run npm script to format unpacked files
+  npm run-script format:unpacked
+
+  echo
 }
 
 # Function to generate changelog entry and commit message
