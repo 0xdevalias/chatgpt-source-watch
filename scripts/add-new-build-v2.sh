@@ -8,12 +8,8 @@
 
 # TODO: add automation that calls buildmanifest-to-json.js --extract-urls
 
-# TODO: automatically identify the webpack entry and extract the path to the webpack file to use in the changelog generation template
-
 # TODO: add support for reading json from STDIN, and if so, extracting the date from it rather than prompting the user
 
-# TODO: detect if there is a webpack entry file chunk, and if so, tell the user they need to manually extract/download the URL references from it
-# TODO: also generate placeholder sections in the CHANGELOG if there is a webpack entry file url detected
 # TODO: can we automate extracting the references from webpack entry file by parsing the AST?
 
 # Extract the script name
@@ -27,7 +23,7 @@ download_directory="orig/"
 
 # Global variables
 typeset -a input_urls filtered_urls already_downloaded_urls wget_urls wayback_download_urls missing_urls found_urls
-typeset build_hash app_release_version
+typeset build_hash app_release_version webpack_file_url webpack_file_path
 
 # Global variables for command-line arguments
 declare skip_changelog_filter=false
@@ -92,13 +88,6 @@ main() {
   filter_and_extract_build_hash
   print_urls filtered_urls "Filtered URLs for first found build"
   echo "Build Hash: $build_hash"
-  echo "  Remember to run the following, and manually ensure they are all downloaded/included properly:"
-  echo "    ./scripts/buildmanifest-to-json.js $build_hash --extract-urls | ./scripts/filter-for-unsaved.js"
-  echo "  Remember to run the following after downloading files:"
-  echo "    pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
-  echo "  If there is a webpack*.js file, remember to manually extract/download/include entries from it (eg *.css) properly:"
-  echo "    pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
-  echo
 
   process_urls
   print_urls already_downloaded_urls "Already saved URLs"
@@ -109,11 +98,24 @@ main() {
   combine_found_urls
   print_urls found_urls "Combined 'found' URLs (not from build manifest)"
 
+  detect_webpack_file
+
   unpack_and_format_files
 
   app_release_version=$(extract_app_version)
 
   generate_changelog_and_commit_message
+
+  echo
+  echo "Remember to run the following, and manually ensure they are all downloaded/included properly:"
+  echo "  ./scripts/buildmanifest-to-json.js $build_hash --extract-urls | ./scripts/filter-for-unsaved.js"
+  echo "Remember to run the following after downloading files:"
+  echo "  pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
+  if [[ -n "$webpack_file_path" ]]; then
+    echo "Remember to manually extract/format the URLs for entries from 'unpacked/_next/static/chunks/webpack.js' (eg *.css), then:"
+    echo "  pbpaste | ./$SCRIPT_NAME"
+    echo "  pbpaste | ./scripts/unpack-files-from-orig.js && npm run-script format:unpacked"
+  fi
 }
 
 # Helper function to check if an array contains a specific element
@@ -467,6 +469,25 @@ unpack_and_format_files() {
   echo
 }
 
+# Function to detect webpack file in found_urls and set global variable
+detect_webpack_file() {
+  local webpack_regex="(_next/static/chunks/webpack.*\.js)"
+
+  for url in "${found_urls[@]}"; do
+    if [[ $url =~ $webpack_regex ]]; then
+      # Capture the full URL
+      webpack_file_url="$url"
+
+      # Extract the path from the URL
+      webpack_file_path="${match[1]}"  # This captures the path part from the regex match
+
+      echo "Webpack entry file detected: $webpack_file_url ($webpack_file_path)"
+      break
+    fi
+  done
+  echo
+}
+
 # Function to extract the app release version from a specified file
 extract_app_version() {
   # Define the file to search in, going one level up from CURRENT_SCRIPT_DIR
@@ -553,17 +574,19 @@ generate_changelog_and_commit_message() {
   # changelog_entry+="$(printf "%s\n" "${TODO[@]}")\n"
   changelog_entry+="\`\`\`\n\n"
 
-  changelog_entry+="### From \`_next/static/chunks/webpack-TODOWEBPACKHASH.js\`\n\n"
-  changelog_entry+="#### Archived\n\n"
-  changelog_entry+="\`\`\`\n"
-  changelog_entry+="TODO (relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)\n"
-  # changelog_entry+="$(printf "%s\n" "${TODO[@]}")\n"
-  changelog_entry+="\`\`\`\n\n"
-  changelog_entry+="#### Missing\n\n"
-  changelog_entry+="\`\`\`\n"
-  changelog_entry+="TODO (or remove this section if nothing missing)\n"
-  # changelog_entry+="$(printf "%s\n" "${TODO[@]}")\n"
-  changelog_entry+="\`\`\`\n\n"
+  if [[ -n "$webpack_file_path" ]]; then
+    changelog_entry+="### From \`orig/$webpack_file_path\`\n\n"
+    changelog_entry+="#### Archived\n\n"
+    changelog_entry+="\`\`\`\n"
+    changelog_entry+="TODO (relevant changes from the webpack.js file.. usually it will only be .css file changes I believe)\n"
+    # changelog_entry+="$(printf "%s\n" "${TODO[@]}")\n"
+    changelog_entry+="\`\`\`\n\n"
+    changelog_entry+="#### Missing\n\n"
+    changelog_entry+="\`\`\`\n"
+    changelog_entry+="TODO (or remove this section if nothing missing)\n"
+    # changelog_entry+="$(printf "%s\n" "${TODO[@]}")\n"
+    changelog_entry+="\`\`\`\n\n"
+  fi
 
   # Generate commit message
   if [[ -n "$missing_urls" ]] && [[ -n "$found_urls" ]]; then
