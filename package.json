@@ -23,11 +23,15 @@
     "format:unpacked": "npx @biomejs/biome format --write unpacked && npx prettier --write unpacked/**/*.css && npx prettier --write unpacked/**/*.css",
     "wakaru": "npx @wakaru/cli",
     "wakaru:unminify-chunk": "f() { CHUNK=\"$1\"; npx @wakaru/cli all \"unpacked/_next/static/chunks/${CHUNK}.js\" --unpacker-output \"stage2-unpacked/${CHUNK}\" --unminify-output \"stage3-unminified/${CHUNK}\" --perf; }; f",
-    "wakaru:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage2-unpacked/${CHUNK}\" \"./stage3-unminified/${CHUNK}\"; }; f"
+    "wakaru:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage2-unpacked/${CHUNK}\" \"./stage3-unminified/${CHUNK}\"; }; f",
+    "webcrack": "npx webcrack",
+    "webcrack:unminify-chunk": "f() { CHUNK=\"$1\"; npx webcrack \"unpacked/_next/static/chunks/${CHUNK}.js\" --output \"stage3-unminified-webcrack/${CHUNK}\"; }; f",
+    "webcrack:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage3-unminified-webcrack/${CHUNK}\"; }; f"
   },
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
-    "@wakaru/cli": "^0.0.5"
+    "@wakaru/cli": "^0.0.5",
+    "webcrack": "^2.12.0"
   }
 }
