@@ -20,7 +20,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format:unpacked": "npx @biomejs/biome format --write unpacked && npx prettier --write unpacked/**/*.css"
+    "format:unpacked": "npx @biomejs/biome format --write unpacked && npx prettier --write unpacked/**/*.css && npx prettier --write unpacked/**/*.css"
   },
   "dependencies": {},
   "devDependencies": {
