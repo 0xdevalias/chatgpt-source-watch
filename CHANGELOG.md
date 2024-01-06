@@ -8,6 +8,23 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-05Z (`ohf0xpZm-mdSSsiYSf4si`)
+
+### Notes
+
+- App release version (Git SHA?): `1fc802fbf723c3e947e7fa5f1b5635f86b20b856`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6ad3b7c5bcb7b4f7.js
+https://cdn.oaistatic.com/_next/static/ohf0xpZm-mdSSsiYSf4si/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/ohf0xpZm-mdSSsiYSf4si/_ssgManifest.js
+```
+
 ## 2024-01-05Z (`-ush58uailrg9NaSp6Olq`)
 
 ### Notes
