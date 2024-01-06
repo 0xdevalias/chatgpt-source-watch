@@ -29,7 +29,7 @@ download_directory="orig/"
 
 # Global variables
 typeset -a input_urls filtered_urls already_downloaded_urls wget_urls wayback_download_urls missing_urls found_urls
-typeset build_hash
+typeset build_hash app_release_version
 
 # Global variables for command-line arguments
 declare skip_changelog_filter=false
@@ -100,6 +100,8 @@ main() {
   print_urls found_urls "Combined 'found' URLs (not from build manifest)"
 
   unpack_and_format_files
+
+  app_release_version=$(extract_app_version)
 
   generate_changelog_and_commit_message
 }
@@ -455,6 +457,30 @@ unpack_and_format_files() {
   echo
 }
 
+# Function to extract the app release version from a specified file
+extract_app_version() {
+  # Define the file to search in, going one level up from CURRENT_SCRIPT_DIR
+  local search_file="${CURRENT_SCRIPT_DIR}/../unpacked/_next/static/chunks/pages/_app.js"
+
+  # Check if the file exists
+  if [[ ! -f "$search_file" ]]; then
+    echo "Error: File $search_file not found." >&2
+    return 1
+  fi
+
+  # Use grep to find the 'version:' line and extract the app version
+  local app_version=$(grep -C 5 'service: "chatgpt-web",' "$search_file" | grep 'version:' | awk -F '"' '{print $2}')
+
+  # Check if the app version was found
+  if [[ -z $app_version ]]; then
+    echo "Error: App version not found in $search_file." >&2
+    return 1
+  fi
+
+  # Return the extracted app version
+  echo "$app_version"
+}
+
 # Function to generate changelog entry and commit message
 generate_changelog_and_commit_message() {
   local changelog_entry=""
@@ -484,6 +510,8 @@ generate_changelog_and_commit_message() {
   fi
 
   # Notes
+  changelog_notes+="- App release version (Git SHA?): \`${app_release_version:-TODO}\`\n"
+  changelog_notes+="  - Extracted with \`grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js\`\n"
   changelog_notes+="\n"
 
   changelog_entry+="### Notes\n\n"
