@@ -2,9 +2,12 @@
 
 # ChatGPT Ref: https://chat.openai.com/c/1687798b-30a7-42cd-b8f4-5529ae5f4d1e
 
+# Extract the script name
+SCRIPT_NAME="$(basename "$0")"
+
 # Function to display usage instructions
 usage() {
-  echo "Usage: cat input.json | ./process_webpack_build.sh"
+  echo "Usage: cat input.json | ./${SCRIPT_NAME}"
 }
 
 # Check if there's any input on STDIN
