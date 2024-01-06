@@ -437,6 +437,7 @@ download_or_show_wayback_commands() {
 # Function to generate changelog entry and commit message
 generate_changelog_and_commit_message() {
   local changelog_entry=""
+  local changelog_notes=""
   local commit_message=""
 
   echo "Generating CHANGELOG entry + commit message..."
@@ -449,17 +450,23 @@ generate_changelog_and_commit_message() {
   # Start building the changelog entry
   if [[ ${#missing_urls[@]} -gt 0 ]] && [[ ${#found_urls[@]} -gt 0 ]]; then
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[partial archive]\`\n\n"
-    changelog_entry+="### Notes\n\n"
-    changelog_entry+="The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.\n\n"
+
+    changelog_notes+="- The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.\n"
   elif [[ ${#missing_urls[@]} -gt 0 ]]; then
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[not archived]\`\n\n"
-    changelog_entry+="### Notes\n\n"
-    changelog_entry+="The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.\n\n"
+
+    changelog_notes+="- The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.\n"
   elif [[ ${#found_urls[@]} -gt 0 ]]; then
     changelog_entry+="## ${build_date}Z (\`$build_hash\`)\n\n"
-    changelog_entry+="### Notes\n\n"
-    changelog_entry+="TODO\n\n"
+
+    changelog_notes+="- TODO\n"
   fi
+
+  # Notes
+  changelog_notes+="\n"
+
+  changelog_entry+="### Notes\n\n"
+  changelog_entry+="${changelog_notes}"
 
   changelog_entry+="### Not From Build Manifest\n\n"
   if [[ ${#found_urls[@]} -gt 0 ]]; then
