@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, e, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e, c, t) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-dfd7db9208d5bc06.js"],
@@ -40,7 +40,7 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-6c967c6bb3c60b1d.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
+    "/auth/login": [s, e, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-83b0ce66a0f7311e.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-93f5191aa551662a.js",
@@ -51,7 +51,7 @@
       "static/chunks/pages/g/[gizmoId]/c/[convId]-871a5686c4458639.js",
     ],
     "/gpts/discovery": [
-      e,
+      c,
       "static/chunks/pages/gpts/discovery-1adcbd1503d5106b.js",
     ],
     "/gpts/editor": [t, "static/chunks/pages/gpts/editor-072951efa1e8a25c.js"],
@@ -59,14 +59,14 @@
       t,
       "static/chunks/pages/gpts/editor/[slug]-f65318b3e7e56625.js",
     ],
-    "/gpts/mine": [e, "static/chunks/pages/gpts/mine-0b23c86464417b3f.js"],
+    "/gpts/mine": [c, "static/chunks/pages/gpts/mine-0b23c86464417b3f.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-e76cf8d6bd8ad095.js",
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      c,
-      "static/chunks/pages/invite/[[...referralCodeParam]]-30b96390f59bab0a.js",
+      e,
+      "static/chunks/pages/invite/[[...referralCodeParam]]-4bdf539a55cd7638.js",
     ],
     "/payments/success": [
       "static/chunks/pages/payments/success-eaec433589ea05de.js",
