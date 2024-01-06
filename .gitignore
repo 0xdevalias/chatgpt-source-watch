@@ -1,3 +1,6 @@
+stage2-unpacked/
+stage3-unminified/
+
 #IDEs
 .idea/
 
