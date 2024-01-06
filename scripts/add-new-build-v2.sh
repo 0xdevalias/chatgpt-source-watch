@@ -10,8 +10,6 @@
 
 # TODO: automatically identify the webpack entry and extract the path to the webpack file to use in the changelog generation template
 
-# TODO: improve usage docs to include name/description/example showing that it reads from STDIN
-
 # TODO: add support for reading json from STDIN, and if so, extracting the date from it rather than prompting the user
 
 # TODO: detect if there is a webpack entry file chunk, and if so, tell the user they need to manually extract/download the URL references from it
@@ -37,10 +35,22 @@ declare skip_filter_already_downloaded=false
 
 # Function to display usage information
 usage() {
-  echo "Usage: $SCRIPT_NAME [-h|--help] [--skip-changelog-filter] [--skip-filter-already-downloaded]"
+  echo "Usage: $SCRIPT_NAME [OPTIONS]"
+  echo ""
+  echo "Description:"
+  echo "  This script processes a list of URLs to manage and archive web content."
+  echo "  It reads URLs from standard input (STDIN), allowing for flexible input methods."
+  echo ""
+  echo "Options:"
   echo "  --skip-changelog-filter           Skip filtering URLs already in the changelog"
   echo "  --skip-filter-already-downloaded  Skip filtering already downloaded files"
   echo "  -h, --help                        Display this help and exit"
+  echo ""
+  echo "Example:"
+  echo "  pbpaste | $SCRIPT_NAME"
+  echo "  cat urls.txt | $SCRIPT_NAME"
+  echo "  echo 'https://example.com' | $SCRIPT_NAME"
+  echo "  $SCRIPT_NAME < urls.txt"
 }
 
 # Main function
