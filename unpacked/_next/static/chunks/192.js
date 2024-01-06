@@ -6,10 +6,10 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return ny;
+            return nj;
           },
           default: function () {
-            return nj;
+            return nw;
           },
         });
       var r,
@@ -3517,6 +3517,9 @@
         return e;
       }
       function tF(e) {
+        window.history.length > 1 ? e.back() : e.push((0, V.L7)());
+      }
+      function tB(e) {
         var t,
           n,
           r,
@@ -3564,7 +3567,7 @@
           S =
             null != y && y.is_verified
               ? void 0
-              : m.formatMessage(t1.displayNameRequiredHint);
+              : m.formatMessage(t2.displayNameRequiredHint);
         x === G.Zz.Marketplace && null != S && b(G.Zz.Link);
         var M =
             f &&
@@ -3642,7 +3645,7 @@
             children: [
               (0, O.jsx)("div", {
                 className: "mb-2 text-sm font-medium text-token-text-tertiary",
-                children: (0, O.jsx)(en.Z, tq({}, t1.publishTo)),
+                children: (0, O.jsx)(en.Z, tq({}, t2.publishTo)),
               }),
               (0, O.jsxs)("div", {
                 className: "flex flex-col gap-3 text-sm",
@@ -3665,7 +3668,7 @@
                                 e === G.Zz.Marketplace
                                   ? null != S
                                     ? S
-                                    : m.formatMessage(t1.publicSharingHint)
+                                    : m.formatMessage(t2.publicSharingHint)
                                   : void 0,
                               label: (0, tl.MI)(e, R, m),
                             },
@@ -3679,7 +3682,7 @@
                               value: G.Zz.Link,
                               disabled: !0,
                               tooltipText: m.formatMessage(
-                                t1.workspaceDisabledHint
+                                t2.workspaceDisabledHint
                               ),
                               label: (0, tl.MI)(G.Zz.Link, R, m),
                             }),
@@ -3687,7 +3690,7 @@
                               value: G.Zz.Marketplace,
                               disabled: !0,
                               tooltipText: m.formatMessage(
-                                t1.workspaceDisabledHint
+                                t2.workspaceDisabledHint
                               ),
                               label: (0, tl.MI)(G.Zz.Marketplace, R, m),
                             }),
@@ -3701,7 +3704,7 @@
                       children: (0, O.jsx)(
                         en.Z,
                         tq(
-                          tq({}, t1.actionNeedsPrivacyPolicyURL),
+                          tq({}, t2.actionNeedsPrivacyPolicyURL),
                           {},
                           {
                             values: {
@@ -3732,7 +3735,7 @@
                     (C
                       ? (0, O.jsx)("div", {
                           className: "text-xs text-red-500",
-                          children: (0, O.jsx)(en.Z, tq({}, t1.categoryError)),
+                          children: (0, O.jsx)(en.Z, tq({}, t2.categoryError)),
                         })
                       : (0, O.jsxs)(O.Fragment, {
                           children: [
@@ -3740,13 +3743,13 @@
                               className:
                                 "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
                               children: [
-                                (0, O.jsx)(en.Z, tq({}, t1.categoryLabel)),
+                                (0, O.jsx)(en.Z, tq({}, t2.categoryLabel)),
                                 (0, O.jsx)(ev.u, {
                                   label: (0, O.jsx)("span", {
                                     className: "w-36 text-xs",
                                     children: (0, O.jsx)(
                                       en.Z,
-                                      tq({}, t1.categoryLabelTooltip)
+                                      tq({}, t2.categoryLabelTooltip)
                                     ),
                                   }),
                                   side: "top",
@@ -3756,7 +3759,7 @@
                                 }),
                               ],
                             }),
-                            (0, O.jsx)(t$, {
+                            (0, O.jsx)(t0, {
                               category: null != k ? k : "",
                               categories:
                                 null !==
@@ -3812,7 +3815,7 @@
                       })
                     ),
                     className: "w-full",
-                    children: (0, O.jsx)(en.Z, tq({}, t1.privacyConfirm)),
+                    children: (0, O.jsx)(en.Z, tq({}, t2.privacyConfirm)),
                   }),
                 ],
               }),
@@ -3820,18 +3823,18 @@
           })
         );
       }
-      function tB(e) {
+      function tW(e) {
         return "".concat("https://chat.openai.com").concat((0, g.m_)(e));
       }
-      function tW(e) {
+      function tH(e) {
         var t = e.publishedGizmo,
-          n = tB(t);
+          n = tW(t);
         return (0, O.jsxs)("div", {
           className: "flex flex-col gap-2",
           children: [
             (0, O.jsx)("div", {
               className: "font-medium",
-              children: (0, O.jsx)(en.Z, tq({}, t1.publishedTitle)),
+              children: (0, O.jsx)(en.Z, tq({}, t2.publishedTitle)),
             }),
             (0, O.jsxs)("div", {
               className:
@@ -3843,7 +3846,7 @@
                 }),
                 (0, O.jsx)("button", {
                   onClick: function () {
-                    (0, tU.S)(tB(t));
+                    (0, tU.S)(tW(t));
                   },
                   className:
                     "text-token-text-secondary transition hover:text-token-text-primary",
@@ -3856,12 +3859,12 @@
               as: "link",
               to: n,
               className: "w-full",
-              children: (0, O.jsx)(en.Z, tq({}, t1.viewGPT)),
+              children: (0, O.jsx)(en.Z, tq({}, t2.viewGPT)),
             }),
           ],
         });
       }
-      function tH(e) {
+      function tK(e) {
         var t = e.gizmo,
           n = e.publishedGizmo,
           r = e.promoteGizmo,
@@ -3874,17 +3877,17 @@
             "w-60 rounded-lg border border-token-border-medium bg-token-surface-primary p-4 text-sm",
           children:
             "privacy" === a.type
-              ? (0, O.jsx)(tF, {
+              ? (0, O.jsx)(tB, {
                   gizmo: t,
                   publishedGizmo: n,
                   promoteGizmo: r,
                   setStep: s,
                   showActionsModal: i,
                 })
-              : (0, O.jsx)(tW, { publishedGizmo: a.publishedGizmo }),
+              : (0, O.jsx)(tH, { publishedGizmo: a.publishedGizmo }),
         });
       }
-      function tK(e) {
+      function tJ(e) {
         var t,
           n = e.gizmo,
           r = e.publishedGizmo,
@@ -3914,8 +3917,8 @@
                   className: "flex items-center gap-1",
                   children: [
                     c && !f
-                      ? p.formatMessage(t1.publishChanges)
-                      : p.formatMessage(t1.save),
+                      ? p.formatMessage(t2.publishChanges)
+                      : p.formatMessage(t2.save),
                     (0, O.jsx)(et.ud, {}),
                   ],
                 }),
@@ -3926,7 +3929,7 @@
                 side: "bottom",
                 align: "end",
                 sideOffset: 8,
-                children: (0, O.jsx)(tH, {
+                children: (0, O.jsx)(tK, {
                   gizmo: n,
                   publishedGizmo: r,
                   promoteGizmo: l,
@@ -3937,7 +3940,7 @@
           ],
         });
       }
-      function tJ(e) {
+      function tY(e) {
         var t = e.gizmoEditorData,
           n = e.publishedGizmo,
           r = e.revertDraft,
@@ -3969,23 +3972,23 @@
                           null != n &&
                             (0, O.jsxs)(eI.UA, {
                               onClick: function () {
-                                (0, tU.S)(tB(n));
+                                (0, tU.S)(tW(n));
                               },
                               children: [
                                 (0, O.jsx)(et.HN, { className: "icon-md" }),
-                                (0, O.jsx)(en.Z, tq({}, t1.copyLink)),
+                                (0, O.jsx)(en.Z, tq({}, t2.copyLink)),
                               ],
                             }),
                           null != r &&
                             (0, O.jsxs)(eI.UA, {
                               onClick: function () {
                                 window.confirm(
-                                  i.formatMessage(t1.revertConfirm)
+                                  i.formatMessage(t2.revertConfirm)
                                 ) && r();
                               },
                               children: [
                                 (0, O.jsx)(et.Nt, { className: "icon-md" }),
-                                (0, O.jsx)(en.Z, tq({}, t1.revertMenuItem)),
+                                (0, O.jsx)(en.Z, tq({}, t2.revertMenuItem)),
                               ],
                             }),
                           (null == l ? void 0 : l.includes("debug")) &&
@@ -4006,7 +4009,7 @@
                               },
                               children: [
                                 (0, O.jsx)(et.a_, { className: "icon-md" }),
-                                (0, O.jsx)(en.Z, tq({}, t1.deleteGPT)),
+                                (0, O.jsx)(en.Z, tq({}, t2.deleteGPT)),
                               ],
                             }),
                         ],
@@ -4018,7 +4021,7 @@
                   (0, O.jsx)(tZ.b, {
                     gizmoId: t.id,
                     onSuccess: function () {
-                      Y().back();
+                      return tF(Y());
                     },
                     onClose: function () {
                       s(!1);
@@ -4028,8 +4031,8 @@
             })
           : null;
       }
-      var tY = I.Z.div(m || (m = (0, C.Z)(["flex items-center gap-1"])));
-      function tX(e) {
+      var tX = I.Z.div(m || (m = (0, C.Z)(["flex items-center gap-1"])));
+      function tQ(e) {
         var t = e.gizmoEditorData,
           n = (0, L.ec)(function (e) {
             var t;
@@ -4039,34 +4042,34 @@
           });
         switch (t.sharingRecipient) {
           case G.Zz.Private:
-            return (0, O.jsxs)(tY, {
+            return (0, O.jsxs)(tX, {
               children: [
                 (0, O.jsx)(et.LX, { className: "icon-xs" }),
-                (0, O.jsx)(en.Z, tq({}, t1.onlyMe)),
+                (0, O.jsx)(en.Z, tq({}, t2.onlyMe)),
               ],
             });
           case G.Zz.Link:
-            return (0, O.jsxs)(tY, {
+            return (0, O.jsxs)(tX, {
               children: [
                 (0, O.jsx)(et.HN, { className: "icon-xs" }),
-                (0, O.jsx)(en.Z, tq({}, t1.anyoneWithLink)),
+                (0, O.jsx)(en.Z, tq({}, t2.anyoneWithLink)),
               ],
             });
           case G.Zz.Workspace:
-            return (0, O.jsxs)(tY, {
+            return (0, O.jsxs)(tX, {
               children: [(0, O.jsx)(et.oq, { className: "icon-xs" }), n],
             });
           case G.Zz.Marketplace:
-            return (0, O.jsxs)(tY, {
+            return (0, O.jsxs)(tX, {
               children: [
                 (0, O.jsx)(et.hk, { className: "icon-xs" }),
-                (0, O.jsx)(en.Z, tq({}, t1.public)),
+                (0, O.jsx)(en.Z, tq({}, t2.public)),
               ],
             });
         }
         return (0, O.jsx)("div", {});
       }
-      function tQ(e) {
+      function t$(e) {
         var t = e.gizmoEditorData;
         return (0, O.jsxs)("div", {
           className: "flex items-center gap-2",
@@ -4085,7 +4088,7 @@
               children: [
                 (0, O.jsx)("div", {
                   className: "text-sm font-medium",
-                  children: t.name || (0, O.jsx)(en.Z, tq({}, t1.newGPT)),
+                  children: t.name || (0, O.jsx)(en.Z, tq({}, t2.newGPT)),
                 }),
                 (0, O.jsx)("div", {
                   className: "text-xs text-token-text-secondary",
@@ -4097,7 +4100,7 @@
                             className:
                               "h-1.5 w-1.5 rounded-full bg-token-text-tertiary",
                           }),
-                          (0, O.jsx)(en.Z, tq({}, t1.draft)),
+                          (0, O.jsx)(en.Z, tq({}, t2.draft)),
                         ],
                       })
                     : (0, O.jsxs)("div", {
@@ -4107,9 +4110,9 @@
                             className:
                               "h-1.5 w-1.5 rounded-full bg-brand-green",
                           }),
-                          (0, O.jsx)(en.Z, tq({}, t1.published)),
+                          (0, O.jsx)(en.Z, tq({}, t2.published)),
                           " \xb7 ",
-                          (0, O.jsx)(tX, { gizmoEditorData: t }),
+                          (0, O.jsx)(tQ, { gizmoEditorData: t }),
                         ],
                       }),
                 }),
@@ -4118,7 +4121,7 @@
           ],
         });
       }
-      function t$(e) {
+      function t0(e) {
         var t = e.category,
           n = e.categories,
           r = e.setCategory;
@@ -4175,7 +4178,7 @@
           ],
         });
       }
-      function t0(e) {
+      function t1(e) {
         var t = e.gizmoEditorData,
           n = e.isLoading,
           r = e.isUploadingProfilePic,
@@ -4199,23 +4202,23 @@
                 (0, O.jsx)("a", {
                   className: "cursor-pointer text-token-text-primary",
                   onClick: function () {
-                    return Y().back();
+                    return tF(Y());
                   },
                   children: (0, O.jsx)(et.L7, { className: "icon-lg" }),
                 }),
-                (0, O.jsx)(tQ, { gizmoEditorData: t }),
+                (0, O.jsx)(t$, { gizmoEditorData: t }),
               ],
             }),
             (0, O.jsxs)("div", {
               className: "flex items-center gap-2",
               children: [
                 l,
-                (0, O.jsx)(tJ, {
+                (0, O.jsx)(tY, {
                   gizmoEditorData: t,
                   publishedGizmo: o,
                   revertDraft: s,
                 }),
-                (0, O.jsx)(tK, {
+                (0, O.jsx)(tJ, {
                   gizmo: t,
                   publishedGizmo: o,
                   isLoading: n,
@@ -4230,7 +4233,7 @@
           ],
         });
       }
-      var t1 = (0, ep.vU)({
+      var t2 = (0, ep.vU)({
         privacyConfirm: {
           id: "gizmo.confirmPublish",
           defaultMessage: "Confirm",
@@ -4298,7 +4301,7 @@
           defaultMessage: "Error generating category",
         },
       });
-      function t2(e, t) {
+      function t4(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -4310,7 +4313,7 @@
         }
         return n;
       }
-      function t4(e) {
+      function t3(e) {
         var t = (function (e, t) {
           var n = e.response,
             r = (0, U.Ot)(e);
@@ -4355,7 +4358,7 @@
                   for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {};
                     t % 2
-                      ? t2(Object(n), !0).forEach(function (t) {
+                      ? t4(Object(n), !0).forEach(function (t) {
                           (0, b.Z)(e, t, n[t]);
                         })
                       : Object.getOwnPropertyDescriptors
@@ -4363,7 +4366,7 @@
                             e,
                             Object.getOwnPropertyDescriptors(n)
                           )
-                        : t2(Object(n)).forEach(function (t) {
+                        : t4(Object(n)).forEach(function (t) {
                             Object.defineProperty(
                               e,
                               t,
@@ -4372,7 +4375,7 @@
                           });
                   }
                   return e;
-                })({}, t5.errorSavingDraft)
+                })({}, t8.errorSavingDraft)
               ),
             }),
             null != t &&
@@ -4383,13 +4386,13 @@
           ],
         });
       }
-      function t3(e) {
+      function t5(e) {
         var t = e.isSavingDraft,
           n = e.hasUnpublishedChanges,
           r = e.upsertDraftError,
           i = e.className;
         return r instanceof U.Q0
-          ? (0, O.jsx)(t4, { upsertDraftError: r })
+          ? (0, O.jsx)(t3, { upsertDraftError: r })
           : n
             ? (0, O.jsxs)("div", {
                 className: (0, H.default)("flex items-center gap-2", i),
@@ -4406,14 +4409,14 @@
               })
             : null;
       }
-      var t5 = (0, ep.vU)({
+      var t8 = (0, ep.vU)({
           errorSavingDraft: {
             id: "gizmo.errorSavingDraft",
             defaultMessage: "Error saving draft",
           },
         }),
-        t8 = n(86178);
-      function t9(e, t) {
+        t9 = n(86178);
+      function t6(e, t) {
         var n =
           ("undefined" != typeof Symbol && e[Symbol.iterator]) ||
           e["@@iterator"];
@@ -4422,7 +4425,7 @@
             Array.isArray(e) ||
             (n = (function (e, t) {
               if (e) {
-                if ("string" == typeof e) return t6(e, t);
+                if ("string" == typeof e) return t7(e, t);
                 var n = Object.prototype.toString.call(e).slice(8, -1);
                 if (
                   ("Object" === n && e.constructor && (n = e.constructor.name),
@@ -4433,7 +4436,7 @@
                   "Arguments" === n ||
                   /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
                 )
-                  return t6(e, t);
+                  return t7(e, t);
               }
             })(e)) ||
             (t && e && "number" == typeof e.length)
@@ -4481,12 +4484,12 @@
           },
         };
       }
-      function t6(e, t) {
+      function t7(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r;
       }
-      function t7(e, t) {
+      function ne(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -4498,16 +4501,16 @@
         }
         return n;
       }
-      function ne(e) {
+      function nt(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? t7(Object(n), !0).forEach(function (t) {
+            ? ne(Object(n), !0).forEach(function (t) {
                 (0, b.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : t7(Object(n)).forEach(function (t) {
+              : ne(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -4517,15 +4520,15 @@
         }
         return e;
       }
-      function nt() {
-        return (nt = (0, v.Z)(
+      function nn() {
+        return (nn = (0, v.Z)(
           j().mark(function e(t) {
             var n, r, i, o, a, s, l, c, u;
             return j().wrap(function (e) {
               for (;;)
                 switch ((e.prev = e.next)) {
                   case 0:
-                    r = t9(t);
+                    r = t6(t);
                     try {
                       for (r.s(); !(i = r.n()).done; )
                         if (
@@ -4534,7 +4537,7 @@
                             o.author.name &&
                             "multimodal_text" === o.content.content_type)
                         ) {
-                          a = t9(o.content.parts);
+                          a = t6(o.content.parts);
                           try {
                             for (a.s(); !(s = a.n()).done; )
                               (l = s.value),
@@ -4578,8 +4581,8 @@
           })
         )).apply(this, arguments);
       }
-      function nn() {
-        return (nn = (0, v.Z)(
+      function nr() {
+        return (nr = (0, v.Z)(
           j().mark(function e(t, n, r) {
             var i, o, a, s, l, c, u, d, p, f, m, h, g;
             return j().wrap(
@@ -4619,11 +4622,11 @@
                             return JSON.parse(e);
                           })
                           .reduce(function (e, t) {
-                            return ne(ne({}, e), t);
+                            return nt(nt({}, e), t);
                           }, {})),
                         (e.next = 4),
                         (function (e) {
-                          return nt.apply(this, arguments);
+                          return nn.apply(this, arguments);
                         })(a)
                       );
                     case 4:
@@ -4701,7 +4704,7 @@
           })
         )).apply(this, arguments);
       }
-      function nr(e, t, n, r) {
+      function ni(e, t, n, r) {
         var i,
           o,
           a,
@@ -4785,11 +4788,11 @@
                   JSON.stringify(y, null, 2),
                   '\n\n    "Do not call update_behavior yet. Instead, use these updated fields as the GPT\'s current behavior, and in the next call to update_behavior, incorporate these changes."\n    '
                 );
-              N.push(t8.Cv.getTextAsMessage(T, $.uU.System));
+              N.push(t9.Cv.getTextAsMessage(T, $.uU.System));
             }
             k.length > 0 &&
               N.push(
-                t8.Cv.getTextAsMessage(
+                t9.Cv.getTextAsMessage(
                   "The user has removed the following files from the GPT. You can no longer reference these files: ".concat(
                     k
                       .map(function (e) {
@@ -4802,7 +4805,7 @@
               ),
               P.length > 0 &&
                 N.push(
-                  t8.Cv.getTextAsMessage(
+                  t9.Cv.getTextAsMessage(
                     "The user is adding these files to the GPT. The GPT may reference these files. The file IDs are: ".concat(
                       P.map(function (e) {
                         return e.file_id;
@@ -4820,7 +4823,7 @@
                 A.tQ.updateTree(e, function (e) {
                   var n,
                     r = e.getNodeByIdOrMessageId(t).parentId,
-                    i = t9(N);
+                    i = t6(N);
                   try {
                     for (i.s(); !(n = i.n()).done; ) {
                       var o = n.value,
@@ -4843,8 +4846,8 @@
           }
         }
       }
-      var ni = n(14402);
-      function no(e, t) {
+      var no = n(14402);
+      function na(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -4856,16 +4859,16 @@
         }
         return n;
       }
-      function na(e) {
+      function ns(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? no(Object(n), !0).forEach(function (t) {
+            ? na(Object(n), !0).forEach(function (t) {
                 (0, b.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : no(Object(n)).forEach(function (t) {
+              : na(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -4875,7 +4878,7 @@
         }
         return e;
       }
-      var ns = q.memo(function (e) {
+      var nl = q.memo(function (e) {
         var t = e.gizmoEditorData,
           n = e.updateGizmo,
           r = e.clientThreadId,
@@ -4963,7 +4966,7 @@
             },
             [l, t, a]
           ),
-          m = (0, ni.gF)(function (e) {
+          m = (0, no.gF)(function (e) {
             return e.files.filter(function (e) {
               return e.status === eT.X.Ready && null != e.gizmoId;
             });
@@ -4987,13 +4990,13 @@
                       id: r,
                       children: [],
                       parentId: n,
-                      message: t8.Cv.getTextAsMessage(i, $.uU.System),
+                      message: t9.Cv.getTextAsMessage(i, $.uU.System),
                       metadata: { isClientCreatedSystemMessage: !0 },
                     });
                   });
                 }
               })(e, t, m),
-                nr(e, t, o, s),
+                ni(e, t, o, s),
                 (function (e, t) {
                   for (
                     var n =
@@ -5019,7 +5022,7 @@
                       id: (0, tb.Z)(),
                       children: [],
                       parentId: r,
-                      message: t8.Cv.getTextAsMessage(n, $.uU.System, {
+                      message: t9.Cv.getTextAsMessage(n, $.uU.System, {
                         exclude_after_next_user_message: !0,
                       }),
                       metadata: { isClientCreatedSystemMessage: !0 },
@@ -5028,8 +5031,8 @@
                 })(e, t),
                 n(function (e) {
                   var t;
-                  return na(
-                    na({}, e),
+                  return ns(
+                    ns({}, e),
                     {},
                     {
                       files: [].concat(
@@ -5098,7 +5101,7 @@
           }),
         });
       });
-      function nl(e, t) {
+      function nc(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -5110,16 +5113,16 @@
         }
         return n;
       }
-      function nc(e) {
+      function nu(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? nl(Object(n), !0).forEach(function (t) {
+            ? nc(Object(n), !0).forEach(function (t) {
                 (0, b.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : nl(Object(n)).forEach(function (t) {
+              : nc(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -5129,7 +5132,7 @@
         }
         return e;
       }
-      function nu(e) {
+      function nd(e) {
         var t = e.value,
           n = e.label;
         return (0, O.jsx)(F.ck, {
@@ -5139,7 +5142,7 @@
           children: n,
         });
       }
-      function nd(e) {
+      function np(e) {
         var t = e.className,
           n = e.editorTab,
           r = e.setEditorTab;
@@ -5153,11 +5156,11 @@
             r(e);
           },
           children: [
-            (0, O.jsx)(nu, { value: h.MAGIC_MAKER, label: "Create" }),
-            (0, O.jsx)(nu, { value: h.ADVANCED, label: "Configure" }),
+            (0, O.jsx)(nd, { value: h.MAGIC_MAKER, label: "Create" }),
+            (0, O.jsx)(nd, { value: h.ADVANCED, label: "Configure" }),
             (0, O.jsx)("div", {
               className: "flex w-1/3 md:hidden",
-              children: (0, O.jsx)(nu, { value: h.PREVIEW, label: "Preview" }),
+              children: (0, O.jsx)(nd, { value: h.PREVIEW, label: "Preview" }),
             }),
           ],
         });
@@ -5165,7 +5168,7 @@
       ((o = h || (h = {})).MAGIC_MAKER = "magic"),
         (o.ADVANCED = "advanced"),
         (o.PREVIEW = "preview");
-      var np = {
+      var nf = {
           id: void 0,
           instructions: "",
           name: "",
@@ -5179,12 +5182,12 @@
           trainingDisabled: !1,
           liveVersion: 0,
         },
-        nf = nc(
-          nc({}, np),
+        nm = nu(
+          nu({}, nf),
           {},
-          { tools: [].concat((0, x.Z)(np.tools), [{ type: w.qK.BROWSER }]) }
+          { tools: [].concat((0, x.Z)(nf.tools), [{ type: w.qK.BROWSER }]) }
         );
-      function nm(e) {
+      function nh(e) {
         var t, n, r, i, o, a;
         return {
           id: e.gizmo.id,
@@ -5215,7 +5218,7 @@
             null !== (a = e.gizmo.live_version) && void 0 !== a ? a : 0,
         };
       }
-      var nh = function (e) {
+      var ng = function (e) {
         var t,
           n,
           r,
@@ -5232,7 +5235,7 @@
           m = e.onNewGizmoId,
           x = (0, P.C)(Z.L0.BrowseAvailable),
           b = (0, X.Z)(),
-          y = (0, q.useRef)(null != f ? nm(f) : x ? nf : np),
+          y = (0, q.useRef)(null != f ? nh(f) : x ? nm : nf),
           w = (0, q.useRef)(f),
           k = (0, q.useRef)(y.current),
           N = (0, q.useState)(function () {
@@ -5321,8 +5324,8 @@
                             (w.current = n),
                             null == y.current.id &&
                               ((r = n.gizmo.id),
-                              (y.current = nc(
-                                nc({}, y.current),
+                              (y.current = nu(
+                                nu({}, y.current),
                                 {},
                                 {
                                   id: r,
@@ -5341,7 +5344,7 @@
                             (o =
                               null !== (i = (0, U.Ot)(e.t0)) && void 0 !== i
                                 ? i
-                                : b.formatMessage(t5.errorSavingDraft)),
+                                : b.formatMessage(t8.errorSavingDraft)),
                             E.m.warning(o, { duration: 2 }),
                             e.t0)
                           );
@@ -5438,7 +5441,7 @@
                   i,
                   o,
                   a = new Set(),
-                  s = t9(e.tools);
+                  s = t6(e.tools);
                 try {
                   for (s.s(); !(o = s.n()).done; ) {
                     var l = o.value;
@@ -5499,7 +5502,7 @@
                             (e.prev = 3),
                             (e.next = 6),
                             (function (e, t, n) {
-                              return nn.apply(this, arguments);
+                              return nr.apply(this, arguments);
                             })(y.current, t, eo.current)
                           );
                         case 6:
@@ -5552,7 +5555,7 @@
                         }
                         return e.abrupt("return");
                       case 2:
-                        (a = A.tQ.getThreadCurrentLeafId(_)), (s = t9(r));
+                        (a = A.tQ.getThreadCurrentLeafId(_)), (s = t6(r));
                         try {
                           for (
                             c = function () {
@@ -5563,7 +5566,7 @@
                                   id: t,
                                   children: [],
                                   parentId: a,
-                                  message: t8.Cv.getTextAsMessage(
+                                  message: t9.Cv.getTextAsMessage(
                                     e,
                                     $.uU.System
                                   ),
@@ -5586,7 +5589,7 @@
                         }
                         if (
                           ((u = a),
-                          nr(_, u, t, n),
+                          ni(_, u, t, n),
                           (d = {
                             conversationMode: {
                               kind: $.OL.GizmoMagicCreate,
@@ -5727,7 +5730,7 @@
           ex = L.isPending || F.isPending,
           eb = (0, q.useState)(function () {
             var e = B.m.getItem(B.F.GizmoEditorTab);
-            return e in h ? e : h.MAGIC_MAKER;
+            return Object.values(h).includes(e) ? e : h.MAGIC_MAKER;
           }),
           ey = eb[0],
           ej = eb[1],
@@ -5764,7 +5767,7 @@
         return (0, O.jsxs)("div", {
           className: "flex h-screen w-full flex-col items-center",
           children: [
-            (0, O.jsx)(t0, {
+            (0, O.jsx)(t1, {
               gizmoEditorData: T,
               isLoading: ex,
               hasUnpublishedChanges: J,
@@ -5783,8 +5786,8 @@
                           case 2:
                             return (
                               (r = e.sent),
-                              (y.current = nc(
-                                nc({}, y.current),
+                              (y.current = nu(
+                                nu({}, y.current),
                                 {},
                                 { sharingRecipient: t }
                               )),
@@ -5809,12 +5812,12 @@
                         (0, g.Vw)(y.current.id).queryKey
                       );
                       if (null != e) {
-                        var t = nm(e);
+                        var t = nh(e);
                         (y.current = t), C(t), Q();
                       }
                     }
                   : void 0,
-              draftMessage: (0, O.jsx)(t3, {
+              draftMessage: (0, O.jsx)(t5, {
                 hasUnpublishedChanges: J,
                 isSavingDraft: R,
                 upsertDraftError: V,
@@ -5854,7 +5857,7 @@
                         : (0, O.jsxs)("div", {
                             className: "flex h-full flex-col px-2 pt-2",
                             children: [
-                              (0, O.jsx)(nd, {
+                              (0, O.jsx)(np, {
                                 editorTab: ey,
                                 setEditorTab: ej,
                                 className: "mb-2 flex-shrink-0 self-center",
@@ -5866,7 +5869,7 @@
                                     ? (0, O.jsx)("div", {
                                         className: "h-full w-full pb-5",
                                         children: (0, O.jsx)(
-                                          ns,
+                                          nl,
                                           {
                                             gizmoEditorData: T,
                                             updateGizmo: er,
@@ -5930,7 +5933,7 @@
           ],
         });
       };
-      function ng(e) {
+      function nv(e) {
         var t = e.businessWorkspaceId,
           n = e.gizmoId,
           r = (0, g.b9)(n, !0).data,
@@ -5938,13 +5941,13 @@
           o = (0, L.aF)(),
           a = null == o ? void 0 : o.id,
           s = null != r && null != i && null != a && (0, tl.k1)(r, i, a, t);
-        return null != r && s ? (0, O.jsx)(nh, { gizmo: r }) : null;
-      }
-      function nv(e) {
-        var t = e.onNewGizmoId;
-        return (0, O.jsx)(nh, { gizmo: void 0, onNewGizmoId: t });
+        return null != r && s ? (0, O.jsx)(ng, { gizmo: r }) : null;
       }
       function nx(e) {
+        var t = e.onNewGizmoId;
+        return (0, O.jsx)(ng, { gizmo: void 0, onNewGizmoId: t });
+      }
+      function nb(e) {
         var t = e.gizmoId,
           n = e.remixSourceId,
           r = (0, J.useRouter)(),
@@ -5966,11 +5969,11 @@
                     children:
                       void 0 != s
                         ? (0, O.jsx)(
-                            ng,
+                            nv,
                             { businessWorkspaceId: o, gizmoId: s },
                             s
                           )
-                        : (0, O.jsx)(nv, {
+                        : (0, O.jsx)(nx, {
                             remixSourceId: n,
                             onNewGizmoId: function (e) {
                               (a.current = e),
@@ -5989,16 +5992,16 @@
           })
         );
       }
-      var nb = n(85958),
-        ny = !0;
-      function nj() {
+      var ny = n(85958),
+        nj = !0;
+      function nw() {
         var e,
           t = (0, D.t)();
         (e = null == t || t.canCreateGizmos()),
           (0, q.useEffect)(
             function () {
               e ||
-                Y().replace((0, nb.M5)(nb.LT.NO_ACCESS), void 0, {
+                Y().replace((0, ny.M5)(ny.LT.NO_ACCESS), void 0, {
                   shallow: !0,
                 });
             },
@@ -6022,7 +6025,7 @@
           [t, n]
         ),
         null != t && t.canCreateGizmos())
-          ? (0, O.jsx)(nx, { gizmoId: i, remixSourceId: o })
+          ? (0, O.jsx)(nb, { gizmoId: i, remixSourceId: o })
           : null;
       }
     },

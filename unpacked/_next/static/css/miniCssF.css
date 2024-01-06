@@ -2113,9 +2113,6 @@ textarea:focus {
 .mt-10 {
   margin-top: 2.5rem;
 }
-.mt-12 {
-  margin-top: 3rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -5903,6 +5900,9 @@ button[data-state="open"] .toggle-item-button-open {
 .last\:mb-2:last-child {
   margin-bottom: 0.5rem;
 }
+.last\:h-\[calc\(100vh-6rem\)\]:last-child {
+  height: calc(100vh - 6rem);
+}
 .last\:border-0:last-child {
   border-width: 0;
 }
@@ -5914,9 +5914,6 @@ button[data-state="open"] .toggle-item-button-open {
 }
 .last\:pb-0:last-child {
   padding-bottom: 0;
-}
-.last\:pb-\[50vh\]:last-child {
-  padding-bottom: 50vh;
 }
 .last\:pr-0:last-child {
   padding-right: 0;

@@ -6,10 +6,10 @@
       r.r(t),
         r.d(t, {
           __N_SSP: function () {
-            return z;
+            return S;
           },
           default: function () {
-            return C;
+            return E;
           },
         });
       var n = r(36112),
@@ -255,10 +255,10 @@
           }),
         });
       }
-      var S = r(61305),
-        z = !0;
-      function C() {
-        return (0, x.jsx)(S.Z, {
+      var z = r(61305),
+        S = !0;
+      function E() {
+        return (0, x.jsx)(z.Z, {
           children: (0, x.jsx)(w, { children: (0, x.jsx)(h, {}) }),
         });
       }
@@ -266,42 +266,43 @@
     85528: function (e, t, r) {
       r.d(t, {
         S: function () {
-          return f;
+          return m;
         },
         X: function () {
-          return d;
+          return f;
         },
       });
       var n = r(37097),
         s = r(29703),
         o = r(14972),
-        i = r(73040),
-        l = r.n(i),
-        a = r(2454),
-        c = r(67404),
-        u = r(35250);
-      function d(e) {
+        i = r(19841),
+        l = r(73040),
+        a = r.n(l),
+        c = r(2454),
+        u = r(67404),
+        d = r(35250);
+      function f(e) {
         var t = e.gizmo,
           r = (0, n.i6)(t);
-        return (0, u.jsxs)("div", {
+        return (0, d.jsxs)("div", {
           className: "flex h-full flex-col",
           children: [
-            (0, u.jsx)(s.N, { gizmo: t }),
-            (0, u.jsx)(f, { redirectUrl: r }),
-            (0, u.jsx)("div", {
+            (0, d.jsx)(s.N, { gizmo: t }),
+            (0, d.jsx)(m, { redirectUrl: r }),
+            (0, d.jsx)("div", {
               className: "flex grow flex-col items-center justify-center p-2",
-              children: (0, u.jsx)(c.r, {
+              children: (0, d.jsx)(u.r, {
                 gizmo: t,
                 isOwner: !1,
                 isAnon: !0,
-                children: (0, u.jsxs)("div", {
+                children: (0, d.jsxs)("div", {
                   className: "mt-7 flex flex-col gap-4",
                   children: [
-                    (0, u.jsx)(a.p, {
+                    (0, d.jsx)(c.p, {
                       href: "/auth/login?next=".concat(r),
                       children: "Sign up to chat",
                     }),
-                    (0, u.jsx)("div", {
+                    (0, d.jsx)("div", {
                       className: "text-sm text-token-text-tertiary",
                       children: "Requires ChatGPT Plus",
                     }),
@@ -312,13 +313,17 @@
           ],
         });
       }
-      function f(e) {
-        var t = e.redirectUrl;
-        return (0, u.jsxs)("div", {
-          className: "flex items-center justify-between px-7 py-4",
+      function m(e) {
+        var t = e.redirectUrl,
+          r = e.className;
+        return (0, d.jsxs)("div", {
+          className: (0, i.default)(
+            "flex items-center justify-between px-7 py-4",
+            r
+          ),
           children: [
-            (0, u.jsx)(m, {}),
-            (0, u.jsx)(l(), {
+            (0, d.jsx)(p, {}),
+            (0, d.jsx)(a(), {
               href: null != t ? "/auth/login?next=".concat(t) : "/auth/login",
               className:
                 "flex items-center rounded-lg bg-green-600 px-4 py-2 font-medium text-white transition hover:opacity-70",
@@ -327,20 +332,20 @@
           ],
         });
       }
-      function m() {
-        return (0, u.jsx)(l(), {
+      function p() {
+        return (0, d.jsx)(a(), {
           href: "/",
-          children: (0, u.jsx)(o.nI, { className: "h-8 w-8" }),
+          children: (0, d.jsx)(o.nI, { className: "h-8 w-8" }),
         });
       }
     },
     94734: function (e, t, r) {
       r.d(t, {
         fN: function () {
-          return ey;
+          return eN;
         },
         b1: function () {
-          return eM;
+          return e_;
         },
       });
       var n,
@@ -366,15 +371,15 @@
         P = r(29787),
         w = r(37068),
         k = r(19992),
-        S = r(53315),
-        z = r(52327),
-        C = r(46789),
-        E = r(48442),
-        T = r(98992),
-        O = r(17575),
-        R = r(70794),
-        M =
-          (((n = M || {})[(n.Open = 0)] = "Open"),
+        z = r(53315),
+        S = r(52327),
+        E = r(46789),
+        C = r(48442),
+        M = r(98992),
+        R = r(17575),
+        T = r(70794),
+        O =
+          (((n = O || {})[(n.Open = 0)] = "Open"),
           (n[(n.Closed = 1)] = "Closed"),
           n),
         I =
@@ -408,27 +413,27 @@
         return t;
       }
       _.displayName = "PopoverContext";
-      let D = (0, x.createContext)(null);
-      function F(e) {
-        let t = (0, x.useContext)(D);
+      let A = (0, x.createContext)(null);
+      function D(e) {
+        let t = (0, x.useContext)(A);
         if (null === t) {
           let t = Error(`<${e} /> is missing a parent <Popover /> component.`);
-          throw (Error.captureStackTrace && Error.captureStackTrace(t, F), t);
+          throw (Error.captureStackTrace && Error.captureStackTrace(t, D), t);
         }
         return t;
       }
-      D.displayName = "PopoverAPIContext";
-      let A = (0, x.createContext)(null);
+      A.displayName = "PopoverAPIContext";
+      let F = (0, x.createContext)(null);
       function L() {
-        return (0, x.useContext)(A);
+        return (0, x.useContext)(F);
       }
-      A.displayName = "PopoverGroupContext";
+      F.displayName = "PopoverGroupContext";
       let U = (0, x.createContext)(null);
       function B(e, t) {
         return (0, g.E)(t.type, Z, e, t);
       }
       U.displayName = "PopoverPanelContext";
-      let $ = (0, h.yV)(function (e, t) {
+      let q = (0, h.yV)(function (e, t) {
           var r;
           let n = `headlessui-popover-button-${(0, b.M)()}`,
             s = `headlessui-popover-panel-${(0, b.M)()}`,
@@ -458,7 +463,7 @@
               },
               m,
             ] = l,
-            p = (0, C.i)(null != (r = o.current) ? r : c);
+            p = (0, E.i)(null != (r = o.current) ? r : c);
           (0, x.useEffect)(() => m({ type: 3, buttonId: n }), [n, m]),
             (0, x.useEffect)(() => m({ type: 5, panelId: s }), [s, m]);
           let v = (0, x.useMemo)(() => {
@@ -477,7 +482,7 @@
             ),
             N = L(),
             k = null == N ? void 0 : N.registerPopover,
-            z = (0, O.z)(() => {
+            S = (0, R.z)(() => {
               var e;
               return null !=
                 (e = null == N ? void 0 : N.isFocusWithinPopoverGroup())
@@ -487,13 +492,13 @@
                       (null == u ? void 0 : u.contains(p.activeElement)));
             });
           (0, x.useEffect)(() => (null == k ? void 0 : k(j)), [k, j]),
-            (0, E.O)(
+            (0, C.O)(
               null == p ? void 0 : p.defaultView,
               "focus",
               (e) => {
                 var t, r, n, s;
                 0 === a &&
-                  (z() ||
+                  (S() ||
                     !c ||
                     !u ||
                     (null !=
@@ -506,7 +511,7 @@
               },
               !0
             ),
-            (0, S.O)(
+            (0, z.O)(
               [c, u],
               (e, t) => {
                 m({ type: 1 }),
@@ -515,7 +520,7 @@
               },
               0 === a
             );
-          let T = (0, O.z)((e) => {
+          let M = (0, R.z)((e) => {
               m({ type: 1 });
               let t = e
                 ? e instanceof HTMLElement
@@ -526,21 +531,21 @@
                 : c;
               null == t || t.focus();
             }),
-            R = (0, x.useMemo)(() => ({ close: T, isPortalled: v }), [T, v]),
-            M = (0, x.useMemo)(() => ({ open: 0 === a, close: T }), [a, T]);
+            T = (0, x.useMemo)(() => ({ close: M, isPortalled: v }), [M, v]),
+            O = (0, x.useMemo)(() => ({ open: 0 === a, close: M }), [a, M]);
           return x.createElement(
             _.Provider,
             { value: l },
             x.createElement(
-              D.Provider,
-              { value: R },
+              A.Provider,
+              { value: T },
               x.createElement(
                 w.up,
                 { value: (0, g.E)(a, { 0: w.ZM.Open, 1: w.ZM.Closed }) },
                 (0, h.sY)({
                   ourProps: { ref: i },
                   theirProps: e,
-                  slot: M,
+                  slot: O,
                   defaultTag: "div",
                   name: "Popover",
                 })
@@ -548,9 +553,9 @@
             )
           );
         }),
-        Y = (0, h.yV)(function (e, t) {
+        $ = (0, h.yV)(function (e, t) {
           let [r, n] = G("Popover.Button"),
-            { isPortalled: s } = F("Popover.Button"),
+            { isPortalled: s } = D("Popover.Button"),
             o = (0, x.useRef)(null),
             i = `headlessui-focus-sentinel-${(0, b.M)()}`,
             l = L(),
@@ -559,8 +564,8 @@
             u = null !== c && c === r.panelId,
             d = (0, y.T)(o, t, u ? null : (e) => n({ type: 2, button: e })),
             f = (0, y.T)(o, t),
-            m = (0, C.i)(o),
-            p = (0, O.z)((e) => {
+            m = (0, E.i)(o),
+            p = (0, R.z)((e) => {
               var t, s, i;
               if (u) {
                 if (1 === r.popoverState) return;
@@ -593,10 +598,10 @@
                     e.preventDefault(), e.stopPropagation(), n({ type: 1 });
                 }
             }),
-            v = (0, O.z)((e) => {
+            v = (0, R.z)((e) => {
               u || (e.key === j.R.Space && e.preventDefault());
             }),
-            w = (0, O.z)((t) => {
+            w = (0, R.z)((t) => {
               var s, o;
               (0, N.P)(t.currentTarget) ||
                 e.disabled ||
@@ -608,32 +613,32 @@
                     n({ type: 0 }),
                     null == (o = r.button) || o.focus()));
             }),
-            S = (0, O.z)((e) => {
+            z = (0, R.z)((e) => {
               e.preventDefault(), e.stopPropagation();
             }),
-            z = 0 === r.popoverState,
-            E = (0, x.useMemo)(() => ({ open: z }), [z]),
-            M = (0, k.f)(e, o),
+            S = 0 === r.popoverState,
+            C = (0, x.useMemo)(() => ({ open: S }), [S]),
+            O = (0, k.f)(e, o),
             I = u
-              ? { ref: f, type: M, onKeyDown: p, onClick: w }
+              ? { ref: f, type: O, onKeyDown: p, onClick: w }
               : {
                   ref: d,
                   id: r.buttonId,
-                  type: M,
+                  type: O,
                   "aria-expanded": e.disabled ? void 0 : 0 === r.popoverState,
                   "aria-controls": r.panel ? r.panelId : void 0,
                   onKeyDown: p,
                   onKeyUp: v,
                   onClick: w,
-                  onMouseDown: S,
+                  onMouseDown: z,
                 },
-            Z = (0, R.l)(),
-            _ = (0, O.z)(() => {
+            Z = (0, T.l)(),
+            _ = (0, R.z)(() => {
               let e = r.panel;
               e &&
                 (0, g.E)(Z.current, {
-                  [R.N.Forwards]: () => (0, P.jA)(e, P.TO.First),
-                  [R.N.Backwards]: () => (0, P.jA)(e, P.TO.Last),
+                  [T.N.Forwards]: () => (0, P.jA)(e, P.TO.First),
+                  [T.N.Backwards]: () => (0, P.jA)(e, P.TO.Last),
                 });
             });
           return x.createElement(
@@ -642,30 +647,30 @@
             (0, h.sY)({
               ourProps: I,
               theirProps: e,
-              slot: E,
+              slot: C,
               defaultTag: "button",
               name: "Popover.Button",
             }),
-            z &&
+            S &&
               !u &&
               s &&
-              x.createElement(T._, {
+              x.createElement(M._, {
                 id: i,
-                features: T.A.Focusable,
+                features: M.A.Focusable,
                 as: "button",
                 type: "button",
                 onFocus: _,
               })
           );
         }),
-        V = h.AN.RenderStrategy | h.AN.Static,
-        W = (0, h.yV)(function (e, t) {
+        Y = h.AN.RenderStrategy | h.AN.Static,
+        V = (0, h.yV)(function (e, t) {
           let [{ popoverState: r }, n] = G("Popover.Overlay"),
             s = (0, y.T)(t),
             o = `headlessui-popover-overlay-${(0, b.M)()}`,
             i = (0, w.oJ)(),
             l = null !== i ? i === w.ZM.Open : 0 === r,
-            a = (0, O.z)((e) => {
+            a = (0, R.z)((e) => {
               if ((0, N.P)(e.currentTarget)) return e.preventDefault();
               n({ type: 1 });
             }),
@@ -675,29 +680,29 @@
             theirProps: e,
             slot: c,
             defaultTag: "div",
-            features: V,
+            features: Y,
             visible: l,
             name: "Popover.Overlay",
           });
         }),
-        q = h.AN.RenderStrategy | h.AN.Static,
-        H = Object.assign($, {
-          Button: Y,
-          Overlay: W,
+        W = h.AN.RenderStrategy | h.AN.Static,
+        H = Object.assign(q, {
+          Button: $,
+          Overlay: V,
           Panel: (0, h.yV)(function (e, t) {
             let { focus: r = !1, ...n } = e,
               [s, o] = G("Popover.Panel"),
-              { close: i, isPortalled: l } = F("Popover.Panel"),
+              { close: i, isPortalled: l } = D("Popover.Panel"),
               a = `headlessui-focus-sentinel-before-${(0, b.M)()}`,
               c = `headlessui-focus-sentinel-after-${(0, b.M)()}`,
               u = (0, x.useRef)(null),
               d = (0, y.T)(u, t, (e) => {
                 o({ type: 4, panel: e });
               }),
-              f = (0, C.i)(u),
+              f = (0, E.i)(u),
               m = (0, w.oJ)(),
               p = null !== m ? m === w.ZM.Open : 0 === s.popoverState,
-              v = (0, O.z)((e) => {
+              v = (0, R.z)((e) => {
                 var t;
                 if (e.key === j.R.Escape) {
                   if (
@@ -761,25 +766,25 @@
                     : void 0,
                 tabIndex: -1,
               },
-              S = (0, R.l)(),
-              z = (0, O.z)(() => {
+              z = (0, T.l)(),
+              S = (0, R.z)(() => {
                 let e = u.current;
                 e &&
-                  (0, g.E)(S.current, {
-                    [R.N.Forwards]: () => {
+                  (0, g.E)(z.current, {
+                    [T.N.Forwards]: () => {
                       (0, P.jA)(e, P.TO.First);
                     },
-                    [R.N.Backwards]: () => {
+                    [T.N.Backwards]: () => {
                       var e;
                       null == (e = s.button) || e.focus({ preventScroll: !0 });
                     },
                   });
               }),
-              E = (0, O.z)(() => {
+              C = (0, R.z)(() => {
                 let e = u.current;
                 e &&
-                  (0, g.E)(S.current, {
-                    [R.N.Forwards]: () => {
+                  (0, g.E)(z.current, {
+                    [T.N.Forwards]: () => {
                       var e, t, r;
                       if (!s.button) return;
                       let n = (0, P.GO)(),
@@ -802,7 +807,7 @@
                         }
                       (0, P.jA)(l, P.TO.First, !1);
                     },
-                    [R.N.Backwards]: () => (0, P.jA)(e, P.TO.Last),
+                    [T.N.Backwards]: () => (0, P.jA)(e, P.TO.Last),
                   });
               });
             return x.createElement(
@@ -810,32 +815,32 @@
               { value: s.panelId },
               p &&
                 l &&
-                x.createElement(T._, {
+                x.createElement(M._, {
                   id: a,
                   ref: s.beforePanelSentinel,
-                  features: T.A.Focusable,
+                  features: M.A.Focusable,
                   as: "button",
                   type: "button",
-                  onFocus: z,
+                  onFocus: S,
                 }),
               (0, h.sY)({
                 ourProps: k,
                 theirProps: n,
                 slot: N,
                 defaultTag: "div",
-                features: q,
+                features: W,
                 visible: p,
                 name: "Popover.Panel",
               }),
               p &&
                 l &&
-                x.createElement(T._, {
+                x.createElement(M._, {
                   id: c,
                   ref: s.afterPanelSentinel,
-                  features: T.A.Focusable,
+                  features: M.A.Focusable,
                   as: "button",
                   type: "button",
-                  onFocus: E,
+                  onFocus: C,
                 })
             );
           }),
@@ -843,7 +848,7 @@
             let r = (0, x.useRef)(null),
               n = (0, y.T)(r, t),
               [s, o] = (0, x.useState)([]),
-              i = (0, O.z)((e) => {
+              i = (0, R.z)((e) => {
                 o((t) => {
                   let r = t.indexOf(e);
                   if (-1 !== r) {
@@ -853,10 +858,10 @@
                   return t;
                 });
               }),
-              l = (0, O.z)((e) => (o((t) => [...t, e]), () => i(e))),
-              a = (0, O.z)(() => {
+              l = (0, R.z)((e) => (o((t) => [...t, e]), () => i(e))),
+              a = (0, R.z)(() => {
                 var e;
-                let t = (0, z.r)(r);
+                let t = (0, S.r)(r);
                 if (!t) return !1;
                 let n = t.activeElement;
                 return (
@@ -874,7 +879,7 @@
                   })
                 );
               }),
-              c = (0, O.z)((e) => {
+              c = (0, R.z)((e) => {
                 for (let t of s) t.buttonId !== e && t.close();
               }),
               u = (0, x.useMemo)(
@@ -888,7 +893,7 @@
               ),
               d = (0, x.useMemo)(() => ({}), []);
             return x.createElement(
-              A.Provider,
+              F.Provider,
               { value: u },
               (0, h.sY)({
                 ourProps: { ref: n },
@@ -900,26 +905,29 @@
             );
           }),
         });
-      var X = r(19841),
-        K = r(43356),
-        J = r(61888),
-        Q = r(73040),
-        ee = r.n(Q),
-        et = r(10721),
-        er = r(1454),
-        en = r(32004),
-        es = r(70671),
-        eo = r(94968),
-        ei = r(21389),
-        el = r(218),
-        ea = r(41202),
-        ec = r(56685),
-        eu = r(85528),
-        ed = r(65865),
-        ef = r(79505),
-        em = r(5063),
-        ep = r(35250);
-      function ev(e, t) {
+      var X = r(25349),
+        K = r(99893),
+        J = r(19841),
+        Q = r(43356),
+        ee = r(61888),
+        et = r(73040),
+        er = r.n(et),
+        en = r(10721),
+        es = r(1454),
+        eo = r(32004),
+        ei = r(70671),
+        el = r(94968),
+        ea = r(21389),
+        ec = r(8844),
+        eu = r(218),
+        ed = r(41202),
+        ef = r(56685),
+        em = r(85528),
+        ep = r(65865),
+        ev = r(79505),
+        ex = r(5063),
+        eg = r(35250);
+      function eh(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -931,16 +939,16 @@
         }
         return r;
       }
-      function ex(e) {
+      function ey(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? ev(Object(r), !0).forEach(function (t) {
+            ? eh(Object(r), !0).forEach(function (t) {
                 (0, l.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ev(Object(r)).forEach(function (t) {
+              : eh(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -950,18 +958,18 @@
         }
         return e;
       }
-      function eg(e, t) {
+      function eb(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
         return n;
       }
-      var eh = ei.Z.div(
+      var ej = ea.Z.div(
         o ||
           (o = (0, a.Z)([
             "grid grid-cols-1 gap-x-1.5 gap-y-1 md:gap-x-2 md:gap-y-1.5 lg:grid-cols-2 lg:gap-x-3 lg:gap-y-2.5",
           ]))
       );
-      function ey(e) {
+      function eN(e) {
         var t,
           r,
           n = e.anon,
@@ -976,8 +984,8 @@
           g = f[1],
           h = (0, x.useMemo)(
             function () {
-              return (0, J.uniqBy)(
-                (0, J.compact)(
+              return (0, ee.uniqBy)(
+                (0, ee.compact)(
                   null == o
                     ? void 0
                     : o.cuts.map(function (e) {
@@ -1032,7 +1040,7 @@
                             Array.isArray(e) ||
                             (r = (function (e, t) {
                               if (e) {
-                                if ("string" == typeof e) return eg(e, t);
+                                if ("string" == typeof e) return eb(e, t);
                                 var r = Object.prototype.toString
                                   .call(e)
                                   .slice(8, -1);
@@ -1049,7 +1057,7 @@
                                     r
                                   )
                                 )
-                                  return eg(e, t);
+                                  return eb(e, t);
                               }
                             })(e))
                           ) {
@@ -1106,8 +1114,8 @@
                           (null == n ? void 0 : n.current) != null &&
                             e.target === n.current &&
                             g(function (t) {
-                              return ex(
-                                ex({}, t),
+                              return ey(
+                                ey({}, t),
                                 {},
                                 (0, l.Z)({}, r.id, e.isIntersecting)
                               );
@@ -1122,7 +1130,7 @@
                     }
                   });
                 },
-                { root: null, rootMargin: "0px", threshold: 0.7 }
+                { root: null, rootMargin: "-96px", threshold: 0.1 }
               );
               return (
                 Object.values(c).forEach(function (t) {
@@ -1143,21 +1151,24 @@
           );
         var j = (0, x.useRef)(null);
         return i
-          ? (0, ep.jsx)("div", {
+          ? (0, eg.jsx)("div", {
               className: "flex h-full w-full items-center justify-center",
-              children: (0, ep.jsx)(m.Z, {}),
+              children: (0, eg.jsx)(m.Z, {}),
             })
-          : (0, ep.jsxs)(ep.Fragment, {
+          : (0, eg.jsxs)(eg.Fragment, {
               children: [
                 n
-                  ? (0, ep.jsx)(eu.S, { redirectUrl: (0, v.cy)() })
-                  : (0, ep.jsx)(eP, { pageSearchRef: j }),
-                (0, ep.jsxs)("div", {
+                  ? (0, eg.jsx)(em.S, {
+                      redirectUrl: (0, v.cy)(),
+                      className: "sticky top-0 z-30 h-14 dark:bg-gray-800",
+                    })
+                  : (0, eg.jsx)(ez, { pageSearchRef: j }),
+                (0, eg.jsxs)("div", {
                   className: "mx-auto max-w-3xl overflow-x-clip px-4",
                   children: [
-                    (0, ep.jsx)(eb, {}),
+                    (0, eg.jsx)(eP, {}),
                     !n &&
-                      (0, ep.jsx)(eC, {
+                      (0, eg.jsx)(eR, {
                         className:
                           "z-20 mb-6 mt-2 flex-grow shadow-[0px_10px_10px_-3px_rgba(0,0,0,0.05)]",
                         inputClassName: "md:h-14 h-12 text-base pl-12",
@@ -1165,7 +1176,7 @@
                         ref: j,
                       }),
                     h.length > 1 &&
-                      (0, ep.jsx)(ej, {
+                      (0, eg.jsx)(ew, {
                         displayGroups: h,
                         currentDisplayGroup: b,
                         scrollToDisplayGroup: function (e) {
@@ -1182,7 +1193,7 @@
                               }));
                         },
                       }),
-                    (0, ep.jsx)("div", { ref: y, className: "scroll-mt-24" }),
+                    (0, eg.jsx)("div", { ref: y, className: "scroll-mt-24" }),
                     null !==
                       (r =
                         null == o
@@ -1190,8 +1201,8 @@
                           : o.cuts.map(function (e) {
                               var t, r, n;
                               return "featured" === e.info.display_type
-                                ? (0, ep.jsx)(
-                                    ew,
+                                ? (0, eg.jsx)(
+                                    eS,
                                     {
                                       title: e.info.title,
                                       description: e.info.description,
@@ -1204,8 +1215,8 @@
                                     },
                                     e.info.id
                                   )
-                                : (0, ep.jsx)(
-                                    eS,
+                                : (0, eg.jsx)(
+                                    eC,
                                     {
                                       title: e.info.title,
                                       description: e.info.description,
@@ -1230,31 +1241,31 @@
                   ],
                 }),
                 (null == o ? void 0 : o.workspace_filtered) &&
-                  (0, ep.jsx)(eN, {}),
+                  (0, eg.jsx)(ek, {}),
               ],
             });
       }
-      function eb() {
-        return (0, ep.jsxs)("div", {
-          className: "mb-6 mt-12",
+      function eP() {
+        return (0, eg.jsxs)("div", {
+          className: "mb-6",
           children: [
-            (0, ep.jsx)("div", {
+            (0, eg.jsx)("div", {
               className:
                 "my-2 text-center text-3xl font-bold md:my-4 md:text-5xl",
-              children: (0, ep.jsx)(en.Z, ex({}, eI.discoverySplashHeader)),
+              children: (0, eg.jsx)(eo.Z, ey({}, eG.discoverySplashHeader)),
             }),
-            (0, ep.jsx)("div", {
+            (0, eg.jsx)("div", {
               className:
                 "mx-auto w-full text-center text-sm font-light text-token-text-secondary md:text-lg md:leading-tight",
-              children: (0, ep.jsx)(
-                en.Z,
-                ex({}, eI.discoverySplashDescription)
+              children: (0, eg.jsx)(
+                eo.Z,
+                ey({}, eG.discoverySplashDescription)
               ),
             }),
           ],
         });
       }
-      function ej(e) {
+      function ew(e) {
         var t = e.displayGroups,
           r = e.currentDisplayGroup,
           n = e.scrollToDisplayGroup,
@@ -1286,33 +1297,33 @@
             },
             [s]
           ),
-          (0, ep.jsxs)("div", {
+          (0, eg.jsxs)("div", {
             className:
               "relative sticky top-14 z-10 mb-12 w-screen bg-white pb-2 text-sm dark:bg-gray-800 md:w-full md:pb-0",
             children: [
               i &&
-                (0, ep.jsx)("div", {
+                (0, eg.jsx)("div", {
                   className:
                     "absolute left-0 top-0 z-10 flex hidden h-full items-end bg-gradient-to-r from-white from-50% to-transparent pr-8 dark:from-gray-800 md:block",
-                  children: (0, ep.jsx)("button", {
+                  children: (0, eg.jsx)("button", {
                     className:
                       "mt-2 rounded-full bg-gray-100 p-1 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600",
                     onClick: function () {
                       null != s.current &&
                         s.current.scrollBy({ left: -400, behavior: "smooth" });
                     },
-                    children: (0, ep.jsx)(em.FX, { className: "icon-sm" }),
+                    children: (0, eg.jsx)(ex.FX, { className: "icon-sm" }),
                   }),
                 }),
-              (0, ep.jsx)("div", {
+              (0, eg.jsx)("div", {
                 className:
                   "no-scrollbar flex scroll-m-5 gap-1.5 overflow-x-auto md:overflow-hidden",
                 ref: s,
                 children: t.map(function (e) {
-                  return (0, ep.jsx)(
+                  return (0, eg.jsx)(
                     "div",
                     {
-                      className: (0, X.default)(
+                      className: (0, J.default)(
                         "cursor-pointer whitespace-nowrap rounded-3xl px-3 py-2 md:px-2",
                         e.id === (null == r ? void 0 : r.id)
                           ? "border-token-text-primary bg-black text-white dark:bg-gray-100 dark:text-gray-800 md:rounded-none md:border-b-2 md:bg-transparent md:text-black dark:md:bg-transparent dark:md:text-white"
@@ -1328,46 +1339,46 @@
                 }),
               }),
               c &&
-                (0, ep.jsx)("div", {
+                (0, eg.jsx)("div", {
                   className:
                     "absolute right-0 top-0 hidden h-full bg-gradient-to-l from-white from-50% to-transparent pl-8 dark:from-gray-800 md:block",
-                  children: (0, ep.jsx)("button", {
+                  children: (0, eg.jsx)("button", {
                     className:
                       "mt-2 rounded-full bg-gray-100 p-1 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600",
                     onClick: function () {
                       null != s.current &&
                         s.current.scrollBy({ left: 400, behavior: "smooth" });
                     },
-                    children: (0, ep.jsx)(em.Gb, { className: "icon-sm" }),
+                    children: (0, eg.jsx)(ex.Gb, { className: "icon-sm" }),
                   }),
                 }),
             ],
           })
         );
       }
-      function eN() {
-        var e = (0, es.Z)(),
-          t = (0, el.$3)(),
+      function ek() {
+        var e = (0, ei.Z)(),
+          t = (0, eu.$3)(),
           r = (0, p.tN)(function (e) {
             return e.isDesktopNavCollapsed;
           });
-        return (0, ep.jsxs)("div", {
-          className: (0, X.default)(
+        return (0, eg.jsxs)("div", {
+          className: (0, J.default)(
             "fixed bottom-0 flex w-full items-center justify-center gap-2 bg-gray-100 p-3 text-sm text-token-text-tertiary dark:bg-gray-700",
             !r && "md:w-[calc(100%-16rem)]"
           ),
           children: [
-            (0, ep.jsx)(em.Oz, { className: "icon-sm" }),
-            e.formatMessage(eI.discoveryThirdPartyGPTsDisabled, {
+            (0, eg.jsx)(ex.Oz, { className: "icon-sm" }),
+            e.formatMessage(eG.discoveryThirdPartyGPTsDisabled, {
               workspaceName: t,
             }),
           ],
         });
       }
-      function eP(e) {
+      function ez(e) {
         var t = e.pageSearchRef,
           r = (0, v.AA)(),
-          n = (0, et.useRouter)(),
+          n = (0, en.useRouter)(),
           s = (0, x.useState)(!1),
           o = s[0],
           i = s[1];
@@ -1396,42 +1407,46 @@
             },
             [t]
           ),
-          (0, ep.jsx)(ep.Fragment, {
-            children: (0, ep.jsxs)(d.QT, {
+          (0, eg.jsx)(eg.Fragment, {
+            children: (0, eg.jsxs)(d.QT, {
               className:
-                "z-30 mx-auto mt-2 flex w-full justify-center gap-2 whitespace-nowrap",
+                "z-30 mx-auto flex w-full justify-center gap-2 whitespace-nowrap",
               children: [
-                (0, ep.jsx)("div", { className: "w-[calc((100%-768px)/2)]" }),
-                (0, ep.jsx)(eC, {
+                (0, eg.jsx)("div", { className: "w-[calc((100%-768px)/2)]" }),
+                (0, eg.jsx)(eR, {
                   className: "max-w-3xl flex-grow",
-                  inputClassName: (0, X.default)(
+                  inputClassName: (0, J.default)(
                     "h-10 text-sm pl-9",
                     !o && "hidden"
                   ),
                   iconClassName: "left-4",
                 }),
-                (0, ep.jsxs)("div", {
+                (0, eg.jsxs)("div", {
                   className:
                     "flex flex min-w-[calc((100%-768px)/2)] justify-end gap-2",
                   children: [
-                    (0, ep.jsx)("button", {
+                    (0, eg.jsx)("button", {
                       color: "neutral",
                       onClick: function () {
-                        n.push("/gpts/mine", void 0, { shallow: !0 });
+                        n.push("/gpts/mine", void 0, { shallow: !0 }),
+                          X.A.logEvent(K.M.storeMyGizmos);
                       },
                       className:
                         "rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-600",
-                      children: (0, ep.jsx)(en.Z, ex({}, eI.discoveryMyGPTs)),
+                      children: (0, eg.jsx)(eo.Z, ey({}, eG.discoveryMyGPTs)),
                     }),
-                    (0, ep.jsxs)(c.z, {
+                    (0, eg.jsxs)(c.z, {
                       color: "primary",
                       onClick: function () {
-                        n.push(r, void 0, { shallow: !0 });
+                        return X.A.logEvent(K.M.storeCreateGizmo);
                       },
                       className: "focus:ring-0 focus:ring-offset-0",
+                      as: "link",
+                      to: r,
+                      openNewTab: !0,
                       children: [
-                        (0, ep.jsx)(em.Ro, { className: "icon-sm -mx-1" }),
-                        (0, ep.jsx)(en.Z, ex({}, eI.discoveryCreateGPT)),
+                        (0, eg.jsx)(ex.Ro, { className: "icon-sm -mx-1" }),
+                        (0, eg.jsx)(eo.Z, ey({}, eG.discoveryCreateGPT)),
                       ],
                     }),
                   ],
@@ -1441,18 +1456,18 @@
           })
         );
       }
-      var ew = (0, x.forwardRef)(function (e, t) {
+      var eS = (0, x.forwardRef)(function (e, t) {
         var r = e.title,
           n = e.description,
           s = e.items;
-        return (0, ep.jsx)(eM, {
+        return (0, eg.jsx)(e_, {
           title: r,
           description: n,
           ref: t,
-          children: (0, ep.jsx)(eh, {
+          children: (0, eg.jsx)(ej, {
             children: s.map(function (e, t) {
-              return (0, ep.jsx)(
-                ek,
+              return (0, eg.jsx)(
+                eE,
                 { resource: e.resource },
                 "".concat(t, "-").concat(e.resource.gizmo.id)
               );
@@ -1460,7 +1475,7 @@
           }),
         });
       });
-      function ek(e) {
+      function eE(e) {
         var t,
           r,
           n,
@@ -1469,15 +1484,15 @@
             null === (t = s.gizmo.vanity_metrics) || void 0 === t
               ? void 0
               : t.num_conversations_str;
-        return (0, ep.jsx)(ec.h9, {
-          children: (0, ep.jsxs)(ee(), {
+        return (0, eg.jsx)(ef.h9, {
+          children: (0, eg.jsxs)(er(), {
             href: (0, u.m_)(s),
             shallow: !0,
             className:
               "flex h-24 items-center gap-5 overflow-hidden rounded-xl bg-gray-50 px-7 py-8 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 md:h-32 lg:h-36",
             target: "_blank",
             children: [
-              (0, ep.jsx)(ef.Z, {
+              (0, eg.jsx)(ev.Z, {
                 isFirstParty: !!(
                   null !== (r = s.gizmo.tags) &&
                   void 0 !== r &&
@@ -1490,30 +1505,30 @@
                     : void 0,
                 className: "h-16 w-16 flex-shrink-0 md:h-24 md:w-24",
               }),
-              (0, ep.jsxs)("div", {
+              (0, eg.jsxs)("div", {
                 className: "flex flex-col",
                 children: [
-                  (0, ep.jsx)("div", {
+                  (0, eg.jsx)("div", {
                     className: "font-medium line-clamp-2 md:text-lg",
                     children: s.gizmo.display.name,
                   }),
-                  (0, ep.jsx)("span", {
+                  (0, eg.jsx)("span", {
                     className: "text-xs line-clamp-2 md:line-clamp-3",
                     children: s.gizmo.display.description,
                   }),
-                  (0, ep.jsxs)("div", {
+                  (0, eg.jsxs)("div", {
                     className:
                       "mt-1 flex justify-start gap-1 text-xs font-light text-token-text-tertiary line-clamp-1",
                     children: [
-                      (0, ep.jsx)(ed.ZP, { gizmo: s, className: "text-xs" }),
+                      (0, eg.jsx)(ep.ZP, { gizmo: s, className: "text-xs" }),
                       o &&
-                        (0, ep.jsxs)(ep.Fragment, {
+                        (0, eg.jsxs)(eg.Fragment, {
                           children: [
-                            (0, ep.jsx)("span", {
+                            (0, eg.jsx)("span", {
                               className: "text-[10px]",
                               children: "•",
                             }),
-                            (0, ep.jsx)(em.M4, { className: "mt-0.5 h-3 w-3" }),
+                            (0, eg.jsx)(ex.M4, { className: "mt-0.5 h-3 w-3" }),
                             o,
                           ],
                         }),
@@ -1525,7 +1540,7 @@
           }),
         });
       }
-      var eS = (0, x.forwardRef)(function (e, t) {
+      var eC = (0, x.forwardRef)(function (e, t) {
         var r,
           n = e.items,
           s = e.title,
@@ -1578,7 +1593,7 @@
                 l = e * Math.abs(i - s);
               if (n) {
                 let t = o * e,
-                  r = (0, K.R)(n);
+                  r = (0, Q.R)(n);
                 l = r(l / t) * t;
               }
               return t + l;
@@ -1597,26 +1612,27 @@
             },
             [b.length, N]
           ),
-          (0, ep.jsxs)(eM, {
+          (0, eg.jsxs)(e_, {
             title: s,
             description: o,
             ref: t,
             children: [
-              (0, ep.jsxs)(eh, {
+              (0, eg.jsxs)(ej, {
                 children: [
                   n.map(function (e, t) {
-                    return (0, ep.jsx)(
-                      ez,
-                      { resource: e.resource, rank: t + 1 },
+                    return (0, eg.jsx)(
+                      eM,
+                      { resource: e.resource, rank: t + 1, cutId: i },
                       t
                     );
                   }),
                   b.map(function (e, t) {
-                    return (0, ep.jsx)(
-                      ez,
+                    return (0, eg.jsx)(
+                      eM,
                       {
                         resource: e.resource,
                         rank: n.length + t + 1,
+                        cutId: i,
                         delay: k(t - N, b.length - N),
                       },
                       t
@@ -1626,54 +1642,64 @@
               }),
               (!d || g || y) &&
                 null != l &&
-                (0, ep.jsx)(c.z, {
+                (0, eg.jsx)(c.z, {
                   color: "neutral",
                   onClick: function () {
-                    f(!0), h();
+                    f(!0),
+                      X.A.publicEvent(K.M.storeLoadMore, { section: i }),
+                      h();
                   },
                   className:
                     "mt-2 h-10 w-full focus:ring-0 focus:ring-offset-0 md:mt-3",
                   children: y
-                    ? (0, ep.jsx)(m.Z, {})
-                    : (0, ep.jsx)(en.Z, ex({}, eI.discoveryLoadMore)),
+                    ? (0, eg.jsx)(m.Z, {})
+                    : (0, eg.jsx)(eo.Z, ey({}, eG.discoveryLoadMore)),
                 }),
-              (0, ep.jsx)("div", { ref: w }),
+              (0, eg.jsx)("div", { ref: w }),
             ],
           })
         );
       });
-      function ez(e) {
+      function eM(e) {
         var t,
           r,
           n,
           s = e.resource,
           o = e.rank,
-          i = e.delay,
-          l =
+          i = e.cutId,
+          l = e.delay,
+          a =
             null === (t = s.gizmo.vanity_metrics) || void 0 === t
               ? void 0
               : t.num_conversations_str;
-        return (0, ep.jsx)(ec.h9, {
-          delay: i,
-          children: (0, ep.jsxs)(
-            ee(),
+        return (0, eg.jsx)(ef.h9, {
+          delay: l,
+          children: (0, eg.jsxs)(
+            er(),
             {
               href: (0, u.m_)(s),
               shallow: !0,
               className:
                 "flex h-[104px] items-center gap-2.5 overflow-hidden rounded-xl px-1 py-4 hover:bg-gray-50 dark:hover:bg-gray-700 md:px-3 md:py-4 lg:px-3",
               target: "_blank",
+              onClick: function () {
+                X.A.publicEvent(K.M.storeClickGizmo, {
+                  gizmo_id: s.gizmo.id,
+                  position: o,
+                  section: i,
+                });
+              },
               children: [
-                (0, ep.jsx)("div", {
+                (0, eg.jsx)("div", {
                   className:
                     "text-md flex w-8 shrink-0 items-center justify-center font-semibold",
                   children: o,
                 }),
-                (0, ep.jsxs)("div", {
+                (0, eg.jsxs)("div", {
                   className:
                     "flex w-full flex-grow items-center gap-4 overflow-hidden",
                   children: [
-                    (0, ep.jsx)(ef.Z, {
+                    (0, eg.jsx)(ev.Z, {
                       isFirstParty: !!(
                         null !== (r = s.gizmo.tags) &&
                         void 0 !== r &&
@@ -1686,35 +1712,35 @@
                           : void 0,
                       className: "h-12 w-12 flex-shrink-0",
                     }),
-                    (0, ep.jsxs)("div", {
+                    (0, eg.jsxs)("div", {
                       className: "overflow-hidden text-ellipsis break-words",
                       children: [
-                        (0, ep.jsx)("span", {
+                        (0, eg.jsx)("span", {
                           className:
                             "text-sm font-medium leading-tight line-clamp-2",
                           children: s.gizmo.display.name,
                         }),
-                        (0, ep.jsx)("span", {
+                        (0, eg.jsx)("span", {
                           className: "text-xs line-clamp-3",
                           children: s.gizmo.display.description,
                         }),
-                        (0, ep.jsxs)("div", {
+                        (0, eg.jsxs)("div", {
                           className:
                             "mt-1 flex items-center gap-1 text-ellipsis whitespace-nowrap pr-1 text-xs text-token-text-tertiary",
                           children: [
-                            (0, ep.jsx)(ed.ZP, {
+                            (0, eg.jsx)(ep.ZP, {
                               gizmo: s,
                               className: "text-xs",
                             }),
-                            l &&
-                              (0, ep.jsxs)(ep.Fragment, {
+                            a &&
+                              (0, eg.jsxs)(eg.Fragment, {
                                 children: [
-                                  (0, ep.jsx)("span", {
+                                  (0, eg.jsx)("span", {
                                     className: "text-[8px]",
                                     children: "•",
                                   }),
-                                  (0, ep.jsx)(em.M4, { className: "h-3 w-3" }),
-                                  l,
+                                  (0, eg.jsx)(ex.M4, { className: "h-3 w-3" }),
+                                  a,
                                 ],
                               }),
                           ],
@@ -1729,44 +1755,44 @@
           ),
         });
       }
-      var eC = (0, x.forwardRef)(function (e, t) {
+      var eR = (0, x.forwardRef)(function (e, t) {
           var r = e.className,
             n = e.inputClassName,
             s = e.iconClassName,
-            o = (0, es.Z)(),
+            o = (0, ei.Z)(),
             i = (0, x.useState)(""),
             l = i[0],
             a = i[1],
             c = (0, x.useState)(!1),
             u = c[0],
             d = c[1];
-          return (0, ep.jsxs)(H, {
+          return (0, eg.jsxs)(H, {
             as: "div",
-            className: (0, X.default)("group relative rounded-xl", r),
+            className: (0, J.default)("group relative rounded-xl", r),
             ref: t,
             children: [
-              (0, ep.jsx)(er.jRj, {
-                className: (0, X.default)(
+              (0, eg.jsx)(es.jRj, {
+                className: (0, J.default)(
                   "pointer-none absolute left-3 top-0 mr-2 h-full text-gray-500",
                   s
                 ),
                 size: 16,
               }),
-              (0, ep.jsx)("input", {
-                className: (0, X.default)(
+              (0, eg.jsx)("input", {
+                className: (0, J.default)(
                   "hover:dark-border-gray-500 z-10 w-full rounded-xl border border-gray-200 py-2 pr-3 font-normal outline-0 delay-100",
                   u
                     ? "border-gray-300 dark:border-gray-600 dark:bg-gray-700"
                     : "hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 hover:dark:bg-gray-700",
                   n
                 ),
-                placeholder: o.formatMessage(eI.discoverySearch),
+                placeholder: o.formatMessage(eG.discoverySearch),
                 value: l,
                 onChange: function (e) {
                   return a(e.target.value);
                 },
                 onFocus: function () {
-                  return d(!0);
+                  d(!0), X.A.publicEvent(K.M.searchOpened);
                 },
                 onBlurCapture: function (e) {
                   var t, r;
@@ -1779,169 +1805,219 @@
                     d(!1);
                 },
               }),
-              (0, ep.jsx)(ea.m, {
+              (0, eg.jsx)(ed.m, {
                 show: u,
-                children: (0, ep.jsx)(H.Panel, {
+                children: (0, eg.jsx)(H.Panel, {
                   static: !0,
                   className:
                     "absolute top-[calc(100%-10px)] max-h-[calc(100vh-320px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
-                  children: (0, ep.jsx)(eO, { query: l }),
+                  children: (0, eg.jsx)(eI, { query: l }),
                 }),
               }),
             ],
           });
         }),
-        eE = ei.Z.div(
+        eT = ea.Z.div(
           i ||
             (i = (0, a.Z)([
               "pb-2 px-4 text-xs font-medium text-token-text-tertiary",
             ]))
         );
-      function eT() {
-        return (0, ep.jsx)("div", {
+      function eO() {
+        return (0, eg.jsx)("div", {
           className: "flex items-center justify-center py-1",
-          children: (0, ep.jsx)(m.Z, {}),
+          children: (0, eg.jsx)(m.Z, {}),
         });
       }
-      function eO(e) {
+      function eI(e) {
         var t = e.query,
           r = (0, x.useState)(""),
           n = r[0],
-          s = r[1];
+          s = r[1],
+          o = (0, x.useRef)((0, ec.Z)());
+        (0, x.useEffect)(function () {
+          X.A.publicEvent(K.M.searchStart);
+        }, []),
+          (0, x.useEffect)(
+            function () {
+              var e = setTimeout(function () {
+                s(t);
+              }, 250);
+              return function () {
+                clearTimeout(e);
+              };
+            },
+            [t]
+          );
+        var i = (0, u.K9)(n),
+          l = i.data,
+          a = i.isLoading;
         (0, x.useEffect)(
           function () {
-            var e = setTimeout(function () {
-              s(t);
-            }, 250);
-            return function () {
-              clearTimeout(e);
-            };
+            !a &&
+              l &&
+              ((o.current = (0, ec.Z)()),
+              l.items.length > 0
+                ? Promise.all(
+                    l.items.map(function (e, t) {
+                      X.A.publicEvent(K.M.searchDisplayResult, {
+                        search_id: o.current,
+                        gizmo_id: e.gizmo.id,
+                        position: t,
+                        query: n,
+                      });
+                    })
+                  )
+                : X.A.publicEvent(K.M.searchNoResults, { query: n }));
           },
-          [t]
+          [l, a, n]
         );
-        var o = (0, u.K9)(n),
-          i = o.data,
-          l = o.isLoading,
-          a = (0, u.Fi)("recent", 3),
-          c = a.data,
-          d = a.isLoading;
+        var c = (0, u.Fi)("recent", 3),
+          d = c.data,
+          f = c.isLoading;
         if ("" === t) {
-          if (d) return (0, ep.jsx)(eT, {});
-          if (null != c) {
-            var f = c.pages.flatMap(function (e) {
+          if (f) return (0, eg.jsx)(eO, {});
+          if (null != d) {
+            var m = d.pages.flatMap(function (e) {
               return e.list.items;
             });
-            return f.length > 0
-              ? (0, ep.jsxs)(ep.Fragment, {
+            return m.length > 0
+              ? (0, eg.jsxs)(eg.Fragment, {
                   children: [
-                    (0, ep.jsx)(eE, {
-                      children: (0, ep.jsx)(
-                        en.Z,
-                        ex({}, eI.discoverySearchRecentlyUsed)
+                    (0, eg.jsx)(eT, {
+                      children: (0, eg.jsx)(
+                        eo.Z,
+                        ey({}, eG.discoverySearchRecentlyUsed)
                       ),
                     }),
-                    f.map(function (e) {
-                      return (0, ep.jsx)(
-                        eR,
-                        { resource: e.resource },
+                    m.map(function (e, r) {
+                      return (0, eg.jsx)(
+                        eZ,
+                        {
+                          searchId: o.current,
+                          position: r,
+                          query: t,
+                          resource: e.resource,
+                        },
                         e.resource.gizmo.id
                       );
                     }),
                   ],
                 })
-              : (0, ep.jsx)(eE, {
-                  children: (0, ep.jsx)(
-                    en.Z,
-                    ex({}, eI.discoverySearchRecentlyUsedEmpty)
+              : (0, eg.jsx)(eT, {
+                  children: (0, eg.jsx)(
+                    eo.Z,
+                    ey({}, eG.discoverySearchRecentlyUsedEmpty)
                   ),
                 });
           }
         }
-        return l
-          ? (0, ep.jsx)(eT, {})
-          : i && 0 !== i.items.length
-            ? (0, ep.jsxs)(ep.Fragment, {
+        return a
+          ? (0, eg.jsx)(eO, {})
+          : l && 0 !== l.items.length
+            ? (0, eg.jsxs)(eg.Fragment, {
                 children: [
-                  (0, ep.jsx)(eE, {
-                    children: (0, ep.jsx)(
-                      en.Z,
-                      ex({}, eI.discoverySearchResults)
+                  (0, eg.jsx)(eT, {
+                    children: (0, eg.jsx)(
+                      eo.Z,
+                      ey({}, eG.discoverySearchResults)
                     ),
                   }),
-                  i.items.map(function (e) {
-                    return (0, ep.jsx)(eR, { resource: e }, e.gizmo.id);
+                  l.items.map(function (e, r) {
+                    return (0, eg.jsx)(
+                      eZ,
+                      {
+                        searchId: o.current,
+                        position: r,
+                        resource: e,
+                        query: t,
+                      },
+                      e.gizmo.id
+                    );
                   }),
                 ],
               })
-            : (0, ep.jsx)("div", {
+            : (0, eg.jsx)("div", {
                 className: "mx-2",
-                children: (0, ep.jsx)(eE, {
-                  children: (0, ep.jsx)(
-                    en.Z,
-                    ex({}, eI.discoveryNoResultsSearch)
+                children: (0, eg.jsx)(eT, {
+                  children: (0, eg.jsx)(
+                    eo.Z,
+                    ey({}, eG.discoveryNoResultsSearch)
                   ),
                 }),
               });
       }
-      function eR(e) {
+      function eZ(e) {
         var t,
           r,
           n,
-          s = e.resource,
-          o =
-            null === (t = s.gizmo.vanity_metrics) || void 0 === t
+          s = e.searchId,
+          o = e.resource,
+          i = e.position,
+          l = e.query,
+          a =
+            null === (t = o.gizmo.vanity_metrics) || void 0 === t
               ? void 0
               : t.num_conversations_str;
-        return (0, ep.jsxs)(ee(), {
-          href: (0, u.m_)(s),
+        return (0, eg.jsxs)(er(), {
+          href: (0, u.m_)(o),
           className:
             "mx-2 flex gap-3 rounded-lg px-2 py-2 hover:bg-gray-50 dark:hover:bg-gray-600",
           target: "_blank",
+          onClick: function () {
+            X.A.publicEvent(K.M.storeClickGizmo, {
+              search_id: s,
+              gizmo_id: o.gizmo.id,
+              position: i,
+              query: l,
+              section: "search",
+            });
+          },
           children: [
-            (0, ep.jsx)(ef.Z, {
+            (0, eg.jsx)(ev.Z, {
               isFirstParty: !!(
-                null !== (r = s.gizmo.tags) &&
+                null !== (r = o.gizmo.tags) &&
                 void 0 !== r &&
                 r.includes(f.U9.FirstParty)
               ),
               src:
-                null !== (n = s.gizmo.display.profile_picture_url) &&
+                null !== (n = o.gizmo.display.profile_picture_url) &&
                 void 0 !== n
                   ? n
                   : void 0,
               className: "h-8 w-8 shrink-0",
             }),
-            (0, ep.jsxs)("div", {
+            (0, eg.jsxs)("div", {
               className: "flex flex-col truncate",
               children: [
-                (0, ep.jsx)("span", {
+                (0, eg.jsx)("span", {
                   className: "truncate text-sm font-medium",
-                  children: s.gizmo.display.name,
+                  children: o.gizmo.display.name,
                 }),
-                (0, ep.jsxs)("div", {
+                (0, eg.jsxs)("div", {
                   className: "flex gap-2",
                   children: [
-                    (0, ep.jsx)(ed.ZP, {
-                      gizmo: s,
+                    (0, eg.jsx)(ep.ZP, {
+                      gizmo: o,
                       className: "truncate text-xs font-medium",
                       hideLink: !0,
                     }),
-                    o &&
-                      (0, ep.jsxs)(ep.Fragment, {
+                    a &&
+                      (0, eg.jsxs)(eg.Fragment, {
                         children: [
-                          (0, ep.jsx)("span", {
+                          (0, eg.jsx)("span", {
                             className:
                               "text-[10px] font-light text-token-text-tertiary",
                             children: "•",
                           }),
-                          (0, ep.jsxs)("div", {
+                          (0, eg.jsxs)("div", {
                             className:
                               "flex items-center gap-1 font-medium text-token-text-tertiary",
                             children: [
-                              (0, ep.jsx)(em.M4, { className: "icon-sm" }),
-                              (0, ep.jsx)("span", {
+                              (0, eg.jsx)(ex.M4, { className: "icon-sm" }),
+                              (0, eg.jsx)("span", {
                                 className: "text-xs line-clamp-1",
-                                children: o,
+                                children: a,
                               }),
                             ],
                           }),
@@ -1954,38 +2030,38 @@
           ],
         });
       }
-      var eM = (0, x.forwardRef)(function (e, t) {
+      var e_ = (0, x.forwardRef)(function (e, t) {
           var r = e.title,
             n = e.description,
             s = e.className,
             o = e.children;
-          return (0, ep.jsxs)("div", {
+          return (0, eg.jsxs)("div", {
             ref: t,
-            className: "scroll-mt-24 last:pb-[50vh]",
+            className: "scroll-mt-24 last:h-[calc(100vh-6rem)]",
             children: [
-              (0, ep.jsxs)(ec.h9, {
+              (0, eg.jsxs)(ef.h9, {
                 animateTap: !1,
                 children: [
-                  (0, ep.jsx)("div", {
+                  (0, eg.jsx)("div", {
                     className: "text-xl font-medium md:text-2xl",
                     children: r,
                   }),
                   n &&
-                    (0, ep.jsx)("div", {
+                    (0, eg.jsx)("div", {
                       className:
                         "text-sm text-token-text-tertiary md:text-base",
                       children: n,
                     }),
                 ],
               }),
-              (0, ep.jsx)("div", {
-                className: (0, X.default)("mb-10 mt-4", s),
+              (0, eg.jsx)("div", {
+                className: (0, J.default)("mb-10 mt-4", s),
                 children: o,
               }),
             ],
           });
         }),
-        eI = (0, eo.vU)({
+        eG = (0, el.vU)({
           discoveryEmpty: {
             id: "gizmo.discovery.empty",
             defaultMessage: "Nothing to discover",
@@ -2123,30 +2199,31 @@
     61305: function (e, t, r) {
       r.d(t, {
         Z: function () {
-          return c;
+          return u;
         },
       });
       var n = r(49516),
         s = r(83562),
         o = r(35212),
         i = r(10721),
-        l = r(17080),
-        a = r(35250);
-      function c(e) {
+        l = r(8024),
+        a = r(17080),
+        c = r(35250);
+      function u(e) {
         var t = e.children,
           r = (0, i.useRouter)();
-        return (0, a.jsx)(o.Z, {
+        return (0, c.jsx)(o.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, a.jsxs)(s.ZP, {
+          sidebar: (0, c.jsxs)(s.ZP, {
             onNewThread: function () {
               r.push("/");
             },
             children: [
-              (0, a.jsx)(l.Dy, {}),
-              (0, a.jsx)(n.Z, { activeId: void 0 }),
+              (0, c.jsx)(a.Dy, {}),
+              (0, c.jsx)(n.Z, { activeId: void 0 }),
             ],
           }),
-          children: t,
+          children: (0, c.jsx)(l.Z, { children: t }),
         });
       }
     },
@@ -2159,7 +2236,7 @@
           return G;
         },
         h9: function () {
-          return R;
+          return T;
         },
         r1: function () {
           return I;
@@ -2189,17 +2266,17 @@
         P = r.n(N),
         w = r(10721),
         k = r(70079),
-        S = r(70671),
-        z = r(94968),
-        C = r(21389),
-        E = r(65865),
-        T = r(87942),
-        O = r(35250);
-      function R(e) {
+        z = r(70671),
+        S = r(94968),
+        E = r(21389),
+        C = r(65865),
+        M = r(87942),
+        R = r(35250);
+      function T(e) {
         var t = e.delay,
           r = e.animateTap,
           n = e.children;
-        return (0, O.jsx)(j.E.div, {
+        return (0, R.jsx)(j.E.div, {
           whileTap: { scale: void 0 === r || r ? 0.98 : void 0 },
           initial: { opacity: 0, translateY: 5 },
           animate: {
@@ -2214,7 +2291,7 @@
           children: n,
         });
       }
-      function M(e) {
+      function O(e) {
         var t,
           r,
           n = e.gizmoResource,
@@ -2227,31 +2304,31 @@
               ? r
               : v.Zz.Private,
           i = (0, x.XA)(o),
-          l = (0, S.Z)();
-        return (0, O.jsxs)("div", {
+          l = (0, z.Z)();
+        return (0, R.jsxs)("div", {
           children: [
             n.gizmo.share_recipient !== v.Zz.Private && null != s
-              ? (0, O.jsxs)("div", {
+              ? (0, R.jsxs)("div", {
                   className: "flex items-center gap-1",
                   children: [
-                    (0, O.jsx)(f.M4, { className: "icon-sm" }),
-                    (0, O.jsx)("span", {
-                      children: l.formatMessage(A.conversationCountStrLabel, {
+                    (0, R.jsx)(f.M4, { className: "icon-sm" }),
+                    (0, R.jsx)("span", {
+                      children: l.formatMessage(F.conversationCountStrLabel, {
                         numConvos: s,
                       }),
                     }),
                   ],
                 })
               : void 0,
-            (0, O.jsxs)("div", {
+            (0, R.jsxs)("div", {
               className: "flex items-center gap-1",
               children: [
                 o === v.Zz.Link || o === v.Zz.Marketplace
-                  ? (0, O.jsx)(f.Ao, { className: "icon-sm" })
+                  ? (0, R.jsx)(f.Ao, { className: "icon-sm" })
                   : o === v.Zz.Workspace
-                    ? (0, O.jsx)(f.oq, { className: "icon-sm" })
-                    : (0, O.jsx)(f.LX, { className: "icon-sm" }),
-                (0, O.jsx)("span", { className: "line-clamp-1", children: i }),
+                    ? (0, R.jsx)(f.oq, { className: "icon-sm" })
+                    : (0, R.jsx)(f.LX, { className: "icon-sm" }),
+                (0, R.jsx)("span", { className: "line-clamp-1", children: i }),
               ],
             }),
           ],
@@ -2269,9 +2346,9 @@
           p = !!(null === (t = s.gizmo.tags) || void 0 === t
             ? void 0
             : t.includes(v.U9.FirstParty));
-        return (0, O.jsx)(D, {
+        return (0, R.jsx)(A, {
           href: m ? (0, h.AA)(s.gizmo.id) : (0, d.m_)(s),
-          icon: (0, O.jsx)(c.Z, {
+          icon: (0, R.jsx)(c.Z, {
             isFirstParty: p,
             src:
               null !==
@@ -2287,25 +2364,25 @@
           description:
             null !== (n = s.gizmo.display.description) && void 0 !== n ? n : "",
           byline: l
-            ? (0, O.jsx)(M, { gizmoResource: s })
-            : (0, O.jsx)(E.ZP, { gizmo: s }),
-          buttons: (0, O.jsxs)(O.Fragment, {
+            ? (0, R.jsx)(O, { gizmoResource: s })
+            : (0, R.jsx)(C.ZP, { gizmo: s }),
+          buttons: (0, R.jsxs)(R.Fragment, {
             children: [
               l &&
-                (0, O.jsx)(a.u, {
+                (0, R.jsx)(a.u, {
                   label: "Edit GPT",
                   className: "flex justify-center",
                   side: "top",
-                  children: (0, O.jsx)("button", {
+                  children: (0, R.jsx)("button", {
                     className:
                       "rounded-lg px-3 py-2 text-token-text-primary transition-transform duration-100 ease-in hover:bg-white active:scale-[0.9] dark:bg-transparent dark:hover:bg-gray-700",
                     onClick: function () {
                       i.push((0, h.AA)(s.gizmo.id), void 0, { shallow: !0 });
                     },
-                    children: (0, O.jsx)(f.eu, { className: "icon-sm" }),
+                    children: (0, R.jsx)(f.eu, { className: "icon-sm" }),
                   }),
                 }),
-              (0, O.jsx)(F, {
+              (0, R.jsx)(D, {
                 gizmoResource: s,
                 isOwner: l,
                 canRemoveRecent: o,
@@ -2315,7 +2392,7 @@
         });
       }
       function Z() {
-        return (0, O.jsx)("span", {
+        return (0, R.jsx)("span", {
           className:
             "rounded-full bg-blue-100 px-1.5 py-0.5 text-[10px] font-medium text-blue-600",
           children: "Beta",
@@ -2324,7 +2401,7 @@
       ((o || (o = {})).Grid1 = "grid-1"),
         ((n = i || (i = {})).Enabled = "enabled"),
         (n.ComingSoon = "coming-soon");
-      var _ = C.Z.div(
+      var _ = E.Z.div(
         s ||
           (s = (0, l.Z)([
             "flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-full border border-dashed\n",
@@ -2340,42 +2417,42 @@
         var t = e.type,
           r = (0, h.J8)(),
           n = t === i.ComingSoon;
-        return (0, O.jsxs)(a.E, {
+        return (0, R.jsxs)(a.E, {
           disabled: !n,
           label: "GPT creation will be available in the coming weeks",
           children: [
-            (0, O.jsx)(D, {
+            (0, R.jsx)(A, {
               href: r,
               disabled: n,
-              icon: (0, O.jsx)(_, {
+              icon: (0, R.jsx)(_, {
                 $disabled: n,
-                children: (0, O.jsx)(f.Ro, {
+                children: (0, R.jsx)(f.Ro, {
                   className: (0, b.default)("icon-sm", n && "opacity-30"),
                 }),
               }),
-              title: (0, O.jsxs)("div", {
+              title: (0, R.jsxs)("div", {
                 className: "flex items-center gap-1",
-                children: ["Create a GPT ", (0, O.jsx)(Z, {})],
+                children: ["Create a GPT ", (0, R.jsx)(Z, {})],
               }),
               description:
                 "Customize a version of ChatGPT for a specific purpose",
               byline: n
-                ? (0, O.jsx)("div", {
+                ? (0, R.jsx)("div", {
                     className: "flex items-center justify-end",
-                    children: (0, O.jsx)("div", {
+                    children: (0, R.jsx)("div", {
                       className: "flex items-center",
                       children: "Coming soon",
                     }),
                   })
                 : void 0,
             }),
-            (0, O.jsx)("div", {
+            (0, R.jsx)("div", {
               className: "h-px bg-gray-100 dark:bg-gray-700",
             }),
           ],
         });
       }
-      function D(e) {
+      function A(e) {
         var t = e.href,
           r = e.icon,
           n = e.title,
@@ -2390,46 +2467,46 @@
             c ? "" : "hover:bg-gray-50 dark:hover:bg-gray-700",
             u
           ),
-          f = (0, O.jsxs)(O.Fragment, {
+          f = (0, R.jsxs)(R.Fragment, {
             children: [
-              (0, O.jsxs)("div", {
+              (0, R.jsxs)("div", {
                 className:
                   "flex grow items-center overflow-hidden md:w-3/5 md:grow-0",
                 children: [
                   r,
-                  (0, O.jsxs)("div", {
+                  (0, R.jsxs)("div", {
                     className: (0, b.default)(
                       "grow overflow-hidden pl-4 pr-9 leading-tight",
                       c ? "opacity-50" : "hover:cursor-pointer"
                     ),
                     children: [
-                      (0, O.jsxs)("div", {
+                      (0, R.jsxs)("div", {
                         className: "flex items-center gap-1",
                         children: [
-                          (0, O.jsx)("span", {
+                          (0, R.jsx)("span", {
                             className: "font-medium",
                             children: n,
                           }),
                           void 0 !== s &&
                             s &&
-                            (0, O.jsx)(a.u, {
+                            (0, R.jsx)(a.u, {
                               label: "Draft",
                               className: "flex justify-center",
                               side: "top",
-                              children: (0, O.jsx)("div", {
+                              children: (0, R.jsx)("div", {
                                 className:
                                   "m-1.5 inline-block h-1.5 w-1.5 rounded-full bg-gray-200 dark:bg-gray-600",
                               }),
                             }),
                         ],
                       }),
-                      (0, O.jsx)("div", {
+                      (0, R.jsx)("div", {
                         className:
                           "overflow-hidden text-ellipsis break-words text-sm line-clamp-2",
                         children: o,
                       }),
                       null != i &&
-                        (0, O.jsx)("div", {
+                        (0, R.jsx)("div", {
                           className:
                             "text-ellipsis text-sm text-gray-500 md:hidden",
                           children: i,
@@ -2439,13 +2516,13 @@
                 ],
               }),
               null != i &&
-                (0, O.jsx)("div", {
+                (0, R.jsx)("div", {
                   className:
                     "hidden flex-1 text-ellipsis text-sm text-gray-500 md:block",
                   children: i,
                 }),
               null != l &&
-                (0, O.jsx)("div", {
+                (0, R.jsx)("div", {
                   onClick: function (e) {
                     e.preventDefault();
                   },
@@ -2459,21 +2536,19 @@
             ],
           });
         return c
-          ? (0, O.jsx)(R, {
-              children: (0, O.jsx)("span", { className: d, children: f }),
+          ? (0, R.jsx)(T, {
+              children: (0, R.jsx)("span", { className: d, children: f }),
             })
-          : (0, O.jsx)(R, {
-              children: (0, O.jsx)(P(), {
+          : (0, R.jsx)(T, {
+              children: (0, R.jsx)(P(), {
                 className: d,
                 href: t,
                 shallow: !0,
-                target: "_blank",
-                rel: "noreferrer",
                 children: f,
               }),
             });
       }
-      function F(e) {
+      function D(e) {
         var t = e.gizmoResource,
           r = e.isOwner,
           n = e.canRemoveRecent,
@@ -2484,17 +2559,17 @@
           a = l[0],
           c = l[1];
         return r || n
-          ? (0, O.jsxs)(O.Fragment, {
+          ? (0, R.jsxs)(R.Fragment, {
               children: [
-                (0, O.jsxs)(y.fC, {
+                (0, R.jsxs)(y.fC, {
                   open: a,
                   onOpenChange: function (e) {
                     return c(e);
                   },
                   children: [
-                    (0, O.jsx)(y.xz, {
+                    (0, R.jsx)(y.xz, {
                       asChild: !0,
-                      children: (0, O.jsx)("button", {
+                      children: (0, R.jsx)("button", {
                         color: "neutral",
                         className:
                           "rounded-lg bg-transparent px-3 py-2 text-token-text-primary duration-100 ease-in hover:bg-white active:scale-[0.9] dark:bg-transparent dark:hover:bg-gray-700",
@@ -2503,11 +2578,11 @@
                             return !e;
                           });
                         },
-                        children: (0, O.jsx)(f.Yr, { className: "icon-md" }),
+                        children: (0, R.jsx)(f.Yr, { className: "icon-md" }),
                       }),
                     }),
-                    (0, O.jsx)(y.Uv, {
-                      children: (0, O.jsxs)(y.VY, {
+                    (0, R.jsx)(y.Uv, {
+                      children: (0, R.jsxs)(y.VY, {
                         className:
                           "min-w-[180px] max-w-xs rounded-lg border border-gray-100 bg-token-surface-primary shadow-lg dark:border-gray-700",
                         side: "top",
@@ -2518,19 +2593,19 @@
                         },
                         children: [
                           r
-                            ? (0, O.jsxs)(p.UA, {
+                            ? (0, R.jsxs)(p.UA, {
                                 color: "danger",
                                 onClick: function () {
                                   i(!0);
                                 },
                                 children: [
-                                  (0, O.jsx)(f.a_, { className: "icon-md" }),
+                                  (0, R.jsx)(f.a_, { className: "icon-md" }),
                                   "Delete GPT",
                                 ],
                               })
-                            : (0, O.jsx)(O.Fragment, {}),
+                            : (0, R.jsx)(R.Fragment, {}),
                           n &&
-                            (0, O.jsx)(p.UA, {
+                            (0, R.jsx)(p.UA, {
                               onClick: function () {
                                 m.U.removeFromRecent(t.gizmo.id);
                               },
@@ -2542,8 +2617,8 @@
                   ],
                 }),
                 o &&
-                  (0, O.jsx)(g.h, {
-                    children: (0, O.jsx)(T.b, {
+                  (0, R.jsx)(g.h, {
+                    children: (0, R.jsx)(M.b, {
                       gizmoId: t.gizmo.id,
                       onSuccess: function () {
                         i(!1);
@@ -2557,7 +2632,7 @@
             })
           : null;
       }
-      var A = (0, z.vU)({
+      var F = (0, S.vU)({
         conversationCountStrLabel: {
           id: "gizmo.gpt.grid.conversationCountStrLabel",
           defaultMessage: "{numConvos} Chats",

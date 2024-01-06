@@ -132,42 +132,43 @@
       "use strict";
       t.d(n, {
         S: function () {
-          return d;
+          return h;
         },
         X: function () {
-          return f;
+          return d;
         },
       });
       var r = t(37097),
         i = t(29703),
         c = t(14972),
-        s = t(73040),
-        o = t.n(s),
-        l = t(2454),
-        u = t(67404),
-        a = t(35250);
-      function f(e) {
+        s = t(19841),
+        o = t(73040),
+        l = t.n(o),
+        u = t(2454),
+        a = t(67404),
+        f = t(35250);
+      function d(e) {
         var n = e.gizmo,
           t = (0, r.i6)(n);
-        return (0, a.jsxs)("div", {
+        return (0, f.jsxs)("div", {
           className: "flex h-full flex-col",
           children: [
-            (0, a.jsx)(i.N, { gizmo: n }),
-            (0, a.jsx)(d, { redirectUrl: t }),
-            (0, a.jsx)("div", {
+            (0, f.jsx)(i.N, { gizmo: n }),
+            (0, f.jsx)(h, { redirectUrl: t }),
+            (0, f.jsx)("div", {
               className: "flex grow flex-col items-center justify-center p-2",
-              children: (0, a.jsx)(u.r, {
+              children: (0, f.jsx)(a.r, {
                 gizmo: n,
                 isOwner: !1,
                 isAnon: !0,
-                children: (0, a.jsxs)("div", {
+                children: (0, f.jsxs)("div", {
                   className: "mt-7 flex flex-col gap-4",
                   children: [
-                    (0, a.jsx)(l.p, {
+                    (0, f.jsx)(u.p, {
                       href: "/auth/login?next=".concat(t),
                       children: "Sign up to chat",
                     }),
-                    (0, a.jsx)("div", {
+                    (0, f.jsx)("div", {
                       className: "text-sm text-token-text-tertiary",
                       children: "Requires ChatGPT Plus",
                     }),
@@ -178,13 +179,17 @@
           ],
         });
       }
-      function d(e) {
-        var n = e.redirectUrl;
-        return (0, a.jsxs)("div", {
-          className: "flex items-center justify-between px-7 py-4",
+      function h(e) {
+        var n = e.redirectUrl,
+          t = e.className;
+        return (0, f.jsxs)("div", {
+          className: (0, s.default)(
+            "flex items-center justify-between px-7 py-4",
+            t
+          ),
           children: [
-            (0, a.jsx)(h, {}),
-            (0, a.jsx)(o(), {
+            (0, f.jsx)(x, {}),
+            (0, f.jsx)(l(), {
               href: null != n ? "/auth/login?next=".concat(n) : "/auth/login",
               className:
                 "flex items-center rounded-lg bg-green-600 px-4 py-2 font-medium text-white transition hover:opacity-70",
@@ -193,10 +198,10 @@
           ],
         });
       }
-      function h() {
-        return (0, a.jsx)(o(), {
+      function x() {
+        return (0, f.jsx)(l(), {
           href: "/",
-          children: (0, a.jsx)(c.nI, { className: "h-8 w-8" }),
+          children: (0, f.jsx)(c.nI, { className: "h-8 w-8" }),
         });
       }
     },
@@ -204,30 +209,31 @@
       "use strict";
       t.d(n, {
         Z: function () {
-          return u;
+          return a;
         },
       });
       var r = t(49516),
         i = t(83562),
         c = t(35212),
         s = t(10721),
-        o = t(17080),
-        l = t(35250);
-      function u(e) {
+        o = t(8024),
+        l = t(17080),
+        u = t(35250);
+      function a(e) {
         var n = e.children,
           t = (0, s.useRouter)();
-        return (0, l.jsx)(c.Z, {
+        return (0, u.jsx)(c.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, l.jsxs)(i.ZP, {
+          sidebar: (0, u.jsxs)(i.ZP, {
             onNewThread: function () {
               t.push("/");
             },
             children: [
-              (0, l.jsx)(o.Dy, {}),
-              (0, l.jsx)(r.Z, { activeId: void 0 }),
+              (0, u.jsx)(l.Dy, {}),
+              (0, u.jsx)(r.Z, { activeId: void 0 }),
             ],
           }),
-          children: n,
+          children: (0, u.jsx)(o.Z, { children: n }),
         });
       }
     },

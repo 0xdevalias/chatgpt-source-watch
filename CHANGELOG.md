@@ -8,6 +8,43 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-05Z (`PEO14vuOqqjOQtCs82SgS`)
+
+### Notes
+
+- App release version (Git SHA?): `ee459c90fe0bd8be3146d1b05cac633ab3c5a86b`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6f5714b74826d9f8.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-5646d29a9fe81c6b.js
+https://cdn.oaistatic.com/_next/static/PEO14vuOqqjOQtCs82SgS/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/PEO14vuOqqjOQtCs82SgS/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-c5413facf22f70cb.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-32619f7589d1c892.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/discovery-51c1fb442a5d6a51.js
+https://cdn.oaistatic.com/_next/static/chunks/192-b633a5ea9fc82ab3.js
+```
+
+### From `_next/static/chunks/webpack-5646d29a9fe81c6b.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/851ebaec58abad64.css
+```
+
 ## 2024-01-04Z (`wvxlBkHE5usnj-32Td8Nr`)
 
 ### Notes

@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, e, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e, c, t) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-b43f54d044ec2f25.js"],
@@ -40,32 +40,32 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-565d8770e52c929a.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-deef6484f170bae2.js"],
+    "/auth/login": [s, e, "static/chunks/pages/auth/login-deef6484f170bae2.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-d11db11603a1a477.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-1cbeed1e3f3eedd3.js",
     ],
     "/bypass": ["static/chunks/pages/bypass-71f135c5de432308.js"],
-    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-b5a277fa600c8450.js"],
+    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-c5413facf22f70cb.js"],
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-8c7558ce5704445d.js",
     ],
     "/gpts/discovery": [
-      e,
-      "static/chunks/pages/gpts/discovery-04d6cb68d3f1d0f9.js",
+      c,
+      "static/chunks/pages/gpts/discovery-51c1fb442a5d6a51.js",
     ],
     "/gpts/editor": [t, "static/chunks/pages/gpts/editor-066904f093c6dd65.js"],
     "/gpts/editor/[slug]": [
       t,
       "static/chunks/pages/gpts/editor/[slug]-145af87f7e35328a.js",
     ],
-    "/gpts/mine": [e, "static/chunks/pages/gpts/mine-7e5560272a89fb83.js"],
+    "/gpts/mine": [c, "static/chunks/pages/gpts/mine-7e5560272a89fb83.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-c068cb61b8b506e3.js",
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      c,
+      e,
       "static/chunks/pages/invite/[[...referralCodeParam]]-52636a17fdba5069.js",
     ],
     "/payments/success": [
@@ -131,7 +131,7 @@
   "static/chunks/5017-dc62820c5a35986c.js",
   "static/chunks/3975-78ada888750e0be2.js",
   "static/chunks/3754-a18653d9d4bfd554.js",
-  "static/chunks/6276-29906ee73c008f82.js",
-  "static/chunks/192-865b00edd7c32b95.js"
+  "static/chunks/6276-32619f7589d1c892.js",
+  "static/chunks/192-b633a5ea9fc82ab3.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
