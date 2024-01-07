@@ -22,16 +22,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format:unpacked": "npx @biomejs/biome format --write unpacked && npx prettier --write unpacked/**/*.css && npx prettier --write unpacked/**/*.css",
     "wakaru": "npx @wakaru/cli",
-    "wakaru:unminify-chunk": "f() { CHUNK=\"$1\"; npx @wakaru/cli all \"unpacked/_next/static/chunks/${CHUNK}.js\" --unpacker-output \"stage2-unpacked/${CHUNK}\" --unminify-output \"stage3-unminified/${CHUNK}\" --perf; }; f",
+    "wakaru:unminify-chunk": "f() { CHUNK=\"$1\"; shift; npx @wakaru/cli all \"unpacked/_next/static/chunks/${CHUNK}.js\" --unpacker-output \"stage2-unpacked/${CHUNK}\" --unminify-output \"stage3-unminified/${CHUNK}\" --perf \"$@\"; }; f",
     "wakaru:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage2-unpacked/${CHUNK}\" \"./stage3-unminified/${CHUNK}\"; }; f",
     "webcrack": "npx webcrack",
-    "webcrack:unminify-chunk": "f() { CHUNK=\"$1\"; npx webcrack \"unpacked/_next/static/chunks/${CHUNK}.js\" --output \"stage3-unminified-webcrack/${CHUNK}\"; }; f",
-    "webcrack:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage3-unminified-webcrack/${CHUNK}\"; }; f"
+    "webcrack:unminify-chunk": "f() { CHUNK=\"$1\"; shift; npx webcrack \"unpacked/_next/static/chunks/${CHUNK}.js\" --output \"stage3-unminified-webcrack/${CHUNK}\" \"$@\"; }; f",
+    "webcrack:clean-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; rm -rf \"./stage3-unminified-webcrack/${CHUNK}\"; }; f",
+    "madge:chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; npm run --silent madge:svg-chunk \"$CHUNK\"; npm run --silent madge:dot-chunk \"$CHUNK\"; npm run --silent madge:json-chunk \"$CHUNK\"; }; f",
+    "madge:svg-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; echo 'Generating svg...'; mkdir -p \"$(dirname \"graphs/${CHUNK}\")\"; npx madge --image \"graphs/${CHUNK}.svg\" \"stage3-unminified/${CHUNK}\"; }; f",
+    "madge:dot-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; echo 'Generating dot...'; mkdir -p \"$(dirname \"graphs/${CHUNK}\")\"; npx madge --dot \"stage3-unminified/${CHUNK}\" > \"graphs/${CHUNK}.gv\" ; }; f",
+    "madge:json-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; echo 'Generating json...'; mkdir -p \"$(dirname \"graphs/${CHUNK}\")\"; npx madge --json \"stage3-unminified/${CHUNK}\" > \"graphs/${CHUNK}.json\" ; }; f"
   },
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "@wakaru/cli": "^0.0.5",
+    "madge": "^6.1.0",
     "webcrack": "^2.12.0"
   }
 }

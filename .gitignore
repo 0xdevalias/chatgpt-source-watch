@@ -1,6 +1,7 @@
 stage2-unpacked/
 stage3-unminified/
 stage3-unminified-webcrack/
+graphs/
 
 #IDEs
 .idea/
