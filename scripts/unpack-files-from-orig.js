@@ -24,12 +24,14 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function(rawInputPath) {
+  const trimmedInputPath = rawInputPath.trim();
+
   // Ignore lines that do not start with urlPrefix or pathPrefix
-  if (!rawInputPath.startsWith(urlPrefix) && !rawInputPath.startsWith(pathPrefix)) {
+  if (!trimmedInputPath.startsWith(urlPrefix) && !trimmedInputPath.startsWith(pathPrefix)) {
     return;
   }
 
-  const origFilePath = rawInputPath.replace(urlPrefix, '');
+  const origFilePath = trimmedInputPath.replace(urlPrefix, '');
   const origFullPath = path.join(basePath, origFilePath);
   const origFileNameWithHash = path.basename(origFullPath);
   const origDirectoryName = path.dirname(origFilePath);
