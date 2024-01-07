@@ -42,7 +42,7 @@ rl.on('line', function(rawInputPath) {
     : origDirectoryName;
 
   // Use regex to strip the hash from the filename
-  let destFileName = origFileNameWithHash.replace(/(-|\.)\w+(\.)/, '$2');
+  let destFileName = origFileNameWithHash.replace(/(.+?)([.-]\w+)?(\.\w+)$/, '$1$3')
 
   // Check if it's in _next/static/css, and rename .css file if needed
   if (origDirectoryName.includes(specialCssPath) && path.extname(origFileNameWithHash) === '.css') {
