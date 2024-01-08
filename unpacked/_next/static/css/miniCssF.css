@@ -2686,6 +2686,9 @@ textarea:focus {
 .min-w-\[50px\] {
   min-width: 50px;
 }
+.min-w-\[80vw\] {
+  min-width: 80vw;
+}
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
@@ -9540,4 +9543,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=8f2a2da44b8da8d5.css.map*/
+/*# sourceMappingURL=1033ddd3b7950a2f.css.map*/

@@ -52,7 +52,7 @@
     ],
     "/gpts/discovery": [
       c,
-      "static/chunks/pages/gpts/discovery-1adcbd1503d5106b.js",
+      "static/chunks/pages/gpts/discovery-e39da93007126323.js",
     ],
     "/gpts/editor": [t, "static/chunks/pages/gpts/editor-072951efa1e8a25c.js"],
     "/gpts/editor/[slug]": [
@@ -131,7 +131,7 @@
   "static/chunks/5017-0a08fd85cfa9ab00.js",
   "static/chunks/3975-41d682cd3b400211.js",
   "static/chunks/3754-2a73b1394b439d25.js",
-  "static/chunks/6276-3569bf96f185cf3c.js",
+  "static/chunks/6276-7521971ea5bc4b96.js",
   "static/chunks/192-af400bcd8b47f7a3.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
