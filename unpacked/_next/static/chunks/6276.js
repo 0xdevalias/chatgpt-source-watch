@@ -423,11 +423,11 @@
         return t;
       }
       _.displayName = "PopoverAPIContext";
-      let D = (0, x.createContext)(null);
-      function L() {
-        return (0, x.useContext)(D);
+      let L = (0, x.createContext)(null);
+      function D() {
+        return (0, x.useContext)(L);
       }
-      D.displayName = "PopoverGroupContext";
+      L.displayName = "PopoverGroupContext";
       let B = (0, x.createContext)(null);
       function U(e, t) {
         return (0, g.E)(t.type, G, e, t);
@@ -480,7 +480,7 @@
               () => ({ buttonId: n, panelId: o, close: () => m({ type: 1 }) }),
               [n, o, m]
             ),
-            N = L(),
+            N = D(),
             P = null == N ? void 0 : N.registerPopover,
             S = (0, M.z)(() => {
               var e;
@@ -558,7 +558,7 @@
             { isPortalled: o } = F("Popover.Button"),
             s = (0, x.useRef)(null),
             i = `headlessui-focus-sentinel-${(0, b.M)()}`,
-            l = L(),
+            l = D(),
             a = null == l ? void 0 : l.closeOthers,
             c = (0, x.useContext)(B),
             u = null !== c && c === r.panelId,
@@ -893,7 +893,7 @@
               ),
               d = (0, x.useMemo)(() => ({}), []);
             return x.createElement(
-              D.Provider,
+              L.Provider,
               { value: u },
               (0, h.sY)({
                 ourProps: { ref: n },
@@ -1486,7 +1486,7 @@
                 }),
                 (0, ey.jsxs)("div", {
                   className: (0, Q.default)(
-                    "min-w-[calc((100%-768px)/2)] justify-end gap-2",
+                    "min-w-[calc((100%-768px)/2)] min-w-fit justify-end gap-2",
                     p ? "hidden lg:flex" : "flex"
                   ),
                   children: [
@@ -1836,57 +1836,81 @@
             f = d[0],
             m = d[1],
             p = null != s ? s : f,
-            v = null != i ? i : m;
-          return (0, ey.jsxs)(W, {
-            as: "div",
-            className: (0, Q.default)("group relative rounded-xl", r),
-            ref: t,
-            children: [
-              (0, ey.jsx)(es.jRj, {
-                className: (0, Q.default)(
-                  "pointer-none absolute left-3 top-0 mr-2 h-full text-gray-500",
-                  o
-                ),
-                size: 16,
-              }),
-              (0, ey.jsx)("input", {
-                className: (0, Q.default)(
-                  "hover:dark-border-gray-500 z-10 w-full rounded-xl border border-gray-200 py-2 pr-3 font-normal outline-0 delay-100",
-                  p
-                    ? "border-gray-300 dark:border-gray-600 dark:bg-gray-700"
-                    : "hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 hover:dark:bg-gray-700",
-                  n
-                ),
-                placeholder: l.formatMessage(eF.discoverySearch),
-                value: c,
-                onChange: function (e) {
-                  return u(e.target.value);
-                },
-                onFocus: function () {
-                  v(!0), X.A.publicEvent(K.M.searchOpened);
-                },
-                onBlurCapture: function (e) {
-                  var t, r;
-                  (null !== (t = e.relatedTarget) &&
-                    void 0 !== t &&
-                    t.hasAttribute("href") &&
-                    (null === (r = e.relatedTarget) || void 0 === r
-                      ? void 0
-                      : r.getAttribute("target")) === "_blank") ||
-                    v(!1);
-                },
-              }),
-              (0, ey.jsx)(em.m, {
-                show: p,
-                children: (0, ey.jsx)(W.Panel, {
-                  static: !0,
-                  className:
-                    "absolute top-[calc(100%-10px)] max-h-[calc(100vh-320px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
-                  children: (0, ey.jsx)(eZ, { query: c }),
+            v = null != i ? i : m,
+            g = (0, x.useRef)(null);
+          return (
+            (0, x.useEffect)(
+              function () {
+                if (p) {
+                  var e = function (e) {
+                    if ("Escape" === e.key) {
+                      var t;
+                      v(!1),
+                        null === (t = g.current) || void 0 === t || t.blur();
+                    }
+                  };
+                  return (
+                    document.addEventListener("keydown", e, !1),
+                    function () {
+                      document.removeEventListener("keydown", e, !1);
+                    }
+                  );
+                }
+              },
+              [p, v]
+            ),
+            (0, ey.jsxs)(W, {
+              as: "div",
+              className: (0, Q.default)("group relative rounded-xl", r),
+              ref: t,
+              children: [
+                (0, ey.jsx)(es.jRj, {
+                  className: (0, Q.default)(
+                    "pointer-none absolute left-3 top-0 mr-2 h-full text-gray-500",
+                    o
+                  ),
+                  size: 16,
                 }),
-              }),
-            ],
-          });
+                (0, ey.jsx)("input", {
+                  className: (0, Q.default)(
+                    "hover:dark-border-gray-500 z-10 w-full rounded-xl border border-gray-200 py-2 pr-3 font-normal outline-0 delay-100",
+                    p
+                      ? "border-gray-300 dark:border-gray-600 dark:bg-gray-700"
+                      : "hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 hover:dark:bg-gray-700",
+                    n
+                  ),
+                  placeholder: l.formatMessage(eF.discoverySearch),
+                  value: c,
+                  onChange: function (e) {
+                    return u(e.target.value);
+                  },
+                  onFocus: function () {
+                    v(!0), X.A.publicEvent(K.M.searchOpened);
+                  },
+                  onBlurCapture: function (e) {
+                    var t, r;
+                    (null !== (t = e.relatedTarget) &&
+                      void 0 !== t &&
+                      t.hasAttribute("href") &&
+                      (null === (r = e.relatedTarget) || void 0 === r
+                        ? void 0
+                        : r.getAttribute("target")) === "_blank") ||
+                      v(!1);
+                  },
+                  ref: g,
+                }),
+                (0, ey.jsx)(em.m, {
+                  show: p,
+                  children: (0, ey.jsx)(W.Panel, {
+                    static: !0,
+                    className:
+                      "absolute top-[calc(100%-10px)] max-h-[calc(100vh-320px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
+                    children: (0, ey.jsx)(eZ, { query: c }),
+                  }),
+                }),
+              ],
+            })
+          );
         }),
         eI = ec.Z.div(
           i ||
@@ -2392,7 +2416,7 @@
                   children: [
                     (0, M.jsx)(f.M4, { className: "icon-sm" }),
                     (0, M.jsx)("span", {
-                      children: l.formatMessage(D.conversationCountStrLabel, {
+                      children: l.formatMessage(L.conversationCountStrLabel, {
                         numConvos: o,
                       }),
                     }),
@@ -2711,7 +2735,7 @@
             })
           : null;
       }
-      var D = (0, S.vU)({
+      var L = (0, S.vU)({
         conversationCountStrLabel: {
           id: "gizmo.gpt.grid.conversationCountStrLabel",
           defaultMessage: "{numConvos} Chats",
@@ -2720,4 +2744,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6276-3569bf96f185cf3c.js.map
+//# sourceMappingURL=6276-7521971ea5bc4b96.js.map

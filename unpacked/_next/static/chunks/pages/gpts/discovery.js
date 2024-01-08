@@ -36,8 +36,7 @@
         ),
         e)
           ? (0, _.jsx)("div", {
-              className:
-                "relative flex h-full w-full flex-1 flex-col overflow-auto",
+              className: "relative h-full w-full flex-1 flex-col overflow-auto",
               children: (0, _.jsx)(u.fN, { anon: !0 }),
             })
           : (0, _.jsx)(p, {});
@@ -67,4 +66,4 @@
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=discovery-1adcbd1503d5106b.js.map
+//# sourceMappingURL=discovery-e39da93007126323.js.map
