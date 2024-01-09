@@ -32,7 +32,9 @@
     "madge:dot-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; echo 'Generating dot...'; mkdir -p \"$(dirname \"graphs/${CHUNK}\")\"; npx madge --dot \"stage3-unminified/${CHUNK}\" > \"graphs/${CHUNK}.gv\" ; }; f",
     "madge:json-chunk": "f() { CHUNK=\"$1\"; if [ -z \"$CHUNK\" ]; then echo 'Error: No chunk provided' >&2; exit 1; fi; echo 'Generating json...'; mkdir -p \"$(dirname \"graphs/${CHUNK}\")\"; npx madge --json \"stage3-unminified/${CHUNK}\" > \"graphs/${CHUNK}.json\" ; }; f"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/parser": "^7.23.6"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "@wakaru/cli": "^0.0.5",
