@@ -2692,9 +2692,6 @@ textarea:focus {
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
-.min-w-\[calc\(\(100\%-768px\)\/2\)\] {
-  min-width: calc(50% - 384px);
-}
 .min-w-fit {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -4242,9 +4239,6 @@ textarea:focus {
 }
 .pb-9 {
   padding-bottom: 2.25rem;
-}
-.pl-0 {
-  padding-left: 0;
 }
 .pl-1 {
   padding-left: 0.25rem;
@@ -9543,4 +9537,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=1033ddd3b7950a2f.css.map*/
+/*# sourceMappingURL=b32d9252cd929c53.css.map*/

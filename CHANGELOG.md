@@ -8,6 +8,67 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-08Z (`VLfcxq6hGipJvVKn1m8UF`)
+
+### Notes
+
+- App release version (Git SHA?): `e8371b5cad4c6a2f48b0e915c0a7c3fbe578b811`
+  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Annual ChatGPT Plus subscriptions might be coming soon:
+    - ```js
+       Y.features.includes("yearly_plus_subscriptions_enabled");
+      ```
+    - ```js
+      plusYearlyCost: {
+        id: "pricingPlanConstants.plusYearly.costInDollars",
+        defaultMessage: "USD $16.66/month*",
+      },
+      // ..snip..
+      plusPricingYearlyDisclaimer: {
+        id: "pricingPlanConstants.plus.plusPricingYearlyDisclaimer",
+        defaultMessage: "* Price billed annually",
+      },
+      ```
+    - ```js
+      plusYearly: ea(
+        ea({}, ec),
+        {},
+        {
+          costInDollars: eu.plusYearlyCost,
+          disclaimer: eu.plusPricingYearlyDisclaimer,
+        }
+      ),
+      ```
+- There are no doubt other changes that I haven't called out in these notes as well.
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-f51d0fc71fba6239.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-fe2ae757f8ba03d3.js
+https://cdn.oaistatic.com/_next/static/VLfcxq6hGipJvVKn1m8UF/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/VLfcxq6hGipJvVKn1m8UF/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/6276-a201bc43ff5fa726.js
+```
+
+### From `orig/_next/static/chunks/webpack-fe2ae757f8ba03d3.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/b32d9252cd929c53.css
+```
+
 ## 2024-01-08Z (`mXIu6W6cm_lCUo268p1XR`)
 
 ### Notes

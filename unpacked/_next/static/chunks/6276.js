@@ -1486,7 +1486,7 @@
                 }),
                 (0, ey.jsxs)("div", {
                   className: (0, Q.default)(
-                    "min-w-[calc((100%-768px)/2)] min-w-fit justify-end gap-2",
+                    "w-[calc((100%-768px)/2)] min-w-fit justify-end gap-2",
                     p ? "hidden lg:flex" : "flex"
                   ),
                   children: [
@@ -2744,4 +2744,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6276-7521971ea5bc4b96.js.map
+//# sourceMappingURL=6276-a201bc43ff5fa726.js.map
