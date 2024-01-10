@@ -8,6 +8,55 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-10Z (`DYD4ptbg3xgXFPHVvylfS`)
+
+### Notes
+
+- App release version (Git SHA?): `f50c3f4315463c2f9cf7f20f2c44d3c37c36a312`
+  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+- New route `/search` added (`static/chunks/pages/search-5506c0ce03a4d9c6.js`)
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-256f6a789863880e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-12836b0c1baa69d7.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-54fa77ab5c301e44.js
+https://cdn.oaistatic.com/_next/static/DYD4ptbg3xgXFPHVvylfS/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/DYD4ptbg3xgXFPHVvylfS/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-2069eae287a82616.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-58d3c2567a3a90e4.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-2338ce0de8ee0b5d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/discovery-78503cb778e29802.js
+https://cdn.oaistatic.com/_next/static/chunks/192-d2b71a1ca30205f8.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-5506c0ce03a4d9c6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-0a1a61c30a1aacae.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-01e317c4d9bcac5c.js
+```
+
+### From `orig/_next/static/chunks/webpack-54fa77ab5c301e44.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/8ec7380cc25a2f80.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.088eb06a39bef157.js
+```
+
 ## 2024-01-08Z (`VLfcxq6hGipJvVKn1m8UF`)
 
 ### Notes

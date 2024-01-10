@@ -46,13 +46,13 @@
       "static/chunks/pages/auth/mocked_login-93f5191aa551662a.js",
     ],
     "/bypass": ["static/chunks/pages/bypass-4782eea63108c9bc.js"],
-    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-5a880474edd89882.js"],
+    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-2069eae287a82616.js"],
     "/g/[gizmoId]/c/[convId]": [
-      "static/chunks/pages/g/[gizmoId]/c/[convId]-871a5686c4458639.js",
+      "static/chunks/pages/g/[gizmoId]/c/[convId]-58d3c2567a3a90e4.js",
     ],
     "/gpts/discovery": [
       c,
-      "static/chunks/pages/gpts/discovery-e39da93007126323.js",
+      "static/chunks/pages/gpts/discovery-78503cb778e29802.js",
     ],
     "/gpts/editor": [t, "static/chunks/pages/gpts/editor-072951efa1e8a25c.js"],
     "/gpts/editor/[slug]": [
@@ -77,18 +77,19 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-d13a6df60456b624.js",
     ],
+    "/search": ["static/chunks/pages/search-5506c0ce03a4d9c6.js"],
     "/share/e/[[...shareParams]]": [
-      "static/chunks/pages/share/e/[[...shareParams]]-ef6fcdc77eae779e.js",
+      "static/chunks/pages/share/e/[[...shareParams]]-0a1a61c30a1aacae.js",
     ],
     "/share/[[...shareParams]]": [
-      "static/chunks/pages/share/[[...shareParams]]-d2c277e4dbba655d.js",
+      "static/chunks/pages/share/[[...shareParams]]-01e317c4d9bcac5c.js",
     ],
     "/status": [s, "static/chunks/pages/status-155fd86ce86ecc55.js"],
     "/workspace/deactivated": [
       "static/chunks/pages/workspace/deactivated-8521e44b668891fc.js",
     ],
     "/[[...default]]": [
-      "static/chunks/pages/[[...default]]-d3a435e20d062ea2.js",
+      "static/chunks/pages/[[...default]]-12836b0c1baa69d7.js",
     ],
     sortedPages: [
       "/_app",
@@ -120,6 +121,7 @@
       "/payments/success",
       "/payments/success-team",
       "/payments/success-trial",
+      "/search",
       "/share/e/[[...shareParams]]",
       "/share/[[...shareParams]]",
       "/status",
@@ -131,7 +133,7 @@
   "static/chunks/5017-0a08fd85cfa9ab00.js",
   "static/chunks/3975-41d682cd3b400211.js",
   "static/chunks/3754-2a73b1394b439d25.js",
-  "static/chunks/6276-a201bc43ff5fa726.js",
-  "static/chunks/192-af400bcd8b47f7a3.js"
+  "static/chunks/6276-2338ce0de8ee0b5d.js",
+  "static/chunks/192-d2b71a1ca30205f8.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

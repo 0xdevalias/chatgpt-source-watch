@@ -2192,7 +2192,7 @@
         tv = n(99304),
         tx = n(84623),
         tb = n(8844),
-        ty = n(24047),
+        ty = n(65654),
         tj = n(90439),
         tw = n(67404);
       function tP() {
@@ -2368,7 +2368,6 @@
                               arkoseToken: d,
                               preflightTime: 0,
                               completionMetadata: s,
-                              extraStreamParams: {},
                             });
                           case 12:
                           case "end":
@@ -5619,7 +5618,6 @@
                           arkoseToken: m,
                           preflightTime: 0,
                           completionMetadata: d,
-                          extraStreamParams: {},
                         });
                       case 16:
                       case "end":
@@ -6114,4 +6112,4 @@
     },
   },
 ]);
-//# sourceMappingURL=192-af400bcd8b47f7a3.js.map
+//# sourceMappingURL=192-d2b71a1ca30205f8.js.map

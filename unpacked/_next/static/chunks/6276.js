@@ -212,8 +212,8 @@
             defaultMessage: "Load more",
           },
         }),
-        N = r(3359),
-        w = r(36638);
+        w = r(3359),
+        N = r(36638);
       function k(e) {
         var t = e.children,
           r = (0, o.t)();
@@ -225,7 +225,7 @@
                   t,
                   (0, x.jsx)("div", {
                     className: "fixed bottom-3 right-3",
-                    children: (0, x.jsx)(N.Z, {}),
+                    children: (0, x.jsx)(w.Z, {}),
                   }),
                 ],
               })
@@ -234,7 +234,7 @@
               : (0, x.jsx)(P, {
                   button: (0, x.jsx)(d.z, {
                     onClick: function () {
-                      return (0, w.MG)();
+                      return (0, N.MG)();
                     },
                     children: "Upgrade to ChatGPT Plus",
                   }),
@@ -345,7 +345,7 @@
           return ek;
         },
         b1: function () {
-          return e_;
+          return eL;
         },
       });
       var n,
@@ -367,8 +367,8 @@
         y = r(14699),
         b = r(58194),
         j = r(86499),
-        N = r(28595),
-        w = r(29787),
+        w = r(28595),
+        N = r(29787),
         k = r(37068),
         P = r(19992),
         z = r(53315),
@@ -413,21 +413,21 @@
         return t;
       }
       Z.displayName = "PopoverContext";
-      let _ = (0, x.createContext)(null);
-      function F(e) {
-        let t = (0, x.useContext)(_);
+      let L = (0, x.createContext)(null);
+      function _(e) {
+        let t = (0, x.useContext)(L);
         if (null === t) {
           let t = Error(`<${e} /> is missing a parent <Popover /> component.`);
-          throw (Error.captureStackTrace && Error.captureStackTrace(t, F), t);
+          throw (Error.captureStackTrace && Error.captureStackTrace(t, _), t);
         }
         return t;
       }
-      _.displayName = "PopoverAPIContext";
-      let L = (0, x.createContext)(null);
-      function D() {
-        return (0, x.useContext)(L);
+      L.displayName = "PopoverAPIContext";
+      let D = (0, x.createContext)(null);
+      function F() {
+        return (0, x.useContext)(D);
       }
-      L.displayName = "PopoverGroupContext";
+      D.displayName = "PopoverGroupContext";
       let B = (0, x.createContext)(null);
       function U(e, t) {
         return (0, g.E)(t.type, G, e, t);
@@ -480,12 +480,12 @@
               () => ({ buttonId: n, panelId: o, close: () => m({ type: 1 }) }),
               [n, o, m]
             ),
-            N = D(),
-            P = null == N ? void 0 : N.registerPopover,
+            w = F(),
+            P = null == w ? void 0 : w.registerPopover,
             S = (0, M.z)(() => {
               var e;
               return null !=
-                (e = null == N ? void 0 : N.isFocusWithinPopoverGroup())
+                (e = null == w ? void 0 : w.isFocusWithinPopoverGroup())
                 ? e
                 : (null == p ? void 0 : p.activeElement) &&
                     ((null == c ? void 0 : c.contains(p.activeElement)) ||
@@ -515,7 +515,7 @@
               [c, u],
               (e, t) => {
                 m({ type: 1 }),
-                  (0, w.sP)(t, w.tJ.Loose) ||
+                  (0, N.sP)(t, N.tJ.Loose) ||
                     (e.preventDefault(), null == c || c.focus());
               },
               0 === a
@@ -537,7 +537,7 @@
             Z.Provider,
             { value: l },
             x.createElement(
-              _.Provider,
+              L.Provider,
               { value: R },
               x.createElement(
                 k.up,
@@ -555,10 +555,10 @@
         }),
         q = (0, h.yV)(function (e, t) {
           let [r, n] = A("Popover.Button"),
-            { isPortalled: o } = F("Popover.Button"),
+            { isPortalled: o } = _("Popover.Button"),
             s = (0, x.useRef)(null),
             i = `headlessui-focus-sentinel-${(0, b.M)()}`,
-            l = D(),
+            l = F(),
             a = null == l ? void 0 : l.closeOthers,
             c = (0, x.useContext)(B),
             u = null !== c && c === r.panelId,
@@ -603,7 +603,7 @@
             }),
             k = (0, M.z)((t) => {
               var o, s;
-              (0, N.P)(t.currentTarget) ||
+              (0, w.P)(t.currentTarget) ||
                 e.disabled ||
                 (u
                   ? (n({ type: 1 }), null == (o = r.button) || o.focus())
@@ -637,8 +637,8 @@
               let e = r.panel;
               e &&
                 (0, g.E)(G.current, {
-                  [R.N.Forwards]: () => (0, w.jA)(e, w.TO.First),
-                  [R.N.Backwards]: () => (0, w.jA)(e, w.TO.Last),
+                  [R.N.Forwards]: () => (0, N.jA)(e, N.TO.First),
+                  [R.N.Backwards]: () => (0, N.jA)(e, N.TO.Last),
                 });
             });
           return x.createElement(
@@ -671,7 +671,7 @@
             i = (0, k.oJ)(),
             l = null !== i ? i === k.ZM.Open : 0 === r,
             a = (0, M.z)((e) => {
-              if ((0, N.P)(e.currentTarget)) return e.preventDefault();
+              if ((0, w.P)(e.currentTarget)) return e.preventDefault();
               n({ type: 1 });
             }),
             c = (0, x.useMemo)(() => ({ open: 0 === r }), [r]);
@@ -692,7 +692,7 @@
           Panel: (0, h.yV)(function (e, t) {
             let { focus: r = !1, ...n } = e,
               [o, s] = A("Popover.Panel"),
-              { close: i, isPortalled: l } = F("Popover.Panel"),
+              { close: i, isPortalled: l } = _("Popover.Panel"),
               a = `headlessui-focus-sentinel-before-${(0, b.M)()}`,
               c = `headlessui-focus-sentinel-after-${(0, b.M)()}`,
               u = (0, x.useRef)(null),
@@ -728,9 +728,9 @@
               (0, x.useEffect)(() => {
                 if (!r || 0 !== o.popoverState || !u.current) return;
                 let e = null == f ? void 0 : f.activeElement;
-                u.current.contains(e) || (0, w.jA)(u.current, w.TO.First);
+                u.current.contains(e) || (0, N.jA)(u.current, N.TO.First);
               }, [r, u, o.popoverState]);
-            let N = (0, x.useMemo)(
+            let w = (0, x.useMemo)(
                 () => ({ open: 0 === o.popoverState, close: i }),
                 [o, i]
               ),
@@ -772,7 +772,7 @@
                 e &&
                   (0, g.E)(z.current, {
                     [R.N.Forwards]: () => {
-                      (0, w.jA)(e, w.TO.First);
+                      (0, N.jA)(e, N.TO.First);
                     },
                     [R.N.Backwards]: () => {
                       var e;
@@ -787,7 +787,7 @@
                     [R.N.Forwards]: () => {
                       var e, t, r;
                       if (!o.button) return;
-                      let n = (0, w.GO)(),
+                      let n = (0, N.GO)(),
                         s = n.indexOf(o.button),
                         i = n.slice(0, s + 1),
                         l = [...n.slice(s + 1), ...i];
@@ -805,9 +805,9 @@
                           let e = l.indexOf(n);
                           -1 !== e && l.splice(e, 1);
                         }
-                      (0, w.jA)(l, w.TO.First, !1);
+                      (0, N.jA)(l, N.TO.First, !1);
                     },
-                    [R.N.Backwards]: () => (0, w.jA)(e, w.TO.Last),
+                    [R.N.Backwards]: () => (0, N.jA)(e, N.TO.Last),
                   });
               });
             return x.createElement(
@@ -826,7 +826,7 @@
               (0, h.sY)({
                 ourProps: P,
                 theirProps: n,
-                slot: N,
+                slot: w,
                 defaultTag: "div",
                 features: H,
                 visible: p,
@@ -893,7 +893,7 @@
               ),
               d = (0, x.useMemo)(() => ({}), []);
             return x.createElement(
-              L.Provider,
+              D.Provider,
               { value: u },
               (0, h.sY)({
                 ourProps: { ref: n },
@@ -960,12 +960,12 @@
         }
         return e;
       }
-      function eN(e, t) {
+      function ew(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
         return n;
       }
-      var ew = ec.Z.div(
+      var eN = ec.Z.div(
         s ||
           (s = (0, a.Z)([
             "grid grid-cols-1 gap-x-1.5 gap-y-1 md:gap-x-2 md:gap-y-1.5 lg:grid-cols-2 lg:gap-x-3 lg:gap-y-2.5",
@@ -995,8 +995,8 @@
           y = h[0],
           b = h[1],
           j = (0, x.useState)({}),
-          N = j[0],
-          w = j[1],
+          w = j[0],
+          N = j[1],
           k = (0, x.useMemo)(
             function () {
               return (0, et.uniqBy)(
@@ -1016,7 +1016,7 @@
           z =
             null !==
               (r = k.find(function (e) {
-                return N[e.id];
+                return w[e.id];
               })) && void 0 !== r
               ? r
               : k[0];
@@ -1055,7 +1055,7 @@
                             Array.isArray(e) ||
                             (r = (function (e, t) {
                               if (e) {
-                                if ("string" == typeof e) return eN(e, t);
+                                if ("string" == typeof e) return ew(e, t);
                                 var r = Object.prototype.toString
                                   .call(e)
                                   .slice(8, -1);
@@ -1072,7 +1072,7 @@
                                     r
                                   )
                                 )
-                                  return eN(e, t);
+                                  return ew(e, t);
                               }
                             })(e))
                           ) {
@@ -1128,7 +1128,7 @@
                             return { v: void 0 };
                           (null == n ? void 0 : n.current) != null &&
                             e.target === n.current &&
-                            w(function (t) {
+                            N(function (t) {
                               return ej(
                                 ej({}, t),
                                 {},
@@ -1164,8 +1164,30 @@
             },
             [y, k]
           );
-        var S = (0, x.useRef)(null);
-        return p
+        var S = (0, x.useRef)(null),
+          E = (0, x.useRef)(null),
+          O = (0, x.useState)(0),
+          C = O[0],
+          M = O[1];
+        return ((0, x.useEffect)(
+          function () {
+            var e = E.current,
+              t = function () {
+                null != e && M(e.scrollTop);
+              };
+            return (
+              null == e || e.addEventListener("scroll", t),
+              window.addEventListener("resize", t),
+              t(),
+              function () {
+                null == e || e.removeEventListener("scroll", t),
+                  window.removeEventListener("resize", t);
+              }
+            );
+          },
+          [E, M]
+        ),
+        p)
           ? (0, ey.jsxs)(ey.Fragment, {
               children: [
                 o
@@ -1181,7 +1203,9 @@
                 }),
               ],
             })
-          : (0, ey.jsxs)(ey.Fragment, {
+          : (0, ey.jsxs)("div", {
+              ref: E,
+              className: "h-full overflow-y-auto",
               children: [
                 o
                   ? (0, ey.jsx)(ev.S, {
@@ -1205,6 +1229,7 @@
                           "z-20 mb-6 mt-2 flex-grow shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.04)]",
                         inputClassName: "md:h-14 h-12 text-base pl-12",
                         iconClassName: "left-6",
+                        resultsSizeOffset: Math.min(C - 260, -110),
                       }),
                     k.length > 1 &&
                       (0, ey.jsx)(ez, {
@@ -1280,14 +1305,14 @@
             (0, ey.jsx)("div", {
               className:
                 "my-2 text-center text-3xl font-bold md:my-4 md:text-5xl",
-              children: (0, ey.jsx)(ei.Z, ej({}, eF.discoverySplashHeader)),
+              children: (0, ey.jsx)(ei.Z, ej({}, e_.discoverySplashHeader)),
             }),
             (0, ey.jsx)("div", {
               className:
                 "mx-auto w-full text-center text-sm font-light text-token-text-secondary md:text-lg md:leading-tight",
               children: (0, ey.jsx)(
                 ei.Z,
-                ej({}, eF.discoverySplashDescription)
+                ej({}, e_.discoverySplashDescription)
               ),
             }),
           ],
@@ -1397,7 +1422,7 @@
           ),
           children: [
             (0, ey.jsx)(eh.Oz, { className: "icon-sm" }),
-            e.formatMessage(eF.discoveryThirdPartyGPTsDisabled, {
+            e.formatMessage(e_.discoveryThirdPartyGPTsDisabled, {
               workspaceName: t,
             }),
           ],
@@ -1455,8 +1480,8 @@
                     side: "right",
                     label:
                       r === f.AR.GLOBAL
-                        ? i.formatMessage(eF.discoveryGlobalViewOn)
-                        : i.formatMessage(eF.discoveryGlobalViewOff),
+                        ? i.formatMessage(e_.discoveryGlobalViewOn)
+                        : i.formatMessage(e_.discoveryGlobalViewOff),
                     children: (0, ey.jsx)("button", {
                       className:
                         "cursor-pointer rounded-lg px-4 py-3 hover:bg-gray-100 dark:text-gray-600 dark:hover:bg-gray-700",
@@ -1483,6 +1508,7 @@
                   iconClassName: "left-4",
                   open: p,
                   setOpen: g,
+                  resultsSizeOffset: -90,
                 }),
                 (0, ey.jsxs)("div", {
                   className: (0, Q.default)(
@@ -1498,7 +1524,7 @@
                       },
                       className:
                         "rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-600",
-                      children: (0, ey.jsx)(ei.Z, ej({}, eF.discoveryMyGPTs)),
+                      children: (0, ey.jsx)(ei.Z, ej({}, e_.discoveryMyGPTs)),
                     }),
                     (0, ey.jsxs)(c.z, {
                       color: "primary",
@@ -1511,7 +1537,7 @@
                       openNewTab: !0,
                       children: [
                         (0, ey.jsx)(eh.Ro, { className: "icon-sm -mx-1" }),
-                        (0, ey.jsx)(ei.Z, ej({}, eF.discoveryCreateGPT)),
+                        (0, ey.jsx)(ei.Z, ej({}, e_.discoveryCreateGPT)),
                       ],
                     }),
                   ],
@@ -1524,11 +1550,11 @@
       var eO = (0, x.forwardRef)(function (e, t) {
         var r = e.info,
           n = e.items;
-        return (0, ey.jsx)(e_, {
+        return (0, ey.jsx)(eL, {
           title: r.title,
           description: r.description,
           ref: t,
-          children: (0, ey.jsx)(ew, {
+          children: (0, ey.jsx)(eN, {
             children: n.map(function (e, t) {
               return (0, ey.jsx)(
                 eC,
@@ -1640,8 +1666,8 @@
         var y = (0, x.useState)(h.length),
           b = y[0],
           j = y[1],
-          N = (0, x.useRef)(null),
-          w = (function (
+          w = (0, x.useRef)(null),
+          N = (function (
             e = 0.1,
             { startDelay: t = 0, from: r = 0, ease: n } = {}
           ) {
@@ -1671,19 +1697,19 @@
               if (h.length > b) {
                 var e;
                 j(h.length),
-                  null === (e = N.current) ||
+                  null === (e = w.current) ||
                     void 0 === e ||
                     e.scrollIntoView({ behavior: "smooth", block: "nearest" });
               }
             },
             [h.length, b]
           ),
-          (0, ey.jsxs)(e_, {
+          (0, ey.jsxs)(eL, {
             title: n.title,
             description: n.description,
             ref: t,
             children: [
-              (0, ey.jsxs)(ew, {
+              (0, ey.jsxs)(eN, {
                 children: [
                   o.map(function (e, t) {
                     return (0, ey.jsx)(
@@ -1699,7 +1725,7 @@
                         resource: e.resource,
                         rank: o.length + t + 1,
                         cutId: n.id,
-                        delay: w(t - b, h.length - b),
+                        delay: N(t - b, h.length - b),
                       },
                       t
                     );
@@ -1719,9 +1745,9 @@
                     "mt-2 h-10 w-full focus:ring-0 focus:ring-offset-0 md:mt-3",
                   children: g
                     ? (0, ey.jsx)(m.Z, {})
-                    : (0, ey.jsx)(ei.Z, ej({}, eF.discoveryLoadMore)),
+                    : (0, ey.jsx)(ei.Z, ej({}, e_.discoveryLoadMore)),
                 }),
-              (0, ey.jsx)("div", { ref: N }),
+              (0, ey.jsx)("div", { ref: w }),
             ],
           })
         );
@@ -1828,36 +1854,80 @@
             o = e.iconClassName,
             s = e.open,
             i = e.setOpen,
-            l = (0, el.Z)(),
-            a = (0, x.useState)(""),
-            c = a[0],
-            u = a[1],
-            d = (0, x.useState)(!1),
-            f = d[0],
-            m = d[1],
-            p = null != s ? s : f,
-            v = null != i ? i : m,
-            g = (0, x.useRef)(null);
+            l = e.resultsSizeOffset,
+            a = (0, el.Z)(),
+            c = (0, x.useState)(""),
+            u = c[0],
+            d = c[1],
+            f = (0, x.useState)(!1),
+            m = f[0],
+            p = f[1],
+            v = null != s ? s : m,
+            g = null != i ? i : p,
+            h = (0, x.useRef)(null);
+          (0, x.useEffect)(
+            function () {
+              if (v) {
+                var e = function (e) {
+                    if ("Escape" === e.key) {
+                      var t;
+                      g(!1),
+                        null === (t = h.current) || void 0 === t || t.blur();
+                    }
+                  },
+                  r = function (e) {
+                    var r;
+                    e.target instanceof Node &&
+                      "function" != typeof t &&
+                      !(
+                        null != t &&
+                        null !== (r = t.current) &&
+                        void 0 !== r &&
+                        r.contains(e.target)
+                      ) &&
+                      g(!1);
+                  };
+                return (
+                  document.addEventListener("keydown", e, !1),
+                  document.addEventListener("mousedown", r, !1),
+                  function () {
+                    document.removeEventListener("keydown", e, !1),
+                      document.removeEventListener("mousedown", r, !1);
+                  }
+                );
+              }
+            },
+            [v, g, h, t]
+          );
+          var y = (0, x.useState)(),
+            b = y[0],
+            j = y[1];
           return (
             (0, x.useEffect)(
               function () {
-                if (p) {
-                  var e = function (e) {
-                    if ("Escape" === e.key) {
-                      var t;
-                      v(!1),
-                        null === (t = g.current) || void 0 === t || t.blur();
-                    }
+                var e,
+                  t = function () {
+                    var e;
+                    j(
+                      null === (e = window.visualViewport) || void 0 === e
+                        ? void 0
+                        : e.height
+                    );
                   };
-                  return (
-                    document.addEventListener("keydown", e, !1),
-                    function () {
-                      document.removeEventListener("keydown", e, !1);
-                    }
-                  );
-                }
+                return (
+                  null === (e = window.visualViewport) ||
+                    void 0 === e ||
+                    e.addEventListener("resize", t),
+                  t(),
+                  function () {
+                    var e;
+                    null === (e = window.visualViewport) ||
+                      void 0 === e ||
+                      e.removeEventListener("resize", t);
+                  }
+                );
               },
-              [p, v]
+              [j]
             ),
             (0, ey.jsxs)(W, {
               as: "div",
@@ -1874,18 +1944,18 @@
                 (0, ey.jsx)("input", {
                   className: (0, Q.default)(
                     "hover:dark-border-gray-500 z-10 w-full rounded-xl border border-gray-200 py-2 pr-3 font-normal outline-0 delay-100",
-                    p
+                    v
                       ? "border-gray-300 dark:border-gray-600 dark:bg-gray-700"
                       : "hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 hover:dark:bg-gray-700",
                     n
                   ),
-                  placeholder: l.formatMessage(eF.discoverySearch),
-                  value: c,
+                  placeholder: a.formatMessage(e_.discoverySearch),
+                  value: u,
                   onChange: function (e) {
-                    return u(e.target.value);
+                    return d(e.target.value);
                   },
                   onFocus: function () {
-                    v(!0), X.A.publicEvent(K.M.searchOpened);
+                    g(!0), X.A.publicEvent(K.M.searchOpened);
                   },
                   onBlurCapture: function (e) {
                     var t, r;
@@ -1895,17 +1965,20 @@
                       (null === (r = e.relatedTarget) || void 0 === r
                         ? void 0
                         : r.getAttribute("target")) === "_blank") ||
-                      v(!1);
+                      g(!1);
                   },
-                  ref: g,
+                  ref: h,
                 }),
                 (0, ey.jsx)(em.m, {
-                  show: p,
+                  show: v,
                   children: (0, ey.jsx)(W.Panel, {
                     static: !0,
                     className:
-                      "absolute top-[calc(100%-10px)] max-h-[calc(100vh-320px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
-                    children: (0, ey.jsx)(eZ, { query: c }),
+                      "absolute top-[calc(100%-10px)] w-full overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-gray-300 bg-white pb-2 pt-4 dark:border-gray-600 dark:bg-gray-700",
+                    style: {
+                      maxHeight: null != b ? b + (null != l ? l : 0) : "100vh",
+                    },
+                    children: (0, ey.jsx)(eZ, { query: u }),
                   }),
                 }),
               ],
@@ -1982,7 +2055,7 @@
                     (0, ey.jsx)(eI, {
                       children: (0, ey.jsx)(
                         ei.Z,
-                        ej({}, eF.discoverySearchRecentlyUsed)
+                        ej({}, e_.discoverySearchRecentlyUsed)
                       ),
                     }),
                     m.map(function (e, r) {
@@ -2002,7 +2075,7 @@
               : (0, ey.jsx)(eI, {
                   children: (0, ey.jsx)(
                     ei.Z,
-                    ej({}, eF.discoverySearchRecentlyUsedEmpty)
+                    ej({}, e_.discoverySearchRecentlyUsedEmpty)
                   ),
                 });
           }
@@ -2015,7 +2088,7 @@
                   (0, ey.jsx)(eI, {
                     children: (0, ey.jsx)(
                       ei.Z,
-                      ej({}, eF.discoverySearchResults)
+                      ej({}, e_.discoverySearchResults)
                     ),
                   }),
                   l.items.map(function (e, r) {
@@ -2037,7 +2110,7 @@
                 children: (0, ey.jsx)(eI, {
                   children: (0, ey.jsx)(
                     ei.Z,
-                    ej({}, eF.discoveryNoResultsSearch)
+                    ej({}, e_.discoveryNoResultsSearch)
                   ),
                 }),
               });
@@ -2125,7 +2198,7 @@
           ],
         });
       }
-      var e_ = (0, x.forwardRef)(function (e, t) {
+      var eL = (0, x.forwardRef)(function (e, t) {
           var r = e.title,
             n = e.description,
             o = e.className,
@@ -2156,7 +2229,7 @@
             ],
           });
         }),
-        eF = (0, ea.vU)({
+        e_ = (0, ea.vU)({
           discoveryEmpty: {
             id: "gizmo.discovery.empty",
             defaultMessage: "Nothing to discover",
@@ -2365,8 +2438,8 @@
         y = r(47428),
         b = r(19841),
         j = r(97296),
-        N = r(73040),
-        w = r.n(N),
+        w = r(73040),
+        N = r.n(w),
         k = r(10721),
         P = r(70079),
         z = r(70671),
@@ -2416,7 +2489,7 @@
                   children: [
                     (0, M.jsx)(f.M4, { className: "icon-sm" }),
                     (0, M.jsx)("span", {
-                      children: l.formatMessage(L.conversationCountStrLabel, {
+                      children: l.formatMessage(D.conversationCountStrLabel, {
                         numConvos: o,
                       }),
                     }),
@@ -2449,7 +2522,7 @@
           p = !!(null === (t = o.gizmo.tags) || void 0 === t
             ? void 0
             : t.includes(v.U9.FirstParty));
-        return (0, M.jsx)(_, {
+        return (0, M.jsx)(L, {
           href: m ? (0, h.AA)(o.gizmo.id) : (0, d.m_)(o),
           icon: (0, M.jsx)(c.Z, {
             isFirstParty: p,
@@ -2485,7 +2558,7 @@
                     children: (0, M.jsx)(f.eu, { className: "icon-sm" }),
                   }),
                 }),
-              (0, M.jsx)(F, {
+              (0, M.jsx)(_, {
                 gizmoResource: o,
                 isOwner: l,
                 canRemoveRecent: s,
@@ -2524,7 +2597,7 @@
           disabled: !n,
           label: "GPT creation will be available in the coming weeks",
           children: [
-            (0, M.jsx)(_, {
+            (0, M.jsx)(L, {
               href: r,
               disabled: n,
               icon: (0, M.jsx)(Z, {
@@ -2555,7 +2628,7 @@
           ],
         });
       }
-      function _(e) {
+      function L(e) {
         var t = e.href,
           r = e.icon,
           n = e.title,
@@ -2643,7 +2716,7 @@
               children: (0, M.jsx)("span", { className: d, children: f }),
             })
           : (0, M.jsx)(R, {
-              children: (0, M.jsx)(w(), {
+              children: (0, M.jsx)(N(), {
                 className: d,
                 href: t,
                 shallow: !0,
@@ -2651,7 +2724,7 @@
               }),
             });
       }
-      function F(e) {
+      function _(e) {
         var t = e.gizmoResource,
           r = e.isOwner,
           n = e.canRemoveRecent,
@@ -2735,7 +2808,7 @@
             })
           : null;
       }
-      var L = (0, S.vU)({
+      var D = (0, S.vU)({
         conversationCountStrLabel: {
           id: "gizmo.gpt.grid.conversationCountStrLabel",
           defaultMessage: "{numConvos} Chats",
@@ -2744,4 +2817,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6276-a201bc43ff5fa726.js.map
+//# sourceMappingURL=6276-2338ce0de8ee0b5d.js.map

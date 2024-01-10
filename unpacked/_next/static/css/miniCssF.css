@@ -1913,10 +1913,6 @@ textarea:focus {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -1980,9 +1976,6 @@ textarea:focus {
 }
 .-ml-2 {
   margin-left: -0.5rem;
-}
-.-ml-8 {
-  margin-left: -2rem;
 }
 .-ml-\[1px\] {
   margin-left: -1px;
@@ -2302,9 +2295,6 @@ textarea:focus {
 .h-\[1200px\] {
   height: 1200px;
 }
-.h-\[128px\] {
-  height: 128px;
-}
 .h-\[12px\] {
   height: 12px;
 }
@@ -2355,9 +2345,6 @@ textarea:focus {
 }
 .h-\[60px\] {
   height: 60px;
-}
-.h-\[66\%\] {
-  height: 66%;
 }
 .h-\[70px\] {
   height: 70px;
@@ -2417,9 +2404,6 @@ textarea:focus {
 }
 .max-h-\[calc\(100vh-300px\)\] {
   max-height: calc(100vh - 300px);
-}
-.max-h-\[calc\(100vh-320px\)\] {
-  max-height: calc(100vh - 320px);
 }
 .min-h-0 {
   min-height: 0;
@@ -2558,9 +2542,6 @@ textarea:focus {
 .w-\[120px\] {
   width: 120px;
 }
-.w-\[128px\] {
-  width: 128px;
-}
 .w-\[14px\] {
   width: 14px;
 }
@@ -2603,9 +2584,6 @@ textarea:focus {
 .w-\[56px\] {
   width: 56px;
 }
-.w-\[66\%\] {
-  width: 66%;
-}
 .w-\[70px\] {
   width: 70px;
 }
@@ -2626,9 +2604,6 @@ textarea:focus {
 }
 .w-\[calc\(\(100\%-768px\)\/2\)\] {
   width: calc(50% - 384px);
-}
-.w-\[calc\(100\%\+4rem\)\] {
-  width: calc(100% + 4rem);
 }
 .w-\[calc\(100\%-50px\)\] {
   width: calc(100% - 50px);
@@ -2699,9 +2674,6 @@ textarea:focus {
 }
 .min-w-full {
   min-width: 100%;
-}
-.\!max-w-\[500px\] {
-  max-width: 500px !important;
 }
 .\!max-w-\[80vw\] {
   max-width: 80vw !important;
@@ -3942,6 +3914,11 @@ textarea:focus {
 .from-gray-900\/0 {
   --tw-gradient-from: rgba(32, 33, 35, 0) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(32, 33, 35, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-token-surface-primary {
+  --tw-gradient-from: var(--surface-primary) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsla(0, 0%, 100%, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-token-surface-secondary {
@@ -7466,10 +7443,6 @@ button[data-state="open"] .toggle-item-button-open {
   .md\:m-auto {
     margin: auto;
   }
-  .md\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
   .md\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -7483,9 +7456,6 @@ button[data-state="open"] .toggle-item-button-open {
   }
   .md\:mb-0 {
     margin-bottom: 0;
-  }
-  .md\:mb-12 {
-    margin-bottom: 3rem;
   }
   .md\:mb-3 {
     margin-bottom: 0.75rem;
@@ -9537,4 +9507,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=b32d9252cd929c53.css.map*/
+/*# sourceMappingURL=8ec7380cc25a2f80.css.map*/

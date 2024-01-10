@@ -1,56 +1,69 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3415],
   {
-    26057: function (n, e, r) {
+    26057: function (e, n, r) {
       "use strict";
-      r.r(e),
-        r.d(e, {
+      r.r(n),
+        r.d(n, {
           __N_SSP: function () {
-            return a;
+            return h;
           },
           default: function () {
-            return d;
+            return w;
           },
         });
-      var u = r(94734),
-        t = r(61305),
-        f = r(7144),
-        i = r(1890),
-        l = r(25349),
-        o = r(99893),
-        s = r(70079),
-        c = r(56276),
+      var t = r(94734),
+        i = r(61305),
+        u = r(7144),
+        l = r(1890),
+        s = r(25349),
+        c = r(99893),
+        f = r(29124),
+        o = r.n(f),
+        a = r(70079),
+        d = r(56276),
         _ = r(35250),
-        a = !0;
-      function d(n) {
-        var e = "store_anon" === n.kind;
-        return ((0, s.useEffect)(
+        h = !0;
+      function w(e) {
+        var n = "store_anon" === e.kind;
+        return ((0, a.useEffect)(
           function () {
-            l.A.publicEvent(o.M.pageView, {
+            s.A.publicEvent(c.M.pageView, {
               page: "gpts/discovery",
-              isAnon: e,
-              referrer: n.referrer,
+              isAnon: n,
+              referrer: e.referrer,
             });
           },
-          [e, n.referrer]
+          [n, e.referrer]
         ),
-        e)
+        n)
           ? (0, _.jsx)("div", {
               className: "relative h-full w-full flex-1 flex-col overflow-auto",
-              children: (0, _.jsx)(u.fN, { anon: !0 }),
+              children: (0, _.jsx)(t.fN, { anon: !0 }),
             })
-          : (0, _.jsx)(p, {});
+          : (0, _.jsx)(x, {});
       }
-      function p() {
-        var n = (0, f.hz)();
-        return null == n
+      function x() {
+        var e = (0, u.hz)();
+        return null == e
           ? null
-          : null != n && n.includes(i.L0.GizmoStore)
-            ? (0, _.jsx)(t.Z, { children: (0, _.jsx)(u.fN, {}) })
-            : (0, _.jsx)(c.default, {});
+          : null != e && e.includes(l.L0.GizmoStore)
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(o(), {
+                    children: (0, _.jsx)("meta", {
+                      name: "viewport",
+                      content:
+                        "width=device-width, initial-scale=1, maximum-scale=1",
+                    }),
+                  }),
+                  (0, _.jsx)(i.Z, { children: (0, _.jsx)(t.fN, {}) }),
+                ],
+              })
+            : (0, _.jsx)(d.default, {});
       }
     },
-    73429: function (n, e, r) {
+    73429: function (e, n, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts/discovery",
         function () {
@@ -59,11 +72,11 @@
       ]);
     },
   },
-  function (n) {
-    n.O(0, [6276, 9774, 2888, 179], function () {
-      return n((n.s = 73429));
+  function (e) {
+    e.O(0, [6276, 9774, 2888, 179], function () {
+      return e((e.s = 73429));
     }),
-      (_N_E = n.O());
+      (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=discovery-e39da93007126323.js.map
+//# sourceMappingURL=discovery-78503cb778e29802.js.map
