@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
-    "@wakaru/cli": "^0.0.5",
+    "@wakaru/cli": "^0.0.6",
     "madge": "^6.1.0",
     "prettier": "^3.1.1",
     "webcrack": "^2.12.0"
