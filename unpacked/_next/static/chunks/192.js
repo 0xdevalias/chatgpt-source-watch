@@ -599,68 +599,68 @@
           ),
           f = p.open,
           m = p.getInputProps;
-        return (0, O.jsx)("div", {
+        return (0, O.jsxs)("div", {
           className: "flex w-full items-center justify-center gap-4",
-          children: (0, O.jsxs)(eb.fC, {
-            children: [
-              (0, O.jsx)(eb.xz, {
-                className: "h-20 w-20",
-                children: i
-                  ? (0, O.jsx)(eG, {})
-                  : null != l && "initial" != l && l.status != eT.X.Ready
-                    ? (0, O.jsxs)("div", {
-                        className:
-                          "relative h-full w-full overflow-hidden rounded-full",
-                        children: [
-                          (0, O.jsx)(eN.l, { file: l.file }),
-                          l.status === eT.X.Uploading && l.progress < 90
-                            ? (0, O.jsx)("div", {
-                                className:
-                                  "absolute inset-0 flex items-center justify-center bg-black/5 text-white",
-                                children: (0, O.jsx)(ew.Z, {
-                                  percentage: l.progress,
-                                  className: "h-6 w-6",
-                                }),
-                              })
-                            : null,
-                        ],
-                      })
-                    : (null == t ? void 0 : t.profilePictureUrl) != null &&
-                        (null == t ? void 0 : t.profilePictureUrl) !== ""
-                      ? (0, O.jsx)(eC.Z, {
-                          isFirstParty: !1,
-                          src: t.profilePictureUrl,
-                        })
-                      : (0, O.jsx)("div", {
+          children: [
+            (0, O.jsxs)(eb.fC, {
+              children: [
+                (0, O.jsx)(eb.xz, {
+                  className: "h-20 w-20",
+                  children: i
+                    ? (0, O.jsx)(eG, {})
+                    : null != l && "initial" != l && l.status != eT.X.Ready
+                      ? (0, O.jsxs)("div", {
                           className:
-                            "flex h-full w-full items-center justify-center rounded-full border-2 border-dashed border-black border-token-border-medium",
-                          children: (0, O.jsx)(ej.OvN, {
-                            className: "text-4xl",
+                            "relative h-full w-full overflow-hidden rounded-full",
+                          children: [
+                            (0, O.jsx)(eN.l, { file: l.file }),
+                            l.status === eT.X.Uploading && l.progress < 90
+                              ? (0, O.jsx)("div", {
+                                  className:
+                                    "absolute inset-0 flex items-center justify-center bg-black/5 text-white",
+                                  children: (0, O.jsx)(ew.Z, {
+                                    percentage: l.progress,
+                                    className: "h-6 w-6",
+                                  }),
+                                })
+                              : null,
+                          ],
+                        })
+                      : (null == t ? void 0 : t.profilePictureUrl) != null &&
+                          (null == t ? void 0 : t.profilePictureUrl) !== ""
+                        ? (0, O.jsx)(eC.Z, {
+                            isFirstParty: !1,
+                            src: t.profilePictureUrl,
+                          })
+                        : (0, O.jsx)("div", {
+                            className:
+                              "flex h-full w-full items-center justify-center rounded-full border-2 border-dashed border-black border-token-border-medium",
+                            children: (0, O.jsx)(ej.OvN, {
+                              className: "text-4xl",
+                            }),
                           }),
-                        }),
-              }),
-              (0, O.jsx)(eb.Uv, {
-                children: (0, O.jsxs)(eb.VY, {
-                  className:
-                    "flex min-w-[100px] max-w-xs flex-col rounded-xl border border-gray-400 bg-token-surface-primary shadow-lg dark:border-gray-700",
-                  sideOffset: 7,
-                  children: [
-                    (0, O.jsxs)(eI.UA, {
-                      onClick: f,
-                      children: [
-                        (0, O.jsx)("input", eS({}, m())),
-                        "Upload Photo",
-                      ],
-                    }),
-                    (0, O.jsx)(eI.UA, {
-                      onClick: r,
-                      children: "Use DALL\xb7E",
-                    }),
-                  ],
                 }),
-              }),
-            ],
-          }),
+                (0, O.jsx)(eb.Uv, {
+                  children: (0, O.jsxs)(eb.VY, {
+                    className:
+                      "flex min-w-[100px] max-w-xs flex-col rounded-xl border border-gray-400 bg-token-surface-primary shadow-lg dark:border-gray-700",
+                    sideOffset: 7,
+                    children: [
+                      (0, O.jsx)(eI.UA, {
+                        onClick: f,
+                        children: "Upload Photo",
+                      }),
+                      (0, O.jsx)(eI.UA, {
+                        onClick: r,
+                        children: "Use DALL\xb7E",
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+            (0, O.jsx)("input", eS({}, m())),
+          ],
         });
       }
       var eM = n(46514),
@@ -6109,4 +6109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=192-67ddbbb4f94fb7c7.js.map
+//# sourceMappingURL=192-63297905761f4832.js.map

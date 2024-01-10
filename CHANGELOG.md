@@ -8,6 +8,73 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-10Z (`WSi1X0ArB7Vb5xbtp9NQo`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `bffc6bf560eb5333ef11e2369a24dad05776b32f`
+  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```diff
+      {
+        key: "getGizmoDiscovery",
+    -   value: function (Y) {
+    -     var et = new URLSearchParams();
+    +   value: function (Y, et) {
+    +     var en = new URLSearchParams();
+          return (
+    -      null != Y && et.set("locale", Y),
+    -       ef.ZP.get("".concat(ef.k5, "/gizmos/discovery?").concat(et), {
+    -         authOption: ef.FB.SendIfAvailable,
+    -       })
+    +       null != Y && en.set("locale", Y),
+    +       ef.ZP.get(
+    +         et
+    +           ? "".concat(ef.k5, "/gizmos/discovery_anon?").concat(en)
+    +           : "".concat(ef.k5, "/gizmos/discovery?").concat(en),
+    +         { authOption: ef.FB.SendIfAvailable }
+    +       )
+          );
+        },
+      },
+    ```
+  - ```diff
+    - placeholder: "Set `tools_section`",
+    + placeholder: ew
+    +  ? "Press `Load active system message` to pre-populate this"
+    +  : "Start a conversation and then press `Load active system message` to pre-populate this",
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-932960befaede682.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-fe184953cac33856.js
+https://cdn.oaistatic.com/_next/static/WSi1X0ArB7Vb5xbtp9NQo/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/WSi1X0ArB7Vb5xbtp9NQo/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/6276-54cca8688ea2ebb8.js
+https://cdn.oaistatic.com/_next/static/chunks/192-63297905761f4832.js
+```
+
+### From `orig/_next/static/chunks/webpack-fe184953cac33856.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/a11a1801860e071d.css
+```
+
 ## 2024-01-10Z (`Qy6WgQbBtdAKO56kyE3EZ`)
 
 ### Notes

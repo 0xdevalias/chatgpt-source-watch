@@ -2429,6 +2429,9 @@ textarea:focus {
 .min-h-\[71px\] {
   min-height: 71px;
 }
+.min-h-\[75vh\] {
+  min-height: 75vh;
+}
 .min-h-\[80vh\] {
   min-height: 80vh;
 }
@@ -9529,4 +9532,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=e91aae5513934b0f.css.map*/
+/*# sourceMappingURL=a11a1801860e071d.css.map*/
