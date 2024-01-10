@@ -1977,6 +1977,9 @@ textarea:focus {
 .-ml-2 {
   margin-left: -0.5rem;
 }
+.-ml-4 {
+  margin-left: -1rem;
+}
 .-ml-\[1px\] {
   margin-left: -1px;
 }
@@ -3063,6 +3066,10 @@ textarea:focus {
 }
 .scroll-m-5 {
   scroll-margin: 1.25rem;
+}
+.scroll-mx-5 {
+  scroll-margin-left: 1.25rem;
+  scroll-margin-right: 1.25rem;
 }
 .scroll-mt-28 {
   scroll-margin-top: 7rem;
@@ -5877,6 +5884,9 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-content: "";
   content: var(--tw-content);
 }
+.first\:ml-4:first-child {
+  margin-left: 1rem;
+}
 .first\:mt-0:first-child {
   margin-top: 0;
 }
@@ -5885,6 +5895,9 @@ button[data-state="open"] .toggle-item-button-open {
 }
 .last\:mb-2:last-child {
   margin-bottom: 0.5rem;
+}
+.last\:mr-4:last-child {
+  margin-right: 1rem;
 }
 .last\:h-\[calc\(100vh-8rem\)\]:last-child {
   height: calc(100vh - 8rem);
@@ -7463,6 +7476,9 @@ button[data-state="open"] .toggle-item-button-open {
   .md\:mb-4 {
     margin-bottom: 1rem;
   }
+  .md\:ml-0 {
+    margin-left: 0;
+  }
   .md\:ml-8 {
     margin-left: 2rem;
   }
@@ -7817,8 +7833,14 @@ button[data-state="open"] .toggle-item-button-open {
   .md\:opacity-0 {
     opacity: 0;
   }
+  .md\:first\:ml-0:first-child {
+    margin-left: 0;
+  }
   .md\:last\:mb-6:last-child {
     margin-bottom: 1.5rem;
+  }
+  .md\:last\:mr-0:last-child {
+    margin-right: 0;
   }
   .md\:hover\:bg-gray-50:hover {
     --tw-bg-opacity: 1;
@@ -9507,4 +9529,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=8ec7380cc25a2f80.css.map*/
+/*# sourceMappingURL=e91aae5513934b0f.css.map*/

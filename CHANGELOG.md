@@ -8,6 +8,52 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-10Z (`Qy6WgQbBtdAKO56kyE3EZ`)
+
+### Notes
+
+- App release version (Git SHA?): `697a63176099499713d7d4fc6bc85c66b9c27172`
+  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/6276.js`
+  - ```js
+    discoveryError: {
+      id: "gizmo.discovery.error",
+      defaultMessage: "Error loading GPTs",
+    },
+    // ..snip..
+    discoveryLoadMoreError: {
+      id: "gizmo.discovery.loadMoreError",
+      defaultMessage: "Error loading more",
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-d32439ca4506ae5c.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-9e2a46098c9085f2.js
+https://cdn.oaistatic.com/_next/static/Qy6WgQbBtdAKO56kyE3EZ/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/Qy6WgQbBtdAKO56kyE3EZ/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/6276-fa322493cf9d5d19.js
+```
+
+### From `orig/_next/static/chunks/webpack-9e2a46098c9085f2.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/e91aae5513934b0f.css
+```
+
 ## 2024-01-10Z (`SEKhaE-wBycAz8cr914YK`)
 
 ### Notes
