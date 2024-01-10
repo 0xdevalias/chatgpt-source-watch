@@ -2151,14 +2151,14 @@
       function tu(e) {
         var t = e.clientThreadId,
           n = (0, A.oq)(t),
-          r = (0, A.U0)(t, n),
-          i = (0, A.Ro)(t),
-          o = (0, x.Z)(Array(r).keys()).map(function (e) {
-            var o;
+          r = (0, A.UL)(t),
+          i = (0, eM.Bv)(r.lastModelUsed, t),
+          o = (0, A.U0)(t, n),
+          a = (0, x.Z)(Array(o).keys()).map(function (e) {
             return (0, O.jsx)(
               tc.Z,
               {
-                isFinalTurn: e === r - 1,
+                isFinalTurn: e === o - 1,
                 turnIndex: e,
                 clientThreadId: t,
                 conversationLeafId: n,
@@ -2166,15 +2166,12 @@
                 onChangeRating: K.noop,
                 onRequestMoreCompletions: K.noop,
                 onRequestCompletion: K.noop,
-                currentModelId:
-                  null !== (o = null == i ? void 0 : i.id) && void 0 !== o
-                    ? o
-                    : "",
+                currentModelId: null != i ? i : "",
               },
               e
             );
           });
-        return (0, O.jsx)(O.Fragment, { children: o });
+        return (0, O.jsx)(O.Fragment, { children: a });
       }
       function td(e) {
         var t = e.clientThreadIds;
@@ -6112,4 +6109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=192-d2b71a1ca30205f8.js.map
+//# sourceMappingURL=192-67ddbbb4f94fb7c7.js.map

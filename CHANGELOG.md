@@ -8,6 +8,43 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-10Z (`SEKhaE-wBycAz8cr914YK`)
+
+### Notes
+
+- App release version (Git SHA?): `1ace54ad692c50bc656723d7a559381f5d0bbb03`
+  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+- New route `/gpts` added (`static/chunks/pages/gpts-feac991ac32a51df.js`)
+  - `/gpts/discovery` seems to redirect there now, so might just be a new URL for that content
+  - https://cdn.oaistatic.com/_next/static/media/gpts-og.772bef1f.jpg
+  - ```js
+    var A = "Explore GPTs",
+        e = "Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills.",
+    ```
+- The following help URL was added: https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-8b7a896ce0d26c7a.js
+https://cdn.oaistatic.com/_next/static/SEKhaE-wBycAz8cr914YK/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/SEKhaE-wBycAz8cr914YK/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-dd64351362096e8e.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-971c7cf6048c8ae0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-feac991ac32a51df.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/discovery-28475bf486cb7133.js
+https://cdn.oaistatic.com/_next/static/chunks/192-67ddbbb4f94fb7c7.js
+```
+
 ## 2024-01-10Z (`DYD4ptbg3xgXFPHVvylfS`)
 
 ### Notes

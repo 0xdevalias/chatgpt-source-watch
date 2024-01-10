@@ -17,7 +17,7 @@
     ],
     "/admin/billing": [
       a,
-      "static/chunks/pages/admin/billing-3460394477b79220.js",
+      "static/chunks/pages/admin/billing-dd64351362096e8e.js",
     ],
     "/admin/identity": [
       a,
@@ -50,9 +50,9 @@
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-58d3c2567a3a90e4.js",
     ],
+    "/gpts": [c, "static/chunks/pages/gpts-feac991ac32a51df.js"],
     "/gpts/discovery": [
-      c,
-      "static/chunks/pages/gpts/discovery-78503cb778e29802.js",
+      "static/chunks/pages/gpts/discovery-28475bf486cb7133.js",
     ],
     "/gpts/editor": [t, "static/chunks/pages/gpts/editor-072951efa1e8a25c.js"],
     "/gpts/editor/[slug]": [
@@ -112,6 +112,7 @@
       "/bypass",
       "/g/[gizmoId]",
       "/g/[gizmoId]/c/[convId]",
+      "/gpts",
       "/gpts/discovery",
       "/gpts/editor",
       "/gpts/editor/[slug]",
@@ -133,7 +134,7 @@
   "static/chunks/5017-0a08fd85cfa9ab00.js",
   "static/chunks/3975-41d682cd3b400211.js",
   "static/chunks/3754-2a73b1394b439d25.js",
-  "static/chunks/6276-2338ce0de8ee0b5d.js",
-  "static/chunks/192-d2b71a1ca30205f8.js"
+  "static/chunks/6276-971c7cf6048c8ae0.js",
+  "static/chunks/192-67ddbbb4f94fb7c7.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
