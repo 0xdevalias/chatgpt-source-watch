@@ -15,7 +15,7 @@ You may also like some of the historical insights captured at the following gist
 The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
 
 - App release version (Git SHA?): `bffc6bf560eb5333ef11e2369a24dad05776b32f`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/pages/_app.js`
   - ```diff
       {
@@ -80,7 +80,7 @@ https://cdn.oaistatic.com/_next/static/css/a11a1801860e071d.css
 ### Notes
 
 - App release version (Git SHA?): `697a63176099499713d7d4fc6bc85c66b9c27172`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/6276.js`
   - ```js
     discoveryError: {
@@ -126,7 +126,7 @@ https://cdn.oaistatic.com/_next/static/css/e91aae5513934b0f.css
 ### Notes
 
 - App release version (Git SHA?): `1ace54ad692c50bc656723d7a559381f5d0bbb03`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - New route `/gpts` added (`static/chunks/pages/gpts-feac991ac32a51df.js`)
   - `/gpts/discovery` seems to redirect there now, so might just be a new URL for that content
   - https://cdn.oaistatic.com/_next/static/media/gpts-og.772bef1f.jpg
@@ -163,7 +163,7 @@ https://cdn.oaistatic.com/_next/static/chunks/192-67ddbbb4f94fb7c7.js
 ### Notes
 
 - App release version (Git SHA?): `f50c3f4315463c2f9cf7f20f2c44d3c37c36a312`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - New route `/search` added (`static/chunks/pages/search-5506c0ce03a4d9c6.js`)
 
 ### Not From Build Manifest
@@ -212,7 +212,7 @@ https://cdn.oaistatic.com/_next/static/chunks/sso.088eb06a39bef157.js
 ### Notes
 
 - App release version (Git SHA?): `e8371b5cad4c6a2f48b0e915c0a7c3fbe578b811`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/pages/_app.js`
   - Annual ChatGPT Plus subscriptions might be coming soon:
     - ```js
@@ -273,7 +273,7 @@ https://cdn.oaistatic.com/_next/static/css/b32d9252cd929c53.css
 ### Notes
 
 - App release version (Git SHA?): `b1693f73932bf26b80b9c407a589f7fa84db519d`
-  - Extracted with `grep -C 3 'service: chatgpt-web,' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -308,7 +308,7 @@ https://cdn.oaistatic.com/_next/static/css/1033ddd3b7950a2f.css
 ### Notes
 
 - App release version (Git SHA?): `0e8527842a288bf87ce5b440aaeff19707d5dfed`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -333,7 +333,7 @@ https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodePara
 ### Notes
 
 - App release version (Git SHA?): `1fc802fbf723c3e947e7fa5f1b5635f86b20b856`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -352,7 +352,7 @@ https://cdn.oaistatic.com/_next/static/ohf0xpZm-mdSSsiYSf4si/_ssgManifest.js
 - A lot of the files changed in this version only had a `sourceMappingURL` appended to them, but the sourcemap file it points to wasn't able to be downloaded. I suspect this was unintentional:
   - eg. `//# sourceMappingURL=main-abb0536823058f9d.js.map`
 - App release version (Git SHA?): `852018811988005c25380d3d1b8647b695d5f0f9`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -444,7 +444,7 @@ https://cdn.oaistatic.com/_next/static/css/8f2a2da44b8da8d5.css
 ### Notes
 
 - App release version (Git SHA?): `ee459c90fe0bd8be3146d1b05cac633ab3c5a86b`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -481,7 +481,7 @@ https://cdn.oaistatic.com/_next/static/css/851ebaec58abad64.css
 ### Notes
 
 - App release version (Git SHA?): `4172b73bd5822a266abda2f7afb829f413761521`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
@@ -515,7 +515,7 @@ https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-634
 
 - This is the first full build that has been archived in a long time. As such, a lot of the changes attributed to this build may have occurred in older builds.
 - App release version (Git SHA?): `cbdf570d5262e3f08d96b4dacb59e25f7f1a849c`
-  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 
 ### Not From Build Manifest
 
