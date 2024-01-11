@@ -1796,6 +1796,9 @@ textarea:focus {
 .top-\[-3px\] {
   top: -3px;
 }
+.top-\[-6px\] {
+  top: -6px;
+}
 .top-\[20px\] {
   top: 20px;
 }
@@ -1897,6 +1900,10 @@ textarea:focus {
   margin-bottom: -0.125rem;
   margin-top: -0.125rem;
 }
+.-my-1 {
+  margin-bottom: -0.25rem;
+  margin-top: -0.25rem;
+}
 .-my-2 {
   margin-bottom: -0.5rem;
   margin-top: -0.5rem;
@@ -1983,6 +1990,9 @@ textarea:focus {
 .-ml-\[1px\] {
   margin-left: -1px;
 }
+.-mr-1 {
+  margin-right: -0.25rem;
+}
 .-mr-12 {
   margin-right: -3rem;
 }
@@ -2009,6 +2019,9 @@ textarea:focus {
 }
 .mb-0 {
   margin-bottom: 0;
+}
+.mb-0\.5 {
+  margin-bottom: 0.125rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -3465,6 +3478,9 @@ textarea:focus {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
+.rounded-br-sm {
+  border-bottom-right-radius: 0.125rem;
+}
 .border {
   border-width: 1px;
 }
@@ -3729,6 +3745,10 @@ textarea:focus {
 .bg-blue-300 {
   --tw-bg-opacity: 1;
   background-color: rgba(121, 137, 255, var(--tw-bg-opacity));
+}
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(58, 136, 255, var(--tw-bg-opacity));
 }
 .bg-blue-500 {
   --tw-bg-opacity: 1;
@@ -4477,6 +4497,9 @@ textarea:focus {
 }
 .leading-none {
   line-height: 1;
+}
+.leading-normal {
+  line-height: 1.5;
 }
 .leading-tight {
   line-height: 1.25;
@@ -6872,6 +6895,10 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-bg-opacity: 1;
   background-color: rgba(236, 236, 241, var(--tw-bg-opacity));
 }
+.dark .dark\:bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 247, 248, var(--tw-bg-opacity));
+}
 .dark .dark\:bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(142, 142, 160, var(--tw-bg-opacity));
@@ -6994,6 +7021,10 @@ button[data-state="open"] .toggle-item-button-open {
 .dark .dark\:text-gray-600 {
   --tw-text-opacity: 1;
   color: rgba(86, 88, 105, var(--tw-text-opacity));
+}
+.dark .dark\:text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(64, 65, 79, var(--tw-text-opacity));
 }
 .dark .dark\:text-gray-800 {
   --tw-text-opacity: 1;
@@ -9532,4 +9563,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=a11a1801860e071d.css.map*/
+/*# sourceMappingURL=36edb078e559dff3.css.map*/

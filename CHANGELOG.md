@@ -8,6 +8,76 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-11Z (`_8Cj5w2Xm_cbdoV37uBTg`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `992ec66ff9a30f22dd6b475ab7f8ce7c3d55d7fe`
+  - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/webpack.js`
+  - New chunk added: `unpacked/_next/static/chunks/5704.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    exploreGPTsTitle: {
+      id: "gptExploreGPTs.title",
+      defaultMessage: "Explore GPTs",
+    },
+    exploreGPTsDescription: {
+      id: "gptExploreGPTs.description",
+      defaultMessage:
+        "Now you can discover GPTs created by the community",
+    },
+    ```
+- `unpacked/_next/static/chunks/3754.js`
+  - ```js
+    invitedToastMessage: {
+      id: "Login.invitedToastMessage",
+      defaultMessage:
+        "You have been invited to the {workspace_name} workspace! Login or sign up with {email} to accept the invitation.",
+    },
+    ```
+- `unpacked/_next/static/chunks/5704.js`
+  - Seems to be some code related to handling websockets from React (eg. `useWebSocket`)
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-69c3348b1896cd1e.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-dcda336ac9faabba.js
+https://cdn.oaistatic.com/_next/static/_8Cj5w2Xm_cbdoV37uBTg/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/_8Cj5w2Xm_cbdoV37uBTg/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/3754-4b243fe67e7e8d54.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-616c2dd6411e8a9c.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-788aa034bc74dd94.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-08bba99d31c568aa.js
+```
+
+### From `orig/_next/static/chunks/webpack-dcda336ac9faabba.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5704.efed3cec4e299c77.js
+https://cdn.oaistatic.com/_next/static/css/36edb078e559dff3.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.0fc4cf02802ea693.js
+```
+
 ## 2024-01-10Z (`WSi1X0ArB7Vb5xbtp9NQo`)
 
 ### Notes

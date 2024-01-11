@@ -6,13 +6,13 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return _;
-          },
-          default: function () {
             return F;
           },
-          messages: function () {
+          default: function () {
             return T;
+          },
+          messages: function () {
+            return W;
           },
         });
       var r = n(36112),
@@ -26,12 +26,12 @@
         d = n(70079),
         p = n(92804),
         g = n(12457),
-        h = n(14972),
-        f = n(15136),
+        f = n(14972),
+        h = n(15136),
         x = n(25349),
         m = n(99893),
-        b = n(14765),
-        v = n(70671),
+        v = n(14765),
+        b = n(70671),
         j = n(32004),
         y = n(94968),
         w = n(62906),
@@ -72,7 +72,7 @@
           n = e.enableNewAuthFlow,
           r = e.nextUrl,
           i = e.isStorageComplianceEnabled,
-          a = (0, v.Z)();
+          a = (0, b.Z)();
         return (0, O.jsx)(O.Fragment, {
           children: (0, O.jsxs)("div", {
             className:
@@ -82,7 +82,7 @@
                 className:
                   "flex w-full justify-start px-6 pb-8 md:hidden md:px-6 lg:px-8",
                 children: (0, O.jsx)("h1", {
-                  "aria-label": a.formatMessage(I.ariaLabel),
+                  "aria-label": a.formatMessage(P.ariaLabel),
                   children: (0, O.jsx)("div", {
                     className:
                       "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
@@ -97,7 +97,7 @@
                   (0, O.jsx)("h2", {
                     className:
                       "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                    children: (0, O.jsx)(j.Z, C({}, I.pageTitle)),
+                    children: (0, O.jsx)(j.Z, C({}, P.pageTitle)),
                   }),
                   (0, O.jsx)("div", {
                     className: "mt-5 w-full max-w-[440px]",
@@ -106,10 +106,10 @@
                           children: (0, O.jsxs)("div", {
                             className: "flex w-full flex-col gap-3",
                             children: [
-                              (0, O.jsx)(P, {
+                              (0, O.jsx)(M, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cpath id='a' d='M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z'/%3E%3C/defs%3E%3CclipPath id='b'%3E%3Cuse xlink:href='%23a' overflow='visible'/%3E%3C/clipPath%3E%3Cpath clip-path='url(%23b)' fill='%23FBBC05' d='M0 37V11l17 13z'/%3E%3Cpath clip-path='url(%23b)' fill='%23EA4335' d='M0 11l17 13 7-6.1L48 14V0H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%2334A853' d='M0 37l30-23 7.9 1L48 0v48H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%234285F4' d='M48 48L17 24l-4-3 35-10z'/%3E%3C/svg%3E\")",
                                 onClick: function () {
-                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "google",
                                   }),
                                     x.A.publicEvent(m.M.authLogin, {
@@ -120,7 +120,7 @@
                                       { callbackUrl: r },
                                       {
                                         prompt: "login",
-                                        login_hint: (0, f.W_)({
+                                        login_hint: (0, h.W_)({
                                           idp: "google",
                                         }),
                                       }
@@ -128,13 +128,13 @@
                                 },
                                 children: (0, O.jsx)(
                                   j.Z,
-                                  C({}, I.continueWithGoogle)
+                                  C({}, P.continueWithGoogle)
                                 ),
                               }),
-                              (0, O.jsx)(P, {
+                              (0, O.jsx)(M, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9h-9z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9h-9z'/%3E%3C/svg%3E\")",
                                 onClick: function () {
-                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "microsoft",
                                   }),
                                     x.A.publicEvent(m.M.authLogin, {
@@ -145,7 +145,7 @@
                                       { callbackUrl: r },
                                       {
                                         prompt: "login",
-                                        login_hint: (0, f.W_)({
+                                        login_hint: (0, h.W_)({
                                           idp: "microsoft",
                                         }),
                                       }
@@ -153,7 +153,7 @@
                                 },
                                 children: (0, O.jsx)(
                                   j.Z,
-                                  C({}, I.continueWithMicrosoft)
+                                  C({}, P.continueWithMicrosoft)
                                 ),
                               }),
                               (0, O.jsx)("div", {
@@ -163,11 +163,11 @@
                               (0, O.jsxs)("div", {
                                 className: "grid grid-cols-2 gap-3",
                                 children: [
-                                  (0, O.jsx)(P, {
+                                  (0, O.jsx)(M, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: function () {
-                                      b.m9.logEvent(
+                                      v.m9.logEvent(
                                         "chatgpt_auth_log_in",
                                         null,
                                         { provider: "openai" }
@@ -180,19 +180,19 @@
                                           { callbackUrl: r },
                                           {
                                             prompt: "login",
-                                            login_hint: (0, f.W_)({
+                                            login_hint: (0, h.W_)({
                                               idp: "openai",
                                             }),
                                           }
                                         );
                                     },
-                                    children: (0, O.jsx)(j.Z, C({}, I.logIn)),
+                                    children: (0, O.jsx)(j.Z, C({}, P.logIn)),
                                   }),
-                                  (0, O.jsx)(P, {
+                                  (0, O.jsx)(M, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: function () {
-                                      b.m9.logEvent(
+                                      v.m9.logEvent(
                                         "chatgpt_auth_sign_up",
                                         null,
                                         { provider: "openai" }
@@ -205,14 +205,14 @@
                                           { callbackUrl: r },
                                           {
                                             prompt: "login",
-                                            login_hint: (0, f.W_)({
+                                            login_hint: (0, h.W_)({
                                               idp: "openai",
                                               screen: "signup",
                                             }),
                                           }
                                         );
                                     },
-                                    children: (0, O.jsx)(j.Z, C({}, I.signUp)),
+                                    children: (0, O.jsx)(j.Z, C({}, P.signUp)),
                                   }),
                                 ],
                               }),
@@ -224,11 +224,11 @@
                             className:
                               "grid gap-x-3 gap-y-2 sm:grid-cols-2 sm:gap-y-0",
                             children: [
-                              (0, O.jsx)(P, {
+                              (0, O.jsx)(M, {
                                 primary: !0,
                                 testid: "login-button",
                                 onClick: function () {
-                                  b.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "auth0",
                                   }),
                                     x.A.publicEvent(m.M.authLogin, {
@@ -240,13 +240,13 @@
                                       { prompt: "login" }
                                     );
                                 },
-                                children: (0, O.jsx)(j.Z, C({}, I.logIn)),
+                                children: (0, O.jsx)(j.Z, C({}, P.logIn)),
                               }),
-                              (0, O.jsx)(P, {
+                              (0, O.jsx)(M, {
                                 primary: !0,
                                 as: "button",
                                 onClick: function () {
-                                  b.m9.logEvent("chatgpt_auth_sign_up", null, {
+                                  v.m9.logEvent("chatgpt_auth_sign_up", null, {
                                     provider: "auth0",
                                   }),
                                     x.A.publicEvent(m.M.authSignup, {
@@ -258,7 +258,7 @@
                                       { prompt: "login", screen_hint: "signup" }
                                     );
                                 },
-                                children: (0, O.jsx)(j.Z, C({}, I.signUp)),
+                                children: (0, O.jsx)(j.Z, C({}, P.signUp)),
                               }),
                             ],
                           }),
@@ -271,7 +271,7 @@
                 children: [
                   (0, O.jsx)("div", {
                     className: "flex justify-center text-gray-300 md:mb-3",
-                    children: (0, O.jsx)(h.nV, {
+                    children: (0, O.jsx)(f.nV, {
                       className: "h-[22px] w-auto",
                     }),
                   }),
@@ -282,7 +282,7 @@
           }),
         });
       }
-      function P(e) {
+      function M(e) {
         var t = e.icon,
           n = e.children,
           r = e.className,
@@ -320,7 +320,7 @@
           ],
         });
       }
-      var I = (0, y.vU)({
+      var P = (0, y.vU)({
           pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
           ariaLabel: {
             id: "Login.ariaLabel",
@@ -357,10 +357,11 @@
             defaultMessage: "Log in with your OpenAI account to continue",
           },
         }),
-        M = n(26822),
+        I = n(4748),
+        L = n(26822),
         N = n(92347),
-        L = n(77997);
-      function A(e, t) {
+        A = n(77997);
+      function _(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -376,12 +377,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? A(Object(n), !0).forEach(function (t) {
+            ? _(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : A(Object(n)).forEach(function (t) {
+              : _(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -391,8 +392,8 @@
         }
         return e;
       }
-      var _ = !0;
-      function F(e) {
+      var F = !0;
+      function T(e) {
         var t,
           n = e.serviceStatus,
           r = e.examples,
@@ -401,25 +402,27 @@
           c = e.cfConnectingIp,
           p = e.isStorageComplianceEnabled,
           g = (0, u.useRouter)(),
-          h = g.query.next,
-          f = "string" == typeof h && h.startsWith("/") ? h : "/";
-        g.asPath.includes("#") && (f += "#" + g.asPath.split("#")[1]);
-        var b = !!(null == n ? void 0 : n.oof),
-          v =
+          f = g.query.next,
+          h = "string" == typeof f && f.startsWith("/") ? f : "/";
+        g.asPath.includes("#") && (h += "#" + g.asPath.split("#")[1]);
+        var v = (0, b.Z)(),
+          j = !!(null == n ? void 0 : n.oof),
+          y = (0, d.useRef)(!1),
+          w =
             "sso" in g.query &&
             (null === (t = g.query.sso) || void 0 === t || t),
-          j = v ? g.query.connection : void 0;
+          k = w ? g.query.connection : void 0;
         return ((0, d.useEffect)(
           function () {
-            v &&
-              !b &&
+            w &&
+              !j &&
               (0, l.signIn)(
-                "openai" === v ? "openai" : "auth0",
-                { callbackUrl: f },
-                j && { connection: j }
+                "openai" === w ? "openai" : "auth0",
+                { callbackUrl: h },
+                k && { connection: k }
               );
           },
-          [f, v, j, b]
+          [h, w, k, j]
         ),
         (0, d.useEffect)(
           function () {
@@ -431,11 +434,33 @@
         ),
         (0, d.useEffect)(function () {
           "#pricing" === window.location.hash &&
-            M.bX.setCookie(M.cn.ShowPaymentModal, !0, { maxAge: 21600 });
+            L.bX.setCookie(L.cn.ShowPaymentModal, !0, { maxAge: 21600 });
         }, []),
-        b)
+        (0, d.useEffect)(
+          function () {
+            if (!y.current) {
+              y.current = !0;
+              var e = g.query,
+                t = e.inv_ws_name,
+                n = e.inv_email;
+              (t = Array.isArray(t) ? t[0] : t),
+                (n = Array.isArray(n) ? n[0] : n),
+                t &&
+                  n &&
+                  I.m.success(
+                    v.formatMessage(W.invitedToastMessage, {
+                      workspace_name: t,
+                      email: n,
+                    }),
+                    { hasCloseButton: !0, duration: 600 }
+                  );
+            }
+          },
+          [g.query, v]
+        ),
+        j)
           ? (0, O.jsx)(i.Z, {})
-          : v
+          : w
             ? null
             : (0, O.jsxs)(O.Fragment, {
                 children: [
@@ -444,7 +469,7 @@
                     auth0Provider: o,
                     enableNewAuthFlow: s,
                     examples: void 0 === r ? [] : r,
-                    nextUrl: f,
+                    nextUrl: h,
                     isStorageComplianceEnabled: p,
                   }),
                 ],
@@ -474,7 +499,7 @@
                       className: (0, o.default)(
                         "interact-bounce absolute bottom-4 right-4 rounded bg-red-600 px-2 py-1 text-sm text-white shadow-xl"
                       ),
-                      children: (0, O.jsx)(j.Z, S({}, T.useDevAuth)),
+                      children: (0, O.jsx)(j.Z, S({}, W.useDevAuth)),
                     }),
                   "auth0dev" === t &&
                     (0, O.jsx)(c(), {
@@ -482,7 +507,7 @@
                       className: (0, o.default)(
                         "interact-bounce absolute bottom-4 right-4 rounded bg-green-600 px-2 py-1 text-sm text-white shadow-xl hover:opacity-70"
                       ),
-                      children: (0, O.jsx)(j.Z, S({}, T.useProdAuth)),
+                      children: (0, O.jsx)(j.Z, S({}, W.useProdAuth)),
                     }),
                 ],
               }),
@@ -495,7 +520,7 @@
           r = e.nextUrl,
           i = e.examples,
           a = e.isStorageComplianceEnabled,
-          o = "dark" === (0, L.F)().resolvedTheme,
+          o = "dark" === (0, A.F)().resolvedTheme,
           l = (0, d.useRef)(null);
         return (
           (0, d.useEffect)(
@@ -529,7 +554,7 @@
           })
         );
       }
-      var T = (0, y.vU)({
+      var W = (0, y.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -559,6 +584,11 @@
           id: "Login.logInWithOpenAI",
           defaultMessage: "Log in with your OpenAI account to continue",
         },
+        invitedToastMessage: {
+          id: "Login.invitedToastMessage",
+          defaultMessage:
+            "You have been invited to the {workspace_name} workspace! Login or sign up with {email} to accept the invitation.",
+        },
       });
     },
     12457: function (e, t, n) {
@@ -570,10 +600,10 @@
           return x;
         },
         jI: function () {
-          return v;
+          return b;
         },
         xh: function () {
-          return f;
+          return h;
         },
       });
       var r,
@@ -598,7 +628,7 @@
         }
         return n;
       }
-      function h(e) {
+      function f(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -617,7 +647,7 @@
         }
         return e;
       }
-      var f = c.Z.div(
+      var h = c.Z.div(
         r ||
           (r = (0, a.Z)([
             "w-96 flex flex-col flex-auto justify-center items-center",
@@ -646,38 +676,38 @@
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
-              children: (0, p.jsx)(l.Z, h({}, j.terms)),
+              children: (0, p.jsx)(l.Z, f({}, j.terms)),
             }),
-            (0, p.jsx)(b, {}),
+            (0, p.jsx)(v, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
-              children: (0, p.jsx)(l.Z, h({}, j.privacy)),
+              children: (0, p.jsx)(l.Z, f({}, j.privacy)),
             }),
             t &&
               (0, p.jsxs)(p.Fragment, {
                 children: [
-                  (0, p.jsx)(b, {}),
+                  (0, p.jsx)(v, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
                     onClick: function () {
                       return o.vm.openModal(o.B.CookieManagement);
                     },
-                    children: (0, p.jsx)(l.Z, h({}, j.cookies)),
+                    children: (0, p.jsx)(l.Z, f({}, j.cookies)),
                   }),
                 ],
               }),
           ],
         });
       }
-      var b = function () {
+      var v = function () {
         return (0, p.jsx)("span", {
           className: "text-gray-600",
           children: "|",
         });
       };
-      function v() {
+      function b() {
         return (0, p.jsx)("div", {
           className: "mb-5",
           children: (0, p.jsx)(u.nI, {}),
@@ -764,13 +794,13 @@
               )),
                 (g = 2500);
             else if (p > c.length) {
-              var h = l + 1;
-              if (h >= t[r].answerTokens.length) {
-                var f = (r + 1) % t.length;
+              var f = l + 1;
+              if (f >= t[r].answerTokens.length) {
+                var h = (r + 1) % t.length;
                 (u.current = {
-                  promptIndex: f,
+                  promptIndex: h,
                   answerIndex: 0,
-                  tokenStreamIndexes: d(d({}, s), {}, (0, o.Z)({}, f, 0)),
+                  tokenStreamIndexes: d(d({}, s), {}, (0, o.Z)({}, h, 0)),
                 }),
                   (g = 900);
               } else
@@ -778,7 +808,7 @@
                   d({}, u.current),
                   {},
                   {
-                    answerIndex: h,
+                    answerIndex: f,
                     tokenStreamIndexes: d(d({}, s), {}, (0, o.Z)({}, r, 0)),
                   }
                 )),
@@ -894,7 +924,7 @@
               className:
                 "left-0 top-8 flex w-full px-6 sm:absolute md:top-[22px] md:px-6 lg:px-8",
               children: (0, c.jsx)("h1", {
-                "aria-label": n.formatMessage(h.ariaLabel),
+                "aria-label": n.formatMessage(f.ariaLabel),
                 children: (0, c.jsx)("div", {
                   className:
                     "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
@@ -911,7 +941,7 @@
           ],
         });
       }
-      var h = (0, i.vU)({
+      var f = (0, i.vU)({
         ariaLabel: {
           id: "Login.ariaLabel",
           defaultMessage: "ChatGPT by OpenAI",
@@ -934,4 +964,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3754-2a73b1394b439d25.js.map
+//# sourceMappingURL=3754-4b243fe67e7e8d54.js.map
