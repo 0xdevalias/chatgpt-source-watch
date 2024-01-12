@@ -1745,6 +1745,9 @@ textarea:focus {
 .right-1 {
   right: 0.25rem;
 }
+.right-1\.5 {
+  right: 0.375rem;
+}
 .right-1\/2 {
   right: 50%;
 }
@@ -1765,6 +1768,9 @@ textarea:focus {
 }
 .top-1 {
   top: 0.25rem;
+}
+.top-1\.5 {
+  top: 0.375rem;
 }
 .top-1\/2 {
   top: 50%;
@@ -2652,6 +2658,9 @@ textarea:focus {
 }
 .min-w-\[100px\] {
   min-width: 100px;
+}
+.min-w-\[16px\] {
+  min-width: 16px;
 }
 .min-w-\[175px\] {
   min-width: 175px;
@@ -3919,6 +3928,10 @@ textarea:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 198, 87, var(--tw-bg-opacity));
 }
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(234, 179, 8, var(--tw-bg-opacity));
+}
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -4226,6 +4239,9 @@ textarea:focus {
 .pb-2 {
   padding-bottom: 0.5rem;
 }
+.pb-24 {
+  padding-bottom: 6rem;
+}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -4318,6 +4334,9 @@ textarea:focus {
 }
 .pt-1 {
   padding-top: 0.25rem;
+}
+.pt-12 {
+  padding-top: 3rem;
 }
 .pt-2 {
   padding-top: 0.5rem;
@@ -7729,6 +7748,9 @@ button[data-state="open"] .toggle-item-button-open {
       #fff 54.73%
     );
   }
+  .md\:p-1 {
+    padding: 0.25rem;
+  }
   .md\:p-2 {
     padding: 0.5rem;
   }
@@ -9563,4 +9585,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=36edb078e559dff3.css.map*/
+/*# sourceMappingURL=9989cc39b1e1b1c9.css.map*/

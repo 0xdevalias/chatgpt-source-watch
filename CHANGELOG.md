@@ -8,6 +8,72 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-11Z (`oaMdM-5A0fn6tvM6jS2wq`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `a10fe62bcd123fa144cfb2450b699d4497a5dade`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs changed:
+  - `35427` -> `51533`
+  - `47428` -> `99715`
+  - `6013` -> `22189`
+  - `20491` -> `36530`
+  - `65689` -> `74318`
+  - `98624` -> `16213`
+  - `65689` -> `74318`
+  - `68354` -> `13521`
+  - `18222` -> `52936`
+  - ?etc?
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-76e73a20be3e00a0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-86e9a5eff18011bb.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-0070f1789aaa10ea.js
+https://cdn.oaistatic.com/_next/static/oaMdM-5A0fn6tvM6jS2wq/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/oaMdM-5A0fn6tvM6jS2wq/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-3701ffda3bcd9de1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-059d2fd008bcca46.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-e3d749bd503b4fc4.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-dc4955d312ac6e1c.js
+https://cdn.oaistatic.com/_next/static/chunks/6276-d41d321c9ff543e0.js
+https://cdn.oaistatic.com/_next/static/chunks/192-ccf21caf313384fd.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-d7dc860bfde3018b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-d9cbb58d299d6b94.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-759494ca250852a3.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-96e3c98339186440.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-1dd5706231571569.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-ab8d1f07797a1d6d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-86e9a5eff18011bb.js
+```
+
+### From `orig/_next/static/chunks/webpack-0070f1789aaa10ea.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/9989cc39b1e1b1c9.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.e8afdba97aa514d9.js
+```
+
 ## 2024-01-11Z (`_8Cj5w2Xm_cbdoV37uBTg`)
 
 ### Notes
