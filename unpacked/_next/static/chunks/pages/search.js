@@ -30,13 +30,13 @@
       }
       var f = o()(
           function () {
-            return Promise.all([t.e(8682), t.e(5704)]).then(t.bind(t, 51838));
+            return Promise.all([t.e(8682), t.e(5704)]).then(t.bind(t, 8145));
           },
           {
             ssr: !1,
             loadableGenerated: {
               webpack: function () {
-                return [51838];
+                return [8145];
               },
             },
           }
@@ -86,4 +86,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-6bf5df201da32f60.js.map
+//# sourceMappingURL=search-e28b421882198027.js.map

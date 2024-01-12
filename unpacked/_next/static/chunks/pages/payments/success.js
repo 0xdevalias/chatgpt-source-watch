@@ -6,34 +6,53 @@
       n.r(t),
         n.d(t, {
           PAYMENTS_SUCCESS_URL: function () {
-            return a;
+            return p;
           },
           __N_SSP: function () {
-            return r;
+            return d;
           },
           default: function () {
-            return c;
+            return m;
           },
         });
-      var s = n(93999),
-        i = n(35250),
-        r = !0,
-        a = "/payments/success";
-      function c() {
-        return (0, i.jsx)(s.W, {});
+      var s = n(82256),
+        a = n(93999),
+        i = n(9280),
+        r = n(25349),
+        c = n(99893),
+        o = n(14765),
+        u = n(70079),
+        l = n(35250),
+        d = !0,
+        p = "/payments/success";
+      function m() {
+        var e = (0, i.J)();
+        return (
+          (0, u.useEffect)(
+            function () {
+              e &&
+                (o.m9.logEvent("chatgpt_plus_payment_success_page"),
+                r.A.logEvent(c.M.chatgptSubscriptionPaymentSuccessPage, {
+                  plan_type: s.D8.PLUS,
+                }));
+            },
+            [e]
+          ),
+          (0, l.jsx)(a.W, {})
+        );
       }
     },
     93999: function (e, t, n) {
       "use strict";
       n.d(t, {
         W: function () {
-          return K;
+          return J;
         },
       });
       var s,
+        a,
         i,
         r,
-        a,
         c = n(36112),
         o = n(91559),
         u = n(90038),
@@ -56,17 +75,17 @@
           ],
         });
       }
-      var f = l.Z.h2(i || (i = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
-        x = l.Z.p(r || (r = (0, u.Z)(["mb-10 text-sm"]))),
-        j = n(25349),
-        h = n(99893),
+      var f = l.Z.h2(a || (a = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
+        x = l.Z.p(i || (i = (0, u.Z)(["mb-10 text-sm"]))),
+        h = n(25349),
+        j = n(99893),
         g = n(29124),
         v = n.n(g),
         y = n(10721),
-        T = n(70079),
-        b = n(70671),
-        O = n(32004),
-        S = n(94968),
+        b = n(70079),
+        T = n(70671),
+        S = n(32004),
+        O = n(94968),
         P = n(70737),
         w = n(97296),
         C = {
@@ -106,9 +125,9 @@
         });
       }
       var M = n(82256),
-        Z = n(52936),
+        _ = n(52936),
         E = n(7144),
-        _ = n(73582),
+        Z = n(73582),
         U = n(18399);
       function D(e, t) {
         var n = Object.keys(e);
@@ -141,12 +160,12 @@
         }
         return e;
       }
-      ((s = a || (a = {})).Landing = "landing"),
+      ((s = r || (r = {})).Landing = "landing"),
         (s.Setup = "setup"),
         (s.Invite = "invite"),
         (s.Complete = "complete");
-      var A = [a.Landing, a.Invite, a.Complete],
-        R = {
+      var A = [r.Landing, r.Invite, r.Complete],
+        L = {
           enter: function (e) {
             return { translateX: e >= 0 ? "50%" : "-50%", opacity: 0 };
           },
@@ -155,35 +174,35 @@
             return { translateX: e <= 0 ? "-50%" : "50%", opacity: 0 };
           },
         };
-      function L() {
+      function R() {
         var e,
           t,
           n = (0, y.useRouter)(),
           s = {
             currentStep: B((t = (e = (0, y.useRouter)().asPath.split("#"))[1]))
               ? t
-              : a.Landing,
+              : r.Landing,
             currentPath: e[0],
           },
-          i = s.currentPath,
-          r = s.currentStep,
-          c = (0, T.useState)(r),
+          a = s.currentPath,
+          i = s.currentStep,
+          c = (0, b.useState)(i),
           o = c[0],
           u = c[1],
           l = (0, E.t)(),
-          d = (0, _.ec)(_.F_.workspaces).find(function (e) {
+          d = (0, Z.ec)(Z.F_.workspaces).find(function (e) {
             return e.structure === M.CZ.WORKSPACE && !e.deactivated;
           }),
           m = function () {
-            var e = A.indexOf(r),
+            var e = A.indexOf(i),
               t = e + 1;
             d || n.push("/"),
-              -1 !== e && t < A.length && n.push(i + "#" + A[t]);
+              -1 !== e && t < A.length && n.push(a + "#" + A[t]);
           };
-        (0, T.useEffect)(
+        (0, b.useEffect)(
           function () {
             var e = function () {
-              u(r);
+              u(i);
             };
             return (
               n.events.on("hashChangeStart", e),
@@ -192,15 +211,15 @@
               }
             );
           },
-          [r, n.events]
+          [i, n.events]
         );
-        var f = A.indexOf(r) <= A.indexOf(o) ? -1 : 1;
+        var f = A.indexOf(i) <= A.indexOf(o) ? -1 : 1;
         return (0, p.jsx)("div", {
           className: "max-w-sm pb-6",
           children: (0, p.jsxs)(P.M, {
             mode: "wait",
             children: [
-              r === a.Landing &&
+              i === r.Landing &&
                 (0, p.jsx)(
                   z,
                   {
@@ -213,7 +232,7 @@
                   },
                   "landing"
                 ),
-              r === a.Invite &&
+              i === r.Invite &&
                 (0, p.jsx)(
                   z,
                   {
@@ -226,7 +245,7 @@
                   },
                   "invite"
                 ),
-              r === a.Complete &&
+              i === r.Complete &&
                 (0, p.jsx)(
                   z,
                   {
@@ -251,7 +270,7 @@
               initial: "enter",
               animate: "center",
               exit: "exit",
-              variants: R,
+              variants: L,
               transition: {
                 translateX: { type: "just" },
                 opacity: { duration: 0.2 },
@@ -267,13 +286,13 @@
         return (0, p.jsxs)(p.Fragment, {
           children: [
             (0, p.jsx)(k, { isTrial: !1 }),
-            (0, p.jsx)(f, { children: (0, p.jsx)(O.Z, Y({}, F.standard)) }),
-            (0, p.jsx)(x, { children: (0, p.jsx)(O.Z, Y({}, F.description)) }),
+            (0, p.jsx)(f, { children: (0, p.jsx)(S.Z, Y({}, F.standard)) }),
+            (0, p.jsx)(x, { children: (0, p.jsx)(S.Z, Y({}, F.description)) }),
             (0, p.jsx)(o.z, {
               onClick: t,
               size: "large",
               loading: void 0 !== n && n,
-              children: (0, p.jsx)(O.Z, Y({}, F.continue)),
+              children: (0, p.jsx)(S.Z, Y({}, F.continue)),
             }),
           ],
         });
@@ -281,14 +300,14 @@
       function W(e) {
         var t = e.onNext,
           n = (0, E.t)(),
-          s = (0, b.Z)();
+          s = (0, T.Z)();
         return null == n
           ? null
           : (0, p.jsxs)(p.Fragment, {
               children: [
                 (0, p.jsx)(f, {
                   children: (0, p.jsx)(
-                    O.Z,
+                    S.Z,
                     Y(
                       Y({}, F.inviteTitle),
                       {},
@@ -297,12 +316,12 @@
                   ),
                 }),
                 (0, p.jsx)(x, {
-                  children: (0, p.jsx)(O.Z, Y({}, F.completeDescription)),
+                  children: (0, p.jsx)(S.Z, Y({}, F.completeDescription)),
                 }),
                 null != n &&
                   (0, p.jsx)("div", {
                     className: "text-sm",
-                    children: (0, p.jsx)(Z.Z, {
+                    children: (0, p.jsx)(_.Z, {
                       fullWidthButtons: !0,
                       workspace: n,
                       canResendInviteEmails: !1,
@@ -319,21 +338,21 @@
         return (0, p.jsxs)(p.Fragment, {
           children: [
             (0, p.jsx)(f, {
-              children: (0, p.jsx)(O.Z, Y({}, F.completeTitle)),
+              children: (0, p.jsx)(S.Z, Y({}, F.completeTitle)),
             }),
             (0, p.jsx)(x, {
-              children: (0, p.jsx)(O.Z, Y({}, F.completeDescription)),
+              children: (0, p.jsx)(S.Z, Y({}, F.completeDescription)),
             }),
             (0, p.jsx)(o.z, {
               onClick: t,
               size: "large",
-              children: (0, p.jsx)(O.Z, Y({}, F.continueToChatgpt)),
+              children: (0, p.jsx)(S.Z, Y({}, F.continueToChatgpt)),
             }),
           ],
         });
       }
-      var B = (0, U.b)(a),
-        F = (0, S.vU)({
+      var B = (0, U.b)(r),
+        F = (0, O.vU)({
           standard: {
             id: "UpgradedToTeamSuccess.trial",
             defaultMessage: "Payment successful",
@@ -408,60 +427,60 @@
         }
         return e;
       }
-      function K(e) {
+      function J(e) {
         var t = e.isTrial,
           n = e.isTeam,
-          s = (0, b.Z)(),
-          i = (0, y.useRouter)(),
-          r = (0, T.useCallback)(
+          s = (0, T.Z)(),
+          a = (0, y.useRouter)(),
+          i = (0, b.useCallback)(
             function (e) {
               e.preventDefault(),
-                j.A.logEvent(h.M.clickAccountPaymentSuccessContinue),
-                i.push("/");
+                h.A.logEvent(j.M.clickAccountPaymentSuccessContinue),
+                a.push("/");
             },
-            [i]
+            [a]
           );
         return (0, p.jsxs)(m, {
           children: [
             (0, p.jsx)(v(), {
               children: (0, p.jsx)("title", {
-                children: s.formatMessage(J.pageTitle),
+                children: s.formatMessage(H.pageTitle),
               }),
             }),
             (0, p.jsx)("div", {
               className: "flex flex-col",
               children: n
-                ? (0, p.jsx)(L, {})
-                : (0, p.jsx)(H, { isTrial: t, onContinue: r }),
+                ? (0, p.jsx)(R, {})
+                : (0, p.jsx)(K, { isTrial: t, onContinue: i }),
             }),
           ],
         });
       }
-      function H(e) {
+      function K(e) {
         var t = e.isTrial,
           n = e.onContinue,
-          s = t ? J.trial : J.standard;
+          s = t ? H.trial : H.standard;
         return (0, p.jsxs)(p.Fragment, {
           children: [
             (0, p.jsx)(k, { isTrial: !!t }),
             (0, p.jsxs)("div", {
               className: "flex flex-col items-center",
               children: [
-                (0, p.jsx)(f, { children: (0, p.jsx)(O.Z, q({}, s)) }),
+                (0, p.jsx)(f, { children: (0, p.jsx)(S.Z, q({}, s)) }),
                 (0, p.jsx)(x, {
-                  children: (0, p.jsx)(O.Z, q({}, J.paymentReceived)),
+                  children: (0, p.jsx)(S.Z, q({}, H.paymentReceived)),
                 }),
                 (0, p.jsx)(o.z, {
                   onClick: n,
                   size: "large",
-                  children: (0, p.jsx)(O.Z, q({}, J.continueButton)),
+                  children: (0, p.jsx)(S.Z, q({}, H.continueButton)),
                 }),
               ],
             }),
           ],
         });
       }
-      var J = (0, S.vU)({
+      var H = (0, O.vU)({
         pageTitle: {
           id: "PaymentsSuccess.pageTitle",
           defaultMessage: "Account - Payment success",
@@ -497,4 +516,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=success-d9cbb58d299d6b94.js.map
+//# sourceMappingURL=success-fe32c547a6f2b6c2.js.map

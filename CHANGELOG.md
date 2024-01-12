@@ -8,6 +8,53 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-12Z (`XdWhUWo_M_wNJEE1jln84`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `763875bab92d599a79f63784f6fb57ba6419ff83`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, so hard to see if/what actually changed within it
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-d0c79833829bebba.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-d35cd52f9ccd15d6.js
+https://cdn.oaistatic.com/_next/static/XdWhUWo_M_wNJEE1jln84/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/XdWhUWo_M_wNJEE1jln84/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-fe32c547a6f2b6c2.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-5245675baa81a6e6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-37a897c05126a17d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-e28b421882198027.js
+```
+
+### From `orig/_next/static/chunks/webpack-d35cd52f9ccd15d6.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/02f82e43283187c3.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.9d450c509461c4a1.js
+```
+
 ## 2024-01-12Z (`v78GkVQvDccUOBvZi02mN`)
 
 ### Notes

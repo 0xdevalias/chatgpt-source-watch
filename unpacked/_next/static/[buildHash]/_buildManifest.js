@@ -69,15 +69,15 @@
       "static/chunks/pages/invite/[[...referralCodeParam]]-d7dc860bfde3018b.js",
     ],
     "/payments/success": [
-      "static/chunks/pages/payments/success-d9cbb58d299d6b94.js",
+      "static/chunks/pages/payments/success-fe32c547a6f2b6c2.js",
     ],
     "/payments/success-team": [
-      "static/chunks/pages/payments/success-team-759494ca250852a3.js",
+      "static/chunks/pages/payments/success-team-5245675baa81a6e6.js",
     ],
     "/payments/success-trial": [
-      "static/chunks/pages/payments/success-trial-96e3c98339186440.js",
+      "static/chunks/pages/payments/success-trial-37a897c05126a17d.js",
     ],
-    "/search": ["static/chunks/pages/search-6bf5df201da32f60.js"],
+    "/search": ["static/chunks/pages/search-e28b421882198027.js"],
     "/share/e/[[...shareParams]]": [
       "static/chunks/pages/share/e/[[...shareParams]]-1dd5706231571569.js",
     ],

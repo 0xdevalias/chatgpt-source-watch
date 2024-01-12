@@ -6,30 +6,36 @@
       n.r(t),
         n.d(t, {
           PAYMENTS_SUCCESS_URL: function () {
-            return l;
+            return d;
           },
           __N_SSP: function () {
-            return u;
+            return l;
           },
           default: function () {
-            return d;
+            return p;
           },
         });
       var s = n(93999),
+        r = n(9280),
         a = n(25349),
         i = n(99893),
-        r = n(14765),
-        c = n(70079),
-        o = n(35250),
-        u = !0,
-        l = "/payments/success";
-      function d() {
+        c = n(14765),
+        o = n(70079),
+        u = n(35250),
+        l = !0,
+        d = "/payments/success";
+      function p() {
+        var e = (0, r.J)();
         return (
-          (0, c.useEffect)(function () {
-            r.m9.logEvent("chatgpt_referral_trial_payment_success"),
-              a.A.logEvent(i.M.chatgptTeamPaymentSuccess);
-          }, []),
-          (0, o.jsx)(s.W, { isTrial: !0 })
+          (0, o.useEffect)(
+            function () {
+              e &&
+                (c.m9.logEvent("chatgpt_referral_trial_payment_success"),
+                a.A.logEvent(i.M.chatgptReferralTrialPaymentSuccess));
+            },
+            [e]
+          ),
+          (0, u.jsx)(s.W, { isTrial: !0 })
         );
       }
     },
@@ -37,20 +43,20 @@
       "use strict";
       n.d(t, {
         W: function () {
-          return K;
+          return J;
         },
       });
       var s,
+        r,
         a,
         i,
-        r,
         c = n(36112),
         o = n(91559),
         u = n(90038),
         l = n(21389),
         d = n(14972),
         p = n(35250);
-      function m(e) {
+      function f(e) {
         var t = e.children;
         return (0, p.jsxs)("div", {
           className: "flex min-h-screen w-full flex-col",
@@ -66,8 +72,8 @@
           ],
         });
       }
-      var f = l.Z.h2(a || (a = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
-        x = l.Z.p(i || (i = (0, u.Z)(["mb-10 text-sm"]))),
+      var m = l.Z.h2(r || (r = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
+        x = l.Z.p(a || (a = (0, u.Z)(["mb-10 text-sm"]))),
         h = n(25349),
         j = n(99893),
         g = n(29124),
@@ -151,11 +157,11 @@
         }
         return e;
       }
-      ((s = r || (r = {})).Landing = "landing"),
+      ((s = i || (i = {})).Landing = "landing"),
         (s.Setup = "setup"),
         (s.Invite = "invite"),
         (s.Complete = "complete");
-      var A = [r.Landing, r.Invite, r.Complete],
+      var A = [i.Landing, i.Invite, i.Complete],
         R = {
           enter: function (e) {
             return { translateX: e >= 0 ? "50%" : "-50%", opacity: 0 };
@@ -172,28 +178,28 @@
           s = {
             currentStep: B((t = (e = (0, y.useRouter)().asPath.split("#"))[1]))
               ? t
-              : r.Landing,
+              : i.Landing,
             currentPath: e[0],
           },
-          a = s.currentPath,
-          i = s.currentStep,
-          c = (0, T.useState)(i),
+          r = s.currentPath,
+          a = s.currentStep,
+          c = (0, T.useState)(a),
           o = c[0],
           u = c[1],
           l = (0, E.t)(),
           d = (0, Z.ec)(Z.F_.workspaces).find(function (e) {
             return e.structure === M.CZ.WORKSPACE && !e.deactivated;
           }),
-          m = function () {
-            var e = A.indexOf(i),
+          f = function () {
+            var e = A.indexOf(a),
               t = e + 1;
             d || n.push("/"),
-              -1 !== e && t < A.length && n.push(a + "#" + A[t]);
+              -1 !== e && t < A.length && n.push(r + "#" + A[t]);
           };
         (0, T.useEffect)(
           function () {
             var e = function () {
-              u(i);
+              u(a);
             };
             return (
               n.events.on("hashChangeStart", e),
@@ -202,48 +208,48 @@
               }
             );
           },
-          [i, n.events]
+          [a, n.events]
         );
-        var f = A.indexOf(i) <= A.indexOf(o) ? -1 : 1;
+        var m = A.indexOf(a) <= A.indexOf(o) ? -1 : 1;
         return (0, p.jsx)("div", {
           className: "max-w-sm pb-6",
           children: (0, p.jsxs)(P.M, {
             mode: "wait",
             children: [
-              i === r.Landing &&
+              a === i.Landing &&
                 (0, p.jsx)(
                   z,
                   {
                     initial: !1,
-                    custom: f,
+                    custom: m,
                     children: (0, p.jsx)(I, {
-                      onNext: m,
+                      onNext: f,
                       isLoading: null == l,
                     }),
                   },
                   "landing"
                 ),
-              i === r.Invite &&
+              a === i.Invite &&
                 (0, p.jsx)(
                   z,
                   {
-                    custom: f,
+                    custom: m,
                     children: (0, p.jsx)(W, {
                       onNext: function () {
-                        m();
+                        f();
                       },
                     }),
                   },
                   "invite"
                 ),
-              i === r.Complete &&
+              a === i.Complete &&
                 (0, p.jsx)(
                   z,
                   {
-                    custom: f,
+                    custom: m,
                     children: (0, p.jsx)(X, {
                       onNext: function () {
-                        m(), d && (0, E.nq)(d.id), n.push("/");
+                        f(), d && (0, E.nq)(d.id), n.push("/");
                       },
                     }),
                   },
@@ -277,7 +283,7 @@
         return (0, p.jsxs)(p.Fragment, {
           children: [
             (0, p.jsx)(k, { isTrial: !1 }),
-            (0, p.jsx)(f, { children: (0, p.jsx)(O.Z, Y({}, F.standard)) }),
+            (0, p.jsx)(m, { children: (0, p.jsx)(O.Z, Y({}, F.standard)) }),
             (0, p.jsx)(x, { children: (0, p.jsx)(O.Z, Y({}, F.description)) }),
             (0, p.jsx)(o.z, {
               onClick: t,
@@ -296,7 +302,7 @@
           ? null
           : (0, p.jsxs)(p.Fragment, {
               children: [
-                (0, p.jsx)(f, {
+                (0, p.jsx)(m, {
                   children: (0, p.jsx)(
                     O.Z,
                     Y(
@@ -328,7 +334,7 @@
         var t = e.onNext;
         return (0, p.jsxs)(p.Fragment, {
           children: [
-            (0, p.jsx)(f, {
+            (0, p.jsx)(m, {
               children: (0, p.jsx)(O.Z, Y({}, F.completeTitle)),
             }),
             (0, p.jsx)(x, {
@@ -342,7 +348,7 @@
           ],
         });
       }
-      var B = (0, U.b)(r),
+      var B = (0, U.b)(i),
         F = (0, S.vU)({
           standard: {
             id: "UpgradedToTeamSuccess.trial",
@@ -418,60 +424,60 @@
         }
         return e;
       }
-      function K(e) {
+      function J(e) {
         var t = e.isTrial,
           n = e.isTeam,
           s = (0, b.Z)(),
-          a = (0, y.useRouter)(),
-          i = (0, T.useCallback)(
+          r = (0, y.useRouter)(),
+          a = (0, T.useCallback)(
             function (e) {
               e.preventDefault(),
                 h.A.logEvent(j.M.clickAccountPaymentSuccessContinue),
-                a.push("/");
+                r.push("/");
             },
-            [a]
+            [r]
           );
-        return (0, p.jsxs)(m, {
+        return (0, p.jsxs)(f, {
           children: [
             (0, p.jsx)(v(), {
               children: (0, p.jsx)("title", {
-                children: s.formatMessage(J.pageTitle),
+                children: s.formatMessage(H.pageTitle),
               }),
             }),
             (0, p.jsx)("div", {
               className: "flex flex-col",
               children: n
                 ? (0, p.jsx)(L, {})
-                : (0, p.jsx)(H, { isTrial: t, onContinue: i }),
+                : (0, p.jsx)(K, { isTrial: t, onContinue: a }),
             }),
           ],
         });
       }
-      function H(e) {
+      function K(e) {
         var t = e.isTrial,
           n = e.onContinue,
-          s = t ? J.trial : J.standard;
+          s = t ? H.trial : H.standard;
         return (0, p.jsxs)(p.Fragment, {
           children: [
             (0, p.jsx)(k, { isTrial: !!t }),
             (0, p.jsxs)("div", {
               className: "flex flex-col items-center",
               children: [
-                (0, p.jsx)(f, { children: (0, p.jsx)(O.Z, q({}, s)) }),
+                (0, p.jsx)(m, { children: (0, p.jsx)(O.Z, q({}, s)) }),
                 (0, p.jsx)(x, {
-                  children: (0, p.jsx)(O.Z, q({}, J.paymentReceived)),
+                  children: (0, p.jsx)(O.Z, q({}, H.paymentReceived)),
                 }),
                 (0, p.jsx)(o.z, {
                   onClick: n,
                   size: "large",
-                  children: (0, p.jsx)(O.Z, q({}, J.continueButton)),
+                  children: (0, p.jsx)(O.Z, q({}, H.continueButton)),
                 }),
               ],
             }),
           ],
         });
       }
-      var J = (0, S.vU)({
+      var H = (0, S.vU)({
         pageTitle: {
           id: "PaymentsSuccess.pageTitle",
           defaultMessage: "Account - Payment success",
@@ -507,4 +513,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=success-trial-96e3c98339186440.js.map
+//# sourceMappingURL=success-trial-37a897c05126a17d.js.map
