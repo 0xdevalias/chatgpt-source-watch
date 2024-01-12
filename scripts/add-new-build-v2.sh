@@ -128,12 +128,12 @@ main() {
   input_filtered_urls_found=($(intersect_arrays "input_filtered_urls" "${input_filtered_urls_existed_already[@]}" "${input_filtered_urls_downloaded_wget[@]}" "${input_filtered_urls_downloaded_wayback[@]}"))
 
   print_urls input_filtered_urls_existed_already    "[main] Previously Downloaded URLs"
-  print_urls input_filtered_urls_downloaded_wget    "[main] Downloaded URLs (wget)"
+  print_urls input_filtered_urls_downloaded_wget    "[main] Newly Downloaded URLs (wget)"
   # TODO: these input_filtered_urls_downloaded_wayback currently aren't actually downloaded, until we call try_wget_wayback_download / download_or_show_wayback_commands somewhere in process_urls or similar
   # print_urls input_filtered_urls_downloaded_wayback           "[main] Downloaded URLs (waybackmachine)"
   print_urls input_filtered_urls_downloaded_wayback "[main] Missing URLs that can be manually downloaded from waybackmachine"
   print_urls input_filtered_urls_missing            "[main] Missing URLs that weren't available on waybackmachine"
-  print_urls input_filtered_urls_found              "[main] Combined 'found' URLs"
+  print_urls input_filtered_urls_found              "[main] Combined 'found' URLs (existed already + newly downloaded)"
 
   # Extract chunk URLs from _buildManifest.js if detected
   if detect_build_manifest_file "${input_filtered_urls_found[@]}"; then
@@ -157,12 +157,12 @@ main() {
 
     # Display URLs in global build_manifest_* arrays
     print_urls build_manifest_urls_existed_already    "[_buildManifest.js] Previously Downloaded URLs"
-    print_urls build_manifest_urls_downloaded_wget    "[_buildManifest.js] Downloaded URLs (wget)"
+    print_urls build_manifest_urls_downloaded_wget    "[_buildManifest.js] Newly Downloaded URLs (wget)"
     # TODO: these build_manifest_urls_downloaded_wayback currently aren't actually downloaded, until we call try_wget_wayback_download / download_or_show_wayback_commands somewhere in process_urls or similar
     # print_urls build_manifest_urls_downloaded_wayback "[_buildManifest.js] Downloaded URLs (waybackmachine)"
     print_urls build_manifest_urls_downloaded_wayback "[_buildManifest.js] Missing URLs that can be manually downloaded from waybackmachine"
     print_urls build_manifest_urls_missing            "[_buildManifest.js] Missing URLs that weren't available on waybackmachine"
-    print_urls build_manifest_urls_found              "[_buildManifest.js] Combined 'found' URLs"
+    print_urls build_manifest_urls_found              "[_buildManifest.js] Combined 'found' URLs (existed already + newly downloaded)"
   fi
 
   # Extract chunk URLs from webpack.js if detected
@@ -187,12 +187,12 @@ main() {
 
     # Display URLs in global build_manifest_* arrays
     print_urls webpack_urls_existed_already    "[webpack.js] Previously Downloaded URLs"
-    print_urls webpack_urls_downloaded_wget    "[webpack.js] Downloaded URLs (wget)"
+    print_urls webpack_urls_downloaded_wget    "[webpack.js] Newly Downloaded URLs (wget)"
     # TODO: these webpack_urls_downloaded_wayback currently aren't actually downloaded, until we call try_wget_wayback_download / download_or_show_wayback_commands somewhere in process_urls or similar
     # print_urls webpack_urls_downloaded_wayback "[webpack.js] Downloaded URLs (waybackmachine)"
     print_urls webpack_urls_downloaded_wayback "[webpack.js] Missing URLs that can be manually downloaded from waybackmachine"
     print_urls webpack_urls_missing            "[webpack.js] Missing URLs that weren't available on waybackmachine"
-    print_urls webpack_urls_found              "[webpack.js] Combined 'found' URLs"
+    print_urls webpack_urls_found              "[webpack.js] Combined 'found' URLs (existed already + newly downloaded)"
   fi
 
   unpack_and_format_files "${input_filtered_urls_found[@]}" "${build_manifest_urls_found[@]}" "${webpack_urls_found[@]}"
