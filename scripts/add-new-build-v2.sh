@@ -782,6 +782,7 @@ generate_changelog_and_commit_message() {
 
   # Start building the changelog entry
   if [[ ${#all_found_urls_not_in_changelog[@]} -gt 0 ]] && [[ ${#all_missing_urls_not_in_changelog[@]} -gt 0 ]]; then
+    commit_message="[content-partial] add $build_hash content from ${build_date}Z"
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[partial archive]\`\n\n"
 
