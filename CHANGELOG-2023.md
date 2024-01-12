@@ -8,6 +8,60 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## Table of Contents
+
+<!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
+
+- [2023-09-16Z to 2024-01-01Z `[not archived]`](#2023-09-16z-to-2024-01-01z-not-archived)
+- [2023-09-15Z \(`0S-3OY79q4frbRmxZL8PL`\) `[partial archive]`](#2023-09-15z-0s-3oy79q4frbrmxzl8pl-partial-archive)
+- [2023-09-13Z \(`HCDcqbITOjtWoyhF0h1lh`\) `[partial archive]`](#2023-09-13z-hcdcqbitojtwoyhf0h1lh-partial-archive)
+- [2023-09-10Z \(`CP830TYXTYOV5LdZUII2f`\) `[not archived]`](#2023-09-10z-cp830tyxtyov5ldzuii2f-not-archived)
+- [2023-09-09Z \(`BA4vBP2tQHV0HpeG1-9lL`\) `[partial archive]`](#2023-09-09z-ba4vbp2tqhv0hpeg1-9ll-partial-archive)
+- [2023-09-06Z \(`HbvObI9-beBZWMNcbKblk`\) `[not archived]`](#2023-09-06z-hbvobi9-bebzwmncbkblk-not-archived)
+- [2023-08-23Z \(`L-nRdgPrZn7iyMiVgf6ia`\) `[not archived]`](#2023-08-23z-l-nrdgprzn7iymivgf6ia-not-archived)
+- [2023-08-22Z \(`dMj6dM6S2JaZGfKbBIHcv`\) `[not archived]`](#2023-08-22z-dmj6dm6s2jazgfkbbihcv-not-archived)
+- [2023-08-19Z \(`8TLwvKhD9FbTeb5-ighui`\) `[not archived]`](#2023-08-19z-8tlwvkhd9fbteb5-ighui-not-archived)
+- [2023-08-18Z \(`MEKNx-othMT86EBOtLOZS`\) `[not archived]`](#2023-08-18z-meknx-othmt86ebotlozs-not-archived)
+- [2023-08-17Z \(`dh8PtrG40HTj_qqNLbeVa`\) `[not archived]`](#2023-08-17z-dh8ptrg40htj_qqnlbeva-not-archived)
+- [2023-08-16Z \(`ri6x4gnuLRb_3_4UhvWjG`\) `[not archived]`](#2023-08-16z-ri6x4gnulrb_3_4uhvwjg-not-archived)
+- [2023-08-15Z \(`jTyapgYmx_AoRWnrWJUNJ`\) `[not archived]`](#2023-08-15z-jtyapgymx_aorwnrwjunj-not-archived)
+- [2023-08-14Z \(`oDTsXIohP85MnLZj7TlaB`\) `[not archived]`](#2023-08-14z-odtsxiohp85mnlzj7tlab-not-archived)
+- [2023-08-04Z \(`37G8pTNKx251duVfzpNCz`\) `[not archived]`](#2023-08-04z-37g8ptnkx251duvfzpncz-not-archived)
+- [2023-08-03Z \(`PurMkNIQjqUSFMyVMhlHV`\) `[not archived]`](#2023-08-03z-purmkniqjqusfmyvmhlhv-not-archived)
+- [2023-08-03Z \(`QrTcOt7XatF0UtTGkJiqj`\) `[not archived]`](#2023-08-03z-qrtcot7xatf0uttgkjiqj-not-archived)
+- [2023-08-02Z \(`9Y1CKRR2ktnFqbtMySwcl`\) `[partial archive]`](#2023-08-02z-9y1ckrr2ktnfqbtmyswcl-partial-archive)
+- [2023-08-01Z \(`VArZIFjnQVe75R3PSp8rf`\) `[not archived]`](#2023-08-01z-varzifjnqve75r3psp8rf-not-archived)
+- [2023-07-31Z \(`TYZUn2IfQoOqt8XVyk3dh`\) `[not archived]`](#2023-07-31z-tyzun2ifqooqt8xvyk3dh-not-archived)
+- [2023-07-31Z \(`TDIJoIMU8uvvuYQbhyAxd`\) `[not archived]`](#2023-07-31z-tdijoimu8uvvuyqbhyaxd-not-archived)
+- [2023-07-26Z \(`XweCcE0e9326Bys4ORyMC`\) `[not archived]`](#2023-07-26z-xwecce0e9326bys4orymc-not-archived)
+- [2023-07-24Z \(`IDWU9BsUPJOCH6wUfUu5n`\) `[not archived]`](#2023-07-24z-idwu9bsupjoch6wufuu5n-not-archived)
+- [2023-07-22Z \(`XmKrBoPpskgF_4RiIX1jm`\) `[not archived]`](#2023-07-22z-xmkrboppskgf_4riix1jm-not-archived)
+- [2023-07-20Z \(`8TObkIccovI1-nluVgBpN`\) `[not archived]`](#2023-07-20z-8tobkiccovi1-nluvgbpn-not-archived)
+- [2023-07-20Z \(`m__df_2bcLUqGXlko-rBN`\) `[not archived]`](#2023-07-20z-m__df_2bcluqgxlko-rbn-not-archived)
+- [2023-07-19Z \(`qwkFw7JXBrWquFuGrYJM4`\) `[not archived]`](#2023-07-19z-qwkfw7jxbrwqufugryjm4-not-archived)
+- [2023-07-18Z \(`CIOQyz3i61JmlV427-WV2`\) `[not archived]`](#2023-07-18z-cioqyz3i61jmlv427-wv2-not-archived)
+- [2023-07-17Z \(`g50f5u-HEuvS0R11uCbQH`\) `[not archived]`](#2023-07-17z-g50f5u-heuvs0r11ucbqh-not-archived)
+- [2023-07-16Z \(`bOqDpPkLAc6P5_jQQ0pOe`\) `[not archived]`](#2023-07-16z-boqdppklac6p5_jqq0poe-not-archived)
+- [2023-07-13Z \(`V8eMtbBOHSVKP1zFk9nxF`\) `[not archived]`](#2023-07-13z-v8emtbbohsvkp1zfk9nxf-not-archived)
+- [2023-07-12Z \(`F80gy2EVE9-zP56kZ04j9`\) `[not archived]`](#2023-07-12z-f80gy2eve9-zp56kz04j9-not-archived)
+- [2023-07-07Z \(`CGRk_Om_aEGLXXSCuMmxw`\)](#2023-07-07z-cgrk_om_aeglxxscummxw)
+- [2023-07-07Z](#2023-07-07z)
+- [2023-07-07Z \(`vCNVkHIoC4nD6VRPE34vP`\)](#2023-07-07z-vcnvkhioc4nd6vrpe34vp)
+- [2023-07-07Z \(`WZIQpxJRN2JuwynD95fGL`\)](#2023-07-07z-wziqpxjrn2juwynd95fgl)
+- [2023-07-04Z \(`f9C5QIWDB4PeBMNfQPho6`\)](#2023-07-04z-f9c5qiwdb4pebmnfqpho6)
+- [2023-06-30Z \(`WLHd8p-1ysAW_5sZZPJIy`\)](#2023-06-30z-wlhd8p-1ysaw_5szzpjiy)
+- [2023-06-29Z \(`HIPozMBuTaTl2Vucglu5e`\)](#2023-06-29z-hipozmbutatl2vucglu5e)
+- [2023-06-29Z \(`wzq04J4IxM11RTl64R6wV`\)](#2023-06-29z-wzq04j4ixm11rtl64r6wv)
+- [2023-06-28Z \(`QvBTYln7NSxjxlNyZ4qN0`\)](#2023-06-28z-qvbtyln7nsxjxlnyz4qn0)
+- [2023-06-27Z \(`gO1nFWbowxDf-s-g3QRWc`\)](#2023-06-27z-go1nfwbowxdf-s-g3qrwc)
+- [2023-06-25Z \(`5oNaFu0A1xunXHmq5l70K`\)](#2023-06-25z-5onafu0a1xunxhmq5l70k)
+- [2023-06-23Z \(`6tvBacVQggsxEa50Su7EW`\)](#2023-06-23z-6tvbacvqggsxea50su7ew)
+- [2023-06-22Z \(`4OtK2GZhlDGpQWluC3GLQ`\)](#2023-06-22z-4otk2gzhldgpqwluc3glq)
+- [2023-06-22Z \(`CTxpiEb45oE7hUCOWm4Jq`\)](#2023-06-22z-ctxpieb45oe7hucowm4jq)
+- [2023-06-22Z \(`kwYJPc99Lx-XLUrLes-Se`\)](#2023-06-22z-kwyjpc99lx-xlurles-se)
+
+<!-- /MarkdownTOC -->
+
 ## 2023-09-16Z to 2024-01-01Z `[not archived]`
 
 ### Notes

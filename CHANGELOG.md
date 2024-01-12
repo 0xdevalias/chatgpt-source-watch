@@ -8,6 +8,24 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## Table of Contents
+
+<!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
+
+- [2024-01-12Z \(`XdWhUWo_M_wNJEE1jln84`\)](#2024-01-12z-xdwhuwo_m_wnjee1jln84)
+- [2024-01-12Z \(`v78GkVQvDccUOBvZi02mN`\)](#2024-01-12z-v78gkvqvdccuobvzi02mn)
+- [2024-01-12Z \(`BHrNOKMcBnyCKNWEuC-_T`\)](#2024-01-12z-bhrnokmcbnycknweuc-_t)
+- [2024-01-10Z \(`SEKhaE-wBycAz8cr914YK`\)](#2024-01-10z-sekhae-wbycaz8cr914yk)
+- [2024-01-08Z \(`mXIu6W6cm_lCUo268p1XR`\)](#2024-01-08z-mxiu6w6cm_lcuo268p1xr)
+- [2024-01-06Z \(`RCBswHp2o_8O-rQH0558u`\)](#2024-01-06z-rcbswhp2o_8o-rqh0558u)
+- [2024-01-05Z \(`ohf0xpZm-mdSSsiYSf4si`\)](#2024-01-05z-ohf0xpzm-mdsssiysf4si)
+- [2024-01-05Z \(`-ush58uailrg9NaSp6Olq`\)](#2024-01-05z--ush58uailrg9nasp6olq)
+- [2024-01-05Z \(`PEO14vuOqqjOQtCs82SgS`\)](#2024-01-05z-peo14vuoqqjoqtcs82sgs)
+- [2024-01-04Z \(`wvxlBkHE5usnj-32Td8Nr`\)](#2024-01-04z-wvxlbkhe5usnj-32td8nr)
+- [2024-01-02Z \(`aNEO7zh0z5I01hzE5e-99`\) `[as well as earlier missing changes]`](#2024-01-02z-aneo7zh0z5i01hze5e-99-as-well-as-earlier-missing-changes)
+
+<!-- /MarkdownTOC -->
+
 ## 2024-01-12Z (`XdWhUWo_M_wNJEE1jln84`)
 
 ### Notes
