@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# TODO: add a filter to the 'content-partial' logic to keep out known missing entries like SSO?
+
 # TODO: refactor to read the build date from args/similar
 
 # TODO: add support for reading json from STDIN, and if so, extracting the date from it rather than prompting the user
