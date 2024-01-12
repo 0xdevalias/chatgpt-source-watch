@@ -3538,34 +3538,36 @@
           ),
           x = h[0],
           b = h[1],
-          y = (0, g.WL)().data,
-          P = (0, q.useState)(
+          y = (0, g.WL)(),
+          P = y.data,
+          k = y.isLoading,
+          N = (0, q.useState)(
             null != o && o.gizmo.display.categories.length > 0
               ? o.gizmo.display.categories[0]
               : void 0
           ),
-          k = P[0],
-          N = P[1];
+          z = N[0],
+          C = N[1];
         (0, q.useEffect)(
           function () {
-            N(null == o ? void 0 : o.gizmo.display.categories[0]);
+            C(null == o ? void 0 : o.gizmo.display.categories[0]);
           },
           [null == o ? void 0 : o.gizmo.display.categories]
         );
-        var z = (0, q.useState)(void 0),
-          C = z[0],
-          I = z[1],
-          _ = (0, q.useRef)(
+        var I = (0, q.useState)(void 0),
+          _ = I[0],
+          S = I[1],
+          E = (0, q.useRef)(
             (0, K.throttle)(function (e, t) {
               return T.U.generateCategory(e, t);
             }, 1e3)
           ),
-          S =
-            null != y && y.is_verified
+          M =
+            null != P && P.is_verified
               ? void 0
               : m.formatMessage(t2.displayNameRequiredHint);
-        x === G.Zz.Marketplace && null != S && b(G.Zz.Link);
-        var E =
+        x !== G.Zz.Marketplace || null == M || k || b(G.Zz.Link);
+        var A =
             f &&
             !(
               null !== (t = i.allowedSharingRecipients) &&
@@ -3574,20 +3576,20 @@
                 return e === G.Zz.Link;
               })
             ),
-          M = e3(i, x, k),
-          A = M.includes(s.MissingPublicActionPrivacyPolicyURL),
-          U = i.tools.find(function (e) {
+          U = e3(i, x, z),
+          R = U.includes(s.MissingPublicActionPrivacyPolicyURL),
+          V = i.tools.find(function (e) {
             return e.type === w.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url;
           }),
-          R = (0, L.ec)(function (e) {
+          B = (0, L.ec)(function (e) {
             return e.currentWorkspace;
           }),
-          V = (0, D.hz)(),
-          B = (0, g.Z1)();
+          W = (0, D.hz)(),
+          H = (0, g.Z1)();
         (0, q.useEffect)(
           function () {
-            if (!(null != V && V.includes(Z.L0.GizmoStore))) {
-              N("other");
+            if (!(null != W && W.includes(Z.L0.GizmoStore))) {
+              C("other");
               return;
             }
             var e = !0;
@@ -3600,24 +3602,24 @@
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            if (((t.prev = 0), !(null != k))) {
+                            if (((t.prev = 0), !(null != z))) {
                               t.next = 3;
                               break;
                             }
                             return t.abrupt("return");
                           case 3:
                             return (
-                              (t.next = 5), _.current(i.name, i.instructions)
+                              (t.next = 5), E.current(i.name, i.instructions)
                             );
                           case 5:
                             (n = t.sent),
-                              e && null == k && (n ? N(n.id) : I(!0)),
+                              e && null == z && (n ? C(n.id) : S(!0)),
                               (t.next = 12);
                             break;
                           case 9:
                             (t.prev = 9),
                               (t.t0 = t.catch(0)),
-                              e && null == k && I(!0);
+                              e && null == z && S(!0);
                           case 12:
                           case "end":
                             return t.stop();
@@ -3634,9 +3636,9 @@
               }
             );
           },
-          [i.instructions, i.name, V, k]
+          [i.instructions, i.name, W, z]
         );
-        var W = null == V ? void 0 : V.includes(Z.L0.GizmoStore);
+        var J = null == W ? void 0 : W.includes(Z.L0.GizmoStore);
         return (0, O.jsxs)("div", {
           children: [
             (0, O.jsx)("div", {
@@ -3659,21 +3661,21 @@
                           eI.Xb,
                           {
                             value: e,
-                            disabled: e === G.Zz.Marketplace && null != S,
+                            disabled: e === G.Zz.Marketplace && null != M,
                             tooltipText:
                               e === G.Zz.Marketplace
-                                ? (null != S ? S : W)
+                                ? (null != M ? M : J)
                                   ? m.formatMessage(
                                       t2.publicSharingHintStoreEnabled
                                     )
                                   : m.formatMessage(t2.publicSharingHint)
                                 : void 0,
-                            label: (0, tl.MI)(e, R, m),
+                            label: (0, tl.MI)(e, B, m),
                           },
                           t
                         );
                       }),
-                    E &&
+                    A &&
                       (0, O.jsxs)(O.Fragment, {
                         children: [
                           (0, O.jsx)(eI.Xb, {
@@ -3682,7 +3684,7 @@
                             tooltipText: m.formatMessage(
                               t2.workspaceDisabledHint
                             ),
-                            label: (0, tl.MI)(G.Zz.Link, R, m),
+                            label: (0, tl.MI)(G.Zz.Link, B, m),
                           }),
                           (0, O.jsx)(eI.Xb, {
                             value: G.Zz.Marketplace,
@@ -3690,13 +3692,13 @@
                             tooltipText: m.formatMessage(
                               t2.workspaceDisabledHint
                             ),
-                            label: (0, tl.MI)(G.Zz.Marketplace, R, m),
+                            label: (0, tl.MI)(G.Zz.Marketplace, B, m),
                           }),
                         ],
                       }),
                   ],
                 }),
-                A &&
+                R &&
                   (0, O.jsx)("div", {
                     className: "text-xs text-red-500",
                     children: (0, O.jsx)(
@@ -3709,7 +3711,7 @@
                             fixlink: function (e) {
                               return (0, O.jsx)("button", {
                                 onClick: function () {
-                                  c(null == U ? void 0 : U.metadata.action_id);
+                                  c(null == V ? void 0 : V.metadata.action_id);
                                 },
                                 className: "underline",
                                 children: e,
@@ -3727,8 +3729,8 @@
                     canEdit: !0,
                   }),
                 x === G.Zz.Marketplace &&
-                  (null == V ? void 0 : V.includes(Z.L0.GizmoStore)) &&
-                  (C
+                  (null == W ? void 0 : W.includes(Z.L0.GizmoStore)) &&
+                  (_
                     ? (0, O.jsx)("div", {
                         className: "text-xs text-red-500",
                         children: (0, O.jsx)(en.Z, tq({}, t2.categoryError)),
@@ -3756,22 +3758,22 @@
                             ],
                           }),
                           (0, O.jsx)(t0, {
-                            category: null != k ? k : "",
+                            category: null != z ? z : "",
                             categories:
                               null !==
                                 (n =
-                                  null === (r = B.data) || void 0 === r
+                                  null === (r = H.data) || void 0 === r
                                     ? void 0
                                     : r.categories) && void 0 !== n
                                 ? n
                                 : [],
-                            setCategory: N,
+                            setCategory: C,
                           }),
                         ],
                       })),
                 (0, O.jsx)(eI.cY, {
                   color: "primary",
-                  disabled: M.length > 0,
+                  disabled: U.length > 0,
                   loading: d,
                   onClick: (0, v.Z)(
                     j().mark(function e() {
@@ -3782,7 +3784,7 @@
                             switch ((e.prev = e.next)) {
                               case 0:
                                 return (
-                                  (e.prev = 0), p(!0), (e.next = 4), a(x, k)
+                                  (e.prev = 0), p(!0), (e.next = 4), a(x, z)
                                 );
                               case 4:
                                 if (null != (t = e.sent)) {
@@ -6109,4 +6111,4 @@
     },
   },
 ]);
-//# sourceMappingURL=192-ccf21caf313384fd.js.map
+//# sourceMappingURL=192-7691c3c7b7192f4b.js.map

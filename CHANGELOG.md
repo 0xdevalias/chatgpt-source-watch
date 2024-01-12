@@ -8,6 +8,94 @@ You may also like some of the historical insights captured at the following gist
 
 - [Reverse engineering ChatGPT's frontend web app + deep dive explorations of the code (0xdevalias gist)](https://gist.github.com/0xdevalias/4ac297ee3f794c17d0997b4673a2f160#reverse-engineering-chatgpts-frontend-web-app--deep-dive-explorations-of-the-code)
 
+## 2024-01-12Z (`v78GkVQvDccUOBvZi02mN`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `ca40803be9f4a02a8a89d3a5b7d663628adab3ba`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-96c015bcc4afda84.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-373f366f3dd34e6f.js
+https://cdn.oaistatic.com/_next/static/v78GkVQvDccUOBvZi02mN/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/v78GkVQvDccUOBvZi02mN/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-373f366f3dd34e6f.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/fbf5130bf76bd106.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.2c9f41128fe4a6b2.js
+```
+
+## 2024-01-12Z (`BHrNOKMcBnyCKNWEuC-_T`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `dc2a17af6e06db68adbcbebfda7cd19cf12c4699`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```diff
+      teamsAdvertisedFeatures3: {
+        id: "pricingPlanConstants.teams.teamsAdvertisedFeatures3",
+    -   defaultMessage: "No training on your data",
+    +   defaultMessage:
+    +     "Team data excluded from training by default. <link>Learn more</link>",
+    +   link: "https://openai.com/enterprise-privacy",
+      },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-614197fb8f7a0c0f.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-9e992d55bf570f14.js
+https://cdn.oaistatic.com/_next/static/BHrNOKMcBnyCKNWEuC-_T/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/BHrNOKMcBnyCKNWEuC-_T/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/6276-ed51c45e26182454.js
+https://cdn.oaistatic.com/_next/static/chunks/192-7691c3c7b7192f4b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-6bf5df201da32f60.js
+```
+
+### From `orig/_next/static/chunks/webpack-9e992d55bf570f14.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/ad8a1177c17fd47a.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.44e3a6fb2a1c2634.js
+```
+
 ## 2024-01-11Z (`oaMdM-5A0fn6tvM6jS2wq`)
 
 ### Notes

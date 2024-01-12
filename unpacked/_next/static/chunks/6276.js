@@ -374,8 +374,8 @@
         z = r(37068),
         S = r(19992),
         E = r(53315),
-        O = r(52327),
-        M = r(46789),
+        M = r(52327),
+        O = r(46789),
         C = r(48442),
         R = r(98992),
         T = r(17575),
@@ -465,7 +465,7 @@
               },
               m,
             ] = l,
-            p = (0, M.i)(null != (r = s.current) ? r : c);
+            p = (0, O.i)(null != (r = s.current) ? r : c);
           (0, h.useEffect)(() => m({ type: 3, buttonId: n }), [n, m]),
             (0, h.useEffect)(() => m({ type: 5, panelId: o }), [o, m]);
           let v = (0, h.useMemo)(() => {
@@ -533,14 +533,14 @@
                 : c;
               null == t || t.focus();
             }),
-            O = (0, h.useMemo)(() => ({ close: S, isPortalled: v }), [S, v]),
+            M = (0, h.useMemo)(() => ({ close: S, isPortalled: v }), [S, v]),
             R = (0, h.useMemo)(() => ({ open: 0 === a, close: S }), [a, S]);
           return h.createElement(
             A.Provider,
             { value: l },
             h.createElement(
               F.Provider,
-              { value: O },
+              { value: M },
               h.createElement(
                 z.up,
                 { value: (0, y.E)(a, { 0: z.ZM.Open, 1: z.ZM.Closed }) },
@@ -566,7 +566,7 @@
             u = null !== c && c === r.panelId,
             d = (0, j.T)(s, t, u ? null : (e) => n({ type: 2, button: e })),
             f = (0, j.T)(s, t),
-            m = (0, M.i)(s),
+            m = (0, O.i)(s),
             p = (0, T.z)((e) => {
               var t, o, i;
               if (u) {
@@ -620,13 +620,13 @@
             }),
             z = 0 === r.popoverState,
             E = (0, h.useMemo)(() => ({ open: z }), [z]),
-            O = (0, S.f)(e, s),
+            M = (0, S.f)(e, s),
             C = u
-              ? { ref: f, type: O, onKeyDown: p, onClick: x }
+              ? { ref: f, type: M, onKeyDown: p, onClick: x }
               : {
                   ref: d,
                   id: r.buttonId,
-                  type: O,
+                  type: M,
                   "aria-expanded": e.disabled ? void 0 : 0 === r.popoverState,
                   "aria-controls": r.panel ? r.panelId : void 0,
                   onKeyDown: p,
@@ -701,7 +701,7 @@
               d = (0, j.T)(u, t, (e) => {
                 s({ type: 4, panel: e });
               }),
-              f = (0, M.i)(u),
+              f = (0, O.i)(u),
               m = (0, z.oJ)(),
               p = null !== m ? m === z.ZM.Open : 0 === o.popoverState,
               v = (0, T.z)((e) => {
@@ -863,7 +863,7 @@
               l = (0, T.z)((e) => (s((t) => [...t, e]), () => i(e))),
               a = (0, T.z)(() => {
                 var e;
-                let t = (0, O.r)(r);
+                let t = (0, M.r)(r);
                 if (!t) return !1;
                 let n = t.activeElement;
                 return (
@@ -1142,13 +1142,13 @@
           [j, P]
         );
         var E = (0, h.useRef)(null),
-          O = (0, h.useRef)(null),
-          M = (0, h.useState)(0),
-          C = M[0],
-          R = M[1];
+          M = (0, h.useRef)(null),
+          O = (0, h.useState)(0),
+          C = O[0],
+          R = O[1];
         return ((0, h.useEffect)(
           function () {
-            var e = O.current,
+            var e = M.current,
               t = function () {
                 null != e && R(e.scrollTop);
               };
@@ -1162,7 +1162,7 @@
               }
             );
           },
-          [O, R]
+          [M, R]
         ),
         x || y)
           ? (0, ew.jsxs)(ew.Fragment, {
@@ -1186,7 +1186,7 @@
               ],
             })
           : (0, ew.jsxs)("div", {
-              ref: O,
+              ref: M,
               className: "h-full overflow-y-auto",
               children: [
                 o
@@ -1214,7 +1214,7 @@
                         resultsSizeOffset: Math.min(C - 260, -110),
                       }),
                     P.length > 1 &&
-                      (0, ew.jsx)(eO, {
+                      (0, ew.jsx)(eM, {
                         displayGroups: P,
                         currentDisplayGroup: S,
                         scrollToDisplayGroup: function (e) {
@@ -1270,7 +1270,7 @@
                   ],
                 }),
                 (null == p ? void 0 : p.workspace_filtered) &&
-                  (0, ew.jsx)(eM, {}),
+                  (0, ew.jsx)(eO, {}),
               ],
             });
       }
@@ -1294,7 +1294,7 @@
           ],
         });
       }
-      function eO(e) {
+      function eM(e) {
         var t = e.displayGroups,
           r = e.currentDisplayGroup,
           n = e.scrollToDisplayGroup,
@@ -1424,7 +1424,7 @@
           })
         );
       }
-      function eM() {
+      function eO() {
         var e = (0, ec.Z)(),
           t = (0, em.$3)(),
           r = (0, p.tN)(function (e) {
@@ -1599,6 +1599,12 @@
             className:
               "flex h-24 items-center gap-5 overflow-hidden rounded-xl bg-gray-50 px-7 py-8 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 md:h-32 lg:h-36",
             target: "_blank",
+            onClick: function () {
+              J.A.publicEvent(Q.M.storeClickGizmo, {
+                gizmo_id: o.gizmo.id,
+                section: "featured",
+              });
+            },
             children: [
               (0, ew.jsx)(eb.Z, {
                 isFirstParty: !!(
@@ -2230,7 +2236,7 @@
             s = e.children;
           return (0, ew.jsxs)("div", {
             ref: t,
-            className: "scroll-mt-28 last:h-[calc(100vh-8rem)]",
+            className: "h-fit scroll-mt-28 last:min-h-[calc(100vh-8rem)]",
             children: [
               (0, ew.jsxs)(eg.h9, {
                 animateTap: !1,
@@ -2482,8 +2488,8 @@
         z = r(70671),
         S = r(94968),
         E = r(21389),
-        O = r(65865),
-        M = r(87942),
+        M = r(65865),
+        O = r(87942),
         C = r(35250);
       function R(e) {
         var t = e.delay,
@@ -2578,7 +2584,7 @@
             null !== (n = o.gizmo.display.description) && void 0 !== n ? n : "",
           byline: l
             ? (0, C.jsx)(T, { gizmoResource: o })
-            : (0, C.jsx)(O.ZP, { gizmo: o }),
+            : (0, C.jsx)(M.ZP, { gizmo: o }),
           buttons: (0, C.jsxs)(C.Fragment, {
             children: [
               l &&
@@ -2831,7 +2837,7 @@
                 }),
                 s &&
                   (0, C.jsx)(g.h, {
-                    children: (0, C.jsx)(M.b, {
+                    children: (0, C.jsx)(O.b, {
                       gizmoId: t.gizmo.id,
                       onSuccess: function () {
                         i(!1);
@@ -2854,4 +2860,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6276-d41d321c9ff543e0.js.map
+//# sourceMappingURL=6276-ed51c45e26182454.js.map
