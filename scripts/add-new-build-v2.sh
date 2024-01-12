@@ -759,8 +759,8 @@ generate_changelog_and_commit_message() {
   local webpack_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_found[@]}"))
   local webpack_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_missing[@]}"))
 
-  local all_found_urls=($(merge_arrays "${input_filtered_urls_found[@]}" "${build_manifest_urls_found[@]}" "${webpack_urls_found[@]}"))
-  local all_missing_urls=($(merge_arrays "${input_filtered_urls_missing[@]}" "${build_manifest_urls_missing[@]}" "${webpack_urls_missing[@]}"))
+  local all_found_urls_not_in_changelog=($(merge_arrays "${input_filtered_urls_found_not_in_changelog[@]}" "${build_manifest_urls_found_not_in_changelog[@]}" "${webpack_urls_found_not_in_changelog[@]}"))
+  local all_missing_urls_not_in_changelog=($(merge_arrays "${input_filtered_urls_missing_not_in_changelog[@]}" "${build_manifest_urls_missing_not_in_changelog[@]}" "${webpack_urls_missing_not_in_changelog[@]}"))
 
   local changelog_entry=""
   local changelog_notes=""
@@ -781,13 +781,12 @@ generate_changelog_and_commit_message() {
   echo
 
   # Start building the changelog entry
-  if [[ ${#all_found_urls[@]} -gt 0 ]] && [[ ${#all_missing_urls[@]} -gt 0 ]]; then
-    commit_message="[content-partial] add $build_hash info/content from ${build_date}Z"
+  if [[ ${#all_found_urls_not_in_changelog[@]} -gt 0 ]] && [[ ${#all_missing_urls_not_in_changelog[@]} -gt 0 ]]; then
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[partial archive]\`\n\n"
 
     changelog_notes+="- The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.\n"
-  elif [[ ${#all_found_urls[@]} -eq 0 ]] && [[ ${#all_missing_urls[@]} -gt 0 ]]; then
+  elif [[ ${#all_found_urls_not_in_changelog[@]} -eq 0 ]] && [[ ${#all_missing_urls_not_in_changelog[@]} -gt 0 ]]; then
     commit_message="[content-missing] add $build_hash info from ${build_date}Z"
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[not archived]\`\n\n"
