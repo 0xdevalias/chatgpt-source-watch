@@ -750,6 +750,15 @@ detect_webpack_file() {
 
 # Function to generate changelog entry and commit message
 generate_changelog_and_commit_message() {
+  local input_filtered_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${input_filtered_urls_found[@]}"))
+  local input_filtered_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${input_filtered_urls_missing[@]}"))
+
+  local build_manifest_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${build_manifest_urls_found[@]}"))
+  local build_manifest_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${build_manifest_urls_missing[@]}"))
+
+  local webpack_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_found[@]}"))
+  local webpack_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_missing[@]}"))
+
   local all_found_urls=($(merge_arrays "${input_filtered_urls_found[@]}" "${build_manifest_urls_found[@]}" "${webpack_urls_found[@]}"))
   local all_missing_urls=($(merge_arrays "${input_filtered_urls_missing[@]}" "${build_manifest_urls_missing[@]}" "${webpack_urls_missing[@]}"))
 
@@ -806,9 +815,6 @@ generate_changelog_and_commit_message() {
   changelog_entry+="The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the \`unpacked/\` folder:\n\n"
   changelog_entry+="${changelog_notes}"
 
-  local input_filtered_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${input_filtered_urls_found[@]}"))
-  local input_filtered_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${input_filtered_urls_missing[@]}"))
-
   if [[ ${#input_filtered_urls_found_not_in_changelog[@]} -gt 0 ]] ||
      [[ ${#input_filtered_urls_missing_not_in_changelog[@]} -gt 0 ]]; then
     changelog_entry+="### Not From Build Manifest\n\n"
@@ -828,9 +834,6 @@ generate_changelog_and_commit_message() {
     fi
   fi
 
-  local build_manifest_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${build_manifest_urls_found[@]}"))
-  local build_manifest_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${build_manifest_urls_missing[@]}"))
-
   if [[ ${#build_manifest_urls_found_not_in_changelog[@]} -gt 0 ]] ||
      [[ ${#build_manifest_urls_missing_not_in_changelog[@]} -gt 0 ]]; then
     changelog_entry+="### From Build Manifest\n\n"
@@ -849,9 +852,6 @@ generate_changelog_and_commit_message() {
       changelog_entry+="\`\`\`\n\n"
     fi
   fi
-
-  local webpack_urls_found_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_found[@]}"))
-  local webpack_urls_missing_not_in_changelog=($(filter_urls_not_in_changelog "${webpack_urls_missing[@]}"))
 
   if [[ ${#webpack_urls_found_not_in_changelog[@]} -gt 0 ]] ||
      [[ ${#webpack_urls_missing_not_in_changelog[@]} -gt 0 ]]; then
