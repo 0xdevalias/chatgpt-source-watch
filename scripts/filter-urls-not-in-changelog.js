@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 
-// TODO: refactor processUrl/similar to collect the URLs to be printed at the end rather than directly console.log'ing them
-
-// TODO: refactor --json mode to check that it's an array, and throw an error if not
-
-// TODO: refactor --json mode to return filtered json array rather than extracting the URLs
-
 // TODO: refactor arg parsing to use node:util parseArgs: https://nodejs.org/api/util.html#utilparseargsconfig
+
+// TODO: add an option that allows us to choose whether we filter the json (as json), or just extract the URLs from it (and return them as newline text)
 
 const fs = require("fs");
 const path = require("path");
@@ -20,7 +16,7 @@ const changelogFilenames = ["CHANGELOG.md", "CHANGELOG-2023.md"];
 const urlPrefixes = ["https://chat.openai.com/", "https://cdn.oaistatic.com/"];
 
 // Define a set to store all output URLs for de-duplication
-const outputUrls = new Set();
+const processedUrls = new Set();
 
 const displayUsage = (scriptName) => {
   console.log(`Usage: ${scriptName} [--json]`);
@@ -70,22 +66,25 @@ const readAllStdin = async () => {
 const main = async () => {
   const { isJsonMode } = parseArguments();
 
+  const inputData = await readAllStdin();
+
+  if (!isJsonMode && looksLikeJson(inputData)) {
+    console.error(
+      "Error: Input data looks like JSON. Did you forget to use the --json flag?"
+    );
+    process.exit(1);
+  }
+
   const combinedChangelogContent =
     loadAndCombineChangelogContent(changelogFilenames);
 
-  const inputData = await readAllStdin();
-  if (isJsonMode) {
-    processJsonInput(inputData, combinedChangelogContent);
-  } else {
-    if (looksLikeJson(inputData)) {
-      console.error(
-        "Error: Input data looks like JSON. Did you forget to use the --json flag?"
-      );
-      process.exit(1);
-    }
+  const outputUrls = isJsonMode
+    ? processJsonInput(inputData, combinedChangelogContent)
+    : inputData
+        .map((url) => processUrl(url, combinedChangelogContent))
+        .filter((url) => !!url);
 
-    inputData.forEach((url) => processUrl(url, combinedChangelogContent));
-  }
+  printUrls(outputUrls);
 };
 
 const loadAndCombineChangelogContent = (filenames) => {
@@ -119,32 +118,44 @@ const looksLikeJson = (inputData) => {
 };
 
 const processJsonInput = (inputLines, combinedChangelogContent) => {
+  if (!looksLikeJson(inputLines)) {
+    console.warn(
+      "Warning: Input data doesn't look like JSON. Are you sure you want to use --json mode on this data?"
+    );
+  }
+
   const inputData = inputLines.join("\n");
 
-  try {
-    const jsonInput = JSON.parse(inputData);
-    jsonInput.forEach((item) => {
-      processUrl(item?.url, combinedChangelogContent);
-    });
-  } catch (err) {
-    console.error("Failed to parse JSON input:", err);
+  const jsonInput = JSON.parse(inputData);
+
+  if (!Array.isArray(jsonInput)) {
+    throw new Error("JSON input is not an array");
   }
+
+  // TODO: add an option that allows us to choose whether we filter the json (as json), or just extract the URLs from it (and return them as newline text)
+  return jsonInput
+    .map((item) => ({
+      ...item,
+      url: processUrl(item?.url, combinedChangelogContent),
+    }))
+    .filter(({ url }) => !!url);
 };
 
 const processUrl = (inputUrl, combinedChangelogContent) => {
   const url = inputUrl.trim();
 
-  if (!isValidUrl(url)) return;
-  if (outputUrls.has(url)) return;
+  if (!isValidUrl(url) || processedUrls.has(url)) return null;
 
   const urlExistsInChangelog = generateUrlVariations(url, urlPrefixes).some(
     (variation) => combinedChangelogContent.includes(variation)
   );
 
-  if (!urlExistsInChangelog) {
-    outputUrls.add(url);
-    console.log(url);
-  }
+  if (urlExistsInChangelog) return null;
+
+  // Used for de-duplication
+  processedUrls.add(url);
+
+  return url;
 };
 
 const isValidUrl = (url) => {
@@ -160,6 +171,12 @@ const generateUrlVariations = (inputUrl, prefixes) => {
   }, url);
 
   return prefixes.map((prefix) => `${prefix}${urlWithoutPrefixes}`);
+};
+
+const printUrls = (urls) => {
+  urls.forEach((url) => {
+    if (url) console.log(url);
+  });
 };
 
 // Entry point
