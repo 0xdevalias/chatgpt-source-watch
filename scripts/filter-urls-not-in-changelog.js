@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-// TODO: refactor arg parsing to use node:util parseArgs: https://nodejs.org/api/util.html#utilparseargsconfig
-
 // TODO: add an option that allows us to choose whether we filter the json (as json), or just extract the URLs from it (and return them as newline text)
 
+const { parseArgs } = require("util");
 const fs = require("fs");
 const path = require("path");
 const { createInterface } = require("readline");
@@ -26,26 +25,36 @@ const displayUsage = (scriptName) => {
 
 const parseArguments = () => {
   const scriptName = path.basename(process.argv[1]);
-  const args = process.argv.slice(2);
 
-  if (args.includes("-h") || args.includes("--help")) {
+  const parsedArgs = (() => {
+    try {
+      return parseArgs({
+        strict: true,
+        allowPositionals: false,
+        options: {
+          json: {
+            type: 'boolean',
+            default: false,
+          },
+          help: {
+            type: 'boolean',
+            short: 'h',
+          },
+        }
+      });
+    } catch (error) {
+      displayUsage(scriptName);
+      console.error("\nError: Invalid arguments provided.", error.message);
+      process.exit(1);
+    }
+  })();
+
+  if (parsedArgs.values.help) {
     displayUsage(scriptName);
     process.exit(0);
   }
 
-  const isJsonMode = args.includes("--json");
-  if (isJsonMode) {
-    // Remove the --json flag from the arguments
-    args.splice(args.indexOf("--json"), 1);
-  }
-
-  if (args.length > 0) {
-    displayUsage(scriptName);
-    console.error("\nError: Invalid arguments provided.");
-    process.exit(1);
-  }
-
-  return { isJsonMode };
+  return { isJsonMode: parsedArgs.values.json };
 };
 
 const readAllStdin = async () => {
