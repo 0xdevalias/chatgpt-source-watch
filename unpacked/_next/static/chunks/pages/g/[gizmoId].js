@@ -1,120 +1,120 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [43],
   {
-    78801: function (e, n, t) {
+    78801: function (e, n, r) {
       "use strict";
-      t.r(n),
-        t.d(n, {
+      r.r(n),
+        r.d(n, {
           __N_SSP: function () {
-            return y;
+            return v;
           },
           default: function () {
-            return O;
+            return _;
           },
         });
-      var r = t(36112),
-        i = t(91559),
-        c = t(74318),
-        s = t(85528),
-        o = t(37097),
-        l = t(67404),
-        u = t(61305),
-        a = t(36638),
-        f = t(85958),
-        d = t(7144),
-        h = t(67311),
-        x = t(10721),
-        m = t.n(x),
-        j = t(70079),
-        g = t(35250);
-      function p(e, n) {
-        var t = Object.keys(e);
+      var t = r(36112),
+        i = r(91559),
+        o = r(74318),
+        c = r(85528),
+        u = r(37097),
+        s = r(67404),
+        l = r(61305),
+        a = r(36638),
+        f = r(85958),
+        d = r(7144),
+        h = r(67311),
+        g = r(10721),
+        j = r.n(g),
+        m = r(70079),
+        p = r(35250);
+      function O(e, n) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(e);
+          var t = Object.getOwnPropertySymbols(e);
           n &&
-            (r = r.filter(function (n) {
+            (t = t.filter(function (n) {
               return Object.getOwnPropertyDescriptor(e, n).enumerable;
             })),
-            t.push.apply(t, r);
+            r.push.apply(r, t);
         }
-        return t;
+        return r;
       }
-      function v(e) {
+      function b(e) {
         for (var n = 1; n < arguments.length; n++) {
-          var t = null != arguments[n] ? arguments[n] : {};
+          var r = null != arguments[n] ? arguments[n] : {};
           n % 2
-            ? p(Object(t), !0).forEach(function (n) {
-                (0, r.Z)(e, n, t[n]);
+            ? O(Object(r), !0).forEach(function (n) {
+                (0, t.Z)(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : p(Object(t)).forEach(function (n) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : O(Object(r)).forEach(function (n) {
                   Object.defineProperty(
                     e,
                     n,
-                    Object.getOwnPropertyDescriptor(t, n)
+                    Object.getOwnPropertyDescriptor(r, n)
                   );
                 });
         }
         return e;
       }
-      var y = !0;
-      function O(e) {
-        var n = (0, x.useRouter)().query.gizmoId;
+      var v = !0;
+      function _(e) {
+        var n = (0, g.useRouter)().query.gizmoId;
         switch (e.kind) {
           case "anon_gizmo":
-            return (0, g.jsx)(s.X, { gizmo: e.gizmo }, n);
+            return (0, p.jsx)(c.X, { gizmo: e.gizmo }, n);
           case "chat_page":
-            return (0, j.createElement)(
-              b,
-              v(v({}, e), {}, { key: n, gizmoId: n })
+            return (0, m.createElement)(
+              y,
+              b(b({}, e), {}, { key: n, gizmoId: n })
             );
           default:
             (0, h.Z)(e);
         }
       }
-      function b(e) {
-        var n = (0, o.b9)(e.gizmoId),
-          t = n.data,
-          r = n.error,
+      function y(e) {
+        var n = (0, u.b9)(e.gizmoId),
+          r = n.data,
+          t = n.error,
           i = (0, d.t)(),
-          s = null == i ? void 0 : i.canInteractWithGizmos();
-        return ((0, j.useEffect)(
+          c = null == i ? void 0 : i.canInteractWithGizmos();
+        return ((0, m.useEffect)(
           function () {
-            null == t && null != r && m().push((0, f.M5)(f.LT.GIZMO_NOT_FOUND));
+            null == r && null != t && j().push((0, f.M5)(f.LT.GIZMO_NOT_FOUND));
           },
-          [t, r]
+          [r, t]
         ),
-        null != r && s)
-          ? (0, g.jsx)(w, {})
-          : !1 === s
-            ? (0, g.jsx)(N, { gizmo: t })
-            : (0, j.createElement)(c.ZP, v(v({}, e), {}, { key: e.gizmoId }));
+        null != t && c)
+          ? (0, p.jsx)(w, {})
+          : !1 === c
+            ? (0, p.jsx)(x, { gizmo: r })
+            : (0, m.createElement)(o.ZP, b(b({}, e), {}, { key: e.gizmoId }));
       }
       function w() {
-        return (0, g.jsx)(u.Z, {
-          children: (0, g.jsxs)("div", {
+        return (0, p.jsx)(l.Z, {
+          children: (0, p.jsxs)("div", {
             className:
               "flex h-full w-full flex-col items-center justify-center",
             children: [
-              (0, g.jsx)("div", {
+              (0, p.jsx)("div", {
                 className: "font-bold",
                 children: "We're having trouble loading this GPT.",
               }),
-              (0, g.jsx)("div", {
+              (0, p.jsx)("div", {
                 children: "Please refresh the page, or try again later",
               }),
             ],
           }),
         });
       }
-      function N(e) {
+      function x(e) {
         var n = e.gizmo;
-        return (0, g.jsx)(u.Z, {
-          children: (0, g.jsx)(l.r, {
+        return (0, p.jsx)(l.Z, {
+          children: (0, p.jsx)(s.r, {
             gizmo: n,
             isOwner: !1,
-            children: (0, g.jsxs)(i.z, {
+            children: (0, p.jsxs)(i.z, {
               className: "mt-6",
               onClick: function () {
                 return (0, a.MG)();
@@ -128,120 +128,43 @@
         });
       }
     },
-    85528: function (e, n, t) {
+    61305: function (e, n, r) {
       "use strict";
-      t.d(n, {
-        S: function () {
-          return h;
-        },
-        X: function () {
-          return d;
-        },
-      });
-      var r = t(37097),
-        i = t(29703),
-        c = t(14972),
-        s = t(19841),
-        o = t(73040),
-        l = t.n(o),
-        u = t(2454),
-        a = t(67404),
-        f = t(35250);
-      function d(e) {
-        var n = e.gizmo,
-          t = (0, r.i6)(n);
-        return (0, f.jsxs)("div", {
-          className: "flex h-full flex-col",
-          children: [
-            (0, f.jsx)(i.N, { gizmo: n }),
-            (0, f.jsx)(h, { redirectUrl: t }),
-            (0, f.jsx)("div", {
-              className: "flex grow flex-col items-center justify-center p-2",
-              children: (0, f.jsx)(a.r, {
-                gizmo: n,
-                isOwner: !1,
-                isAnon: !0,
-                children: (0, f.jsxs)("div", {
-                  className: "mt-7 flex flex-col gap-4",
-                  children: [
-                    (0, f.jsx)(u.p, {
-                      href: "/auth/login?next=".concat(t),
-                      children: "Sign up to chat",
-                    }),
-                    (0, f.jsx)("div", {
-                      className: "text-sm text-token-text-tertiary",
-                      children: "Requires ChatGPT Plus",
-                    }),
-                  ],
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      function h(e) {
-        var n = e.redirectUrl,
-          t = e.className;
-        return (0, f.jsxs)("div", {
-          className: (0, s.default)(
-            "flex items-center justify-between px-7 py-4",
-            t
-          ),
-          children: [
-            (0, f.jsx)(x, {}),
-            (0, f.jsx)(l(), {
-              href: null != n ? "/auth/login?next=".concat(n) : "/auth/login",
-              className:
-                "flex items-center rounded-lg bg-green-600 px-4 py-2 font-medium text-white transition hover:opacity-70",
-              children: "Sign up",
-            }),
-          ],
-        });
-      }
-      function x() {
-        return (0, f.jsx)(l(), {
-          href: "/",
-          children: (0, f.jsx)(c.nI, { className: "h-8 w-8" }),
-        });
-      }
-    },
-    61305: function (e, n, t) {
-      "use strict";
-      t.d(n, {
+      r.d(n, {
         Z: function () {
           return a;
         },
       });
-      var r = t(49516),
-        i = t(83562),
-        c = t(35212),
-        s = t(10721),
-        o = t(8024),
-        l = t(5813),
-        u = t(35250);
+      var t = r(49516),
+        i = r(83562),
+        o = r(35212),
+        c = r(10721),
+        u = r(8024),
+        s = r(5813),
+        l = r(35250);
       function a(e) {
         var n = e.children,
-          t = (0, s.useRouter)();
-        return (0, u.jsx)(c.Z, {
+          r = (0, c.useRouter)();
+        return (0, l.jsx)(o.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, u.jsxs)(i.ZP, {
+          sidebar: (0, l.jsxs)(i.ZP, {
             onNewThread: function () {
-              t.push("/");
+              r.push("/");
             },
             children: [
-              (0, u.jsx)(l.Dy, {}),
-              (0, u.jsx)(r.Z, { activeId: void 0 }),
+              (0, l.jsx)(s.Dy, {}),
+              (0, l.jsx)(t.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, u.jsx)(o.Z, { children: n }),
+          children: (0, l.jsx)(u.Z, { children: n }),
         });
       }
     },
-    80052: function (e, n, t) {
+    80052: function (e, n, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]",
         function () {
-          return t(78801);
+          return r(78801);
         },
       ]);
     },
@@ -253,4 +176,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-e3d749bd503b4fc4.js.map
+//# sourceMappingURL=[gizmoId]-f12e078a06a4386b.js.map

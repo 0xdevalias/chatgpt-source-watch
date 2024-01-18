@@ -12,6 +12,7 @@ You may also like some of the historical insights captured at the following gist
 
 <!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 
+- [2024-01-18Z \(`mfRdA1mhUEbx-XW-t8HI1`\)](#2024-01-18z-mfrda1mhuebx-xw-t8hi1)
 - [2024-01-12Z \(`XdWhUWo_M_wNJEE1jln84`\)](#2024-01-12z-xdwhuwo_m_wnjee1jln84)
 - [2024-01-12Z \(`v78GkVQvDccUOBvZi02mN`\)](#2024-01-12z-v78gkvqvdccuobvzi02mn)
 - [2024-01-12Z \(`BHrNOKMcBnyCKNWEuC-_T`\)](#2024-01-12z-bhrnokmcbnycknweuc-_t)
@@ -25,6 +26,98 @@ You may also like some of the historical insights captured at the following gist
 - [2024-01-02Z \(`aNEO7zh0z5I01hzE5e-99`\) `[as well as earlier missing changes]`](#2024-01-02z-aneo7zh0z5i01hze5e-99-as-well-as-earlier-missing-changes)
 
 <!-- /MarkdownTOC -->
+
+## 2024-01-18Z (`mfRdA1mhUEbx-XW-t8HI1`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `d39a41bd98d114b394c04f83fd7af47c9fa87e40`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Chunk IDs removed:
+  - `6276` was removed and seemingly split between a number of files, probably including:
+    - `unpacked/_next/static/chunks/pages/_app.js`
+    - `unpacked/_next/static/chunks/pages/gpts.js`
+    - `unpacked/_next/static/chunks/pages/g/[gizmoId].js`
+    - `unpacked/_next/static/chunks/pages/gpts/mine.js`
+    - `unpacked/_next/static/chunks/7893.js`
+    - ?etc?
+- Chunk IDs changed:
+  - `192` -> `7893`
+- Module IDs changed:
+  - `66027` -> `32062`
+  - `47455` -> `72256`
+  - `192` -> `17893`
+  - `52936` -> `78116`
+  - `8145` -> `88963`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - New route added: `/admin/gpts` (`unpacked/_next/static/chunks/pages/admin/gpts.js`)
+- `unpacked/_next/static/chunks/7893.js`
+  - Seems to contain a lot of stuff related to GPTs / creating them, including what seems to be some (all?) of the prompts used behind the scenes by the GPT creator.
+- `unpacked/_next/static/chunks/d7aec224.js`
+  - Seems to contain a bunch of stuff related to cryptography or similar I think?
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, so hard to see if/what actually changed within it
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-7d6b14769f155495.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-f676425bf2920d14.js
+https://cdn.oaistatic.com/_next/static/mfRdA1mhUEbx-XW-t8HI1/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/mfRdA1mhUEbx-XW-t8HI1/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-e8e15d8ebec0097a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-21bf33ecdd89e2bb.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/analytics-51dd97dd90e2ae2b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-109060fbf829aa50.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-5a7a4ad9c0ffad2e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-608051d3daa617bc.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-bed6b17cf2cad1ff.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-0d86cca11863da22.js
+https://cdn.oaistatic.com/_next/static/chunks/3975-37a9301353b29c5d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-f12e078a06a4386b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-b75a8a81b1ff7791.js
+https://cdn.oaistatic.com/_next/static/chunks/7893-22d1a9f418c004b7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor-d67e0d7a5e8ac006.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor/[slug]-65029f38793803c7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-544670a0f116527f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/accepted-d7ba9a8c17e28e51.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-32f24149f5824618.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-4b0ce67625fcf59e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-e8774e9d3f7da4aa.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-84597e34390c1506.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-8da35bbb0f092dc3.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-080407fd516d7e1c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/workspace/deactivated-5190e0ba03fbed0b.js
+```
+
+### From `orig/_next/static/chunks/webpack-f676425bf2920d14.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/2186.cabe8d2968afacb8.js
+https://cdn.oaistatic.com/_next/static/chunks/d7aec224.68e70012d9ba3ab1.js
+https://cdn.oaistatic.com/_next/static/chunks/30750f44.7367fc2b279f784a.js
+https://cdn.oaistatic.com/_next/static/chunks/9118.f8d764b6cd157f81.js
+https://cdn.oaistatic.com/_next/static/css/132af4ac1db4a00b.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.9faebbfee625ef81.js
+```
 
 ## 2024-01-12Z (`XdWhUWo_M_wNJEE1jln84`)
 

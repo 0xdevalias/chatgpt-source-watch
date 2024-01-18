@@ -1,23 +1,23 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [577],
   {
-    47455: function (e, t, s) {
+    72256: function (e, t, s) {
       "use strict";
       s.r(t),
         s.d(t, {
           __N_SSP: function () {
-            return I;
+            return z;
           },
           default: function () {
-            return D;
+            return K;
           },
         });
       var n = s(36112),
         i = s(35017),
-        r = s(82256),
-        a = s(90166),
+        a = s(82256),
+        r = s(90166),
         o = s(67558),
-        l = s(66027),
+        l = s(32062),
         c = s(73582),
         d = s(82473),
         u = s(25494),
@@ -25,15 +25,13 @@
         g = s(29124),
         f = s.n(g),
         h = s(70671),
-        b = s(32004),
-        w = s(94968),
-        x = s(33562),
-        m = s(14972),
-        j = s(46001),
-        v = s(4748),
-        y = s(81942),
-        T = s(35250);
-      function S(e, t) {
+        x = s(32004),
+        b = s(94968),
+        w = s(33562),
+        m = s(4748),
+        j = s(81942),
+        S = s(35250);
+      function y(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -45,16 +43,16 @@
         }
         return s;
       }
-      function O(e) {
+      function v(e) {
         for (var t = 1; t < arguments.length; t++) {
           var s = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? S(Object(s), !0).forEach(function (t) {
+            ? y(Object(s), !0).forEach(function (t) {
                 (0, n.Z)(e, t, s[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
-              : S(Object(s)).forEach(function (t) {
+              : y(Object(s)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -64,80 +62,75 @@
         }
         return e;
       }
-      function k() {
-        return (0, T.jsx)(m.aU, {
-          className: "icon-sm ml-1 text-token-text-tertiary",
-        });
-      }
-      function P(e) {
+      function O(e) {
         var t,
           s = e.conversationTTL,
           n = (0, h.Z)();
         return (
           (t =
             null === s
-              ? n.formatMessage(E.retentionInfinite)
+              ? n.formatMessage(Z.retentionInfinite)
               : 7776e3 === s
-                ? n.formatMessage(E.retentionNinetyDays)
+                ? n.formatMessage(Z.retentionNinetyDays)
                 : 31536e3 === s
-                  ? n.formatMessage(E.retentionOneYear)
-                  : n.formatMessage(E.retentionCustomDays, {
+                  ? n.formatMessage(Z.retentionOneYear)
+                  : n.formatMessage(Z.retentionCustomDays, {
                       num: Math.floor(s / 86400),
                     })),
-          (0, T.jsxs)(y.vi, {
+          (0, S.jsxs)(j.vi, {
             children: [
-              (0, T.jsx)("p", {
+              (0, S.jsx)("p", {
                 className: "inline-flex items-center text-base",
-                children: (0, T.jsx)(b.Z, O({}, E.conversationRetention)),
+                children: (0, S.jsx)(x.Z, v({}, Z.conversationRetention)),
               }),
-              (0, T.jsx)(a.u, {
-                label: n.formatMessage(E.retentionSettingTooltip),
+              (0, S.jsx)(r.u, {
+                label: n.formatMessage(Z.retentionSettingTooltip),
                 children: t,
               }),
             ],
           })
         );
       }
-      function Z(e) {
+      function k(e) {
         var t = e.title,
           s = e.description,
           n = e.children,
           i = e.upsellEnterprise,
-          r = void 0 !== i && i;
-        return (0, T.jsx)(a.E, {
-          label: (0, T.jsx)(b.Z, O({}, E.enterpriseRequiredMessage)),
+          a = void 0 !== i && i;
+        return (0, S.jsx)(r.E, {
+          label: (0, S.jsx)(x.Z, v({}, Z.enterpriseRequiredMessage)),
           side: "top",
           sideOffset: 4,
-          disabled: !r,
+          disabled: !a,
           className: "max-w-xl",
-          children: (0, T.jsxs)(y.i9, {
-            className: (0, p.default)(r && "text-token-text-tertiary"),
+          children: (0, S.jsxs)(j.i9, {
+            className: (0, p.default)(a && "text-token-text-tertiary"),
             children: [
-              (0, T.jsxs)(y.A4, {
+              (0, S.jsxs)(j.A4, {
                 className: "flex items-center gap-3",
                 children: [
-                  (0, T.jsx)(b.Z, O({}, t)),
-                  r &&
-                    (0, T.jsx)("span", {
+                  (0, S.jsx)(x.Z, v({}, t)),
+                  a &&
+                    (0, S.jsx)("span", {
                       className:
                         "rounded-xl bg-token-surface-tertiary px-2 pb-0.5 text-sm",
-                      children: (0, T.jsx)(b.Z, O({}, E.enterpriseUpsellPill)),
+                      children: (0, S.jsx)(x.Z, v({}, Z.enterpriseUpsellPill)),
                     }),
                 ],
               }),
-              s && (0, T.jsx)(y.Li, { children: (0, T.jsx)(b.Z, O({}, s)) }),
+              s && (0, S.jsx)(j.Li, { children: (0, S.jsx)(x.Z, v({}, s)) }),
               n,
             ],
           }),
         });
       }
-      function M(e) {
+      function T(e) {
         var t,
           s = e.workspaceId,
           n = e.label,
           i = e.setting,
-          r = e.defaultValue,
-          a = e.values,
+          a = e.defaultValue,
+          r = e.values,
           o = e.disabled,
           c = (0, h.Z)(),
           p = (0, d.NL)(),
@@ -151,43 +144,43 @@
               p.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              v.m.danger(c.formatMessage(E.featureSettingsUpdateFailed));
+              m.m.danger(c.formatMessage(Z.featureSettingsUpdateFailed));
             },
           }),
           f = g.variables,
-          w = g.mutate;
-        return (0, T.jsxs)(y.vi, {
+          b = g.mutate;
+        return (0, S.jsxs)(j.vi, {
           children: [
-            (0, T.jsx)("p", {
+            (0, S.jsx)("p", {
               className: "text-md inline-flex items-center",
-              children: (0, T.jsx)(b.Z, O({}, n)),
+              children: (0, S.jsx)(x.Z, v({}, n)),
             }),
-            (0, T.jsxs)(x.Z.Root, {
+            (0, S.jsxs)(w.Z.Root, {
               defaultValue:
                 null !== (t = null == f ? void 0 : f.value) && void 0 !== t
                   ? t
-                  : r,
+                  : a,
               onValueChange: function (e) {
-                w({ setting: i, value: e });
+                b({ setting: i, value: e });
               },
               disabled: void 0 !== o && o,
               children: [
-                (0, T.jsxs)(x.Z.Trigger, {
+                (0, S.jsxs)(w.Z.Trigger, {
                   className: "text-md focus-visible:border-none",
                   children: [
-                    (0, T.jsx)(x.Z.Value, {}),
-                    (0, T.jsx)(x.Z.Icon, {}),
+                    (0, S.jsx)(w.Z.Value, {}),
+                    (0, S.jsx)(w.Z.Icon, {}),
                   ],
                 }),
-                (0, T.jsx)(x.Z.Portal, {
-                  children: (0, T.jsx)(x.Z.Content, {
-                    children: a.map(function (e, t) {
-                      return (0, T.jsx)(
-                        x.Z.Item,
+                (0, S.jsx)(w.Z.Portal, {
+                  children: (0, S.jsx)(w.Z.Content, {
+                    children: r.map(function (e, t) {
+                      return (0, S.jsx)(
+                        w.Z.Item,
                         {
                           className: "text-md",
                           value: e.value,
-                          children: (0, T.jsx)(b.Z, O({}, e.display)),
+                          children: (0, S.jsx)(x.Z, v({}, e.display)),
                         },
                         t
                       );
@@ -199,50 +192,344 @@
           ],
         });
       }
-      function N(e) {
+      function P(e) {
+        var t = e.workspaceId,
+          s = e.data,
+          n = (0, c.ec)(c.F_.isTeamPlan);
+        return (0, S.jsxs)(j.$V, {
+          children: [
+            n && (0, S.jsx)(j.W8, {}),
+            (0, S.jsx)(k, {
+              title: Z.sharingSettingsTitle,
+              upsellEnterprise: n,
+              children: (0, S.jsx)(j.qQ, {
+                children: (0, S.jsx)(T, {
+                  workspaceId: t,
+                  label: Z.chatSharingTitle,
+                  setting: a.bb.CHAT_SHARE_SETTINGS,
+                  disabled: n,
+                  defaultValue: s.share_settings.chat_share_setting,
+                  values: [
+                    {
+                      display: Z.workspaceMembersOnlySelect,
+                      value: a.Gz.WORKSPACE_ONLY,
+                    },
+                    { display: Z.noOneSelect, value: a.Gz.NO_ONE },
+                  ],
+                }),
+              }),
+            }),
+            (0, S.jsx)(k, {
+              title: Z.retentionPolicyTitle,
+              description: Z.retentionChange,
+              upsellEnterprise: n,
+              children: (0, S.jsx)(O, { conversationTTL: s.conversation_ttl }),
+            }),
+          ],
+        });
+      }
+      function M(e) {
+        var t = e.currentWorkspaceId,
+          s = (0, o.C)(t),
+          n = s.data,
+          a = s.isLoading,
+          r = (0, h.Z)();
+        return (0, S.jsxs)(S.Fragment, {
+          children: [
+            (0, S.jsx)(f(), {
+              children: (0, S.jsx)("title", {
+                children: r.formatMessage(Z.title),
+              }),
+            }),
+            (0, S.jsx)(i.yG, { title: r.formatMessage(Z.title) }),
+            (0, S.jsx)(i.hb, {
+              showSpinner: a,
+              children:
+                void 0 === n
+                  ? null
+                  : (0, S.jsx)(P, { workspaceId: t, data: n }),
+            }),
+          ],
+        });
+      }
+      var Z = (0, b.vU)({
+          title: { id: "workspaceSettings.title", defaultMessage: "Settings" },
+          retentionPolicyTitle: {
+            id: "workspaceSettings.retentionPolicyTitle",
+            defaultMessage: "Retention policy",
+          },
+          sharingSettingsTitle: {
+            id: "workspaceSettings.sharingSettingsTitle",
+            defaultMessage: "Sharing",
+          },
+          chatSharingTitle: {
+            id: "workspaceSettings.chatSharingTitle",
+            defaultMessage: "Chats can be shared with...",
+          },
+          workspaceMembersOnlySelect: {
+            id: "workspaceSettings.workspaceMembersOnlySelect",
+            defaultMessage: "Workspace members only",
+          },
+          noOneSelect: {
+            id: "workspaceSettings.noOneSelect",
+            defaultMessage: "No one",
+          },
+          featureSettingsUpdateFailed: {
+            id: "workspaceSettings.featureSettingsUpdateFailed",
+            defaultMessage: "Failed to update feature setting",
+          },
+          conversationRetention: {
+            id: "workspaceSettings.conversationRetention",
+            defaultMessage: "Chat retention",
+          },
+          retentionInfinite: {
+            id: "workspaceSettings.retentionInfinite",
+            defaultMessage: "Infinite",
+          },
+          retentionNinetyDays: {
+            id: "workspaceSettings.retentionNinetyDays",
+            defaultMessage: "90 days",
+          },
+          retentionOneYear: {
+            id: "workspaceSettings.retentionOneYear",
+            defaultMessage: "1 year",
+          },
+          retentionCustomDays: {
+            id: "workspaceSettings.retentionCustomDays",
+            defaultMessage: "{num} days",
+          },
+          retentionChange: {
+            id: "workspaceSettings.retentionChange",
+            defaultMessage:
+              "Contact your account manager to change this setting.",
+          },
+          enterpriseUpsellPill: {
+            id: "workspaceSettings.enterpriseUpsellPill",
+            defaultMessage: "Enterprise",
+          },
+          retentionSettingTooltip: {
+            id: "workspaceSettings.retentionSettingTooltip",
+            defaultMessage:
+              "Contact your account manager to change this setting",
+          },
+          enterpriseRequiredMessage: {
+            id: "workspaceSettings.enterpriseRequiredMessage",
+            defaultMessage:
+              "Only workspaces with the Enterprise plan can change these settings",
+          },
+        }),
+        N = s(14972),
+        _ = s(46001);
+      function C(e, t) {
+        var s = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var n = Object.getOwnPropertySymbols(e);
+          t &&
+            (n = n.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            s.push.apply(s, n);
+        }
+        return s;
+      }
+      function E(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var s = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? C(Object(s), !0).forEach(function (t) {
+                (0, n.Z)(e, t, s[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+              : C(Object(s)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(s, t)
+                  );
+                });
+        }
+        return e;
+      }
+      function G() {
+        return (0, S.jsx)(N.aU, {
+          className: "icon-sm ml-1 text-token-text-tertiary",
+        });
+      }
+      function I(e) {
+        var t,
+          s = e.conversationTTL,
+          n = (0, h.Z)();
+        return (
+          (t =
+            null === s
+              ? n.formatMessage(U.retentionInfinite)
+              : 7776e3 === s
+                ? n.formatMessage(U.retentionNinetyDays)
+                : 31536e3 === s
+                  ? n.formatMessage(U.retentionOneYear)
+                  : n.formatMessage(U.retentionCustomDays, {
+                      num: Math.floor(s / 86400),
+                    })),
+          (0, S.jsxs)(j.vi, {
+            children: [
+              (0, S.jsx)("p", {
+                className: "inline-flex items-center text-base",
+                children: (0, S.jsx)(x.Z, E({}, U.conversationRetention)),
+              }),
+              (0, S.jsx)(r.u, {
+                label: n.formatMessage(U.retentionSettingTooltip),
+                children: t,
+              }),
+            ],
+          })
+        );
+      }
+      function A(e) {
+        var t = e.title,
+          s = e.description,
+          n = e.children,
+          i = e.upsellEnterprise,
+          a = void 0 !== i && i;
+        return (0, S.jsx)(r.E, {
+          label: (0, S.jsx)(x.Z, E({}, U.enterpriseRequiredMessage)),
+          side: "top",
+          sideOffset: 4,
+          disabled: !a,
+          className: "max-w-xl",
+          children: (0, S.jsxs)(j.i9, {
+            className: (0, p.default)(a && "text-token-text-tertiary"),
+            children: [
+              (0, S.jsxs)(j.A4, {
+                className: "flex items-center gap-3",
+                children: [
+                  (0, S.jsx)(x.Z, E({}, t)),
+                  a &&
+                    (0, S.jsx)("span", {
+                      className:
+                        "rounded-xl bg-token-surface-tertiary px-2 pb-0.5 text-sm",
+                      children: (0, S.jsx)(x.Z, E({}, U.enterpriseUpsellPill)),
+                    }),
+                ],
+              }),
+              s && (0, S.jsx)(j.Li, { children: (0, S.jsx)(x.Z, E({}, s)) }),
+              n,
+            ],
+          }),
+        });
+      }
+      function D(e) {
+        var t,
+          s = e.workspaceId,
+          n = e.label,
+          i = e.setting,
+          a = e.defaultValue,
+          r = e.values,
+          o = e.disabled,
+          c = (0, h.Z)(),
+          p = (0, d.NL)(),
+          g = (0, u.D)({
+            mutationFn: function (e) {
+              var t = e.setting,
+                n = e.value;
+              return l.ZP.setWorkspaceShareSetting(s, t, n);
+            },
+            onSettled: function () {
+              p.invalidateQueries({ queryKey: ["workspace-settings"] });
+            },
+            onError: function () {
+              m.m.danger(c.formatMessage(U.featureSettingsUpdateFailed));
+            },
+          }),
+          f = g.variables,
+          b = g.mutate;
+        return (0, S.jsxs)(j.vi, {
+          children: [
+            (0, S.jsx)("p", {
+              className: "text-md inline-flex items-center",
+              children: (0, S.jsx)(x.Z, E({}, n)),
+            }),
+            (0, S.jsxs)(w.Z.Root, {
+              defaultValue:
+                null !== (t = null == f ? void 0 : f.value) && void 0 !== t
+                  ? t
+                  : a,
+              onValueChange: function (e) {
+                b({ setting: i, value: e });
+              },
+              disabled: void 0 !== o && o,
+              children: [
+                (0, S.jsxs)(w.Z.Trigger, {
+                  className: "text-md focus-visible:border-none",
+                  children: [
+                    (0, S.jsx)(w.Z.Value, {}),
+                    (0, S.jsx)(w.Z.Icon, {}),
+                  ],
+                }),
+                (0, S.jsx)(w.Z.Portal, {
+                  children: (0, S.jsx)(w.Z.Content, {
+                    children: r.map(function (e, t) {
+                      return (0, S.jsx)(
+                        w.Z.Item,
+                        {
+                          className: "text-md",
+                          value: e.value,
+                          children: (0, S.jsx)(x.Z, E({}, e.display)),
+                        },
+                        t
+                      );
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function L(e) {
         var t,
           s = e.workspaceId,
           n = e.value,
           i = (0, h.Z)(),
-          a = (0, d.NL)(),
+          r = (0, d.NL)(),
           o = (0, u.D)({
             mutationFn: function (e) {
               var t = e.value;
               return l.ZP.setWorkspaceThirdPartyGPTSetting(s, t);
             },
             onSettled: function () {
-              a.invalidateQueries({ queryKey: ["workspace-settings"] });
+              r.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              v.m.danger(i.formatMessage(E.featureSettingsUpdateFailed));
+              m.m.danger(i.formatMessage(U.featureSettingsUpdateFailed));
             },
           }),
           c = o.variables,
           p = o.mutate;
-        return (0, T.jsxs)(x.Z.Root, {
+        return (0, S.jsxs)(w.Z.Root, {
           defaultValue:
             null !== (t = null == c ? void 0 : c.value) && void 0 !== t ? t : n,
           onValueChange: function (e) {
             p({ value: e });
           },
           children: [
-            (0, T.jsxs)(x.Z.Trigger, {
+            (0, S.jsxs)(w.Z.Trigger, {
               className:
                 "border border-token-border-light text-base focus-visible:border-token-border-light",
-              children: [(0, T.jsx)(x.Z.Value, {}), (0, T.jsx)(x.Z.Icon, {})],
+              children: [(0, S.jsx)(w.Z.Value, {}), (0, S.jsx)(w.Z.Icon, {})],
             }),
-            (0, T.jsx)(x.Z.Portal, {
-              children: (0, T.jsxs)(x.Z.Content, {
+            (0, S.jsx)(w.Z.Portal, {
+              children: (0, S.jsxs)(w.Z.Content, {
                 children: [
-                  (0, T.jsx)(x.Z.Item, {
+                  (0, S.jsx)(w.Z.Item, {
                     className: "text-base",
-                    value: r.NN.ALLOW_ALL,
-                    children: (0, T.jsx)(b.Z, O({}, E.allowAllOption)),
+                    value: a.NN.ALLOW_ALL,
+                    children: (0, S.jsx)(x.Z, E({}, U.allowAllOption)),
                   }),
-                  (0, T.jsx)(x.Z.Item, {
+                  (0, S.jsx)(w.Z.Item, {
                     className: "text-base",
-                    value: r.NN.ALLOW_NONE,
-                    children: (0, T.jsx)(b.Z, O({}, E.dontAllowOption)),
+                    value: a.NN.ALLOW_NONE,
+                    children: (0, S.jsx)(x.Z, E({}, U.dontAllowOption)),
                   }),
                 ],
               }),
@@ -250,12 +537,12 @@
           ],
         });
       }
-      function _(e) {
+      function R(e) {
         var t,
           s = e.workspaceId,
           n = e.label,
           i = e.feature,
-          r = e.value,
+          a = e.value,
           o = e.tooltip,
           c = e.disabled,
           p = (0, h.Z)(),
@@ -270,300 +557,302 @@
               g.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              v.m.danger(p.formatMessage(E.featureSettingsUpdateFailed));
+              m.m.danger(p.formatMessage(U.featureSettingsUpdateFailed));
             },
           }),
-          w = f.variables,
-          x = f.mutate;
-        return (0, T.jsxs)(y.vi, {
+          b = f.variables,
+          w = f.mutate;
+        return (0, S.jsxs)(j.vi, {
           children: [
-            (0, T.jsxs)("p", {
+            (0, S.jsxs)("p", {
               className: "text-md inline-flex items-center",
               children: [
-                (0, T.jsx)(b.Z, O({}, n)),
+                (0, S.jsx)(x.Z, E({}, n)),
                 o &&
-                  (0, T.jsx)(a.u, {
+                  (0, S.jsx)(r.u, {
                     sideOffset: 4,
                     interactive: !0,
                     delayDuration: 0,
-                    label: (0, T.jsx)(b.Z, O({}, o)),
+                    label: (0, S.jsx)(x.Z, E({}, o)),
                     side: "top",
-                    children: (0, T.jsx)(k, {}),
+                    children: (0, S.jsx)(G, {}),
                   }),
               ],
             }),
-            (0, T.jsx)(j.oC, {
+            (0, S.jsx)(_.oC, {
               label: "",
               disabled: void 0 !== c && c,
               enabled:
-                null !== (t = null == w ? void 0 : w.enabled) && void 0 !== t
+                null !== (t = null == b ? void 0 : b.enabled) && void 0 !== t
                   ? t
-                  : r,
+                  : a,
               onChange: function (e) {
-                x({ feature: i, enabled: e });
+                w({ feature: i, enabled: e });
               },
             }),
           ],
         });
       }
-      function G(e) {
+      function W(e) {
         var t = e.workspaceId,
           s = e.data,
           n = (0, c.ec)(c.F_.isTeamPlan),
-          i = (0, T.jsxs)(Z, {
-            title: E.thirdPartyGPTsTitle,
+          i = (0, S.jsxs)(A, {
+            title: U.thirdPartyGPTsTitle,
             children: [
-              (0, T.jsx)("p", {
+              (0, S.jsx)("p", {
                 className: "text-md flex grow items-center",
-                children: (0, T.jsx)(b.Z, O({}, E.thirdPartyGPTsDescription)),
+                children: (0, S.jsx)(x.Z, E({}, U.thirdPartyGPTsDescription)),
               }),
-              (0, T.jsx)("div", {
-                children: (0, T.jsx)(N, {
+              (0, S.jsx)("div", {
+                children: (0, S.jsx)(L, {
                   workspaceId: t,
                   value: s.allow_third_party_gpts,
                 }),
               }),
             ],
           });
-        return (0, T.jsxs)(y.$V, {
+        return (0, S.jsxs)(j.$V, {
           children: [
             n && i,
-            n && (0, T.jsx)(y.W8, {}),
-            (0, T.jsx)(Z, {
-              title: E.sharingSettingsTitle,
+            n && (0, S.jsx)(j.W8, {}),
+            (0, S.jsx)(A, {
+              title: U.sharingSettingsTitle,
               upsellEnterprise: n,
-              children: (0, T.jsxs)(y.qQ, {
+              children: (0, S.jsxs)(j.qQ, {
                 children: [
-                  (0, T.jsx)(M, {
+                  (0, S.jsx)(D, {
                     workspaceId: t,
-                    label: E.chatSharingTitle,
-                    setting: r.bb.CHAT_SHARE_SETTINGS,
+                    label: U.chatSharingTitle,
+                    setting: a.bb.CHAT_SHARE_SETTINGS,
                     disabled: n,
                     defaultValue: s.share_settings.chat_share_setting,
                     values: [
                       {
-                        display: E.workspaceMembersOnlySelect,
-                        value: r.Gz.WORKSPACE_ONLY,
+                        display: U.workspaceMembersOnlySelect,
+                        value: a.Gz.WORKSPACE_ONLY,
                       },
-                      { display: E.noOneSelect, value: r.Gz.NO_ONE },
+                      { display: U.noOneSelect, value: a.Gz.NO_ONE },
                     ],
                   }),
-                  (0, T.jsx)(M, {
+                  (0, S.jsx)(D, {
                     workspaceId: t,
-                    label: E.gptSharingTitle,
+                    label: U.gptSharingTitle,
                     disabled: n,
-                    setting: r.bb.GPT_SHARE_SETTINGS,
+                    setting: a.bb.GPT_SHARE_SETTINGS,
                     defaultValue: s.share_settings.gpt_share_setting,
                     values: [
-                      { display: E.anyOneSelect, value: r.Gz.ANYONE },
+                      { display: U.anyOneSelect, value: a.Gz.ANYONE },
                       {
-                        display: E.workspaceMembersOnlySelect,
-                        value: r.Gz.WORKSPACE_ONLY,
+                        display: U.workspaceMembersOnlySelect,
+                        value: a.Gz.WORKSPACE_ONLY,
                       },
-                      { display: E.noOneSelect, value: r.Gz.NO_ONE },
+                      { display: U.noOneSelect, value: a.Gz.NO_ONE },
                     ],
                   }),
                 ],
               }),
             }),
-            (0, T.jsx)(Z, {
-              title: E.workspaceGPTsTitle,
-              description: E.workspaceGPTsDescription,
+            (0, S.jsx)(A, {
+              title: U.workspaceGPTsTitle,
+              description: U.workspaceGPTsDescription,
               upsellEnterprise: n,
-              children: (0, T.jsxs)(y.qQ, {
+              children: (0, S.jsxs)(j.qQ, {
                 children: [
-                  (0, T.jsx)(_, {
-                    label: E.browseOptionTitle,
-                    feature: r.Nh.BROWSING,
+                  (0, S.jsx)(R, {
+                    label: U.browseOptionTitle,
+                    feature: a.Nh.BROWSING,
                     value: s.beta_settings.browsing,
                     workspaceId: t,
-                    tooltip: E.browseTooltip,
+                    tooltip: U.browseTooltip,
                     disabled: n,
                   }),
-                  (0, T.jsx)(_, {
-                    label: E.customActionsOptionTitle,
-                    feature: r.Nh.WORKSPACE_GPT_CUSTOM_ACTIONS,
+                  (0, S.jsx)(R, {
+                    label: U.customActionsOptionTitle,
+                    feature: a.Nh.WORKSPACE_GPT_CUSTOM_ACTIONS,
                     value: s.beta_settings.workspace_gpt_custom_actions,
                     workspaceId: t,
-                    tooltip: E.customActionsTooltip,
+                    tooltip: U.customActionsTooltip,
                     disabled: n,
                   }),
-                  (0, T.jsx)(_, {
-                    label: E.pluginsOptionTitle,
-                    feature: r.Nh.PLUGINS,
+                  (0, S.jsx)(R, {
+                    label: U.pluginsOptionTitle,
+                    feature: a.Nh.PLUGINS,
                     value: s.beta_settings.plugins,
                     workspaceId: t,
-                    tooltip: E.pluginsTooltip,
+                    tooltip: U.pluginsTooltip,
                     disabled: n,
                   }),
                 ],
               }),
             }),
             !n && i,
-            (0, T.jsx)(Z, {
-              title: E.retentionPolicyTitle,
-              description: E.retentionChange,
+            (0, S.jsx)(A, {
+              title: U.retentionPolicyTitle,
+              description: U.retentionChange,
               upsellEnterprise: n,
-              children: (0, T.jsx)(P, { conversationTTL: s.conversation_ttl }),
+              children: (0, S.jsx)(I, { conversationTTL: s.conversation_ttl }),
             }),
           ],
         });
       }
-      function A(e) {
+      function F(e) {
         var t = e.currentWorkspaceId,
           s = (0, o.C)(t),
           n = s.data,
-          r = s.isLoading,
-          a = (0, h.Z)();
-        return (0, T.jsxs)(T.Fragment, {
+          a = s.isLoading,
+          r = (0, h.Z)();
+        return (0, S.jsxs)(S.Fragment, {
           children: [
-            (0, T.jsx)(f(), {
-              children: (0, T.jsx)("title", {
-                children: a.formatMessage(E.title),
+            (0, S.jsx)(f(), {
+              children: (0, S.jsx)("title", {
+                children: r.formatMessage(U.title),
               }),
             }),
-            (0, T.jsx)(i.yG, { title: a.formatMessage(E.title) }),
-            (0, T.jsx)(i.hb, {
-              showSpinner: r,
+            (0, S.jsx)(i.yG, { title: r.formatMessage(U.title) }),
+            (0, S.jsx)(i.hb, {
+              showSpinner: a,
               children:
                 void 0 === n
                   ? null
-                  : (0, T.jsx)(G, { workspaceId: t, data: n }),
+                  : (0, S.jsx)(W, { workspaceId: t, data: n }),
             }),
           ],
         });
       }
-      var E = (0, w.vU)({
-        title: { id: "workspaceSettings.title", defaultMessage: "Settings" },
-        allowAllOption: {
-          id: "workspaceSettings.allowAllOption",
-          defaultMessage: "Allow all",
-        },
-        dontAllowOption: {
-          id: "workspaceSettings.dontAllowOption",
-          defaultMessage: "Don't allow",
-        },
-        retentionPolicyTitle: {
-          id: "workspaceSettings.retentionPolicyTitle",
-          defaultMessage: "Retention policy",
-        },
-        thirdPartyGPTsTitle: {
-          id: "workspaceSettings.thirdPartyGPTsTitle",
-          defaultMessage: "Third-party GPTs",
-        },
-        thirdPartyGPTsDescription: {
-          id: "workspaceSettings.thirdPartyGPTsDescription",
-          defaultMessage:
-            "Manage whether members can use GPTs created outside your workspace. These GPTs may be able to browse the internet or take custom actions.",
-        },
-        customActionsTooltip: {
-          id: "workspaceSettings.customActionsTooltip",
-          defaultMessage:
-            "Allow GPTs to use third-party services for tasks such as finding flights. Actions are defined by GPT builders.",
-        },
-        browseTooltip: {
-          id: "workspaceSettings.browseTooltip",
-          defaultMessage:
-            "Allow ChatGPT and GPTs to browse the internet to answer questions about recent topics and events.",
-        },
-        pluginsTooltip: {
-          id: "workspaceSettings.pluginsTooltip",
-          defaultMessage:
-            "Allow members to install plugins so ChatGPT can use third-party services for tasks such as finding flights.",
-        },
-        pluginsOptionTitle: {
-          id: "workspaceSettings.pluginsOptionTitle",
-          defaultMessage: "Plugins",
-        },
-        customActionsOptionTitle: {
-          id: "workspaceSettings.pluginsOptionTitle.0",
-          defaultMessage: "Custom actions",
-        },
-        browseOptionTitle: {
-          id: "workspaceSettings.browseOptionTitle",
-          defaultMessage: "Browsing with Bing",
-        },
-        workspaceGPTsTitle: {
-          id: "workspaceSettings.workspaceGPTsTitle",
-          defaultMessage: "Workspace GPTs",
-        },
-        appearanceTitle: {
-          id: "workspaceSettings.appearanceTitle",
-          defaultMessage: "Appearance",
-        },
-        sharingSettingsTitle: {
-          id: "workspaceSettings.sharingSettingsTitle",
-          defaultMessage: "Sharing",
-        },
-        gptSharingTitle: {
-          id: "workspaceSettings.gptSharingTitle",
-          defaultMessage: "GPTs can be shared with...",
-        },
-        chatSharingTitle: {
-          id: "workspaceSettings.chatSharingTitle",
-          defaultMessage: "Chats can be shared with...",
-        },
-        workspaceMembersOnlySelect: {
-          id: "workspaceSettings.workspaceMembersOnlySelect",
-          defaultMessage: "Workspace members only",
-        },
-        anyOneSelect: {
-          id: "workspaceSettings.anyOneSelect",
-          defaultMessage: "Anyone",
-        },
-        noOneSelect: {
-          id: "workspaceSettings.noOneSelect",
-          defaultMessage: "No one",
-        },
-        featureSettingsUpdateFailed: {
-          id: "workspaceSettings.featureSettingsUpdateFailed",
-          defaultMessage: "Failed to update feature setting",
-        },
-        conversationRetention: {
-          id: "workspaceSettings.conversationRetention",
-          defaultMessage: "Chat retention",
-        },
-        retentionInfinite: {
-          id: "workspaceSettings.retentionInfinite",
-          defaultMessage: "Infinite",
-        },
-        retentionNinetyDays: {
-          id: "workspaceSettings.retentionNinetyDays",
-          defaultMessage: "90 days",
-        },
-        retentionOneYear: {
-          id: "workspaceSettings.retentionOneYear",
-          defaultMessage: "1 year",
-        },
-        retentionCustomDays: {
-          id: "workspaceSettings.retentionCustomDays",
-          defaultMessage: "{num} days",
-        },
-        retentionChange: {
-          id: "workspaceSettings.retentionChange",
-          defaultMessage:
-            "Contact your account manager to change this setting.",
-        },
-        workspaceGPTsDescription: {
-          id: "workspaceSettings.workspaceGPTsDescription",
-          defaultMessage:
-            "Manage which capabilities are available for standard ChatGPT and custom GPTs created in your workspace. These settings do not apply to third-party GPTs.",
-        },
-        enterpriseUpsellPill: {
-          id: "workspaceSettings.enterpriseUpsellPill",
-          defaultMessage: "Enterprise",
-        },
-        retentionSettingTooltip: {
-          id: "workspaceSettings.retentionSettingTooltip",
-          defaultMessage: "Contact your account manager to change this setting",
-        },
-        enterpriseRequiredMessage: {
-          id: "workspaceSettings.enterpriseRequiredMessage",
-          defaultMessage:
-            "Only workspaces with the Enterprise plan can change these settings",
-        },
-      });
-      function C(e, t) {
+      var U = (0, b.vU)({
+          title: { id: "workspaceSettings.title", defaultMessage: "Settings" },
+          allowAllOption: {
+            id: "workspaceSettings.allowAllOption",
+            defaultMessage: "Allow all",
+          },
+          dontAllowOption: {
+            id: "workspaceSettings.dontAllowOption",
+            defaultMessage: "Don't allow",
+          },
+          retentionPolicyTitle: {
+            id: "workspaceSettings.retentionPolicyTitle",
+            defaultMessage: "Retention policy",
+          },
+          thirdPartyGPTsTitle: {
+            id: "workspaceSettings.thirdPartyGPTsTitle",
+            defaultMessage: "Third-party GPTs",
+          },
+          thirdPartyGPTsDescription: {
+            id: "workspaceSettings.thirdPartyGPTsDescription",
+            defaultMessage:
+              "Manage whether members can use GPTs created outside your workspace. These GPTs may be able to browse the internet or take custom actions.",
+          },
+          customActionsTooltip: {
+            id: "workspaceSettings.customActionsTooltip",
+            defaultMessage:
+              "Allow GPTs to use third-party services for tasks such as finding flights. Actions are defined by GPT builders.",
+          },
+          browseTooltip: {
+            id: "workspaceSettings.browseTooltip",
+            defaultMessage:
+              "Allow ChatGPT and GPTs to browse the internet to answer questions about recent topics and events.",
+          },
+          pluginsTooltip: {
+            id: "workspaceSettings.pluginsTooltip",
+            defaultMessage:
+              "Allow members to install plugins so ChatGPT can use third-party services for tasks such as finding flights.",
+          },
+          pluginsOptionTitle: {
+            id: "workspaceSettings.pluginsOptionTitle",
+            defaultMessage: "Plugins",
+          },
+          customActionsOptionTitle: {
+            id: "workspaceSettings.pluginsOptionTitle.0",
+            defaultMessage: "Custom actions",
+          },
+          browseOptionTitle: {
+            id: "workspaceSettings.browseOptionTitle",
+            defaultMessage: "Browsing with Bing",
+          },
+          workspaceGPTsTitle: {
+            id: "workspaceSettings.workspaceGPTsTitle",
+            defaultMessage: "Workspace GPTs",
+          },
+          appearanceTitle: {
+            id: "workspaceSettings.appearanceTitle",
+            defaultMessage: "Appearance",
+          },
+          sharingSettingsTitle: {
+            id: "workspaceSettings.sharingSettingsTitle",
+            defaultMessage: "Sharing",
+          },
+          gptSharingTitle: {
+            id: "workspaceSettings.gptSharingTitle",
+            defaultMessage: "GPTs can be shared with...",
+          },
+          chatSharingTitle: {
+            id: "workspaceSettings.chatSharingTitle",
+            defaultMessage: "Chats can be shared with...",
+          },
+          workspaceMembersOnlySelect: {
+            id: "workspaceSettings.workspaceMembersOnlySelect",
+            defaultMessage: "Workspace members only",
+          },
+          anyOneSelect: {
+            id: "workspaceSettings.anyOneSelect",
+            defaultMessage: "Anyone",
+          },
+          noOneSelect: {
+            id: "workspaceSettings.noOneSelect",
+            defaultMessage: "No one",
+          },
+          featureSettingsUpdateFailed: {
+            id: "workspaceSettings.featureSettingsUpdateFailed",
+            defaultMessage: "Failed to update feature setting",
+          },
+          conversationRetention: {
+            id: "workspaceSettings.conversationRetention",
+            defaultMessage: "Chat retention",
+          },
+          retentionInfinite: {
+            id: "workspaceSettings.retentionInfinite",
+            defaultMessage: "Infinite",
+          },
+          retentionNinetyDays: {
+            id: "workspaceSettings.retentionNinetyDays",
+            defaultMessage: "90 days",
+          },
+          retentionOneYear: {
+            id: "workspaceSettings.retentionOneYear",
+            defaultMessage: "1 year",
+          },
+          retentionCustomDays: {
+            id: "workspaceSettings.retentionCustomDays",
+            defaultMessage: "{num} days",
+          },
+          retentionChange: {
+            id: "workspaceSettings.retentionChange",
+            defaultMessage:
+              "Contact your account manager to change this setting.",
+          },
+          workspaceGPTsDescription: {
+            id: "workspaceSettings.workspaceGPTsDescription",
+            defaultMessage:
+              "Manage which capabilities are available for standard ChatGPT and custom GPTs created in your workspace. These settings do not apply to third-party GPTs.",
+          },
+          enterpriseUpsellPill: {
+            id: "workspaceSettings.enterpriseUpsellPill",
+            defaultMessage: "Enterprise",
+          },
+          retentionSettingTooltip: {
+            id: "workspaceSettings.retentionSettingTooltip",
+            defaultMessage:
+              "Contact your account manager to change this setting",
+          },
+          enterpriseRequiredMessage: {
+            id: "workspaceSettings.enterpriseRequiredMessage",
+            defaultMessage:
+              "Only workspaces with the Enterprise plan can change these settings",
+          },
+        }),
+        V = s(14765);
+      function q(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -575,36 +864,37 @@
         }
         return s;
       }
-      var I = !0;
-      function D(e) {
-        return (0, T.jsx)(
-          A,
-          (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var s = null != arguments[t] ? arguments[t] : {};
-              t % 2
-                ? C(Object(s), !0).forEach(function (t) {
-                    (0, n.Z)(e, t, s[t]);
-                  })
-                : Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(
-                      e,
-                      Object.getOwnPropertyDescriptors(s)
-                    )
-                  : C(Object(s)).forEach(function (t) {
-                      Object.defineProperty(
-                        e,
-                        t,
-                        Object.getOwnPropertyDescriptor(s, t)
-                      );
-                    });
-            }
-            return e;
-          })({}, e)
-        );
+      function Y(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var s = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? q(Object(s), !0).forEach(function (t) {
+                (0, n.Z)(e, t, s[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+              : q(Object(s)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(s, t)
+                  );
+                });
+        }
+        return e;
       }
-      D.getLayout = function (e) {
-        return (0, T.jsx)(i.ZP, {
+      var z = !0;
+      function K(e) {
+        var t = (0, V.sB)(V.tz.WorkspaceAllowSpecific),
+          s = t.value;
+        return t.isLoading
+          ? null
+          : s
+            ? (0, S.jsx)(M, Y({}, e))
+            : (0, S.jsx)(F, Y({}, e));
+      }
+      K.getLayout = function (e) {
+        return (0, S.jsx)(i.ZP, {
           mobilePageTitle: "Settings",
           requireAdminPrivileges: !0,
           children: e,
@@ -621,7 +911,7 @@
           return f;
         },
         Li: function () {
-          return x;
+          return w;
         },
         W8: function () {
           return j;
@@ -630,10 +920,10 @@
           return h;
         },
         i9: function () {
-          return w;
+          return b;
         },
         qQ: function () {
-          return b;
+          return x;
         },
         vi: function () {
           return m;
@@ -641,8 +931,8 @@
       });
       var n,
         i,
-        r,
         a,
+        r,
         o,
         l,
         c,
@@ -656,20 +946,20 @@
             ]))
         ),
         f = p.Z.div(i || (i = (0, u.Z)(["text-xl font-medium"]))),
-        h = p.Z.div(r || (r = (0, u.Z)(["text-base font-medium"]))),
-        b = p.Z.div(
-          a ||
-            (a = (0, u.Z)([
+        h = p.Z.div(a || (a = (0, u.Z)(["text-base font-medium"]))),
+        x = p.Z.div(
+          r ||
+            (r = (0, u.Z)([
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
             ]))
         ),
-        w = p.Z.div(
+        b = p.Z.div(
           o ||
             (o = (0, u.Z)([
               "max-w-xl flex flex-col gap-3 w-full m-auto md:m-0",
             ]))
         ),
-        x = p.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
+        w = p.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
         m = p.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
         j = p.Z.hr(d || (d = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
@@ -677,7 +967,7 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/settings",
         function () {
-          return s(47455);
+          return s(72256);
         },
       ]);
     },
@@ -689,4 +979,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=settings-6f7bbe791acce9c8.js.map
+//# sourceMappingURL=settings-608051d3daa617bc.js.map
