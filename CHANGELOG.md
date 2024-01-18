@@ -10,14 +10,27 @@ You may also like some of the historical insights captured at the following gist
 
 ## Table of Contents
 
-<!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
-
+<!--
+  TODO: For now, we strip all of the non-heading content (before generating the ToC) with something like this:
+    grep '^## ' CHANGELOG.md
+  Once this bug is fixed, we would no longer need to do that:
+    https://github.com/derlin/bitdowntoc/issues/26
+  Alternately, once the following bugfix PR is merged, we could go back to using MarkdownTOC to do it automatically:
+    https://github.com/naokazuterada/MarkdownTOC/pull/170
+-->
+<!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
 - [2024-01-18Z \(`sgI7Q_wtcDQlOzRFnqIoV`\)](#2024-01-18z-sgi7q_wtcdqlozrfnqiov)
 - [2024-01-18Z \(`mfRdA1mhUEbx-XW-t8HI1`\)](#2024-01-18z-mfrda1mhuebx-xw-t8hi1)
 - [2024-01-12Z \(`XdWhUWo_M_wNJEE1jln84`\)](#2024-01-12z-xdwhuwo_m_wnjee1jln84)
 - [2024-01-12Z \(`v78GkVQvDccUOBvZi02mN`\)](#2024-01-12z-v78gkvqvdccuobvzi02mn)
 - [2024-01-12Z \(`BHrNOKMcBnyCKNWEuC-_T`\)](#2024-01-12z-bhrnokmcbnycknweuc-_t)
+- [2024-01-11Z \(`oaMdM-5A0fn6tvM6jS2wq`\)](#2024-01-11z-oamdm-5a0fn6tvm6js2wq)
+- [2024-01-11Z \(`_8Cj5w2Xm_cbdoV37uBTg`\)](#2024-01-11z-_8cj5w2xm_cbdov37ubtg)
+- [2024-01-10Z \(`WSi1X0ArB7Vb5xbtp9NQo`\)](#2024-01-10z-wsi1x0arb7vb5xbtp9nqo)
+- [2024-01-10Z \(`Qy6WgQbBtdAKO56kyE3EZ`\)](#2024-01-10z-qy6wgqbbtdako56kye3ez)
 - [2024-01-10Z \(`SEKhaE-wBycAz8cr914YK`\)](#2024-01-10z-sekhae-wbycaz8cr914yk)
+- [2024-01-10Z \(`DYD4ptbg3xgXFPHVvylfS`\)](#2024-01-10z-dyd4ptbg3xgxfphvvylfs)
+- [2024-01-08Z \(`VLfcxq6hGipJvVKn1m8UF`\)](#2024-01-08z-vlfcxq6hgipjvvkn1m8uf)
 - [2024-01-08Z \(`mXIu6W6cm_lCUo268p1XR`\)](#2024-01-08z-mxiu6w6cm_lcuo268p1xr)
 - [2024-01-06Z \(`RCBswHp2o_8O-rQH0558u`\)](#2024-01-06z-rcbswhp2o_8o-rqh0558u)
 - [2024-01-05Z \(`ohf0xpZm-mdSSsiYSf4si`\)](#2024-01-05z-ohf0xpzm-mdsssiysf4si)
@@ -25,7 +38,9 @@ You may also like some of the historical insights captured at the following gist
 - [2024-01-05Z \(`PEO14vuOqqjOQtCs82SgS`\)](#2024-01-05z-peo14vuoqqjoqtcs82sgs)
 - [2024-01-04Z \(`wvxlBkHE5usnj-32Td8Nr`\)](#2024-01-04z-wvxlbkhe5usnj-32td8nr)
 - [2024-01-02Z \(`aNEO7zh0z5I01hzE5e-99`\) `[as well as earlier missing changes]`](#2024-01-02z-aneo7zh0z5i01hze5e-99-as-well-as-earlier-missing-changes)
-
+<!-- TOC end -->
+<!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
+<!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
 
 ## 2024-01-18Z (`sgI7Q_wtcDQlOzRFnqIoV`)

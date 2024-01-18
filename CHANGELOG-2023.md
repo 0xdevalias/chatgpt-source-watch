@@ -10,8 +10,15 @@ You may also like some of the historical insights captured at the following gist
 
 ## Table of Contents
 
-<!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
-
+<!--
+  TODO: For now, we strip all of the non-heading content (before generating the ToC) with something like this:
+    grep '^## ' CHANGELOG-2023.md
+  Once this bug is fixed, we would no longer need to do that:
+    https://github.com/derlin/bitdowntoc/issues/26
+  Alternately, once the following bugfix PR is merged, we could go back to using MarkdownTOC to do it automatically:
+    https://github.com/naokazuterada/MarkdownTOC/pull/170
+-->
+<!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
 - [2023-09-16Z to 2024-01-01Z `[not archived]`](#2023-09-16z-to-2024-01-01z-not-archived)
 - [2023-09-15Z \(`0S-3OY79q4frbRmxZL8PL`\) `[partial archive]`](#2023-09-15z-0s-3oy79q4frbrmxzl8pl-partial-archive)
 - [2023-09-13Z \(`HCDcqbITOjtWoyhF0h1lh`\) `[partial archive]`](#2023-09-13z-hcdcqbitojtwoyhf0h1lh-partial-archive)
@@ -45,21 +52,38 @@ You may also like some of the historical insights captured at the following gist
 - [2023-07-13Z \(`V8eMtbBOHSVKP1zFk9nxF`\) `[not archived]`](#2023-07-13z-v8emtbbohsvkp1zfk9nxf-not-archived)
 - [2023-07-12Z \(`F80gy2EVE9-zP56kZ04j9`\) `[not archived]`](#2023-07-12z-f80gy2eve9-zp56kz04j9-not-archived)
 - [2023-07-07Z \(`CGRk_Om_aEGLXXSCuMmxw`\)](#2023-07-07z-cgrk_om_aeglxxscummxw)
+- [2023-07-07Z \(`DWP_u3zVBg1e7X-f6lt0k`\)](#2023-07-07z-dwp_u3zvbg1e7x-f6lt0k)
 - [2023-07-07Z](#2023-07-07z)
 - [2023-07-07Z \(`vCNVkHIoC4nD6VRPE34vP`\)](#2023-07-07z-vcnvkhioc4nd6vrpe34vp)
 - [2023-07-07Z \(`WZIQpxJRN2JuwynD95fGL`\)](#2023-07-07z-wziqpxjrn2juwynd95fgl)
+- [2023-07-05Z \(`R7pUM1N0nPGQARjIff8eg`\)](#2023-07-05z-r7pum1n0npgqarjiff8eg)
+- [2023-07-05Z \(`jNdBFo8LxuQBj6E3aaAOe`\)](#2023-07-05z-jndbfo8lxuqbj6e3aaaoe)
 - [2023-07-04Z \(`f9C5QIWDB4PeBMNfQPho6`\)](#2023-07-04z-f9c5qiwdb4pebmnfqpho6)
 - [2023-06-30Z \(`WLHd8p-1ysAW_5sZZPJIy`\)](#2023-06-30z-wlhd8p-1ysaw_5szzpjiy)
 - [2023-06-29Z \(`HIPozMBuTaTl2Vucglu5e`\)](#2023-06-29z-hipozmbutatl2vucglu5e)
+- [2023-06-29Z \(`Qr8FFr6F9GQHixKSXgAke`\)](#2023-06-29z-qr8ffr6f9gqhixksxgake)
+- [2023-06-29Z \(`IMPCGbhyMemq6LQoEyhI5`\)](#2023-06-29z-impcgbhymemq6lqoeyhi5)
 - [2023-06-29Z \(`wzq04J4IxM11RTl64R6wV`\)](#2023-06-29z-wzq04j4ixm11rtl64r6wv)
 - [2023-06-28Z \(`QvBTYln7NSxjxlNyZ4qN0`\)](#2023-06-28z-qvbtyln7nsxjxlnyz4qn0)
+- [2023-06-27Z \(`xNQaMU5Ofw4qA7ejTH2hq`\)](#2023-06-27z-xnqamu5ofw4qa7ejth2hq)
 - [2023-06-27Z \(`gO1nFWbowxDf-s-g3QRWc`\)](#2023-06-27z-go1nfwbowxdf-s-g3qrwc)
+- [2023-06-26Z \(`F2_bAYHO9NlBwvfiLPAW3`\)](#2023-06-26z-f2_bayho9nlbwvfilpaw3)
 - [2023-06-25Z \(`5oNaFu0A1xunXHmq5l70K`\)](#2023-06-25z-5onafu0a1xunxhmq5l70k)
+- [2023-06-24Z \(`49Xsx1Peja-HtEBNEMSwO`\)](#2023-06-24z-49xsx1peja-htebnemswo)
 - [2023-06-23Z \(`6tvBacVQggsxEa50Su7EW`\)](#2023-06-23z-6tvbacvqggsxea50su7ew)
 - [2023-06-22Z \(`4OtK2GZhlDGpQWluC3GLQ`\)](#2023-06-22z-4otk2gzhldgpqwluc3glq)
 - [2023-06-22Z \(`CTxpiEb45oE7hUCOWm4Jq`\)](#2023-06-22z-ctxpieb45oe7hucowm4jq)
 - [2023-06-22Z \(`kwYJPc99Lx-XLUrLes-Se`\)](#2023-06-22z-kwyjpc99lx-xlurles-se)
-
+- [2023-06-21Z \(`9rHv4XACEoIItIhKMAq4_`\)](#2023-06-21z-9rhv4xaceoiitihkmaq4_)
+- [2023-06-18Z \(`2zx-gqs4DHnXCij8pMcM3`\)](#2023-06-18z-2zx-gqs4dhnxcij8pmcm3)
+- [2023-06-16Z \(`Wnd5NrsJwJ8L-68NTfmnl`\)](#2023-06-16z-wnd5nrsjwj8l-68ntfmnl)
+- [2023-06-15Z \(`OYOAZ1aqhcJ0ghEfSRnPf`\)](#2023-06-15z-oyoaz1aqhcj0ghefsrnpf)
+- [2023-06-15Z \(`OYOAZ1aqhcJ0ghEfSRnPf`\) (or thereabouts..) `[not archived]`](#2023-06-15z-oyoaz1aqhcj0ghefsrnpf-or-thereabouts-not-archived)
+- [2023-06-15 \(`Sz5I5M8XqNP7c6HNKaN0U`\) (or thereabouts..)](#2023-06-15-sz5i5m8xqnp7c6hnkan0u-or-thereabouts)
+- [2023-06-14 \(`a3Jc7aP-UMfeR9s4-iLvW`\) (or thereabouts.. might include stuff from earlier too)](#2023-06-14-a3jc7ap-umfer9s4-ilvw-or-thereabouts-might-include-stuff-from-earlier-too)
+<!-- TOC end -->
+<!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
+<!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
 
 ## 2023-09-16Z to 2024-01-01Z `[not archived]`
