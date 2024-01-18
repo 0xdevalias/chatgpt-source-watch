@@ -12,6 +12,7 @@ You may also like some of the historical insights captured at the following gist
 
 <!-- MarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 
+- [2024-01-18Z \(`sgI7Q_wtcDQlOzRFnqIoV`\)](#2024-01-18z-sgi7q_wtcdqlozrfnqiov)
 - [2024-01-18Z \(`mfRdA1mhUEbx-XW-t8HI1`\)](#2024-01-18z-mfrda1mhuebx-xw-t8hi1)
 - [2024-01-12Z \(`XdWhUWo_M_wNJEE1jln84`\)](#2024-01-12z-xdwhuwo_m_wnjee1jln84)
 - [2024-01-12Z \(`v78GkVQvDccUOBvZi02mN`\)](#2024-01-12z-v78gkvqvdccuobvzi02mn)
@@ -26,6 +27,66 @@ You may also like some of the historical insights captured at the following gist
 - [2024-01-02Z \(`aNEO7zh0z5I01hzE5e-99`\) `[as well as earlier missing changes]`](#2024-01-02z-aneo7zh0z5i01hze5e-99-as-well-as-earlier-missing-changes)
 
 <!-- /MarkdownTOC -->
+
+## 2024-01-18Z (`sgI7Q_wtcDQlOzRFnqIoV`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `7d8a337f50406df08636e1036030cc0cb61c2c11`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, so hard to see what else (if anything) actually changed within it
+  - ```js
+    archiveHistoryModalTitle: {
+      id: "settingsModal.archiveHistoryModalTitle",
+      defaultMessage: "Archive your chat history - are you sure?",
+    },
+    archiveHistoryModalConfirm: {
+      id: "settingsModal.archiveHistoryModalConfirm",
+      defaultMessage: "Confirm archive",
+    },
+    archiveHistoryModalCancel: {
+      id: "settingsModal.archiveHistoryModalCancel",
+      defaultMessage: "Cancel",
+    },
+    archiveHistorySuccess: {
+      id: "settingsModal.archiveHistorySuccess",
+      defaultMessage:
+        "Successfully archived chats. You can view your archived chats in Settings.",
+    },
+    ```
+  - ```js
+    archiveChatsLabel: {
+      id: "settingsModal.archiveChatsLabel",
+      defaultMessage: "Archive all chats",
+    },
+    archiveChatsButton: {
+      id: "settingsModal.archiveChatsButton",
+      defaultMessage: "Archive all",
+    },
+    ```
+  - ```js
+    {
+      key: "archiveConversations",
+      value: function () {
+        return this.patch("".concat(tc, "/conversations"), {
+          is_archived: !0,
+        });
+      },
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-d19491243565be98.js
+https://cdn.oaistatic.com/_next/static/sgI7Q_wtcDQlOzRFnqIoV/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/sgI7Q_wtcDQlOzRFnqIoV/_ssgManifest.js
+```
 
 ## 2024-01-18Z (`mfRdA1mhUEbx-XW-t8HI1`)
 
