@@ -669,6 +669,11 @@ https://cdn.oaistatic.com/_next/static/chunks/sso.088eb06a39bef157.js
 
 ### Notes
 
+- **tl;dr**
+  - **Twitter:** https://twitter.com/_devalias/status/1744511619286331767
+  - **Reddit:** https://www.reddit.com/r/ChatGPT/comments/1920mt4/chatgpt_unreleased_feature_leak_annual/
+  - **Hacker News:** https://news.ycombinator.com/item?id=38920588
+  - **LinkedIn:** https://www.linkedin.com/feed/update/urn:li:activity:7150280336805986305/
 - App release version (Git SHA?): `e8371b5cad4c6a2f48b0e915c0a7c3fbe578b811`
   - Extracted with `grep -C 3 'service: "chatgpt-web"' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/pages/_app.js`
