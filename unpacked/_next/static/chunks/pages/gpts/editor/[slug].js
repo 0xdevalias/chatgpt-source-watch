@@ -5,16 +5,16 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts/editor/[slug]",
         function () {
-          return u(17893);
+          return u(54648);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [7893, 9774, 2888, 179], function () {
+    n.O(0, [4648, 9774, 2888, 179], function () {
       return n((n.s = 80439));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=[slug]-65029f38793803c7.js.map
+//# sourceMappingURL=[slug]-2f34c3f32b57db78.js.map

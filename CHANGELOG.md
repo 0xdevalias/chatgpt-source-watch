@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-19Z \(`WxxDBH31dddvpYD-hkj3T`\)](#2024-01-19z-wxxdbh31dddvpyd-hkj3t)
 - [2024-01-18Z \(`sgI7Q_wtcDQlOzRFnqIoV`\)](#2024-01-18z-sgi7q_wtcdqlozrfnqiov)
 - [2024-01-18Z \(`mfRdA1mhUEbx-XW-t8HI1`\)](#2024-01-18z-mfrda1mhuebx-xw-t8hi1)
 - [2024-01-12Z \(`XdWhUWo_M_wNJEE1jln84`\)](#2024-01-12z-xdwhuwo_m_wnjee1jln84)
@@ -42,6 +43,136 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-19Z (`WxxDBH31dddvpYD-hkj3T`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Changes related to Custom GPT's (gizmo's) getting removed from the marketplace + appealing that decision; etc.
+- App release version (Git SHA?): `69f8f17225e9b9c85cfa7c4b720065e549249c3e`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Chunk IDs changed:
+  - `7893` -> `4648`
+- Modules IDs changed:
+  - `17893` -> `54648`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (Y.GizmoAppeals = "chatgpt-gizmo-appeals");
+    ```
+- `unpacked/_next/static/chunks/4648.js`
+  - ```js
+    switch (e) {
+      case m.PublishBlocked:
+        return "Your changes couldn’t be published";
+      case m.RemovedFromMarketplace:
+        return "Your GPT has been removed from the marketplace";
+      case m.RemovedFromPublic:
+        return "Your GPT has been removed from public view";
+      case m.Recategorized:
+        return "Your GPT has been recategorized";
+    }
+    ```
+  - ```js
+    children: "Alternatively you may appeal this decision and we will get back to you in a few days. Or you can publish to “Only me” and use this GPT privately.",
+    ```
+  - ```js
+    children: [
+      "Your GPT’s name is restricted for public sharing. If this is your organization’s name, please verify your website via the",
+      " ",
+      (0, R.jsx)(B, {
+        href: "/#settings/BuilderProfile",
+        children: "Builder profile in Settings",
+      }),
+      ".",
+    ],
+    ```
+  - ```js
+    children: "Your GPT’s category is restricted for public sharing. Please select a different category.",
+    ```
+  - ```js
+    children: "Your GPT isn’t ready for public sharing yet. Usually, it’s a quick fix.",
+    ```
+  - ```js
+     children: [
+      (0, R.jsxs)("li", {
+        children: [
+          (0, R.jsx)("b", {
+            children: "Review your info:",
+          }),
+          " Check that your description, name, and profile picture meet our",
+          " ",
+          (0, R.jsx)(B, {
+            target: "_blank",
+            href: "https://openai.com/brand",
+            rel: "noreferrer",
+            children: "brand",
+          }),
+          " ",
+          "and",
+          " ",
+          (0, R.jsx)(B, {
+            target: "_blank",
+            href: "https://openai.com/policies/usage-policies",
+            rel: "noreferrer",
+            children: "usage",
+          }),
+          " ",
+          "guidelines.",
+        ],
+      }),
+      (0, R.jsxs)("li", {
+        children: [
+          (0, R.jsx)("b", { children: "Share again:" }),
+          " Once updated, go ahead and share your GPT.",
+        ],
+      }),
+    ],
+    ```
+  - ```js
+    children: "Feel free to use your GPT privately for now by publishing to “only me”.",
+    ```
+  - ```js
+    children: "Please provide a reason for why you believe this GPT doesn’t violate our policies and should be published",
+    ```
+  - ```js
+    children: "Your appeal has been submitted. We will get back to you as soon as possible.",
+    ```
+  - ```js
+    recipientBlocked: {
+      id: "gizmo.recipientBlocked",
+      defaultMessage:
+        "Because this GPT previously may have violated our policies, you cannot publish it at this level.",
+    },
+    appealNeededLabel: {
+      id: "gizmo.appealNeededLabel",
+      defaultMessage:
+        "Because this GPT previously may have violated our policies, you will have to submit an appeal to make it available at this level.",
+    },
+    appealButton: { id: "gizmo.appealButton", defaultMessage: "Appeal" },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-2fc68d310cc5b0f4.js
+https://cdn.oaistatic.com/_next/static/WxxDBH31dddvpYD-hkj3T/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/WxxDBH31dddvpYD-hkj3T/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/4648-2c509a8042fbdd43.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor-4a9765f081cecc34.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor/[slug]-2f34c3f32b57db78.js
+```
 
 ## 2024-01-18Z (`sgI7Q_wtcDQlOzRFnqIoV`)
 
