@@ -51,7 +51,7 @@
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-dc4955d312ac6e1c.js",
     ],
-    "/gpts": ["static/chunks/pages/gpts-b75a8a81b1ff7791.js"],
+    "/gpts": ["static/chunks/pages/gpts-4a72d22fdef2a77d.js"],
     "/gpts/discovery": [
       "static/chunks/pages/gpts/discovery-28475bf486cb7133.js",
     ],
@@ -60,7 +60,7 @@
       e,
       "static/chunks/pages/gpts/editor/[slug]-2f34c3f32b57db78.js",
     ],
-    "/gpts/mine": ["static/chunks/pages/gpts/mine-544670a0f116527f.js"],
+    "/gpts/mine": ["static/chunks/pages/gpts/mine-13db41e2b35edf17.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-d7ba9a8c17e28e51.js",
     ],
@@ -136,6 +136,6 @@
   "static/chunks/5017-e8e15d8ebec0097a.js",
   "static/chunks/3975-37a9301353b29c5d.js",
   "static/chunks/3754-4b243fe67e7e8d54.js",
-  "static/chunks/4648-2c509a8042fbdd43.js"
+  "static/chunks/4648-df1e5d7194a249d0.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

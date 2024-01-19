@@ -6,7 +6,7 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return I;
+            return _;
           },
           default: function () {
             return R;
@@ -146,7 +146,7 @@
           c = (0, o.useState)(i),
           u = c[0],
           s = c[1],
-          a = (0, h.Fi)(t, void 0, 8, n, u),
+          a = (0, h.Fi)({ cutId: t, limit: 8, cursor: n, enabled: u }),
           f = a.data,
           x = a.hasNextPage,
           v = a.fetchNextPage,
@@ -255,10 +255,10 @@
           }),
         });
       }
-      var _ = n(61305),
-        I = !0;
+      var I = n(61305),
+        _ = !0;
       function R() {
-        return (0, j.jsx)(_.Z, {
+        return (0, j.jsx)(I.Z, {
           children: (0, j.jsx)(w, { children: (0, j.jsx)(v, {}) }),
         });
       }
@@ -311,4 +311,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=mine-544670a0f116527f.js.map
+//# sourceMappingURL=mine-13db41e2b35edf17.js.map

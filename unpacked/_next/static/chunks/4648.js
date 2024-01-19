@@ -3689,7 +3689,7 @@
               null !== (t = i.sharingTargets) &&
               void 0 !== t &&
               t.some(function (e) {
-                return e.allowed && e.recipient === Z.Zz.Link;
+                return e.recipient === Z.Zz.Link;
               })
             ),
           U = tt(i, v, k),
@@ -6279,4 +6279,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-2c509a8042fbdd43.js.map
+//# sourceMappingURL=4648-df1e5d7194a249d0.js.map

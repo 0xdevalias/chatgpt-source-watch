@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-19Z \(`q-nwvju19I1V-kczySDcG`\)](#2024-01-19z-q-nwvju19i1v-kczysdcg)
 - [2024-01-19Z \(`WxxDBH31dddvpYD-hkj3T`\)](#2024-01-19z-wxxdbh31dddvpyd-hkj3t)
 - [2024-01-18Z \(`sgI7Q_wtcDQlOzRFnqIoV`\)](#2024-01-18z-sgi7q_wtcdqlozrfnqiov)
 - [2024-01-18Z \(`mfRdA1mhUEbx-XW-t8HI1`\)](#2024-01-18z-mfrda1mhuebx-xw-t8hi1)
@@ -43,6 +44,43 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-19Z (`q-nwvju19I1V-kczySDcG`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `17ca9964d52e12ba9866e9b465bc26177d91b28d`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    invalidEmail: {
+      id: "changeOwnerModal.invalidEmail",
+      defaultMessage:
+        "Email is invalid or does not belong to a member in this workspace",
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-3b2ec867133c0e75.js
+https://cdn.oaistatic.com/_next/static/q-nwvju19I1V-kczySDcG/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/q-nwvju19I1V-kczySDcG/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-4a72d22fdef2a77d.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-df1e5d7194a249d0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-13db41e2b35edf17.js
+```
 
 ## 2024-01-19Z (`WxxDBH31dddvpYD-hkj3T`)
 

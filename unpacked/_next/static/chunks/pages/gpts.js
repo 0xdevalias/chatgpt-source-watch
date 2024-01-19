@@ -278,7 +278,7 @@
           o = (0, u.useState)(i),
           s = o[0],
           c = o[1],
-          A = (0, g.Fi)(t, void 0, 8, n, s),
+          A = (0, g.Fi)({ cutId: t, limit: 8, cursor: n, enabled: s }),
           d = A.data,
           m = A.hasNextPage,
           p = A.fetchNextPage,
@@ -363,7 +363,7 @@
               })
             : n.hasPaidSubscription()
               ? null
-              : (0, x.jsx)(E, {
+              : (0, x.jsx)(I, {
                   button: (0, x.jsx)(l.z, {
                     onClick: function () {
                       return (0, b.MG)();
@@ -373,7 +373,7 @@
                   children: "GPTs are gradually rolling out to Plus users",
                 });
       }
-      function E(e) {
+      function I(e) {
         var t = e.children,
           n = e.button;
         return (0, x.jsx)("div", {
@@ -387,10 +387,10 @@
           }),
         });
       }
-      var I = n(61305),
+      var E = n(61305),
         C = !0;
       function Q() {
-        return (0, x.jsx)(I.Z, {
+        return (0, x.jsx)(E.Z, {
           children: (0, x.jsx)(P, { children: (0, x.jsx)(p, {}) }),
         });
       }
@@ -443,4 +443,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-b75a8a81b1ff7791.js.map
+//# sourceMappingURL=gpts-4a72d22fdef2a77d.js.map
