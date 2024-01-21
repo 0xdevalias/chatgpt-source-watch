@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-21Z \(`MCkVH1jJi3yNLkMToVDdU`\)](#2024-01-21z-mckvh1jji3ynlkmtovddu)
 - [2024-01-19Z \(`q-nwvju19I1V-kczySDcG`\)](#2024-01-19z-q-nwvju19i1v-kczysdcg)
 - [2024-01-19Z \(`WxxDBH31dddvpYD-hkj3T`\)](#2024-01-19z-wxxdbh31dddvpyd-hkj3t)
 - [2024-01-18Z \(`sgI7Q_wtcDQlOzRFnqIoV`\)](#2024-01-18z-sgi7q_wtcdqlozrfnqiov)
@@ -44,6 +45,337 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-21Z (`MCkVH1jJi3yNLkMToVDdU`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Looks like custom GPTs are getting 'memory' between chats (`memory_history_enabled`, `chatgpt-gizmo-memory-tool`)
+    - https://help.openai.com/en/articles/8590148-memory-in-chatgpt-faq
+  - There is also something about `chatgpt_browse_bing_from_fe`, though not sure specifically what it relates to.. 
+- App release version (Git SHA?): `87851b0827d9db415242b03502fcff40991ff63b`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Modules IDs changed:
+  - `46001` -> `76316`
+  - `63265` -> `40670`
+  - ?etc?
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    stillLoadingData: {
+      id: "workspaceSettings.stillLoadingData",
+      defaultMessage:
+        "Don't see what you're looking for? Some GPTs are still loading...",
+    },
+    ```
+  - ```diff
+      bulletDescription1: {
+    -   id: "TemporaryChatOnboardingModal.bulletDescription1",
+    +   id: "TemporaryChatOnboardingModal.bulletDescription1.1",
+        defaultMessage:
+    -     "Temporary Chats won't appear in your history, and your GPT won't remember anything you talk about. We may still keep a copy for up to 30 days for safety purposes.",
+    +     "Temporary chats won’t appear in your history. For safety purposes, we may keep a copy of your chat for up to 30 days.",
+      },
+      bulletTitle2: {
+        Icon: eM.av,
+    -   id: "TemporaryChatOnboardingModal.bulletTitle2",
+    -   defaultMessage: "Blank slate",
+    +   id: "TemporaryChatOnboardingModal.bulletTitle2.1",
+    +   defaultMessage: "No memory",
+      },
+      bulletDescription2: {
+       id: "TemporaryChatOnboardingModal.bulletDescription2.1",
+        defaultMessage:
+    -    "Your GPT won't be aware of previous conversations. It will still follow your custom instructions if they're enabled.",
+    +    "ChatGPT won’t use or create memories in Temporary Chats. If you have Custom Instructions, they’ll still be followed.",
+      },
+    ```
+  - ```diff
+      temporaryChatDescription: {
+    -  id: "GizmoLanding.temporaryChatDescription.2",
+    +  id: "GizmoLanding.temporaryChatDescription.3",
+        defaultMessage:
+    -     "{name} won't remember anything you talk about, and this chat won't show up in your history or be used to train our models. It'll follow your custom instructions if they're enabled.",
+    +     "This chat won't appear in history, use memory, or be used to train our models. For safety purposes, we may keep a copy for up to 30 days.",
+        },
+    ```
+  - ```js
+    ep = en.formatMessage({
+      id: "MemoriesModal.deleteMemory",
+      defaultMessage: "Delete memory",
+    });
+    
+    // ..snip..
+    
+      children: (0, eM.jsx)(eE.Z, {
+        id: "MemoriesModal.deleteMemoryDescription",
+        defaultMessage: "This will delete the memory: {title}",
+        values: {
+          title: (0, eM.jsx)("strong", { children: et.content }),
+        },
+      }),
+    ```
+  - ```js
+    children: (0, eM.jsx)(eE.Z, {
+      id: "MemoriesModal.loading",
+      defaultMessage: "Loading...",
+    }),
+  
+    // ..snip..
+  
+    children: (0, eM.jsx)(eE.Z, {
+      id: "MemoriesModal.somethingWentWrong",
+      defaultMessage: "Something went wrong...",
+    }),
+  
+    // ..snip..
+  
+    children: (0, eM.jsx)(eE.Z, {
+      id: "MemoriesModal.retry",
+      defaultMessage: "Retry",
+    }),
+  
+    // ..snip..
+  
+    children: (0, eM.jsx)(eE.Z, {
+      id: "MemoriesModal.memoryColumn",
+      defaultMessage: "Memory",
+    }),
+  
+    // ..snip..
+  
+    children: (0, eM.jsx)(eE.Z, {
+      id: "MemoriesModal.noMemories",
+      defaultMessage:
+        "As you chat with ChatGPT, the details and preferences it remembers will be shown here.",
+    }),
+  
+    // ..snip..
+
+    title: ed.formatMessage({
+      id: "MemoriesModal.title",
+      defaultMessage: "My memories",
+    }),
+    ```
+  - ```js
+    title: ei.formatMessage({
+      id: "MemoriesModal.resetModalTitle",
+      defaultMessage: "Are you sure?",
+    }),
+    description: ei.formatMessage({
+      id: "MemoriesModal.resetModalDescription",
+      defaultMessage:
+        "ChatGPT will forget everything it has remembered from your chats. This cannot be undone.",
+    }),
+    primaryButton: (0, eM.jsx)(e6.ZP.Button, {
+      title: ei.formatMessage({
+        id: "MemoriesModal.resetModalConfirm",
+        defaultMessage: "Clear memory",
+      }),
+      color: "danger",
+      onClick: en,
+    }),
+    secondaryButton: (0, eM.jsx)(e6.ZP.Button, {
+      title: ei.formatMessage({
+        id: "MemoriesModal.resetModalCancel",
+        defaultMessage: "Cancel",
+      }),
+    });
+    ```
+  - ```js
+    return (0, eM.jsx)("a", {
+      href: "https://help.openai.com/en/articles/8590148-memory-in-chatgpt-faq",
+      target: "_blank",
+      className: "underline",
+      rel: "noreferrer",
+      children: Y,
+    });
+    ```
+    - https://help.openai.com/en/articles/8590148-memory-in-chatgpt-faq
+  - ```js
+    var tK = (0, eT.vU)({
+        toggleLabel: {
+          id: "settingsModal.myChagtGptToggleLabel.1",
+          defaultMessage: "Improve responses with your chats",
+        },
+        exampleDescription1: {
+          id: "settingsModal.exampleDescription1.1",
+          defaultMessage:
+            "ChatGPT will become more helpful as you chat, picking up on details and preferences to tailor its responses to you. <link>Learn more</link>",
+        },
+        exampleDescription2: {
+          id: "settingsModal.exampleDescription2.2",
+          defaultMessage:
+            "To understand what ChatGPT remembers or teach it something new, just chat with it:",
+        },
+        exampleMessage1: {
+          id: "settingsModal.exampleMessage1.1",
+          defaultMessage: "Remember that I like concise responses.",
+        },
+        exampleMessage2: {
+          id: "settingsModal.exampleMessage2.1",
+          defaultMessage: "I just got a puppy!",
+        },
+        exampleMessage3: {
+          id: "settingsModal.exampleMessage3.2",
+          defaultMessage: "What do you remember about me?",
+        },
+        exampleMessage4: {
+          id: "settingsModal.exampleMessage4",
+          defaultMessage: "Where did we leave off on my last project?",
+        },
+        reset: {
+          id: "settingsModal.reset",
+          defaultMessage: "Reset memories",
+        },
+        resetModalTitle: {
+          id: "settingsModal.resetModalTitle",
+          defaultMessage: "Are you sure?",
+        },
+        resetModalDescription: {
+          id: "settingsModal.resetModalDescription",
+          defaultMessage:
+            "Your GPT will forget what it has learned from your previous chats. This can't be undone.",
+        },
+        resetModalConfirm: {
+          id: "settingsModal.resetModalConfirm",
+          defaultMessage: "Confirm reset",
+        },
+        resetModalCancel: {
+          id: "settingsModal.resetModalCancel",
+          defaultMessage: "Cancel",
+        },
+        resetSuccessful: {
+          id: "settingsModal.resetSuccessful",
+          defaultMessage: "Your GPT's memory has been reset.",
+        },
+        resetFailed: {
+          id: "settingsModal.resetFailed",
+          defaultMessage: "Failed to reset your GPT's memory.",
+        },
+        on: { id: "personalizationSettings.on", defaultMessage: "On" },
+        off: { id: "personalizationSettings.off", defaultMessage: "Off" },
+        customInstructions: {
+          id: "personalizationSettings.customInstructions",
+          defaultMessage: "Custom instructions",
+        },
+        memories: {
+          id: "personalizationSettings.memories",
+          defaultMessage: "Memory",
+        },
+        manageMemoriesButton: {
+          id: "personalizationSettings.manageMemoriesButton",
+          defaultMessage: "Manage",
+        },
+      }),
+    ```
+  - ```js
+    {
+      key: "getMemories",
+      value: function () {
+        return this.get("".concat(tc, "/memories"));
+      },
+    },
+    {
+      key: "deleteMemory",
+      value: (function () {
+        var Y = (0, ef.Z)(
+          eh().mark(function Y(et) {
+            return eh().wrap(
+              function (Y) {
+                for (;;)
+                  switch ((Y.prev = Y.next)) {
+                    case 0:
+                      return (
+                        (Y.next = 2),
+                        this.delete(
+                          "".concat(tc, "/memories/").concat(et)
+                        )
+                      );
+                    case 2:
+                      if (Y.sent.success) {
+                        Y.next = 6;
+                        break;
+                      }
+                      throw Error(
+                        "An error occurred while deleting the memory"
+                      );
+                    case 6:
+                    case "end":
+                      return Y.stop();
+                  }
+              },
+              Y,
+              this
+            );
+          })
+        );
+        return function (et) {
+          return Y.apply(this, arguments);
+        };
+      })(),
+    },
+    ```
+  - ```js
+    (Y.MemoryHistoryEnabled = "memory_history_enabled");
+    ```
+  - ```js
+    (Y.GizmoMemory = "chatgpt-gizmo-memory-tool"),
+    (Y.BrowsingSearchLinksFromFe = "chatgpt_browse_bing_from_fe");
+    ```
+- `unpacked/_next/static/chunks/4648.js`
+  - ```js
+    codeInterpreterTooltip: {
+      id: "GizmoEditorModelPicker.codeInterpreterTooltip",
+      defaultMessage:
+        "Allow this GPT to run code. When enabled, this GPT can analyze data, work with files you’ve uploaded, do math, and more.",
+    },
+    memoryTooltip: {
+      id: "GizmoEditorModelPicker.memoryTooltip",
+      defaultMessage:
+        "Allow this GPT to pick up on users details and preferences to tailor its responses to them. When enabled, users will need to have memory on to use this GPT.",
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6a7d6a91e94bf731.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-b423e3a015a7f4f9.js
+https://cdn.oaistatic.com/_next/static/MCkVH1jJi3yNLkMToVDdU/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/MCkVH1jJi3yNLkMToVDdU/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-4fc940ac8c543236.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-16513a05953fa44e.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-5b21345d26e5f4e4.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-f97349054ed94179.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-0634ac9c66590616.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-eabe060a973a762b.js
+```
+
+### From `orig/_next/static/chunks/webpack-b423e3a015a7f4f9.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/074d29967bc6ad87.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.509a94378dab66e7.js
+```
 
 ## 2024-01-19Z (`q-nwvju19I1V-kczySDcG`)
 

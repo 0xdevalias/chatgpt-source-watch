@@ -34,16 +34,16 @@
         w,
         P,
         k,
-        N = n(37097),
-        T = n(50134),
+        T = n(37097),
+        N = n(50134),
         z = n(6939),
         O = n(36112),
         C = n(4399),
         I = n.n(C),
         _ = n(82256),
         G = n(61302),
-        S = n(90038),
-        M = n(3554),
+        M = n(90038),
+        S = n(3554),
         A = n(21120),
         E = n(14711),
         Z = n(52336),
@@ -51,10 +51,10 @@
         L = n(70079),
         U = n(21389),
         R = n(35250),
-        B = U.Z.a(u || (u = (0, S.Z)(["bold underline"]))),
+        B = U.Z.a(u || (u = (0, M.Z)(["bold underline"]))),
         F = U.Z.textarea(
           d ||
-            (d = (0, S.Z)([
+            (d = (0, M.Z)([
               "w-full text-sm overflow-y-auto rounded-lg border bg-transparent px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium dark:bg-gray-800 bg-white h-32",
             ]))
         );
@@ -74,7 +74,7 @@
           g = p[0],
           v = p[1],
           x =
-            ((t = (0, T.Z)(
+            ((t = (0, N.Z)(
               I().mark(function e() {
                 return I().wrap(function (e) {
                   for (;;)
@@ -110,14 +110,14 @@
               })(i),
               isOpen: !0,
               onClose: s,
-              closeButton: (0, R.jsx)(M.ZP.CloseButton, { onClose: s }),
-              primaryButton: (0, R.jsx)(M.ZP.Button, {
+              closeButton: (0, R.jsx)(S.ZP.CloseButton, { onClose: s }),
+              primaryButton: (0, R.jsx)(S.ZP.Button, {
                 title: "Continue",
                 color: "primary",
                 onClick: s,
               }),
               secondaryButton: a
-                ? (0, R.jsx)(M.ZP.Button, {
+                ? (0, R.jsx)(S.ZP.Button, {
                     title: "Appeal",
                     onClick: function () {
                       return v(h.AppealForm);
@@ -225,14 +225,14 @@
               title: "Appeal",
               isOpen: !0,
               onClose: s,
-              closeButton: (0, R.jsx)(M.ZP.CloseButton, { onClose: s }),
-              primaryButton: (0, R.jsx)(M.ZP.Button, {
+              closeButton: (0, R.jsx)(S.ZP.CloseButton, { onClose: s }),
+              primaryButton: (0, R.jsx)(S.ZP.Button, {
                 title: "Submit",
                 color: "primary",
                 onClick: x,
                 disabled: 0 === u.trim().length,
               }),
-              secondaryButton: (0, R.jsx)(M.ZP.Button, {
+              secondaryButton: (0, R.jsx)(S.ZP.Button, {
                 title: "Back",
                 onClick: function () {
                   return v(h.Initial);
@@ -265,7 +265,7 @@
           title: "Appeal submitted",
           isOpen: !0,
           onClose: t,
-          closeButton: (0, R.jsx)(M.ZP.CloseButton, { onClose: t }),
+          closeButton: (0, R.jsx)(S.ZP.CloseButton, { onClose: t }),
           type: "success",
           children: (0, R.jsx)("div", {
             className: "flex flex-col gap-2 text-sm",
@@ -280,9 +280,9 @@
         var t,
           n = e.gizmoId,
           r = e.onClose,
-          i = (0, N.b9)(n, !0).data,
+          i = (0, T.b9)(n, !0).data,
           o =
-            ((t = (0, T.Z)(
+            ((t = (0, N.Z)(
               I().mark(function e() {
                 return I().wrap(function (e) {
                   for (;;)
@@ -304,7 +304,7 @@
           onClose: function () {
             null == r || r();
           },
-          primaryButton: (0, R.jsx)(M.ZP.Button, {
+          primaryButton: (0, R.jsx)(S.ZP.Button, {
             title: "Cancel appeal",
             color: "primary",
             onClick: o,
@@ -526,16 +526,16 @@
           },
         ],
         ek = n(73558),
-        eN = n(90166),
-        eT = n(25736),
+        eT = n(90166),
+        eN = n(25736),
         ez = n(99715),
         eO = n(76483),
         eC = n(1454),
         eI = n(68919),
         e_ = n(41845),
         eG = n(60624),
-        eS = n(49685),
-        eM = n(7525),
+        eM = n(49685),
+        eS = n(7525),
         eA = n(31609),
         eE = n(55161),
         eZ = n(79505),
@@ -590,7 +590,7 @@
           c = s[1],
           u = (0, L.useRef)(n);
         function d() {
-          return (d = (0, T.Z)(
+          return (d = (0, N.Z)(
             I().mark(function e(t) {
               var n, r;
               return I().wrap(function (e) {
@@ -607,7 +607,7 @@
                         c({
                           tempId: (r = (0, eA.W7)(n)),
                           file: n,
-                          status: eM.X.Uploading,
+                          status: eS.X.Uploading,
                           progress: 1,
                           fileId: null,
                           cdnUrl: null,
@@ -618,7 +618,7 @@
                             c(function (r) {
                               return "initial" !== r &&
                                 (null == r ? void 0 : r.tempId) === e &&
-                                r.status === eM.X.Uploading
+                                r.status === eS.X.Uploading
                                 ? eU(
                                     eU({}, r),
                                     {},
@@ -631,7 +631,7 @@
                             c(function (n) {
                               return "initial" !== n &&
                                 (null == n ? void 0 : n.tempId) === e &&
-                                n.status === eM.X.Uploading
+                                n.status === eS.X.Uploading
                                 ? eU(eU({}, n), {}, { progress: t })
                                 : n;
                             });
@@ -645,7 +645,7 @@
                                     eU({}, n),
                                     {},
                                     {
-                                      status: eM.X.Ready,
+                                      status: eS.X.Ready,
                                       progress: 100,
                                       fileSpec: eU(
                                         {
@@ -693,7 +693,7 @@
                   return d.apply(this, arguments);
                 },
                 onDropRejected: function (e) {
-                  return (0, eG.UJ)(e, a, eM.A.ProfilePicture);
+                  return (0, eG.UJ)(e, a, eS.A.ProfilePicture);
                 },
                 multiple: !0,
                 maxSize: e_.xC,
@@ -712,13 +712,13 @@
                   className: "h-20 w-20",
                   children: i
                     ? (0, R.jsx)(eR, {})
-                    : null != l && "initial" != l && l.status != eM.X.Ready
+                    : null != l && "initial" != l && l.status != eS.X.Ready
                       ? (0, R.jsxs)("div", {
                           className:
                             "relative h-full w-full overflow-hidden rounded-full",
                           children: [
-                            (0, R.jsx)(eS.l, { file: l.file }),
-                            l.status === eM.X.Uploading && l.progress < 90
+                            (0, R.jsx)(eM.l, { file: l.file }),
+                            l.status === eS.X.Uploading && l.progress < 90
                               ? (0, R.jsx)("div", {
                                   className:
                                     "absolute inset-0 flex items-center justify-center bg-black/5 text-white",
@@ -819,7 +819,7 @@
           u = (0, L.useRef)(new Map()),
           d = (0, eE.Zp)(o, void 0),
           p =
-            ((t = (0, T.Z)(
+            ((t = (0, N.Z)(
               I().mark(function e(t) {
                 var n;
                 return I().wrap(function (e) {
@@ -848,7 +848,7 @@
                                 tempId: t,
                                 gizmoId: n,
                                 file: e,
-                                status: eM.X.Uploading,
+                                status: eS.X.Uploading,
                                 progress: 1,
                                 fileId: null,
                                 cdnUrl: null,
@@ -908,7 +908,7 @@
                                               tempId: t,
                                               gizmoId: n,
                                               file: e,
-                                              status: eM.X.Uploading,
+                                              status: eS.X.Uploading,
                                               progress: 1,
                                             },
                                             u.current.get(t)
@@ -924,7 +924,7 @@
                                     onFileUploadProgress: function (e, t) {
                                       var n = u.current.get(e);
                                       (null == n ? void 0 : n.status) ===
-                                        eM.X.Uploading &&
+                                        eS.X.Uploading &&
                                         u.current.set(
                                           e,
                                           eX(eX({}, n), {}, { progress: t })
@@ -978,7 +978,7 @@
               : [];
         function v(e) {
           return (0, R.jsx)(
-            eS.Z,
+            eM.Z,
             {
               onRemoveFileClick: function () {
                 u.current.delete(e.tempId),
@@ -988,14 +988,14 @@
               },
               file: e.file,
               loadingPercentage:
-                e.status === eM.X.Uploading ? e.progress : void 0,
+                e.status === eS.X.Uploading ? e.progress : void 0,
             },
             e.tempId
           );
         }
         function x(e) {
           return (0, R.jsx)(
-            eS.Z,
+            eM.Z,
             {
               file: e.name,
               fileId: e.file_id,
@@ -1044,9 +1044,9 @@
               (0, eE._0)(o, e.type, e.name) === _.Cd.CodeInterpreter
             );
           }),
-          N = (0, eK.Z)(k, 2),
-          O = N[0],
-          C = N[1],
+          T = (0, eK.Z)(k, 2),
+          O = T[0],
+          C = T[1],
           G = (0, L.useRef)(O.length);
         return (
           (0, L.useEffect)(
@@ -1187,7 +1187,7 @@
         return null != a
           ? (0, R.jsx)("div", {
               className: "opacity-70",
-              children: (0, R.jsx)(eN.u, {
+              children: (0, R.jsx)(eT.u, {
                 side: "top",
                 label: a,
                 children: l,
@@ -1198,7 +1198,9 @@
       function e4(e) {
         var t = e.enabledTools,
           n = e.onEnabledToolsChange,
-          r = (0, G.C)(Q.L0.BrowseAvailable);
+          r = (0, G.C)(Q.L0.BrowseAvailable),
+          i = (0, D.sB)(D.tz.GizmoMemory).value,
+          o = (0, eu.Z)();
         return (0, R.jsxs)("div", {
           className: "flex flex-col items-start gap-2",
           children: [
@@ -1248,8 +1250,7 @@
                 children: [
                   "Code Interpreter",
                   (0, R.jsx)(tc, {
-                    description:
-                      "Code Interpreter lets your GPT run code. When enabled, your GPT can analyze data, work with files you've uploaded, do math and more",
+                    description: o.formatMessage(e5.codeInterpreterTooltip),
                   }),
                 ],
               }),
@@ -1257,6 +1258,21 @@
               enabledTools: t,
               onEnabledToolsChange: n,
             }),
+            i &&
+              (0, R.jsx)(e3, {
+                label: (0, R.jsxs)("div", {
+                  className: "flex items-center",
+                  children: [
+                    "Memory",
+                    (0, R.jsx)(tc, {
+                      description: o.formatMessage(e5.memoryTooltip),
+                    }),
+                  ],
+                }),
+                toolType: _.qK.MEMORY,
+                enabledTools: t,
+                onEnabledToolsChange: n,
+              }),
           ],
         });
       }
@@ -1265,6 +1281,16 @@
             defaultMessage:
               "Web browsing is disabled for your workspace. Contact your admin to enable it.",
             id: "GizmoEditorModelPicker.disabledBrowsingToolTip",
+          },
+          codeInterpreterTooltip: {
+            id: "GizmoEditorModelPicker.codeInterpreterTooltip",
+            defaultMessage:
+              "Allow this GPT to run code. When enabled, this GPT can analyze data, work with files you’ve uploaded, do math, and more.",
+          },
+          memoryTooltip: {
+            id: "GizmoEditorModelPicker.memoryTooltip",
+            defaultMessage:
+              "Allow this GPT to pick up on users details and preferences to tailor its responses to them. When enabled, users will need to have memory on to use this GPT.",
           },
         }),
         e8 = n(67311);
@@ -1331,7 +1357,7 @@
         }
       }
       function tt(e, t, n) {
-        var r = e.name.length > eT.aI,
+        var r = e.name.length > eN.aI,
           i =
             (null !==
               (l =
@@ -1339,7 +1365,7 @@
                   ? void 0
                   : c.length) && void 0 !== l
               ? l
-              : 0) > eT.P_,
+              : 0) > eN.P_,
           o =
             (null !==
               (u =
@@ -1347,7 +1373,7 @@
                   ? void 0
                   : d.length) && void 0 !== u
               ? u
-              : 0) > eT.Lu,
+              : 0) > eN.Lu,
           a =
             (null !==
               (p =
@@ -1355,7 +1381,7 @@
                   ? void 0
                   : m.length) && void 0 !== p
               ? p
-              : 0) > eT.vi,
+              : 0) > eN.vi,
           s = [];
         if (
           ((null == e ? void 0 : e.name) === "" && s.push(g.NameEmpty),
@@ -1524,15 +1550,15 @@
         (s[(s.MissingCategory = 9)] = "MissingCategory");
       var ti = U.Z.input(
           v ||
-            (v = (0, S.Z)([
+            (v = (0, M.Z)([
               "w-full resize-none overflow-y-auto rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 border focus:ring-blue-400 border-token-border-medium dark:bg-gray-700 h-9 dark:bg-gray-800",
             ]))
         ),
-        to = U.Z.div(x || (x = (0, S.Z)(["text-sm text-red-500"]))),
-        ta = U.Z.div(b || (b = (0, S.Z)(["mb-6"]))),
+        to = U.Z.div(x || (x = (0, M.Z)(["text-sm text-red-500"]))),
+        ta = U.Z.div(b || (b = (0, M.Z)(["mb-6"]))),
         ts = U.Z.textarea(
           y ||
-            (y = (0, S.Z)([
+            (y = (0, M.Z)([
               "w-full text-sm overflow-y-auto rounded-lg border bg-transparent px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium dark:bg-gray-800 bg-white h-32",
             ]))
         );
@@ -1545,7 +1571,8 @@
       }
       function tc(e) {
         var t = e.description;
-        return (0, R.jsx)(eN.u, {
+        return (0, R.jsx)(eT.u, {
+          wide: !0,
           label: t,
           delayDuration: 0,
           children: (0, R.jsx)(tl, {}),
@@ -1567,7 +1594,7 @@
             void 0 !== r &&
               (r ? (0, R.jsx)(eH.H_v, {}) : (0, R.jsx)(eH.iUH, {})),
             n
-              ? (0, R.jsx)(eN.u, {
+              ? (0, R.jsx)(eT.u, {
                   label: n,
                   sideOffset: 4,
                   side: "top",
@@ -1700,10 +1727,10 @@
                         })) && void 0 !== n
                 ? n
                 : []
-              ).length >= eT.L5
+              ).length >= eN.L5
                 ? (0, R.jsx)("div", {
                     children: s.formatMessage(th.maxActionsReached, {
-                      number: eT.L5,
+                      number: eN.L5,
                     }),
                   })
                 : (0, R.jsx)(eD.cY, {
@@ -1717,7 +1744,7 @@
             ],
           });
         return a
-          ? (0, R.jsx)(eN.u, {
+          ? (0, R.jsx)(eT.u, {
               side: "top",
               label: s.formatMessage(th.disabledCustomActionsTooltip),
               children: l,
@@ -1751,11 +1778,11 @@
               : [],
           P = j ? y[j] : void 0,
           k = (0, L.useState)(!1),
-          N = k[0],
+          T = k[0],
           O = k[1],
           C = (0, L.useState)(!1),
-          S = C[0],
-          M = C[1],
+          M = C[0],
+          S = C[1],
           A = (0, L.useState)(!0),
           E = A[0],
           Z = A[1],
@@ -1783,7 +1810,7 @@
                       isGeneratingProfilePic: h,
                       setIsGeneratingProfilePic: v,
                       onFileChange:
-                        ((t = (0, T.Z)(
+                        ((t = (0, N.Z)(
                           I().mark(function e(t) {
                             var n;
                             return I().wrap(function (e) {
@@ -1860,7 +1887,7 @@
                             tr(
                               tr({}, th.nameTooLong),
                               {},
-                              { values: { length: eT.aI } }
+                              { values: { length: eN.aI } }
                             )
                           ),
                         })
@@ -1914,7 +1941,7 @@
                             tr(
                               tr({}, th.descriptionTooLong),
                               {},
-                              { values: { length: eT.P_ } }
+                              { values: { length: eN.P_ } }
                             )
                           ),
                         })
@@ -1968,7 +1995,7 @@
                             tr(
                               tr({}, th.instructionsTooLong),
                               {},
-                              { values: { length: eT.vi } }
+                              { values: { length: eN.vi } }
                             )
                           ),
                         })
@@ -1997,7 +2024,7 @@
                           className:
                             "absolute bottom-3 right-2 text-token-text-tertiary",
                           onClick: function () {
-                            return M(!0);
+                            return S(!0);
                           },
                           children: (0, R.jsx)(ef.j5, { className: "icon-sm" }),
                         }),
@@ -2011,7 +2038,7 @@
                             tr(
                               tr({}, th.welcomeMessageTooLong),
                               {},
-                              { values: { length: eT.Lu } }
+                              { values: { length: eN.Lu } }
                             )
                           ),
                         })
@@ -2185,18 +2212,18 @@
                   }),
               ],
             }),
-            S &&
+            M &&
               (0, R.jsx)(e1, {
                 text: null !== (c = d.welcomeMessage) && void 0 !== c ? c : "",
                 onChange: function (e) {
                   p({ welcomeMessage: e });
                 },
                 onClose: function () {
-                  return M(!1);
+                  return S(!1);
                 },
                 placeholder: "How this GPT starts conversations.",
               }),
-            N &&
+            T &&
               (0, R.jsx)(e1, {
                 text: null !== (u = d.instructions) && void 0 !== u ? u : "",
                 onChange: function (e) {
@@ -2290,8 +2317,8 @@
         tw = n(13366),
         tP = n(18008),
         tk = n(58272),
-        tN = n(99304),
-        tT = n(84623),
+        tT = n(99304),
+        tN = n(84623),
         tz = n(8844),
         tO = n(65654),
         tC = n(90439),
@@ -2317,8 +2344,8 @@
       ((l = j || (j = {}))[(l.MAGIC = 1)] = "MAGIC"),
         (l[(l.SANDBOX = 2)] = "SANDBOX"),
         ((w || (w = {})).TestGizmoAction = "test_gizmo_action");
-      var tG = new tN.V(),
-        tS = L.memo(function (e) {
+      var tG = new tT.V(),
+        tM = L.memo(function (e) {
           var t,
             n,
             r,
@@ -2399,7 +2426,7 @@
             P =
               ((n = (0, tO.Z)(l, void 0, es.noop, es.noop, es.noop, [])),
               (0, L.useCallback)(
-                ((t = (0, T.Z)(
+                ((t = (0, N.Z)(
                   I().mark(function e(t, r, i) {
                     var o, a, s, c, u, d;
                     return I().wrap(function (e) {
@@ -2449,14 +2476,14 @@
                                 },
                               }),
                               (c = [eF.S.GPT_4]),
-                              (u = (0, tT.Rr)((0, J.N$)(), c, ep.OL.GizmoTest)),
+                              (u = (0, tN.Rr)((0, J.N$)(), c, ep.OL.GizmoTest)),
                               (d = null),
                               !u)
                             ) {
                               e.next = 11;
                               break;
                             }
-                            return (e.next = 10), tT.ZP.getEnforcementToken(c);
+                            return (e.next = 10), tN.ZP.getEnforcementToken(c);
                           case 10:
                             d = e.sent;
                           case 11:
@@ -2604,7 +2631,7 @@
             })
           );
         }),
-        tM = ["oauth_client_id", "oauth_client_secret"],
+        tS = ["oauth_client_id", "oauth_client_secret"],
         tA = ["api_key"];
       function tE(e, t) {
         var n = Object.keys(e);
@@ -2673,7 +2700,7 @@
           w = e.jitPluginTool,
           P = e.onUpdateTool,
           k = e.onClose,
-          N = (0, L.useState)({
+          T = (0, L.useState)({
             apiKeyValue: "",
             oauthClientIdValue: "",
             oauthClientSecretValue: "",
@@ -2762,8 +2789,8 @@
                 ? b
                 : "default_post",
           }),
-          T = N[0],
-          z = N[1];
+          N = T[0],
+          z = T[1];
         function O(e) {
           z(function (t) {
             return tZ(tZ({}, t), e);
@@ -2777,25 +2804,25 @@
             color: "dark",
             onClick: function () {
               P(
-                T.authTypeValue === ep.Jv.None
+                N.authTypeValue === ep.Jv.None
                   ? { type: ep.Jv.None }
-                  : T.authTypeValue === ep.Jv.OAuth
+                  : N.authTypeValue === ep.Jv.OAuth
                     ? {
                         type: ep.Jv.OAuth,
-                        client_url: T.oauthAuthUrlValue,
-                        authorization_url: T.oauthTokenUrlValue,
+                        client_url: N.oauthAuthUrlValue,
+                        authorization_url: N.oauthTokenUrlValue,
                         authorization_content_type:
                           "application/x-www-form-urlencoded",
-                        scope: T.oauthScopeValue,
-                        token_exchange_method: T.tokenExchangeMethodValue,
-                        oauth_client_id: T.oauthClientIdValue,
-                        oauth_client_secret: T.oauthClientSecretValue,
+                        scope: N.oauthScopeValue,
+                        token_exchange_method: N.tokenExchangeMethodValue,
+                        oauth_client_id: N.oauthClientIdValue,
+                        oauth_client_secret: N.oauthClientSecretValue,
                       }
                     : {
                         type: ep.Jv.ServiceHTTP,
-                        authorization_type: T.httpAuthTypeValue,
-                        custom_auth_header: T.customHeaderValue,
-                        api_key: T.apiKeyValue,
+                        authorization_type: N.httpAuthTypeValue,
+                        custom_auth_header: N.customHeaderValue,
+                        api_key: N.apiKeyValue,
                       }
               ),
                 k();
@@ -2817,7 +2844,7 @@
                   onValueChange: function (e) {
                     O({ authTypeValue: e });
                   },
-                  value: T.authTypeValue,
+                  value: N.authTypeValue,
                   className: "flex gap-4",
                   children: [
                     (0, R.jsx)(eD.Xb, { label: "None", value: ep.Jv.None }),
@@ -2830,14 +2857,14 @@
                 }),
               ],
             }),
-            "service_http" === T.authTypeValue
+            "service_http" === N.authTypeValue
               ? (0, R.jsxs)(R.Fragment, {
                   children: [
                     (0, R.jsx)(tL, { children: "API Key" }),
                     (0, R.jsx)(ti, {
                       placeholder: "<HIDDEN>",
                       type: "password",
-                      value: T.apiKeyValue,
+                      value: N.apiKeyValue,
                       onChange: function (e) {
                         O({ apiKeyValue: e.target.value });
                       },
@@ -2846,7 +2873,7 @@
                     (0, R.jsx)(tL, { children: "Auth Type" }),
                     (0, R.jsxs)(ex.Z.Root, {
                       className: "mb-2 flex gap-6 overflow-hidden rounded-lg",
-                      value: T.httpAuthTypeValue,
+                      value: N.httpAuthTypeValue,
                       required: !0,
                       onValueChange: function (e) {
                         O({ httpAuthTypeValue: e });
@@ -2857,13 +2884,13 @@
                         (0, R.jsx)(eD.Xb, { value: "custom", label: "Custom" }),
                       ],
                     }),
-                    "custom" === T.httpAuthTypeValue &&
+                    "custom" === N.httpAuthTypeValue &&
                       (0, R.jsxs)("div", {
                         className: "mt-2",
                         children: [
                           (0, R.jsx)(tL, { children: "Custom Header Name" }),
                           (0, R.jsx)(ti, {
-                            value: T.customHeaderValue,
+                            value: N.customHeaderValue,
                             onChange: function (e) {
                               O({ customHeaderValue: e.target.value });
                             },
@@ -2874,14 +2901,14 @@
                       }),
                   ],
                 })
-              : "oauth" === T.authTypeValue
+              : "oauth" === N.authTypeValue
                 ? (0, R.jsxs)(R.Fragment, {
                     children: [
                       (0, R.jsx)(tL, { children: "Client ID" }),
                       (0, R.jsx)(ti, {
                         placeholder: "<HIDDEN>",
                         type: "password",
-                        value: T.oauthClientIdValue,
+                        value: N.oauthClientIdValue,
                         onChange: function (e) {
                           O({ oauthClientIdValue: e.target.value });
                         },
@@ -2891,7 +2918,7 @@
                       (0, R.jsx)(ti, {
                         placeholder: "<HIDDEN>",
                         type: "password",
-                        value: T.oauthClientSecretValue,
+                        value: N.oauthClientSecretValue,
                         onChange: function (e) {
                           O({ oauthClientSecretValue: e.target.value });
                         },
@@ -2899,7 +2926,7 @@
                       }),
                       (0, R.jsx)(tL, { children: "Authorization URL" }),
                       (0, R.jsx)(ti, {
-                        value: T.oauthAuthUrlValue,
+                        value: N.oauthAuthUrlValue,
                         onChange: function (e) {
                           O({ oauthAuthUrlValue: e.target.value });
                         },
@@ -2907,7 +2934,7 @@
                       }),
                       (0, R.jsx)(tL, { children: "Token URL" }),
                       (0, R.jsx)(ti, {
-                        value: T.oauthTokenUrlValue,
+                        value: N.oauthTokenUrlValue,
                         onChange: function (e) {
                           O({ oauthTokenUrlValue: e.target.value });
                         },
@@ -2915,7 +2942,7 @@
                       }),
                       (0, R.jsx)(tL, { children: "Scope" }),
                       (0, R.jsx)(ti, {
-                        value: T.oauthScopeValue,
+                        value: N.oauthScopeValue,
                         onChange: function (e) {
                           O({ oauthScopeValue: e.target.value });
                         },
@@ -2923,7 +2950,7 @@
                       }),
                       (0, R.jsx)(tL, { children: "Token Exchange Method" }),
                       (0, R.jsxs)(ex.Z.Root, {
-                        value: T.tokenExchangeMethodValue,
+                        value: N.tokenExchangeMethodValue,
                         required: !0,
                         onValueChange: function (e) {
                           O({ tokenExchangeMethodValue: e });
@@ -2955,7 +2982,7 @@
           s = a[0],
           l = a[1];
         function c() {
-          return (c = (0, T.Z)(
+          return (c = (0, N.Z)(
             I().mark(function e() {
               var r, o;
               return I().wrap(
@@ -3165,7 +3192,7 @@
           w = y[1],
           P = (0, L.useState)(!1),
           k = P[0],
-          N = P[1];
+          T = P[1];
         function O(e) {
           d(function (t) {
             return tZ(
@@ -3202,11 +3229,11 @@
         }
         var C = (0, L.useState)(),
           G = C[0],
-          S = C[1],
-          M = (0, L.useState)(function () {
+          M = C[1],
+          S = (0, L.useState)(function () {
             var e;
             return (0, es.debounce)(
-              ((e = (0, T.Z)(
+              ((e = (0, N.Z)(
                 I().mark(function e(t) {
                   var n, r, i, o;
                   return I().wrap(function (e) {
@@ -3216,7 +3243,7 @@
                           return (e.next = 2), E.U.validateOpenAPISpec(t);
                         case 2:
                           if (
-                            (S((n = e.sent)),
+                            (M((n = e.sent)),
                             !(r = n.success ? n.spec.root_domain : void 0))
                           ) {
                             e.next = 13;
@@ -3239,7 +3266,7 @@
                             break;
                           }
                           return (
-                            S({
+                            M({
                               success: !1,
                               errors: [
                                 "Action sets cannot have duplicate domains - ".concat(
@@ -3306,9 +3333,9 @@
           A = null != G ? (G.success ? G.warnings : G.errors) : void 0;
         (0, L.useEffect)(
           function () {
-            "" === b ? (S(void 0), M.cancel()) : M(b);
+            "" === b ? (M(void 0), S.cancel()) : S(b);
           },
-          [M, b]
+          [S, b]
         );
         var Z = function (e) {
           try {
@@ -3437,7 +3464,7 @@
                           var t = e.oauth_client_id,
                             n = e.oauth_client_secret;
                           O({
-                            auth: (0, ed.Z)(e, tM),
+                            auth: (0, ed.Z)(e, tS),
                             oauth_client_id: t,
                             oauth_client_secret: n,
                           });
@@ -3470,7 +3497,7 @@
                               Z(e);
                             },
                             onClose: function () {
-                              N(!1);
+                              T(!1);
                             },
                           })
                         : (0, R.jsxs)("div", {
@@ -3479,7 +3506,7 @@
                               (0, R.jsx)(eD.cY, {
                                 color: "neutral",
                                 onClick: function () {
-                                  N(!0);
+                                  T(!0);
                                 },
                                 children: "Import from URL",
                               }),
@@ -3635,7 +3662,7 @@
           m = (0, $.ec)($.F_.isBusinessWorkspace),
           f = (0, eu.Z)(),
           h = (0, L.useState)(
-            (0, N.Sg)(i)
+            (0, T.Sg)(i)
               ? m
                 ? Z.Zz.Workspace
                 : Z.Zz.Marketplace
@@ -3654,7 +3681,7 @@
             },
             [null == o ? void 0 : o.gizmo.sharing_targets, v]
           ),
-          y = (0, N.WL)(),
+          y = (0, T.WL)(),
           j = y.data,
           w = y.isLoading,
           P = (0, L.useState)(
@@ -3673,16 +3700,16 @@
         var O = (0, L.useState)(void 0),
           C = O[0],
           G = O[1],
-          S = (0, L.useRef)(
+          M = (0, L.useRef)(
             (0, es.throttle)(function (e, t) {
               return E.U.generateCategory(e, t);
             }, 1e3)
           ),
-          M =
+          S =
             null != j && j.is_verified
               ? void 0
               : f.formatMessage(ne.displayNameRequiredHint);
-        v !== Z.Zz.Marketplace || null == M || w || x(Z.Zz.Link);
+        v !== Z.Zz.Marketplace || null == S || w || x(Z.Zz.Link);
         var A =
             m &&
             !(
@@ -3701,7 +3728,7 @@
             return e.currentWorkspace;
           }),
           q = (0, J.hz)(),
-          W = (0, N.Z1)();
+          W = (0, T.Z1)();
         (0, L.useEffect)(
           function () {
             if (!(null != q && q.includes(Q.L0.GizmoStore))) {
@@ -3710,7 +3737,7 @@
             }
             var e = !0;
             return (
-              (0, T.Z)(
+              (0, N.Z)(
                 I().mark(function t() {
                   var n;
                   return I().wrap(
@@ -3725,7 +3752,7 @@
                             return t.abrupt("return");
                           case 3:
                             return (
-                              (t.next = 5), S.current(i.name, i.instructions)
+                              (t.next = 5), M.current(i.name, i.instructions)
                             );
                           case 5:
                             (n = t.sent),
@@ -3779,10 +3806,10 @@
                           {
                             value: e.recipient,
                             disabled:
-                              e.recipient === Z.Zz.Marketplace && null != M,
+                              e.recipient === Z.Zz.Marketplace && null != S,
                             tooltipText:
                               e.recipient === Z.Zz.Marketplace
-                                ? (null != M ? M : H)
+                                ? (null != S ? S : H)
                                   ? f.formatMessage(
                                       ne.publicSharingHintStoreEnabled
                                     )
@@ -3860,7 +3887,7 @@
                               "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
                             children: [
                               (0, R.jsx)(eh.Z, tQ({}, ne.categoryLabel)),
-                              (0, R.jsx)(eN.u, {
+                              (0, R.jsx)(eT.u, {
                                 label: (0, R.jsx)("span", {
                                   className: "w-36 text-xs",
                                   children: (0, R.jsx)(
@@ -3894,7 +3921,7 @@
                       color: "primary",
                       disabled: U.length > 0,
                       loading: d,
-                      onClick: (0, T.Z)(
+                      onClick: (0, N.Z)(
                         I().mark(function e() {
                           var t;
                           return I().wrap(
@@ -3913,7 +3940,7 @@
                                     return e.abrupt("return");
                                   case 7:
                                     1 === t.gizmo.live_version
-                                      ? ec().push((0, N.m_)(t))
+                                      ? ec().push((0, T.m_)(t))
                                       : l({
                                           type: "published",
                                           publishedGizmo: t,
@@ -3947,7 +3974,7 @@
                           }),
                           (0, R.jsx)(eD.cY, {
                             color: "primary",
-                            onClick: (0, T.Z)(
+                            onClick: (0, N.Z)(
                               I().mark(function e() {
                                 return I().wrap(function (e) {
                                   for (;;)
@@ -3977,7 +4004,7 @@
         });
       }
       function t0(e) {
-        return "".concat("https://chat.openai.com").concat((0, N.m_)(e));
+        return "".concat("https://chat.openai.com").concat((0, T.m_)(e));
       }
       function t1(e) {
         var t = e.publishedGizmo,
@@ -4058,7 +4085,7 @@
         (null == n || i) && d.push(g.Loading),
           o && d.push(g.UploadingProfilePic),
           a && d.push(g.GeneratingProfilePic);
-        var m = (0, N.Sg)(n);
+        var m = (0, T.Sg)(n);
         return (0, R.jsxs)(tW.fC, {
           modal: !0,
           children: [
@@ -4188,7 +4215,7 @@
             })
           : null;
       }
-      var t5 = U.Z.div(P || (P = (0, S.Z)(["flex items-center gap-1"])));
+      var t5 = U.Z.div(P || (P = (0, M.Z)(["flex items-center gap-1"])));
       function t8(e) {
         var t = e.gizmoEditorData,
           n = (0, $.ec)(function (e) {
@@ -4249,7 +4276,7 @@
                 }),
                 (0, R.jsx)("div", {
                   className: "text-xs text-token-text-secondary",
-                  children: (0, N.Sg)(t)
+                  children: (0, T.Sg)(t)
                     ? (0, R.jsxs)("div", {
                         className: "flex items-center gap-1",
                         children: [
@@ -4554,7 +4581,7 @@
               ),
             }),
             null != t &&
-              (0, R.jsx)(eN.u, {
+              (0, R.jsx)(eT.u, {
                 label: t,
                 children: (0, R.jsx)(eC.H33, { className: "icon-sm" }),
               }),
@@ -4696,7 +4723,7 @@
         return e;
       }
       function nu() {
-        return (nu = (0, T.Z)(
+        return (nu = (0, N.Z)(
           I().mark(function e(t) {
             var n, r, i, o, a, s, l, c, u;
             return I().wrap(function (e) {
@@ -4757,7 +4784,7 @@
         )).apply(this, arguments);
       }
       function nd() {
-        return (nd = (0, T.Z)(
+        return (nd = (0, N.Z)(
           I().mark(function e(t, n, r) {
             var i, o, a, s, l, c, u, d, p, m, f, h, g;
             return I().wrap(
@@ -4956,17 +4983,17 @@
               return !w.has(e.file_id);
             });
           if (!(0, es.isEmpty)(y) || 0 !== P.length || 0 !== k.length) {
-            var N = [];
+            var T = [];
             if (!(0, es.isEmpty)(y)) {
-              var T =
+              var N =
                 "Explicitly update the GPT's behavior to the following exact fields:\n\n    ".concat(
                   JSON.stringify(y, null, 2),
                   '\n\n    "Do not call update_behavior yet. Instead, use these updated fields as the GPT\'s current behavior, and in the next call to update_behavior, incorporate these changes."\n    '
                 );
-              N.push(no.Cv.getTextAsMessage(T, ep.uU.System));
+              T.push(no.Cv.getTextAsMessage(N, ep.uU.System));
             }
             k.length > 0 &&
-              N.push(
+              T.push(
                 no.Cv.getTextAsMessage(
                   "The user has removed the following files from the GPT. You can no longer reference these files: ".concat(
                     k
@@ -4979,7 +5006,7 @@
                 )
               ),
               P.length > 0 &&
-                N.push(
+                T.push(
                   no.Cv.getTextAsMessage(
                     "The user is adding these files to the GPT. The GPT may reference these files. The file IDs are: ".concat(
                       P.map(function (e) {
@@ -4994,11 +5021,11 @@
                     }
                   )
                 ),
-              N.length > 0 &&
+              T.length > 0 &&
                 X.tQ.updateTree(e, function (e) {
                   var n,
                     r = e.getNodeByIdOrMessageId(t).parentId,
-                    i = na(N);
+                    i = na(T);
                   try {
                     for (i.s(); !(n = i.n()).done; ) {
                       var o = n.value,
@@ -5143,7 +5170,7 @@
           ),
           f = (0, nm.gF)(function (e) {
             return e.files.filter(function (e) {
-              return e.status === eM.X.Ready && null != e.gizmoId;
+              return e.status === eS.X.Ready && null != e.gizmoId;
             });
           }),
           h = (0, L.useCallback)(
@@ -5423,23 +5450,23 @@
           }),
           _ = C[0];
         C[1];
-        var S = (0, N.kg)(y.current.id).data,
-          M = (0, N.N_)(),
-          A = M.isPending,
-          E = M.error,
-          D = (0, N.ZJ)(),
+        var M = (0, T.kg)(y.current.id).data,
+          S = (0, T.N_)(),
+          A = S.isPending,
+          E = S.error,
+          D = (0, T.ZJ)(),
           U = (0, L.useMemo)(
             function () {
               var e, t, n, r, i, o;
               return (
-                null != S &&
+                null != M &&
                 (!(
-                  z.name === S.gizmo.display.name &&
-                  z.description === S.gizmo.display.description &&
-                  z.welcomeMessage === S.gizmo.display.welcome_message &&
-                  z.instructions === S.gizmo.instructions &&
+                  z.name === M.gizmo.display.name &&
+                  z.description === M.gizmo.display.description &&
+                  z.welcomeMessage === M.gizmo.display.welcome_message &&
+                  z.instructions === M.gizmo.instructions &&
                   ((i = z.tools),
-                  (o = S.tools),
+                  (o = M.tools),
                   i.length === o.length &&
                     i.every(function (e) {
                       return o.some(function (t) {
@@ -5458,7 +5485,7 @@
                       : [],
                     null !==
                       (n =
-                        null === (r = S.files) || void 0 === r
+                        null === (r = M.files) || void 0 === r
                           ? void 0
                           : r.map(function (e) {
                               return e.file_id;
@@ -5467,13 +5494,13 @@
                       : []
                   )
                 ) ||
-                  z.profilePictureUrl != S.gizmo.display.profile_picture_url)
+                  z.profilePictureUrl != M.gizmo.display.profile_picture_url)
               );
             },
-            [z, S]
+            [z, M]
           ),
           B =
-            ((t = (0, T.Z)(
+            ((t = (0, N.Z)(
               I().mark(function e() {
                 var t, n, r, i, o;
                 return I().wrap(
@@ -5485,7 +5512,7 @@
                             (t = y.current),
                             (e.prev = 1),
                             (e.next = 4),
-                            M.mutateAsync({ editorData: t, gizmoId: t.id })
+                            S.mutateAsync({ editorData: t, gizmoId: t.id })
                           );
                         case 4:
                           return (
@@ -5532,7 +5559,7 @@
             }),
           F = (0, L.useRef)(),
           V =
-            ((n = (0, T.Z)(
+            ((n = (0, N.Z)(
               I().mark(function e() {
                 return I().wrap(function (e) {
                   for (;;)
@@ -5652,7 +5679,7 @@
           })[0],
           $ = (0, L.useRef)(),
           et =
-            ((r = (0, T.Z)(
+            ((r = (0, N.Z)(
               I().mark(function e(t) {
                 var n;
                 return I().wrap(
@@ -5711,7 +5738,7 @@
             (X.tQ.getOrInitThread(_),
             (i = (0, tO.Z)(_, void 0, es.noop, es.noop, et, [])),
             (o = (0, J.hz)()),
-            (a = (0, T.Z)(
+            (a = (0, N.Z)(
               I().mark(function e(t, n, r) {
                 var a, s, l, c, u, d, p, m, f;
                 return I().wrap(function (e) {
@@ -5767,14 +5794,14 @@
                             },
                           }),
                           (p = [eF.S.GPT_4]),
-                          (m = (0, tT.Rr)(o, p, ep.OL.GizmoMagicCreate)),
+                          (m = (0, tN.Rr)(o, p, ep.OL.GizmoMagicCreate)),
                           (f = null),
                           !m)
                         ) {
                           e.next = 15;
                           break;
                         }
-                        return (e.next = 14), tT.ZP.getEnforcementToken(p);
+                        return (e.next = 14), tN.ZP.getEnforcementToken(p);
                       case 14:
                         f = e.sent;
                       case 15:
@@ -5852,7 +5879,7 @@
           [g]
         );
         var ed =
-            ((s = (0, T.Z)(
+            ((s = (0, N.Z)(
               I().mark(function e(t, n) {
                 var r, i, o, a, s;
                 return I().wrap(
@@ -5894,7 +5921,7 @@
                               },
                               {
                                 onSuccess: function (e) {
-                                  eo.E.setQueryData((0, N.Vw)(o).queryKey, e),
+                                  eo.E.setQueryData((0, T.Vw)(o).queryKey, e),
                                     eo.E.invalidateQueries({
                                       queryKey: ["gizmos"],
                                     }),
@@ -5944,7 +5971,7 @@
             function (e, t) {
               return s.apply(this, arguments);
             }),
-          em = M.isPending || D.isPending,
+          em = S.isPending || D.isPending,
           ef = (0, L.useState)(function () {
             var e = ei.m.getItem(ei.F.GizmoEditorTab);
             return Object.values(k).includes(e) ? e : k.MAGIC_MAKER;
@@ -5979,8 +6006,8 @@
           ew = ej[0],
           eP = ej[1],
           ek = (0, L.useState)(void 0),
-          eN = ek[0],
-          eT = ek[1];
+          eT = ek[0],
+          eN = ek[1];
         return (0, R.jsxs)("div", {
           className: "flex h-screen w-full flex-col items-center",
           children: [
@@ -5990,9 +6017,9 @@
               hasUnpublishedChanges: U,
               isUploadingProfilePic: eb,
               isGeneratingProfilePic: ew,
-              publishedGizmo: S,
+              publishedGizmo: M,
               promoteGizmo:
-                ((d = (0, T.Z)(
+                ((d = (0, N.Z)(
                   I().mark(function e(t, n) {
                     var r;
                     return I().wrap(function (e) {
@@ -6023,7 +6050,7 @@
                   return d.apply(this, arguments);
                 }),
               appealGizmo:
-                ((h = (0, T.Z)(
+                ((h = (0, N.Z)(
                   I().mark(function e(t) {
                     return I().wrap(function (e) {
                       for (;;)
@@ -6056,10 +6083,10 @@
                   return h.apply(this, arguments);
                 }),
               revertDraft:
-                null != S && U
+                null != M && U
                   ? function () {
                       var e = eo.E.getQueryData(
-                        (0, N.Vw)(y.current.id).queryKey
+                        (0, T.Vw)(y.current.id).queryKey
                       );
                       if (null != e) {
                         var t = nP(e);
@@ -6074,7 +6101,7 @@
                 className: "text-sm",
               }),
               showActionsModal: function (e) {
-                eT(e);
+                eN(e);
               },
               className: "flex-shrink-0",
             }),
@@ -6093,13 +6120,13 @@
                   children: (0, R.jsx)("div", {
                     className: "h-full grow overflow-hidden",
                     children:
-                      void 0 !== eN
+                      void 0 !== eT
                         ? (0, R.jsx)(tV, {
-                            currentlyEditingActionDomain: eN,
+                            currentlyEditingActionDomain: eT,
                             gizmoEditorData: z,
                             updateGizmo: W,
                             onClose: function () {
-                              eT(void 0);
+                              eN(void 0);
                             },
                           })
                         : (0, R.jsxs)("div", {
@@ -6147,10 +6174,10 @@
                                           setIsGeneratingProfilePic: eP,
                                           requireGizmoId: V,
                                           onShowActionsEditor: function (e) {
-                                            eT(e);
+                                            eN(e);
                                           },
                                         })
-                                      : (0, R.jsx)(tS, {
+                                      : (0, R.jsx)(tM, {
                                           gizmoEditorData: z,
                                           isSavingDraft: A,
                                           showTitle: !1,
@@ -6169,7 +6196,7 @@
                     className: "flex-grow pb-5",
                     children: (0, R.jsx)("div", {
                       className: "h-full",
-                      children: (0, R.jsx)(tS, {
+                      children: (0, R.jsx)(tM, {
                         gizmoEditorData: z,
                         isSavingDraft: A,
                       }),
@@ -6181,17 +6208,17 @@
           ],
         });
       };
-      function nN(e) {
+      function nT(e) {
         var t = e.businessWorkspaceId,
           n = e.gizmoId,
-          r = (0, N.b9)(n, !0).data,
+          r = (0, T.b9)(n, !0).data,
           i = (0, $.ec)($.F_.accountUserId),
           o = (0, $.aF)(),
           a = null == o ? void 0 : o.id,
           s = null != r && null != i && null != a && (0, tg.k1)(r, i, a, t);
         return null != r && s ? (0, R.jsx)(nk, { gizmo: r }) : null;
       }
-      function nT(e) {
+      function nN(e) {
         var t = e.onNewGizmoId;
         return (0, R.jsx)(nk, { gizmo: void 0, onNewGizmoId: t });
       }
@@ -6217,11 +6244,11 @@
                     children:
                       void 0 != s
                         ? (0, R.jsx)(
-                            nN,
+                            nT,
                             { businessWorkspaceId: o, gizmoId: s },
                             s
                           )
-                        : (0, R.jsx)(nT, {
+                        : (0, R.jsx)(nN, {
                             remixSourceId: n,
                             onNewGizmoId: function (e) {
                               (a.current = e),
@@ -6257,12 +6284,12 @@
           );
         var n = (0, el.useRouter)(),
           r = n.query.slug,
-          i = r ? (0, N.CR)(r) : void 0,
+          i = r ? (0, T.CR)(r) : void 0,
           o = n.query.remixFrom,
           a = null == t ? void 0 : t.features.includes(Q.PL);
         return ((0, L.useEffect)(
           function () {
-            a && tT.ZP.initializeAndGatherData();
+            a && tN.ZP.initializeAndGatherData();
           },
           [a]
         ),
@@ -6279,4 +6306,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-df1e5d7194a249d0.js.map
+//# sourceMappingURL=4648-5b21345d26e5f4e4.js.map

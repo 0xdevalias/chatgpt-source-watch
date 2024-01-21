@@ -185,148 +185,152 @@
             i = e.handleSignupWarning,
             s = e.handleLogin,
             o = (0, u.ec)(u.F_.hasPaidSubscription);
-          return null == (0, c.t)()
-            ? null
-            : null != a && a.id
-              ? (0, A.jsx)(D.z, {
-                  as: "button",
-                  disabled: t || o,
-                  loading: t,
-                  color: o ? "disabled" : "primary",
-                  size: "large",
-                  onClick: n,
-                  className: (0, v.default)(
-                    "whitespace-nowrap text-base font-bold ",
-                    { "bg-[#4046EC] hover:bg-[#6E73FC]": !o }
-                  ),
-                  children: o
-                    ? (0, A.jsx)(P.Z, V({}, J.alreadyPaidUserCta))
-                    : (0, A.jsx)(
-                        P.Z,
-                        V(
-                          V({}, J.acceptInviteCtaLoggedIn),
-                          {},
-                          { values: { dollarValue: r } }
-                        )
-                      ),
-                })
-              : (0, A.jsxs)(A.Fragment, {
-                  children: [
-                    (0, A.jsx)("div", {
-                      className: "pb-5 text-center text-sm text-gray-500",
-                      children: (0, A.jsx)(
-                        P.Z,
-                        V({}, J.claimInviteLoginOrSignUp)
-                      ),
+          return null != a && a.id
+            ? (0, A.jsx)(D.z, {
+                as: "button",
+                disabled: t || o,
+                loading: t,
+                color: o ? "disabled" : "primary",
+                size: "large",
+                onClick: n,
+                className: (0, v.default)(
+                  "whitespace-nowrap text-base font-bold ",
+                  { "bg-[#4046EC] hover:bg-[#6E73FC]": !o }
+                ),
+                children: o
+                  ? (0, A.jsx)(P.Z, V({}, J.alreadyPaidUserCta))
+                  : (0, A.jsx)(
+                      P.Z,
+                      V(
+                        V({}, J.acceptInviteCtaLoggedIn),
+                        {},
+                        { values: { dollarValue: r } }
+                      )
+                    ),
+              })
+            : (0, A.jsxs)(A.Fragment, {
+                children: [
+                  (0, A.jsx)("div", {
+                    className: "pb-5 text-center text-sm text-gray-500",
+                    children: (0, A.jsx)(
+                      P.Z,
+                      V({}, J.claimInviteLoginOrSignUp)
+                    ),
+                  }),
+                  (0, A.jsx)("div", {
+                    className: "flex flex-col space-y-4 px-3",
+                    children: (0, A.jsxs)("div", {
+                      className: "flex flex-col gap-3 sm:flex-row",
+                      children: [
+                        (0, A.jsx)(D.z, {
+                          disabled: t,
+                          loading: l,
+                          className: "w-full",
+                          onClick: s,
+                          children: (0, A.jsx)(P.Z, V({}, R.messages.logIn)),
+                        }),
+                        (0, A.jsx)(D.z, {
+                          onClick: i,
+                          disabled: t,
+                          className: "w-full",
+                          children: (0, A.jsx)(P.Z, V({}, R.messages.signUp)),
+                        }),
+                      ],
                     }),
-                    (0, A.jsx)("div", {
-                      className: "flex flex-col space-y-4 px-3",
-                      children: (0, A.jsxs)("div", {
-                        className: "flex flex-col gap-3 sm:flex-row",
-                        children: [
-                          (0, A.jsx)(D.z, {
-                            disabled: t,
-                            loading: l,
-                            className: "w-full",
-                            onClick: s,
-                            children: (0, A.jsx)(P.Z, V({}, R.messages.logIn)),
-                          }),
-                          (0, A.jsx)(D.z, {
-                            onClick: i,
-                            disabled: t,
-                            className: "w-full",
-                            children: (0, A.jsx)(P.Z, V({}, R.messages.signUp)),
-                          }),
-                        ],
-                      }),
-                    }),
-                  ],
-                });
+                  }),
+                ],
+              });
         };
       function z(e) {
         var r,
           a,
           t,
-          l = e.user,
-          i = e.referralCodeId,
-          s = e.redirectUrl,
-          v = e.auth0Provider,
-          _ = (0, N.useState)(!1),
-          b = _[0],
-          M = _[1],
-          O = (0, N.useState)(!1),
-          R = O[0],
-          E = O[1],
-          D = (0, N.useState)(!1),
-          S = D[0],
-          U = D[1],
-          T = (0, N.useState)(!1),
-          L = T[0],
-          H = T[1],
-          B =
-            null !== (t = null == l ? void 0 : l.id) && void 0 !== t
+          l,
+          i = e.user,
+          s = e.referralCodeId,
+          v = e.redirectUrl,
+          _ = e.auth0Provider,
+          b = (0, N.useState)(!1),
+          M = b[0],
+          O = b[1],
+          R = (0, N.useState)(!1),
+          E = R[0],
+          D = R[1],
+          S = (0, N.useState)(!1),
+          U = S[0],
+          T = S[1],
+          L = (0, N.useState)(!1),
+          H = L[0],
+          B = L[1],
+          G =
+            null !== (t = null == i ? void 0 : i.id) && void 0 !== t
               ? t
               : "_no_user",
-          G = (0, f.a)({
-            queryKey: ["referral-invite", i],
+          z = (0, f.a)({
+            queryKey: ["referral-invite", s],
             queryFn: function () {
-              return d.ZP.getPublicReferralInvite(i);
+              return d.ZP.getPublicReferralInvite(s);
             },
           }),
-          z = G.data,
-          Q = G.isLoading,
-          ee = G.isError,
-          er = (0, k.Z)(),
-          ea = null == z ? void 0 : z.result.invite_metadata.invite_data,
-          et = "$".concat(null == ea ? void 0 : ea.referral_trial_dollar_value),
-          el = null == ea ? void 0 : ea.referrer_public_avatar_url,
-          en =
-            null != ea && ea.referral_trial_duration_months
-              ? (null == ea ? void 0 : ea.referral_trial_duration_months) >= 1
-                ? er.formatMessage(J.monthsOfService, {
+          Q = z.data,
+          ee = z.isLoading,
+          er = z.isError,
+          ea = (0, k.Z)(),
+          et =
+            null == Q
+              ? void 0
+              : null === (l = Q.result.invite_metadata) || void 0 === l
+                ? void 0
+                : l.invite_data,
+          el = "$".concat(null == et ? void 0 : et.referral_trial_dollar_value),
+          en = null == et ? void 0 : et.referrer_public_avatar_url,
+          ei =
+            null != et && et.referral_trial_duration_months
+              ? (null == et ? void 0 : et.referral_trial_duration_months) >= 1
+                ? ea.formatMessage(J.monthsOfService, {
                     referralTrialDurationMonths:
-                      null == ea ? void 0 : ea.referral_trial_duration_months,
+                      null == et ? void 0 : et.referral_trial_duration_months,
                   })
-                : er.formatMessage(J.daysOfService, {
+                : ea.formatMessage(J.daysOfService, {
                     referralTrialDurationDays:
-                      null == ea ? void 0 : ea.referral_trial_duration_days,
+                      null == et ? void 0 : et.referral_trial_duration_days,
                   })
               : null,
-          ei = null == ea ? void 0 : ea.referrer_user_name,
-          es =
-            null != ea && ea.referral_trial_duration_months
-              ? (null == ea ? void 0 : ea.referral_trial_duration_months) > 1
-                ? er.formatMessage(J.monthsOfBenefit, {
-                    referralTrialDurationMonths:
-                      null == ea ? void 0 : ea.referral_trial_duration_months,
-                  })
-                : er.formatMessage(J.daysOfBenefit, {
-                    referralTrialDurationDays:
-                      null == ea ? void 0 : ea.referral_trial_duration_days,
-                  })
-              : null,
+          es = null == et ? void 0 : et.referrer_user_name,
           eo =
-            null != ea && ea.referral_trial_duration_months
-              ? (null == ea ? void 0 : ea.referral_trial_duration_months) >= 1
-                ? er.formatMessage(J.ctaHeaderMonths, {
+            null != et && et.referral_trial_duration_months
+              ? (null == et ? void 0 : et.referral_trial_duration_months) > 1
+                ? ea.formatMessage(J.monthsOfBenefit, {
                     referralTrialDurationMonths:
-                      null == ea ? void 0 : ea.referral_trial_duration_months,
+                      null == et ? void 0 : et.referral_trial_duration_months,
                   })
-                : er.formatMessage(J.ctaHeaderDays, {
+                : ea.formatMessage(J.daysOfBenefit, {
                     referralTrialDurationDays:
-                      null == ea ? void 0 : ea.referral_trial_duration_days,
+                      null == et ? void 0 : et.referral_trial_duration_days,
                   })
               : null,
-          ed = er.formatMessage(J.dollarValue, { offerDollarValue: et }),
-          ec = (0, c.t)(),
-          eu = (0, u.ec)(u.F_.workspaceId),
-          ef = (0, I.useRouter)(),
-          ex = (0, x.D)({
+          ed =
+            null != et && et.referral_trial_duration_months
+              ? (null == et ? void 0 : et.referral_trial_duration_months) >= 1
+                ? ea.formatMessage(J.ctaHeaderMonths, {
+                    referralTrialDurationMonths:
+                      null == et ? void 0 : et.referral_trial_duration_months,
+                  })
+                : ea.formatMessage(J.ctaHeaderDays, {
+                    referralTrialDurationDays:
+                      null == et ? void 0 : et.referral_trial_duration_days,
+                  })
+              : null,
+          ec = ea.formatMessage(J.dollarValue, { offerDollarValue: el }),
+          eu = (0, c.t)(),
+          ef = (0, u.ec)(u.F_.workspaceId),
+          ex = (0, I.useRouter)(),
+          em = (0, x.D)({
             mutationFn: function () {
-              return d.ZP.postClaimReferralInvite(i, eu || "");
+              return d.ZP.postClaimReferralInvite(s, ef || "");
             },
             onSettled: function () {
-              U(!1);
+              T(!1);
             },
             onError:
               ((r = (0, n.Z)(
@@ -335,7 +339,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          F.m.danger(er.formatMessage(J.claimReferralError));
+                          F.m.danger(ea.formatMessage(J.claimReferralError));
                         case 1:
                         case "end":
                           return e.stop();
@@ -347,10 +351,10 @@
                 return r.apply(this, arguments);
               }),
             onSuccess: function () {
-              M(!0), ef.push("/invite/accepted?referralCodeId=".concat(i));
+              O(!0), ex.push("/invite/accepted?referralCodeId=".concat(s));
             },
           }).mutateAsync,
-          em =
+          eh =
             ((a = (0, n.Z)(
               o().mark(function e() {
                 return o().wrap(function (e) {
@@ -358,16 +362,16 @@
                     switch ((e.prev = e.next)) {
                       case 0:
                         return (
-                          U(!0),
-                          g.m9.logEvent("chatgpt_referral_invite_claim", i, {
-                            referralCodeId: i,
-                            userId: B,
+                          T(!0),
+                          g.m9.logEvent("chatgpt_referral_invite_claim", s, {
+                            referralCodeId: s,
+                            userId: G,
                           }),
                           m.A.logEvent(h.M.chatgptReferralInviteClaim, {
-                            content: B,
+                            content: G,
                           }),
                           (e.next = 5),
-                          ex()
+                          em()
                         );
                       case 5:
                       case "end":
@@ -381,25 +385,25 @@
             });
         return ((0, N.useEffect)(
           function () {
-            ee &&
-              (ef.push("/?e=oldi"),
+            er &&
+              (ex.push("/?e=oldi"),
               p.U.addAction("fetch_error_404", {
                 url: location.href,
                 errorMessage: "Referral code not found",
               }));
           },
-          [ee, ef]
+          [er, ex]
         ),
-        ee)
+        er)
           ? (0, A.jsx)(Y, {})
-          : Q || (null == ec && null != l && l.id) || b
+          : ee || (null == eu && null != i && i.id) || M
             ? (0, A.jsx)(X, {})
             : (0, A.jsx)(A.Fragment, {
                 children: (0, A.jsxs)("div", {
                   className:
                     "relative flex h-full w-full flex-col items-center justify-center",
                   children: [
-                    R &&
+                    E &&
                       (0, A.jsx)(j.E.div, {
                         initial: { opacity: 0, x: 10 },
                         transition: { delay: 1, duration: 0.1 },
@@ -414,26 +418,26 @@
                         },
                         children: (0, A.jsx)(q, {
                           handleSignup: function () {
-                            U(!0),
-                              H(!0),
+                            T(!0),
+                              B(!0),
                               g.m9.logEvent(
                                 "chatgpt_referral_invite_signup",
-                                i,
-                                { referralCodeId: i }
+                                s,
+                                { referralCodeId: s }
                               ),
                               m.A.logEvent(h.M.chatgptReferralInviteSignup, {
-                                content: i,
+                                content: s,
                               }),
                               (0, y.signIn)(
-                                v,
-                                { callbackUrl: s },
+                                _,
+                                { callbackUrl: v },
                                 { prompt: "login", screen_hint: "signup" }
                               );
                           },
-                          setHasRequestedSignup: E,
+                          setHasRequestedSignup: D,
                         }),
                       }),
-                    !R &&
+                    !E &&
                       (0, A.jsx)(j.E.div, {
                         initial: { opacity: 0 },
                         transition: { delay: 1, duration: 0.2 },
@@ -453,14 +457,14 @@
                               (0, A.jsx)("h2", {
                                 className:
                                   "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                                children: eo,
+                                children: ed,
                               }),
                               (0, A.jsx)(K, {
-                                referrerPublicAvatarUrl: el,
-                                referrerName: ei,
-                                benefitWithTime: es,
+                                referrerPublicAvatarUrl: en,
+                                referrerName: es,
+                                benefitWithTime: eo,
                                 receivedPlan: "ChatGPT Plus",
-                                dollarValue: ed,
+                                dollarValue: ec,
                               }),
                               (0, A.jsx)("div", {
                                 children: (0, A.jsx)("p", {
@@ -534,43 +538,43 @@
                               (0, A.jsx)("div", {
                                 className: "w-full",
                                 children: (0, A.jsx)(W, {
-                                  handleClaimInvite: em,
+                                  handleClaimInvite: eh,
                                   handleSignupWarning: function () {
-                                    U(!0),
-                                      E(!0),
+                                    T(!0),
+                                      D(!0),
                                       g.m9.logEvent(
                                         "chatgpt_referral_invite_explain_signup",
-                                        i,
-                                        { referralCodeId: i }
+                                        s,
+                                        { referralCodeId: s }
                                       ),
                                       m.A.logEvent(
                                         h.M.chatgptReferralInviteExplainSignup,
-                                        { content: i }
+                                        { content: s }
                                       ),
-                                      U(!1);
+                                      T(!1);
                                   },
                                   handleLogin: function () {
-                                    U(!0),
-                                      H(!0),
+                                    T(!0),
+                                      B(!0),
                                       g.m9.logEvent(
                                         "chatgpt_referral_invite_login",
-                                        i,
-                                        { referralCodeId: i }
+                                        s,
+                                        { referralCodeId: s }
                                       ),
                                       m.A.logEvent(
                                         h.M.chatgptReferralInviteLogin,
-                                        { content: i }
+                                        { content: s }
                                       ),
                                       (0, y.signIn)(
-                                        v,
-                                        { callbackUrl: s },
+                                        _,
+                                        { callbackUrl: v },
                                         { prompt: "login" }
                                       );
                                   },
-                                  user: l,
-                                  offerDollarValue: et,
-                                  isLoading: S,
-                                  isLoadingLogin: L,
+                                  user: i,
+                                  offerDollarValue: el,
+                                  isLoading: U,
+                                  isLoadingLogin: H,
                                 }),
                               }),
                               (0, A.jsxs)("div", {
@@ -586,13 +590,13 @@
                                         {
                                           values: {
                                             monthlyCost: "$20",
-                                            monthsOfService: en,
+                                            monthsOfService: ei,
                                           },
                                         }
                                       )
                                     ),
                                   }),
-                                  (null == l ? void 0 : l.id) &&
+                                  (null == i ? void 0 : i.id) &&
                                     (0, A.jsx)("p", {
                                       className: "text-xs text-gray-500",
                                       children: (0, A.jsx)(
@@ -603,7 +607,7 @@
                                           {
                                             values: {
                                               userEmail:
-                                                null == l ? void 0 : l.email,
+                                                null == i ? void 0 : i.email,
                                               avatar: function () {
                                                 var e;
                                                 return (0, A.jsx)("img", {
@@ -612,14 +616,14 @@
                                                   src:
                                                     null !==
                                                       (e =
-                                                        null == l
+                                                        null == i
                                                           ? void 0
-                                                          : l.picture) &&
+                                                          : i.picture) &&
                                                     void 0 !== e
                                                       ? e
                                                       : void 0,
                                                   alt:
-                                                    null == l ? void 0 : l.name,
+                                                    null == i ? void 0 : i.name,
                                                 });
                                               },
                                               email: function (e) {
@@ -965,4 +969,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...referralCodeParam]]-32f24149f5824618.js.map
+//# sourceMappingURL=[[...referralCodeParam]]-f97349054ed94179.js.map

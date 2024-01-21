@@ -1990,6 +1990,9 @@ textarea:focus {
   margin-bottom: auto;
   margin-top: auto;
 }
+.-mb-2 {
+  margin-bottom: -0.5rem;
+}
 .-ml-0 {
   margin-left: 0;
 }
@@ -2031,6 +2034,9 @@ textarea:focus {
 }
 .-mt-2\.5 {
   margin-top: -0.625rem;
+}
+.-mt-3 {
+  margin-top: -0.75rem;
 }
 .-mt-4 {
   margin-top: -1rem;
@@ -4710,10 +4716,6 @@ textarea:focus {
 .text-orange-500 {
   --tw-text-opacity: 1;
   color: rgba(224, 108, 43, var(--tw-text-opacity));
-}
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgba(248, 113, 113, var(--tw-text-opacity));
 }
 .text-red-500 {
   --tw-text-opacity: 1;
@@ -8256,6 +8258,10 @@ button[data-state="open"] .toggle-item-button-open {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -8263,6 +8269,10 @@ button[data-state="open"] .toggle-item-button-open {
   .lg\:py-10 {
     padding-bottom: 2.5rem;
     padding-top: 2.5rem;
+  }
+  .lg\:py-3 {
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
   }
   .lg\:py-6 {
     padding-bottom: 1.5rem;
@@ -9719,4 +9729,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=132af4ac1db4a00b.css.map*/
+/*# sourceMappingURL=074d29967bc6ad87.css.map*/
