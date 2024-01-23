@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-23Z \(`SV8rS7Dgwcs4Wy66AK7F-`\)](#2024-01-23z-sv8rs7dgwcs4wy66ak7f-)
 - [2024-01-23Z \(`QuwWxUlwJ3R2mN9xC_kGf`\)](#2024-01-23z-quwwxulwj3r2mn9xc_kgf)
 - [2024-01-22Z \(`xkpErLYv9UcK2R7KCfW2D`\)](#2024-01-22z-xkperlyv9uck2r7kcfw2d)
 - [2024-01-21Z \(`MCkVH1jJi3yNLkMToVDdU`\)](#2024-01-21z-mckvh1jji3ynlkmtovddu)
@@ -47,6 +48,49 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-23Z (`SV8rS7Dgwcs4Wy66AK7F-`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - It looks like a bunch of the diff churn here might be removing things added in a build from earlier today.. perhaps a commit was reverted?
+    - 2024-01-22Z (`xkpErLYv9UcK2R7KCfW2D`) (SHA: `0b66576ee72010207e33131c826fc4be47449e88`)
+- App release version (Git SHA?): `0e1fd5d29993a88a61b87d3a343770c296a3078d`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/4648.js`
+  - ```diff
+    - z.profilePictureUrl != G.gizmo.display.profile_picture_url ||
+    - z.profilePictureId != G.gizmo.display.profile_pic_id)
+    + z.profilePictureUrl != M.gizmo.display.profile_picture_url)
+    ```    
+  - ```diff
+    - navigateAway: {
+    -   id: "gizmo.navigateAway",
+    -   defaultMessage: "Are you sure you would like to leave this page?",
+    - },
+    ```
+  - etc
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-659abd9a08966577.js
+https://cdn.oaistatic.com/_next/static/SV8rS7Dgwcs4Wy66AK7F-/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/SV8rS7Dgwcs4Wy66AK7F-/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/4648-04f0b01bbab45fe8.js
+```
 
 ## 2024-01-23Z (`QuwWxUlwJ3R2mN9xC_kGf`)
 

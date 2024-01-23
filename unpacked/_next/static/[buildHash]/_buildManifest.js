@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, e) {
+(self.__BUILD_MANIFEST = (function (s, a, c, e) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-dfd7db9208d5bc06.js"],
@@ -8,24 +8,24 @@
     "/account/manage": [
       "static/chunks/pages/account/manage-d6c22d23218f3753.js",
     ],
-    "/admin": [a, "static/chunks/pages/admin-21bf33ecdd89e2bb.js"],
+    "/admin": [s, "static/chunks/pages/admin-21bf33ecdd89e2bb.js"],
     "/admin/analytics": [
       "static/chunks/3a34cc27-e83cff9ee2ba2afc.js",
       "static/chunks/7549-122f729dc49e6850.js",
-      a,
+      s,
       "static/chunks/pages/admin/analytics-51dd97dd90e2ae2b.js",
     ],
     "/admin/billing": [
-      a,
+      s,
       "static/chunks/pages/admin/billing-109060fbf829aa50.js",
     ],
-    "/admin/gpts": [a, "static/chunks/pages/admin/gpts-ba58d3c8c4fb842d.js"],
+    "/admin/gpts": [s, "static/chunks/pages/admin/gpts-ba58d3c8c4fb842d.js"],
     "/admin/identity": [
-      a,
+      s,
       "static/chunks/pages/admin/identity-059d2fd008bcca46.js",
     ],
     "/admin/settings": [
-      a,
+      s,
       "static/chunks/pages/admin/settings-16513a05953fa44e.js",
     ],
     "/aip/[pluginId]/oauth/callback": [
@@ -41,7 +41,7 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-6c967c6bb3c60b1d.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
+    "/auth/login": [a, c, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-83b0ce66a0f7311e.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-93f5191aa551662a.js",
@@ -65,7 +65,7 @@
       "static/chunks/pages/invite/accepted-d7ba9a8c17e28e51.js",
     ],
     "/invite/[[...referralCodeParam]]": [
-      s,
+      a,
       c,
       "static/chunks/pages/invite/[[...referralCodeParam]]-f97349054ed94179.js",
     ],
@@ -85,7 +85,7 @@
     "/share/[[...shareParams]]": [
       "static/chunks/pages/share/[[...shareParams]]-372842b7a352c62f.js",
     ],
-    "/status": [s, "static/chunks/pages/status-155fd86ce86ecc55.js"],
+    "/status": [a, "static/chunks/pages/status-155fd86ce86ecc55.js"],
     "/workspace/deactivated": [
       "static/chunks/pages/workspace/deactivated-5190e0ba03fbed0b.js",
     ],
@@ -136,6 +136,6 @@
   "static/chunks/5017-e8e15d8ebec0097a.js",
   "static/chunks/3975-37a9301353b29c5d.js",
   "static/chunks/3754-4b243fe67e7e8d54.js",
-  "static/chunks/4648-57c8f5ab3cfbc4b3.js"
+  "static/chunks/4648-04f0b01bbab45fe8.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
