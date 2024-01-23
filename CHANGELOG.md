@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-22Z \(`xkpErLYv9UcK2R7KCfW2D`\)](#2024-01-22z-xkperlyv9uck2r7kcfw2d)
 - [2024-01-21Z \(`MCkVH1jJi3yNLkMToVDdU`\)](#2024-01-21z-mckvh1jji3ynlkmtovddu)
 - [2024-01-19Z \(`q-nwvju19I1V-kczySDcG`\)](#2024-01-19z-q-nwvju19i1v-kczysdcg)
 - [2024-01-19Z \(`WxxDBH31dddvpYD-hkj3T`\)](#2024-01-19z-wxxdbh31dddvpyd-hkj3t)
@@ -45,6 +46,547 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-22Z (`xkpErLYv9UcK2R7KCfW2D`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `0b66576ee72010207e33131c826fc4be47449e88`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Modules IDs changed:
+  - `74318` -> `29861`
+  - ?etc?
+- The following files had large changes to embedded JSON that appears to be related to translation:
+  - `unpacked/_next/static/chunks/676.js`
+  - `unpacked/_next/static/chunks/718.js`
+  - `unpacked/_next/static/chunks/1141.js`
+  - `unpacked/_next/static/chunks/1777.js`
+  - `unpacked/_next/static/chunks/1948.js`
+  - `unpacked/_next/static/chunks/2178.js`
+  - `unpacked/_next/static/chunks/3466.js`
+  - `unpacked/_next/static/chunks/3705.js`
+  - `unpacked/_next/static/chunks/4042.js`
+  - `unpacked/_next/static/chunks/4615.js`
+  - `unpacked/_next/static/chunks/4700.js`
+  - `unpacked/_next/static/chunks/4806.js`
+  - `unpacked/_next/static/chunks/5187.js`
+  - `unpacked/_next/static/chunks/5288.js`
+  - `unpacked/_next/static/chunks/5952.js`
+  - `unpacked/_next/static/chunks/6522.js`
+  - `unpacked/_next/static/chunks/6875.js`
+  - `unpacked/_next/static/chunks/6951.js`
+  - `unpacked/_next/static/chunks/6952.js`
+  - `unpacked/_next/static/chunks/7198.js`
+  - `unpacked/_next/static/chunks/7947.js`
+  - `unpacked/_next/static/chunks/8226.js`
+  - `unpacked/_next/static/chunks/8400.js`
+  - `unpacked/_next/static/chunks/9087.js` (This one looks like it's english)
+    - Extracting the JSON, fixing some escape sequences, and then pretty formatting it, the old version had `6128` lines, and the new version has `7258` lines
+    - I skimmed through the diff of the pretty-formatted JSON to see what has changed, but there is far too much churn to be able to include it all here; so if you're interested, I would suggest looking deeper at that yourself:
+      - https://gist.github.com/0xdevalias/a4965b21dfb5aff6a15c8e0d17d9ba80#file-chatgpt-chunk-9087-diff
+  - `unpacked/_next/static/chunks/9120.js`
+  - `unpacked/_next/static/chunks/9271.js`
+  - `unpacked/_next/static/chunks/9826.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added 2 new `svg` images:
+    - one that looks like a star, half buried in some sand, with the handle of a spade sticking out of it
+    - one that looks like a down arrow
+  - Module `67425` seems to be newly added, and has a heap of code related to team account creation/transfer, including a help link:
+    - https://help.openai.com/en/articles/8801890
+    - `teamAccountTransferModalTransferLabel`
+    - `teamAccountTransferModalCreateLabel`
+    - `teamAccountTransferModalTransferDetail`
+    - `teamAccountTransferModalCreateDetail`
+    - `teamAccountTransferModalTitle`
+    - `teamAccountTransferModalExplanation`
+    - `teamTransferModalMigrateData`
+    - `teamTransferModalDeleteData`
+    - `teamTransferModalCancelPlus`
+    - `transferAccount`
+  - Module `72576` seems to be newly added (or maybe just heavily refactored/churned):
+    - Links to: https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq
+    - ```js
+      eO = (0, ep.vU)({
+        askAway: { id: "onboarding.askAway", defaultMessage: "Ask away" },
+        askAwayBody: {
+          id: "onboarding.askAwayBody",
+          defaultMessage:
+            "ChatGPT can answer questions, help you learn, write code, brainstorm together, and much more.",
+        },
+        warning: {
+          id: "onboarding.warning",
+          defaultMessage: "Don’t share sensitive info",
+        },
+        warningBody: {
+          id: "onboarding.warningBody",
+          defaultMessage:
+            "Chat history may be reviewed or used to improve our services. Learn more about your choices in our <article>Help Center</article>.",
+        },
+        accuracy: {
+          id: "onboarding.accuracy",
+          defaultMessage: "Check your facts",
+        },
+        accuracyBody: {
+          id: "onboarding.accuracyBody",
+          defaultMessage:
+            "While we have safeguards, ChatGPT may give you inaccurate information. It’s not intended to give advice.",
+        },
+        gettingStartedButton: {
+          id: "onboarding.gettingStartedButton",
+          defaultMessage: "Okay, let’s go",
+        },
+        workspaceWelcome: {
+          id: "onboarding.workspaceWelcome",
+          defaultMessage: "Welcome to the {workspaceName} Workspace",
+        },
+        workspaceWelcomeNoName: {
+          id: "onboarding.workspaceWelcomeNoName",
+          defaultMessage: "Welcome to the your Workspace",
+        },
+        workspaceWelcomeBody: {
+          id: "onboarding.workspaceWelcomeBody",
+          defaultMessage:
+            "Here you can use our latest models, with more capabilities, and fewer limits.",
+        },
+        workUse: {
+          id: "onboarding.workUse",
+          defaultMessage: "Made for use at work",
+        },
+        workUseBody: {
+          id: "onboarding.workUseBody",
+          defaultMessage:
+            "By default, chats in this workspace are not used to train our AI models.",
+        },
+      });
+      ```
+  - ```js
+    (function (Y) {
+      (Y.Personal = "chat"), (Y.Workspace = "workspace"), (Y.Team = "team");
+    })(ei || (ei = {}));
+    ```
+  - ```diff
+      initialModalBilling: {
+        id: "initialModal.billing",
+        defaultMessage:
+    -     "If you have a paid plan, it will be canceled upon completing this step.",
+    +     "If you have a ChatGPT Plus subscription, it will be canceled and refunded upon completing this step.",
+      },
+    ```
+  - ```js
+    ec = Y.turnGizmo,
+    ```
+  - `readOnly: !0,`
+  - ```js
+    var eR = (0, eE.vU)({
+      teamAccountTransferModalTitle: {
+        id: "teamAccountTransferModal.title",
+        defaultMessage: "Your ChatGPT Team workspace is ready",
+      },
+      teamAccountTransferModalExplanation: {
+        id: "teamAccountTransferModal.explanation",
+        defaultMessage:
+          "Do you want to transfer your chat history and GPTs to the Team workspace?",
+      },
+      teamAccountTransferModalConfirm: {
+        id: "teamAccountTransferModal.confirm",
+        defaultMessage: "Continue",
+      },
+      teamAccountTransferModalTransferLabel: {
+        id: "teamAccountTransferModal.transferLabel",
+        defaultMessage: "Transfer chat history and GPTs",
+      },
+      teamAccountTransferModalTransferDetail: {
+        id: "teamAccountTransferModal.transferDetail",
+        defaultMessage:
+          "Carry over existing data from your personal workspace",
+      },
+      teamAccountTransferModalCreateLabel: {
+        id: "teamAccountTransferModal.createLabel",
+        defaultMessage: "Start as empty workspace",
+      },
+      teamAccountTransferModalCreateDetail: {
+        id: "teamAccountTransferModal.createDetail",
+        defaultMessage:
+          "Keep your personal workspace separate. If you’re on Plus, you will maintain your subscription until you cancel",
+      },
+      selectedModalTitle: {
+        id: "selectedModal.title",
+        defaultMessage: "Are you sure?",
+      },
+      selectedModalBack: { id: "selectedModal.back", defaultMessage: "Back" },
+      tansferModalPersonalAccount: {
+        id: "teamTransferModal.personalAccount",
+        defaultMessage: "Personal workspace",
+      },
+      teamTransferModalConfirmTitle: {
+        id: "teamTransferModal.confirmTitle",
+        defaultMessage:
+          "Transfer of existing data is permanent and can't be undone.",
+      },
+      teamTransferModalMigrateData: {
+        id: "teamTransferModal.migrateData",
+        defaultMessage:
+          "Your chat history and GPTs in your personal workspace will be migrated to the Team workspace.",
+      },
+      teamTransferModalDeleteData: {
+        id: "teamTransferModal.deleteData",
+        defaultMessage:
+          "Your Plugins and custom instructions in your personal workspace will be deleted.",
+      },
+      teamTransferModalCancelPlus: {
+        id: "teamTransferModal.cancelPlus",
+        defaultMessage:
+          "If you have a ChatGPT Plus subscription, it will be canceled and refunded upon merging.",
+      },
+      teamTransferModalWarning: {
+        id: "teamTransferModal.warning",
+        defaultMessage:
+          "You will lose access to your data if you leave or are removed from the Team workspace, or if the workspace is deactivated. <link>Learn more</link>",
+      },
+      teamTransferModalConfirm: {
+        id: "teamTransferModal.confirm",
+        defaultMessage: "Confirm transfer",
+      },
+      mergeModalConfirm: {
+        id: "mergerModal.confirm",
+        defaultMessage: "Confirm merge",
+      },
+    });
+    ```
+  - ```diff
+      noWorkspaceApprovedGPTs: {
+    -   id: "workspaceSettings.noWorkspaceGPTs",
+    +   id: "workspaceSettings.noWorkspaceApprovedGPTs",
+        defaultMessage: "You havent approved any third-party GPTs",
+      },
+    ```
+  - ```js
+    tA = null == tm ? void 0 : tm.isTeam(),
+    tP = (0, eU.rk)().data,
+    tN =
+      null == tP
+        ? void 0
+        : tP.accountItems.some(function (Y) {
+            return Y.isPersonalAccount();
+          }),
+    ```
+  - ```js
+    mergePersonalData: {
+      id: "settingsModal.mergePersonalData",
+      defaultMessage: "Merge data from your personal workspace",
+    },
+    mergeButton: {
+      id: "settingsModal.mergeButton",
+      defaultMessage: "Merge",
+    },
+    ```
+  - ```js
+    (Y.TeamOwnerOnboarding = "oai/apps/hasSeenTeamOwnerOnboarding"),
+    ```
+- `unpacked/_next/static/chunks/pages/admin/gpts.js`
+  - ```diff
+    - var C = (0, x.vU)({
+    -   title: { id: "workspaceSettings.title", defaultMessage: "GPTs" },
+    + var C = (0, b.vU)({
+    +   sidebarTitle: {
+    +     id: "workspaceSettingsOld.sidebarTitle",
+    +     defaultMessage: "GPTs",
+    +   },
+        allowAllOption: {
+    -     id: "workspaceSettings.allowAllOption",
+    +     id: "workspaceSettingsOld.allowAllOption",
+          defaultMessage: "Allow all",
+        },
+        ownerApprovedOnlyOption: {
+    -     id: "workspaceSettings.allowAllOption",
+    +     id: "workspaceSettingsOld.ownerApprovedOnlyOption",
+          defaultMessage: "Owner-approved only",
+        },
+        dontAllowOption: {
+    -     id: "workspaceSettings.dontAllowOption",
+    +     id: "workspaceSettingsOld.dontAllowOption",
+          defaultMessage: "Don't allow",
+        },
+        retentionPolicyTitle: {
+    -     id: "workspaceSettings.retentionPolicyTitle",
+    +     id: "workspaceSettingsOld.retentionPolicyTitle",
+          defaultMessage: "Retention policy",
+        },
+        thirdPartyGPTsTitle: {
+    -     id: "workspaceSettings.thirdPartyGPTsTitle",
+    +     id: "workspaceSettingsOld.thirdPartyGPTsTitle",
+          defaultMessage: "Third-party",
+        },
+        thirdPartyGPTsDescription: {
+    -     id: "workspaceSettings.thirdPartyGPTsDescription",
+    +     id: "workspaceSettingsOld.thirdPartyGPTsDescription",
+          defaultMessage:
+            "Manage whether members can use GPTs created outside your workspace.",
+        },
+        customActionsTooltip: {
+    -     id: "workspaceSettings.customActionsTooltip",
+    +     id: "workspaceSettingsOld.customActionsTooltip",
+          defaultMessage:
+            "Allow GPTs to use third-party services for tasks such as finding flights. Actions are defined by GPT builders.",
+        },
+        browseTooltip: {
+    -     id: "workspaceSettings.browseTooltip",
+    +     id: "workspaceSettingsOld.browseTooltip",
+          defaultMessage:
+            "Allow ChatGPT and GPTs to browse the internet to answer questions about recent topics and events.",
+        },
+        pluginsTooltip: {
+    -     id: "workspaceSettings.pluginsTooltip",
+    +     id: "workspaceSettingsOld.pluginsTooltip",
+          defaultMessage:
+            "Allow members to install plugins so ChatGPT can use third-party services for tasks such as finding flights.",
+        },
+        pluginsOptionTitle: {
+    -     id: "workspaceSettings.pluginsOptionTitle",
+    +     id: "workspaceSettingsOld.pluginsOptionTitle",
+          defaultMessage: "Plugins",
+        },
+        customActionsOptionTitle: {
+    -     id: "workspaceSettings.pluginsOptionTitle.0",
+    +     id: "workspaceSettingsOld.pluginsOptionTitle.0",
+          defaultMessage: "Custom actions",
+        },
+        browseOptionTitle: {
+    -     id: "workspaceSettings.browseOptionTitle",
+    +     id: "workspaceSettingsOld.browseOptionTitle",
+          defaultMessage: "Browsing with Bing",
+        },
+        workspaceGPTsTitle: {
+    -     id: "workspaceSettings.workspaceGPTsTitle",
+    +     id: "workspaceSettingsOld.workspaceGPTsTitle",
+          defaultMessage: "Workspace",
+        },
+        appearanceTitle: {
+    -     id: "workspaceSettings.appearanceTitle",
+    +     id: "workspaceSettingsOld.appearanceTitle",
+          defaultMessage: "Appearance",
+        },
+        sharingSettingsTitle: {
+    -     id: "workspaceSettings.sharingSettingsTitle",
+    +     id: "workspaceSettingsOld.sharingSettingsTitle",
+          defaultMessage: "Sharing",
+        },
+        gptSharingTitle: {
+    -     id: "workspaceSettings.gptSharingTitle",
+    +     id: "workspaceSettingsOld.gptSharingTitle",
+          defaultMessage: "GPTs can be shared with...",
+        },
+        chatSharingTitle: {
+    -     id: "workspaceSettings.chatSharingTitle",
+    +     id: "workspaceSettingsOld.chatSharingTitle",
+          defaultMessage: "Chats can be shared with...",
+        },
+        workspaceMembersOnlySelect: {
+    -     id: "workspaceSettings.workspaceMembersOnlySelect",
+    +     id: "workspaceSettingsOld.workspaceMembersOnlySelect",
+          defaultMessage: "Workspace members only",
+        },
+        anyOneSelect: {
+    -     id: "workspaceSettings.anyOneSelect",
+    +     id: "workspaceSettingsOld.anyOneSelect",
+          defaultMessage: "Anyone",
+        },
+        noOneSelect: {
+    -     id: "workspaceSettings.noOneSelect",
+    +     id: "workspaceSettingsOld.noOneSelect",
+          defaultMessage: "No one",
+        },
+        featureSettingsUpdateFailed: {
+    -     id: "workspaceSettings.featureSettingsUpdateFailed",
+    +     id: "workspaceSettingsOld.featureSettingsUpdateFailed",
+          defaultMessage: "Failed to update feature setting",
+        },
+        conversationRetention: {
+    -     id: "workspaceSettings.conversationRetention",
+    +     id: "workspaceSettingsOld.conversationRetention",
+          defaultMessage: "Chat retention",
+        },
+        retentionInfinite: {
+    -     id: "workspaceSettings.retentionInfinite",
+    +     id: "workspaceSettingsOld.retentionInfinite",
+          defaultMessage: "Infinite",
+        },
+        retentionNinetyDays: {
+    -     id: "workspaceSettings.retentionNinetyDays",
+    +     id: "workspaceSettingsOld.retentionNinetyDays",
+          defaultMessage: "90 days",
+        },
+        retentionOneYear: {
+    -     id: "workspaceSettings.retentionOneYear",
+    +     id: "workspaceSettingsOld.retentionOneYear",
+          defaultMessage: "1 year",
+        },
+        retentionCustomDays: {
+    -     id: "workspaceSettings.retentionCustomDays",
+    +     id: "workspaceSettingsOld.retentionCustomDays",
+          defaultMessage: "{num} days",
+        },
+        retentionChange: {
+    -     id: "workspaceSettings.retentionChange",
+    +     id: "workspaceSettingsOld.retentionChange",
+          defaultMessage:
+            "Contact your account manager to change this setting.",
+        },
+        workspaceGPTsDescription: {
+    -     id: "workspaceSettings.workspaceGPTsDescription",
+    +     id: "workspaceSettingsOld.workspaceGPTsDescription",
+          defaultMessage:
+            "Manage which capabilities are available for GPTs built in your workspace or by ChatGPT. This does not apply to third-party GPTs.",
+        },
+        enterpriseUpsellPill: {
+    -     id: "workspaceSettings.enterpriseUpsellPill",
+    +     id: "workspaceSettingsOld.enterpriseUpsellPill",
+          defaultMessage: "Enterprise",
+        },
+        retentionSettingTooltip: {
+    -     id: "workspaceSettings.retentionSettingTooltip",
+    +     id: "workspaceSettingsOld.retentionSettingTooltip",
+          defaultMessage: "Contact your account manager to change this setting",
+        },
+        enterpriseRequiredMessage: {
+    -     id: "workspaceSettings.enterpriseRequiredMessage",
+    +     id: "workspaceSettingsOld.enterpriseRequiredMessage",
+          defaultMessage:
+            "Only workspaces with the Enterprise plan can change these settings",
+        },
+        shareRecipientTitlePrivate: {
+    -     id: "workspaceSettings.shareRecipientTitlePrivate",
+    +     id: "workspaceSettingsOld.shareRecipientTitlePrivate",
+          defaultMessage: "Private",
+        },
+        shareRecipientTitleLink: {
+    -     id: "workspaceSettings.shareRecipientTitleLink",
+    +     id: "workspaceSettingsOld.shareRecipientTitleLink",
+          defaultMessage: "Link",
+        },
+        shareRecipientTitlePublic: {
+    -     id: "workspaceSettings.shareRecipientTitlePublic",
+    +     id: "workspaceSettingsOld.shareRecipientTitlePublic",
+          defaultMessage: "Public",
+        },
+      });
+    ```
+- `unpacked/_next/static/chunks/4648.js`
+  - `isDraft: !1,`
+  - `isDraft: !0,`
+  - ```js
+    (0, L.useEffect)(
+      function () {
+        var e = function (e) {
+          e.preventDefault(), (e.returnValue = "");
+        };
+        window.addEventListener("beforeunload", e);
+        var t = function () {
+          if (!confirm(l.formatMessage(nO.navigateAway)))
+            throw (
+              (r.events.emit("routeChangeError"),
+              "User cancelled navigation")
+            );
+        };
+        return (
+          r.events.on("routeChangeStart", t),
+          r.beforePopState(function (e) {
+            var t = e.url,
+              n = r.asPath;
+            return (
+              t === n ||
+              !!confirm(l.formatMessage(nO.navigateAway)) ||
+              (window.history.pushState(window.history.state, "", n), !1)
+            );
+          }),
+          function () {
+            window.removeEventListener("beforeunload", e),
+              r.events.off("routeChangeStart", t),
+              r.beforePopState(function () {
+                return !0;
+              });
+          }
+        );
+      },
+      [r, l]
+    ),
+    ```
+  - ```js
+    var nO = (0, ed.vU)({
+        navigateAway: {
+          id: "gizmo.navigateAway",
+          defaultMessage: "Are you sure you would like to leave this page?",
+        },
+      }),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-b2cc09d3e5227bc6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-eff305ba84d715f1.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-4d7e7c9992c78ac4.js
+https://cdn.oaistatic.com/_next/static/xkpErLYv9UcK2R7KCfW2D/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/xkpErLYv9UcK2R7KCfW2D/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-ba58d3c8c4fb842d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-a1b8b62dcf7e5de1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-6653d61c65bf2071.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-57c8f5ab3cfbc4b3.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-08e7adef031feae5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-372842b7a352c62f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-eff305ba84d715f1.js
+```
+
+### From `orig/_next/static/chunks/webpack-4d7e7c9992c78ac4.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/676.ca854ecf1128cf71.js
+https://cdn.oaistatic.com/_next/static/chunks/718.a180e15747a90b6d.js
+https://cdn.oaistatic.com/_next/static/chunks/1141.0e443d073ffe999c.js
+https://cdn.oaistatic.com/_next/static/chunks/1777.a38d4073d27e2f15.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.5211fa4de462dda6.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.d5e19ab04b6eadbc.js
+https://cdn.oaistatic.com/_next/static/chunks/3466.33ac4b56c38c4b85.js
+https://cdn.oaistatic.com/_next/static/chunks/3705.8c6482c47acea5fb.js
+https://cdn.oaistatic.com/_next/static/chunks/4042.f0990bc43e1a7a1e.js
+https://cdn.oaistatic.com/_next/static/chunks/4615.aa5600049f07c49a.js
+https://cdn.oaistatic.com/_next/static/chunks/4700.6b53bd0e52aefa43.js
+https://cdn.oaistatic.com/_next/static/chunks/4806.77ecb32d58edb990.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.c00a1b2bf4b0e6d0.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.2d3d14c9d986850b.js
+https://cdn.oaistatic.com/_next/static/chunks/5952.0f11f5b3ef405821.js
+https://cdn.oaistatic.com/_next/static/chunks/6522.1084952457ac1c03.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.b01c41aafa3b40d4.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.7bee414b74debe35.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.9a58ffd2d2078c31.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.ee2246e72f6b2def.js
+https://cdn.oaistatic.com/_next/static/chunks/7947.754d9f5e5c9265eb.js
+https://cdn.oaistatic.com/_next/static/chunks/8226.266024bff9f30c2c.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.01cb7c2f250020dd.js
+https://cdn.oaistatic.com/_next/static/chunks/9087.6e47dfa8228a44f5.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.c877908fafc4d172.js
+https://cdn.oaistatic.com/_next/static/chunks/9271.64464c2fdca5a47e.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.fa332d498d191e2c.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.1f8a31d0bd35e82e.js
+```
 
 ## 2024-01-21Z (`MCkVH1jJi3yNLkMToVDdU`)
 
