@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-23Z \(`wbIK0kqRaZ7Chlr6S7vCn`\)](#2024-01-23z-wbik0kqraz7chlr6s7vcn)
 - [2024-01-23Z \(`SV8rS7Dgwcs4Wy66AK7F-`\)](#2024-01-23z-sv8rs7dgwcs4wy66ak7f-)
 - [2024-01-23Z \(`QuwWxUlwJ3R2mN9xC_kGf`\)](#2024-01-23z-quwwxulwj3r2mn9xc_kgf)
 - [2024-01-22Z \(`xkpErLYv9UcK2R7KCfW2D`\)](#2024-01-22z-xkperlyv9uck2r7kcfw2d)
@@ -48,6 +49,27 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-23Z (`wbIK0kqRaZ7Chlr6S7vCn`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Not actually sure what changed here... as best I can tell, the changes look like practically a NOOP?
+- App release version (Git SHA?): `18f65fab42d45e354df3e54cb3e95093cee85c58`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-f50ca2e55bc60c48.js
+https://cdn.oaistatic.com/_next/static/wbIK0kqRaZ7Chlr6S7vCn/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/wbIK0kqRaZ7Chlr6S7vCn/_ssgManifest.js
+```
 
 ## 2024-01-23Z (`SV8rS7Dgwcs4Wy66AK7F-`)
 
