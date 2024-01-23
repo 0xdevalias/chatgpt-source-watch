@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-23Z \(`QuwWxUlwJ3R2mN9xC_kGf`\)](#2024-01-23z-quwwxulwj3r2mn9xc_kgf)
 - [2024-01-22Z \(`xkpErLYv9UcK2R7KCfW2D`\)](#2024-01-22z-xkperlyv9uck2r7kcfw2d)
 - [2024-01-21Z \(`MCkVH1jJi3yNLkMToVDdU`\)](#2024-01-21z-mckvh1jji3ynlkmtovddu)
 - [2024-01-19Z \(`q-nwvju19I1V-kczySDcG`\)](#2024-01-19z-q-nwvju19i1v-kczysdcg)
@@ -46,6 +47,176 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-23Z (`QuwWxUlwJ3R2mN9xC_kGf`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - More updates to do with gizmos (eg. Custom GPTs) getting 'memory' that persists between chats
+- App release version (Git SHA?): `2730cab4966d0a966b286651d0e5858b139f42f1`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    children: [
+      eo
+        ? (0, eM.jsxs)(eM.Fragment, {
+            children: [
+              ea(eo),
+              (0, eM.jsx)("span", {
+                className: "text-gray-600 dark:text-gray-400",
+                children: null == eo ? void 0 : eo.name,
+              }),
+            ],
+          })
+        : (0, eM.jsx)(eE.Z, {
+            id: "MemoriesModal.unknownGizmo",
+            defaultMessage: "Unknown GPT",
+          }),
+      (0, eM.jsx)(eF.ud, {
+        className: "text-token-text-tertiary",
+      }),
+    ],
+    ```
+  - ```js
+    ec = (0, ez.Gl)(ed.sh.Sunshine),
+    ```
+  - ```js
+    eP = (0, ek.a)({
+      queryKey: ["memory_gizmos"],
+      queryFn: function () {
+        return eb.ZP.getGizmosWithMemory();
+      },
+      refetchOnMount: "always",
+    }),
+    ```
+  - ```js
+    children: ef
+              ? (0, eM.jsx)(eE.Z, {
+                  id: "MemoriesModal.noMemories",
+                  defaultMessage:
+                    "As you chat with ChatGPT, the details and preferences it remembers will be shown here.",
+                })
+              : (0, eM.jsx)(eE.Z, {
+                  id: "MemoriesModal.noMemoriesAndDisabled",
+                  defaultMessage:
+                    "Memory is disabled. ChatGPT won't use or create memories.",
+                }),
+    ```
+  - ```diff
+      title: eu.formatMessage({
+        id: "MemoriesModal.title",
+    -   defaultMessage: "My memories",
+    +   defaultMessage: "Memory",
+      }),
+    ```
+  - ```js
+    gizmoId: eg,
+    memoryName:
+      null !== (ei = null == eR ? void 0 : eR.name) &&
+      void 0 !== ei
+        ? ei
+        : "ChatGPT",
+    ```
+  - ```js
+    children: (0, eM.jsx)(tX, { memoryName: "ChatGPT" }),
+    ```
+  - ```diff
+    - ea.formatMessage({
+    -   id: "ResetMemoriesButton.resetSuccessful",
+    -   defaultMessage: "Your GPT's memory has been reset.",
+    + ec.formatMessage({
+    +   id: "ResetMemoriesButton.resetSuccess",
+    +   defaultMessage: "Memory cleared.",
+      })
+    ```
+  - ```js
+    children: en
+      ? (0, eM.jsx)(eE.Z, {
+          id: "ResetMemoriesButton.resetGizmo",
+          defaultMessage: "Clear this GPT's memory",
+        })
+      : (0, eM.jsx)(eE.Z, {
+          id: "ResetMemoriesButton.resetChatGPT",
+          defaultMessage: "Clear ChatGPT's memory",
+        }),
+    ```
+  - ```js
+    description: ec.formatMessage(
+      {
+        id: "MemoriesModal.resetGizmoModalDescription",
+        defaultMessage:
+          "{name} will forget everything it has remembered from your chats. This cannot be undone.",
+      },
+    ```
+  - ```js
+    value: function (Y) {
+      return this.deleteWithPayload(
+        "".concat(tc, "/settings/clear_account_user_memory"),
+        Y ? { gizmo_id: Y } : {}
+      );
+    ```
+  - ```js
+    value: function (Y) {
+      var et = "";
+      return (
+        Y && (et = "?gizmo_id=".concat(encodeURIComponent(Y))),
+        this.get("".concat(tc, "/memories").concat(et))
+      );
+    ```
+  - ```js
+    this.deleteWithPayload(
+      "".concat(tc, "/memories/").concat(et),
+      en ? { gizmo_id: en } : {}
+    )
+    ```
+  - ```js
+    {
+      key: "getGizmosWithMemory",
+      value: (function () {
+        var Y = (0, ef.Z)(
+          eh().mark(function Y() {
+            return eh().wrap(
+              function (Y) {
+                for (;;)
+                  switch ((Y.prev = Y.next)) {
+                    case 0:
+                      return Y.abrupt(
+                        "return",
+                        this.get("".concat(tc, "/memories/gizmos"))
+                      );
+                    case 1:
+                    case "end":
+                      return Y.stop();
+                  }
+              },
+              Y,
+              this
+            );
+          })
+        );
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-96b29c634bb7efc2.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-38f225f425909566.js
+https://cdn.oaistatic.com/_next/static/QuwWxUlwJ3R2mN9xC_kGf/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/QuwWxUlwJ3R2mN9xC_kGf/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-38f225f425909566.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/665c05ae643cfce9.css
+```
 
 ## 2024-01-22Z (`xkpErLYv9UcK2R7KCfW2D`)
 
