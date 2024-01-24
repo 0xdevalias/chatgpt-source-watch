@@ -65,6 +65,7 @@ The following notes are not necessarily comprehensive, but just things of potent
   - `isDraft` removed, and `categories` added
   - Maybe something about `ParallelBrowsing` / `ParallelBrowsingTools` / `RetrievalBrowsing`
   - Something that checks `isOrWasPaidCustomer`
+  - **Twitter thread:** https://twitter.com/_devalias/status/1750270012542317022
 - App release version (Git SHA?): `294820fa3d5b4822081d3d14d42de9e1fa08f12d`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - Module IDs changed:
