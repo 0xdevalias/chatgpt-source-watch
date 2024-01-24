@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-24Z \(`IT6Bs6aT0lMIT2GMD2zGo`\)](#2024-01-24z-it6bs6at0lmit2gmd2zgo)
 - [2024-01-24Z \(`sfv3TRBfIvsEV2B4_cMOk`\)](#2024-01-24z-sfv3trbfivsev2b4_cmok)
 - [2024-01-23Z \(`Nhh-QuOgEGFphEueL7xal`\)](#2024-01-23z-nhh-quogegfpheuel7xal)
 - [2024-01-23Z \(`wbIK0kqRaZ7Chlr6S7vCn`\)](#2024-01-23z-wbik0kqraz7chlr6s7vcn)
@@ -51,6 +52,97 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-24Z (`IT6Bs6aT0lMIT2GMD2zGo`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some minor tweaks to gizmo (Custom GPT) ratings, and ChatGPT 'memory'
+- App release version (Git SHA?): `4a2bcf5c657b9cb02486dbb23764f222bd8a648b`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs changed:
+  - `20225` -> `29887`
+  - `1890` -> `12374`
+  - `94426` -> `90393`
+  - `28172` -> `45283`
+  - `94146` -> `15856`
+  - `55756` -> `25180`
+  - `79862` -> `2222`
+  - `7392` -> `40143`
+  - `21559` -> `58936`
+  - `94146` -> `15856`
+  - `44114` -> `81639`
+  - `57934` -> `25087`
+  - `41176` -> `27637`
+  - `65523` -> `41991`
+  - `75745` -> `51373`
+  - `72904` -> `81089`
+  - `19108` -> `3220`
+  - etc... (there seem to be MANY of these changes in this build)
+- `unpacked/_next/static/chunks/4648.js`
+  - ```js
+    - "Alternatively you may appeal this decision and we will get back to you in a few days. Or you can publish to “Only me” and use this GPT privately.",
+    + "Alternatively you may appeal this decision and we will get back to you as soon as possible. Or you can publish to “Only me” and use this GPT privately.",
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    eb &&
+      (null === (en = eo.gizmo.vanity_metrics) || void 0 === en
+        ? void 0
+        : en.review_stats) != null &&
+      (null === (ei = eo.gizmo.vanity_metrics) || void 0 === ei
+        ? void 0
+        : ei.review_stats.count) > 0 &&
+    ```
+  - ```diff
+    - en.gizmo.rating.average_rating,
+    + (
+    +   eo.gizmo.vanity_metrics.review_stats.total /
+    +   eo.gizmo.vanity_metrics.review_stats.count
+    + ).toFixed(1),
+    ```
+  - ```js
+    (0, eA.jsx)("div", {
+      children: (0, eA.jsx)(
+        eS.Z,
+        eN({}, eL.googleDriveDesc)
+    ```
+  - ```diff
+      toggleLabel: {
+    -   id: "settingsModal.myChagtGptToggleLabel.1",
+    -   defaultMessage: "Improve responses with your chats",
+    +   id: "settingsModal.myChagtGptToggleLabel.2",
+    +   defaultMessage: "Memory",
+      },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-e485235c03419359.js
+https://cdn.oaistatic.com/_next/static/IT6Bs6aT0lMIT2GMD2zGo/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/IT6Bs6aT0lMIT2GMD2zGo/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/ext_callback-75fcc605a8c00f89.js
+https://cdn.oaistatic.com/_next/static/chunks/3754-abb5fa69a16fc07f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-d0da5c26107ed0b9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/mocked_login-e3f3990046158829.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-e18de67bc28b9f7f.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-cd4449b1cb4e9b5d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-9666f73de441f515.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-8a707a74a1020183.js
+```
 
 ## 2024-01-24Z (`sfv3TRBfIvsEV2B4_cMOk`)
 

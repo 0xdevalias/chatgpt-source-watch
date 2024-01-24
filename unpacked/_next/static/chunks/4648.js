@@ -132,7 +132,7 @@
                   var n = t
                     ? (0, R.jsx)("p", {
                         children:
-                          "Alternatively you may appeal this decision and we will get back to you in a few days. Or you can publish to “Only me” and use this GPT privately.",
+                          "Alternatively you may appeal this decision and we will get back to you as soon as possible. Or you can publish to “Only me” and use this GPT privately.",
                       })
                     : void 0;
                   switch (e) {
@@ -307,9 +307,7 @@
             });
         return (0, R.jsx)(A.Z, {
           isOpen: !0,
-          onClose: function () {
-            null == r || r();
-          },
+          onClose: function () {},
           primaryButton: (0, R.jsx)(S.ZP.Button, {
             title: "Cancel appeal",
             color: "primary",
@@ -390,7 +388,7 @@
       var K = n(63866),
         Y = n(4748),
         J = n(7144),
-        X = n(1890),
+        X = n(12374),
         Q = n(19954),
         $ = n(73582),
         ee = n(88654),
@@ -6338,4 +6336,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-49185e0fa2d0cc0a.js.map
+//# sourceMappingURL=4648-cd4449b1cb4e9b5d.js.map
