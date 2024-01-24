@@ -18,8 +18,9 @@ const urlPrefixes = ["https://chat.openai.com/", "https://cdn.oaistatic.com/"];
 const processedUrls = new Set();
 
 const displayUsage = (scriptName) => {
-  console.log(`Usage: ${scriptName} [--json]`);
-  console.log('--json: Process input as JSON array of objects with "url" keys');
+  console.log(`Usage: ${scriptName} [--json] [--json-with-urls]`);
+  console.log('    --json: Process input as JSON array of objects with "url" keys');
+  console.log('    --json-with-urls: Output both the filtered JSON and a list of URLs [implies --json]');
   console.log("-h, --help: Display this help message");
 };
 
@@ -33,6 +34,10 @@ const parseArguments = () => {
         allowPositionals: false,
         options: {
           json: {
+            type: 'boolean',
+            default: false,
+          },
+          'json-with-urls': {
             type: 'boolean',
             default: false,
           },
@@ -54,7 +59,12 @@ const parseArguments = () => {
     process.exit(0);
   }
 
-  return { isJsonMode: parsedArgs.values.json };
+  const isJsonWithUrlsMode = parsedArgs.values['json-with-urls'];
+
+  // Automatically enable JSON mode if --json-with-urls is specified
+  const isJsonMode = parsedArgs.values.json || isJsonWithUrlsMode;
+
+  return { isJsonMode, isJsonWithUrlsMode };
 };
 
 const readAllStdin = async () => {
@@ -73,7 +83,7 @@ const readAllStdin = async () => {
 };
 
 const main = async () => {
-  const { isJsonMode } = parseArguments();
+  const { isJsonMode, isJsonWithUrlsMode } = parseArguments();
 
   const inputData = await readAllStdin();
 
@@ -94,6 +104,10 @@ const main = async () => {
         .filter((url) => !!url);
 
   printUrls(outputUrls);
+
+  if (isJsonWithUrlsMode) {
+    printUrls(outputUrls.map(obj => obj.url))
+  }
 };
 
 const loadAndCombineChangelogContent = (filenames) => {
