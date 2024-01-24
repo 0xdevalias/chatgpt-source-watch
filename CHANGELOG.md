@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-24Z \(`sfv3TRBfIvsEV2B4_cMOk`\)](#2024-01-24z-sfv3trbfivsev2b4_cmok)
 - [2024-01-23Z \(`Nhh-QuOgEGFphEueL7xal`\)](#2024-01-23z-nhh-quogegfpheuel7xal)
 - [2024-01-23Z \(`wbIK0kqRaZ7Chlr6S7vCn`\)](#2024-01-23z-wbik0kqraz7chlr6s7vcn)
 - [2024-01-23Z \(`SV8rS7Dgwcs4Wy66AK7F-`\)](#2024-01-23z-sv8rs7dgwcs4wy66ak7f-)
@@ -50,6 +51,378 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-24Z (`sfv3TRBfIvsEV2B4_cMOk`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Users will be able to leave ratings/reviews on gizmos (Custom GPTs) soon (feature flag: `gizmo_reviews`(?))
+    - Including new API endpoints (`/gizmo_reviews/`) for supporting this (see `getUserReview`, `upsertUserReview` for specifics)
+  - New settings to `alwaysExpandCodeOutput`
+  - `isDraft` removed, and `categories` added
+  - Maybe something about `ParallelBrowsing` / `ParallelBrowsingTools` / `RetrievalBrowsing`
+  - Something that checks `isOrWasPaidCustomer`
+- App release version (Git SHA?): `294820fa3d5b4822081d3d14d42de9e1fa08f12d`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs changed:
+  - `36638` -> `81853`
+  - `13973` -> `33460`
+  - ?etc?
+- `unpacked/_next/static/chunks/4648.js`
+  - ```diff
+    + i = e.categories,
+      o = e.moderationType,
+      a = e.violationType,
+    - a = e.isDraft,
+    ```
+  - ```diff
+      (0, R.jsx)(V, {
+        gizmoId: t.gizmoId,
+        sharingRecipient: t.sharingRecipient,
+    +   categories: t.categories,
+        moderationType: t.moderationType,
+        violationType: t.violationType,
+    -   isDraft: t.isDraft,
+        appealAvailable: i,
+    ```
+  - ```js
+    profilePictureId: null !== (n = e.gizmo.display.profile_pic_id) && void 0 !== n
+    ```
+  - ```diff
+    - z.profilePictureUrl != M.gizmo.display.profile_picture_url)
+    + z.profilePictureUrl != M.gizmo.display.profile_picture_url ||
+    + z.profilePictureId != M.gizmo.display.profile_pic_id)
+    ```
+  - ```js
+    categories: e.gizmo.categories,
+    ```
+  - ```js
+    categories: null == n ? void 0 : [n],
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - A `.svg` image of a star was added
+  - ```js
+    (Y.ShowExpandedCodeView = "show_expanded_code_view");
+    ```
+  - ```diff
+    -   (null == ep ? void 0 : ep.type) === eT.ParallelBrowsing
+    -     ? ep.messages.push(ei)
+    -     : et.push({ type: eT.ParallelBrowsing, messages: [ei] });
+    - } else if (eo === e7.Cs.Plugin || eo === e7.Cs.PluginTool) {
+    +   (null == ep ? void 0 : ep.type) === eT.RetrievalBrowsing
+    +     ? ep.messages.push(eo)
+    +     : et.push({ type: eT.RetrievalBrowsing, messages: [eo] });
+    + } else if (
+    +   ea === e7.Cs.ParallelBrowsing ||
+    +   ea === e7.Cs.ParallelBrowsingTool
+    + ) {
+    ```
+  - ```js
+    case "noTestGizmoId":
+      return [r$.noTestGizmoId, !0];
+    ```
+  - ```js
+    noTestGizmoId: {
+      id: "PromptTextarea.noTestGizmoId",
+      defaultMessage: "Start by defining your GPT.",
+    },
+    ```
+  - ```js
+    var Y,
+      en = e$.iN.getConversationMode(et);
+    return (null == en ? void 0 : en.kind) === eV.OL.GizmoTest &&
+      null == en.gizmo_id
+      ? "noTestGizmoId"
+      : null;
+    ```
+  - A largish section of new code related to gizmo (Custom GPTs) reviews:
+    - ```js
+      switch ((et.prev = et.next)) {
+        case 0:
+          return (
+            (ei = en.rating),
+            (eo = en.message),
+            (ea = en.includeFrom),
+            (et.next = 3),
+            eb.U.upsertUserReview(Y, ei, eo, ea)
+          );
+      ```
+    - ```js
+      case 0:
+        eH.E.invalidateQueries({
+          queryKey: ["gizmo", "review", { gizmoId: Y }],
+        });
+      ```
+    - ```js
+      case 0:
+        return et.abrupt("return", eb.U.getUserReview(Y));
+      ```
+    - ```js
+      queryKey: ["gizmo", "review", { gizmoId: Y }],
+      ```
+    - ```js
+      var et = Y.gizmo;
+      return (0, eC.EV)(eC.B.GPTReview)
+        ? (0, eA.jsx)(tM, { gizmo: et })
+        : null;
+      ```
+    - ```js
+      case 0:
+        if (null != eI) {
+          Y.next = 3;
+          break;
+        }
+        return (
+          ew.m.warning("Please select a rating"),
+          Y.abrupt("return")
+        );
+      ```
+    - ```js
+      tA = (0, eM.vU)({
+        title: {
+          id: "GizmoReviewModal.title",
+          defaultMessage: "Leave Feedback",
+        },
+        subtitle: {
+          id: "GizmoReviewModal.subtitle",
+          defaultMessage: "How well did this GPT meet your expectations?",
+        },
+        subtitleChange: {
+          id: "GizmoReviewModal.subtitleChange",
+          defaultMessage: "Would you like to change your rating?",
+        },
+        subtitleTooltip: {
+          id: "GizmoReviewModal.subtitleTooltip",
+          defaultMessage:
+            "This will help the builder improve the quality of GPTs in the future.",
+        },
+        messagePlaceholder: {
+          id: "GizmoReviewModal.messagePlaceholder",
+          defaultMessage: "Add an optional private email to the creator",
+        },
+        submit: { id: "GizmoReviewModal.submit", defaultMessage: "Submit" },
+        successToast: {
+          id: "GizmoReviewModal.successToast",
+          defaultMessage: "Review sent",
+        },
+        includeFrom: {
+          id: "GizmoReviewModal.includeFrom",
+          defaultMessage: "Include my email address {email}",
+        },
+      }),
+      ```
+  - ```js
+    eD = (0, tg.sB)(tg.tz.GizmoReviews) && !eP,
+    ```
+  - ```js
+    eD &&
+      (0, eA.jsxs)(e7.UA, {
+        onClick: function () {
+          return eC.vm.openModal(eC.B.GPTReview);
+        },
+        children: [
+          (0, eA.jsx)(e_.EQ9, { className: "icon-md" }),
+          (0, eA.jsx)(eO.Z, tF({}, tW.feedbackEmail)),
+        ],
+      }),
+    ```
+  - ```js
+    eg = (0, ta.hz)(),
+    ey =
+      (null == eg ? void 0 : eg.includes(tu.L0.GizmoReviews)) &&
+      null != en.gizmo.rating &&
+      en.gizmo.rating.num_ratings > 0;
+    ```
+  - ```js
+    children: [
+      (0, eA.jsx)(tw.r, { gizmo: en, isOwner: eh }),
+      ey &&
+        null != en.gizmo.rating &&
+        (0, eA.jsxs)("div", {
+          className: "flex flex-col items-center gap-2",
+          children: [
+            (0, eA.jsxs)("div", {
+              className:
+                "flex flex-row items-center gap-1.5 pt-1 text-xl font-medium",
+              children: [
+                (0, eA.jsx)(eF.p$, { className: "icon-sm" }),
+                en.gizmo.rating.average_rating,
+              ],
+            }),
+            (0, eA.jsx)("div", {
+              className: "text-xs text-token-text-tertiary",
+              children: (0, eA.jsx)(
+                eO.Z,
+                tF(
+                  tF({}, tW.numReviews),
+                  {},
+                  {
+                    values: {
+                      numReviews: en.gizmo.rating.num_ratings,
+                    },
+                  }
+                )
+              ),
+            }),
+          ],
+        }),
+    ],
+    ```
+  - ```js
+    numReviews: {
+      defaultMessage:
+        "{numReviews, plural, one {# review} other {# reviews}}",
+      id: "GizmoInformation.numReviews",
+    },
+    ```
+  - ```diff
+    - { reason: en, share_recipient: ei, draft: eo }
+    + {
+    +   reason: en,
+    +   share_recipient: ei,
+    +   categories: eo,
+    + }
+    ```
+  - ```js
+    {
+      key: "getUserReview",
+      value: (function () {
+        var Y = (0, eo.Z)(
+          ed().mark(function Y(et) {
+            return ed().wrap(function (Y) {
+              for (;;)
+                switch ((Y.prev = Y.next)) {
+                  case 0:
+                    return Y.abrupt(
+                      "return",
+                      ef.ZP.get(
+                        "".concat(ef.B, "/gizmo_reviews/").concat(et)
+                      )
+                    );
+    ```
+  - ```js
+    {
+      key: "upsertUserReview",
+      value: (function () {
+        var Y = (0, eo.Z)(
+          ed().mark(function Y(et, en, ei, eo) {
+            return ed().wrap(function (Y) {
+              for (;;)
+                switch ((Y.prev = Y.next)) {
+                  case 0:
+                    return Y.abrupt(
+                      "return",
+                      ef.ZP.post(
+                        "".concat(ef.B, "/gizmo_reviews/").concat(et),
+                        { rating: en, message: ei, include_from: eo }
+                      )
+                    );
+    ```
+  - ```js
+    ec = (0, ef.Gl)(eo.sh.ShowExpandedCodeView).data,
+    ```
+  - ```js
+    (!!ei.isOrWasPaidCustomer() ||
+      !!ep ||
+      ec.m9.getLayerValue({
+        layerName: ec.Hk.CHATGPT_SUBSCRIPTIONS,
+        key: "is_team_enabled",
+        defaultValue: !0,
+      }))
+    ```
+  - ```js
+    "data-testid": "".concat(et, "-pricing-modal-column"),
+    ```
+  - ```js
+    { id: "memoryDeleteFailed" }
+    ```
+  - ```js
+    { gizmoId: eg, memory: Y },
+    ```
+  - ```js
+    (0, eM.jsx)(nM, {
+      children: (0, eM.jsx)(nk, {
+        label: et.formatMessage(nN.alwaysExpandCodeOutput),
+        enabled: tP,
+        isLoading: tM,
+        onChange: function (Y) {
+          tI.mutate({
+            setting: ed.sh.ShowExpandedCodeView,
+            value: Y,
+          }),
+            tN(Y);
+        },
+      }),
+    }),
+    ```
+  - ```js
+    alwaysExpandCodeOutput: {
+      id: "settingsModal.alwaysExpandCodeOutput",
+      defaultMessage: "Always expand code output",
+    },
+    ```
+  - ```js
+    {
+      key: "isOrWasPaidCustomer",
+      value: function () {
+        return (
+          this.data.subscriptionStatus.hasPaidSubscription ||
+          this.data.subscriptionStatus.wasPaidCustomer
+        );
+      },
+    },
+    ```
+  - ```js
+    (Y.GizmoReviews = "gizmo_reviews");
+    ```
+  - ```js
+    (Y.GPTReview = "gpt-review"),
+    ```
+  - ```js
+    (Y.GizmoReviews = "chatgpt-gizmo-reviews"),
+    ```
+  - ```js
+    Y.CHATGPT_SUBSCRIPTIONS = "chatgpt_subscriptions";
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-e3758382a3f71256.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-8fa26b17ac182069.js
+https://cdn.oaistatic.com/_next/static/sfv3TRBfIvsEV2B4_cMOk/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/sfv3TRBfIvsEV2B4_cMOk/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-7d4ce1daa5c8048c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-5b6d1d348212e230.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-49185e0fa2d0cc0a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-4b9468329355752d.js
+```
+
+### From `orig/_next/static/chunks/webpack-8fa26b17ac182069.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/c49ea65a5ee37ea1.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.34f001d55c7fce16.js
+```
 
 ## 2024-01-23Z (`Nhh-QuOgEGFphEueL7xal`)
 

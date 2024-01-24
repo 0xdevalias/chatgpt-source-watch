@@ -3349,6 +3349,11 @@ textarea:focus {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
 }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  margin-top: calc(2rem * (1 - var(--tw-space-y-reverse)));
+}
 .divide-x > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 0;
   border-left-width: calc(1px * (1 - var(--tw-divide-x-reverse)));
@@ -9738,4 +9743,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=43ee066262cbb202.css.map*/
+/*# sourceMappingURL=c49ea65a5ee37ea1.css.map*/

@@ -62,9 +62,9 @@
         var t,
           n = e.gizmoId,
           r = e.sharingRecipient,
-          i = e.moderationType,
-          o = e.violationType,
-          a = e.isDraft,
+          i = e.categories,
+          o = e.moderationType,
+          a = e.violationType,
           s = e.appealAvailable,
           l = e.onClose,
           c = e.onAppealSubmitted,
@@ -81,7 +81,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), E.U.postGizmoAppeal(n, d, r, a);
+                        return (e.next = 2), E.U.postGizmoAppeal(n, d, r, i);
                       case 2:
                         x(h.SubmittedConfirmation), null == c || c();
                       case 4:
@@ -108,7 +108,7 @@
                   case m.Recategorized:
                     return "Your GPT has been recategorized";
                 }
-              })(i),
+              })(o),
               isOpen: !0,
               onClose: l,
               closeButton: (0, R.jsx)(S.ZP.CloseButton, { onClose: l }),
@@ -218,7 +218,7 @@
                         ],
                       });
                   }
-                })(o, s),
+                })(a, s),
               }),
             });
           case h.AppealForm:
@@ -313,7 +313,9 @@
           primaryButton: (0, R.jsx)(S.ZP.Button, {
             title: "Cancel appeal",
             color: "primary",
-            onClick: o,
+            onClick: function () {
+              o(), null == r || r();
+            },
           }),
           type: "warning",
           children: (0, R.jsxs)("div", {
@@ -351,14 +353,14 @@
           : (0, R.jsxs)(R.Fragment, {
               children: [
                 (null == t ? void 0 : t.showModal) == p.AppealSent &&
-                  (0, R.jsx)(W, { gizmoId: t.gizmoId }),
+                  (0, R.jsx)(W, { gizmoId: t.gizmoId, onClose: n }),
                 (null == t ? void 0 : t.showModal) == p.AppealAvailable &&
                   (0, R.jsx)(V, {
                     gizmoId: t.gizmoId,
                     sharingRecipient: t.sharingRecipient,
+                    categories: t.categories,
                     moderationType: t.moderationType,
                     violationType: t.violationType,
-                    isDraft: t.isDraft,
                     appealAvailable: i,
                     onClose: function () {
                       return null == n ? void 0 : n();
@@ -3985,7 +3987,7 @@
                                   for (;;)
                                     switch ((e.prev = e.next)) {
                                       case 0:
-                                        return (e.next = 2), s(v);
+                                        return (e.next = 2), s(v, k);
                                       case 2:
                                       case "end":
                                         return e.stop();
@@ -5407,34 +5409,37 @@
           { tools: [].concat((0, z.Z)(nj.tools), [{ type: _.qK.BROWSER }]) }
         );
       function nP(e) {
-        var t, n, r, i, o, a;
+        var t, n, r, i, o, a, s;
         return {
           id: e.gizmo.id,
           instructions: e.gizmo.instructions,
           name: e.gizmo.display.name,
           description:
             null !== (t = e.gizmo.display.description) && void 0 !== t ? t : "",
-          profilePictureId: void 0,
-          profilePictureUrl:
-            null !== (n = e.gizmo.display.profile_picture_url) && void 0 !== n
+          profilePictureId:
+            null !== (n = e.gizmo.display.profile_pic_id) && void 0 !== n
               ? n
               : void 0,
-          welcomeMessage:
-            null !== (r = e.gizmo.display.welcome_message) && void 0 !== r
+          profilePictureUrl:
+            null !== (r = e.gizmo.display.profile_picture_url) && void 0 !== r
               ? r
+              : void 0,
+          welcomeMessage:
+            null !== (i = e.gizmo.display.welcome_message) && void 0 !== i
+              ? i
               : "",
           promptStarters:
-            null !== (i = e.gizmo.display.prompt_starters) && void 0 !== i
-              ? i
+            null !== (o = e.gizmo.display.prompt_starters) && void 0 !== o
+              ? o
               : [],
           tools: e.tools,
           files: e.files,
           trainingDisabled:
-            null !== (o = e.gizmo.training_disabled) && void 0 !== o && o,
+            null !== (a = e.gizmo.training_disabled) && void 0 !== a && a,
           sharingRecipient: e.gizmo.share_recipient,
           sharingTargets: e.gizmo.sharing_targets,
           liveVersion:
-            null !== (a = e.gizmo.live_version) && void 0 !== a ? a : 0,
+            null !== (s = e.gizmo.live_version) && void 0 !== s ? s : 0,
         };
       }
       var nk = function (e) {
@@ -5511,7 +5516,8 @@
                       : []
                   )
                 ) ||
-                  z.profilePictureUrl != M.gizmo.display.profile_picture_url)
+                  z.profilePictureUrl != M.gizmo.display.profile_picture_url ||
+                  z.profilePictureId != M.gizmo.display.profile_pic_id)
               );
             },
             [z, M]
@@ -5884,6 +5890,7 @@
                     })(e.gizmo.share_recipient, e.gizmo.sharing_targets);
                   return {
                     sharingRecipient: e.gizmo.share_recipient,
+                    categories: e.gizmo.categories,
                     gizmoId: e.gizmo.id,
                     moderationType: r,
                     violationType: f.Other,
@@ -5892,7 +5899,6 @@
                       : r !== m.None
                         ? p.AppealAvailable
                         : p.None,
-                    isDraft: !1,
                   };
                 }
               })(g)
@@ -5974,7 +5980,6 @@
                                   moderationType: m.PublishBlocked,
                                   violationType: s ? f.BrandName : f.Other,
                                   showModal: p.AppealAvailable,
-                                  isDraft: !0,
                                 }))
                               : (console.error(e.t0),
                                 Y.m.warning("Error saving GPT", {
@@ -6074,7 +6079,7 @@
                 }),
               appealGizmo:
                 ((h = (0, N.Z)(
-                  I().mark(function e(t) {
+                  I().mark(function e(t, n) {
                     return I().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
@@ -6091,6 +6096,7 @@
                                 {},
                                 {
                                   sharingRecipient: t,
+                                  categories: null == n ? void 0 : [n],
                                   showModal: p.AppealAvailable,
                                 }
                               )
@@ -6102,7 +6108,7 @@
                     }, e);
                   })
                 )),
-                function (e) {
+                function (e, t) {
                   return h.apply(this, arguments);
                 }),
               revertDraft:
@@ -6332,4 +6338,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-e8bf624eabfd5571.js.map
+//# sourceMappingURL=4648-49185e0fa2d0cc0a.js.map
