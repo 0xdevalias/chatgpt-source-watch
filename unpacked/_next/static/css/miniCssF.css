@@ -7513,6 +7513,9 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:max-w-2xl {
     max-width: 42rem;
   }
+  .sm\:max-w-xs {
+    max-width: 20rem;
+  }
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -8156,6 +8159,9 @@ button[data-state="open"] .toggle-item-button-open {
   }
   .lg\:max-w-\[896px\] {
     max-width: 896px;
+  }
+  .lg\:max-w-md {
+    max-width: 28rem;
   }
   .lg\:max-w-none {
     max-width: none;
@@ -9732,4 +9738,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=665c05ae643cfce9.css.map*/
+/*# sourceMappingURL=43ee066262cbb202.css.map*/

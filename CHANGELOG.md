@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-23Z \(`Nhh-QuOgEGFphEueL7xal`\)](#2024-01-23z-nhh-quogegfpheuel7xal)
 - [2024-01-23Z \(`wbIK0kqRaZ7Chlr6S7vCn`\)](#2024-01-23z-wbik0kqraz7chlr6s7vcn)
 - [2024-01-23Z \(`SV8rS7Dgwcs4Wy66AK7F-`\)](#2024-01-23z-sv8rs7dgwcs4wy66ak7f-)
 - [2024-01-23Z \(`QuwWxUlwJ3R2mN9xC_kGf`\)](#2024-01-23z-quwwxulwj3r2mn9xc_kgf)
@@ -49,6 +50,222 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-23Z (`Nhh-QuOgEGFphEueL7xal`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `9cbc7ed56e8dd631cc287e5b298556ce3460d090`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/4648.js`
+  - ```js
+    (0, Q.ax)(l, { kind: ep.OL.GizmoTest, gizmo_id: i.id }),
+    ```
+  - ```js
+    (0, Q.ax)(r, {
+      kind: ep.OL.GizmoMagicCreate,
+      gizmo_id: t.id,
+      behavior_overrides: a,
+    }),
+      (0, L.useEffect)(
+        function () {
+          Q.tQ.updateConversationMode(r, {
+            kind: ep.OL.GizmoMagicCreate,
+            gizmo_id: t.id,
+            behavior_overrides: a,
+          });
+        },
+        [r, t.id, a]
+      );
+    ```
+  - ```diff
+    - (X.tQ.getOrInitThread(_),
+    + (Q.tQ.initThread(_, {
+    +   kind: ep.OL.GizmoMagicCreate,
+    +   gizmo_id: void 0,
+    +   behavior_overrides: K,
+    + }),
+    ```
+  - ```diff
+    - [g]
+    + [null == g ? void 0 : g.gizmo.id]
+    ```
+  - ```js
+    onAppealSubmitted: function () {
+      return ec(nx(nx({}, el), {}, { showModal: p.AppealSent }));
+    },
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    rs = en(11591),
+    ```
+  - ```diff
+    - (0, eS.ax)(et);
+    + (0, eS.ax)(et, { kind: rs.OL.PrimaryAssistant });
+    ```
+  - ```js
+    (0, em.ax)(
+      et,
+      eU
+        ? { kind: eh.OL.GizmoInteraction, gizmo_id: eU }
+        : { kind: eh.OL.PrimaryAssistant }
+    );
+    ```
+  - ```diff
+    - completionMetadata: { conversationMode: ek },
+    + completionMetadata: {
+    +   conversationMode: e9.iN.getConversationMode(en),
+    + },
+    ```
+  - ```js
+    (0, eF.useEffect)(function () {
+      eO.A.logEvent(eM.M.mentionsOpened);
+    }, []);
+    var em = function (Y) {
+      eO.A.logEvent(eM.M.mentionsClickGizmo, {
+        gizmo_id: "create" === Y ? "create" : Y.gizmo.id,
+      }),
+        "create" !== Y && et(Y);
+    };
+    ```
+  - ```diff
+    - eL = "magic" === eN ? "var(--brand-purple)" : eR,
+    + eL =
+    +   (null == eN ? void 0 : eN.kind) === ey.OL.GizmoMagicCreate
+    +     ? "var(--brand-purple)"
+    +     : eR,
+    ```
+  - ```diff
+      onSettled: function (et) {
+        Y.invalidateQueries({ queryKey: ["gizmos"], refetchType: "all" }),
+    +     Y.invalidateQueries({
+    +       queryKey: ["gizmos", "pinned"],
+    +       refetchType: "none",
+    +     }),
+          et && Y.setQueryData(eJ(et.gizmo.id, !1).queryKey, et);
+      },
+    ```
+  - ```js
+    if (et.startsWith("gpt-4")) return eP[eu.GPT4].avatarColor;
+    ```
+  - ```js
+    getGizmoId: function (Y) {
+      var et =
+          arguments.length > 1 && void 0 !== arguments[1]
+            ? arguments[1]
+            : eQ(),
+        en = et.threads[eJ.resolveThreadId(Y, et)];
+      if (
+        (null == en ? void 0 : en.mode.kind) === eo.OL.GizmoInteraction ||
+        (null == en ? void 0 : en.mode.kind) === eo.OL.GizmoTest
+      )
+        return en.mode.gizmo_id;
+    },
+    ```
+  - ```js
+    updateConversationMode: function (Y, et) {
+      var en = e0.resolveThreadId(Y);
+      eX(function (Y) {
+        Y.threads[en].mode = et;
+      });
+    },
+    ```
+  - ```diff
+      Y.threads[ey] = {
+        initialThreadData: ew,
+    -   settings: {
+    -     gizmoId: et.gizmo_id,
+    -     pluginIds: et.plugin_ids,
+    -   },
+    +   mode:
+    +     null != et.gizmo_id
+    +       ? {
+    +           kind: eo.OL.GizmoInteraction,
+    +           gizmo_id: et.gizmo_id,
+    +         }
+    +       : {
+    +           kind: eo.OL.PrimaryAssistant,
+    +           plugin_ids: et.plugin_ids,
+    +         },
+        sharedConversationMetadata: eS,
+        title: ew.title,
+    ```
+  - ```diff
+      updateInitialThreadDataForNewThread: function (Y, et, en) {
+        var ei = e0.resolveThreadId(Y);
+        eX(function (Y) {
+    +     var ea = Y.threads[ei];
+    -     (Y.threads[ei].initialThreadData.lastModelUsed = et),
+    -       (Y.threads[ei].settings.pluginIds = en);
+    +     (ea.initialThreadData.lastModelUsed = et),
+    +       en &&
+    +         en.length > 0 &&
+    +         (ea.mode.kind !== eo.OL.PrimaryAssistant &&
+    +           console.error(
+    +             "Unexpected conversation mode with plugins: ".concat(
+    +               ea.mode.kind,
+    +               "}"
+    +             )
+    +           ),
+    +         (ea.mode = { kind: eo.OL.PrimaryAssistant, plugin_ids: en }));
+        });
+    ```
+  - ```js
+    eS.m9.getExperimentValue({
+      experimentName: eS.H6.RetrievalSearchModel,
+      key: eS.Hy.TREATMENT,
+      defaultValue: "ba",
+    })))
+    ```
+  - ```js
+    (Y.mentionsOpened = "Mentions Opened"),
+    (Y.mentionsClickGizmo = "Mentions Click Gizmo"),
+    ```
+  - ```diff
+    - var pP = ["Fetch is aborted"];
+    + var pP = [
+    +   "Fetch is aborted",
+    +   "Load failed",
+    +   "Script error.",
+    +   "Failed to execute 'insertBefore' on 'Node'",
+    +   "ResizeObserver loop completed with undelivered notifications.",
+    + ];
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-c761bb0350b47ce2.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-b60d5c5cfa5fece3.js
+https://cdn.oaistatic.com/_next/static/Nhh-QuOgEGFphEueL7xal/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/Nhh-QuOgEGFphEueL7xal/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/4648-e8bf624eabfd5571.js
+```
+
+### From `orig/_next/static/chunks/webpack-b60d5c5cfa5fece3.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/43ee066262cbb202.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.869d521e6227e07b.js
+```
 
 ## 2024-01-23Z (`wbIK0kqRaZ7Chlr6S7vCn`)
 

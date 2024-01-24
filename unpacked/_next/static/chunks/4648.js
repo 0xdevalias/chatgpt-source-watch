@@ -267,6 +267,11 @@
           isOpen: !0,
           onClose: t,
           closeButton: (0, R.jsx)(S.ZP.CloseButton, { onClose: t }),
+          primaryButton: (0, R.jsx)(S.ZP.Button, {
+            title: "Close",
+            color: "primary",
+            onClick: t,
+          }),
           type: "success",
           children: (0, R.jsx)("div", {
             className: "flex flex-col gap-2 text-sm",
@@ -383,8 +388,8 @@
       var K = n(63866),
         Y = n(4748),
         J = n(7144),
-        Q = n(1890),
-        X = n(19954),
+        X = n(1890),
+        Q = n(19954),
         $ = n(73582),
         ee = n(88654),
         et = n(83380),
@@ -777,7 +782,7 @@
         eK = n(3125),
         eY = n(25349),
         eJ = n(99893);
-      function eQ(e, t) {
+      function eX(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -789,16 +794,16 @@
         }
         return n;
       }
-      function eX(e) {
+      function eQ(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eQ(Object(n), !0).forEach(function (t) {
+            ? eX(Object(n), !0).forEach(function (t) {
                 (0, O.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eQ(Object(n)).forEach(function (t) {
+              : eX(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -867,8 +872,8 @@
                                         null != r.fileId &&
                                         (a(function (e) {
                                           var t;
-                                          return eX(
-                                            eX({}, e),
+                                          return eQ(
+                                            eQ({}, e),
                                             {},
                                             {
                                               files: [].concat(
@@ -904,8 +909,8 @@
                                     onFileCreated: function (t, r, i) {
                                       u.current.set(
                                         t,
-                                        eX(
-                                          eX(
+                                        eQ(
+                                          eQ(
                                             {
                                               tempId: t,
                                               gizmoId: n,
@@ -929,7 +934,7 @@
                                         eS.X.Uploading &&
                                         u.current.set(
                                           e,
-                                          eX(eX({}, n), {}, { progress: t })
+                                          eQ(eQ({}, n), {}, { progress: t })
                                         ),
                                         c(function (e) {
                                           return e + 1;
@@ -960,7 +965,7 @@
               return t.apply(this, arguments);
             }),
           m = (0, eO.uI)(
-            eX(
+            eQ(
               {
                 disabled: !1,
                 noClick: !0,
@@ -1004,8 +1009,8 @@
               onRemoveFileClick: function () {
                 return a(function (t) {
                   var n;
-                  return eX(
-                    eX({}, t),
+                  return eQ(
+                    eQ({}, t),
                     {},
                     {
                       files:
@@ -1062,8 +1067,8 @@
                       return e.type === _.qK.PYTHON;
                     })
                     ? e
-                    : eX(
-                        eX({}, e),
+                    : eQ(
+                        eQ({}, e),
                         {},
                         {
                           tools: [].concat(
@@ -1084,7 +1089,7 @@
             children: [
               (0, R.jsx)("div", {
                 className: "rounded-lg text-gray-500",
-                children: (0, R.jsx)(eh.Z, eX({}, e0.knowledgeWarning)),
+                children: (0, R.jsx)(eh.Z, eQ({}, e0.knowledgeWarning)),
               }),
               P.length > 0 || C.length > 0
                 ? (0, R.jsxs)("div", {
@@ -1110,7 +1115,7 @@
               (0, R.jsx)("div", {
                 children: (0, R.jsxs)(eD.cY, {
                   onClick: h,
-                  children: [(0, R.jsx)("input", eX({}, f())), "Upload files"],
+                  children: [(0, R.jsx)("input", eQ({}, f())), "Upload files"],
                 }),
               }),
             ],
@@ -1200,7 +1205,7 @@
       function e4(e) {
         var t = e.enabledTools,
           n = e.onEnabledToolsChange,
-          r = (0, G.C)(Q.L0.BrowseAvailable),
+          r = (0, G.C)(X.L0.BrowseAvailable),
           i = (0, D.sB)(D.tz.GizmoMemory).value,
           o = (0, eu.Z)();
         return (0, R.jsxs)("div", {
@@ -1795,7 +1800,7 @@
           U = [].concat((0, z.Z)(D), (0, z.Z)(D.length < 12 ? [""] : [])),
           B = tt(d),
           F = (0, $.ec)($.F_.isBusinessWorkspace),
-          V = (0, G.C)(Q.L0.WorkspaceGPTCustomActions),
+          V = (0, G.C)(X.L0.WorkspaceGPTCustomActions),
           q = (0, eu.Z)();
         return (0, R.jsxs)("div", {
           className:
@@ -2283,10 +2288,10 @@
         tv = n(85695);
       function tx(e) {
         var t = e.clientThreadId,
-          n = (0, X.oq)(t),
-          r = (0, X.UL)(t),
+          n = (0, Q.oq)(t),
+          r = (0, Q.UL)(t),
           i = (0, eF.Bv)(r.lastModelUsed, t),
-          o = (0, X.U0)(t, n),
+          o = (0, Q.U0)(t, n),
           a = (0, z.Z)(Array(o).keys()).map(function (e) {
             return (0, R.jsx)(
               tv.Z,
@@ -2355,7 +2360,7 @@
             o = e.isSavingDraft,
             a = e.showTitle,
             s = (0, L.useState)(function () {
-              return (0, X.OX)();
+              return (0, Q.OX)();
             }),
             l = s[0],
             c = s[1],
@@ -2371,39 +2376,37 @@
             [l]
           );
           var m = d.slice(0, -1);
-          (0, X.ax)(l);
-          var f = (0, X.UL)(l);
-          (0, L.useEffect)(
-            function () {
-              null != i.id &&
-                X.tQ.setNewThreadConversationModeMetadata(l, {
+          (0, Q.ax)(l, { kind: ep.OL.GizmoTest, gizmo_id: i.id }),
+            (0, L.useEffect)(
+              function () {
+                Q.tQ.updateConversationMode(l, {
                   kind: ep.OL.GizmoTest,
                   gizmo_id: i.id,
                 });
-            },
-            [l, i.id]
-          );
-          var h =
-            null === (r = i.files) || void 0 === r
-              ? void 0
-              : r
-                  .map(function (e) {
-                    return e.file_id;
-                  })
-                  .join();
+              },
+              [l, i.id]
+            );
+          var f = (0, Q.UL)(l),
+            h =
+              null === (r = i.files) || void 0 === r
+                ? void 0
+                : r
+                    .map(function (e) {
+                      return e.file_id;
+                    })
+                    .join();
           (0, L.useEffect)(
             function () {
-              null != X.tQ.getServerThreadId(l) && c((0, X.OX)());
+              null != Q.tQ.getServerThreadId(l) && c((0, Q.OX)());
             },
             [i.id, i.instructions, i.welcomeMessage, i.tools, h, l]
           ),
             (0, L.useEffect)(
               function () {
-                (0, X.Zz)(l) &&
-                  X.iN.hasThread(l) &&
+                (0, Q.Zz)(l) &&
+                  Q.iN.hasThread(l) &&
                   f.lastModelUsed !== eF.mx &&
-                  (X.tQ.getOrInitThread(l),
-                  X.tQ.updateInitialThreadDataForNewThread(l, eF.mx, []));
+                  Q.tQ.updateInitialThreadDataForNewThread(l, eF.mx, []);
               },
               [l, f, i]
             );
@@ -2436,9 +2439,9 @@
                         switch ((e.prev = e.next)) {
                           case 0:
                             if (
-                              ((o = X.tQ.getThreadCurrentLeafId(l)),
+                              ((o = Q.tQ.getThreadCurrentLeafId(l)),
                               (a = (0, tz.Z)()),
-                              X.tQ.updateTree(l, function (e) {
+                              Q.tQ.updateTree(l, function (e) {
                                 e.addNodeToEnd(o, {
                                   id: a,
                                   children: [],
@@ -2548,7 +2551,7 @@
                                 (0, R.jsx)("div", { className: "icon-md" }),
                                 (0, R.jsxs)("button", {
                                   onClick: function () {
-                                    j(), p([]), c((0, X.OX)());
+                                    j(), p([]), c((0, Q.OX)());
                                   },
                                   className: "flex items-center gap-2",
                                   children: [
@@ -3626,7 +3629,7 @@
         }
         return n;
       }
-      function tQ(e) {
+      function tX(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -3645,7 +3648,7 @@
         }
         return e;
       }
-      function tX(e) {
+      function tQ(e) {
         window.history.length > 1 ? e.back() : e.push((0, en.L7)());
       }
       function t$(e) {
@@ -3733,7 +3736,7 @@
           W = (0, T.Z1)();
         (0, L.useEffect)(
           function () {
-            if (!(null != q && q.includes(Q.L0.GizmoStore))) {
+            if (!(null != q && q.includes(X.L0.GizmoStore))) {
               z("other");
               return;
             }
@@ -3783,13 +3786,13 @@
           },
           [i.instructions, i.name, q, k]
         );
-        var H = null == q ? void 0 : q.includes(Q.L0.GizmoStore),
+        var H = null == q ? void 0 : q.includes(X.L0.GizmoStore),
           K = (0, D.sB)(D.tz.GizmoAppeals).value;
         return (0, R.jsxs)("div", {
           children: [
             (0, R.jsx)("div", {
               className: "mb-2 text-sm font-medium text-token-text-tertiary",
-              children: (0, R.jsx)(eh.Z, tQ({}, ne.publishTo)),
+              children: (0, R.jsx)(eh.Z, tX({}, ne.publishTo)),
             }),
             (0, R.jsxs)("div", {
               className: "flex flex-col gap-3 text-sm",
@@ -3850,8 +3853,8 @@
                     className: "text-xs text-red-500",
                     children: (0, R.jsx)(
                       eh.Z,
-                      tQ(
-                        tQ({}, ne.actionNeedsPrivacyPolicyURL),
+                      tX(
+                        tX({}, ne.actionNeedsPrivacyPolicyURL),
                         {},
                         {
                           values: {
@@ -3876,11 +3879,11 @@
                     canEdit: !0,
                   }),
                 v === Z.Zz.Marketplace &&
-                  (null == q ? void 0 : q.includes(Q.L0.GizmoStore)) &&
+                  (null == q ? void 0 : q.includes(X.L0.GizmoStore)) &&
                   (C
                     ? (0, R.jsx)("div", {
                         className: "text-xs text-red-500",
-                        children: (0, R.jsx)(eh.Z, tQ({}, ne.categoryError)),
+                        children: (0, R.jsx)(eh.Z, tX({}, ne.categoryError)),
                       })
                     : (0, R.jsxs)(R.Fragment, {
                         children: [
@@ -3888,13 +3891,13 @@
                             className:
                               "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
                             children: [
-                              (0, R.jsx)(eh.Z, tQ({}, ne.categoryLabel)),
+                              (0, R.jsx)(eh.Z, tX({}, ne.categoryLabel)),
                               (0, R.jsx)(eT.u, {
                                 label: (0, R.jsx)("span", {
                                   className: "w-36 text-xs",
                                   children: (0, R.jsx)(
                                     eh.Z,
-                                    tQ({}, ne.categoryLabelTooltip)
+                                    tX({}, ne.categoryLabelTooltip)
                                   ),
                                 }),
                                 side: "top",
@@ -3961,7 +3964,7 @@
                         })
                       ),
                       className: "w-full",
-                      children: (0, R.jsx)(eh.Z, tQ({}, ne.privacyConfirm)),
+                      children: (0, R.jsx)(eh.Z, tX({}, ne.privacyConfirm)),
                     })
                   : K
                     ? (0, R.jsxs)(R.Fragment, {
@@ -3971,7 +3974,7 @@
                               "flex items-center justify-between text-sm text-token-text-secondary",
                             children: (0, R.jsx)(
                               eh.Z,
-                              tQ({}, ne.appealNeededLabel)
+                              tX({}, ne.appealNeededLabel)
                             ),
                           }),
                           (0, R.jsx)(eD.cY, {
@@ -3991,14 +3994,14 @@
                               })
                             ),
                             className: "w-full",
-                            children: (0, R.jsx)(eh.Z, tQ({}, ne.appealButton)),
+                            children: (0, R.jsx)(eh.Z, tX({}, ne.appealButton)),
                           }),
                         ],
                       })
                     : (0, R.jsx)("div", {
                         className:
                           "flex items-center justify-between text-sm text-token-text-secondary",
-                        children: (0, R.jsx)(eh.Z, tQ({}, ne.recipientBlocked)),
+                        children: (0, R.jsx)(eh.Z, tX({}, ne.recipientBlocked)),
                       }),
               ],
             }),
@@ -4016,7 +4019,7 @@
           children: [
             (0, R.jsx)("div", {
               className: "font-medium",
-              children: (0, R.jsx)(eh.Z, tQ({}, ne.publishedTitle)),
+              children: (0, R.jsx)(eh.Z, tX({}, ne.publishedTitle)),
             }),
             (0, R.jsxs)("div", {
               className:
@@ -4041,7 +4044,7 @@
               as: "link",
               to: n,
               className: "w-full",
-              children: (0, R.jsx)(eh.Z, tQ({}, ne.viewGPT)),
+              children: (0, R.jsx)(eh.Z, tX({}, ne.viewGPT)),
             }),
           ],
         });
@@ -4162,7 +4165,7 @@
                               },
                               children: [
                                 (0, R.jsx)(ef.HN, { className: "icon-md" }),
-                                (0, R.jsx)(eh.Z, tQ({}, ne.copyLink)),
+                                (0, R.jsx)(eh.Z, tX({}, ne.copyLink)),
                               ],
                             }),
                           null != r &&
@@ -4174,7 +4177,7 @@
                               },
                               children: [
                                 (0, R.jsx)(ef.Nt, { className: "icon-md" }),
-                                (0, R.jsx)(eh.Z, tQ({}, ne.revertMenuItem)),
+                                (0, R.jsx)(eh.Z, tX({}, ne.revertMenuItem)),
                               ],
                             }),
                           (null == l ? void 0 : l.includes("debug")) &&
@@ -4195,7 +4198,7 @@
                               },
                               children: [
                                 (0, R.jsx)(ef.a_, { className: "icon-md" }),
-                                (0, R.jsx)(eh.Z, tQ({}, ne.deleteGPT)),
+                                (0, R.jsx)(eh.Z, tX({}, ne.deleteGPT)),
                               ],
                             }),
                         ],
@@ -4207,7 +4210,7 @@
                   (0, R.jsx)(tq.b, {
                     gizmoId: t.id,
                     onSuccess: function () {
-                      return tX(ec());
+                      return tQ(ec());
                     },
                     onClose: function () {
                       s(!1);
@@ -4231,14 +4234,14 @@
             return (0, R.jsxs)(t5, {
               children: [
                 (0, R.jsx)(ef.LX, { className: "icon-xs" }),
-                (0, R.jsx)(eh.Z, tQ({}, ne.onlyMe)),
+                (0, R.jsx)(eh.Z, tX({}, ne.onlyMe)),
               ],
             });
           case Z.Zz.Link:
             return (0, R.jsxs)(t5, {
               children: [
                 (0, R.jsx)(ef.HN, { className: "icon-xs" }),
-                (0, R.jsx)(eh.Z, tQ({}, ne.anyoneWithLink)),
+                (0, R.jsx)(eh.Z, tX({}, ne.anyoneWithLink)),
               ],
             });
           case Z.Zz.Workspace:
@@ -4249,7 +4252,7 @@
             return (0, R.jsxs)(t5, {
               children: [
                 (0, R.jsx)(ef.hk, { className: "icon-xs" }),
-                (0, R.jsx)(eh.Z, tQ({}, ne.public)),
+                (0, R.jsx)(eh.Z, tX({}, ne.public)),
               ],
             });
         }
@@ -4274,7 +4277,7 @@
               children: [
                 (0, R.jsx)("div", {
                   className: "text-sm font-medium",
-                  children: t.name || (0, R.jsx)(eh.Z, tQ({}, ne.newGPT)),
+                  children: t.name || (0, R.jsx)(eh.Z, tX({}, ne.newGPT)),
                 }),
                 (0, R.jsx)("div", {
                   className: "text-xs text-token-text-secondary",
@@ -4286,7 +4289,7 @@
                             className:
                               "h-1.5 w-1.5 rounded-full bg-token-text-tertiary",
                           }),
-                          (0, R.jsx)(eh.Z, tQ({}, ne.draft)),
+                          (0, R.jsx)(eh.Z, tX({}, ne.draft)),
                         ],
                       })
                     : (0, R.jsxs)("div", {
@@ -4296,7 +4299,7 @@
                             className:
                               "h-1.5 w-1.5 rounded-full bg-brand-green",
                           }),
-                          (0, R.jsx)(eh.Z, tQ({}, ne.published)),
+                          (0, R.jsx)(eh.Z, tX({}, ne.published)),
                           " \xb7 ",
                           (0, R.jsx)(t8, { gizmoEditorData: t }),
                         ],
@@ -4389,7 +4392,7 @@
                 (0, R.jsx)("a", {
                   className: "cursor-pointer text-token-text-primary",
                   onClick: function () {
-                    return tX(ec());
+                    return tQ(ec());
                   },
                   children: (0, R.jsx)(ef.L7, { className: "icon-lg" }),
                 }),
@@ -4797,8 +4800,8 @@
                       return (
                         (s = (a = (function (e, t) {
                           for (
-                            var n = X.tQ.getThreadCurrentLeafId(e),
-                              r = X.tQ.getTree(e),
+                            var n = Q.tQ.getThreadCurrentLeafId(e),
+                              r = Q.tQ.getTree(e),
                               i = [],
                               o = r.getNodeByIdOrMessageId(n);
                             null != o && (null == t || o.id !== t);
@@ -5024,7 +5027,7 @@
                   )
                 ),
               T.length > 0 &&
-                X.tQ.updateTree(e, function (e) {
+                Q.tQ.updateTree(e, function (e) {
                   var n,
                     r = e.getNodeByIdOrMessageId(t).parentId,
                     i = na(T);
@@ -5091,8 +5094,22 @@
           a = e.magicMakerBehaviorOverrides,
           s = e.magicMakerConversationGizmoEditorDataRef,
           l = e.requireGizmoId;
-        (0, X.ax)(r);
-        var c = (0, X.UL)(r),
+        (0, Q.ax)(r, {
+          kind: ep.OL.GizmoMagicCreate,
+          gizmo_id: t.id,
+          behavior_overrides: a,
+        }),
+          (0, L.useEffect)(
+            function () {
+              Q.tQ.updateConversationMode(r, {
+                kind: ep.OL.GizmoMagicCreate,
+                gizmo_id: t.id,
+                behavior_overrides: a,
+              });
+            },
+            [r, t.id, a]
+          );
+        var c = (0, Q.UL)(r),
           u = null == t.id,
           d =
             null != t.id &&
@@ -5112,8 +5129,7 @@
           )[0];
         (0, L.useEffect)(
           function () {
-            X.tQ.getOrInitThread(r);
-            var e = X.tQ.getTree(r);
+            var e = Q.tQ.getTree(r);
             if (
               !e.findNode(function (e) {
                 var t;
@@ -5124,7 +5140,7 @@
                     : t.isClientCreatedSystemMessage) === !0
                 );
               }) &&
-              (X.tQ.deleteNodesByFilter(r, function (e) {
+              (Q.tQ.deleteNodesByFilter(r, function (e) {
                 var t;
                 return (
                   (null === (t = e.metadata) || void 0 === t
@@ -5134,15 +5150,15 @@
               }),
               null != p && 0 !== p.length)
             ) {
-              var t = X.tQ.getThreadCurrentLeafId(r);
+              var t = Q.tQ.getThreadCurrentLeafId(r);
               if (e.hasNodeOrMessageId(t)) {
                 var n = (0, tz.Z)();
-                X.tQ.updateTree(r, function (e) {
+                Q.tQ.updateTree(r, function (e) {
                   e.addNode(n, p, t, ep.uU.Assistant, {
                     isPlaceholderTemplateAssistantWelcomeMessage: !0,
                   });
                 }),
-                  X.tQ.setThreadCurrentLeafId(r, n);
+                  Q.tQ.setThreadCurrentLeafId(r, n);
               }
             }
           },
@@ -5150,11 +5166,10 @@
         ),
           (0, L.useEffect)(
             function () {
-              (0, X.Zz)(r) &&
-                X.iN.hasThread(r) &&
+              (0, Q.Zz)(r) &&
+                Q.iN.hasThread(r) &&
                 c.lastModelUsed !== eF.Mw &&
-                (X.tQ.getOrInitThread(r),
-                X.tQ.updateInitialThreadDataForNewThread(r, eF.Mw, []));
+                Q.tQ.updateInitialThreadDataForNewThread(r, eF.Mw, []);
             },
             [r, c, c.lastModelUsed]
           );
@@ -5188,7 +5203,7 @@
                           })
                           .join(", ")
                       );
-                  X.tQ.updateTree(e, function (e) {
+                  Q.tQ.updateTree(e, function (e) {
                     var n = e.getNodeByIdOrMessageId(t).parentId;
                     e.insertNodeBefore(t, {
                       id: r,
@@ -5205,8 +5220,8 @@
                   for (
                     var n =
                         "Remember, you should be calling either update_behavior or generate_profile_pic after most messages from the user. Your personality should be neutral and separate from the GPT you are creating.",
-                      r = X.tQ.getThreadCurrentLeafId(e),
-                      i = X.tQ.getTree(e),
+                      r = Q.tQ.getThreadCurrentLeafId(e),
+                      i = Q.tQ.getTree(e),
                       o = i.getNodeByIdOrMessageId(r);
                     null != o && o.message.author.role !== ep.uU.User;
                   ) {
@@ -5220,7 +5235,7 @@
                         ? i.getNodeByIdOrMessageId(o.parentId)
                         : void 0;
                   }
-                  X.tQ.updateTree(e, function (e) {
+                  Q.tQ.updateTree(e, function (e) {
                     var r = e.getNodeByIdOrMessageId(t).parentId;
                     e.insertNodeBefore(t, {
                       id: (0, tz.Z)(),
@@ -5437,7 +5452,7 @@
           h,
           g = e.gizmo,
           v = e.onNewGizmoId,
-          x = (0, G.C)(Q.L0.BrowseAvailable),
+          x = (0, G.C)(X.L0.BrowseAvailable),
           b = (0, eu.Z)(),
           y = (0, L.useRef)(null != g ? nP(g) : x ? nw : nj),
           j = (0, L.useRef)(g),
@@ -5448,7 +5463,7 @@
           z = P[0],
           O = P[1],
           C = (0, L.useState)(function () {
-            return (0, X.OX)();
+            return (0, Q.OX)();
           }),
           _ = C[0];
         C[1];
@@ -5718,7 +5733,7 @@
                         case 14:
                           return (
                             (e.prev = 14),
-                            ($.current = X.tQ.getThreadCurrentLeafId(t)),
+                            ($.current = Q.tQ.getThreadCurrentLeafId(t)),
                             eP(!1),
                             e.finish(14)
                           );
@@ -5737,7 +5752,11 @@
               return r.apply(this, arguments);
             }),
           en =
-            (X.tQ.getOrInitThread(_),
+            (Q.tQ.initThread(_, {
+              kind: ep.OL.GizmoMagicCreate,
+              gizmo_id: void 0,
+              behavior_overrides: K,
+            }),
             (i = (0, tO.Z)(_, void 0, es.noop, es.noop, et, [])),
             (o = (0, J.hz)()),
             (a = (0, N.Z)(
@@ -5753,13 +5772,13 @@
                         }
                         return e.abrupt("return");
                       case 2:
-                        (a = X.tQ.getThreadCurrentLeafId(_)), (s = na(r));
+                        (a = Q.tQ.getThreadCurrentLeafId(_)), (s = na(r));
                         try {
                           for (
                             c = function () {
                               var e = l.value,
                                 t = (0, tz.Z)();
-                              X.tQ.updateTree(_, function (n) {
+                              Q.tQ.updateTree(_, function (n) {
                                 n.addNodeToEnd(a, {
                                   id: t,
                                   children: [],
@@ -5773,7 +5792,7 @@
                                   },
                                 });
                               }),
-                                X.tQ.setThreadCurrentLeafId(_, t),
+                                Q.tQ.setThreadCurrentLeafId(_, t),
                                 (a = t);
                             },
                               s.s();
@@ -5879,7 +5898,7 @@
               })(g)
             );
           },
-          [g]
+          [null == g ? void 0 : g.gizmo.id]
         );
         var ed =
             ((s = (0, N.Z)(
@@ -6115,6 +6134,9 @@
                 onAppealClose: function () {
                   return ec(nx(nx({}, el), {}, { showModal: p.None }));
                 },
+                onAppealSubmitted: function () {
+                  return ec(nx(nx({}, el), {}, { showModal: p.AppealSent }));
+                },
               }),
             (0, R.jsxs)("div", {
               className: "relative flex w-full grow overflow-hidden",
@@ -6290,7 +6312,7 @@
           r = n.query.slug,
           i = r ? (0, T.CR)(r) : void 0,
           o = n.query.remixFrom,
-          a = null == t ? void 0 : t.features.includes(Q.PL);
+          a = null == t ? void 0 : t.features.includes(X.PL);
         return ((0, L.useEffect)(
           function () {
             a && tN.ZP.initializeAndGatherData();
@@ -6310,4 +6332,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-04f0b01bbab45fe8.js.map
+//# sourceMappingURL=4648-e8bf624eabfd5571.js.map
