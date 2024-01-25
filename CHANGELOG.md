@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-25Z \(`Ciy2lLIu2TbOaLBCgfGi1`\)](#2024-01-25z-ciy2lliu2tboalbcgfgi1)
 - [2024-01-24Z \(`IT6Bs6aT0lMIT2GMD2zGo`\)](#2024-01-24z-it6bs6at0lmit2gmd2zgo)
 - [2024-01-24Z \(`sfv3TRBfIvsEV2B4_cMOk`\)](#2024-01-24z-sfv3trbfivsev2b4_cmok)
 - [2024-01-23Z \(`Nhh-QuOgEGFphEueL7xal`\)](#2024-01-23z-nhh-quogegfpheuel7xal)
@@ -52,6 +53,111 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-25Z (`Ciy2lLIu2TbOaLBCgfGi1`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Mostly seems to be minor tweaks/refactoring/similar
+- App release version (Git SHA?): `b434a7fce6bfc72bddd32a5b55c19d76a249085e`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/3754.js`
+  - ```js
+    g = e.statsigShowCapacityGate,
+    ```
+- `unpacked/_next/static/chunks/4648.js`
+  - There are some large'ish chunks of diff churn related to `GizmoMagicCreate`, it might have been refactored/similar
+    - ```js
+        var c = null !== (t = e.name) && void 0 !== t ? t : "",
+          u = null !== (n = e.description) && void 0 !== n ? n : "",
+          d = null !== (r = e.instructions) && void 0 !== r ? r : "",
+          p = Array.from(a).join(","),
+          m = null !== (i = e.welcomeMessage) && void 0 !== i ? i : "",
+          f = null != e.profilePictureUrl;
+        return "" === c && "" === u && "" === d && "" === m
+          ? "The GPT you are about to has the following abilities: ".concat(
+              p,
+              "."
+            )
+          : "This is the GPT's current set of fields:\n\nname: "
+              .concat(c, "\n\ndescription: ")
+              .concat(u, "\n\ncontext: ")
+              .concat(d, "\n\nabilities: ")
+              .concat(p, "\n\nwelcome_message: ")
+              .concat(m, "\n\n")
+              .concat(
+                f
+                  ? "The GPT has a profile picture."
+                  : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
+                "\n"
+              );
+      })(P.current),
+      model_slug: "unused",
+      enabled_tools: [
+        { tool_id: null != b ? "gizmo_editor" : "gizmo_creator" },
+      ],
+      ```
+    - ```js
+      return e
+        ? 'Hi! I\'ll help you build a new GPT. You can say something like, "make a creative who helps generate visuals for new products" or "make a software engineer who helps format my code."\n\nWhat would you like to make?'
+        : n
+          ? "Welcome back! Is there anything ".concat(
+              t.name,
+              " should be doing better? Anything you'd like to change?"
+            )
+          : "You're back! Let's continue where we left off...";
+      ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Removed an `svg` image of a person's head/shoulders
+  - Added an `svg` image of what looks like a smaller person's head/shoulders, with a horizontal line above their head; all contained within a rounded box/card.
+  - ```js
+    eN =
+      null == eO
+        ? void 0
+        : eO.accountItems.some(function (Y) {
+            return Y.isPersonalAccount();
+          }),
+    ```
+  - ```diff
+    - ei = (0, eg.ec)(eg.F_.workspaceId),
+    - ea = (0, eg.ec)(eg.F_.isEnterprisePlan),
+    + ea = (0, ef.w)(null == eo ? void 0 : eo.getWorkspaceId()),
+    + eu =
+    +   null !== (Y = null == eo ? void 0 : eo.isEnterprise()) &&
+    +   void 0 !== Y &&
+    +   Y,
+    ```
+  - ```js
+    {
+      key: "getWorkspaceId",
+      value: function () {
+        return this.isWorkspaceAccount() ? this.id : void 0;
+      },
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-ffad4e2e4c61f798.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-8d9390b1dd30897f.js
+https://cdn.oaistatic.com/_next/static/Ciy2lLIu2TbOaLBCgfGi1/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/Ciy2lLIu2TbOaLBCgfGi1/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/3754-94f297953fed6882.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-eff8917c0768da11.js
+```
 
 ## 2024-01-24Z (`IT6Bs6aT0lMIT2GMD2zGo`)
 

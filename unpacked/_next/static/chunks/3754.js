@@ -401,28 +401,29 @@
           s = e.enableNewAuthFlow,
           c = e.cfConnectingIp,
           p = e.isStorageComplianceEnabled,
-          g = (0, u.useRouter)(),
-          f = g.query.next,
-          h = "string" == typeof f && f.startsWith("/") ? f : "/";
-        g.asPath.includes("#") && (h += "#" + g.asPath.split("#")[1]);
-        var v = (0, b.Z)(),
-          j = !!(null == n ? void 0 : n.oof),
-          y = (0, d.useRef)(!1),
-          w =
-            "sso" in g.query &&
-            (null === (t = g.query.sso) || void 0 === t || t),
-          k = w ? g.query.connection : void 0;
+          g = e.statsigShowCapacityGate,
+          f = (0, u.useRouter)(),
+          h = f.query.next,
+          v = "string" == typeof h && h.startsWith("/") ? h : "/";
+        f.asPath.includes("#") && (v += "#" + f.asPath.split("#")[1]);
+        var j = (0, b.Z)(),
+          y = !!(null == n ? void 0 : n.oof) || !0 === g,
+          w = (0, d.useRef)(!1),
+          k =
+            "sso" in f.query &&
+            (null === (t = f.query.sso) || void 0 === t || t),
+          C = k ? f.query.connection : void 0;
         return ((0, d.useEffect)(
           function () {
-            w &&
-              !j &&
+            k &&
+              !y &&
               (0, l.signIn)(
-                "openai" === w ? "openai" : "auth0",
-                { callbackUrl: h },
-                k && { connection: k }
+                "openai" === k ? "openai" : "auth0",
+                { callbackUrl: v },
+                C && { connection: C }
               );
           },
-          [h, w, k, j]
+          [v, k, C, y]
         ),
         (0, d.useEffect)(
           function () {
@@ -438,9 +439,9 @@
         }, []),
         (0, d.useEffect)(
           function () {
-            if (!y.current) {
-              y.current = !0;
-              var e = g.query,
+            if (!w.current) {
+              w.current = !0;
+              var e = f.query,
                 t = e.inv_ws_name,
                 n = e.inv_email;
               (t = Array.isArray(t) ? t[0] : t),
@@ -448,7 +449,7 @@
                 t &&
                   n &&
                   I.m.success(
-                    v.formatMessage(W.invitedToastMessage, {
+                    j.formatMessage(W.invitedToastMessage, {
                       workspace_name: t,
                       email: n,
                     }),
@@ -456,11 +457,11 @@
                   );
             }
           },
-          [g.query, v]
+          [f.query, j]
         ),
-        j)
+        y)
           ? (0, O.jsx)(i.Z, {})
-          : w
+          : k
             ? null
             : (0, O.jsxs)(O.Fragment, {
                 children: [
@@ -469,7 +470,7 @@
                     auth0Provider: o,
                     enableNewAuthFlow: s,
                     examples: void 0 === r ? [] : r,
-                    nextUrl: h,
+                    nextUrl: v,
                     isStorageComplianceEnabled: p,
                   }),
                 ],
@@ -964,4 +965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3754-abb5fa69a16fc07f.js.map
+//# sourceMappingURL=3754-94f297953fed6882.js.map

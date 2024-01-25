@@ -5093,87 +5093,9 @@
           o = e.gizmoEditorDataRef,
           a = e.magicMakerBehaviorOverrides,
           s = e.magicMakerConversationGizmoEditorDataRef,
-          l = e.requireGizmoId;
-        (0, Q.ax)(r, {
-          kind: ep.OL.GizmoMagicCreate,
-          gizmo_id: t.id,
-          behavior_overrides: a,
-        }),
-          (0, L.useEffect)(
-            function () {
-              Q.tQ.updateConversationMode(r, {
-                kind: ep.OL.GizmoMagicCreate,
-                gizmo_id: t.id,
-                behavior_overrides: a,
-              });
-            },
-            [r, t.id, a]
-          );
-        var c = (0, Q.UL)(r),
-          u = null == t.id,
-          d =
-            null != t.id &&
-            "" !== t.name &&
-            null != t.description &&
-            "" !== t.instructions &&
-            null != t.profilePictureUrl,
-          p = (0, L.useState)(
-            u
-              ? 'Hi! I\'ll help you build a new GPT. You can say something like, "make a creative who helps generate visuals for new products" or "make a software engineer who helps format my code."\n\nWhat would you like to make?'
-              : d
-                ? "Welcome back! Is there anything ".concat(
-                    t.name,
-                    " should be doing better? Anything you'd like to change?"
-                  )
-                : "You're back! Let's continue where we left off..."
-          )[0];
-        (0, L.useEffect)(
-          function () {
-            var e = Q.tQ.getTree(r);
-            if (
-              !e.findNode(function (e) {
-                var t;
-                return (
-                  e.message.author.role === ep.uU.User ||
-                  (null === (t = e.metadata) || void 0 === t
-                    ? void 0
-                    : t.isClientCreatedSystemMessage) === !0
-                );
-              }) &&
-              (Q.tQ.deleteNodesByFilter(r, function (e) {
-                var t;
-                return (
-                  (null === (t = e.metadata) || void 0 === t
-                    ? void 0
-                    : t.isPlaceholderTemplateAssistantWelcomeMessage) === !0
-                );
-              }),
-              null != p && 0 !== p.length)
-            ) {
-              var t = Q.tQ.getThreadCurrentLeafId(r);
-              if (e.hasNodeOrMessageId(t)) {
-                var n = (0, tz.Z)();
-                Q.tQ.updateTree(r, function (e) {
-                  e.addNode(n, p, t, ep.uU.Assistant, {
-                    isPlaceholderTemplateAssistantWelcomeMessage: !0,
-                  });
-                }),
-                  Q.tQ.setThreadCurrentLeafId(r, n);
-              }
-            }
-          },
-          [r, p]
-        ),
-          (0, L.useEffect)(
-            function () {
-              (0, Q.Zz)(r) &&
-                Q.iN.hasThread(r) &&
-                c.lastModelUsed !== eF.Mw &&
-                Q.tQ.updateInitialThreadDataForNewThread(r, eF.Mw, []);
-            },
-            [r, c, c.lastModelUsed]
-          );
-        var m = (0, L.useMemo)(
+          l = e.requireGizmoId,
+          c = (0, Q.UL)(r),
+          u = (0, L.useMemo)(
             function () {
               return {
                 gizmoEditorData: t,
@@ -5185,12 +5107,12 @@
             },
             [l, t, a]
           ),
-          f = (0, nm.gF)(function (e) {
+          d = (0, nm.gF)(function (e) {
             return e.files.filter(function (e) {
               return e.status === eS.X.Ready && null != e.gizmoId;
             });
           }),
-          h = (0, L.useCallback)(
+          p = (0, L.useCallback)(
             function (e, t) {
               !(function (e, t, n) {
                 if (0 !== n.length) {
@@ -5214,7 +5136,7 @@
                     });
                   });
                 }
-              })(e, t, f),
+              })(e, t, d),
                 np(e, t, o, s),
                 (function (e, t) {
                   for (
@@ -5260,7 +5182,7 @@
                         ),
                         (0, z.Z)(
                           (0, es.compact)(
-                            f.map(function (e) {
+                            d.map(function (e) {
                               var t;
                               return (
                                 null != e.fileId && {
@@ -5284,13 +5206,13 @@
                 }),
                 (s.current = (0, es.cloneDeep)(o.current));
             },
-            [o, s, f, n]
+            [o, s, d, n]
           ),
-          g = (0, tP.tN)(function (e) {
+          m = (0, tP.tN)(function (e) {
             return e.activeSidebar;
           });
         return (0, R.jsx)(tC.D.Provider, {
-          value: m,
+          value: u,
           children: (0, R.jsxs)("div", {
             className: "relative flex h-full grow overflow-auto",
             children: [
@@ -5300,14 +5222,14 @@
                   initialThreadData: c,
                   clientThreadId: r,
                   onCompletionFinished: i,
-                  preRequestCompletion: h,
+                  preRequestCompletion: p,
                   hideHeader: !0,
                   prependThreadChildren: (0, R.jsx)("div", {
                     className: "h-8",
                   }),
                 }),
               }),
-              "debug" === g &&
+              "debug" === m &&
                 (0, R.jsx)(ty.fv, {
                   clientThreadId: r,
                   slideOver: !1,
@@ -5453,40 +5375,173 @@
           u,
           d,
           h,
-          g = e.gizmo,
-          v = e.onNewGizmoId,
-          x = (0, G.C)(X.L0.BrowseAvailable),
-          b = (0, eu.Z)(),
-          y = (0, L.useRef)(null != g ? nP(g) : x ? nw : nj),
-          j = (0, L.useRef)(g),
-          w = (0, L.useRef)(y.current),
-          P = (0, L.useState)(function () {
-            return y.current;
-          }),
-          z = P[0],
-          O = P[1],
+          g,
+          v,
+          x,
+          b = e.gizmo,
+          y = e.onNewGizmoId,
+          j = (0, G.C)(X.L0.BrowseAvailable),
+          w = (0, eu.Z)(),
+          P = (0, L.useRef)(null != b ? nP(b) : j ? nw : nj),
+          z = (0, L.useRef)(b),
+          O = (0, L.useRef)(P.current),
           C = (0, L.useState)(function () {
+            return P.current;
+          }),
+          _ = C[0],
+          M = C[1],
+          S = (0, L.useState)(function () {
             return (0, Q.OX)();
           }),
-          _ = C[0];
-        C[1];
-        var M = (0, T.kg)(y.current.id).data,
-          S = (0, T.N_)(),
-          A = S.isPending,
-          E = S.error,
-          D = (0, T.ZJ)(),
-          U = (0, L.useMemo)(
+          A = S[0];
+        S[1];
+        var E = (0, L.useState)(function () {
+          return {
+            context_message: (function (e) {
+              var t,
+                n,
+                r,
+                i,
+                o,
+                a = new Set(),
+                s = na(e.tools);
+              try {
+                for (s.s(); !(o = s.n()).done; ) {
+                  var l = o.value;
+                  a.add(l.type);
+                }
+              } catch (e) {
+                s.e(e);
+              } finally {
+                s.f();
+              }
+              var c = null !== (t = e.name) && void 0 !== t ? t : "",
+                u = null !== (n = e.description) && void 0 !== n ? n : "",
+                d = null !== (r = e.instructions) && void 0 !== r ? r : "",
+                p = Array.from(a).join(","),
+                m = null !== (i = e.welcomeMessage) && void 0 !== i ? i : "",
+                f = null != e.profilePictureUrl;
+              return "" === c && "" === u && "" === d && "" === m
+                ? "The GPT you are about to has the following abilities: ".concat(
+                    p,
+                    "."
+                  )
+                : "This is the GPT's current set of fields:\n\nname: "
+                    .concat(c, "\n\ndescription: ")
+                    .concat(u, "\n\ncontext: ")
+                    .concat(d, "\n\nabilities: ")
+                    .concat(p, "\n\nwelcome_message: ")
+                    .concat(m, "\n\n")
+                    .concat(
+                      f
+                        ? "The GPT has a profile picture."
+                        : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
+                      "\n"
+                    );
+            })(P.current),
+            model_slug: "unused",
+            enabled_tools: [
+              { tool_id: null != b ? "gizmo_editor" : "gizmo_creator" },
+            ],
+          };
+        })[0];
+        (t = O.current),
+          (0, Q.ax)(A, {
+            kind: ep.OL.GizmoMagicCreate,
+            gizmo_id: t.id,
+            behavior_overrides: E,
+          }),
+          (0, L.useEffect)(
+            function () {
+              Q.tQ.updateConversationMode(A, {
+                kind: ep.OL.GizmoMagicCreate,
+                gizmo_id: t.id,
+                behavior_overrides: E,
+              });
+            },
+            [A, t.id, E]
+          ),
+          (n = (0, L.useState)(function () {
+            var e = null == t.id,
+              n =
+                null != t.id &&
+                "" !== t.name &&
+                null != t.description &&
+                "" !== t.instructions &&
+                null != t.profilePictureUrl;
+            return e
+              ? 'Hi! I\'ll help you build a new GPT. You can say something like, "make a creative who helps generate visuals for new products" or "make a software engineer who helps format my code."\n\nWhat would you like to make?'
+              : n
+                ? "Welcome back! Is there anything ".concat(
+                    t.name,
+                    " should be doing better? Anything you'd like to change?"
+                  )
+                : "You're back! Let's continue where we left off...";
+          })[0]),
+          (0, L.useEffect)(
+            function () {
+              var e = Q.tQ.getTree(A);
+              if (
+                !e.findNode(function (e) {
+                  var t;
+                  return (
+                    e.message.author.role === ep.uU.User ||
+                    (null === (t = e.metadata) || void 0 === t
+                      ? void 0
+                      : t.isClientCreatedSystemMessage) === !0
+                  );
+                }) &&
+                (Q.tQ.deleteNodesByFilter(A, function (e) {
+                  var t;
+                  return (
+                    (null === (t = e.metadata) || void 0 === t
+                      ? void 0
+                      : t.isPlaceholderTemplateAssistantWelcomeMessage) === !0
+                  );
+                }),
+                null != n && 0 !== n.length)
+              ) {
+                var t = Q.tQ.getThreadCurrentLeafId(A);
+                if (e.hasNodeOrMessageId(t)) {
+                  var r = (0, tz.Z)();
+                  Q.tQ.updateTree(A, function (e) {
+                    e.addNode(r, n, t, ep.uU.Assistant, {
+                      isPlaceholderTemplateAssistantWelcomeMessage: !0,
+                    });
+                  }),
+                    Q.tQ.setThreadCurrentLeafId(A, r);
+                }
+              }
+            },
+            [A, n]
+          ),
+          (r = (0, Q.UL)(A)),
+          (0, L.useEffect)(
+            function () {
+              (0, Q.Zz)(A) &&
+                Q.iN.hasThread(A) &&
+                r.lastModelUsed !== eF.Mw &&
+                Q.tQ.updateInitialThreadDataForNewThread(A, eF.Mw, []);
+            },
+            [A, r, r.lastModelUsed]
+          );
+        var D = (0, T.kg)(P.current.id).data,
+          U = (0, T.N_)(),
+          B = U.isPending,
+          F = U.error,
+          V = (0, T.ZJ)(),
+          q = (0, L.useMemo)(
             function () {
               var e, t, n, r, i, o;
               return (
-                null != M &&
+                null != D &&
                 (!(
-                  z.name === M.gizmo.display.name &&
-                  z.description === M.gizmo.display.description &&
-                  z.welcomeMessage === M.gizmo.display.welcome_message &&
-                  z.instructions === M.gizmo.instructions &&
-                  ((i = z.tools),
-                  (o = M.tools),
+                  _.name === D.gizmo.display.name &&
+                  _.description === D.gizmo.display.description &&
+                  _.welcomeMessage === D.gizmo.display.welcome_message &&
+                  _.instructions === D.gizmo.instructions &&
+                  ((i = _.tools),
+                  (o = D.tools),
                   i.length === o.length &&
                     i.every(function (e) {
                       return o.some(function (t) {
@@ -5496,7 +5551,7 @@
                   (0, es.isEqual)(
                     null !==
                       (e =
-                        null === (t = z.files) || void 0 === t
+                        null === (t = _.files) || void 0 === t
                           ? void 0
                           : t.map(function (e) {
                               return e.file_id;
@@ -5505,7 +5560,7 @@
                       : [],
                     null !==
                       (n =
-                        null === (r = M.files) || void 0 === r
+                        null === (r = D.files) || void 0 === r
                           ? void 0
                           : r.map(function (e) {
                               return e.file_id;
@@ -5514,14 +5569,14 @@
                       : []
                   )
                 ) ||
-                  z.profilePictureUrl != M.gizmo.display.profile_picture_url ||
-                  z.profilePictureId != M.gizmo.display.profile_pic_id)
+                  _.profilePictureUrl != D.gizmo.display.profile_picture_url ||
+                  _.profilePictureId != D.gizmo.display.profile_pic_id)
               );
             },
-            [z, M]
+            [_, D]
           ),
-          B =
-            ((t = (0, N.Z)(
+          W =
+            ((i = (0, N.Z)(
               I().mark(function e() {
                 var t, n, r, i, o;
                 return I().wrap(
@@ -5530,27 +5585,27 @@
                       switch ((e.prev = e.next)) {
                         case 0:
                           return (
-                            (t = y.current),
+                            (t = P.current),
                             (e.prev = 1),
                             (e.next = 4),
-                            S.mutateAsync({ editorData: t, gizmoId: t.id })
+                            U.mutateAsync({ editorData: t, gizmoId: t.id })
                           );
                         case 4:
                           return (
                             (n = e.sent),
-                            (j.current = n),
-                            null == y.current.id &&
+                            (z.current = n),
+                            null == P.current.id &&
                               ((r = n.gizmo.id),
-                              (y.current = nx(
-                                nx({}, y.current),
+                              (P.current = nx(
+                                nx({}, P.current),
                                 {},
                                 {
                                   id: r,
                                   sharingTargets: n.gizmo.sharing_targets,
                                 }
                               )),
-                              O(y.current),
-                              null == v || v(r)),
+                              M(P.current),
+                              null == y || y(r)),
                             e.abrupt("return", n)
                           );
                         case 10:
@@ -5560,7 +5615,7 @@
                             (o =
                               null !== (i = (0, ee.Ot)(e.t0)) && void 0 !== i
                                 ? i
-                                : b.formatMessage(ni.errorSavingDraft)),
+                                : w.formatMessage(ni.errorSavingDraft)),
                             Y.m.warning(o, { duration: 2 }),
                             e.t0)
                           );
@@ -5576,32 +5631,32 @@
               })
             )),
             function () {
-              return t.apply(this, arguments);
+              return i.apply(this, arguments);
             }),
-          F = (0, L.useRef)(),
-          V =
-            ((n = (0, N.Z)(
+          K = (0, L.useRef)(),
+          $ =
+            ((o = (0, N.Z)(
               I().mark(function e() {
                 return I().wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (!(null != y.current.id)) {
+                        if (!(null != P.current.id)) {
                           e.next = 2;
                           break;
                         }
-                        return e.abrupt("return", y.current.id);
+                        return e.abrupt("return", P.current.id);
                       case 2:
                         return (
-                          null == F.current &&
-                            (F.current = B()
+                          null == K.current &&
+                            (K.current = W()
                               .then(function (e) {
                                 return e.gizmo.id;
                               })
                               .catch(function (e) {
-                                throw ((F.current = void 0), e);
+                                throw ((K.current = void 0), e);
                               })),
-                          e.abrupt("return", F.current)
+                          e.abrupt("return", K.current)
                         );
                       case 4:
                       case "end":
@@ -5611,24 +5666,24 @@
               })
             )),
             function () {
-              return n.apply(this, arguments);
+              return o.apply(this, arguments);
             }),
-          q = (0, L.useState)(function () {
+          et = (0, L.useState)(function () {
             return (0, es.debounce)(
               function () {
-                return B();
+                return W();
               },
               2e3,
               { trailing: !0 }
             );
           })[0];
-        function W(e) {
+        function en(e) {
           var t,
             n,
             r =
               "function" == typeof e
-                ? e(y.current)
-                : ((t = y.current),
+                ? e(P.current)
+                : ((t = P.current),
                   null == (n = e)
                     ? t
                     : ((n = (function e(t) {
@@ -5646,61 +5701,12 @@
                             : t;
                       })(n)),
                       e7(e7({}, t), n)));
-          (0, es.isEqual)(r, y.current) || ((y.current = r), O(y.current), q());
+          (0, es.isEqual)(r, P.current) ||
+            ((P.current = r), M(P.current), et());
         }
-        var K = (0, L.useState)(function () {
-            return {
-              context_message: (function (e) {
-                var t,
-                  n,
-                  r,
-                  i,
-                  o,
-                  a = new Set(),
-                  s = na(e.tools);
-                try {
-                  for (s.s(); !(o = s.n()).done; ) {
-                    var l = o.value;
-                    a.add(l.type);
-                  }
-                } catch (e) {
-                  s.e(e);
-                } finally {
-                  s.f();
-                }
-                var c = null !== (t = e.name) && void 0 !== t ? t : "",
-                  u = null !== (n = e.description) && void 0 !== n ? n : "",
-                  d = null !== (r = e.instructions) && void 0 !== r ? r : "",
-                  p = Array.from(a).join(","),
-                  m = null !== (i = e.welcomeMessage) && void 0 !== i ? i : "",
-                  f = null != e.profilePictureUrl;
-                return "" === c && "" === u && "" === d && "" === m
-                  ? "The GPT you are about to has the following abilities: ".concat(
-                      p,
-                      "."
-                    )
-                  : "This is the GPT's current set of fields:\n\nname: "
-                      .concat(c, "\n\ndescription: ")
-                      .concat(u, "\n\ncontext: ")
-                      .concat(d, "\n\nabilities: ")
-                      .concat(p, "\n\nwelcome_message: ")
-                      .concat(m, "\n\n")
-                      .concat(
-                        f
-                          ? "The GPT has a profile picture."
-                          : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
-                        "\n"
-                      );
-              })(y.current),
-              model_slug: "unused",
-              enabled_tools: [
-                { tool_id: null != g ? "gizmo_editor" : "gizmo_creator" },
-              ],
-            };
-          })[0],
-          $ = (0, L.useRef)(),
-          et =
-            ((r = (0, N.Z)(
+        var er = (0, L.useRef)(),
+          el =
+            ((a = (0, N.Z)(
               I().mark(function e(t) {
                 var n;
                 return I().wrap(
@@ -5712,18 +5718,18 @@
                             e.next = 3;
                             break;
                           }
-                          return eP(!1), e.abrupt("return");
+                          return eN(!1), e.abrupt("return");
                         case 3:
                           return (
                             (e.prev = 3),
                             (e.next = 6),
                             (function (e, t, n) {
                               return nd.apply(this, arguments);
-                            })(y.current, t, $.current)
+                            })(P.current, t, er.current)
                           );
                         case 6:
                           null != (n = e.sent) &&
-                            (W(n), (w.current = (0, es.cloneDeep)(y.current))),
+                            (en(n), (O.current = (0, es.cloneDeep)(P.current))),
                             (e.next = 14);
                           break;
                         case 10:
@@ -5737,8 +5743,8 @@
                         case 14:
                           return (
                             (e.prev = 14),
-                            ($.current = Q.tQ.getThreadCurrentLeafId(t)),
-                            eP(!1),
+                            (er.current = Q.tQ.getThreadCurrentLeafId(t)),
+                            eN(!1),
                             e.finish(14)
                           );
                         case 18:
@@ -5753,19 +5759,19 @@
               })
             )),
             function (e) {
-              return r.apply(this, arguments);
+              return a.apply(this, arguments);
             }),
-          en =
-            (Q.tQ.initThread(_, {
+          ec =
+            (Q.tQ.initThread(A, {
               kind: ep.OL.GizmoMagicCreate,
               gizmo_id: void 0,
-              behavior_overrides: K,
+              behavior_overrides: E,
             }),
-            (i = (0, tO.Z)(_, void 0, es.noop, es.noop, et, [])),
-            (o = (0, J.hz)()),
-            (a = (0, N.Z)(
+            (s = (0, tO.Z)(A, void 0, es.noop, es.noop, el, [])),
+            (l = (0, J.hz)()),
+            (c = (0, N.Z)(
               I().mark(function e(t, n, r) {
-                var a, s, l, c, u, d, p, m, f;
+                var i, o, a, c, u, d, p, m, f;
                 return I().wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -5776,17 +5782,17 @@
                         }
                         return e.abrupt("return");
                       case 2:
-                        (a = Q.tQ.getThreadCurrentLeafId(_)), (s = na(r));
+                        (i = Q.tQ.getThreadCurrentLeafId(A)), (o = na(r));
                         try {
                           for (
                             c = function () {
-                              var e = l.value,
+                              var e = a.value,
                                 t = (0, tz.Z)();
-                              Q.tQ.updateTree(_, function (n) {
-                                n.addNodeToEnd(a, {
+                              Q.tQ.updateTree(A, function (n) {
+                                n.addNodeToEnd(i, {
                                   id: t,
                                   children: [],
-                                  parentId: a,
+                                  parentId: i,
                                   message: no.Cv.getTextAsMessage(
                                     e,
                                     ep.uU.System
@@ -5796,30 +5802,30 @@
                                   },
                                 });
                               }),
-                                Q.tQ.setThreadCurrentLeafId(_, t),
-                                (a = t);
+                                Q.tQ.setThreadCurrentLeafId(A, t),
+                                (i = t);
                             },
-                              s.s();
-                            !(l = s.n()).done;
+                              o.s();
+                            !(a = o.n()).done;
                           )
                             c();
                         } catch (e) {
-                          s.e(e);
+                          o.e(e);
                         } finally {
-                          s.f();
+                          o.f();
                         }
                         if (
-                          ((u = a),
-                          np(_, u, t, n),
+                          ((u = i),
+                          np(A, u, t, n),
                           (d = {
                             conversationMode: {
                               kind: ep.OL.GizmoMagicCreate,
                               gizmo_id: t.current.id,
-                              behavior_overrides: K,
+                              behavior_overrides: E,
                             },
                           }),
                           (p = [eF.S.GPT_4]),
-                          (m = (0, tN.Rr)(o, p, ep.OL.GizmoMagicCreate)),
+                          (m = (0, tN.Rr)(l, p, ep.OL.GizmoMagicCreate)),
                           (f = null),
                           !m)
                         ) {
@@ -5830,7 +5836,7 @@
                       case 14:
                         f = e.sent;
                       case 15:
-                        i({
+                        s({
                           model: eF.Mw,
                           completionType: ep.Os.Next,
                           parentNodeId: u,
@@ -5848,14 +5854,14 @@
               })
             )),
             function (e, t, n) {
-              return a.apply(this, arguments);
+              return c.apply(this, arguments);
             }),
-          er = (0, L.useState)(void 0),
-          el = er[0],
-          ec = er[1];
+          ed = (0, L.useState)(void 0),
+          em = ed[0],
+          ef = ed[1];
         (0, L.useEffect)(
           function () {
-            ec(
+            ef(
               (function (e) {
                 if (e) {
                   var t,
@@ -5899,13 +5905,13 @@
                         : p.None,
                   };
                 }
-              })(g)
+              })(b)
             );
           },
-          [null == g ? void 0 : g.gizmo.id]
+          [null == b ? void 0 : b.gizmo.id]
         );
-        var ed =
-            ((s = (0, N.Z)(
+        var eh =
+            ((u = (0, N.Z)(
               I().mark(function e(t, n) {
                 var r, i, o, a, s;
                 return I().wrap(
@@ -5913,7 +5919,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if (!((r = tt(y.current, t, n)).length > 0)) {
+                          if (!((r = tt(P.current, t, n)).length > 0)) {
                             e.next = 4;
                             break;
                           }
@@ -5931,13 +5937,13 @@
                             e.abrupt("return")
                           );
                         case 4:
-                          return (e.next = 6), B();
+                          return (e.next = 6), W();
                         case 6:
                           return (
                             (o = (i = e.sent).gizmo.id),
                             (e.prev = 8),
                             (e.next = 11),
-                            D.mutateAsync(
+                            V.mutateAsync(
                               {
                                 gizmoId: i.gizmo.id,
                                 data: {
@@ -5972,7 +5978,7 @@
                             (e.t0 = e.catch(8)),
                             e.t0 instanceof Z.DC
                               ? ((s = !!e.t0.response.is_flagged_brand_name),
-                                ec({
+                                ef({
                                   gizmoId: o,
                                   sharingRecipient: t,
                                   moderationType: m.PublishBlocked,
@@ -5995,20 +6001,20 @@
               })
             )),
             function (e, t) {
-              return s.apply(this, arguments);
+              return u.apply(this, arguments);
             }),
-          em = S.isPending || D.isPending,
-          ef = (0, L.useState)(function () {
+          eg = U.isPending || V.isPending,
+          ev = (0, L.useState)(function () {
             var e = ei.m.getItem(ei.F.GizmoEditorTab);
             return Object.values(k).includes(e) ? e : k.MAGIC_MAKER;
           }),
-          eh = ef[0],
-          eg = ef[1],
-          ev = ((c = (l = (0, L.useState)({ width: null, height: null }))[0]),
-          (u = l[1]),
+          ex = ev[0],
+          eb = ev[1],
+          ey = ((h = (d = (0, L.useState)({ width: null, height: null }))[0]),
+          (g = d[1]),
           (0, L.useLayoutEffect)(function () {
             var e = function () {
-              u({ width: window.innerWidth, height: window.innerHeight });
+              g({ width: window.innerWidth, height: window.innerHeight });
             };
             return (
               e(),
@@ -6018,51 +6024,51 @@
               }
             );
           }, []),
-          c).width;
+          h).width;
         (0, L.useEffect)(
           function () {
-            null != ev && ev >= 768 && eh === k.PREVIEW && eg(k.MAGIC_MAKER);
+            null != ey && ey >= 768 && ex === k.PREVIEW && eb(k.MAGIC_MAKER);
           },
-          [ev, eh]
+          [ey, ex]
         );
-        var ex = (0, L.useState)(!1),
-          eb = ex[0],
-          ey = ex[1],
-          ej = (0, L.useState)(!1),
+        var ej = (0, L.useState)(!1),
           ew = ej[0],
           eP = ej[1],
-          ek = (0, L.useState)(void 0),
+          ek = (0, L.useState)(!1),
           eT = ek[0],
-          eN = ek[1];
+          eN = ek[1],
+          ez = (0, L.useState)(void 0),
+          eO = ez[0],
+          eC = ez[1];
         return (0, R.jsxs)("div", {
           className: "flex h-screen w-full flex-col items-center",
           children: [
             (0, R.jsx)(t7, {
-              gizmoEditorData: z,
-              isLoading: em,
-              hasUnpublishedChanges: U,
-              isUploadingProfilePic: eb,
-              isGeneratingProfilePic: ew,
-              publishedGizmo: M,
+              gizmoEditorData: _,
+              isLoading: eg,
+              hasUnpublishedChanges: q,
+              isUploadingProfilePic: ew,
+              isGeneratingProfilePic: eT,
+              publishedGizmo: D,
               promoteGizmo:
-                ((d = (0, N.Z)(
+                ((v = (0, N.Z)(
                   I().mark(function e(t, n) {
                     var r;
                     return I().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), ed(t, n);
+                            return (e.next = 2), eh(t, n);
                           case 2:
                             return (
                               (r = e.sent),
-                              (y.current = nx(
-                                nx({}, y.current),
+                              (P.current = nx(
+                                nx({}, P.current),
                                 {},
                                 { sharingRecipient: t }
                               )),
-                              O(y.current),
-                              ei.m.setItem(ei.F.GizmoEditorTab, eh),
+                              M(P.current),
+                              ei.m.setItem(ei.F.GizmoEditorTab, ex),
                               e.abrupt("return", r)
                             );
                           case 7:
@@ -6073,24 +6079,24 @@
                   })
                 )),
                 function (e, t) {
-                  return d.apply(this, arguments);
+                  return v.apply(this, arguments);
                 }),
               appealGizmo:
-                ((h = (0, N.Z)(
+                ((x = (0, N.Z)(
                   I().mark(function e(t, n) {
                     return I().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            if (null != el) {
+                            if (null != em) {
                               e.next = 2;
                               break;
                             }
                             return e.abrupt("return");
                           case 2:
-                            ec(
+                            ef(
                               nx(
-                                nx({}, el),
+                                nx({}, em),
                                 {},
                                 {
                                   sharingRecipient: t,
@@ -6107,39 +6113,39 @@
                   })
                 )),
                 function (e, t) {
-                  return h.apply(this, arguments);
+                  return x.apply(this, arguments);
                 }),
               revertDraft:
-                null != M && U
+                null != D && q
                   ? function () {
                       var e = eo.E.getQueryData(
-                        (0, T.Vw)(y.current.id).queryKey
+                        (0, T.Vw)(P.current.id).queryKey
                       );
                       if (null != e) {
                         var t = nP(e);
-                        (y.current = t), O(t), B();
+                        (P.current = t), M(t), W();
                       }
                     }
                   : void 0,
               draftMessage: (0, R.jsx)(nr, {
-                hasUnpublishedChanges: U,
-                isSavingDraft: A,
-                upsertDraftError: E,
+                hasUnpublishedChanges: q,
+                isSavingDraft: B,
+                upsertDraftError: F,
                 className: "text-sm",
               }),
               showActionsModal: function (e) {
-                eN(e);
+                eC(e);
               },
               className: "flex-shrink-0",
             }),
-            el &&
+            em &&
               (0, R.jsx)(H, {
-                appealState: el,
+                appealState: em,
                 onAppealClose: function () {
-                  return ec(nx(nx({}, el), {}, { showModal: p.None }));
+                  return ef(nx(nx({}, em), {}, { showModal: p.None }));
                 },
                 onAppealSubmitted: function () {
-                  return ec(nx(nx({}, el), {}, { showModal: p.AppealSent }));
+                  return ef(nx(nx({}, em), {}, { showModal: p.AppealSent }));
                 },
               }),
             (0, R.jsxs)("div", {
@@ -6150,66 +6156,66 @@
                   children: (0, R.jsx)("div", {
                     className: "h-full grow overflow-hidden",
                     children:
-                      void 0 !== eT
+                      void 0 !== eO
                         ? (0, R.jsx)(tV, {
-                            currentlyEditingActionDomain: eT,
-                            gizmoEditorData: z,
-                            updateGizmo: W,
+                            currentlyEditingActionDomain: eO,
+                            gizmoEditorData: _,
+                            updateGizmo: en,
                             onClose: function () {
-                              eN(void 0);
+                              eC(void 0);
                             },
                           })
                         : (0, R.jsxs)("div", {
                             className: "flex h-full flex-col px-2 pt-2",
                             children: [
                               (0, R.jsx)(ny, {
-                                editorTab: eh,
-                                setEditorTab: eg,
+                                editorTab: ex,
+                                setEditorTab: eb,
                                 className: "mb-2 flex-shrink-0 self-center",
                               }),
                               (0, R.jsx)("div", {
                                 className: "grow overflow-hidden",
                                 children:
-                                  eh === k.MAGIC_MAKER
+                                  ex === k.MAGIC_MAKER
                                     ? (0, R.jsx)("div", {
                                         className: "h-full w-full pb-5",
                                         children: (0, R.jsx)(
                                           ng,
                                           {
-                                            gizmoEditorData: z,
-                                            updateGizmo: W,
-                                            completionCallbackResponse: et,
-                                            clientThreadId: _,
-                                            gizmoEditorDataRef: y,
-                                            magicMakerBehaviorOverrides: K,
+                                            gizmoEditorData: _,
+                                            updateGizmo: en,
+                                            completionCallbackResponse: el,
+                                            clientThreadId: A,
+                                            gizmoEditorDataRef: P,
+                                            magicMakerBehaviorOverrides: E,
                                             magicMakerConversationGizmoEditorDataRef:
-                                              w,
-                                            requireGizmoId: V,
+                                              O,
+                                            requireGizmoId: $,
                                           },
-                                          _
+                                          A
                                         ),
                                       })
-                                    : eh === k.ADVANCED
+                                    : ex === k.ADVANCED
                                       ? (0, R.jsx)(tf, {
-                                          gizmoEditorData: z,
-                                          updateGizmo: W,
+                                          gizmoEditorData: _,
+                                          updateGizmo: en,
                                           generateProfilePic: function () {
-                                            eP(!0),
-                                              en(y, w, [
+                                            eN(!0),
+                                              ec(P, O, [
                                                 "Generate a new profile picture for this GPT using gizmo_editor generate_profile_pic. Do not prompt the user for any clarification. Do not send extra text outside of the tool function call. DO NOT CALL update_behavior or otherwise update GPT behavior in your response.",
                                               ]);
                                           },
-                                          setIsUploadingProfilePic: ey,
-                                          isGeneratingProfilePic: ew,
-                                          setIsGeneratingProfilePic: eP,
-                                          requireGizmoId: V,
+                                          setIsUploadingProfilePic: eP,
+                                          isGeneratingProfilePic: eT,
+                                          setIsGeneratingProfilePic: eN,
+                                          requireGizmoId: $,
                                           onShowActionsEditor: function (e) {
-                                            eN(e);
+                                            eC(e);
                                           },
                                         })
                                       : (0, R.jsx)(tM, {
-                                          gizmoEditorData: z,
-                                          isSavingDraft: A,
+                                          gizmoEditorData: _,
+                                          isSavingDraft: B,
                                           showTitle: !1,
                                         }),
                               }),
@@ -6220,15 +6226,15 @@
                 (0, R.jsx)("div", {
                   className: (0, ea.default)(
                     "hidden w-1/2 justify-center border-l border-token-border-medium bg-token-surface-secondary pt-4",
-                    eh !== k.PREVIEW && "md:flex"
+                    ex !== k.PREVIEW && "md:flex"
                   ),
                   children: (0, R.jsx)("div", {
                     className: "flex-grow pb-5",
                     children: (0, R.jsx)("div", {
                       className: "h-full",
                       children: (0, R.jsx)(tM, {
-                        gizmoEditorData: z,
-                        isSavingDraft: A,
+                        gizmoEditorData: _,
+                        isSavingDraft: B,
                       }),
                     }),
                   }),
@@ -6336,4 +6342,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4648-cd4449b1cb4e9b5d.js.map
+//# sourceMappingURL=4648-eff8917c0768da11.js.map
