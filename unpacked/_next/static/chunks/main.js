@@ -1700,7 +1700,7 @@
                       (t.onerror = function () {
                         return n(u(Error("Failed to load script: " + e)));
                       }),
-                      (t.crossOrigin = void 0),
+                      (t.crossOrigin = "anonymous"),
                       (t.src = e),
                       document.body.appendChild(t);
                   }))
@@ -1821,7 +1821,7 @@
                                 (n = document.createElement("link")),
                                   r && (n.as = r),
                                   (n.rel = "prefetch"),
-                                  (n.crossOrigin = void 0),
+                                  (n.crossOrigin = "anonymous"),
                                   (n.onload = e),
                                   (n.onerror = function () {
                                     return o(
@@ -8239,4 +8239,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=main-abb0536823058f9d.js.map
+//# sourceMappingURL=main-6da2aad3a6c32aae.js.map

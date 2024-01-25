@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-25Z \(`szrLZD3jp74fFKmcgupNh`\)](#2024-01-25z-szrlzd3jp74ffkmcgupnh)
 - [2024-01-25Z \(`QmYgAUngWc_4uo62fFx_C`\)](#2024-01-25z-qmygaungwc_4uo62ffx_c)
 - [2024-01-25Z \(`N5xlkLIlsItbOmqA7rcUO`\)](#2024-01-25z-n5xlklilsitbomqa7rcuo)
 - [2024-01-25Z \(`Ciy2lLIu2TbOaLBCgfGi1`\)](#2024-01-25z-ciy2lliu2tboalbcgfgi1)
@@ -55,6 +56,216 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-25Z (`szrLZD3jp74fFKmcgupNh`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some refinements around gizmo (Custom GPT) memory, reviews, etc
+  - Some refinements around teams/account transfers/etc
+- App release version (Git SHA?): `d260c67029ed76f6b3c9004f9a5d5cd79ebde39d`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/main.js`
+  - ```diff
+    - (t.crossOrigin = void 0),
+    + (t.crossOrigin = "anonymous"),
+    ```
+- `unpacked/_next/static/chunks/webpack.js`
+  - ```js
+    0 === a.src.indexOf(window.location.origin + "/") ||
+      (a.crossOrigin = "anonymous")),
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (en = Y.sent),
+      eu && eu(),
+      en.success
+        ? (0, em.M)()
+        : ((ei = (0, eA.M5)(
+            eA.LT.ACCOUNT_TRANSFER_ERROR,
+            "/",
+            void 0
+          )),
+          eC.push(ei));
+    ```
+  - A fairly large chunk of code (it might be some diff churn/refactoring) related to gizmos (Custom GPTs)
+    - ```js
+      switch (Y.type) {
+        case eh.qK.BROWSER:
+          return { title: tL.browsing };
+        case eh.qK.PYTHON:
+          return { title: tL.dataAnalysis };
+        case eh.qK.DALLE:
+          return { title: tL.dalle, description: tL.memoryDescription };
+        case eh.qK.MEMORY:
+          return { title: tL.memory, description: tL.memoryDescription };
+        default:
+          return null;
+      }
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.capabilitiesHeader",
+        defaultMessage: "Capabilities",
+      }),
+      ```
+    - ```js
+
+      var et = Y.vanityMetrics,
+        en = (0, tv.sB)(tv.tz.GizmoReviews).value;
+      if (null == et) return null;
+      var ei =
+        en && null != et.review_stats && et.review_stats.count > tO
+          ? et.review_stats
+          : void 0;
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.numReviews",
+        defaultMessage:
+          "{numReviews, plural, one {# review} other {# reviews}}",
+        values: { numReviews: ei.count },
+      }),
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.numConversations",
+        defaultMessage: "conversations",
+      }),
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.ratingsHeader",
+        defaultMessage: "Ratings",
+      }),
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.numReviews",
+        defaultMessage:
+          "{numReviews, plural, one {# review} other {# reviews}}",
+        values: {
+          numReviews:
+            null !==
+              (ei =
+                null == en
+                  ? void 0
+                  : en.by_rating[Y]) && void 0 !== ei
+              ? ei
+              : 0,
+        },
+      }),
+      ```
+    - ```js
+      children: (0, eP.jsx)(eM.Z, {
+        id: "gizmo.about.notEnoughReviews",
+        defaultMessage: "Not enough reviews yet",
+      }),
+      ```
+    - ```js
+      children: [
+        (0, eP.jsx)(tE.r, { gizmo: en, isOwner: ed }),
+        (0, eP.jsx)(tN, { vanityMetrics: en.gizmo.vanity_metrics }),
+        (0, eP.jsx)(tI, { vanityMetrics: en.gizmo.vanity_metrics }),
+        (0, eP.jsx)(tA, { tools: en.tools }),
+      ],
+      ```
+    - ```js
+      tR = function (Y) {
+        var et = Y.gizmo;
+        return (0, eE.EV)(eE.B.GPTDetails)
+          ? (0, eP.jsx)(tD, { gizmo: et })
+          : null;
+      },
+      tL = (0, eA.vU)({
+        browsing: {
+          id: "gizmo.about.tools.browsing",
+          defaultMessage: "Browsing",
+        },
+        dataAnalysis: {
+          id: "gizmo.about.tools.dataAnalysis",
+          defaultMessage: "Data Analysis",
+        },
+        dalle: {
+          id: "gizmo.about.tools.dalle",
+          defaultMessage: "DALL\xb7E Images",
+        },
+        memory: { id: "gizmo.about.tools.memory", defaultMessage: "Memory" },
+        memoryDescription: {
+          id: "gizmo.about.tools.memoryDescription",
+          defaultMessage:
+            "Learns from previous chats to improve future conversations",
+        },
+      }),
+      ```
+  - ```js
+    case ei.ACCOUNT_TRANSFER_ERROR:
+      en(
+        {
+          id: "globalToasts.accountTransferError",
+          defaultMessage:
+            "Error transferring account. To retry, go to Settings → Merge.",
+          description:
+            "Error when unable to transfer their personal account to the workspace",
+        },
+        ei.ACCOUNT_TRANSFER_ERROR,
+        5,
+        "warning"
+      );
+      break;
+    ```
+  - ```js
+    (Y.ACCOUNT_TRANSFER_ERROR = "account_transfer_error");
+    ```
+  - ```js
+    "zh-CN": "zh-Hans",
+    "zh-HK": "zh-TW",
+    ```
+  - ```js
+    var eE = [
+      "The node to be removed is not a child of this node",
+      "The object can not be found here.",
+    ];
+    function eT(Y) {
+      return eE.some(function (et) {
+        var en;
+        return null === (en = Y.message) || void 0 === en
+          ? void 0
+          : en.includes(et);
+      });
+    }
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/webpack-25d9ee953e4f2622.js
+https://cdn.oaistatic.com/_next/static/chunks/main-6da2aad3a6c32aae.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-0000fe89ade26a2e.js
+https://cdn.oaistatic.com/_next/static/szrLZD3jp74fFKmcgupNh/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/szrLZD3jp74fFKmcgupNh/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-f7c5e142fc7f0516.js
+```
+
+### From `orig/_next/static/chunks/webpack-25d9ee953e4f2622.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/1fdacb4b6c8717e2.css
+```
 
 ## 2024-01-25Z (`QmYgAUngWc_4uo62fFx_C`)
 

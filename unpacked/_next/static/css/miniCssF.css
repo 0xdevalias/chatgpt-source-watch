@@ -2278,6 +2278,9 @@ textarea:focus {
 .h-2 {
   height: 0.5rem;
 }
+.h-2\.5 {
+  height: 0.625rem;
+}
 .h-2\/3 {
   height: 66.666667%;
 }
@@ -2656,9 +2659,6 @@ textarea:focus {
 }
 .w-\[70px\] {
   width: 70px;
-}
-.w-\[72px\] {
-  width: 72px;
 }
 .w-\[860px\] {
   width: 860px;
@@ -4261,10 +4261,6 @@ textarea:focus {
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
-.py-5 {
-  padding-bottom: 1.25rem;
-  padding-top: 1.25rem;
-}
 .py-6 {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
@@ -4495,6 +4491,9 @@ textarea:focus {
 }
 .text-\[10px\] {
   font-size: 10px;
+}
+.text-\[11px\] {
+  font-size: 11px;
 }
 .text-\[15px\] {
   font-size: 15px;
@@ -6006,6 +6005,9 @@ button[data-state="open"] .toggle-item-button-open {
 }
 .first\:mt-0:first-child {
   margin-top: 0;
+}
+.first\:border-0:first-child {
+  border-width: 0;
 }
 .last\:mb-0:last-child {
   margin-bottom: 0;
@@ -7581,10 +7583,6 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-  .sm\:py-10 {
-    padding-bottom: 2.5rem;
-    padding-top: 2.5rem;
   }
   .sm\:pb-0 {
     padding-bottom: 0;
@@ -9746,4 +9744,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=513a3d4c2705610e.css.map*/
+/*# sourceMappingURL=1fdacb4b6c8717e2.css.map*/
