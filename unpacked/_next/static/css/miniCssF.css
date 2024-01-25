@@ -7478,6 +7478,9 @@ button[data-state="open"] .toggle-item-button-open {
   .sm\:absolute {
     position: absolute;
   }
+  .sm\:left-16 {
+    left: 4rem;
+  }
   .sm\:-mx-6 {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -9743,4 +9746,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=c49ea65a5ee37ea1.css.map*/
+/*# sourceMappingURL=513a3d4c2705610e.css.map*/

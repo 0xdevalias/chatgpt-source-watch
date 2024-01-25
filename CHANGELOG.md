@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-25Z \(`N5xlkLIlsItbOmqA7rcUO`\)](#2024-01-25z-n5xlklilsitbomqa7rcuo)
 - [2024-01-25Z \(`Ciy2lLIu2TbOaLBCgfGi1`\)](#2024-01-25z-ciy2lliu2tboalbcgfgi1)
 - [2024-01-24Z \(`IT6Bs6aT0lMIT2GMD2zGo`\)](#2024-01-24z-it6bs6at0lmit2gmd2zgo)
 - [2024-01-24Z \(`sfv3TRBfIvsEV2B4_cMOk`\)](#2024-01-24z-sfv3trbfivsev2b4_cmok)
@@ -53,6 +54,87 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-25Z (`N5xlkLIlsItbOmqA7rcUO`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - GPT mentions: Ability to `@mention` custom GPTs to add them to a convo (potentially implies the ability to have multiple in a single chat?)
+- App release version (Git SHA?): `82c5572d985c6633c736a6c183d1aa07df9d6c8a`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs changed:
+  - `99642` -> `4925`
+  - `5813` -> `10318`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - LOTS of diff churn, so might be hard to see what actually changed...
+  - A large'ish section of code related to `MentionGPTs`
+    - ```js
+      var en = (0, nI.qg)(nI.pm.MentionGPTs),
+      ```
+    - ```js
+      title: en.formatMessage({
+        id: "mentionGptsAnnouncement.title",
+        defaultMessage: "GPT mentions",
+      }),
+      ```
+    - ```js
+      description: (0, tv.jsx)(eZ.Z, {
+        id: "mentionGptsAnnouncement.description",
+        defaultMessage:
+          "Type {key} to mention a GPT and add it directly into your conversation",
+        values: {
+          key: (0, tv.jsx)("span", {
+            className: "font-bold",
+            children: "@",
+          }),
+        },
+      }),
+      ```
+    - ```js
+      (Y.MentionGPTs = "oai/apps/hasSeenMentionGPTs");
+      ```
+    - ```js
+      (Y.mentionsDisplayNux = "Mentions Display Nux"),
+      ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-d060e2c8388d0dab.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-5c7b55a216039928.js
+https://cdn.oaistatic.com/_next/static/N5xlkLIlsItbOmqA7rcUO/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/N5xlkLIlsItbOmqA7rcUO/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-abaf3ad85e78e649.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-d58629dff7ddda37.js
+https://cdn.oaistatic.com/_next/static/chunks/4648-7bb7c20713eddfd9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-58edb4ce6dafc746.js
+```
+
+### From `orig/_next/static/chunks/webpack-5c7b55a216039928.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/513a3d4c2705610e.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.5fe85845cb6854d4.js
+```
 
 ## 2024-01-25Z (`Ciy2lLIu2TbOaLBCgfGi1`)
 
