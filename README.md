@@ -20,6 +20,7 @@ Or, to put it more poetically, in the eloquent words of ChatGPT itself:
 - [Related Research and Notes](#related-research-and-notes)
 - [License](#license)
 - [Responsible Usage](#responsible-usage)
+- [Star History](#star-history)
 
 ## tl;dr
 
@@ -147,3 +148,7 @@ This project is subject to multiple licenses with specific exceptions. For detai
 This repository is provided for educational and research purposes. Ensure that you use the content, especially from the `orig/` and `unpacked/` directories, in a lawful and ethical manner. We are not responsible for any unauthorized or unlawful use of the materials contained in this repository.
 
 OpenAI operates a Bug Bounty Program through Bugcrowd, aimed at enhancing the security of its services via responsible vulnerability disclosures. For detailed information and participation, please visit the official program page on [Bugcrowd](https://bugcrowd.com/openai). You can also read the [announcement blog post](https://openai.com/blog/bug-bounty-program) for an overview of the program.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=0xdevalias/chatgpt-source-watch&type=Date)](https://star-history.com/#0xdevalias/chatgpt-source-watch&Date)
