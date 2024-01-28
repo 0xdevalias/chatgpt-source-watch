@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-26Z \(`83oSRqlSVypjfyIfupJ78`\)](#2024-01-26z-83osrqlsvypjfyifupj78)
 - [2024-01-25Z \(`szrLZD3jp74fFKmcgupNh`\)](#2024-01-25z-szrlzd3jp74ffkmcgupnh)
 - [2024-01-25Z \(`QmYgAUngWc_4uo62fFx_C`\)](#2024-01-25z-qmygaungwc_4uo62ffx_c)
 - [2024-01-25Z \(`N5xlkLIlsItbOmqA7rcUO`\)](#2024-01-25z-n5xlklilsitbomqa7rcuo)
@@ -56,6 +57,925 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-26Z (`83oSRqlSVypjfyIfupJ78`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - New DALLE Controls feature, allowing various settings to be selected on image generation prompts (Prompt Boost/Strict, Style Automatic/Natural/Vivid, Aspect Ratio Automatic / Square (1024x1024) / Widescreen (1792x1024) / Vertical (1024x1792))
+    - Feature flag: `d3_controls`
+  - Further refinements to various upcoming features including:
+    - ChatGPT 'memory' (sunshine)
+    - Custom GPT reviews/ratings
+    - Pricing plans/payment modal (including discounted annual ChatGPT Plus subscriptions for US$199.99/year (eg. US$16.67/month))
+    - Locales/language settings (Development, German, English (US), Spanish (Spain), French (France), Italian, Japanese, Korean, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Simplified Chinese, Traditional Chinese (Taiwan))
+  - Some CSS cleanup/refactoring to standardize colours/etc
+- App release version (Git SHA?): `0bc7ea79e82fb4d24d8ded463ee920b62c85e85f`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Chunk IDs Changed
+  - `4648` -> `5054`
+- Modules IDs Changed
+  - `495` -> `21842`  ?
+  - `4925` -> `21842` ?
+  - `29861` -> `91928`
+  - `8995` -> `99959`
+  - `81853` -> `12275`
+  - `54648` -> `45054`
+  - `93193` -> `33460`
+  - `61888` -> `33228` ?
+  - `67404` -> `61236` ?
+  - `9559` -> `90166` ?
+  - ?etc?
+- Styling refinements (across a number of files) such as:
+  - ```diff
+      className: (0, a.default)(
+    -   "truncate  text-gray-500 dark:text-gray-100",
+    +   "truncate text-token-text-tertiary",
+    ```
+  - ```diff
+      className: (0, a.default)(
+    -   "mt-1  text-gray-900 dark:text-blue-200",
+    +   "mt-1 font-semibold text-token-text-primary",
+    ```
+- `unpacked/_next/static/chunks/5054.js`
+  - Chunk ID changed from `4648`
+  - There is lots of diff churn in this chunk, so harder to see what changed specifically, but it mostly looks like churn/noise; I didn't notice anything big/new.
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - There is lots of diff churn in this chunk, so harder to see what changed specifically
+  - Added a new `svg` image of a speech bubble
+  - ```diff
+    - assistantMessage: ed,
+    + jitPluginData: eJ,
+    ```
+  - ```js
+    function nS(Y) {
+      var et, en, ei;
+      if (
+        (null === (et = Y.from_server) || void 0 === et
+          ? void 0
+          : et.type) === "confirm_action" ||
+        (null === (en = Y.from_server) || void 0 === en
+          ? void 0
+          : en.type) === "oauth_required" ||
+        (null === (ei = Y.from_server) || void 0 === ei
+          ? void 0
+          : ei.type) === "preview"
+      )
+        return Y.from_server.body.params;
+    }
+    ```
+  - ```diff
+    - ei = Y.assistantMessage,
+    + ei = Y.jitPluginData,
+    ```
+  - ```js
+    ec =
+      null !==
+        (et =
+          null === (en = (0, ed.hz)()) || void 0 === en
+            ? void 0
+            : en.includes(ef.L0.Sunshine)) &&
+      void 0 !== et &&
+      et;
+    ```
+  - ```js
+    children: (0, ta.jsx)(eR.Z, {
+      id: "history.deleteModalMemoryDisclaimer",
+      defaultMessage:
+        "To clear any memories from this chat, visit your <link>settings</link>.",
+      values: {
+        link: function (Y) {
+          return (0, ta.jsx)(eP(), {
+            href: "#settings/Personalization",
+            shallow: !0,
+            className: "underline",
+            children: Y,
+          });
+        },
+      },
+    }),
+    ```
+  - ```js
+    badge: "beta",
+    ```
+    - I believe this is added to the custom @mentions feature.. so maybe it will release as beta soon!
+  - A fairly large chunk of code related to DALLE 3 settings/etc:
+    - ```js
+      children: [
+        (0, tC.jsx)(rk, {
+          value: et,
+          onValueChange: en,
+          items: [
+            {
+              value: ed.Boost,
+              label: "Boost",
+              labelWhenSelected: "Prompt: Boost",
+            },
+            {
+              value: ed.Strict,
+              label: "Strict",
+              labelWhenSelected: "Prompt: Strict",
+            },
+          ],
+        }),
+      ```
+    - ```js
+      items: [
+        {
+          value: ef.Automatic,
+          label: "Automatic",
+          labelWhenSelected: "Style: Automatic",
+        },
+        {
+          value: ef.Natural,
+          label: "Natural",
+          labelWhenSelected: "Style: Natural",
+        },
+        {
+          value: ef.Vivid,
+          label: "Vivid",
+          labelWhenSelected: "Style: Vivid",
+        },
+      ],
+      ```
+    - ```js
+      items: [
+        {
+          value: ep.Automatic,
+          label: "Automatic",
+          labelWhenSelected: "Aspect Ratio: Automatic",
+        },
+        {
+          value: ep.Square,
+          label: "Square",
+          labelWhenSelected: "Aspect Ratio: Square",
+        },
+        {
+          value: ep.Wide,
+          label: "Widescreen",
+          labelWhenSelected: "Aspect Ratio: Widescreen",
+        },
+        {
+          value: ep.Tall,
+          label: "Vertical",
+          labelWhenSelected: "Aspect Ratio: Vertical",
+        },
+      ],
+      ```
+    - ```js
+      !(function (Y) {
+        (Y.Boost = "boost"), (Y.Strict = "strict");
+      })(ed || (ed = {})),
+        (function (Y) {
+          (Y.Automatic = "automatic"),
+            (Y.Natural = "natural"),
+            (Y.Vivid = "vivid");
+        })(ef || (ef = {})),
+        (function (Y) {
+          (Y.Automatic = "automatic"),
+            (Y.Square = "1024x1024"),
+            (Y.Wide = "1792x1024"),
+            (Y.Tall = "1024x1792");
+      ```
+    - ```js
+      (null === (eh = tO) || void 0 === eh
+        ? void 0
+        : eh.gizmo.id) === nk.qL &&
+        (null == tc
+          ? void 0
+          : tc.includes(eQ.L0.DalleControls)) &&
+        (0, tC.jsx)(rb, {}),
+    ```
+  - I think `33228` is mostly just refactored/diff churn, but it has a fairly large chunk of seemingly new code
+    - ```js
+      switch (Y.type) {
+        case ec.qK.BROWSER:
+          return { title: eL.browsing };
+        case ec.qK.PYTHON:
+          return { title: eL.dataAnalysis };
+        case ec.qK.DALLE:
+          return { title: eL.dalle, description: eL.memoryDescription };
+        case ec.qK.MEMORY:
+          return { title: eL.memory, description: eL.memoryDescription };
+        default:
+          return null;
+      }
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.capabilitiesHeader",
+        defaultMessage: "Capabilities",
+      }),
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.numReviews",
+        defaultMessage:
+          "{numReviews, plural, one {# review} other {# reviews}}",
+        values: { numReviews: ei.count },
+      }),
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.numConversations",
+        defaultMessage: "conversations",
+      }),
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.ratingsHeader",
+        defaultMessage: "Ratings",
+      }),
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.numReviews",
+        defaultMessage:
+          "{numReviews, plural, one {# review} other {# reviews}}",
+        values: {
+          numReviews:
+            null !==
+              (ei =
+                null == en
+                  ? void 0
+                  : en.by_rating[Y]) && void 0 !== ei
+              ? ei
+              : 0,
+        },
+      ```
+    - ```js
+      children: (0, eS.jsx)(em.Z, {
+        id: "gizmo.about.notEnoughReviews",
+        defaultMessage: "Not enough reviews yet",
+      }),
+      ```
+    - ```js
+      var et = Y.gizmo,
+        en = (0, ed.EV)(ed.B.GPTDetails),
+        ei = function () {
+          return ed.vm.closeModal(ed.B.GPTDetails);
+        };
+      ```
+    - ```js
+      children: [
+        (0, eS.jsx)(eC.r, { gizmo: en, isOwner: ep }),
+        eo,
+        (0, eS.jsx)(eN, { vanityMetrics: en.gizmo.vanity_metrics }),
+        (0, eS.jsx)(eI, { vanityMetrics: en.gizmo.vanity_metrics }),
+        (0, eS.jsx)(eA, { tools: en.tools }),
+      ],
+      ```
+    - ```js
+      eL = (0, eg.vU)({
+        browsing: {
+          id: "gizmo.about.tools.browsing",
+          defaultMessage: "Browsing",
+        },
+        dataAnalysis: {
+          id: "gizmo.about.tools.dataAnalysis",
+          defaultMessage: "Data Analysis",
+        },
+        dalle: {
+          id: "gizmo.about.tools.dalle",
+          defaultMessage: "DALL\xb7E Images",
+        },
+        memory: { id: "gizmo.about.tools.memory", defaultMessage: "Memory" },
+        memoryDescription: {
+          id: "gizmo.about.tools.memoryDescription",
+          defaultMessage:
+            "Learns from previous chats to improve future conversations",
+        },
+      });
+      ```
+  - Another chunk of seemingly new code:
+    - ```js
+      ed = (0, tm.sB)(tm.tz.GizmoReviews).value,
+      ```
+    - ```js
+      children: [
+        (0, tV.jsx)(tG.ec, { className: "icon-lg" }),
+        (0, tV.jsx)(tj.Z, {
+          id: "gizmo.about.startChat",
+          defaultMessage: "Start Chat",
+        }),
+      ],
+      ```
+  - ```js
+    ei = Y.setPopoverForceOpen,
+    ```
+  - ```diff
+      subtitle: {
+        id: "GizmoReviewModal.subtitle",
+    -   defaultMessage: "How well did this GPT meet your expectations?",
+    +   defaultMessage: "How would you rate this GPT?",
+      },
+    ```
+  - ```js
+      subtitleTooltip: {
+        id: "GizmoReviewModal.subtitleTooltip",
+    -   defaultMessage: "This will help the builder improve the quality of GPTs in the future.",
+    +   defaultMessage: "Stars will be public and anonymous",
+      },
+    ```
+  - ```diff
+      ey = "g-YyyyMT9XH";
+    + eb = "g-2fkFE8rbu";
+    ```
+  - ```js
+    eS = Y.badge,
+    eT = void 0 === eS ? "new" : eS,
+    ```
+  - ```js
+    "new" === eT
+      ? (0, ep.jsx)("span", {
+          className: (0, ea.default)(
+            "rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase leading-normal",
+            "default" === eE
+              ? "bg-green-500 text-white"
+              : "bg-white text-black"
+          ),
+          children: (0, ep.jsx)(ed.Z, em({}, ey.new)),
+        })
+      : (0, ep.jsx)("span", {
+          className:
+            "rounded-full bg-blue-100 px-1.5 text-[10px] font-medium text-blue-600",
+          children: (0, ep.jsx)(ed.Z, em({}, ey.beta)),
+        }),
+    ```
+  - ```diff
+      new: { id: "announcementTooltip.new", defaultMessage: "New" },
+    + beta: { id: "announcementTooltip.beta", defaultMessage: "Beta" },
+    ```
+  - A bunch of diff churn/refactor related to subscriptions/invites/payment modal/etc:
+    - ```js
+      return (0, eg.a)({
+        queryKey: ["updateInvites"],
+        queryFn: function () {
+          return em.ZP.getUpgradeInvites();
+        },
+      ```
+    - ```js
+      plusWaitlistSignupSuccess: {
+        id: "pricingPlanConstants.plusWaitlistSignupSuccess",
+        defaultMessage:
+          "You've been added to the waitlist to upgrade to Plus",
+      },
+      ```
+    - ```js
+      teamWaitlistSignupSuccess: {
+        id: "pricingPlanConstants.teamWaitlistSignupSuccess",
+        defaultMessage:
+          "You've been added to the waitlist to upgrade to Team",
+      },
+      ```
+    - ```js
+      (0, ef.Z)(ei, ep.D8.PLUS, {
+        localStorageKeyByVersion: {
+          V1: ey.F.HasSignedUpForPlusUpgradeWaitlistV1,
+          V2: ey.F.HasSignedUpForPlusUpgradeWaitlistV2,
+        },
+        onSuccessMessage: eA.plusWaitlistSignupSuccess,
+      }),
+      (0, ef.Z)(ei, ep.D8.TEAM, {
+        localStorageKeyByVersion: {
+          V1: ey.F.HasSignedUpForTeamUpgradeWaitlistV1,
+          V2: ey.F.HasSignedUpForTeamUpgradeWaitlistV2,
+        },
+        onSuccessMessage: eA.teamWaitlistSignupSuccess,
+      }),
+      ```
+    - ```js
+        ei = en.localStorageKeyByVersion,
+        eo = en.onSuccessMessage,
+        ea = ei.V1,
+        eu = ei.V2,
+        ec = (0, ej.useState)(!!ey.m.getItem(ea))[0],
+        ed = (0, ej.useState)(!!ey.m.getItem(eu)),
+        ef = ed[0],
+        ep = ed[1],
+        eh = eE().data,
+        em = function () {
+          ep(!0),
+            ey.m.setItem(eu, !0),
+            eS.m.success(et.formatMessage(eo), {
+              hasCloseButton: !0,
+              duration: 5,
+            }),
+            eT.A.logEvent(e_.M.upgradePlanWaitlistSignup, { plan: Y });
+        };
+      return {
+        hasSignedUpForWaitlist: ec || ef,
+        isEligibleToUpgrade: !!(null == eh ? void 0 : eh.plus) || ec,
+        signUpForWaitlist: em,
+      };
+      ```
+    - ```js
+      eF = function (Y) {
+        var et = Y.shouldLogExposure,
+          en = (0, eI.rk)().data,
+          ei = (0, eD.Sx)().initialized && en && !(0, eI.c)(en),
+          eo = (0, ej.useMemo)(
+            function () {
+              return ei
+                ? eD.m9.getLayer({
+                    layerName: eD.Hk.CHATGPT_SUBSCRIPTIONS,
+                    shouldLogExposure: !1,
+                  })
+                : null;
+            },
+            [ei]
+          );
+        if (!ei)
+          return {
+            isTeamEnabled: eR,
+            isYearlyPlusSubscriptionEnabled: eL,
+            subscriptionsLayer: null,
+          };
+        var ea = eD.m9.getLayerValue({
+          layerName: eD.Hk.CHATGPT_SUBSCRIPTIONS,
+          key: "is_yearly_plus_subscription_enabled",
+          defaultValue: eL,
+          shouldLogExposure: et,
+        });
+        return {
+          isTeamEnabled: eD.m9.getLayerValue({
+            layerName: eD.Hk.CHATGPT_SUBSCRIPTIONS,
+            key: "is_team_enabled",
+            defaultValue: eR,
+            shouldLogExposure: et,
+          }),
+          isYearlyPlusSubscriptionEnabled: ea,
+          subscriptionsLayer: eo,
+        };
+      },
+      ```
+    - ```js
+      return (0, eX.jsxs)("div", {
+        className: (0, eQ.default)("mb-4 flex items-center", et),
+        "data-testid": "".concat(eo, "-yearly-billing-toggle"),
+        children: [
+          (0, eX.jsx)(eY.Z, {
+            enabled: en,
+            label: ea.formatMessage(e0.billAnnuallyToggleLabel),
+            onChange: ei,
+          }),
+          (0, eX.jsx)("span", {
+            className: "ml-[6px] mr-2 text-xs text-gray-600",
+            children: ea.formatMessage(e0.billedAnnually),
+          }),
+          (0, eX.jsx)("span", {
+            className:
+              "rounded-[2px] bg-green-100 px-[4px] py-[2px] text-xs text-green-800",
+            children: ea.formatMessage(e0.save40Dollars),
+          }),
+        ],
+      });
+      ```
+    - ```js
+      e0 = (0, eO.vU)({
+        billedAnnually: {
+          id: "YearlyBillingToggle.billedAnnually",
+          defaultMessage: "Billed annually",
+        },
+        save40Dollars: {
+          id: "YearlyBillingToggle.save40Dollars",
+          defaultMessage: "Save $40",
+        },
+        billAnnuallyToggleLabel: {
+          id: "YearlyBillingToggle.billAnnuallyToggleLabel",
+          defaultMessage:
+            "Toggle to change between monthly and yearly subscriptions",
+        },
+      }),
+      ```
+    - ```js
+      var tt = ep.D8.FREE,
+        ta = function (Y) {
+          var et = Y.isYearlyPlusSubscriptionEnabled;
+      ```
+    - ```js
+      children: [
+        (0, eX.jsx)("p", {
+          className:
+            "text-base font-light text-token-text-tertiary",
+          "data-testid": "".concat(et, "-pricing-column-cost"),
+          children: (0, eX.jsx)(eW.Z, tk({}, en.costInDollars)),
+        }),
+        en.costInDollarsSubtitle
+          ? (0, eX.jsx)("p", {
+              className:
+                "text-xs font-light text-token-text-tertiary",
+              "data-testid": "".concat(
+                et,
+                "-pricing-column-cost-subtitle"
+              ),
+              children: (0, eX.jsx)(
+                eW.Z,
+                tk({}, en.costInDollarsSubtitle)
+              ),
+            })
+          : null,
+      ],
+      ```
+    - ```js
+          en = Y.isYearlyBillingEnabled,
+          ei = et.data.subscriptionStatus;
+        return ei.hasPaidSubscription && ei.subscriptionPlan === ep.Y5.PLUS
+          ? "yearly" === ei.billingPeriod
+            ? e4.S.plusYearly
+            : e4.S.plus
+          : en
+            ? e4.S.plusYearly
+            : e4.S.plus;
+      },
+      ```
+    - ```js
+      tA = ep.D8.PLUS,
+      tP = function (Y) {
+        var et = Y.analyticsParams,
+          en = Y.currentAccount,
+          ei = Y.hasUpgradeInvite,
+          eo = Y.isPlanLoading,
+          ea = Y.isYearlyPlusSubscriptionEnabled,
+          eu = Y.onSubmit,
+          ec = Y.setIsPlanLoading,
+          ed = Y.shouldShowAdditionalLinks,
+          ef = void 0 === ed || ed,
+          ep = Y.upgradeButtonText,
+          eh = void 0 === ep ? e4.S.plus.callToAction.inactive : ep,
+          eg = Y.size,
+          ey = (0, eI.hz)(),
+          eb = (0, eM.Z)(),
+          ek = (0, eH.useRouter)(),
+          ew = [],
+          eC = (0, eB.KQ)(),
+          eE = (0, eB.WY)(),
+          eO = (0, eB.e2)(),
+          eA = eN(tA),
+          eP = eA.hasSignedUpForWaitlist,
+          eR = eA.signUpForWaitlist,
+          eL = (0, ej.useState)(!1),
+          eF = eL[0],
+          ez = eL[1],
+          eU =
+            (null == ey ? void 0 : ey.includes("disable_plus_upgrade_ui")) &&
+            !(eC || eE || ei),
+          eG = tO(
+            tO({}, et),
+            {},
+            {
+              planType: tA,
+              isUpgradeUiDisabled: eU,
+              isYearlyBillingEnabled: eF,
+            }
+      ```
+    - ```js
+      eD.m9.logEvent(
+        "chatgpt_account_payment_modal_upgrade_button_click",
+        tA
+      ),
+      (Y.prev = 3),
+      (Y.next = 6),
+      em.ZP.getCheckoutLink({
+        plus_plan_data: {
+          price_interval: eF ? "year" : "month",
+        },
+      })
+      ```
+    - ```js
+      eD.m9.logEvent(
+        "chatgpt_account_payment_modal_navigating_to_checkout",
+        tA,
+        { url: et.url }
+      ),
+      ```
+    - ```js
+      var tB = ep.D8.TEAM,
+        tU = function (Y) {
+          var et = Y.analyticsParams,
+            en = Y.isPlanLoading,
+            ei = Y.isYearlyPlusSubscriptionEnabled,
+            eo = Y.size,
+            ea = (0, eI.hz)(),
+            eu = null == ea ? void 0 : ea.includes("disable_team_upgrade_ui"),
+            ec = (0, eM.Z)(),
+            ed = (0, eI.t)(),
+            ef = eN(tB),
+            ep = ef.hasSignedUpForWaitlist,
+            eh = ef.signUpForWaitlist,
+            em = ed && ed.isTeam(),
+            eg = ed && ed.isPlus(),
+            ey = tF(tF({}, et), {}, { planType: tB, isUpgradeUiDisabled: eu }),
+            eb = function () {
+              eT.A.logEvent(e_.M.clickAccountPaymentCheckout, ey),
+                eD.m9.logEvent(
+                  "chatgpt_account_payment_modal_upgrade_button_click",
+                  tB
+                ),
+                tR.vm.setPurchaseWorkspaceData({ minimumSeats: tD.Y6 }),
+                tW();
+            },
+            ek = ei
+              ? (0, eX.jsx)(eJ, {
+                  planType: tB,
+                  isEnabled: !1,
+                  onChange: e9.noop,
+                  className: "invisible",
+                })
+              : null;
+          return (0, eX.jsx)(t_, {
+            planName: "team",
+            pricingPlan: e4.S.teams,
+            icon: (0, eX.jsx)(tI.Bj, {
+              className: "icon-md text-brand-blue-800",
+            }),
+            size: eo,
+            callToActionButton: (0, eX.jsxs)("div", {
+              className: "flex gap-2",
+              children: [
+                em &&
+                  (0, eX.jsx)(e6, {
+                    planType: tB,
+                    isCurrentPlan: !0,
+                    disabled: en,
+                    onClick: eb,
+                    testId: "select-plan-button-teams-upgrade",
+                    children: ec.formatMessage(e4.S.teams.callToAction.active),
+                  }),
+                eu
+                  ? (0, eX.jsxs)("div", {
+                      className: "relative w-full",
+                      children: [
+                        ek,
+                        (0, eX.jsx)(tp.u, {
+                          side: "bottom",
+                          sideOffset: 20,
+                          label: ec.formatMessage(
+                            e4.S.disabledHighDemand.hoverText
+                          ),
+                          children: (0, eX.jsx)(e6, {
+                            planType: tB,
+                            isCurrentPlan: !1,
+                            disabled: ep,
+                            onClick: eh,
+                            testId: "select-plan-button-teams-waitlist",
+                            children: (0, eX.jsx)(
+                              eW.Z,
+                              tF(
+                                {},
+                                ep
+                                  ? e4.S.signUpForWaitlist.inactive
+                                  : e4.S.signUpForWaitlist.active
+                              )
+                            ),
+                          }),
+                        }),
+                      ],
+                    })
+                  : (0, eX.jsxs)("div", {
+                      className: "w-full",
+                      children: [
+                        ek,
+                        (0, eX.jsx)(e6, {
+                          planType: tB,
+                          isCurrentPlan: !1,
+                          disabled: en,
+                          onClick: eb,
+                          testId: "select-plan-button-teams-create",
+                          children:
+                            em || eg
+                              ? ec.formatMessage(e4.S.teams.callToAction.create)
+                              : ec.formatMessage(
+                                  e4.S.teams.callToAction.inactive
+                                ),
+                        }),
+                      ],
+                    }),
+              ],
+      ```
+    - ```js
+      eb = !(
+        null !== (en = (0, eI.t)()) &&
+        void 0 !== en &&
+        en.hasPaidSubscription()
+      ),
+      ek = eN(ep.D8.PLUS).isEligibleToUpgrade,
+      ew = (0, eD.Sx)(),
+      eC = ew.initialized,
+      eE = ew.initTimedOut,
+      eS = ed && null != em && (eC || eE),
+      eO = eF({ shouldLogExposure: eS }),
+      eM = eO.isTeamEnabled,
+      eA = eO.subscriptionsLayer,
+      eP = eO.isYearlyPlusSubscriptionEnabled,
+      eR = (0, ej.useMemo)(
+        function () {
+          return em
+            ? tH(
+                tH({}, em.subscriptionAnalyticsParams),
+                {},
+                {
+                  subscriptionsLayer: {
+                    isTeamEnabled: eM,
+                    isYearlyPlusSubscriptionEnabled: eP,
+                    groupName: null == eA ? void 0 : eA.getGroupName(),
+                    ruleId: null == eA ? void 0 : eA.getRuleID(),
+                    name: null == eA ? void 0 : eA.getName(),
+                  },
+                }
+              )
+            : {};
+        },
+      ```
+    - ```js
+      (0, ej.useEffect)(function () {
+        !eg.startsWith("/auth") &&
+          ez.bX.getCookie(ez.cn.ShowPaymentModal) &&
+          (ez.bX.deleteCookie(ez.cn.ShowPaymentModal), tV());
+      }, []),
+      ```
+    - ```js
+      children: [
+        eb &&
+          (0, eX.jsx)(ta, { isYearlyPlusSubscriptionEnabled: eP }),
+        !ey &&
+          (0, eX.jsx)(tP, {
+            analyticsParams: eR,
+            currentAccount: em,
+            setIsPlanLoading: eu,
+            isPlanLoading: ea,
+            isYearlyPlusSubscriptionEnabled: eP,
+            hasUpgradeInvite: ek,
+            size: eb || eM ? "small" : "medium",
+          }),
+      ```
+    - ```js
+      eM &&
+        (0, eX.jsx)(tU, {
+          analyticsParams: eR,
+          isPlanLoading: ea,
+          isYearlyPlusSubscriptionEnabled: eP,
+          size: ey ? "large" : "small",
+        }),
+      ```
+    - ```js
+          modalTitle: {
+            id: "AccountPaymentModal.modalTitle",
+            defaultMessage: "Upgrade your plan",
+          },
+          modalFooterCapabilities: {
+            id: "AccountPaymentModal.modalFooterCapabilities",
+            defaultMessage:
+              "Need more capabilities? See <link> ChatGPT Enterprise </link>",
+          },
+      ```
+  - ```diff
+      plusYearlyCost: {
+        id: "pricingPlanConstants.plusYearly.costInDollars",
+    +   defaultMessage: "USD $16.67/month",
+    + },
+    + plusYearlyCostSubtitle: {
+    +   id: "pricingPlanConstants.plusYearly.costInDollarsSubtitle",
+        defaultMessage: "USD $199.99/year",
+      },
+    - plusPricingYearlyDisclaimer: {
+    -   id: "pricingPlanConstants.plus.plusPricingYearlyDisclaimer",
+    -   defaultMessage: "* Price billed annually",
+    - },
+    ```
+  - ```diff
+    - disclaimer: eu.plusPricingYearlyDisclaimer,
+    + costInDollarsSubtitle: eu.plusYearlyCostSubtitle,
+    ```
+  - ```diff
+      ? (0, eA.jsx)(eS.Z, {
+          id: "MemoriesModal.noMemories.1",
+          defaultMessage:
+    -       "As you chat with ChatGPT, the details and preferences it remembers will be shown here.",
+    +       "As you chat with {name}, the details and preferences it remembers will be shown here.",
+    +     values: {
+    +       name:
+    +         null !==
+    +           (ea = null == eF ? void 0 : eF.name) &&
+    +         void 0 !== ea
+    +           ? ea
+    +           : "ChatGPT",
+    +     },
+    ```
+  - ```js
+    eu =
+      null !==
+        (et =
+          null === (en = (0, eZ.hz)()) || void 0 === en
+            ? void 0
+            : en.includes(eH.L0.Sunshine)) &&
+      void 0 !== et &&
+      et;
+    ```
+  - ```js
+    title: ea.formatMessage(nL.deleteHistoryModalTitle),
+    description:
+      eu &&
+      (0, eA.jsx)(eS.Z, {
+        id: "settingsModal.deleteHistoryModalMemoryDisclaimer",
+        defaultMessage:
+          "To clear any memories from your chats, visit your <link>settings</link>.",
+        values: {
+          link: function (Y) {
+            return (0, eA.jsx)(e4(), {
+              onClick: function () {
+                return ei();
+              },
+              href: "#settings/Personalization",
+              shallow: !0,
+              className: "underline",
+              children: Y,
+            });
+          },
+        },
+    ```
+  - ```diff
+      locale: {
+        id: "settingsModal.locale_alpha",
+    -   defaultMessage: "Locale (Alpha)",
+    +   defaultMessage: "Language (Alpha)",
+      },
+    ```
+  - ```js
+    (Y.DalleControls = "d3_controls");
+    ```
+  - ```js
+    ed = {
+      dev: "Dev",
+      "de-DE": "Deutsch",
+      "en-US": "English (US)",
+      "es-ES": "Espa\xf1ol (Espa\xf1a)",
+      "fr-FR": "Fran\xe7ais (France)",
+      "it-IT": "Italiano",
+      "ja-JP": "日本語",
+      "ko-KR": "한국어",
+      "pl-PL": "Polski",
+      "pt-BR": "Portugu\xeas (Brasil)",
+      "pt-PT": "Portugu\xeas (Portugal)",
+      "ru-RU": "Русский",
+      "zh-Hans": "简体中文",
+      "zh-TW": "繁體中文（台灣）",
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-4b251c6a7b09e430.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-bc9a420e8e08747c.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-255d6b55cbc34391.js
+https://cdn.oaistatic.com/_next/static/83oSRqlSVypjfyIfupJ78/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/83oSRqlSVypjfyIfupJ78/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-3eb3f50870298330.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-f7f6e23b9ed909cf.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-75f1a09ab48a63c5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/error-8ea7903eb2fe12ae.js
+https://cdn.oaistatic.com/_next/static/chunks/3754-ae5dc2fb759ecfc1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-7cb4d55a75b2ec20.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-459085e513ae2a9c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-252d29e38cf1ddb8.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-44b132ed09adeb86.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-b9cbf3196abce4c8.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor-aa68c5a869aaf2fc.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/editor/[slug]-6e6e5debc72cd8cd.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-8b5f326b497481a5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-8e27de70951fc99c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-899e50f90dac9ff5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-d56de3ae0710acd6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-bc9a420e8e08747c.js
+```
+
+### From `orig/_next/static/chunks/webpack-255d6b55cbc34391.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/9387.c51e4a59408e000e.js
+https://cdn.oaistatic.com/_next/static/css/da25c2237a223c81.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.99d033c76681d21e.js
+```
 
 ## 2024-01-25Z (`szrLZD3jp74fFKmcgupNh`)
 

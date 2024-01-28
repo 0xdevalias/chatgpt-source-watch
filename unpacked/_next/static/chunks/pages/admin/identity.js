@@ -13,8 +13,8 @@
           },
         });
       var o,
-        r,
         i,
+        r,
         s = n(36112),
         a = n(35017),
         c = n(82256),
@@ -142,9 +142,9 @@
         var t = e.domains,
           n = e.workspaceId,
           o = (0, S.Bd)(n).mutateAsync,
-          r = (0, l.useState)(!1),
-          i = r[0],
-          s = r[1],
+          i = (0, l.useState)(!1),
+          r = i[0],
+          s = i[1],
           a = (0, l.useState)(),
           c = a[0],
           d = a[1];
@@ -206,7 +206,7 @@
             }),
             (0, I.jsxs)(y.z, {
               color: "neutral",
-              className: "mt-6 font-medium text-gray-800 dark:text-gray-200",
+              className: "mt-6 font-medium text-token-text-secondary",
               onClick: function () {
                 s(!0);
               },
@@ -218,12 +218,12 @@
             (0, I.jsx)(
               M.Z,
               {
-                isOpen: i || void 0 !== c,
+                isOpen: r || void 0 !== c,
                 onClose: function () {
                   s(!1), d(void 0);
                 },
                 workspaceId: n,
-                currentDomain: i ? void 0 : c,
+                currentDomain: r ? void 0 : c,
                 domains: t,
               },
               null == c ? void 0 : c.id
@@ -332,7 +332,7 @@
           o = ""
             .concat(location.host, "/auth/login?sso=true&connection=")
             .concat(t),
-          r = (0, b.Z)();
+          i = (0, b.Z)();
         return (0, I.jsxs)(I.Fragment, {
           children: [
             (0, I.jsx)(U.Li, {
@@ -342,32 +342,32 @@
               className: "mb-6 flex flex-col space-y-4",
               children: [
                 (0, I.jsx)(A.Z, {
-                  label: r.formatMessage(W.acsURLLabel),
+                  label: i.formatMessage(W.acsURLLabel),
                   value:
                     "https://auth0.openai.com/login/callback?connection=".concat(
                       t
                     ),
                   onCopied: function () {
-                    _.m.success(r.formatMessage(W.copiedACSToClipboard), {
+                    _.m.success(i.formatMessage(W.copiedACSToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
                 (0, I.jsx)(A.Z, {
-                  label: r.formatMessage(W.entityIDLabel),
+                  label: i.formatMessage(W.entityIDLabel),
                   value: "urn:auth0:openai:".concat(t),
                   onCopied: function () {
-                    _.m.success(r.formatMessage(W.copiedEntityToClipboard), {
+                    _.m.success(i.formatMessage(W.copiedEntityToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
                 n &&
                   (0, I.jsx)(A.Z, {
-                    label: r.formatMessage(W.idpSignInURL),
+                    label: i.formatMessage(W.idpSignInURL),
                     value: o,
                     onCopied: function () {
-                      _.m.success(r.formatMessage(W.copiedIDPUrlToClipboard), {
+                      _.m.success(i.formatMessage(W.copiedIDPUrlToClipboard), {
                         duration: 3,
                       });
                     },
@@ -381,7 +381,7 @@
         var t,
           n,
           o = e.workspaceId,
-          r = e.data,
+          i = e.data,
           s = e.isOpen,
           a = e.onClose,
           c = (0, b.Z)(),
@@ -389,14 +389,14 @@
           u = (0, S.OR)(o).mutateAsync,
           f = (0, S.DD)(o).mutateAsync,
           g = (0, l.useRef)(null),
-          m = null == r ? void 0 : r.connection,
+          m = null == i ? void 0 : i.connection,
           v = (0, l.useState)(null == m ? void 0 : m.sign_in_endpoint),
           j = v[0],
           h = v[1],
           w = (0, l.useState)(null == m ? void 0 : m.cert),
           M = w[0],
           k = w[1],
-          C = null === r ? i.CREATE : i.EDIT,
+          C = null === i ? r.CREATE : r.EDIT,
           Z =
             ((t = (0, D.Z)(
               E().mark(function e(t, n) {
@@ -425,7 +425,7 @@
               return t.apply(this, arguments);
             }),
           P =
-            C === i.CREATE
+            C === r.CREATE
               ? (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.doneButton),
                   color: "primary",
@@ -451,7 +451,7 @@
                     })
                   ),
                 })
-              : r &&
+              : i &&
                 (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.doneButton),
                   color: "primary",
@@ -464,7 +464,7 @@
                               return (
                                 (e.next = 2),
                                 f({
-                                  connectionId: null == r ? void 0 : r.id,
+                                  connectionId: null == i ? void 0 : i.id,
                                   cert: M,
                                   signInEndpoint: j,
                                   active: !0,
@@ -481,7 +481,7 @@
                   ),
                 }),
           T =
-            null === r
+            null === i
               ? (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.cancelButton),
                   color: "light",
@@ -502,7 +502,7 @@
                             case 0:
                               return (
                                 (e.next = 2),
-                                u({ connectionId: null == r ? void 0 : r.id })
+                                u({ connectionId: null == i ? void 0 : i.id })
                               );
                             case 2:
                               a();
@@ -518,7 +518,7 @@
         return (0, I.jsx)(R.Z, {
           isOpen: s,
           type: "success",
-          title: c.formatMessage(C === i.CREATE ? W.createTitle : W.editTitle),
+          title: c.formatMessage(C === r.CREATE ? W.createTitle : W.editTitle),
           primaryButton: P,
           secondaryButton: T,
           onClose: a,
@@ -611,7 +611,7 @@
                     className: (0, p.default)(
                       "w-full resize-none overflow-y-auto rounded border border-gray-300 px-3 py-2",
                       "outline-none focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600",
-                      "text-gray-900 placeholder-gray-500 dark:bg-gray-700 dark:text-gray-100"
+                      "text-token-text-primary placeholder-gray-500 dark:bg-gray-700"
                     ),
                     placeholder: "-----BEGIN CERTIFICATE-----",
                     value: null != M ? M : "",
@@ -625,8 +625,8 @@
           }),
         });
       }
-      ((r = i || (i = {}))[(r.CREATE = 1)] = "CREATE"),
-        (r[(r.EDIT = 2)] = "EDIT");
+      ((i = r || (r = {}))[(i.CREATE = 1)] = "CREATE"),
+        (i[(i.EDIT = 2)] = "EDIT");
       var W = (0, v.vU)({
         setupSSOContent: {
           id: "workspaceIdentity.setupSSOContent",
@@ -753,7 +753,7 @@
           var t = e.icon,
             n = e.title,
             o = e.body,
-            r = e.toggle;
+            i = e.toggle;
           return (0, I.jsxs)(U.i9, {
             children: [
               (0, I.jsxs)("div", {
@@ -766,7 +766,7 @@
                       (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, $({}, n)) }),
                     ],
                   }),
-                  (0, I.jsx)("div", { children: r }),
+                  (0, I.jsx)("div", { children: i }),
                 ],
               }),
               (0, I.jsx)(U.Li, { children: o }),
@@ -777,14 +777,14 @@
         var t,
           n,
           o,
-          r,
-          i = e.currentWorkspaceId,
+          i,
+          r = e.currentWorkspaceId,
           s = (0, b.Z)(),
-          g = (0, S.f_)(i),
+          g = (0, S.f_)(r),
           v = g.data,
           h = g.isLoading,
-          w = (0, S.DD)(i).mutateAsync,
-          O = (0, S.Ji)(i),
+          w = (0, S.DD)(r).mutateAsync,
+          O = (0, S.Ji)(r),
           M = O.variables,
           k = O.mutateAsync,
           C = (null == v ? void 0 : v.sso_connection) !== null,
@@ -820,7 +820,7 @@
                     }),
                     children: (0, I.jsx)(P, {
                       domains: v.domains,
-                      workspaceId: i,
+                      workspaceId: r,
                     }),
                   }),
                   (0, I.jsx)(J, {
@@ -854,7 +854,9 @@
                               (0, I.jsx)(u, {
                                 className: (0, p.default)(
                                   "icon-sm",
-                                  A ? "text-blue-600" : "text-gray-400"
+                                  A
+                                    ? "text-blue-600"
+                                    : "text-token-text-tertiary"
                                 ),
                               }),
                               (0, I.jsx)(U.A4, {
@@ -888,7 +890,7 @@
                             children: (0, I.jsx)(x.Z, $({}, T)),
                           }),
                           (0, I.jsx)(X, {
-                            workspaceId: i,
+                            workspaceId: r,
                             data: v.sso_connection,
                             isOpen: L,
                             onClose: function () {
@@ -910,10 +912,10 @@
                         disabled: !Z,
                         enabled:
                           null ===
-                            (r = v.sso_connection.auth0_enforced_clients) ||
-                          void 0 === r
+                            (i = v.sso_connection.auth0_enforced_clients) ||
+                          void 0 === i
                             ? void 0
-                            : r.includes("chat"),
+                            : i.includes("chat"),
                         onChange: function (e) {
                           w({
                             connectionId: v.sso_connection.id,
@@ -1072,8 +1074,8 @@
         },
       });
       var o,
-        r,
         i,
+        r,
         s,
         a,
         c,
@@ -1087,8 +1089,8 @@
               "text-base text-token-text-primary flex flex-col gap-10 my-10",
             ]))
         ),
-        g = f.Z.div(r || (r = (0, u.Z)(["text-xl font-medium"]))),
-        m = f.Z.div(i || (i = (0, u.Z)(["text-base font-medium"]))),
+        g = f.Z.div(i || (i = (0, u.Z)(["text-xl font-medium"]))),
+        m = f.Z.div(r || (r = (0, u.Z)(["text-base font-medium"]))),
         x = f.Z.div(
           s ||
             (s = (0, u.Z)([
@@ -1121,4 +1123,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=identity-059d2fd008bcca46.js.map
+//# sourceMappingURL=identity-f7f6e23b9ed909cf.js.map

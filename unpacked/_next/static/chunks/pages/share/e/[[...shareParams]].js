@@ -1,10 +1,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6737],
   {
-    49503: function (e, t, r) {
+    49503: function (t, e, n) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      n.r(e),
+        n.d(e, {
           __N_SSP: function () {
             return S;
           },
@@ -12,82 +12,82 @@
             return E;
           },
         });
-      var n = r(36112),
-        a = r(50134),
-        i = r(4399),
-        o = r.n(i),
-        c = r(29861),
-        u = r(40670),
-        s = r(63866),
-        f = r(85958),
-        l = r(32062),
-        d = r(19954),
-        p = r(73929),
-        h = r(61236),
-        y = r(82473),
-        v = r(92347);
-      r(88654);
-      var b = r(44675);
-      function g(e, t) {
-        (null == t || t > e.length) && (t = e.length);
-        for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
-        return n;
+      var r = n(36112),
+        a = n(50134),
+        i = n(4399),
+        o = n.n(i),
+        c = n(91928),
+        u = n(40670),
+        s = n(63866),
+        f = n(85958),
+        l = n(32062),
+        d = n(19954),
+        p = n(73929),
+        h = n(61236),
+        y = n(82473),
+        v = n(92347);
+      n(88654);
+      var b = n(44675);
+      function g(t, e) {
+        (null == e || e > t.length) && (e = t.length);
+        for (var n = 0, r = Array(e); n < e; n++) r[n] = t[n];
+        return r;
       }
       var m = "".concat(b.env.INTERNAL_API_URL, "/api"),
         O = v.ZF ? m : "https://chat.openai.com/backend-api";
       function _() {
         return (_ = (0, a.Z)(
-          o().mark(function e(t) {
-            var r, n, a, i, c, u, s;
-            return o().wrap(function (e) {
+          o().mark(function t(e) {
+            var n, r, a, i, c, u, s;
+            return o().wrap(function (t) {
               for (;;)
-                switch ((e.prev = e.next)) {
+                switch ((t.prev = t.next)) {
                   case 0:
-                    (r = t.ids),
-                      (n = []),
-                      (a = (function (e, t) {
-                        var r =
+                    (n = e.ids),
+                      (r = []),
+                      (a = (function (t, e) {
+                        var n =
                           ("undefined" != typeof Symbol &&
-                            e[Symbol.iterator]) ||
-                          e["@@iterator"];
-                        if (!r) {
+                            t[Symbol.iterator]) ||
+                          t["@@iterator"];
+                        if (!n) {
                           if (
-                            Array.isArray(e) ||
-                            (r = (function (e, t) {
-                              if (e) {
-                                if ("string" == typeof e) return g(e, t);
-                                var r = Object.prototype.toString
-                                  .call(e)
+                            Array.isArray(t) ||
+                            (n = (function (t, e) {
+                              if (t) {
+                                if ("string" == typeof t) return g(t, e);
+                                var n = Object.prototype.toString
+                                  .call(t)
                                   .slice(8, -1);
                                 if (
-                                  ("Object" === r &&
-                                    e.constructor &&
-                                    (r = e.constructor.name),
-                                  "Map" === r || "Set" === r)
+                                  ("Object" === n &&
+                                    t.constructor &&
+                                    (n = t.constructor.name),
+                                  "Map" === n || "Set" === n)
                                 )
-                                  return Array.from(e);
+                                  return Array.from(t);
                                 if (
-                                  "Arguments" === r ||
+                                  "Arguments" === n ||
                                   /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-                                    r
+                                    n
                                   )
                                 )
-                                  return g(e, t);
+                                  return g(t, e);
                               }
-                            })(e))
+                            })(t))
                           ) {
-                            r && (e = r);
-                            var n = 0,
+                            n && (t = n);
+                            var r = 0,
                               a = function () {};
                             return {
                               s: a,
                               n: function () {
-                                return n >= e.length
+                                return r >= t.length
                                   ? { done: !0 }
-                                  : { done: !1, value: e[n++] };
+                                  : { done: !1, value: t[r++] };
                               },
-                              e: function (e) {
-                                throw e;
+                              e: function (t) {
+                                throw t;
                               },
                               f: a,
                             };
@@ -101,100 +101,100 @@
                           c = !1;
                         return {
                           s: function () {
-                            r = r.call(e);
+                            n = n.call(t);
                           },
                           n: function () {
-                            var e = r.next();
-                            return (o = e.done), e;
+                            var t = n.next();
+                            return (o = t.done), t;
                           },
-                          e: function (e) {
-                            (c = !0), (i = e);
+                          e: function (t) {
+                            (c = !0), (i = t);
                           },
                           f: function () {
                             try {
-                              o || null == r.return || r.return();
+                              o || null == n.return || n.return();
                             } finally {
                               if (c) throw i;
                             }
                           },
                         };
-                      })(r));
+                      })(n));
                     try {
                       for (a.s(); !(i = a.n()).done; )
-                        (c = i.value), n.push(["ids", c]);
-                    } catch (e) {
-                      a.e(e);
+                        (c = i.value), r.push(["ids", c]);
+                    } catch (t) {
+                      a.e(t);
                     } finally {
                       a.f();
                     }
                     return (
-                      (u = new URLSearchParams(n)),
-                      (e.next = 7),
+                      (u = new URLSearchParams(r)),
+                      (t.next = 7),
                       fetch("".concat(O, "/public/plugins/by-id?").concat(u), {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
                       })
                     );
                   case 7:
-                    if (200 !== (s = e.sent).status) {
-                      e.next = 10;
+                    if (200 !== (s = t.sent).status) {
+                      t.next = 10;
                       break;
                     }
-                    return e.abrupt("return", s.json());
+                    return t.abrupt("return", s.json());
                   case 10:
                     throw Error("Failed to get plugins by id: " + s.status);
                   case 11:
                   case "end":
-                    return e.stop();
+                    return t.stop();
                 }
-            }, e);
+            }, t);
           })
         )).apply(this, arguments);
       }
-      var w = r(70079),
-        j = r(35250);
-      function P(e, t) {
-        var r = Object.keys(e);
+      var w = n(70079),
+        j = n(35250);
+      function P(t, e) {
+        var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          t &&
-            (n = n.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+          var r = Object.getOwnPropertySymbols(t);
+          e &&
+            (r = r.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
             })),
-            r.push.apply(r, n);
+            n.push.apply(n, r);
         }
-        return r;
+        return n;
       }
-      function x(e) {
-        for (var t = 1; t < arguments.length; t++) {
-          var r = null != arguments[t] ? arguments[t] : {};
-          t % 2
-            ? P(Object(r), !0).forEach(function (t) {
-                (0, n.Z)(e, t, r[t]);
+      function x(t) {
+        for (var e = 1; e < arguments.length; e++) {
+          var n = null != arguments[e] ? arguments[e] : {};
+          e % 2
+            ? P(Object(n), !0).forEach(function (e) {
+                (0, r.Z)(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : P(Object(r)).forEach(function (t) {
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+              : P(Object(n)).forEach(function (e) {
                   Object.defineProperty(
-                    e,
                     t,
-                    Object.getOwnPropertyDescriptor(r, t)
+                    e,
+                    Object.getOwnPropertyDescriptor(n, e)
                   );
                 });
         }
-        return e;
+        return t;
       }
       var S = !0;
-      function E(e) {
-        var t = e.sharedConversationId,
-          r = (0, h.a)({
-            queryKey: ["shared-conversation/".concat(t)],
+      function E(t) {
+        var e = t.sharedConversationId,
+          n = (0, h.a)({
+            queryKey: ["shared-conversation/".concat(e)],
             queryFn: function () {
-              return l.ZP.getAuthedSharedConversation(t);
+              return l.ZP.getAuthedSharedConversation(e);
             },
           }),
-          n = r.data,
-          i = r.isError,
+          r = n.data,
+          i = n.isError,
           v = (0, w.useState)(function () {
             return (0, d.OX)();
           })[0],
@@ -211,99 +211,99 @@
           ),
           (0, w.useEffect)(
             function () {
-              function e() {
-                return (e = (0, a.Z)(
-                  o().mark(function e() {
-                    var r, a, i;
-                    return o().wrap(function (e) {
+              function t() {
+                return (t = (0, a.Z)(
+                  o().mark(function t() {
+                    var n, a, i;
+                    return o().wrap(function (t) {
                       for (;;)
-                        switch ((e.prev = e.next)) {
+                        switch ((t.prev = t.next)) {
                           case 0:
-                            if (!(n && v)) {
-                              e.next = 9;
+                            if (!(r && v)) {
+                              t.next = 9;
                               break;
                             }
                             if (
                               !(
                                 (a =
-                                  null !== (r = n.plugin_ids) && void 0 !== r
-                                    ? r
+                                  null !== (n = r.plugin_ids) && void 0 !== n
+                                    ? n
                                     : []).length > 0
                               )
                             ) {
-                              e.next = 7;
+                              t.next = 7;
                               break;
                             }
                             return (
-                              (e.next = 5),
-                              (function (e) {
+                              (t.next = 5),
+                              (function (t) {
                                 return _.apply(this, arguments);
                               })({ ids: a })
                             );
                           case 5:
-                            (i = e.sent),
+                            (i = t.sent),
                               O.setQueryData(
-                                i.items.map(function (e) {
-                                  return e.id;
+                                i.items.map(function (t) {
+                                  return t.id;
                                 }),
                                 i
                               );
                           case 7:
-                            d.tQ.initThreadFromServerData(v, n, !0, t), m(!0);
+                            d.tQ.initThreadFromServerData(v, r, !0, e), m(!0);
                           case 9:
                           case "end":
-                            return e.stop();
+                            return t.stop();
                         }
-                    }, e);
+                    }, t);
                   })
                 )).apply(this, arguments);
               }
               !(function () {
-                e.apply(this, arguments);
+                t.apply(this, arguments);
               })();
             },
-            [n, t, v, O]
+            [r, e, v, O]
           ),
           g
-            ? e.continueMode
+            ? t.continueMode
               ? (0, j.jsx)(
                   c.ZP,
-                  x(x({}, e.chatPageProps), {}, { clientThreadId: v })
+                  x(x({}, t.chatPageProps), {}, { clientThreadId: v })
                 )
               : (0, j.jsx)(p.gB.Provider, {
-                  value: { serverSharedThreadId: t },
+                  value: { serverSharedThreadId: e },
                   children: (0, j.jsx)(u.Z, {
                     clientThreadId: v,
                     setClientThreadId: function () {},
                     initiallyHighlightedMessageId:
-                      null == n ? void 0 : n.highlighted_message_id,
+                      null == r ? void 0 : r.highlighted_message_id,
                     continueConversationUrl:
-                      null == n ? void 0 : n.continue_conversation_url,
+                      null == r ? void 0 : r.continue_conversation_url,
                   }),
                 })
             : (0, j.jsx)("div", {
                 className: "flex h-full items-center justify-center",
                 children: (0, j.jsx)(s.Z, {
-                  className: "text-gray-400 dark:text-gray-500",
+                  className: "text-token-text-tertiary",
                 }),
               })
         );
       }
     },
-    80027: function (e, t, r) {
+    80027: function (t, e, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/share/e/[[...shareParams]]",
         function () {
-          return r(49503);
+          return n(49503);
         },
       ]);
     },
   },
-  function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 80027));
+  function (t) {
+    t.O(0, [9774, 2888, 179], function () {
+      return t((t.s = 80027));
     }),
-      (_N_E = e.O());
+      (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=[[...shareParams]]-08e7adef031feae5.js.map
+//# sourceMappingURL=[[...shareParams]]-899e50f90dac9ff5.js.map

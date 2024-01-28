@@ -10,8 +10,8 @@
           },
         });
       var r = n(36112),
-        a = n(12457),
-        i = n(32062),
+        i = n(12457),
+        a = n(32062),
         c = n(70079),
         s = n(94968),
         o = n(32004),
@@ -63,16 +63,16 @@
           t = e[0],
           n = e[1];
         (0, c.useEffect)(function () {
-          i.ZP.getInternalEnableURL().then(function () {
+          a.ZP.getInternalEnableURL().then(function () {
             return n(!0);
           });
         }, []);
         var r = t ? p.enabled : p.loading;
-        return (0, l.jsx)(a.Wk, {
+        return (0, l.jsx)(i.Wk, {
           isStorageComplianceEnabled: !1,
-          children: (0, l.jsxs)(a.xh, {
+          children: (0, l.jsxs)(i.xh, {
             children: [
-              (0, l.jsx)(a.jI, {}),
+              (0, l.jsx)(i.jI, {}),
               (0, l.jsx)("div", {
                 className: "mb-2 text-center text-lg",
                 children: (0, l.jsx)(o.Z, f({}, p.title)),
@@ -93,7 +93,7 @@
       "use strict";
       n.d(t, {
         VL: function () {
-          return h;
+          return x;
         },
         Wk: function () {
           return g;
@@ -106,8 +106,8 @@
         },
       });
       var r,
-        a = n(36112),
-        i = n(90038),
+        i = n(36112),
+        a = n(90038),
         c = n(18008),
         s = n(32004),
         o = n(94968),
@@ -132,7 +132,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? d(Object(n), !0).forEach(function (t) {
-                (0, a.Z)(e, t, n[t]);
+                (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -148,7 +148,7 @@
       }
       var j = l.Z.div(
         r ||
-          (r = (0, i.Z)([
+          (r = (0, a.Z)([
             "w-96 flex flex-col flex-auto justify-center items-center",
           ]))
       );
@@ -162,14 +162,14 @@
           children: [
             t,
             (void 0 === n || n) &&
-              (0, p.jsx)(h, { isStorageComplianceEnabled: r }),
+              (0, p.jsx)(x, { isStorageComplianceEnabled: r }),
           ],
         });
       }
-      function h(e) {
+      function x(e) {
         var t = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
-          className: "flex gap-3 py-3 text-xs text-gray-500",
+          className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
           children: [
             (0, p.jsx)(f.Z, {
               href: "https://openai.com/policies/terms-of-use",
@@ -177,7 +177,7 @@
               openNewTab: !0,
               children: (0, p.jsx)(s.Z, b({}, O.terms)),
             }),
-            (0, p.jsx)(x, {}),
+            (0, p.jsx)(h, {}),
             (0, p.jsx)(f.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
@@ -187,7 +187,7 @@
             t &&
               (0, p.jsxs)(p.Fragment, {
                 children: [
-                  (0, p.jsx)(x, {}),
+                  (0, p.jsx)(h, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
                     onClick: function () {
@@ -200,9 +200,9 @@
           ],
         });
       }
-      var x = function () {
+      var h = function () {
         return (0, p.jsx)("span", {
-          className: "text-gray-600",
+          className: "text-token-text-tertiary",
           children: "|",
         });
       };
@@ -234,4 +234,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=internal-0d86cca11863da22.js.map
+//# sourceMappingURL=internal-75f1a09ab48a63c5.js.map

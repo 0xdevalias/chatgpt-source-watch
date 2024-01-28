@@ -12,8 +12,8 @@
       var n = r(36112),
         o = r(12457),
         s = r(91559),
-        a = r(10721),
-        i = r(94968),
+        i = r(10721),
+        a = r(94968),
         u = r(32004),
         c = r(35250);
       function l(e, t) {
@@ -47,7 +47,7 @@
         }
         return e;
       }
-      var p = (0, i.vU)({
+      var p = (0, a.vU)({
           oops: { id: "AuthError.oops", defaultMessage: "Oops!" },
           goBack: { id: "AuthError.goBack", defaultMessage: "Go back" },
           systemBusyError: {
@@ -111,7 +111,7 @@
       }
       function g() {
         var e,
-          t = (0, a.useRouter)(),
+          t = (0, i.useRouter)(),
           r =
             null !== (e = h[String(t.query.error)]) && void 0 !== e
               ? e
@@ -158,8 +158,8 @@
       var n,
         o = r(36112),
         s = r(90038),
-        a = r(18008),
-        i = r(32004),
+        i = r(18008),
+        a = r(32004),
         u = r(94968),
         c = r(21389),
         l = r(14972),
@@ -219,20 +219,20 @@
       function j(e) {
         var t = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
-          className: "flex gap-3 py-3 text-xs text-gray-500",
+          className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
           children: [
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
-              children: (0, p.jsx)(i.Z, h({}, v.terms)),
+              children: (0, p.jsx)(a.Z, h({}, x.terms)),
             }),
             (0, p.jsx)(b, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
-              children: (0, p.jsx)(i.Z, h({}, v.privacy)),
+              children: (0, p.jsx)(a.Z, h({}, x.privacy)),
             }),
             t &&
               (0, p.jsxs)(p.Fragment, {
@@ -241,9 +241,9 @@
                   (0, p.jsx)("button", {
                     className: "underline",
                     onClick: function () {
-                      return a.vm.openModal(a.B.CookieManagement);
+                      return i.vm.openModal(i.B.CookieManagement);
                     },
-                    children: (0, p.jsx)(i.Z, h({}, v.cookies)),
+                    children: (0, p.jsx)(a.Z, h({}, x.cookies)),
                   }),
                 ],
               }),
@@ -252,7 +252,7 @@
       }
       var b = function () {
         return (0, p.jsx)("span", {
-          className: "text-gray-600",
+          className: "text-token-text-tertiary",
           children: "|",
         });
       };
@@ -262,7 +262,7 @@
           children: (0, p.jsx)(l.nI, {}),
         });
       }
-      var v = (0, u.vU)({
+      var x = (0, u.vU)({
         terms: { id: "AuthPage.terms", defaultMessage: "Terms of use" },
         privacy: { id: "AuthPage.privacy", defaultMessage: "Privacy policy" },
         cookies: { id: "AuthPage.cookies", defaultMessage: "Manage cookies" },
@@ -284,4 +284,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=error-a9f157429575d195.js.map
+//# sourceMappingURL=error-8ea7903eb2fe12ae.js.map

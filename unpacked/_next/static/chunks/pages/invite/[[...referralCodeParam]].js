@@ -35,8 +35,8 @@
         w = a.n(b),
         I = a(10721),
         N = a(70079),
-        C = a(1454),
-        k = a(70671),
+        k = a(1454),
+        C = a(70671),
         P = a(32004),
         M = a(94968),
         O = a(21389),
@@ -93,7 +93,7 @@
             t = e.user,
             l = e.auth0Provider,
             n = e.redirectUrl,
-            i = (0, k.Z)(),
+            i = (0, C.Z)(),
             s = "dark" === (0, _.F)().resolvedTheme,
             o = (0, N.useRef)(null);
           return (
@@ -211,7 +211,8 @@
             : (0, A.jsxs)(A.Fragment, {
                 children: [
                   (0, A.jsx)("div", {
-                    className: "pb-5 text-center text-sm text-gray-500",
+                    className:
+                      "pb-5 text-center text-sm text-token-text-tertiary",
                     children: (0, A.jsx)(
                       P.Z,
                       V({}, J.claimInviteLoginOrSignUp)
@@ -275,7 +276,7 @@
           Q = z.data,
           ee = z.isLoading,
           er = z.isError,
-          ea = (0, k.Z)(),
+          ea = (0, C.Z)(),
           et =
             null == Q
               ? void 0
@@ -483,7 +484,7 @@
                                       (0, A.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(C.UgA, {
+                                        children: (0, A.jsx)(k.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
@@ -501,7 +502,7 @@
                                       (0, A.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(C.UgA, {
+                                        children: (0, A.jsx)(k.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
@@ -520,7 +521,7 @@
                                       (0, A.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(C.UgA, {
+                                        children: (0, A.jsx)(k.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
@@ -581,7 +582,8 @@
                                 className: "space-y-1.5 py-1 text-center",
                                 children: [
                                   (0, A.jsx)("p", {
-                                    className: "text-xs text-gray-500",
+                                    className:
+                                      "text-xs text-token-text-tertiary",
                                     children: (0, A.jsx)(
                                       P.Z,
                                       V(
@@ -598,7 +600,8 @@
                                   }),
                                   (null == i ? void 0 : i.id) &&
                                     (0, A.jsx)("p", {
-                                      className: "text-xs text-gray-500",
+                                      className:
+                                        "text-xs text-token-text-tertiary",
                                       children: (0, A.jsx)(
                                         P.Z,
                                         V(
@@ -786,7 +789,7 @@
               (0, A.jsx)("div", {
                 className: "ml-3 w-0 flex-1",
                 children: (0, A.jsx)("p", {
-                  className: "text-sm text-gray-900 dark:text-white",
+                  className: "text-sm text-token-text-primary",
                   children: (0, A.jsx)(
                     P.Z,
                     V(
@@ -969,4 +972,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...referralCodeParam]]-8a707a74a1020183.js.map
+//# sourceMappingURL=[[...referralCodeParam]]-8e27de70951fc99c.js.map

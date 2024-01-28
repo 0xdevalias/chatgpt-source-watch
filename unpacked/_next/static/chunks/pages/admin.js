@@ -23,8 +23,8 @@
         d = t(18008),
         m = t(99715),
         f = t(18399),
-        g = t(82920),
-        p = t(19841),
+        p = t(82920),
+        g = t(19841),
         v = t(61888),
         j = t(29124),
         b = t.n(j),
@@ -444,9 +444,9 @@
           m = l || u;
         if (void 0 === o) return (0, F.jsx)(K.bq, {});
         var f = o.items,
-          g = Math.ceil(o.total / 25);
+          p = Math.ceil(o.total / 25);
         return (
-          i >= g && 0 !== g && c(Math.max(g - 1, 0)),
+          i >= p && 0 !== p && c(Math.max(p - 1, 0)),
           (0, F.jsxs)("div", {
             children: [
               (0, F.jsxs)(R.Z.Root, {
@@ -500,13 +500,13 @@
                   }),
                 ],
               }),
-              g > 1 &&
+              p > 1 &&
                 (0, F.jsx)("div", {
                   className: "mt-2 flex justify-center",
                   children: (0, F.jsx)(q.t, {
                     currentPage: i,
                     onChangeIndex: c,
-                    length: g,
+                    length: p,
                   }),
                 }),
             ],
@@ -620,7 +620,7 @@
           case a.Requests:
             return (0, F.jsx)(k.Z, en({}, eu.pendingRequests));
           default:
-            (0, g.vE)(r);
+            (0, p.vE)(r);
         }
       }
       function ea(e) {
@@ -635,7 +635,7 @@
           case a.Requests:
             return (0, F.jsx)($, { workspaceId: n, filterInputValue: t });
           default:
-            (0, g.vE)(r);
+            (0, p.vE)(r);
         }
       }
       ((n = a || (a = {})).Members = "members"),
@@ -650,10 +650,10 @@
           i = null !== (r = (0, K.p5)(t)) && void 0 !== r ? r : "?",
           o = (0, B.qH)(s),
           f = null == s ? void 0 : s.isTeam(),
-          g = (0, h.useRouter)(),
-          p =
-            "string" == typeof g.query.tab && ei(g.query.tab)
-              ? g.query.tab
+          p = (0, h.useRouter)(),
+          g =
+            "string" == typeof p.query.tab && ei(p.query.tab)
+              ? p.query.tab
               : a.Members,
           j = (0, x.useState)(""),
           O = j[0],
@@ -665,7 +665,7 @@
           function () {
             C("");
           },
-          [p]
+          [g]
         );
         var N = (0, x.useCallback)(
             (0, v.debounce)(function (e) {
@@ -709,11 +709,11 @@
                           eo,
                           {
                             onClick: function () {
-                              g.push(
+                              p.push(
                                 null != e ? "/admin?tab=".concat(e) : "/admin"
                               );
                             },
-                            isSelected: p === e,
+                            isSelected: g === e,
                             children: (0, F.jsx)(es, { tab: e }),
                           },
                           e
@@ -738,7 +738,7 @@
                               },
                               placeholder: n.formatMessage(eu.search),
                               className:
-                                "w-48 rounded-lg border border-gray-200 pl-8 placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700",
+                                "w-48 rounded-lg border border-gray-200 pl-8 placeholder:text-token-text-tertiary dark:border-gray-600 dark:bg-gray-700",
                             }),
                           ],
                         }),
@@ -784,7 +784,7 @@
                     }),
                   ],
                 }),
-                (0, F.jsx)(ea, { workspaceId: t, tab: p, filterInputValue: q }),
+                (0, F.jsx)(ea, { workspaceId: t, tab: g, filterInputValue: q }),
               ],
             }),
             null != s ? (0, F.jsx)(P.Z, { workspace: s }) : null,
@@ -797,7 +797,7 @@
           n = e.onClick;
         return (0, F.jsx)(M.z, {
           color: "none",
-          className: (0, p.default)(
+          className: (0, g.default)(
             t
               ? "bg-gray-100 dark:bg-gray-600"
               : "hover:bg-gray-50 hover:dark:bg-gray-700"
@@ -917,4 +917,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-21bf33ecdd89e2bb.js.map
+//# sourceMappingURL=admin-3eb3f50870298330.js.map

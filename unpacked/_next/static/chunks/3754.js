@@ -671,7 +671,7 @@
       function m(e) {
         var t = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
-          className: "flex gap-3 py-3 text-xs text-gray-500",
+          className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
           children: [
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/terms-of-use",
@@ -704,7 +704,7 @@
       }
       var v = function () {
         return (0, p.jsx)("span", {
-          className: "text-gray-600",
+          className: "text-token-text-tertiary",
           children: "|",
         });
       };
@@ -965,4 +965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3754-94f297953fed6882.js.map
+//# sourceMappingURL=3754-ae5dc2fb759ecfc1.js.map
