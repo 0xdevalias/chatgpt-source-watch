@@ -76,6 +76,7 @@ The following notes are not necessarily comprehensive, but just things of potent
   - Some minor tweaks/refinements to the text used for some of the upcoming features
   - Updates to the translation language files (except for the english one)
     - I didn't extract/diff these individually to see what exactly changed in them, but my guess is that it's just to update them for the default english strings embedded in the code recently.
+  - **Twitter thread:** https://twitter.com/_devalias/status/1751768315071271354
 - App release version (Git SHA?): `8feae373829ad394bd434293b28e7fe9dd874b0c`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - The following files had large changes to embedded JSON that appears to be related to translation:
