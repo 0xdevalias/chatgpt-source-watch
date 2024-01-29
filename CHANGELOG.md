@@ -73,6 +73,7 @@ The following notes are not necessarily comprehensive, but just things of potent
     - Pricing plans/payment modal (including discounted annual ChatGPT Plus subscriptions for US$199.99/year (eg. US$16.67/month))
     - Locales/language settings (Development, German, English (US), Spanish (Spain), French (France), Italian, Japanese, Korean, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Simplified Chinese, Traditional Chinese (Taiwan))
   - Some CSS cleanup/refactoring to standardize colours/etc
+  - **Twitter thread:** https://twitter.com/_devalias/status/1751746340575703473
 - App release version (Git SHA?): `0bc7ea79e82fb4d24d8ded463ee920b62c85e85f`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - Chunk IDs Changed
