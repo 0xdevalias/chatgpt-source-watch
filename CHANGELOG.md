@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-28Z \(`PFzTxQNocNiG6gdS1bBR-`\)](#2024-01-28z-pfztxqnocnig6gds1bbr-)
 - [2024-01-26Z \(`83oSRqlSVypjfyIfupJ78`\)](#2024-01-26z-83osrqlsvypjfyifupj78)
 - [2024-01-25Z \(`szrLZD3jp74fFKmcgupNh`\)](#2024-01-25z-szrlzd3jp74ffkmcgupnh)
 - [2024-01-25Z \(`QmYgAUngWc_4uo62fFx_C`\)](#2024-01-25z-qmygaungwc_4uo62ffx_c)
@@ -57,6 +58,357 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-28Z (`PFzTxQNocNiG6gdS1bBR-`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A new 'verified social auth' (`GizmoBuilderSocials` / `chatgpt-gizmo-builder-socials`) feature for gizmo (Custom GPT) builders to link to their social media accounts (Twitter, GitHub, LinkedIn)
+  - Some parsing/display of `metadata.__internal.*` data:
+    - `metadata.__internal.normalized_model_side`
+    - `metadata.__internal.model_experiment_group_name` (Group Name)
+    - `metadata.__internal.model_experiment_group_params` (Group Params)
+    - `metadata.__internal.model_experiment_override` (Above Parmas Overrid By)
+    - `metadata.__internal.model_experiment_eval_seq` (Experiment Eval Seq)
+  - Some minor tweaks/refinements to the text used for some of the upcoming features
+  - Updates to the translation language files (except for the english one)
+    - I didn't extract/diff these individually to see what exactly changed in them, but my guess is that it's just to update them for the default english strings embedded in the code recently.
+- App release version (Git SHA?): `8feae373829ad394bd434293b28e7fe9dd874b0c`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- The following files had large changes to embedded JSON that appears to be related to translation:
+  - Of note, there didn't seem to be changes to the chunk related to english I don't think (previously was `unpacked/_next/static/chunks/9087.js`)
+  - `unpacked/_next/static/chunks/676.js`
+  - `unpacked/_next/static/chunks/718.js`
+  - `unpacked/_next/static/chunks/1141.js`
+  - `unpacked/_next/static/chunks/1777.js`
+  - `unpacked/_next/static/chunks/1948.js`
+  - `unpacked/_next/static/chunks/2178.js`
+  - `unpacked/_next/static/chunks/3466.js`
+  - `unpacked/_next/static/chunks/3705.js`
+  - `unpacked/_next/static/chunks/4042.js`
+  - `unpacked/_next/static/chunks/4615.js`
+  - `unpacked/_next/static/chunks/4700.js`
+  - `unpacked/_next/static/chunks/4806.js`
+  - `unpacked/_next/static/chunks/5187.js`
+  - `unpacked/_next/static/chunks/5288.js`
+  - `unpacked/_next/static/chunks/5952.js`
+  - `unpacked/_next/static/chunks/6522.js`
+  - `unpacked/_next/static/chunks/6875.js`
+  - `unpacked/_next/static/chunks/6951.js`
+  - `unpacked/_next/static/chunks/6952.js`
+  - `unpacked/_next/static/chunks/7198.js`
+  - `unpacked/_next/static/chunks/7947.js`
+  - `unpacked/_next/static/chunks/8226.js`
+  - `unpacked/_next/static/chunks/8400.js`
+  - `unpacked/_next/static/chunks/9120.js`
+  - `unpacked/_next/static/chunks/9271.js`
+  - `unpacked/_next/static/chunks/9826.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Further CSS styling refinements/standardisation such as:
+    - ```diff
+      - "flex w-full items-center justify-between bg-blue-950 p-3 text-white",
+      + "dark flex w-full items-center justify-between bg-blue-950 p-3 text-token-text-primary",
+      ```
+    - ```diff
+      - className: "text-white hover:text-gray-300",
+      + className: "hover:text-token-text-secondary",
+      ```
+    - etc
+  - ```diff
+      case ec.qK.DALLE:
+    -   return { title: eL.dalle, description: eL.memoryDescription };
+    +   return { title: eL.dalle };
+    ```
+  - ```diff
+      (0, em.jsx)(ep.p, {
+        href: "/auth/login?next=".concat(en),
+    -   children: "Sign up to chat",
+    +   children: (0, em.jsx)(ef.Z, {
+    +     id: "gizmo.anonLandingPage.login",
+    +     defaultMessage: "Sign up to chat",
+    +   }),
+      }),
+    ```
+  - ```diff
+      (0, em.jsx)("div", {
+        className: "text-sm text-token-text-tertiary",
+    -   children: "Requires ChatGPT Plus",
+    +   children: (0, em.jsx)(ef.Z, {
+    +     id: "gizmo.anonLandingPage.subtext",
+    +     defaultMessage: "Requires ChatGPT Plus",
+    +   }),
+      }),
+    ```
+  - A bunch of changes related to 'social auth' connected to gizmo (Custom GPT) creator profiles:
+    - `svg` images of:
+      - the GitHub octocat logo
+      - the LinkedIn logo
+      - the Twitter logo
+    - ```js
+      {
+        key: "unverifySocialAuth",
+        value: function (Y) {
+          return ef.ZP.delete(
+            "".concat(ef.B, "/gizmo_creator_profile/socials/").concat(Y)
+          );
+        },
+      },
+      ```
+    - ```js
+      var eP = "#settings/BuilderProfile";
+      ```
+    - ```js
+      function eI() {
+        var Y = (0, ew.NL)();
+        return (0, eC.D)({
+          mutationFn: function (Y) {
+            var et = Y.id;
+            return em.U.unverifySocialAuth(et);
+          },
+          onSuccess: function () {
+            Y.refetchQueries({ queryKey: ["builderProfile"] });
+          },
+        });
+      }
+      ```
+    - ```js
+      children: [
+        en({ className: "icon-md hover:cursor-pointer" }),
+        (0, eO.jsx)("span", { children: eo }),
+        ea &&
+          (null == eu ? void 0 : eu.username) &&
+          (0, eO.jsxs)("a", {
+            href: eu.link_to,
+            className: "text-sm text-gray-500",
+            children: ["@", null == eu ? void 0 : eu.username],
+          }),
+      ],
+      ```
+    - ```js
+      ea
+        ? (0, eO.jsx)(eg.cY, {
+            loading: em.isPending,
+            className:
+              "rounded-lg bg-green-200 px-2 py-1.5 font-medium text-green-900",
+            onClick: function () {
+              em.mutate({ id: ei });
+            },
+            children: (0, eO.jsx)(e_.Z, eA({}, eR.verified)),
+          })
+        : (0, eO.jsx)(eg.cY, {
+            loading: ep,
+            onClick: (0, ec.Z)(
+              ef().mark(function Y() {
+                return ef().wrap(function (Y) {
+                  for (;;)
+                    switch ((Y.prev = Y.next)) {
+                      case 0:
+                        return (
+                          eh(!0),
+                          (Y.next = 3),
+                          (0, ey.doOauthRedirect)({ id: ei }, eP)
+                        );
+                      case 3:
+                        eh(!1);
+                      case 4:
+                      case "end":
+                        return Y.stop();
+                    }
+                }, Y);
+              })
+            ),
+            children: (0, eO.jsx)(e_.Z, eA({}, eR.verify)),
+          }),
+      ```
+    - ```js
+      ew = (0, eV.sB)(eV.tz.GizmoBuilderSocials).value,
+      ```
+    - ```js
+      ew &&
+        (0, eO.jsxs)(eO.Fragment, {
+          children: [
+            (0, eO.jsx)(eD, {
+              socialData: eo.socials.twitter,
+              icon: eW.fWC,
+            }),
+            (0, eO.jsx)(eD, {
+              socialData: eo.socials.github,
+              icon: eW.hJX,
+            }),
+            (0, eO.jsx)(eD, {
+              socialData: eo.socials.linkedin,
+              icon: eW.ltd,
+            }),
+          ],
+        }),
+      ```
+    - ```js
+      (Y.GizmoBuilderSocials = "chatgpt-gizmo-builder-socials");
+      ```
+  - ```js
+    ep = (0, eb.get)(Y, "metadata.__internal.normalized_model_side"),
+    eh = (0, eb.get)(
+      Y,
+      "metadata.__internal.model_experiment_group_name"
+    ),
+    eg = (0, eb.get)(
+      Y,
+      "metadata.__internal.model_experiment_group_params"
+    ),
+    ey = (0, eb.get)(
+      Y,
+      "metadata.__internal.model_experiment_override"
+    ),
+    ek = (0, eb.get)(
+      Y,
+      "metadata.__internal.model_experiment_eval_seq"
+    );
+    ```
+  - ```js
+    eh &&
+      (0, eI.jsxs)("div", {
+        children: [
+          (0, eI.jsx)("b", { children: "Group Name:" }),
+          " ",
+          eh,
+        ],
+      }),
+    eg &&
+      (0, eI.jsxs)("div", {
+        children: [
+          (0, eI.jsx)("b", { children: "Group Params:" }),
+          (0, eI.jsx)("div", {
+            children: JSON.stringify(eg, null, 2),
+          }),
+        ],
+      }),
+    ey &&
+      (0, eI.jsxs)("div", {
+        children: [
+          (0, eI.jsx)("b", {
+            children: "Above Parmas Overrid By:",
+          }),
+          " ",
+          ey,
+        ],
+      }),
+    ek &&
+      (0, eI.jsxs)("div", {
+        children: [
+          (0, eI.jsx)("b", {
+            children: "Experiment Eval Seq:",
+          }),
+          " click to see",
+        ],
+      }),
+    ```
+  - ```diff
+    - var ed = { pathname: Y.pathname, query: ec };
+    + var ed = {
+    +   pathname: Y.pathname,
+    +   hash: Y.asPath.split("#")[1],
+    +   query: ec,
+    + };
+    ```
+- `unpacked/_next/static/chunks/5054.js`
+  - ```diff
+      recipientBlocked: {
+        id: "gizmo.recipientBlocked",
+        defaultMessage:
+    -     "Because this GPT previously may have violated our policies, you cannot publish it at this level.",
+    +     "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
+      },
+    ```
+- `unpacked/_next/static/chunks/pages/g/[gizmoId].js`
+  - ```js
+    children: (0, x.jsx)(p.Z, {
+      id: "gizmo.loadError",
+      defaultMessage: "We're having trouble loading this GPT.",
+    }),
+    ```
+  - ```js
+    (0, x.jsx)(p.Z, {
+      id: "gizmo.loadErrorRefresh",
+      defaultMessage: "Please refresh the page, or try again later",
+    }),
+    ```
+  - ```js
+      children: (0, x.jsx)(p.Z, {
+        id: "gizmo.upsell",
+        defaultMessage: "Sign up to chat",
+      }),
+    }),
+    (0, x.jsx)("div", {
+      className: "text-sm text-token-text-tertiary",
+      children: (0, x.jsx)(p.Z, {
+        id: "gizmo.upsellSubtext",
+        defaultMessage: "Requires ChatGPT Plus",
+      }),
+    }),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-e4a1a0a39128a801.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-3bae4746a995c045.js
+https://cdn.oaistatic.com/_next/static/PFzTxQNocNiG6gdS1bBR-/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/PFzTxQNocNiG6gdS1bBR-/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-468b117d740e6d37.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-8ad3d13d663a6185.js
+```
+
+### From `orig/_next/static/chunks/webpack-3bae4746a995c045.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/676.dbf1ba728fbd92b7.js
+https://cdn.oaistatic.com/_next/static/chunks/718.7fd76febb795c6d1.js
+https://cdn.oaistatic.com/_next/static/chunks/1141.4cb21c14f513419e.js
+https://cdn.oaistatic.com/_next/static/chunks/1777.b69524f431de351e.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.fcbba53fff20bf3f.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.f04715e086de4d29.js
+https://cdn.oaistatic.com/_next/static/chunks/3466.b0dfc5942fa3723e.js
+https://cdn.oaistatic.com/_next/static/chunks/3705.f2833b6e8cc87512.js
+https://cdn.oaistatic.com/_next/static/chunks/4042.653106b054eaf3c2.js
+https://cdn.oaistatic.com/_next/static/chunks/4615.205db2b86a7ccf3d.js
+https://cdn.oaistatic.com/_next/static/chunks/4700.ce0f69688dfc2ecc.js
+https://cdn.oaistatic.com/_next/static/chunks/4806.9246cd6a90c74ac0.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.2538cbec4e04d2d2.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.d726dba33293502c.js
+https://cdn.oaistatic.com/_next/static/chunks/5952.248c9b23bbb29423.js
+https://cdn.oaistatic.com/_next/static/chunks/6522.814b2637eb5737cc.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.4a9d99c62d5f2a0e.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.823f271ea6fac0c4.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.9bde05acbeecdf4c.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.cc60a9fa4c5c5881.js
+https://cdn.oaistatic.com/_next/static/chunks/7947.b853d79982179568.js
+https://cdn.oaistatic.com/_next/static/chunks/8226.5bfc74b574c7cab0.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.7f72b6e74736cfb3.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.3d3747553b932a9e.js
+https://cdn.oaistatic.com/_next/static/chunks/9271.08253793e606fa7c.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.e4559afae7a3a553.js
+https://cdn.oaistatic.com/_next/static/css/8b86e27efbeac809.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.83bc6392b8f90823.js
+```
 
 ## 2024-01-26Z (`83oSRqlSVypjfyIfupJ78`)
 

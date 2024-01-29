@@ -4672,6 +4672,10 @@ textarea:focus {
   --tw-text-opacity: 1;
   color: rgba(172, 172, 190, var(--tw-text-opacity));
 }
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(153, 153, 153, var(--tw-text-opacity));
+}
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgba(102, 102, 102, var(--tw-text-opacity));
@@ -6300,30 +6304,6 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-text-opacity: 1;
   color: rgba(37, 99, 235, var(--tw-text-opacity));
 }
-.hover\:text-gray-300:hover {
-  --tw-text-opacity: 1;
-  color: rgba(197, 197, 210, var(--tw-text-opacity));
-}
-.hover\:text-gray-600:hover {
-  --tw-text-opacity: 1;
-  color: rgba(102, 102, 102, var(--tw-text-opacity));
-}
-.hover\:text-gray-700:hover {
-  --tw-text-opacity: 1;
-  color: rgba(64, 65, 79, var(--tw-text-opacity));
-}
-.hover\:text-gray-800:hover {
-  --tw-text-opacity: 1;
-  color: rgba(52, 53, 65, var(--tw-text-opacity));
-}
-.hover\:text-gray-900:hover {
-  --tw-text-opacity: 1;
-  color: rgba(32, 33, 35, var(--tw-text-opacity));
-}
-.hover\:text-gray-950:hover {
-  --tw-text-opacity: 1;
-  color: rgba(15, 15, 15, var(--tw-text-opacity));
-}
 .hover\:text-red-500:hover {
   --tw-text-opacity: 1;
   color: rgba(239, 68, 68, var(--tw-text-opacity));
@@ -6339,6 +6319,10 @@ button[data-state="open"] .toggle-item-button-open {
 .hover\:text-token-text-secondary:hover {
   color: #666;
   color: var(--text-secondary);
+}
+.hover\:text-token-text-tertiary:hover {
+  color: #999;
+  color: var(--text-tertiary);
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
@@ -7315,18 +7299,6 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-text-opacity: 1;
   color: rgba(37, 99, 235, var(--tw-text-opacity));
 }
-.dark .dark\:hover\:text-gray-200:hover {
-  --tw-text-opacity: 1;
-  color: rgba(217, 217, 227, var(--tw-text-opacity));
-}
-.dark .dark\:hover\:text-gray-400:hover {
-  --tw-text-opacity: 1;
-  color: rgba(172, 172, 190, var(--tw-text-opacity));
-}
-.dark .dark\:hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
 .dark .dark\:hover\:text-white\/50:hover {
   color: hsla(0, 0%, 100%, 0.5);
 }
@@ -7361,10 +7333,6 @@ button[data-state="open"] .toggle-item-button-open {
 .dark .dark\:disabled\:hover\:bg-white:hover:disabled {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-:is(.dark .disabled\:dark\:hover\:text-gray-400:hover):disabled {
-  --tw-text-opacity: 1;
-  color: rgba(172, 172, 190, var(--tw-text-opacity));
 }
 .dark .dark\:radix-disabled\:bg-transparent[data-disabled] {
   background-color: transparent;
@@ -9683,4 +9651,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=da25c2237a223c81.css.map*/
+/*# sourceMappingURL=8b86e27efbeac809.css.map*/

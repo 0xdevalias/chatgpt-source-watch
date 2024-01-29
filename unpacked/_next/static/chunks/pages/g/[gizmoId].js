@@ -1,10 +1,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [43],
   {
-    78801: function (e, n, r) {
+    78801: function (e, t, r) {
       "use strict";
-      r.r(n),
-        r.d(n, {
+      r.r(t),
+        r.d(t, {
           __N_SSP: function () {
             return v;
           },
@@ -12,47 +12,48 @@
             return _;
           },
         });
-      var t = r(36112),
-        i = r(91559),
-        o = r(91928),
-        c = r(85528),
-        u = r(37097),
-        s = r(67404),
+      var n = r(36112),
+        i = r(91928),
+        s = r(2454),
+        o = r(85528),
+        c = r(37097),
+        u = r(67404),
         l = r(61305),
         a = r(12275),
-        f = r(85958),
-        d = r(7144),
-        h = r(67311),
-        g = r(10721),
-        j = r.n(g),
+        d = r(85958),
+        f = r(7144),
+        g = r(67311),
+        h = r(10721),
+        j = r.n(h),
         m = r(70079),
-        p = r(35250);
-      function O(e, n) {
+        p = r(32004),
+        x = r(35250);
+      function O(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var t = Object.getOwnPropertySymbols(e);
-          n &&
-            (t = t.filter(function (n) {
-              return Object.getOwnPropertyDescriptor(e, n).enumerable;
+          var n = Object.getOwnPropertySymbols(e);
+          t &&
+            (n = n.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, t);
+            r.push.apply(r, n);
         }
         return r;
       }
       function b(e) {
-        for (var n = 1; n < arguments.length; n++) {
-          var r = null != arguments[n] ? arguments[n] : {};
-          n % 2
-            ? O(Object(r), !0).forEach(function (n) {
-                (0, t.Z)(e, n, r[n]);
+        for (var t = 1; t < arguments.length; t++) {
+          var r = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? O(Object(r), !0).forEach(function (t) {
+                (0, n.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : O(Object(r)).forEach(function (n) {
+              : O(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
-                    n,
-                    Object.getOwnPropertyDescriptor(r, n)
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t)
                   );
                 });
         }
@@ -60,107 +61,122 @@
       }
       var v = !0;
       function _(e) {
-        var n = (0, g.useRouter)().query.gizmoId;
+        var t = (0, h.useRouter)().query.gizmoId;
         switch (e.kind) {
           case "anon_gizmo":
-            return (0, p.jsx)(c.X, { gizmo: e.gizmo }, n);
+            return (0, x.jsx)(o.X, { gizmo: e.gizmo }, t);
           case "chat_page":
             return (0, m.createElement)(
               y,
-              b(b({}, e), {}, { key: n, gizmoId: n })
+              b(b({}, e), {}, { key: t, gizmoId: t })
             );
           default:
-            (0, h.Z)(e);
+            (0, g.Z)(e);
         }
       }
       function y(e) {
-        var n = (0, u.b9)(e.gizmoId),
-          r = n.data,
-          t = n.error,
-          i = (0, d.t)(),
-          c = null == i ? void 0 : i.canInteractWithGizmos();
+        var t = (0, c.b9)(e.gizmoId),
+          r = t.data,
+          n = t.error,
+          s = (0, f.t)(),
+          o = null == s ? void 0 : s.canInteractWithGizmos();
         return ((0, m.useEffect)(
           function () {
-            null == r && null != t && j().push((0, f.M5)(f.LT.GIZMO_NOT_FOUND));
+            null == r && null != n && j().push((0, d.M5)(d.LT.GIZMO_NOT_FOUND));
           },
-          [r, t]
+          [r, n]
         ),
-        null != t && c)
-          ? (0, p.jsx)(w, {})
-          : !1 === c
-            ? (0, p.jsx)(x, { gizmo: r })
-            : (0, m.createElement)(o.ZP, b(b({}, e), {}, { key: e.gizmoId }));
+        null != n && o)
+          ? (0, x.jsx)(P, {})
+          : !1 === o
+            ? (0, x.jsx)(w, { gizmo: r })
+            : (0, m.createElement)(i.ZP, b(b({}, e), {}, { key: e.gizmoId }));
       }
-      function w() {
-        return (0, p.jsx)(l.Z, {
-          children: (0, p.jsxs)("div", {
+      function P() {
+        return (0, x.jsx)(l.Z, {
+          children: (0, x.jsxs)("div", {
             className:
               "flex h-full w-full flex-col items-center justify-center",
             children: [
-              (0, p.jsx)("div", {
+              (0, x.jsx)("div", {
                 className: "font-bold",
-                children: "We're having trouble loading this GPT.",
+                children: (0, x.jsx)(p.Z, {
+                  id: "gizmo.loadError",
+                  defaultMessage: "We're having trouble loading this GPT.",
+                }),
               }),
-              (0, p.jsx)("div", {
-                children: "Please refresh the page, or try again later",
+              (0, x.jsx)(p.Z, {
+                id: "gizmo.loadErrorRefresh",
+                defaultMessage: "Please refresh the page, or try again later",
               }),
             ],
           }),
         });
       }
-      function x(e) {
-        var n = e.gizmo;
-        return (0, p.jsx)(l.Z, {
-          children: (0, p.jsx)(s.r, {
-            gizmo: n,
+      function w(e) {
+        var t = e.gizmo;
+        return (0, x.jsx)(l.Z, {
+          children: (0, x.jsx)(u.r, {
+            gizmo: t,
             isOwner: !1,
-            children: (0, p.jsxs)(i.z, {
-              className: "mt-6",
-              onClick: function () {
-                return (0, a.MG)();
-              },
+            children: (0, x.jsxs)("div", {
+              className: "mt-7 flex flex-col gap-4",
               children: [
-                "Sign up for ChatGPT Plus to chat with ",
-                null == n ? void 0 : n.gizmo.display.name,
+                (0, x.jsx)(s.p, {
+                  onClick: function () {
+                    return (0, a.MG)();
+                  },
+                  children: (0, x.jsx)(p.Z, {
+                    id: "gizmo.upsell",
+                    defaultMessage: "Sign up to chat",
+                  }),
+                }),
+                (0, x.jsx)("div", {
+                  className: "text-sm text-token-text-tertiary",
+                  children: (0, x.jsx)(p.Z, {
+                    id: "gizmo.upsellSubtext",
+                    defaultMessage: "Requires ChatGPT Plus",
+                  }),
+                }),
               ],
             }),
           }),
         });
       }
     },
-    61305: function (e, n, r) {
+    61305: function (e, t, r) {
       "use strict";
-      r.d(n, {
+      r.d(t, {
         Z: function () {
           return a;
         },
       });
-      var t = r(49516),
+      var n = r(49516),
         i = r(83562),
-        o = r(35212),
-        c = r(10721),
-        u = r(8024),
-        s = r(10318),
+        s = r(35212),
+        o = r(10721),
+        c = r(8024),
+        u = r(10318),
         l = r(35250);
       function a(e) {
-        var n = e.children,
-          r = (0, c.useRouter)();
-        return (0, l.jsx)(o.Z, {
+        var t = e.children,
+          r = (0, o.useRouter)();
+        return (0, l.jsx)(s.Z, {
           mobileHeaderRightContent: null,
           sidebar: (0, l.jsxs)(i.ZP, {
             onNewThread: function () {
               r.push("/");
             },
             children: [
-              (0, l.jsx)(s.Dy, {}),
-              (0, l.jsx)(t.Z, { activeId: void 0 }),
+              (0, l.jsx)(u.Dy, {}),
+              (0, l.jsx)(n.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, l.jsx)(u.Z, { children: n }),
+          children: (0, l.jsx)(c.Z, { children: t }),
         });
       }
     },
-    80052: function (e, n, r) {
+    80052: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]",
         function () {
@@ -176,4 +192,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-459085e513ae2a9c.js.map
+//# sourceMappingURL=[gizmoId]-468b117d740e6d37.js.map

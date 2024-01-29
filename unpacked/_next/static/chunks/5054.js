@@ -4434,7 +4434,7 @@
         recipientBlocked: {
           id: "gizmo.recipientBlocked",
           defaultMessage:
-            "Because this GPT previously may have violated our policies, you cannot publish it at this level.",
+            "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
         },
         appealNeededLabel: {
           id: "gizmo.appealNeededLabel",
@@ -6343,4 +6343,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5054-b9cbf3196abce4c8.js.map
+//# sourceMappingURL=5054-8ad3d13d663a6185.js.map
