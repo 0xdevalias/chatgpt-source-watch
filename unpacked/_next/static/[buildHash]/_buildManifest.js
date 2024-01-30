@@ -78,7 +78,7 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-84597e34390c1506.js",
     ],
-    "/search": ["static/chunks/pages/search-8da35bbb0f092dc3.js"],
+    "/search": ["static/chunks/pages/search-d835393483b5432a.js"],
     "/share/e/[[...shareParams]]": [
       "static/chunks/pages/share/e/[[...shareParams]]-899e50f90dac9ff5.js",
     ],
@@ -136,6 +136,6 @@
   "static/chunks/5017-f7c5e142fc7f0516.js",
   "static/chunks/3975-37a9301353b29c5d.js",
   "static/chunks/3754-ae5dc2fb759ecfc1.js",
-  "static/chunks/5054-8ad3d13d663a6185.js"
+  "static/chunks/5054-e2060ddbea2abdb7.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

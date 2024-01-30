@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-29Z \(`3Frj0dWPrnm3c4KeyI6Zl`\)](#2024-01-29z-3frj0dwprnm3c4keyi6zl)
 - [2024-01-28Z \(`PFzTxQNocNiG6gdS1bBR-`\)](#2024-01-28z-pfztxqnocnig6gds1bbr-)
 - [2024-01-26Z \(`83oSRqlSVypjfyIfupJ78`\)](#2024-01-26z-83osrqlsvypjfyifupj78)
 - [2024-01-25Z \(`szrLZD3jp74fFKmcgupNh`\)](#2024-01-25z-szrlzd3jp74ffkmcgupnh)
@@ -58,6 +59,104 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-29Z (`3Frj0dWPrnm3c4KeyI6Zl`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Possibly nothing much of note, but hard to say for sure due to the amount of diff churn.
+- App release version (Git SHA?): `a97b75ec2d006ee672072a0311d0a02b37942961`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs Changed:
+  - `21842` -> `24102`
+  - `79468` -> `23920`
+  - `88963` -> `99023`
+  - ?etc?
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Huge amount of diff churn, making it hard to see what changed specifically, but I think most of it was just refactor/noise.
+  - Some of it might have been changes in dependency versions or similar?
+  - It looks like a bunch of old `useEffect` code might have been removed/reformatted, and replaced with this call:
+    - ```diff
+      - (0, eU.useEffect)(
+      -   function () {
+      -     if (
+      -       tQ &&
+      -       void 0 !== tM &&
+      -       (void 0 === tM.enabledTools ||
+      -         !(tM.enabledTools.length > 0)) &&
+      -       null != ew &&
+      -       ew.includes(eQ.Yj) &&
+      -       0 !== tY.enabledModelsInCategoriesById.size &&
+      -       !t$.current &&
+      -       void 0 === eX.tQ.getServerThreadId(ec)
+      -     ) {
+      -       var Y,
+      -         et = eR.query,
+      -         en = et.m,
+      -         ei = (0, eE.Z)(et, iZ);
+      -       if (void 0 !== en) {
+      -         Y = Array.isArray(en) ? en[0] : en;
+      -         var eo = (0, eK.Z)();
+      -         (t$.current = !0),
+      -           tK(
+      -             eo,
+      -             { content: Y, attachments: [] },
+      -             { eventSource: "url" },
+      -             { conversationMode: eX.iN.getConversationMode(ec) }
+      -           ),
+      -           eR.replace({ pathname: eR.pathname, query: ei }, void 0, {
+      -             shallow: !0,
+      -           });
+      -       }
+      -     }
+      -   },
+      -   [tM, eR, tK, tQ, tY, ew, ec]
+      - );
+      ```
+    - ```js
+      iN({
+        clientThreadId: ec,
+        currentLeafId: eU,
+        handleRequestCompletion: tH,
+      });
+      ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-a58796752d470ac0.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-0bf92d30f53a218a.js
+https://cdn.oaistatic.com/_next/static/3Frj0dWPrnm3c4KeyI6Zl/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/3Frj0dWPrnm3c4KeyI6Zl/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5054-e2060ddbea2abdb7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-d835393483b5432a.js
+```
+
+### From `orig/_next/static/chunks/webpack-0bf92d30f53a218a.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/b706d4182d20ff06.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.61c48d706fc289b6.js
+```
 
 ## 2024-01-28Z (`PFzTxQNocNiG6gdS1bBR-`)
 
