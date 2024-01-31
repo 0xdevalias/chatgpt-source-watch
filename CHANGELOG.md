@@ -73,6 +73,7 @@ The following notes are not necessarily comprehensive, but just things of potent
   - Some refinements to text labels + one of the translation files
   - Some code cleanup/refactoring
   - etc
+  - **Twitter thread:** https://twitter.com/_devalias/status/1752524740366041167
 - App release version (Git SHA?): `3784968e54c2bcb8aeb90452a1a5efbd63e8fc86`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - The following language/translation files were updated:
