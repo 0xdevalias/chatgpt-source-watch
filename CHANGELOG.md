@@ -240,6 +240,7 @@ The following notes are not necessarily comprehensive, but just things of potent
   - New publicly accessible `/g/:gizmoId/about` pages (and modal when logged in)
     - eg. https://chat.openai.com/g/g-2fkFE8rbu-dall-e/about
   - Updates to the translation language files (including a diff of what changed in the English language chunk)
+  - **Twitter thread:** https://twitter.com/_devalias/status/1752503173825323250
 - App release version (Git SHA?): `9da7fe4ed7534947837013241d3043024c267d2a`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - New Chunks
