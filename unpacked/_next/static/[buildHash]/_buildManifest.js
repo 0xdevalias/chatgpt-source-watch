@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e, t) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-dfd7db9208d5bc06.js"],
@@ -41,13 +41,16 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-6c967c6bb3c60b1d.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
+    "/auth/login": [s, e, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-7cb4d55a75b2ec20.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-e3f3990046158829.js",
     ],
     "/bypass": ["static/chunks/pages/bypass-4782eea63108c9bc.js"],
-    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-468b117d740e6d37.js"],
+    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-8849567cbce226b6.js"],
+    "/g/[gizmoId]/about": [
+      "static/chunks/pages/g/[gizmoId]/about-c111b3c828beae5a.js",
+    ],
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-252d29e38cf1ddb8.js",
     ],
@@ -66,7 +69,7 @@
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      c,
+      e,
       "static/chunks/pages/invite/[[...referralCodeParam]]-8e27de70951fc99c.js",
     ],
     "/payments/success": [
@@ -113,6 +116,7 @@
       "/auth/mocked_login",
       "/bypass",
       "/g/[gizmoId]",
+      "/g/[gizmoId]/about",
       "/g/[gizmoId]/c/[convId]",
       "/gpts",
       "/gpts/discovery",
@@ -136,6 +140,6 @@
   "static/chunks/5017-f7c5e142fc7f0516.js",
   "static/chunks/3975-37a9301353b29c5d.js",
   "static/chunks/3754-ae5dc2fb759ecfc1.js",
-  "static/chunks/5054-e2060ddbea2abdb7.js"
+  "static/chunks/5054-62a250586f2efcd7.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

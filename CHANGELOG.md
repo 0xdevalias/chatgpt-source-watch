@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-30Z \(`QOvkXTvubXtbvlZ_iHiii`\)](#2024-01-30z-qovkxtvubxtbvlz_ihiii)
 - [2024-01-29Z \(`3Frj0dWPrnm3c4KeyI6Zl`\)](#2024-01-29z-3frj0dwprnm3c4keyi6zl)
 - [2024-01-28Z \(`PFzTxQNocNiG6gdS1bBR-`\)](#2024-01-28z-pfztxqnocnig6gds1bbr-)
 - [2024-01-26Z \(`83oSRqlSVypjfyIfupJ78`\)](#2024-01-26z-83osrqlsvypjfyifupj78)
@@ -59,6 +60,854 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-30Z (`QOvkXTvubXtbvlZ_iHiii`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - New `DataAnalysisV2` feature (feature flag: `graphite`, that looks like it may be related to an `InChatSpreadsheetFileView` potentially handling these file types: `"xls", "xlsx", "csv", "json"`
+  - New publicly accessible `/g/:gizmoId/about` pages (and modal when logged in)
+    - eg. https://chat.openai.com/g/g-2fkFE8rbu-dall-e/about
+  - Updates to the translation language files (including a diff of what changed in the English language chunk)
+- App release version (Git SHA?): `9da7fe4ed7534947837013241d3043024c267d2a`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- New Chunks
+  - `4534`
+  - `5719`
+  - `9610`
+  - Couldn't be downloaded (server rendered?) 
+    - `1187`
+    - `6378`
+- Module IDs Changed:
+  - `85695` -> `50860`
+  - `24102` -> `35473`
+  - `61404` -> `60934` (or `28059`?)
+  - `39889` -> `38104`
+  - `85695` -> `50860`
+  - ?etc?
+- The following language/translation files were updated:
+  - `unpacked/_next/static/chunks/132.js`
+  - `unpacked/_next/static/chunks/660.js`
+  - `unpacked/_next/static/chunks/676.js`
+  - `unpacked/_next/static/chunks/718.js`
+  - `unpacked/_next/static/chunks/1141.js`
+  - `unpacked/_next/static/chunks/1597.js`
+  - `unpacked/_next/static/chunks/1776.js`
+  - `unpacked/_next/static/chunks/1777.js`
+  - `unpacked/_next/static/chunks/1948.js`
+  - `unpacked/_next/static/chunks/2143.js`
+  - `unpacked/_next/static/chunks/2161.js`
+  - `unpacked/_next/static/chunks/2178.js`
+  - `unpacked/_next/static/chunks/2212.js`
+  - `unpacked/_next/static/chunks/2292.js`
+  - `unpacked/_next/static/chunks/3060.js`
+  - `unpacked/_next/static/chunks/3332.js`
+  - `unpacked/_next/static/chunks/3432.js`
+  - `unpacked/_next/static/chunks/3466.js`
+  - `unpacked/_next/static/chunks/3705.js`
+  - `unpacked/_next/static/chunks/4042.js`
+  - `unpacked/_next/static/chunks/4347.js`
+  - `unpacked/_next/static/chunks/4505.js`
+  - `unpacked/_next/static/chunks/4615.js`
+  - `unpacked/_next/static/chunks/4616.js`
+  - `unpacked/_next/static/chunks/4685.js`
+  - `unpacked/_next/static/chunks/4700.js`
+  - `unpacked/_next/static/chunks/4806.js`
+  - `unpacked/_next/static/chunks/5187.js`
+  - `unpacked/_next/static/chunks/5288.js`
+  - `unpacked/_next/static/chunks/5632.js`
+  - `unpacked/_next/static/chunks/5883.js`
+  - `unpacked/_next/static/chunks/5952.js`
+  - `unpacked/_next/static/chunks/6291.js`
+  - `unpacked/_next/static/chunks/6522.js`
+  - `unpacked/_next/static/chunks/6550.js`
+  - `unpacked/_next/static/chunks/6867.js`
+  - `unpacked/_next/static/chunks/6875.js`
+  - `unpacked/_next/static/chunks/6951.js`
+  - `unpacked/_next/static/chunks/6952.js`
+  - `unpacked/_next/static/chunks/7198.js`
+  - `unpacked/_next/static/chunks/7659.js`
+  - `unpacked/_next/static/chunks/7745.js`
+  - `unpacked/_next/static/chunks/7791.js`
+  - `unpacked/_next/static/chunks/7795.js`
+  - `unpacked/_next/static/chunks/7947.js`
+  - `unpacked/_next/static/chunks/7994.js`
+  - `unpacked/_next/static/chunks/8226.js`
+  - `unpacked/_next/static/chunks/8400.js`
+  - `unpacked/_next/static/chunks/9087.js` (English)
+    - <details><summary>Diff of changes to the English language chunk</summary>
+      
+      ### Added
+      
+      ```json
+      {
+        // ..snip..
+      
+        "announcementTooltip.beta": {
+            "defaultMessage": "Beta",
+            "description": "Beta badge text"
+        },
+      
+        // ..snip..
+      
+        "gizmo.about.capabilitiesHeader": {
+            "defaultMessage": "Capabilities",
+            "description": "Header for the capabilities section of the about modal"
+        },
+        "gizmo.about.notEnoughReviews": {
+            "defaultMessage": "Not enough reviews yet",
+            "description": "Message when there are not enough reviews for a gizmo"
+        },
+        "gizmo.about.numConversations": {
+            "defaultMessage": "conversations",
+            "description": "Number of conversations for a gizmo"
+        },
+        "gizmo.about.numReviews": {
+            "defaultMessage": "{numReviews, plural, one {# review} other {# reviews}}",
+            "description": "Number of reviews for a gizmo"
+        },
+        "gizmo.about.ratingsHeader": {
+            "defaultMessage": "Ratings",
+            "description": "Header for the ratings section of the about modal"
+        },
+        "gizmo.about.startChat": {
+            "defaultMessage": "Start Chat",
+            "description": "Label for the start chat button in the about modal"
+        },
+        "gizmo.about.tools.browsing": {
+            "defaultMessage": "Browsing",
+            "description": "Title for the browsing tool in the about modal"
+        },
+        "gizmo.about.tools.dalle": {
+            "defaultMessage": "DALL·E Images",
+            "description": "Title for the dalle tool in the about modal"
+        },
+        "gizmo.about.tools.dataAnalysis": {
+            "defaultMessage": "Data Analysis",
+            "description": "Title for the data analysis tool in the about modal"
+        },
+        "gizmo.about.tools.memory": {
+            "defaultMessage": "Memory",
+            "description": "Title for the memory tool in the about modal"
+        },
+        "gizmo.about.tools.memoryDescription": {
+            "defaultMessage": "Learns from previous chats to improve future conversations",
+            "description": "Description for the memory tool in the about modal"
+        },
+      
+        // ..snip..
+      
+        "gizmo.anonLandingPage.login": {
+            "defaultMessage": "Sign up to chat",
+            "description": "Upsell messsage for anonymous users"
+        },
+        "gizmo.anonLandingPage.subtext": {
+            "defaultMessage": "Requires ChatGPT Plus",
+            "description": "Upsell subtext for anonymous users"
+        },
+      
+        // ..snip..
+      
+        "GizmoEditorModelPicker.codeInterpreterTooltip": {
+            "defaultMessage": "Allow this GPT to run code. When enabled, this GPT can analyze data, work with files you’ve uploaded, do math, and more.",
+            "description": "Code Interpreter tooltip"
+        },
+        "GizmoEditorModelPicker.memoryTooltip": {
+            "defaultMessage": "Allow this GPT to pick up on users details and preferences to tailor its responses to them. When enabled, users will need to have memory on to use this GPT.",
+            "description": "Memory tooltip"
+        },
+      
+        // ..snip..
+      
+        "GizmoReviewModal.includeFrom": {
+            "defaultMessage": "Include my email address {email}",
+            "description": "Include from checkbox label"
+        },
+        "GizmoReviewModal.messagePlaceholder": {
+            "defaultMessage": "Add an optional private email to the creator",
+            "description": "Message placeholder of the GPT review modal"
+        },
+        "GizmoReviewModal.submit": {
+            "defaultMessage": "Submit",
+            "description": "Submit"
+        },
+        "GizmoReviewModal.subtitle": {
+            "defaultMessage": "How would you rate this GPT?",
+            "description": "Subtitle of the GPT review modal"
+        },
+        "GizmoReviewModal.subtitleChange": {
+            "defaultMessage": "Would you like to change your rating?",
+            "description": "Subtitle of the GPT review modal"
+        },
+        "GizmoReviewModal.subtitleTooltip": {
+            "defaultMessage": "Stars will be public and anonymous",
+            "description": "Subtitle tooltip of the GPT review modal"
+        },
+        "GizmoReviewModal.successToast": {
+            "defaultMessage": "Review sent",
+            "description": "Success toast message"
+        },
+        "GizmoReviewModal.title": {
+            "defaultMessage": "Leave Feedback",
+            "description": "Title of the GPT review modal"
+        },
+      
+        // ..snip..
+      
+        "history.deleteModalMemoryDisclaimer": {
+            "defaultMessage": "To clear any memories from this chat, visit your <link>settings</link>.",
+            "description": "Disclaimer that memory is not cleared when chat is deleted"
+        },
+      
+        // ..snip..
+      
+        "MemoriesModal.unknownGizmo": {
+            "defaultMessage": "Unknown GPT",
+            "description": "Label when an unknown gizmo is selected"
+        },
+      
+        // ..snip..
+      
+        "mentionGptsAnnouncement.description": {
+            "defaultMessage": "Type {key} to mention a GPT and add it directly into your conversation",
+            "description": "Description of modal announcing Explore GPTs"
+        },
+        "mentionGptsAnnouncement.title": {
+            "defaultMessage": "GPT mentions",
+            "description": "Title of modal announcing Explore GPTs"
+        },
+      
+        // ..snip..
+      
+        "PromptTextarea.noTestGizmoId": {
+            "defaultMessage": "Start by defining your GPT.",
+            "description": "Text that shows when input is disabled due to no gizmo id in test mode"
+        },
+      
+        // ..snip..
+      
+        "settingsModal.alwaysExpandCodeOutput": {
+            "defaultMessage": "Always expand code output",
+            "description": "Label for the always expand python code setting"
+        },
+      
+        // ..snip..
+      
+        "settingsModal.deleteHistoryModalMemoryDisclaimer": {
+            "defaultMessage": "To clear any memories from your chats, visit your <link>settings</link>.",
+            "description": "Disclaimer that memory is not cleared when chat history is deleted"
+        },
+      
+        // ..snip..
+      
+        "settingsModal.mergeButton": {
+            "defaultMessage": "Merge",
+            "description": "Merge data from personal workspace button"
+        },
+        "settingsModal.mergePersonalData": {
+            "defaultMessage": "Merge data from your personal workspace",
+            "description": "Label for the settings option to merge data from personal workspace"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.stillLoadingData": {
+            "defaultMessage": "Don't see what you're looking for? Some GPTs are still loading...",
+            "description": "Message for loading state"
+        },
+      
+        // ..snip..
+      
+        "YearlyBillingToggle.billAnnuallyToggleLabel": {
+            "defaultMessage": "Toggle to change between monthly and yearly subscriptions",
+            "description": "Toggle label to change between monthly and yearly subscriptions"
+        },
+        "YearlyBillingToggle.billedAnnually": {
+            "defaultMessage": "Billed annually",
+            "description": "Description for toggling between billed monthly and billed annually"
+        },
+        "YearlyBillingToggle.save40Dollars": {
+            "defaultMessage": "Save $40",
+            "description": "Discount in USD for billing annually"
+        },
+      }
+      ```
+      
+      ### Modified
+      
+      ```diff
+        "gizmo.recipientBlocked":
+        {
+      -     "defaultMessage": "Because this GPT previously may have violated our policies, you cannot publish it at this level.",
+      +     "defaultMessage": "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
+            "description": "Label explaining that GPT cannot be shared at the selected level"
+        },
+      ```
+      
+      ```diff
+        "initialModal.billing": {
+      -     "defaultMessage": "If you have a paid plan, it will be canceled upon completing this step.",
+      +     "defaultMessage": "If you have a ChatGPT Plus subscription, it will be canceled and refunded upon completing this step.",
+            "description": "Description for what happens to billing"
+        },
+      ```
+      
+      ```diff
+        "MemoriesModal.title": {
+      -     "defaultMessage": "My memories",
+      +     "defaultMessage": "Memory",
+            "description": "Memories modal title"
+        },
+      ```
+      
+      ```diff
+      - "MemoriesModal.noMemories": {
+      -     "defaultMessage": "As you chat with ChatGPT, the details and preferences it remembers will be shown here.",
+      + "MemoriesModal.noMemories.1": {
+      +     "defaultMessage": "As you chat with {name}, the details and preferences it remembers will be shown here.",
+            "description": "No memories message"
+        },
+      + "MemoriesModal.noMemoriesAndDisabled": {
+      +     "defaultMessage": "Memory is disabled. ChatGPT won't use or create memories.",
+      +     "description": "No memories message when memory is disabled"
+      + },
+      - "MemoriesModal.resetModalDescription": {
+      -     "defaultMessage": "ChatGPT will forget everything it has remembered from your chats. This cannot be undone.",
+      -     "description": "Description for the reset memory modal"
+      + "MemoriesModal.resetGizmoModalDescription": {
+      +     "defaultMessage": "{name} will forget everything it has remembered from your chats. This cannot be undone.",
+      +     "description": "Description for the reset memory modal for a single GPT"
+        },
+      ```
+      
+      ```diff
+        "pricingPlanConstants.plusYearly.costInDollars": {
+      -     "defaultMessage": "USD $199.99/year",
+      +     "defaultMessage": "USD $16.67/month",
+            "description": "Cost for plus yearly plan"
+        },
+      - "pricingPlanConstants.plus.plusPricingYearlyDisclaimer": {
+      -     "defaultMessage": "* Price billed annually",
+      -     "description": "Yearly Plus plan disclaimer message"
+      - },
+      + "pricingPlanConstants.plusYearly.costInDollarsSubtitle": {
+      +     "defaultMessage": "USD $199.99/year",
+      +     "description": "Cost for plus yearly plan subtitle"
+      + },
+      ```
+      
+      ```diff
+      + "ResetMemoriesButton.resetChatGPT": {
+      +     "defaultMessage": "Clear ChatGPT's memory",
+      +     "description": "Label for clear ChatGPT memory button"
+      + },
+      - "ResetMemoriesButton.resetSuccessful": {
+      -     "defaultMessage": "Your GPT's memory has been reset.",
+      + "ResetMemoriesButton.resetSuccess": {
+      +     "defaultMessage": "Memory cleared.",
+            "description": "Success message for the reset memory modal"
+        },
+        "ResetMemoriesButton.resetFailed": {
+      +     "defaultMessage": "Failed to clear memory.",
+            "description": "Error message for the reset memory modal"
+        },
+      + "ResetMemoriesButton.resetGizmo": {
+      +     "defaultMessage": "Clear this GPT's memory",
+      +     "description": "Label for clear this GPT's memory button"
+      + },
+      ```
+      
+      ```diff
+        "settingsModal.locale_alpha": {
+      -     "defaultMessage": "Locale (Alpha)",
+      +     "defaultMessage": "Language (Alpha)",
+            "description": "Label for the locale setting"
+        },
+      ```
+      
+      ```diff
+      - "settingsModal.myChagtGptToggleLabel.1": {
+      -     "defaultMessage": "Improve responses with your chats",
+      -     "description": "Label for the chat history toggle."
+      - },
+      + "settingsModal.myChagtGptToggleLabel.2": {
+      +     "defaultMessage": "Memory",
+      +     "description": "Label for the memory-enabled toggle."
+      + },
+      ```
+      
+      ```diff
+        "teamAccountTransferModal.createDetail": {
+      -     "defaultMessage": "Keep your personal account separate. If you’re on Plus, you will maintain your subscription until you cancel",
+      -     "description": "Description for keeping personal account separate"
+      +     "defaultMessage": "Keep your personal workspace separate. If you’re on Plus, you will maintain your subscription until you cancel",
+      +     "description": "Description for keeping personal workspace separate"
+        },
+        "teamTransferModal.deleteData": {
+      -     "defaultMessage": "Your Plugins and custom instructions in your personal account will be deleted.",
+      +     "defaultMessage": "Your Plugins and custom instructions in your personal workspace will be deleted.",
+            "description": "Description to explain what data will be deleted"
+        },
+        "teamTransferModal.migrateData": {
+      -     "defaultMessage": "Your chat history and GPTs in your personal account will be migrated to the Team workspace.",
+      +     "defaultMessage": "Your chat history and GPTs in your personal workspace will be migrated to the Team workspace.",
+            "description": "Description to explain what data will be transferred"
+        },
+        "teamTransferModal.personalAccount": {
+      -     "defaultMessage": "Personal account",
+      -     "description": "Label for personal account"
+      +     "defaultMessage": "Personal workspace",
+      +     "description": "Label for personal workspace"
+        },
+      ```
+      
+      ### Removed
+      
+      ```json
+      {
+        // ..snip..
+      
+        "GizmoInformation.gpt3_5": {
+            "defaultMessage": "GPT-3.5",
+            "description": "Label for the GPT-3.5 category of the Gizmo model"
+        },
+        "GizmoInformation.gpt4": {
+            "defaultMessage": "GPT-4",
+            "description": "Label for the GPT-4 category of the Gizmo model"
+        },
+      
+        // ..snip..
+      
+        "GizmoInformation.poweredBy": {
+            "defaultMessage": "Powered by",
+            "description": "Label for the powered by section of the GPT details modal"
+        },
+      
+        // ..snip..
+      
+        "MemoriesModal.memoryColumn": {
+            "defaultMessage": "Memory",
+            "description": "Memory column name"
+        },
+        
+        // ..snip..
+      
+        "workspaceSettings.allowAllOption": {
+            "defaultMessage": "Allow all",
+            "description": "Allow all option for third party gpts"
+        },
+        "workspaceSettings.anyOneSelect": {
+            "defaultMessage": "Anyone",
+            "description": "Select value for any one option for sharing"
+        },
+        "workspaceSettings.appearanceTitle": {
+            "defaultMessage": "Appearance",
+            "description": "Title for appearance settings"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.browseOptionTitle": {
+            "defaultMessage": "Browsing with Bing",
+            "description": "Browse setting title"
+        },
+        "workspaceSettings.browseTooltip": {
+            "defaultMessage": "Allow ChatGPT and GPTs to browse the internet to answer questions about recent topics and events.",
+            "description": "Tooltip message for browse setting toggle"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.customActionsTooltip": {
+            "defaultMessage": "Allow GPTs to use third-party services for tasks such as finding flights. Actions are defined by GPT builders.",
+            "description": "Tooltip message for custom actions toggle"
+        },
+      
+        "workspaceSettings.dontAllowOption": {
+            "defaultMessage": "Don't allow",
+            "description": "Don't allow option for third party gpts"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.gptSharingTitle": {
+            "defaultMessage": "GPTs can be shared with...",
+            "description": "Title for gpt sharing select"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.pluginsOptionTitle": {
+            "defaultMessage": "Plugins",
+            "description": "Plugins setting title"
+        },
+        "workspaceSettings.pluginsOptionTitle.0": {
+            "defaultMessage": "Custom actions",
+            "description": "Custom Actions setting title"
+        },
+        "workspaceSettings.pluginsTooltip": {
+            "defaultMessage": "Allow members to install plugins so ChatGPT can use third-party services for tasks such as finding flights.",
+            "description": "Tooltip message for plugin setting toggle"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.thirdPartyGPTsDescription": {
+            "defaultMessage": "Manage whether members can use GPTs created outside your workspace. These GPTs may be able to browse the internet or take custom actions.",
+            "description": "Description of third GPT settings"
+        },
+        "workspaceSettings.thirdPartyGPTsTitle": {
+            "defaultMessage": "Third-party",
+            "description": "Third Party GPTs setting title"
+        },
+      
+        // ..snip..
+      
+        "workspaceSettings.workspaceGPTsDescription": {
+            "defaultMessage": "Manage which capabilities are available for standard ChatGPT and custom GPTs created in your workspace. These settings do not apply to third-party GPTs.",
+            "description": "Workspace GPTS settings description"
+        },
+        "workspaceSettings.workspaceGPTsTitle": {
+            "defaultMessage": "Workspace GPTs",
+            "description": "Title for workspace gpts settings"
+        },
+      
+        // ..snip..
+      }
+      ```
+      
+      </details>
+
+  - `unpacked/_next/static/chunks/9120.js`
+  - `unpacked/_next/static/chunks/9271.js`
+  - `unpacked/_next/static/chunks/9826.js`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - Added new route: `/g/[gizmoId]/about` (`static/chunks/pages/g/[gizmoId]/about-c111b3c828beae5a.js`)
+- `unpacked/_next/static/chunks/4534.js`
+  - This is a newly added chunk
+  - At least some parts of this chunk seem to correlate with the following libs:
+    - https://github.com/leandrowd/react-easy-swipe/blob/65b9a3c5f4acc2fc8c2abf00c3c963cf52873b29/lib/react-swipe.js
+    - https://github.com/leandrowd/react-responsive-carousel/blob/b8762d6627819fefbaa2c56fa3fcb8c614bcc4f0/src/components/Carousel/index.tsx
+    - https://github.com/glideapps/glide-data-grid/blob/0673b91ac92210766f4d783f87c63485e9447483/packages/core/src/common/styles.ts
+    - https://github.com/NoobKilla5412/Stuff/blob/3c71879b1057bf9d9eb0b1df7df8777fe4430390/js/marked.js#L1253
+      - https://github.com/markedjs/marked4
+    - https://github.com/adaltas/node-csv/blob/f56106dba13c2d2d91997c69341f66794e92929e/packages/csv-parse/lib/api/normalize_columns_array.js#L24
+    - ?etc?
+- `unpacked/_next/static/chunks/5719.js`
+  - This is a newly added chunk
+  - At least some parts of this chunk seem to correlate with the following libs:
+    - https://github.com/glideapps/glide-data-grid/blob/0673b91ac92210766f4d783f87c63485e9447483/packages/core/src/internal/data-grid-overlay-editor/private/number-overlay-editor.tsx
+    - https://github.com/s-yadav/react-number-format/blob/e2179f9e9d2c4ddd1ab714ff385412b53e9ed3e7/src/number_format_base.tsx#L297
+    - ?etc?
+- `unpacked/_next/static/chunks/9610.js`
+  - This is a newly added chunk
+  - At least some parts of this chunk seem to correlate with the following libs:
+    - https://github.com/glideapps/glide-data-grid/blob/0673b91ac92210766f4d783f87c63485e9447483/packages/core/src/internal/data-grid-overlay-editor/data-grid-overlay-editor.tsx#L198
+    - ?etc?
+- `unpacked/_next/static/css/944a9aa5c00c7d0e.css`
+  - This is a newly added CSS chunk
+  - At least some parts of this chunk seem to correlate with the following libs:
+    - https://github.com/glideapps/glide-data-grid
+- `unpacked/_next/static/chunks/pages/g/[gizmoId].js`
+  - ```js
+    GizmoChatWithRedirect: function () {
+      return y;
+    },
+    ```
+- `unpacked/_next/static/chunks/pages/g/[gizmoId]/about.js`
+  - This is a newly added chunk/page/route (`/g/[gizmoId]/about`)
+  - ```js
+    (0, u.createElement)(
+      s.GizmoChatWithRedirect,
+      f(f({}, e), {}, { key: e.gizmoId })
+    ),
+    ```
+  - ```js
+    function h(e) {
+      var t = (0, c.useRouter)().query.gizmoId;
+      return "chat_page" === e.kind
+        ? (0, u.createElement)(d, f(f({}, e), {}, { key: t, gizmoId: t }))
+        : (0, s.default)(e);
+    }
+    ```
+  - ```js
+    r.d(t, {
+      GizmoChatWithRedirect: function () {
+        return P;
+      },
+      __N_SSP: function () {
+        return x;
+      },
+      default: function () {
+        return v;
+      },
+    });
+    ```
+  - ```js
+    function v(e) {
+      var t = (0, h.useRouter)().query.gizmoId;
+      switch (e.kind) {
+        case "anon_gizmo":
+          return (0, O.jsx)(c.X, { gizmo: e.gizmo }, t);
+        case "chat_page":
+          return (0, p.createElement)(
+            P,
+            y(y({}, e), {}, { key: t, gizmoId: t })
+          );
+        default:
+          (0, g.Z)(e);
+      }
+    }
+    ```
+  - ```js
+    children: [
+      (0, O.jsx)("div", {
+        className: "font-bold",
+        children: (0, O.jsx)(m.Z, {
+          id: "gizmo.loadError",
+          defaultMessage: "We're having trouble loading this GPT.",
+        }),
+      }),
+      (0, O.jsx)(m.Z, {
+        id: "gizmo.loadErrorRefresh",
+        defaultMessage: "Please refresh the page, or try again later",
+      }),
+    ],
+    ```
+  - ```js
+    children: [
+      (0, O.jsx)(o.p, {
+        onClick: function () {
+          return (0, l.MG)();
+        },
+        children: (0, O.jsx)(m.Z, {
+          id: "gizmo.upsell",
+          defaultMessage: "Sign up to chat",
+        }),
+      }),
+      (0, O.jsx)("div", {
+        className: "text-sm text-token-text-tertiary",
+        children: (0, O.jsx)(m.Z, {
+          id: "gizmo.upsellSubtext",
+          defaultMessage: "Requires ChatGPT Plus",
+        }),
+      }),
+    ],
+    ```
+  - ```js
+    (window.__NEXT_P = window.__NEXT_P || []).push([
+      "/g/[gizmoId]/about",
+      function () {
+        return r(14320);
+      },
+    ]);
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, making it hard to see what changed specifically
+  - ```js
+    os = nu()(
+      function () {
+        return Promise.all([en.e(8682), en.e(4534), en.e(1187)])
+          .then(en.bind(en, 36027))
+          .then(function (Y) {
+            return Y.default;
+          });
+      },
+      {
+        loadableGenerated: {
+          webpack: function () {
+            return [36027];
+          },
+        },
+      }
+    );
+    ```
+  - ```diff
+    - ei.is_visually_hidden)
+    + ei.is_visually_hidden_from_conversation)
+    ```
+  - ```js
+    ek = (0, ez.FJ)(eU.L0.DataAnalysisV2) ? os : nj.ZP,
+    ```
+  - ```js
+    var rr = eS()(
+        function () {
+          return en
+            .e(8682)
+            .then(en.bind(en, 66202))
+            .then(function (Y) {
+              return Y.default;
+            });
+        },
+        {
+          loadableGenerated: {
+            webpack: function () {
+              return [66202];
+            },
+          },
+        }
+      ),
+    ```
+  - ```js
+    tw = null == eO ? void 0 : eO.includes(eB.L0.DataAnalysisV2),
+    ```
+  - ```js
+    function eL(Y) {
+      var et = eD(Y);
+      return null != et && ["xls", "xlsx", "csv", "json"].includes(et);
+    }
+    ```
+  - ```js
+    var eI = ew()(
+        function () {
+          return Promise.all([en.e(8682), en.e(4534), en.e(6378)])
+            .then(en.bind(en, 40528))
+            .then(function (Y) {
+              return Y.InChatSpreadsheetFileView;
+            });
+        },
+        {
+          loadableGenerated: {
+            webpack: function () {
+              return [40528];
+            },
+          },
+        }
+      ),
+    ```
+  - ```diff
+    - return (0, eT.jsx)(ew.u, {
+    + return (0, ep.FJ)(eh.L0.DataAnalysisV2) && (0, ed.Vm)(eT)
+    +   ? (0, eM.jsx)(eI, {
+    +       file: {
+    +         type: "interpreter",
+    +         fileName: eT,
+    +         serverThreadId: eP,
+    +         messageId: et,
+    +       },
+    +     })
+    +   : (0, eM.jsx)(e_.u, {
+            closeOnOutsideClick: !1,
+            delayDuration: 0,
+            label: (0, eM.jsxs)("span", {
+              className: "flex items-center gap-1",
+              children: [
+                ew
+                  ? eR.formatMessage(ez.startingDownload)
+                  : eR.formatMessage(ez.downloadFile),
+                ew && (0, eM.jsx)(ej.Z, {}),
+              ],
+            }),
+    ```
+  - ```diff
+    - void 0 !== ey && en({ targetedReply: ey, messageId: Y });
+    + void 0 !== ey && en({ targetedReply: { message: ey }, messageId: Y });
+    ```
+  - ```js
+    (Y.DataAnalysisV2 = "graphite");
+    ```
+  - ```diff
+    - parts: [
+    -   "User is replying to this part in particular: [".concat(Y, "]"),
+    - ],
+    + parts: ["The user is referring to this in particular:\n".concat(Y)],
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-790dff08864dc0e9.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-cc5855bb7bd791cb.js
+https://cdn.oaistatic.com/_next/static/QOvkXTvubXtbvlZ_iHiii/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/QOvkXTvubXtbvlZ_iHiii/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-8849567cbce226b6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/about-c111b3c828beae5a.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-62a250586f2efcd7.js
+```
+
+### From `orig/_next/static/chunks/webpack-cc5855bb7bd791cb.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/132.a745fcb48f3f79d7.js
+https://cdn.oaistatic.com/_next/static/chunks/660.863db58d9b2c4fac.js
+https://cdn.oaistatic.com/_next/static/chunks/676.02ac0ffbfa8c5154.js
+https://cdn.oaistatic.com/_next/static/chunks/718.9483197b3c23f16f.js
+https://cdn.oaistatic.com/_next/static/chunks/1141.e12619ef20ee8dcb.js
+https://cdn.oaistatic.com/_next/static/chunks/1597.452b273c1662f842.js
+https://cdn.oaistatic.com/_next/static/chunks/1776.1c17d87e4be5be0d.js
+https://cdn.oaistatic.com/_next/static/chunks/1777.7e475e32ffd8606a.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.b74b40283fc502df.js
+https://cdn.oaistatic.com/_next/static/chunks/2143.e3112fc0bdc6fa12.js
+https://cdn.oaistatic.com/_next/static/chunks/2161.159b4ff2174ea408.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.18cbce9703f1716c.js
+https://cdn.oaistatic.com/_next/static/chunks/2212.18f476477f4b666d.js
+https://cdn.oaistatic.com/_next/static/chunks/2292.ee193cc78b99bd50.js
+https://cdn.oaistatic.com/_next/static/chunks/3060.fb83d49572672105.js
+https://cdn.oaistatic.com/_next/static/chunks/3332.f2d71c59c27b82df.js
+https://cdn.oaistatic.com/_next/static/chunks/3432.9ba3191923ffe5b2.js
+https://cdn.oaistatic.com/_next/static/chunks/3466.f5367a2a3f0c7e0a.js
+https://cdn.oaistatic.com/_next/static/chunks/3705.a652e3e05b57dc6d.js
+https://cdn.oaistatic.com/_next/static/chunks/4042.9cce873b21d9d1fc.js
+https://cdn.oaistatic.com/_next/static/chunks/4347.03656ba77ad8b1e2.js
+https://cdn.oaistatic.com/_next/static/chunks/4505.a2a487e75de0dba5.js
+https://cdn.oaistatic.com/_next/static/chunks/4534.c91227865dbd351e.js
+https://cdn.oaistatic.com/_next/static/chunks/4615.f2144e58c6d3d96d.js
+https://cdn.oaistatic.com/_next/static/chunks/4616.0e2523515d925276.js
+https://cdn.oaistatic.com/_next/static/chunks/4685.230d3d3b676bd751.js
+https://cdn.oaistatic.com/_next/static/chunks/4700.16ef54769ebe4d62.js
+https://cdn.oaistatic.com/_next/static/chunks/4806.ea138c284a6d3ad8.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.d6f3e7be8bddb1d0.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.655e15d0328160bd.js
+https://cdn.oaistatic.com/_next/static/chunks/5632.6eba15000e99adae.js
+https://cdn.oaistatic.com/_next/static/chunks/5719.7c6ed6ab3bf446f4.js
+https://cdn.oaistatic.com/_next/static/chunks/5883.f566f7bc43d433b1.js
+https://cdn.oaistatic.com/_next/static/chunks/5952.372cba881ee40706.js
+https://cdn.oaistatic.com/_next/static/chunks/6291.45a11795b1f677f6.js
+https://cdn.oaistatic.com/_next/static/chunks/6522.65706e5da58922b6.js
+https://cdn.oaistatic.com/_next/static/chunks/6550.b0eb71c1fc6253b5.js
+https://cdn.oaistatic.com/_next/static/chunks/6867.ab0d66ec1a9e61c5.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.234da06b9a80ed0b.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.e7d1dd0f30b42e30.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.8ad3cdd527fc5245.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.00799d507cea0fba.js
+https://cdn.oaistatic.com/_next/static/chunks/7659.d64759fc62a514e2.js
+https://cdn.oaistatic.com/_next/static/chunks/7745.6d3d8ed11b0e9709.js
+https://cdn.oaistatic.com/_next/static/chunks/7791.a44e46a641c46b6f.js
+https://cdn.oaistatic.com/_next/static/chunks/7795.a691b8d7f9267f78.js
+https://cdn.oaistatic.com/_next/static/chunks/7947.709027c1f343a12d.js
+https://cdn.oaistatic.com/_next/static/chunks/7994.096269e2f8b6a1ad.js
+https://cdn.oaistatic.com/_next/static/chunks/8226.319595273e51f6c9.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.229d5c975f2f96fb.js
+https://cdn.oaistatic.com/_next/static/chunks/9087.d54d32dc67199d8a.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.736b0b5dcb0fd73c.js
+https://cdn.oaistatic.com/_next/static/chunks/9271.3ff25034d4f49bf3.js
+https://cdn.oaistatic.com/_next/static/chunks/9610.2a98c01f0e084702.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.be1c530080db6526.js
+https://cdn.oaistatic.com/_next/static/css/944a9aa5c00c7d0e.css
+https://cdn.oaistatic.com/_next/static/css/3fb8fa04c05d20fc.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1187.e399439fd7afe77c.js
+https://cdn.oaistatic.com/_next/static/chunks/6378.85bbfb8e15956201.js
+https://cdn.oaistatic.com/_next/static/chunks/sso.0128006165f67fd9.js
+```
 
 ## 2024-01-29Z (`3Frj0dWPrnm3c4KeyI6Zl`)
 

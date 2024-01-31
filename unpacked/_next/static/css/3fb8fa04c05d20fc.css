@@ -1689,6 +1689,9 @@ textarea:focus {
 .bottom-1\.5 {
   bottom: 0.375rem;
 }
+.bottom-12 {
+  bottom: 3rem;
+}
 .bottom-16 {
   bottom: 4rem;
 }
@@ -2386,6 +2389,9 @@ textarea:focus {
 .h-\[3px\] {
   height: 3px;
 }
+.h-\[400px\] {
+  height: 400px;
+}
 .h-\[404px\] {
   height: 404px;
 }
@@ -2394,6 +2400,9 @@ textarea:focus {
 }
 .h-\[50px\] {
   height: 50px;
+}
+.h-\[55px\] {
+  height: 55px;
 }
 .h-\[60px\] {
   height: 60px;
@@ -7093,6 +7102,10 @@ button[data-state="open"] .toggle-item-button-open {
   --tw-text-opacity: 1;
   color: rgba(37, 99, 235, var(--tw-text-opacity));
 }
+.dark .dark\:text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgba(172, 172, 190, var(--tw-text-opacity));
+}
 .dark .dark\:text-gray-700 {
   --tw-text-opacity: 1;
   color: rgba(64, 65, 79, var(--tw-text-opacity));
@@ -9654,4 +9667,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=b706d4182d20ff06.css.map*/
+/*# sourceMappingURL=3fb8fa04c05d20fc.css.map*/

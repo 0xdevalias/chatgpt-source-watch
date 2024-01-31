@@ -5,6 +5,9 @@
       "use strict";
       r.r(t),
         r.d(t, {
+          GizmoChatWithRedirect: function () {
+            return y;
+          },
           __N_SSP: function () {
             return v;
           },
@@ -14,17 +17,17 @@
         });
       var n = r(36112),
         i = r(91928),
-        s = r(2454),
-        o = r(85528),
+        o = r(2454),
+        s = r(85528),
         c = r(37097),
         u = r(67404),
         l = r(61305),
         a = r(12275),
         d = r(85958),
         f = r(7144),
-        g = r(67311),
-        h = r(10721),
-        j = r.n(h),
+        h = r(67311),
+        g = r(10721),
+        j = r.n(g),
         m = r(70079),
         p = r(32004),
         x = r(35250);
@@ -61,38 +64,38 @@
       }
       var v = !0;
       function _(e) {
-        var t = (0, h.useRouter)().query.gizmoId;
+        var t = (0, g.useRouter)().query.gizmoId;
         switch (e.kind) {
           case "anon_gizmo":
-            return (0, x.jsx)(o.X, { gizmo: e.gizmo }, t);
+            return (0, x.jsx)(s.X, { gizmo: e.gizmo }, t);
           case "chat_page":
             return (0, m.createElement)(
               y,
               b(b({}, e), {}, { key: t, gizmoId: t })
             );
           default:
-            (0, g.Z)(e);
+            (0, h.Z)(e);
         }
       }
       function y(e) {
         var t = (0, c.b9)(e.gizmoId),
           r = t.data,
           n = t.error,
-          s = (0, f.t)(),
-          o = null == s ? void 0 : s.canInteractWithGizmos();
+          o = (0, f.t)(),
+          s = null == o ? void 0 : o.canInteractWithGizmos();
         return ((0, m.useEffect)(
           function () {
             null == r && null != n && j().push((0, d.M5)(d.LT.GIZMO_NOT_FOUND));
           },
           [r, n]
         ),
-        null != n && o)
-          ? (0, x.jsx)(P, {})
-          : !1 === o
-            ? (0, x.jsx)(w, { gizmo: r })
+        null != n && s)
+          ? (0, x.jsx)(z, {})
+          : !1 === s
+            ? (0, x.jsx)(P, { gizmo: r })
             : (0, m.createElement)(i.ZP, b(b({}, e), {}, { key: e.gizmoId }));
       }
-      function P() {
+      function z() {
         return (0, x.jsx)(l.Z, {
           children: (0, x.jsxs)("div", {
             className:
@@ -113,7 +116,7 @@
           }),
         });
       }
-      function w(e) {
+      function P(e) {
         var t = e.gizmo;
         return (0, x.jsx)(l.Z, {
           children: (0, x.jsx)(u.r, {
@@ -122,7 +125,7 @@
             children: (0, x.jsxs)("div", {
               className: "mt-7 flex flex-col gap-4",
               children: [
-                (0, x.jsx)(s.p, {
+                (0, x.jsx)(o.p, {
                   onClick: function () {
                     return (0, a.MG)();
                   },
@@ -153,15 +156,15 @@
       });
       var n = r(49516),
         i = r(83562),
-        s = r(35212),
-        o = r(10721),
+        o = r(35212),
+        s = r(10721),
         c = r(8024),
         u = r(10318),
         l = r(35250);
       function a(e) {
         var t = e.children,
-          r = (0, o.useRouter)();
-        return (0, l.jsx)(s.Z, {
+          r = (0, s.useRouter)();
+        return (0, l.jsx)(o.Z, {
           mobileHeaderRightContent: null,
           sidebar: (0, l.jsxs)(i.ZP, {
             onNewThread: function () {
@@ -192,4 +195,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-468b117d740e6d37.js.map
+//# sourceMappingURL=[gizmoId]-8849567cbce226b6.js.map
