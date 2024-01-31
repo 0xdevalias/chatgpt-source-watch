@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-01-31Z \(`HcJr3AWz9pJF9a2HyS6Cf`\)](#2024-01-31z-hcjr3awz9pjf9a2hys6cf)
 - [2024-01-30Z \(`QOvkXTvubXtbvlZ_iHiii`\)](#2024-01-30z-qovkxtvubxtbvlz_ihiii)
 - [2024-01-29Z \(`3Frj0dWPrnm3c4KeyI6Zl`\)](#2024-01-29z-3frj0dwprnm3c4keyi6zl)
 - [2024-01-28Z \(`PFzTxQNocNiG6gdS1bBR-`\)](#2024-01-28z-pfztxqnocnig6gds1bbr-)
@@ -60,6 +61,173 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-01-31Z (`HcJr3AWz9pJF9a2HyS6Cf`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some updates related to `isActivelyStreaming` / `_getNextCharDelayMs` / `INVERSE_BUFFER_SCALING_FACTOR`
+  - Some refinements to text labels + one of the translation files
+  - Some code cleanup/refactoring
+  - etc
+- App release version (Git SHA?): `3784968e54c2bcb8aeb90452a1a5efbd63e8fc86`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- The following language/translation files were updated:
+  - `unpacked/_next/static/chunks/2292.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (0, ea.Z)(this, "isActivelyStreaming", void 0),
+    (0, ea.Z)(this, "debug", void 0),
+    ```
+  - ```js
+    (this.isActivelyStreaming = !1),
+    (this.debug =
+      null !== (eo = null == en ? void 0 : en.debug) &&
+      void 0 !== eo &&
+      eo),
+    ```
+  - ```diff
+    - this._getNextCharDelayMs()
+    + this.isActivelyStreaming ? this._getNextCharDelayMs() : 0
+    ```
+  - ```diff
+    - value: function (Y) {
+    -   this.textMessageParts = Y;
+    + value: function (Y, et) {
+    +   (this.textMessageParts = Y), (this.isActivelyStreaming = et);
+        var en = (0, ec.Vh)(this.textMessageParts);
+        (this.concatenatedText = en),
+          (this.textMessagePartsTextLength = en.length),
+    ```
+  - ```diff
+    -     this.textMessagePartsTextLength - this.displayedTextLength;
+    - return ei <= 0 ? en : Math.round(en / ei);
+    +     this.textMessagePartsTextLength - this.displayedTextLength,
+    +   eo =
+    +     ei <= 0
+    +       ? en
+    +       : Math.round(en / (ei / Y.INVERSE_BUFFER_SCALING_FACTOR));
+    + return (
+    +   this.debug &&
+    +     en > Y.CHAR_MAX_BUFFERING_LAG_MS &&
+    +     console.debug(
+    +       "PunctuationBuffer: [lagMs: "
+    +         .concat(eo, "] [numBufferedChars: ")
+    +         .concat(ei, "]")
+    +     ),
+    +   eo
+    + );
+    ```
+  - ```js
+    (0, ea.Z)(ep, "INVERSE_BUFFER_SCALING_FACTOR", 100);
+    ```
+  - ```diff
+    - return Y < eg.length ? eg[Y].resource : "create";
+    + if (!ey[Y]) return Y < eg.length ? eg[Y].resource : "create";
+    ```
+  - ```diff
+    - children: (0, eH.jsx)(eQ, { isSelected: eu === eg.length }),
+    + children: (0, eH.jsx)(eJ, {
+    +   gizmoResource: Y.resource,
+    +   from: Y.from,
+    +   showDescription: ec,
+    +   isSelected: eu === et,
+    +   grayedOut: ey[et],
+    + }),
+    ```
+  - ```diff
+      items: [
+        {
+          value: eo.Boost,
+    -     label: "Boost",
+    +     label: (0, eH.jsx)(na, {
+    +       label: "Boost",
+    +       description:
+    +         "The model expands upon on your prompt to have a more detailed DALL\xb7E generation.",
+    +     }),
+          labelWhenSelected: "Prompt: Boost",
+        },
+        {
+          value: eo.Strict,
+    -     label: "Strict",
+    +     label: (0, eH.jsx)(na, {
+    +       label: "Strict",
+    +       description:
+    +         "The model uses your exact prompt for the DALL\xb7E generation.",
+    +     }),
+          labelWhenSelected: "Prompt: Strict",
+        },
+      ],
+    ```
+  - The following looks like they aren't new code, but were refactored to use a helper component to simplify the implementation:
+    - ```js
+      (0, eA.jsx)(nD, {
+        children: (0, eA.jsx)(nO, {
+          label: (0, eA.jsx)(eS.Z, tX({}, t3.customInstructions)),
+          stateLabel:
+            null != eh && eh.enabled
+              ? ei.formatMessage(t3.on)
+              : ei.formatMessage(t3.off),
+      ```
+    - ```js
+      (0, eA.jsx)(nO, {
+        onClick: function () {
+          return eo(!0);
+        },
+        label: Y.formatMessage(nF.chatTrainingAllowedToggleLabel),
+        stateLabel: ed
+          ? Y.formatMessage({
+              id: "settingsModal.trainingEnabled",
+              defaultMessage: "On",
+            })
+          : Y.formatMessage({
+              id: "settingsModal.trainingDisabled",
+              defaultMessage: "Off",
+            }),
+      }),
+      ```
+    - etc
+  - ```js
+    user_prompt_settings:
+      null ===
+        (ep =
+          et.completionMetadata) ||
+      void 0 === ep
+        ? void 0
+        : ep.userPromptSettings,
+    ```
+  - ```js
+    chatgpt_plan_type: et.planType,
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-dfbd5fe22b2a2375.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-c19ea191bfe97e1d.js
+https://cdn.oaistatic.com/_next/static/HcJr3AWz9pJF9a2HyS6Cf/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/HcJr3AWz9pJF9a2HyS6Cf/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-c19ea191bfe97e1d.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/2292.9792e24c24b4d20c.js
+https://cdn.oaistatic.com/_next/static/css/1bca5ee9d7f86daa.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.0adec88adbfdfad0.js
+```
 
 ## 2024-01-30Z (`QOvkXTvubXtbvlZ_iHiii`)
 

@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, e, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e, c) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-dfd7db9208d5bc06.js"],
@@ -58,9 +58,9 @@
     "/gpts/discovery": [
       "static/chunks/pages/gpts/discovery-28475bf486cb7133.js",
     ],
-    "/gpts/editor": [t, "static/chunks/pages/gpts/editor-aa68c5a869aaf2fc.js"],
+    "/gpts/editor": [c, "static/chunks/pages/gpts/editor-aa68c5a869aaf2fc.js"],
     "/gpts/editor/[slug]": [
-      t,
+      c,
       "static/chunks/pages/gpts/editor/[slug]-6e6e5debc72cd8cd.js",
     ],
     "/gpts/mine": ["static/chunks/pages/gpts/mine-8b5f326b497481a5.js"],
