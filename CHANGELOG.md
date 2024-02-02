@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-01Z \(`pPcfPwRZfdrv0dCws676L`\)](#2024-02-01z-ppcfpwrzfdrv0dcws676l)
 - [2024-01-31Z \(`HcJr3AWz9pJF9a2HyS6Cf`\)](#2024-01-31z-hcjr3awz9pjf9a2hys6cf)
 - [2024-01-30Z \(`QOvkXTvubXtbvlZ_iHiii`\)](#2024-01-30z-qovkxtvubxtbvlz_ihiii)
 - [2024-01-29Z \(`3Frj0dWPrnm3c4KeyI6Zl`\)](#2024-01-29z-3frj0dwprnm3c4keyi6zl)
@@ -61,6 +62,443 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-01Z (`pPcfPwRZfdrv0dCws676L`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `38ed1383cf782f7e45561e545cda3663a2152a91`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- New Chunks:
+  - Couldn't be downloaded (server rendered?):
+    - `6281`
+- Module IDs Changed:
+  - `32062` -> `45754`
+  - `35473` -> `96055`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Added new `svg` images of:
+    - A white rounded rectangle in the top left corner
+    - A white square with rounded corners in the top left corner, connected to a white square with rounded corners in the bottom right corner
+    - Four arrows pointing toward the centre of the square image (minimize/collapse?)
+    - Four arrows pointing toward the outer corners of the square image (maximize/expand?)
+  - ```js
+    eH = ec()(
+      function () {
+        return Promise.all([en.e(8682), en.e(4534), en.e(1187)])
+          .then(en.bind(en, 10898))
+          .then(function (Y) {
+            return Y.default;
+          });
+      },
+      {
+        loadableGenerated: {
+          webpack: function () {
+            return [10898];
+          },
+        },
+      }
+    ),
+    ```
+  - A bunch of changes across the codebase that seemed to remove `.metadata` from things, but one addition of it again.. perhaps some cleanup/refactoring to DRY the codebase?:
+    - ```diff
+      - function t7(Y, et) {
+      -   if (
+      -     Y.type !== tM.qK.JIT_PLUGIN ||
+      -     (null === (en = Y.metadata) || void 0 === en
+      -       ? void 0
+      -       : en.json_schema) == null
+      -   )
+      -     return !1;
+      + function nt(Y, et) {
+      +   if (Y.type !== tA.qK.JIT_PLUGIN) return !1;
+      ```
+    - ```diff
+      - return eo(Y.metadata.json_schema), ei;
+      + try {
+      +   en = JSON.parse(Y.metadata.raw_spec);
+      + } catch (et) {
+      +   en = tH.ZP.parse(Y.metadata.raw_spec);
+      + }
+      + return eo(en), ei;
+      ```
+    - ```diff
+      - return (
+      -   (ef = iT(
+      -     null !==
+      -       (en =
+      -         null === (eo = et.metadata) || void 0 === eo
+      -           ? void 0
+      -           : null === (eu = eo.dalle) || void 0 === eu
+      -             ? void 0
+      -             : eu.prompt) && void 0 !== en
+      -       ? en
+      -       : ""
+      -   )),
+      -   (Y.next = 4),
+      -   iE(et.url, ef)
+      - );
+      + return (eu = ij(iO(et))), (Y.next = 4), iT(et.url, eu);
+      ```
+    - ```diff
+      - function ed() {
+      -   var Y,
+      -     et,
+      -     en,
+      -     eo =
+      -       null !==
+      -         (Y =
+      -           null === (et = ei.metadata) || void 0 === et
+      -             ? void 0
+      -             : null === (en = et.dalle) || void 0 === en
+      -               ? void 0
+      -               : en.prompt) && void 0 !== Y
+      -         ? Y
+      -         : "";
+      ```
+    - ```diff
+      - children:
+      -   null === (et = ei.metadata) || void 0 === et
+      -     ? void 0
+      -     : null === (en = et.dalle) || void 0 === en
+      -       ? void 0
+      -       : en.prompt,
+      + children: iO(et),
+      ```
+    - ```diff
+      - var ij = (0, eW.vU)({
+      + function iO(Y) {
+      +   var et, en, ei;
+      +   return null !==
+      +     (et =
+      +       null === (en = Y.metadata) || void 0 === en
+      +         ? void 0
+      +         : null === (ei = en.dalle) || void 0 === ei
+      +           ? void 0
+      +           : ei.prompt) && void 0 !== et
+      +     ? et
+      +     : "";
+      + }
+      ```
+    - ```diff
+      - (0, tt.jsx)(nd.sH, {
+      -   alt: ed.formatMessage(ij.generatedImageAltText),
+      -   src: ek,
+      -   width: ew,
+      -   height: eC,
+      - }),
+      - (0, tt.jsx)("div", {
+      + (0, ta.jsx)(np.sH, { alt: iO(et), src: eb, width: ek, height: ew }),
+      + (0, ta.jsx)("div", {
+      ```
+  - ```diff
+    - generatedImageAltText: {
+    -   id: "dalleMessage.generatedImageAltText",
+    -   defaultMessage: "Generated by DALL\xb7E",
+    - },
+    ```
+  - A fairly large chunk of new code related to `gizmo.inlineReview`:
+    - ```js
+      return (0, tA.a)({
+        queryKey: ["gizmo", "promptReview", Y],
+        queryFn: (function () {
+          var en = (0, em.Z)(
+            eb().mark(function en() {
+              var ei;
+              return eb().wrap(function (en) {
+                for (;;)
+                  switch ((en.prev = en.next)) {
+                    case 0:
+                      return (en.next = 2), nf.U.getShouldPromptReview(Y);
+      ```
+    - ```js
+       eg = (function () {
+         var Y = (0, em.Z)(
+           eb().mark(function Y(et) {
+             return eb().wrap(function (Y) {
+               for (;;)
+                 switch ((Y.prev = Y.next)) {
+                   case 0:
+                     return (
+                       ep(!0), (Y.next = 3), eh.mutateAsync({ rating: et })
+      ```
+    - ```js
+      ec.isLoading ||
+        !(null !== (et = ec.data) && void 0 !== et && et.should_prompt))
+      ```
+    - ```js
+      children: [
+        (0, td.jsx)(eR.Z, {
+          id: "gizmo.inlineReview.reviewLeft",
+          defaultMessage: "Thanks for your feedback!",
+        }),
+      ```
+    - ```js
+      children: (0, td.jsx)(eR.Z, {
+        id: "gizmo.inlineReview.reviewLeftSubtext",
+        defaultMessage:
+          'To update your rating, click "Leave Feedback" in the GPT Menu',
+      }),
+      ```
+    - ```js
+      children: [
+        (0, td.jsx)(eR.Z, {
+          id: "gizmo.inlineReview.prompt",
+          defaultMessage: "How would you rate this GPT so far?",
+        }),
+      ```
+  - Not sure if this dynamically loaded chunk was removed, or just moved due to diff churn:
+    - ```diff
+      - var rr = eS()(
+      -     function () {
+      -       return en
+      -         .e(8682)
+      -         .then(en.bind(en, 66202))
+      -         .then(function (Y) {
+      -           return Y.default;
+      -         });
+      -     },
+      -     {
+      -       loadableGenerated: {
+      -         webpack: function () {
+      -           return [66202];
+      -         },
+      -       },
+      -     }
+      -   ),
+      -   ri = eS()(
+      ```
+  - This was removed from one section, but there are still other references to it in the code:
+    - ```diff
+      tw = null == eO ? void 0 : eO.includes(eB.L0.DataAnalysisV2),
+      ```
+  - A decent chunk of new/refactored code related to gizmo conversation starters:
+    - ```js
+        eo = (0, ep.sB)(ep.tz.GizmoReviews).value,
+        ea =
+          null === (et = en.gizmo.display.prompt_starters) || void 0 === et
+            ? void 0
+            : et.slice(0, eD);
+      return null != ea && 0 !== ea.length && eo
+        ? (0, eA.jsxs)("div", {
+            className: "flex flex-col",
+            children: [
+              (0, eA.jsx)(eR, {
+                children: (0, eA.jsx)(ek.Z, {
+                  id: "gizmo.about.conversationStartersHeader",
+                  defaultMessage: "Conversation Starters",
+                }),
+              }),
+      ```
+  - ```js
+    function eB(Y, et) {
+      var en = new URLSearchParams();
+      null != et && en.set("m", et);
+      var ei = eL(eD(Y));
+      return "" === en.toString() ? ei : "".concat(eL(eD(Y)), "?").concat(en);
+    ```
+  - A largeish section of removed/added code that looks like it was refactored, related to gizmo reviews:
+    - ```js
+      {
+        key: "getShouldPromptReview",
+        value: (function () {
+          var Y = (0, eo.Z)(
+            ed().mark(function Y(et) {
+              return ed().wrap(function (Y) {
+                for (;;)
+                  switch ((Y.prev = Y.next)) {
+                    case 0:
+                      return Y.abrupt(
+                        "return",
+                        ef.ZP.get(
+                          ""
+                            .concat(ef.B, "/gizmo_reviews/")
+                            .concat(et, "/should_prompt")
+                        )
+                      );
+                    case 1:
+                    case "end":
+                      return Y.stop();
+                  }
+              }, Y);
+            })
+          );
+          return function (et) {
+            return Y.apply(this, arguments);
+          };
+        })(),
+      },
+      ```
+    - ```js
+      return (0, ey.a)({
+        queryFn: (function () {
+          var et = (0, eo.Z)(
+            eu().mark(function et() {
+              return eu().wrap(function (et) {
+                for (;;)
+                  switch ((et.prev = et.next)) {
+                    case 0:
+                      return et.abrupt("return", ef.U.getUserReview(Y));
+                    case 1:
+                    case "end":
+                      return et.stop();
+                  }
+              }, et);
+            })
+          );
+          return function () {
+            return et.apply(this, arguments);
+          };
+        })(),
+        queryKey: ["gizmo", "review", { gizmoId: Y }],
+        enabled: null != Y,
+      });
+      ```
+    - ```js
+      eR = function (Y) {
+        var et = Y.gizmo;
+        return (0, em.EV)(em.B.GPTReview)
+          ? (0, eO.jsx)(eL, { gizmo: et })
+          : null;
+      },
+      ```
+    - ```js
+      eu().mark(function Y() {
+        return eu().wrap(function (Y) {
+          for (;;)
+            switch ((Y.prev = Y.next)) {
+              case 0:
+                if (null != eZ) {
+                  Y.next = 3;
+                  break;
+                }
+                return (
+                  eh.m.warning("Please select a rating"),
+                  Y.abrupt("return")
+                );
+              case 3:
+                return (
+                  (Y.next = 5),
+                  ez.mutateAsync({
+                    rating: eZ,
+                    message: ej.length > 0 ? ej : void 0,
+                    includeFrom: ej.length > 0 ? eR : void 0,
+                  })
+                );
+              case 5:
+                eh.m.success(ey.formatMessage(eF.successToast), {
+                  duration: 3,
+                }),
+                  ef();
+              case 7:
+      ```
+    - ```js
+      eF = (0, eE.vU)({
+        title: {
+          id: "GizmoReviewModal.title",
+          defaultMessage: "Leave Feedback",
+        },
+        subtitle: {
+          id: "GizmoReviewModal.subtitle",
+          defaultMessage: "How would you rate this GPT?",
+        },
+        subtitleChange: {
+          id: "GizmoReviewModal.subtitleChange",
+          defaultMessage: "Would you like to change your rating?",
+        },
+        subtitleTooltip: {
+          id: "GizmoReviewModal.subtitleTooltip",
+          defaultMessage: "Stars will be public and anonymous",
+        },
+        messagePlaceholder: {
+          id: "GizmoReviewModal.messagePlaceholder",
+          defaultMessage: "Add an optional private email to the creator",
+        },
+        submit: { id: "GizmoReviewModal.submit", defaultMessage: "Submit" },
+        successToast: {
+          id: "GizmoReviewModal.successToast",
+          defaultMessage: "Review sent",
+        },
+        includeFrom: {
+          id: "GizmoReviewModal.includeFrom",
+          defaultMessage: "Include my email address {email}",
+        },
+      });
+      ```
+  - More updates to the `PunctuationBuffer` / `INVERSE_BUFFER_SCALING_FACTOR` tweaks
+    - ```js
+        this.debug &&
+          console.debug(
+            "PunctuationBuffer: [scalingFactor: ".concat(
+              Y.INVERSE_BUFFER_SCALING_FACTOR,
+              "]"
+            )
+          ),
+      ```
+    - ```diff
+      - : Math.round(en / (ei / Y.INVERSE_BUFFER_SCALING_FACTOR));
+      + : Math.round(
+      +     en / Math.max(ei / Y.INVERSE_BUFFER_SCALING_FACTOR, 1)
+      +   );
+      ```
+    - ```diff
+      - (0, ea.Z)(ep, "INVERSE_BUFFER_SCALING_FACTOR", 100);
+      + (0, ea.Z)(ep, "INVERSE_BUFFER_SCALING_FACTOR", 70);
+      ```
+  - ```diff
+    - : eo.SkippingEnterAnimation
+    + : ea !== ei.Finished || ew
+    +   ? eo.SkippingEnterAnimation
+    +   : eo.ToolFinished
+    ```
+  - ```js
+    customIDs: (0, ep.Z)({}, ej, (0, eg.f3)()),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-a4c060ecbc81f5d4.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-6dbbb942552b84af.js
+https://cdn.oaistatic.com/_next/static/pPcfPwRZfdrv0dCws676L/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/pPcfPwRZfdrv0dCws676L/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-569d9ff7d165a256.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-e19ac01dadc476e1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/analytics-6a84f6c3316883e9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-15f5c05c635f85b2.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-386ea098f1c5b20b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-839d7c4366477c11.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-62c32a26d82c6ffa.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-0157a9b224541f44.js
+https://cdn.oaistatic.com/_next/static/chunks/3975-7f17a9769fd1a61d.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-1dbd7585744bc44a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/accepted-4c8bd0bf70514c24.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-e1245d1db53404c6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-c66100d1dcf1180c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/workspace/deactivated-1ac94d1210251d31.js
+https://cdn.oaistatic.com/_next/static/css/dafd04b74869940d.css
+```
+
+### From `orig/_next/static/chunks/webpack-6dbbb942552b84af.js`
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1187.142433cda70381ac.js
+https://cdn.oaistatic.com/_next/static/chunks/6281.4a0babda689d4f3d.js
+https://cdn.oaistatic.com/_next/static/chunks/6378.0fb19b18f331da2d.js
+https://cdn.oaistatic.com/_next/static/chunks/sso.a10fc00cdd8c6075.js
+```
 
 ## 2024-01-31Z (`HcJr3AWz9pJF9a2HyS6Cf`)
 

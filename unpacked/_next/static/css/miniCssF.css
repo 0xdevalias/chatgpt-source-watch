@@ -1659,6 +1659,9 @@ textarea:focus {
   bottom: 0;
   top: 0;
 }
+.-bottom-px {
+  bottom: -1px;
+}
 .-left-2 {
   left: -0.5rem;
 }
@@ -1887,6 +1890,9 @@ textarea:focus {
 }
 .m-6 {
   margin: 1.5rem;
+}
+.m-8 {
+  margin: 2rem;
 }
 .m-auto {
   margin: auto;
@@ -2401,8 +2407,8 @@ textarea:focus {
 .h-\[50px\] {
   height: 50px;
 }
-.h-\[55px\] {
-  height: 55px;
+.h-\[550px\] {
+  height: 550px;
 }
 .h-\[60px\] {
   height: 60px;
@@ -2415,6 +2421,9 @@ textarea:focus {
 }
 .h-\[72px\] {
   height: 72px;
+}
+.h-\[93vh\] {
+  height: 93vh;
 }
 .h-auto {
   height: auto;
@@ -2656,6 +2665,9 @@ textarea:focus {
 }
 .w-\[32px\] {
   width: 32px;
+}
+.w-\[350px\] {
+  width: 350px;
 }
 .w-\[3px\] {
   width: 3px;
@@ -3565,6 +3577,9 @@ textarea:focus {
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+}
+.rounded-br-full {
+  border-bottom-right-radius: 9999px;
 }
 .rounded-br-sm {
   border-bottom-right-radius: 0.125rem;
@@ -4762,6 +4777,10 @@ textarea:focus {
 .text-token-surface-primary {
   color: #fff;
   color: var(--surface-primary);
+}
+.text-token-surface-tertiary {
+  color: #ececf1;
+  color: var(--surface-tertiary);
 }
 .text-token-text-primary {
   color: #0f0f0f;
@@ -9677,4 +9696,4 @@ pre[class*="language-"] {
 #intercom-container {
   display: none;
 }
-/*# sourceMappingURL=1bca5ee9d7f86daa.css.map*/
+/*# sourceMappingURL=dafd04b74869940d.css.map*/

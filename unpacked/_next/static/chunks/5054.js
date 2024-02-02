@@ -777,7 +777,7 @@
         });
       }
       var eq = n(46514),
-        eW = n(32062),
+        eW = n(45754),
         eH = n(70737),
         eK = n(97296),
         eY = n(7137),
@@ -1153,7 +1153,7 @@
           }),
         });
       }
-      function e4(e, t) {
+      function e5(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -1165,7 +1165,7 @@
         }
         return n;
       }
-      function e5(e) {
+      function e4(e) {
         var t = e.label,
           n = e.toolType,
           r = e.enabledTools,
@@ -1213,7 +1213,7 @@
         return (0, F.jsxs)("div", {
           className: "flex flex-col items-start gap-2",
           children: [
-            (0, F.jsx)(e5, {
+            (0, F.jsx)(e4, {
               label: "Web Browsing",
               toolType: _.qK.BROWSER,
               enabledTools: t,
@@ -1227,7 +1227,7 @@
                       for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {};
                         t % 2
-                          ? e4(Object(n), !0).forEach(function (t) {
+                          ? e5(Object(n), !0).forEach(function (t) {
                               (0, O.Z)(e, t, n[t]);
                             })
                           : Object.getOwnPropertyDescriptors
@@ -1235,7 +1235,7 @@
                                 e,
                                 Object.getOwnPropertyDescriptors(n)
                               )
-                            : e4(Object(n)).forEach(function (t) {
+                            : e5(Object(n)).forEach(function (t) {
                                 Object.defineProperty(
                                   e,
                                   t,
@@ -1247,13 +1247,13 @@
                     })({}, e9.disabledBrowsingToolTip)
                   ),
             }),
-            (0, F.jsx)(e5, {
+            (0, F.jsx)(e4, {
               label: "DALL\xb7E Image Generation",
               toolType: _.qK.DALLE,
               enabledTools: t,
               onEnabledToolsChange: n,
             }),
-            (0, F.jsx)(e5, {
+            (0, F.jsx)(e4, {
               label: (0, F.jsxs)("div", {
                 className: "flex items-center",
                 children: [
@@ -1268,7 +1268,7 @@
               onEnabledToolsChange: n,
             }),
             i &&
-              (0, F.jsx)(e5, {
+              (0, F.jsx)(e4, {
                 label: (0, F.jsxs)("div", {
                   className: "flex items-center",
                   children: [
@@ -2322,7 +2322,7 @@
         });
       }
       var tw = n(75499),
-        tP = n(35473),
+        tP = n(96055),
         tk = n(13366),
         tT = n(18008),
         tN = n(58272),
@@ -4051,7 +4051,7 @@
           ],
         });
       }
-      function t4(e) {
+      function t5(e) {
         var t = e.gizmo,
           n = e.publishedGizmo,
           r = e.promoteGizmo,
@@ -4076,7 +4076,7 @@
               : (0, F.jsx)(t3, { publishedGizmo: s.publishedGizmo }),
         });
       }
-      function t5(e) {
+      function t4(e) {
         var t,
           n = e.gizmo,
           r = e.publishedGizmo,
@@ -4119,7 +4119,7 @@
                 side: "bottom",
                 align: "end",
                 sideOffset: 8,
-                children: (0, F.jsx)(t4, {
+                children: (0, F.jsx)(t5, {
                   gizmo: n,
                   publishedGizmo: r,
                   promoteGizmo: s,
@@ -4410,7 +4410,7 @@
                   publishedGizmo: o,
                   revertDraft: l,
                 }),
-                (0, F.jsx)(t5, {
+                (0, F.jsx)(t4, {
                   gizmo: t,
                   publishedGizmo: o,
                   isLoading: n,
@@ -6343,4 +6343,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5054-62a250586f2efcd7.js.map
+//# sourceMappingURL=5054-1dbd7585744bc44a.js.map
