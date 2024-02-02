@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, t) {
+(self.__BUILD_MANIFEST = (function (a, s, t, c) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-dfd7db9208d5bc06.js"],
@@ -41,35 +41,35 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-6c967c6bb3c60b1d.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
+    "/auth/login": [s, t, "static/chunks/pages/auth/login-001159e4899e6e7a.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-7cb4d55a75b2ec20.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-e3f3990046158829.js",
     ],
     "/bypass": ["static/chunks/pages/bypass-4782eea63108c9bc.js"],
-    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-8849567cbce226b6.js"],
+    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-7fadb2946edbe409.js"],
     "/g/[gizmoId]/about": [
-      "static/chunks/pages/g/[gizmoId]/about-c111b3c828beae5a.js",
+      "static/chunks/pages/g/[gizmoId]/about-eb0ae194b80daac5.js",
     ],
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-252d29e38cf1ddb8.js",
     ],
-    "/gpts": ["static/chunks/pages/gpts-44b132ed09adeb86.js"],
+    "/gpts": ["static/chunks/pages/gpts-dc1c030d5ab0d59e.js"],
     "/gpts/discovery": [
       "static/chunks/pages/gpts/discovery-28475bf486cb7133.js",
     ],
-    "/gpts/editor": [t, "static/chunks/pages/gpts/editor-aa68c5a869aaf2fc.js"],
+    "/gpts/editor": [c, "static/chunks/pages/gpts/editor-aa68c5a869aaf2fc.js"],
     "/gpts/editor/[slug]": [
-      t,
+      c,
       "static/chunks/pages/gpts/editor/[slug]-6e6e5debc72cd8cd.js",
     ],
-    "/gpts/mine": ["static/chunks/pages/gpts/mine-8b5f326b497481a5.js"],
+    "/gpts/mine": ["static/chunks/pages/gpts/mine-c2d7bc1da5dc7f60.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-4c8bd0bf70514c24.js",
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      c,
+      t,
       "static/chunks/pages/invite/[[...referralCodeParam]]-e1245d1db53404c6.js",
     ],
     "/payments/success": [
@@ -140,6 +140,6 @@
   "static/chunks/5017-569d9ff7d165a256.js",
   "static/chunks/3975-7f17a9769fd1a61d.js",
   "static/chunks/3754-ae5dc2fb759ecfc1.js",
-  "static/chunks/5054-1dbd7585744bc44a.js"
+  "static/chunks/5054-f3f8b9683a8b7976.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

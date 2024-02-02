@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-02Z \(`cJnjwmwanfzv1nD-EjrOa`\)](#2024-02-02z-cjnjwmwanfzv1nd-ejroa)
 - [2024-02-01Z \(`pPcfPwRZfdrv0dCws676L`\)](#2024-02-01z-ppcfpwrzfdrv0dcws676l)
 - [2024-01-31Z \(`HcJr3AWz9pJF9a2HyS6Cf`\)](#2024-01-31z-hcjr3awz9pjf9a2hys6cf)
 - [2024-01-30Z \(`QOvkXTvubXtbvlZ_iHiii`\)](#2024-01-30z-qovkxtvubxtbvlz_ihiii)
@@ -63,6 +64,203 @@ You may also like some of the historical insights captured at the following gist
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
 
+## 2024-02-02Z (`cJnjwmwanfzv1nD-EjrOa`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `1c1aa5355e2283e65b6af0a4668113b9ca64f6cd`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Removed Chunks:
+  - `6281`
+- Module IDs Changed:
+  -  `50860` -> `85695`
+  -  `83562` -> `70521`
+  -  ?etc?
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn (including some pretty huge chunks), making it hard to see what changed specifically
+  - Newly added `svg` image:
+    - Of a white `x` within a black square with rounded corners (close? delete?)
+  - ```diff
+    - "DALL\xb7E ".concat(et, " - ").concat(en, ".png")
+    + "DALL\xb7E ".concat(et, " - ").concat(en, ".webp")
+    ```
+  - Not sure if this dynamic loaded chunk was removed entirely, or just refactored/diff churn:
+  - ```js
+    ou = en(48099),
+    oc = nf()(
+      function () {
+        return Promise.all([en.e(8682), en.e(4534), en.e(6378)])
+          .then(en.bind(en, 53299))
+          .then(function (Y) {
+            return Y.default;
+          });
+      },
+      {
+        loadableGenerated: {
+          webpack: function () {
+            return [53299];
+          },
+        },
+      }
+    );
+    ```
+  - A number of changes related to removing `promptTextareaRef`
+    - ```diff
+      - ec = Y.promptTextareaRef,
+      ```
+    - ```diff
+      - promptTextareaRef: ec,
+      ```
+    - ```diff
+      - ref: eu,
+      ```
+    - etc
+  - ```diff
+    - className: (0, ef.default)(
+    -   "fixed inset-0 bg-black/50 dark:bg-gray-600/70",
+    + className: (0, ed.default)(
+    +   "fixed inset-0 bg-black/50 dark:bg-black/80",
+    ```
+  - Some new code/refactor/diff churn related to user surveys:
+    - ```js
+      return (0, eY.a)({
+        queryKey: ["userSurvey"],
+        queryFn: (function () {
+          var Y = (0, eR.Z)(
+            eF().mark(function Y() {
+              return eF().wrap(function (Y) {
+                for (;;)
+                  switch ((Y.prev = Y.next)) {
+                    case 0:
+                      return Y.abrupt(
+                        "return",
+                        ez.ZP.getActiveUserSurvey()
+      ```
+    - ```js
+      mutationFn: (function () {
+        var Y = (0, eR.Z)(
+          eF().mark(function Y(et) {
+            return eF().wrap(function (Y) {
+              for (;;)
+                switch ((Y.prev = Y.next)) {
+                  case 0:
+                    return Y.abrupt(
+                      "return",
+                      ez.ZP.completeUserSurvey(et)
+      ```
+    - ```js
+      eF().mark(function Y() {
+        return eF().wrap(function (Y) {
+          for (;;)
+            switch ((Y.prev = Y.next)) {
+              case 0:
+                t9.E.invalidateQueries({ queryKey: ["userSurvey"] });
+      ```
+    - ```js
+      children: (0, eX.jsx)(ey.Z, {
+        id: "navigation.survey.title",
+        defaultMessage:
+          "We are asking a small group of people for their opinion",
+      }),
+      ```
+    - ```js
+      children: (0, eX.jsx)(ey.Z, {
+        id: "navigation.survey.description",
+        defaultMessage:
+          "Could you spare few minutes to take a short survey?",
+      }),
+      ```
+    - ```js
+      "aria-label": et.formatMessage({
+        id: "navigation.survey.dismiss",
+        defaultMessage: "Dismiss survey",
+      }),
+      ```
+    - ```js
+      (0, eX.jsx)(ey.Z, {
+        id: "navigation.survey.takeSurvey",
+        defaultMessage: "Take survey",
+      }),
+      ```
+    - ```js
+      {
+        key: "getActiveUserSurvey",
+        value: (function () {
+          var Y = (0, ef.Z)(
+            eh().mark(function Y() {
+              return eh().wrap(
+                function (Y) {
+                  for (;;)
+                    switch ((Y.prev = Y.next)) {
+                      case 0:
+                        return Y.abrupt(
+                          "return",
+                          this.get(
+                            "".concat(tt, "/user_surveys/active")
+                          )
+                        );
+      ```
+    - ```js
+      {
+        key: "completeUserSurvey",
+        value: (function () {
+          var Y = (0, ef.Z)(
+            eh().mark(function Y(et) {
+              return eh().wrap(
+                function (Y) {
+                  for (;;)
+                    switch ((Y.prev = Y.next)) {
+                      case 0:
+                        return Y.abrupt(
+                          "return",
+                          this.post(
+                            ""
+                              .concat(tt, "/user_surveys/")
+                              .concat(et, "/complete")
+                          )
+                        );
+      ```
+  - ```diff
+    - memories: {
+    -   id: "personalizationSettings.memories",
+    -   defaultMessage: "Memory",
+    - },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-502171a9cdb09c3c.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-fbdc645b411b26ed.js
+https://cdn.oaistatic.com/_next/static/cJnjwmwanfzv1nD-EjrOa/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/cJnjwmwanfzv1nD-EjrOa/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-7fadb2946edbe409.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/about-eb0ae194b80daac5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-dc1c030d5ab0d59e.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-f3f8b9683a8b7976.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-c2d7bc1da5dc7f60.js
+```
+
+### From `orig/_next/static/chunks/webpack-fbdc645b411b26ed.js`
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.b7a768b9c8c3a3f4.js
+https://cdn.oaistatic.com/_next/undefined
+```
+
 ## 2024-02-01Z (`pPcfPwRZfdrv0dCws676L`)
 
 ### Notes
@@ -77,6 +275,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 - Module IDs Changed:
   - `32062` -> `45754`
   - `35473` -> `96055`
+  - ?etc?
 - `unpacked/_next/static/chunks/pages/_app.js`
   - Added new `svg` images of:
     - A white rounded rectangle in the top left corner
