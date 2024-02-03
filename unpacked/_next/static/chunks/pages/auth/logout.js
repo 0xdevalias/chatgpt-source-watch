@@ -1,100 +1,145 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7825],
   {
-    99959: function (t, e, n) {
+    99959: function (e, t, r) {
       "use strict";
-      n.r(e),
-        n.d(e, {
+      r.r(t),
+        r.d(t, {
           __N_SSP: function () {
             return O;
           },
           default: function () {
-            return a;
+            return b;
           },
         });
-      var r = n(36112),
-        u = n(40318),
-        c = n(70079),
-        o = n(25349),
-        i = n(29887),
-        f = n(35250);
-      function s(t, e) {
-        var n = Object.keys(t);
+      var n = r(50134),
+        c = r(36112),
+        o = r(4399),
+        u = r.n(o),
+        i = r(40318),
+        s = r(70079),
+        a = r(25349),
+        f = r(29887),
+        l = r(35250);
+      function p(e, t) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(t);
-          e &&
-            (r = r.filter(function (e) {
-              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+          var n = Object.getOwnPropertySymbols(e);
+          t &&
+            (n = n.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            r.push.apply(r, n);
         }
-        return n;
+        return r;
       }
       var O = !0;
-      function a(t) {
-        return (0, f.jsx)(
-          p,
-          (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-              var n = null != arguments[e] ? arguments[e] : {};
-              e % 2
-                ? s(Object(n), !0).forEach(function (e) {
-                    (0, r.Z)(t, e, n[e]);
+      function b(e) {
+        return (0, l.jsx)(
+          w,
+          (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+              var r = null != arguments[t] ? arguments[t] : {};
+              t % 2
+                ? p(Object(r), !0).forEach(function (t) {
+                    (0, c.Z)(e, t, r[t]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
-                      t,
-                      Object.getOwnPropertyDescriptors(n)
+                      e,
+                      Object.getOwnPropertyDescriptors(r)
                     )
-                  : s(Object(n)).forEach(function (e) {
+                  : p(Object(r)).forEach(function (t) {
                       Object.defineProperty(
-                        t,
                         e,
-                        Object.getOwnPropertyDescriptor(n, e)
+                        t,
+                        Object.getOwnPropertyDescriptor(r, t)
                       );
                     });
             }
-            return t;
-          })({}, t)
+            return e;
+          })({}, e)
         );
       }
-      function p(t) {
-        var e,
-          n,
-          r = t.federatedLogoutUri,
-          f =
-            ((e = function () {
-              o.A.reset(function () {
-                (0, i.signOut)({ callbackUrl: r || window.location.origin });
-              });
-            }),
-            (n = (0, c.useRef)(!1)),
+      function w(e) {
+        var t,
+          r,
+          c = e.federatedLogoutUri,
+          o =
+            ((t = (0, n.Z)(
+              u().mark(function e() {
+                return u().wrap(
+                  function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          return (e.prev = 0), (e.next = 3), a.A.reset();
+                        case 3:
+                          e.next = 8;
+                          break;
+                        case 5:
+                          (e.prev = 5),
+                            (e.t0 = e.catch(0)),
+                            console.error(
+                              "Failed to reset ProductEventLogger on logout"
+                            );
+                        case 8:
+                          return (
+                            (e.prev = 8),
+                            (e.next = 11),
+                            (0, f.signOut)({
+                              callbackUrl:
+                                null != c ? c : window.location.origin,
+                            })
+                          );
+                        case 11:
+                          e.next = 16;
+                          break;
+                        case 13:
+                          (e.prev = 13),
+                            (e.t1 = e.catch(8)),
+                            console.error("Next auth signout failed", e.t1);
+                        case 16:
+                        case "end":
+                          return e.stop();
+                      }
+                  },
+                  e,
+                  null,
+                  [
+                    [0, 5],
+                    [8, 13],
+                  ]
+                );
+              })
+            )),
+            (r = (0, s.useRef)(!1)),
             function () {
-              n.current || (e(), (n.current = !0));
+              r.current || (t(), (r.current = !0));
             });
         return (
-          (0, c.useEffect)(f, [f]),
-          (0, c.useEffect)(function () {
-            (0, u.I)();
+          (0, s.useEffect)(o, [o]),
+          (0, s.useEffect)(function () {
+            (0, i.I)();
           }, []),
           null
         );
       }
     },
-    3499: function (t, e, n) {
+    3499: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/logout",
         function () {
-          return n(99959);
+          return r(99959);
         },
       ]);
     },
   },
-  function (t) {
-    t.O(0, [9774, 2888, 179], function () {
-      return t((t.s = 3499));
+  function (e) {
+    e.O(0, [9774, 2888, 179], function () {
+      return e((e.s = 3499));
     }),
-      (_N_E = t.O());
+      (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=logout-7cb4d55a75b2ec20.js.map
+//# sourceMappingURL=logout-5d4433531d135f53.js.map

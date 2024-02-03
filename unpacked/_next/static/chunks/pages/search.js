@@ -31,14 +31,14 @@
       var f = o()(
           function () {
             return Promise.all([t.e(8682), t.e(2922), t.e(9118)]).then(
-              t.bind(t, 99023)
+              t.bind(t, 37705)
             );
           },
           {
             ssr: !1,
             loadableGenerated: {
               webpack: function () {
-                return [99023];
+                return [37705];
               },
             },
           }
@@ -88,4 +88,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-d835393483b5432a.js.map
+//# sourceMappingURL=search-f969bf847681b2ce.js.map

@@ -34,13 +34,13 @@
         w = t(94968),
         Z = t(91559),
         O = t(60493),
-        P = t(44247),
-        M = t(63866),
+        M = t(44247),
+        P = t(63866),
         N = t(3554),
         _ = t(7144),
-        B = t(90387),
-        I = t(21120),
-        k = t(998),
+        I = t(90387),
+        k = t(21120),
+        B = t(998),
         D = t(23232),
         T = t(35250);
       function E(e, n) {
@@ -94,9 +94,9 @@
           O =
             (null == d ? void 0 : d.email) &&
             x.toLowerCase() == d.email.toLowerCase(),
-          P = (0, j.useState)(s && !s.will_renew),
-          M = P[0],
-          E = P[1];
+          M = (0, j.useState)(s && !s.will_renew),
+          P = M[0],
+          E = M[1];
         if (l || !o || !s) return null;
         var C =
           ((n = (0, u.Z)(
@@ -135,17 +135,17 @@
           function () {
             return n.apply(this, arguments);
           });
-        return (0, T.jsx)(I.Z, {
+        return (0, T.jsx)(k.Z, {
           type: "success",
           onClose: i,
+          showCloseButton: !0,
           isOpen: t,
           className: "",
           title: (0, T.jsx)("span", {
             className: "text-lg",
             children: (0, T.jsx)(y.Z, S({}, z.cancelPlan)),
           }),
-          closeButton: (0, T.jsx)(N.ZP.CloseButton, { onClose: i }),
-          children: M
+          children: P
             ? (0, T.jsxs)("div", {
                 children: [
                   (0, T.jsx)("h3", {
@@ -185,7 +185,7 @@
                       (0, T.jsxs)("div", {
                         className: "flex w-full items-center gap-4",
                         children: [
-                          (0, T.jsx)(B.B0, {
+                          (0, T.jsx)(I.B0, {
                             src: o.data.profilePictureUrl,
                             size: "large",
                           }),
@@ -268,7 +268,7 @@
                               S({}, z.enterEmailToConfirm)
                             ),
                           }),
-                          (0, T.jsx)(k.Z, {
+                          (0, T.jsx)(B.Z, {
                             type: "text",
                             name: "user-email",
                             placeholder: "abcd@acme.com",
@@ -642,10 +642,10 @@
         if (a)
           return (0, T.jsx)("div", {
             className: "flex min-h-screen items-center justify-center",
-            children: (0, T.jsx)(M.Z, {}),
+            children: (0, T.jsx)(P.Z, {}),
           });
         if (r || !i) return null;
-        var P = null != i.active_until,
+        var M = null != i.active_until,
           N =
             (null == i ? void 0 : i.seats_in_use) >
             (null == i ? void 0 : i.seats_entitled);
@@ -659,7 +659,7 @@
                 (0, T.jsxs)("div", {
                   children: [
                     (0, T.jsx)(J.i$, {
-                      children: P
+                      children: M
                         ? s
                           ? (0, T.jsx)(y.Z, er({}, ef.activeEnterpriseLicense))
                           : (0, T.jsx)(y.Z, er({}, ef.activeTeamLicense))
@@ -721,7 +721,7 @@
                 }),
               ],
             }),
-            P &&
+            M &&
               (0, T.jsxs)(J.i9, {
                 children: [
                   (0, T.jsx)(J.A4, {
@@ -927,7 +927,7 @@
                 (0, T.jsx)(J.A4, {
                   children: (0, T.jsx)(y.Z, er({}, ef.invoicesTitle)),
                 }),
-                (0, T.jsx)(P.Z, {
+                (0, T.jsx)(M.Z, {
                   children: (0, T.jsx)(y.Z, er({}, ef.noInvoices)),
                 }),
               ],
@@ -1208,4 +1208,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=billing-15f5c05c635f85b2.js.map
+//# sourceMappingURL=billing-8914f334a8e695e8.js.map

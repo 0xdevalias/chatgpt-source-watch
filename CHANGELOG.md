@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-03Z \(`cUT12v7YWT4wI-mCJ_MrR`\)](#2024-02-03z-cut12v7ywt4wi-mcj_mrr)
 - [2024-02-02Z \(`cJnjwmwanfzv1nD-EjrOa`\)](#2024-02-02z-cjnjwmwanfzv1nd-ejroa)
 - [2024-02-01Z \(`pPcfPwRZfdrv0dCws676L`\)](#2024-02-01z-ppcfpwrzfdrv0dcws676l)
 - [2024-01-31Z \(`HcJr3AWz9pJF9a2HyS6Cf`\)](#2024-01-31z-hcjr3awz9pjf9a2hys6cf)
@@ -63,6 +64,630 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-03Z (`cUT12v7YWT4wI-mCJ_MrR`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - TODO high level summary of the technical changes listed below
+  - **Twitter thread:** TODO
+- App release version (Git SHA?): `34e26755cb77127cb70c40390ad63ad37328f79c`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Module IDs Changed:
+  - `85695` -> `35425`
+  - `99023` -> `37705`
+  - ?etc?
+- Cleanup/refactoring related to modal close buttons
+  - `unpacked/_next/static/chunks/5017.js`
+    - ```diff
+      - X = function () {
+      -   return B.vm.closeModal(B.B.WorkspaceAppearance);
+      - },
+      ```
+    - ```js
+      onClose: function () {
+        return B.vm.closeModal(B.B.WorkspaceAppearance);
+      },
+      showCloseButton: !0,
+      ```
+  - `unpacked/_next/static/chunks/5054.js`
+    - ```diff
+      - closeButton: (0, F.jsx)(S.ZP.CloseButton, { onClose: l }),
+      + showCloseButton: !0,
+      ```
+    - ```diff
+      - onClose: U(),
+      - closeButton: (0, F.jsx)(S.ZP.CloseButton, { onClose: l }),
+      + onClose: l,
+      + showCloseButton: !0,
+      + shouldIgnoreClickOutside: !0,
+      ```
+  - `unpacked/_next/static/chunks/pages/admin/billing.js`
+    - ```js
+      showCloseButton: !0,
+      ```
+    - ```diff
+      - closeButton: (0, T.jsx)(N.ZP.CloseButton, { onClose: i }),
+      ```
+- `unpacked/_next/static/chunks/pages/auth/logout.js`
+  - ```diff
+    - function p(t) {
+    -   var e,
+    -     n,
+    -     r = t.federatedLogoutUri,
+    -     f =
+    -       ((e = function () {
+    -         o.A.reset(function () {
+    -           (0, i.signOut)({ callbackUrl: r || window.location.origin });
+    -         });
+    -       }),
+    -       (n = (0, c.useRef)(!1)),
+    + function w(e) {
+    +   var t,
+    +     r,
+    +     c = e.federatedLogoutUri,
+    +     o =
+    +       ((t = (0, n.Z)(
+    +         u().mark(function e() {
+    +           return u().wrap(
+    +             function (e) {
+    +               for (;;)
+    +                 switch ((e.prev = e.next)) {
+    +                   case 0:
+    +                     return (e.prev = 0), (e.next = 3), a.A.reset();
+    +                   case 3:
+    +                     e.next = 8;
+    +                     break;
+    +                   case 5:
+    +                     (e.prev = 5),
+    +                       (e.t0 = e.catch(0)),
+    +                       console.error(
+    +                         "Failed to reset ProductEventLogger on logout"
+    +                       );
+    +                   case 8:
+    +                     return (
+    +                       (e.prev = 8),
+    +                       (e.next = 11),
+    +                       (0, f.signOut)({
+    +                         callbackUrl:
+    +                           null != c ? c : window.location.origin,
+    +                       })
+    +                     );
+    +                   case 11:
+    +                     e.next = 16;
+    +                     break;
+    +                   case 13:
+    +                     (e.prev = 13),
+    +                       (e.t1 = e.catch(8)),
+    +                       console.error("Next auth signout failed", e.t1);
+    +                   case 16:
+    +                   case "end":
+    +                     return e.stop();
+    +                 }
+    +             },
+    +             e,
+    +             null,
+    +             [
+    +               [0, 5],
+    +               [8, 13],
+    +             ]
+    +           );
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, making it hard to see what changed specifically
+  - New/updated `svg` images:
+    - Thumbs up (with a section missing from the bottom of it)
+    - Thumbs down
+    - Something that seemed transparent/I couldn't figure the proper colours for
+    - 4 circles in a square layout
+  - Refactoring related to close button in modals:
+    - ```js
+      showCloseButton: !0,
+      ```
+    - ```diff
+      - closeButton: (0, eG.jsx)(eI.ZP.CloseButton, { onClose: eS }),
+      ```
+    - ```diff
+      - showCloseButton: !0,
+        type: "warning",
+      + closeButton: (0, eG.jsx)(eI.ZP.CloseButton, { onClose: et }),
+      ```
+    - ```diff
+      - closeButton: (0, eV.jsx)(eR.ZP.CloseButton, {
+      -   onClose: function () {
+      -     tt();
+      -   },
+      - }),
+      + showCloseButton: !0
+      ```
+    - etc
+  - ```diff
+    - morning: "in the morning",
+    - afternoon: "in the afternoon",
+    - evening: "in the evening",
+    - night: "at night",
+    + morning: "morning",
+    + afternoon: "afternoon",
+    + evening: "evening",
+    + night: "night",
+    ```
+  - Large section of code related to model feedback:
+    - ```js
+       ⋮61020│      var lC = function (Y) {
+       ⋮61021│          return Y.allGroupedMessages.some(function (Y) {
+       ⋮61022│            return [
+       ⋮61023│              e_.Browsing,
+       ⋮61024│              e_.RetrievalBrowsing,
+       ⋮61025│              e_.ParallelBrowsing,
+       ⋮61026│            ].includes(Y.type);
+       ⋮61027│          });
+       ⋮61028│        },
+       ⋮61029│        lS = function (Y) {
+       ⋮61030│          return Y.allGroupedMessages.some(function (Y) {
+       ⋮61031│            return Y.type === e_.CodeInterpreter;
+       ⋮61032│          });
+       ⋮61033│        },
+       ⋮61034│        lE = [
+       ⋮61035│          {
+       ⋮61036│            match: lC,
+       ⋮61037│            tag: "Shouldn't have searched the web",
+       ⋮61038│            defaultMessage: "Shouldn't have searched the web",
+       ⋮61039│            id: "ConversationTurnInlineMessageFeedback.tag.shouldntHaveUsedBrowser",
+       ⋮61040│            description: "'Shouldn't have searched the web' tag",
+       ⋮61041│          },
+       ⋮61042│          {
+       ⋮61043│            match: lC,
+       ⋮61044│            tag: "Don't like the source it cited",
+       ⋮61045│            defaultMessage: "Don't like the source it cited",
+       ⋮61046│            id: "ConversationTurnInlineMessageFeedback.tag.dontLike",
+       ⋮61047│            description: "'Don't like the source it cited' tag",
+       ⋮61048│          },
+       ⋮61049│          {
+       ⋮61050│            match: lS,
+       ⋮61051│            tag: "Shouldn't have run code",
+       ⋮61052│            defaultMessage: "Shouldn't have run code",
+       ⋮61053│            id: "ConversationTurnInlineMessageFeedback.tag.shouldntHaveRunCode",
+       ⋮61054│            description: "'Shouldn't have run code' tag",
+       ⋮61055│          },
+       ⋮61056│          {
+       ⋮61057│            match: lS,
+       ⋮61058│            tag: "Couldn't handle my file",
+       ⋮61059│            defaultMessage: "Couldn't handle my file",
+       ⋮61060│            id: "ConversationTurnInlineMessageFeedback.tag.couldntHandleMyFile",
+       ⋮61061│            description: "'Couldn't handle my file' tag",
+       ⋮61062│          },
+       ⋮61063│          {
+       ⋮61064│            match: function (Y) {
+       ⋮61065│              return Y.allGroupedMessages.some(function (Y) {
+       ⋮61066│                return Y.type === e_.Dalle;
+       ⋮61067│              });
+       ⋮61068│            },
+       ⋮61069│            tag: "Shouldn't have created an image",
+       ⋮61070│            defaultMessage: "Shouldn't have created an image",
+       ⋮61071│            id: "ConversationTurnInlineMessageFeedback.tag.shouldntHaveCreatedImage",
+       ⋮61072│            description: "'Shouldn't have used code DALL\xb7E' tag",
+       ⋮61073│          },
+       ⋮61074│          {
+       ⋮61075│            match: function (Y) {
+       ⋮61076│              var et,
+       ⋮61077│                en,
+       ⋮61078│                ei = Y.systemContent;
+       ⋮61079│              return (
+       ⋮61080│                null !==
+       ⋮61081│                  (et =
+       ⋮61082│                    null == ei
+       ⋮61083│                      ? void 0
+       ⋮61084│                      : null === (en = ei.instructions) || void 0 === en
+       ⋮61085│                        ? void 0
+       ⋮61086│                        : en.includes("Personality")) &&
+       ⋮61087│                void 0 !== et &&
+       ⋮61088│                et
+       ⋮61089│              );
+       ⋮61090│            },
+       ⋮61091│            tag: "Too chatty or casual",
+       ⋮61092│            defaultMessage: "Too chatty or casual",
+       ⋮61093│            id: "ConversationTurnInlineMessageFeedback.tag.tooChattyOrCasual",
+       ⋮61094│            description: "'Too chatty or casual' tag",
+       ⋮61095│          },
+       ⋮61096│          {
+       ⋮61097│            tag: "Don't like the style",
+       ⋮61098│            defaultMessage: "Don't like the style",
+       ⋮61099│            id: "ConversationTurnInlineMessageFeedback.tag.dontLikeStyle",
+       ⋮61100│            description: "'I don't like it' tag",
+       ⋮61101│          },
+       ⋮61102│          {
+       ⋮61103│            tag: "Not factually correct",
+       ⋮61104│            defaultMessage: "Not factually correct",
+       ⋮61105│            id: "ConversationTurnInlineMessageFeedback.tag.notFactuallyCorrect",
+       ⋮61106│            description: "'Not factually correct' tag",
+       ⋮61107│          },
+       ⋮61108│          {
+       ⋮61109│            match: function (Y) {
+       ⋮61110│              return Y.features.includes(eY.L0.Sunshine);
+       ⋮61111│            },
+       ⋮61112│            tag: "Shouldn't have used Memory",
+       ⋮61113│            defaultMessage: "Shouldn't have used Memory",
+       ⋮61114│            id: "ConversationTurnInlineMessageFeedback.tag.shouldntUseMemory",
+       ⋮61115│            description: "'Shouldn't have used Memory' tag",
+       ⋮61116│          },
+       ⋮61117│        ],
+       ⋮61118│        lT = [
+       ⋮61119│          {
+       ⋮61120│            tag: "Didn't fully follow instructions",
+       ⋮61121│            defaultMessage: "Didn't fully follow instructions",
+       ⋮61122│            id: "ConversationTurnInlineMessageFeedback.tag.didntFullyFollowInstructions",
+       ⋮61123│            description: "'Didn't fully follow instructions' tag",
+       ⋮61124│          },
+       ⋮61125│          {
+       ⋮61126│            tag: "Refused when it shouldn't have",
+       ⋮61127│            defaultMessage: "Refused when it shouldn't have",
+       ⋮61128│            id: "ConversationTurnInlineMessageFeedback.tag.refusedWhenShouldntHave",
+       ⋮61129│            description: "'Refused when it shouldn't have' tag",
+       ⋮61130│          },
+       ⋮61131│          {
+       ⋮61132│            tag: "Being lazy",
+       ⋮61133│            defaultMessage: "Being lazy",
+       ⋮61134│            id: "ConversationTurnInlineMessageFeedback.tag.beingLazy",
+       ⋮61135│            description: "'Being lazy' tag",
+       ⋮61136│          },
+       ⋮61137│          {
+       ⋮61138│            tag: "Other",
+       ⋮61139│            defaultMessage: "Other",
+       ⋮61140│            id: "ConversationTurnInlineMessageFeedback.tag.other",
+       ⋮61141│            description: "'Other' tag",
+       ⋮61142│          },
+       ⋮61143│        ];
+      ```
+    - ```js
+       ⋮61255│                                  children: (0, tR.jsx)(eJ.Z, {
+       ⋮61256│                                    id: "ConversationTurnInlineMessageFeedback.submitted",
+       ⋮61257│                                    defaultMessage: "Thanks for your feedback!",
+       ⋮61258│                                  }),
+      ```
+    - ```js
+       ⋮61281│                                  children: (0, tR.jsx)(eJ.Z, {
+       ⋮61282│                                    id: "ConversationTurnInlineMessageFeedback.inlineTitle",
+       ⋮61283│                                    defaultMessage: "Tell us more:",
+       ⋮61284│                                  }),
+      ```
+    - ```js
+       ⋮61314│                                          id: "ConversationTurnInlineMessageFeedback.moreOptions",
+       ⋮61315│                                          defaultMessage: "More options",
+       ⋮61316│                                        }),
+      ```
+    - ```js
+       ⋮61333│                    title: (0, tR.jsx)(eJ.Z, {
+       ⋮61334│                      id: "ConversationTurnInlineMessageFeedback.modalTitle",
+       ⋮61335│                      defaultMessage: "Provide additional feedback",
+       ⋮61336│                    }),
+      ```
+  - ```js
+     ⋮61347│                      children: (0, tR.jsx)(eJ.Z, {
+     ⋮61348│                        id: "ConversationTurnInlineMessageFeedback.submit",
+     ⋮61349│                        defaultMessage: "Submit",
+     ⋮61350│                      }),
+    ```
+  - ```js
+     ⋮61373│                        placeholder: ec.formatMessage({
+     ⋮61374│                          id: "ConversationTurnInlineMessageFeedback.feedbackPlaceholder",
+     ⋮61375│                          defaultMessage:
+     ⋮61376│                            "(Optional) Let us know what you think",
+     ⋮61377│                        }),
+    ```
+  - ```diff
+      children: (0, td.jsx)(eR.Z, {
+        id: "gizmo.inlineReview.reviewLeftSubtext",
+        defaultMessage:
+    -     'To update your rating, click "Leave Feedback" in the GPT Menu',
+    +     'To update your rating, click "Send Feedback" in the GPT Menu',
+      }),
+    ```
+  - ```js
+153202⋮      │                                              : 18);
+      ⋮153617│                                              : "gizmo_inline_review" === Y.t0
+      ⋮153618│                                                ? 18
+      ⋮153619│                                                : 20);
+    ```
+  - ```js
+153228⋮153645│                            case 18:
+      ⋮153646│                              return (
+      ⋮153647│                                eb.handleGizmoInlineReview(et),
+      ⋮153648│                                Y.abrupt("break", 21)
+      ⋮153649│                              );
+    ```
+  - ```js
+      ⋮153709│              {
+      ⋮153710│                key: "handleGizmoInlineReview",
+      ⋮153711│                value: function (Y) {
+      ⋮153712│                  eg.tQ.setPromptGptRating(this.clientThreadId, Y.gizmoId);
+      ⋮153713│                },
+      ⋮153714│              },
+    ```
+  - ```js
+      ⋮156517│              {
+      ⋮156518│                key: "getSentinelHeaders",
+      ⋮156519│                value: function (Y) {
+      ⋮156520│                  var et = {},
+      ⋮156521│                    en = "OpenAI-Sentinel-";
+      ⋮156522│                  return (
+      ⋮156523│                    "string" == typeof Y &&
+      ⋮156524│                      (et["".concat(en, "Arkose-Token")] = Y),
+      ⋮156525│                    et
+      ⋮156526│                  );
+      ⋮156527│                },
+      ⋮156528│              },
+    ```
+  - ```js
+158552⋮      │                                                      "moderation_response" in
+158553⋮      │                                                      et
+      ⋮158994│                                                      "type" in et &&
+      ⋮158995│                                                      "gizmo_inline_review" ===
+      ⋮158996│                                                        et.type
+158554⋮158997│                                                        ? en({
+158555⋮      │                                                            type: "moderation",
+158556⋮      │                                                            conversationId:
+158557⋮      │                                                              et.conversation_id,
+158558⋮      │                                                            messageId:
+158559⋮      │                                                              et.message_id,
+158560⋮      │                                                            isCompletion:
+158561⋮      │                                                              et.is_completion,
+158562⋮      │                                                            flagged:
+158563⋮      │                                                              et
+158564⋮      │                                                                .moderation_response
+158565⋮      │                                                                .flagged,
+158566⋮      │                                                            blocked:
+158567⋮      │                                                              et
+158568⋮      │                                                                .moderation_response
+158569⋮      │                                                                .blocked,
+      ⋮158998│                                                            type: "gizmo_inline_review",
+      ⋮158999│                                                            gizmoId:
+      ⋮159000│                                                              et.gizmo_id,
+158570⋮159001│                                                          })
+158571⋮      │                                                        : "url_moderation_result" in
+      ⋮159002│                                                        : "moderation_response" in
+158572⋮159003│                                                            et
+158573⋮159004│                                                          ? en({
+158574⋮      │                                                              type: "url_moderation",
+      ⋮159005│                                                              type: "moderation",
+158575⋮159006│                                                              conversationId:
+158576⋮159007│                                                                et.conversation_id,
+158577⋮159008│                                                              messageId:
+158578⋮159009│                                                                et.message_id,
+158579⋮      │                                                              url: et
+158580⋮      │                                                                .url_moderation_result
+158581⋮      │                                                                .full_url,
+158582⋮      │                                                              isSafe:
+      ⋮159010│                                                              isCompletion:
+      ⋮159011│                                                                et.is_completion,
+      ⋮159012│                                                              flagged:
+158583⋮159013│                                                                et
+158584⋮      │                                                                  .url_moderation_result
+158585⋮      │                                                                  .is_safe,
+      ⋮159014│                                                                  .moderation_response
+      ⋮159015│                                                                  .flagged,
+      ⋮159016│                                                              blocked:
+      ⋮159017│                                                                et
+      ⋮159018│                                                                  .moderation_response
+      ⋮159019│                                                                  .blocked,
+158586⋮159020│                                                            })
+158587⋮      │                                                          : "num_variants_in_stream" in
+      ⋮159021│                                                          : "url_moderation_result" in
+158588⋮159022│                                                              et
+158589⋮159023│                                                            ? en({
+158590⋮      │                                                                type: "num_variants_in_stream",
+158591⋮      │                                                                num_variants_in_stream:
+158592⋮      │                                                                  et.num_variants_in_stream,
+158593⋮      │                                                                display_treatment:
+158594⋮      │                                                                  et.display_treatment,
+158595⋮      │                                                              })
+158596⋮      │                                                            : (en({
+158597⋮      │                                                                type: "message",
+158598⋮      │                                                                message:
+158599⋮      │                                                                  et.message,
+      ⋮159024│                                                                type: "url_moderation",
+158600⋮159025│                                                                conversationId:
+158601⋮159026│                                                                  et.conversation_id,
+158602⋮      │                                                              }),
+158603⋮      │                                                              eS &&
+158604⋮      │                                                                ((eS = !1),
+158605⋮      │                                                                eO.end()));
+      ⋮159027│                                                                messageId:
+      ⋮159028│                                                                  et.message_id,
+      ⋮159029│                                                                url: et
+      ⋮159030│                                                                  .url_moderation_result
+      ⋮159031│                                                                  .full_url,
+      ⋮159032│                                                                isSafe:
+      ⋮159033│                                                                  et
+      ⋮159034│                                                                    .url_moderation_result
+      ⋮159035│                                                                    .is_safe,
+      ⋮159036│                                                              })
+      ⋮159037│                                                            : "num_variants_in_stream" in
+      ⋮159038│                                                                et
+      ⋮159039│                                                              ? en({
+      ⋮159040│                                                                  type: "num_variants_in_stream",
+      ⋮159041│                                                                  num_variants_in_stream:
+      ⋮159042│                                                                    et.num_variants_in_stream,
+      ⋮159043│                                                                  display_treatment:
+      ⋮159044│                                                                    et.display_treatment,
+      ⋮159045│                                                                })
+      ⋮159046│                                                              : (en({
+      ⋮159047│                                                                  type: "message",
+      ⋮159048│                                                                  message:
+      ⋮159049│                                                                    et.message,
+      ⋮159050│                                                                  conversationId:
+      ⋮159051│                                                                    et.conversation_id,
+      ⋮159052│                                                                }),
+      ⋮159053│                                                                eE &&
+      ⋮159054│                                                                  ((eE = !1),
+      ⋮159055│                                                                  eO.end()));
+    ```
+  - ```js
+      ⋮159176│                                            case 20:
+      ⋮159177│                                              return (
+      ⋮159178│                                                (Y.t4 = Y.t3),
+      ⋮159179│                                                (Y.t5 = (0, Y.t1)(Y.t2, Y.t4)),
+      ⋮159180│                                                (Y.t6 = ea.getSentinelHeaders(
+      ⋮159181│                                                  null != em
+      ⋮159182│                                                    ? em
+      ⋮159183│                                                    : et.arkoseToken
+      ⋮159184│                                                )),
+    ```
+  - ```js
+      ⋮159722│                                    {
+      ⋮159723│                                      additionalHeaders:
+      ⋮159724│                                        this.getSentinelHeaders(en),
+      ⋮159725│                                    }
+    ```
+  - ```js
+      ⋮161759│          (Y.MessageFeedbackV2 = "message_feedback_v2");
+    ```
+  - ```js
+      ⋮162221│          getRatingPrompt: function (Y) {
+      ⋮162222│            var et,
+      ⋮162223│              en =
+      ⋮162224│                arguments.length > 1 && void 0 !== arguments[1]
+      ⋮162225│                  ? arguments[1]
+      ⋮162226│                  : eQ(),
+      ⋮162227│              ei = eJ.resolveThreadId(Y, en);
+      ⋮162228│            return null === (et = en.threads[ei]) || void 0 === et
+      ⋮162229│              ? void 0
+      ⋮162230│              : et.promptGptRating;
+      ⋮162231│          },
+    ```
+  - ```js
+      ⋮162607│          setPromptGptRating: function (Y, et) {
+      ⋮162608│            var en = e0.resolveThreadId(Y);
+      ⋮162609│            eX(function (Y) {
+      ⋮162610│              null == et
+      ⋮162611│                ? (Y.threads[en].promptGptRating = void 0)
+      ⋮162612│                : (Y.threads[en].promptGptRating = { gizmoId: et });
+      ⋮162613│            });
+      ⋮162614│          },
+    ```
+  - ```js
+      ⋮162973│        tI = function (Y) {
+      ⋮162974│          return eY(function () {
+      ⋮162975│            var et,
+      ⋮162976│              en = e0.resolveThreadId(Y);
+      ⋮162977│            return null === (et = eQ().threads[en]) || void 0 === et
+      ⋮162978│              ? void 0
+      ⋮162979│              : et.promptGptRating;
+      ⋮162980│          });
+      ⋮162981│        },
+      ⋮162982│        tD = function (Y, et) {
+      ⋮162983│          return eY(function () {
+      ⋮162984│            var en = e0.resolveThreadId(Y),
+      ⋮162985│              ei = e0.getTree(en).getBranchFromLeaf(et);
+      ⋮162986│            return (0, eP.findLast)(ei, function (Y) {
+      ⋮162987│              return (
+      ⋮162988│                Y.message.author.role === eo.uU.System &&
+      ⋮162989│                "system_content" === Y.message.content.content_type
+      ⋮162990│              );
+      ⋮162991│            });
+      ⋮162992│          });
+162482⋮162993│        };
+    ```
+  - ```js
+164295⋮      │                                (eu = Y.sent).setHandler(en, ei, eo),
+      ⋮164811│                                (eu = Y.sent),
+      ⋮164812│                                  (ec = setTimeout(function () {
+      ⋮164813│                                    tC.A.logEvent(
+      ⋮164814│                                      tS.M.asyncResponseWaitTooLong,
+      ⋮164815│                                      {}
+      ⋮164816│                                    );
+      ⋮164817│                                  }, t_)),
+      ⋮164818│                                  (ed = function (Y) {
+      ⋮164819│                                    return (
+      ⋮164820│                                      ec && (clearTimeout(ec), (ec = null)),
+      ⋮164821│                                      eo(Y)
+      ⋮164822│                                    );
+      ⋮164823│                                  }),
+      ⋮164824│                                  eu.setHandler(en, ei, ed),
+    ```
+  - ```js
+      ⋮175328│            (Y.asyncResponseWaitTooLong =
+      ⋮175329│              "Async Response Took Too Long to Come Back");
+    ```
+  - ```js
+178348⋮      │                value: function (Y) {
+178349⋮      │                  var et = this;
+178350⋮      │                  (this._userFeatures = []), (this._identified = !1);
+178351⋮      │                  var en = this.getAnonymousId();
+178352⋮      │                  this.getAnalytics().once("reset", function () {
+178353⋮      │                    et.getAnalytics().setAnonymousId(en), null == Y || Y();
+178354⋮      │                  }),
+178355⋮      │                    this.getAnalytics().reset();
+178356⋮      │                },
+      ⋮178882│                value: (function () {
+      ⋮178883│                  var Y = (0, ec.Z)(
+      ⋮178884│                    eh().mark(function Y() {
+      ⋮178885│                      var et;
+      ⋮178886│                      return eh().wrap(
+      ⋮178887│                        function (Y) {
+      ⋮178888│                          for (;;)
+      ⋮178889│                            switch ((Y.prev = Y.next)) {
+      ⋮178890│                              case 0:
+      ⋮178891│                                return (
+      ⋮178892│                                  (this._userFeatures = []),
+      ⋮178893│                                  (this._identified = !1),
+      ⋮178894│                                  (et = this.getAnonymousId()),
+      ⋮178895│                                  (Y.next = 5),
+      ⋮178896│                                  this.getAnalytics().reset()
+      ⋮178897│                                );
+      ⋮178898│                              case 5:
+      ⋮178899│                                return (
+      ⋮178900│                                  (Y.next = 7),
+      ⋮178901│                                  this.getAnalytics().setAnonymousId(et)
+      ⋮178902│                                );
+      ⋮178903│                              case 7:
+      ⋮178904│                              case "end":
+      ⋮178905│                                return Y.stop();
+      ⋮178906│                            }
+      ⋮178907│                        },
+      ⋮178908│                        Y,
+      ⋮178909│                        this
+      ⋮178910│                      );
+      ⋮178911│                    })
+      ⋮178912│                  );
+      ⋮178913│                  return function () {
+      ⋮178914│                    return Y.apply(this, arguments);
+      ⋮178915│                  };
+      ⋮178916│                })(),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-fb4aee8b03acbd7c.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-4deb970c0eb42112.js
+https://cdn.oaistatic.com/_next/static/cUT12v7YWT4wI-mCJ_MrR/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/cUT12v7YWT4wI-mCJ_MrR/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-66d7665ea648d8f4.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-8914f334a8e695e8.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-5d4433531d135f53.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-2ca8c37b713752b1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-f969bf847681b2ce.js
+```
+
+### From `orig/_next/static/chunks/webpack-4deb970c0eb42112.js`
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.648aa56391049bfa.js
+```
 
 ## 2024-02-02Z (`cJnjwmwanfzv1nD-EjrOa`)
 

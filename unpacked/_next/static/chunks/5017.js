@@ -225,14 +225,11 @@
           T = P[1],
           z = (0, B.EV)(B.B.WorkspaceAppearance),
           q = (0, j.Z)(),
-          X = function () {
-            return B.vm.closeModal(B.B.WorkspaceAppearance);
-          },
-          G = (0, b.useState)(void 0),
-          Q = G[0],
-          J = G[1];
-        function $() {
-          return ($ = (0, p.Z)(
+          X = (0, b.useState)(void 0),
+          G = X[0],
+          Q = X[1];
+        function J() {
+          return (J = (0, p.Z)(
             m().mark(function e(t) {
               var r, n;
               return m().wrap(function (e) {
@@ -245,7 +242,7 @@
                       );
                     case 2:
                       (r = e.sent),
-                        J({
+                        Q({
                           tempId: (n = (0, D.W7)(r)),
                           file: r,
                           status: A.X.Uploading,
@@ -255,7 +252,7 @@
                         }),
                         (0, D.lU)(n, r, q, u.Ei.ProfilePicture, {
                           onFileCreated: function (e, t, r) {
-                            J(function (n) {
+                            Q(function (n) {
                               return "initial" !== n &&
                                 (null == n ? void 0 : n.tempId) === e &&
                                 n.status === A.X.Uploading
@@ -268,7 +265,7 @@
                             });
                           },
                           onFileUploadProgress: function (e, t) {
-                            J(function (r) {
+                            Q(function (r) {
                               return "initial" !== r &&
                                 (null == r ? void 0 : r.tempId) === e &&
                                 r.status === A.X.Uploading
@@ -277,7 +274,7 @@
                             });
                           },
                           onFileUploaded: function (e, t) {
-                            J(function (r) {
+                            Q(function (r) {
                               return "initial" !== r &&
                                 r &&
                                 r.cdnUrl &&
@@ -308,12 +305,12 @@
                             });
                           },
                           onError: function (e) {
-                            J(function (t) {
+                            Q(function (t) {
                               if (
                                 "initial" !== t &&
                                 (null == t ? void 0 : t.tempId) === e
                               ) {
-                                T(void 0), k(void 0), er(null);
+                                T(void 0), k(void 0), et(null);
                                 return;
                               }
                               return t;
@@ -328,7 +325,7 @@
             })
           )).apply(this, arguments);
         }
-        var H =
+        var $ =
             ((t = s.id),
             (r = (0, I.NL)()),
             (n = (0, j.Z)()),
@@ -352,15 +349,15 @@
                 r.invalidateQueries({ queryKey: ["account-status"] });
               },
             })),
-          V = (0, y.jsx)(M.ZP.Button, {
+          H = (0, y.jsx)(M.ZP.Button, {
             color: "primary",
             disabled:
-              ("initial" !== Q && void 0 !== Q && Q.status !== A.X.Ready) ||
-              ("initial" !== Q &&
-                void 0 !== Q &&
-                Q.status === A.X.Ready &&
+              ("initial" !== G && void 0 !== G && G.status !== A.X.Ready) ||
+              ("initial" !== G &&
+                void 0 !== G &&
+                G.status === A.X.Ready &&
                 !w) ||
-              H.isPending ||
+              $.isPending ||
               0 === c.trim().length,
             onClick: (0, p.Z)(
               m().mark(function e() {
@@ -368,7 +365,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        H.mutate({
+                        $.mutate({
                           name: c,
                           profilePictureId: N,
                           profilePictureUrl: w,
@@ -383,38 +380,40 @@
             ),
             title: q.formatMessage(K.modalSubmit),
           }),
-          Y = (0, y.jsx)(M.ZP.Button, {
+          V = (0, y.jsx)(M.ZP.Button, {
             onClick: function () {
-              J(void 0),
+              Q(void 0),
                 T(s.profilePictureId),
                 k(s.profilePictureUrl),
                 B.vm.closeModal(B.B.WorkspaceAppearance);
             },
             title: q.formatMessage(K.modalCancel),
           }),
-          ee = (0, b.useState)(null),
-          et = ee[0],
-          er = ee[1];
+          Y = (0, b.useState)(null),
+          ee = Y[0],
+          et = Y[1];
         return (
           (0, b.useEffect)(
             function () {
-              if ("initial" !== Q && void 0 != Q && null == et) {
+              if ("initial" !== G && void 0 != G && null == ee) {
                 var e = new FileReader();
                 e.addEventListener("load", function () {
                   var t = e.result;
-                  "string" == typeof t && er(t);
+                  "string" == typeof t && et(t);
                 }),
-                  e.readAsDataURL(Q.file);
+                  e.readAsDataURL(G.file);
               }
             },
-            [Q, et]
+            [G, ee]
           ),
           (0, y.jsxs)(E.Z, {
             isOpen: z,
-            onClose: X,
-            closeButton: (0, y.jsx)(M.ZP.CloseButton, { onClose: X }),
-            primaryButton: V,
-            secondaryButton: Y,
+            onClose: function () {
+              return B.vm.closeModal(B.B.WorkspaceAppearance);
+            },
+            showCloseButton: !0,
+            primaryButton: H,
+            secondaryButton: V,
             type: "danger",
             title: q.formatMessage(K.modalTitle),
             children: [
@@ -478,27 +477,27 @@
                             className: "absolute -right-1 -top-1",
                             children: (0, y.jsx)(L, {
                               onClick: function () {
-                                T(null), k(null), J(void 0), er(null);
+                                T(null), k(null), Q(void 0), et(null);
                               },
                             }),
                           }),
                         ],
                       })
-                    : void 0 != Q && "initial" !== Q && et
+                    : void 0 != G && "initial" !== G && ee
                       ? (0, y.jsx)("div", {
                           className: "flex flex-col justify-center text-center",
                           children: (0, y.jsxs)("div", {
                             className: "relative mb-3 text-center",
                             children: [
                               (0, y.jsx)(d.B0, {
-                                src: URL.createObjectURL(Q.file),
+                                src: URL.createObjectURL(G.file),
                                 size: "workspaceAvatarPreview",
                               }),
                               (0, y.jsx)("div", {
                                 className:
                                   "absolute inset-0 flex items-center justify-center text-white",
                                 children: (0, y.jsx)(Z.Z, {
-                                  percentage: Q.progress,
+                                  percentage: G.progress,
                                   className: "h-6 w-6",
                                 }),
                               }),
@@ -508,7 +507,7 @@
                       : (0, y.jsx)(O, {
                           onFileChange: function (e) {
                             !(function (e) {
-                              $.apply(this, arguments);
+                              J.apply(this, arguments);
                             })(e);
                           },
                           mimeTypes: g.KL,
@@ -1186,4 +1185,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5017-569d9ff7d165a256.js.map
+//# sourceMappingURL=5017-66d7665ea648d8f4.js.map

@@ -113,7 +113,7 @@
               })(o),
               isOpen: !0,
               onClose: l,
-              closeButton: (0, F.jsx)(S.ZP.CloseButton, { onClose: l }),
+              showCloseButton: !0,
               primaryButton: (0, F.jsx)(S.ZP.Button, {
                 title: "Continue",
                 color: "primary",
@@ -227,8 +227,9 @@
             return (0, F.jsx)(A.Z, {
               title: "Appeal",
               isOpen: !0,
-              onClose: U(),
-              closeButton: (0, F.jsx)(S.ZP.CloseButton, { onClose: l }),
+              onClose: l,
+              showCloseButton: !0,
+              shouldIgnoreClickOutside: !0,
               primaryButton: (0, F.jsx)(S.ZP.Button, {
                 title: "Submit",
                 color: "primary",
@@ -268,7 +269,7 @@
           title: "Appeal submitted",
           isOpen: !0,
           onClose: t,
-          closeButton: (0, F.jsx)(S.ZP.CloseButton, { onClose: t }),
+          showCloseButton: !0,
           primaryButton: (0, F.jsx)(S.ZP.Button, {
             title: "Close",
             color: "primary",
@@ -2287,7 +2288,7 @@
           },
         }),
         tx = n(9559),
-        tb = n(85695);
+        tb = n(35425);
       function ty(e) {
         var t = e.clientThreadId,
           n = (0, ee.oq)(t),
@@ -6343,4 +6344,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5054-f3f8b9683a8b7976.js.map
+//# sourceMappingURL=5054-2ca8c37b713752b1.js.map
