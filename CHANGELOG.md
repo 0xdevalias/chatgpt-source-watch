@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-03Z \(`kAMJ5uXo_RnBLFn2scds_`\)](#2024-02-03z-kamj5uxo_rnblfn2scds_)
 - [2024-02-03Z \(`cUT12v7YWT4wI-mCJ_MrR`\)](#2024-02-03z-cut12v7ywt4wi-mcj_mrr)
 - [2024-02-02Z \(`cJnjwmwanfzv1nD-EjrOa`\)](#2024-02-02z-cjnjwmwanfzv1nd-ejroa)
 - [2024-02-01Z \(`pPcfPwRZfdrv0dCws676L`\)](#2024-02-01z-ppcfpwrzfdrv0dcws676l)
@@ -64,6 +65,76 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-03Z (`kAMJ5uXo_RnBLFn2scds_`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A super tiny build with minimal changes to some strings/labels related to `workspaceSettings`
+- App release version (Git SHA?): `a94f8b65257d8f931939865d6b622f99a52cd5d0`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/admin/settings.js`
+  - ```diff
+    - r && (0, v.jsx)(y.W8, {}),
+    - (0, v.jsx)(k, {
+    -   title: T.sharingSettingsTitle,
+    -   upsellEnterprise: r,
+    -   children: (0, v.jsx)(y.qQ, {
+    -     children: (0, v.jsx)(Z, {
+    + i && (0, w.jsx)(v.W8, {}),
+    + (0, w.jsx)(Z, {
+    +   title: _.workspaceDetails,
+    +   children: (0, w.jsx)(
+    +     b.Z,
+    +     O(
+    +       O({}, _.organizationIdLabel),
+    +       {},
+    +       {
+    +         values: {
+    +           organizationId:
+    +             null == r ? void 0 : r.data.organizationId,
+    +         },
+    +       }
+    +     )
+    +   ),
+    + }),
+    + (0, w.jsx)(Z, {
+    +   title: _.sharingSettingsTitle,
+    +   upsellEnterprise: i,
+    +   children: (0, w.jsx)(v.qQ, {
+    +     children: (0, w.jsx)(M, {
+    ```
+  - ```js
+    workspaceDetails: {
+      id: "workspaceSettings.workspaceDetails",
+      defaultMessage: "Workspace details",
+    },
+    organizationIdLabel: {
+      id: "workspaceSettings.organizationIdLabel",
+      defaultMessage: "Organization ID: {organizationId}",
+    },
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-ee0b14f890279a08.js
+https://cdn.oaistatic.com/_next/static/kAMJ5uXo_RnBLFn2scds_/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/kAMJ5uXo_RnBLFn2scds_/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-65cfc8af93b61cd0.js
+```
 
 ## 2024-02-03Z (`cUT12v7YWT4wI-mCJ_MrR`)
 

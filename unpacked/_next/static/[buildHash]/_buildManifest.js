@@ -26,7 +26,7 @@
     ],
     "/admin/settings": [
       a,
-      "static/chunks/pages/admin/settings-839d7c4366477c11.js",
+      "static/chunks/pages/admin/settings-65cfc8af93b61cd0.js",
     ],
     "/aip/[pluginId]/oauth/callback": [
       "static/chunks/pages/aip/[pluginId]/oauth/callback-62c32a26d82c6ffa.js",
