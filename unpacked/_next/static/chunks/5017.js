@@ -794,10 +794,8 @@
           : (0, y.jsxs)(X.ZB, {
               $as: "button",
               className: (0, Y.default)(
-                "rounded",
-                "w-full",
-                "hover:bg-token-surface-secondary dark:hover:bg-gray-800",
-                i.route === t && "bg-token-surface-secondary dark:bg-gray-800"
+                "w-full rounded hover:bg-token-sidebar-surface-secondary",
+                i.route === t && "bg-token-sidebar-surface-secondary"
               ),
               onClick: function (e) {
                 i.push(t), e.stopPropagation();
@@ -1185,4 +1183,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5017-66d7665ea648d8f4.js.map
+//# sourceMappingURL=5017-b4ef70a357855319.js.map

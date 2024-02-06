@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-06Z \(`8eNlznjVNElT8wapWdDOE`\)](#2024-02-06z-8enlznjvnelt8wapwddoe)
 - [2024-02-03Z \(`kAMJ5uXo_RnBLFn2scds_`\)](#2024-02-03z-kamj5uxo_rnblfn2scds_)
 - [2024-02-03Z \(`cUT12v7YWT4wI-mCJ_MrR`\)](#2024-02-03z-cut12v7ywt4wi-mcj_mrr)
 - [2024-02-02Z \(`cJnjwmwanfzv1nD-EjrOa`\)](#2024-02-02z-cjnjwmwanfzv1nd-ejroa)
@@ -65,6 +66,1046 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-06Z (`8eNlznjVNElT8wapWdDOE`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- App release version (Git SHA?): `59a67dcb4bc0938277cf0b9cc52f0742e1a4c54a`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- New Chunks:
+  - `398`
+  - `4663` (+ associated css chunk)
+  - `6002`
+- Module IDs Changed:
+  - `5129` -> `64619`
+  - `6511` -> `25523`
+  - `12900` -> `54100`
+  - `18092` -> `70621`
+  - `18357` -> `87245`
+  - `20520` -> `65042`
+  - `20532` -> `34621`
+  - `21887` -> `72058`
+  - `23015` -> `21557`
+  - `26867` -> `89511`
+  - `27635` -> `84324`
+  - `30985` -> `38526`
+  - `35425` -> `13722`
+  - `35676` -> `26867`
+  - `36395` -> `7327`
+  - `39252` -> `13832`
+  - `41370` -> `18262`
+  - `47477` -> `49941`
+  - `48953` -> `28771`
+  - `48953` -> `976`
+  - `51522` -> `83218`
+  - `51546` -> `92874`
+  - `52923` -> `29428`
+  - `59873` -> `51331`
+  - `70919` -> `57324`
+  - `74267` -> `88675`
+  - `76316`-> `76036`
+  - `85763` -> `18653`
+  - `90172` -> `28234`
+  - `96039` -> `1943`
+  - `96055` -> `73819`
+  - `96157` -> `6188`
+  - ?etc?
+- A bunch of little styling tweaks such as:
+  - `unpacked/_next/static/chunks/3754.js`
+    - ```diff
+        className:
+      -   "flex h-full w-full flex-col items-center justify-center bg-gray-50 dark:bg-gray-800",
+      +   "flex h-full w-full flex-col items-center justify-center bg-token-main-surface-primary",
+      ```
+  - `unpacked/_next/static/chunks/5017.js`
+    - ```diff
+        className: (0, Y.default)(
+      -   "rounded",
+      -   "w-full",
+      -   "hover:bg-token-surface-secondary dark:hover:bg-gray-800",
+      -   i.route === t && "bg-token-surface-secondary dark:bg-gray-800"
+      +   "w-full rounded hover:bg-token-sidebar-surface-secondary",
+      +   i.route === t && "bg-token-sidebar-surface-secondary"
+      ```
+  - etc
+- `unpacked/_next/static/chunks/398.js`
+  - New chunk (1687 lines total)
+  - New `svg` images of:
+    - a 'down pointing chevron'
+    - a cliboard with a tick
+    - a cliboard with a left pointing arrow
+  - A whole bunch of new `JVR.*` components related to `JVR.JsonView`:
+    - ```js
+      c.displayName = "JVR.DispatchShowTools";
+      p.displayName = "JVR.ShowTools";
+      N.displayName = "JVR.DispatchExpands";
+      x.displayName = "JVR.Expands";
+      (g.displayName = "JVR.DispatchTypes"), (C.displayName = "JVR.Types");
+      b.displayName = "JVR.TriangleArrow";
+      B.displayName = "JVR.DispatchSymbols";
+      E.displayName = "JVR.Symbols";
+      I.displayName = "JVR.DispatchSection";
+      A.displayName = "JVR.Section";
+      P.displayName = "JVR.Context";
+      U.displayName = "JVR.DispatchContext";
+      _.displayName = "JVR.Provider";
+      ea.displayName = "JVR.Quote";
+      er.displayName = "JVR.ValueQuote";
+      et.displayName = "JVR.Colon";
+      el.displayName = "JVR.Arrow";
+      en.displayName = "JVR.BracketsOpen";
+      es.displayName = "JVR.BracketsClose";
+      ei.displayName = "JVR.NestedClose";
+      ev.displayName = "JVR.Copied";
+      eg.displayName = "JVR.SetComp";
+      eC.displayName = "JVR.MapComp";
+      eb.displayName = "JVR.TypeString";
+      eL.displayName = "JVR.TypeTrue";
+      eJ.displayName = "JVR.TypeFalse";
+      ek.displayName = "JVR.TypeFloat";
+      eS.displayName = "JVR.TypeInt";
+      eB.displayName = "JVR.TypeFloat";
+      eE.displayName = "JVR.TypeUrl";
+      eT.displayName = "JVR.TypeDate";
+      eK.displayName = "JVR.TypeUndefined";
+      eM.displayName = "JVR.TypeNull";
+      eF.displayName = "JVR.TypeNan";
+      eA.displayName = "JVR.Value";
+      eO.displayName = "JVR.KeyName";
+      e_.displayName = "JVR.KeyNameComp";
+      eW.displayName = "JVR.Row";
+      eH.displayName = "JVR.RowComp";
+      eG.displayName = "JVR.KeyValues";
+      eX.displayName = "JVR.KayName";
+      eY.displayName = "JVR.KeyValuesItem";
+      e5.displayName = "JVR.CountInfoExtra";
+      e2.displayName = "JVR.CountInfoExtraComps";
+      e7.displayName = "JVR.CountInfo";
+      e6.displayName = "JVR.CountInfoComp";
+      e4.displayName = "JVR.Ellipsis";
+      e9.displayName = "JVR.EllipsisComp";
+      ae.displayName = "JVR.NestedOpen";
+      ar.displayName = "JVR.Container";
+      at.displayName = "JVR.BraceLeft";
+      al.displayName = "JVR.BraceRight";
+      an.displayName = "JVR.BracketsLeft";
+      as.displayName = "JVR.BracketsRight";
+      ai.displayName = "JVR.Arrow";
+      ao.displayName = "JVR.Colon";
+      au.displayName = "JVR.Quote";
+      av.displayName = "JVR.ValueQuote";
+      ac.displayName = "JVR.Bigint";
+      ay.displayName = "JVR.Date";
+      ap.displayName = "JVR.False";
+      ad.displayName = "JVR.Float";
+      am.displayName = "JVR.Int";
+      aj.displayName = "JVR.Map";
+      af.displayName = "JVR.Nan";
+      aN.displayName = "JVR.Null";
+      ax.displayName = "JVR.Set";
+      ah.displayName = "JVR.StringText";
+      aZ.displayName = "JVR.True";
+      aw.displayName = "JVR.Undefined";
+      aR.displayName = "JVR.Url";
+      ag.displayName = "JVR.Copied";
+      (aV.displayName = "JVR.JsonView");
+      ```
+- `unpacked/_next/static/chunks/4663.js`
+  - New chunk (32 lines total)
+  - ```js
+    14663: function (n, e, a) {
+      "use strict";
+      a.r(e),
+        a.d(e, {
+          default: function () {
+            return i;
+          },
+        });
+      var t = a(398),
+        r = a(85168),
+        s = a.n(r),
+        c = a(35250);
+      function i(n) {
+        var e = n.json;
+        return (0, c.jsx)(t.ZP, {
+          className: s().container,
+          enableClipboard: !0,
+          displayDataTypes: !1,
+          displayObjectSize: !1,
+          value: e,
+        });
+      }
+    },
+    85168: function (n) {
+      n.exports = { container: "JsonViewer_container__wckvT" };
+    },
+    ```
+- `unpacked/_next/static/chunks/5054.js`
+  - Some minor styling changes, as well as...
+  - ```diff
+    - (0, ec.isEqual)(v.metadata.auth, o) ||
+    + (0, ec.isEqual)(
+    +   null == v ? void 0 : v.metadata.auth,
+    +   o
+    + ) ||
+        O({
+          auth: tL({ type: ef.Jv.OAuth }, n.known_auth),
+        }),
+    - v.metadata.privacy_policy_url !==
+    + (null == v
+    +   ? void 0
+    +   : v.metadata.privacy_policy_url) !==
+        n.known_privacy_policy &&
+    ```
+- `unpacked/_next/static/chunks/6002.js`
+  - New chunk (211 lines total)
+  - ```js
+    title: "Experimentation DevTools",
+    noPadding: !0,
+    showCloseButton: !0,
+    children: (0, p.jsxs)(x.fC, {
+      defaultValue: n.FeatureGates,
+    ```
+  - ```js
+    value: n.Features,
+    children:
+      null !==
+        (t =
+          null == a
+            ? void 0
+            : a.map(function (e) {
+                return (0, p.jsx)(
+                  N,
+                  {
+                    children: (0, p.jsx)("p", {
+                      children: String(e),
+                    }),
+                  },
+                  e
+                );
+              })) && void 0 !== t
+        ? t
+        : null,
+    ```
+  - ```js
+    value: n.FeatureGates,
+    children: Object.entries(d.tz).map(function (e) {
+      var t = (0, i.Z)(e, 2),
+        s = t[0],
+        r = t[1];
+      return (0, p.jsx)(v, { codeName: s, statsigName: r }, s);
+    }),
+    ```
+  - ```js
+    function v(e) {
+      var t = e.codeName,
+        s = e.statsigName,
+        r = (0, d.sB)(s),
+        a = r.isLoading,
+        n = r.value;
+      return (0, p.jsxs)(N, {
+        children: [
+          (0, p.jsx)("a", {
+            href: "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
+              s
+            ),
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "underline",
+            children: t,
+          }),
+    ```
+  - ```js
+    ((r = n || (n = {})).FeatureGates = "Feature Gates"),
+      (r.Features = "Features"),
+      (r.ExperimentalFeatureGates = "Experimental Gates");
+    ```
+- `unpacked/_next/static/chunks/pages/g/[gizmoId]/about.js`
+  - ```diff
+    - gizmo: t,
+    + gizmoId: e.gizmoId,
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, making it hard to see what changed specifically
+  - New `svg` image of ?settings sliders?
+  - ```js
+    57123: function (Y, et, en) {
+      var ei,
+        eo = en(44675);
+      !(function () {
+        "use strict";
+        var et = "input is invalid type",
+          ea = "object" == typeof window,
+          eu = ea ? window : {};
+        eu.JS_SHA256_NO_WINDOW && (ea = !1);
+        var ec = !ea && "object" == typeof self,
+          ed =
+            !eu.JS_SHA256_NO_NODE_JS &&
+            "object" == typeof eo &&
+            eo.versions &&
+            eo.versions.node;
+        ed ? (eu = en.g) : ec && (eu = self);
+        var ef = !eu.JS_SHA256_NO_COMMON_JS && Y.exports,
+    ```
+    - This appears to be the following lib:
+      - https://github.com/emn178/js-sha256
+        - > A simple SHA-256 / SHA-224 hash function for JavaScript supports UTF-8 encoding.
+  - ```diff
+    - (0, eV.jsx)(rB, {
+    -   children: (0, eV.jsxs)(nJ.fC, {
+    + (0, eV.jsx)(rF, {
+    +   children: (0, eV.jsxs)(ry.Z.Root, {
+        children: [
+    -   (0, eV.jsx)(nJ.xz, {
+    -     asChild: !0,
+    -     children: (0, eV.jsx)(tK.z, {
+    -       color: "neutral",
+    -       className: "mb-auto mt-auto",
+    -       children: (0, eV.jsx)(n4.JEI, {}),
+    -     }),
+    +   (0, eV.jsx)(ry.Z.Trigger, {
+    +     className: "border border-token-surface-tertiary",
+    +     children: (0, eV.jsx)(ez.K9M, { className: "icon-sm" }),
+        }),
+    -   (0, eV.jsx)(nJ.h_, {
+    -     children: (0, eV.jsxs)(nJ.VY, {
+    -       className:
+    -         "PopoverContent rounded-sm bg-white p-2 pb-0.5 shadow-xl dark:bg-gray-800/90",
+    +   (0, eV.jsx)(ry.Z.Portal, {
+    +     children: (0, eV.jsxs)(ry.Z.Content, {
+            side: "top",
+            align: "end",
+            children: [
+              eN &&
+    -           (0, eV.jsx)(tK.z, {
+    -             color: "neutral",
+    -             className: "mb-2 flex w-full border-0",
+    +           (0, eV.jsx)(ry.Z.Item, {
+    ```
+  - ```diff
+    - et !== e3.current &&
+    -   (ek.vm.setActiveSidebar(!1), eT.hx.clear(), (e3.current = et));
+    + et !== e3.current && (eT.hx.clear(), (e3.current = et));
+    ```
+  - ```diff
+    - var eZ =
+    -     (null === (eT = eF) || void 0 === eT
+    -       ? void 0
+    -       : null === (e_ = eT.metadata) || void 0 === e_
+    -         ? void 0
+    -         : null === (ej = e_.auth) || void 0 === ej
+    -           ? void 0
+    -           : ej.type) === e5.Jv.OAuth,
+    -   eH = (0, t4.Wd)(null == ek ? void 0 : ek.gizmo.id, eZ),
+    -   eG = eH.data,
+    -   eW = eH.isLoading,
+    ```
+  - ```diff
+    - return (
+    -   et ===
+    -   (null === (en = Y.message.metadata) || void 0 === en
+    -     ? void 0
+    -     : null === (ei = en.jit_plugin_data) || void 0 === ei
+    + return (
+    +   et ===
+    +   (null === (en = Y.message.metadata) || void 0 === en
+          ? void 0
+            ? void 0
+    +     : null === (eo = ei.from_server) || void 0 === eo
+    +       ? void 0
+            : eo.type)
+    ```
+  - ```diff
+    - : null ===
+    -       (eM = eG.settings.find(function (Y) {
+    -         var et, en;
+    -         return (
+    -           Y.action_id ===
+    -           (null === (et = eF) || void 0 === et
+    -             ? void 0
+    -             : null === (en = et.metadata) || void 0 === en
+    -               ? void 0
+    -               : en.action_id)
+    -         );
+    -       })) || void 0 === eM
+    ```
+  - ```diff
+          : ei.type) === "oauth_required" &&
+    - !eY
+    + eu.query.oauth_success
+    ```
+  - ```diff
+  - {
+  -   key: "_getNextCharDelayMs",
+  -   value: function () {
+  -     var et = this.concatenatedText[this.displayedTextLength - 1],
+  -       en = Y.VERY_SLOW_PUNCTUATION_CHARS.includes(et)
+  -         ? Y.VERY_SLOW_PUNCTUATION_MAX_BUFFERING_LAG_MS
+  -         : Y.SLOW_PUNCTUATION_CHARS.includes(et)
+  -           ? Y.SLOW_PUNCTUATION_MAX_BUFFERING_LAG_MS
+  -           : Y.CHAR_MAX_BUFFERING_LAG_MS,
+  -       ei =
+  -         this.textMessagePartsTextLength - this.displayedTextLength,
+  -       eo =
+  -         ei <= 0
+  -           ? en
+  -           : Math.round(
+  -               en / Math.max(ei / Y.INVERSE_BUFFER_SCALING_FACTOR, 1)
+  -             );
+  -     return (
+  -       this.debug &&
+  -         eo > Y.CHAR_MAX_BUFFERING_LAG_MS &&
+  -         console.debug(
+  -           "PunctuationBuffer: [lagMs: "
+  -             .concat(eo, "] [numBufferedChars: ")
+  -             .concat(ei, "]")
+  + {
+  +   key: "_getNextCharDelayMs",
+  +   value: function () {
+  +     var Y,
+  +       et = this.concatenatedText[this.displayedTextLength - 1],
+  +       en =
+  +         this.textMessagePartsTextLength -
+  +         this.displayedTextLength,
+  +       ei = 1 / Math.max(en * this.LAG_FACTORS.BUFFER_FACTOR, 1),
+  +       eo =
+  +         (null !== (Y = this.LAG_FACTORS[et]) && void 0 !== Y
+  +           ? Y
+  +           : this.LAG_FACTORS.DEFAULT_LAG_FACTOR) * ei,
+  +       ea = this.averageMsPerChar * eo;
+  +     return (
+  +       this._throttledDebugLog(
+  +         [
+  +           "PunctuationBuffer:",
+  +           "[lagMs: ".concat(ea, "]"),
+  +           '[lastChar: "'.concat(et, '"]'),
+  +           "[averageMsPerChar: ".concat(
+  +             this.averageMsPerChar,
+  +             "]"
+  +           ),
+  +           "[lagFactor: ".concat(eo, "]"),
+  +           "[bufferLagFactor: ".concat(ei, "]"),
+  +           "[numBufferedChars: ".concat(en, "]"),
+  +           "===",
+  +         ].join("\n")
+    ```
+  - ```diff
+    - children: (0, tR.jsx)(eJ.Z, {
+    -   id: "ConversationTurnInlineMessageFeedback.moreOptions",
+    -   defaultMessage: "More options",
+    - }),
+    + children: (0, tL.jsx)(e0.Z, {
+    +   id: "ConversationTurnInlineMessageFeedback.moreOptions.1",
+    +   defaultMessage: "More...",
+    + }),
+    ```
+  - ```diff
+      placeholder: ec.formatMessage({
+    -   id: "ConversationTurnInlineMessageFeedback.feedbackPlaceholder",
+    +   id: "ConversationTurnInlineMessageFeedback.feedbackPlaceholder.1",
+        defaultMessage:
+    -     "(Optional) Let us know what you think",
+    +     "(Optional) Feel free to add specific details",
+      }),
+    ```
+  - ```diff
+    - tE = function (Y) {
+    -   ep({ nodeId: tg.nodeId, messageId: tg.message.id, rating: Y }),
+    -     null != tf && tf.includes(eY.L0.MessageFeedbackV2) && ez(!0);
+    + tT = function (Y) {
+    +   ep({ nodeId: tv.nodeId, messageId: tv.message.id, rating: Y }),
+    +     eJ.m9.getExperimentValue({
+    +       experimentName: eJ.H6.MessageFeedbackV2,
+    +       key: "show_new_ui",
+    +       defaultValue: !1,
+    +     }) && ez(!0);
+    ```
+  - ```js
+    rc = eT()(
+      function () {
+        return en.e(6002).then(en.bind(en, 86529));
+      },
+      {
+        ssr: !1,
+        loadableGenerated: {
+          webpack: function () {
+            return [86529];
+          },
+        },
+      }
+    ),
+    ```
+  - ```diff
+    - null !== (eo = (0, nS.Bv)(eu.lastModelUsed, ec)) && void 0 !== eo
+    + null === (ei = (0, nE.BC)(eL, e_)) || void 0 === ei
+    ```
+  - ```diff
+    - !(null != eM && eM.includes(ez.L0.MessageFeedbackV2)) &&
+    -   (tp(et), tv(en), tu(ei), "thumbsDown" === ei && eI))
+    + !tI.m9.getExperimentValue({
+    +   experimentName: tI.H6.MessageFeedbackV2,
+    +   key: "show_new_ui",
+    +   defaultValue: !1,
+    + }) && (tp(et), tv(en), tu(ei), "thumbsDown" === ei && eI))
+    ```
+  - ```js
+    queryFn: (function () {
+      var et = (0, ed.Z)(
+        eh().mark(function et() {
+          return eh().wrap(function (et) {
+            for (;;)
+              switch ((et.prev = et.next)) {
+                case 0:
+                  return et.abrupt("return", eL.U.getAbout(Y));
+    // ..snip..
+    })(),
+    queryKey: ["gizmo", "about", { gizmoId: Y }],
+    ```
+  - ```diff
+    - eB = function (Y) {
+    -   var et = Y.vanityMetrics,
+    -     en = (0, ep.sB)(ep.tz.GizmoReviews).value;
+    -   if (null == et) return null;
+    -   var ei =
+    -     en && null != et.review_stats && et.review_stats.count > eN
+    -       ? et.review_stats
+    -       : void 0;
+    -   return (0, eO.jsxs)("div", {
+    // ..snip..
+    + eQ = function (Y) {
+    +   var et = Y.aboutBlock;
+    +   switch (et.type) {
+    +     case "generic_title_subtitle":
+    +       return (0, eB.jsxs)(eK, {
+    +         children: [
+    +           (0, eB.jsx)(e$, { children: et.title }),
+    +           (0, eB.jsx)(eY, { children: et.subtitle }),
+    +         ],
+    +       });
+    +     case "rating":
+    +       return (0, eB.jsxs)(eK, {
+    +         children: [
+    +           (0, eB.jsxs)(e$, {
+    +             children: [
+    +               (0, eB.jsx)(eD.p$, { className: "icon-sm" }),
+    +               et.rating_str,
+    +             ],
+    +           }),
+    +           (0, eB.jsx)(eY, {
+    +             children: (0, eB.jsx)(ej.Z, {
+    +               id: "gizmo.about.numReviews",
+    +               defaultMessage: "{numReviews} reviews",
+    +               values: { numReviews: et.rating_count_str },
+    +             }),
+    +           }),
+    +         ],
+    +       });
+    +     case "category":
+    +       if (null != et.category_ranking)
+    +         return (0, eB.jsxs)(eK, {
+    +           children: [
+    +             (0, eB.jsx)(e$, { children: et.category_ranking }),
+    +             (0, eB.jsx)(eY, {
+    +               children: (0, eB.jsx)(ej.Z, {
+    +                 id: "gizmo.about.inCategory",
+    +                 defaultMessage: "in {category}",
+    +                 values: { category: et.category_str },
+    +               }),
+    +             }),
+    +           ],
+    +         });
+    +       return (0, eB.jsxs)(eK, {
+    +         children: [
+    +           (0, eB.jsx)(e$, { children: et.category_str }),
+    +           (0, eB.jsx)(eY, {
+    +             children: (0, eB.jsx)(ej.Z, {
+    +               id: "gizmo.about.category",
+    +               defaultMessage: "Category",
+    +             }),
+    +           }),
+    +         ],
+    +       });
+    +     case "conversations":
+    +       return (0, eB.jsxs)(eK, {
+    +         children: [
+    +           (0, eB.jsx)(e$, { children: et.conversation_count_str }),
+    +           (0, eB.jsx)(eY, {
+    +             children: (0, eB.jsx)(ej.Z, {
+    +               id: "gizmo.about.numConversations",
+    +               defaultMessage: "conversations",
+    +             }),
+    +           }),
+    +         ],
+    +       });
+    +     default:
+    +       return (0, eb.Z)(et), (0, eB.jsx)(eB.Fragment, {});
+    ```
+  - ```js
+    children: et.map(function (Y) {
+      return (0, eB.jsx)(eQ, { aboutBlock: Y }, Y.type);
+    }),
+    ```
+  - ```diff
+    - eZ = function (Y) {
+    -   var et = Y.vanityMetrics,
+    -     en = null == et ? void 0 : et.review_stats,
+    -     ei = (0, ep.sB)(ep.tz.GizmoReviews).value;
+    -   return null != et && null != en && ei
+    -     ? (0, eO.jsxs)("div", {
+    + e9 = function (Y) {
+    +   var et = Y.reviewStats;
+    +   return (0, ew.sB)(ew.tz.GizmoReviews).value
+    ```
+  - ```diff
+      children: (0, eB.jsx)(ej.Z, {
+    -   id: "gizmo.about.numReviews",
+    +   id: "gizmo.about.ratings.numReviews",
+        defaultMessage:
+          "{numReviews, plural, one {# review} other {# reviews}}",
+        values: {
+          numReviews:
+    -       null !==
+    -         (ei =
+    -           null == en
+    -             ? void 0
+    -             : en.by_rating[Y]) && void 0 !== ei
+    +       null !== (ei = et.by_rating[Y]) &&
+    +       void 0 !== ei
+    ```
+  - ```diff
+      children: (0, eB.jsx)(ej.Z, {
+    -   id: "gizmo.about.notEnoughReviews",
+    +   id: "gizmo.about.ratings.notEnoughReviews",
+        defaultMessage: "Not enough reviews yet",
+      }),
+    ```
+  - ```js
+    children: (0, eB.jsx)(ej.Z, {
+      id: "gizmo.about.notFound",
+      defaultMessage: "GPT not found",
+    }),
+    ```
+  - ```diff
+      children: [
+        (0, eB.jsx)(eR.r, { gizmo: ep, isOwner: eb }),
+        ea,
+    -   (0, eO.jsx)(eB, { vanityMetrics: en.gizmo.vanity_metrics }),
+    +   (0, eB.jsx)(eX, { blocks: ec.data.about_blocks }),
+        (0, eB.jsx)(e0, { gizmo: ep, onClose: eo }),
+    -   (0, eO.jsx)(eZ, { vanityMetrics: en.gizmo.vanity_metrics }),
+    +   (0, eB.jsx)(e9, { reviewStats: ec.data.review_stats }),
+        (0, eB.jsx)(eW, { tools: ep.tools }),
+      ],
+    ```
+  - ```diff
+    - gizmo: et,
+    + gizmoId: et.gizmo.id,
+    ```
+  - ```diff
+    - (0, eM.jsx)(tv.j4, { gizmo: eu }),
+    + (0, eO.jsx)(tv.j4, { gizmoId: eu.gizmo.id }),
+    ```
+  - ```js
+    {
+      key: "getAbout",
+      value: (function () {
+        var Y = (0, eo.Z)(
+          ed().mark(function Y(et) {
+            return ed().wrap(function (Y) {
+              for (;;)
+                switch ((Y.prev = Y.next)) {
+                  case 0:
+                    return Y.abrupt(
+                      "return",
+                      ef.ZP.get(
+                        "".concat(ef.B, "/gizmos/").concat(et, "/about")
+                      )
+                    );
+    ```
+  - ```js
+    var ny = tm()(
+        function () {
+          return en
+            .e(8682)
+            .then(en.bind(en, 61544))
+            .then(function (Y) {
+              return Y.default;
+            });
+        },
+        {
+          loadableGenerated: {
+            webpack: function () {
+              return [61544];
+            },
+          },
+        }
+      ),
+    ```
+  - ```js
+    conversationMode: tH,
+    ```
+  - ```js
+    eg = Y.conversationMode,
+    ey = (0, ni.Z)({ clientThreadId: et, conversationMode: eg }),
+    ```
+  - ```diff
+    - conversationMode: td.iN.getConversationMode(et),
+    + conversationMode:
+    +   null != eg ? eg : ta.iN.getConversationMode(et),
+    ```
+  - ```js
+    function eZ() {
+      return (0, eC.a)({
+        queryKey: ["mfaInfo"],
+        queryFn: function () {
+          return ew.ZP.getMfaInfo();
+        },
+        enabled: !0,
+      });
+    }
+    function eH() {
+      var Y,
+        et = eZ();
+      return et.isLoading
+        ? ei.LOADING
+        : null !== (Y = et.data) && void 0 !== Y && Y.mfa_enabled
+          ? ei.ENABLED
+          : ei.DISABLED;
+    }
+    !(function (Y) {
+      (Y.DISABLED = "DISABLED"),
+        (Y.ENABLED = "ENABLED"),
+        (Y.LOADING = "LOADING");
+    ```
+  - ```js
+    e7 = e6.setupMfa,
+    ta = e6.isUsernamePassword,
+    tu = e6.removeMfa,
+    ```
+  - ```diff
+    + (null == tE ? void 0 : tE.includes(eW.i)) &&
+    +   (td === ei.LOADING || td === ei.DISABLED) &&
+        ta &&
+    -   (0, eA.jsx)(nD, {
+    -     children: (0, eA.jsx)(nT, {
+    -       label: et.formatMessage(nF.enable2fa),
+    -       buttonLabel: et.formatMessage(nF.enable),
+    -       onClick: e8,
+    +   (0, eP.jsx)(nF, {
+    +     children: (0, eP.jsx)(nO, {
+    +       label: et.formatMessage(nU.toggleMfa),
+    +       buttonLabel:
+    +         td == ei.LOADING
+    +           ? et.formatMessage(nU.loadingMfa)
+    +           : et.formatMessage(nU.enableMfa),
+    +       disabled: td == ei.LOADING,
+    +       onClick: e7,
+          }),
+        }),
+    - (null == tI
+    -   ? void 0
+    -   : null === (t9 = tI.user) || void 0 === t9
+    -     ? void 0
+    -     : t9.mfa) &&
+    + td === ei.ENABLED &&
+        ta &&
+    -   (0, eA.jsx)(nD, {
+    -     children: (0, eA.jsx)(nT, {
+    -       label: et.formatMessage(nF.disable2fa),
+    -       buttonLabel: et.formatMessage(nF.disable),
+    -       onClick: tc,
+    -       color: "danger",
+    +   (0, eP.jsx)(nF, {
+    +     children: (0, eP.jsx)(nO, {
+    +       label: et.formatMessage(nU.toggleMfa),
+    +       buttonLabel: et.formatMessage(nU.disableMfa),
+    +       onClick: tu,
+          }),
+    ```
+  - ```diff
+    - enable2fa: {
+    -   id: "settingsModal.enable2fa",
+    -   defaultMessage: "Enable two-factor authentication",
+    + toggleMfa: {
+    +   id: "settingsModal.toggleMfa",
+    +   defaultMessage: "Multi-factor authentication",
+      },
+    - enable: { id: "settingsModal.enable", defaultMessage: "Enable" },
+    - disable: { id: "settingsModal.disable", defaultMessage: "Disable" },
+    - disable2fa: {
+    -   id: "settingsModal.disable2fa",
+    -   defaultMessage: "Disable two factor authentication",
+    + enableMfa: { id: "settingsModal.enable", defaultMessage: "Enable" },
+    + disableMfa: {
+    +   id: "settingsModal.disable",
+    +   defaultMessage: "Disable",
+    + },
+    + loadingMfa: {
+    +   id: "settingsModal.loadingMfa",
+    +   defaultMessage: "Loading...",
+      },
+    ```
+  - ```js
+    var eX = eC()(
+      function () {
+        return Promise.all([en.e(398), en.e(4663)])
+          .then(en.bind(en, 14663))
+          .then(function (Y) {
+            return Y.default;
+          });
+      },
+      {
+        ssr: !1,
+        loadableGenerated: {
+          webpack: function () {
+            return [14663];
+          },
+        },
+      }
+    );
+    ```
+  - ```js
+    eE =
+      null ===
+        (ei = (0, ek.get)(Y, "metadata.__internal.raw_tokens")) ||
+      void 0 === ei
+        ? void 0
+        : ei.length,
+    eS = (0, ek.get)(Y, "metadata.request_id");
+    ```
+  - ```js
+    Y.author.role !== ep.uU.System &&
+      (0, eL.jsxs)("div", {
+        className: "text-xs text-token-text-tertiary",
+        children: ["Req ID: ", eS || "Reload page to see ID"],
+      }),
+    ```
+  - ```diff
+          children: [
+    -       (0, eI.jsx)("b", { children: "Engine:" }),
+    +       (0, eL.jsx)("b", { children: "Tokens Count:" }),
+            " ",
+          children: [
+    -       (0, eI.jsx)("b", { children: "Experiment:" }),
+    +       (0, eL.jsx)("b", { children: "Engine:" }),
+            " ",
+            ed,
+          ],
+        }),
+      ef &&
+          children: [
+    -       (0, eI.jsx)("b", { children: "Treatment:" }),
+    +       (0, eL.jsx)("b", { children: "Experiment:" }),
+    ```
+  - ```diff
+    - (0, eI.jsx)("b", { children: "Group Name:" }),
+    + (0, eL.jsx)("b", { children: "Treatment:" }),
+    ```
+  - ```diff
+    + switch (
+        (eg.tQ.updateTree(this.clientThreadId, function (Y) {
+          Y.updateNodeMessage(
+            et.currentNodeId,
+            et.activeBranchLastMessage
+          ),
+            Y.updateNodeMetadata(et.currentNodeId, {
+              err: ei,
+              errType: "danger",
+              errCode: eo,
+              completionSampleFinishTime: Date.now(),
+            });
+        }),
+        eo)
+      ) {
+    +   case eW.qS.ContentPolicy:
+    +   case eW.qS.ContentOrTos:
+    +   case eP.uU:
+    +   case eI.wp:
+    +     break;
+    +   default:
+    +     void 0 !== ei &&
+    +       e_.m9.logEvent("chatgpt_conversation_error_web", ei);
+    }
+    ```
+  - ```js
+    {
+      key: "getMfaInfo",
+      value: (function () {
+        var Y = (0, ef.Z)(
+          eh().mark(function Y() {
+            return eh().wrap(
+              function (Y) {
+                for (;;)
+                  switch ((Y.prev = Y.next)) {
+                    case 0:
+                      return Y.abrupt(
+                        "return",
+                        this.get("".concat(tt, "/accounts/mfa_info"))
+                      );
+    ```
+  - ```diff
+    - em = "allow_url_thread_creation",
+    ```
+  - ```diff
+    - (Y.MessageFeedbackV2 = "message_feedback_v2");
+    + (Y.MessageFeedbackV2 = "chatgpt_web_message_feedback_v2");
+    ```
+  - ```diff
+    - e3 = function (Y) {
+    -   return eY(function (et) {
+    -     return eJ.getConversationMode(Y, et);
+    + e3 = function (Y, et) {
+    +   return eY(function (en) {
+    +     var ei = eJ.getConversationMode(Y, en);
+    +     return (null == ei ? void 0 : ei.kind) === "gizmo_interaction" && et
+    +       ? { gizmo_id: et, kind: eo.OL.GizmoInteraction }
+    +       : ei;
+    ```
+  - ```js
+    ed =
+      "undefined" != typeof navigator &&
+      (null === (ei = navigator.userAgent) || void 0 === ei
+        ? void 0
+        : ei.includes(" sidekick/"));
+    ```
+  - ```js
+      var ei,
+        eo = en(14765),
+        ea = en(6020),
+        eu = en(35250),
+        ec = "client-e603C1J5XKDc1uGaxqjKesU5bmT1Pge1gCndOG5OdhH";
+      function ed(Y) {
+        var et = Y.children,
+          en = Y.statsig;
+        return null == en || null == en.payload
+          ? (0, eu.jsx)(eu.Fragment, { children: et })
+          : (0, eu.jsx)(ea.StatsigSynchronousProvider, {
+              initializeValues: en.payload,
+              user: en.user,
+              sdkKey: ec,
+              options: { environment: { tier: eo.uG } },
+              children: et,
+            });
+      }
+      function ef(Y) {
+        return (0, ea.useGate)(Y);
+      }
+      !(function (Y) {
+        (Y.Test = "keyz-test-20240201"),
+          (Y.AnonTest = "keyz-test-anon-20240201");
+      })(ei || (ei = {}));
+    },
+    ```
+  - ```diff
+    - return (
+    -   console.error(
+    -     "[Statsig] An unexpected exception occurred.",
+    -     et
+    -   ),
+    -   this.logError(Y, et, ei),
+    -   en()
+    - );
+    + return et instanceof ec.StatsigInitializationTimeoutError
+    +   ? (console.error("[Statsig] Timeout occured.", et), en())
+    +   : (console.error(
+    +       "[Statsig] An unexpected exception occurred.",
+    +       et
+    +     ),
+    +     this.logError(Y, et, ei),
+    ```
+  - ```diff
+    - (et.StatsigInvalidArgumentError = et.StatsigUninitializedError =
+    -   void 0);
+    + (et.StatsigInitializationTimeoutError =
+    +   et.StatsigSDKKeyMismatchError =
+    +   et.StatsigInvalidArgumentError =
+    +   et.StatsigUninitializedError =
+    +     void 0);
+    ```
+  - ```diff
+    et.StatsigSDKKeyMismatchError = ea;
+    var eu = (function (Y) {
+      function et(en) {
+        var ei =
+          Y.call(
+            this,
+            "The initialization timeout of " +
+              en +
+              "ms has been hit before the network request has completed."
+          ) || this;
+        return Object.setPrototypeOf(ei, et.prototype), ei;
+      }
+      return en(et, Y), et;
+    })(Error);
+    et.StatsigInitializationTimeoutError = eu;
+    ```
+  - ```diff
+    - (et.version = "4.39.3");
+    + (et.version = "4.45.1");
+    ```
+  - ```js
+    Y.getSDKKey()
+    ```
+  - ```diff
+    - return { v1: "", v2: "" };
+    + return { v1: "", v2: "", v3: "" };
+    ```
+  - ```diff
+    - "./_parts/human-corrected/ko-KR.json": [35676, 6867],
+    + "./_parts/human-corrected/ko-KR.json": [26867, 6867],
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-9cd3a0f216f85167.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-42150dfadc3cd05e.js
+https://cdn.oaistatic.com/_next/static/8eNlznjVNElT8wapWdDOE/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/8eNlznjVNElT8wapWdDOE/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-b4ef70a357855319.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-a1768f81fff6d91d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/analytics-9b1758696d2460a5.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-69a1549f68de26f0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-0907046e07350e78.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-caf3d8e37ce7e706.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/error-0bf38b4bd16cede0.js
+https://cdn.oaistatic.com/_next/static/chunks/3754-c84775af41cb659b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/about-191f42d45191221c.js
+https://cdn.oaistatic.com/_next/static/chunks/5054-dd89364b2a3ddb67.js
+```
+
+### From `orig/_next/static/chunks/webpack-42150dfadc3cd05e.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/398.1ef137792edb771e.js
+https://cdn.oaistatic.com/_next/static/chunks/4534.ada329ee1983b4db.js
+https://cdn.oaistatic.com/_next/static/chunks/4663.99f635e91a0dd0ad.js
+https://cdn.oaistatic.com/_next/static/chunks/6002.32843a0cf3f8db12.js
+https://cdn.oaistatic.com/_next/static/chunks/6867.4b3fe5232d753e7c.js
+https://cdn.oaistatic.com/_next/static/chunks/9387.4d07776b2bcf19aa.js
+https://cdn.oaistatic.com/_next/static/css/d5b290ede491fef6.css
+https://cdn.oaistatic.com/_next/static/css/a3516913ef4144ef.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.5e703480baf20b28.js
+```
 
 ## 2024-02-03Z (`kAMJ5uXo_RnBLFn2scds_`)
 

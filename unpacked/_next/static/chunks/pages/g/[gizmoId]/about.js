@@ -63,7 +63,7 @@
                 onClose: function () {
                   return c(!1);
                 },
-                gizmo: t,
+                gizmoId: e.gizmoId,
                 children: (0, a.jsx)(i.Bo, {
                   onClick: function () {
                     c(!1), window.history.pushState({}, "", (0, o.m_)(t));
@@ -176,7 +176,7 @@
         null != n && c)
           ? (0, O.jsx)(w, {})
           : !1 === c
-            ? (0, O.jsx)(_, { gizmo: r })
+            ? (0, O.jsx)(z, { gizmo: r })
             : (0, p.createElement)(i.ZP, y(y({}, e), {}, { key: e.gizmoId }));
       }
       function w() {
@@ -200,7 +200,7 @@
           }),
         });
       }
-      function _(e) {
+      function z(e) {
         var t = e.gizmo;
         return (0, O.jsx)(a.Z, {
           children: (0, O.jsx)(s.r, {
@@ -279,4 +279,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=about-eb0ae194b80daac5.js.map
+//# sourceMappingURL=about-191f42d45191221c.js.map

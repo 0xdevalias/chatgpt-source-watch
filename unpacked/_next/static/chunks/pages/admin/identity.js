@@ -156,15 +156,15 @@
                 (0, I.jsxs)(w.Z.Header, {
                   children: [
                     (0, I.jsx)(w.Z.HeaderCell, {
-                      className: "dark:bg-gray-800",
+                      className: "bg-token-main-surface-primary",
                       children: (0, I.jsx)(x.Z, C({}, T.domainTableHeader)),
                     }),
                     (0, I.jsx)(w.Z.HeaderCell, {
-                      className: "dark:bg-gray-800",
+                      className: "bg-token-main-surface-primary",
                       children: (0, I.jsx)(x.Z, C({}, T.statusTableHeader)),
                     }),
                     (0, I.jsx)(w.Z.HeaderCell, {
-                      className: "dark:bg-gray-800",
+                      className: "bg-token-main-surface-primary",
                     }),
                   ],
                 }),
@@ -1123,4 +1123,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=identity-f7f6e23b9ed909cf.js.map
+//# sourceMappingURL=identity-0907046e07350e78.js.map

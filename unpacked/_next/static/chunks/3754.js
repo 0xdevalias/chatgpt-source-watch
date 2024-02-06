@@ -660,7 +660,7 @@
           r = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
           className:
-            "flex h-full w-full flex-col items-center justify-center bg-gray-50 dark:bg-gray-800",
+            "flex h-full w-full flex-col items-center justify-center bg-token-main-surface-primary",
           children: [
             t,
             (void 0 === n || n) &&
@@ -965,4 +965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3754-ae5dc2fb759ecfc1.js.map
+//# sourceMappingURL=3754-c84775af41cb659b.js.map

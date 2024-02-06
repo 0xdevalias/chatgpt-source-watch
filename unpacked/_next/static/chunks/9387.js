@@ -12,18 +12,18 @@
       var s = n(18008),
         i = n(3125),
         r = n(36112),
-        a = n(19841),
-        o = n(5397),
-        l = n.n(o),
+        o = n(19841),
+        a = n(5397),
+        l = n.n(a),
         c = n(70079),
         d = n(35236),
         u = n(84589),
         f = n.n(u),
         x = n(97296),
-        h = n(1454),
-        m = n(32004),
-        g = n(70671),
-        p = n(94968),
+        m = n(1454),
+        h = n(32004),
+        p = n(70671),
+        g = n(94968),
         j = n(91559),
         w = n(90166),
         y = n(10936),
@@ -81,7 +81,7 @@
                   className:
                     "flex items-center justify-center text-center font-mono text-sm uppercase text-token-text-primary",
                   style: { height: 200 },
-                  children: (0, b.jsx)(m.Z, z({}, W.loading)),
+                  children: (0, b.jsx)(h.Z, z({}, W.loading)),
                 }),
               });
             },
@@ -97,11 +97,11 @@
           t = f()(),
           n = (0, i.Z)(t, 2),
           r = n[0],
-          o = r.width,
+          a = r.width,
           l = r.height,
           u = n[1],
-          g = (0, y.gj)().targetLatencyData,
-          p = (0, s.tN)(s.bM.isLatencyDevtoolsVisible);
+          p = (0, y.gj)().targetLatencyData,
+          g = (0, s.tN)(s.bM.isLatencyDevtoolsVisible);
         (0, c.useEffect)(function () {
           if (e.current) {
             var t = window.innerWidth,
@@ -149,9 +149,9 @@
           [Z, E]
         );
         var A = function () {
-          p ? s.vm.hideLatencyDevTools() : s.vm.showLatencyDevTools();
+          g ? s.vm.hideLatencyDevTools() : s.vm.showLatencyDevTools();
         };
-        if (!p) return null;
+        if (!g) return null;
         var F = Object.keys(L).length > 1;
         return (0, b.jsx)(x.E.div, {
           initial: { opacity: 0 },
@@ -169,8 +169,8 @@
               width: k.normal.width,
               height: k.normal.height,
             },
-            className: (0, a.default)(
-              "transition-delay group relative flex h-full flex-col overflow-hidden rounded-md border-2 border-gray-500 bg-gray-50 opacity-80 shadow-md transition-opacity delay-100 hover:opacity-100 hover:delay-0 dark:border-white dark:bg-gray-900"
+            className: (0, o.default)(
+              "transition-delay group relative flex h-full flex-col overflow-hidden rounded-md border-2 border-gray-500 bg-token-popover-surface-primary opacity-80 shadow-md transition-opacity delay-100 hover:opacity-100 hover:delay-0 dark:border-white"
             ),
             children: Z
               ? (0, b.jsxs)(b.Fragment, {
@@ -197,7 +197,7 @@
                                 onClick: function () {
                                   E(!0), (0, v.WD)((0, v.iZ)(Z));
                                 },
-                                children: (0, b.jsx)(h.YFh, {
+                                children: (0, b.jsx)(m.YFh, {
                                   className: "icon-sm",
                                 }),
                               }),
@@ -224,7 +224,7 @@
                                     ],
                                   }),
                                   (0, b.jsx)(
-                                    m.Z,
+                                    h.Z,
                                     z(
                                       z({}, W.node),
                                       {},
@@ -244,7 +244,7 @@
                                 onClick: function () {
                                   E(!0), (0, v.WD)((0, v.Q7)(Z));
                                 },
-                                children: (0, b.jsx)(h.Tfp, {
+                                children: (0, b.jsx)(m.Tfp, {
                                   className: "icon-sm",
                                 }),
                               }),
@@ -258,14 +258,14 @@
                               return A();
                             },
                             className: "whitespace-nowrap !pr-2",
-                            children: (0, b.jsx)(h.q5L, {
+                            children: (0, b.jsx)(m.q5L, {
                               className: "icon-sm",
                             }),
                           }),
                         ],
                       }),
                     }),
-                    g &&
+                    p &&
                       (0, b.jsxs)(b.Fragment, {
                         children: [
                           (0, b.jsx)("div", {
@@ -273,7 +273,7 @@
                             className:
                               "min-w-20 h-full w-full space-y-2 overflow-scroll p-1 pb-12",
                             children: (0, b.jsxs)("div", {
-                              className: (0, a.default)(
+                              className: (0, o.default)(
                                 "col-span-1 grid gap-1"
                               ),
                               children: [
@@ -284,8 +284,8 @@
                                   onMouseOut: B,
                                   onMouseUp: B,
                                   children: (0, b.jsx)(C, {
-                                    parentDimensions: { width: o, height: l },
-                                    targetLatencyData: g,
+                                    parentDimensions: { width: a, height: l },
+                                    targetLatencyData: p,
                                   }),
                                 }),
                                 (0, b.jsx)(M, {}),
@@ -304,7 +304,7 @@
                       className:
                         "font-lg flex h-full flex-col items-center justify-center text-lg",
                       children: (0, b.jsx)(
-                        m.Z,
+                        h.Z,
                         z({}, W.initiateCompletionRequest)
                       ),
                     }),
@@ -358,8 +358,8 @@
                   {
                     className: "col-span-1",
                     children: (0, b.jsxs)("div", {
-                      className: (0, a.default)(
-                        "overflow-hidden bg-white shadow dark:bg-gray-800 ",
+                      className: (0, o.default)(
+                        "overflow-hidden bg-token-main-surface-primary shadow",
                         {
                           "rounded px-2 py-1 sm:p-2": "normal" == s,
                           "rounded-lg px-2 py-3 sm:p-3": "large" == s,
@@ -367,7 +367,7 @@
                       ),
                       children: [
                         (0, b.jsx)("dt", {
-                          className: (0, a.default)(
+                          className: (0, o.default)(
                             "truncate text-token-text-tertiary",
                             {
                               "text-xs font-medium": "normal" == s,
@@ -377,7 +377,7 @@
                           children: e.name,
                         }),
                         (0, b.jsx)("dd", {
-                          className: (0, a.default)(
+                          className: (0, o.default)(
                             "mt-1 font-semibold text-token-text-primary",
                             {
                               "text-base tracking-tight": "normal" == s,
@@ -397,7 +397,7 @@
         },
         P = function (e) {
           var t = e.resizableRef,
-            n = (0, g.Z)(),
+            n = (0, p.Z)(),
             i = function (e) {
               var n = window.innerWidth,
                 s = window.innerHeight,
@@ -422,7 +422,7 @@
             };
           return (0, b.jsxs)("div", {
             className:
-              "sticky bottom-0 z-50 flex w-full flex-row justify-between border-t border-gray-400 bg-white p-2 dark:bg-gray-900",
+              "sticky bottom-0 z-50 flex w-full flex-row justify-between border-t border-gray-400 bg-token-popover-surface-primary p-2",
             children: [
               (0, b.jsxs)("div", {
                 className: "flex flex-row gap-3",
@@ -431,7 +431,7 @@
                     label: n.formatMessage(W.dragAndResizeTooltip),
                     className:
                       "item-center flex flex-col justify-center pl-2 pr-1",
-                    children: (0, b.jsx)(h.uWH, { className: "icon-sm" }),
+                    children: (0, b.jsx)(m.uWH, { className: "icon-sm" }),
                   }),
                   (0, b.jsxs)("div", {
                     className: "flex flex-row space-x-1",
@@ -443,7 +443,7 @@
                         onClick: function () {
                           return i("down-left");
                         },
-                        children: (0, b.jsx)(h.hr3, { className: "icon-sm" }),
+                        children: (0, b.jsx)(m.hr3, { className: "icon-sm" }),
                       }),
                       (0, b.jsx)(j.z, {
                         color: "neutral",
@@ -452,7 +452,7 @@
                         onClick: function () {
                           return i("up-left");
                         },
-                        children: (0, b.jsx)(h.Zuc, { className: "icon-sm" }),
+                        children: (0, b.jsx)(m.Zuc, { className: "icon-sm" }),
                       }),
                       (0, b.jsx)(j.z, {
                         color: "neutral",
@@ -461,7 +461,7 @@
                         onClick: function () {
                           return i("up-right");
                         },
-                        children: (0, b.jsx)(h.TKU, { className: "icon-sm" }),
+                        children: (0, b.jsx)(m.TKU, { className: "icon-sm" }),
                       }),
                       (0, b.jsx)(j.z, {
                         color: "neutral",
@@ -470,7 +470,7 @@
                         onClick: function () {
                           return i("down-right");
                         },
-                        children: (0, b.jsx)(h.Gx, { className: "icon-sm" }),
+                        children: (0, b.jsx)(m.Gx, { className: "icon-sm" }),
                       }),
                     ],
                   }),
@@ -490,7 +490,7 @@
                               height: k.small.height,
                             });
                         },
-                        children: (0, b.jsx)(m.Z, z({}, W.shrinkButton)),
+                        children: (0, b.jsx)(h.Z, z({}, W.shrinkButton)),
                       }),
                       (0, b.jsx)(j.z, {
                         color: "neutral",
@@ -505,7 +505,7 @@
                               height: k.normal.height,
                             });
                         },
-                        children: (0, b.jsx)(m.Z, z({}, W.growButton)),
+                        children: (0, b.jsx)(h.Z, z({}, W.growButton)),
                       }),
                     ],
                   }),
@@ -521,13 +521,13 @@
                     return r();
                   },
                   className: "whitespace-nowrap !pr-2",
-                  children: (0, b.jsx)(m.Z, z({}, W.closeButton)),
+                  children: (0, b.jsx)(h.Z, z({}, W.closeButton)),
                 }),
               }),
             ],
           });
         },
-        W = (0, p.vU)({
+        W = (0, g.vU)({
           loading: {
             id: "CompletionDevToolsWidget.loading",
             defaultMessage: "Loading...",
@@ -565,4 +565,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9387.c51e4a59408e000e.js.map
+//# sourceMappingURL=9387.4d07776b2bcf19aa.js.map

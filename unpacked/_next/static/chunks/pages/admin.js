@@ -24,8 +24,8 @@
         m = t(99715),
         f = t(18399),
         p = t(82920),
-        g = t(19841),
-        v = t(61888),
+        v = t(19841),
+        g = t(61888),
         j = t(29124),
         b = t.n(j),
         h = t(10721),
@@ -202,11 +202,11 @@
                   (0, F.jsxs)(R.Z.Header, {
                     children: [
                       (0, F.jsx)(R.Z.HeaderCell, {
-                        className: "dark:bg-gray-800",
+                        className: "bg-token-main-surface-primary",
                         children: (0, F.jsx)(k.Z, Q({}, J.email)),
                       }),
                       (0, F.jsx)(R.Z.HeaderCell, {
-                        className: "w-28 dark:bg-gray-800",
+                        className: "w-28 bg-token-main-surface-primary",
                         children: (0, F.jsx)("span", {
                           className: u ? "pl-3" : "",
                           children: (0, F.jsx)(k.Z, Q({}, J.role)),
@@ -214,7 +214,7 @@
                       }),
                       u &&
                         (0, F.jsx)(R.Z.HeaderCell, {
-                          className: "w-16 dark:bg-gray-800",
+                          className: "w-16 bg-token-main-surface-primary",
                         }),
                     ],
                   }),
@@ -456,11 +456,11 @@
                   (0, F.jsxs)(R.Z.Header, {
                     children: [
                       (0, F.jsx)(R.Z.HeaderCell, {
-                        className: "dark:bg-gray-800",
+                        className: "bg-token-main-surface-primary",
                         children: (0, F.jsx)(k.Z, Y({}, er.email)),
                       }),
                       (0, F.jsx)(R.Z.HeaderCell, {
-                        className: "w-28 dark:bg-gray-800",
+                        className: "w-28 bg-token-main-surface-primary",
                         children: (0, F.jsx)("span", {
                           className: m ? "pl-3" : "",
                           children: (0, F.jsx)(k.Z, Y({}, er.role)),
@@ -468,7 +468,7 @@
                       }),
                       m &&
                         (0, F.jsx)(R.Z.HeaderCell, {
-                          className: "w-40 dark:bg-gray-800",
+                          className: "w-40 bg-token-main-surface-primary",
                           children: d.formatMessage(er.actions),
                         }),
                     ],
@@ -651,7 +651,7 @@
           o = (0, B.qH)(s),
           f = null == s ? void 0 : s.isTeam(),
           p = (0, h.useRouter)(),
-          g =
+          v =
             "string" == typeof p.query.tab && ei(p.query.tab)
               ? p.query.tab
               : a.Members,
@@ -665,10 +665,10 @@
           function () {
             C("");
           },
-          [g]
+          [v]
         );
         var N = (0, x.useCallback)(
-            (0, v.debounce)(function (e) {
+            (0, g.debounce)(function (e) {
               C(e);
             }, 250),
             []
@@ -713,7 +713,7 @@
                                 null != e ? "/admin?tab=".concat(e) : "/admin"
                               );
                             },
-                            isSelected: g === e,
+                            isSelected: v === e,
                             children: (0, F.jsx)(es, { tab: e }),
                           },
                           e
@@ -784,7 +784,7 @@
                     }),
                   ],
                 }),
-                (0, F.jsx)(ea, { workspaceId: t, tab: g, filterInputValue: q }),
+                (0, F.jsx)(ea, { workspaceId: t, tab: v, filterInputValue: q }),
               ],
             }),
             null != s ? (0, F.jsx)(P.Z, { workspace: s }) : null,
@@ -797,7 +797,7 @@
           n = e.onClick;
         return (0, F.jsx)(M.z, {
           color: "none",
-          className: (0, g.default)(
+          className: (0, v.default)(
             t
               ? "bg-gray-100 dark:bg-gray-600"
               : "hover:bg-gray-50 hover:dark:bg-gray-700"
@@ -917,4 +917,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-e19ac01dadc476e1.js.map
+//# sourceMappingURL=admin-a1768f81fff6d91d.js.map

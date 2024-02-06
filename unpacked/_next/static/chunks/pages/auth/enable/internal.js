@@ -93,10 +93,10 @@
       "use strict";
       n.d(t, {
         VL: function () {
-          return x;
+          return h;
         },
         Wk: function () {
-          return g;
+          return x;
         },
         jI: function () {
           return y;
@@ -152,21 +152,21 @@
             "w-96 flex flex-col flex-auto justify-center items-center",
           ]))
       );
-      function g(e) {
+      function x(e) {
         var t = e.children,
           n = e.showTerms,
           r = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
           className:
-            "flex h-full w-full flex-col items-center justify-center bg-gray-50 dark:bg-gray-800",
+            "flex h-full w-full flex-col items-center justify-center bg-token-main-surface-primary",
           children: [
             t,
             (void 0 === n || n) &&
-              (0, p.jsx)(x, { isStorageComplianceEnabled: r }),
+              (0, p.jsx)(h, { isStorageComplianceEnabled: r }),
           ],
         });
       }
-      function x(e) {
+      function h(e) {
         var t = e.isStorageComplianceEnabled;
         return (0, p.jsxs)("div", {
           className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
@@ -177,7 +177,7 @@
               openNewTab: !0,
               children: (0, p.jsx)(s.Z, b({}, O.terms)),
             }),
-            (0, p.jsx)(h, {}),
+            (0, p.jsx)(g, {}),
             (0, p.jsx)(f.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
@@ -187,7 +187,7 @@
             t &&
               (0, p.jsxs)(p.Fragment, {
                 children: [
-                  (0, p.jsx)(h, {}),
+                  (0, p.jsx)(g, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
                     onClick: function () {
@@ -200,7 +200,7 @@
           ],
         });
       }
-      var h = function () {
+      var g = function () {
         return (0, p.jsx)("span", {
           className: "text-token-text-tertiary",
           children: "|",
@@ -234,4 +234,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=internal-0157a9b224541f44.js.map
+//# sourceMappingURL=internal-caf3d8e37ce7e706.js.map

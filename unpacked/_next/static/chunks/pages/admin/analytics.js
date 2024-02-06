@@ -173,7 +173,7 @@
         var t = e.label,
           s = e.value;
         return (0, L.jsxs)("div", {
-          className: "w-1/3 rounded bg-gray-50 px-4 py-2 dark:bg-gray-700",
+          className: "w-1/3 rounded bg-token-main-surface-secondary px-4 py-2",
           children: [
             (0, L.jsx)("label", {
               className: "text-sm text-token-text-secondary",
@@ -448,4 +448,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=analytics-6a84f6c3316883e9.js.map
+//# sourceMappingURL=analytics-9b1758696d2460a5.js.map

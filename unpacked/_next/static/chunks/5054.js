@@ -57,7 +57,7 @@
         q = B.Z.textarea(
           d ||
             (d = (0, M.Z)([
-              "w-full text-sm overflow-y-auto rounded-lg border bg-transparent px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium dark:bg-gray-800 bg-white h-32",
+              "w-full text-sm overflow-y-auto rounded-lg border px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium bg-token-main-surface-primary h-32",
             ]))
         );
       function W(e) {
@@ -1145,7 +1145,7 @@
           primaryButton: (0, F.jsx)(eU.cY, { onClick: i, children: "Close" }),
           children: (0, F.jsx)("textarea", {
             className:
-              "h-[70vh] w-full resize-none rounded-lg dark:border-gray-700 dark:bg-gray-800",
+              "h-[70vh] w-full resize-none rounded-lg bg-token-main-surface-primary dark:border-gray-700",
             value: n,
             onChange: function (e) {
               r(e.target.value);
@@ -1154,7 +1154,7 @@
           }),
         });
       }
-      function e5(e, t) {
+      function e4(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -1166,7 +1166,7 @@
         }
         return n;
       }
-      function e4(e) {
+      function e5(e) {
         var t = e.label,
           n = e.toolType,
           r = e.enabledTools,
@@ -1214,7 +1214,7 @@
         return (0, F.jsxs)("div", {
           className: "flex flex-col items-start gap-2",
           children: [
-            (0, F.jsx)(e4, {
+            (0, F.jsx)(e5, {
               label: "Web Browsing",
               toolType: _.qK.BROWSER,
               enabledTools: t,
@@ -1228,7 +1228,7 @@
                       for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {};
                         t % 2
-                          ? e5(Object(n), !0).forEach(function (t) {
+                          ? e4(Object(n), !0).forEach(function (t) {
                               (0, O.Z)(e, t, n[t]);
                             })
                           : Object.getOwnPropertyDescriptors
@@ -1236,7 +1236,7 @@
                                 e,
                                 Object.getOwnPropertyDescriptors(n)
                               )
-                            : e5(Object(n)).forEach(function (t) {
+                            : e4(Object(n)).forEach(function (t) {
                                 Object.defineProperty(
                                   e,
                                   t,
@@ -1248,13 +1248,13 @@
                     })({}, e9.disabledBrowsingToolTip)
                   ),
             }),
-            (0, F.jsx)(e4, {
+            (0, F.jsx)(e5, {
               label: "DALL\xb7E Image Generation",
               toolType: _.qK.DALLE,
               enabledTools: t,
               onEnabledToolsChange: n,
             }),
-            (0, F.jsx)(e4, {
+            (0, F.jsx)(e5, {
               label: (0, F.jsxs)("div", {
                 className: "flex items-center",
                 children: [
@@ -1269,7 +1269,7 @@
               onEnabledToolsChange: n,
             }),
             i &&
-              (0, F.jsx)(e4, {
+              (0, F.jsx)(e5, {
                 label: (0, F.jsxs)("div", {
                   className: "flex items-center",
                   children: [
@@ -1561,7 +1561,7 @@
       var ta = B.Z.input(
           v ||
             (v = (0, M.Z)([
-              "w-full resize-none overflow-y-auto rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 border focus:ring-blue-400 border-token-border-medium dark:bg-gray-700 h-9 dark:bg-gray-800",
+              "w-full resize-none overflow-y-auto rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 border focus:ring-blue-400 border-token-border-medium h-9 bg-token-main-surface-primary",
             ]))
         ),
         ts = B.Z.div(x || (x = (0, M.Z)(["text-sm text-red-500"]))),
@@ -1569,7 +1569,7 @@
         tc = B.Z.textarea(
           y ||
             (y = (0, M.Z)([
-              "w-full text-sm overflow-y-auto rounded-lg border bg-transparent px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium dark:bg-gray-800 bg-white h-32",
+              "w-full text-sm overflow-y-auto rounded-lg border px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium bg-token-main-surface-primary h-32",
             ]))
         );
       function tu() {
@@ -2288,7 +2288,7 @@
           },
         }),
         tx = n(9559),
-        tb = n(35425);
+        tb = n(13722);
       function ty(e) {
         var t = e.clientThreadId,
           n = (0, ee.oq)(t),
@@ -2323,7 +2323,7 @@
         });
       }
       var tw = n(75499),
-        tP = n(96055),
+        tP = n(73819),
         tk = n(13366),
         tT = n(18008),
         tN = n(58272),
@@ -3316,11 +3316,16 @@
                             n.known_auth &&
                             n.known_privacy_policy &&
                             ((o = tL({ type: ef.Jv.OAuth }, n.known_auth)),
-                            (0, ec.isEqual)(v.metadata.auth, o) ||
+                            (0, ec.isEqual)(
+                              null == v ? void 0 : v.metadata.auth,
+                              o
+                            ) ||
                               O({
                                 auth: tL({ type: ef.Jv.OAuth }, n.known_auth),
                               }),
-                            v.metadata.privacy_policy_url !==
+                            (null == v
+                              ? void 0
+                              : v.metadata.privacy_policy_url) !==
                               n.known_privacy_policy &&
                               O({
                                 privacy_policy_url: n.known_privacy_policy,
@@ -4052,7 +4057,7 @@
           ],
         });
       }
-      function t5(e) {
+      function t4(e) {
         var t = e.gizmo,
           n = e.publishedGizmo,
           r = e.promoteGizmo,
@@ -4077,7 +4082,7 @@
               : (0, F.jsx)(t3, { publishedGizmo: s.publishedGizmo }),
         });
       }
-      function t4(e) {
+      function t5(e) {
         var t,
           n = e.gizmo,
           r = e.publishedGizmo,
@@ -4120,7 +4125,7 @@
                 side: "bottom",
                 align: "end",
                 sideOffset: 8,
-                children: (0, F.jsx)(t5, {
+                children: (0, F.jsx)(t4, {
                   gizmo: n,
                   publishedGizmo: r,
                   promoteGizmo: s,
@@ -4341,7 +4346,7 @@
             (0, F.jsx)(tY.h_, {
               children: (0, F.jsx)(tY.VY, {
                 className:
-                  "h-64 w-[var(--radix-select-trigger-width)] rounded-xl border bg-white p-1 py-2 dark:border-gray-600 dark:bg-gray-800",
+                  "h-64 w-[var(--radix-select-trigger-width)] rounded-xl border bg-token-main-surface-primary p-1 py-2 dark:border-gray-600",
                 position: "popper",
                 sideOffset: 2,
                 children: (0, F.jsx)("div", {
@@ -4411,7 +4416,7 @@
                   publishedGizmo: o,
                   revertDraft: l,
                 }),
-                (0, F.jsx)(t4, {
+                (0, F.jsx)(t5, {
                   gizmo: t,
                   publishedGizmo: o,
                   isLoading: n,
@@ -6344,4 +6349,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5054-2ca8c37b713752b1.js.map
+//# sourceMappingURL=5054-dd89364b2a3ddb67.js.map
