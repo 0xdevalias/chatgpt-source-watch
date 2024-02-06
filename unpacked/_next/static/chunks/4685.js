@@ -2,10 +2,1755 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [4685],
   {
-    84685: function (e) {
-      e.exports = JSON.parse(
-        '{"AccountPaymentModal.accountErrorWarning":"A p\xe1gina de gerenciamento de conta encontrou um erro. Por favor, tente novamente. Se o problema persistir, visite help.openai.com.","AccountPaymentModal.modalTitle":"O seu plano","AccountPaymentModal.paymentErrorWarning":"A p\xe1gina de pagamentos encontrou um erro. Por favor, tente novamente. Se o problema persistir, visite help.openai.com.","Alert.closeButtonLabel":"Fechar","AppLogo.altText":"{name} log\xf3tipo","BlockingInitialModals.personalOnboardingSubheading":"Dicas para come\xe7ar","CapacityGate.addEmail":"Adicione o seu email para um link de login personalizado","CapacityGate.allSet":"Est\xe1 tudo pronto! Se for um assinante {chatGPTPlus}, verifique o seu email para obter um link de login.","CapacityGate.chatGPTPlus":"Login para assinantes do ChatGPT Plus","CapacityGate.emailPlaceholder":"Email","CapacityGate.getNotified":"Seja notificado quando voltarmos","CapacityGate.notSubscriber":"Ainda n\xe3o \xe9 assinante do {chatGPTPlus}? Junte-se \xe0 <waitlist>lista de espera</waitlist>.","CapacityGate.searchCandidates":"Pesquisar candidatos","CapacityGate.sendLink":"Enviar enlace","CapacityGate.sent":"Enviado!","CapacityGate.title":"ChatGPT est\xe1 com capacidade m\xe1xima no momento","CapacityGate.waitlist":"lista de espera","Card.imageAlt":"imagem de {title}","CompletionDevToolsWidget.closeButton":"Fechar","CompletionDevToolsWidget.dragAndResizeTooltip":"Este widget pode ser arrastado e redimensionado","CompletionDevToolsWidget.growButton":"Aumentar","CompletionDevToolsWidget.initiateCompletionRequest":"Inicie um pedido de conclus\xe3o para usar este recurso","CompletionDevToolsWidget.loading":"A carregar...","CompletionDevToolsWidget.node":"N\xf3: {focusedNodeId}","CompletionDevToolsWidget.shrinkButton":"Reduzir","ConversationTurnInlineFeedback.regenBetterLabel":"Esta resposta foi melhor que a anterior","ConversationTurnInlineFeedback.regenBetterText":"Regenera\xe7\xe3o foi melhor","ConversationTurnInlineFeedback.regenSameLabel":"Esta resposta teve a mesma qualidade","ConversationTurnInlineFeedback.regenSameText":"Igual","ConversationTurnInlineFeedback.regenSkipLabel":"Ignorar esta compara\xe7\xe3o","ConversationTurnInlineFeedback.regenTitle":"Esta resposta foi melhor ou pior?","ConversationTurnInlineFeedback.regenWorseLabel":"Esta resposta foi pior que a anterior","ConversationTurnInlineFeedback.regenWorseText":"Pior","ConversationTurnTwoUpFeedback.responseNumber":"Resposta {responseIndex, number}","ConversationTurnTwoUpFeedback.responsePrompt":"Qual resposta voc\xea prefere?","ConversationTurnTwoUpFeedback.responsePromptExplanation":"A sua escolha ajudar\xe1 a melhorar o ChatGPT.","CopyButton.copied":"Copiado!","DebugSidebar.closeSidebar":"Fechar barra lateral","DebugSidebar.copyText":"Copiar texto","DebugSidebar.debugTitle":"Depura\xe7\xe3o","DebugSidebar.downloadRawConversation":"Baixar conversa bruta","DevelopPluginModal.accessTokenText":"Token de acesso","DevelopPluginModal.addTokensLaterButtonText":"Adicionarei os tokens mais tarde","DevelopPluginModal.addVerificationTokenTitle":"Adicionar token de verifica\xe7\xe3o","DevelopPluginModal.addVerificationTokensText":"Adicione os seguintes tokens de verifica\xe7\xe3o ao seu arquivo de manifesto:","DevelopPluginModal.authenticationFileText":"O meu arquivo requer autentica\xe7\xe3o","DevelopPluginModal.authenticationTypeText":"Tipo de autentica\xe7\xe3o","DevelopPluginModal.basicLabel":"B\xe1sico","DevelopPluginModal.bearerLabel":"Bearer","DevelopPluginModal.cancelButtonText":"Cancelar","DevelopPluginModal.domainDisplayName":"Dom\xednio","DevelopPluginModal.domainInputPlaceholder":"ex: openai.com ou localhost:3000","DevelopPluginModal.enterOAuthCredentialsLabel":"Insira as suas credenciais OAuth:","DevelopPluginModal.enterServiceAccessTokenLabel":"Insira o seu token de acesso ao servi\xe7o:","DevelopPluginModal.enterWebsiteDomainTitle":"Insira o dom\xednio do seu site","DevelopPluginModal.findManifestFileText":"Encontrar arquivo de manifesto","DevelopPluginModal.foundPluginTitle":"Plugin encontrado","DevelopPluginModal.installForMeButtonText":"Instalar para mim","DevelopPluginModal.installLaterButtonText":"Instalar mais tarde","DevelopPluginModal.installLocalhostPluginButtonText":"Instalar plugin de localhost","DevelopPluginModal.learnToBuildPlugin":"Visite a nossa documenta\xe7\xe3o para aprender como construir um plugin.","DevelopPluginModal.nextButtonText":"Pr\xf3ximo","DevelopPluginModal.pluginApprovalWarning":"Se o seu plugin foi aprovado para estar na loja de plugins do ChatGPT, e voc\xea fez altera\xe7\xf5es no manifesto do seu plugin, o seu plugin ser\xe1 removido da loja, e voc\xea precisar\xe1 de <resubmitLink>submet\xea-lo novamente para revis\xe3o</resubmitLink>.","DevelopPluginModal.readyToInstallTitle":"Pronto para instalar","DevelopPluginModal.refetchManifestButtonText":"Buscar manifesto novamente","DevelopPluginModal.unverifiedPluginText":"O seu plugin n\xe3o verificado agora pode ser instalado por <developersLink>at\xe9 15 desenvolvedores</developersLink>. Quando estiver pronto para disponibilizar o seu plugin para todos, pode <submitPluginLink>submeter o seu plugin para revis\xe3o</submitPluginLink>.","DevelopPluginModal.verifyTokensButtonText":"Verificar tokens","FileTile.removeFile":"Remover arquivo","InstallPluginModal.cancel":"Cancelar","InstallPluginModal.enterHttpAccessToken":"Insira o seu token de acesso HTTP abaixo:","InstallPluginModal.findPlugin":"Buscar plugin","InstallPluginModal.installPlugin":"Instalar plugin","InstallPluginModal.installUnverifiedPluginTitle":"Instalar um plugin n\xe3o verificado","InstallPluginModal.loginWithPlugin":"Inicie sess\xe3o com {pluginName}","InstallPluginModal.pleaseProvideDomain":"Por favor, forne\xe7a o dom\xednio do site do plugin n\xe3o verificado que voc\xea gostaria de instalar.","InstallPluginModal.unverifiedPluginTitle":"Plugin n\xe3o verificado","InstallPluginModal.youWillBeRedirected":"Ser\xe1 redirecionado para {pluginName} para iniciar sess\xe3o.","InstallUnverifiedDisclaimerModal.cancel":"Cancelar","InstallUnverifiedDisclaimerModal.continue":"Continuar","InstallUnverifiedDisclaimerModal.title":"Plugin n\xe3o verificado","InstallUnverifiedDisclaimerModal.warning":"A OpenAI n\xe3o verificou este plugin. Este plugin pode representar riscos para as suas informa\xe7\xf5es. Certifique-se de que confia neste plugin antes de prosseguir.","InviteManager.email":"Email","InviteManager.noResults":"Sem convites encontrados","InviteManager.resendInvite":"Reenviar convite","InviteManager.revokeInvite":"Revogar convite","InviteManager.role":"Fun\xe7\xe3o","KeyboardActionsModal.keyboardActionsModalTitle":"Atalhos de teclado","LocaleContextProvider.betaMessage":"Experimente uma pr\xe9-visualiza\xe7\xe3o antecipada do ChatGPT no seu idioma.","NavigationContent.chatHistoryLabel":"Hist\xf3rico de chat","NavigationContent.chatHistoryOff":"O hist\xf3rico de chat est\xe1 desativado para este navegador.","NavigationContent.chatHistoryOffDescription":"Quando o hist\xf3rico est\xe1 desativado, novos chats neste navegador n\xe3o aparecer\xe3o no seu hist\xf3rico em nenhum dos seus dispositivos, n\xe3o ser\xe3o usados para treinar os nossos modelos, nem armazenados por mais de 30 dias. <b>Esta configura\xe7\xe3o n\xe3o \xe9 sincronizada entre navegadores ou dispositivos.</b> {learnMore}","NavigationContent.chatHistoryOffDescriptionBusiness":"Quando o hist\xf3rico est\xe1 desativado, novos chats neste navegador n\xe3o aparecer\xe3o no seu hist\xf3rico em nenhum dos seus dispositivos, nem ser\xe3o armazenados por mais de 30 dias. <b>Esta configura\xe7\xe3o n\xe3o \xe9 sincronizada entre navegadores ou dispositivos.</b> {learnMore}","NavigationContent.enableChatHistory":"Ativar hist\xf3rico de chat","NavigationContent.learnMore":"Saiba mais","NodeEditor.cancel":"Cancelar","NodeEditor.saveAndSubmit":"Guardar e Submeter","PaginationControls.next":"Pr\xf3ximo","PaginationControls.prev":"Anterior","PluginChooser.enabledPluginsLimit":"{enabledPlugins}/{maxEnabledPlugins} Ativados","PluginChooser.loading":"A carregar...","PluginChooser.pluginsEnabled":"{count, plural, =0 {Nenhum plugin} one {# plugin} other {# plugins}} ativado(s)","PluginDevtools.enableLocalhostPlugin":"Por favor, ative um plugin localhost para usar as ferramentas de desenvolvimento.","PluginDevtools.enableLocalhostPluginenableLocalhostPluginWithDevTools":"Por favor, ative um plugin localhost (ou qualquer plugin, se voc\xea for um revisor de plugins) para usar as ferramentas de desenvolvimento.","PluginDevtools.pluginId":"Id do plugin: {id}","PluginDevtools.refreshPlugin":"Atualizar plugin","PluginDevtools.title":"Ferramentas de desenvolvimento de plugin","PluginMessage.triedToUse":"Tentou usar {pluginName}","PluginMessage.used":"Usou {pluginName}","PluginMessage.using":"Usando {pluginName}...","PluginStoreModal.aboutPlugins":"Sobre plugins","PluginStoreModal.card.developerInfo":"Informa\xe7\xf5es do desenvolvedor","PluginStoreModal.card.install":"Instalar","PluginStoreModal.card.installing":"A instalar","PluginStoreModal.card.uninstall":"Desinstalar","PluginStoreModal.card.uninstalling":"Desinstalando","PluginStoreModal.developPlugin":"Desenvolva o seu pr\xf3prio plugin","PluginStoreModal.installUnverifiedPlugin":"Instalar um plugin n\xe3o verificado","PluginStoreModal.noSearchResults":"Nenhum plugin encontrado para \\"{query}\\"","PluginStoreModal.noSearchResultsHint":"Tente uma pesquisa ou categoria diferente","PluginStoreModal.searchPlaceholder":"Pesquisar plugins","PluginStoreModal.title":"Loja de plugins","PromptFilePicker.errorFileTooLarge":"O arquivo \xe9 muito grande. O tamanho m\xe1ximo do arquivo \xe9 {size}MB","PromptFilePicker.errorTooManyFiles":"Foram carregados demasiados ficheiros. O n\xfamero m\xe1ximo de ficheiros por vez \xe9 {maxNum}","PromptTextarea.continueGenerating":"Continuar a gerar","PromptTextarea.continueSharedConversationPlaceholder":"Envie uma mensagem para continuar a conversa.","PromptTextarea.disabledFeedbackPlaceholder":"Selecione uma resposta para continuar","PromptTextarea.errorGeneratingResponse":"Ocorreu um erro ao gerar uma resposta","PromptTextarea.noModelsAvailablePlaceholder":"N\xe3o h\xe1 modelos dispon\xedveis","PromptTextarea.placeholder":"Envie uma mensagem","PromptTextarea.regenerateResponse":"Regenerar","PromptTextarea.sendMessageTooltip":"Enviar mensagem","PromptTextarea.stopGenerating":"Parar de gerar","PromptTextarea.suggestionTooltip":"Clique para enviar","PromptTextarea.unsupportedFileType":"Uploads com o tipo de arquivo \\"{file_type}\\" n\xe3o s\xe3o suportados, por favor, tente outro arquivo.","RequireMfaForAuthPluginsModal.primaryButtonTitle":"Configurar autentica\xe7\xe3o de dois fatores","RequireMfaForAuthPluginsModal.secondaryButtonTitle":"Desativar os plugins","RequireMfaForAuthPluginsModal.title":"Alguns dos seus plugins requerem autentica\xe7\xe3o de dois fatores.","RequiresMfaModal.cancelButton":"Cancelar","RequiresMfaModal.disclaimer":"Este plugin requer que voc\xea tenha a autentica\xe7\xe3o de dois fatores ativada para seguran\xe7a adicional. Por favor, configure a autentica\xe7\xe3o de dois fatores e tente novamente.","RequiresMfaModal.enableMfaButton":"Ativar autentica\xe7\xe3o de dois fatores","RequiresMfaModal.title":"Ative a autentica\xe7\xe3o de dois fatores","ResultsSection.error":"Erro","ResultsSection.requestTo":"Pedido para {pluginName}","ResultsSection.responseFrom":"Resposta de {pluginName}","SandboxDownload.downloadFile":"Descarregar ficheiro","SandboxDownload.downloadUnavailable":"Download de arquivo n\xe3o suportado em um chat compartilhado","SandboxDownload.startingDownload":"Iniciando o download","StoreDisclaimerModal.aboutPlugins":"Sobre os plugins","StoreDisclaimerModal.autoUseWarning":"O ChatGPT escolhe automaticamente quando usar plugins durante uma conversa, dependendo dos plugins que voc\xea ativou.","StoreDisclaimerModal.cancelButton":"Cancelar","StoreDisclaimerModal.externalAppsWarning":"Os plugins conectam o ChatGPT a aplicativos externos. Se voc\xea ativar um plugin, o ChatGPT pode enviar a sua conversa, Instru\xe7\xf5es Personalizadas, e o pa\xeds ou estado em que voc\xea se encontra para o plugin.","StoreDisclaimerModal.okButton":"OK","StoreDisclaimerModal.thirdPartyWarning":"Os plugins s\xe3o alimentados por aplica\xe7\xf5es de terceiros que n\xe3o s\xe3o controladas pela OpenAI. Certifique-se de que confia num plugin antes da instala\xe7\xe3o.","TagComponents.localhostTag":"Localhost","TagComponents.unapprovedTag":"N\xe3o verificado","TextMessageDisplay.buttonTryAgain":"Tente novamente","TextMessageDisplay.buttonUseDefaultModel":"Use o modelo padr\xe3o","TextMessageDisplay.contentOrTosViolation":"Este conte\xfado pode violar a nossa <contentPolicyLink>pol\xedtica de conte\xfado</contentPolicyLink> ou os nossos <termsLink>termos de uso</termsLink>. Se acredita que isto \xe9 um erro, por favor, <feedbackLink>envie o seu feedback</feedbackLink> — a sua contribui\xe7\xe3o ajudar\xe1 a nossa pesquisa nesta \xe1rea.","TextMessageDisplay.contentPolicyViolation":"Este conte\xfado pode violar a nossa <contentPolicyLink>pol\xedtica de conte\xfado</contentPolicyLink>. Se acredita que isto \xe9 um erro, por favor <feedbackLink>envie o seu feedback</feedbackLink> — a sua contribui\xe7\xe3o ajudar\xe1 a nossa pesquisa nesta \xe1rea.","TextMessageDisplay.gptUsageCapExceeded":"Voc\xea atingiu o limite de uso atual para o GPT-4. Pode continuar com o modelo padr\xe3o agora, ou tentar novamente {formattedTime}. <link>Saiba mais</link>","TextMessageDisplay.gptUsageCapExceededExpired":"Voc\xea atingiu anteriormente o seu limite de uso para o GPT-4, mas agora pode tentar enviar a sua mensagem novamente","TextMessageDisplay.historyDisabledConversationMissing":"Desculpe, as conversas criadas quando o Hist\xf3rico de Chat est\xe1 desativado expiram ap\xf3s 6 horas de inatividade. Por favor, inicie uma nova conversa para continuar a usar o ChatGPT.","UserContextFirstTimeModal.body1":"Personalize suas intera\xe7\xf5es com o ChatGPT fornecendo detalhes espec\xedficos e diretrizes para suas conversas.","UserContextFirstTimeModal.body2":"Sempre que editar as suas instru\xe7\xf5es personalizadas, elas entrar\xe3o em vigor em todos os novos chats que criar. Os chats existentes n\xe3o ser\xe3o atualizados.","UserContextFirstTimeModal.legal1":"As suas instru\xe7\xf5es ser\xe3o utilizadas para aprimorar nossos modelos, a menos que tenha optado por n\xe3o participar, e podem ser compartilhadas com quaisquer plugins que tenha ativado. Visite o nosso <article>Centro de Ajuda</article> para saber mais.","UserContextFirstTimeModal.ok":"OK","UserContextFirstTimeModal.title":"Apresentando Instru\xe7\xf5es Personalizadas","UserManager.dateJoined":"Entrou no espa\xe7o de trabalho em {dateAdded}","UserManager.email":"Email","UserManager.inviteMemberButton":"Convidar membro","UserManager.missingName":"Nenhum nome fornecido","UserManager.name":"Nome","UserManager.noResults":"Sem resultados","UserManager.removeMemberModalCancel":"Cancelar","UserManager.removeMemberModalConfirm":"Eliminar","UserManager.removeMemberModalTitle":"Remover membro","UserManager.removeUser":"Remover utilizador do espa\xe7o de trabalho","UserManager.role":"Fun\xe7\xe3o","UserManager.youSpecifier":"(Voc\xea)","WorkspaceIdentityPage.ssoToggleActive":"Ative o SSO para este espa\xe7o de trabalho","adminPage.adminBrowserPageTitle":"ChatGPT - Administra\xe7\xe3o de Membros","adminPage.allMembers":"Todos os membros","adminPage.analytics":"An\xe1lises","adminPage.backToChat":"Voltar ao chat","adminPage.inviteMemberButton":"Convidar membro","adminPage.pendingInvites":"Convites pendentes","adminPage.search":"Pesquisar","adminPage.totalMembers":"{planName} \xb7 {totalMembers} {totalMembers, plural, one {membro} other {membros}}","adminPage.workspaceNotFound":"Espa\xe7o de trabalho n\xe3o encontrado","citations.invalid":"Cita\xe7\xe3o inv\xe1lida","dalleMessage.generatedImageAltText":"Gerado por DALL\xb7E","domainModal.cancel":"Cancelar","domainModal.check":"Verificar","domainModal.copiedTXTRecordToClipboard":"Registo DNS TXT copiado para a \xe1rea de transfer\xeancia","domainModal.domainCheckError":"N\xe3o foi poss\xedvel verificar o seu dom\xednio. Certifique-se de que configurou corretamente o registo TXT acima. Os registos DNS podem demorar at\xe9 30 minutos para se propagarem.","domainModal.done":"Conclu\xeddo","domainModal.editTitle":"Gerir Dom\xednio","domainModal.placeholder":"openai.com","domainModal.submit":"Submeter","domainModal.verificationTokenFooter":"Depois, verifique o registro para completar a verifica\xe7\xe3o.","domainModal.verificationTokenMessage":"Para verificar a propriedade de {hostname}, navegue at\xe9 o seu provedor de DNS e adicione um registro TXT com este valor:","emailsTextarea.clearAllEntries":"Limpar todas as entradas","emailsTextarea.membersAdded":"+{count} {count, plural, one {membro} other {membros}}","emailsTextarea.placeholder":"Digite um email e pressione enter...","emailsTextarea.removeMember":"Remover {member}","emailsTextarea.tooltipInvalidEmail":"\\"{email}\\" pode n\xe3o ser um email v\xe1lido","feedbackModal.continueWithChosenAnswer":"A conversa continuar\xe1 com a resposta que escolher.","feedbackModal.copyrightContent":"Este conte\xfado viola a lei de direitos autorais","feedbackModal.dontLikeThis":"N\xe3o gosto disto","feedbackModal.harmfulOffensive":"Este conte\xfado \xe9 prejudicial ou ofensivo","feedbackModal.harmfulUnsafe":"Isto \xe9 prejudicial / inseguro","feedbackModal.moderationAccept":"Permitir Conte\xfado","feedbackModal.moderationReject":"Bloquear Conte\xfado","feedbackModal.neitherAnswerBetter":"Nenhuma das respostas \xe9 superior","feedbackModal.newAnswer":"Nova Resposta","feedbackModal.newAnswerBetter":"A nova resposta \xe9 melhor","feedbackModal.notHelpful":"Isto n\xe3o \xe9 \xfatil","feedbackModal.notTrue":"Isto n\xe3o \xe9 verdade","feedbackModal.originalAnswer":"Resposta Original","feedbackModal.originalAnswerBetter":"A resposta original \xe9 melhor","feedbackModal.pickBestAnswer":"Escolha a melhor resposta para melhorar o modelo","feedbackModal.provideAdditionalFeedback":"Forne\xe7a feedback adicional","feedbackModal.provideReportModalTitle":"Denunciar Este Conte\xfado","feedbackModal.reportContentExplanationPlaceholder":"O que est\xe1 errado com a resposta? O que h\xe1 de prejudicial nesta resposta? Seja o mais espec\xedfico poss\xedvel e adicione quaisquer detalhes que n\xe3o estejam presentes nas caixas de sele\xe7\xe3o abaixo.","feedbackModal.reportOtherContent":"N\xe3o gosto disto por outro motivo (por favor, descreva)","feedbackModal.sexualAbuse":"Este conte\xfado cont\xe9m abuso sexual","feedbackModal.skipStep":"Saltar este passo","feedbackModal.submitFeedback":"Enviar feedback","feedbackModal.submitReport":"Enviar relat\xf3rio","feedbackModal.thumbsDownPlaceholder":"Qual foi o problema com a resposta? Como poderia ser melhorada?","feedbackModal.thumbsUpPlaceholder":"O que voc\xea gostou na resposta?","fileUpload.codeInterpreterSessionTimeout":"Sess\xe3o do interpretador de c\xf3digo expirou","fileUpload.defaultCreateEntryError":"N\xe3o foi poss\xedvel fazer o upload de {fileName}","fileUpload.defaultDownloadLinkError":"Falha ao obter o status de upload para {fileName}","fileUpload.fileNotFound":"Ficheiro n\xe3o encontrado","fileUpload.fileTimedOut":"O upload do arquivo excedeu o tempo limite. Por favor, tente novamente.","fileUpload.fileTooLarge":"O arquivo \xe9 muito grande","fileUpload.overUserQuota":"Quota de usu\xe1rio excedida","fileUpload.unknownError":"Ocorreu um erro desconhecido","filesModal.fileDownloadFailed":"Falha no download do arquivo. Por favor, tente novamente.","history.bucket.lastSeven":"\xdaltimos 7 Dias","history.bucket.lastThirty":"\xdaltimos 30 Dias","history.bucket.today":"Hoje","history.bucket.yesterday":"Ontem","history.deleteModalBody":"Isto ir\xe1 eliminar {title}.","history.deleteModalCancel":"Cancelar","history.deleteModalConfirm":"Eliminar","history.deleteModalTitle":"Eliminar chat?","history.retryButton":"Tentar novamente","history.showMoreButton":"Mostrar mais","history.unableToLoad":"N\xe3o foi poss\xedvel carregar o hist\xf3rico","keyboardActions.copyLastCodeBlock":"Copiar \xfaltimo bloco de c\xf3digo","keyboardActions.copyLastResponse":"Copiar \xfaltima resposta","keyboardActions.deleteChat":"Eliminar chat","keyboardActions.focusPromptTextarea":"Focar na entrada do chat","keyboardActions.navigationToggle":"Alternar barra lateral","keyboardActions.newChat":"Abrir nova conversa","keyboardActions.toggleCustomInstructions":"Definir instru\xe7\xf5es personalizadas","keyboardActions.toggleKeyboardActions":"Mostrar atalhos","navigation.accountSwitcherTitle":"Espa\xe7os de trabalho","navigation.closeSidebar":"Fechar barra lateral","navigation.helpAndFaq":"Ajuda & FAQ","navigation.logOut":"Terminar sess\xe3o","navigation.openSidebar":"Abrir barra lateral","navigation.settings":"Configura\xe7\xf5es","navigation.settingsPlus":"Configura\xe7\xf5es e Beta","navigation.survey.takeSurveyButton":"Participe na pesquisa","navigation.surveyDescription":"Molde o futuro do ChatGPT.","navigation.surveyDismiss":"Descartar inqu\xe9rito","navigation.surveyTitle":"Adorar\xedamos ouvir a sua opini\xe3o!","onboarding.accuracy":"Verifique os seus factos","onboarding.accuracyBody":"Embora tenhamos salvaguardas, o ChatGPT pode fornecer informa\xe7\xf5es imprecisas. N\xe3o \xe9 destinado a dar conselhos.","onboarding.askAway":"Fa\xe7a perguntas \xe0 vontade","onboarding.askAwayBody":"O ChatGPT pode responder a perguntas, ajudar-te a aprender, escrever c\xf3digo, fazer brainstorming contigo e muito mais.","onboarding.gettingStartedButton":"Ok, vamos l\xe1","onboarding.warning":"N\xe3o partilhe informa\xe7\xf5es sens\xedveis","onboarding.warningBody":"O hist\xf3rico de chat pode ser revisto ou usado para melhorar nossos servi\xe7os. Saiba mais sobre suas op\xe7\xf5es no nosso <article>Centro de Ajuda</article>.","onboarding.workUse":"Criado para uso no trabalho","onboarding.workUseBody":"Por padr\xe3o, os chats neste espa\xe7o de trabalho n\xe3o s\xe3o usados para treinar nossos modelos de IA.","onboarding.workspaceWelcome":"Bem-vindo ao espa\xe7o de trabalho {workspaceName}","onboarding.workspaceWelcomeBody":"Aqui voc\xea pode usar nossos modelos mais recentes, com mais capacidades e menos limita\xe7\xf5es.","onboarding.workspaceWelcomeNoName":"Bem-vindo ao seu Espa\xe7o de Trabalho","organizationBillingInfo.defaultInvoiceName":"Fatura","organizationBillingInfo.inactiveLicense":"Licen\xe7a Inativa","organizationBillingInfo.invoiceName":"Fatura: {createdDate, date, long}","organizationBillingInfo.invoicesTitle":"Faturas","organizationBillingInfo.licenseExpiry":"Ativo at\xe9 {expiryDate, date, long}","organizationBillingInfo.paidInvoice":"Pagado: {invoiceDate, date, long}","organizationBillingInfo.planTitle":"Plano","organizationBillingInfo.seatsInUse":"{numSeats} em uso ({numSeatsPct})","organizationBillingInfo.seatsTitle":"Asientos","organizationBillingInfo.upcomingInvoice":"Vencimento: {invoiceDate, date, long}","pluginDisplayParams.generatedImage":"Gerado pelo plugin","popoverNavigation.chatPreferences":"Instru\xe7\xf5es personalizadas","popoverNavigation.myPlan":"O meu plano","pricingPlanConstants.business.callToAction":"Compre para a minha equipa","pricingPlanConstants.free.costInDollars":"Custo do plano gratuito","pricingPlanConstants.free.demandAccess":"Acesso ao nosso modelo GPT-3.5","pricingPlanConstants.free.modelFeatures":"Atualiza\xe7\xf5es regulares do modelo","pricingPlanConstants.free.name":"Plano gratuito","pricingPlanConstants.free.responseSpeed":"Velocidade de resposta padr\xe3o","pricingPlanConstants.getHelp.callToAction":"Preciso de ajuda com um problema de fatura\xe7\xe3o","pricingPlanConstants.manageSubscriptionAndroid.callToAction":"Gerir a minha subscri\xe7\xe3o na aplica\xe7\xe3o ChatGPT para Android","pricingPlanConstants.manageSubscriptionIos.callToAction":"Gerir a minha subscri\xe7\xe3o na aplica\xe7\xe3o ChatGPT para iOS","pricingPlanConstants.manageSubscriptionWeb.callToAction":"Gerir a minha subscri\xe7\xe3o","pricingPlanConstants.plus.callToAction.active":"Atualize para o seu Plano Plus","pricingPlanConstants.plus.callToAction.inactivePayment":"Atualize para Plus","pricingPlanConstants.plus.costInDollars":"USD $20/m\xeas","pricingPlanConstants.plus.demandAccess":"Acesso ao GPT-4, o nosso modelo mais capaz","pricingPlanConstants.plus.modelFeatures":"Acesso exclusivo a recursos beta como Navega\xe7\xe3o, Plugins e An\xe1lise Avan\xe7ada de Dados","pricingPlanConstants.plus.name":"ChatGPT Plus","pricingPlanConstants.plus.responseSpeed":"Velocidade de resposta mais r\xe1pida","settingsModal.betaAdvancedDataAnalysisToggleDescription":"Experimente uma vers\xe3o do ChatGPT que sabe como escrever e executar c\xf3digo Python, e pode trabalhar com uploads de arquivos. Tente pedir ajuda com an\xe1lise de dados, convers\xf5es de imagem ou edi\xe7\xe3o de um arquivo de c\xf3digo. Nota: os arquivos n\xe3o persistir\xe3o al\xe9m de uma \xfanica sess\xe3o.","settingsModal.betaAdvancedDataAnalysisToggleLabel":"An\xe1lise de dados avan\xe7ada","settingsModal.betaBrowsingToggleDescription":"Experimente uma vers\xe3o do ChatGPT que sabe quando e como navegar na internet para responder a perguntas sobre t\xf3picos e eventos recentes.","settingsModal.betaBrowsingToggleLabel":"Navegar com Bing","settingsModal.betaIntro":"Como usu\xe1rio Plus, desfrute de acesso antecipado a recursos experimentais, que podem mudar durante o desenvolvimento.","settingsModal.betaPluginToggleDescription":"Experimente uma vers\xe3o do ChatGPT que sabe quando e como usar plugins de terceiros que voc\xea habilita.","settingsModal.betaPluginToggleLabel":"Plugins","settingsModal.betaSettingsUpdateFailed":"Falha ao atualizar suas configura\xe7\xf5es beta","settingsModal.betaTab":"Funcionalidades Beta","settingsModal.chatHistoryDescription":"Guarde novos chats neste navegador no seu hist\xf3rico e permita que eles sejam usados para melhorar nossos modelos. Chats n\xe3o salvos ser\xe3o exclu\xeddos dos nossos sistemas dentro de 30 dias. Esta configura\xe7\xe3o n\xe3o \xe9 sincronizada entre navegadores ou dispositivos. <link>Saiba mais</link>","settingsModal.chatHistoryLabel":"Hist\xf3rico de chat","settingsModal.chatHistoryOnlyDescription":"Guarde novos chats neste navegador no seu hist\xf3rico. Chats n\xe3o guardados ser\xe3o exclu\xeddos dos nossos sistemas dentro de 30 dias. Esta configura\xe7\xe3o n\xe3o \xe9 sincronizada entre navegadores ou dispositivos. <link>Saiba mais</link>","settingsModal.chatHistoryToggleLabel":"Hist\xf3rico de chat e treinamento","settingsModal.chatTrainingEnterpriseDescription":"Este espa\xe7o de trabalho \xe9 privado e optou por n\xe3o participar do treinamento.","settingsModal.chatTrainingEnterpriseTooltip":"O ChatGPT Enterprise desativa automaticamente o treinamento.","settingsModal.chatTrainingLabel":"Treinamento de chat","settingsModal.dark":"Escuro","settingsModal.dataControls":"Controles de dados","settingsModal.dataExportFailed":"N\xe3o conseguimos processar a sua exporta\xe7\xe3o neste momento. Por favor, tente novamente mais tarde.","settingsModal.dataExportModalCancel":"Cancelar","settingsModal.dataExportModalConfirm":"Confirmar exporta\xe7\xe3o","settingsModal.dataExportModalDescription1":"Os detalhes da sua conta e as conversas ser\xe3o inclu\xeddos na exporta\xe7\xe3o.","settingsModal.dataExportModalDescription2":"Os dados ser\xe3o enviados para o seu email registado num ficheiro descarreg\xe1vel.","settingsModal.dataExportModalDescription3":"O link para download expirar\xe1 24 horas ap\xf3s o seu recebimento.","settingsModal.dataExportModalDescription4":"O processamento pode levar algum tempo. Voc\xea ser\xe1 notificado quando estiver pronto.","settingsModal.dataExportModalDescription5":"Para prosseguir, clique em \\"Confirmar exporta\xe7\xe3o\\" abaixo.","settingsModal.dataExportModalTitle":"Solicitar exporta\xe7\xe3o de dados - tem certeza?","settingsModal.dataExportRequested":"Exporta\xe7\xe3o de dados bem-sucedida. Voc\xea dever\xe1 receber um email em breve com os seus dados.","settingsModal.deleteAccount":"Eliminar conta","settingsModal.deleteAccountButtonLabel":"Eliminar permanentemente a minha conta","settingsModal.deleteAccountFailed":"Falha ao eliminar a conta. Por favor, tente novamente mais tarde.","settingsModal.deleteAccountSessionTooOld":"A sua sess\xe3o de login \xe9 muito antiga. Por favor, inicie sess\xe3o novamente antes de eliminar a sua conta.","settingsModal.deleteAccountTitle":"Eliminar conta - tem certeza?","settingsModal.deleteAccountWarning":"A exclus\xe3o da sua conta \xe9 permanente e n\xe3o pode ser desfeita.","settingsModal.deleteButton":"Eliminar","settingsModal.deleteHistoryModalCancel":"Cancelar","settingsModal.deleteHistoryModalConfirm":"Confirmar exclus\xe3o","settingsModal.deleteHistoryModalTitle":"Limpar o seu hist\xf3rico de conversas - tem a certeza?","settingsModal.disable":"Desativar","settingsModal.disable2fa":"Desativar autentica\xe7\xe3o de dois fatores","settingsModal.enable":"Ativar","settingsModal.enable2fa":"Ativar autentica\xe7\xe3o de dois fatores","settingsModal.exportButton":"Exportar","settingsModal.exportData":"Exportar dados","settingsModal.generalTab":"Geral","settingsModal.iapSubscriptionWarning":"Ter\xe1 de cancelar a sua subscri\xe7\xe3o de compras na aplica\xe7\xe3o na Apple App Store. N\xe3o podemos cancelar a sua subscri\xe7\xe3o por si.","settingsModal.light":"Luz","settingsModal.localeAuto":"Detec\xe7\xe3o autom\xe1tica","settingsModal.localeDev":"⋆✩★DEV★✩⋆","settingsModal.lockedButtonLabel":"Bloqueado","settingsModal.openPluginDevtools":"Abrir ferramentas de desenvolvimento de plugin","settingsModal.playStoreSubscriptionWarning":"Ter\xe1 de cancelar a sua subscri\xe7\xe3o de compras na aplica\xe7\xe3o na Google Play Store. N\xe3o podemos cancelar a sua subscri\xe7\xe3o por si.","settingsModal.recentLoginMessage":"S\xf3 pode eliminar a sua conta se tiver iniciado sess\xe3o nos \xfaltimos 10 minutos. Por favor, inicie sess\xe3o novamente e volte aqui para continuar.","settingsModal.refreshLoginButtonLabel":"Atualizar login","settingsModal.settings":"Configura\xe7\xf5es","settingsModal.sharedConversations":"Links partilhados","settingsModal.system":"Sistema","settingsModal.theme":"Tema","settingsModal.typeDeleteInputLabel":"Para prosseguir, digite \\"DELETE\\" no campo de entrada abaixo.","settingsModal.typeEmailLabel":"Por favor, digite o email da sua conta.","sharedConversation.advancedDataAnalysisSupportDisclaimer":"Este chat cont\xe9m arquivos ou imagens produzidos por An\xe1lise de Dados Avan\xe7ada que ainda n\xe3o s\xe3o vis\xedveis em Chats Compartilhados.","sharedConversationModal.dateShared":"Data de partilha","sharedConversationModal.deleteSharedAllConversations":"Eliminar todos os links partilhados","sharedConversationModal.deleteSharedAllConversationsConfirm":"Tem certeza de que deseja excluir todos os seus links compartilhados?","sharedConversationModal.deleteSharedAllConversationsFailed":"Falha ao eliminar todos os links partilhados","sharedConversationModal.deleteSharedLink":"Eliminar link partilhado","sharedConversationModal.deleteSharedLinkFailed":"Falha ao eliminar o link partilhado","sharedConversationModal.goToOriginConversation":"Ver chat original","sharedConversationModal.loading":"A carregar...","sharedConversationModal.name":"Nome","sharedConversationModal.noSharedConversations":"Voc\xea n\xe3o tem links compartilhados.","sharedConversationModal.retry":"Tentar novamente","sharedConversationModal.somethingWentWrong":"Algo correu mal...","sharedConversationModal.title":"Links Partilhados","sharingModal.advancedDataAnalysisSupportDisclaimer":"Os destinat\xe1rios n\xe3o poder\xe3o visualizar imagens de An\xe1lise de Dados Avan\xe7ada nem baixar arquivos.","sharingModal.confirmDeleteLink":"Tem certeza de que deseja apagar o link de partilha?","sharingModal.deleteLink":"Eliminar enlace","sharingModal.description":"As mensagens que enviar ap\xf3s criar o seu link n\xe3o ser\xe3o partilhadas. Qualquer pessoa com o URL poder\xe1 visualizar o chat partilhado.","sharingModal.exisitingDescription":"Voc\xea j\xe1 compartilhou este chat <existingLink>antes</existingLink>. Se quiser atualizar o conte\xfado do chat compartilhado, <deleteLink>apague este link</deleteLink> e crie um novo link de compartilhamento.","sharingModal.moderationBlocked":"Este link partilhado foi desativado pela modera\xe7\xe3o.","sharingModal.shareAnonymously":"Partilhar anonimamente","sharingModal.shareYourName":"Partilhe o seu nome","ssoModal.cancelButton":"Cancelar","ssoModal.certLabel":"Certificado de Assinatura X.509","ssoModal.createInstructionsManual":"Copie o seu ponto de entrada de in\xedcio de sess\xe3o (URL do SSO) e o certificado p\xfablico X.509 do seu Provedor de Identidade.","ssoModal.createInstructionsXML":"Se o seu Provedor de Identidade oferecer uma URL de metadados ou um arquivo XML, adicione-o aqui para a op\xe7\xe3o de configura\xe7\xe3o mais r\xe1pida.","ssoModal.createTitle":"Criar Configura\xe7\xe3o SAML SSO","ssoModal.deleteButton":"Eliminar configura\xe7\xe3o","ssoModal.doneButton":"Conclu\xeddo","ssoModal.editTitle":"Editar Configura\xe7\xe3o SAML SSO","ssoModal.nextButton":"Pr\xf3ximo","ssoModal.signInLabel":"URL do SSO","ssoModal.ssoMetadataLabel":"URL de Metadados da Federa\xe7\xe3o de Aplica\xe7\xf5es","textMessage.errorLoadingImage":"N\xe3o foi poss\xedvel carregar a imagem","textMessage.imageAltText":"Imagem carregada","textMessage.loadingImage":"A carregar...","thread.helpAndFaq":"Ajuda & FAQ","thread.keyboardShortcutsMenu":"Atalhos de teclado","thread.latencyButton":"Lat\xeancia","thread.modal.onboarding.title":"N\xe3o partilhe materiais sens\xedveis com esta aplica\xe7\xe3o","thread.modal.reportModalThankYou.description":"Obrigado pelo seu relat\xf3rio.","thread.modal.reportModalThankYou.dismissButton":"Fechar","thread.modal.reportModalThankYou.title":"Obrigado pelo seu relat\xf3rio!","thread.modal.unrecoverableError.description":"Lamentamos, mas algo correu mal. Por favor, tente novamente mais tarde.","thread.modal.unrecoverableError.resetThread":"Reiniciar conversa","thread.modal.unrecoverableError.title":"Algo correu mal","thread.privacyPolicy":"Pol\xedtica de privacidade","thread.reportSharedConversation":"Denunciar conte\xfado","thread.sharedConversation.continue":"Continuar esta conversaci\xf3n","thread.sharedConversation.moderate":"Moderar conversa","thread.sharedConversation.report":"Denunciar conversa","thread.sharingModal.confirmCloseWithChanges":"Voc\xea tem altera\xe7\xf5es n\xe3o salvas. Deseja continuar?","thread.sharingModal.copied":"Copiado!","thread.sharingModal.copiedSharedConversationURL":"URL da conversa compartilhada copiada para a \xe1rea de transfer\xeancia!","thread.sharingModal.copyLink":"Copiar Link","thread.sharingModal.copying":"A copiar...","thread.sharingModal.failedToCopyLink":"Falha ao copiar o link para a \xe1rea de transfer\xeancia","thread.sharingModal.failedToDeleteSharedLink":"Falha ao eliminar o link partilhado","thread.sharingModal.moreInfo":"Mais Informa\xe7\xf5es","thread.sharingModal.title":"Partilhar Link para o Chat","thread.sharingModal.updateAndCopyLink":"Atualizar e Copiar Link","thread.termsOfUse":"Termos de uso","useFilePickerState.maxUploadsAtATime":"N\xe3o \xe9 poss\xedvel carregar {fileName}. M\xe1ximo de {maxUploads} carregamentos por vez","useModelSwitcherModels.gpt3_5.disclaimer":"Dispon\xedvel para utilizadores Free e Plus","useModelSwitcherModels.gpt4.disclaimer":"Dispon\xedvel exclusivamente para utilizadores Plus","useWorkspaces.adminRoleName":"Admin","useWorkspaces.defaultWorkspaceTitle":"\xc1rea de Trabalho Sem T\xedtulo","useWorkspaces.enterprisePlanName":"Empresa","useWorkspaces.ownerRoleName":"Propriet\xe1rio","useWorkspaces.personalPlanName":"Pessoal","useWorkspaces.personalWorkspaceTitle":"Espa\xe7o de trabalho pessoal","useWorkspacews.standardRoleName":"Membro","userContextModal.aboutUserTip1":"Onde voc\xea est\xe1 baseado?","userContextModal.aboutUserTip2":"Qual \xe9 a sua profiss\xe3o?","userContextModal.aboutUserTip3":"Quais s\xe3o os seus hobbies e interesses?","userContextModal.aboutUserTip4":"Sobre quais assuntos voc\xea consegue falar por horas?","userContextModal.aboutUserTip5":"Quais s\xe3o alguns dos seus objetivos?","userContextModal.aboutYouHelpText":"O que gostaria que o ChatGPT soubesse sobre si para fornecer respostas melhores?","userContextModal.cancel":"Cancelar","userContextModal.chatPreferencesEnable":"Ativar para novos chats","userContextModal.confirmCloseBody":"Tem a certeza de que deseja sair? Todas as altera\xe7\xf5es que fez ser\xe3o perdidas permanentemente.","userContextModal.confirmCloseCancel":"Cancelar","userContextModal.confirmCloseOk":"Sair","userContextModal.confirmCloseTitle":"Tem altera\xe7\xf5es n\xe3o guardadas.","userContextModal.disableToggleLabel":"Desativar prefer\xeancias de chat","userContextModal.enableToggleLabel":"Ativar prefer\xeancias de chat","userContextModal.hideTips":"Ocultar dicas","userContextModal.messageLimitError":"Por favor, limite as suas respostas a {limit} caracteres ou menos.","userContextModal.modApiVoilation":"Este conte\xfado pode violar a nossa <policyLink>pol\xedtica de conte\xfado</policyLink>. Se acredita que isto \xe9 um erro, por favor <feedbackLink>envie o seu feedback</feedbackLink> — a sua contribui\xe7\xe3o ajudar\xe1 a nossa pesquisa nesta \xe1rea.","userContextModal.modelHelpText":"Como voc\xea gostaria que o ChatGPT respondesse?","userContextModal.modelTip1":"Qual deve ser o grau de formalidade ou informalidade do ChatGPT?","userContextModal.modelTip2":"Qu\xe3o longas ou curtas devem ser as respostas, geralmente?","userContextModal.modelTip3":"Como deseja ser tratado(a)?","userContextModal.modelTip4":"O ChatGPT deve ter opini\xf5es sobre os t\xf3picos ou permanecer neutro?","userContextModal.save":"Guardar","userContextModal.showTips":"Mostrar dicas","userContextModal.subhead":"<article>Aprenda mais</article> sobre as Instru\xe7\xf5es personalizadas e como elas s\xe3o usadas para ajudar o ChatGPT a fornecer respostas melhores.","userContextModal.tipsHeader":"Pontos de partida","userContextModal.title":"Instru\xe7\xf5es personalizadas","workspaceAnalytics.activeUsersChartLabel":"Utilizadores ativos","workspaceAnalytics.activeUsersLastWeek":"Utilizadores ativos na \xfaltima semana","workspaceAnalytics.conversationsLabel":"Conversas","workspaceAnalytics.messagesChartLabel":"Mensagens","workspaceAnalytics.messagesLabel":"Mensagens","workspaceAnalytics.messagesLast30Days":"{count, plural, =0 {Sem mensagens} one {# mensagem} other {# mensagens}} processadas nos \xfaltimos 30 dias","workspaceAnalytics.messagesLastWeek":"Mensagens processadas na semana passada","workspaceAnalytics.title":"An\xe1lise do Espa\xe7o de Trabalho","workspaceAnalytics.totals":"Totais dos \xfaltimos 30 dias","workspaceAnalytics.understand":"Compreenda como o seu espa\xe7o de trabalho est\xe1 a utilizar o ChatGPT","workspaceAnalytics.usageTitle":"Utiliza\xe7\xe3o","workspaceAnalytics.usersLabel":"Utilizadores","workspaceAnalytics.usersLast30Days":"{count, plural, =0 {Sem utilizadores ativos} one {# utilizador ativo} other {# utilizadores ativos}} nos \xfaltimos 30 dias","workspaceAnalytics.weeklyUsersTitle":"Utilizadores semanais","workspaceIdentity.acsURLLabel":"URL do Servi\xe7o de Consumo de Asser\xe7\xe3o (ACS)","workspaceIdentity.autoProvisionBody":"Crie automaticamente contas do ChatGPT Enterprise para novos usu\xe1rios que fa\xe7am login com um dom\xednio verificado.","workspaceIdentity.autoProvisionSubtitle":"Cria\xe7\xe3o autom\xe1tica de conta","workspaceIdentity.certExtractFailed":"N\xe3o foi poss\xedvel encontrar o Certificado X.509 no XML fornecido","workspaceIdentity.copiedACSToClipboard":"URL do ACS copiada para a \xe1rea de transfer\xeancia","workspaceIdentity.copiedEntityToClipboard":"ID da entidade copiado para a \xe1rea de transfer\xeancia","workspaceIdentity.copiedIDPUrlToClipboard":"URL do IDP copiada para a \xe1rea de transfer\xeancia","workspaceIdentity.domainSubtitle":"Gest\xe3o de Dom\xednio","workspaceIdentity.enforceSSOBody":"Quando o SSO est\xe1 ativo, os usu\xe1rios n\xe3o poder\xe3o mais usar logins sociais e ser\xe3o redirecionados para o seu portal SSO.","workspaceIdentity.enforceSSOLabel":"Alternar para ativar ou desativar a aplica\xe7\xe3o do SSO","workspaceIdentity.enforceSSOTitle":"Impor o login SSO","workspaceIdentity.entityIDLabel":"ID da Entidade","workspaceIdentity.idpSignInURL":"URL do Tile IDP","workspaceIdentity.learnMoreLink":"Saiba mais","workspaceIdentity.orDivider":"ou","workspaceIdentity.setupSSOContent":"Qualquer pessoa que use endere\xe7os de email com um dom\xednio verificado pode fazer login atrav\xe9s do SAML SSO.","workspaceIdentity.ssoAddButton":"Adicionar SAML SSO","workspaceIdentity.ssoEditButton":"Editar SAML SSO","workspaceIdentity.ssoLearnMoreLink":"Saiba mais","workspaceIdentity.ssoTitle":"In\xedcio de Sess\xe3o \xdanico","workspaceIdentity.ssoUrlExtractFailed":"N\xe3o foi poss\xedvel encontrar o ID da Entidade (ponto de acesso para iniciar sess\xe3o) no XML fornecido","workspaceIdentity.title":"Identidade & Provisionamento","workspaceIdentity.toggleAutoProvisionLabel":"Alternar para ativar ou desativar a provis\xe3o autom\xe1tica","workspaceIdentity.verifyDomainInfoText":"Verifique a propriedade de um dom\xednio de e-mail para acessar recursos de seguran\xe7a avan\xe7ados, incluindo o login \xfanico.","workspacePopoverNavigation.chatPreferences":"Instru\xe7\xf5es personalizadas","workspacePopoverNavigation.myWorkspaceSettings":"Configura\xe7\xf5es do espa\xe7o de trabalho","workspaceSettings.conversationRetention":"Reten\xe7\xe3o de conversas","workspaceSettings.featureSettingsUpdateFailed":"Falha ao atualizar a configura\xe7\xe3o do recurso","workspaceSettings.retentionChange":"Por favor, entre em contato com o gerente da sua conta para alterar esta configura\xe7\xe3o.","workspaceSettings.retentionCustomDays":"{num} dias","workspaceSettings.retentionInfinite":"Infinito","workspaceSettings.retentionNinetyDays":"90 dias","workspaceSettings.retentionOneYear":"1 ano","workspaceSettings.title":"Configura\xe7\xf5es do administrador","workspaceSwitcher.disclaimer":"Voc\xea foi adicionado ao(s) {workspaces} {numWorkspaces, plural, one {workspace} other {workspaces}}. Voc\xea pode alternar entre os workspaces a qualquer momento.","workspaceSwitcher.title":"Selecione um espa\xe7o de trabalho"}'
-      );
+    398: function (e, r, a) {
+      a.d(r, {
+        ZP: function () {
+          return rV;
+        },
+      });
+      var t = a(30204);
+      function l(e, r) {
+        if (null == e) return {};
+        var a,
+          t,
+          l = {},
+          n = Object.keys(e);
+        for (t = 0; t < n.length; t++)
+          (a = n[t]), r.indexOf(a) >= 0 || (l[a] = e[a]);
+        return l;
+      }
+      var n = a(70079),
+        s = a(35250),
+        o = {},
+        i = (0, n.createContext)(o),
+        c = (e, r) => (0, t.Z)({}, e, r),
+        v = () => (0, n.useContext)(i),
+        u = (0, n.createContext)(() => {});
+      function y() {
+        return (0, n.useContext)(u);
+      }
+      u.displayName = "JVR.DispatchShowTools";
+      var p = (e) => {
+        var { initial: r, dispatch: a, children: t } = e;
+        return (0, s.jsx)(i.Provider, {
+          value: r,
+          children: (0, s.jsx)(u.Provider, { value: a, children: t }),
+        });
+      };
+      p.displayName = "JVR.ShowTools";
+      var d = {},
+        j = (0, n.createContext)(d),
+        m = (e, r) => (0, t.Z)({}, e, r),
+        f = () => (0, n.useContext)(j),
+        N = (0, n.createContext)(() => {});
+      N.displayName = "JVR.DispatchExpands";
+      var x = (e) => {
+        var { initial: r, dispatch: a, children: t } = e;
+        return (0, s.jsx)(j.Provider, {
+          value: r,
+          children: (0, s.jsx)(N.Provider, { value: a, children: t }),
+        });
+      };
+      x.displayName = "JVR.Expands";
+      var w = {
+          Str: {
+            as: "span",
+            "data-type": "string",
+            style: { color: "var(--w-rjv-type-string-color, #cb4b16)" },
+            className: "w-rjv-type",
+            children: "string",
+          },
+          Url: {
+            as: "a",
+            style: { color: "var(--w-rjv-type-url-color, #0969da)" },
+            "data-type": "url",
+            className: "w-rjv-type",
+            children: "url",
+          },
+          Undefined: {
+            style: { color: "var(--w-rjv-type-undefined-color, #586e75)" },
+            as: "span",
+            "data-type": "undefined",
+            className: "w-rjv-type",
+            children: "undefined",
+          },
+          Null: {
+            style: { color: "var(--w-rjv-type-null-color, #d33682)" },
+            as: "span",
+            "data-type": "null",
+            className: "w-rjv-type",
+            children: "null",
+          },
+          Map: {
+            style: {
+              color: "var(--w-rjv-type-map-color, #268bd2)",
+              marginRight: 3,
+            },
+            as: "span",
+            "data-type": "map",
+            className: "w-rjv-type",
+            children: "Map",
+          },
+          Nan: {
+            style: { color: "var(--w-rjv-type-nan-color, #859900)" },
+            as: "span",
+            "data-type": "nan",
+            className: "w-rjv-type",
+            children: "NaN",
+          },
+          Bigint: {
+            style: { color: "var(--w-rjv-type-bigint-color, #268bd2)" },
+            as: "span",
+            "data-type": "bigint",
+            className: "w-rjv-type",
+            children: "bigint",
+          },
+          Int: {
+            style: { color: "var(--w-rjv-type-int-color, #268bd2)" },
+            as: "span",
+            "data-type": "int",
+            className: "w-rjv-type",
+            children: "int",
+          },
+          Set: {
+            style: {
+              color: "var(--w-rjv-type-set-color, #268bd2)",
+              marginRight: 3,
+            },
+            as: "span",
+            "data-type": "set",
+            className: "w-rjv-type",
+            children: "Set",
+          },
+          Float: {
+            style: { color: "var(--w-rjv-type-float-color, #859900)" },
+            as: "span",
+            "data-type": "float",
+            className: "w-rjv-type",
+            children: "float",
+          },
+          True: {
+            style: { color: "var(--w-rjv-type-boolean-color, #2aa198)" },
+            as: "span",
+            "data-type": "bool",
+            className: "w-rjv-type",
+            children: "bool",
+          },
+          False: {
+            style: { color: "var(--w-rjv-type-boolean-color, #2aa198)" },
+            as: "span",
+            "data-type": "bool",
+            className: "w-rjv-type",
+            children: "bool",
+          },
+          Date: {
+            style: { color: "var(--w-rjv-type-date-color, #268bd2)" },
+            as: "span",
+            "data-type": "date",
+            className: "w-rjv-type",
+            children: "date",
+          },
+        },
+        h = (0, n.createContext)(w),
+        Z = (e, r) => (0, t.Z)({}, e, r),
+        b = () => (0, n.useContext)(h),
+        g = (0, n.createContext)(() => {});
+      function R(e) {
+        var { initial: r, dispatch: a, children: t } = e;
+        return (0, s.jsx)(h.Provider, {
+          value: r,
+          children: (0, s.jsx)(g.Provider, { value: a, children: t }),
+        });
+      }
+      (g.displayName = "JVR.DispatchTypes"), (R.displayName = "JVR.Types");
+      var C = ["style"];
+      function V(e) {
+        var { style: r } = e,
+          a = l(e, C),
+          n = (0, t.Z)(
+            {
+              cursor: "pointer",
+              height: "1em",
+              width: "1em",
+              userSelect: "none",
+              display: "flex",
+            },
+            r
+          );
+        return (0, s.jsx)(
+          "svg",
+          (0, t.Z)(
+            {
+              viewBox: "0 0 24 24",
+              fill: "var(--w-rjv-arrow-color, currentColor)",
+              style: n,
+            },
+            a,
+            {
+              children: (0, s.jsx)("path", {
+                d: "M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z",
+              }),
+            }
+          )
+        );
+      }
+      V.displayName = "JVR.TriangleArrow";
+      var L = {
+          Arrow: {
+            as: "span",
+            className: "w-rjv-arrow",
+            style: { transform: "rotate(0deg)", transition: "all 0.3s" },
+            children: (0, s.jsx)(V, {}),
+          },
+          Colon: {
+            as: "span",
+            style: {
+              color: "var(--w-rjv-colon-color, var(--w-rjv-color))",
+              marginLeft: 0,
+              marginRight: 2,
+            },
+            className: "w-rjv-colon",
+            children: ":",
+          },
+          Quote: {
+            as: "span",
+            style: { color: "var(--w-rjv-quotes-color, #236a7c)" },
+            className: "w-rjv-quotes",
+            children: '"',
+          },
+          ValueQuote: {
+            as: "span",
+            style: { color: "var(--w-rjv-quotes-string-color, #cb4b16)" },
+            className: "w-rjv-quotes",
+            children: '"',
+          },
+          BracketsLeft: {
+            as: "span",
+            style: { color: "var(--w-rjv-brackets-color, #236a7c)" },
+            className: "w-rjv-brackets-start",
+            children: "[",
+          },
+          BracketsRight: {
+            as: "span",
+            style: { color: "var(--w-rjv-brackets-color, #236a7c)" },
+            className: "w-rjv-brackets-end",
+            children: "]",
+          },
+          BraceLeft: {
+            as: "span",
+            style: { color: "var(--w-rjv-curlybraces-color, #236a7c)" },
+            className: "w-rjv-curlybraces-start",
+            children: "{",
+          },
+          BraceRight: {
+            as: "span",
+            style: { color: "var(--w-rjv-curlybraces-color, #236a7c)" },
+            className: "w-rjv-curlybraces-end",
+            children: "}",
+          },
+        },
+        k = (0, n.createContext)(L),
+        J = (e, r) => (0, t.Z)({}, e, r),
+        S = () => (0, n.useContext)(k),
+        B = (0, n.createContext)(() => {});
+      B.displayName = "JVR.DispatchSymbols";
+      var E = (e) => {
+        var { initial: r, dispatch: a, children: t } = e;
+        return (0, s.jsx)(k.Provider, {
+          value: r,
+          children: (0, s.jsx)(B.Provider, { value: a, children: t }),
+        });
+      };
+      E.displayName = "JVR.Symbols";
+      var T = {
+          Copied: {
+            className: "w-rjv-copied",
+            style: {
+              height: "1em",
+              width: "1em",
+              cursor: "pointer",
+              verticalAlign: "middle",
+              marginLeft: 5,
+            },
+          },
+          CountInfo: {
+            as: "span",
+            className: "w-rjv-object-size",
+            style: {
+              color: "var(--w-rjv-info-color, #0000004d)",
+              paddingLeft: 8,
+              fontStyle: "italic",
+            },
+          },
+          CountInfoExtra: {
+            as: "span",
+            className: "w-rjv-object-extra",
+            style: { paddingLeft: 8 },
+          },
+          Ellipsis: {
+            as: "span",
+            style: {
+              cursor: "pointer",
+              color: "var(--w-rjv-ellipsis-color, #cb4b16)",
+              userSelect: "none",
+            },
+            className: "w-rjv-ellipsis",
+            children: "...",
+          },
+          Row: { as: "div", className: "w-rjv-line" },
+          KeyName: { as: "span", className: "w-rjv-object-key" },
+        },
+        K = (0, n.createContext)(T),
+        M = (e, r) => (0, t.Z)({}, e, r),
+        F = () => (0, n.useContext)(K),
+        I = (0, n.createContext)(() => {});
+      I.displayName = "JVR.DispatchSection";
+      var A = (e) => {
+        var { initial: r, dispatch: a, children: t } = e;
+        return (0, s.jsx)(K.Provider, {
+          value: r,
+          children: (0, s.jsx)(I.Provider, { value: a, children: t }),
+        });
+      };
+      A.displayName = "JVR.Section";
+      var D = { objectSortKeys: !1, indentWidth: 15 },
+        P = (0, n.createContext)(D);
+      P.displayName = "JVR.Context";
+      var U = (0, n.createContext)(() => {});
+      function Q(e, r) {
+        return (0, t.Z)({}, e, r);
+      }
+      U.displayName = "JVR.DispatchContext";
+      var O = () => (0, n.useContext)(P),
+        q = (e) => {
+          var { children: r, initialState: a, initialTypes: l } = e,
+            [i, v] = (0, n.useReducer)(Q, Object.assign({}, D, a)),
+            [u, y] = (0, n.useReducer)(c, o),
+            [j, f] = (0, n.useReducer)(m, d),
+            [N, h] = (0, n.useReducer)(Z, w),
+            [b, g] = (0, n.useReducer)(J, L),
+            [C, V] = (0, n.useReducer)(M, T);
+          return (
+            (0, n.useEffect)(() => v((0, t.Z)({}, a)), [a]),
+            (0, s.jsx)(P.Provider, {
+              value: i,
+              children: (0, s.jsx)(U.Provider, {
+                value: v,
+                children: (0, s.jsx)(p, {
+                  initial: u,
+                  dispatch: y,
+                  children: (0, s.jsx)(x, {
+                    initial: j,
+                    dispatch: f,
+                    children: (0, s.jsx)(R, {
+                      initial: (0, t.Z)({}, N, l),
+                      dispatch: h,
+                      children: (0, s.jsx)(E, {
+                        initial: b,
+                        dispatch: g,
+                        children: (0, s.jsx)(A, {
+                          initial: C,
+                          dispatch: V,
+                          children: r,
+                        }),
+                      }),
+                    }),
+                  }),
+                }),
+              }),
+            })
+          );
+        };
+      q.displayName = "JVR.Provider";
+      var _ = ["isNumber"],
+        z = ["as", "render"],
+        W = ["as", "render"],
+        H = ["as", "render"],
+        $ = ["as", "style", "render"],
+        G = ["as", "render"],
+        X = ["as", "render"],
+        Y = ["as", "render"],
+        ee = ["as", "render"],
+        er = (e) => {
+          var { Quote: r = {} } = S(),
+            { isNumber: a } = e,
+            n = l(e, _);
+          if (a) return null;
+          var { as: o, render: i } = r,
+            c = l(r, z),
+            v = (0, t.Z)({}, n, c);
+          return (
+            (i && "function" == typeof i && i(v)) ||
+            (0, s.jsx)(o || "span", (0, t.Z)({}, v))
+          );
+        };
+      er.displayName = "JVR.Quote";
+      var ea = (e) => {
+        var { ValueQuote: r = {} } = S(),
+          a = (0, t.Z)(
+            {},
+            ((function (e) {
+              if (null == e) throw TypeError("Cannot destructure " + e);
+            })(e),
+            e)
+          ),
+          { as: n, render: o } = r,
+          i = l(r, W),
+          c = (0, t.Z)({}, a, i);
+        return (
+          (o && "function" == typeof o && o(c)) ||
+          (0, s.jsx)(n || "span", (0, t.Z)({}, c))
+        );
+      };
+      ea.displayName = "JVR.ValueQuote";
+      var et = () => {
+        var { Colon: e = {} } = S(),
+          { as: r, render: a } = e,
+          n = l(e, H);
+        return (
+          (a && "function" == typeof a && a(n)) ||
+          (0, s.jsx)(r || "span", (0, t.Z)({}, n))
+        );
+      };
+      et.displayName = "JVR.Colon";
+      var el = (e) => {
+        var { Arrow: r = {} } = S(),
+          a = f(),
+          { expandKey: n } = e,
+          o = !!a[n],
+          { as: i, style: c, render: v } = r,
+          u = l(r, $);
+        return (
+          (v &&
+            "function" == typeof v &&
+            v(
+              (0, t.Z)({}, u, {
+                "data-expanded": o,
+                style: (0, t.Z)({}, c, e.style),
+              })
+            )) ||
+          (0, s.jsx)(
+            i || "span",
+            (0, t.Z)({}, u, { style: (0, t.Z)({}, c, e.style) })
+          )
+        );
+      };
+      el.displayName = "JVR.Arrow";
+      var en = (e) => {
+        var { isBrackets: r } = e,
+          { BracketsLeft: a = {}, BraceLeft: n = {} } = S();
+        if (r) {
+          var { as: o, render: i } = a,
+            c = l(a, G);
+          return (
+            (i && "function" == typeof i && i(c)) ||
+            (0, s.jsx)(o || "span", (0, t.Z)({}, c))
+          );
+        }
+        var { as: v, render: u } = n,
+          y = l(n, X);
+        return (
+          (u && "function" == typeof u && u(y)) ||
+          (0, s.jsx)(v || "span", (0, t.Z)({}, y))
+        );
+      };
+      en.displayName = "JVR.BracketsOpen";
+      var es = (e) => {
+        var { isBrackets: r, isVisiable: a } = e;
+        if (!a) return null;
+        var { BracketsRight: n = {}, BraceRight: o = {} } = S();
+        if (r) {
+          var { as: i, render: c } = n,
+            v = l(n, Y);
+          return (
+            (c && "function" == typeof c && c(v)) ||
+            (0, s.jsx)(i || "span", (0, t.Z)({}, v))
+          );
+        }
+        var { as: u, render: y } = o,
+          p = l(o, ee);
+        return (
+          (y && "function" == typeof y && y(p)) ||
+          (0, s.jsx)(u || "span", (0, t.Z)({}, p))
+        );
+      };
+      es.displayName = "JVR.BracketsClose";
+      var eo = (e) => {
+        var r,
+          { value: a, expandKey: t, level: l } = e,
+          n = f(),
+          o = Array.isArray(a),
+          { collapsed: i } = O(),
+          c = a instanceof Set,
+          v =
+            null != (r = n[t])
+              ? r
+              : "boolean" == typeof i
+                ? i
+                : "number" == typeof i && l > i,
+          u = Object.keys(a).length;
+        return v || 0 === u
+          ? null
+          : (0, s.jsx)("div", {
+              style: { paddingLeft: 4 },
+              children: (0, s.jsx)(es, { isBrackets: o || c, isVisiable: !0 }),
+            });
+      };
+      eo.displayName = "JVR.NestedClose";
+      var ei = ["keyName", "value", "expandKey"],
+        ec = ["as", "render"],
+        ev = (e) => {
+          var { keyName: r, value: a, expandKey: o } = e,
+            i = l(e, ei),
+            { onCopied: c, enableClipboard: u } = O(),
+            y = v()[o],
+            [p, d] = (0, n.useState)(!1),
+            { Copied: j = {} } = F();
+          if (!1 === u || !y) return null;
+          var m = (e) => {
+              e.stopPropagation();
+              var r = "";
+              (r =
+                "number" == typeof a && a === 1 / 0
+                  ? "Infinity"
+                  : "number" == typeof a && isNaN(a)
+                    ? "NaN"
+                    : "bigint" == typeof a
+                      ? a + "n"
+                      : a instanceof Date
+                        ? a.toLocaleString()
+                        : JSON.stringify(a, null, 2)),
+                c && c(r, a),
+                d(!0),
+                navigator.clipboard
+                  .writeText(r)
+                  .then(() => {
+                    var e = setTimeout(() => {
+                      d(!1), clearTimeout(e);
+                    }, 3e3);
+                  })
+                  .catch((e) => {});
+            },
+            { render: f } = j,
+            N = l(j, ec),
+            x = (0, t.Z)({}, N, i, {
+              fill: p
+                ? "var(--w-rjv-copied-success-color, #28a745)"
+                : "var(--w-rjv-copied-color, currentColor)",
+              onClick: m,
+            });
+          return (
+            (f &&
+              "function" == typeof f &&
+              f((0, t.Z)({}, x, { "data-copied": p }), {
+                value: a,
+                keyName: r,
+              })) ||
+            (p
+              ? (0, s.jsx)(
+                  "svg",
+                  (0, t.Z)({ viewBox: "0 0 32 36" }, x, {
+                    children: (0, s.jsx)("path", {
+                      d: "M27.5,33 L2.5,33 L2.5,12.5 L27.5,12.5 L27.5,15.2249049 C29.1403264,13.8627542 29.9736597,13.1778155 30,13.1700887 C30,11.9705278 30,10.0804982 30,7.5 C30,6.1 28.9,5 27.5,5 L20,5 C20,2.2 17.8,0 15,0 C12.2,0 10,2.2 10,5 L2.5,5 C1.1,5 0,6.1 0,7.5 L0,33 C0,34.4 1.1,36 2.5,36 L27.5,36 C28.9,36 30,34.4 30,33 L30,26.1114493 L27.5,28.4926435 L27.5,33 Z M7.5,7.5 L10,7.5 C10,7.5 12.5,6.4 12.5,5 C12.5,3.6 13.6,2.5 15,2.5 C16.4,2.5 17.5,3.6 17.5,5 C17.5,6.4 18.8,7.5 20,7.5 L22.5,7.5 C22.5,7.5 25,8.6 25,10 L5,10 C5,8.5 6.1,7.5 7.5,7.5 Z M5,27.5 L10,27.5 L10,25 L5,25 L5,27.5 Z M28.5589286,16 L32,19.6 L21.0160714,30.5382252 L13.5303571,24.2571429 L17.1303571,20.6571429 L21.0160714,24.5428571 L28.5589286,16 Z M17.5,15 L5,15 L5,17.5 L17.5,17.5 L17.5,15 Z M10,20 L5,20 L5,22.5 L10,22.5 L10,20 Z",
+                    }),
+                  })
+                )
+              : (0, s.jsx)(
+                  "svg",
+                  (0, t.Z)({ viewBox: "0 0 32 36" }, x, {
+                    children: (0, s.jsx)("path", {
+                      d: "M27.5,33 L2.5,33 L2.5,12.5 L27.5,12.5 L27.5,20 L30,20 L30,7.5 C30,6.1 28.9,5 27.5,5 L20,5 C20,2.2 17.8,0 15,0 C12.2,0 10,2.2 10,5 L2.5,5 C1.1,5 0,6.1 0,7.5 L0,33 C0,34.4 1.1,36 2.5,36 L27.5,36 C28.9,36 30,34.4 30,33 L30,29 L27.5,29 L27.5,33 Z M7.5,7.5 L10,7.5 C10,7.5 12.5,6.4 12.5,5 C12.5,3.6 13.6,2.5 15,2.5 C16.4,2.5 17.5,3.6 17.5,5 C17.5,6.4 18.8,7.5 20,7.5 L22.5,7.5 C22.5,7.5 25,8.6 25,10 L5,10 C5,8.5 6.1,7.5 7.5,7.5 Z M5,27.5 L10,27.5 L10,25 L5,25 L5,27.5 Z M22.5,21.5 L22.5,16.5 L12.5,24 L22.5,31.5 L22.5,26.5 L32,26.5 L32,21.5 L22.5,21.5 Z M17.5,15 L5,15 L5,17.5 L17.5,17.5 L17.5,15 Z M10,20 L5,20 L5,22.5 L10,22.5 L10,20 Z",
+                    }),
+                  })
+                ))
+          );
+        };
+      ev.displayName = "JVR.Copied";
+      var eu = ["as", "render"],
+        ey = ["as", "render"],
+        ep = ["as", "render"],
+        ed = ["as", "render"],
+        ej = ["as", "render"],
+        em = ["as", "render"],
+        ef = ["as", "render"],
+        eN = ["as", "render"],
+        ex = ["as", "render"],
+        ew = ["as", "render"],
+        eh = ["as", "render"],
+        eZ = ["as", "render"],
+        eb = ["as", "render"],
+        eg = (e) => {
+          var { value: r, keyName: a } = e,
+            { Set: n = {}, displayDataTypes: o } = b();
+          if (!(r instanceof Set) || !o) return null;
+          var { as: i, render: c } = n,
+            v = l(n, eu);
+          return (
+            (c &&
+              "function" == typeof c &&
+              c(v, { type: "type", value: r, keyName: a })) ||
+            (0, s.jsx)(i || "span", (0, t.Z)({}, v))
+          );
+        };
+      eg.displayName = "JVR.SetComp";
+      var eR = (e) => {
+        var { value: r, keyName: a } = e,
+          { Map: n = {}, displayDataTypes: o } = b();
+        if (!(r instanceof Map) || !o) return null;
+        var { as: i, render: c } = n,
+          v = l(n, ey);
+        return (
+          (c &&
+            "function" == typeof c &&
+            c(v, { type: "type", value: r, keyName: a })) ||
+          (0, s.jsx)(i || "span", (0, t.Z)({}, v))
+        );
+      };
+      eR.displayName = "JVR.MapComp";
+      var eC = { opacity: 0.75, paddingRight: 4 },
+        eV = (e) => {
+          var { children: r = "", expandKey: a, keyName: o } = e,
+            { Str: i = {}, displayDataTypes: c } = b(),
+            { shortenTextAfterLength: v = 30 } = O(),
+            { as: u, render: y } = i,
+            p = l(i, ep),
+            [d, j] = (0, n.useState)(v && r.length >= v);
+          (0, n.useEffect)(() => j(v && r.length >= v), [v]);
+          var m = u || "span",
+            f = (0, t.Z)({}, eC, i.style || {});
+          v > 0 &&
+            ((p.style = (0, t.Z)({}, p.style, {
+              cursor: r.length <= v ? "initial" : "pointer",
+            })),
+            r.length > v &&
+              (p.onClick = () => {
+                j(!d);
+              }));
+          var N = d ? r.slice(0, v) + "..." : r,
+            x = y && "function" == typeof y,
+            w =
+              x &&
+              y((0, t.Z)({}, p, { style: f }), {
+                type: "type",
+                value: r,
+                keyName: o,
+              }),
+            h =
+              x &&
+              y((0, t.Z)({}, p, { children: N, className: "w-rjv-value" }), {
+                type: "value",
+                value: r,
+                keyName: o,
+              });
+          return (0, s.jsxs)(n.Fragment, {
+            children: [
+              c && (w || (0, s.jsx)(m, (0, t.Z)({}, p, { style: f }))),
+              h ||
+                (0, s.jsxs)(n.Fragment, {
+                  children: [
+                    (0, s.jsx)(ea, {}),
+                    (0, s.jsx)(
+                      m,
+                      (0, t.Z)({}, p, { className: "w-rjv-value", children: N })
+                    ),
+                    (0, s.jsx)(ea, {}),
+                  ],
+                }),
+              (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+            ],
+          });
+        };
+      eV.displayName = "JVR.TypeString";
+      var eL = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { True: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, ed),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f =
+            j &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            f ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, {
+                  className: "w-rjv-value",
+                  children: null == r ? void 0 : r.toString(),
+                })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eL.displayName = "JVR.TypeTrue";
+      var ek = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { False: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, ej),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f =
+            j &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            f ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, {
+                  className: "w-rjv-value",
+                  children: null == r ? void 0 : r.toString(),
+                })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      ek.displayName = "JVR.TypeFalse";
+      var eJ = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Float: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, em),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f =
+            j &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            f ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, {
+                  className: "w-rjv-value",
+                  children: null == r ? void 0 : r.toString(),
+                })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eJ.displayName = "JVR.TypeFloat";
+      var eS = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Int: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, ef),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f =
+            j &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            f ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, {
+                  className: "w-rjv-value",
+                  children: null == r ? void 0 : r.toString(),
+                })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eS.displayName = "JVR.TypeInt";
+      var eB = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Bigint: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, eN),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f =
+            j &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            f ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, {
+                  className: "w-rjv-value",
+                  children: (null == r ? void 0 : r.toString()) + "n",
+                })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eB.displayName = "JVR.TypeFloat";
+      var eE = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Url: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, ex),
+          p = (0, t.Z)({}, eC, i.style),
+          d = u && "function" == typeof u,
+          j =
+            d &&
+            u((0, t.Z)({}, y, { style: p }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          m =
+            d &&
+            u(
+              (0, t.Z)({}, y, {
+                children: null == r ? void 0 : r.href,
+                className: "w-rjv-value",
+              }),
+              { type: "value", value: r, keyName: o }
+            );
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (j || (0, s.jsx)(v || "span", (0, t.Z)({}, y, { style: p }))),
+            m ||
+              (0, s.jsxs)(
+                "a",
+                (0, t.Z)(
+                  { href: null == r ? void 0 : r.href, target: "_blank" },
+                  y,
+                  {
+                    className: "w-rjv-value",
+                    children: [
+                      (0, s.jsx)(ea, {}),
+                      null == r ? void 0 : r.href,
+                      (0, s.jsx)(ea, {}),
+                    ],
+                  }
+                )
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eE.displayName = "JVR.TypeUrl";
+      var eT = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Date: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, ew),
+          p = v || "span",
+          d = (0, t.Z)({}, eC, i.style || {}),
+          j = u && "function" == typeof u,
+          m =
+            j &&
+            u((0, t.Z)({}, y, { style: d }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          f = r instanceof Date ? r.toLocaleString() : r,
+          N =
+            j &&
+            u((0, t.Z)({}, y, { children: f, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (m || (0, s.jsx)(p, (0, t.Z)({}, y, { style: d }))),
+            N ||
+              (0, s.jsx)(
+                p,
+                (0, t.Z)({}, y, { className: "w-rjv-value", children: f })
+              ),
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eT.displayName = "JVR.TypeDate";
+      var eK = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Undefined: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, eh),
+          p = (0, t.Z)({}, eC, i.style || {}),
+          d = u && "function" == typeof u,
+          j =
+            d &&
+            u((0, t.Z)({}, y, { style: p }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          m =
+            d &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (j || (0, s.jsx)(v || "span", (0, t.Z)({}, y, { style: p }))),
+            m,
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eK.displayName = "JVR.TypeUndefined";
+      var eM = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Null: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, eZ),
+          p = (0, t.Z)({}, eC, i.style || {}),
+          d = u && "function" == typeof u,
+          j =
+            d &&
+            u((0, t.Z)({}, y, { style: p }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          m =
+            d &&
+            u((0, t.Z)({}, y, { children: r, className: "w-rjv-value" }), {
+              type: "value",
+              value: r,
+              keyName: o,
+            });
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (j || (0, s.jsx)(v || "span", (0, t.Z)({}, y, { style: p }))),
+            m,
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eM.displayName = "JVR.TypeNull";
+      var eF = (e) => {
+        var { children: r, expandKey: a, keyName: o } = e,
+          { Nan: i = {}, displayDataTypes: c } = b(),
+          { as: v, render: u } = i,
+          y = l(i, eb),
+          p = (0, t.Z)({}, eC, i.style || {}),
+          d = u && "function" == typeof u,
+          j =
+            d &&
+            u((0, t.Z)({}, y, { style: p }), {
+              type: "type",
+              value: r,
+              keyName: o,
+            }),
+          m =
+            d &&
+            u(
+              (0, t.Z)({}, y, {
+                children: null == r ? void 0 : r.toString(),
+                className: "w-rjv-value",
+              }),
+              { type: "value", value: r, keyName: o }
+            );
+        return (0, s.jsxs)(n.Fragment, {
+          children: [
+            c && (j || (0, s.jsx)(v || "span", (0, t.Z)({}, y, { style: p }))),
+            m,
+            (0, s.jsx)(ev, { keyName: o, value: r, expandKey: a }),
+          ],
+        });
+      };
+      eF.displayName = "JVR.TypeNan";
+      var eI = (e) => (Number(e) === e && e % 1 != 0) || isNaN(e),
+        eA = (e) => {
+          var { value: r, keyName: a, expandKey: l } = e,
+            n = { keyName: a, expandKey: l };
+          return r instanceof URL
+            ? (0, s.jsx)(eE, (0, t.Z)({}, n, { children: r }))
+            : "string" == typeof r
+              ? (0, s.jsx)(eV, (0, t.Z)({}, n, { children: r }))
+              : !0 === r
+                ? (0, s.jsx)(eL, (0, t.Z)({}, n, { children: r }))
+                : !1 === r
+                  ? (0, s.jsx)(ek, (0, t.Z)({}, n, { children: r }))
+                  : null === r
+                    ? (0, s.jsx)(eM, (0, t.Z)({}, n, { children: r }))
+                    : void 0 === r
+                      ? (0, s.jsx)(eK, (0, t.Z)({}, n, { children: r }))
+                      : r instanceof Date
+                        ? (0, s.jsx)(eT, (0, t.Z)({}, n, { children: r }))
+                        : "number" == typeof r && isNaN(r)
+                          ? (0, s.jsx)(eF, (0, t.Z)({}, n, { children: r }))
+                          : "number" == typeof r && eI(r)
+                            ? (0, s.jsx)(eJ, (0, t.Z)({}, n, { children: r }))
+                            : "bigint" == typeof r
+                              ? (0, s.jsx)(eB, (0, t.Z)({}, n, { children: r }))
+                              : "number" == typeof r
+                                ? (0, s.jsx)(
+                                    eS,
+                                    (0, t.Z)({}, n, { children: r })
+                                  )
+                                : null;
+        };
+      function eD(e, r, a) {
+        var l = (0, n.useContext)(B),
+          s = [e.className, r.className].filter(Boolean).join(" "),
+          o = (0, t.Z)({}, e, r, {
+            className: s,
+            style: (0, t.Z)({}, e.style, r.style),
+            children: r.children || e.children,
+          });
+        (0, n.useEffect)(() => l({ [a]: o }), [r]);
+      }
+      function eP(e, r, a) {
+        var l = (0, n.useContext)(g),
+          s = [e.className, r.className].filter(Boolean).join(" "),
+          o = (0, t.Z)({}, e, r, {
+            className: s,
+            style: (0, t.Z)({}, e.style, r.style),
+            children: r.children || e.children,
+          });
+        (0, n.useEffect)(() => l({ [a]: o }), [r]);
+      }
+      function eU(e, r, a) {
+        var l = (0, n.useContext)(I),
+          s = [e.className, r.className].filter(Boolean).join(" "),
+          o = (0, t.Z)({}, e, r, {
+            className: s,
+            style: (0, t.Z)({}, e.style, r.style),
+            children: r.children || e.children,
+          });
+        (0, n.useEffect)(() => l({ [a]: o }), [r]);
+      }
+      eA.displayName = "JVR.Value";
+      var eQ = ["as", "render"],
+        eO = (e) => {
+          var { KeyName: r = {} } = F();
+          return eU(r, e, "KeyName"), null;
+        };
+      eO.displayName = "JVR.KeyName";
+      var eq = (e) => {
+        var { children: r, value: a, parentValue: n, keyName: o } = e,
+          { KeyName: i = {} } = F(),
+          { as: c, render: v } = i,
+          u = l(i, eQ);
+        return (
+          (u.style = (0, t.Z)({}, u.style, {
+            color:
+              "number" == typeof r
+                ? "var(--w-rjv-key-number, #268bd2)"
+                : "var(--w-rjv-key-string, #002b36)",
+          })),
+          (v &&
+            "function" == typeof v &&
+            v((0, t.Z)({}, u, { children: r }), {
+              value: a,
+              parentValue: n,
+              keyName: o,
+            })) ||
+            (0, s.jsx)(c || "span", (0, t.Z)({}, u, { children: r }))
+        );
+      };
+      eq.displayName = "JVR.KeyNameComp";
+      var e_ = ["children", "value", "keyName", "parentValue"],
+        ez = ["as", "render", "children"],
+        eW = (e) => {
+          var { Row: r = {} } = F();
+          return eU(r, e, "Row"), null;
+        };
+      eW.displayName = "JVR.Row";
+      var eH = (e) => {
+        var { children: r, value: a, keyName: n = "", parentValue: o } = e,
+          i = l(e, e_),
+          { Row: c = {} } = F(),
+          { as: v, render: u } = c,
+          y = l(c, ez);
+        return (
+          (u &&
+            "function" == typeof u &&
+            u((0, t.Z)({}, i, y, { children: r }), {
+              value: a,
+              keyName: n,
+              parentValue: o,
+            })) ||
+          (0, s.jsx)(v || "div", (0, t.Z)({}, i, y, { children: r }))
+        );
+      };
+      eH.displayName = "JVR.RowComp";
+      var e$ = (e) => {
+        var r,
+          { value: a, expandKey: t = "", level: l } = e,
+          n = f(),
+          { objectSortKeys: o, indentWidth: i, collapsed: c } = O(),
+          v = Array.isArray(a);
+        if (
+          null != (r = n[t])
+            ? r
+            : "boolean" == typeof c
+              ? c
+              : "number" == typeof c && l > c
+        )
+          return null;
+        var u = v
+          ? Object.entries(a).map((e) => [Number(e[0]), e[1]])
+          : Object.entries(a);
+        return (
+          o &&
+            (u =
+              !0 === o
+                ? u.sort((e, r) => {
+                    var [a] = e,
+                      [t] = r;
+                    return "string" == typeof a && "string" == typeof t
+                      ? a.localeCompare(t)
+                      : 0;
+                  })
+                : u.sort((e, r) => {
+                    var [a, t] = e,
+                      [l, n] = r;
+                    return "string" == typeof a && "string" == typeof l
+                      ? o(a, l, t, n)
+                      : 0;
+                  })),
+          (0, s.jsx)("div", {
+            className: "w-rjv-wrap",
+            style: {
+              borderLeft:
+                "var(--w-rjv-border-left-width, 1px) var(--w-rjv-line-style, solid) var(--w-rjv-line-color, #ebebeb)",
+              paddingLeft: i,
+              marginLeft: 6,
+            },
+            children: u.map((e, r) => {
+              var [t, n] = e;
+              return (0, s.jsx)(
+                eX,
+                { parentValue: a, keyName: t, value: n, level: l },
+                r
+              );
+            }),
+          })
+        );
+      };
+      e$.displayName = "JVR.KeyValues";
+      var eG = (e) => {
+        var { keyName: r, parentValue: a, value: t } = e,
+          { highlightUpdates: l } = O(),
+          o = "number" == typeof r,
+          i = (0, n.useRef)(null);
+        return (
+          !(function (e) {
+            var r,
+              { value: a, highlightUpdates: t, highlightContainer: l } = e,
+              s =
+                ((r = (0, n.useRef)()),
+                (0, n.useEffect)(() => {
+                  r.current = a;
+                }),
+                r.current),
+              o = (0, n.useMemo)(
+                () =>
+                  !!t &&
+                  void 0 !== s &&
+                  (typeof a != typeof s ||
+                    ("number" == typeof a
+                      ? !(isNaN(a) && isNaN(s)) && a !== s
+                      : Array.isArray(a) !== Array.isArray(s) ||
+                        ("object" != typeof a &&
+                          "function" != typeof a &&
+                          (a !== s || void 0)))),
+                [t, a]
+              );
+            (0, n.useEffect)(() => {
+              l &&
+                l.current &&
+                o &&
+                "animate" in l.current &&
+                l.current.animate(
+                  [
+                    { backgroundColor: "var(--w-rjv-update-color, #ebcb8b)" },
+                    { backgroundColor: "" },
+                  ],
+                  { duration: 1e3, easing: "ease-in" }
+                );
+            }, [o, a, l]);
+          })({ value: t, highlightUpdates: l, highlightContainer: i }),
+          (0, s.jsxs)(n.Fragment, {
+            children: [
+              (0, s.jsxs)("span", {
+                ref: i,
+                children: [
+                  (0, s.jsx)(er, { isNumber: o, "data-placement": "left" }),
+                  (0, s.jsx)(eq, {
+                    keyName: r,
+                    value: t,
+                    parentValue: a,
+                    children: r,
+                  }),
+                  (0, s.jsx)(er, { isNumber: o, "data-placement": "right" }),
+                ],
+              }),
+              (0, s.jsx)(et, {}),
+            ],
+          })
+        );
+      };
+      eG.displayName = "JVR.KayName";
+      var eX = (e) => {
+        var { keyName: r, value: a, parentValue: l, level: o = 0 } = e,
+          i = y(),
+          c = (0, n.useId)(),
+          v = Array.isArray(a),
+          u = a instanceof Set,
+          p = a instanceof Map,
+          d = a instanceof URL;
+        if (
+          (a &&
+            "object" == typeof a &&
+            !v &&
+            !u &&
+            !p &&
+            !(a instanceof Date) &&
+            !d) ||
+          v ||
+          u ||
+          p
+        ) {
+          var j = u ? Array.from(a) : p ? Object.fromEntries(a) : a;
+          return (0, s.jsx)(ra, {
+            keyName: r,
+            value: j,
+            parentValue: l,
+            initialValue: a,
+            level: o + 1,
+          });
+        }
+        return (0, s.jsxs)(
+          eH,
+          (0, t.Z)(
+            { className: "w-rjv-line", value: a, keyName: r, parentValue: l },
+            {
+              onMouseEnter: () => i({ [c]: !0 }),
+              onMouseLeave: () => i({ [c]: !1 }),
+            },
+            {
+              children: [
+                (0, s.jsx)(eG, { keyName: r, value: a, parentValue: l }),
+                (0, s.jsx)(eA, { keyName: r, value: a, expandKey: c }),
+              ],
+            }
+          )
+        );
+      };
+      eX.displayName = "JVR.KeyValuesItem";
+      var eY = ["value", "keyName"],
+        e0 = ["as", "render"],
+        e5 = (e) => {
+          var { CountInfoExtra: r = {} } = F();
+          return eU(r, e, "CountInfoExtra"), null;
+        };
+      e5.displayName = "JVR.CountInfoExtra";
+      var e2 = (e) => {
+        var { value: r = {}, keyName: a } = e,
+          n = l(e, eY),
+          { CountInfoExtra: o = {} } = F(),
+          { as: i, render: c } = o,
+          v = l(o, e0);
+        if (!c && !v.children) return null;
+        var u = (0, t.Z)({}, v, n);
+        return (
+          (c && "function" == typeof c && c(u, { value: r, keyName: a })) ||
+          (0, s.jsx)(i || "span", (0, t.Z)({}, u))
+        );
+      };
+      e2.displayName = "JVR.CountInfoExtraComps";
+      var e1 = ["value", "keyName"],
+        e3 = ["as", "render"],
+        e6 = (e) => {
+          var { CountInfo: r = {} } = F();
+          return eU(r, e, "CountInfo"), null;
+        };
+      e6.displayName = "JVR.CountInfo";
+      var e7 = (e) => {
+        var { value: r = {}, keyName: a } = e,
+          n = l(e, e1),
+          { displayObjectSize: o } = O(),
+          { CountInfo: i = {} } = F();
+        if (!o) return null;
+        var { as: c, render: v } = i,
+          u = l(i, e3);
+        u.style = (0, t.Z)({}, u.style, e.style);
+        var y = Object.keys(r).length;
+        u.children || (u.children = y + " items");
+        var p = (0, t.Z)({}, u, n);
+        return (
+          (v &&
+            "function" == typeof v &&
+            v((0, t.Z)({}, p, { "data-length": y }), {
+              value: r,
+              keyName: a,
+            })) ||
+          (0, s.jsx)(c || "span", (0, t.Z)({}, p))
+        );
+      };
+      e7.displayName = "JVR.CountInfoComp";
+      var e8 = ["as", "render"],
+        e4 = (e) => {
+          var { Ellipsis: r = {} } = F();
+          return eU(r, e, "Ellipsis"), null;
+        };
+      e4.displayName = "JVR.Ellipsis";
+      var e9 = (e) => {
+        var { isExpanded: r, value: a, keyName: n } = e,
+          { Ellipsis: o = {} } = F(),
+          { as: i, render: c } = o,
+          v = l(o, e8);
+        return (
+          (c &&
+            "function" == typeof c &&
+            c((0, t.Z)({}, v, { "data-expanded": r }), {
+              value: a,
+              keyName: n,
+            })) ||
+          (r ? (0, s.jsx)(i || "span", (0, t.Z)({}, v)) : null)
+        );
+      };
+      e9.displayName = "JVR.EllipsisComp";
+      var re = (e) => {
+        var r,
+          { keyName: a, expandKey: l, initialValue: o, value: i, level: c } = e,
+          v = f(),
+          u = (0, n.useContext)(N),
+          { onExpand: y, collapsed: p } = O(),
+          d = Array.isArray(i),
+          j = i instanceof Set,
+          m =
+            null != (r = v[l])
+              ? r
+              : "boolean" == typeof p
+                ? p
+                : "number" == typeof p && c > p,
+          x = () => {
+            var e = { expand: !m, value: i, keyid: l, keyName: a };
+            y && y(e), u({ [l]: e.expand });
+          },
+          w = 0 !== Object.keys(i).length && (d || j || "object" == typeof i),
+          h = { style: { display: "inline-flex", alignItems: "center" } };
+        return (
+          w && (h.onClick = x),
+          (0, s.jsxs)(
+            "span",
+            (0, t.Z)({}, h, {
+              children: [
+                w &&
+                  (0, s.jsx)(el, {
+                    style: {
+                      transform: "rotate(" + (m ? "-90" : "0") + "deg)",
+                      transition: "all 0.3s",
+                    },
+                    expandKey: l,
+                  }),
+                (a || "number" == typeof a) && (0, s.jsx)(eG, { keyName: a }),
+                (0, s.jsx)(eg, { value: o, keyName: a }),
+                (0, s.jsx)(eR, { value: o, keyName: a }),
+                (0, s.jsx)(en, { isBrackets: d || j }),
+                (0, s.jsx)(e9, { keyName: a, value: i, isExpanded: m }),
+                (0, s.jsx)(es, { isVisiable: m || !w, isBrackets: d || j }),
+                (0, s.jsx)(e7, { value: i, keyName: a }),
+                (0, s.jsx)(e2, { value: i, keyName: a }),
+                (0, s.jsx)(ev, { keyName: a, value: i, expandKey: l }),
+              ],
+            })
+          )
+        );
+      };
+      re.displayName = "JVR.NestedOpen";
+      var rr = [
+          "className",
+          "children",
+          "parentValue",
+          "keyid",
+          "level",
+          "value",
+          "initialValue",
+          "keyName",
+        ],
+        ra = (0, n.forwardRef)((e, r) => {
+          var {
+              className: a = "",
+              level: o = 1,
+              value: i,
+              initialValue: c,
+              keyName: v,
+            } = e,
+            u = l(e, rr),
+            p = y(),
+            d = (0, n.useId)(),
+            j = [a, "w-rjv-inner"].filter(Boolean).join(" ");
+          return (0, s.jsxs)(
+            "div",
+            (0, t.Z)(
+              { className: j, ref: r },
+              u,
+              {
+                onMouseEnter: () => p({ [d]: !0 }),
+                onMouseLeave: () => p({ [d]: !1 }),
+              },
+              {
+                children: [
+                  (0, s.jsx)(re, {
+                    expandKey: d,
+                    value: i,
+                    level: o,
+                    keyName: v,
+                    initialValue: c,
+                  }),
+                  (0, s.jsx)(e$, { expandKey: d, value: i, level: o }),
+                  (0, s.jsx)(eo, { expandKey: d, value: i, level: o }),
+                ],
+              }
+            )
+          );
+        });
+      ra.displayName = "JVR.Container";
+      var rt = (e) => {
+        var { BraceLeft: r = {} } = S();
+        return eD(r, e, "BraceLeft"), null;
+      };
+      rt.displayName = "JVR.BraceLeft";
+      var rl = (e) => {
+        var { BraceRight: r = {} } = S();
+        return eD(r, e, "BraceRight"), null;
+      };
+      rl.displayName = "JVR.BraceRight";
+      var rn = (e) => {
+        var { BracketsLeft: r = {} } = S();
+        return eD(r, e, "BracketsLeft"), null;
+      };
+      rn.displayName = "JVR.BracketsLeft";
+      var rs = (e) => {
+        var { BracketsRight: r = {} } = S();
+        return eD(r, e, "BracketsRight"), null;
+      };
+      rs.displayName = "JVR.BracketsRight";
+      var ro = (e) => {
+        var { Arrow: r = {} } = S();
+        return eD(r, e, "Arrow"), null;
+      };
+      ro.displayName = "JVR.Arrow";
+      var ri = (e) => {
+        var { Colon: r = {} } = S();
+        return eD(r, e, "Colon"), null;
+      };
+      ri.displayName = "JVR.Colon";
+      var rc = (e) => {
+        var { Quote: r = {} } = S();
+        return eD(r, e, "Quote"), null;
+      };
+      rc.displayName = "JVR.Quote";
+      var rv = (e) => {
+        var { ValueQuote: r = {} } = S();
+        return eD(r, e, "ValueQuote"), null;
+      };
+      rv.displayName = "JVR.ValueQuote";
+      var ru = (e) => {
+        var { Bigint: r = {} } = b();
+        return eP(r, e, "Bigint"), null;
+      };
+      ru.displayName = "JVR.Bigint";
+      var ry = (e) => {
+        var { Date: r = {} } = b();
+        return eP(r, e, "Date"), null;
+      };
+      ry.displayName = "JVR.Date";
+      var rp = (e) => {
+        var { False: r = {} } = b();
+        return eP(r, e, "False"), null;
+      };
+      rp.displayName = "JVR.False";
+      var rd = (e) => {
+        var { Float: r = {} } = b();
+        return eP(r, e, "Float"), null;
+      };
+      rd.displayName = "JVR.Float";
+      var rj = (e) => {
+        var { Int: r = {} } = b();
+        return eP(r, e, "Int"), null;
+      };
+      rj.displayName = "JVR.Int";
+      var rm = (e) => {
+        var { Map: r = {} } = b();
+        return eP(r, e, "Map"), null;
+      };
+      rm.displayName = "JVR.Map";
+      var rf = (e) => {
+        var { Nan: r = {} } = b();
+        return eP(r, e, "Nan"), null;
+      };
+      rf.displayName = "JVR.Nan";
+      var rN = (e) => {
+        var { Null: r = {} } = b();
+        return eP(r, e, "Null"), null;
+      };
+      rN.displayName = "JVR.Null";
+      var rx = (e) => {
+        var { Set: r = {} } = b();
+        return eP(r, e, "Set"), null;
+      };
+      rx.displayName = "JVR.Set";
+      var rw = (e) => {
+        var { Str: r = {} } = b();
+        return eP(r, e, "Str"), null;
+      };
+      rw.displayName = "JVR.StringText";
+      var rh = (e) => {
+        var { True: r = {} } = b();
+        return eP(r, e, "True"), null;
+      };
+      rh.displayName = "JVR.True";
+      var rZ = (e) => {
+        var { Undefined: r = {} } = b();
+        return eP(r, e, "Undefined"), null;
+      };
+      rZ.displayName = "JVR.Undefined";
+      var rb = (e) => {
+        var { Url: r = {} } = b();
+        return eP(r, e, "Url"), null;
+      };
+      rb.displayName = "JVR.Url";
+      var rg = (e) => {
+        var { Copied: r = {} } = F();
+        return eU(r, e, "Copied"), null;
+      };
+      rg.displayName = "JVR.Copied";
+      var rR = [
+          "className",
+          "style",
+          "value",
+          "children",
+          "collapsed",
+          "indentWidth",
+          "displayObjectSize",
+          "shortenTextAfterLength",
+          "highlightUpdates",
+          "enableClipboard",
+          "displayDataTypes",
+          "objectSortKeys",
+          "onExpand",
+        ],
+        rC = (0, n.forwardRef)((e, r) => {
+          var {
+              className: a = "",
+              style: n,
+              value: o,
+              children: i,
+              collapsed: c,
+              indentWidth: v = 15,
+              displayObjectSize: u = !0,
+              shortenTextAfterLength: y = 30,
+              highlightUpdates: p = !0,
+              enableClipboard: d = !0,
+              displayDataTypes: j = !0,
+              objectSortKeys: m = !1,
+              onExpand: f,
+            } = e,
+            N = l(e, rR),
+            x = (0, t.Z)(
+              {
+                lineHeight: 1.4,
+                fontFamily: "var(--w-rjv-font-family, Menlo, monospace)",
+                color: "var(--w-rjv-color, #002b36)",
+                backgroundColor: "var(--w-rjv-background-color, #00000000)",
+                fontSize: 13,
+              },
+              n
+            ),
+            w = ["w-json-view-container", "w-rjv", a].filter(Boolean).join(" ");
+          return (0, s.jsxs)(q, {
+            initialState: {
+              value: o,
+              objectSortKeys: m,
+              indentWidth: v,
+              displayObjectSize: u,
+              collapsed: c,
+              enableClipboard: d,
+              shortenTextAfterLength: y,
+              highlightUpdates: p,
+              onExpand: f,
+            },
+            initialTypes: { displayDataTypes: j },
+            children: [
+              (0, s.jsx)(
+                ra,
+                (0, t.Z)({ value: o }, N, { ref: r, className: w, style: x })
+              ),
+              i,
+            ],
+          });
+        });
+      (rC.Bigint = ru),
+        (rC.Date = ry),
+        (rC.False = rp),
+        (rC.Float = rd),
+        (rC.Int = rj),
+        (rC.Map = rm),
+        (rC.Nan = rf),
+        (rC.Null = rN),
+        (rC.Set = rx),
+        (rC.String = rw),
+        (rC.True = rh),
+        (rC.Undefined = rZ),
+        (rC.Url = rb),
+        (rC.ValueQuote = rv),
+        (rC.Arrow = ro),
+        (rC.Colon = ri),
+        (rC.Quote = rc),
+        (rC.Ellipsis = e4),
+        (rC.BraceLeft = rt),
+        (rC.BraceRight = rl),
+        (rC.BracketsLeft = rn),
+        (rC.BracketsRight = rs),
+        (rC.Copied = rg),
+        (rC.CountInfo = e6),
+        (rC.CountInfoExtra = e5),
+        (rC.KeyName = eO),
+        (rC.Row = eW),
+        (rC.displayName = "JVR.JsonView");
+      var rV = rC;
+    },
+    91432: function (e, r, a) {
+      a.d(r, {
+        $: function () {
+          return t;
+        },
+      });
+      var t = {
+        "--w-rjv-font-family": "monospace",
+        "--w-rjv-color": "#0184a6",
+        "--w-rjv-key-string": "#0184a6",
+        "--w-rjv-background-color": "#202020",
+        "--w-rjv-line-color": "#323232",
+        "--w-rjv-arrow-color": "var(--w-rjv-color)",
+        "--w-rjv-edit-color": "var(--w-rjv-color)",
+        "--w-rjv-info-color": "#656565",
+        "--w-rjv-update-color": "#ebcb8b",
+        "--w-rjv-copied-color": "#0184a6",
+        "--w-rjv-copied-success-color": "#28a745",
+        "--w-rjv-curlybraces-color": "#1896b6",
+        "--w-rjv-brackets-color": "#1896b6",
+        "--w-rjv-quotes-color": "var(--w-rjv-key-string)",
+        "--w-rjv-quotes-string-color": "var(--w-rjv-type-string-color)",
+        "--w-rjv-type-string-color": "#cb4b16",
+        "--w-rjv-type-int-color": "#268bd2",
+        "--w-rjv-type-float-color": "#859900",
+        "--w-rjv-type-bigint-color": "#268bd2",
+        "--w-rjv-type-boolean-color": "#2aa198",
+        "--w-rjv-type-date-color": "#586e75",
+        "--w-rjv-type-url-color": "#649bd8",
+        "--w-rjv-type-null-color": "#d33682",
+        "--w-rjv-type-nan-color": "#076678",
+        "--w-rjv-type-undefined-color": "#586e75",
+      };
+    },
+    10099: function (e, r, a) {
+      a.d(r, {
+        W: function () {
+          return t;
+        },
+      });
+      var t = {
+        "--w-rjv-font-family": "monospace",
+        "--w-rjv-color": "#002b36",
+        "--w-rjv-key-string": "#002b36",
+        "--w-rjv-background-color": "#ffffff",
+        "--w-rjv-line-color": "#ebebeb",
+        "--w-rjv-arrow-color": "var(--w-rjv-color)",
+        "--w-rjv-edit-color": "var(--w-rjv-color)",
+        "--w-rjv-info-color": "#0000004d",
+        "--w-rjv-update-color": "#ebcb8b",
+        "--w-rjv-copied-color": "#002b36",
+        "--w-rjv-copied-success-color": "#28a745",
+        "--w-rjv-curlybraces-color": "#236a7c",
+        "--w-rjv-colon-color": "#002b36",
+        "--w-rjv-brackets-color": "#236a7c",
+        "--w-rjv-quotes-color": "var(--w-rjv-key-string)",
+        "--w-rjv-quotes-string-color": "var(--w-rjv-type-string-color)",
+        "--w-rjv-type-string-color": "#cb4b16",
+        "--w-rjv-type-int-color": "#268bd2",
+        "--w-rjv-type-float-color": "#859900",
+        "--w-rjv-type-bigint-color": "#268bd2",
+        "--w-rjv-type-boolean-color": "#2aa198",
+        "--w-rjv-type-date-color": "#586e75",
+        "--w-rjv-type-url-color": "#0969da",
+        "--w-rjv-type-null-color": "#d33682",
+        "--w-rjv-type-nan-color": "#859900",
+        "--w-rjv-type-undefined-color": "#586e75",
+      };
     },
   },
 ]);
+//# sourceMappingURL=4685.140d3e7e712ccf43.js.map

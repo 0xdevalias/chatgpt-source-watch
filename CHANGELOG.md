@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-06Z \(`oTgm15z1w361g3mBl796W`\)](#2024-02-06z-otgm15z1w361g3mbl796w)
 - [2024-02-06Z \(`8eNlznjVNElT8wapWdDOE`\)](#2024-02-06z-8enlznjvnelt8wapwddoe)
 - [2024-02-03Z \(`kAMJ5uXo_RnBLFn2scds_`\)](#2024-02-03z-kamj5uxo_rnblfn2scds_)
 - [2024-02-03Z \(`cUT12v7YWT4wI-mCJ_MrR`\)](#2024-02-03z-cut12v7ywt4wi-mcj_mrr)
@@ -66,6 +67,64 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-06Z (`oTgm15z1w361g3mBl796W`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - A few chunk IDs churned
+  - Some minor tweaks to the code (including `prefers-color-scheme: dark`)
+- App release version (Git SHA?): `32c032cec13c3fed67b1fb63aa81557ecb3ce8d0`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Chunk IDs Changed:
+  - `4685` -> `987`
+  - `398` -> `4685`
+- `unpacked/_next/static/chunks/987.js`
+  - Was renamed from `unpacked/_next/static/chunks/4685.js` and basically unchanged
+- `unpacked/_next/static/chunks/4685.js`
+  - Was renamed from `unpacked/_next/static/chunks/398.js` and basically unchanged(?)
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```diff
+    - if (0 === eu.length && null != eo.commonAncestorContainer)
+    + if (
+    +   0 === eu.length &&
+    +   null != eo.commonAncestorContainer &&
+    +   eo.commonAncestorContainer instanceof HTMLElement
+    + )
+    ```
+  - ```js
+    function ey() {
+      return ed("(prefers-color-scheme: dark)");
+    }
+    ```
+  - ```diff
+    - "./_parts/human-verified/pt-PT.json": [84685, 4685],
+    + "./_parts/human-verified/pt-PT.json": [84685, 987],
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-64a0da3d68e732cd.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-af471444c3e93988.js
+https://cdn.oaistatic.com/_next/static/oTgm15z1w361g3mBl796W/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/oTgm15z1w361g3mBl796W/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-af471444c3e93988.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/987.2e980d7b78929481.js
+https://cdn.oaistatic.com/_next/static/chunks/4663.05c150cd11bd3bf1.js
+https://cdn.oaistatic.com/_next/static/chunks/4685.140d3e7e712ccf43.js
+```
 
 ## 2024-02-06Z (`8eNlznjVNElT8wapWdDOE`)
 
