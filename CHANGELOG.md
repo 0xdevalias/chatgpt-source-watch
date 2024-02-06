@@ -132,6 +132,10 @@ https://cdn.oaistatic.com/_next/static/chunks/4685.140d3e7e712ccf43.js
 
 The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
 
+- **tl;dr**
+  - New: 'Experimentation DevTools' ('Feature Gates', 'Experimental Gates')
+  - TODO: summarise the rest of the changes here
+  - **Twitter thread:** https://twitter.com/_devalias/status/1754668960002580822
 - App release version (Git SHA?): `59a67dcb4bc0938277cf0b9cc52f0742e1a4c54a`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - New Chunks:
@@ -194,8 +198,8 @@ The following notes are not necessarily comprehensive, but just things of potent
   - New chunk (1687 lines total)
   - New `svg` images of:
     - a 'down pointing chevron'
-    - a cliboard with a tick
-    - a cliboard with a left pointing arrow
+    - a clipboard with a tick
+    - a clipboard with a left pointing arrow
   - A whole bunch of new `JVR.*` components related to `JVR.JsonView`:
     - ```js
       c.displayName = "JVR.DispatchShowTools";
@@ -272,6 +276,9 @@ The following notes are not necessarily comprehensive, but just things of potent
       ag.displayName = "JVR.Copied";
       (aV.displayName = "JVR.JsonView");
       ```
+    - This appears to be the following lib:
+      - https://github.com/uiwjs/react-json-view
+        - > A React component for displaying and editing javascript arrays and JSON objects.
 - `unpacked/_next/static/chunks/4663.js`
   - New chunk (32 lines total)
   - ```js
