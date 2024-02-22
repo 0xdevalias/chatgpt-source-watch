@@ -79,6 +79,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 - **tl;dr**
   - This is the first full build that has been archived in a while. As such, a bunch of the changes attributed to this build may have occurred in older builds.
   - TODO: This is only partially analysed, and somewhat messy.. can definitely be cleaned up and improved further from here..
+  - **Twitter thread:** https://twitter.com/_devalias/status/1760637135911338067
 - App release version (Git SHA?): `22c29151b7611e103642a8d59273ba76b50b392b`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - New Chunks:
