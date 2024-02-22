@@ -6,13 +6,13 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return x;
-          },
-          default: function () {
             return h;
           },
+          default: function () {
+            return p;
+          },
         });
-      var r = n(94734),
+      var r = n(78076),
         i = n(29124),
         o = n.n(i),
         s = {
@@ -82,22 +82,23 @@
           ],
         });
       }
-      var a = n(61305),
-        A = n(7144),
-        l = n(12374),
-        d = n(98083),
-        f = n(99893),
-        g = n(70079),
-        m = n(56276),
-        x = !0;
-      function h(e) {
+      var A = n(61305),
+        a = n(66319),
+        l = n(7144),
+        d = n(1890),
+        f = n(1755),
+        g = n(99893),
+        m = n(70079),
+        x = n(56276),
+        h = !0;
+      function p(e) {
         var t,
           n = "store_anon" === e.kind,
-          i = null === (t = (0, A.t)()) || void 0 === t ? void 0 : t.planType;
-        return ((0, g.useEffect)(
+          i = null === (t = (0, l.t)()) || void 0 === t ? void 0 : t.planType;
+        return ((0, m.useEffect)(
           function () {
             (i || n) &&
-              d.A.logEvent(f.M.pageView, {
+              f.A.logEvent(g.M.pageView, {
                 page: "gpts/discovery",
                 isAnon: n,
                 referrer: e.referrer,
@@ -111,26 +112,20 @@
               className: "relative h-full w-full flex-1 flex-col overflow-auto",
               children: [(0, c.jsx)(u, {}), (0, c.jsx)(r.fN, { anon: !0 })],
             })
-          : (0, c.jsx)(p, {});
+          : (0, c.jsx)(j, {});
       }
-      function p() {
-        var e = (0, A.hz)();
+      function j() {
+        var e = (0, l.hz)();
         return null == e
           ? null
-          : null != e && e.includes(l.L0.GizmoStore)
+          : null != e && e.includes(d.L0.GizmoStore)
             ? (0, c.jsxs)(c.Fragment, {
                 children: [
-                  (0, c.jsx)(o(), {
-                    children: (0, c.jsx)("meta", {
-                      name: "viewport",
-                      content:
-                        "width=device-width, initial-scale=1, maximum-scale=1",
-                    }),
-                  }),
-                  (0, c.jsx)(a.Z, { children: (0, c.jsx)(r.fN, {}) }),
+                  (0, c.jsx)(a.r, {}),
+                  (0, c.jsx)(A.Z, { children: (0, c.jsx)(r.fN, {}) }),
                 ],
               })
-            : (0, c.jsx)(m.default, {});
+            : (0, c.jsx)(x.default, {});
       }
     },
     56276: function (e, t, n) {
@@ -146,17 +141,17 @@
         });
       var r = n(36112),
         i = n(7144),
-        o = n(12374),
+        o = n(1890),
         s = n(83380),
         c = n(10721),
         u = n(70079),
-        a = n(32004),
-        A = n(94968),
+        A = n(32004),
+        a = n(94968),
         l = n(91559),
         d = n(63866),
         f = n(56685),
         g = n(37097),
-        m = n(94734),
+        m = n(78076),
         x = n(35250);
       function h(e, t) {
         var n = Object.keys(e);
@@ -176,7 +171,7 @@
           n = (0, c.useRouter)(),
           r = (0, g.Yp)(),
           u = r.data,
-          a = r.isLoading;
+          A = r.isLoading;
         if (
           ((0, s.yx)({
             resetThreadAction: function () {
@@ -186,7 +181,7 @@
           null == t)
         )
           return null;
-        var A =
+        var a =
           null !==
             (e =
               null == u
@@ -203,13 +198,13 @@
             : [];
         return (
           t.features.includes(o.L0.GizmoStore) &&
-            (A = A.filter(function (e) {
+            (a = a.filter(function (e) {
               return "mine" === e.cutId;
             })),
-          A.some(function (e) {
+          a.some(function (e) {
             return "mine" === e.cutId;
           }) ||
-            A.unshift({
+            a.unshift({
               cutId: "mine",
               title: "My GPTs",
               items: [],
@@ -217,12 +212,12 @@
             }),
           (0, x.jsx)("div", {
             className: "mx-auto max-w-3xl px-4 py-12",
-            children: a
+            children: A
               ? (0, x.jsx)("div", {
                   className: "flex justify-center",
                   children: (0, x.jsx)(d.Z, {}),
                 })
-              : A.map(function (e) {
+              : a.map(function (e) {
                   return (0, x.jsx)(
                     j,
                     {
@@ -278,11 +273,11 @@
           o = (0, u.useState)(i),
           s = o[0],
           c = o[1],
-          A = (0, g.Fi)({ cutId: t, limit: 8, cursor: n, enabled: s }),
-          d = A.data,
-          m = A.hasNextPage,
-          p = A.fetchNextPage,
-          j = A.isLoading;
+          a = (0, g.Fi)({ cutId: t, limit: 8, cursor: n, enabled: s }),
+          d = a.data,
+          m = a.hasNextPage,
+          p = a.fetchNextPage,
+          j = a.isLoading;
         return (0, x.jsxs)("div", {
           children: [
             (0, x.jsx)("div", {
@@ -309,7 +304,7 @@
                   loading: j,
                   className: "w-full",
                   children: (0, x.jsx)(
-                    a.Z,
+                    A.Z,
                     (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {};
@@ -331,21 +326,21 @@
                               });
                       }
                       return e;
-                    })({}, w.discoveryLoadMore)
+                    })({}, y.discoveryLoadMore)
                   ),
                 })
               : null,
           ],
         });
       }
-      var w = (0, A.vU)({
+      var y = (0, a.vU)({
           discoveryLoadMore: {
             id: "gizmo.mygpts.loadMore",
             defaultMessage: "Load more",
           },
         }),
-        y = n(3359),
-        b = n(12275);
+        w = n(3359),
+        b = n(31564);
       function P(e) {
         var t = e.children,
           n = (0, i.t)();
@@ -357,7 +352,7 @@
                   t,
                   (0, x.jsx)("div", {
                     className: "fixed bottom-3 right-3",
-                    children: (0, x.jsx)(y.Z, {}),
+                    children: (0, x.jsx)(w.Z, {}),
                   }),
                 ],
               })
@@ -399,7 +394,7 @@
       "use strict";
       n.d(t, {
         Z: function () {
-          return A;
+          return a;
         },
       });
       var r = n(49516),
@@ -408,22 +403,22 @@
         s = n(10721),
         c = n(8024),
         u = n(10318),
-        a = n(35250);
-      function A(e) {
+        A = n(35250);
+      function a(e) {
         var t = e.children,
           n = (0, s.useRouter)();
-        return (0, a.jsx)(o.Z, {
+        return (0, A.jsx)(o.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, a.jsxs)(i.ZP, {
+          sidebar: (0, A.jsxs)(i.ZP, {
             onNewThread: function () {
               n.push("/");
             },
             children: [
-              (0, a.jsx)(u.Dy, {}),
-              (0, a.jsx)(r.Z, { activeId: void 0 }),
+              (0, A.jsx)(u.Dy, {}),
+              (0, A.jsx)(r.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, a.jsx)(c.Z, { children: t }),
+          children: (0, A.jsx)(c.Z, { children: t }),
         });
       }
     },
@@ -443,4 +438,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-f218063f1aa72d2c.js.map
+//# sourceMappingURL=gpts-2c9ed3f17744c8c4.js.map

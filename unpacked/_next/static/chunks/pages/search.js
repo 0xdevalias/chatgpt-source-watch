@@ -30,15 +30,13 @@
       }
       var f = o()(
           function () {
-            return Promise.all([t.e(8682), t.e(2922), t.e(9118)]).then(
-              t.bind(t, 37705)
-            );
+            return Promise.all([t.e(8682), t.e(1393)]).then(t.bind(t, 38768));
           },
           {
             ssr: !1,
             loadableGenerated: {
               webpack: function () {
-                return [37705];
+                return [38768];
               },
             },
           }
@@ -88,4 +86,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-f969bf847681b2ce.js.map
+//# sourceMappingURL=search-4d8f743c06f21895.js.map

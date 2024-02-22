@@ -18,7 +18,7 @@
         a = s(90166),
         l = s(14972),
         o = s(67558),
-        d = s(45754),
+        d = s(95412),
         c = s(7144),
         u = s(82473),
         p = s(25494),
@@ -29,8 +29,8 @@
         w = s(70671),
         b = s(94968),
         x = s(33562),
-        m = s(76036),
-        y = s(4748),
+        y = s(38126),
+        m = s(4748),
         v = s(81942),
         T = s(91676),
         k = s(35250);
@@ -78,7 +78,7 @@
           r = void 0 !== n && n,
           l = e.className;
         return (0, k.jsx)(a.E, {
-          label: (0, k.jsx)(O.Z, S({}, C.enterpriseRequiredMessage)),
+          label: (0, k.jsx)(O.Z, S({}, E.enterpriseRequiredMessage)),
           side: "top",
           sideOffset: 4,
           disabled: !r,
@@ -98,7 +98,7 @@
                     (0, k.jsx)("span", {
                       className:
                         "rounded-xl bg-token-main-surface-tertiary px-2 pb-0.5 text-sm",
-                      children: (0, k.jsx)(O.Z, S({}, C.enterpriseUpsellPill)),
+                      children: (0, k.jsx)(O.Z, S({}, E.enterpriseUpsellPill)),
                     }),
                 ],
               }),
@@ -126,13 +126,13 @@
             mutationFn: function (e) {
               var t = e.setting,
                 i = e.value;
-              return d.ZP.setWorkspaceShareSetting(s, t, i);
+              return d.Z.setWorkspaceShareSetting(s, t, i);
             },
             onSettled: function () {
               c.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              y.m.danger(o.formatMessage(C.featureSettingsUpdateFailed));
+              m.m.danger(o.formatMessage(E.featureSettingsUpdateFailed));
             },
           }),
           f = g.variables,
@@ -190,13 +190,13 @@
           o = (0, p.D)({
             mutationFn: function (e) {
               var t = e.value;
-              return d.ZP.setWorkspaceThirdPartyGPTSetting(s, t);
+              return d.Z.setWorkspaceThirdPartyGPTSetting(s, t);
             },
             onSettled: function () {
               l.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              y.m.danger(a.formatMessage(C.featureSettingsUpdateFailed));
+              m.m.danger(a.formatMessage(E.featureSettingsUpdateFailed));
             },
           }),
           c = o.variables,
@@ -219,7 +219,7 @@
                   (0, k.jsx)(x.Z.Item, {
                     className: "text-base",
                     value: r.NN.ALLOW_ALL,
-                    children: (0, k.jsx)(O.Z, S({}, C.allowAllOption)),
+                    children: (0, k.jsx)(O.Z, S({}, E.allowAllOption)),
                   }),
                   !(void 0 !== n && n) &&
                     (0, k.jsx)(x.Z.Item, {
@@ -227,13 +227,13 @@
                       value: r.NN.ALLOW_SPECIFIC,
                       children: (0, k.jsx)(
                         O.Z,
-                        S({}, C.ownerApprovedOnlyOption)
+                        S({}, E.ownerApprovedOnlyOption)
                       ),
                     }),
                   (0, k.jsx)(x.Z.Item, {
                     className: "text-base",
                     value: r.NN.ALLOW_NONE,
-                    children: (0, k.jsx)(O.Z, S({}, C.dontAllowOption)),
+                    children: (0, k.jsx)(O.Z, S({}, E.dontAllowOption)),
                   }),
                 ],
               }),
@@ -255,13 +255,13 @@
             mutationFn: function (e) {
               var t = e.feature,
                 i = e.enabled;
-              return d.ZP.setWorkspaceBetaFeature(s, t, i);
+              return d.Z.setWorkspaceBetaFeature(s, t, i);
             },
             onSettled: function () {
               g.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: function () {
-              y.m.danger(c.formatMessage(C.featureSettingsUpdateFailed));
+              m.m.danger(c.formatMessage(E.featureSettingsUpdateFailed));
             },
           }),
           h = f.variables,
@@ -269,7 +269,7 @@
         return (0, k.jsxs)(v.vi, {
           className: "justify-start py-6",
           children: [
-            (0, k.jsx)(m.oC, {
+            (0, k.jsx)(y.wy, {
               label: "",
               disabled: void 0 !== o && o,
               enabled:
@@ -305,8 +305,8 @@
         if (null == i) return null;
         var n = i.isTeam(),
           a = (0, k.jsx)(Z, {
-            title: C.thirdPartyGPTsTitle,
-            description: C.thirdPartyGPTsDescription,
+            title: E.thirdPartyGPTsTitle,
+            description: E.thirdPartyGPTsDescription,
             className: "border-b border-token-border-light pb-4",
             children: (0, k.jsx)("div", {
               children: (0, k.jsx)(M, {
@@ -317,7 +317,7 @@
             }),
           }),
           l = (0, k.jsx)(Z, {
-            title: C.sidebarTitle,
+            title: E.sidebarTitle,
             children: (0, k.jsx)(T.Z, {
               account: i,
               showThirdParty:
@@ -331,54 +331,54 @@
             n && i.isOwnerOfAccount() && l,
             n && (0, k.jsx)(v.W8, {}),
             (0, k.jsx)(Z, {
-              title: C.sharingSettingsTitle,
+              title: E.sharingSettingsTitle,
               upsellEnterprise: n,
               children: (0, k.jsx)(v.qQ, {
                 children: (0, k.jsx)(N, {
                   workspaceId: t,
-                  label: C.gptSharingTitle,
+                  label: E.gptSharingTitle,
                   disabled: n,
                   setting: r.bb.GPT_SHARE_SETTINGS,
                   defaultValue: s.share_settings.gpt_share_setting,
                   values: [
-                    { display: C.anyOneSelect, value: r.Gz.ANYONE },
+                    { display: E.anyOneSelect, value: r.Gz.ANYONE },
                     {
-                      display: C.workspaceMembersOnlySelect,
+                      display: E.workspaceMembersOnlySelect,
                       value: r.Gz.WORKSPACE_ONLY,
                     },
-                    { display: C.noOneSelect, value: r.Gz.NO_ONE },
+                    { display: E.noOneSelect, value: r.Gz.NO_ONE },
                   ],
                 }),
               }),
             }),
             (0, k.jsx)(Z, {
-              title: C.workspaceGPTsTitle,
-              description: C.workspaceGPTsDescription,
+              title: E.workspaceGPTsTitle,
+              description: E.workspaceGPTsDescription,
               upsellEnterprise: n,
               children: (0, k.jsxs)(v.qQ, {
                 children: [
                   (0, k.jsx)(_, {
-                    label: C.browseOptionTitle,
+                    label: E.browseOptionTitle,
                     feature: r.Nh.BROWSING,
                     value: s.beta_settings.browsing,
                     workspaceId: t,
-                    tooltip: C.browseTooltip,
+                    tooltip: E.browseTooltip,
                     disabled: n,
                   }),
                   (0, k.jsx)(_, {
-                    label: C.customActionsOptionTitle,
+                    label: E.customActionsOptionTitle,
                     feature: r.Nh.WORKSPACE_GPT_CUSTOM_ACTIONS,
                     value: s.beta_settings.workspace_gpt_custom_actions,
                     workspaceId: t,
-                    tooltip: C.customActionsTooltip,
+                    tooltip: E.customActionsTooltip,
                     disabled: n,
                   }),
                   (0, k.jsx)(_, {
-                    label: C.pluginsOptionTitle,
+                    label: E.pluginsOptionTitle,
                     feature: r.Nh.PLUGINS,
                     value: s.beta_settings.plugins,
                     workspaceId: t,
-                    tooltip: C.pluginsTooltip,
+                    tooltip: E.pluginsTooltip,
                     disabled: n,
                   }),
                 ],
@@ -399,10 +399,10 @@
           children: [
             (0, k.jsx)(h(), {
               children: (0, k.jsx)("title", {
-                children: a.formatMessage(C.sidebarTitle),
+                children: a.formatMessage(E.sidebarTitle),
               }),
             }),
-            (0, k.jsx)(n.yG, { title: a.formatMessage(C.sidebarTitle) }),
+            (0, k.jsx)(n.yG, { title: a.formatMessage(E.sidebarTitle) }),
             (0, k.jsx)(n.hb, {
               showSpinner: r,
               children:
@@ -413,7 +413,7 @@
           ],
         });
       }
-      var C = (0, b.vU)({
+      var E = (0, b.vU)({
         sidebarTitle: {
           id: "workspaceSettingsOld.sidebarTitle",
           defaultMessage: "GPTs",
@@ -562,7 +562,7 @@
           defaultMessage: "Public",
         },
       });
-      function E(e, t) {
+      function C(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -582,7 +582,7 @@
             for (var t = 1; t < arguments.length; t++) {
               var s = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? E(Object(s), !0).forEach(function (t) {
+                ? C(Object(s), !0).forEach(function (t) {
                     (0, i.Z)(e, t, s[t]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -590,7 +590,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(s)
                     )
-                  : E(Object(s)).forEach(function (t) {
+                  : C(Object(s)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -605,7 +605,7 @@
       D.getLayout = function (e) {
         return (0, k.jsx)(n.ZP, {
           mobilePageTitle: "GPTs",
-          requireAdminPrivileges: !0,
+          requireOwnerPrivileges: !0,
           children: e,
         });
       };
@@ -623,7 +623,7 @@
           return b;
         },
         W8: function () {
-          return m;
+          return y;
         },
         i$: function () {
           return h;
@@ -663,14 +663,11 @@
             ]))
         ),
         w = p.Z.div(
-          l ||
-            (l = (0, u.Z)([
-              "max-w-xl flex flex-col gap-3 w-full m-auto md:m-0",
-            ]))
+          l || (l = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
         b = p.Z.div(o || (o = (0, u.Z)(["text-sm"]))),
         x = p.Z.div(d || (d = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
-        m = p.Z.hr(c || (c = (0, u.Z)(["max-w-xl border-token-border-light"])));
+        y = p.Z.hr(c || (c = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
     92074: function (e, t, s) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
@@ -688,4 +685,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-44c7d770af897d9c.js.map
+//# sourceMappingURL=gpts-0d03f8591be64905.js.map

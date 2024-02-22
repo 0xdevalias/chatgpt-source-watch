@@ -17,7 +17,7 @@
         c = t.n(u),
         i = t(75129),
         s = t(63866),
-        a = t(45754),
+        a = t(95412),
         f = t(88654),
         o = t(10721),
         l = t(70079),
@@ -41,7 +41,7 @@
                               return (
                                 (n.prev = 0),
                                 (n.next = 3),
-                                a.ZP.getCheckoutLink()
+                                a.Z.getCheckoutLink()
                               );
                             case 3:
                               (t = n.sent), e.replace(t.url), (n.next = 13);
@@ -100,4 +100,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=accepted-4c8bd0bf70514c24.js.map
+//# sourceMappingURL=accepted-5050e9452b9743cb.js.map

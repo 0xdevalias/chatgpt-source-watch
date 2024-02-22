@@ -23,7 +23,7 @@
         d = s(50134),
         g = s(4399),
         p = s.n(g),
-        y = s(45754),
+        y = s(95412),
         f = s(61236),
         m = s(65998),
         b = s(77997),
@@ -34,8 +34,8 @@
         k = s(70671),
         w = s(32004),
         O = s(94968),
-        P = s(21389),
-        L = s(35250);
+        L = s(21389),
+        P = s(35250);
       function _(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -81,7 +81,7 @@
                     return (
                       (s = (0, c.Z)(t.queryKey, 2))[0],
                       (r = s[1].workspaceId),
-                      e.abrupt("return", y.ZP.getWorkspaceAnalytics(r))
+                      e.abrupt("return", y.Z.getWorkspaceAnalytics(r))
                     );
                   case 2:
                   case "end":
@@ -163,23 +163,23 @@
               },
             ],
           };
-        return (0, L.jsx)("div", {
+        return (0, P.jsx)("div", {
           className:
             "flex h-full w-full items-center justify-center bg-token-main-surface-secondary p-4",
-          children: (0, L.jsx)(v.$Q, { options: i, data: o, height: 192 }),
+          children: (0, P.jsx)(v.$Q, { options: i, data: o, height: 192 }),
         });
       }
       function D(e) {
         var t = e.label,
           s = e.value;
-        return (0, L.jsxs)("div", {
+        return (0, P.jsxs)("div", {
           className: "w-1/3 rounded bg-token-main-surface-secondary px-4 py-2",
           children: [
-            (0, L.jsx)("label", {
+            (0, P.jsx)("label", {
               className: "text-sm text-token-text-secondary",
               children: t,
             }),
-            (0, L.jsx)("div", {
+            (0, P.jsx)("div", {
               className: "text-xl font-medium text-token-text-primary",
               children: s,
             }),
@@ -190,45 +190,45 @@
         var t = e.data,
           s = (0, k.Z)(),
           r = t.weekly_data[t.weekly_data.length - 2];
-        return (0, L.jsxs)("div", {
+        return (0, P.jsxs)("div", {
           className: "mt-10",
           children: [
-            (0, L.jsx)("div", {
+            (0, P.jsx)("div", {
               className: "mb-2 font-medium text-token-text-primary",
-              children: (0, L.jsx)(w.Z, M({}, E.totals)),
+              children: (0, P.jsx)(w.Z, M({}, E.totals)),
             }),
-            (0, L.jsxs)("div", {
+            (0, P.jsxs)("div", {
               className: "mb-16 flex gap-4",
               children: [
-                (0, L.jsx)(D, {
+                (0, P.jsx)(D, {
                   label: s.formatMessage(E.usersLabel),
                   value: t.total_users,
                 }),
-                (0, L.jsx)(D, {
+                (0, P.jsx)(D, {
                   label: s.formatMessage(E.conversationsLabel),
                   value: t.total_conversations,
                 }),
-                (0, L.jsx)(D, {
+                (0, P.jsx)(D, {
                   label: s.formatMessage(E.messagesLabel),
                   value: t.total_messages,
                 }),
               ],
             }),
-            (0, L.jsxs)(W, {
+            (0, P.jsxs)(W, {
               children: [
-                (0, L.jsx)("div", {
+                (0, P.jsx)("div", {
                   className: "flex flex-col justify-between p-4",
-                  children: (0, L.jsxs)("div", {
+                  children: (0, P.jsxs)("div", {
                     children: [
-                      (0, L.jsx)(U, {
-                        children: (0, L.jsx)(w.Z, M({}, E.usageTitle)),
+                      (0, P.jsx)(U, {
+                        children: (0, P.jsx)(w.Z, M({}, E.usageTitle)),
                       }),
                       null != r &&
-                        (0, L.jsxs)("div", {
+                        (0, P.jsxs)("div", {
                           children: [
-                            (0, L.jsx)(T, { children: r.message_count }),
-                            (0, L.jsx)(S, {
-                              children: (0, L.jsx)(
+                            (0, P.jsx)(T, { children: r.message_count }),
+                            (0, P.jsx)(S, {
+                              children: (0, P.jsx)(
                                 w.Z,
                                 M({}, E.messagesLastWeek)
                               ),
@@ -238,8 +238,8 @@
                     ],
                   }),
                 }),
-                (0, L.jsx)("div", {
-                  children: (0, L.jsx)(C, {
+                (0, P.jsx)("div", {
+                  children: (0, P.jsx)(C, {
                     data: t,
                     label: s.formatMessage(E.messagesChartLabel),
                     getWeekValue: function (e) {
@@ -249,10 +249,10 @@
                 }),
               ],
             }),
-            (0, L.jsxs)(W, {
+            (0, P.jsxs)(W, {
               children: [
-                (0, L.jsx)("div", {
-                  children: (0, L.jsx)(C, {
+                (0, P.jsx)("div", {
+                  children: (0, P.jsx)(C, {
                     data: t,
                     label: s.formatMessage(E.activeUsersChartLabel),
                     getWeekValue: function (e) {
@@ -260,19 +260,19 @@
                     },
                   }),
                 }),
-                (0, L.jsx)("div", {
+                (0, P.jsx)("div", {
                   className: "flex grow flex-col justify-between p-4",
-                  children: (0, L.jsxs)("div", {
+                  children: (0, P.jsxs)("div", {
                     children: [
-                      (0, L.jsx)(U, {
-                        children: (0, L.jsx)(w.Z, M({}, E.weeklyUsersTitle)),
+                      (0, P.jsx)(U, {
+                        children: (0, P.jsx)(w.Z, M({}, E.weeklyUsersTitle)),
                       }),
                       null != r &&
-                        (0, L.jsxs)("div", {
+                        (0, P.jsxs)("div", {
                           children: [
-                            (0, L.jsx)(T, { children: r.active_users_count }),
-                            (0, L.jsx)(S, {
-                              children: (0, L.jsx)(
+                            (0, P.jsx)(T, { children: r.active_users_count }),
+                            (0, P.jsx)(S, {
+                              children: (0, P.jsx)(
                                 w.Z,
                                 M({}, E.activeUsersLastWeek)
                               ),
@@ -288,15 +288,15 @@
         });
       }
       m.kL.register(m.uw, m.f$, m.od, m.ZL, m.Dx, m.u, m.De);
-      var W = P.Z.div(
+      var W = L.Z.div(
           r ||
             (r = (0, u.Z)([
               "mb-12 grid grid-cols-1 rounded-lg overflow-hidden border border-token-border-light sm:grid-cols-2",
             ]))
         ),
-        U = P.Z.div(a || (a = (0, u.Z)(["font-medium"]))),
-        T = P.Z.div(n || (n = (0, u.Z)(["font-medium text-3xl"]))),
-        S = P.Z.div(i || (i = (0, u.Z)(["text-sm text-token-text-tertiary"])));
+        U = L.Z.div(a || (a = (0, u.Z)(["font-medium"]))),
+        T = L.Z.div(n || (n = (0, u.Z)(["font-medium text-3xl"]))),
+        S = L.Z.div(i || (i = (0, u.Z)(["text-sm text-token-text-tertiary"])));
       function V(e) {
         var t = e.currentWorkspaceId,
           s = (0, k.Z)(),
@@ -306,20 +306,20 @@
           }),
           a = r.data,
           n = r.isLoading;
-        return (0, L.jsxs)(L.Fragment, {
+        return (0, P.jsxs)(P.Fragment, {
           children: [
-            (0, L.jsx)(h(), {
-              children: (0, L.jsx)("title", {
+            (0, P.jsx)(h(), {
+              children: (0, P.jsx)("title", {
                 children: s.formatMessage(E.title),
               }),
             }),
-            (0, L.jsx)(o.yG, {
+            (0, P.jsx)(o.yG, {
               title: s.formatMessage(E.title),
               subtitle: s.formatMessage(E.pageDescription),
             }),
-            (0, L.jsx)(o.hb, {
+            (0, P.jsx)(o.hb, {
               showSpinner: n,
-              children: void 0 !== a ? (0, L.jsx)(N, { data: a }) : null,
+              children: void 0 !== a ? (0, P.jsx)(N, { data: a }) : null,
             }),
           ],
         });
@@ -398,7 +398,7 @@
       }
       var F = !0;
       function I(e) {
-        return (0, L.jsx)(
+        return (0, P.jsx)(
           V,
           (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -425,7 +425,7 @@
         );
       }
       I.getLayout = function (e) {
-        return (0, L.jsx)(o.ZP, {
+        return (0, P.jsx)(o.ZP, {
           mobilePageTitle: "Analytics",
           requireAdminPrivileges: !0,
           children: e,
@@ -448,4 +448,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=analytics-17f5b583d003c529.js.map
+//# sourceMappingURL=analytics-a328f77b31a63709.js.map

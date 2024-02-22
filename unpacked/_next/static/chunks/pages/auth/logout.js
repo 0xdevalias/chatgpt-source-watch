@@ -1,146 +1,115 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7825],
   {
-    99959: function (e, t, r) {
+    8995: function (t, r, n) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      n.r(r),
+        n.d(r, {
           __N_SSP: function () {
-            return O;
-          },
-          default: function () {
             return b;
           },
+          default: function () {
+            return w;
+          },
         });
-      var n = r(50134),
-        c = r(36112),
-        o = r(4399),
-        u = r.n(o),
-        i = r(40318),
-        s = r(70079),
-        a = r(98083),
-        f = r(29887),
-        l = r(35250);
-      function p(e, t) {
-        var r = Object.keys(e);
+      var e,
+        o = n(36112),
+        c = n(50134),
+        u = n(4399),
+        i = n.n(u),
+        f = n(40318),
+        s = n(26565),
+        a = n(70079),
+        l = n(35250);
+      function p(t, r) {
+        var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          t &&
-            (n = n.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+          var e = Object.getOwnPropertySymbols(t);
+          r &&
+            (e = e.filter(function (r) {
+              return Object.getOwnPropertyDescriptor(t, r).enumerable;
             })),
-            r.push.apply(r, n);
+            n.push.apply(n, e);
         }
-        return r;
+        return n;
       }
-      var O = !0;
-      function b(e) {
+      var O =
+          ((e = (0, c.Z)(
+            i().mark(function t(r) {
+              return i().wrap(function (t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return (t.next = 2), (0, s.signOut)({ callbackUrl: r });
+                    case 2:
+                      (0, f.I)();
+                    case 3:
+                    case "end":
+                      return t.stop();
+                  }
+              }, t);
+            })
+          )),
+          function (t) {
+            return e.apply(this, arguments);
+          }),
+        b = !0;
+      function w(t) {
         return (0, l.jsx)(
-          w,
-          (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var r = null != arguments[t] ? arguments[t] : {};
-              t % 2
-                ? p(Object(r), !0).forEach(function (t) {
-                    (0, c.Z)(e, t, r[t]);
+          _,
+          (function (t) {
+            for (var r = 1; r < arguments.length; r++) {
+              var n = null != arguments[r] ? arguments[r] : {};
+              r % 2
+                ? p(Object(n), !0).forEach(function (r) {
+                    (0, o.Z)(t, r, n[r]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
-                      e,
-                      Object.getOwnPropertyDescriptors(r)
+                      t,
+                      Object.getOwnPropertyDescriptors(n)
                     )
-                  : p(Object(r)).forEach(function (t) {
+                  : p(Object(n)).forEach(function (r) {
                       Object.defineProperty(
-                        e,
                         t,
-                        Object.getOwnPropertyDescriptor(r, t)
+                        r,
+                        Object.getOwnPropertyDescriptor(n, r)
                       );
                     });
             }
-            return e;
-          })({}, e)
+            return t;
+          })({}, t)
         );
       }
-      function w(e) {
-        var t,
-          r,
-          c = e.federatedLogoutUri,
-          o =
-            ((t = (0, n.Z)(
-              u().mark(function e() {
-                return u().wrap(
-                  function (e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.prev = 0), (e.next = 3), a.A.reset();
-                        case 3:
-                          e.next = 8;
-                          break;
-                        case 5:
-                          (e.prev = 5),
-                            (e.t0 = e.catch(0)),
-                            console.error(
-                              "Failed to reset ProductEventLogger on logout",
-                              e.t0
-                            );
-                        case 8:
-                          return (
-                            (e.prev = 8),
-                            (e.next = 11),
-                            (0, f.signOut)({
-                              callbackUrl:
-                                null != c ? c : window.location.origin,
-                            })
-                          );
-                        case 11:
-                          e.next = 16;
-                          break;
-                        case 13:
-                          (e.prev = 13),
-                            (e.t1 = e.catch(8)),
-                            console.error("Next auth signout failed", e.t1);
-                        case 16:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  null,
-                  [
-                    [0, 5],
-                    [8, 13],
-                  ]
-                );
-              })
-            )),
-            (r = (0, s.useRef)(!1)),
-            function () {
-              r.current || (t(), (r.current = !0));
-            });
+      function _(t) {
+        var r = t.federatedLogoutUri;
         return (
-          (0, s.useEffect)(o, [o]),
-          (0, s.useEffect)(function () {
-            (0, i.I)();
-          }, []),
+          (0, a.useEffect)(
+            function () {
+              O(null != r ? r : window.location.origin).catch(function (t) {
+                return console.error("Failed to logout", { error: t });
+              });
+            },
+            [r]
+          ),
           null
         );
       }
     },
-    3499: function (e, t, r) {
+    3499: function (t, r, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/logout",
         function () {
-          return r(99959);
+          return n(8995);
         },
       ]);
     },
   },
-  function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 3499));
+  function (t) {
+    t.O(0, [9774, 2888, 179], function () {
+      return t((t.s = 3499));
     }),
-      (_N_E = e.O());
+      (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=logout-296a1f68f894060a.js.map
+//# sourceMappingURL=logout-68394f2869368842.js.map

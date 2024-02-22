@@ -6,10 +6,10 @@
       a.r(r),
         a.d(r, {
           __N_SSP: function () {
-            return Q;
+            return ee;
           },
           default: function () {
-            return ee;
+            return er;
           },
         });
       var t,
@@ -18,39 +18,40 @@
         i = a(36112),
         s = a(4399),
         o = a.n(s),
-        d = a(45754),
+        d = a(95412),
         c = a(7144),
         u = a(73582),
         f = a(61236),
         x = a(25494),
-        m = a(98083),
+        m = a(1755),
         h = a(99893),
-        p = a(13521),
-        g = a(14765),
-        v = a(19841),
-        j = a(97296),
-        y = a(29887),
-        _ = a(77997),
-        b = a(73040),
-        w = a.n(b),
-        I = a(10721),
-        N = a(70079),
-        k = a(1454),
-        C = a(70671),
+        p = a(26822),
+        g = a(13521),
+        v = a(14765),
+        j = a(19841),
+        y = a(83737),
+        _ = a(26565),
+        b = a(77997),
+        w = a(73040),
+        I = a.n(w),
+        N = a(10721),
+        k = a(70079),
+        C = a(1454),
+        M = a(70671),
         P = a(32004),
-        M = a(94968),
-        O = a(21389),
-        R = a(63754),
+        O = a(94968),
+        R = a(21389),
+        D = a(63754),
         E = a(12457),
-        D = a(91559),
-        S = a(14972),
-        U = a(62906),
-        T = a(92804),
-        Z = a(90955),
-        L = a(63866),
-        F = a(4748),
-        A = a(35250);
-      function H(e, r) {
+        S = a(91559),
+        U = a(14972),
+        T = a(62906),
+        Z = a(92804),
+        L = a(90955),
+        F = a(63866),
+        A = a(4748),
+        H = a(35250);
+      function V(e, r) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var t = Object.getOwnPropertySymbols(e);
@@ -62,16 +63,16 @@
         }
         return a;
       }
-      function V(e) {
+      function B(e) {
         for (var r = 1; r < arguments.length; r++) {
           var a = null != arguments[r] ? arguments[r] : {};
           r % 2
-            ? H(Object(a), !0).forEach(function (r) {
+            ? V(Object(a), !0).forEach(function (r) {
                 (0, i.Z)(e, r, a[r]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : H(Object(a)).forEach(function (r) {
+              : V(Object(a)).forEach(function (r) {
                   Object.defineProperty(
                     e,
                     r,
@@ -81,25 +82,25 @@
         }
         return e;
       }
-      function B() {
-        return (0, A.jsx)("div", {
+      function G() {
+        return (0, H.jsx)("div", {
           className: "absolute inset-0 flex items-center justify-center",
-          children: (0, A.jsx)(L.Z, {}),
+          children: (0, H.jsx)(F.Z, {}),
         });
       }
-      var G = function (e) {
+      var W = function (e) {
           var r = e.examples,
             a = e.referralCodeId,
             t = e.user,
             l = e.auth0Provider,
             n = e.redirectUrl,
-            i = (0, C.Z)(),
-            s = "dark" === (0, _.F)().resolvedTheme,
-            o = (0, N.useRef)(null);
+            i = (0, M.Z)(),
+            s = "dark" === (0, b.F)().resolvedTheme,
+            o = (0, k.useRef)(null);
           return (
-            (0, N.useEffect)(
+            (0, k.useEffect)(
               function () {
-                g.m9.logEvent(
+                v.m9.logEvent(
                   "chatgpt_referral_invite_loaded",
                   null != t && t.id ? "has_user" : "user_logged_out",
                   {
@@ -110,7 +111,7 @@
               },
               [a, null == t ? void 0 : t.id]
             ),
-            (0, N.useEffect)(
+            (0, k.useEffect)(
               function () {
                 return (
                   null === o.current &&
@@ -126,45 +127,45 @@
               },
               [s]
             ),
-            (0, A.jsxs)("div", {
+            (0, H.jsxs)("div", {
               className:
                 "flex min-h-full w-screen flex-col sm:supports-[min-height:100dvh]:min-h-[100dvh] md:grid md:grid-cols-2 lg:grid-cols-[60%_40%] ",
               children: [
-                (0, A.jsx)(T.O, { examples: void 0 === r ? [] : r }),
-                (0, A.jsxs)("div", {
+                (0, H.jsx)(Z.O, { examples: void 0 === r ? [] : r }),
+                (0, H.jsxs)("div", {
                   className:
                     "relative flex grow flex-col items-center justify-between bg-white px-5 py-8 text-black dark:bg-black dark:text-white sm:rounded-t-[30px] md:rounded-none md:px-6",
                   children: [
-                    (0, A.jsx)("nav", {
+                    (0, H.jsx)("nav", {
                       className:
                         "flex w-full justify-start px-6 pb-8 md:hidden md:px-6 lg:px-8",
-                      children: (0, A.jsx)("h1", {
-                        "aria-label": i.formatMessage(J.ariaLabel),
-                        children: (0, A.jsx)("div", {
+                      children: (0, H.jsx)("h1", {
+                        "aria-label": i.formatMessage(Q.ariaLabel),
+                        children: (0, H.jsx)("div", {
                           className:
                             "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
-                          children: (0, A.jsx)("div", { children: U.L }),
+                          children: (0, H.jsx)("div", { children: T.L }),
                         }),
                       }),
                     }),
-                    (0, A.jsx)(z, {
+                    (0, H.jsx)(q, {
                       user: t,
                       auth0Provider: l,
                       redirectUrl: n,
                       referralCodeId: a,
                     }),
-                    (0, A.jsxs)("div", {
+                    (0, H.jsxs)("div", {
                       className: "flex flex-col items-center justify-end",
                       children: [
-                        (0, A.jsx)("div", {
+                        (0, H.jsx)("div", {
                           className: "flex text-gray-300",
-                          children: (0, A.jsx)(S.nV, {
+                          children: (0, H.jsx)(U.nV, {
                             className: "h-[22px] w-auto",
                           }),
                         }),
-                        (0, A.jsx)("div", {
+                        (0, H.jsx)("div", {
                           className: " opacity-50",
-                          children: (0, A.jsx)(E.VL, {
+                          children: (0, H.jsx)(E.VL, {
                             isStorageComplianceEnabled: !1,
                           }),
                         }),
@@ -176,7 +177,7 @@
             })
           );
         },
-        W = function (e) {
+        z = function (e) {
           var r = e.offerDollarValue,
             a = e.user,
             t = e.isLoading,
@@ -186,55 +187,55 @@
             s = e.handleLogin,
             o = (0, u.ec)(u.F_.hasPaidSubscription);
           return null != a && a.id
-            ? (0, A.jsx)(D.z, {
+            ? (0, H.jsx)(S.z, {
                 as: "button",
                 disabled: t || o,
                 loading: t,
                 color: o ? "disabled" : "primary",
                 size: "large",
                 onClick: n,
-                className: (0, v.default)(
+                className: (0, j.default)(
                   "whitespace-nowrap text-base font-bold ",
                   { "bg-[#4046EC] hover:bg-[#6E73FC]": !o }
                 ),
                 children: o
-                  ? (0, A.jsx)(P.Z, V({}, J.alreadyPaidUserCta))
-                  : (0, A.jsx)(
+                  ? (0, H.jsx)(P.Z, B({}, Q.alreadyPaidUserCta))
+                  : (0, H.jsx)(
                       P.Z,
-                      V(
-                        V({}, J.acceptInviteCtaLoggedIn),
+                      B(
+                        B({}, Q.acceptInviteCtaLoggedIn),
                         {},
                         { values: { dollarValue: r } }
                       )
                     ),
               })
-            : (0, A.jsxs)(A.Fragment, {
+            : (0, H.jsxs)(H.Fragment, {
                 children: [
-                  (0, A.jsx)("div", {
+                  (0, H.jsx)("div", {
                     className:
                       "pb-5 text-center text-sm text-token-text-tertiary",
-                    children: (0, A.jsx)(
+                    children: (0, H.jsx)(
                       P.Z,
-                      V({}, J.claimInviteLoginOrSignUp)
+                      B({}, Q.claimInviteLoginOrSignUp)
                     ),
                   }),
-                  (0, A.jsx)("div", {
+                  (0, H.jsx)("div", {
                     className: "flex flex-col space-y-4 px-3",
-                    children: (0, A.jsxs)("div", {
+                    children: (0, H.jsxs)("div", {
                       className: "flex flex-col gap-3 sm:flex-row",
                       children: [
-                        (0, A.jsx)(D.z, {
+                        (0, H.jsx)(S.z, {
                           disabled: t,
                           loading: l,
                           className: "w-full",
                           onClick: s,
-                          children: (0, A.jsx)(P.Z, V({}, R.messages.logIn)),
+                          children: (0, H.jsx)(P.Z, B({}, D.messages.logIn)),
                         }),
-                        (0, A.jsx)(D.z, {
+                        (0, H.jsx)(S.z, {
                           onClick: i,
                           disabled: t,
                           className: "w-full",
-                          children: (0, A.jsx)(P.Z, V({}, R.messages.signUp)),
+                          children: (0, H.jsx)(P.Z, B({}, D.messages.signUp)),
                         }),
                       ],
                     }),
@@ -242,96 +243,96 @@
                 ],
               });
         };
-      function z(e) {
+      function q(e) {
         var r,
           a,
           t,
           l,
           i = e.user,
           s = e.referralCodeId,
-          v = e.redirectUrl,
-          _ = e.auth0Provider,
-          b = (0, N.useState)(!1),
-          M = b[0],
-          O = b[1],
-          R = (0, N.useState)(!1),
-          E = R[0],
-          D = R[1],
-          S = (0, N.useState)(!1),
-          U = S[0],
-          T = S[1],
-          L = (0, N.useState)(!1),
-          H = L[0],
-          B = L[1],
-          G =
+          j = e.redirectUrl,
+          b = e.auth0Provider,
+          w = (0, k.useState)(!1),
+          O = w[0],
+          R = w[1],
+          D = (0, k.useState)(!1),
+          E = D[0],
+          S = D[1],
+          U = (0, k.useState)(!1),
+          T = U[0],
+          Z = U[1],
+          F = (0, k.useState)(!1),
+          V = F[0],
+          G = F[1],
+          W =
             null !== (t = null == i ? void 0 : i.id) && void 0 !== t
               ? t
               : "_no_user",
-          z = (0, f.a)({
+          q = (0, f.a)({
             queryKey: ["referral-invite", s],
             queryFn: function () {
-              return d.ZP.getPublicReferralInvite(s);
+              return d.Z.getPublicReferralInvite(s);
             },
           }),
-          Q = z.data,
-          ee = z.isLoading,
-          er = z.isError,
-          ea = (0, C.Z)(),
-          et =
-            null == Q
+          ee = q.data,
+          er = q.isLoading,
+          ea = q.isError,
+          et = (0, M.Z)(),
+          el =
+            null == ee
               ? void 0
-              : null === (l = Q.result.invite_metadata) || void 0 === l
+              : null === (l = ee.result.invite_metadata) || void 0 === l
                 ? void 0
                 : l.invite_data,
-          el = "$".concat(null == et ? void 0 : et.referral_trial_dollar_value),
-          en = null == et ? void 0 : et.referrer_public_avatar_url,
-          ei =
-            null != et && et.referral_trial_duration_months
-              ? (null == et ? void 0 : et.referral_trial_duration_months) >= 1
-                ? ea.formatMessage(J.monthsOfService, {
+          en = "$".concat(null == el ? void 0 : el.referral_trial_dollar_value),
+          ei = null == el ? void 0 : el.referrer_public_avatar_url,
+          es =
+            null != el && el.referral_trial_duration_months
+              ? (null == el ? void 0 : el.referral_trial_duration_months) >= 1
+                ? et.formatMessage(Q.monthsOfService, {
                     referralTrialDurationMonths:
-                      null == et ? void 0 : et.referral_trial_duration_months,
+                      null == el ? void 0 : el.referral_trial_duration_months,
                   })
-                : ea.formatMessage(J.daysOfService, {
+                : et.formatMessage(Q.daysOfService, {
                     referralTrialDurationDays:
-                      null == et ? void 0 : et.referral_trial_duration_days,
+                      null == el ? void 0 : el.referral_trial_duration_days,
                   })
               : null,
-          es = null == et ? void 0 : et.referrer_user_name,
-          eo =
-            null != et && et.referral_trial_duration_months
-              ? (null == et ? void 0 : et.referral_trial_duration_months) > 1
-                ? ea.formatMessage(J.monthsOfBenefit, {
-                    referralTrialDurationMonths:
-                      null == et ? void 0 : et.referral_trial_duration_months,
-                  })
-                : ea.formatMessage(J.daysOfBenefit, {
-                    referralTrialDurationDays:
-                      null == et ? void 0 : et.referral_trial_duration_days,
-                  })
-              : null,
+          eo = null == el ? void 0 : el.referrer_user_name,
           ed =
-            null != et && et.referral_trial_duration_months
-              ? (null == et ? void 0 : et.referral_trial_duration_months) >= 1
-                ? ea.formatMessage(J.ctaHeaderMonths, {
+            null != el && el.referral_trial_duration_months
+              ? (null == el ? void 0 : el.referral_trial_duration_months) > 1
+                ? et.formatMessage(Q.monthsOfBenefit, {
                     referralTrialDurationMonths:
-                      null == et ? void 0 : et.referral_trial_duration_months,
+                      null == el ? void 0 : el.referral_trial_duration_months,
                   })
-                : ea.formatMessage(J.ctaHeaderDays, {
+                : et.formatMessage(Q.daysOfBenefit, {
                     referralTrialDurationDays:
-                      null == et ? void 0 : et.referral_trial_duration_days,
+                      null == el ? void 0 : el.referral_trial_duration_days,
                   })
               : null,
-          ec = ea.formatMessage(J.dollarValue, { offerDollarValue: el }),
-          eu = (0, c.t)(),
-          ef = (0, u.ec)(u.F_.workspaceId),
-          ex = (0, I.useRouter)(),
-          em = (0, x.D)({
+          ec =
+            null != el && el.referral_trial_duration_months
+              ? (null == el ? void 0 : el.referral_trial_duration_months) >= 1
+                ? et.formatMessage(Q.ctaHeaderMonths, {
+                    referralTrialDurationMonths:
+                      null == el ? void 0 : el.referral_trial_duration_months,
+                  })
+                : et.formatMessage(Q.ctaHeaderDays, {
+                    referralTrialDurationDays:
+                      null == el ? void 0 : el.referral_trial_duration_days,
+                  })
+              : null,
+          eu = et.formatMessage(Q.dollarValue, { offerDollarValue: en }),
+          ef = (0, c.t)(),
+          ex = (0, u.ec)(u.F_.workspaceId),
+          em = (0, N.useRouter)(),
+          eh = (0, x.D)({
             mutationFn: function () {
-              return d.ZP.postClaimReferralInvite(s, ef || "");
+              return d.Z.postClaimReferralInvite(s, ex || "");
             },
             onSettled: function () {
-              T(!1);
+              Z(!1);
             },
             onError:
               ((r = (0, n.Z)(
@@ -340,7 +341,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          F.m.danger(ea.formatMessage(J.claimReferralError));
+                          A.m.danger(et.formatMessage(Q.claimReferralError));
                         case 1:
                         case "end":
                           return e.stop();
@@ -352,10 +353,10 @@
                 return r.apply(this, arguments);
               }),
             onSuccess: function () {
-              O(!0), ex.push("/invite/accepted?referralCodeId=".concat(s));
+              R(!0), em.push("/invite/accepted?referralCodeId=".concat(s));
             },
           }).mutateAsync,
-          eh =
+          ep =
             ((a = (0, n.Z)(
               o().mark(function e() {
                 return o().wrap(function (e) {
@@ -363,16 +364,16 @@
                     switch ((e.prev = e.next)) {
                       case 0:
                         return (
-                          T(!0),
-                          g.m9.logEvent("chatgpt_referral_invite_claim", s, {
+                          Z(!0),
+                          v.m9.logEvent("chatgpt_referral_invite_claim", s, {
                             referralCodeId: s,
-                            userId: G,
+                            userId: W,
                           }),
                           m.A.logEvent(h.M.chatgptReferralInviteClaim, {
-                            content: G,
+                            content: W,
                           }),
                           (e.next = 5),
-                          em()
+                          eh()
                         );
                       case 5:
                       case "end":
@@ -384,28 +385,28 @@
             function () {
               return a.apply(this, arguments);
             });
-        return ((0, N.useEffect)(
+        return ((0, k.useEffect)(
           function () {
-            er &&
-              (ex.push("/?e=oldi"),
-              p.U.addAction("fetch_error_404", {
+            ea &&
+              (em.push("/?e=oldi"),
+              g.U.addAction("fetch_error_404", {
                 url: location.href,
                 errorMessage: "Referral code not found",
               }));
           },
-          [er, ex]
+          [ea, em]
         ),
-        er)
-          ? (0, A.jsx)(Y, {})
-          : ee || (null == eu && null != i && i.id) || M
-            ? (0, A.jsx)(X, {})
-            : (0, A.jsx)(A.Fragment, {
-                children: (0, A.jsxs)("div", {
+        ea)
+          ? (0, H.jsx)(Y, {})
+          : er || (null == ef && null != i && i.id) || O
+            ? (0, H.jsx)($, {})
+            : (0, H.jsx)(H.Fragment, {
+                children: (0, H.jsxs)("div", {
                   className:
                     "relative flex h-full w-full flex-col items-center justify-center",
                   children: [
                     E &&
-                      (0, A.jsx)(j.E.div, {
+                      (0, H.jsx)(y.E.div, {
                         initial: { opacity: 0, x: 10 },
                         transition: { delay: 1, duration: 0.1 },
                         animate: {
@@ -417,11 +418,11 @@
                           opacity: 0,
                           transition: { duration: 0.2, ease: "easeIn" },
                         },
-                        children: (0, A.jsx)(q, {
+                        children: (0, H.jsx)(X, {
                           handleSignup: function () {
-                            T(!0),
-                              B(!0),
-                              g.m9.logEvent(
+                            Z(!0),
+                              G(!0),
+                              v.m9.logEvent(
                                 "chatgpt_referral_invite_signup",
                                 s,
                                 { referralCodeId: s }
@@ -429,17 +430,17 @@
                               m.A.logEvent(h.M.chatgptReferralInviteSignup, {
                                 content: s,
                               }),
-                              (0, y.signIn)(
-                                _,
-                                { callbackUrl: v },
+                              (0, _.signIn)(
+                                b,
+                                { callbackUrl: j },
                                 { prompt: "login", screen_hint: "signup" }
                               );
                           },
-                          setHasRequestedSignup: D,
+                          setHasRequestedSignup: S,
                         }),
                       }),
                     !E &&
-                      (0, A.jsx)(j.E.div, {
+                      (0, H.jsx)(y.E.div, {
                         initial: { opacity: 0 },
                         transition: { delay: 1, duration: 0.2 },
                         animate: {
@@ -450,100 +451,100 @@
                           opacity: 0,
                           transition: { duration: 0.2, ease: "easeIn" },
                         },
-                        children: (0, A.jsx)("div", {
+                        children: (0, H.jsx)("div", {
                           className:
                             "relative mx-auto flex h-full max-w-[372px] flex-col items-center justify-center space-y-4 rounded-t-[30px] bg-white px-5 text-black dark:bg-black dark:text-white md:rounded-none md:px-6",
-                          children: (0, A.jsxs)(A.Fragment, {
+                          children: (0, H.jsxs)(H.Fragment, {
                             children: [
-                              (0, A.jsx)("h2", {
+                              (0, H.jsx)("h2", {
                                 className:
                                   "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                                children: ed,
+                                children: ec,
                               }),
-                              (0, A.jsx)(K, {
-                                referrerPublicAvatarUrl: en,
-                                referrerName: es,
-                                benefitWithTime: eo,
+                              (0, H.jsx)(J, {
+                                referrerPublicAvatarUrl: ei,
+                                referrerName: eo,
+                                benefitWithTime: ed,
                                 receivedPlan: "ChatGPT Plus",
-                                dollarValue: ec,
+                                dollarValue: eu,
                               }),
-                              (0, A.jsx)("div", {
-                                children: (0, A.jsx)("p", {
+                              (0, H.jsx)("div", {
+                                children: (0, H.jsx)("p", {
                                   className: "text-sm",
-                                  children: (0, A.jsx)(
+                                  children: (0, H.jsx)(
                                     P.Z,
-                                    V({}, J.benefitPointsHeader)
+                                    B({}, Q.benefitPointsHeader)
                                   ),
                                 }),
                               }),
-                              (0, A.jsxs)("div", {
+                              (0, H.jsxs)("div", {
                                 className: "space-y-3",
                                 children: [
-                                  (0, A.jsxs)($, {
+                                  (0, H.jsxs)(K, {
                                     children: [
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(k.UgA, {
+                                        children: (0, H.jsx)(C.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className: "max-w-full",
-                                        children: (0, A.jsx)(
+                                        children: (0, H.jsx)(
                                           P.Z,
-                                          V({}, Z.S.plus.demandAccess)
+                                          B({}, L.S.plus.demandAccess)
                                         ),
                                       }),
                                     ],
                                   }),
-                                  (0, A.jsxs)($, {
+                                  (0, H.jsxs)(K, {
                                     children: [
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(k.UgA, {
+                                        children: (0, H.jsx)(C.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className: "max-w-full",
-                                        children: (0, A.jsx)(
+                                        children: (0, H.jsx)(
                                           P.Z,
-                                          V({}, Z.S.plus.responseSpeed)
+                                          B({}, L.S.plus.responseSpeed)
                                         ),
                                       }),
                                     ],
                                   }),
-                                  (0, A.jsxs)($, {
+                                  (0, H.jsxs)(K, {
                                     className: "pb-2",
                                     children: [
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className:
                                           "h-5 w-5 rounded-full bg-green-500 p-0.5",
-                                        children: (0, A.jsx)(k.UgA, {
+                                        children: (0, H.jsx)(C.UgA, {
                                           className: "h-4 w-4 text-white",
                                         }),
                                       }),
-                                      (0, A.jsx)("span", {
+                                      (0, H.jsx)("span", {
                                         className: "max-w-full",
-                                        children: (0, A.jsx)(
+                                        children: (0, H.jsx)(
                                           P.Z,
-                                          V({}, Z.S.plus.modelFeatures)
+                                          B({}, L.S.plus.modelFeatures)
                                         ),
                                       }),
                                     ],
                                   }),
                                 ],
                               }),
-                              (0, A.jsx)("div", {
+                              (0, H.jsx)("div", {
                                 className: "w-full",
-                                children: (0, A.jsx)(W, {
-                                  handleClaimInvite: eh,
+                                children: (0, H.jsx)(z, {
+                                  handleClaimInvite: ep,
                                   handleSignupWarning: function () {
-                                    T(!0),
-                                      D(!0),
-                                      g.m9.logEvent(
+                                    Z(!0),
+                                      S(!0),
+                                      v.m9.logEvent(
                                         "chatgpt_referral_invite_explain_signup",
                                         s,
                                         { referralCodeId: s }
@@ -552,12 +553,12 @@
                                         h.M.chatgptReferralInviteExplainSignup,
                                         { content: s }
                                       ),
-                                      T(!1);
+                                      Z(!1);
                                   },
                                   handleLogin: function () {
-                                    T(!0),
-                                      B(!0),
-                                      g.m9.logEvent(
+                                    Z(!0),
+                                      G(!0),
+                                      v.m9.logEvent(
                                         "chatgpt_referral_invite_login",
                                         s,
                                         { referralCodeId: s }
@@ -565,47 +566,57 @@
                                       m.A.logEvent(
                                         h.M.chatgptReferralInviteLogin,
                                         { content: s }
-                                      ),
-                                      (0, y.signIn)(
-                                        _,
-                                        { callbackUrl: v },
-                                        { prompt: "login" }
                                       );
+                                    var e,
+                                      r =
+                                        null ===
+                                          (e = p.bX.getCookie(p.cn.DeviceId)) ||
+                                        void 0 === e
+                                          ? void 0
+                                          : e.toString();
+                                    (0, _.signIn)(
+                                      b,
+                                      B(
+                                        { callbackUrl: j },
+                                        r ? { device_id: r } : {}
+                                      ),
+                                      { prompt: "login" }
+                                    );
                                   },
                                   user: i,
-                                  offerDollarValue: el,
-                                  isLoading: U,
-                                  isLoadingLogin: H,
+                                  offerDollarValue: en,
+                                  isLoading: T,
+                                  isLoadingLogin: V,
                                 }),
                               }),
-                              (0, A.jsxs)("div", {
+                              (0, H.jsxs)("div", {
                                 className: "space-y-1.5 py-1 text-center",
                                 children: [
-                                  (0, A.jsx)("p", {
+                                  (0, H.jsx)("p", {
                                     className:
                                       "text-xs text-token-text-tertiary",
-                                    children: (0, A.jsx)(
+                                    children: (0, H.jsx)(
                                       P.Z,
-                                      V(
-                                        V({}, J.ctaFollowUpSummary),
+                                      B(
+                                        B({}, Q.ctaFollowUpSummary),
                                         {},
                                         {
                                           values: {
                                             monthlyCost: "$20",
-                                            monthsOfService: ei,
+                                            monthsOfService: es,
                                           },
                                         }
                                       )
                                     ),
                                   }),
                                   (null == i ? void 0 : i.id) &&
-                                    (0, A.jsx)("p", {
+                                    (0, H.jsx)("p", {
                                       className:
                                         "text-xs text-token-text-tertiary",
-                                      children: (0, A.jsx)(
+                                      children: (0, H.jsx)(
                                         P.Z,
-                                        V(
-                                          V({}, J.ctaNotice),
+                                        B(
+                                          B({}, Q.ctaNotice),
                                           {},
                                           {
                                             values: {
@@ -613,7 +624,7 @@
                                                 null == i ? void 0 : i.email,
                                               avatar: function () {
                                                 var e;
-                                                return (0, A.jsx)("img", {
+                                                return (0, H.jsx)("img", {
                                                   className:
                                                     "inline-block h-4 w-4 rounded-full",
                                                   src:
@@ -630,13 +641,13 @@
                                                 });
                                               },
                                               email: function (e) {
-                                                return (0, A.jsx)("span", {
+                                                return (0, H.jsx)("span", {
                                                   className: "font-medium",
                                                   children: e,
                                                 });
                                               },
                                               link: function (e) {
-                                                return (0, A.jsx)(w(), {
+                                                return (0, H.jsx)(I(), {
                                                   className: "underline",
                                                   href: "/auth/logout",
                                                   children: e,
@@ -657,40 +668,40 @@
                 }),
               });
       }
-      var q = function (e) {
+      var X = function (e) {
           var r = e.setHasRequestedSignup,
             a = e.handleSignup;
-          return (0, A.jsxs)("div", {
+          return (0, H.jsxs)("div", {
             className:
               "relative mx-auto flex h-full max-w-[372px] flex-col items-center justify-center space-y-4 rounded-t-[30px] bg-white px-5 text-black dark:bg-black dark:text-white md:rounded-none md:px-6",
             children: [
-              (0, A.jsx)("h2", {
+              (0, H.jsx)("h2", {
                 className:
                   "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                children: (0, A.jsx)(P.Z, V({}, J.signUpExplainTitle)),
+                children: (0, H.jsx)(P.Z, B({}, Q.signUpExplainTitle)),
               }),
-              (0, A.jsx)("div", {
-                children: (0, A.jsx)("p", {
+              (0, H.jsx)("div", {
+                children: (0, H.jsx)("p", {
                   className: "text-sm",
-                  children: (0, A.jsx)(P.Z, V({}, J.signUpExplainDescription)),
+                  children: (0, H.jsx)(P.Z, B({}, Q.signUpExplainDescription)),
                 }),
               }),
-              (0, A.jsxs)("div", {
+              (0, H.jsxs)("div", {
                 className: "flex flex-col gap-4 md:flex-row",
                 children: [
-                  (0, A.jsx)(D.z, {
+                  (0, H.jsx)(S.z, {
                     className: "w-full",
                     onClick: function () {
                       r(!1);
                     },
                     color: "neutral",
-                    children: (0, A.jsx)(P.Z, V({}, J.signUpCtaBack)),
+                    children: (0, H.jsx)(P.Z, B({}, Q.signUpCtaBack)),
                   }),
-                  (0, A.jsx)(D.z, {
+                  (0, H.jsx)(S.z, {
                     onClick: a,
                     className: "w-full",
                     color: "primary",
-                    children: (0, A.jsx)(P.Z, V({}, J.signUpCtaProceed)),
+                    children: (0, H.jsx)(P.Z, B({}, Q.signUpCtaProceed)),
                   }),
                 ],
               }),
@@ -698,16 +709,16 @@
           });
         },
         Y = function () {
-          return (0, A.jsxs)("div", {
+          return (0, H.jsxs)("div", {
             className:
               "relative mx-auto flex h-full max-w-[480px] flex-col items-center justify-center space-y-3 rounded-t-[30px] bg-white px-5 py-8 text-black dark:bg-black dark:text-white md:rounded-none md:px-6",
             children: [
-              (0, A.jsx)("div", {
+              (0, H.jsx)("div", {
                 className:
                   "relative flex h-8 w-8 items-center justify-center opacity-70",
-                children: (0, A.jsx)(B, {}),
+                children: (0, H.jsx)(G, {}),
               }),
-              (0, A.jsx)(j.E.div, {
+              (0, H.jsx)(y.E.div, {
                 initial: { opacity: 0 },
                 transition: { delay: 1, duration: 0.2 },
                 animate: {
@@ -718,24 +729,24 @@
                   opacity: 0,
                   transition: { duration: 0.2, ease: "easeIn" },
                 },
-                children: (0, A.jsxs)("div", {
+                children: (0, H.jsxs)("div", {
                   className: "text-center",
                   children: [
-                    (0, A.jsx)("h2", {
+                    (0, H.jsx)("h2", {
                       className: "text-sm font-semibold",
-                      children: (0, A.jsx)(P.Z, V({}, J.errorHeader)),
+                      children: (0, H.jsx)(P.Z, B({}, Q.errorHeader)),
                     }),
-                    (0, A.jsx)("p", {
+                    (0, H.jsx)("p", {
                       className: "text-xs font-normal",
-                      children: (0, A.jsx)(
+                      children: (0, H.jsx)(
                         P.Z,
-                        V(
-                          V({}, J.errorDescription),
+                        B(
+                          B({}, Q.errorDescription),
                           {},
                           {
                             values: {
                               link: function (e) {
-                                return (0, A.jsx)("a", {
+                                return (0, H.jsx)("a", {
                                   href: "/",
                                   className: "underline",
                                   children: e,
@@ -752,48 +763,48 @@
             ],
           });
         },
-        X = function () {
-          return (0, A.jsx)("div", {
+        $ = function () {
+          return (0, H.jsx)("div", {
             className:
               "relative mx-auto flex h-full max-w-[480px] flex-col items-center justify-center space-y-3 rounded-t-[30px] bg-white px-5 py-8 text-black dark:bg-black dark:text-white md:rounded-none md:px-6",
-            children: (0, A.jsx)("div", {
+            children: (0, H.jsx)("div", {
               className:
                 "relative flex h-8 w-8 items-center justify-center opacity-70",
-              children: (0, A.jsx)(B, {}),
+              children: (0, H.jsx)(G, {}),
             }),
           });
         },
-        $ = O.Z.div(
+        K = R.Z.div(
           t ||
             (t = (0, l.Z)([
               "gap-2 flex flex-row justify-start text-sm items-start",
             ]))
         ),
-        K = function (e) {
+        J = function (e) {
           var r = e.referrerPublicAvatarUrl,
             a = e.referrerName,
             t = e.benefitWithTime,
             l = e.receivedPlan,
             n = e.dollarValue;
-          return (0, A.jsxs)("div", {
+          return (0, H.jsxs)("div", {
             className: "flex w-full items-center",
             children: [
-              (0, A.jsx)("div", {
+              (0, H.jsx)("div", {
                 className: "flex-shrink-0 pt-0.5",
-                children: (0, A.jsx)("img", {
+                children: (0, H.jsx)("img", {
                   className: "h-12 w-12 rounded-full bg-yellow-400",
                   src: r,
                   alt: a,
                 }),
               }),
-              (0, A.jsx)("div", {
+              (0, H.jsx)("div", {
                 className: "ml-3 w-0 flex-1",
-                children: (0, A.jsx)("p", {
+                children: (0, H.jsx)("p", {
                   className: "text-sm text-token-text-primary",
-                  children: (0, A.jsx)(
+                  children: (0, H.jsx)(
                     P.Z,
-                    V(
-                      V({}, J.socialProofText),
+                    B(
+                      B({}, Q.socialProofText),
                       {},
                       {
                         values: {
@@ -802,7 +813,7 @@
                           receivedPlan: l,
                           dollarValue: n,
                           highlight: function (e) {
-                            return (0, A.jsx)("span", {
+                            return (0, H.jsx)("span", {
                               className:
                                 "rounded-sm bg-green-200 px-0.5 dark:bg-orange-500",
                               children: e,
@@ -817,7 +828,7 @@
             ],
           });
         },
-        J = (0, M.vU)({
+        Q = (0, O.vU)({
           claimReferralError: {
             id: "ReferralInvite.claimReferralError",
             defaultMessage: "There was an issue.",
@@ -940,14 +951,14 @@
             defaultMessage: "Go back",
           },
         }),
-        Q = !0;
-      function ee(e) {
+        ee = !0;
+      function er(e) {
         var r = e.examples,
           a = e.redirectUrl,
           t = e.user,
           l = e.auth0Provider,
           n = e.referralCodeId;
-        return (0, A.jsx)(G, {
+        return (0, H.jsx)(W, {
           user: t,
           redirectUrl: a,
           referralCodeId: n,
@@ -972,4 +983,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...referralCodeParam]]-13ab5f645c59dc36.js.map
+//# sourceMappingURL=[[...referralCodeParam]]-d288b497b9ca19cb.js.map

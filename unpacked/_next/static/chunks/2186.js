@@ -446,7 +446,7 @@
             s
           );
         });
-      var ea = r(14984).Buffer;
+      var ea = r(14984).lW;
       function el(e) {
         return en.isPlainObject(e) || en.isArray(e);
       }
@@ -1850,4 +1850,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2186.cabe8d2968afacb8.js.map
+//# sourceMappingURL=2186.34fe7ff92a4f6a1f.js.map

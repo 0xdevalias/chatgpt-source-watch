@@ -22,7 +22,7 @@
         p = a(21389),
         m = a(138),
         g = a.n(m),
-        y = a(45754),
+        y = a(95412),
         b = a(78103);
       function w(e, t) {
         var a = Object.keys(e);
@@ -189,7 +189,7 @@
           var t = e.target,
             a = g()(t.email.value);
           j(!0),
-            y.ZP.getLoginLink(a)
+            y.Z.getLoginLink(a)
               .catch(function (e) {
                 G.m.forError(e);
               })
@@ -545,4 +545,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3975-7f17a9769fd1a61d.js.map
+//# sourceMappingURL=3975-727132bb57222b04.js.map

@@ -385,14 +385,14 @@
       var V = n(63866),
         q = n(4748),
         W = n(7144),
-        K = n(12374),
-        Y = n(19954),
+        K = n(1890),
+        Y = n(22004),
         H = n(73582),
         J = n(88654),
         X = n(83380),
         Q = n(28818),
         $ = n(51533),
-        ee = n(98083),
+        ee = n(1755),
         et = n(99893),
         en = n(69101),
         er = n(13135),
@@ -533,7 +533,7 @@
         ],
         ew = n(70249),
         eP = n(9559),
-        ek = n(82427),
+        ek = n(91845),
         eT = n(46514);
       function eN(e) {
         var t = e.clientThreadId,
@@ -568,17 +568,17 @@
         });
       }
       var eO = n(75499),
-        eC = n(73819),
+        eC = n(83002),
         eI = n(13366),
         e_ = n(18008),
         eG = n(58272),
         eM = n(99304),
-        eS = n(84623),
+        eS = n(50828),
         eA = n(80058),
-        eE = n(97296),
+        eE = n(83737),
         eZ = n(1454),
         eD = n(8844),
-        eL = n(65654),
+        eL = n(66241),
         eU = n(90439),
         eR = n(12556);
       function eB() {
@@ -607,105 +607,107 @@
           var t,
             n,
             r,
-            i = e.gizmoEditorData,
-            o = e.isSavingDraft,
-            a = e.showTitle,
-            s = (0, A.useState)(function () {
+            i,
+            o = e.gizmoEditorData,
+            a = e.isSavingDraft,
+            s = e.showTitle,
+            l = (0, A.useState)(function () {
               return (0, Y.OX)();
             }),
-            l = s[0],
-            c = s[1],
-            u = (0, A.useState)([]),
-            d = u[0],
-            p = u[1];
+            c = l[0],
+            u = l[1],
+            d = (0, A.useState)([]),
+            p = d[0],
+            m = d[1];
           (0, A.useEffect)(
             function () {
-              p(function (e) {
-                return e[e.length - 1] === l ? e : [].concat((0, j.Z)(e), [l]);
+              m(function (e) {
+                return e[e.length - 1] === c ? e : [].concat((0, j.Z)(e), [c]);
               });
             },
-            [l]
+            [c]
           );
-          var m = d.slice(0, -1);
-          (0, Y.ax)(l, { kind: eu.OL.GizmoTest, gizmo_id: i.id }),
+          var f = p.slice(0, -1);
+          (0, Y.ax)(c, { kind: eu.OL.GizmoTest, gizmo_id: o.id }),
             (0, A.useEffect)(
               function () {
-                Y.tQ.updateConversationMode(l, {
+                Y.tQ.updateConversationMode(c, {
                   kind: eu.OL.GizmoTest,
-                  gizmo_id: i.id,
+                  gizmo_id: o.id,
                 });
               },
-              [l, i.id]
+              [c, o.id]
             );
-          var f = (0, Y.UL)(l),
-            h =
-              null === (r = i.files) || void 0 === r
+          var h = (0, Y.UL)(c),
+            g =
+              null === (i = o.files) || void 0 === i
                 ? void 0
-                : r
+                : i
                     .map(function (e) {
                       return e.file_id;
                     })
                     .join();
           (0, A.useEffect)(
             function () {
-              null != Y.tQ.getServerThreadId(l) && c((0, Y.OX)());
+              null != Y.tQ.getServerThreadId(c) && u((0, Y.OX)());
             },
-            [i.id, i.instructions, i.welcomeMessage, i.tools, h, l]
+            [o.id, o.instructions, o.welcomeMessage, o.tools, g, c]
           ),
             (0, A.useEffect)(
               function () {
-                (0, Y.Zz)(l) &&
-                  Y.iN.hasThread(l) &&
-                  f.lastModelUsed !== eT.mx &&
-                  Y.tQ.updateInitialThreadDataForNewThread(l, eT.mx, []);
+                (0, Y.Zz)(c) &&
+                  Y.iN.hasThread(c) &&
+                  h.lastModelUsed !== eT.mx &&
+                  Y.tQ.updateInitialThreadDataForNewThread(c, eT.mx, []);
               },
-              [l, f, i]
+              [c, h, o]
             );
-          var g = (0, e_.tN)(function (e) {
+          var v = (0, e_.tN)(function (e) {
               return e.activeSidebar;
             }),
-            v = (0, A.useMemo)(
+            x = (0, A.useMemo)(
               function () {
-                return { gizmoEditorData: i, mode: "test" };
+                return { gizmoEditorData: o, mode: "test" };
               },
-              [i]
+              [o]
             ),
-            x = (0, A.useState)(0),
-            b = x[0],
-            w = x[1],
-            P = function () {
-              w(function (e) {
+            b = (0, A.useState)(0),
+            w = b[0],
+            P = b[1],
+            T = function () {
+              P(function (e) {
                 return e - 360;
               });
             },
-            T = i.id,
-            N =
-              ((n = (0, eL.Z)(l, void 0, eo.noop, eo.noop, eo.noop, [])),
+            N = o.id,
+            z =
+              ((n = (0, H.m0)()),
+              (r = (0, eL.Z)(c, void 0, eo.noop, [])),
               (0, A.useCallback)(
                 ((t = (0, y.Z)(
-                  k().mark(function e(t, r, i) {
-                    var o, a, s, c, u, d, p, m;
+                  k().mark(function e(t, i, o) {
+                    var a, s, l, u, d, p, m, f, h;
                     return k().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            if (
-                              ((o = Y.tQ.getThreadCurrentLeafId(l)),
-                              (a = (0, eD.Z)()),
-                              Y.tQ.updateTree(l, function (e) {
-                                e.addNodeToEnd(o, {
-                                  id: a,
+                            return (
+                              (a = Y.tQ.getThreadCurrentLeafId(c)),
+                              (s = (0, eD.Z)()),
+                              Y.tQ.updateTree(c, function (e) {
+                                e.addNodeToEnd(a, {
+                                  id: s,
                                   children: [],
-                                  parentId: o,
+                                  parentId: a,
                                   message: {
-                                    id: a,
+                                    id: s,
                                     author: { role: eu.uU.User },
                                     content: {
                                       content_type: eu.PX.Text,
                                       parts: [
                                         "Call the "
-                                          .concat(r, " API with the ")
-                                          .concat(i, " operation"),
+                                          .concat(i, " API with the ")
+                                          .concat(o, " operation"),
                                       ],
                                     },
                                     recipient: "all",
@@ -715,8 +717,8 @@
                                           user_action: {
                                             data: {
                                               type: "test",
-                                              operation: i,
-                                              tool_name: (0, eP.VN)(r),
+                                              operation: o,
+                                              tool_name: (0, eP.VN)(i),
                                             },
                                           },
                                         },
@@ -725,46 +727,53 @@
                                   },
                                 });
                               }),
-                              (s = {
+                              (l = {
                                 conversationMode: {
                                   kind: eu.OL.GizmoTest,
                                   gizmo_id: t,
                                 },
                               }),
-                              (c = [eT.S.GPT_4]),
-                              (u = (0, eS.Rr)((0, W.N$)(), c, eu.OL.GizmoTest)),
-                              (d = null),
-                              !u)
-                            ) {
-                              e.next = 11;
-                              break;
-                            }
-                            return (e.next = 10), eS.ZP.getEnforcementToken(c);
+                              (u = [eu.S.GPT_4]),
+                              (e.next = 7),
+                              (0, eS.Ob)(n)
+                            );
+                          case 7:
+                            return (
+                              (d = e.sent),
+                              (e.next = 10),
+                              (0, eS.Rr)((0, W.N$)(), d, eu.OL.GizmoTest)
+                            );
                           case 10:
-                            d = e.sent;
-                          case 11:
-                            if (
-                              ((p = (0, eA.u7)((0, W.N$)(), c)), (m = null), !p)
-                            ) {
-                              e.next = 17;
+                            if (((p = e.sent), (m = null), !p)) {
+                              e.next = 16;
                               break;
                             }
-                            return (e.next = 16), eA.ZP.getEnforcementToken(c);
-                          case 16:
+                            return (e.next = 15), eS.ZP.getEnforcementToken(d);
+                          case 15:
                             m = e.sent;
-                          case 17:
-                            n({
+                          case 16:
+                            if (
+                              ((f = (0, eA.u7)((0, W.N$)(), u)), (h = null), !f)
+                            ) {
+                              e.next = 22;
+                              break;
+                            }
+                            return (e.next = 21), eA.ZP.getEnforcementToken(u);
+                          case 21:
+                            h = e.sent;
+                          case 22:
+                            r({
                               model: eT.mx,
                               completionType: eu.Os.Next,
-                              parentNodeId: a,
+                              parentNodeId: s,
                               metadata: {},
                               focusOnNewCompletion: !0,
-                              arkoseToken: d,
-                              turnstileToken: m,
+                              arkoseToken: m,
+                              turnstileToken: h,
                               preflightTime: 0,
-                              completionMetadata: s,
+                              completionMetadata: l,
                             });
-                          case 18:
+                          case 23:
                           case "end":
                             return e.stop();
                         }
@@ -774,7 +783,7 @@
                 function (e, n, r) {
                   return t.apply(this, arguments);
                 }),
-                [l, n]
+                [c, r, n]
               ));
           return (
             (0, A.useEffect)(
@@ -783,18 +792,18 @@
                   test_gizmo_action: function (e) {
                     var t = e.rootDomain,
                       n = e.operationName;
-                    T && N(T, t, n);
+                    N && z(N, t, n);
                   },
                 });
               },
-              [N, T]
+              [z, N]
             ),
             (0, Z.jsx)(eU.D.Provider, {
-              value: v,
+              value: x,
               children: (0, Z.jsxs)("div", {
                 className: (0, ei.default)(
                   "flex h-full w-full",
-                  o && "cursor-wait opacity-80 transition"
+                  a && "cursor-wait opacity-80 transition"
                 ),
                 children: [
                   (0, Z.jsxs)("div", {
@@ -805,7 +814,7 @@
                         children: (0, Z.jsx)("div", {
                           className: "flex justify-center py-1",
                           children:
-                            (void 0 === a || a) &&
+                            (void 0 === s || s) &&
                             (0, Z.jsxs)("div", {
                               className:
                                 "group flex items-center gap-2 text-lg font-medium",
@@ -813,14 +822,14 @@
                                 (0, Z.jsx)("div", { className: "icon-md" }),
                                 (0, Z.jsxs)("button", {
                                   onClick: function () {
-                                    P(), p([]), c((0, Y.OX)());
+                                    T(), m([]), u((0, Y.OX)());
                                   },
                                   className: "flex items-center gap-2",
                                   children: [
                                     "Preview",
                                     (0, Z.jsx)(eE.E.div, {
                                       className: "text-token-text-primary",
-                                      animate: { rotate: b },
+                                      animate: { rotate: w },
                                       transition: { duration: 0.3 },
                                       children: (0, Z.jsx)(ep.u8, {
                                         className:
@@ -836,21 +845,21 @@
                       (0, Z.jsx)("div", {
                         className: (0, ei.default)(
                           "relative grow overflow-auto px-2",
-                          o && "pointer-events-none"
+                          a && "pointer-events-none"
                         ),
                         children: (0, Z.jsx)(eC.Z, {
-                          clientThreadId: l,
+                          clientThreadId: c,
                           hideHeader: !0,
                           renderEmptyState: (0, Z.jsxs)("div", {
                             className: "relative h-full w-full",
                             children: [
-                              null != m &&
-                                m.length > 0 &&
+                              null != f &&
+                                f.length > 0 &&
                                 (0, Z.jsx)("div", {
                                   className: "h-full w-full opacity-20",
                                   children: (0, Z.jsxs)(eI.I, {
                                     children: [
-                                      (0, Z.jsx)(ez, { clientThreadIds: m }),
+                                      (0, Z.jsx)(ez, { clientThreadIds: f }),
                                       (0, Z.jsx)(eB, {}),
                                     ],
                                   }),
@@ -859,7 +868,7 @@
                                 className:
                                   "absolute left-0 top-0 h-full w-full",
                                 children: (0, Z.jsx)(eR.r, {
-                                  gizmo: i,
+                                  gizmo: o,
                                   isOwner: !0,
                                   hideOwner: !0,
                                 }),
@@ -867,13 +876,13 @@
                             ],
                           }),
                           prependThreadChildren:
-                            m.length > 0 &&
+                            f.length > 0 &&
                             (0, Z.jsxs)(Z.Fragment, {
                               children: [
                                 (0, Z.jsx)("div", {
                                   className: "opacity-50",
                                   children: (0, Z.jsx)(ez, {
-                                    clientThreadIds: m,
+                                    clientThreadIds: f,
                                   }),
                                 }),
                                 (0, Z.jsx)(eB, {}),
@@ -883,9 +892,9 @@
                       }),
                     ],
                   }),
-                  "debug" === g &&
+                  "debug" === v &&
                     (0, Z.jsx)(eO.fv, {
-                      clientThreadId: l,
+                      clientThreadId: c,
                       slideOver: !1,
                       onClose: function () {
                         return e_.vm.toggleActiveSidebar("debug");
@@ -1473,7 +1482,13 @@
                         ? eH(
                             eH({}, t),
                             {},
-                            { metadata: eH(eH({}, t.metadata), e) }
+                            {
+                              metadata: eH(
+                                eH(eH({}, t.metadata), e),
+                                {},
+                                { json_schema: void 0 }
+                              ),
+                            }
                           )
                         : t;
                     })
@@ -1481,12 +1496,16 @@
                       {
                         type: T.qK.JIT_PLUGIN,
                         metadata: eH(
-                          {
-                            raw_spec: "",
-                            domain: null != f ? f : "Unknown domain",
-                            action_id: "",
-                          },
-                          e
+                          eH(
+                            {
+                              raw_spec: "",
+                              domain: null != f ? f : "Unknown domain",
+                              action_id: "",
+                            },
+                            e
+                          ),
+                          {},
+                          { json_schema: void 0 }
                         ),
                       },
                     ]),
@@ -1877,12 +1896,12 @@
       }
       var e3 = n(79505),
         e5 = n(87942),
-        e4 = n(99715),
-        e8 = n(22189),
-        e9 = n(36530),
-        e6 = n(37178),
+        e6 = n(99715),
+        e4 = n(22189),
+        e8 = n(5667),
+        e9 = n(37178),
         e7 = n(90166),
-        te = n(34490),
+        te = n(10466),
         tt = n(57664);
       function tn(e, t) {
         var n = Object.keys(e);
@@ -2298,7 +2317,7 @@
                 }),
                 (0, Z.jsx)("button", {
                   onClick: function () {
-                    (0, e6.v)(ta(t));
+                    (0, e9.v)(ta(t));
                   },
                   className:
                     "text-token-text-secondary transition hover:text-token-text-primary",
@@ -2358,10 +2377,10 @@
           o && d.push(tt.hs.UploadingProfilePic),
           a && d.push(tt.hs.GeneratingProfilePic);
         var m = (0, b.Sg)(n);
-        return (0, Z.jsxs)(e8.fC, {
+        return (0, Z.jsxs)(e4.fC, {
           modal: !0,
           children: [
-            (0, Z.jsx)(e8.xz, {
+            (0, Z.jsx)(e4.xz, {
               asChild: !0,
               children: (0, Z.jsx)(eq.cY, {
                 color: "primary",
@@ -2379,8 +2398,8 @@
                 }),
               }),
             }),
-            (0, Z.jsx)(e8.h_, {
-              children: (0, Z.jsx)(e8.VY, {
+            (0, Z.jsx)(e4.h_, {
+              children: (0, Z.jsx)(e4.VY, {
                 side: "bottom",
                 align: "end",
                 sideOffset: 8,
@@ -2409,18 +2428,18 @@
           (null == t ? void 0 : t.id) != null
           ? (0, Z.jsxs)(Z.Fragment, {
               children: [
-                (0, Z.jsxs)(e4.fC, {
+                (0, Z.jsxs)(e6.fC, {
                   children: [
-                    (0, Z.jsx)(e4.xz, {
+                    (0, Z.jsx)(e6.xz, {
                       asChild: !0,
                       children: (0, Z.jsx)(eq.cY, {
                         children: (0, Z.jsx)(ep.Yr, { className: "icon-md" }),
                       }),
                     }),
-                    (0, Z.jsx)(e4.Uv, {
-                      children: (0, Z.jsxs)(e4.VY, {
+                    (0, Z.jsx)(e6.Uv, {
+                      children: (0, Z.jsxs)(e6.VY, {
                         className:
-                          "min-w-[180px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
+                          "popover min-w-[180px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
                         side: "top",
                         align: "end",
                         sideOffset: 6,
@@ -2428,7 +2447,7 @@
                           null != n &&
                             (0, Z.jsxs)(eq.UA, {
                               onClick: function () {
-                                (0, e6.v)(ta(n));
+                                (0, e9.v)(ta(n));
                               },
                               children: [
                                 (0, Z.jsx)(ep.HN, { className: "icon-md" }),
@@ -2581,20 +2600,20 @@
         var t = e.category,
           n = e.categories,
           r = e.setCategory;
-        return (0, Z.jsxs)(e9.fC, {
+        return (0, Z.jsxs)(e8.fC, {
           value: t,
           onValueChange: function (e) {
             return r(e);
           },
           children: [
-            (0, Z.jsx)(e9.xz, {
+            (0, Z.jsx)(e8.xz, {
               className:
                 "flex justify-between rounded-xl bg-gray-50 p-3 font-medium dark:bg-gray-900",
               children: t
                 ? (0, Z.jsxs)(Z.Fragment, {
                     children: [
-                      (0, Z.jsx)(e9.B4, {}),
-                      (0, Z.jsx)(e9.JO, { children: (0, Z.jsx)(ep.ud, {}) }),
+                      (0, Z.jsx)(e8.B4, {}),
+                      (0, Z.jsx)(e8.JO, { children: (0, Z.jsx)(ep.ud, {}) }),
                     ],
                   })
                 : (0, Z.jsx)("div", {
@@ -2602,8 +2621,8 @@
                     children: (0, Z.jsx)(V.Z, {}),
                   }),
             }),
-            (0, Z.jsx)(e9.h_, {
-              children: (0, Z.jsx)(e9.VY, {
+            (0, Z.jsx)(e8.h_, {
+              children: (0, Z.jsx)(e8.VY, {
                 className:
                   "h-64 w-[var(--radix-select-trigger-width)] rounded-xl border bg-token-main-surface-primary p-1 py-2 dark:border-gray-600",
                 position: "popper",
@@ -2612,14 +2631,14 @@
                   className: "overflow-y-auto",
                   children: n.map(function (e) {
                     return (0, Z.jsxs)(
-                      e9.ck,
+                      e8.ck,
                       {
                         className:
                           "flex w-full cursor-pointer justify-between rounded-lg p-2 pl-4 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700",
                         value: e.id,
                         children: [
-                          (0, Z.jsx)(e9.eT, { children: e.title }),
-                          (0, Z.jsx)(e9.wU, {
+                          (0, Z.jsx)(e8.eT, { children: e.title }),
+                          (0, Z.jsx)(e8.wU, {
                             className: "text-green-600",
                             children: (0, Z.jsx)(ep.oS, {}),
                           }),
@@ -2890,7 +2909,7 @@
           },
         }),
         tj = n(55161),
-        tw = n(45754),
+        tw = n(95412),
         tP = n(86178);
       function tk(e, t) {
         var n =
@@ -3038,7 +3057,7 @@
                     return (
                       (c = (0, tj.Iy)(n.asset_pointer)),
                       (e.next = 6),
-                      tw.ZP.getFileDownloadLink(c)
+                      tw.Z.getFileDownloadLink(c)
                     );
                   case 6:
                     if ((u = e.sent).status !== T.KF.Success) {
@@ -3127,7 +3146,7 @@
                       return (
                         (e.prev = 9),
                         (e.next = 12),
-                        tw.ZP.getFileDownloadLink(m, t.id)
+                        tw.Z.getFileDownloadLink(m, t.id)
                       );
                     case 12:
                       (h = e.sent).status === T.KF.Success &&
@@ -3651,24 +3670,25 @@
           g,
           v,
           j,
-          w = e.gizmo,
-          P = e.onNewGizmoId,
-          z = (0, N.C)(K.L0.BrowseAvailable),
-          O = (0, el.Z)(),
-          C = (0, A.useRef)(null != w ? tF(w) : z ? tB : tR),
-          I = (0, A.useRef)(w),
-          G = (0, A.useRef)(C.current),
-          M = (0, A.useState)(function () {
-            return C.current;
+          w,
+          P = e.gizmo,
+          z = e.onNewGizmoId,
+          O = (0, N.C)(K.L0.BrowseAvailable),
+          C = (0, el.Z)(),
+          I = (0, A.useRef)(null != P ? tF(P) : O ? tB : tR),
+          G = (0, A.useRef)(P),
+          M = (0, A.useRef)(I.current),
+          S = (0, A.useState)(function () {
+            return I.current;
           }),
-          S = M[0],
-          E = M[1],
-          D = (0, A.useState)(function () {
+          E = S[0],
+          D = S[1],
+          L = (0, A.useState)(function () {
             return (0, Y.OX)();
           }),
-          L = D[0];
-        D[1];
-        var U = (0, A.useState)(function () {
+          U = L[0];
+        L[1];
+        var R = (0, A.useState)(function () {
           return {
             context_message: (function (e) {
               var t,
@@ -3711,28 +3731,28 @@
                         : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
                       "\n"
                     );
-            })(C.current),
+            })(I.current),
             model_slug: "unused",
             enabled_tools: [
-              { tool_id: null != w ? "gizmo_editor" : "gizmo_creator" },
+              { tool_id: null != P ? "gizmo_editor" : "gizmo_creator" },
             ],
           };
         })[0];
-        (t = G.current),
-          (0, Y.ax)(L, {
+        (t = M.current),
+          (0, Y.ax)(U, {
             kind: eu.OL.GizmoMagicCreate,
             gizmo_id: t.id,
-            behavior_overrides: U,
+            behavior_overrides: R,
           }),
           (0, A.useEffect)(
             function () {
-              Y.tQ.updateConversationMode(L, {
+              Y.tQ.updateConversationMode(U, {
                 kind: eu.OL.GizmoMagicCreate,
                 gizmo_id: t.id,
-                behavior_overrides: U,
+                behavior_overrides: R,
               });
             },
-            [L, t.id, U]
+            [U, t.id, R]
           ),
           (n = (0, A.useState)(function () {
             var e = null == t.id,
@@ -3753,7 +3773,7 @@
           })[0]),
           (0, A.useEffect)(
             function () {
-              var e = Y.tQ.getTree(L);
+              var e = Y.tQ.getTree(U);
               if (
                 !e.findNode(function (e) {
                   var t;
@@ -3764,7 +3784,7 @@
                       : t.isClientCreatedSystemMessage) === !0
                   );
                 }) &&
-                (Y.tQ.deleteNodesByFilter(L, function (e) {
+                (Y.tQ.deleteNodesByFilter(U, function (e) {
                   var t;
                   return (
                     (null === (t = e.metadata) || void 0 === t
@@ -3774,47 +3794,47 @@
                 }),
                 null != n && 0 !== n.length)
               ) {
-                var t = Y.tQ.getThreadCurrentLeafId(L);
+                var t = Y.tQ.getThreadCurrentLeafId(U);
                 if (e.hasNodeOrMessageId(t)) {
                   var r = (0, eD.Z)();
-                  Y.tQ.updateTree(L, function (e) {
+                  Y.tQ.updateTree(U, function (e) {
                     e.addNode(r, n, t, eu.uU.Assistant, {
                       isPlaceholderTemplateAssistantWelcomeMessage: !0,
                     });
                   }),
-                    Y.tQ.setThreadCurrentLeafId(L, r);
+                    Y.tQ.setThreadCurrentLeafId(U, r);
                 }
               }
             },
-            [L, n]
+            [U, n]
           ),
-          (r = (0, Y.UL)(L)),
+          (r = (0, Y.UL)(U)),
           (0, A.useEffect)(
             function () {
-              (0, Y.Zz)(L) &&
-                Y.iN.hasThread(L) &&
+              (0, Y.Zz)(U) &&
+                Y.iN.hasThread(U) &&
                 r.lastModelUsed !== eT.Mw &&
-                Y.tQ.updateInitialThreadDataForNewThread(L, eT.Mw, []);
+                Y.tQ.updateInitialThreadDataForNewThread(U, eT.Mw, []);
             },
-            [L, r, r.lastModelUsed]
+            [U, r, r.lastModelUsed]
           );
-        var R = (0, b.kg)(C.current.id).data,
-          B = (0, b.N_)(),
-          V = B.isPending,
-          H = B.error,
-          X = (0, b.ZJ)(),
-          Q = (0, A.useMemo)(
+        var B = (0, b.kg)(I.current.id).data,
+          V = (0, b.N_)(),
+          X = V.isPending,
+          Q = V.error,
+          $ = (0, b.ZJ)(),
+          ea = (0, A.useMemo)(
             function () {
               var e, t, n, r, i, o;
               return (
-                null != R &&
+                null != B &&
                 (!(
-                  S.name === R.gizmo.display.name &&
-                  S.description === R.gizmo.display.description &&
-                  S.welcomeMessage === R.gizmo.display.welcome_message &&
-                  S.instructions === R.gizmo.instructions &&
-                  ((i = S.tools),
-                  (o = R.tools),
+                  E.name === B.gizmo.display.name &&
+                  E.description === B.gizmo.display.description &&
+                  E.welcomeMessage === B.gizmo.display.welcome_message &&
+                  E.instructions === B.gizmo.instructions &&
+                  ((i = E.tools),
+                  (o = B.tools),
                   i.length === o.length &&
                     i.every(function (e) {
                       return o.some(function (t) {
@@ -3824,7 +3844,7 @@
                   (0, eo.isEqual)(
                     null !==
                       (e =
-                        null === (t = S.files) || void 0 === t
+                        null === (t = E.files) || void 0 === t
                           ? void 0
                           : t.map(function (e) {
                               return e.file_id;
@@ -3833,7 +3853,7 @@
                       : [],
                     null !==
                       (n =
-                        null === (r = R.files) || void 0 === r
+                        null === (r = B.files) || void 0 === r
                           ? void 0
                           : r.map(function (e) {
                               return e.file_id;
@@ -3842,13 +3862,13 @@
                       : []
                   )
                 ) ||
-                  S.profilePictureUrl != R.gizmo.display.profile_picture_url ||
-                  S.profilePictureId != R.gizmo.display.profile_pic_id)
+                  E.profilePictureUrl != B.gizmo.display.profile_picture_url ||
+                  E.profilePictureId != B.gizmo.display.profile_pic_id)
               );
             },
-            [S, R]
+            [E, B]
           ),
-          $ =
+          es =
             ((i = (0, y.Z)(
               k().mark(function e() {
                 var t, n, r, i, o, a, s, l;
@@ -3858,26 +3878,26 @@
                       switch ((e.prev = e.next)) {
                         case 0:
                           return (
-                            (t = C.current),
+                            (t = I.current),
                             (e.prev = 1),
                             (e.next = 4),
-                            B.mutateAsync({ editorData: t, gizmoId: t.id })
+                            V.mutateAsync({ editorData: t, gizmoId: t.id })
                           );
                         case 4:
                           (n = e.sent),
-                            (I.current = n),
-                            null == C.current.id &&
+                            (G.current = n),
+                            null == I.current.id &&
                               ((r = n.gizmo.id),
-                              (C.current = tD(
-                                tD({}, C.current),
+                              (I.current = tD(
+                                tD({}, I.current),
                                 {},
                                 {
                                   id: r,
                                   sharingTargets: n.gizmo.sharing_targets,
                                 }
                               )),
-                              E(C.current),
-                              null == P || P(r)),
+                              D(I.current),
+                              null == z || z(r)),
                             (i = (function (e, t) {
                               var n =
                                 ("undefined" != typeof Symbol &&
@@ -3960,7 +3980,7 @@
                             for (
                               a = function () {
                                 var e = o.value,
-                                  t = C.current.tools.find(function (t) {
+                                  t = I.current.tools.find(function (t) {
                                     return (
                                       t.type === T.qK.JIT_PLUGIN &&
                                       t.metadata.domain === e.metadata.domain
@@ -3971,7 +3991,7 @@
                                     e.metadata.action_id &&
                                   ((t.metadata.action_id =
                                     e.metadata.action_id),
-                                  E(C.current));
+                                  D(I.current));
                               },
                                 i.s();
                               !(o = i.n()).done;
@@ -3990,7 +4010,7 @@
                             (l =
                               null !== (s = (0, J.Ot)(e.t0)) && void 0 !== s
                                 ? s
-                                : O.formatMessage(ty.errorSavingDraft)),
+                                : C.formatMessage(ty.errorSavingDraft)),
                             q.m.warning(l, { duration: 2 }),
                             e.t0)
                           );
@@ -4008,30 +4028,30 @@
             function () {
               return i.apply(this, arguments);
             }),
-          ea = (0, A.useRef)(),
-          es =
+          ec = (0, A.useRef)(),
+          ed =
             ((o = (0, y.Z)(
               k().mark(function e() {
                 return k().wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (!(null != C.current.id)) {
+                        if (!(null != I.current.id)) {
                           e.next = 2;
                           break;
                         }
-                        return e.abrupt("return", C.current.id);
+                        return e.abrupt("return", I.current.id);
                       case 2:
                         return (
-                          null == ea.current &&
-                            (ea.current = $()
+                          null == ec.current &&
+                            (ec.current = es()
                               .then(function (e) {
                                 return e.gizmo.id;
                               })
                               .catch(function (e) {
-                                throw ((ea.current = void 0), e);
+                                throw ((ec.current = void 0), e);
                               })),
-                          e.abrupt("return", ea.current)
+                          e.abrupt("return", ec.current)
                         );
                       case 4:
                       case "end":
@@ -4043,23 +4063,23 @@
             function () {
               return o.apply(this, arguments);
             }),
-          ec = (0, A.useState)(function () {
+          ep = (0, A.useState)(function () {
             return (0, eo.debounce)(
               function () {
-                return $();
+                return es();
               },
               2e3,
               { trailing: !0 }
             );
           })[0];
-        function ed(e) {
+        function em(e) {
           var t =
-            "function" == typeof e ? e(C.current) : (0, tt.x$)(C.current, e);
-          (0, eo.isEqual)(t, C.current) ||
-            ((C.current = t), E(C.current), ec());
+            "function" == typeof e ? e(I.current) : (0, tt.x$)(I.current, e);
+          (0, eo.isEqual)(t, I.current) ||
+            ((I.current = t), D(I.current), ep());
         }
-        var ep = (0, A.useRef)(),
-          em =
+        var ef = (0, A.useRef)(),
+          eh =
             ((a = (0, y.Z)(
               k().mark(function e(t) {
                 var n;
@@ -4072,18 +4092,18 @@
                             e.next = 3;
                             break;
                           }
-                          return e_(!1), e.abrupt("return");
+                          return eM(!1), e.abrupt("return");
                         case 3:
                           return (
                             (e.prev = 3),
                             (e.next = 6),
                             (function (e, t, n) {
                               return tC.apply(this, arguments);
-                            })(C.current, t, ep.current)
+                            })(I.current, t, ef.current)
                           );
                         case 6:
                           null != (n = e.sent) &&
-                            (ed(n), (G.current = (0, eo.cloneDeep)(C.current))),
+                            (em(n), (M.current = (0, eo.cloneDeep)(I.current))),
                             (e.next = 14);
                           break;
                         case 10:
@@ -4097,8 +4117,8 @@
                         case 14:
                           return (
                             (e.prev = 14),
-                            (ep.current = Y.tQ.getThreadCurrentLeafId(t)),
-                            e_(!1),
+                            (ef.current = Y.tQ.getThreadCurrentLeafId(t)),
+                            eM(!1),
                             e.finish(14)
                           );
                         case 18:
@@ -4115,17 +4135,18 @@
             function (e) {
               return a.apply(this, arguments);
             }),
-          ef =
-            (Y.tQ.initThread(L, {
+          eg =
+            (Y.tQ.initThread(U, {
               kind: eu.OL.GizmoMagicCreate,
               gizmo_id: void 0,
-              behavior_overrides: U,
+              behavior_overrides: R,
             }),
-            (s = (0, eL.Z)(L, void 0, eo.noop, eo.noop, em, [])),
+            (s = (0, eL.Z)(U, void 0, eh, [])),
             (l = (0, W.hz)()),
-            (c = (0, y.Z)(
+            (c = (0, H.m0)()),
+            (u = (0, y.Z)(
               k().mark(function e(t, n, r) {
-                var i, o, a, c, u, d, p, m, f, h, g;
+                var i, o, a, u, d, p, m, f, h, g, v, x;
                 return k().wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -4136,13 +4157,13 @@
                         }
                         return e.abrupt("return");
                       case 2:
-                        (i = Y.tQ.getThreadCurrentLeafId(L)), (o = tk(r));
+                        (i = Y.tQ.getThreadCurrentLeafId(U)), (o = tk(r));
                         try {
                           for (
-                            c = function () {
+                            u = function () {
                               var e = a.value,
                                 t = (0, eD.Z)();
-                              Y.tQ.updateTree(L, function (n) {
+                              Y.tQ.updateTree(U, function (n) {
                                 n.addNodeToEnd(i, {
                                   id: t,
                                   children: [],
@@ -4156,60 +4177,67 @@
                                   },
                                 });
                               }),
-                                Y.tQ.setThreadCurrentLeafId(L, t),
+                                Y.tQ.setThreadCurrentLeafId(U, t),
                                 (i = t);
                             },
                               o.s();
                             !(a = o.n()).done;
                           )
-                            c();
+                            u();
                         } catch (e) {
                           o.e(e);
                         } finally {
                           o.f();
                         }
-                        if (
-                          ((u = i),
-                          tI(L, u, t, n),
-                          (d = {
+                        return (
+                          (d = i),
+                          tI(U, d, t, n),
+                          (p = {
                             conversationMode: {
                               kind: eu.OL.GizmoMagicCreate,
                               gizmo_id: t.current.id,
-                              behavior_overrides: U,
+                              behavior_overrides: R,
                             },
                           }),
-                          (p = [eT.S.GPT_4]),
-                          (m = (0, eS.Rr)(l, p, eu.OL.GizmoMagicCreate)),
-                          (f = null),
-                          !m)
-                        ) {
-                          e.next = 15;
-                          break;
-                        }
-                        return (e.next = 14), eS.ZP.getEnforcementToken(p);
+                          (m = [eu.S.GPT_4]),
+                          (e.next = 11),
+                          (0, eS.Ob)(c)
+                        );
+                      case 11:
+                        return (
+                          (f = e.sent),
+                          (e.next = 14),
+                          (0, eS.Rr)(l, f, eu.OL.GizmoMagicCreate)
+                        );
                       case 14:
-                        f = e.sent;
-                      case 15:
-                        if (((h = (0, eA.u7)(l, p)), (g = null), !h)) {
-                          e.next = 21;
+                        if (((h = e.sent), (g = null), !h)) {
+                          e.next = 20;
                           break;
                         }
-                        return (e.next = 20), eA.ZP.getEnforcementToken(p);
-                      case 20:
+                        return (e.next = 19), eS.ZP.getEnforcementToken(f);
+                      case 19:
                         g = e.sent;
-                      case 21:
+                      case 20:
+                        if (((v = (0, eA.u7)(l, m)), (x = null), !v)) {
+                          e.next = 26;
+                          break;
+                        }
+                        return (e.next = 25), eA.ZP.getEnforcementToken(m);
+                      case 25:
+                        x = e.sent;
+                      case 26:
                         s({
                           model: eT.Mw,
                           completionType: eu.Os.Next,
-                          parentNodeId: u,
+                          parentNodeId: d,
                           metadata: {},
                           focusOnNewCompletion: !0,
-                          arkoseToken: f,
-                          turnstileToken: g,
+                          arkoseToken: g,
+                          turnstileToken: x,
                           preflightTime: 0,
-                          completionMetadata: d,
+                          completionMetadata: p,
                         });
-                      case 22:
+                      case 27:
                       case "end":
                         return e.stop();
                     }
@@ -4217,14 +4245,14 @@
               })
             )),
             function (e, t, n) {
-              return c.apply(this, arguments);
+              return u.apply(this, arguments);
             }),
-          eh = (0, A.useState)(void 0),
-          eg = eh[0],
-          ev = eh[1];
+          ev = (0, A.useState)(void 0),
+          ex = ev[0],
+          eb = ev[1];
         (0, A.useEffect)(
           function () {
-            ev(
+            eb(
               (function (e) {
                 if (e) {
                   var t,
@@ -4268,13 +4296,13 @@
                         : d.None,
                   };
                 }
-              })(w)
+              })(P)
             );
           },
-          [null == w ? void 0 : w.gizmo.id]
+          [null == P ? void 0 : P.gizmo.id]
         );
-        var ex =
-            ((u = (0, y.Z)(
+        var ey =
+            ((f = (0, y.Z)(
               k().mark(function e(t, n) {
                 var r, i, o, a, s;
                 return k().wrap(
@@ -4282,7 +4310,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if (!((r = (0, tt.bw)(C.current, t, n)).length > 0)) {
+                          if (!((r = (0, tt.bw)(I.current, t, n)).length > 0)) {
                             e.next = 4;
                             break;
                           }
@@ -4300,7 +4328,7 @@
                             e.abrupt("return")
                           );
                         case 4:
-                          return (e.next = 6), $();
+                          return (e.next = 6), es();
                         case 6:
                           return (
                             (o = (i = e.sent).gizmo.id),
@@ -4308,10 +4336,10 @@
                             ee.A.logEvent(et.M.promoteGizmo, {
                               gizmo_id: i.gizmo.id,
                               sharing_recipient: t,
-                              editor_tab: ej,
+                              editor_tab: ek,
                             }),
                             (e.next = 12),
-                            X.mutateAsync(
+                            $.mutateAsync(
                               {
                                 gizmoId: i.gizmo.id,
                                 data: {
@@ -4346,7 +4374,7 @@
                             (e.t0 = e.catch(8)),
                             e.t0 instanceof _.DC
                               ? ((s = !!e.t0.response.is_flagged_brand_name),
-                                ev({
+                                eb({
                                   gizmoId: o,
                                   sharingRecipient: t,
                                   moderationType: p.PublishBlocked,
@@ -4369,20 +4397,20 @@
               })
             )),
             function (e, t) {
-              return u.apply(this, arguments);
+              return f.apply(this, arguments);
             }),
-          eb = B.isPending || X.isPending,
-          ey = (0, A.useState)(function () {
+          ej = V.isPending || $.isPending,
+          eP = (0, A.useState)(function () {
             var e = en.m.getItem(en.F.GizmoEditorTab);
             return Object.values(x).includes(e) ? e : x.MAGIC_MAKER;
           }),
-          ej = ey[0],
-          eP = ey[1],
-          ek = ((h = (f = (0, A.useState)({ width: null, height: null }))[0]),
-          (g = f[1]),
+          ek = eP[0],
+          eN = eP[1],
+          ez = ((g = (h = (0, A.useState)({ width: null, height: null }))[0]),
+          (v = h[1]),
           (0, A.useLayoutEffect)(function () {
             var e = function () {
-              g({ width: window.innerWidth, height: window.innerHeight });
+              v({ width: window.innerWidth, height: window.innerHeight });
             };
             return (
               e(),
@@ -4392,51 +4420,51 @@
               }
             );
           }, []),
-          h).width;
+          g).width;
         (0, A.useEffect)(
           function () {
-            null != ek && ek >= 768 && ej === x.PREVIEW && eP(x.MAGIC_MAKER);
+            null != ez && ez >= 768 && ek === x.PREVIEW && eN(x.MAGIC_MAKER);
           },
-          [ek, ej]
+          [ez, ek]
         );
-        var eN = (0, A.useState)(!1),
-          ez = eN[0],
-          eO = eN[1],
-          eC = (0, A.useState)(!1),
-          eI = eC[0],
-          e_ = eC[1],
-          eG = (0, A.useState)(void 0),
-          eM = eG[0],
-          eE = eG[1];
+        var eO = (0, A.useState)(!1),
+          eC = eO[0],
+          eI = eO[1],
+          e_ = (0, A.useState)(!1),
+          eG = e_[0],
+          eM = e_[1],
+          eE = (0, A.useState)(void 0),
+          eZ = eE[0],
+          eU = eE[1];
         return (0, Z.jsxs)("div", {
           className: "flex h-screen w-full flex-col items-center",
           children: [
             (0, Z.jsx)(th, {
-              gizmoEditorData: S,
-              isLoading: eb,
-              hasUnpublishedChanges: Q,
-              isUploadingProfilePic: ez,
-              isGeneratingProfilePic: eI,
-              publishedGizmo: R,
+              gizmoEditorData: E,
+              isLoading: ej,
+              hasUnpublishedChanges: ea,
+              isUploadingProfilePic: eC,
+              isGeneratingProfilePic: eG,
+              publishedGizmo: B,
               promoteGizmo:
-                ((v = (0, y.Z)(
+                ((j = (0, y.Z)(
                   k().mark(function e(t, n) {
                     var r;
                     return k().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), ex(t, n);
+                            return (e.next = 2), ey(t, n);
                           case 2:
                             return (
                               (r = e.sent),
-                              (C.current = tD(
-                                tD({}, C.current),
+                              (I.current = tD(
+                                tD({}, I.current),
                                 {},
                                 { sharingRecipient: t }
                               )),
-                              E(C.current),
-                              en.m.setItem(en.F.GizmoEditorTab, ej),
+                              D(I.current),
+                              en.m.setItem(en.F.GizmoEditorTab, ek),
                               e.abrupt("return", r)
                             );
                           case 7:
@@ -4447,24 +4475,24 @@
                   })
                 )),
                 function (e, t) {
-                  return v.apply(this, arguments);
+                  return j.apply(this, arguments);
                 }),
               appealGizmo:
-                ((j = (0, y.Z)(
+                ((w = (0, y.Z)(
                   k().mark(function e(t, n) {
                     return k().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            if (null != eg) {
+                            if (null != ex) {
                               e.next = 2;
                               break;
                             }
                             return e.abrupt("return");
                           case 2:
-                            ev(
+                            eb(
                               tD(
-                                tD({}, eg),
+                                tD({}, ex),
                                 {},
                                 {
                                   sharingRecipient: t,
@@ -4481,39 +4509,39 @@
                   })
                 )),
                 function (e, t) {
-                  return j.apply(this, arguments);
+                  return w.apply(this, arguments);
                 }),
               revertDraft:
-                null != R && Q
+                null != B && ea
                   ? function () {
                       var e = er.E.getQueryData(
-                        (0, b.Vw)(C.current.id).queryKey
+                        (0, b.Vw)(I.current.id).queryKey
                       );
                       if (null != e) {
                         var t = tF(e);
-                        (C.current = t), E(t), $();
+                        (I.current = t), D(t), es();
                       }
                     }
                   : void 0,
               draftMessage: (0, Z.jsx)(tb, {
-                hasUnpublishedChanges: Q,
-                isSavingDraft: V,
-                upsertDraftError: H,
+                hasUnpublishedChanges: ea,
+                isSavingDraft: X,
+                upsertDraftError: Q,
                 className: "text-sm",
               }),
               showActionsModal: function (e) {
-                eE(e);
+                eU(e);
               },
               className: "flex-shrink-0",
             }),
-            eg &&
+            ex &&
               (0, Z.jsx)(F, {
-                appealState: eg,
+                appealState: ex,
                 onAppealClose: function () {
-                  return ev(tD(tD({}, eg), {}, { showModal: d.None }));
+                  return eb(tD(tD({}, ex), {}, { showModal: d.None }));
                 },
                 onAppealSubmitted: function () {
-                  return ev(tD(tD({}, eg), {}, { showModal: d.AppealSent }));
+                  return eb(tD(tD({}, ex), {}, { showModal: d.AppealSent }));
                 },
               }),
             (0, Z.jsxs)("div", {
@@ -4524,66 +4552,66 @@
                   children: (0, Z.jsx)("div", {
                     className: "h-full grow overflow-hidden",
                     children:
-                      void 0 !== eM
+                      void 0 !== eZ
                         ? (0, Z.jsx)(e2, {
-                            currentlyEditingActionDomain: eM,
-                            gizmoEditorData: S,
-                            updateGizmo: ed,
+                            currentlyEditingActionDomain: eZ,
+                            gizmoEditorData: E,
+                            updateGizmo: em,
                             onClose: function () {
-                              eE(void 0);
+                              eU(void 0);
                             },
                           })
                         : (0, Z.jsxs)("div", {
                             className: "flex h-full flex-col px-2 pt-2",
                             children: [
                               (0, Z.jsx)(tU, {
-                                editorTab: ej,
-                                setEditorTab: eP,
+                                editorTab: ek,
+                                setEditorTab: eN,
                                 className: "mb-2 flex-shrink-0 self-center",
                               }),
                               (0, Z.jsx)("div", {
                                 className: "grow overflow-hidden",
                                 children:
-                                  ej === x.MAGIC_MAKER
+                                  ek === x.MAGIC_MAKER
                                     ? (0, Z.jsx)("div", {
                                         className: "h-full w-full pb-5",
                                         children: (0, Z.jsx)(
                                           tA,
                                           {
-                                            gizmoEditorData: S,
-                                            updateGizmo: ed,
-                                            completionCallbackResponse: em,
-                                            clientThreadId: L,
-                                            gizmoEditorDataRef: C,
-                                            magicMakerBehaviorOverrides: U,
+                                            gizmoEditorData: E,
+                                            updateGizmo: em,
+                                            completionCallbackResponse: eh,
+                                            clientThreadId: U,
+                                            gizmoEditorDataRef: I,
+                                            magicMakerBehaviorOverrides: R,
                                             magicMakerConversationGizmoEditorDataRef:
-                                              G,
-                                            requireGizmoId: es,
+                                              M,
+                                            requireGizmoId: ed,
                                           },
-                                          L
+                                          U
                                         ),
                                       })
-                                    : ej === x.ADVANCED
+                                    : ek === x.ADVANCED
                                       ? (0, Z.jsx)(ew.cK, {
-                                          gizmoEditorData: S,
-                                          updateGizmo: ed,
+                                          gizmoEditorData: E,
+                                          updateGizmo: em,
                                           generateProfilePic: function () {
-                                            e_(!0),
-                                              ef(C, G, [
+                                            eM(!0),
+                                              eg(I, M, [
                                                 "Generate a new profile picture for this GPT using gizmo_editor generate_profile_pic. Do not prompt the user for any clarification. Do not send extra text outside of the tool function call. DO NOT CALL update_behavior or otherwise update GPT behavior in your response.",
                                               ]);
                                           },
-                                          setIsUploadingProfilePic: eO,
-                                          isGeneratingProfilePic: eI,
-                                          setIsGeneratingProfilePic: e_,
-                                          requireGizmoId: es,
+                                          setIsUploadingProfilePic: eI,
+                                          isGeneratingProfilePic: eG,
+                                          setIsGeneratingProfilePic: eM,
+                                          requireGizmoId: ed,
                                           onShowActionsEditor: function (e) {
-                                            eE(e);
+                                            eU(e);
                                           },
                                         })
                                       : (0, Z.jsx)(eV, {
-                                          gizmoEditorData: S,
-                                          isSavingDraft: V,
+                                          gizmoEditorData: E,
+                                          isSavingDraft: X,
                                           showTitle: !1,
                                         }),
                               }),
@@ -4594,15 +4622,15 @@
                 (0, Z.jsx)("div", {
                   className: (0, ei.default)(
                     "hidden w-1/2 justify-center border-l border-token-border-medium bg-token-main-surface-secondary pt-4",
-                    ej !== x.PREVIEW && "md:flex"
+                    ek !== x.PREVIEW && "md:flex"
                   ),
                   children: (0, Z.jsx)("div", {
                     className: "flex-grow pb-5",
                     children: (0, Z.jsx)("div", {
                       className: "h-full",
                       children: (0, Z.jsx)(eV, {
-                        gizmoEditorData: S,
-                        isSavingDraft: V,
+                        gizmoEditorData: E,
+                        isSavingDraft: X,
                       }),
                     }),
                   }),
@@ -4690,12 +4718,16 @@
           r = n.query.slug,
           i = r ? (0, b.CR)(r) : void 0,
           o = n.query.remixFrom,
-          a = null == t ? void 0 : t.features.includes(K.PL);
+          a = null == t ? void 0 : t.features.includes(K.PL),
+          s = (0, H.m0)();
         return ((0, A.useEffect)(
           function () {
-            a && eS.ZP.initializeAndGatherData();
+            a &&
+              (0, eS.Ob)(s).then(function (e) {
+                eS.ZP.initializeAndGatherData(e);
+              });
           },
-          [a]
+          [a, s]
         ),
         (0, A.useEffect)(
           function () {
@@ -4729,7 +4761,7 @@
           return ew;
         },
         sY: function () {
-          return eC;
+          return eI;
         },
       });
       var r,
@@ -4859,28 +4891,28 @@
                                 : n;
                             });
                           },
-                          onFileUploaded: function (e, t) {
-                            u(function (n) {
-                              return "initial" !== n &&
-                                (null == n ? void 0 : n.tempId) === e
-                                ? (d.current(n),
+                          onFileUploaded: function (e, t, n) {
+                            u(function (t) {
+                              return "initial" !== t &&
+                                (null == t ? void 0 : t.tempId) === e
+                                ? (d.current(t),
                                   A(
-                                    A({}, n),
+                                    A({}, t),
                                     {},
                                     {
                                       status: z.X.Ready,
                                       progress: 100,
                                       fileSpec: A(
                                         {
-                                          name: n.file.name,
-                                          id: n.fileId,
-                                          size: n.file.size,
+                                          name: t.file.name,
+                                          id: t.fileId,
+                                          size: t.file.size,
                                         },
-                                        null != t ? t : {}
+                                        null != n ? n : {}
                                       ),
                                     }
                                   ))
-                                : n;
+                                : t;
                             });
                           },
                           onError: function (e) {
@@ -4993,13 +5025,13 @@
       var D = n(5063),
         L = n(4748),
         U = n(46514),
-        R = n(45754),
-        B = n(12374),
+        R = n(95412),
+        B = n(1890),
         F = n(73582),
         V = n(14765),
         q = n(19841),
-        W = n(70737),
-        K = n(97296),
+        W = n(24343),
+        K = n(83737),
         Y = n(61888),
         H = n(5397),
         J = n.n(H),
@@ -5008,7 +5040,7 @@
         $ = n(94968),
         ee = n(21389),
         et = n(3125),
-        en = n(98083),
+        en = n(1755),
         er = n(99893);
       function ei(e, t) {
         var n = Object.keys(e);
@@ -5063,6 +5095,7 @@
                       case 0:
                         return (
                           en.A.logEvent(er.M.uploadFile, {
+                            client: "web",
                             eventSource: "mouse",
                             intent: "gizmo",
                           }),
@@ -5094,10 +5127,10 @@
                                   c,
                                   { kind: m.Ei.Gizmo, gizmoId: n },
                                   {
-                                    onFileUploaded: function (e, t, n) {
-                                      var r = f.current.get(e);
-                                      null != r &&
-                                        null != r.fileId &&
+                                    onFileUploaded: function (e, t, n, r) {
+                                      var i = f.current.get(e);
+                                      null != i &&
+                                        null != i.fileId &&
                                         (a(function (e) {
                                           var t;
                                           return eo(
@@ -5113,16 +5146,16 @@
                                                 ),
                                                 [
                                                   {
-                                                    file_id: r.fileId,
-                                                    name: r.file.name,
-                                                    size: r.file.size,
-                                                    type: r.file.type,
+                                                    file_id: i.fileId,
+                                                    name: i.file.name,
+                                                    size: i.file.size,
+                                                    type: i.file.type,
                                                     last_modified:
-                                                      r.file.lastModified,
+                                                      i.file.lastModified,
                                                     file_size_tokens:
-                                                      null == n
+                                                      null == r
                                                         ? void 0
-                                                        : n.fileTokenSize,
+                                                        : r.fileTokenSize,
                                                   },
                                                 ]
                                               ),
@@ -5737,7 +5770,7 @@
                 : []
               ).length >= v.L5
                 ? (0, M.jsx)("div", {
-                    children: s.formatMessage(eC.maxActionsReached, {
+                    children: s.formatMessage(eI.maxActionsReached, {
                       number: v.L5,
                     }),
                   })
@@ -5747,14 +5780,14 @@
                       o("Unknown domain");
                     },
                     className: "mt-2",
-                    children: (0, M.jsx)(Q.Z, eg({}, eC.createActionLabel)),
+                    children: (0, M.jsx)(Q.Z, eg({}, eI.createActionLabel)),
                   }),
             ],
           });
         return a
           ? (0, M.jsx)(g.u, {
               side: "top",
-              label: s.formatMessage(eC.disabledCustomActionsTooltip),
+              label: s.formatMessage(eI.disabledCustomActionsTooltip),
               children: l,
             })
           : l;
@@ -5803,7 +5836,8 @@
           et = (0, F.ec)(F.F_.isBusinessWorkspace),
           en = (0, f.C)(B.L0.WorkspaceGPTCustomActions),
           er = (0, w.Z)(),
-          ei = (0, V.sB)(V.tz.GizmoIntents).value;
+          ei = (0, V.sB)(V.tz.GizmoContacts).value,
+          eo = (0, V.sB)(V.tz.GizmoIntents).value;
         return (0, M.jsxs)("div", {
           className:
             "flex h-full grow flex-col overflow-y-auto px-2 pt-6 text-sm",
@@ -5838,7 +5872,7 @@
                                     }
                                     return (
                                       (e.next = 3),
-                                      R.ZP.getFileDownloadLink(t.fileId)
+                                      R.Z.getFileDownloadLink(t.fileId)
                                     );
                                   case 3:
                                     (n = e.sent).status === m.KF.Success &&
@@ -5894,7 +5928,7 @@
                           children: (0, M.jsx)(
                             Q.Z,
                             eg(
-                              eg({}, eC.nameTooLong),
+                              eg({}, eI.nameTooLong),
                               {},
                               { values: { length: v.aI } }
                             )
@@ -5948,7 +5982,7 @@
                           children: (0, M.jsx)(
                             Q.Z,
                             eg(
-                              eg({}, eC.descriptionTooLong),
+                              eg({}, eI.descriptionTooLong),
                               {},
                               { values: { length: v.P_ } }
                             )
@@ -6002,7 +6036,7 @@
                           children: (0, M.jsx)(
                             Q.Z,
                             eg(
-                              eg({}, eC.instructionsTooLong),
+                              eg({}, eI.instructionsTooLong),
                               {},
                               { values: { length: v.vi } }
                             )
@@ -6045,7 +6079,7 @@
                           children: (0, M.jsx)(
                             Q.Z,
                             eg(
-                              eg({}, eC.welcomeMessageTooLong),
+                              eg({}, eI.welcomeMessageTooLong),
                               {},
                               { values: { length: v.Lu } }
                             )
@@ -6139,7 +6173,7 @@
                   children: [
                     (0, M.jsx)(eP, {
                       label: "Knowledge",
-                      description: er.formatMessage(eC.knowledgeExplanation),
+                      description: er.formatMessage(eI.knowledgeExplanation),
                     }),
                     (0, M.jsx)(ea, {
                       gizmoEditorData: g,
@@ -6219,7 +6253,8 @@
                       }),
                     ],
                   }),
-                ei && (0, M.jsx)(eO, { gizmoEditorData: g, updateGizmo: x }),
+                !ei && (0, M.jsx)(eC, { gizmoEditorData: g, updateGizmo: x }),
+                eo && (0, M.jsx)(eO, { gizmoEditorData: g, updateGizmo: x }),
               ],
             }),
             L &&
@@ -6265,7 +6300,24 @@
             },
           }
         ),
-        eC = (0, $.vU)({
+        eC = J()(
+          function () {
+            return n
+              .e(8682)
+              .then(n.bind(n, 79669))
+              .then(function (e) {
+                return e.GizmoContactsEditor;
+              });
+          },
+          {
+            loadableGenerated: {
+              webpack: function () {
+                return [79669];
+              },
+            },
+          }
+        ),
+        eI = (0, $.vU)({
           nameTooLong: {
             id: "gizmo.nameTooLong",
             defaultMessage:
@@ -6573,4 +6625,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1992-7d89277202cd454e.js.map
+//# sourceMappingURL=1992-af69aabaa65d6a75.js.map

@@ -5,13 +5,13 @@
     35017: function (e, t, r) {
       r.d(t, {
         hb: function () {
-          return ey;
-        },
-        yG: function () {
           return ej;
         },
+        yG: function () {
+          return eb;
+        },
         ZP: function () {
-          return eg;
+          return em;
         },
       });
       var n,
@@ -151,13 +151,13 @@
         }),
         Z = r(68919),
         M = r(3554),
-        E = r(21120),
-        A = r(7525),
-        D = r(31609),
+        D = r(21120),
+        E = r(7525),
+        A = r(31609),
         S = r(998),
         F = r(44247),
         C = r(4748),
-        U = r(45754),
+        U = r(95412),
         B = r(18008),
         I = r(82473),
         W = r(25494),
@@ -243,19 +243,19 @@
                     case 2:
                       (r = e.sent),
                         Q({
-                          tempId: (n = (0, D.W7)(r)),
+                          tempId: (n = (0, A.W7)(r)),
                           file: r,
-                          status: A.X.Uploading,
+                          status: E.X.Uploading,
                           progress: 1,
                           fileId: null,
                           cdnUrl: null,
                         }),
-                        (0, D.lU)(n, r, q, u.Ei.ProfilePicture, {
+                        (0, A.lU)(n, r, q, u.Ei.ProfilePicture, {
                           onFileCreated: function (e, t, r) {
                             Q(function (n) {
                               return "initial" !== n &&
                                 (null == n ? void 0 : n.tempId) === e &&
-                                n.status === A.X.Uploading
+                                n.status === E.X.Uploading
                                 ? R(
                                     R({}, n),
                                     {},
@@ -268,40 +268,40 @@
                             Q(function (r) {
                               return "initial" !== r &&
                                 (null == r ? void 0 : r.tempId) === e &&
-                                r.status === A.X.Uploading
+                                r.status === E.X.Uploading
                                 ? R(R({}, r), {}, { progress: t })
                                 : r;
                             });
                           },
-                          onFileUploaded: function (e, t) {
-                            Q(function (r) {
-                              return "initial" !== r &&
-                                r &&
-                                r.cdnUrl &&
-                                r.tempId === e
-                                ? (U.ZP.getFileDownloadLink(r.fileId).then(
+                          onFileUploaded: function (e, t, r) {
+                            Q(function (t) {
+                              return "initial" !== t &&
+                                t &&
+                                t.cdnUrl &&
+                                t.tempId === e
+                                ? (U.Z.getFileDownloadLink(t.fileId).then(
                                     function (e) {
                                       e.status === u.KF.Success &&
-                                        (T(r.fileId), k(e.download_url));
+                                        (T(t.fileId), k(e.download_url));
                                     }
                                   ),
                                   R(
-                                    R({}, r),
+                                    R({}, t),
                                     {},
                                     {
-                                      status: A.X.Ready,
+                                      status: E.X.Ready,
                                       progress: 100,
                                       fileSpec: R(
                                         {
-                                          name: r.file.name,
-                                          id: r.fileId,
-                                          size: r.file.size,
+                                          name: t.file.name,
+                                          id: t.fileId,
+                                          size: t.file.size,
                                         },
-                                        null != t ? t : {}
+                                        null != r ? r : {}
                                       ),
                                     }
                                   ))
-                                : r;
+                                : t;
                             });
                           },
                           onError: function (e) {
@@ -334,7 +334,7 @@
                 var r = e.name,
                   a = e.profilePictureId,
                   i = e.profilePictureUrl;
-                return U.ZP.patchWorkspace({
+                return U.Z.patchWorkspace({
                   workspaceId: t,
                   name: r,
                   profile_picture_id: a,
@@ -352,10 +352,10 @@
           H = (0, y.jsx)(M.ZP.Button, {
             color: "primary",
             disabled:
-              ("initial" !== G && void 0 !== G && G.status !== A.X.Ready) ||
+              ("initial" !== G && void 0 !== G && G.status !== E.X.Ready) ||
               ("initial" !== G &&
                 void 0 !== G &&
-                G.status === A.X.Ready &&
+                G.status === E.X.Ready &&
                 !w) ||
               $.isPending ||
               0 === c.trim().length,
@@ -406,7 +406,7 @@
             },
             [G, ee]
           ),
-          (0, y.jsxs)(E.Z, {
+          (0, y.jsxs)(D.Z, {
             isOpen: z,
             onClose: function () {
               return B.vm.closeModal(B.B.WorkspaceAppearance);
@@ -577,16 +577,15 @@
         J = r(88140),
         $ = r(7144),
         H = r(73582),
-        V = r(14765),
-        Y = r(19841),
-        ee = r(10721),
-        et = r(1454),
-        er = r(21389),
-        en = r(86561),
-        ea = r(91559),
-        ei = r(23232),
-        es = r(218);
-      function eo(e, t) {
+        V = r(19841),
+        Y = r(10721),
+        ee = r(1454),
+        et = r(21389),
+        er = r(86561),
+        en = r(91559),
+        ea = r(23232),
+        ei = r(218);
+      function es(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -598,16 +597,16 @@
         }
         return r;
       }
-      function ec(e) {
+      function eo(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eo(Object(r), !0).forEach(function (t) {
+            ? es(Object(r), !0).forEach(function (t) {
                 (0, l.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : eo(Object(r)).forEach(function (t) {
+              : es(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -617,16 +616,16 @@
         }
         return e;
       }
-      function el(e) {
+      function ec(e) {
         var t,
           r = e.accountId,
           n = e.subscription,
           a = (0, j.Z)(),
-          i = (0, ei.wK)(r),
+          i = (0, ea.wK)(r),
           s = (0, b.useState)(!1),
           o = s[0],
           c = s[1],
-          l = (0, es.Gk)(r),
+          l = (0, ei.Gk)(r),
           u =
             ((t = (0, p.Z)(
               m().mark(function e() {
@@ -645,7 +644,7 @@
                           (e.prev = 6),
                             (e.t0 = e.catch(1)),
                             C.m.warning(
-                              a.formatMessage(eu.errorRenewingSubscription),
+                              a.formatMessage(el.errorRenewingSubscription),
                               { hasCloseButton: !0 }
                             );
                         case 9:
@@ -676,14 +675,14 @@
                   (0, y.jsxs)("div", {
                     className: "flex items-center",
                     children: [
-                      (0, y.jsx)(en.FE, {
+                      (0, y.jsx)(er.FE, {
                         className: "mr-4 hidden text-orange-500 md:block",
                       }),
                       (0, y.jsx)("p", {
                         className: "text-lg font-semibold",
                         children: (0, y.jsx)(
                           _.Z,
-                          ec({}, eu.workspaceWillBeDeactivated)
+                          eo({}, el.workspaceWillBeDeactivated)
                         ),
                       }),
                     ],
@@ -693,8 +692,8 @@
                       className: "md:ml-8",
                       children: (0, y.jsx)(
                         _.Z,
-                        ec(
-                          ec({}, eu.retainAccessUntil),
+                        eo(
+                          eo({}, el.retainAccessUntil),
                           {},
                           { values: { expiryDate: new Date(n.active_until) } }
                         )
@@ -703,17 +702,17 @@
                 ],
               }),
               l &&
-                (0, y.jsx)(ea.z, {
+                (0, y.jsx)(en.z, {
                   color: "primary",
                   onClick: u,
                   loading: o,
-                  children: (0, y.jsx)(_.Z, ec({}, eu.reactivateBtn)),
+                  children: (0, y.jsx)(_.Z, eo({}, el.reactivateBtn)),
                 }),
             ],
           }),
         });
       }
-      var eu = (0, w.vU)({
+      var el = (0, w.vU)({
         retainAccessUntil: {
           id: "adminPage.retainAccessUntil",
           defaultMessage:
@@ -732,7 +731,7 @@
           defaultMessage: "There was an error reactivating your subscription.",
         },
       });
-      function ed(e, t) {
+      function eu(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -744,16 +743,16 @@
         }
         return r;
       }
-      function ep(e) {
+      function ed(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? ed(Object(r), !0).forEach(function (t) {
+            ? eu(Object(r), !0).forEach(function (t) {
                 (0, l.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ed(Object(r)).forEach(function (t) {
+              : eu(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -763,62 +762,50 @@
         }
         return e;
       }
-      function ef(e) {
+      function ep(e) {
         var t = e.route,
           r = e.icon,
           n = e.name,
           a = e.upsellEnterprise,
-          i = (0, ee.useRouter)();
+          i = (0, Y.useRouter)();
         return void 0 !== a && a
-          ? (0, y.jsx)(q.E, {
-              label: (0, y.jsx)(_.Z, ep({}, ek.availableForEnterprise)),
+          ? (0, y.jsx)(q.u, {
+              label: (0, y.jsx)(_.Z, ed({}, ew.availableForEnterprise)),
               side: "right",
-              disabled: !0,
               children: (0, y.jsxs)(X.ZB, {
                 $as: "button",
-                className: (0, Y.default)(
+                className: (0, V.default)(
                   "w-full rounded text-left",
                   "hover:bg-token-sidebar-surface-secondary"
                 ),
                 children: [
-                  (0, y.jsx)(et.UIZ, {
+                  (0, y.jsx)(ee.UIZ, {
                     className: "icon-sm shrink-0 text-token-text-secondary",
                   }),
                   (0, y.jsx)("span", {
                     className: "text-token-text-secondary",
-                    children: (0, y.jsx)(_.Z, ep({}, n)),
+                    children: (0, y.jsx)(_.Z, ed({}, n)),
                   }),
                 ],
               }),
             })
           : (0, y.jsxs)(X.ZB, {
               $as: "button",
-              className: (0, Y.default)(
+              className: (0, V.default)(
                 "w-full rounded text-left hover:bg-token-sidebar-surface-secondary",
                 i.route === t && "bg-token-sidebar-surface-secondary"
               ),
               onClick: function (e) {
                 i.push(t), e.stopPropagation();
               },
-              children: [r, (0, y.jsx)(_.Z, ep({}, n))],
+              children: [r, (0, y.jsx)(_.Z, ed({}, n))],
             });
       }
-      function em() {
-        return (0, V.sB)(V.tz.WorkspaceAllowSpecific).value
-          ? (0, y.jsx)(y.Fragment, {
-              children: (0, y.jsx)(ef, {
-                route: "/admin/gpts",
-                icon: (0, y.jsx)(v.fr, { className: "icon-sm" }),
-                name: ek.gpts,
-              }),
-            })
-          : null;
-      }
-      function ex(e) {
+      function ef(e) {
         var t = e.workspace,
           r = e.hasAdminPrivileges,
           n = e.hasOwnerPrivileges,
-          a = (0, ee.useRouter)(),
+          a = (0, Y.useRouter)(),
           i = (0, b.useCallback)(
             function () {
               a.push("/");
@@ -834,8 +821,8 @@
               children: (0, y.jsxs)(J.MP, {
                 onClick: i,
                 children: [
-                  (0, y.jsx)(et.Ao2, { className: "icon-sm" }),
-                  (0, y.jsx)(_.Z, ep({}, ek.backToChat)),
+                  (0, y.jsx)(ee.Ao2, { className: "icon-sm" }),
+                  (0, y.jsx)(_.Z, ed({}, ew.backToChat)),
                 ],
               }),
             }),
@@ -877,67 +864,75 @@
                     }),
                   ],
                 }),
-                (0, y.jsx)(ef, {
+                (0, y.jsx)(ep, {
                   route: "/admin",
                   icon: (0, y.jsx)(v.yj, { className: "icon-sm" }),
-                  name: ek.membersPageTitle,
+                  name: ew.membersPageTitle,
                 }),
                 n &&
-                  (0, y.jsx)(ef, {
+                  (0, y.jsx)(ep, {
                     route: "/admin/billing",
                     icon: (0, y.jsx)(v.L2, { className: "icon-sm" }),
-                    name: ek.billing,
+                    name: ew.billing,
                   }),
-                n && (0, y.jsx)(em, {}),
                 n &&
-                  (0, y.jsx)(ef, {
+                  (0, y.jsx)(ep, {
+                    route: "/admin/gpts",
+                    icon: (0, y.jsx)(v.fr, { className: "icon-sm" }),
+                    name: ew.gpts,
+                  }),
+                n &&
+                  (0, y.jsx)(ep, {
                     route: "/admin/settings",
                     icon: (0, y.jsx)(v.O4, { className: "icon-sm" }),
-                    name: ek.settings,
+                    name: ew.settings,
                   }),
                 !s &&
                   (0, y.jsx)("span", {
                     className: "mx-3 border-t border-y-token-border-medium",
                   }),
                 r &&
-                  (0, y.jsx)(ef, {
+                  (0, y.jsx)(ep, {
                     route: "/admin/analytics",
                     icon: (0, y.jsx)(v.Ie, { className: "icon-sm" }),
-                    name: ek.analytics,
+                    name: ew.analytics,
                     upsellEnterprise: !s,
                   }),
                 n &&
-                  (0, y.jsx)(ef, {
+                  (0, y.jsx)(ep, {
                     route: "/admin/identity",
                     upsellEnterprise: !s,
                     icon: (0, y.jsx)(v.Tg, { className: "icon-sm" }),
-                    name: ek.identity,
+                    name: ew.identity,
                   }),
               ],
             }),
           ],
         });
       }
-      function eg(e) {
+      function em(e) {
         var t,
           r = e.mobilePageTitle,
           n = e.requireAdminPrivileges,
           a = void 0 !== n && n,
-          i = e.children,
-          s = (0, H.ec)(function (e) {
+          i = e.requireOwnerPrivileges,
+          s = void 0 !== i && i,
+          o = e.children,
+          c = (0, H.ec)(function (e) {
             return e.currentWorkspace;
           }),
-          o = (0, ee.useRouter)(),
-          c =
-            null != s
-              ? (t = s.role) === u.r3.ADMIN || t === u.r3.OWNER
+          l = (0, Y.useRouter)(),
+          d =
+            null != c
+              ? (t = c.role) === u.r3.ADMIN || t === u.r3.OWNER
               : void 0,
-          l = null != s ? s.role === u.r3.OWNER : void 0;
+          p = null != c ? c.role === u.r3.OWNER : void 0;
         return ((0, b.useEffect)(
           function () {
-            a && !1 === c && o.push("/admin");
+            a && !1 === d && l.push("/admin"),
+              s && !1 === p && l.push("/admin");
           },
-          [a, c, o]
+          [a, d, l, s, p]
         ),
         null == (0, $.t)())
           ? null
@@ -945,54 +940,54 @@
               children: [
                 (0, y.jsx)(Q.Z, {
                   mobileHeaderContent: r,
-                  sidebar: (0, y.jsx)(ex, {
-                    workspace: null != s ? s : void 0,
-                    hasAdminPrivileges: c,
-                    hasOwnerPrivileges: l,
+                  sidebar: (0, y.jsx)(ef, {
+                    workspace: null != c ? c : void 0,
+                    hasAdminPrivileges: d,
+                    hasOwnerPrivileges: p,
                   }),
-                  children: i,
+                  children: o,
                 }),
-                null == s ? null : (0, y.jsx)(z, { workspace: s }),
+                null == c ? null : (0, y.jsx)(z, { workspace: c }),
               ],
             });
       }
-      var ev = er.Z.div(
+      var ex = et.Z.div(
           n ||
             (n = (0, c.Z)([
               "border-b border-token-main-surface-tertiary hidden md:block py-6 lg:py-10",
             ]))
         ),
-        eb = er.Z.h2(
+        eg = et.Z.h2(
           a ||
             (a = (0, c.Z)(["mx-auto w-full max-w-4xl px-2 md:px-6 lg:px-10"]))
         ),
-        eh = (0, er.Z)(eb)(
+        ev = (0, et.Z)(eg)(
           i ||
             (i = (0, c.Z)(["font-normal text-base text-token-text-secondary"]))
         );
-      function ej(e) {
+      function eb(e) {
         var t = e.title,
           r = e.subtitle,
-          n = (0, ei.ZP)().data,
+          n = (0, ea.ZP)().data,
           a = (0, $.t)(),
           i = a && n && n.plan_type === u.D8.TEAM && !n.will_renew;
         return (0, y.jsxs)(y.Fragment, {
           children: [
-            i && (0, y.jsx)(el, { accountId: a.id, subscription: n }),
-            (0, y.jsxs)(ev, {
+            i && (0, y.jsx)(ec, { accountId: a.id, subscription: n }),
+            (0, y.jsxs)(ex, {
               children: [
-                (0, y.jsx)(eb, { children: t }),
-                r && (0, y.jsx)(eh, { children: r }),
+                (0, y.jsx)(eg, { children: t }),
+                r && (0, y.jsx)(ev, { children: r }),
               ],
             }),
           ],
         });
       }
-      er.Z.p(s || (s = (0, c.Z)(["text-sm text-token-text-tertiary"])));
-      var ew = er.Z.div(
+      et.Z.p(s || (s = (0, c.Z)(["text-sm text-token-text-tertiary"])));
+      var eh = et.Z.div(
         o || (o = (0, c.Z)(["max-w-4xl mx-auto w-full px-2 md:px-6 lg:px-10"]))
       );
-      function ey(e) {
+      function ej(e) {
         var t = e.children,
           r = e.showSpinner,
           n = (0, $.t)(),
@@ -1000,7 +995,7 @@
             return e.currentWorkspace;
           }),
           i = !n || r;
-        return (0, y.jsxs)(ew, {
+        return (0, y.jsxs)(eh, {
           children: [
             i &&
               (0, y.jsx)("div", {
@@ -1011,13 +1006,13 @@
               !a &&
               (0, y.jsx)("div", {
                 className: "flex min-h-[80vh] items-center justify-center",
-                children: (0, y.jsx)(_.Z, ep({}, ek.workspaceNotFound)),
+                children: (0, y.jsx)(_.Z, ed({}, ew.workspaceNotFound)),
               }),
             !i && a && t,
           ],
         });
       }
-      var ek = (0, w.vU)({
+      var ew = (0, w.vU)({
         workspaceNotFound: {
           id: "adminPage.workspaceNotFound",
           defaultMessage: "Workspace not found",
@@ -1059,7 +1054,7 @@
       var n = r(50134),
         a = r(4399),
         i = r.n(a),
-        s = r(45754),
+        s = r(95412),
         o = r(73582),
         c = r(61236),
         l = r(25494),
@@ -1095,7 +1090,7 @@
                         case 0:
                           return (
                             (r.next = 2),
-                            s.ZP.getSubscription(e).catch(function (e) {
+                            s.Z.getSubscription(e).catch(function (e) {
                               f.m.danger(
                                 t.formatMessage(v.subscriptionLoadError, {
                                   error: e.message,
@@ -1129,7 +1124,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return e.abrupt("return", s.ZP.cancelSubscription(t));
+                        return e.abrupt("return", s.Z.cancelSubscription(t));
                       case 1:
                       case "end":
                         return e.stop();
@@ -1157,7 +1152,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return e.abrupt("return", s.ZP.renewSubscription(t));
+                        return e.abrupt("return", s.Z.renewSubscription(t));
                       case 1:
                       case "end":
                         return e.stop();
@@ -1185,4 +1180,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5017-bdd3eb6219fbc9e9.js.map
+//# sourceMappingURL=5017-ca2c744f862d22b1.js.map

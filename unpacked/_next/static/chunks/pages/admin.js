@@ -36,14 +36,14 @@
         O = t(94968),
         I = t(21389),
         M = t(91559),
-        P = t(73659),
-        Z = t(45634),
+        Z = t(73659),
+        P = t(45634),
         R = t(34408),
         q = t(52467),
         C = t(50134),
         N = t(4399),
         E = t.n(N),
-        S = t(45754),
+        S = t(95412),
         U = t(61236),
         D = t(82473),
         _ = t(25494),
@@ -56,7 +56,7 @@
             var n = t.inviteId,
               s = t.role,
               a = t.acceptRequest;
-            return S.ZP.patchWorkspaceInvite(e, n, {
+            return S.Z.patchWorkspaceInvite(e, n, {
               role: s,
               acceptRequest: a,
             }).catch(function (e) {
@@ -80,7 +80,7 @@
         return (0, _.D)({
           mutationFn: function (t) {
             var n = t.email;
-            return S.ZP.deleteWorkspaceInvite(e, n).catch(function (e) {
+            return S.Z.deleteWorkspaceInvite(e, n).catch(function (e) {
               W.m.danger(
                 r.formatMessage(H.deleteInviteError, {
                   email: n,
@@ -173,7 +173,7 @@
                       switch ((e.prev = e.next)) {
                         case 0:
                           return (
-                            (e.next = 2), S.ZP.getWorkspaceInvites(n, r, 25, s)
+                            (e.next = 2), S.Z.getWorkspaceInvites(n, r, 25, s)
                           );
                         case 2:
                           return e.abrupt("return", e.sent);
@@ -275,7 +275,7 @@
               mutationFn: function (e) {
                 var t = e.role,
                   s = e.email;
-                return S.ZP.addWorkspaceUsers(n, [s], t, !0)
+                return S.Z.addWorkspaceUsers(n, [s], t, !0)
                   .then(function (e) {
                     var t = e.account_invites,
                       n = e.errored_emails;
@@ -423,7 +423,7 @@
                         case 0:
                           return (
                             (e.next = 2),
-                            S.ZP.getWorkspaceInviteRequests(n, r, 25, s)
+                            S.Z.getWorkspaceInviteRequests(n, r, 25, s)
                           );
                         case 2:
                           return e.abrupt("return", e.sent);
@@ -673,7 +673,7 @@
             }, 250),
             []
           ),
-          E = (0, Z.Wv)();
+          E = (0, P.Wv)();
         if (!s) return null;
         var S = s.isAdminOfAccount(),
           U = s.isOwnerOfAccount(),
@@ -787,7 +787,7 @@
                 (0, F.jsx)(ea, { workspaceId: t, tab: v, filterInputValue: q }),
               ],
             }),
-            null != s ? (0, F.jsx)(P.Z, { workspace: s }) : null,
+            null != s ? (0, F.jsx)(Z.Z, { workspace: s }) : null,
           ],
         });
       }
@@ -917,4 +917,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-2cb1ade3e79e149d.js.map
+//# sourceMappingURL=admin-0790b301e04e30ad.js.map

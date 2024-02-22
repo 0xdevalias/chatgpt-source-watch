@@ -13,8 +13,8 @@
           },
         });
       var o,
-        i,
         r,
+        i,
         s = n(36112),
         a = n(35017),
         c = n(82256),
@@ -142,9 +142,9 @@
         var t = e.domains,
           n = e.workspaceId,
           o = (0, S.Bd)(n).mutateAsync,
-          i = (0, l.useState)(!1),
-          r = i[0],
-          s = i[1],
+          r = (0, l.useState)(!1),
+          i = r[0],
+          s = r[1],
           a = (0, l.useState)(),
           c = a[0],
           d = a[1];
@@ -218,12 +218,12 @@
             (0, I.jsx)(
               M.Z,
               {
-                isOpen: r || void 0 !== c,
+                isOpen: i || void 0 !== c,
                 onClose: function () {
                   s(!1), d(void 0);
                 },
                 workspaceId: n,
-                currentDomain: r ? void 0 : c,
+                currentDomain: i ? void 0 : c,
                 domains: t,
               },
               null == c ? void 0 : c.id
@@ -332,7 +332,7 @@
           o = ""
             .concat(location.host, "/auth/login?sso=true&connection=")
             .concat(t),
-          i = (0, b.Z)();
+          r = (0, b.Z)();
         return (0, I.jsxs)(I.Fragment, {
           children: [
             (0, I.jsx)(U.Li, {
@@ -342,32 +342,32 @@
               className: "mb-6 flex flex-col space-y-4",
               children: [
                 (0, I.jsx)(A.Z, {
-                  label: i.formatMessage(W.acsURLLabel),
+                  label: r.formatMessage(W.acsURLLabel),
                   value:
                     "https://auth0.openai.com/login/callback?connection=".concat(
                       t
                     ),
                   onCopied: function () {
-                    _.m.success(i.formatMessage(W.copiedACSToClipboard), {
+                    _.m.success(r.formatMessage(W.copiedACSToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
                 (0, I.jsx)(A.Z, {
-                  label: i.formatMessage(W.entityIDLabel),
+                  label: r.formatMessage(W.entityIDLabel),
                   value: "urn:auth0:openai:".concat(t),
                   onCopied: function () {
-                    _.m.success(i.formatMessage(W.copiedEntityToClipboard), {
+                    _.m.success(r.formatMessage(W.copiedEntityToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
                 n &&
                   (0, I.jsx)(A.Z, {
-                    label: i.formatMessage(W.idpSignInURL),
+                    label: r.formatMessage(W.idpSignInURL),
                     value: o,
                     onCopied: function () {
-                      _.m.success(i.formatMessage(W.copiedIDPUrlToClipboard), {
+                      _.m.success(r.formatMessage(W.copiedIDPUrlToClipboard), {
                         duration: 3,
                       });
                     },
@@ -381,7 +381,7 @@
         var t,
           n,
           o = e.workspaceId,
-          i = e.data,
+          r = e.data,
           s = e.isOpen,
           a = e.onClose,
           c = (0, b.Z)(),
@@ -389,14 +389,14 @@
           u = (0, S.OR)(o).mutateAsync,
           f = (0, S.DD)(o).mutateAsync,
           g = (0, l.useRef)(null),
-          m = null == i ? void 0 : i.connection,
+          m = null == r ? void 0 : r.connection,
           v = (0, l.useState)(null == m ? void 0 : m.sign_in_endpoint),
           j = v[0],
           h = v[1],
           w = (0, l.useState)(null == m ? void 0 : m.cert),
           M = w[0],
           k = w[1],
-          C = null === i ? r.CREATE : r.EDIT,
+          C = null === r ? i.CREATE : i.EDIT,
           Z =
             ((t = (0, D.Z)(
               E().mark(function e(t, n) {
@@ -425,7 +425,7 @@
               return t.apply(this, arguments);
             }),
           P =
-            C === r.CREATE
+            C === i.CREATE
               ? (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.doneButton),
                   color: "primary",
@@ -451,7 +451,7 @@
                     })
                   ),
                 })
-              : i &&
+              : r &&
                 (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.doneButton),
                   color: "primary",
@@ -464,7 +464,7 @@
                               return (
                                 (e.next = 2),
                                 f({
-                                  connectionId: null == i ? void 0 : i.id,
+                                  connectionId: null == r ? void 0 : r.id,
                                   cert: M,
                                   signInEndpoint: j,
                                   active: !0,
@@ -481,7 +481,7 @@
                   ),
                 }),
           T =
-            null === i
+            null === r
               ? (0, I.jsx)(B.ZP.Button, {
                   title: c.formatMessage(W.cancelButton),
                   color: "light",
@@ -502,7 +502,7 @@
                             case 0:
                               return (
                                 (e.next = 2),
-                                u({ connectionId: null == i ? void 0 : i.id })
+                                u({ connectionId: null == r ? void 0 : r.id })
                               );
                             case 2:
                               a();
@@ -518,7 +518,7 @@
         return (0, I.jsx)(R.Z, {
           isOpen: s,
           type: "success",
-          title: c.formatMessage(C === r.CREATE ? W.createTitle : W.editTitle),
+          title: c.formatMessage(C === i.CREATE ? W.createTitle : W.editTitle),
           primaryButton: P,
           secondaryButton: T,
           onClose: a,
@@ -610,7 +610,7 @@
                     rows: 10,
                     className: (0, p.default)(
                       "w-full resize-none overflow-y-auto rounded border border-gray-300 px-3 py-2",
-                      "outline-none focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600",
+                      "outline-none focus-within:border-green-600 focus-within:ring-1 focus-within:ring-green-600",
                       "text-token-text-primary placeholder-gray-500 dark:bg-gray-700"
                     ),
                     placeholder: "-----BEGIN CERTIFICATE-----",
@@ -625,8 +625,8 @@
           }),
         });
       }
-      ((i = r || (r = {}))[(i.CREATE = 1)] = "CREATE"),
-        (i[(i.EDIT = 2)] = "EDIT");
+      ((r = i || (i = {}))[(r.CREATE = 1)] = "CREATE"),
+        (r[(r.EDIT = 2)] = "EDIT");
       var W = (0, v.vU)({
         setupSSOContent: {
           id: "workspaceIdentity.setupSSOContent",
@@ -706,7 +706,7 @@
           defaultMessage: "Learn more",
         },
       });
-      function G(e, t) {
+      function q(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -718,16 +718,16 @@
         }
         return n;
       }
-      function $(e) {
+      function G(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? G(Object(n), !0).forEach(function (t) {
+            ? q(Object(n), !0).forEach(function (t) {
                 (0, s.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : G(Object(n)).forEach(function (t) {
+              : q(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -737,13 +737,13 @@
         }
         return e;
       }
-      var q = function (e) {
+      var $ = function (e) {
           var t = e.title,
             n = e.footer,
             o = e.children;
           return (0, I.jsxs)(U.i9, {
             children: [
-              (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, $({}, t)) }),
+              (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, G({}, t)) }),
               (0, I.jsx)("div", { children: o }),
               (0, I.jsx)(U.Li, { children: n }),
             ],
@@ -753,7 +753,7 @@
           var t = e.icon,
             n = e.title,
             o = e.body,
-            i = e.toggle;
+            r = e.toggle;
           return (0, I.jsxs)(U.i9, {
             children: [
               (0, I.jsxs)("div", {
@@ -763,10 +763,10 @@
                     className: "flex items-center gap-2",
                     children: [
                       (0, I.jsx)(t, { className: "icon-sm" }),
-                      (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, $({}, n)) }),
+                      (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, G({}, n)) }),
                     ],
                   }),
-                  (0, I.jsx)("div", { children: i }),
+                  (0, I.jsx)("div", { children: r }),
                 ],
               }),
               (0, I.jsx)(U.Li, { children: o }),
@@ -777,14 +777,14 @@
         var t,
           n,
           o,
-          i,
-          r = e.currentWorkspaceId,
+          r,
+          i = e.currentWorkspaceId,
           s = (0, b.Z)(),
-          g = (0, S.f_)(r),
+          g = (0, S.f_)(i),
           v = g.data,
           h = g.isLoading,
-          w = (0, S.DD)(r).mutateAsync,
-          O = (0, S.Ji)(r),
+          w = (0, S.DD)(i).mutateAsync,
+          O = (0, S.Ji)(i),
           M = O.variables,
           k = O.mutateAsync,
           C = (null == v ? void 0 : v.sso_connection) !== null,
@@ -813,21 +813,21 @@
           R = v
             ? (0, I.jsxs)(U.$V, {
                 children: [
-                  (0, I.jsx)(q, {
+                  (0, I.jsx)($, {
                     title: Q.domainSubtitle,
                     footer: (0, I.jsx)(I.Fragment, {
-                      children: (0, I.jsx)(x.Z, $({}, Q.verifyDomainInfoText)),
+                      children: (0, I.jsx)(x.Z, G({}, Q.verifyDomainInfoText)),
                     }),
                     children: (0, I.jsx)(P, {
                       domains: v.domains,
-                      workspaceId: r,
+                      workspaceId: i,
                     }),
                   }),
                   (0, I.jsx)(J, {
                     icon: d,
                     title: Q.autoProvisionTitle,
                     body: (0, I.jsx)(I.Fragment, {
-                      children: (0, I.jsx)(x.Z, $({}, Q.autoProvisionBody)),
+                      children: (0, I.jsx)(x.Z, G({}, Q.autoProvisionBody)),
                     }),
                     toggle: (0, I.jsx)(j.Z, {
                       disabled: !Z,
@@ -860,7 +860,7 @@
                                 ),
                               }),
                               (0, I.jsx)(U.A4, {
-                                children: (0, I.jsx)(x.Z, $({}, Q.ssoTitle)),
+                                children: (0, I.jsx)(x.Z, G({}, Q.ssoTitle)),
                               }),
                             ],
                           }),
@@ -887,10 +887,10 @@
                               E(!0);
                             },
                             className: "font-medium",
-                            children: (0, I.jsx)(x.Z, $({}, T)),
+                            children: (0, I.jsx)(x.Z, G({}, T)),
                           }),
                           (0, I.jsx)(X, {
-                            workspaceId: r,
+                            workspaceId: i,
                             data: v.sso_connection,
                             isOpen: L,
                             onClose: function () {
@@ -906,16 +906,16 @@
                       icon: f.Z,
                       title: Q.enforceSSOTitle,
                       body: (0, I.jsx)(I.Fragment, {
-                        children: (0, I.jsx)(x.Z, $({}, Q.enforceSSOBody)),
+                        children: (0, I.jsx)(x.Z, G({}, Q.enforceSSOBody)),
                       }),
                       toggle: (0, I.jsx)(j.Z, {
                         disabled: !Z,
                         enabled:
                           null ===
-                            (i = v.sso_connection.auth0_enforced_clients) ||
-                          void 0 === i
+                            (r = v.sso_connection.auth0_enforced_clients) ||
+                          void 0 === r
                             ? void 0
-                            : i.includes("chat"),
+                            : r.includes("chat"),
                         onChange: function (e) {
                           w({
                             connectionId: v.sso_connection.id,
@@ -1042,7 +1042,11 @@
         );
       }
       et.getLayout = function (e) {
-        return (0, I.jsx)(a.ZP, { mobilePageTitle: "Identity", children: e });
+        return (0, I.jsx)(a.ZP, {
+          mobilePageTitle: "Identity",
+          requireOwnerPrivileges: !0,
+          children: e,
+        });
       };
     },
     81942: function (e, t, n) {
@@ -1074,8 +1078,8 @@
         },
       });
       var o,
-        i,
         r,
+        i,
         s,
         a,
         c,
@@ -1089,8 +1093,8 @@
               "text-base text-token-text-primary flex flex-col gap-10 my-10",
             ]))
         ),
-        g = f.Z.div(i || (i = (0, u.Z)(["text-xl font-medium"]))),
-        m = f.Z.div(r || (r = (0, u.Z)(["text-base font-medium"]))),
+        g = f.Z.div(r || (r = (0, u.Z)(["text-xl font-medium"]))),
+        m = f.Z.div(i || (i = (0, u.Z)(["text-base font-medium"]))),
         x = f.Z.div(
           s ||
             (s = (0, u.Z)([
@@ -1098,10 +1102,7 @@
             ]))
         ),
         b = f.Z.div(
-          a ||
-            (a = (0, u.Z)([
-              "max-w-xl flex flex-col gap-3 w-full m-auto md:m-0",
-            ]))
+          a || (a = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
         v = f.Z.div(c || (c = (0, u.Z)(["text-sm"]))),
         y = f.Z.div(l || (l = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
@@ -1123,4 +1124,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=identity-0907046e07350e78.js.map
+//# sourceMappingURL=identity-aee2b2bce5345c48.js.map

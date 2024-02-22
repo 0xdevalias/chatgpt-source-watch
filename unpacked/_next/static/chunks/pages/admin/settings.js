@@ -17,7 +17,7 @@
         s = n(82256),
         a = n(90166),
         o = n(67558),
-        l = n(45754),
+        l = n(95412),
         c = n(7144),
         d = n(73582),
         u = n(82473),
@@ -27,8 +27,8 @@
         h = n.n(f),
         x = n(70671),
         b = n(32004),
-        m = n(94968),
-        j = n(33562),
+        j = n(94968),
+        m = n(33562),
         y = n(4748),
         v = n(81942),
         w = n(35250);
@@ -139,7 +139,7 @@
             mutationFn: function (e) {
               var t = e.setting,
                 i = e.value;
-              return l.ZP.setWorkspaceShareSetting(n, t, i);
+              return l.Z.setWorkspaceShareSetting(n, t, i);
             },
             onSettled: function () {
               d.invalidateQueries({ queryKey: ["workspace-settings"] });
@@ -156,7 +156,7 @@
               className: "text-md inline-flex items-center",
               children: (0, w.jsx)(b.Z, O({}, i)),
             }),
-            (0, w.jsxs)(j.Z.Root, {
+            (0, w.jsxs)(m.Z.Root, {
               defaultValue:
                 null !== (t = null == f ? void 0 : f.value) && void 0 !== t
                   ? t
@@ -166,18 +166,18 @@
               },
               disabled: void 0 !== o && o,
               children: [
-                (0, w.jsxs)(j.Z.Trigger, {
+                (0, w.jsxs)(m.Z.Trigger, {
                   className: "text-md focus-visible:border-none",
                   children: [
-                    (0, w.jsx)(j.Z.Value, {}),
-                    (0, w.jsx)(j.Z.Icon, {}),
+                    (0, w.jsx)(m.Z.Value, {}),
+                    (0, w.jsx)(m.Z.Icon, {}),
                   ],
                 }),
-                (0, w.jsx)(j.Z.Portal, {
-                  children: (0, w.jsx)(j.Z.Content, {
+                (0, w.jsx)(m.Z.Portal, {
+                  children: (0, w.jsx)(m.Z.Content, {
                     children: a.map(function (e, t) {
                       return (0, w.jsx)(
-                        j.Z.Item,
+                        m.Z.Item,
                         {
                           className: "text-md",
                           value: e.value,
@@ -270,7 +270,7 @@
           ],
         });
       }
-      var _ = (0, m.vU)({
+      var _ = (0, j.vU)({
         title: { id: "workspaceSettings.title", defaultMessage: "Settings" },
         retentionPolicyTitle: {
           id: "workspaceSettings.retentionPolicyTitle",
@@ -401,7 +401,7 @@
           return f;
         },
         Li: function () {
-          return m;
+          return j;
         },
         W8: function () {
           return y;
@@ -416,7 +416,7 @@
           return x;
         },
         vi: function () {
-          return j;
+          return m;
         },
       });
       var i,
@@ -444,13 +444,10 @@
             ]))
         ),
         b = g.Z.div(
-          o ||
-            (o = (0, u.Z)([
-              "max-w-xl flex flex-col gap-3 w-full m-auto md:m-0",
-            ]))
+          o || (o = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
-        m = g.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
-        j = g.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
+        j = g.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
+        m = g.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
         y = g.Z.hr(d || (d = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
     16118: function (e, t, n) {
@@ -469,4 +466,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=settings-32bb8c9cb300aa0e.js.map
+//# sourceMappingURL=settings-fc1b53fca10cc2c7.js.map

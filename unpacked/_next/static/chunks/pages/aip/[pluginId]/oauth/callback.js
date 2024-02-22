@@ -17,7 +17,7 @@
         u = n(4399),
         o = n.n(u),
         i = n(85958),
-        s = n(45754),
+        s = n(95412),
         a = n(10721),
         p = n(70079),
         f = n(35250);
@@ -90,7 +90,7 @@
                                   .concat(t, "/oauth/callback")),
                                 (e.prev = 1),
                                 (e.next = 4),
-                                s.ZP.pluginOauthCallback(t, n, r, c)
+                                s.Z.pluginOauthCallback(t, n, r, c)
                               );
                             case 4:
                               (a = e.sent).success
@@ -156,4 +156,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=callback-62c32a26d82c6ffa.js.map
+//# sourceMappingURL=callback-45805e25402663ec.js.map

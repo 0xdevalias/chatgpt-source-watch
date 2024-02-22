@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-22Z \(`H3Ik95CB8IbemzYEGBRet`\) `[as well as earlier missing changes]`](#2024-02-22z-h3ik95cb8ibemzyegbret-as-well-as-earlier-missing-changes)
 - [2024-02-12Z \(`FVFs9JMpH-RFaOJJ6VKnB`\) `[as well as earlier missing changes]`](#2024-02-12z-fvfs9jmph-rfaojj6vknb-as-well-as-earlier-missing-changes)
 - [2024-02-06Z \(`oTgm15z1w361g3mBl796W`\)](#2024-02-06z-otgm15z1w361g3mbl796w)
 - [2024-02-06Z \(`8eNlznjVNElT8wapWdDOE`\)](#2024-02-06z-8enlznjvnelt8wapwddoe)
@@ -68,6 +69,252 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-22Z (`H3Ik95CB8IbemzYEGBRet`) `[as well as earlier missing changes]`
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - This is the first full build that has been archived in a while. As such, a bunch of the changes attributed to this build may have occurred in older builds.
+  - TODO: This is only partially analysed, and somewhat messy.. can definitely be cleaned up and improved further from here..
+- App release version (Git SHA?): `22c29151b7611e103642a8d59273ba76b50b392b`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- New Chunks:
+  - `1393`
+- Module IDs Changed:
+  - `9442` -> `33156`
+  - `12275` -> `31564`
+  - `12374` -> `1890`
+  - `19954` -> `22004`
+  - `29887` -> `26565`
+  - `37705` -> `38768`
+  - `45754` -> `95412`
+  - `53429` -> `43356`
+  - `70737` -> `24343`
+  - `76036` -> `38126`
+  - `91928` -> `55842`
+  - `93809` -> `12374`
+  - `94734` -> `78076`
+  - `97296` -> `83737`
+  - `98083` -> `1755`
+  - ?etc?
+- TODO: The CSS style files haven't been downloaded/properly captured/reviewed
+- TODO: The following files haven't been deeply reviewed:
+  - `unpacked/_next/static/chunks/3754.js`
+    - TODO: Looks like there are some interesting things in here related to the 'sso' file, and OpenAI auth/login/test features/etc?
+  - `unpacked/_next/static/chunks/5017.js`
+  - `unpacked/_next/static/chunks/6002.js`
+  - `unpacked/_next/static/chunks/6445.js` (?new/renamed?)
+  - `unpacked/_next/static/chunks/7665.js` (?new/renamed?)
+  - `unpacked/_next/static/chunks/8931.js` (?new/renamed?)
+  - `unpacked/_next/static/chunks/pages/auth/logout.js`
+  - `unpacked/_next/static/chunks/pages/invite/[[...referralCodeParam]].js`
+  - `unpacked/_next/static/chunks/pages/search/feedback.js` (new)
+  - `unpacked/_next/static/chunks/pages/share/e/[[...shareParams]].js`
+  - `unpacked/_next/static/chunks/pages/workspace/deactivated.js`
+  - ?etc?
+- A number of files have changes related to renaming a `Buffer` export from module `14984`, eg:
+  - `unpacked/_next/static/chunks/2186.js`
+    - ```diff
+      - var ea = r(14984).Buffer;
+      + var ea = r(14984).lW;
+      ```
+  - `unpacked/_next/static/chunks/30750f44.js`
+  - `unpacked/_next/static/chunks/5104.js`
+  - ?etc?
+- A number of CSS/styling refinements across various chunks
+- The following language/translation files were updated:
+  - `unpacked/_next/static/chunks/132.js`
+  - `unpacked/_next/static/chunks/676.js`
+  - `unpacked/_next/static/chunks/718.js`
+  - `unpacked/_next/static/chunks/987.js`
+  - `unpacked/_next/static/chunks/1141.js`
+  - `unpacked/_next/static/chunks/1597.js`
+  - `unpacked/_next/static/chunks/1776.js`
+  - `unpacked/_next/static/chunks/1777.js`
+  - `unpacked/_next/static/chunks/1948.js`
+  - `unpacked/_next/static/chunks/2143.js`
+  - `unpacked/_next/static/chunks/2161.js`
+  - `unpacked/_next/static/chunks/2178.js`
+  - `unpacked/_next/static/chunks/2212.js`
+  - `unpacked/_next/static/chunks/2292.js`
+  - `unpacked/_next/static/chunks/3060.js`
+  - `unpacked/_next/static/chunks/3332.js`
+  - `unpacked/_next/static/chunks/3432.js`
+  - `unpacked/_next/static/chunks/3466.js`
+  - `unpacked/_next/static/chunks/3705.js`
+  - `unpacked/_next/static/chunks/4042.js`
+  - `unpacked/_next/static/chunks/4347.js`
+  - `unpacked/_next/static/chunks/4505.js`
+  - `unpacked/_next/static/chunks/4615.js`
+  - `unpacked/_next/static/chunks/4616.js`
+  - `unpacked/_next/static/chunks/4700.js`
+  - `unpacked/_next/static/chunks/4806.js`
+  - `unpacked/_next/static/chunks/5187.js`
+  - `unpacked/_next/static/chunks/5288.js`
+  - `unpacked/_next/static/chunks/5632.js`
+  - `unpacked/_next/static/chunks/5883.js`
+  - `unpacked/_next/static/chunks/5952.js`
+  - `unpacked/_next/static/chunks/6291.js`
+  - `unpacked/_next/static/chunks/6522.js`
+  - `unpacked/_next/static/chunks/6875.js`
+  - `unpacked/_next/static/chunks/6951.js`
+  - `unpacked/_next/static/chunks/6952.js`
+  - `unpacked/_next/static/chunks/7198.js`
+  - `unpacked/_next/static/chunks/7659.js`
+  - `unpacked/_next/static/chunks/7791.js`
+  - `unpacked/_next/static/chunks/7795.js`
+  - `unpacked/_next/static/chunks/7947.js`
+  - `unpacked/_next/static/chunks/8226.js`
+  - `unpacked/_next/static/chunks/8400.js`
+  - `unpacked/_next/static/chunks/9087.js` (English)
+    - <details><summary>Diff of changes to the English language chunk</summary>
+        
+        TODO
+
+      </details>
+
+  - `unpacked/_next/static/chunks/9120.js`
+  - `unpacked/_next/static/chunks/9271.js`
+  - `unpacked/_next/static/chunks/9826.js`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - New routes:
+    - `/search/feedback`: (`static/chunks/pages/search/feedback-03d82007df79fb50.js`)
+- `unpacked/_next/static/chunks/webpack.js`
+  - TODO: Looks like some new chunks in here probably, a decent bit of diff churn..
+  - TODO: Need to extract and download the CSS style files manually
+- `unpacked/_next/static/chunks/pages/admin/identity.js`
+  - ```diff
+    - return (0, I.jsx)(a.ZP, { mobilePageTitle: "Identity", children: e });
+    + return (0, I.jsx)(a.ZP, {
+    +   mobilePageTitle: "Identity",
+    +   requireOwnerPrivileges: !0,
+    +   children: e,
+    + });
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - Lots of diff churn, making it hard to see what changed specifically (pre diff noise reduction: `203,662` lines, post diff noise reduction: `60,327` lines)
+  - TODO
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-121d50d4f95079be.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-6395e1f389afa57e.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-18c779c212d344ed.js
+https://cdn.oaistatic.com/_next/static/H3Ik95CB8IbemzYEGBRet/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/H3Ik95CB8IbemzYEGBRet/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/5017-ca2c744f862d22b1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin-0790b301e04e30ad.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/analytics-a328f77b31a63709.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/billing-8450732a6dad1f9b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/gpts-0d03f8591be64905.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-aee2b2bce5345c48.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/settings-fc1b53fca10cc2c7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-45805e25402663ec.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/enable/internal-9f6dc7f11533b721.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/ext_callback-3604bf782a1e6a47.js
+https://cdn.oaistatic.com/_next/static/chunks/3975-727132bb57222b04.js
+https://cdn.oaistatic.com/_next/static/chunks/3754-6dd4d99b259b6acc.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-68394f2869368842.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/mocked_login-c5e6b6623024195d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-3c5fcdca1d8c4f90.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/about-8ef33cf5cba566e6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-aeb7432eb221b025.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-2c9ed3f17744c8c4.js
+https://cdn.oaistatic.com/_next/static/chunks/1992-af69aabaa65d6a75.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-43a8259040031afe.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/accepted-5050e9452b9743cb.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-d288b497b9ca19cb.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-e1307aaace1f14ed.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-84079b9b3eebbabf.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-c1d97f7edff4cf8b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-4d8f743c06f21895.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/feedback-03d82007df79fb50.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-15cfe86e19a4388f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-dad93816b4b19cb7.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/workspace/deactivated-3ff3b16d85c87728.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-6395e1f389afa57e.js
+```
+
+### From `orig/_next/static/chunks/webpack-18c779c212d344ed.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/132.660fa56f7d9f8841.js
+https://cdn.oaistatic.com/_next/static/chunks/676.1695899797a18685.js
+https://cdn.oaistatic.com/_next/static/chunks/718.c39541320838d2e1.js
+https://cdn.oaistatic.com/_next/static/chunks/987.7f0de228a3562cc0.js
+https://cdn.oaistatic.com/_next/static/chunks/1141.1aac68555afd4d6b.js
+https://cdn.oaistatic.com/_next/static/chunks/1393.035f577202ad7345.js
+https://cdn.oaistatic.com/_next/static/chunks/1597.fd18bd86faeaa7b0.js
+https://cdn.oaistatic.com/_next/static/chunks/1776.e9a991b898301078.js
+https://cdn.oaistatic.com/_next/static/chunks/1777.361ecd58fa0ac9f5.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.797361ea99a892a2.js
+https://cdn.oaistatic.com/_next/static/chunks/2143.b4746c7a1f512b5a.js
+https://cdn.oaistatic.com/_next/static/chunks/2161.36f791c3f2dbf0ec.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.29104c892767faf2.js
+https://cdn.oaistatic.com/_next/static/chunks/2212.04ab16a240f4ce97.js
+https://cdn.oaistatic.com/_next/static/chunks/2292.32ab3d24800a1a80.js
+https://cdn.oaistatic.com/_next/static/chunks/3060.0f0eee9f9d7a9a3a.js
+https://cdn.oaistatic.com/_next/static/chunks/3332.c865be216348dd51.js
+https://cdn.oaistatic.com/_next/static/chunks/3432.2f6ad9ce262d966a.js
+https://cdn.oaistatic.com/_next/static/chunks/3466.4c4cb925af3442d0.js
+https://cdn.oaistatic.com/_next/static/chunks/3705.46b523e60584f44f.js
+https://cdn.oaistatic.com/_next/static/chunks/4042.a08151d3efed095c.js
+https://cdn.oaistatic.com/_next/static/chunks/4347.1ce750acd0106d6e.js
+https://cdn.oaistatic.com/_next/static/chunks/4505.b80d67713515dff2.js
+https://cdn.oaistatic.com/_next/static/chunks/tsub-middleware.74b3f7d901b25de9.js
+https://cdn.oaistatic.com/_next/static/chunks/4615.b41a5c7bc5017269.js
+https://cdn.oaistatic.com/_next/static/chunks/4616.94b9b8a3298ce71f.js
+https://cdn.oaistatic.com/_next/static/chunks/4700.60463b33da33b8b8.js
+https://cdn.oaistatic.com/_next/static/chunks/4806.6ef5e476dad7ed16.js
+https://cdn.oaistatic.com/_next/static/chunks/5104.9b28bedd347e1cfb.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.2ae7c3fec20da7cb.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.eecba8f575f628a2.js
+https://cdn.oaistatic.com/_next/static/chunks/5632.0445a5d12846771b.js
+https://cdn.oaistatic.com/_next/static/chunks/5883.70979731ae1a472e.js
+https://cdn.oaistatic.com/_next/static/chunks/5952.c3edeef63a58e362.js
+https://cdn.oaistatic.com/_next/static/chunks/6002.5d08126d9ab9c8e2.js
+https://cdn.oaistatic.com/_next/static/chunks/6291.a671d3e99d9a3215.js
+https://cdn.oaistatic.com/_next/static/chunks/6445.09fe8b3ac253b1b0.js
+https://cdn.oaistatic.com/_next/static/chunks/6522.ee7e1452e33739e6.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.2177f28b937c71b0.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.583ec3a0c8764140.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.018b8b2946dc8b20.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.10400e67574b5a9a.js
+https://cdn.oaistatic.com/_next/static/chunks/7659.c682389becf401d9.js
+https://cdn.oaistatic.com/_next/static/chunks/7665.f235c81abfebf195.js
+https://cdn.oaistatic.com/_next/static/chunks/7791.367b294ff3d2e4a0.js
+https://cdn.oaistatic.com/_next/static/chunks/7795.5fa4b187af7d697f.js
+https://cdn.oaistatic.com/_next/static/chunks/7947.42809fbb8b2f331e.js
+https://cdn.oaistatic.com/_next/static/chunks/8226.84cbf69a0bf382da.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.edae42c864b47324.js
+https://cdn.oaistatic.com/_next/static/chunks/8931.92dd97264847e42a.js
+https://cdn.oaistatic.com/_next/static/chunks/9087.51416b5b42bf2771.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.5b368a3b1f211414.js
+https://cdn.oaistatic.com/_next/static/chunks/9271.3b0e463179d66d5e.js
+https://cdn.oaistatic.com/_next/static/chunks/9387.ce0e65c87a1ee0ee.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.92961eb1ec331066.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.0c2bdabdb162df46.js
+```
 
 ## 2024-02-12Z (`FVFs9JMpH-RFaOJJ6VKnB`) `[as well as earlier missing changes]`
 

@@ -18,7 +18,7 @@
       var s = n(82256),
         a = n(93999),
         i = n(9280),
-        r = n(98083),
+        r = n(1755),
         c = n(99893),
         o = n(14765),
         u = n(70079),
@@ -77,7 +77,7 @@
       }
       var f = l.Z.h2(a || (a = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
         x = l.Z.p(i || (i = (0, u.Z)(["mb-10 text-sm"]))),
-        h = n(98083),
+        h = n(1755),
         j = n(99893),
         g = n(29124),
         v = n.n(g),
@@ -86,8 +86,8 @@
         b = n(70671),
         S = n(32004),
         O = n(94968),
-        P = n(70737),
-        w = n(97296),
+        P = n(24343),
+        w = n(83737),
         C = {
           hidden: { opacity: 0, translateY: 50 },
           show: {
@@ -516,4 +516,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=success-team-03194700606677a0.js.map
+//# sourceMappingURL=success-team-84079b9b3eebbabf.js.map

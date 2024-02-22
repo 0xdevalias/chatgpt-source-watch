@@ -14,8 +14,8 @@
         });
       var i,
         a,
-        s,
         r,
+        s,
         l,
         o = t(35017),
         c = t(36112),
@@ -23,7 +23,7 @@
         d = t(4399),
         f = t.n(d),
         m = t(4748),
-        g = t(45754),
+        g = t(95412),
         p = t(73582),
         x = t(19841),
         v = t(10721),
@@ -79,9 +79,9 @@
           t = e.isOpen,
           i = e.onClose,
           a = (0, b.Z)(),
-          s = (0, D.ZP)(),
-          r = s.data,
-          l = s.isLoading,
+          r = (0, D.ZP)(),
+          s = r.data,
+          l = r.isLoading,
           o = (0, _.t)(),
           c = (0, D.St)(o.id),
           d = (0, p.aF)(),
@@ -94,10 +94,10 @@
           O =
             (null == d ? void 0 : d.email) &&
             x.toLowerCase() == d.email.toLowerCase(),
-          M = (0, j.useState)(r && !r.will_renew),
+          M = (0, j.useState)(s && !s.will_renew),
           P = M[0],
           E = M[1];
-        if (l || !o || !r) return null;
+        if (l || !o || !s) return null;
         var C =
           ((n = (0, u.Z)(
             f().mark(function e() {
@@ -153,7 +153,7 @@
                       "mb-2 text-base font-medium text-token-text-primary",
                     children: (0, T.jsx)(y.Z, S({}, z.successfullyCanceled)),
                   }),
-                  null != r.active_until &&
+                  null != s.active_until &&
                     (0, T.jsx)("p", {
                       className: "text-sm text-token-text-primary",
                       children: (0, T.jsx)(
@@ -161,7 +161,7 @@
                         S(
                           S({}, z.retainUntil),
                           {},
-                          { values: { expiryDate: new Date(r.active_until) } }
+                          { values: { expiryDate: new Date(s.active_until) } }
                         )
                       ),
                     }),
@@ -203,7 +203,7 @@
                                   S(
                                     S({}, z.membersCount),
                                     {},
-                                    { values: { count: r.seats_entitled } }
+                                    { values: { count: s.seats_entitled } }
                                   )
                                 ),
                               }),
@@ -230,7 +230,7 @@
                                   S({}, z.dataUnavailable)
                                 ),
                               }),
-                              null != r.active_until &&
+                              null != s.active_until &&
                                 (0, T.jsx)("li", {
                                   className: "my-2",
                                   children: (0, T.jsx)(
@@ -240,7 +240,7 @@
                                       {},
                                       {
                                         values: {
-                                          expiryDate: new Date(r.active_until),
+                                          expiryDate: new Date(s.active_until),
                                         },
                                       }
                                     )
@@ -467,9 +467,9 @@
         H = L.Z.div(i || (i = (0, A.Z)(["h-4 w-4 rounded-full"]))),
         G = (0, L.Z)(H)(a || (a = (0, A.Z)(["bg-green-600"]))),
         K = (0, L.Z)(H)(
-          s || (s = (0, A.Z)(["bg-token-main-surface-tertiary"]))
+          r || (r = (0, A.Z)(["bg-token-main-surface-tertiary"]))
         ),
-        Q = (0, L.Z)(H)(r || (r = (0, A.Z)(["bg-orange-500"]))),
+        Q = (0, L.Z)(H)(s || (s = (0, A.Z)(["bg-orange-500"]))),
         R = L.Z.span(
           l ||
             (l = (0, A.Z)([
@@ -481,7 +481,7 @@
           t = e.numInUse,
           i = (0, b.Z)(),
           a = t > n,
-          s = (0, j.useMemo)(
+          r = (0, j.useMemo)(
             function () {
               return Array.from(Array(a ? t : n).keys());
             },
@@ -489,17 +489,17 @@
           );
         return (0, T.jsx)("div", {
           className: "flex items-center gap-2",
-          children: s.map(function (e) {
-            var s = Q,
-              r = null;
+          children: r.map(function (e) {
+            var r = Q,
+              s = null;
             return (
-              e < t && !a ? (s = G) : e < n && !a && (s = K),
+              e < t && !a ? (r = G) : e < n && !a && (r = K),
               e === n - 1 &&
-                (r = (0, T.jsx)(U.u, {
+                (s = (0, T.jsx)(U.u, {
                   label: i.formatMessage(X.dividerTooltip, { count: n }),
                   children: (0, T.jsx)($, {}),
                 })),
-              (0, T.jsxs)(T.Fragment, { children: [(0, T.jsx)(s, {}, e), r] })
+              (0, T.jsxs)(T.Fragment, { children: [(0, T.jsx)(r, {}, e), s] })
             );
           }),
         });
@@ -567,7 +567,7 @@
         }
         return t;
       }
-      function es(e) {
+      function er(e) {
         for (var n = 1; n < arguments.length; n++) {
           var t = null != arguments[n] ? arguments[n] : {};
           n % 2
@@ -586,14 +586,14 @@
         }
         return e;
       }
-      function er() {
+      function es() {
         var e,
           n = (0, v.useRouter)(),
           t = (0, D.ZP)(),
           i = t.data,
           a = t.isLoading,
-          s = t.isError,
-          r = (0, p.ec)(p.F_.isEnterprisePlan),
+          r = t.isError,
+          s = (0, p.ec)(p.F_.isEnterprisePlan),
           l = (0, b.Z)(),
           o = (0, j.useState)(!1),
           c = o[0],
@@ -613,7 +613,7 @@
                             d(!0),
                             (e.prev = 1),
                             (e.next = 4),
-                            g.ZP.fetchCustomerPortalUrl(x)
+                            g.Z.fetchCustomerPortalUrl(x)
                           );
                         case 4:
                           (t = e.sent), n.push(t.url), (e.next = 11);
@@ -646,7 +646,7 @@
             className: "flex min-h-screen items-center justify-center",
             children: (0, T.jsx)(P.Z, {}),
           });
-        if (s || !i) return null;
+        if (r || !i) return null;
         var M = null != i.active_until,
           N =
             (null == i ? void 0 : i.seats_in_use) >
@@ -656,24 +656,24 @@
             (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, es({}, ef.planTitle)),
+                  children: (0, T.jsx)(y.Z, er({}, ef.planTitle)),
                 }),
                 (0, T.jsxs)("div", {
                   children: [
                     (0, T.jsx)(J.i$, {
                       children: M
-                        ? r
-                          ? (0, T.jsx)(y.Z, es({}, ef.activeEnterpriseLicense))
-                          : (0, T.jsx)(y.Z, es({}, ef.activeTeamLicense))
-                        : (0, T.jsx)(y.Z, es({}, ef.inactiveLicense)),
+                        ? s
+                          ? (0, T.jsx)(y.Z, er({}, ef.activeEnterpriseLicense))
+                          : (0, T.jsx)(y.Z, er({}, ef.activeTeamLicense))
+                        : (0, T.jsx)(y.Z, er({}, ef.inactiveLicense)),
                     }),
                     null != i.active_until &&
                       (0, T.jsx)(J.Li, {
-                        children: r
+                        children: s
                           ? (0, T.jsx)(
                               y.Z,
-                              es(
-                                es({}, ef.licenseExpiry),
+                              er(
+                                er({}, ef.licenseExpiry),
                                 {},
                                 {
                                   values: {
@@ -685,8 +685,8 @@
                           : i.will_renew
                             ? (0, T.jsx)(
                                 y.Z,
-                                es(
-                                  es({}, ef.renewalDate),
+                                er(
+                                  er({}, ef.renewalDate),
                                   {},
                                   {
                                     values: {
@@ -697,8 +697,8 @@
                               )
                             : (0, T.jsx)(
                                 y.Z,
-                                es(
-                                  es({}, ef.deactivateDate),
+                                er(
+                                  er({}, ef.deactivateDate),
                                   {},
                                   {
                                     values: {
@@ -716,7 +716,7 @@
                         loading: c,
                         children: (0, T.jsx)(
                           y.Z,
-                          es({}, ef.managePaymentMethodBtn)
+                          er({}, ef.managePaymentMethodBtn)
                         ),
                       }),
                   ],
@@ -727,7 +727,7 @@
               (0, T.jsxs)(J.i9, {
                 children: [
                   (0, T.jsx)(J.A4, {
-                    children: (0, T.jsx)(y.Z, es({}, ef.seatsTitle)),
+                    children: (0, T.jsx)(y.Z, er({}, ef.seatsTitle)),
                   }),
                   (0, T.jsx)(eu, {}),
                   h &&
@@ -735,14 +735,14 @@
                     (0, T.jsxs)("span", {
                       className: "text-sm text-token-text-secondary",
                       children: [
-                        (0, T.jsx)(y.Z, es({}, ef.teamsAutochargeMessage)),
+                        (0, T.jsx)(y.Z, er({}, ef.teamsAutochargeMessage)),
                         (0, T.jsx)(O.Z, {
                           className: "pl-1",
                           openNewTab: !0,
                           href: "https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan",
                           children: (0, T.jsx)(
                             y.Z,
-                            es({}, ef.billingLearnMore)
+                            er({}, ef.billingLearnMore)
                           ),
                         }),
                       ],
@@ -760,13 +760,13 @@
           a = t[1];
         if (!n || (!(null != e && e.will_renew) && !i))
           return (0, T.jsx)(T.Fragment, {});
-        var s = function () {
+        var r = function () {
           a(!i);
         };
         return (0, T.jsxs)(J.i9, {
           children: [
             (0, T.jsx)(J.A4, {
-              children: (0, T.jsx)(y.Z, es({}, ef.manageSubscription)),
+              children: (0, T.jsx)(y.Z, er({}, ef.manageSubscription)),
             }),
             (0, T.jsxs)("div", {
               children: [
@@ -774,11 +774,11 @@
                   color: "neutral",
                   className: "mt-4",
                   onClick: function () {
-                    s();
+                    r();
                   },
-                  children: (0, T.jsx)(y.Z, es({}, ef.cancelSubscriptionBtn)),
+                  children: (0, T.jsx)(y.Z, er({}, ef.cancelSubscriptionBtn)),
                 }),
-                (0, T.jsx)(C, { isOpen: i, onClose: s }),
+                (0, T.jsx)(C, { isOpen: i, onClose: r }),
               ],
             }),
           ],
@@ -801,21 +801,21 @@
                   children: a
                     ? (0, T.jsx)(
                         y.Z,
-                        es(
-                          es({}, ef.invoiceName),
+                        er(
+                          er({}, ef.invoiceName),
                           {},
                           { values: { createdDate: a } }
                         )
                       )
-                    : (0, T.jsx)(y.Z, es({}, ef.defaultInvoiceName)),
+                    : (0, T.jsx)(y.Z, er({}, ef.defaultInvoiceName)),
                 }),
                 null != n && n.paid && null != t
                   ? (0, T.jsx)("div", {
                       className: "text-xs text-token-text-secondary",
                       children: (0, T.jsx)(
                         y.Z,
-                        es(
-                          es({}, ef.paidInvoice),
+                        er(
+                          er({}, ef.paidInvoice),
                           {},
                           { values: { invoiceDate: t } }
                         )
@@ -826,8 +826,8 @@
                       className: "text-xs text-green-600",
                       children: (0, T.jsx)(
                         y.Z,
-                        es(
-                          es({}, ef.upcomingInvoice),
+                        er(
+                          er({}, ef.upcomingInvoice),
                           {},
                           { values: { invoiceDate: i } }
                         )
@@ -857,8 +857,8 @@
           t,
           i,
           a,
-          s,
           r,
+          s,
           l,
           o = (0, j.useState)({ limit: 5 }),
           c = o[0],
@@ -874,12 +874,12 @@
               void 0 !== e
                 ? e
                 : void 0),
-            (s = t ? { organization_id: a } : { account_id: i }),
-            (r = (0, b.Z)()),
+            (r = t ? { organization_id: a } : { account_id: i }),
+            (s = (0, b.Z)()),
             (0, ee.a)({
               queryKey: [
                 "organization-invoices",
-                et(et({}, s), {}, { options: c }),
+                et(et({}, r), {}, { options: c }),
               ],
               queryFn:
                 ((l = (0, u.Z)(
@@ -890,10 +890,10 @@
                           case 0:
                             return (
                               (e.next = 2),
-                              g.ZP.getInvoices(s, c).catch(function (e) {
+                              g.Z.getInvoices(r, c).catch(function (e) {
                                 throw (
                                   (m.m.danger(
-                                    r.formatMessage(ei.invoicesLoadError, {
+                                    s.formatMessage(ei.invoicesLoadError, {
                                       error: e.message,
                                     })
                                   ),
@@ -913,7 +913,7 @@
                 function () {
                   return l.apply(this, arguments);
                 }),
-              enabled: "account_id" in s || "organization_id" in s,
+              enabled: "account_id" in r || "organization_id" in r,
             })),
           v = x.data,
           w = x.isError,
@@ -927,17 +927,17 @@
           ? (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, es({}, ef.invoicesTitle)),
+                  children: (0, T.jsx)(y.Z, er({}, ef.invoicesTitle)),
                 }),
                 (0, T.jsx)(M.Z, {
-                  children: (0, T.jsx)(y.Z, es({}, ef.noInvoices)),
+                  children: (0, T.jsx)(y.Z, er({}, ef.noInvoices)),
                 }),
               ],
             })
           : (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, es({}, ef.invoicesTitle)),
+                  children: (0, T.jsx)(y.Z, er({}, ef.invoicesTitle)),
                 }),
                 (0, T.jsx)(J.qQ, {
                   children: v.data.map(function (e) {
@@ -952,8 +952,8 @@
                         onClick: function () {
                           v &&
                             d(function (e) {
-                              return es(
-                                es({}, e),
+                              return er(
+                                er({}, e),
                                 {},
                                 {
                                   endingBefore: v.data[0].id,
@@ -970,8 +970,8 @@
                         onClick: function () {
                           v &&
                             d(function (e) {
-                              return es(
-                                es({}, e),
+                              return er(
+                                er({}, e),
                                 {},
                                 {
                                   startingAfter: v.data[v.data.length - 1].id,
@@ -1015,7 +1015,7 @@
                 (0, T.jsx)(o.hb, {
                   children: (0, T.jsxs)(J.$V, {
                     children: [
-                      (0, T.jsx)(er, {}),
+                      (0, T.jsx)(es, {}),
                       (0, T.jsx)(ec, {}),
                       (0, T.jsx)(el, {}),
                     ],
@@ -1127,7 +1127,7 @@
       eg.getLayout = function (e) {
         return (0, T.jsx)(o.ZP, {
           mobilePageTitle: "Billing",
-          requireAdminPrivileges: !0,
+          requireOwnerPrivileges: !0,
           children: e,
         });
       };
@@ -1162,8 +1162,8 @@
       });
       var i,
         a,
-        s,
         r,
+        s,
         l,
         o,
         c,
@@ -1177,18 +1177,15 @@
             ]))
         ),
         g = f.Z.div(a || (a = (0, d.Z)(["text-xl font-medium"]))),
-        p = f.Z.div(s || (s = (0, d.Z)(["text-base font-medium"]))),
+        p = f.Z.div(r || (r = (0, d.Z)(["text-base font-medium"]))),
         x = f.Z.div(
-          r ||
-            (r = (0, d.Z)([
+          s ||
+            (s = (0, d.Z)([
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
             ]))
         ),
         v = f.Z.div(
-          l ||
-            (l = (0, d.Z)([
-              "max-w-xl flex flex-col gap-3 w-full m-auto md:m-0",
-            ]))
+          l || (l = (0, d.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
         j = f.Z.div(o || (o = (0, d.Z)(["text-sm"]))),
         h = f.Z.div(c || (c = (0, d.Z)(["flex justify-between py-4 gap-4"]))),
@@ -1210,4 +1207,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=billing-72b36677e657367d.js.map
+//# sourceMappingURL=billing-8450732a6dad1f9b.js.map

@@ -12,14 +12,14 @@
       var s = n(18008),
         i = n(3125),
         r = n(36112),
-        o = n(19841),
-        a = n(5397),
-        l = n.n(a),
+        a = n(19841),
+        o = n(5397),
+        l = n.n(o),
         c = n(70079),
         d = n(35236),
         u = n(84589),
         f = n.n(u),
-        x = n(97296),
+        x = n(83737),
         m = n(1454),
         h = n(32004),
         p = n(70671),
@@ -97,7 +97,7 @@
           t = f()(),
           n = (0, i.Z)(t, 2),
           r = n[0],
-          a = r.width,
+          o = r.width,
           l = r.height,
           u = n[1],
           p = (0, y.gj)().targetLatencyData,
@@ -169,8 +169,8 @@
               width: k.normal.width,
               height: k.normal.height,
             },
-            className: (0, o.default)(
-              "transition-delay group relative flex h-full flex-col overflow-hidden rounded-md border-2 border-gray-500 bg-token-popover-surface-primary opacity-80 shadow-md transition-opacity delay-100 hover:opacity-100 hover:delay-0 dark:border-white"
+            className: (0, a.default)(
+              "transition-delay popover group relative flex h-full flex-col overflow-hidden rounded-md border-2 border-gray-500 bg-token-main-surface-primary opacity-80 shadow-md transition-opacity delay-100 hover:opacity-100 hover:delay-0 dark:border-white"
             ),
             children: Z
               ? (0, b.jsxs)(b.Fragment, {
@@ -273,7 +273,7 @@
                             className:
                               "min-w-20 h-full w-full space-y-2 overflow-scroll p-1 pb-12",
                             children: (0, b.jsxs)("div", {
-                              className: (0, o.default)(
+                              className: (0, a.default)(
                                 "col-span-1 grid gap-1"
                               ),
                               children: [
@@ -284,7 +284,7 @@
                                   onMouseOut: B,
                                   onMouseUp: B,
                                   children: (0, b.jsx)(C, {
-                                    parentDimensions: { width: a, height: l },
+                                    parentDimensions: { width: o, height: l },
                                     targetLatencyData: p,
                                   }),
                                 }),
@@ -358,7 +358,7 @@
                   {
                     className: "col-span-1",
                     children: (0, b.jsxs)("div", {
-                      className: (0, o.default)(
+                      className: (0, a.default)(
                         "overflow-hidden bg-token-main-surface-primary shadow",
                         {
                           "rounded px-2 py-1 sm:p-2": "normal" == s,
@@ -367,7 +367,7 @@
                       ),
                       children: [
                         (0, b.jsx)("dt", {
-                          className: (0, o.default)(
+                          className: (0, a.default)(
                             "truncate text-token-text-tertiary",
                             {
                               "text-xs font-medium": "normal" == s,
@@ -377,7 +377,7 @@
                           children: e.name,
                         }),
                         (0, b.jsx)("dd", {
-                          className: (0, o.default)(
+                          className: (0, a.default)(
                             "mt-1 font-semibold text-token-text-primary",
                             {
                               "text-base tracking-tight": "normal" == s,
@@ -422,7 +422,7 @@
             };
           return (0, b.jsxs)("div", {
             className:
-              "sticky bottom-0 z-50 flex w-full flex-row justify-between border-t border-gray-400 bg-token-popover-surface-primary p-2",
+              "popover sticky bottom-0 z-50 flex w-full flex-row justify-between border-t border-gray-400 bg-token-main-surface-primary p-2",
             children: [
               (0, b.jsxs)("div", {
                 className: "flex flex-row gap-3",
@@ -565,4 +565,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9387.4d07776b2bcf19aa.js.map
+//# sourceMappingURL=9387.ce0e65c87a1ee0ee.js.map
