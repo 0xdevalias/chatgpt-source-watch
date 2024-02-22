@@ -9,10 +9,10 @@
             return F;
           },
           default: function () {
-            return T;
+            return Z;
           },
           messages: function () {
-            return W;
+            return D;
           },
         });
       var r = n(36112),
@@ -28,7 +28,7 @@
         g = n(12457),
         f = n(14972),
         h = n(15136),
-        x = n(25349),
+        x = n(98083),
         m = n(99893),
         v = n(14765),
         b = n(70671),
@@ -112,7 +112,7 @@
                                   v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "google",
                                   }),
-                                    x.A.publicEvent(m.M.authLogin, {
+                                    x.A.logEvent(m.M.authLogin, {
                                       provider: "google",
                                     }),
                                     (0, l.signIn)(
@@ -137,7 +137,7 @@
                                   v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "microsoft",
                                   }),
-                                    x.A.publicEvent(m.M.authLogin, {
+                                    x.A.logEvent(m.M.authLogin, {
                                       provider: "microsoft",
                                     }),
                                     (0, l.signIn)(
@@ -172,7 +172,7 @@
                                         null,
                                         { provider: "openai" }
                                       ),
-                                        x.A.publicEvent(m.M.authLogin, {
+                                        x.A.logEvent(m.M.authLogin, {
                                           provider: "openai",
                                         }),
                                         (0, l.signIn)(
@@ -197,7 +197,7 @@
                                         null,
                                         { provider: "openai" }
                                       ),
-                                        x.A.publicEvent(m.M.authSignup, {
+                                        x.A.logEvent(m.M.authSignup, {
                                           provider: "openai",
                                         }),
                                         (0, l.signIn)(
@@ -231,7 +231,7 @@
                                   v.m9.logEvent("chatgpt_auth_log_in", null, {
                                     provider: "auth0",
                                   }),
-                                    x.A.publicEvent(m.M.authLogin, {
+                                    x.A.logEvent(m.M.authLogin, {
                                       provider: "auth0",
                                     }),
                                     (0, l.signIn)(
@@ -249,7 +249,7 @@
                                   v.m9.logEvent("chatgpt_auth_sign_up", null, {
                                     provider: "auth0",
                                   }),
-                                    x.A.publicEvent(m.M.authSignup, {
+                                    x.A.logEvent(m.M.authSignup, {
                                       provider: "auth0",
                                     }),
                                     (0, l.signIn)(
@@ -358,10 +358,11 @@
           },
         }),
         I = n(4748),
-        L = n(26822),
+        A = n(26822),
         N = n(92347),
-        A = n(77997);
-      function _(e, t) {
+        L = n(90458),
+        _ = n(77997);
+      function S(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -373,16 +374,16 @@
         }
         return n;
       }
-      function S(e) {
+      function T(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? _(Object(n), !0).forEach(function (t) {
+            ? S(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : _(Object(n)).forEach(function (t) {
+              : S(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -393,7 +394,7 @@
         return e;
       }
       var F = !0;
-      function T(e) {
+      function Z(e) {
         var t,
           n = e.serviceStatus,
           r = e.examples,
@@ -404,43 +405,45 @@
           g = e.statsigShowCapacityGate,
           f = (0, u.useRouter)(),
           h = f.query.next,
-          v = "string" == typeof h && h.startsWith("/") ? h : "/";
-        f.asPath.includes("#") && (v += "#" + f.asPath.split("#")[1]);
-        var j = (0, b.Z)(),
-          y = !!(null == n ? void 0 : n.oof) || !0 === g,
-          w = (0, d.useRef)(!1),
-          k =
+          j = "string" == typeof h && h.startsWith("/") ? h : "/";
+        f.asPath.includes("#") && (j += "#" + f.asPath.split("#")[1]);
+        var y = (0, b.Z)(),
+          w = !!(null == n ? void 0 : n.oof) || !0 === g,
+          k = (0, d.useRef)(!1),
+          C =
             "sso" in f.query &&
             (null === (t = f.query.sso) || void 0 === t || t),
-          C = k ? f.query.connection : void 0;
+          E = C ? f.query.connection : void 0,
+          M = (0, L.mK)(L.LA.AnonAATest240206).config.get(
+            v.Hy.TREATMENT,
+            "control"
+          );
         return ((0, d.useEffect)(
           function () {
-            k &&
-              !y &&
+            C &&
+              !w &&
               (0, l.signIn)(
-                "openai" === k ? "openai" : "auth0",
-                { callbackUrl: v },
-                C && { connection: C }
+                "openai" === C ? "openai" : "auth0",
+                { callbackUrl: j },
+                E && { connection: E }
               );
           },
-          [v, k, C, y]
+          [j, C, E, w]
         ),
         (0, d.useEffect)(
           function () {
-            x.A.publicEvent(m.M.loggedOutOpenedAuthLogin, {
-              cfConnectingIp: c,
-            });
+            x.A.logEvent(m.M.loggedOutOpenedAuthLogin, { cfConnectingIp: c });
           },
           [c]
         ),
         (0, d.useEffect)(function () {
           "#pricing" === window.location.hash &&
-            L.bX.setCookie(L.cn.ShowPaymentModal, !0, { maxAge: 21600 });
+            A.bX.setCookie(A.cn.ShowPaymentModal, !0, { maxAge: 21600 });
         }, []),
         (0, d.useEffect)(
           function () {
-            if (!w.current) {
-              w.current = !0;
+            if (!k.current) {
+              k.current = !0;
               var e = f.query,
                 t = e.inv_ws_name,
                 n = e.inv_email;
@@ -449,7 +452,7 @@
                 t &&
                   n &&
                   I.m.success(
-                    j.formatMessage(W.invitedToastMessage, {
+                    y.formatMessage(D.invitedToastMessage, {
                       workspace_name: t,
                       email: n,
                     }),
@@ -457,26 +460,32 @@
                   );
             }
           },
-          [f.query, j]
+          [f.query, y]
         ),
-        y)
+        w)
           ? (0, O.jsx)(i.Z, {})
-          : k
+          : C
             ? null
             : (0, O.jsxs)(O.Fragment, {
                 children: [
                   (0, O.jsx)(a.Z, {}),
-                  (0, O.jsx)(Z, {
+                  (0, O.jsx)(U, {
                     auth0Provider: o,
                     enableNewAuthFlow: s,
                     examples: void 0 === r ? [] : r,
-                    nextUrl: v,
+                    nextUrl: j,
                     isStorageComplianceEnabled: p,
                   }),
+                  "test" === M
+                    ? (0, O.jsx)("div", {
+                        id: "3875edf8-7e14-4776-ba0e-3f90d0a5229a",
+                        className: "hidden",
+                      })
+                    : null,
                 ],
               });
       }
-      var Z = function (e) {
+      var U = function (e) {
         var t = e.auth0Provider,
           n = e.enableNewAuthFlow,
           r = e.examples,
@@ -484,7 +493,7 @@
           a = e.isStorageComplianceEnabled;
         return (0, O.jsxs)(O.Fragment, {
           children: [
-            (0, O.jsx)(U, {
+            (0, O.jsx)(W, {
               auth0Provider: t,
               enableNewAuthFlow: n,
               nextUrl: i,
@@ -500,7 +509,7 @@
                       className: (0, o.default)(
                         "interact-bounce absolute bottom-4 right-4 rounded bg-red-600 px-2 py-1 text-sm text-white shadow-xl"
                       ),
-                      children: (0, O.jsx)(j.Z, S({}, W.useDevAuth)),
+                      children: (0, O.jsx)(j.Z, T({}, D.useDevAuth)),
                     }),
                   "auth0dev" === t &&
                     (0, O.jsx)(c(), {
@@ -508,20 +517,20 @@
                       className: (0, o.default)(
                         "interact-bounce absolute bottom-4 right-4 rounded bg-green-600 px-2 py-1 text-sm text-white shadow-xl hover:opacity-70"
                       ),
-                      children: (0, O.jsx)(j.Z, S({}, W.useProdAuth)),
+                      children: (0, O.jsx)(j.Z, T({}, D.useProdAuth)),
                     }),
                 ],
               }),
           ],
         });
       };
-      function U(e) {
+      function W(e) {
         var t = e.auth0Provider,
           n = e.enableNewAuthFlow,
           r = e.nextUrl,
           i = e.examples,
           a = e.isStorageComplianceEnabled,
-          o = "dark" === (0, A.F)().resolvedTheme,
+          o = "dark" === (0, _.F)().resolvedTheme,
           l = (0, d.useRef)(null);
         return (
           (0, d.useEffect)(
@@ -555,7 +564,7 @@
           })
         );
       }
-      var W = (0, y.vU)({
+      var D = (0, y.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -965,4 +974,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3754-c84775af41cb659b.js.map
+//# sourceMappingURL=3754-163b39ce431131bc.js.map

@@ -738,7 +738,7 @@
                               },
                               placeholder: n.formatMessage(eu.search),
                               className:
-                                "w-48 rounded-lg border border-gray-200 pl-8 placeholder:text-token-text-tertiary dark:border-gray-600 dark:bg-gray-700",
+                                "w-48 rounded-lg border border-token-border-light bg-token-main-surface-primary pl-8 placeholder:text-token-text-tertiary",
                             }),
                           ],
                         }),
@@ -799,8 +799,8 @@
           color: "none",
           className: (0, v.default)(
             t
-              ? "bg-gray-100 dark:bg-gray-600"
-              : "hover:bg-gray-50 hover:dark:bg-gray-700"
+              ? "bg-token-main-surface-tertiary"
+              : "hover:bg-token-main-surface-tertiary"
           ),
           onClick: n,
           children: r,
@@ -917,4 +917,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-a1768f81fff6d91d.js.map
+//# sourceMappingURL=admin-2cb1ade3e79e149d.js.map

@@ -665,7 +665,7 @@
               return t.apply(this, arguments);
             });
         return (0, y.jsx)("div", {
-          className: "bg-token-surface-secondary",
+          className: "bg-token-main-surface-secondary",
           children: (0, y.jsxs)("div", {
             className:
               "mx-auto flex w-full max-w-5xl items-center justify-between px-2 py-4 md:px-6 lg:px-10 lg:py-6",
@@ -778,7 +778,7 @@
                 $as: "button",
                 className: (0, Y.default)(
                   "w-full rounded text-left",
-                  "hover:bg-token-surface-secondary dark:hover:bg-gray-800"
+                  "hover:bg-token-sidebar-surface-secondary"
                 ),
                 children: [
                   (0, y.jsx)(et.UIZ, {
@@ -794,7 +794,7 @@
           : (0, y.jsxs)(X.ZB, {
               $as: "button",
               className: (0, Y.default)(
-                "w-full rounded hover:bg-token-sidebar-surface-secondary",
+                "w-full rounded text-left hover:bg-token-sidebar-surface-secondary",
                 i.route === t && "bg-token-sidebar-surface-secondary"
               ),
               onClick: function (e) {
@@ -844,7 +844,9 @@
               children: [
                 (0, y.jsxs)("div", {
                   className: "flex flex-col gap-2 rounded px-2 py-2 ".concat(
-                    n ? "cursor-pointer hover:bg-token-surface-secondary" : ""
+                    n
+                      ? "cursor-pointer hover:bg-token-main-surface-secondary"
+                      : ""
                   ),
                   onClick: function () {
                     n && B.vm.openModal(B.B.WorkspaceAppearance);
@@ -957,7 +959,7 @@
       var ev = er.Z.div(
           n ||
             (n = (0, c.Z)([
-              "border-b border-token-surface-tertiary hidden md:block py-6 lg:py-10",
+              "border-b border-token-main-surface-tertiary hidden md:block py-6 lg:py-10",
             ]))
         ),
         eb = er.Z.h2(
@@ -1183,4 +1185,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5017-b4ef70a357855319.js.map
+//# sourceMappingURL=5017-bdd3eb6219fbc9e9.js.map

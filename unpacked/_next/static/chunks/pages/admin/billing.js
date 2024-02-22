@@ -6,24 +6,24 @@
       t.r(n),
         t.d(n, {
           __N_SSP: function () {
-            return eg;
+            return em;
           },
           default: function () {
-            return em;
+            return eg;
           },
         });
       var i,
         a,
-        r,
         s,
+        r,
         l,
         o = t(35017),
         c = t(36112),
         u = t(50134),
         d = t(4399),
         f = t.n(d),
-        g = t(4748),
-        m = t(45754),
+        m = t(4748),
+        g = t(45754),
         p = t(73582),
         x = t(19841),
         v = t(10721),
@@ -39,8 +39,8 @@
         N = t(3554),
         _ = t(7144),
         I = t(90387),
-        k = t(21120),
-        B = t(998),
+        B = t(21120),
+        k = t(998),
         D = t(23232),
         T = t(35250);
       function E(e, n) {
@@ -79,25 +79,25 @@
           t = e.isOpen,
           i = e.onClose,
           a = (0, b.Z)(),
-          r = (0, D.ZP)(),
-          s = r.data,
-          l = r.isLoading,
+          s = (0, D.ZP)(),
+          r = s.data,
+          l = s.isLoading,
           o = (0, _.t)(),
           c = (0, D.St)(o.id),
           d = (0, p.aF)(),
-          m = (0, j.useState)(""),
-          x = m[0],
-          v = m[1],
+          g = (0, j.useState)(""),
+          x = g[0],
+          v = g[1],
           h = (0, j.useState)(!1),
           w = h[0],
           Z = h[1],
           O =
             (null == d ? void 0 : d.email) &&
             x.toLowerCase() == d.email.toLowerCase(),
-          M = (0, j.useState)(s && !s.will_renew),
+          M = (0, j.useState)(r && !r.will_renew),
           P = M[0],
           E = M[1];
-        if (l || !o || !s) return null;
+        if (l || !o || !r) return null;
         var C =
           ((n = (0, u.Z)(
             f().mark(function e() {
@@ -115,7 +115,7 @@
                       case 7:
                         (e.prev = 7),
                           (e.t0 = e.catch(1)),
-                          g.m.warning(
+                          m.m.warning(
                             a.formatMessage(z.errorCancellingSubscription),
                             { hasCloseButton: !0 }
                           );
@@ -135,7 +135,7 @@
           function () {
             return n.apply(this, arguments);
           });
-        return (0, T.jsx)(k.Z, {
+        return (0, T.jsx)(B.Z, {
           type: "success",
           onClose: i,
           showCloseButton: !0,
@@ -153,7 +153,7 @@
                       "mb-2 text-base font-medium text-token-text-primary",
                     children: (0, T.jsx)(y.Z, S({}, z.successfullyCanceled)),
                   }),
-                  null != s.active_until &&
+                  null != r.active_until &&
                     (0, T.jsx)("p", {
                       className: "text-sm text-token-text-primary",
                       children: (0, T.jsx)(
@@ -161,7 +161,7 @@
                         S(
                           S({}, z.retainUntil),
                           {},
-                          { values: { expiryDate: new Date(s.active_until) } }
+                          { values: { expiryDate: new Date(r.active_until) } }
                         )
                       ),
                     }),
@@ -203,7 +203,7 @@
                                   S(
                                     S({}, z.membersCount),
                                     {},
-                                    { values: { count: s.seats_entitled } }
+                                    { values: { count: r.seats_entitled } }
                                   )
                                 ),
                               }),
@@ -230,7 +230,7 @@
                                   S({}, z.dataUnavailable)
                                 ),
                               }),
-                              null != s.active_until &&
+                              null != r.active_until &&
                                 (0, T.jsx)("li", {
                                   className: "my-2",
                                   children: (0, T.jsx)(
@@ -240,7 +240,7 @@
                                       {},
                                       {
                                         values: {
-                                          expiryDate: new Date(s.active_until),
+                                          expiryDate: new Date(r.active_until),
                                         },
                                       }
                                     )
@@ -268,7 +268,7 @@
                               S({}, z.enterEmailToConfirm)
                             ),
                           }),
-                          (0, T.jsx)(B.Z, {
+                          (0, T.jsx)(k.Z, {
                             type: "text",
                             name: "user-email",
                             placeholder: "abcd@acme.com",
@@ -425,7 +425,7 @@
         return (0, T.jsx)("div", {
           className: (0, x.default)(
             "relative w-full rounded-full",
-            a ? "bg-orange-500" : "bg-gray-200 dark:bg-gray-500"
+            a ? "bg-orange-500" : "bg-token-main-surface-primary"
           ),
           children: (0, T.jsxs)("div", {
             className: "relative h-4",
@@ -442,7 +442,7 @@
                 a &&
                 (0, T.jsx)("div", {
                   className:
-                    "absolute right-0 top-[-3px] bg-token-surface-primary dark:bg-token-surface-secondary",
+                    "absolute right-0 top-[-3px] bg-token-main-surface-primary",
                   children: (0, T.jsx)(U.u, {
                     label: i.formatMessage(X.dividerTooltip, { count: n }),
                     children: (0, T.jsx)($, { className: "px-1 py-0.5" }),
@@ -466,8 +466,10 @@
         },
         H = L.Z.div(i || (i = (0, A.Z)(["h-4 w-4 rounded-full"]))),
         G = (0, L.Z)(H)(a || (a = (0, A.Z)(["bg-green-600"]))),
-        K = (0, L.Z)(H)(r || (r = (0, A.Z)(["bg-gray-200 dark:bg-gray-500"]))),
-        Q = (0, L.Z)(H)(s || (s = (0, A.Z)(["bg-orange-500"]))),
+        K = (0, L.Z)(H)(
+          s || (s = (0, A.Z)(["bg-token-main-surface-tertiary"]))
+        ),
+        Q = (0, L.Z)(H)(r || (r = (0, A.Z)(["bg-orange-500"]))),
         R = L.Z.span(
           l ||
             (l = (0, A.Z)([
@@ -479,7 +481,7 @@
           t = e.numInUse,
           i = (0, b.Z)(),
           a = t > n,
-          r = (0, j.useMemo)(
+          s = (0, j.useMemo)(
             function () {
               return Array.from(Array(a ? t : n).keys());
             },
@@ -487,17 +489,17 @@
           );
         return (0, T.jsx)("div", {
           className: "flex items-center gap-2",
-          children: r.map(function (e) {
-            var r = Q,
-              s = null;
+          children: s.map(function (e) {
+            var s = Q,
+              r = null;
             return (
-              e < t && !a ? (r = G) : e < n && !a && (r = K),
+              e < t && !a ? (s = G) : e < n && !a && (s = K),
               e === n - 1 &&
-                (s = (0, T.jsx)(U.u, {
+                (r = (0, T.jsx)(U.u, {
                   label: i.formatMessage(X.dividerTooltip, { count: n }),
                   children: (0, T.jsx)($, {}),
                 })),
-              (0, T.jsxs)(T.Fragment, { children: [(0, T.jsx)(r, {}, e), s] })
+              (0, T.jsxs)(T.Fragment, { children: [(0, T.jsx)(s, {}, e), r] })
             );
           }),
         });
@@ -565,7 +567,7 @@
         }
         return t;
       }
-      function er(e) {
+      function es(e) {
         for (var n = 1; n < arguments.length; n++) {
           var t = null != arguments[n] ? arguments[n] : {};
           n % 2
@@ -584,14 +586,14 @@
         }
         return e;
       }
-      function es() {
+      function er() {
         var e,
           n = (0, v.useRouter)(),
           t = (0, D.ZP)(),
           i = t.data,
           a = t.isLoading,
-          r = t.isError,
-          s = (0, p.ec)(p.F_.isEnterprisePlan),
+          s = t.isError,
+          r = (0, p.ec)(p.F_.isEnterprisePlan),
           l = (0, b.Z)(),
           o = (0, j.useState)(!1),
           c = o[0],
@@ -611,7 +613,7 @@
                             d(!0),
                             (e.prev = 1),
                             (e.next = 4),
-                            m.ZP.fetchCustomerPortalUrl(x)
+                            g.ZP.fetchCustomerPortalUrl(x)
                           );
                         case 4:
                           (t = e.sent), n.push(t.url), (e.next = 11);
@@ -619,7 +621,7 @@
                         case 8:
                           (e.prev = 8),
                             (e.t0 = e.catch(1)),
-                            g.m.warning(
+                            m.m.warning(
                               l.formatMessage(ef.stripeErrorWarning),
                               { hasCloseButton: !0 }
                             );
@@ -644,7 +646,7 @@
             className: "flex min-h-screen items-center justify-center",
             children: (0, T.jsx)(P.Z, {}),
           });
-        if (r || !i) return null;
+        if (s || !i) return null;
         var M = null != i.active_until,
           N =
             (null == i ? void 0 : i.seats_in_use) >
@@ -654,24 +656,24 @@
             (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, er({}, ef.planTitle)),
+                  children: (0, T.jsx)(y.Z, es({}, ef.planTitle)),
                 }),
                 (0, T.jsxs)("div", {
                   children: [
                     (0, T.jsx)(J.i$, {
                       children: M
-                        ? s
-                          ? (0, T.jsx)(y.Z, er({}, ef.activeEnterpriseLicense))
-                          : (0, T.jsx)(y.Z, er({}, ef.activeTeamLicense))
-                        : (0, T.jsx)(y.Z, er({}, ef.inactiveLicense)),
+                        ? r
+                          ? (0, T.jsx)(y.Z, es({}, ef.activeEnterpriseLicense))
+                          : (0, T.jsx)(y.Z, es({}, ef.activeTeamLicense))
+                        : (0, T.jsx)(y.Z, es({}, ef.inactiveLicense)),
                     }),
                     null != i.active_until &&
                       (0, T.jsx)(J.Li, {
-                        children: s
+                        children: r
                           ? (0, T.jsx)(
                               y.Z,
-                              er(
-                                er({}, ef.licenseExpiry),
+                              es(
+                                es({}, ef.licenseExpiry),
                                 {},
                                 {
                                   values: {
@@ -683,8 +685,8 @@
                           : i.will_renew
                             ? (0, T.jsx)(
                                 y.Z,
-                                er(
-                                  er({}, ef.renewalDate),
+                                es(
+                                  es({}, ef.renewalDate),
                                   {},
                                   {
                                     values: {
@@ -695,8 +697,8 @@
                               )
                             : (0, T.jsx)(
                                 y.Z,
-                                er(
-                                  er({}, ef.deactivateDate),
+                                es(
+                                  es({}, ef.deactivateDate),
                                   {},
                                   {
                                     values: {
@@ -714,7 +716,7 @@
                         loading: c,
                         children: (0, T.jsx)(
                           y.Z,
-                          er({}, ef.managePaymentMethodBtn)
+                          es({}, ef.managePaymentMethodBtn)
                         ),
                       }),
                   ],
@@ -725,7 +727,7 @@
               (0, T.jsxs)(J.i9, {
                 children: [
                   (0, T.jsx)(J.A4, {
-                    children: (0, T.jsx)(y.Z, er({}, ef.seatsTitle)),
+                    children: (0, T.jsx)(y.Z, es({}, ef.seatsTitle)),
                   }),
                   (0, T.jsx)(eu, {}),
                   h &&
@@ -733,14 +735,14 @@
                     (0, T.jsxs)("span", {
                       className: "text-sm text-token-text-secondary",
                       children: [
-                        (0, T.jsx)(y.Z, er({}, ef.teamsAutochargeMessage)),
+                        (0, T.jsx)(y.Z, es({}, ef.teamsAutochargeMessage)),
                         (0, T.jsx)(O.Z, {
                           className: "pl-1",
                           openNewTab: !0,
                           href: "https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan",
                           children: (0, T.jsx)(
                             y.Z,
-                            er({}, ef.billingLearnMore)
+                            es({}, ef.billingLearnMore)
                           ),
                         }),
                       ],
@@ -758,13 +760,13 @@
           a = t[1];
         if (!n || (!(null != e && e.will_renew) && !i))
           return (0, T.jsx)(T.Fragment, {});
-        var r = function () {
+        var s = function () {
           a(!i);
         };
         return (0, T.jsxs)(J.i9, {
           children: [
             (0, T.jsx)(J.A4, {
-              children: (0, T.jsx)(y.Z, er({}, ef.manageSubscription)),
+              children: (0, T.jsx)(y.Z, es({}, ef.manageSubscription)),
             }),
             (0, T.jsxs)("div", {
               children: [
@@ -772,11 +774,11 @@
                   color: "neutral",
                   className: "mt-4",
                   onClick: function () {
-                    r();
+                    s();
                   },
-                  children: (0, T.jsx)(y.Z, er({}, ef.cancelSubscriptionBtn)),
+                  children: (0, T.jsx)(y.Z, es({}, ef.cancelSubscriptionBtn)),
                 }),
-                (0, T.jsx)(C, { isOpen: i, onClose: r }),
+                (0, T.jsx)(C, { isOpen: i, onClose: s }),
               ],
             }),
           ],
@@ -799,21 +801,21 @@
                   children: a
                     ? (0, T.jsx)(
                         y.Z,
-                        er(
-                          er({}, ef.invoiceName),
+                        es(
+                          es({}, ef.invoiceName),
                           {},
                           { values: { createdDate: a } }
                         )
                       )
-                    : (0, T.jsx)(y.Z, er({}, ef.defaultInvoiceName)),
+                    : (0, T.jsx)(y.Z, es({}, ef.defaultInvoiceName)),
                 }),
                 null != n && n.paid && null != t
                   ? (0, T.jsx)("div", {
                       className: "text-xs text-token-text-secondary",
                       children: (0, T.jsx)(
                         y.Z,
-                        er(
-                          er({}, ef.paidInvoice),
+                        es(
+                          es({}, ef.paidInvoice),
                           {},
                           { values: { invoiceDate: t } }
                         )
@@ -824,8 +826,8 @@
                       className: "text-xs text-green-600",
                       children: (0, T.jsx)(
                         y.Z,
-                        er(
-                          er({}, ef.upcomingInvoice),
+                        es(
+                          es({}, ef.upcomingInvoice),
                           {},
                           { values: { invoiceDate: i } }
                         )
@@ -855,8 +857,8 @@
           t,
           i,
           a,
-          r,
           s,
+          r,
           l,
           o = (0, j.useState)({ limit: 5 }),
           c = o[0],
@@ -872,12 +874,12 @@
               void 0 !== e
                 ? e
                 : void 0),
-            (r = t ? { organization_id: a } : { account_id: i }),
-            (s = (0, b.Z)()),
+            (s = t ? { organization_id: a } : { account_id: i }),
+            (r = (0, b.Z)()),
             (0, ee.a)({
               queryKey: [
                 "organization-invoices",
-                et(et({}, r), {}, { options: c }),
+                et(et({}, s), {}, { options: c }),
               ],
               queryFn:
                 ((l = (0, u.Z)(
@@ -888,10 +890,10 @@
                           case 0:
                             return (
                               (e.next = 2),
-                              m.ZP.getInvoices(r, c).catch(function (e) {
+                              g.ZP.getInvoices(s, c).catch(function (e) {
                                 throw (
-                                  (g.m.danger(
-                                    s.formatMessage(ei.invoicesLoadError, {
+                                  (m.m.danger(
+                                    r.formatMessage(ei.invoicesLoadError, {
                                       error: e.message,
                                     })
                                   ),
@@ -911,7 +913,7 @@
                 function () {
                   return l.apply(this, arguments);
                 }),
-              enabled: "account_id" in r || "organization_id" in r,
+              enabled: "account_id" in s || "organization_id" in s,
             })),
           v = x.data,
           w = x.isError,
@@ -925,17 +927,17 @@
           ? (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, er({}, ef.invoicesTitle)),
+                  children: (0, T.jsx)(y.Z, es({}, ef.invoicesTitle)),
                 }),
                 (0, T.jsx)(M.Z, {
-                  children: (0, T.jsx)(y.Z, er({}, ef.noInvoices)),
+                  children: (0, T.jsx)(y.Z, es({}, ef.noInvoices)),
                 }),
               ],
             })
           : (0, T.jsxs)(J.i9, {
               children: [
                 (0, T.jsx)(J.A4, {
-                  children: (0, T.jsx)(y.Z, er({}, ef.invoicesTitle)),
+                  children: (0, T.jsx)(y.Z, es({}, ef.invoicesTitle)),
                 }),
                 (0, T.jsx)(J.qQ, {
                   children: v.data.map(function (e) {
@@ -950,8 +952,8 @@
                         onClick: function () {
                           v &&
                             d(function (e) {
-                              return er(
-                                er({}, e),
+                              return es(
+                                es({}, e),
                                 {},
                                 {
                                   endingBefore: v.data[0].id,
@@ -968,8 +970,8 @@
                         onClick: function () {
                           v &&
                             d(function (e) {
-                              return er(
-                                er({}, e),
+                              return es(
+                                es({}, e),
                                 {},
                                 {
                                   startingAfter: v.data[v.data.length - 1].id,
@@ -1013,7 +1015,7 @@
                 (0, T.jsx)(o.hb, {
                   children: (0, T.jsxs)(J.$V, {
                     children: [
-                      (0, T.jsx)(es, {}),
+                      (0, T.jsx)(er, {}),
                       (0, T.jsx)(ec, {}),
                       (0, T.jsx)(el, {}),
                     ],
@@ -1118,11 +1120,11 @@
             defaultMessage: "Learn more",
           },
         }),
-        eg = !0;
-      function em() {
+        em = !0;
+      function eg() {
         return (0, T.jsx)(ed, {});
       }
-      em.getLayout = function (e) {
+      eg.getLayout = function (e) {
         return (0, T.jsx)(o.ZP, {
           mobilePageTitle: "Billing",
           requireAdminPrivileges: !0,
@@ -1134,10 +1136,10 @@
       "use strict";
       t.d(n, {
         $V: function () {
-          return g;
+          return m;
         },
         A4: function () {
-          return m;
+          return g;
         },
         Li: function () {
           return j;
@@ -1160,25 +1162,25 @@
       });
       var i,
         a,
-        r,
         s,
+        r,
         l,
         o,
         c,
         u,
         d = t(90038),
         f = t(21389),
-        g = f.Z.div(
+        m = f.Z.div(
           i ||
             (i = (0, d.Z)([
               "text-base text-token-text-primary flex flex-col gap-10 my-10",
             ]))
         ),
-        m = f.Z.div(a || (a = (0, d.Z)(["text-xl font-medium"]))),
-        p = f.Z.div(r || (r = (0, d.Z)(["text-base font-medium"]))),
+        g = f.Z.div(a || (a = (0, d.Z)(["text-xl font-medium"]))),
+        p = f.Z.div(s || (s = (0, d.Z)(["text-base font-medium"]))),
         x = f.Z.div(
-          s ||
-            (s = (0, d.Z)([
+          r ||
+            (r = (0, d.Z)([
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
             ]))
         ),
@@ -1208,4 +1210,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=billing-8914f334a8e695e8.js.map
+//# sourceMappingURL=billing-72b36677e657367d.js.map

@@ -18,7 +18,7 @@
         u = r.n(o),
         i = r(40318),
         s = r(70079),
-        a = r(25349),
+        a = r(98083),
         f = r(29887),
         l = r(35250);
       function p(e, t) {
@@ -81,7 +81,8 @@
                           (e.prev = 5),
                             (e.t0 = e.catch(0)),
                             console.error(
-                              "Failed to reset ProductEventLogger on logout"
+                              "Failed to reset ProductEventLogger on logout",
+                              e.t0
                             );
                         case 8:
                           return (
@@ -142,4 +143,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=logout-5d4433531d135f53.js.map
+//# sourceMappingURL=logout-296a1f68f894060a.js.map

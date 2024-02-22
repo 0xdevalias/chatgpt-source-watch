@@ -1,31 +1,32 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [4663],
   {
-    14663: function (e, n, a) {
+    14663: function (e, n, t) {
       "use strict";
-      a.r(n),
-        a.d(n, {
+      t.r(n),
+        t.d(n, {
           default: function () {
             return l;
           },
         });
-      var t = a(5974),
-        s = a(398),
-        r = a(91432),
-        c = a(10099),
-        i = a(85168),
-        u = a.n(i),
-        o = a(35250);
+      var a = t(5974),
+        r = t(398),
+        s = t(91432),
+        c = t(10099),
+        i = t(85168),
+        o = t.n(i),
+        u = t(35250);
       function l(e) {
         var n = e.json,
-          a = (0, t.Gv)();
-        return (0, o.jsx)(s.ZP, {
-          className: u().container,
+          t = (0, a.Gv)();
+        return (0, u.jsx)(r.ZP, {
+          className: o().container,
           enableClipboard: !0,
           displayDataTypes: !1,
           displayObjectSize: !1,
           value: n,
-          style: a ? r.$ : c.W,
+          style: t ? s.$ : c.W,
+          shortenTextAfterLength: 120,
         });
       }
     },
@@ -34,4 +35,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4663.05c150cd11bd3bf1.js.map
+//# sourceMappingURL=4663.925bf83197940c00.js.map

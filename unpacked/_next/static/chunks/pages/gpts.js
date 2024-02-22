@@ -85,7 +85,7 @@
       var a = n(61305),
         A = n(7144),
         l = n(12374),
-        d = n(25349),
+        d = n(98083),
         f = n(99893),
         g = n(70079),
         m = n(56276),
@@ -97,7 +97,7 @@
         return ((0, g.useEffect)(
           function () {
             (i || n) &&
-              d.A.publicEvent(f.M.pageView, {
+              d.A.logEvent(f.M.pageView, {
                 page: "gpts/discovery",
                 isAnon: n,
                 referrer: e.referrer,
@@ -443,4 +443,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-dc1c030d5ab0d59e.js.map
+//# sourceMappingURL=gpts-f218063f1aa72d2c.js.map

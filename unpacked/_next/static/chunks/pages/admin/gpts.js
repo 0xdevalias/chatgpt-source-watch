@@ -97,7 +97,7 @@
                   r &&
                     (0, k.jsx)("span", {
                       className:
-                        "rounded-xl bg-token-surface-tertiary px-2 pb-0.5 text-sm",
+                        "rounded-xl bg-token-main-surface-tertiary px-2 pb-0.5 text-sm",
                       children: (0, k.jsx)(O.Z, S({}, C.enterpriseUpsellPill)),
                     }),
                 ],
@@ -688,4 +688,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-69a1549f68de26f0.js.map
+//# sourceMappingURL=gpts-44c7d770af897d9c.js.map

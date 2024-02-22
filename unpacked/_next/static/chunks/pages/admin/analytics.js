@@ -165,7 +165,7 @@
           };
         return (0, L.jsx)("div", {
           className:
-            "flex h-full w-full items-center justify-center bg-token-surface-secondary p-4",
+            "flex h-full w-full items-center justify-center bg-token-main-surface-secondary p-4",
           children: (0, L.jsx)(v.$Q, { options: i, data: o, height: 192 }),
         });
       }
@@ -448,4 +448,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=analytics-9b1758696d2460a5.js.map
+//# sourceMappingURL=analytics-17f5b583d003c529.js.map
