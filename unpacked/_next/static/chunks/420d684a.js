@@ -127,11 +127,15 @@
                 -1 === s.indexOf(a) && s.push(a);
               let p = a.inboundLayers.length;
               for (let e = 0; e < p; e++) {
-                let n = a.inputTensors[e],
-                  i = a.inboundLayers[e],
-                  o = a.nodeIndices[e],
-                  r = a.tensorIndices[e];
-                h(n, t, s, i, o, r);
+                let n = a.inputTensors[e];
+                h(
+                  n,
+                  t,
+                  s,
+                  a.inboundLayers[e],
+                  a.nodeIndices[e],
+                  a.tensorIndices[e]
+                );
               }
               for (t.push(a); s.indexOf(a) >= 0; ) s.splice(s.indexOf(a), 1);
               u.push(a);
@@ -139,12 +143,13 @@
             p = [],
             d = [];
           for (let e of this.outputs) h(e, p, d);
-          let m = u.slice().reverse();
-          for (let e of m) {
+          for (let e of u.slice().reverse()) {
             (s[e.id] = e), e.id in t || (t[e.id] = 0);
-            let i = t[e.id],
-              o = null == n[e.outboundLayer.id] ? 0 : n[e.outboundLayer.id];
-            (i = Math.max(i, o)),
+            let i = t[e.id];
+            (i = Math.max(
+              i,
+              null == n[e.outboundLayer.id] ? 0 : n[e.outboundLayer.id]
+            )),
               (n[e.outboundLayer.id] = i),
               (r[e.outboundLayer.id] = e.outboundLayer),
               (t[e.id] = i);
@@ -156,21 +161,21 @@
               (t[a.id] = Math.max(i + 1, l)), (s[a.id] = a);
             }
           }
-          let g = {};
+          let m = {};
           for (let e in t) {
             let n = t[e];
-            n in g || (g[n] = []), g[n].push(s[e]);
+            n in m || (m[n] = []), m[n].push(s[e]);
           }
-          let b = {};
+          let g = {};
           for (let e in n) {
             let t = n[e];
-            t in b || (b[t] = []), b[t].push(r[e]);
+            t in g || (g[t] = []), g[t].push(r[e]);
           }
-          let L = Object.keys(b)
+          let b = Object.keys(g)
             .map((e) => parseInt(e, 10))
             .sort(a.L7);
-          for (let e of ((this.layers = []), L)) {
-            let t = b[e];
+          for (let e of ((this.layers = []), b)) {
+            let t = g[e];
             for (let e of (t.sort((e, t) => {
               let s = l[e.id],
                 n = l[t.id];
@@ -180,33 +185,33 @@
               e instanceof c && this.internalContainerRefs.push(e),
                 this.layers.push(e);
           }
-          (this.layersByDepth = b),
-            (L = Object.keys(g)
+          (this.layersByDepth = g),
+            (b = Object.keys(m)
               .map((e) => parseInt(e, 10))
               .sort(a.L7));
-          let w = this.inputs.slice(),
-            N = [];
-          for (let e of L)
-            for (let t of g[e]) {
+          let L = this.inputs.slice(),
+            w = [];
+          for (let e of b)
+            for (let t of m[e]) {
               let e = t.outboundLayer;
               if (null != e) {
                 for (let s of t.inputTensors)
-                  if (-1 === w.indexOf(s))
+                  if (-1 === L.indexOf(s))
                     throw new o.LH(
-                      `Graph disconnected: cannot obtain value for tensor ${s} at layer "${e.name}". The following previous layers were accessed without issue: ${N}`
+                      `Graph disconnected: cannot obtain value for tensor ${s} at layer "${e.name}". The following previous layers were accessed without issue: ${w}`
                     );
-                for (let e of t.outputTensors) w.push(e);
-                N.push(e.name);
+                for (let e of t.outputTensors) L.push(e);
+                w.push(e.name);
               }
             }
-          this.nodesByDepth = g;
-          let I = this.layers.map((e) => e.name);
-          for (let e of I) {
-            let t = I.filter((t) => t === e).length;
+          this.nodesByDepth = m;
+          let N = this.layers.map((e) => e.name);
+          for (let e of N) {
+            let t = N.filter((t) => t === e).length;
             if (1 !== t)
               throw new o.LH(
                 `The name "${e}" is used ${t} times in the model. All layer names should be unique. Layer names: ` +
-                  JSON.stringify(I)
+                  JSON.stringify(N)
               );
           }
           (this.outboundNodes = []),
@@ -286,9 +291,11 @@
           for (let n in e) {
             let r = n;
             if (null == s[n]) {
-              let e = n.split("/"),
-                t = e.slice(0, -2).concat([e[e.length - 1]]);
-              r = t.join("/");
+              let e = n.split("/");
+              r = e
+                .slice(0, -2)
+                .concat([e[e.length - 1]])
+                .join("/");
             }
             if (null != s[r]) i.push([s[r], e[n]]);
             else if (t)
@@ -348,38 +355,32 @@
           let s = {};
           for (let e = 0; e < t.length; e++) {
             let n = this.inputLayers[e],
-              i = t[e],
-              o = n.name + "_0_0";
-            s[o] = i;
+              i = t[e];
+            s[n.name + "_0_0"] = i;
           }
           let n = Object.keys(this.nodesByDepth)
             .map((e) => parseInt(e, 10))
             .sort(a.L7);
           if (n.length > 1)
-            for (let e of n) {
-              let t = this.nodesByDepth[e];
-              for (let e of t) {
-                let t = e.outboundLayer;
-                if (-1 !== this.inputLayers.map((e) => e.id).indexOf(t.id))
+            for (let e of n)
+              for (let t of this.nodesByDepth[e]) {
+                let e = t.outboundLayer;
+                if (-1 !== this.inputLayers.map((e) => e.id).indexOf(e.id))
                   continue;
                 let n = [];
-                for (let t = 0; t < e.inboundLayers.length; t++) {
-                  let i = e.inboundLayers[t],
-                    o = e.nodeIndices[t],
-                    r = e.tensorIndices[t],
-                    a = `${i.name}_${o}_${r}`,
-                    l = s[a];
-                  n.push(l);
+                for (let e = 0; e < t.inboundLayers.length; e++) {
+                  let i = t.inboundLayers[e],
+                    o = t.nodeIndices[e],
+                    r = t.tensorIndices[e],
+                    a = s[`${i.name}_${o}_${r}`];
+                  n.push(a);
                 }
-                let i = t.computeOutputShape(a.Bq(n)),
+                let i = e.computeOutputShape(a.Bq(n)),
                   o = u.x6(i),
-                  r = t.inboundNodes.indexOf(e);
-                for (let e = 0; e < o.length; e++) {
-                  let n = `${t.name}_${r}_${e}`;
-                  s[n] = o[e];
-                }
+                  r = e.inboundNodes.indexOf(t);
+                for (let t = 0; t < o.length; t++)
+                  s[`${e.name}_${r}_${t}`] = o[t];
               }
-            }
           let i = [],
             r = [];
           for (let e = 0; e < this.outputLayers.length; e++) {
@@ -404,15 +405,13 @@
               r = t[n];
             s[i.id] = [o, r];
           }
-          let n = Object.keys(this.nodesByDepth)
+          for (let e of Object.keys(this.nodesByDepth)
             .map((e) => parseInt(e, 10))
-            .sort(a.L7);
-          for (let e of n) {
-            let t = this.nodesByDepth[e];
-            for (let e of t) {
-              let t = e.outboundLayer,
-                n = e.inputTensors,
-                i = e.outputTensors,
+            .sort(a.L7))
+            for (let t of this.nodesByDepth[e]) {
+              let e = t.outboundLayer,
+                n = t.inputTensors,
+                i = t.outputTensors,
                 r = [];
               for (let e of n) e.id in s && r.push(s[e.id]);
               if (r.length === n.length) {
@@ -421,20 +420,20 @@
                   u,
                   h,
                   p = {};
-                if ((null != e.callArgs && (p = e.callArgs), 1 === r.length)) {
-                  let [e, s] = r[0];
+                if ((null != t.callArgs && (p = t.callArgs), 1 === r.length)) {
+                  let [t, s] = r[0];
                   null == p.mask && (p.mask = s),
-                    (u = a.zZ(t.call(e, p))),
-                    (h = a.zZ(t.computeMask(e, s))),
-                    (n = [e]),
+                    (u = a.zZ(e.call(t, p))),
+                    (h = a.zZ(e.computeMask(t, s))),
+                    (n = [t]),
                     (l = [s]);
                 } else
                   (n = r.map((e) => e[0])),
                     (l = r.map((e) => e[1])),
                     null == p.mask && (p.mask = l),
-                    (u = a.zZ(t.call(n, p))),
-                    (h = a.zZ(t.computeMask(n, l)));
-                if (t.activityRegularizer)
+                    (u = a.zZ(e.call(n, p))),
+                    (h = a.zZ(e.computeMask(n, l)));
+                if (e.activityRegularizer)
                   throw new o.nj(
                     "LayersModel invocation with concrete Tensor value(s) in the presence of activity regularizer(s) is not supported yet."
                   );
@@ -446,16 +445,15 @@
                 }
               }
             }
-          }
-          let i = [],
-            r = [],
-            l = [];
+          let n = [],
+            i = [],
+            r = [];
           for (let e of this.outputs) {
             a.hu(e.id in s, `Could not compute output ${e.name} : ${e.id}`);
-            let [t, n] = s[e.id];
-            l.push(t.shape), i.push(t), r.push(n);
+            let [t, o] = s[e.id];
+            r.push(t.shape), n.push(t), i.push(o);
           }
-          return [i, r, l];
+          return [n, i, r];
         }
         buildNodeConversionMap(e) {
           let t;
@@ -520,9 +518,8 @@
                     let i = n.inboundLayers[s],
                       o = n.nodeIndices[s],
                       a = n.tensorIndices[s],
-                      l = c.nodeKey(i, o),
-                      u = t[l];
-                    null == u && (u = 0), e.push([i.name, u, a, r]);
+                      l = t[c.nodeKey(i, o)];
+                    null == l && (l = 0), e.push([i.name, l, a, r]);
                   }
                   o.push(e);
                 }
@@ -573,15 +570,15 @@
             !(function (e) {
               let s = e.name,
                 a = (0, r.v)(e, null != t.customObjects ? t.customObjects : {});
-              a.setFastWeightInitDuringBuild(n), (i[s] = a);
-              let l = e.inboundNodes;
-              l.forEach((e) => {
-                if (!(e instanceof Array))
-                  throw new o.nu(
-                    `Corrupted configuration, expected array for nodeData: ${e}`
-                  );
-                u(a, e);
-              });
+              a.setFastWeightInitDuringBuild(n),
+                (i[s] = a),
+                e.inboundNodes.forEach((e) => {
+                  if (!(e instanceof Array))
+                    throw new o.nu(
+                      `Corrupted configuration, expected array for nodeData: ${e}`
+                    );
+                  u(a, e);
+                });
             })(e);
           for (; !a.nK(l); )
             for (let e of p) {
@@ -613,26 +610,22 @@
               }
             }
           let d = [],
-            f = [],
-            y = t.inputLayers;
-          for (let e of y) {
+            f = [];
+          for (let e of t.inputLayers) {
             let t = e[0],
               s = e[1],
               n = e[2];
             a.hu(t in i);
-            let o = i[t],
-              r = o.inboundNodes[s].outputTensors;
-            d.push(r[n]);
+            let o = i[t].inboundNodes[s].outputTensors;
+            d.push(o[n]);
           }
-          let c = t.outputLayers;
-          for (let e of c) {
+          for (let e of t.outputLayers) {
             let t = e[0],
               s = e[1],
               n = e[2];
             a.hu(t in i);
-            let o = i[t],
-              r = o.inboundNodes[s].outputTensors;
-            f.push(r[n]);
+            let o = i[t].inboundNodes[s].outputTensors;
+            f.push(o[n]);
           }
           return new e({ inputs: d, outputs: f, name: h });
         }
@@ -655,4 +648,4 @@
     },
   },
 ]);
-//# sourceMappingURL=420d684a.77ed574b6550c57e.js.map
+//# sourceMappingURL=420d684a.abf37f1db8be5c89.js.map

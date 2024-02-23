@@ -32,7 +32,7 @@
        * limitations under the License.
        * =============================================================================
        */
-      let { getBroadcastDims: a } = r.Wap;
+      let { getBroadcastDims: a } = r.backend_util;
       function l(e, t, n) {
         let l, C;
         let T = [];
@@ -102,8 +102,7 @@
                 let l = "";
                 n
                   ? (l += (function e(t, n) {
-                      let o = t.shapeInfo.logicalShape;
-                      switch (o.length) {
+                      switch (t.shapeInfo.logicalShape.length) {
                         case 0:
                           return (function (e) {
                             let t = e.name,
@@ -194,10 +193,9 @@
                               l = t.shapeInfo.texShape,
                               c = [Math.ceil(l[0] / 2), Math.ceil(l[1] / 2)];
                             if (1 === r[0]) {
-                              let i = r.slice(1),
-                                o = f(t, i);
+                              let i = f(t, r.slice(1));
                               return `
-        ${e(o, n)}
+        ${e(i, n)}
         vec4 ${a}(int b, int row, int col) {
           return ${a}(${S(["b", "row", "col"], [1, 2])});
         }
@@ -852,12 +850,12 @@
                                   .map((e, t) => `coords.${h[t + x]}`)
                                   .join(", ");
                           let d = "return outputValue;",
-                            $ = r.D5U.sizeFromShape(e.shapeInfo.logicalShape),
-                            f = 1 === $,
-                            S = r.D5U.sizeFromShape(t.logicalShape),
-                            C = 1 === S;
-                          if (1 !== l || f || C) {
-                            if (f && !C)
+                            $ =
+                              1 ===
+                              r.D5U.sizeFromShape(e.shapeInfo.logicalShape),
+                            f = 1 === r.D5U.sizeFromShape(t.logicalShape);
+                          if (1 !== l || $ || f) {
+                            if ($ && !f)
                               d =
                                 1 === c
                                   ? `
@@ -915,26 +913,27 @@
                             s = a(e.shapeInfo.logicalShape, t.logicalShape),
                             d = x - p,
                             $ = ["x", "y", "z", "w", "u", "v"];
+                          n =
+                            0 === p
+                              ? ""
+                              : x < 2 && s.length >= 1
+                                ? "coords = 0;"
+                                : s
+                                    .map((e) => `coords.${$[e + d]} = 0;`)
+                                    .join("\n");
+                          let f = "";
                           return (
-                            (n =
-                              0 === p
-                                ? ""
-                                : x < 2 && s.length >= 1
-                                  ? "coords = 0;"
-                                  : s
-                                      .map((e) => `coords.${$[e + d]} = 0;`)
-                                      .join("\n")),
+                            (f =
+                              x < 2 && p > 0
+                                ? "coords"
+                                : e.shapeInfo.logicalShape
+                                    .map((e, t) => `coords.${$[t + d]}`)
+                                    .join(", ")),
                             `
     float ${l}() {
       ${h} coords = getOutputCoords();
       ${n}
-      return get${o}(${
-        x < 2 && p > 0
-          ? "coords"
-          : e.shapeInfo.logicalShape
-              .map((e, t) => `coords.${$[t + d]}`)
-              .join(", ")
-      });
+      return get${o}(${f});
     }
   `
                           );
@@ -951,13 +950,12 @@
       return ${w.texture2D}(textureSampler, uv).r;
     }
   `,
-          I = (function (e) {
-            let t = `${e.version}
+          I = `${w.version}
     precision highp float;
     precision highp int;
     precision highp sampler2D;
-    ${e.varyingFs} vec2 resultUV;
-    ${e.defineOutput}
+    ${w.varyingFs} vec2 resultUV;
+    ${w.defineOutput}
     const vec2 halfCR = vec2(0.5, 0.5);
 
     struct ivec5
@@ -980,9 +978,9 @@
     };
 
     uniform float NAN;
-    ${e.defineSpecialNaN}
-    ${e.defineSpecialInf}
-    ${e.defineRound}
+    ${w.defineSpecialNaN}
+    ${w.defineSpecialInf}
+    ${w.defineRound}
 
     int imod(int x, int y) {
       return x - y * (x / y);
@@ -1011,42 +1009,41 @@
     ${u}
     ${p}
   `;
-            return t;
-          })(w);
-        t.isPacked
-          ? ((l = (function (e, t, n) {
-              switch (e.length) {
-                case 0:
-                  return h();
-                case 1:
-                  return (function (e, t, n) {
-                    let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)];
-                    return 1 === r[0]
-                      ? n
-                        ? `
+        return (
+          t.isPacked
+            ? ((l = (function (e, t, n) {
+                switch (e.length) {
+                  case 0:
+                    return h();
+                  case 1:
+                    return (function (e, t, n) {
+                      let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)];
+                      return 1 === r[0]
+                        ? n
+                          ? `
       int getOutputCoords() {
         return 2 * int(resultUV.x * ceil(float(outTexShape[1]) / 2.0));
       }
     `
-                        : `
+                          : `
       int getOutputCoords() {
         return 2 * int(resultUV.x * ${r[1]}.0);
       }
     `
-                      : 1 === r[1]
-                        ? n
-                          ? `
+                        : 1 === r[1]
+                          ? n
+                            ? `
       int getOutputCoords() {
         return 2 * int(resultUV.y * ceil(float(outTexShape[0]) / 2.0));
       }
     `
-                          : `
+                            : `
       int getOutputCoords() {
         return 2 * int(resultUV.y * ${r[0]}.0);
       }
     `
-                        : n
-                          ? `
+                          : n
+                            ? `
     int getOutputCoords() {
       ivec2 packedTexShape = ivec2(ceil(float(outTexShape[0]) / 2.0), ceil(float(outTexShape[1]) / 2.0));
       ivec2 resTexRC = ivec2(resultUV.yx *
@@ -1054,33 +1051,33 @@
       return 2 * (resTexRC.x * packedTexShape[1] + resTexRC.y);
     }
   `
-                          : `
+                            : `
     int getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${r[0]}, ${r[1]}));
       return 2 * (resTexRC.x * ${r[1]} + resTexRC.y);
     }
   `;
-                  })(0, t, n);
-                case 2:
-                  return (function (e, t, n) {
-                    let i = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)];
-                    if (r.D5U.arraysEqual(e, t))
-                      return n
-                        ? `
+                    })(0, t, n);
+                  case 2:
+                    return (function (e, t, n) {
+                      let i = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)];
+                      if (r.D5U.arraysEqual(e, t))
+                        return n
+                          ? `
       ivec2 getOutputCoords() {
         ivec2 packedTexShape = ivec2(ceil(float(outTexShape[0]) / 2.0), ceil(float(outTexShape[1]) / 2.0));
         return 2 * ivec2(resultUV.yx * vec2(packedTexShape[0], packedTexShape[1]));
       }
     `
-                        : `
+                          : `
       ivec2 getOutputCoords() {
         return 2 * ivec2(resultUV.yx * vec2(${i[0]}, ${i[1]}));
       }
     `;
-                    let o = Math.ceil(e[1] / 2);
-                    return n
-                      ? `
+                      let o = Math.ceil(e[1] / 2);
+                      return n
+                        ? `
     ivec2 getOutputCoords() {
       ivec2 packedTexShape = ivec2(ceil(float(outTexShape[0]) / 2.0), ceil(float(outTexShape[1]) / 2.0));
       int texelsInLogicalRow = int(ceil(float(outShape[1]) / 2.0));
@@ -1094,7 +1091,7 @@
       return ivec2(r, c);
     }
   `
-                      : `
+                        : `
     ivec2 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${i[0]}, ${i[1]}));
@@ -1106,11 +1103,11 @@
       return ivec2(r, c);
     }
   `;
-                  })(e, t, n);
-                case 3:
-                  return (function (e, t, n) {
-                    if (n)
-                      return `
+                    })(e, t, n);
+                  case 3:
+                    return (function (e, t, n) {
+                      if (n)
+                        return `
     ivec3 getOutputCoords() {
       ivec2 packedTexShape = ivec2(ceil(float(outTexShape[0]) / 2.0), ceil(float(outTexShape[1]) / 2.0));
       int texelsInLogicalRow = int(ceil(float(outShape[2]) / 2.0));
@@ -1128,10 +1125,10 @@
       return ivec3(b, r, c);
     }
   `;
-                    let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)],
-                      i = Math.ceil(e[2] / 2),
-                      o = i * Math.ceil(e[1] / 2);
-                    return `
+                      let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)],
+                        i = Math.ceil(e[2] / 2),
+                        o = i * Math.ceil(e[1] / 2);
+                      return `
     ivec3 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${r[0]}, ${r[1]}));
@@ -1146,11 +1143,11 @@
       return ivec3(b, r, c);
     }
   `;
-                  })(e, t, n);
-                default:
-                  return (function (e, t, n) {
-                    if (n)
-                      return `
+                    })(e, t, n);
+                  default:
+                    return (function (e, t, n) {
+                      if (n)
+                        return `
     ivec4 getOutputCoords() {
       ivec2 packedTexShape = ivec2(ceil(float(outTexShape[0]) / 2.0), ceil(float(outTexShape[1]) / 2.0));
       ivec2 resTexRC = ivec2(resultUV.yx *
@@ -1173,21 +1170,21 @@
       return ivec4(b2, b, r, c);
     }
   `;
-                    let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)],
-                      i = Math.ceil(e[e.length - 1] / 2),
-                      o = i * Math.ceil(e[e.length - 2] / 2),
-                      a = o,
-                      l = "",
-                      c = "b, r, c";
-                    for (let t = 2; t < e.length - 1; t++)
-                      (a *= e[e.length - t - 1]),
-                        (l =
-                          `
+                      let r = [Math.ceil(t[0] / 2), Math.ceil(t[1] / 2)],
+                        i = Math.ceil(e[e.length - 1] / 2),
+                        o = i * Math.ceil(e[e.length - 2] / 2),
+                        a = o,
+                        l = "",
+                        c = "b, r, c";
+                      for (let t = 2; t < e.length - 1; t++)
+                        (a *= e[e.length - t - 1]),
+                          (l =
+                            `
       int b${t} = index / ${a};
       index -= b${t} * ${a};
     ` + l),
-                        (c = `b${t}, ` + c);
-                    return `
+                          (c = `b${t}, ` + c);
+                      return `
     ivec${e.length} getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${r[0]}, ${r[1]}));
@@ -1204,97 +1201,79 @@
       return ivec${e.length}(${c});
     }
   `;
-                  })(e, t, n);
-              }
-            })(t.logicalShape, g, n.enableShapeUniforms)),
-            (C = `
+                    })(e, t, n);
+                }
+              })(t.logicalShape, g, n.enableShapeUniforms)),
+              (C = `
     void setOutput(vec4 val) {
       ${w.output} = val;
     }
   `))
-          : ((l = (function (e, t, n) {
-              switch (e.length) {
-                case 0:
-                  return h();
-                case 1:
-                  return 1 === t[0]
-                    ? n
-                      ? `
+            : ((l = (function (e, t, n) {
+                switch (e.length) {
+                  case 0:
+                    return h();
+                  case 1:
+                    return 1 === t[0]
+                      ? n
+                        ? `
       int getOutputCoords() {
         return int(resultUV.x * float(outTexShape[1]));
       }
     `
-                      : `
+                        : `
       int getOutputCoords() {
         return int(resultUV.x * ${t[1]}.0);
       }
     `
-                    : 1 === t[1]
-                      ? n
-                        ? `
+                      : 1 === t[1]
+                        ? n
+                          ? `
       int getOutputCoords() {
         return int(resultUV.y * float(outTexShape[0]));
       }
     `
-                        : `
+                          : `
       int getOutputCoords() {
         return int(resultUV.y * ${t[0]}.0);
       }
     `
-                      : n
-                        ? `
+                        : n
+                          ? `
     int getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(outTexShape[0], outTexShape[1]));
       return resTexRC.x * outTexShape[1] + resTexRC.y;
     }
   `
-                        : `
+                          : `
     int getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${t[0]}, ${t[1]}));
       return resTexRC.x * ${t[1]} + resTexRC.y;
     }
   `;
-                case 2:
-                  return r.D5U.arraysEqual(e, t)
-                    ? n
-                      ? `
+                  case 2:
+                    return r.D5U.arraysEqual(e, t)
+                      ? n
+                        ? `
       ivec2 getOutputCoords() {
         return ivec2(resultUV.yx * vec2(outTexShape[0], outTexShape[1]));
       }
     `
-                      : `
+                        : `
       ivec2 getOutputCoords() {
         return ivec2(resultUV.yx * vec2(${t[0]}, ${t[1]}));
       }
     `
-                    : 1 === e[1]
-                      ? n
-                        ? `
-      ivec2 getOutputCoords() {
-        ivec2 resTexRC = ivec2(resultUV.yx *
-                               vec2(outTexShape[0], outTexShape[1]));
-        int index = resTexRC.x * outTexShape[1] + resTexRC.y;
-        return ivec2(index, 0);
-      }
-    `
-                        : `
-      ivec2 getOutputCoords() {
-        ivec2 resTexRC = ivec2(resultUV.yx *
-                               vec2(${t[0]}, ${t[1]}));
-        int index = resTexRC.x * ${t[1]} + resTexRC.y;
-        return ivec2(index, 0);
-      }
-    `
-                      : 1 === e[0]
+                      : 1 === e[1]
                         ? n
                           ? `
       ivec2 getOutputCoords() {
         ivec2 resTexRC = ivec2(resultUV.yx *
                                vec2(outTexShape[0], outTexShape[1]));
         int index = resTexRC.x * outTexShape[1] + resTexRC.y;
-        return ivec2(0, index);
+        return ivec2(index, 0);
       }
     `
                           : `
@@ -1302,11 +1281,29 @@
         ivec2 resTexRC = ivec2(resultUV.yx *
                                vec2(${t[0]}, ${t[1]}));
         int index = resTexRC.x * ${t[1]} + resTexRC.y;
+        return ivec2(index, 0);
+      }
+    `
+                        : 1 === e[0]
+                          ? n
+                            ? `
+      ivec2 getOutputCoords() {
+        ivec2 resTexRC = ivec2(resultUV.yx *
+                               vec2(outTexShape[0], outTexShape[1]));
+        int index = resTexRC.x * outTexShape[1] + resTexRC.y;
         return ivec2(0, index);
       }
     `
-                        : n
-                          ? `
+                            : `
+      ivec2 getOutputCoords() {
+        ivec2 resTexRC = ivec2(resultUV.yx *
+                               vec2(${t[0]}, ${t[1]}));
+        int index = resTexRC.x * ${t[1]} + resTexRC.y;
+        return ivec2(0, index);
+      }
+    `
+                          : n
+                            ? `
     ivec2 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(outTexShape[0], outTexShape[1]));
@@ -1316,7 +1313,7 @@
       return ivec2(r, c);
     }
   `
-                          : `
+                            : `
     ivec2 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${t[0]}, ${t[1]}));
@@ -1326,11 +1323,11 @@
       return ivec2(r, c);
     }
   `;
-                case 3:
-                  return (function (e, t, n) {
-                    if (n) {
-                      let t = o.Kn(["r", "c", "d"], e);
-                      return `
+                  case 3:
+                    return (function (e, t, n) {
+                      if (n) {
+                        let t = o.Kn(["r", "c", "d"], e);
+                        return `
   ivec3 getOutputCoords() {
     ivec2 resTexRC = ivec2(resultUV.yx *
                            vec2(outTexShape[0], outTexShape[1]));
@@ -1339,9 +1336,9 @@
     return ivec3(r, c, d);
   }
 `;
-                    }
-                    let r = o.RW(["r", "c", "d"], e);
-                    return `
+                      }
+                      let r = o.RW(["r", "c", "d"], e);
+                      return `
     ivec3 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
                              vec2(${t[0]}, ${t[1]}));
@@ -1350,12 +1347,12 @@
       return ivec3(r, c, d);
     }
   `;
-                  })(e, t, n);
-                case 4:
-                  return (function (e, t, n) {
-                    if (n) {
-                      let t = o.Kn(["r", "c", "d", "d2"], e);
-                      return `
+                    })(e, t, n);
+                  case 4:
+                    return (function (e, t, n) {
+                      if (n) {
+                        let t = o.Kn(["r", "c", "d", "d2"], e);
+                        return `
     ivec4 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
         vec2(outTexShape[0], outTexShape[1]));
@@ -1364,9 +1361,9 @@
       return ivec4(r, c, d, d2);
     }
   `;
-                    }
-                    let r = o.RW(["r", "c", "d", "d2"], e);
-                    return `
+                      }
+                      let r = o.RW(["r", "c", "d", "d2"], e);
+                      return `
     ivec4 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
         vec2(${t[0]}, ${t[1]}));
@@ -1375,11 +1372,11 @@
       return ivec4(r, c, d, d2);
     }
   `;
-                  })(e, t, n);
-                case 5:
-                  return (function (e, t) {
-                    let n = o.RW(["r", "c", "d", "d2", "d3"], e);
-                    return `
+                    })(e, t, n);
+                  case 5:
+                    return (function (e, t) {
+                      let n = o.RW(["r", "c", "d", "d2", "d3"], e);
+                      return `
     ivec5 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx * vec2(${t[0]},
                              ${t[1]}));
@@ -1392,11 +1389,11 @@
       return outShape;
     }
   `;
-                  })(e, t);
-                case 6:
-                  return (function (e, t) {
-                    let n = o.RW(["r", "c", "d", "d2", "d3", "d4"], e);
-                    return `
+                    })(e, t);
+                  case 6:
+                    return (function (e, t) {
+                      let n = o.RW(["r", "c", "d", "d2", "d3", "d4"], e);
+                      return `
     ivec6 getOutputCoords() {
       ivec2 resTexRC = ivec2(resultUV.yx *
         vec2(${t[0]}, ${t[1]}));
@@ -1408,21 +1405,21 @@
       return result;
     }
   `;
-                  })(e, t);
-                default:
-                  throw Error(
-                    `${e.length}-D output sampling is not yet supported`
-                  );
-              }
-            })(t.logicalShape, g, n.enableShapeUniforms)),
-            (C = `
+                    })(e, t);
+                  default:
+                    throw Error(
+                      `${e.length}-D output sampling is not yet supported`
+                    );
+                }
+              })(t.logicalShape, g, n.enableShapeUniforms)),
+              (C = `
     void setOutput(float val) {
       ${w.output} = vec4(val, 0, 0, 0);
     }
   `)),
-          n.packedInputs && (I += x);
-        let U = [I, y, C, m, l, R, n.userCode].join("\n");
-        return U;
+          n.packedInputs && (I += x),
+          [I, y, C, m, l, R, n.userCode].join("\n")
+        );
       }
       let c = `
 vec2 uvFromFlat(int texNumR, int texNumC, int index) {
@@ -1505,8 +1502,9 @@ vec2 packedUVfrom3D(int texNumR, int texNumC,
           a = t.length,
           l = e && 3 === a && 1 === t[0],
           c = l ? t.slice(1) : i,
-          u = (!e && a > 1 && !r.D5U.arraysEqual(t, n) && i.length < a) || l;
-        return { useSqueezeShape: u, uniformShape: u ? c : t, keptDims: o };
+          u = (!e && a > 1 && !r.D5U.arraysEqual(t, n) && i.length < a) || l,
+          p = u ? c : t;
+        return { useSqueezeShape: u, uniformShape: p, keptDims: o };
       }
       function f(e, t) {
         let n = JSON.parse(JSON.stringify(e));
@@ -1518,4 +1516,4 @@ vec2 packedUVfrom3D(int texNumR, int texNumC,
     },
   },
 ]);
-//# sourceMappingURL=65fd0ec4.f0a4fd236d1d0804.js.map
+//# sourceMappingURL=65fd0ec4.bc4f77e47caaeac6.js.map

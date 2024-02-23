@@ -1,159 +1,121 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2758],
   {
-    39636: function (e, t, n) {
+    60999: function (t, e, r) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      r.r(e),
+        r.d(e, {
           __N_SSP: function () {
-            return O;
+            return l;
           },
           default: function () {
-            return h;
+            return p;
           },
         });
-      var r = n(50134),
-        c = n(36112),
-        u = n(4399),
-        o = n.n(u),
-        i = n(85958),
-        s = n(95412),
-        a = n(10721),
-        p = n(70079),
-        f = n(35250);
-      function l(e, t) {
-        var n = Object.keys(e);
+      var n = r(39827),
+        c = r(19892),
+        u = r(13038),
+        o = r(12366),
+        i = r(70079),
+        s = r(35250);
+      function a(t, e) {
+        var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(e);
-          t &&
-            (r = r.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+          var n = Object.getOwnPropertySymbols(t);
+          e &&
+            (n = n.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
             })),
-            n.push.apply(n, r);
+            r.push.apply(r, n);
         }
-        return n;
+        return r;
       }
-      var O = !0;
-      function h(e) {
-        return (0, f.jsx)(
-          b,
-          (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = null != arguments[t] ? arguments[t] : {};
-              t % 2
-                ? l(Object(n), !0).forEach(function (t) {
-                    (0, c.Z)(e, t, n[t]);
+      var l = !0;
+      function p(t) {
+        return (0, s.jsx)(
+          f,
+          (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+              var r = null != arguments[e] ? arguments[e] : {};
+              e % 2
+                ? a(Object(r), !0).forEach(function (e) {
+                    (0, n.Z)(t, e, r[e]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
-                      e,
-                      Object.getOwnPropertyDescriptors(n)
+                      t,
+                      Object.getOwnPropertyDescriptors(r)
                     )
-                  : l(Object(n)).forEach(function (t) {
+                  : a(Object(r)).forEach(function (e) {
                       Object.defineProperty(
-                        e,
                         t,
-                        Object.getOwnPropertyDescriptor(n, t)
+                        e,
+                        Object.getOwnPropertyDescriptor(r, e)
                       );
                     });
             }
-            return e;
-          })({}, e)
+            return t;
+          })({}, t)
         );
       }
-      function b(e) {
-        var t = e.pluginId,
-          n = e.code,
-          c = e.state,
-          u = (0, a.useRouter)(),
-          l = (0, p.useRef)(!1);
+      function f(t) {
+        let { pluginId: e, code: r, state: n } = t,
+          a = (0, o.useRouter)(),
+          l = (0, i.useRef)(!1);
         return (
-          (0, p.useEffect)(
-            function () {
-              !0 !== l.current &&
-                ((l.current = !0),
-                (function () {
-                  e.apply(this, arguments);
-                })());
-              function e() {
-                return (e = (0, r.Z)(
-                  o().mark(function e() {
-                    var r, a, p, f;
-                    return o().wrap(
-                      function (e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                (r = ""
-                                  .concat(window.location.origin, "/aip/")
-                                  .concat(t, "/oauth/callback")),
-                                (e.prev = 1),
-                                (e.next = 4),
-                                s.Z.pluginOauthCallback(t, n, r, c)
-                              );
-                            case 4:
-                              (a = e.sent).success
-                                ? ((p = new URL(
-                                    (0, i.M5)(
-                                      i.LT.OAUTH_SUCCESS,
-                                      a.redirect_path
-                                    )
-                                  )).searchParams.set("oauth_success", "true"),
-                                  u.push(p.toString()))
-                                : u.push(
-                                    (0, i.M5)(
-                                      i.LT.CUSTOM_ERROR,
-                                      a.redirect_path,
-                                      null !== (f = a.error) && void 0 !== f
-                                        ? f
-                                        : a.message
-                                    )
-                                  ),
-                                (e.next = 11);
-                              break;
-                            case 8:
-                              (e.prev = 8),
-                                (e.t0 = e.catch(1)),
-                                u.push(
-                                  "/?model=gpt-4-plugins&loginAip=".concat(
-                                    t,
-                                    "&loginSuccess=false"
-                                  )
-                                );
-                            case 11:
-                            case "end":
-                              return e.stop();
-                          }
-                      },
-                      e,
-                      null,
-                      [[1, 8]]
+          (0, i.useEffect)(() => {
+            !0 !== l.current &&
+              ((l.current = !0),
+              (async function () {
+                let t = ""
+                  .concat(window.location.origin, "/aip/")
+                  .concat(e, "/oauth/callback");
+                try {
+                  let i = await u.Z.pluginOauthCallback(e, r, t, n);
+                  if (i.success) {
+                    let t = new URL(
+                      (0, c.M5)(c.LT.OAUTH_SUCCESS, i.redirect_path)
                     );
-                  })
-                )).apply(this, arguments);
-              }
-            },
-            [t, n, c, u]
-          ),
-          (0, f.jsx)("div", {})
+                    t.searchParams.set("oauth_success", "true"),
+                      a.push(t.toString());
+                  } else {
+                    var o;
+                    a.push(
+                      (0, c.M5)(
+                        c.LT.CUSTOM_ERROR,
+                        i.redirect_path,
+                        null !== (o = i.error) && void 0 !== o ? o : i.message
+                      )
+                    );
+                  }
+                } catch (t) {
+                  a.push(
+                    "/?model=gpt-4-plugins&loginAip=".concat(
+                      e,
+                      "&loginSuccess=false"
+                    )
+                  );
+                }
+              })());
+          }, [e, r, n, a]),
+          (0, s.jsx)("div", {})
         );
       }
     },
-    69613: function (e, t, n) {
+    19654: function (t, e, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/aip/[pluginId]/oauth/callback",
         function () {
-          return n(39636);
+          return r(60999);
         },
       ]);
     },
   },
-  function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 69613));
+  function (t) {
+    t.O(0, [2888, 9774, 179], function () {
+      return t((t.s = 19654));
     }),
-      (_N_E = e.O());
+      (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=callback-45805e25402663ec.js.map
+//# sourceMappingURL=callback-d767522b53f0239b.js.map

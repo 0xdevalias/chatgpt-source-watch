@@ -1,103 +1,68 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6529],
   {
-    112: function (e, n, t) {
+    10166: function (e, n, t) {
       "use strict";
       t.r(n),
         t.d(n, {
           __N_SSP: function () {
-            return p;
+            return a;
           },
           default: function () {
-            return h;
+            return o;
           },
         });
-      var r = t(50134),
-        u = t(4399),
-        c = t.n(u),
-        i = t(75129),
-        s = t(63866),
-        a = t(95412),
-        f = t(88654),
-        o = t(10721),
+      var u = t(83356),
+        c = t(42005),
+        i = t(13038),
+        r = t(24668),
+        s = t(30640),
+        f = t(12366),
         l = t(70079),
         _ = t(35250),
-        p = !0;
-      function h() {
-        var e = (0, o.useRouter)();
+        a = !0;
+      function o() {
+        let e = (0, f.useRouter)(),
+          n = (0, r.hz)();
         return (
-          (0, l.useEffect)(
-            function () {
-              if (e) {
-                var n;
-                ((n = (0, r.Z)(
-                  c().mark(function n() {
-                    var t;
-                    return c().wrap(
-                      function (n) {
-                        for (;;)
-                          switch ((n.prev = n.next)) {
-                            case 0:
-                              return (
-                                (n.prev = 0),
-                                (n.next = 3),
-                                a.Z.getCheckoutLink()
-                              );
-                            case 3:
-                              (t = n.sent), e.replace(t.url), (n.next = 13);
-                              break;
-                            case 7:
-                              if (
-                                ((n.prev = 7),
-                                (n.t0 = n.catch(0)),
-                                !(n.t0 instanceof f.Q0) ||
-                                  (null === n.t0 || void 0 === n.t0
-                                    ? void 0
-                                    : n.t0.message) != i.D7.ALREADY_PAID)
-                              ) {
-                                n.next = 13;
-                                break;
-                              }
-                              return e.push("/"), n.abrupt("return");
-                            case 13:
-                            case "end":
-                              return n.stop();
-                          }
-                      },
-                      n,
-                      null,
-                      [[0, 7]]
-                    );
-                  })
-                )),
-                function () {
-                  return n.apply(this, arguments);
-                })();
-              }
-            },
-            [e]
-          ),
+          (0, l.useEffect)(() => {
+            e &&
+              (async () => {
+                try {
+                  let t = await i.Z.getCheckoutLink(n);
+                  e.replace(t.url);
+                } catch (n) {
+                  if (
+                    n instanceof s.Q0 &&
+                    (null == n ? void 0 : n.message) == u.D7.ALREADY_PAID
+                  ) {
+                    e.push("/");
+                    return;
+                  }
+                }
+              })();
+          }, [e, n]),
           (0, _.jsx)("div", {
             className: "flex h-full w-full items-center justify-center",
-            children: (0, _.jsx)(s.Z, {}),
+            children: (0, _.jsx)(c.Z, {}),
           })
         );
       }
     },
-    97794: function (e, n, t) {
+    37606: function (e, n, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/invite/accepted",
         function () {
-          return t(112);
+          return t(10166);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 97794));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 37606));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=accepted-5050e9452b9743cb.js.map
+//# sourceMappingURL=accepted-bb8c0272663609d2.js.map

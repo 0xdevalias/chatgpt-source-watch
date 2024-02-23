@@ -1,38 +1,38 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [577],
   {
-    76893: function (e, t, n) {
+    8956: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return E;
-          },
-          default: function () {
             return D;
           },
+          default: function () {
+            return E;
+          },
         });
-      var i = n(36112),
-        r = n(35017),
-        s = n(82256),
-        a = n(90166),
-        o = n(67558),
-        l = n(95412),
-        c = n(7144),
-        d = n(73582),
+      var i = n(39827),
+        r = n(9112),
+        s = n(25660),
+        a = n(68832),
+        o = n(37379),
+        l = n(13038),
+        c = n(24668),
+        d = n(78e3),
         u = n(82473),
         g = n(25494),
         p = n(19841),
-        f = n(29124),
+        f = n(80483),
         h = n.n(f),
         x = n(70671),
-        b = n(32004),
-        j = n(94968),
-        m = n(33562),
-        y = n(4748),
-        v = n(81942),
-        w = n(35250);
-      function S(e, t) {
+        j = n(32004),
+        m = n(94968),
+        b = n(60734),
+        y = n(65455),
+        w = n(41594),
+        S = n(35250);
+      function O(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -44,16 +44,16 @@
         }
         return n;
       }
-      function O(e) {
+      function v(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? S(Object(n), !0).forEach(function (t) {
+            ? O(Object(n), !0).forEach(function (t) {
                 (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : S(Object(n)).forEach(function (t) {
+              : O(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -64,28 +64,28 @@
         return e;
       }
       function k(e) {
-        var t,
-          n = e.conversationTTL,
+        let t,
+          { conversationTTL: n } = e,
           i = (0, x.Z)();
         return (
           (t =
             null === n
-              ? i.formatMessage(_.retentionInfinite)
+              ? i.formatMessage(N.retentionInfinite)
               : 7776e3 === n
-                ? i.formatMessage(_.retentionNinetyDays)
+                ? i.formatMessage(N.retentionNinetyDays)
                 : 31536e3 === n
-                  ? i.formatMessage(_.retentionOneYear)
-                  : i.formatMessage(_.retentionCustomDays, {
+                  ? i.formatMessage(N.retentionOneYear)
+                  : i.formatMessage(N.retentionCustomDays, {
                       num: Math.floor(n / 86400),
                     })),
-          (0, w.jsxs)(v.vi, {
+          (0, S.jsxs)(w.vi, {
             children: [
-              (0, w.jsx)("p", {
+              (0, S.jsx)("p", {
                 className: "inline-flex items-center text-base",
-                children: (0, w.jsx)(b.Z, O({}, _.conversationRetention)),
+                children: (0, S.jsx)(j.Z, v({}, N.conversationRetention)),
               }),
-              (0, w.jsx)(a.u, {
-                label: i.formatMessage(_.retentionSettingTooltip),
+              (0, S.jsx)(a.u, {
+                label: i.formatMessage(N.retentionSettingTooltip),
                 children: t,
               }),
             ],
@@ -93,99 +93,99 @@
         );
       }
       function Z(e) {
-        var t = e.title,
-          n = e.description,
-          i = e.children,
-          r = e.upsellEnterprise,
-          s = void 0 !== r && r;
-        return (0, w.jsx)(a.E, {
-          label: (0, w.jsx)(b.Z, O({}, _.enterpriseRequiredMessage)),
+        let {
+          title: t,
+          description: n,
+          children: i,
+          upsellEnterprise: r = !1,
+        } = e;
+        return (0, S.jsx)(a.E, {
+          label: (0, S.jsx)(j.Z, v({}, N.enterpriseRequiredMessage)),
           side: "top",
           sideOffset: 4,
-          disabled: !s,
+          disabled: !r,
           className: "max-w-xl",
-          children: (0, w.jsxs)(v.i9, {
-            className: (0, p.default)(s && "text-token-text-tertiary"),
+          children: (0, S.jsxs)(w.i9, {
+            className: (0, p.default)(r && "text-token-text-tertiary"),
             children: [
-              (0, w.jsxs)(v.A4, {
+              (0, S.jsxs)(w.A4, {
                 className: "flex items-center gap-3",
                 children: [
-                  (0, w.jsx)(b.Z, O({}, t)),
-                  s &&
-                    (0, w.jsx)("span", {
+                  (0, S.jsx)(j.Z, v({}, t)),
+                  r &&
+                    (0, S.jsx)("span", {
                       className:
                         "rounded-xl bg-token-main-surface-tertiary px-2 pb-0.5 text-sm",
-                      children: (0, w.jsx)(b.Z, O({}, _.enterpriseUpsellPill)),
+                      children: (0, S.jsx)(j.Z, v({}, N.enterpriseUpsellPill)),
                     }),
                 ],
               }),
-              n && (0, w.jsx)(v.Li, { children: (0, w.jsx)(b.Z, O({}, n)) }),
+              n && (0, S.jsx)(w.Li, { children: (0, S.jsx)(j.Z, v({}, n)) }),
               i,
             ],
           }),
         });
       }
       function M(e) {
-        var t,
-          n = e.workspaceId,
-          i = e.label,
-          r = e.setting,
-          s = e.defaultValue,
-          a = e.values,
-          o = e.disabled,
+        var t;
+        let {
+            workspaceId: n,
+            label: i,
+            setting: r,
+            defaultValue: s,
+            values: a,
+            disabled: o = !1,
+          } = e,
           c = (0, x.Z)(),
           d = (0, u.NL)(),
-          p = (0, g.D)({
-            mutationFn: function (e) {
-              var t = e.setting,
-                i = e.value;
+          { variables: p, mutate: f } = (0, g.D)({
+            mutationFn: (e) => {
+              let { setting: t, value: i } = e;
               return l.Z.setWorkspaceShareSetting(n, t, i);
             },
-            onSettled: function () {
+            onSettled: () => {
               d.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
-            onError: function () {
-              y.m.danger(c.formatMessage(_.featureSettingsUpdateFailed));
+            onError: () => {
+              y.m.danger(c.formatMessage(N.featureSettingsUpdateFailed));
             },
-          }),
-          f = p.variables,
-          h = p.mutate;
-        return (0, w.jsxs)(v.vi, {
+          });
+        return (0, S.jsxs)(w.vi, {
           children: [
-            (0, w.jsx)("p", {
+            (0, S.jsx)("p", {
               className: "text-md inline-flex items-center",
-              children: (0, w.jsx)(b.Z, O({}, i)),
+              children: (0, S.jsx)(j.Z, v({}, i)),
             }),
-            (0, w.jsxs)(m.Z.Root, {
+            (0, S.jsxs)(b.Z.Root, {
               defaultValue:
-                null !== (t = null == f ? void 0 : f.value) && void 0 !== t
+                null !== (t = null == p ? void 0 : p.value) && void 0 !== t
                   ? t
                   : s,
-              onValueChange: function (e) {
-                h({ setting: r, value: e });
+              onValueChange: (e) => {
+                f({ setting: r, value: e });
               },
-              disabled: void 0 !== o && o,
+              disabled: o,
               children: [
-                (0, w.jsxs)(m.Z.Trigger, {
+                (0, S.jsxs)(b.Z.Trigger, {
                   className: "text-md focus-visible:border-none",
                   children: [
-                    (0, w.jsx)(m.Z.Value, {}),
-                    (0, w.jsx)(m.Z.Icon, {}),
+                    (0, S.jsx)(b.Z.Value, {}),
+                    (0, S.jsx)(b.Z.Icon, {}),
                   ],
                 }),
-                (0, w.jsx)(m.Z.Portal, {
-                  children: (0, w.jsx)(m.Z.Content, {
-                    children: a.map(function (e, t) {
-                      return (0, w.jsx)(
-                        m.Z.Item,
+                (0, S.jsx)(b.Z.Portal, {
+                  children: (0, S.jsx)(b.Z.Content, {
+                    children: a.map((e, t) =>
+                      (0, S.jsx)(
+                        b.Z.Item,
                         {
                           className: "text-md",
                           value: e.value,
-                          children: (0, w.jsx)(b.Z, O({}, e.display)),
+                          children: (0, S.jsx)(j.Z, v({}, e.display)),
                         },
                         t
-                      );
-                    }),
+                      )
+                    ),
                   }),
                 }),
               ],
@@ -194,19 +194,18 @@
         });
       }
       function P(e) {
-        var t = e.workspaceId,
-          n = e.data,
+        let { workspaceId: t, data: n } = e,
           i = (0, d.ec)(d.F_.isTeamPlan),
           r = (0, c.t)();
-        return (0, w.jsxs)(v.$V, {
+        return (0, S.jsxs)(w.$V, {
           children: [
-            i && (0, w.jsx)(v.W8, {}),
-            (0, w.jsx)(Z, {
-              title: _.workspaceDetails,
-              children: (0, w.jsx)(
-                b.Z,
-                O(
-                  O({}, _.organizationIdLabel),
+            i && (0, S.jsx)(w.W8, {}),
+            (0, S.jsx)(Z, {
+              title: N.workspaceDetails,
+              children: (0, S.jsx)(
+                j.Z,
+                v(
+                  v({}, N.organizationIdLabel),
                   {},
                   {
                     values: {
@@ -217,60 +216,58 @@
                 )
               ),
             }),
-            (0, w.jsx)(Z, {
-              title: _.sharingSettingsTitle,
+            (0, S.jsx)(Z, {
+              title: N.sharingSettingsTitle,
               upsellEnterprise: i,
-              children: (0, w.jsx)(v.qQ, {
-                children: (0, w.jsx)(M, {
+              children: (0, S.jsx)(w.qQ, {
+                children: (0, S.jsx)(M, {
                   workspaceId: t,
-                  label: _.chatSharingTitle,
+                  label: N.chatSharingTitle,
                   setting: s.bb.CHAT_SHARE_SETTINGS,
                   disabled: i,
                   defaultValue: n.share_settings.chat_share_setting,
                   values: [
                     {
-                      display: _.workspaceMembersOnlySelect,
+                      display: N.workspaceMembersOnlySelect,
                       value: s.Gz.WORKSPACE_ONLY,
                     },
-                    { display: _.noOneSelect, value: s.Gz.NO_ONE },
+                    { display: N.noOneSelect, value: s.Gz.NO_ONE },
                   ],
                 }),
               }),
             }),
-            (0, w.jsx)(Z, {
-              title: _.retentionPolicyTitle,
-              description: _.retentionChange,
+            (0, S.jsx)(Z, {
+              title: N.retentionPolicyTitle,
+              description: N.retentionChange,
               upsellEnterprise: i,
-              children: (0, w.jsx)(k, { conversationTTL: n.conversation_ttl }),
+              children: (0, S.jsx)(k, { conversationTTL: n.conversation_ttl }),
             }),
           ],
         });
       }
-      function T(e) {
-        var t = e.currentWorkspaceId,
-          n = (0, o.C)(t),
-          i = n.data,
-          s = n.isLoading,
-          a = (0, x.Z)();
-        return (0, w.jsxs)(w.Fragment, {
+      function _(e) {
+        let { currentWorkspaceId: t } = e,
+          { data: n, isLoading: i } = (0, o.C)(t),
+          s = (0, x.Z)();
+        return (0, S.jsxs)(S.Fragment, {
           children: [
-            (0, w.jsx)(h(), {
-              children: (0, w.jsx)("title", {
-                children: a.formatMessage(_.title),
+            (0, S.jsx)(h(), {
+              children: (0, S.jsx)("title", {
+                children: s.formatMessage(N.title),
               }),
             }),
-            (0, w.jsx)(r.yG, { title: a.formatMessage(_.title) }),
-            (0, w.jsx)(r.hb, {
-              showSpinner: s,
+            (0, S.jsx)(r.yG, { title: s.formatMessage(N.title) }),
+            (0, S.jsx)(r.hb, {
+              showSpinner: i,
               children:
-                void 0 === i
+                void 0 === n
                   ? null
-                  : (0, w.jsx)(P, { workspaceId: t, data: i }),
+                  : (0, S.jsx)(P, { workspaceId: t, data: n }),
             }),
           ],
         });
       }
-      var _ = (0, j.vU)({
+      let N = (0, m.vU)({
         title: { id: "workspaceSettings.title", defaultMessage: "Settings" },
         retentionPolicyTitle: {
           id: "workspaceSettings.retentionPolicyTitle",
@@ -343,7 +340,7 @@
             "Only workspaces with the Enterprise plan can change these settings",
         },
       });
-      function N(e, t) {
+      function T(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -355,15 +352,15 @@
         }
         return n;
       }
-      var E = !0;
-      function D(e) {
-        return (0, w.jsx)(
-          T,
+      var D = !0;
+      function E(e) {
+        return (0, S.jsx)(
+          _,
           (function (e) {
             for (var t = 1; t < arguments.length; t++) {
               var n = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? N(Object(n), !0).forEach(function (t) {
+                ? T(Object(n), !0).forEach(function (t) {
                     (0, i.Z)(e, t, n[t]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -371,7 +368,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(n)
                     )
-                  : N(Object(n)).forEach(function (t) {
+                  : T(Object(n)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -383,15 +380,15 @@
           })({}, e)
         );
       }
-      D.getLayout = function (e) {
-        return (0, w.jsx)(r.ZP, {
+      E.getLayout = function (e) {
+        return (0, S.jsx)(r.ZP, {
           mobilePageTitle: "Settings",
           requireAdminPrivileges: !0,
           children: e,
         });
       };
     },
-    81942: function (e, t, n) {
+    41594: function (e, t, n) {
       "use strict";
       n.d(t, {
         $V: function () {
@@ -401,7 +398,7 @@
           return f;
         },
         Li: function () {
-          return j;
+          return m;
         },
         W8: function () {
           return y;
@@ -410,13 +407,13 @@
           return h;
         },
         i9: function () {
-          return b;
+          return j;
         },
         qQ: function () {
           return x;
         },
         vi: function () {
-          return m;
+          return b;
         },
       });
       var i,
@@ -427,9 +424,9 @@
         l,
         c,
         d,
-        u = n(90038),
-        g = n(21389),
-        p = g.Z.div(
+        u = n(73017),
+        g = n(21389);
+      let p = g.Z.div(
           i ||
             (i = (0, u.Z)([
               "text-base text-token-text-primary flex flex-col gap-10 my-10",
@@ -443,27 +440,27 @@
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
             ]))
         ),
-        b = g.Z.div(
+        j = g.Z.div(
           o || (o = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
-        j = g.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
-        m = g.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
+        m = g.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
+        b = g.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
         y = g.Z.hr(d || (d = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
-    16118: function (e, t, n) {
+    4449: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/settings",
         function () {
-          return n(76893);
+          return n(8956);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [5017, 9774, 2888, 179], function () {
-      return e((e.s = 16118));
+    e.O(0, [9112, 2888, 9774, 179], function () {
+      return e((e.s = 4449));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=settings-fc1b53fca10cc2c7.js.map
+//# sourceMappingURL=settings-9784e5fd778c176d.js.map

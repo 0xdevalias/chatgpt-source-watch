@@ -507,49 +507,48 @@
             [p, d] = (0, n.useState)(!1),
             { Copied: j = {} } = F();
           if (!1 === u || !y) return null;
-          var m = (e) => {
-              e.stopPropagation();
-              var r = "";
-              (r =
-                "number" == typeof a && a === 1 / 0
-                  ? "Infinity"
-                  : "number" == typeof a && isNaN(a)
-                    ? "NaN"
-                    : "bigint" == typeof a
-                      ? a + "n"
-                      : a instanceof Date
-                        ? a.toLocaleString()
-                        : JSON.stringify(a, null, 2)),
-                c && c(r, a),
-                d(!0),
-                navigator.clipboard
-                  .writeText(r)
-                  .then(() => {
-                    var e = setTimeout(() => {
-                      d(!1), clearTimeout(e);
-                    }, 3e3);
-                  })
-                  .catch((e) => {});
-            },
-            { render: f } = j,
-            N = l(j, ec),
-            x = (0, t.Z)({}, N, i, {
+          var { render: m } = j,
+            f = l(j, ec),
+            N = (0, t.Z)({}, f, i, {
               fill: p
                 ? "var(--w-rjv-copied-success-color, #28a745)"
                 : "var(--w-rjv-copied-color, currentColor)",
-              onClick: m,
+              onClick: (e) => {
+                e.stopPropagation();
+                var r = "";
+                (r =
+                  "number" == typeof a && a === 1 / 0
+                    ? "Infinity"
+                    : "number" == typeof a && isNaN(a)
+                      ? "NaN"
+                      : "bigint" == typeof a
+                        ? a + "n"
+                        : a instanceof Date
+                          ? a.toLocaleString()
+                          : JSON.stringify(a, null, 2)),
+                  c && c(r, a),
+                  d(!0),
+                  navigator.clipboard
+                    .writeText(r)
+                    .then(() => {
+                      var e = setTimeout(() => {
+                        d(!1), clearTimeout(e);
+                      }, 3e3);
+                    })
+                    .catch((e) => {});
+              },
             });
           return (
-            (f &&
-              "function" == typeof f &&
-              f((0, t.Z)({}, x, { "data-copied": p }), {
+            (m &&
+              "function" == typeof m &&
+              m((0, t.Z)({}, N, { "data-copied": p }), {
                 value: a,
                 keyName: r,
               })) ||
             (p
               ? (0, s.jsx)(
                   "svg",
-                  (0, t.Z)({ viewBox: "0 0 32 36" }, x, {
+                  (0, t.Z)({ viewBox: "0 0 32 36" }, N, {
                     children: (0, s.jsx)("path", {
                       d: "M27.5,33 L2.5,33 L2.5,12.5 L27.5,12.5 L27.5,15.2249049 C29.1403264,13.8627542 29.9736597,13.1778155 30,13.1700887 C30,11.9705278 30,10.0804982 30,7.5 C30,6.1 28.9,5 27.5,5 L20,5 C20,2.2 17.8,0 15,0 C12.2,0 10,2.2 10,5 L2.5,5 C1.1,5 0,6.1 0,7.5 L0,33 C0,34.4 1.1,36 2.5,36 L27.5,36 C28.9,36 30,34.4 30,33 L30,26.1114493 L27.5,28.4926435 L27.5,33 Z M7.5,7.5 L10,7.5 C10,7.5 12.5,6.4 12.5,5 C12.5,3.6 13.6,2.5 15,2.5 C16.4,2.5 17.5,3.6 17.5,5 C17.5,6.4 18.8,7.5 20,7.5 L22.5,7.5 C22.5,7.5 25,8.6 25,10 L5,10 C5,8.5 6.1,7.5 7.5,7.5 Z M5,27.5 L10,27.5 L10,25 L5,25 L5,27.5 Z M28.5589286,16 L32,19.6 L21.0160714,30.5382252 L13.5303571,24.2571429 L17.1303571,20.6571429 L21.0160714,24.5428571 L28.5589286,16 Z M17.5,15 L5,15 L5,17.5 L17.5,17.5 L17.5,15 Z M10,20 L5,20 L5,22.5 L10,22.5 L10,20 Z",
                     }),
@@ -557,7 +556,7 @@
                 )
               : (0, s.jsx)(
                   "svg",
-                  (0, t.Z)({ viewBox: "0 0 32 36" }, x, {
+                  (0, t.Z)({ viewBox: "0 0 32 36" }, N, {
                     children: (0, s.jsx)("path", {
                       d: "M27.5,33 L2.5,33 L2.5,12.5 L27.5,12.5 L27.5,20 L30,20 L30,7.5 C30,6.1 28.9,5 27.5,5 L20,5 C20,2.2 17.8,0 15,0 C12.2,0 10,2.2 10,5 L2.5,5 C1.1,5 0,6.1 0,7.5 L0,33 C0,34.4 1.1,36 2.5,36 L27.5,36 C28.9,36 30,34.4 30,33 L30,29 L27.5,29 L27.5,33 Z M7.5,7.5 L10,7.5 C10,7.5 12.5,6.4 12.5,5 C12.5,3.6 13.6,2.5 15,2.5 C16.4,2.5 17.5,3.6 17.5,5 C17.5,6.4 18.8,7.5 20,7.5 L22.5,7.5 C22.5,7.5 25,8.6 25,10 L5,10 C5,8.5 6.1,7.5 7.5,7.5 Z M5,27.5 L10,27.5 L10,25 L5,25 L5,27.5 Z M22.5,21.5 L22.5,16.5 L12.5,24 L22.5,31.5 L22.5,26.5 L32,26.5 L32,21.5 L22.5,21.5 Z M17.5,15 L5,15 L5,17.5 L17.5,17.5 L17.5,15 Z M10,20 L5,20 L5,22.5 L10,22.5 L10,20 Z",
                     }),
@@ -1096,24 +1095,24 @@
       eO.displayName = "JVR.KeyName";
       var eq = (e) => {
         var { children: r, value: a, parentValue: n, keyName: o } = e,
-          { KeyName: i = {} } = F(),
-          { as: c, render: v } = i,
-          u = l(i, eQ);
+          i = "number" == typeof r,
+          { KeyName: c = {} } = F(),
+          { as: v, render: u } = c,
+          y = l(c, eQ);
         return (
-          (u.style = (0, t.Z)({}, u.style, {
-            color:
-              "number" == typeof r
-                ? "var(--w-rjv-key-number, #268bd2)"
-                : "var(--w-rjv-key-string, #002b36)",
+          (y.style = (0, t.Z)({}, y.style, {
+            color: i
+              ? "var(--w-rjv-key-number, #268bd2)"
+              : "var(--w-rjv-key-string, #002b36)",
           })),
-          (v &&
-            "function" == typeof v &&
-            v((0, t.Z)({}, u, { children: r }), {
+          (u &&
+            "function" == typeof u &&
+            u((0, t.Z)({}, y, { children: r }), {
               value: a,
               parentValue: n,
               keyName: o,
             })) ||
-            (0, s.jsx)(c || "span", (0, t.Z)({}, u, { children: r }))
+            (0, s.jsx)(v || "span", (0, t.Z)({}, y, { children: r }))
         );
       };
       eq.displayName = "JVR.KeyNameComp";
@@ -1267,23 +1266,18 @@
           v = Array.isArray(a),
           u = a instanceof Set,
           p = a instanceof Map,
-          d = a instanceof URL;
+          d = a instanceof Date,
+          j = a instanceof URL;
         if (
-          (a &&
-            "object" == typeof a &&
-            !v &&
-            !u &&
-            !p &&
-            !(a instanceof Date) &&
-            !d) ||
+          (a && "object" == typeof a && !v && !u && !p && !d && !j) ||
           v ||
           u ||
           p
         ) {
-          var j = u ? Array.from(a) : p ? Object.fromEntries(a) : a;
+          var m = u ? Array.from(a) : p ? Object.fromEntries(a) : a;
           return (0, s.jsx)(ra, {
             keyName: r,
-            value: j,
+            value: m,
             parentValue: l,
             initialValue: a,
             level: o + 1,
@@ -1394,14 +1388,15 @@
               : "boolean" == typeof p
                 ? p
                 : "number" == typeof p && c > p,
-          x = () => {
-            var e = { expand: !m, value: i, keyid: l, keyName: a };
-            y && y(e), u({ [l]: e.expand });
-          },
-          w = 0 !== Object.keys(i).length && (d || j || "object" == typeof i),
+          x = "object" == typeof i,
+          w = 0 !== Object.keys(i).length && (d || j || x),
           h = { style: { display: "inline-flex", alignItems: "center" } };
         return (
-          w && (h.onClick = x),
+          w &&
+            (h.onClick = () => {
+              var e = { expand: !m, value: i, keyid: l, keyName: a };
+              y && y(e), u({ [l]: e.expand });
+            }),
           (0, s.jsxs)(
             "span",
             (0, t.Z)({}, h, {
@@ -1753,4 +1748,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4685.140d3e7e712ccf43.js.map
+//# sourceMappingURL=4685.352bbad25795ea42.js.map

@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2555],
   {
-    59858: function (e, t, n) {
+    33938: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -9,37 +9,34 @@
             return d;
           },
           __N_SSP: function () {
-            return l;
+            return u;
           },
           default: function () {
             return p;
           },
         });
-      var s = n(93999),
-        r = n(9280),
-        a = n(1755),
-        i = n(99893),
-        c = n(14765),
-        o = n(70079),
-        u = n(35250),
-        l = !0,
-        d = "/payments/success";
+      var s = n(23198),
+        a = n(45342),
+        i = n(91128),
+        r = n(53197),
+        c = n(27282),
+        l = n(70079),
+        o = n(35250),
+        u = !0;
+      let d = "/payments/success";
       function p() {
-        var e = (0, r.J)();
+        let e = (0, a.J)();
         return (
-          (0, o.useEffect)(
-            function () {
-              e &&
-                (c.m9.logEvent("chatgpt_referral_trial_payment_success"),
-                a.A.logEvent(i.M.chatgptReferralTrialPaymentSuccess));
-            },
-            [e]
-          ),
-          (0, u.jsx)(s.W, { isTrial: !0 })
+          (0, l.useEffect)(() => {
+            e &&
+              (c.m9.logEvent("chatgpt_referral_trial_payment_success"),
+              i.A.logEvent(r.M.chatgptReferralTrialPaymentSuccess));
+          }, [e]),
+          (0, o.jsx)(s.W, { isTrial: !0 })
         );
       }
     },
-    93999: function (e, t, n) {
+    23198: function (e, t, n) {
       "use strict";
       n.d(t, {
         W: function () {
@@ -47,45 +44,44 @@
         },
       });
       var s,
-        r,
         a,
         i,
-        c = n(36112),
-        o = n(91559),
-        u = n(90038),
-        l = n(21389),
-        d = n(14972),
-        p = n(35250);
-      function f(e) {
-        var t = e.children;
-        return (0, p.jsxs)("div", {
+        r = n(39827),
+        c = n(7557),
+        l = n(73017),
+        o = n(21389),
+        u = n(47527),
+        d = n(35250);
+      function p(e) {
+        let { children: t } = e;
+        return (0, d.jsxs)("div", {
           className: "flex min-h-screen w-full flex-col",
           children: [
-            (0, p.jsx)("div", {
+            (0, d.jsx)("div", {
               className: "m-4 flex gap-3",
-              children: (0, p.jsx)(d.nI, { className: "icon-xl" }),
+              children: (0, d.jsx)(u.nI, { className: "icon-xl" }),
             }),
-            (0, p.jsx)("div", {
+            (0, d.jsx)("div", {
               className: "m-auto max-w-sm flex-col justify-center",
               children: t,
             }),
           ],
         });
       }
-      var m = l.Z.h2(r || (r = (0, u.Z)(["mb-2 text-2xl font-medium"]))),
-        x = l.Z.p(a || (a = (0, u.Z)(["mb-10 text-sm"]))),
-        h = n(1755),
-        j = n(99893),
-        g = n(29124),
-        v = n.n(g),
-        y = n(10721),
-        T = n(70079),
+      let m = o.Z.h2(a || (a = (0, l.Z)(["mb-2 text-2xl font-medium"]))),
+        f = o.Z.p(i || (i = (0, l.Z)(["mb-10 text-sm"])));
+      var j = n(91128),
+        x = n(53197),
+        h = n(80483),
+        g = n.n(h),
+        v = n(12366),
+        y = n(70079),
         b = n(70671),
-        O = n(32004),
-        S = n(94968),
-        P = n(24343),
-        w = n(83737),
-        C = {
+        T = n(32004),
+        O = n(94968),
+        S = n(24343),
+        P = n(83737);
+      let w = {
           hidden: { opacity: 0, translateY: 50 },
           show: {
             opacity: 1,
@@ -93,7 +89,7 @@
             transition: { staggerChildren: 0.5, delayChildren: 0.2 },
           },
         },
-        N = {
+        C = {
           hidden: { opacity: 0, translateY: 50 },
           show: {
             opacity: 1,
@@ -102,31 +98,31 @@
           },
         };
       function k(e) {
-        var t = e.isTrial;
-        return (0, p.jsx)("div", {
+        let { isTrial: t } = e;
+        return (0, d.jsx)("div", {
           className: "mb-6 flex items-center justify-center gap-2",
-          children: (0, p.jsx)(P.M, {
-            children: (0, p.jsx)(w.E.div, {
-              variants: C,
+          children: (0, d.jsx)(S.M, {
+            children: (0, d.jsx)(P.E.div, {
+              variants: w,
               initial: "hidden",
               animate: "show",
               className: "flex",
-              children: (0, p.jsx)(w.E.div, {
-                variants: N,
+              children: (0, d.jsx)(P.E.div, {
+                variants: C,
                 children: t
-                  ? (0, p.jsx)(d.r4, { className: "h-8" })
-                  : (0, p.jsx)(d.An, { className: "h-8" }),
+                  ? (0, d.jsx)(u.r4, { className: "h-8" })
+                  : (0, d.jsx)(u.An, { className: "h-8" }),
               }),
             }),
           }),
         });
       }
-      var M = n(82256),
-        _ = n(78116),
-        E = n(7144),
-        Z = n(73582),
-        U = n(18399);
-      function D(e, t) {
+      var M = n(25660),
+        N = n(79849),
+        _ = n(24668),
+        E = n(78e3),
+        Z = n(19816);
+      function U(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var s = Object.getOwnPropertySymbols(e);
@@ -138,16 +134,16 @@
         }
         return n;
       }
-      function Y(e) {
+      function D(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? D(Object(n), !0).forEach(function (t) {
-                (0, c.Z)(e, t, n[t]);
+            ? U(Object(n), !0).forEach(function (t) {
+                (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : D(Object(n)).forEach(function (t) {
+              : U(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -157,99 +153,87 @@
         }
         return e;
       }
-      ((s = i || (i = {})).Landing = "landing"),
+      var Y =
+        (((s = Y || {}).Landing = "landing"),
         (s.Setup = "setup"),
         (s.Invite = "invite"),
-        (s.Complete = "complete");
-      var A = [i.Landing, i.Invite, i.Complete],
+        (s.Complete = "complete"),
+        s);
+      let A = [Y.Landing, Y.Invite, Y.Complete],
         R = {
-          enter: function (e) {
-            return { translateX: e >= 0 ? "50%" : "-50%", opacity: 0 };
-          },
+          enter: (e) => ({ translateX: e >= 0 ? "50%" : "-50%", opacity: 0 }),
           center: { translateX: 0, opacity: 1 },
-          exit: function (e) {
-            return { translateX: e <= 0 ? "-50%" : "50%", opacity: 0 };
-          },
+          exit: (e) => ({ translateX: e <= 0 ? "-50%" : "50%", opacity: 0 }),
         };
-      function L() {
-        var e,
-          t,
-          n = (0, y.useRouter)(),
-          s = {
-            currentStep: B((t = (e = (0, y.useRouter)().asPath.split("#"))[1]))
-              ? t
-              : i.Landing,
-            currentPath: e[0],
-          },
-          r = s.currentPath,
-          a = s.currentStep,
-          c = (0, T.useState)(a),
-          o = c[0],
-          u = c[1],
-          l = (0, E.t)(),
-          d = (0, Z.ec)(Z.F_.workspaces).find(function (e) {
-            return e.structure === M.CZ.WORKSPACE && !e.deactivated;
-          }),
-          f = function () {
-            var e = A.indexOf(a),
-              t = e + 1;
-            d || n.push("/"),
-              -1 !== e && t < A.length && n.push(r + "#" + A[t]);
+      function z() {
+        let e = (0, v.useRouter)(),
+          { currentPath: t, currentStep: n } = (function () {
+            let e = (0, v.useRouter)().asPath.split("#"),
+              t = e[1];
+            return { currentStep: B(t) ? t : Y.Landing, currentPath: e[0] };
+          })(),
+          { 0: s, 1: a } = (0, y.useState)(n),
+          i = (0, _.t)(),
+          r = (0, E.ec)(E.F_.workspaces).find(
+            (e) => e.structure === M.CZ.WORKSPACE && !e.deactivated
+          ),
+          c = () => {
+            let s = A.indexOf(n),
+              a = s + 1;
+            r || e.push("/"),
+              -1 !== s && a < A.length && e.push(t + "#" + A[a]);
           };
-        (0, T.useEffect)(
-          function () {
-            var e = function () {
-              u(a);
-            };
-            return (
-              n.events.on("hashChangeStart", e),
-              function () {
-                n.events.off("hashChangeStart", e);
-              }
-            );
-          },
-          [a, n.events]
-        );
-        var m = A.indexOf(a) <= A.indexOf(o) ? -1 : 1;
-        return (0, p.jsx)("div", {
+        (0, y.useEffect)(() => {
+          let t = () => {
+            a(n);
+          };
+          return (
+            e.events.on("hashChangeStart", t),
+            () => {
+              e.events.off("hashChangeStart", t);
+            }
+          );
+        }, [n, e.events]);
+        let l = A.indexOf(n) <= A.indexOf(s) ? -1 : 1;
+        return (0, d.jsx)("div", {
           className: "max-w-sm pb-6",
-          children: (0, p.jsxs)(P.M, {
+          children: (0, d.jsxs)(S.M, {
             mode: "wait",
             children: [
-              a === i.Landing &&
-                (0, p.jsx)(
-                  z,
+              n === Y.Landing &&
+                (0, d.jsx)(
+                  I,
                   {
                     initial: !1,
-                    custom: m,
-                    children: (0, p.jsx)(I, {
-                      onNext: f,
-                      isLoading: null == l,
+                    custom: l,
+                    children: (0, d.jsx)(L, {
+                      onNext: c,
+                      isLoading: null == i,
                     }),
                   },
                   "landing"
                 ),
-              a === i.Invite &&
-                (0, p.jsx)(
-                  z,
+              n === Y.Invite &&
+                (0, d.jsx)(
+                  I,
                   {
-                    custom: m,
-                    children: (0, p.jsx)(W, {
-                      onNext: function () {
-                        f();
+                    custom: l,
+                    children: (0, d.jsx)(W, {
+                      onNext: () => {
+                        c();
                       },
                     }),
                   },
                   "invite"
                 ),
-              a === i.Complete &&
-                (0, p.jsx)(
-                  z,
+              n === Y.Complete &&
+                (0, d.jsx)(
+                  I,
                   {
-                    custom: m,
-                    children: (0, p.jsx)(X, {
-                      onNext: function () {
-                        f(), d && (0, E.nq)(d.id), n.push("/");
+                    custom: l,
+                    children: (0, d.jsx)(X, {
+                      onNext: () => {
+                        c(), r && (0, _.nq)(r.id), e.push("/");
                       },
                     }),
                   },
@@ -259,10 +243,10 @@
           }),
         });
       }
-      var z = function (e) {
-        return (0, p.jsx)(
-          w.E.div,
-          Y(
+      let I = (e) =>
+        (0, d.jsx)(
+          P.E.div,
+          D(
             {
               initial: "enter",
               animate: "center",
@@ -276,49 +260,47 @@
             e
           )
         );
-      };
-      function I(e) {
-        var t = e.onNext,
-          n = e.isLoading;
-        return (0, p.jsxs)(p.Fragment, {
+      function L(e) {
+        let { onNext: t, isLoading: n = !1 } = e;
+        return (0, d.jsxs)(d.Fragment, {
           children: [
-            (0, p.jsx)(k, { isTrial: !1 }),
-            (0, p.jsx)(m, { children: (0, p.jsx)(O.Z, Y({}, F.standard)) }),
-            (0, p.jsx)(x, { children: (0, p.jsx)(O.Z, Y({}, F.description)) }),
-            (0, p.jsx)(o.z, {
+            (0, d.jsx)(k, { isTrial: !1 }),
+            (0, d.jsx)(m, { children: (0, d.jsx)(T.Z, D({}, F.standard)) }),
+            (0, d.jsx)(f, { children: (0, d.jsx)(T.Z, D({}, F.description)) }),
+            (0, d.jsx)(c.z, {
               onClick: t,
               size: "large",
-              loading: void 0 !== n && n,
-              children: (0, p.jsx)(O.Z, Y({}, F.continue)),
+              loading: n,
+              children: (0, d.jsx)(T.Z, D({}, F.continue)),
             }),
           ],
         });
       }
       function W(e) {
-        var t = e.onNext,
-          n = (0, E.t)(),
+        let { onNext: t } = e,
+          n = (0, _.t)(),
           s = (0, b.Z)();
         return null == n
           ? null
-          : (0, p.jsxs)(p.Fragment, {
+          : (0, d.jsxs)(d.Fragment, {
               children: [
-                (0, p.jsx)(m, {
-                  children: (0, p.jsx)(
-                    O.Z,
-                    Y(
-                      Y({}, F.inviteTitle),
+                (0, d.jsx)(m, {
+                  children: (0, d.jsx)(
+                    T.Z,
+                    D(
+                      D({}, F.inviteTitle),
                       {},
                       { values: { workspaceName: n.data.name } }
                     )
                   ),
                 }),
-                (0, p.jsx)(x, {
-                  children: (0, p.jsx)(O.Z, Y({}, F.completeDescription)),
+                (0, d.jsx)(f, {
+                  children: (0, d.jsx)(T.Z, D({}, F.completeDescription)),
                 }),
                 null != n &&
-                  (0, p.jsx)("div", {
+                  (0, d.jsx)("div", {
                     className: "text-sm",
-                    children: (0, p.jsx)(_.Z, {
+                    children: (0, d.jsx)(N.Z, {
                       fullWidthButtons: !0,
                       workspace: n,
                       canResendInviteEmails: !1,
@@ -331,25 +313,25 @@
             });
       }
       function X(e) {
-        var t = e.onNext;
-        return (0, p.jsxs)(p.Fragment, {
+        let { onNext: t } = e;
+        return (0, d.jsxs)(d.Fragment, {
           children: [
-            (0, p.jsx)(m, {
-              children: (0, p.jsx)(O.Z, Y({}, F.completeTitle)),
+            (0, d.jsx)(m, {
+              children: (0, d.jsx)(T.Z, D({}, F.completeTitle)),
             }),
-            (0, p.jsx)(x, {
-              children: (0, p.jsx)(O.Z, Y({}, F.completeDescription)),
+            (0, d.jsx)(f, {
+              children: (0, d.jsx)(T.Z, D({}, F.completeDescription)),
             }),
-            (0, p.jsx)(o.z, {
+            (0, d.jsx)(c.z, {
               onClick: t,
               size: "large",
-              children: (0, p.jsx)(O.Z, Y({}, F.continueToChatgpt)),
+              children: (0, d.jsx)(T.Z, D({}, F.continueToChatgpt)),
             }),
           ],
         });
       }
-      var B = (0, U.b)(i),
-        F = (0, S.vU)({
+      let B = (0, Z.b)(Y),
+        F = (0, O.vU)({
           standard: {
             id: "UpgradedToTeamSuccess.trial",
             defaultMessage: "Payment successful",
@@ -410,7 +392,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? G(Object(n), !0).forEach(function (t) {
-                (0, c.Z)(e, t, n[t]);
+                (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -425,59 +407,57 @@
         return e;
       }
       function J(e) {
-        var t = e.isTrial,
-          n = e.isTeam,
+        let { isTrial: t, isTeam: n } = e,
           s = (0, b.Z)(),
-          r = (0, y.useRouter)(),
-          a = (0, T.useCallback)(
-            function (e) {
+          a = (0, v.useRouter)(),
+          i = (0, y.useCallback)(
+            (e) => {
               e.preventDefault(),
-                h.A.logEvent(j.M.clickAccountPaymentSuccessContinue),
-                r.push("/");
+                j.A.logEvent(x.M.clickAccountPaymentSuccessContinue),
+                a.push("/");
             },
-            [r]
+            [a]
           );
-        return (0, p.jsxs)(f, {
+        return (0, d.jsxs)(p, {
           children: [
-            (0, p.jsx)(v(), {
-              children: (0, p.jsx)("title", {
+            (0, d.jsx)(g(), {
+              children: (0, d.jsx)("title", {
                 children: s.formatMessage(H.pageTitle),
               }),
             }),
-            (0, p.jsx)("div", {
+            (0, d.jsx)("div", {
               className: "flex flex-col",
               children: n
-                ? (0, p.jsx)(L, {})
-                : (0, p.jsx)(K, { isTrial: t, onContinue: a }),
+                ? (0, d.jsx)(z, {})
+                : (0, d.jsx)(K, { isTrial: t, onContinue: i }),
             }),
           ],
         });
       }
       function K(e) {
-        var t = e.isTrial,
-          n = e.onContinue,
+        let { isTrial: t, onContinue: n } = e,
           s = t ? H.trial : H.standard;
-        return (0, p.jsxs)(p.Fragment, {
+        return (0, d.jsxs)(d.Fragment, {
           children: [
-            (0, p.jsx)(k, { isTrial: !!t }),
-            (0, p.jsxs)("div", {
+            (0, d.jsx)(k, { isTrial: !!t }),
+            (0, d.jsxs)("div", {
               className: "flex flex-col items-center",
               children: [
-                (0, p.jsx)(m, { children: (0, p.jsx)(O.Z, q({}, s)) }),
-                (0, p.jsx)(x, {
-                  children: (0, p.jsx)(O.Z, q({}, H.paymentReceived)),
+                (0, d.jsx)(m, { children: (0, d.jsx)(T.Z, q({}, s)) }),
+                (0, d.jsx)(f, {
+                  children: (0, d.jsx)(T.Z, q({}, H.paymentReceived)),
                 }),
-                (0, p.jsx)(o.z, {
+                (0, d.jsx)(c.z, {
                   onClick: n,
                   size: "large",
-                  children: (0, p.jsx)(O.Z, q({}, H.continueButton)),
+                  children: (0, d.jsx)(T.Z, q({}, H.continueButton)),
                 }),
               ],
             }),
           ],
         });
       }
-      var H = (0, S.vU)({
+      let H = (0, O.vU)({
         pageTitle: {
           id: "PaymentsSuccess.pageTitle",
           defaultMessage: "Account - Payment success",
@@ -497,20 +477,20 @@
         trial: { id: "PaymentsSuccess.trial", defaultMessage: "Trial started" },
       });
     },
-    27688: function (e, t, n) {
+    97068: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/payments/success-trial",
         function () {
-          return n(59858);
+          return n(33938);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 27688));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 97068));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=success-trial-c1d97f7edff4cf8b.js.map
+//# sourceMappingURL=success-trial-b5e0d4fd579cf5dd.js.map

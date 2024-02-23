@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3468],
   {
-    67395: function (n, u, t) {
+    55729: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
@@ -18,20 +18,20 @@
         return (0, c.jsx)(c.Fragment, { children: (0, c.jsx)("div", {}) });
       }
     },
-    49228: function (n, u, t) {
+    68734: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/account/cancel",
         function () {
-          return t(67395);
+          return t(55729);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [9774, 2888, 179], function () {
-      return n((n.s = 49228));
+    n.O(0, [2888, 9774, 179], function () {
+      return n((n.s = 68734));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=cancel-92d8ce0316071915.js.map
+//# sourceMappingURL=cancel-bb4e2023be395e08.js.map

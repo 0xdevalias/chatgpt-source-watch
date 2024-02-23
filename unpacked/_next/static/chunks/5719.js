@@ -6,7 +6,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return M;
+            return B;
           },
         });
       var a,
@@ -14,14 +14,13 @@
         u,
         o,
         i,
-        l = r(70079),
-        s = r(78228);
-      let c = (0, s.z)("div")({
+        l = r(70079);
+      let s = (0, r(78228).z)("div")({
         name: "NumberOverlayEditorStyle",
         class: "gdg-n15fjm3e",
         propsAsIs: !1,
       });
-      function f(e, t) {
+      function c(e, t) {
         var r = {};
         for (var a in e)
           Object.prototype.hasOwnProperty.call(e, a) &&
@@ -38,24 +37,24 @@
               (r[a[n]] = e[a[n]]);
         return r;
       }
-      function d() {}
-      function v(e) {
+      function f() {}
+      function d(e) {
         return !!(e || "").match(/\d/);
       }
-      function g(e) {
+      function v(e) {
         return null == e;
       }
-      function m(e) {
+      function g(e) {
         return (
-          g(e) ||
+          v(e) ||
           ("number" == typeof e && isNaN(e)) ||
           ("number" == typeof e && !isFinite(e))
         );
       }
-      function p(e) {
+      function m(e) {
         return e.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&");
       }
-      function h(e, t) {
+      function p(e, t) {
         void 0 === t && (t = !0);
         var r = "-" === e[0],
           a = r && t,
@@ -67,15 +66,15 @@
           addNegation: a,
         };
       }
-      function S(e, t, r) {
+      function h(e, t, r) {
         for (var a = "", n = r ? "0" : "", u = 0; u <= t - 1; u++)
           a += e[u] || n;
         return a;
       }
-      function b(e, t) {
+      function S(e, t) {
         return Array(t + 1).join(e);
       }
-      function y(e) {
+      function b(e) {
         var t = e + "",
           r = "-" === t[0] ? "-" : "";
         r && (t = t.substring(1));
@@ -88,17 +87,17 @@
           i = n.length;
         return (
           o < 0
-            ? (n = "0." + b("0", Math.abs(o)) + n)
+            ? (n = "0." + S("0", Math.abs(o)) + n)
             : o >= i
-              ? (n += b("0", o - i))
+              ? (n += S("0", o - i))
               : (n = (n.substring(0, o) || "0") + "." + n.substring(o)),
           r + n
         );
       }
-      function V(e, t, r) {
+      function y(e, t, r) {
         if (-1 !== ["", "-"].indexOf(e)) return e;
         var a = (-1 !== e.indexOf(".") || r) && t,
-          n = h(e),
+          n = p(e),
           u = n.beforeDecimal,
           o = n.afterDecimal,
           i = n.hasNegation,
@@ -119,10 +118,10 @@
               s[0]
             ) +
           (a ? "." : "") +
-          S(s[1] || "", t, r)
+          h(s[1] || "", t, r)
         );
       }
-      function x(e, t) {
+      function V(e, t) {
         if (((e.value = e.value), null !== e)) {
           if (e.createTextRange) {
             var r = e.createTextRange();
@@ -134,7 +133,7 @@
         }
       }
       ((a = i || (i = {})).event = "event"), (a.props = "prop");
-      var w =
+      var x =
         ((n = function (e, t) {
           for (
             var r = 0, a = 0, n = e.length, u = t.length;
@@ -158,17 +157,17 @@
             ? o
             : ((u = e), (o = n.apply(void 0, e)));
         });
-      function N(e) {
+      function w(e) {
         return Math.max(e.selectionStart, e.selectionEnd);
       }
-      function D(e) {
+      function N(e) {
         var t = e.currentValue,
           r = e.formattedValue,
           a = e.currentValueIndex,
           n = e.formattedValueIndex;
         return t[a] === r[n];
       }
-      function O(e, t, r, a) {
+      function D(e, t, r, a) {
         var n = e.length;
         if (((t = Math.min(Math.max(t, 0), n)), "left" === a)) {
           for (; t >= 0 && !r[t]; ) t--;
@@ -179,7 +178,7 @@
         }
         return -1 === t && (t = n), t;
       }
-      function E(e) {
+      function O(e) {
         for (
           var t = Array.from({ length: e.length + 1 }).map(function () {
               return !0;
@@ -189,22 +188,22 @@
           r < a;
           r++
         )
-          t[r] = !!(v(e[r]) || v(e[r - 1]));
+          t[r] = !!(d(e[r]) || d(e[r - 1]));
         return t;
       }
-      function C(e, t, r, a, n, u) {
-        void 0 === u && (u = d);
+      function E(e, t, r, a, n, u) {
+        void 0 === u && (u = f);
         var o,
           i,
           s =
             ((o = function (e, t) {
               var r, u;
               return (
-                m(e)
+                g(e)
                   ? ((u = ""), (r = ""))
                   : (r =
                       "number" == typeof e || t
-                        ? a((u = "number" == typeof e ? y(e) : e))
+                        ? a((u = "number" == typeof e ? b(e) : e))
                         : a((u = n(e, void 0)))),
                 { formattedValue: r, numAsString: u }
               );
@@ -215,38 +214,38 @@
               return i.current.apply(i, e);
             }).current),
           c = (0, l.useState)(function () {
-            return s(g(e) ? t : e, r);
+            return s(v(e) ? t : e, r);
           }),
-          f = c[0],
-          v = c[1],
+          d = c[0],
+          m = c[1],
           p = e,
           h = r;
-        g(e) && ((p = f.numAsString), (h = !0));
+        v(e) && ((p = d.numAsString), (h = !0));
         var S = s(p, h);
         return (
           (0, l.useMemo)(
             function () {
-              v(S);
+              m(S);
             },
             [S.formattedValue]
           ),
           [
-            f,
+            d,
             function (e, t) {
-              e.formattedValue !== f.formattedValue &&
-                v({ formattedValue: e.formattedValue, numAsString: e.value }),
+              e.formattedValue !== d.formattedValue &&
+                m({ formattedValue: e.formattedValue, numAsString: e.value }),
                 u(e, t);
             },
           ]
         );
       }
-      function I(e) {
+      function C(e) {
         return e.replace(/[^0-9]/g, "");
       }
-      function A(e) {
+      function I(e) {
         return e;
       }
-      function T(e) {
+      function A(e) {
         var t = e.type;
         void 0 === t && (t = "text");
         var r = e.displayType;
@@ -255,30 +254,30 @@
           n = e.renderText,
           u = e.getInputRef,
           o = e.format;
-        void 0 === o && (o = A);
+        void 0 === o && (o = I);
         var s = e.removeFormatting;
-        void 0 === s && (s = I);
-        var c = e.defaultValue,
+        void 0 === s && (s = C);
+        var v = e.defaultValue,
           g = e.valueIsNumericString,
           m = e.onValueChange,
           p = e.isAllowed,
           h = e.onChange;
-        void 0 === h && (h = d);
+        void 0 === h && (h = f);
         var S = e.onKeyDown;
-        void 0 === S && (S = d);
+        void 0 === S && (S = f);
         var b = e.onMouseUp;
-        void 0 === b && (b = d);
+        void 0 === b && (b = f);
         var y = e.onFocus;
-        void 0 === y && (y = d);
-        var V = e.onBlur;
-        void 0 === V && (V = d);
+        void 0 === y && (y = f);
+        var A = e.onBlur;
+        void 0 === A && (A = f);
         var T = e.value,
           R = e.getCaretBoundary;
-        void 0 === R && (R = E);
+        void 0 === R && (R = O);
         var j = e.isValidInputCharacter;
-        void 0 === j && (j = v);
+        void 0 === j && (j = d);
         var F = e.isCharacterSame,
-          B = f(e, [
+          B = c(e, [
             "type",
             "displayType",
             "customInput",
@@ -300,7 +299,7 @@
             "isValidInputCharacter",
             "isCharacterSame",
           ]),
-          k = C(T, c, !!g, o, s, m),
+          k = E(T, v, !!g, o, s, m),
           M = k[0],
           P = M.formattedValue,
           W = M.numAsString,
@@ -338,18 +337,18 @@
           },
           J = function (e, t, r) {
             (0 !== e.selectionStart || e.selectionEnd !== e.value.length) &&
-              (x(e, t),
+              (V(e, t),
               (z.current.setCaretTimeout = setTimeout(function () {
-                e.value === r && e.selectionStart !== e.selectionEnd && x(e, t);
+                e.value === r && e.selectionStart !== e.selectionEnd && V(e, t);
               }, 0)));
           },
           Q = function (e, t, r) {
-            return O(e, t, R(e), r);
+            return D(e, t, R(e), r);
           },
           X = function (e, t, r) {
             var a = R(t),
               n = (function (e, t, r, a, n, u, o) {
-                void 0 === o && (o = D);
+                void 0 === o && (o = N);
                 var i = n.findIndex(function (e) {
                     return e;
                   }),
@@ -382,7 +381,7 @@
                 var h = -1 === m || -1 === d[m] ? 0 : d[m] + 1;
                 return h > p ? p : a - h < p - a ? h : p;
               })(t, P, e, r, a, j, F);
-            return O(t, n, a);
+            return D(t, n, a);
           },
           Y = function (e) {
             var t = e.formattedValue;
@@ -397,7 +396,7 @@
             if (r) {
               if (void 0 === i && a) {
                 var l = e.inputValue || r.value,
-                  s = N(r);
+                  s = w(r);
                 (r.value = t), (i = X(l, t, s));
               }
               (r.value = t), a && void 0 !== i && J(r, i, t);
@@ -415,7 +414,7 @@
           },
           [P, W]
         );
-        var ee = Z.current ? N(Z.current) : void 0;
+        var ee = Z.current ? w(Z.current) : void 0;
         ("undefined" != typeof window ? l.useLayoutEffect : l.useEffect)(
           function () {
             var e = Z.current;
@@ -427,14 +426,13 @@
           [P]
         );
         var et = function (e, t, r) {
-            var a = Object.assign(Object.assign({}, w(P, e)), { lastValue: P }),
+            var a = Object.assign(Object.assign({}, x(P, e)), { lastValue: P }),
               n = s(e, a),
               u = q(n);
             if (((n = s(u, void 0)), p && !p(H(u, n)))) {
               var o = t.target,
-                i = N(o),
-                l = X(e, P, i);
-              return (o.value = P), J(o, l, P), !1;
+                i = X(e, P, w(o));
+              return (o.value = P), J(o, i, P), !1;
             }
             return (
               Y({
@@ -523,7 +521,7 @@
                 (Z.current = null),
                   clearTimeout(z.current.focusTimeout),
                   clearTimeout(z.current.setCaretTimeout),
-                  V(e);
+                  A(e);
               },
             }
           );
@@ -535,7 +533,7 @@
             ? l.createElement(a, Object.assign({}, er, { ref: u }))
             : l.createElement("input", Object.assign({}, er, { ref: u }));
       }
-      function R(e, t) {
+      function T(e, t) {
         var r,
           a,
           n,
@@ -548,18 +546,18 @@
         var s = t.allowNegative,
           c = t.thousandsGroupStyle;
         if ((void 0 === c && (c = "thousand"), "" === e || "-" === e)) return e;
-        var f = j(t),
+        var f = R(t),
           d = f.thousandSeparator,
           v = f.decimalSeparator,
           g = (0 !== u && -1 !== e.indexOf(".")) || (u && o),
-          m = h(e, s),
-          p = m.beforeDecimal,
+          m = p(e, s),
+          S = m.beforeDecimal,
           b = m.afterDecimal,
           y = m.addNegation;
         return (
-          void 0 !== u && (b = S(b, u, !!o)),
+          void 0 !== u && (b = h(b, u, !!o)),
           d &&
-            ((r = p),
+            ((r = S),
             (a = (function (e) {
               switch (e) {
                 case "lakh":
@@ -571,16 +569,16 @@
               }
             })(c)),
             (n = -1 === (n = r.search(/[1-9]/)) ? r.length : n),
-            (p =
+            (S =
               r.substring(0, n) +
               r.substring(n, r.length).replace(a, "$1" + d))),
-          i && (p = i + p),
+          i && (S = i + S),
           l && (b += l),
-          y && (p = "-" + p),
-          (e = p + ((g && v) || "") + b)
+          y && (S = "-" + S),
+          (e = S + ((g && v) || "") + b)
         );
       }
-      function j(e) {
+      function R(e) {
         var t = e.decimalSeparator;
         void 0 === t && (t = ".");
         var r = e.thousandSeparator,
@@ -595,7 +593,7 @@
           }
         );
       }
-      function F(e) {
+      function j(e) {
         var t,
           r,
           a,
@@ -603,15 +601,15 @@
           u,
           o,
           s,
-          c,
+          h,
           S,
-          b,
+          w,
           N,
           D,
           O,
-          E,
+          C,
           I,
-          A,
+          j,
           F,
           B,
           k,
@@ -627,7 +625,7 @@
           Z,
           z =
             ((t = (function (e) {
-              var t = j(e),
+              var t = R(e),
                 r = t.thousandSeparator,
                 a = t.decimalSeparator,
                 n = e.prefix;
@@ -660,17 +658,17 @@
             (r = t.suffix),
             (a = t.allowNegative),
             (n = t.allowLeadingZeros),
-            void 0 === (u = t.onKeyDown) && (u = d),
-            void 0 === (o = t.onBlur) && (o = d),
+            void 0 === (u = t.onKeyDown) && (u = f),
+            void 0 === (o = t.onBlur) && (o = f),
             (s = t.thousandSeparator),
-            (c = t.decimalScale),
+            (h = t.decimalScale),
             (S = t.fixedDecimalScale),
-            void 0 === (b = t.prefix) && (b = ""),
+            void 0 === (w = t.prefix) && (w = ""),
             (N = t.defaultValue),
             (D = t.value),
             (O = t.valueIsNumericString),
-            (E = t.onValueChange),
-            (I = f(t, [
+            (C = t.onValueChange),
+            (I = c(t, [
               "decimalSeparator",
               "allowedDecimalSeparators",
               "thousandsGroupStyle",
@@ -688,10 +686,10 @@
               "valueIsNumericString",
               "onValueChange",
             ])),
-            (F = (A = j(t)).decimalSeparator),
-            (B = A.allowedDecimalSeparators),
+            (F = (j = R(t)).decimalSeparator),
+            (B = j.allowedDecimalSeparators),
             (k = function (e) {
-              return R(e, t);
+              return T(e, t);
             }),
             (M = function (e, r) {
               return (function (e, t, r) {
@@ -712,22 +710,20 @@
                 void 0 === s && (s = "");
                 var c = r.decimalScale,
                   f = t.from,
-                  d = t.to,
-                  g = d.start,
-                  m = d.end,
-                  S = j(r),
+                  v = t.to,
+                  g = v.start,
+                  h = v.end,
+                  S = R(r),
                   b = S.allowedDecimalSeparators,
                   y = S.decimalSeparator,
-                  V = e[m] === y;
-                if (v(e) && (e === l || e === s) && "" === t.lastValue)
+                  V = e[h] === y;
+                if (d(e) && (e === l || e === s) && "" === t.lastValue)
                   return e;
-                m - g == 1 &&
-                  -1 !== b.indexOf(e[g]) &&
-                  (e =
-                    e.substring(0, g) +
-                    (0 === c ? "" : y) +
-                    e.substring(g + 1, e.length));
-                var x = function (e, t, r) {
+                if (h - g == 1 && -1 !== b.indexOf(e[g])) {
+                  var x = 0 === c ? "" : y;
+                  e = e.substring(0, g) + x + e.substring(g + 1, e.length);
+                }
+                var w = function (e, t, r) {
                     var a = !1,
                       n = !1;
                     l.startsWith("-")
@@ -744,86 +740,86 @@
                       { value: e, start: t, end: r, hasNegation: a }
                     );
                   },
-                  w = x(e, g, m),
-                  N = w.hasNegation;
-                (e = w.value), (g = w.start), (m = w.end);
-                var D = x(t.lastValue, f.start, f.end),
-                  O = D.start,
-                  E = D.end,
-                  C = D.value,
-                  I = e.substring(g, m);
+                  N = w(e, g, h),
+                  D = N.hasNegation;
+                (e = N.value), (g = N.start), (h = N.end);
+                var O = w(t.lastValue, f.start, f.end),
+                  E = O.start,
+                  C = O.end,
+                  I = O.value,
+                  A = e.substring(g, h);
                 e.length &&
-                  C.length &&
-                  (O > C.length - s.length || E < l.length) &&
-                  !(I && s.startsWith(I)) &&
-                  (e = C);
-                var A = 0;
-                e.startsWith(l) ? (A += l.length) : g < l.length && (A = g),
-                  (e = e.substring(A)),
-                  (m -= A);
-                var T = e.length,
-                  R = e.length - s.length;
+                  I.length &&
+                  (E > I.length - s.length || C < l.length) &&
+                  !(A && s.startsWith(A)) &&
+                  (e = I);
+                var T = 0;
+                e.startsWith(l) ? (T += l.length) : g < l.length && (T = g),
+                  (e = e.substring(T)),
+                  (h -= T);
+                var j = e.length,
+                  F = e.length - s.length;
                 e.endsWith(s)
-                  ? (T = R)
-                  : m > R
-                    ? (T = m)
-                    : m > e.length - s.length && (T = m),
-                  (e = e.substring(0, T)),
-                  void 0 === (a = N ? "-" + e : e) && (a = ""),
+                  ? (j = F)
+                  : h > F
+                    ? (j = h)
+                    : h > e.length - s.length && (j = h),
+                  (e = e.substring(0, j)),
+                  void 0 === (a = D ? "-" + e : e) && (a = ""),
                   (n = RegExp("(-)(.)*(-)")),
                   (u = /(-)/.test(a)),
                   (o = n.test(a)),
                   (a = a.replace(/-/g, "")),
                   u && !o && i && (a = "-" + a);
-                var F = (e = (
-                    (e = a).match(RegExp("(^-)|[0-9]|" + p(y), "g")) || []
+                var B = (e = (
+                    (e = a).match(RegExp("(^-)|[0-9]|" + m(y), "g")) || []
                   ).join("")).indexOf(y),
-                  B = h(
-                    (e = e.replace(RegExp(p(y), "g"), function (e, t) {
-                      return t === F ? "." : "";
+                  k = p(
+                    (e = e.replace(RegExp(m(y), "g"), function (e, t) {
+                      return t === B ? "." : "";
                     })),
                     i
                   ),
-                  k = B.beforeDecimal,
-                  M = B.afterDecimal,
-                  P = B.addNegation;
+                  M = k.beforeDecimal,
+                  P = k.afterDecimal,
+                  W = k.addNegation;
                 return (
-                  d.end - d.start < f.end - f.start &&
-                    "" === k &&
+                  v.end - v.start < f.end - f.start &&
+                    "" === M &&
                     V &&
-                    !parseFloat(M) &&
-                    (e = P ? "-" : ""),
+                    !parseFloat(P) &&
+                    (e = W ? "-" : ""),
                   e
                 );
               })(e, r, t);
             }),
-            (P = g(D) ? N : D),
+            (P = v(D) ? N : D),
             (L =
               null != O
                 ? O
-                : ((W = b),
+                : ((W = w),
                   "" === P ||
                     (!(null == W ? void 0 : W.match(/\d/)) &&
                       !(null == r ? void 0 : r.match(/\d/)) &&
                       "string" == typeof P &&
                       !isNaN(Number(P))))),
-            g(D)
-              ? g(N) || (L = L || "number" == typeof N)
+            v(D)
+              ? v(N) || (L = L || "number" == typeof N)
               : (L = L || "number" == typeof D),
-            (G = (_ = (U = C(
+            (G = (_ = (U = E(
               (K = function (e) {
-                return m(e)
+                return g(e)
                   ? e
-                  : ("number" == typeof e && (e = y(e)),
-                      L && "number" == typeof c)
-                    ? V(e, c, !!S)
+                  : ("number" == typeof e && (e = b(e)),
+                      L && "number" == typeof h)
+                    ? y(e, h, !!S)
                     : e;
               })(D),
               K(N),
               !!L,
               k,
               M,
-              E
+              C
             ))[0]).numAsString),
             ($ = _.formattedValue),
             (Z = U[1]),
@@ -831,7 +827,7 @@
               value: $,
               valueIsNumericString: !1,
               isValidInputCharacter: function (e) {
-                return e === F || v(e);
+                return e === F || d(e);
               },
               isCharacterSame: function (e) {
                 var t = e.currentValue,
@@ -841,7 +837,7 @@
                   u = e.formattedValueIndex,
                   o = t[n],
                   i = a[u],
-                  l = w(r, t).to;
+                  l = x(r, t).to;
                 return (
                   (!!(n >= l.start && n < l.end && B && B.includes(o)) &&
                     i === F) ||
@@ -878,20 +874,20 @@
                 }
                 "Backspace" === r &&
                   "-" === i[0] &&
-                  n === b.length + 1 &&
+                  n === w.length + 1 &&
                   a &&
-                  x(t, 1),
-                  c &&
+                  V(t, 1),
+                  h &&
                     S &&
                     ("Backspace" === r && i[n - 1] === F
-                      ? (x(t, n - 1), e.preventDefault())
+                      ? (V(t, n - 1), e.preventDefault())
                       : "Delete" === r && i[n] === F && e.preventDefault()),
                   (null == B ? void 0 : B.includes(r)) &&
                     i[n] === F &&
-                    x(t, n + 1);
+                    V(t, n + 1);
                 var l = !0 === s ? "," : s;
-                "Backspace" === r && i[n - 1] === l && x(t, n - 1),
-                  "Delete" === r && i[n] === l && x(t, n + 1),
+                "Backspace" === r && i[n - 1] === l && V(t, n - 1),
+                  "Delete" === r && i[n] === l && V(t, n + 1),
                   u(e);
               },
               onBlur: function (e) {
@@ -907,11 +903,11 @@
                         n = r[1] || "";
                       return (t ? "-" : "") + a + (n ? "." + n : "");
                     })(r)),
-                  S && c && (r = V(r, c, S)),
+                  S && h && (r = y(r, h, S)),
                   r !== G &&
                     Z(
                       {
-                        formattedValue: R(r, t),
+                        formattedValue: T(r, t),
                         value: r,
                         floatValue: parseFloat(r),
                       },
@@ -920,15 +916,16 @@
                   o(e);
               },
             }));
-        return l.createElement(T, Object.assign({}, z));
+        return l.createElement(A, Object.assign({}, z));
       }
-      function B() {
-        let e = Intl.NumberFormat()
-          ?.formatToParts(1.1)
-          ?.find((e) => "decimal" === e.type)?.value;
-        return e ?? ".";
+      function F() {
+        return (
+          Intl.NumberFormat()
+            ?.formatToParts(1.1)
+            ?.find((e) => "decimal" === e.type)?.value ?? "."
+        );
       }
-      let k = (e) => {
+      var B = (e) => {
         let {
             value: t,
             onChange: r,
@@ -937,7 +934,7 @@
             validatedSelection: u,
             fixedDecimals: o,
             allowNegative: i,
-            thousandSeparator: s,
+            thousandSeparator: c,
             decimalSeparator: f,
           } = e,
           d = l.useRef();
@@ -949,9 +946,9 @@
             }
           }, [u]),
           l.createElement(
-            c,
+            s,
             null,
-            l.createElement(F, {
+            l.createElement(j, {
               autoFocus: !0,
               getInputRef: d,
               className: "gdg-input",
@@ -963,16 +960,15 @@
               disabled: !0 === a,
               decimalScale: o,
               allowNegative: i,
-              thousandSeparator: s ?? ("." === B() ? "," : "."),
-              decimalSeparator: f ?? B(),
+              thousandSeparator: c ?? ("." === F() ? "," : "."),
+              decimalSeparator: f ?? F(),
               value: Object.is(t, -0) ? "-" : t ?? "",
               onValueChange: r,
             })
           )
         );
       };
-      var M = k;
     },
   },
 ]);
-//# sourceMappingURL=5719.7c6ed6ab3bf446f4.js.map
+//# sourceMappingURL=5719.1a42259f0c3d91c1.js.map

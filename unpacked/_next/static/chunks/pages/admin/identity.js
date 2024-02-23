@@ -1,26 +1,24 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2571],
   {
-    83994: function (e, t, n) {
+    3219: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return ee;
+            return J;
           },
           default: function () {
-            return et;
+            return K;
           },
         });
       var o,
-        r,
-        i,
-        s = n(36112),
-        a = n(35017),
-        c = n(82256),
-        l = n(70079);
-      let d = l.forwardRef(function ({ title: e, titleId: t, ...n }, o) {
-          return l.createElement(
+        i = n(39827),
+        s = n(9112),
+        a = n(25660),
+        r = n(70079);
+      let l = r.forwardRef(function ({ title: e, titleId: t, ...n }, o) {
+          return r.createElement(
             "svg",
             Object.assign(
               {
@@ -33,14 +31,14 @@
               },
               n
             ),
-            e ? l.createElement("title", { id: t }, e) : null,
-            l.createElement("path", {
+            e ? r.createElement("title", { id: t }, e) : null,
+            r.createElement("path", {
               d: "M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z",
             })
           );
         }),
-        u = l.forwardRef(function ({ title: e, titleId: t, ...n }, o) {
-          return l.createElement(
+        d = r.forwardRef(function ({ title: e, titleId: t, ...n }, o) {
+          return r.createElement(
             "svg",
             Object.assign(
               {
@@ -53,30 +51,30 @@
               },
               n
             ),
-            e ? l.createElement("title", { id: t }, e) : null,
-            l.createElement("path", {
+            e ? r.createElement("title", { id: t }, e) : null,
+            r.createElement("path", {
               fillRule: "evenodd",
               d: "M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z",
               clipRule: "evenodd",
             })
           );
         });
-      var f = n(77311),
-        p = n(19841),
-        g = n(29124),
-        m = n.n(g),
-        x = n(32004),
-        b = n(70671),
-        v = n(94968),
-        y = n(91559),
-        j = n(16213),
-        h = n(73797),
-        w = n(34408),
-        O = n(1454),
-        M = n(97861),
-        S = n(45634),
-        I = n(35250);
-      function k(e, t) {
+      var c = n(77311),
+        u = n(19841),
+        f = n(80483),
+        p = n.n(f),
+        g = n(32004),
+        m = n(70671),
+        b = n(94968),
+        x = n(7557),
+        y = n(14591),
+        j = n(70917),
+        v = n(95250),
+        h = n(1454),
+        w = n(62733),
+        O = n(41068),
+        M = n(35250);
+      function S(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -88,16 +86,16 @@
         }
         return n;
       }
-      function C(e) {
+      function I(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? k(Object(n), !0).forEach(function (t) {
-                (0, s.Z)(e, t, n[t]);
+            ? S(Object(n), !0).forEach(function (t) {
+                (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : k(Object(n)).forEach(function (t) {
+              : S(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -107,29 +105,28 @@
         }
         return e;
       }
-      function Z(e) {
-        var t = e.onRemoveDomainClick,
-          n = e.onVerifyDomainClick;
-        return (0, I.jsxs)(h.Z.Root, {
+      function k(e) {
+        let { onRemoveDomainClick: t, onVerifyDomainClick: n } = e;
+        return (0, M.jsxs)(j.Z.Root, {
           children: [
-            (0, I.jsx)(h.Z.Trigger, {
-              children: (0, I.jsx)(O.K9M, { className: "icon-sm" }),
+            (0, M.jsx)(j.Z.Trigger, {
+              children: (0, M.jsx)(h.K9M, { className: "icon-sm" }),
             }),
-            (0, I.jsx)(h.Z.Portal, {
-              children: (0, I.jsxs)(h.Z.Content, {
+            (0, M.jsx)(j.Z.Portal, {
+              children: (0, M.jsxs)(j.Z.Content, {
                 children: [
-                  (0, I.jsx)(h.Z.Item, {
+                  (0, M.jsx)(j.Z.Item, {
                     onClick: t,
-                    children: (0, I.jsx)(
-                      x.Z,
-                      C({}, T.ssoDropdownRemoveButtonText)
+                    children: (0, M.jsx)(
+                      g.Z,
+                      I({}, Z.ssoDropdownRemoveButtonText)
                     ),
                   }),
-                  (0, I.jsx)(h.Z.Item, {
+                  (0, M.jsx)(j.Z.Item, {
                     onClick: n,
-                    children: (0, I.jsx)(
-                      x.Z,
-                      C({}, T.ssoDropdownVerifyButtonText)
+                    children: (0, M.jsx)(
+                      g.Z,
+                      I({}, Z.ssoDropdownVerifyButtonText)
                     ),
                   }),
                 ],
@@ -138,60 +135,51 @@
           ],
         });
       }
-      function P(e) {
-        var t = e.domains,
-          n = e.workspaceId,
-          o = (0, S.Bd)(n).mutateAsync,
-          r = (0, l.useState)(!1),
-          i = r[0],
-          s = r[1],
-          a = (0, l.useState)(),
-          c = a[0],
-          d = a[1];
-        return (0, I.jsxs)(I.Fragment, {
+      function C(e) {
+        let { domains: t, workspaceId: n } = e,
+          { mutateAsync: o } = (0, O.Bd)(n),
+          { 0: i, 1: s } = (0, r.useState)(!1),
+          { 0: a, 1: l } = (0, r.useState)();
+        return (0, M.jsxs)(M.Fragment, {
           children: [
-            (0, I.jsxs)(w.Z.Root, {
+            (0, M.jsxs)(v.Z.Root, {
               className: "w-full table-auto",
               children: [
-                (0, I.jsxs)(w.Z.Header, {
+                (0, M.jsxs)(v.Z.Header, {
                   children: [
-                    (0, I.jsx)(w.Z.HeaderCell, {
+                    (0, M.jsx)(v.Z.HeaderCell, {
                       className: "bg-token-main-surface-primary",
-                      children: (0, I.jsx)(x.Z, C({}, T.domainTableHeader)),
+                      children: (0, M.jsx)(g.Z, I({}, Z.domainTableHeader)),
                     }),
-                    (0, I.jsx)(w.Z.HeaderCell, {
+                    (0, M.jsx)(v.Z.HeaderCell, {
                       className: "bg-token-main-surface-primary",
-                      children: (0, I.jsx)(x.Z, C({}, T.statusTableHeader)),
+                      children: (0, M.jsx)(g.Z, I({}, Z.statusTableHeader)),
                     }),
-                    (0, I.jsx)(w.Z.HeaderCell, {
+                    (0, M.jsx)(v.Z.HeaderCell, {
                       className: "bg-token-main-surface-primary",
                     }),
                   ],
                 }),
-                (0, I.jsx)(w.Z.Body, {
-                  children: t.map(function (e, t) {
-                    return (0, I.jsxs)(
+                (0, M.jsx)(v.Z.Body, {
+                  children: t.map((e, t) =>
+                    (0, M.jsxs)(
                       "tr",
                       {
-                        onClick: function () {
-                          return d(e);
-                        },
+                        onClick: () => l(e),
                         className: "cursor-pointer",
                         children: [
-                          (0, I.jsx)(w.Z.Cell, { children: e.hostname }),
-                          (0, I.jsx)(w.Z.Cell, { children: S.sd[e.status] }),
-                          (0, I.jsx)(w.Z.Cell, {
+                          (0, M.jsx)(v.Z.Cell, { children: e.hostname }),
+                          (0, M.jsx)(v.Z.Cell, { children: O.sd[e.status] }),
+                          (0, M.jsx)(v.Z.Cell, {
                             textAlign: "right",
-                            children: (0, I.jsx)("div", {
-                              onClick: function (e) {
-                                return e.stopPropagation();
-                              },
-                              children: (0, I.jsx)(Z, {
-                                onRemoveDomainClick: function () {
+                            children: (0, M.jsx)("div", {
+                              onClick: (e) => e.stopPropagation(),
+                              children: (0, M.jsx)(k, {
+                                onRemoveDomainClick: () => {
                                   o({ domainId: e.id });
                                 },
-                                onVerifyDomainClick: function () {
-                                  d(e);
+                                onVerifyDomainClick: () => {
+                                  l(e);
                                 },
                               }),
                             }),
@@ -199,70 +187,67 @@
                         ],
                       },
                       t
-                    );
-                  }),
+                    )
+                  ),
                 }),
               ],
             }),
-            (0, I.jsxs)(y.z, {
+            (0, M.jsxs)(x.z, {
               color: "neutral",
               className: "mt-6 font-medium text-token-text-secondary",
-              onClick: function () {
+              onClick: () => {
                 s(!0);
               },
               children: [
-                (0, I.jsx)(O.OvN, { className: "icon-sm" }),
-                (0, I.jsx)(x.Z, C({}, T.addDomainButton)),
+                (0, M.jsx)(h.OvN, { className: "icon-sm" }),
+                (0, M.jsx)(g.Z, I({}, Z.addDomainButton)),
               ],
             }),
-            (0, I.jsx)(
-              M.Z,
+            (0, M.jsx)(
+              w.Z,
               {
-                isOpen: i || void 0 !== c,
-                onClose: function () {
-                  s(!1), d(void 0);
+                isOpen: i || void 0 !== a,
+                onClose: () => {
+                  s(!1), l(void 0);
                 },
                 workspaceId: n,
-                currentDomain: i ? void 0 : c,
+                currentDomain: i ? void 0 : a,
                 domains: t,
               },
-              null == c ? void 0 : c.id
+              null == a ? void 0 : a.id
             ),
           ],
         });
       }
-      var T = (0, v.vU)({
-          ssoDropdownRemoveButtonText: {
-            id: "workspaceIdentity.ssoDropdownRemoveButtonText",
-            defaultMessage: "Remove Domain",
-          },
-          ssoDropdownVerifyButtonText: {
-            id: "workspaceIdentity.ssoDropdownVerifyButtonText",
-            defaultMessage: "Verify",
-          },
-          domainTableHeader: {
-            id: "workspaceIdentity.domainTableHeader",
-            defaultMessage: "Domain",
-          },
-          statusTableHeader: {
-            id: "workspaceIdentity.statusTableHeader",
-            defaultMessage: "Status",
-          },
-          addDomainButton: {
-            id: "workspaceIdentity.addDomainButton.0",
-            defaultMessage: "Add domain",
-          },
-        }),
-        D = n(50134),
-        L = n(4399),
-        E = n.n(L),
-        A = n(73558),
-        B = n(3554),
-        R = n(21120),
-        N = n(998),
-        _ = n(4748),
-        U = n(81942);
-      function F(e, t) {
+      let Z = (0, b.vU)({
+        ssoDropdownRemoveButtonText: {
+          id: "workspaceIdentity.ssoDropdownRemoveButtonText",
+          defaultMessage: "Remove Domain",
+        },
+        ssoDropdownVerifyButtonText: {
+          id: "workspaceIdentity.ssoDropdownVerifyButtonText",
+          defaultMessage: "Verify",
+        },
+        domainTableHeader: {
+          id: "workspaceIdentity.domainTableHeader",
+          defaultMessage: "Domain",
+        },
+        statusTableHeader: {
+          id: "workspaceIdentity.statusTableHeader",
+          defaultMessage: "Status",
+        },
+        addDomainButton: {
+          id: "workspaceIdentity.addDomainButton.0",
+          defaultMessage: "Add domain",
+        },
+      });
+      var P = n(65897),
+        T = n(33925),
+        L = n(16244),
+        D = n(36607),
+        E = n(65455),
+        A = n(41594);
+      function B(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -274,16 +259,16 @@
         }
         return n;
       }
-      function H(e) {
+      function N(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? F(Object(n), !0).forEach(function (t) {
-                (0, s.Z)(e, t, n[t]);
+            ? B(Object(n), !0).forEach(function (t) {
+                (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : F(Object(n)).forEach(function (t) {
+              : B(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -293,81 +278,56 @@
         }
         return e;
       }
-      var V =
-        ((o = (0, D.Z)(
-          E().mark(function e(t) {
-            return E().wrap(function (e) {
-              for (;;)
-                switch ((e.prev = e.next)) {
-                  case 0:
-                    return e.abrupt(
-                      "return",
-                      new Promise(function (e, n) {
-                        var o = new FileReader();
-                        o.readAsText(t),
-                          (o.onload = function (t) {
-                            var n;
-                            e(
-                              null === (n = t.target) || void 0 === n
-                                ? void 0
-                                : n.result
-                            );
-                          }),
-                          (o.onerror = n);
-                      })
-                    );
-                  case 1:
-                  case "end":
-                    return e.stop();
-                }
-            }, e);
-          })
-        )),
-        function (e) {
-          return o.apply(this, arguments);
+      let R = async (e) =>
+        new Promise((t, n) => {
+          let o = new FileReader();
+          o.readAsText(e),
+            (o.onload = function (e) {
+              var n;
+              t(null === (n = e.target) || void 0 === n ? void 0 : n.result);
+            }),
+            (o.onerror = n);
         });
-      function z(e) {
-        var t = e.acsId,
-          n = e.hasSSO,
-          o = ""
+      function _(e) {
+        let { acsId: t, hasSSO: n } = e,
+          o = "https://auth0.openai.com/login/callback?connection=".concat(t),
+          i = "urn:auth0:openai:".concat(t),
+          s = ""
             .concat(location.host, "/auth/login?sso=true&connection=")
             .concat(t),
-          r = (0, b.Z)();
-        return (0, I.jsxs)(I.Fragment, {
+          a = (0, m.Z)();
+        return (0, M.jsxs)(M.Fragment, {
           children: [
-            (0, I.jsx)(U.Li, {
-              children: (0, I.jsx)(x.Z, H({}, W.setupSSOContent)),
+            (0, M.jsx)(A.Li, {
+              children: (0, M.jsx)(g.Z, N({}, H.setupSSOContent)),
             }),
-            (0, I.jsxs)("div", {
+            (0, M.jsxs)("div", {
               className: "mb-6 flex flex-col space-y-4",
               children: [
-                (0, I.jsx)(A.Z, {
-                  label: r.formatMessage(W.acsURLLabel),
-                  value:
-                    "https://auth0.openai.com/login/callback?connection=".concat(
-                      t
-                    ),
-                  onCopied: function () {
-                    _.m.success(r.formatMessage(W.copiedACSToClipboard), {
+                (0, M.jsx)(P.Z, {
+                  label: a.formatMessage(H.acsURLLabel),
+                  value: o,
+                  onCopied: () => {
+                    E.m.success(a.formatMessage(H.copiedACSToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
-                (0, I.jsx)(A.Z, {
-                  label: r.formatMessage(W.entityIDLabel),
-                  value: "urn:auth0:openai:".concat(t),
-                  onCopied: function () {
-                    _.m.success(r.formatMessage(W.copiedEntityToClipboard), {
+                (0, M.jsx)(P.Z, {
+                  label: a.formatMessage(H.entityIDLabel),
+                  value: i,
+                  onCopied: () => {
+                    E.m.success(a.formatMessage(H.copiedEntityToClipboard), {
                       duration: 3,
                     });
                   },
                 }),
                 n &&
-                  (0, I.jsx)(A.Z, {
-                    label: r.formatMessage(W.idpSignInURL),
-                    value: o,
-                    onCopied: function () {
-                      _.m.success(r.formatMessage(W.copiedIDPUrlToClipboard), {
+                  (0, M.jsx)(P.Z, {
+                    label: a.formatMessage(H.idpSignInURL),
+                    value: s,
+                    onCopied: () => {
+                      E.m.success(a.formatMessage(H.copiedIDPUrlToClipboard), {
                         duration: 3,
                       });
                     },
@@ -377,246 +337,142 @@
           ],
         });
       }
-      function X(e) {
-        var t,
-          n,
-          o = e.workspaceId,
-          r = e.data,
-          s = e.isOpen,
-          a = e.onClose,
-          c = (0, b.Z)(),
-          d = (0, S.Fc)(o).mutateAsync,
-          u = (0, S.OR)(o).mutateAsync,
-          f = (0, S.DD)(o).mutateAsync,
-          g = (0, l.useRef)(null),
-          m = null == r ? void 0 : r.connection,
-          v = (0, l.useState)(null == m ? void 0 : m.sign_in_endpoint),
-          j = v[0],
-          h = v[1],
-          w = (0, l.useState)(null == m ? void 0 : m.cert),
-          M = w[0],
-          k = w[1],
-          C = null === r ? i.CREATE : i.EDIT,
-          Z =
-            ((t = (0, D.Z)(
-              E().mark(function e(t, n) {
-                var o;
-                return E().wrap(function (e) {
-                  for (;;)
-                    switch ((e.prev = e.next)) {
-                      case 0:
-                        return (e.next = 2), d({ signInEndpoint: t, cert: n });
-                      case 2:
-                        return (
-                          (o = e.sent),
-                          (e.next = 5),
-                          f({ connectionId: o.id, active: !0 })
-                        );
-                      case 5:
-                        a();
-                      case 6:
-                      case "end":
-                        return e.stop();
-                    }
-                }, e);
-              })
-            )),
-            function (e, n) {
-              return t.apply(this, arguments);
-            }),
-          P =
-            C === i.CREATE
-              ? (0, I.jsx)(B.ZP.Button, {
-                  title: c.formatMessage(W.doneButton),
+      var U =
+        (((o = U || {})[(o.CREATE = 1)] = "CREATE"),
+        (o[(o.EDIT = 2)] = "EDIT"),
+        o);
+      function F(e) {
+        let { workspaceId: t, data: n, isOpen: o, onClose: i } = e,
+          s = (0, m.Z)(),
+          { mutateAsync: a } = (0, O.Fc)(t),
+          { mutateAsync: l } = (0, O.OR)(t),
+          { mutateAsync: d } = (0, O.DD)(t),
+          c = (0, r.useRef)(null),
+          f = null == n ? void 0 : n.connection,
+          { 0: p, 1: b } = (0, r.useState)(
+            null == f ? void 0 : f.sign_in_endpoint
+          ),
+          { 0: y, 1: j } = (0, r.useState)(null == f ? void 0 : f.cert),
+          v = null === n ? U.CREATE : U.EDIT,
+          w = async (e, t) => {
+            let n = await a({ signInEndpoint: e, cert: t });
+            await d({ connectionId: n.id, active: !0 }), i();
+          },
+          S =
+            v === U.CREATE
+              ? (0, M.jsx)(T.ZP.Button, {
+                  title: s.formatMessage(H.doneButton),
                   color: "primary",
-                  disabled: void 0 === j || void 0 === M,
-                  onClick: (0, D.Z)(
-                    E().mark(function e() {
-                      return E().wrap(function (e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              if (!(void 0 === j || void 0 === M)) {
-                                e.next = 2;
-                                break;
-                              }
-                              return e.abrupt("return");
-                            case 2:
-                              return (e.next = 4), Z(j, M);
-                            case 4:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    })
-                  ),
-                })
-              : r &&
-                (0, I.jsx)(B.ZP.Button, {
-                  title: c.formatMessage(W.doneButton),
-                  color: "primary",
-                  onClick: (0, D.Z)(
-                    E().mark(function e() {
-                      return E().wrap(function (e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                (e.next = 2),
-                                f({
-                                  connectionId: null == r ? void 0 : r.id,
-                                  cert: M,
-                                  signInEndpoint: j,
-                                  active: !0,
-                                })
-                              );
-                            case 2:
-                              a();
-                            case 3:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    })
-                  ),
-                }),
-          T =
-            null === r
-              ? (0, I.jsx)(B.ZP.Button, {
-                  title: c.formatMessage(W.cancelButton),
-                  color: "light",
-                  onClick: function () {
-                    return a();
+                  disabled: void 0 === p || void 0 === y,
+                  onClick: async () => {
+                    void 0 !== p && void 0 !== y && (await w(p, y));
                   },
                 })
-              : (0, I.jsx)(y.z, {
+              : n &&
+                (0, M.jsx)(T.ZP.Button, {
+                  title: s.formatMessage(H.doneButton),
+                  color: "primary",
+                  onClick: async () => {
+                    await d({
+                      connectionId: null == n ? void 0 : n.id,
+                      cert: y,
+                      signInEndpoint: p,
+                      active: !0,
+                    }),
+                      i();
+                  },
+                }),
+          I =
+            null === n
+              ? (0, M.jsx)(T.ZP.Button, {
+                  title: s.formatMessage(H.cancelButton),
+                  color: "light",
+                  onClick: () => i(),
+                })
+              : (0, M.jsx)(x.z, {
                   as: "link",
                   color: "danger",
                   className:
                     "bg-transparent font-bold text-red-500 hover:bg-transparent",
-                  onClick: (0, D.Z)(
-                    E().mark(function e() {
-                      return E().wrap(function (e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                (e.next = 2),
-                                u({ connectionId: null == r ? void 0 : r.id })
-                              );
-                            case 2:
-                              a();
-                            case 3:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    })
-                  ),
-                  children: c.formatMessage(W.deleteButton),
+                  onClick: async () => {
+                    await l({ connectionId: null == n ? void 0 : n.id }), i();
+                  },
+                  children: s.formatMessage(H.deleteButton),
                 });
-        return (0, I.jsx)(R.Z, {
-          isOpen: s,
+        return (0, M.jsx)(L.Z, {
+          isOpen: o,
           type: "success",
-          title: c.formatMessage(C === i.CREATE ? W.createTitle : W.editTitle),
-          primaryButton: P,
-          secondaryButton: T,
-          onClose: a,
-          children: (0, I.jsxs)("form", {
-            onSubmit: function (e) {
-              return e.preventDefault();
-            },
+          title: s.formatMessage(v === U.CREATE ? H.createTitle : H.editTitle),
+          primaryButton: S,
+          secondaryButton: I,
+          onClose: i,
+          children: (0, M.jsxs)("form", {
+            onSubmit: (e) => e.preventDefault(),
             children: [
-              (0, I.jsx)(S.z0, {
-                children: (0, I.jsx)(x.Z, H({}, W.createInstructionsManual)),
+              (0, M.jsx)(O.z0, {
+                children: (0, M.jsx)(g.Z, N({}, H.createInstructionsManual)),
               }),
-              (0, I.jsx)("label", {
+              (0, M.jsx)("label", {
                 className: "mb-2 flex items-center text-sm",
-                children: (0, I.jsx)(x.Z, H({}, W.signInLabel)),
+                children: (0, M.jsx)(g.Z, N({}, H.signInLabel)),
               }),
-              (0, I.jsx)("div", {
+              (0, M.jsx)("div", {
                 className: "mb-4",
-                children: (0, I.jsx)(N.Z, {
+                children: (0, M.jsx)(D.Z, {
                   className: "w-full appearance-none rounded border px-3 py-2",
                   name: "Sign-In URL",
                   type: "text",
                   placeholder: "https://your.idp.here/saml2?idpid=123456",
-                  value: null != j ? j : "",
-                  onChange: function (e) {
-                    h(e.target.value);
+                  value: null != p ? p : "",
+                  onChange: (e) => {
+                    b(e.target.value);
                   },
                 }),
               }),
-              (0, I.jsxs)("div", {
+              (0, M.jsxs)("div", {
                 className: "mb-4",
                 children: [
-                  (0, I.jsxs)("div", {
+                  (0, M.jsxs)("div", {
                     className: "mb-2 flex items-center justify-between",
                     children: [
-                      (0, I.jsx)("label", {
+                      (0, M.jsx)("label", {
                         className: "text-sm",
-                        children: (0, I.jsx)(x.Z, H({}, W.certLabel)),
+                        children: (0, M.jsx)(g.Z, N({}, H.certLabel)),
                       }),
-                      (0, I.jsx)("input", {
-                        ref: g,
+                      (0, M.jsx)("input", {
+                        ref: c,
                         type: "file",
                         accept: ".csv,.cer,.pem,text/plain",
                         className: "hidden",
-                        onChange:
-                          ((n = (0, D.Z)(
-                            E().mark(function e(t) {
-                              var n;
-                              return E().wrap(function (e) {
-                                for (;;)
-                                  switch ((e.prev = e.next)) {
-                                    case 0:
-                                      if (
-                                        !(
-                                          null !== (n = t.target.files) &&
-                                          void 0 !== n &&
-                                          n[0]
-                                        )
-                                      ) {
-                                        e.next = 5;
-                                        break;
-                                      }
-                                      return (e.next = 3), V(t.target.files[0]);
-                                    case 3:
-                                      k(e.sent);
-                                    case 5:
-                                    case "end":
-                                      return e.stop();
-                                  }
-                              }, e);
-                            })
-                          )),
-                          function (e) {
-                            return n.apply(this, arguments);
-                          }),
-                      }),
-                      (0, I.jsx)(y.z, {
-                        color: "light",
-                        onClick: function () {
-                          return g.current.click();
+                        onChange: async (e) => {
+                          var t;
+                          null !== (t = e.target.files) &&
+                            void 0 !== t &&
+                            t[0] &&
+                            j(await R(e.target.files[0]));
                         },
-                        children: (0, I.jsx)("div", {
+                      }),
+                      (0, M.jsx)(x.z, {
+                        color: "light",
+                        onClick: () => c.current.click(),
+                        children: (0, M.jsx)("div", {
                           className: "flex items-center",
-                          children: (0, I.jsx)(O.Yjd, { className: "icon-sm" }),
+                          children: (0, M.jsx)(h.Yjd, { className: "icon-sm" }),
                         }),
                       }),
                     ],
                   }),
-                  (0, I.jsx)("textarea", {
+                  (0, M.jsx)("textarea", {
                     rows: 10,
-                    className: (0, p.default)(
+                    className: (0, u.default)(
                       "w-full resize-none overflow-y-auto rounded border border-gray-300 px-3 py-2",
                       "outline-none focus-within:border-green-600 focus-within:ring-1 focus-within:ring-green-600",
                       "text-token-text-primary placeholder-gray-500 dark:bg-gray-700"
                     ),
                     placeholder: "-----BEGIN CERTIFICATE-----",
-                    value: null != M ? M : "",
-                    onChange: function (e) {
-                      k(e.target.value);
+                    value: null != y ? y : "",
+                    onChange: (e) => {
+                      j(e.target.value);
                     },
                   }),
                 ],
@@ -625,9 +481,7 @@
           }),
         });
       }
-      ((r = i || (i = {}))[(r.CREATE = 1)] = "CREATE"),
-        (r[(r.EDIT = 2)] = "EDIT");
-      var W = (0, v.vU)({
+      let H = (0, b.vU)({
         setupSSOContent: {
           id: "workspaceIdentity.setupSSOContent",
           defaultMessage:
@@ -706,7 +560,7 @@
           defaultMessage: "Learn more",
         },
       });
-      function q(e, t) {
+      function z(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -718,16 +572,16 @@
         }
         return n;
       }
-      function G(e) {
+      function V(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? q(Object(n), !0).forEach(function (t) {
-                (0, s.Z)(e, t, n[t]);
+            ? z(Object(n), !0).forEach(function (t) {
+                (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : q(Object(n)).forEach(function (t) {
+              : z(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -737,210 +591,188 @@
         }
         return e;
       }
-      var $ = function (e) {
-          var t = e.title,
-            n = e.footer,
-            o = e.children;
-          return (0, I.jsxs)(U.i9, {
+      let X = (e) => {
+          let { title: t, footer: n, children: o } = e;
+          return (0, M.jsxs)(A.i9, {
             children: [
-              (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, G({}, t)) }),
-              (0, I.jsx)("div", { children: o }),
-              (0, I.jsx)(U.Li, { children: n }),
+              (0, M.jsx)(A.A4, { children: (0, M.jsx)(g.Z, V({}, t)) }),
+              (0, M.jsx)("div", { children: o }),
+              (0, M.jsx)(A.Li, { children: n }),
             ],
           });
         },
-        J = function (e) {
-          var t = e.icon,
-            n = e.title,
-            o = e.body,
-            r = e.toggle;
-          return (0, I.jsxs)(U.i9, {
+        q = (e) => {
+          let { icon: t, title: n, body: o, toggle: i } = e;
+          return (0, M.jsxs)(A.i9, {
             children: [
-              (0, I.jsxs)("div", {
+              (0, M.jsxs)("div", {
                 className: "flex items-center justify-between",
                 children: [
-                  (0, I.jsxs)("div", {
+                  (0, M.jsxs)("div", {
                     className: "flex items-center gap-2",
                     children: [
-                      (0, I.jsx)(t, { className: "icon-sm" }),
-                      (0, I.jsx)(U.A4, { children: (0, I.jsx)(x.Z, G({}, n)) }),
+                      (0, M.jsx)(t, { className: "icon-sm" }),
+                      (0, M.jsx)(A.A4, { children: (0, M.jsx)(g.Z, V({}, n)) }),
                     ],
                   }),
-                  (0, I.jsx)("div", { children: r }),
+                  (0, M.jsx)("div", { children: i }),
                 ],
               }),
-              (0, I.jsx)(U.Li, { children: o }),
+              (0, M.jsx)(A.Li, { children: o }),
             ],
           });
         };
-      function K(e) {
-        var t,
-          n,
-          o,
-          r,
-          i = e.currentWorkspaceId,
-          s = (0, b.Z)(),
-          g = (0, S.f_)(i),
-          v = g.data,
-          h = g.isLoading,
-          w = (0, S.DD)(i).mutateAsync,
-          O = (0, S.Ji)(i),
-          M = O.variables,
-          k = O.mutateAsync,
-          C = (null == v ? void 0 : v.sso_connection) !== null,
-          Z =
-            null == v
+      function G(e) {
+        var t, n, o, i;
+        let { currentWorkspaceId: f } = e,
+          b = (0, m.Z)(),
+          { data: j, isLoading: v } = (0, O.f_)(f),
+          { mutateAsync: h } = (0, O.DD)(f),
+          { variables: w, mutateAsync: S } = (0, O.Ji)(f),
+          I = (null == j ? void 0 : j.sso_connection) !== null,
+          k =
+            null == j
               ? void 0
-              : v.domains.some(function (e) {
-                  return e.status === c.pT.VERIFIED;
-                }),
-          T = C ? Q.ssoEditButton : Q.ssoAddButton,
-          D = (0, l.useState)(!1),
-          L = D[0],
-          E = D[1],
-          A =
-            (null == v
+              : j.domains.some((e) => e.status === a.pT.VERIFIED),
+          Z = I ? W.ssoEditButton : W.ssoAddButton,
+          { 0: P, 1: T } = (0, r.useState)(!1),
+          L =
+            (null == j || null === (t = j.sso_connection) || void 0 === t
               ? void 0
-              : null === (t = v.sso_connection) || void 0 === t
-                ? void 0
-                : t.status) === "ACTIVE",
-          B =
-            null == v
+              : t.status) === "ACTIVE",
+          D =
+            null == j || null === (n = j.sso_connection) || void 0 === n
               ? void 0
-              : null === (n = v.sso_connection) || void 0 === n
-                ? void 0
-                : n.id,
-          R = v
-            ? (0, I.jsxs)(U.$V, {
+              : n.id,
+          E = j
+            ? (0, M.jsxs)(A.$V, {
                 children: [
-                  (0, I.jsx)($, {
-                    title: Q.domainSubtitle,
-                    footer: (0, I.jsx)(I.Fragment, {
-                      children: (0, I.jsx)(x.Z, G({}, Q.verifyDomainInfoText)),
+                  (0, M.jsx)(X, {
+                    title: W.domainSubtitle,
+                    footer: (0, M.jsx)(M.Fragment, {
+                      children: (0, M.jsx)(g.Z, V({}, W.verifyDomainInfoText)),
                     }),
-                    children: (0, I.jsx)(P, {
-                      domains: v.domains,
-                      workspaceId: i,
+                    children: (0, M.jsx)(C, {
+                      domains: j.domains,
+                      workspaceId: f,
                     }),
                   }),
-                  (0, I.jsx)(J, {
-                    icon: d,
-                    title: Q.autoProvisionTitle,
-                    body: (0, I.jsx)(I.Fragment, {
-                      children: (0, I.jsx)(x.Z, G({}, Q.autoProvisionBody)),
+                  (0, M.jsx)(q, {
+                    icon: l,
+                    title: W.autoProvisionTitle,
+                    body: (0, M.jsx)(M.Fragment, {
+                      children: (0, M.jsx)(g.Z, V({}, W.autoProvisionBody)),
                     }),
-                    toggle: (0, I.jsx)(j.Z, {
-                      disabled: !Z,
+                    toggle: (0, M.jsx)(y.Z, {
+                      disabled: !k,
                       enabled:
                         null !==
-                          (o = null == M ? void 0 : M.shouldAutoProvision) &&
+                          (o = null == w ? void 0 : w.shouldAutoProvision) &&
                         void 0 !== o
                           ? o
-                          : v.should_auto_provision,
-                      onChange: function (e) {
-                        k({ shouldAutoProvision: e });
+                          : j.should_auto_provision,
+                      onChange: (e) => {
+                        S({ shouldAutoProvision: e });
                       },
-                      label: s.formatMessage(Q.toggleAutoProvisionLabel),
+                      label: b.formatMessage(W.toggleAutoProvisionLabel),
                     }),
                   }),
-                  (0, I.jsxs)(U.i9, {
+                  (0, M.jsxs)(A.i9, {
                     children: [
-                      (0, I.jsxs)("div", {
+                      (0, M.jsxs)("div", {
                         className: "mb-4 flex items-center justify-between",
                         children: [
-                          (0, I.jsxs)("div", {
+                          (0, M.jsxs)("div", {
                             className: "flex items-center gap-2",
                             children: [
-                              (0, I.jsx)(u, {
-                                className: (0, p.default)(
+                              (0, M.jsx)(d, {
+                                className: (0, u.default)(
                                   "icon-sm",
-                                  A
+                                  L
                                     ? "text-blue-600"
                                     : "text-token-text-tertiary"
                                 ),
                               }),
-                              (0, I.jsx)(U.A4, {
-                                children: (0, I.jsx)(x.Z, G({}, Q.ssoTitle)),
+                              (0, M.jsx)(A.A4, {
+                                children: (0, M.jsx)(g.Z, V({}, W.ssoTitle)),
                               }),
                             ],
                           }),
-                          C &&
-                            (0, I.jsx)("div", {
-                              children: (0, I.jsx)(j.Z, {
-                                enabled: A,
-                                onChange: function () {
-                                  w({ connectionId: B, active: !A });
+                          I &&
+                            (0, M.jsx)("div", {
+                              children: (0, M.jsx)(y.Z, {
+                                enabled: L,
+                                onChange: () => {
+                                  h({ connectionId: D, active: !L });
                                 },
-                                label: s.formatMessage(Q.ssoToggleActive),
+                                label: b.formatMessage(W.ssoToggleActive),
                               }),
                             }),
                         ],
                       }),
-                      Z && (0, I.jsx)(z, { acsId: v.acs_id, hasSSO: C }),
-                      (0, I.jsxs)("div", {
+                      k && (0, M.jsx)(_, { acsId: j.acs_id, hasSSO: I }),
+                      (0, M.jsxs)("div", {
                         children: [
-                          (0, I.jsx)(y.z, {
+                          (0, M.jsx)(x.z, {
                             as: "button",
                             color: "primary",
-                            disabled: !Z,
-                            onClick: function () {
-                              E(!0);
+                            disabled: !k,
+                            onClick: () => {
+                              T(!0);
                             },
                             className: "font-medium",
-                            children: (0, I.jsx)(x.Z, G({}, T)),
+                            children: (0, M.jsx)(g.Z, V({}, Z)),
                           }),
-                          (0, I.jsx)(X, {
-                            workspaceId: i,
-                            data: v.sso_connection,
-                            isOpen: L,
-                            onClose: function () {
-                              return E(!1);
-                            },
+                          (0, M.jsx)(F, {
+                            workspaceId: f,
+                            data: j.sso_connection,
+                            isOpen: P,
+                            onClose: () => T(!1),
                           }),
                         ],
                       }),
                     ],
                   }),
-                  v.sso_connection &&
-                    (0, I.jsx)(J, {
-                      icon: f.Z,
-                      title: Q.enforceSSOTitle,
-                      body: (0, I.jsx)(I.Fragment, {
-                        children: (0, I.jsx)(x.Z, G({}, Q.enforceSSOBody)),
+                  j.sso_connection &&
+                    (0, M.jsx)(q, {
+                      icon: c.Z,
+                      title: W.enforceSSOTitle,
+                      body: (0, M.jsx)(M.Fragment, {
+                        children: (0, M.jsx)(g.Z, V({}, W.enforceSSOBody)),
                       }),
-                      toggle: (0, I.jsx)(j.Z, {
-                        disabled: !Z,
+                      toggle: (0, M.jsx)(y.Z, {
+                        disabled: !k,
                         enabled:
                           null ===
-                            (r = v.sso_connection.auth0_enforced_clients) ||
-                          void 0 === r
+                            (i = j.sso_connection.auth0_enforced_clients) ||
+                          void 0 === i
                             ? void 0
-                            : r.includes("chat"),
-                        onChange: function (e) {
-                          w({
-                            connectionId: v.sso_connection.id,
+                            : i.includes("chat"),
+                        onChange: (e) => {
+                          h({
+                            connectionId: j.sso_connection.id,
                             enforcedClients: e ? ["chat"] : [],
                           });
                         },
-                        label: s.formatMessage(Q.enforceSSOLabel),
+                        label: b.formatMessage(W.enforceSSOLabel),
                       }),
                     }),
                 ],
               })
             : null;
-        return (0, I.jsxs)(I.Fragment, {
+        return (0, M.jsxs)(M.Fragment, {
           children: [
-            (0, I.jsx)(m(), {
-              children: (0, I.jsx)("title", {
-                children: s.formatMessage(Q.title),
+            (0, M.jsx)(p(), {
+              children: (0, M.jsx)("title", {
+                children: b.formatMessage(W.title),
               }),
             }),
-            (0, I.jsx)(a.yG, { title: s.formatMessage(Q.title) }),
-            (0, I.jsx)(a.hb, { showSpinner: h, children: R }),
+            (0, M.jsx)(s.yG, { title: b.formatMessage(W.title) }),
+            (0, M.jsx)(s.hb, { showSpinner: v, children: E }),
           ],
         });
       }
-      var Q = (0, v.vU)({
+      let W = (0, b.vU)({
         title: {
           id: "workspaceIdentity.title",
           defaultMessage: "Identity & Provisioning",
@@ -1001,7 +833,7 @@
           defaultMessage: "Learn more",
         },
       });
-      function Y(e, t) {
+      function $(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -1013,23 +845,23 @@
         }
         return n;
       }
-      var ee = !0;
-      function et(e) {
-        return (0, I.jsx)(
-          K,
+      var J = !0;
+      function K(e) {
+        return (0, M.jsx)(
+          G,
           (function (e) {
             for (var t = 1; t < arguments.length; t++) {
               var n = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? Y(Object(n), !0).forEach(function (t) {
-                    (0, s.Z)(e, t, n[t]);
+                ? $(Object(n), !0).forEach(function (t) {
+                    (0, i.Z)(e, t, n[t]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       e,
                       Object.getOwnPropertyDescriptors(n)
                     )
-                  : Y(Object(n)).forEach(function (t) {
+                  : $(Object(n)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -1041,15 +873,15 @@
           })({}, e)
         );
       }
-      et.getLayout = function (e) {
-        return (0, I.jsx)(a.ZP, {
+      K.getLayout = function (e) {
+        return (0, M.jsx)(s.ZP, {
           mobilePageTitle: "Identity",
           requireOwnerPrivileges: !0,
           children: e,
         });
       };
     },
-    81942: function (e, t, n) {
+    41594: function (e, t, n) {
       "use strict";
       n.d(t, {
         $V: function () {
@@ -1059,69 +891,69 @@
           return g;
         },
         Li: function () {
-          return v;
+          return y;
         },
         W8: function () {
-          return j;
+          return v;
         },
         i$: function () {
           return m;
         },
         i9: function () {
-          return b;
-        },
-        qQ: function () {
           return x;
         },
+        qQ: function () {
+          return b;
+        },
         vi: function () {
-          return y;
+          return j;
         },
       });
       var o,
-        r,
         i,
         s,
         a,
-        c,
+        r,
         l,
         d,
-        u = n(90038),
-        f = n(21389),
-        p = f.Z.div(
+        c,
+        u = n(73017),
+        f = n(21389);
+      let p = f.Z.div(
           o ||
             (o = (0, u.Z)([
               "text-base text-token-text-primary flex flex-col gap-10 my-10",
             ]))
         ),
-        g = f.Z.div(r || (r = (0, u.Z)(["text-xl font-medium"]))),
-        m = f.Z.div(i || (i = (0, u.Z)(["text-base font-medium"]))),
-        x = f.Z.div(
-          s ||
-            (s = (0, u.Z)([
+        g = f.Z.div(i || (i = (0, u.Z)(["text-xl font-medium"]))),
+        m = f.Z.div(s || (s = (0, u.Z)(["text-base font-medium"]))),
+        b = f.Z.div(
+          a ||
+            (a = (0, u.Z)([
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
             ]))
         ),
-        b = f.Z.div(
-          a || (a = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
+        x = f.Z.div(
+          r || (r = (0, u.Z)(["flex flex-col gap-3 w-full m-auto md:m-0"]))
         ),
-        v = f.Z.div(c || (c = (0, u.Z)(["text-sm"]))),
-        y = f.Z.div(l || (l = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
-        j = f.Z.hr(d || (d = (0, u.Z)(["max-w-xl border-token-border-light"])));
+        y = f.Z.div(l || (l = (0, u.Z)(["text-sm"]))),
+        j = f.Z.div(d || (d = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
+        v = f.Z.hr(c || (c = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
-    29019: function (e, t, n) {
+    91524: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/identity",
         function () {
-          return n(83994);
+          return n(3219);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [5017, 9774, 2888, 179], function () {
-      return e((e.s = 29019));
+    e.O(0, [9112, 2888, 9774, 179], function () {
+      return e((e.s = 91524));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=identity-aee2b2bce5345c48.js.map
+//# sourceMappingURL=identity-df6e3f3857210a85.js.map

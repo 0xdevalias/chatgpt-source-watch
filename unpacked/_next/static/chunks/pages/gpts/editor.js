@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9148],
   {
-    7945: function (n, u, t) {
+    69003: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
@@ -9,24 +9,24 @@
             return e;
           },
         });
-      var _ = t(11992),
+      var _ = t(42637),
         e = !0;
       u.default = _.default;
     },
-    13873: function (n, u, t) {
+    8732: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts/editor",
         function () {
-          return t(7945);
+          return t(69003);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [1992, 9774, 2888, 179], function () {
-      return n((n.s = 13873));
+    n.O(0, [2637, 2888, 9774, 179], function () {
+      return n((n.s = 8732));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=editor-0c6d1961349ade9f.js.map
+//# sourceMappingURL=editor-d8dcff2470f7e92c.js.map

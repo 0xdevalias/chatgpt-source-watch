@@ -1,52 +1,49 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [204],
   {
-    53199: function (n, u, t) {
+    25217: function (n, t, u) {
       "use strict";
-      t.r(u),
-        t.d(u, {
+      u.r(t),
+        u.d(t, {
           __N_SSP: function () {
-            return _;
+            return i;
           },
           default: function () {
             return f;
           },
         });
-      var e = t(15136),
-        r = t(26565),
-        i = t(70079),
-        c = t(35250),
-        _ = !0;
+      var e = u(16640),
+        r = u(2722),
+        _ = u(70079),
+        c = u(35250),
+        i = !0;
       function f() {
         return (0, c.jsx)(o, {});
       }
       function o() {
-        var n = (0, e.kP)().session;
+        let { session: n } = (0, e.kP)();
         return (
-          (0, i.useEffect)(
-            function () {
-              n || (0, r.signIn)("credentials", {});
-            },
-            [n]
-          ),
+          (0, _.useEffect)(() => {
+            n || (0, r.signIn)("credentials", {});
+          }, [n]),
           (0, c.jsx)(c.Fragment, {})
         );
       }
     },
-    39691: function (n, u, t) {
+    68128: function (n, t, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/mocked_login",
         function () {
-          return t(53199);
+          return u(25217);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [9774, 2888, 179], function () {
-      return n((n.s = 39691));
+    n.O(0, [2888, 9774, 179], function () {
+      return n((n.s = 68128));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=mocked_login-c5e6b6623024195d.js.map
+//# sourceMappingURL=mocked_login-41d7182d0db9ce3d.js.map

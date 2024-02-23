@@ -1,18 +1,18 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [4933],
   {
-    43521: function (e, t, r) {
+    69881: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, {
           default: function () {
-            return y;
+            return h;
           },
         });
-      var n = r(36112),
-        o = r(12457),
-        s = r(91559),
-        i = r(10721),
+      var n = r(39827),
+        o = r(66873),
+        s = r(7557),
+        i = r(12366),
         a = r(94968),
         u = r(32004),
         c = r(35250);
@@ -47,7 +47,7 @@
         }
         return e;
       }
-      var p = (0, a.vU)({
+      let p = (0, a.vU)({
           oops: { id: "AuthError.oops", defaultMessage: "Oops!" },
           goBack: { id: "AuthError.goBack", defaultMessage: "Go back" },
           systemBusyError: {
@@ -92,7 +92,7 @@
           },
         }),
         f = (0, c.jsx)(u.Z, d({}, p.systemBusyError)),
-        h = {
+        y = {
           RequestTimeout: f,
           AuthRateLimit: f,
           identity_provider_mismatch: (0, c.jsx)(
@@ -106,16 +106,14 @@
           sso_required: (0, c.jsx)(u.Z, d({}, p.ssoRequired)),
           default: (0, c.jsx)(u.Z, d({}, p.defaultError)),
         };
-      function y() {
+      function h() {
         return (0, c.jsx)(g, {});
       }
       function g() {
-        var e,
-          t = (0, i.useRouter)(),
-          r =
-            null !== (e = h[String(t.query.error)]) && void 0 !== e
-              ? e
-              : h.default;
+        var e;
+        let t = (0, i.useRouter)(),
+          { error: r } = t.query,
+          n = null !== (e = y[String(r)]) && void 0 !== e ? e : y.default;
         return (0, c.jsx)(o.Wk, {
           isStorageComplianceEnabled: !1,
           children: (0, c.jsxs)(o.xh, {
@@ -125,13 +123,11 @@
                 className: "mb-2 text-center text-lg",
                 children: (0, c.jsx)(u.Z, d({}, p.oops)),
               }),
-              (0, c.jsx)("div", { className: "mb-5 text-center", children: r }),
+              (0, c.jsx)("div", { className: "mb-5 text-center", children: n }),
               (0, c.jsx)(s.z, {
                 as: "button",
                 color: "neutral",
-                onClick: function () {
-                  return t.replace("/auth/login");
-                },
+                onClick: () => t.replace("/auth/login"),
                 children: (0, c.jsx)(u.Z, d({}, p.goBack)),
               }),
             ],
@@ -139,7 +135,7 @@
         });
       }
     },
-    12457: function (e, t, r) {
+    66873: function (e, t, r) {
       "use strict";
       r.d(t, {
         VL: function () {
@@ -152,18 +148,18 @@
           return m;
         },
         xh: function () {
-          return y;
+          return h;
         },
       });
       var n,
-        o = r(36112),
-        s = r(90038),
-        i = r(18008),
+        o = r(39827),
+        s = r(73017),
+        i = r(18405),
         a = r(32004),
         u = r(94968),
         c = r(21389),
-        l = r(14972),
-        d = r(60493),
+        l = r(47527),
+        d = r(59674),
         p = r(35250);
       function f(e, t) {
         var r = Object.keys(e);
@@ -177,7 +173,7 @@
         }
         return r;
       }
-      function h(e) {
+      function y(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -196,28 +192,26 @@
         }
         return e;
       }
-      var y = c.Z.div(
+      let h = c.Z.div(
         n ||
           (n = (0, s.Z)([
             "w-96 flex flex-col flex-auto justify-center items-center",
           ]))
       );
       function g(e) {
-        var t = e.children,
-          r = e.showTerms,
-          n = e.isStorageComplianceEnabled;
+        let {
+          children: t,
+          showTerms: r = !0,
+          isStorageComplianceEnabled: n,
+        } = e;
         return (0, p.jsxs)("div", {
           className:
             "flex h-full w-full flex-col items-center justify-center bg-token-main-surface-primary",
-          children: [
-            t,
-            (void 0 === r || r) &&
-              (0, p.jsx)(j, { isStorageComplianceEnabled: n }),
-          ],
+          children: [t, r && (0, p.jsx)(j, { isStorageComplianceEnabled: n })],
         });
       }
       function j(e) {
-        var t = e.isStorageComplianceEnabled;
+        let { isStorageComplianceEnabled: t } = e;
         return (0, p.jsxs)("div", {
           className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
           children: [
@@ -225,14 +219,14 @@
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
-              children: (0, p.jsx)(a.Z, h({}, x.terms)),
+              children: (0, p.jsx)(a.Z, y({}, x.terms)),
             }),
             (0, p.jsx)(b, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
-              children: (0, p.jsx)(a.Z, h({}, x.privacy)),
+              children: (0, p.jsx)(a.Z, y({}, x.privacy)),
             }),
             t &&
               (0, p.jsxs)(p.Fragment, {
@@ -240,48 +234,45 @@
                   (0, p.jsx)(b, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
-                    onClick: function () {
-                      return i.vm.openModal(i.B.CookieManagement);
-                    },
-                    children: (0, p.jsx)(a.Z, h({}, x.cookies)),
+                    onClick: () => i.vm.openModal(i.B.CookieManagement),
+                    children: (0, p.jsx)(a.Z, y({}, x.cookies)),
                   }),
                 ],
               }),
           ],
         });
       }
-      var b = function () {
-        return (0, p.jsx)("span", {
+      let b = () =>
+        (0, p.jsx)("span", {
           className: "text-token-text-tertiary",
           children: "|",
         });
-      };
       function m() {
         return (0, p.jsx)("div", {
           className: "mb-5",
           children: (0, p.jsx)(l.nI, {}),
         });
       }
-      var x = (0, u.vU)({
+      let x = (0, u.vU)({
         terms: { id: "AuthPage.terms", defaultMessage: "Terms of use" },
         privacy: { id: "AuthPage.privacy", defaultMessage: "Privacy policy" },
         cookies: { id: "AuthPage.cookies", defaultMessage: "Manage cookies" },
       });
     },
-    4579: function (e, t, r) {
+    20702: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/error",
         function () {
-          return r(43521);
+          return r(69881);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 4579));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 20702));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=error-0bf38b4bd16cede0.js.map
+//# sourceMappingURL=error-3f032281e24d4e86.js.map

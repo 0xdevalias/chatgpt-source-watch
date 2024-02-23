@@ -23,11 +23,11 @@
           E,
           S,
           w,
-          C,
           B,
+          C,
           T,
-          x,
           _,
+          x,
           k,
           A,
           I,
@@ -518,7 +518,7 @@
                 );
               };
             })();
-            function C(e, t) {
+            function B(e, t) {
               switch (typeof e) {
                 case "string":
                   return e;
@@ -534,7 +534,7 @@
               }
               throw Error("unsupported value in General format: " + e);
             }
-            function B(e) {
+            function C(e) {
               if (e.length <= 3) return e;
               for (
                 var t = e.length % 3, r = e.substr(0, t);
@@ -544,7 +544,7 @@
                 r += (r.length > 0 ? "," : "") + e.substr(t, 3);
               return r;
             }
-            (e._general_num = w), (e._general = C);
+            (e._general_num = w), (e._general = B);
             var T = (function () {
               var e = /%/g,
                 o = /# (\?+)( ?)\/( ?)(\d+)/,
@@ -672,9 +672,9 @@
                         E,
                         S,
                         w,
-                        C,
-                        x,
+                        B,
                         _,
+                        x,
                         k = Math.abs(p),
                         A = p < 0 ? "-" : "";
                       if (d.match(/^00+$/)) return A + n(k, d.length);
@@ -686,30 +686,30 @@
                             ? w
                             : h(d.substr(0, d.length - w.length)) + w
                         );
-                      if ((C = d.match(o)))
+                      if ((B = d.match(o)))
                         return (
                           A +
                           (0 === k ? "" : "" + k) +
-                          r(" ", (g = C)[1].length + 2 + g[4].length)
+                          r(" ", (g = B)[1].length + 2 + g[4].length)
                         );
                       if (d.match(/^#+0+$/))
                         return A + n(k, d.length - d.indexOf("0"));
-                      if ((C = d.match(c)))
+                      if ((B = d.match(c)))
                         return (
                           (w = (w = ("" + p)
-                            .replace(/^([^\.]+)$/, "$1." + h(C[1]))
-                            .replace(/\.$/, "." + h(C[1]))).replace(
+                            .replace(/^([^\.]+)$/, "$1." + h(B[1]))
+                            .replace(/\.$/, "." + h(B[1]))).replace(
                             /\.(\d*)$/,
                             function (e, t) {
                               return (
-                                "." + t + r("0", h(C[1]).length - t.length)
+                                "." + t + r("0", h(B[1]).length - t.length)
                               );
                             }
                           )),
                           -1 !== d.indexOf("0.") ? w : w.replace(/^0\./, ".")
                         );
                       if (
-                        (C = (d = d.replace(/^#+([0.])/, "$1")).match(
+                        (B = (d = d.replace(/^#+([0.])/, "$1")).match(
                           /^(0*)\.(#*)$/
                         ))
                       )
@@ -718,26 +718,26 @@
                           ("" + k)
                             .replace(/\.(\d*[1-9])0*$/, ".$1")
                             .replace(/^(-?\d*)$/, "$1.")
-                            .replace(/^0\./, C[1].length ? "0." : ".")
+                            .replace(/^0\./, B[1].length ? "0." : ".")
                         );
-                      if ((C = d.match(/^#{1,3},##0(\.?)$/)))
-                        return A + B("" + k);
-                      if ((C = d.match(/^#,##0\.([#0]*0)$/)))
+                      if ((B = d.match(/^#{1,3},##0(\.?)$/)))
+                        return A + C("" + k);
+                      if ((B = d.match(/^#,##0\.([#0]*0)$/)))
                         return p < 0
                           ? "-" + i(u, d, -p)
-                          : B("" + p) + "." + r("0", C[1].length);
-                      if ((C = d.match(/^#,#*,#0/)))
+                          : C("" + p) + "." + r("0", B[1].length);
+                      if ((B = d.match(/^#,#*,#0/)))
                         return i(u, d.replace(/^#,#*,/, ""), p);
-                      if ((C = d.match(/^([0#]+)(\\?-([0#]+))+$/)))
+                      if ((B = d.match(/^([0#]+)(\\?-([0#]+))+$/)))
                         return (
                           (w = t(i(u, d.replace(/[\\-]/g, ""), p))),
-                          (x = 0),
+                          (_ = 0),
                           t(
                             t(d.replace(/\\/g, "")).replace(
                               /[0#]/g,
                               function (e) {
-                                return x < w.length
-                                  ? w.charAt(x++)
+                                return _ < w.length
+                                  ? w.charAt(_++)
                                   : "0" === e
                                     ? "0"
                                     : "";
@@ -755,59 +755,59 @@
                           w.substr(6)
                         );
                       var I = "";
-                      if ((C = d.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/)))
+                      if ((B = d.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/)))
                         return (
-                          (_ = m(
+                          (x = m(
                             k,
-                            Math.pow(10, (x = Math.min(C[4].length, 7))) - 1,
+                            Math.pow(10, (_ = Math.min(B[4].length, 7))) - 1,
                             !1
                           )),
                           (w = "" + A),
                           " " ==
-                            (I = T("n", C[1], _[1])).charAt(I.length - 1) &&
+                            (I = T("n", B[1], x[1])).charAt(I.length - 1) &&
                             (I = I.substr(0, I.length - 1) + "0"),
-                          (w += I + C[2] + "/" + C[3]),
-                          (I = s(_[2], x)).length < C[4].length &&
-                            (I = h(C[4].substr(C[4].length - I.length)) + I),
+                          (w += I + B[2] + "/" + B[3]),
+                          (I = s(x[2], _)).length < B[4].length &&
+                            (I = h(B[4].substr(B[4].length - I.length)) + I),
                           (w += I)
                         );
-                      if ((C = d.match(/^# ([#0?]+)( ?)\/( ?)([#0?]+)/)))
+                      if ((B = d.match(/^# ([#0?]+)( ?)\/( ?)([#0?]+)/)))
                         return (
                           A +
-                          ((_ = m(
+                          ((x = m(
                             k,
                             Math.pow(
                               10,
-                              (x = Math.min(
-                                Math.max(C[1].length, C[4].length),
+                              (_ = Math.min(
+                                Math.max(B[1].length, B[4].length),
                                 7
                               ))
                             ) - 1,
                             !0
-                          ))[0] || (_[1] ? "" : "0")) +
+                          ))[0] || (x[1] ? "" : "0")) +
                           " " +
-                          (_[1]
-                            ? a(_[1], x) + C[2] + "/" + C[3] + s(_[2], x)
-                            : r(" ", 2 * x + 1 + C[2].length + C[3].length))
+                          (x[1]
+                            ? a(x[1], _) + B[2] + "/" + B[3] + s(x[2], _)
+                            : r(" ", 2 * _ + 1 + B[2].length + B[3].length))
                         );
-                      if ((C = d.match(/^[#0?]+$/)))
+                      if ((B = d.match(/^[#0?]+$/)))
                         return ((w = "" + p), d.length <= w.length)
                           ? w
                           : h(d.substr(0, d.length - w.length)) + w;
-                      if ((C = d.match(/^([#0]+)\.([#0]+)$/))) {
-                        x = (w =
+                      if ((B = d.match(/^([#0]+)\.([#0]+)$/))) {
+                        _ = (w =
                           "" +
                           p
-                            .toFixed(Math.min(C[2].length, 10))
+                            .toFixed(Math.min(B[2].length, 10))
                             .replace(/([^0])0+$/, "$1")).indexOf(".");
-                        var y = d.indexOf(".") - x,
+                        var y = d.indexOf(".") - _,
                           R = d.length - w.length - y;
                         return h(d.substr(0, y) + w + d.substr(d.length - R));
                       }
-                      if ((C = d.match(/^00,000\.([#0]*0)$/)))
+                      if ((B = d.match(/^00,000\.([#0]*0)$/)))
                         return p < 0
                           ? "-" + i(u, d, -p)
-                          : B("" + p)
+                          : C("" + p)
                               .replace(/^\d,\d{3}$/, "0$&")
                               .replace(/^\d*$/, function (e) {
                                 return (
@@ -817,12 +817,12 @@
                                 );
                               }) +
                               "." +
-                              n(0, C[1].length);
+                              n(0, B[1].length);
                       switch (d) {
                         case "###,###":
                         case "##,###":
                         case "#,###":
-                          var F = B("" + k);
+                          var F = C("" + k);
                           return "0" !== F ? A + F : "";
                         default:
                           if (d.match(/\.[0#?]*$/))
@@ -838,9 +838,9 @@
                         var E,
                           S,
                           w,
-                          C,
-                          x,
+                          B,
                           _,
+                          x,
                           k = v
                             .replace(/\( */, "")
                             .replace(/ \)/, "")
@@ -956,18 +956,18 @@
                         );
                       if ((F = v.match(o)))
                         return (
-                          (C = Math.floor(
+                          (B = Math.floor(
                             (w = Math.round(
                               P * (S = parseInt((E = F)[4], 10))
                             )) / S
                           )),
-                          (x = w - C * S),
+                          (_ = w - B * S),
                           N +
-                            (0 === C ? "" : "" + C) +
+                            (0 === B ? "" : "" + B) +
                             " " +
-                            (0 === x
+                            (0 === _
                               ? r(" ", E[1].length + 1 + E[4].length)
-                              : a(x, E[1].length) +
+                              : a(_, E[1].length) +
                                 E[2] +
                                 "/" +
                                 E[3] +
@@ -1000,18 +1000,18 @@
                             .replace(/^0\./, F[1].length ? "0." : ".")
                         );
                       if ((F = v.match(/^#{1,3},##0(\.?)$/)))
-                        return N + B(i(P, 0));
+                        return N + C(i(P, 0));
                       if ((F = v.match(/^#,##0\.([#0]*0)$/)))
                         return b < 0
                           ? "-" + p(g, v, -b)
-                          : B(
+                          : C(
                               "" +
                                 (Math.floor(b) +
-                                  ((_ = F[1].length) <
+                                  ((x = F[1].length) <
                                   (
                                     "" +
                                     Math.round(
-                                      (b - Math.floor(b)) * Math.pow(10, _)
+                                      (b - Math.floor(b)) * Math.pow(10, x)
                                     )
                                   ).length
                                     ? 1
@@ -1102,7 +1102,7 @@
                           (D = d(b, F[1].length)),
                           b < 0
                             ? "-" + p(g, v, -b)
-                            : B(
+                            : C(
                                 b < 2147483647 && b > -2147483648
                                   ? "" + (b >= 0 ? 0 | b : (b - 1) | 0)
                                   : "" + Math.floor(b)
@@ -1124,7 +1124,7 @@
                         case "###,###":
                         case "##,###":
                         case "#,###":
-                          var H = B(i(P, 0));
+                          var H = C(i(P, 0));
                           return "0" !== H ? N + H : "";
                         case "###,###.00":
                           return p(g, "###,##0.00", b).replace(/^0\./, ".");
@@ -1135,7 +1135,7 @@
                     })(p, g, v);
               };
             })();
-            function x(e) {
+            function _(e) {
               for (var t = [], r = !1, n = 0, a = 0; n < e.length; ++n)
                 switch (e.charCodeAt(n)) {
                   case 34:
@@ -1153,8 +1153,8 @@
                 throw Error("Format |" + e + "| unterminated string ");
               return t;
             }
-            e._split = x;
-            var _ = /\[[HhMmSs\u0E0A\u0E19\u0E17]*\]/;
+            e._split = _;
+            var x = /\[[HhMmSs\u0E0A\u0E19\u0E17]*\]/;
             function k(e) {
               for (var t = 0, r = "", n = ""; t < e.length; )
                 switch ((r = e.charAt(t))) {
@@ -1204,7 +1204,7 @@
                   case "[":
                     for (n = r; "]" !== e.charAt(t++) && t < e.length; )
                       n += e.charAt(t);
-                    if (n.match(_)) return !0;
+                    if (n.match(x)) return !0;
                     break;
                   case ".":
                   case "0":
@@ -1347,7 +1347,7 @@
                       u += e.charAt(d);
                     if ("]" !== u.slice(-1))
                       throw 'unterminated "[" block: |' + u + "|";
-                    if (u.match(_)) {
+                    if (u.match(x)) {
                       if (null == s && null == (s = g(t, r))) return "";
                       (h[h.length] = { t: "Z", v: u.toLowerCase() }),
                         (m = u.charAt(1));
@@ -1414,18 +1414,18 @@
                     (h[h.length] = { t: "t", v: p }), ++d;
                 }
               var w,
-                B = 0,
-                x = 0;
+                C = 0,
+                _ = 0;
               for (d = h.length - 1, m = "t"; d >= 0; --d)
                 switch (h[d].t) {
                   case "h":
                   case "H":
-                    (h[d].t = v), (m = "h"), B < 1 && (B = 1);
+                    (h[d].t = v), (m = "h"), C < 1 && (C = 1);
                     break;
                   case "s":
                     (w = h[d].v.match(/\.0+$/)) &&
-                      (x = Math.max(x, w[0].length - 1)),
-                      B < 3 && (B = 3);
+                      (_ = Math.max(_, w[0].length - 1)),
+                      C < 3 && (C = 3);
                   case "d":
                   case "y":
                   case "M":
@@ -1433,16 +1433,16 @@
                     m = h[d].t;
                     break;
                   case "m":
-                    "s" === m && ((h[d].t = "M"), B < 2 && (B = 2));
+                    "s" === m && ((h[d].t = "M"), C < 2 && (C = 2));
                     break;
                   case "X":
                     break;
                   case "Z":
-                    B < 1 && h[d].v.match(/[Hh]/) && (B = 1),
-                      B < 2 && h[d].v.match(/[Mm]/) && (B = 2),
-                      B < 3 && h[d].v.match(/[Ss]/) && (B = 3);
+                    C < 1 && h[d].v.match(/[Hh]/) && (C = 1),
+                      C < 2 && h[d].v.match(/[Mm]/) && (C = 2),
+                      C < 3 && h[d].v.match(/[Ss]/) && (C = 3);
                 }
-              switch (B) {
+              switch (C) {
                 case 0:
                   break;
                 case 1:
@@ -1607,7 +1607,7 @@
                           (s = h), (u = 1);
                       }
                       return u > 0 ? n(s, u) : "";
-                    })(h[d].t.charCodeAt(0), h[d].v, s, x)),
+                    })(h[d].t.charCodeAt(0), h[d].v, s, _)),
                       (h[d].t = "t");
                     break;
                   case "n":
@@ -1633,7 +1633,7 @@
                     (I += h[d].v), (d = A - 1);
                     break;
                   case "G":
-                    (h[d].t = "t"), (h[d].v = C(t, r));
+                    (h[d].t = "t"), (h[d].v = B(t, r));
                 }
               var y,
                 R,
@@ -1772,10 +1772,10 @@
                     (n = (r.table && r.table[u[e]]) || h[u[e]]),
                     null == n && (n = p[e] || "General");
               }
-              if (o(n, 0)) return C(t, r);
+              if (o(n, 0)) return B(t, r);
               t instanceof Date && (t = S(t, r.date1904));
               var a = (function (e, t) {
-                var r = x(e),
+                var r = _(e),
                   n = r.length,
                   a = r[n - 1].indexOf("@");
                 if ((n < 4 && a > -1 && --n, r.length > 4))
@@ -1817,7 +1817,7 @@
                 }
                 return [n, s];
               })(n, t);
-              if (o(a[1])) return C(t, r);
+              if (o(a[1])) return B(t, r);
               if (!0 === t) t = "TRUE";
               else if (!1 === t) t = "FALSE";
               else if ("" === t || null == t) return "";
@@ -2053,7 +2053,7 @@
                         i[(a ^ (128 | (63 & r))) & 255]);
             return -1 ^ a;
           });
-        var eC = (function () {
+        var eB = (function () {
           var e,
             t,
             n,
@@ -2070,7 +2070,7 @@
             return -1 === t ? e : e.slice(t + 1);
           }
           function o(e) {
-            tZ(e, 0);
+            tJ(e, 0);
             for (var t = {}, r = 0; e.l <= e.length - 4; ) {
               var n = e.read_shift(2),
                 a = e.read_shift(2),
@@ -2103,7 +2103,7 @@
               c = 0,
               l = [],
               h = e.slice(0, 512);
-            tZ(h, 0);
+            tJ(h, 0);
             var u = (function (e) {
               if (80 == e[e.l] && 75 == e[e.l + 1]) return [0, 0];
               e.chk(g, "Header Signature: "), (e.l += 16);
@@ -2122,7 +2122,7 @@
               default:
                 throw Error("Major Version: Expected 3 or 4 saw " + r);
             }
-            512 !== n && tZ((h = e.slice(0, n)), 28);
+            512 !== n && tJ((h = e.slice(0, n)), 28);
             var d = e.slice(0, n);
             !(function (e, t) {
               var r = 9;
@@ -2200,7 +2200,7 @@
                       throw Error("FAT boundary crossed: " + h + " 4 " + n);
                     if (!e[m] || p[(h = tG(e[m], d))]) break;
                   }
-                  s[u] = { nodes: o, data: tB([c]) };
+                  s[u] = { nodes: o, data: tC([c]) };
                 }
               return s;
             })(S, i, l, n);
@@ -2209,8 +2209,8 @@
               (w[l[0]].name = "!FAT"),
               (w.fat_addrs = l),
               (w.ssz = n);
-            var C = [],
-              B = [],
+            var B = [],
+              C = [],
               T = [];
             (function (e, t, r, n, a, s, i, o) {
               for (
@@ -2219,9 +2219,9 @@
                 d += 128
               ) {
                 var v = u.slice(d, d + 128);
-                tZ(v, 64),
+                tJ(v, 64),
                   (g = v.read_shift(2)),
-                  (c = tx(v, 0, g - h)),
+                  (c = t_(v, 0, g - h)),
                   n.push(c);
                 var b = {
                   name: c,
@@ -2273,7 +2273,7 @@
                               if (!e[f]) break;
                               c = tG(e[f], l);
                             }
-                            return { nodes: s, data: tB([i]) };
+                            return { nodes: s, data: tC([i]) };
                           })(r, b.start, t.fat_addrs, t.ssz)),
                         (t[b.start].name = b.name),
                         (b.content = t[b.start].data.slice(0, b.size)))
@@ -2292,14 +2292,14 @@
                                   (a -= p),
                                   (i = tG(r, 4 * i));
                               return 0 === s.length
-                                ? t1(0)
+                                ? tq(0)
                                 : ep(s).slice(0, e.size);
                             })(b, t[l].data, (t[o] || {}).data))),
-                  b.content && tZ(b.content, 0),
+                  b.content && tJ(b.content, 0),
                   (s[c] = b),
                   i.push(b);
               }
-            })(i, w, S, C, a, {}, B, o),
+            })(i, w, S, B, a, {}, C, o),
               (function (e, t, r) {
                 for (
                   var n = 0,
@@ -2342,10 +2342,10 @@
                   }
                 for (t[0] += "/", n = 1; n < c; ++n)
                   2 !== e[n].type && (t[n] += "/");
-              })(B, T, C),
-              C.shift();
-            var x = { FileIndex: B, FullPaths: T };
-            return t && t.raw && (x.raw = { header: d, sectors: S }), x;
+              })(C, T, B),
+              B.shift();
+            var _ = { FileIndex: C, FullPaths: T };
+            return t && t.raw && (_.raw = { header: d, sectors: S }), _;
           }
           function f(e, t) {
             return new Date(
@@ -2370,8 +2370,8 @@
               r.CLSID && (e.FileIndex[0].clsid = r.CLSID),
               (function (e) {
                 var t = "\x01Sh33tJ5";
-                if (!eC.find(e, "/" + t)) {
-                  var r = t1(4);
+                if (!eB.find(e, "/" + t)) {
+                  var r = tq(4);
                   (r[0] = 55),
                     (r[1] = r[3] = 50),
                     (r[2] = 54),
@@ -2489,7 +2489,7 @@
               return (function (e, t) {
                 var r = [],
                   a = [],
-                  s = t1(1),
+                  s = tq(1),
                   i = (t || {}).compression ? 8 : 0,
                   o = 0,
                   c = 0,
@@ -2509,13 +2509,13 @@
                   ) {
                     var g,
                       v = l,
-                      b = t1(u.length);
+                      b = tq(u.length);
                     for (c = 0; c < u.length; ++c)
                       b.write_shift(1, 127 & u.charCodeAt(c));
                     (b = b.slice(0, b.l)), (p[f] = L.buf(d.content, 0));
                     var E = d.content;
                     8 == i && ((g = E), (E = n ? n.deflateRawSync(g) : D(g))),
-                      (s = t1(30)).write_shift(4, 67324752),
+                      (s = tq(30)).write_shift(4, 67324752),
                       s.write_shift(2, 20),
                       s.write_shift(2, 0),
                       s.write_shift(2, i),
@@ -2545,7 +2545,7 @@
                       r.push(b),
                       (l += E.length),
                       r.push(E),
-                      (s = t1(46)).write_shift(4, 33639248),
+                      (s = tq(46)).write_shift(4, 33639248),
                       s.write_shift(2, 0),
                       s.write_shift(2, 20),
                       s.write_shift(2, 0),
@@ -2568,7 +2568,7 @@
                       ++f;
                   }
                 return (
-                  (s = t1(22)).write_shift(4, 101010256),
+                  (s = tq(22)).write_shift(4, 101010256),
                   s.write_shift(2, 0),
                   s.write_shift(2, 0),
                   s.write_shift(2, f),
@@ -2608,7 +2608,7 @@
                   u
                 );
               })(e),
-              s = t1(a[7] << 9),
+              s = tq(a[7] << 9),
               i = 0,
               o = 0;
             for (i = 0; i < 8; ++i) s.write_shift(1, v[i]);
@@ -2751,27 +2751,27 @@
                 16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1,
                 15,
               ],
-              C = [
+              B = [
                 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43,
                 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258,
               ],
-              B = [
+              C = [
                 1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257,
                 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289,
                 16385, 24577,
               ],
               T = "undefined" != typeof Uint8Array,
-              x = T ? new Uint8Array(256) : [],
-              _ = 0;
-            _ < 256;
-            ++_
+              _ = T ? new Uint8Array(256) : [],
+              x = 0;
+            x < 256;
+            ++x
           )
-            x[_] = (function (e) {
+            _[x] = (function (e) {
               var t =
                 (((e << 1) | (e << 11)) & 139536) |
                 (((e << 5) | (e << 15)) & 558144);
               return ((t >> 16) | (t >> 8) | t) & 255;
-            })(_);
+            })(x);
           function k(e, t) {
             var r = 7 & t,
               n = t >>> 3;
@@ -2839,7 +2839,7 @@
               return t.l;
             }),
             function (t) {
-              var r = t1(50 + Math.floor(1.1 * t.length)),
+              var r = tq(50 + Math.floor(1.1 * t.length)),
                 n = e(t, r);
               return r.slice(0, n);
             });
@@ -2866,12 +2866,12 @@
                 for (
                   o =
                     (function (e, t) {
-                      var r = x[255 & e];
+                      var r = _[255 & e];
                       return t <= 8
                         ? r >>> (8 - t)
-                        : ((r = (r << 8) | x[(e >> 8) & 255]), t <= 16)
+                        : ((r = (r << 8) | _[(e >> 8) & 255]), t <= 16)
                           ? r >>> (16 - t)
-                          : (r = (r << 8) | x[(e >> 16) & 255]) >>> (24 - t);
+                          : (r = (r << 8) | _[(e >> 16) & 255]) >>> (24 - t);
                     })(f[s], n) >>
                     (n - h),
                     i = (1 << (n + 4 - h)) - 1;
@@ -2974,7 +2974,7 @@
                         var v = 0;
                         for (m = 0; m < p; ++m)
                           if (0 != (v = l[m])) {
-                            g = x[f[m]] >> (8 - v);
+                            g = _[f[m]] >> (8 - v);
                             for (var b = (1 << (7 - v)) - 1; b >= 0; --b)
                               W[g | (b << v)] = (7 & v) | (m << 3);
                           }
@@ -3014,10 +3014,10 @@
                               E.push(g), h < g && (h = g);
                           }
                         var S = E.slice(0, s),
-                          C = E.slice(s);
+                          B = E.slice(s);
                         for (m = s; m < 286; ++m) S[m] = 0;
-                        for (m = i; m < 30; ++m) C[m] = 0;
-                        return (V = O(S, U, 286)), (X = O(C, H, 30)), t;
+                        for (m = i; m < 30; ++m) B[m] = 0;
+                        return (V = O(S, U, 286)), (X = O(B, H, 30)), t;
                       })(e, r)),
                       (o = V),
                       (c = X)),
@@ -3032,13 +3032,12 @@
                   else {
                     var u = (h -= 257) < 8 ? 0 : (h - 4) >> 2;
                     u > 5 && (u = 0);
-                    var d = s + C[h];
+                    var d = s + B[h];
                     u > 0 && ((d += y(e, r, u)), (r += u)),
                       (f = y(e, r, c)),
-                      (h = n >>> 1 == 1 ? N[f] : H[f]),
-                      (r += 15 & h);
+                      (r += 15 & (h = n >>> 1 == 1 ? N[f] : H[f]));
                     var p = (h >>>= 4) < 4 ? 0 : (h - 2) >> 1,
-                      m = B[h];
+                      m = C[h];
                     for (
                       p > 0 && ((m += y(e, r, p)), (r += p)),
                         !t && i < d && (i = (a = R(a, d)).length);
@@ -3057,36 +3056,35 @@
             else throw Error(t);
           }
           function j(e, t) {
-            var r = e;
-            tZ(r, 0);
-            var a = { FileIndex: [], FullPaths: [] };
-            h(a, { root: t.root });
+            tJ(e, 0);
+            var r = { FileIndex: [], FullPaths: [] };
+            h(r, { root: t.root });
             for (
-              var s = r.length - 4;
-              (80 != r[s] ||
-                75 != r[s + 1] ||
-                5 != r[s + 2] ||
-                6 != r[s + 3]) &&
-              s >= 0;
+              var a = e.length - 4;
+              (80 != e[a] ||
+                75 != e[a + 1] ||
+                5 != e[a + 2] ||
+                6 != e[a + 3]) &&
+              a >= 0;
             )
-              --s;
-            (r.l = s + 4), (r.l += 4);
-            var i = r.read_shift(2);
-            r.l += 6;
-            var c = r.read_shift(4);
-            for (s = 0, r.l = c; s < i; ++s) {
-              r.l += 20;
-              var l = r.read_shift(4),
-                f = r.read_shift(4),
-                u = r.read_shift(2),
-                d = r.read_shift(2),
-                p = r.read_shift(2);
-              r.l += 8;
-              var m = r.read_shift(4),
-                g = o(r.slice(r.l + u, r.l + u + d));
-              r.l += u + d + p;
-              var v = r.l;
-              (r.l = m + 4),
+              --a;
+            (e.l = a + 4), (e.l += 4);
+            var s = e.read_shift(2);
+            e.l += 6;
+            var i = e.read_shift(4);
+            for (a = 0, e.l = i; a < s; ++a) {
+              e.l += 20;
+              var c = e.read_shift(4),
+                l = e.read_shift(4),
+                f = e.read_shift(2),
+                u = e.read_shift(2),
+                d = e.read_shift(2);
+              e.l += 8;
+              var p = e.read_shift(4),
+                m = o(e.slice(e.l + f, e.l + f + u));
+              e.l += f + u + d;
+              var g = e.l;
+              (e.l = p + 4),
                 (function (e, t, r, a, s) {
                   e.l += 2;
                   var i,
@@ -3123,22 +3121,22 @@
                       E = e.read_shift(4),
                       S = e.read_shift(2),
                       w = e.read_shift(2),
-                      C = "",
-                      B = 0;
-                    B < S;
-                    ++B
+                      B = "",
+                      C = 0;
+                    C < S;
+                    ++C
                   )
-                    C += String.fromCharCode(e[e.l++]);
+                    B += String.fromCharCode(e[e.l++]);
                   if (w) {
                     var T = o(e.slice(e.l, e.l + w));
                     (T[21589] || {}).mt && (g = T[21589].mt),
                       ((s || {})[21589] || {}).mt && (g = s[21589].mt);
                   }
                   e.l += w;
-                  var x = e.slice(e.l, e.l + b);
+                  var _ = e.slice(e.l, e.l + b);
                   switch (m) {
                     case 8:
-                      x = (function (e, t) {
+                      _ = (function (e, t) {
                         if (!n) return G(e, t);
                         var r = new n.InflateRaw(),
                           a = r._processChunk(e.slice(e.l), r._finishFlushFlag);
@@ -3150,27 +3148,27 @@
                     default:
                       throw Error("Unsupported ZIP Compression method " + m);
                   }
-                  var _ = !1;
+                  var x = !1;
                   8 & p &&
                     (134695760 == (v = e.read_shift(4)) &&
-                      ((v = e.read_shift(4)), (_ = !0)),
+                      ((v = e.read_shift(4)), (x = !0)),
                     (b = e.read_shift(4)),
                     (E = e.read_shift(4))),
-                    b != t && z(_, "Bad compressed size: " + t + " != " + b),
-                    E != r && z(_, "Bad uncompressed size: " + r + " != " + E);
-                  var k = L.buf(x, 0);
+                    b != t && z(x, "Bad compressed size: " + t + " != " + b),
+                    E != r && z(x, "Bad uncompressed size: " + r + " != " + E);
+                  var k = L.buf(_, 0);
                   v >> 0 != k >> 0 &&
-                    z(_, "Bad CRC32 checksum: " + v + " != " + k),
-                    K(a, C, x, { unsafe: !0, mt: g });
-                })(r, l, f, a, g),
-                (r.l = v);
+                    z(x, "Bad CRC32 checksum: " + v + " != " + k),
+                    K(a, B, _, { unsafe: !0, mt: g });
+                })(e, c, l, r, m),
+                (e.l = g);
             }
-            return a;
+            return r;
           }
           function K(e, t, r, n) {
             var a = n && n.unsafe;
             a || h(e);
-            var s = !a && eC.find(e, t);
+            var s = !a && eB.find(e, t);
             if (!s) {
               var o = e.FullPaths[0];
               t.slice(0, o.length) == o
@@ -3180,7 +3178,7 @@
                 (s = { name: i(t), type: 2 }),
                 e.FileIndex.push(s),
                 e.FullPaths.push(o),
-                a || eC.utils.cfb_gc(e);
+                a || eB.utils.cfb_gc(e);
             }
             return (
               (s.content = r),
@@ -3259,7 +3257,7 @@
               cfb_add: K,
               cfb_del: function (e, t) {
                 h(e);
-                var r = eC.find(e, t);
+                var r = eB.find(e, t);
                 if (r) {
                   for (var n = 0; n < e.FileIndex.length; ++n)
                     if (e.FileIndex[n] == r)
@@ -3271,7 +3269,7 @@
               },
               cfb_mov: function (e, t, r) {
                 h(e);
-                var n = eC.find(e, t);
+                var n = eB.find(e, t);
                 if (n) {
                   for (var a = 0; a < e.FileIndex.length; ++a)
                     if (e.FileIndex[a] == n)
@@ -3284,9 +3282,9 @@
               cfb_gc: function (e) {
                 u(e, !0);
               },
-              ReadShift: tj,
-              CheckField: tJ,
-              prep_blob: tZ,
+              ReadShift: tz,
+              CheckField: tQ,
+              prep_blob: tJ,
               bconcat: ep,
               use_zlib: function (e) {
                 try {
@@ -3314,7 +3312,7 @@
         try {
           U = r(99851);
         } catch (e) {}
-        function eB(e, t, r) {
+        function eC(e, t, r) {
           if (void 0 !== U && U.writeFileSync)
             return r ? U.writeFileSync(e, t, r) : U.writeFileSync(e, t);
           var n = "utf8" == r ? ti(t) : t;
@@ -3398,12 +3396,12 @@
             Object.prototype.hasOwnProperty.call(e, t[n]) && r.push(t[n]);
           return r;
         }
-        function ex(e, t) {
+        function e_(e, t) {
           for (var r = [], n = eT(e), a = 0; a !== n.length; ++a)
             null == r[e[n[a]][t]] && (r[e[n[a]][t]] = n[a]);
           return r;
         }
-        function e_(e) {
+        function ex(e) {
           for (var t = [], r = eT(e), n = 0; n !== r.length; ++n)
             t[e[r[n]]] = r[n];
           return t;
@@ -3603,10 +3601,10 @@
           }
         }
         function eK(e, t, r) {
-          e.FullPaths ? eC.utils.cfb_add(e, t, r) : e.file(t, r);
+          e.FullPaths ? eB.utils.cfb_add(e, t, r) : e.file(t, r);
         }
         function eY() {
-          return H ? new H() : eC.utils.cfb_new();
+          return H ? new H() : eB.utils.cfb_new();
         }
         function eQ(e, t) {
           if ("/" == e.charAt(0)) return e.slice(1);
@@ -3619,7 +3617,7 @@
           return r.join("/");
         }
         "undefined" != typeof JSZipSync && (H = JSZipSync),
-          e.exports && void 0 === H && (H = r(55275));
+          e.exports && void 0 === H && (H = r(89997));
         var eJ = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\r\n',
           eZ =
             /([^"\s?>\/]+)\s*=\s*((?:")([^"]*)(?:")|(?:')([^']*)(?:')|([^'">\s]+))/g,
@@ -3684,7 +3682,7 @@
             "&lt;": "<",
             "&amp;": "&",
           },
-          e5 = e_(e3),
+          e5 = ex(e3),
           e6 =
             ((c = /&(?:quot|apos|gt|lt|amp|#x?([\da-fA-F]+));/gi),
             (l = /_x([\da-fA-F]{4})_/gi),
@@ -3993,9 +3991,7 @@
           dc: "http://purl.org/dc/elements/1.1/",
           dcterms: "http://purl.org/dc/terms/",
           dcmitype: "http://purl.org/dc/dcmitype/",
-          mx: "http://schemas.microsoft.com/office/mac/excel/2008/main",
           r: "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-          sjs: "http://schemas.openxmlformats.org/package/2006/sheetjs/core-properties",
           vt: "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
           xsi: "http://www.w3.org/2001/XMLSchema-instance",
           xsd: "http://www.w3.org/2001/XMLSchema",
@@ -4006,7 +4002,7 @@
           "http://schemas.microsoft.com/office/excel/2006/main",
           "http://schemas.microsoft.com/office/excel/2006/2",
         ];
-        var tC = {
+        var tB = {
             o: "urn:schemas-microsoft-com:office:office",
             x: "urn:schemas-microsoft-com:office:excel",
             ss: "urn:schemas-microsoft-com:office:spreadsheet",
@@ -4015,20 +4011,20 @@
             v: "urn:schemas-microsoft-com:vml",
             html: "http://www.w3.org/TR/REC-html40",
           },
-          tB = function (e) {
+          tC = function (e) {
             for (var t = [], r = 0; r < e[0].length; ++r)
               if (e[0][r])
                 for (var n = 0, a = e[0][r].length; n < a; n += 10240)
                   t.push.apply(t, e[0][r].slice(n, n + 10240));
             return t;
           },
-          tT = tB,
-          tx = function (e, t, r) {
+          tT = tC,
+          t_ = function (e, t, r) {
             for (var n = [], a = t; a < r; a += 2)
               n.push(String.fromCharCode(tW(e, a)));
             return n.join("").replace(em, "");
           },
-          t_ = tx,
+          tx = t_,
           tk = function (e, t, r) {
             for (var n = [], a = t; a < t + r; ++a)
               n.push(("0" + e[a].toString(16)).slice(-2));
@@ -4058,7 +4054,7 @@
           tN = tP;
         W = V = function (e, t) {
           var r = tX(e, t);
-          return r > 0 ? tx(e, t + 4, t + 4 + r) : "";
+          return r > 0 ? t_(e, t + 4, t + 4 + r) : "";
         };
         var tM = function (e, t) {
             var r = tX(e, t);
@@ -4078,7 +4074,7 @@
               a = 256 * a + e[t + s];
             return 2047 == n
               ? 0 == a
-                ? r * (1 / 0)
+                ? (1 / 0) * r
                 : NaN
               : (0 == n ? (n = -1022) : ((n -= 1023), (a += 4503599627370496)),
                 r * Math.pow(2, n - 52) * a);
@@ -4088,10 +4084,10 @@
           return Array.isArray(e);
         };
         es &&
-          ((tx = function (e, t, r) {
+          ((t_ = function (e, t, r) {
             return n.isBuffer(e)
               ? e.toString("utf16le", t, r).replace(em, "")
-              : t_(e, t, r);
+              : tx(e, t, r);
           }),
           (tk = function (e, t, r) {
             return n.isBuffer(e) ? e.toString("hex", t, t + r) : tA(e, t, r);
@@ -4124,7 +4120,7 @@
           (tI = function (e, t, r) {
             return n.isBuffer(e) ? e.toString("utf8", t, r) : ty(e, t, r);
           }),
-          (tB = function (e) {
+          (tC = function (e) {
             return e[0].length > 0 && n.isBuffer(e[0][0])
               ? n.concat(e[0])
               : tT(e);
@@ -4139,7 +4135,7 @@
             return n.isBuffer(e) || Array.isArray(e);
           })),
           "undefined" != typeof cptable &&
-            ((tx = function (e, t, r) {
+            ((t_ = function (e, t, r) {
               return cptable.utils.decode(1200, e.slice(t, r)).replace(em, "");
             }),
             (tI = function (e, t, r) {
@@ -4192,11 +4188,8 @@
           },
           tG = function (e, t) {
             return (e[t + 3] << 24) | (e[t + 2] << 16) | (e[t + 1] << 8) | e[t];
-          },
-          tz = function (e, t) {
-            return (e[t] << 24) | (e[t + 1] << 16) | (e[t + 2] << 8) | e[t + 3];
           };
-        function tj(e, t) {
+        function tz(e, t) {
           var r,
             a,
             s,
@@ -4218,11 +4211,11 @@
               l = tI(this, this.l, this.l + e);
               break;
             case "utf16le":
-              (e *= 2), (l = tx(this, this.l, this.l + e));
+              (e *= 2), (l = t_(this, this.l, this.l + e));
               break;
             case "wstr":
               if ("undefined" == typeof cptable)
-                return tj.call(this, e, "dbcs");
+                return tz.call(this, e, "dbcs");
               (l = cptable.utils.decode(z, this.slice(this.l, this.l + 2 * e))),
                 (e *= 2);
               break;
@@ -4261,7 +4254,7 @@
                   return (
                     (s = tH(this, c)),
                     (this.l = c + 1),
-                    (i = tj.call(this, e - o, s ? "dbcs-cont" : "sbcs-cont")),
+                    (i = tz.call(this, e - o, s ? "dbcs-cont" : "sbcs-cont")),
                     f.join("") + i
                   );
                 f.push(er(tW(this, c))), (c += 2);
@@ -4279,7 +4272,7 @@
                   return (
                     (s = tH(this, c)),
                     (this.l = c + 1),
-                    (i = tj.call(this, e - o, s ? "dbcs-cont" : "sbcs-cont")),
+                    (i = tz.call(this, e - o, s ? "dbcs-cont" : "sbcs-cont")),
                     f.join("") + i
                   );
                 f.push(er(tH(this, c))), (c += 1);
@@ -4298,7 +4291,20 @@
                 case -4:
                   if ("i" === t || (128 & this[this.l + 3]) == 0)
                     return (
-                      (r = (e > 0 ? tG : tz)(this, this.l)), (this.l += 4), r
+                      (r = (
+                        e > 0
+                          ? tG
+                          : function (e, t) {
+                              return (
+                                (e[t] << 24) |
+                                (e[t + 1] << 16) |
+                                (e[t + 2] << 8) |
+                                e[t + 3]
+                              );
+                            }
+                      )(this, this.l)),
+                      (this.l += 4),
+                      r
                     );
                   return (a = tX(this, this.l)), (this.l += 4), a;
                 case 8:
@@ -4331,27 +4337,27 @@
           }
           return (this.l += e), l;
         }
-        var t$ = function (e, t, r) {
+        var tj = function (e, t, r) {
             (e[r] = 255 & t),
               (e[r + 1] = (t >>> 8) & 255),
               (e[r + 2] = (t >>> 16) & 255),
               (e[r + 3] = (t >>> 24) & 255);
           },
-          tK = function (e, t, r) {
+          t$ = function (e, t, r) {
             (e[r] = 255 & t),
               (e[r + 1] = (t >> 8) & 255),
               (e[r + 2] = (t >> 16) & 255),
               (e[r + 3] = (t >> 24) & 255);
           },
-          tY = function (e, t, r) {
+          tK = function (e, t, r) {
             (e[r] = 255 & t), (e[r + 1] = (t >>> 8) & 255);
           };
-        function tQ(e, t, r) {
+        function tY(e, t, r) {
           var n = 0,
             a = 0;
           if ("dbcs" === r) {
             for (a = 0; a != t.length; ++a)
-              tY(this, t.charCodeAt(a), this.l + 2 * a);
+              tK(this, t.charCodeAt(a), this.l + 2 * a);
             n = 2 * t.length;
           } else if ("sbcs" === r) {
             if ("undefined" != typeof cptable && 874 == j)
@@ -4399,7 +4405,7 @@
                   (this[this.l + 2] = 255 & t);
                 break;
               case 4:
-                (n = 4), t$(this, t, this.l);
+                (n = 4), tj(this, t, this.l);
                 break;
               case 8:
                 if (((n = 8), "f" === r)) {
@@ -4426,32 +4432,32 @@
               case 16:
                 break;
               case -4:
-                (n = 4), tK(this, t, this.l);
+                (n = 4), t$(this, t, this.l);
             }
           return (this.l += n), this;
         }
-        function tJ(e, t) {
+        function tQ(e, t) {
           var r = tk(this, this.l, e.length >> 1);
           if (r !== e) throw Error(t + "Expected " + e + " saw " + r);
           this.l += e.length >> 1;
         }
-        function tZ(e, t) {
-          (e.l = t), (e.read_shift = tj), (e.chk = tJ), (e.write_shift = tQ);
+        function tJ(e, t) {
+          (e.l = t), (e.read_shift = tz), (e.chk = tQ), (e.write_shift = tY);
         }
-        function tq(e, t) {
+        function tZ(e, t) {
           e.l += t;
         }
-        function t1(e) {
+        function tq(e) {
           var t = ec(e);
-          return tZ(t, 0), t;
+          return tJ(t, 0), t;
         }
-        function t0(e, t, r) {
+        function t1(e, t, r) {
           if (e) {
-            tZ(e, e.l || 0);
+            tJ(e, e.l || 0);
             for (var n, a, s, i = e.length, o = 0, c = 0; e.l < i; ) {
               128 & (o = e.read_shift(1)) &&
                 (o = (127 & o) + ((127 & e.read_shift(1)) << 7));
-              var l = iv[o] || iv[65535];
+              var l = is[o] || is[65535];
               for (
                 a = 1, s = 127 & (n = e.read_shift(1));
                 a < 4 && 128 & n;
@@ -4459,17 +4465,17 @@
               )
                 s += (127 & (n = e.read_shift(1))) << (7 * a);
               c = e.l + s;
-              var f = (l.f || tq)(e, s, r);
+              var f = (l.f || tZ)(e, s, r);
               if (((e.l = c), t(f, l.n, o))) return;
             }
           }
         }
-        function t2() {
+        function t0() {
           var e = [],
             t = es ? 256 : 2048,
             r = function (e) {
-              var t = t1(e);
-              return tZ(t, 0), t;
+              var t = tq(e);
+              return tJ(t, 0), t;
             },
             n = r(t),
             a = function () {
@@ -4489,16 +4495,16 @@
               a(), null == (n = e).l && (n.l = n.length), s(t);
             },
             end: function () {
-              return a(), tB([e]);
+              return a(), tC([e]);
             },
             _bufs: e,
           };
         }
-        function t4(e, t, r, n) {
+        function t2(e, t, r, n) {
           var a,
-            s = +ib[t];
+            s = +ii[t];
           if (!isNaN(s)) {
-            n || (n = iv[s].p || (r || []).length || 0),
+            n || (n = is[s].p || (r || []).length || 0),
               (a = 1 + (s >= 128 ? 1 : 0) + 1),
               n >= 128 && ++a,
               n >= 16384 && ++a,
@@ -4516,7 +4522,7 @@
             n > 0 && tU(r) && e.push(r);
           }
         }
-        function t3(e, t, r) {
+        function t4(e, t, r) {
           var n = eL(e);
           if (
             (t.s
@@ -4529,17 +4535,17 @@
           }
           return n;
         }
-        function t5(e, t, r) {
+        function t3(e, t, r) {
           var n = eL(e);
-          return (n.s = t3(n.s, t.s, r)), (n.e = t3(n.e, t.s, r)), n;
+          return (n.s = t4(n.s, t.s, r)), (n.e = t4(n.e, t.s, r)), n;
         }
-        function t6(e, t) {
+        function t5(e, t) {
           if (e.cRel && e.c < 0)
             for (e = eL(e); e.c < 0; ) e.c += t > 8 ? 16384 : 256;
           if (e.rRel && e.r < 0)
             for (e = eL(e); e.r < 0; )
               e.r += t > 8 ? 1048576 : t > 5 ? 65536 : 16384;
-          var r = rn(e);
+          var r = rr(e);
           return (
             e.cRel || null == e.cRel || (r = r.replace(/^([A-Z])/, "$$$1")),
             e.rRel ||
@@ -4548,7 +4554,7 @@
             r
           );
         }
-        function t8(e, t) {
+        function t6(e, t) {
           return 0 != e.s.r ||
             e.s.rRel ||
             e.e.r != (t.biff >= 12 ? 1048575 : t.biff >= 8 ? 65536 : 16384) ||
@@ -4557,25 +4563,25 @@
               e.s.cRel ||
               e.e.c != (t.biff >= 12 ? 16383 : 255) ||
               e.e.cRel
-              ? t6(e.s, t.biff) + ":" + t6(e.e, t.biff)
+              ? t5(e.s, t.biff) + ":" + t5(e.e, t.biff)
               : (e.s.rRel ? "" : "$") +
-                t9(e.s.r) +
+                t7(e.s.r) +
                 ":" +
                 (e.e.rRel ? "" : "$") +
-                t9(e.e.r)
+                t7(e.e.r)
             : (e.s.cRel ? "" : "$") +
-                rt(e.s.c) +
+                re(e.s.c) +
                 ":" +
                 (e.e.cRel ? "" : "$") +
-                rt(e.e.c);
+                re(e.e.c);
         }
-        function t7(e) {
+        function t8(e) {
           return parseInt(e.replace(/\$(\d+)$/, "$1"), 10) - 1;
         }
-        function t9(e) {
+        function t7(e) {
           return "" + (e + 1);
         }
-        function re(e) {
+        function t9(e) {
           for (
             var t = e.replace(/^\$([A-Z])/, "$1"), r = 0, n = 0;
             n !== t.length;
@@ -4584,14 +4590,14 @@
             r = 26 * r + t.charCodeAt(n) - 64;
           return r - 1;
         }
-        function rt(e) {
+        function re(e) {
           if (e < 0) throw Error("invalid column " + e);
           var t = "";
           for (++e; e; e = Math.floor((e - 1) / 26))
             t = String.fromCharCode(((e - 1) % 26) + 65) + t;
           return t;
         }
-        function rr(e) {
+        function rt(e) {
           for (var t = 0, r = 0, n = 0; n < e.length; ++n) {
             var a = e.charCodeAt(n);
             a >= 48 && a <= 57
@@ -4600,25 +4606,25 @@
           }
           return { c: r - 1, r: t - 1 };
         }
-        function rn(e) {
+        function rr(e) {
           for (var t = e.c + 1, r = ""; t; t = ((t - 1) / 26) | 0)
             r = String.fromCharCode(((t - 1) % 26) + 65) + r;
           return r + (e.r + 1);
         }
-        function ra(e) {
+        function rn(e) {
           var t = e.indexOf(":");
           return -1 == t
-            ? { s: rr(e), e: rr(e) }
-            : { s: rr(e.slice(0, t)), e: rr(e.slice(t + 1)) };
+            ? { s: rt(e), e: rt(e) }
+            : { s: rt(e.slice(0, t)), e: rt(e.slice(t + 1)) };
         }
-        function rs(e, t) {
+        function ra(e, t) {
           return void 0 === t || "number" == typeof t
-            ? rs(e.s, e.e)
-            : ("string" != typeof e && (e = rn(e)),
-              "string" != typeof t && (t = rn(t)),
+            ? ra(e.s, e.e)
+            : ("string" != typeof e && (e = rr(e)),
+              "string" != typeof t && (t = rr(t)),
               e == t ? e : e + ":" + t);
         }
-        function ri(e) {
+        function rs(e) {
           var t = { s: { c: 0, r: 0 }, e: { c: 0, r: 0 } },
             r = 0,
             n = 0,
@@ -4652,7 +4658,7 @@
             r = 10 * r + a;
           return (t.e.r = --r), t;
         }
-        function ro(e, t) {
+        function ri(e, t) {
           var r = "d" == e.t && t instanceof Date;
           if (null != e.z)
             try {
@@ -4667,22 +4673,22 @@
             return "" + t;
           }
         }
-        function rc(e, t, r) {
+        function ro(e, t, r) {
           return null == e || null == e.t || "z" == e.t
             ? ""
             : void 0 !== e.w
               ? e.w
               : ("d" == e.t && !e.z && r && r.dateNF && (e.z = r.dateNF),
                   void 0 == t)
-                ? ro(e, e.v)
-                : ro(e, t);
+                ? ri(e, e.v)
+                : ri(e, t);
         }
-        function rl(e, t) {
+        function rc(e, t) {
           var r = t && t.sheet ? t.sheet : "Sheet1",
             n = {};
           return (n[r] = e), { SheetNames: [r], Sheets: n };
         }
-        function rf(e, t, r) {
+        function rl(e, t, r) {
           var n = r || {},
             a = e ? Array.isArray(e) : n.dense,
             s = e || (a ? [] : {}),
@@ -4691,14 +4697,14 @@
           if (s && null != n.origin) {
             if ("number" == typeof n.origin) i = n.origin;
             else {
-              var c = "string" == typeof n.origin ? rr(n.origin) : n.origin;
+              var c = "string" == typeof n.origin ? rt(n.origin) : n.origin;
               (i = c.r), (o = c.c);
             }
             s["!ref"] || (s["!ref"] = "A1:A1");
           }
           var l = { s: { c: 1e7, r: 1e7 }, e: { c: 0, r: 0 } };
           if (s["!ref"]) {
-            var f = ri(s["!ref"]);
+            var f = rs(s["!ref"]);
             (l.s.c = f.s.c),
               (l.s.r = f.s.r),
               (l.e.c = Math.max(l.e.c, f.e.c)),
@@ -4753,36 +4759,36 @@
                       s[p][m] && s[p][m].z && (d.z = s[p][m].z),
                       (s[p][m] = d);
                   else {
-                    var g = rn({ c: m, r: p });
+                    var g = rr({ c: m, r: p });
                     s[g] && s[g].z && (d.z = s[g].z), (s[g] = d);
                   }
                 }
             }
-          return l.s.c < 1e7 && (s["!ref"] = rs(l)), s;
+          return l.s.c < 1e7 && (s["!ref"] = ra(l)), s;
+        }
+        function rf(e, t) {
+          return rl(null, e, t);
         }
         function rh(e, t) {
-          return rf(null, e, t);
+          return t || (t = tq(4)), t.write_shift(4, e), t;
         }
-        function ru(e, t) {
-          return t || (t = t1(4)), t.write_shift(4, e), t;
-        }
-        function rd(e) {
+        function ru(e) {
           var t = e.read_shift(4);
           return 0 === t ? "" : e.read_shift(t, "dbcs");
         }
-        function rp(e, t) {
+        function rd(e, t) {
           var r = !1;
           return (
-            null == t && ((r = !0), (t = t1(4 + 2 * e.length))),
+            null == t && ((r = !0), (t = tq(4 + 2 * e.length))),
             t.write_shift(4, e.length),
             e.length > 0 && t.write_shift(0, e, "dbcs"),
             r ? t.slice(0, t.l) : t
           );
         }
-        function rm(e, t) {
+        function rp(e, t) {
           var r = e.l,
             n = e.read_shift(1),
-            a = rd(e),
+            a = ru(e),
             s = [],
             i = { t: a, h: a };
           if ((1 & n) != 0) {
@@ -4792,46 +4798,46 @@
           } else i.r = [{ ich: 0, ifnt: 0 }];
           return (e.l = r + t), i;
         }
-        function rg(e) {
+        function rm(e) {
           var t = e.read_shift(4),
             r = e.read_shift(2);
           return (r += e.read_shift(1) << 16), e.l++, { c: t, iStyleRef: r };
         }
-        function rv(e, t) {
+        function rg(e, t) {
           return (
-            null == t && (t = t1(8)),
+            null == t && (t = tq(8)),
             t.write_shift(-4, e.c),
             t.write_shift(3, e.iStyleRef || e.s),
             t.write_shift(1, 0),
             t
           );
         }
-        function rb(e) {
+        function rv(e) {
           var t = e.read_shift(2);
           return (t += e.read_shift(1) << 16), e.l++, { c: -1, iStyleRef: t };
         }
-        function rE(e, t) {
+        function rb(e, t) {
           return (
-            null == t && (t = t1(4)),
+            null == t && (t = tq(4)),
             t.write_shift(3, e.iStyleRef || e.s),
             t.write_shift(1, 0),
             t
           );
         }
-        function rS(e) {
+        function rE(e) {
           var t = e.read_shift(4);
           return 0 === t || 4294967295 === t ? "" : e.read_shift(t, "dbcs");
         }
-        function rw(e, t) {
+        function rS(e, t) {
           var r = !1;
           return (
-            null == t && ((r = !0), (t = t1(127))),
+            null == t && ((r = !0), (t = tq(127))),
             t.write_shift(4, e.length > 0 ? e.length : 4294967295),
             e.length > 0 && t.write_shift(0, e, "dbcs"),
             r ? t.slice(0, t.l) : t
           );
         }
-        function rC(e) {
+        function rw(e) {
           var t = e.slice(e.l, e.l + 4),
             r = 1 & t[0],
             n = 2 & t[0];
@@ -4843,7 +4849,7 @@
           return r ? a / 100 : a;
         }
         function rB(e, t) {
-          null == t && (t = t1(4));
+          null == t && (t = tq(4));
           var r = 0,
             n = 0,
             a = 100 * e;
@@ -4859,7 +4865,7 @@
             t.write_shift(-4, ((r ? a : e) << 2) + (r + 2));
           else throw Error("unsupported RkNumber " + e);
         }
-        function rT(e) {
+        function rC(e) {
           var t = { s: {}, e: {} };
           return (
             (t.s.r = e.read_shift(4)),
@@ -4905,9 +4911,9 @@
               return n.createHash("md5").update(e).digest("hex");
             });
         })({}, "undefined" != typeof crypto ? crypto : void 0);
-        var rx = function (e, t) {
+        var rT = function (e, t) {
           return (
-            t || (t = t1(16)),
+            t || (t = tq(16)),
             t.write_shift(4, e.s.r),
             t.write_shift(4, e.e.r),
             t.write_shift(4, e.s.c),
@@ -4919,11 +4925,11 @@
           if (e.length - e.l < 8) throw "XLS Xnum Buffer underflow";
           return e.read_shift(8, "f");
         }
-        function rk(e, t) {
-          return (t || t1(8)).write_shift(8, e, "f");
+        function rx(e, t) {
+          return (t || tq(8)).write_shift(8, e, "f");
         }
-        function rA(e, t) {
-          if ((t || (t = t1(8)), !e || e.auto))
+        function rk(e, t) {
+          if ((t || (t = tq(8)), !e || e.auto))
             return t.write_shift(4, 0), t.write_shift(4, 0), t;
           null != e.index
             ? (t.write_shift(1, 2), t.write_shift(1, e.index))
@@ -4945,7 +4951,7 @@
           } else t.write_shift(2, 0), t.write_shift(1, 0), t.write_shift(1, 0);
           return t;
         }
-        function rI(e, t) {
+        function rA(e, t) {
           var r = e.read_shift(4);
           switch (r) {
             case 0:
@@ -4961,8 +4967,8 @@
           if (r > 400) throw Error("Unsupported Clipboard: " + r.toString(16));
           return (e.l -= 4), e.read_shift(0, 1 == t ? "lpstr" : "lpwstr");
         }
-        var ry = [80, 81],
-          rR = {
+        var rI = [80, 81],
+          ry = {
             1: { n: "CodePage", t: 2 },
             2: { n: "Category", t: 80 },
             3: { n: "PresentationFormat", t: 80 },
@@ -4990,7 +4996,7 @@
             29: { n: "Version", t: 80 },
             255: {},
           },
-          rF = {
+          rR = {
             1: { n: "CodePage", t: 2 },
             2: { n: "Title", t: 80 },
             3: { n: "Subject", t: 80 },
@@ -5012,19 +5018,19 @@
             19: { n: "DocSecurity", t: 3 },
             255: {},
           },
-          rD = {
+          rF = {
             2147483648: { n: "Locale", t: 19 },
             2147483651: { n: "Behavior", t: 19 },
             1919054434: {},
           };
         !(function () {
-          for (var e in rD)
-            Object.prototype.hasOwnProperty.call(rD, e) &&
-              (rR[e] = rF[e] = rD[e]);
+          for (var e in rF)
+            Object.prototype.hasOwnProperty.call(rF, e) &&
+              (ry[e] = rR[e] = rF[e]);
         })();
-        var rO = ex(rR, "n"),
-          rP = ex(rF, "n"),
-          rN = {
+        var rD = e_(ry, "n"),
+          rO = e_(rR, "n"),
+          rP = {
             1: "US",
             2: "CA",
             3: "",
@@ -5076,7 +5082,7 @@
             981: "IR",
             65535: "US",
           },
-          rM = [
+          rN = [
             null,
             "solid",
             "mediumGray",
@@ -5097,7 +5103,7 @@
             "gray125",
             "gray0625",
           ],
-          rL = eL(
+          rM = eL(
             [
               0, 16777215, 16711680, 65280, 255, 16776960, 16711935, 65535, 0,
               16777215, 16711680, 65280, 255, 16776960, 16711935, 65535,
@@ -5113,7 +5119,7 @@
               return [(e >> 16) & 255, (e >> 8) & 255, 255 & e];
             })
           ),
-          rU = {
+          rL = {
             0: "#NULL!",
             7: "#DIV/0!",
             15: "#VALUE!",
@@ -5124,8 +5130,8 @@
             43: "#GETTING_DATA",
             255: "#WTF?",
           },
-          rH = ek(rU),
-          rW = {
+          rU = ek(rL),
+          rH = {
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml":
               "workbooks",
             "application/vnd.ms-excel.binIndexWs": "TODO",
@@ -5226,7 +5232,7 @@
             "image/png": "TODO",
             sheet: "js",
           },
-          rV =
+          rW =
             (eT(
               (d = {
                 workbooks: {
@@ -5272,16 +5278,16 @@
             }),
             eT(d).forEach(function (e) {
               eT(d[e]).forEach(function (t) {
-                rW[d[e][t]] = e;
+                rH[d[e][t]] = e;
               });
             }),
             d),
-          rX = (function (e) {
+          rV = (function (e) {
             for (var t = [], r = eT(e), n = 0; n !== r.length; ++n)
               null == t[e[r[n]]] && (t[e[r[n]]] = []), t[e[r[n]]].push(r[n]);
             return t;
-          })(rW);
-        function rG() {
+          })(rH);
+        function rX() {
           return {
             workbooks: [],
             sheets: [],
@@ -5305,12 +5311,12 @@
           };
         }
         tw.CT = "http://schemas.openxmlformats.org/package/2006/content-types";
-        var rz = tE("Types", null, {
+        var rG = tE("Types", null, {
             xmlns: tw.CT,
             "xmlns:xsd": tw.xsd,
             "xmlns:xsi": tw.xsi,
           }),
-          rj = [
+          rz = [
             ["xml", "application/xml"],
             ["bin", "application/vnd.ms-excel.sheet.binary.macroEnabled.main"],
             ["vml", "application/vnd.openxmlformats-officedocument.vmlDrawing"],
@@ -5328,14 +5334,12 @@
             ["tif", "image/tiff"],
             ["tiff", "image/tiff"],
             ["pdf", "application/pdf"],
-            ["rels", rX.rels[0]],
+            ["rels", rV.rels[0]],
           ].map(function (e) {
             return tE("Default", null, { Extension: e[0], ContentType: e[1] });
           }),
-          r$ = {
+          rj = {
             WB: "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
-            SHEET:
-              "http://sheetjs.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
             HLINK:
               "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
             VML: "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
@@ -5343,18 +5347,13 @@
               "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath",
             XMISS:
               "http://schemas.microsoft.com/office/2006/relationships/xlExternalLinkPath/xlPathMissing",
-            XLINK:
-              "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink",
-            CXML: "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-            CXMLP:
-              "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
             VBA: "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
           };
-        function rK(e) {
+        function r$(e) {
           var t = e.lastIndexOf("/");
           return e.slice(0, t + 1) + "_rels/" + e.slice(t + 1) + ".rels";
         }
-        function rY(e, t) {
+        function rK(e, t) {
           var r = { "!id": {} };
           if (!e) return r;
           "/" !== t.charAt(0) && (t = "/" + t);
@@ -5379,9 +5378,9 @@
         }
         tw.RELS =
           "http://schemas.openxmlformats.org/package/2006/relationships";
-        var rQ = tE("Relationships", null, { xmlns: tw.RELS });
-        function rJ(e) {
-          var t = [eJ, rQ];
+        var rY = tE("Relationships", null, { xmlns: tw.RELS });
+        function rQ(e) {
+          var t = [eJ, rY];
           return (
             eT(e["!id"]).forEach(function (r) {
               t[t.length] = tE("Relationship", null, e["!id"][r]);
@@ -5392,8 +5391,8 @@
             t.join("")
           );
         }
-        var rZ = [r$.HLINK, r$.XPATH, r$.XMISS];
-        function rq(e, t, r, n, a, s) {
+        var rJ = [rj.HLINK, rj.XPATH, rj.XMISS];
+        function rZ(e, t, r, n, a, s) {
           if ((a || (a = {}), e["!id"] || (e["!id"] = {}), t < 0))
             for (t = 1; e["!id"]["rId" + t]; ++t);
           if (
@@ -5402,7 +5401,7 @@
             (a.Target = r),
             s
               ? (a.TargetMode = s)
-              : rZ.indexOf(a.Type) > -1 && (a.TargetMode = "External"),
+              : rJ.indexOf(a.Type) > -1 && (a.TargetMode = "External"),
             e["!id"][a.Id])
           )
             throw Error("Cannot rewrite rId " + t);
@@ -5412,7 +5411,7 @@
             t
           );
         }
-        function r1(e, t, r) {
+        function rq(e, t, r) {
           return [
             '  <rdf:Description rdf:about="' + e + '">\n',
             '    <rdf:type rdf:resource="http://docs.oasis-open.org/ns/office/1.2/meta/' +
@@ -5423,7 +5422,7 @@
             "  </rdf:Description>\n",
           ].join("");
         }
-        var r0 =
+        var r1 =
             ((p =
               '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" office:version="1.2"><office:meta><meta:generator>SheetJS ' +
               t.version +
@@ -5431,7 +5430,7 @@
             function () {
               return p;
             }),
-          r2 = [
+          r0 = [
             ["cp:category", "Category"],
             ["cp:contentStatus", "ContentStatus"],
             ["cp:keywords", "Keywords"],
@@ -5450,11 +5449,11 @@
           ];
         (tw.CORE_PROPS =
           "http://schemas.openxmlformats.org/package/2006/metadata/core-properties"),
-          (r$.CORE_PROPS =
+          (rj.CORE_PROPS =
             "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties");
-        var r4 = (function () {
-          for (var e = Array(r2.length), t = 0; t < r2.length; ++t) {
-            var r = r2[t],
+        var r2 = (function () {
+          for (var e = Array(r0.length), t = 0; t < r0.length; ++t) {
+            var r = r0[t],
               n =
                 "(?:" +
                 r[0].slice(0, r[0].indexOf(":")) +
@@ -5464,25 +5463,25 @@
           }
           return e;
         })();
-        function r3(e) {
+        function r4(e) {
           var t = {};
           e = ts(e);
-          for (var r = 0; r < r2.length; ++r) {
-            var n = r2[r],
-              a = e.match(r4[r]);
+          for (var r = 0; r < r0.length; ++r) {
+            var n = r0[r],
+              a = e.match(r2[r]);
             null != a && a.length > 0 && (t[n[1]] = e6(a[1])),
               "date" === n[2] && t[n[1]] && (t[n[1]] = eN(t[n[1]]));
           }
           return t;
         }
-        var r5 = tE("cp:coreProperties", null, {
+        var r3 = tE("cp:coreProperties", null, {
           "xmlns:cp": tw.CORE_PROPS,
           "xmlns:dc": tw.dc,
           "xmlns:dcterms": tw.dcterms,
           "xmlns:dcmitype": tw.dcmitype,
           "xmlns:xsi": tw.xsi,
         });
-        function r6(e, t, r, n, a) {
+        function r5(e, t, r, n, a) {
           null == a[e] &&
             null != t &&
             "" !== t &&
@@ -5490,7 +5489,7 @@
             (t = e9(t)),
             (n[n.length] = r ? tE(e, t, r) : tv(e, t)));
         }
-        var r8 = [
+        var r6 = [
           ["Application", "Application", "string"],
           ["AppVersion", "AppVersion", "string"],
           ["Company", "Company", "string"],
@@ -5503,7 +5502,7 @@
           ["HeadingPairs", "HeadingPairs", "raw"],
           ["TitlesOfParts", "TitlesOfParts", "raw"],
         ];
-        function r7(e, t, r, n) {
+        function r8(e, t, r, n) {
           var a = [];
           if ("string" == typeof e) a = tm(e, n);
           else
@@ -5557,22 +5556,22 @@
         }
         (tw.EXT_PROPS =
           "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"),
-          (r$.EXT_PROPS =
+          (rj.EXT_PROPS =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties");
-        var r9 = tE("Properties", null, {
+        var r7 = tE("Properties", null, {
           xmlns: tw.EXT_PROPS,
           "xmlns:vt": tw.vt,
         });
         (tw.CUST_PROPS =
           "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties"),
-          (r$.CUST_PROPS =
+          (rj.CUST_PROPS =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties");
-        var ne = /<[^>]+>[^<]*/g,
-          nt = tE("Properties", null, {
+        var r9 = /<[^>]+>[^<]*/g,
+          ne = tE("Properties", null, {
             xmlns: tw.CUST_PROPS,
             "xmlns:vt": tw.vt,
           }),
-          nr = {
+          nt = {
             Title: "Title",
             Subject: "Subject",
             Author: "Author",
@@ -5592,33 +5591,32 @@
             Identifier: "Identifier",
             Language: "Language",
           },
-          nn = e_(nr);
-        function na(e) {
-          var t = e.read_shift(4),
-            r = e.read_shift(4);
+          nr = ex(nt);
+        function nn(e) {
+          var t = e.read_shift(4);
           return new Date(
-            ((r / 1e7) * 4294967296 + t / 1e7 - 11644473600) * 1e3
+            ((e.read_shift(4) / 1e7) * 4294967296 + t / 1e7 - 11644473600) * 1e3
           )
             .toISOString()
             .replace(/\.000/, "");
         }
-        function ns(e, t, r) {
+        function na(e, t, r) {
           var n = e.l,
             a = e.read_shift(0, "lpstr-cp");
           if (r) for (; (e.l - n) & 3; ) ++e.l;
           return a;
         }
-        function ni(e, t, r) {
+        function ns(e, t, r) {
           var n = e.read_shift(0, "lpwstr");
           return r && (e.l += (4 - ((n.length + 1) & 3)) & 3), n;
         }
+        function ni(e, t, r) {
+          return 31 === t ? ns(e) : na(e, t, r);
+        }
         function no(e, t, r) {
-          return 31 === t ? ni(e) : ns(e, t, r);
+          return ni(e, t, !1 === r ? 0 : 4);
         }
-        function nc(e, t, r) {
-          return no(e, t, !1 === r ? 0 : 4);
-        }
-        function nl(e, t) {
+        function nc(e, t) {
           for (var r = e.read_shift(4), n = {}, a = 0; a != r; ++a) {
             var s = e.read_shift(4),
               i = e.read_shift(4);
@@ -5630,22 +5628,21 @@
           }
           return 3 & e.l && (e.l = (e.l >> 3) << 2), n;
         }
-        function nf(e) {
+        function nl(e) {
           var t = e.read_shift(4),
             r = e.slice(e.l, e.l + t);
           return (e.l += t), (3 & t) > 0 && (e.l += (4 - (3 & t)) & 3), r;
         }
-        function nh(e, t, r) {
+        function nf(e, t, r) {
           var n,
             a,
-            s,
-            i = e.read_shift(2),
-            o = r || {};
-          if (((e.l += 2), 12 !== t && i !== t && -1 === ry.indexOf(t)))
-            throw Error("Expected type " + t + " saw " + i);
-          switch (12 === t ? i : t) {
+            s = e.read_shift(2),
+            i = r || {};
+          if (((e.l += 2), 12 !== t && s !== t && -1 === rI.indexOf(t)))
+            throw Error("Expected type " + t + " saw " + s);
+          switch (12 === t ? s : t) {
             case 2:
-              return (s = e.read_shift(2, "i")), o.raw || (e.l += 2), s;
+              return (a = e.read_shift(2, "i")), i.raw || (e.l += 2), a;
             case 3:
               return e.read_shift(4, "i");
             case 11:
@@ -5653,32 +5650,31 @@
             case 19:
               return e.read_shift(4);
             case 30:
-              return ns(e, i, 4).replace(em, "");
+              return na(e, s, 4).replace(em, "");
             case 31:
-              return ni(e);
+              return ns(e);
             case 64:
-              return na(e);
+              return nn(e);
             case 65:
-              return nf(e);
+              return nl(e);
             case 71:
               return (
-                (n = e),
-                ((a = {}).Size = n.read_shift(4)),
-                (n.l += a.Size + 3 - ((a.Size - 1) % 4)),
-                a
+                ((n = {}).Size = e.read_shift(4)),
+                (e.l += n.Size + 3 - ((n.Size - 1) % 4)),
+                n
               );
             case 80:
-              return nc(e, i, !o.raw).replace(em, "");
+              return no(e, s, !i.raw).replace(em, "");
             case 81:
               return (function (e, t) {
                 if (!t)
                   throw Error("VtUnalignedString must have positive length");
-                return no(e, t, 0);
-              })(e, i).replace(em, "");
+                return ni(e, t, 0);
+              })(e, s).replace(em, "");
             case 4108:
               return (function (e) {
                 for (var t = e.read_shift(4), r = [], n = 0; n != t / 2; ++n)
-                  r.push([nh(e, 81), nh(e, 3)]);
+                  r.push([nf(e, 81), nf(e, 3)]);
                 return r;
               })(e);
             case 4126:
@@ -5689,24 +5685,24 @@
               })(e);
             default:
               throw Error(
-                "TypedPropertyValue unrecognized type " + t + " " + i
+                "TypedPropertyValue unrecognized type " + t + " " + s
               );
           }
         }
-        function nu(e, t) {
+        function nh(e, t) {
           var r,
             n,
             a,
             s,
             i,
-            o = t1(4),
-            c = t1(4);
+            o = tq(4),
+            c = tq(4);
           switch ((o.write_shift(4, 80 == e ? 31 : e), e)) {
             case 3:
               c.write_shift(-4, t);
               break;
             case 5:
-              (c = t1(8)).write_shift(8, t, "f");
+              (c = tq(8)).write_shift(8, t, "f");
               break;
             case 11:
               c.write_shift(4, t ? 1 : 0);
@@ -5723,14 +5719,14 @@
                 (a = ((r - n) / 4294967296) * 1e7),
                 (s = ((n *= 1e7) / 4294967296) | 0) > 0 &&
                   ((n %= 4294967296), (a += s)),
-                (i = t1(8)).write_shift(4, n),
+                (i = tq(8)).write_shift(4, n),
                 i.write_shift(4, a),
                 (c = i);
               break;
             case 31:
             case 80:
               for (
-                (c = t1(
+                (c = tq(
                   4 + 2 * (t.length + 1) + (t.length % 2 ? 0 : 2)
                 )).write_shift(4, t.length + 1),
                   c.write_shift(0, t, "dbcs");
@@ -5745,7 +5741,7 @@
           }
           return ep([o, c]);
         }
-        function nd(e, t) {
+        function nu(e, t) {
           var r = e.l,
             n = e.read_shift(4),
             a = e.read_shift(4),
@@ -5793,7 +5789,7 @@
             if (t) {
               var p = t[s[i][0]];
               if (
-                ((u[p.n] = nh(e, p.t, { raw: !0 })),
+                ((u[p.n] = nf(e, p.t, { raw: !0 })),
                 "version" === p.p &&
                   (u[p.n] =
                     String(u[p.n] >> 16) +
@@ -5831,26 +5827,26 @@
                     throw Error("Unsupported CodePage: " + u[p.n]);
                 }
             } else if (1 === s[i][0]) {
-              if ((Z((o = u.CodePage = nh(e, 2))), -1 !== c)) {
+              if (((o = u.CodePage = nf(e, 2)), Z(o), -1 !== c)) {
                 var m = e.l;
-                (e.l = s[c][1]), (l = nl(e, o)), (e.l = m);
+                (e.l = s[c][1]), (l = nc(e, o)), (e.l = m);
               }
             } else if (0 === s[i][0]) {
               if (0 === o) {
                 (c = i), (e.l = s[i + 1][1]);
                 continue;
               }
-              l = nl(e, o);
+              l = nc(e, o);
             } else {
               var g,
                 v = l[s[i][0]];
               switch (e[e.l]) {
                 case 65:
-                  (e.l += 4), (g = nf(e));
+                  (e.l += 4), (g = nl(e));
                   break;
                 case 30:
                 case 31:
-                  (e.l += 4), (g = nc(e, e[e.l - 4]).replace(/\u0000+$/, ""));
+                  (e.l += 4), (g = no(e, e[e.l - 4]).replace(/\u0000+$/, ""));
                   break;
                 case 3:
                   (e.l += 4), (g = e.read_shift(4, "i"));
@@ -5862,10 +5858,10 @@
                   (e.l += 4), (g = e.read_shift(8, "f"));
                   break;
                 case 11:
-                  (e.l += 4), (g = nE(e, 4));
+                  (e.l += 4), (g = nb(e, 4));
                   break;
                 case 64:
-                  (e.l += 4), (g = eN(na(e)));
+                  (e.l += 4), (g = eN(nn(e)));
                   break;
                 default:
                   throw Error("unparsed value: " + e[e.l]);
@@ -5875,7 +5871,7 @@
           }
           return (e.l = r + n), u;
         }
-        var np = [
+        var nd = [
           "CodePage",
           "Thumbnail",
           "_PID_LINKBASE",
@@ -5890,14 +5886,14 @@
           "Chartsheets",
           "ChartNames",
         ]);
-        function nm(e, t, r) {
-          var n = t1(8),
+        function np(e, t, r) {
+          var n = tq(8),
             a = [],
             s = [],
             i = 8,
             o = 0,
-            c = t1(8),
-            l = t1(8);
+            c = tq(8),
+            l = tq(8);
           if (
             (c.write_shift(4, 2),
             c.write_shift(4, 1200),
@@ -5907,12 +5903,12 @@
             (i += 8 + c.length),
             !t)
           ) {
-            (l = t1(8)).write_shift(4, 0), a.unshift(l);
-            var f = [t1(4)];
+            (l = tq(8)).write_shift(4, 0), a.unshift(l);
+            var f = [tq(4)];
             for (f[0].write_shift(4, e.length), o = 0; o < e.length; ++o) {
               var h = e[o][0];
               for (
-                (c = t1(
+                (c = tq(
                   8 + 2 * (h.length + 1) + (h.length % 2 ? 0 : 2)
                 )).write_shift(4, o + 2),
                   c.write_shift(4, h.length + 1),
@@ -5926,7 +5922,7 @@
           }
           for (o = 0; o < e.length; ++o)
             if (
-              !((t && !t[e[o][0]]) || np.indexOf(e[o][0]) > -1) &&
+              !((t && !t[e[o][0]]) || nd.indexOf(e[o][0]) > -1) &&
               null != e[o][1]
             ) {
               var u = e[o][1],
@@ -5937,7 +5933,7 @@
                   var m = u.split(".");
                   u = (+m[0] << 16) + (+m[1] || 0);
                 }
-                c = nu(p.t, u);
+                c = nh(p.t, u);
               } else {
                 var g = (function (e) {
                   switch (typeof e) {
@@ -5952,10 +5948,10 @@
                   }
                   return -1;
                 })(u);
-                -1 == g && ((g = 31), (u = String(u))), (c = nu(g, u));
+                -1 == g && ((g = 31), (u = String(u))), (c = nh(g, u));
               }
               s.push(c),
-                (l = t1(8)).write_shift(4, t ? d : 2 + o),
+                (l = tq(8)).write_shift(4, t ? d : 2 + o),
                 a.push(l),
                 (i += 8 + c.length);
             }
@@ -5968,11 +5964,11 @@
             ep([n].concat(a).concat(s))
           );
         }
-        function ng(e, t, r) {
+        function nm(e, t, r) {
           var n,
             a = e.content;
           if (!a) return {};
-          tZ(a, 0);
+          tJ(a, 0);
           var s,
             i,
             o,
@@ -5981,7 +5977,7 @@
           a.chk("feff", "Byte Order: "), a.read_shift(2);
           var f = a.read_shift(4),
             h = a.read_shift(16);
-          if (h !== eC.utils.consts.HEADER_CLSID && h !== r)
+          if (h !== eB.utils.consts.HEADER_CLSID && h !== r)
             throw Error("Bad PropertySet CLSID " + h);
           if (1 !== (s = a.read_shift(4)) && 2 !== s)
             throw Error("Unrecognized #Sets: " + s);
@@ -5992,60 +5988,60 @@
           )
             throw Error("Length mismatch: " + c + " !== " + a.l);
           2 === s && ((o = a.read_shift(16)), (l = a.read_shift(4)));
-          var u = nd(a, t),
+          var u = nu(a, t),
             d = { SystemIdentifier: f };
           for (var p in u) d[p] = u[p];
           if (((d.FMTID = i), 1 === s)) return d;
           if ((l - a.l == 2 && (a.l += 2), a.l !== l))
             throw Error("Length mismatch 2: " + a.l + " !== " + l);
           try {
-            n = nd(a, null);
+            n = nu(a, null);
           } catch (e) {}
           for (p in n) d[p] = n[p];
           return (d.FMTID = [i, o]), d;
         }
-        function nv(e, t, r, n, a, s) {
-          var i = t1(a ? 68 : 48),
+        function ng(e, t, r, n, a, s) {
+          var i = tq(a ? 68 : 48),
             o = [i];
           i.write_shift(2, 65534),
             i.write_shift(2, 0),
             i.write_shift(4, 842412599),
-            i.write_shift(16, eC.utils.consts.HEADER_CLSID, "hex"),
+            i.write_shift(16, eB.utils.consts.HEADER_CLSID, "hex"),
             i.write_shift(4, a ? 2 : 1),
             i.write_shift(16, t, "hex"),
             i.write_shift(4, a ? 68 : 48);
-          var c = nm(e, r, n);
+          var c = np(e, r, n);
           if ((o.push(c), a)) {
-            var l = nm(a, null, null);
+            var l = np(a, null, null);
             i.write_shift(16, s, "hex"),
               i.write_shift(4, 68 + c.length),
               o.push(l);
           }
           return ep(o);
         }
-        function nb(e, t) {
+        function nv(e, t) {
           return e.read_shift(t), null;
         }
-        function nE(e, t) {
+        function nb(e, t) {
           return 1 === e.read_shift(t);
         }
-        function nS(e, t) {
-          return t || (t = t1(2)), t.write_shift(2, +!!e), t;
+        function nE(e, t) {
+          return t || (t = tq(2)), t.write_shift(2, +!!e), t;
         }
-        function nw(e) {
+        function nS(e) {
           return e.read_shift(2, "u");
         }
-        function nC(e, t) {
-          return t || (t = t1(2)), t.write_shift(2, e), t;
+        function nw(e, t) {
+          return t || (t = tq(2)), t.write_shift(2, e), t;
         }
         function nB(e, t) {
           return (function (e, t, r) {
             for (var n = [], a = e.l + t; e.l < a; ) n.push(r(e, a - e.l));
             if (a !== e.l) throw Error("Slurp error");
             return n;
-          })(e, t, nw);
+          })(e, t, nS);
         }
-        function nT(e, t, r) {
+        function nC(e, t, r) {
           var n = e.read_shift(r && r.biff >= 12 ? 2 : 1),
             a = "sbcs-cont",
             s = z;
@@ -6057,7 +6053,7 @@
           var i = n ? e.read_shift(n, a) : "";
           return (z = s), i;
         }
-        function nx(e, t, r) {
+        function nT(e, t, r) {
           if (r) {
             if (r.biff >= 2 && r.biff <= 5) return e.read_shift(t, "cpstr");
             if (r.biff >= 12) return e.read_shift(t, "dbcs-cont");
@@ -6068,29 +6064,29 @@
         }
         function n_(e, t, r) {
           var n = e.read_shift(r && 2 == r.biff ? 1 : 2);
-          return 0 === n ? (e.l++, "") : nx(e, n, r);
+          return 0 === n ? (e.l++, "") : nT(e, n, r);
         }
-        function nk(e, t, r) {
+        function nx(e, t, r) {
           if (r.biff > 5) return n_(e, t, r);
           var n = e.read_shift(1);
           return 0 === n
             ? (e.l++, "")
             : e.read_shift(n, r.biff <= 4 || !e.lens ? "cpstr" : "sbcs-cont");
         }
-        function nA(e, t, r) {
+        function nk(e, t, r) {
           return (
-            r || (r = t1(3 + 2 * e.length)),
+            r || (r = tq(3 + 2 * e.length)),
             r.write_shift(2, e.length),
             r.write_shift(1, 1),
             r.write_shift(31, e, "utf16le"),
             r
           );
         }
-        function nI(e) {
+        function nA(e) {
           var t = e.read_shift(4);
           return t > 0 ? e.read_shift(t, "utf16le").replace(em, "") : "";
         }
-        function ny(e) {
+        function nI(e) {
           return [
             e.read_shift(1),
             e.read_shift(1),
@@ -6098,30 +6094,30 @@
             e.read_shift(1),
           ];
         }
-        function nR(e, t) {
-          var r = ny(e, t);
+        function ny(e, t) {
+          var r = nI(e, t);
           return (r[3] = 0), r;
         }
-        function nF(e) {
+        function nR(e) {
           return {
             r: e.read_shift(2),
             c: e.read_shift(2),
             ixfe: e.read_shift(2),
           };
         }
-        function nD(e, t, r, n) {
+        function nF(e, t, r, n) {
           return (
-            n || (n = t1(6)),
+            n || (n = tq(6)),
             n.write_shift(2, e),
             n.write_shift(2, t),
             n.write_shift(2, r || 0),
             n
           );
         }
-        function nO(e) {
-          return [e.read_shift(2), rC(e)];
+        function nD(e) {
+          return [e.read_shift(2), rw(e)];
         }
-        function nP(e) {
+        function nO(e) {
           var t = e.read_shift(2),
             r = e.read_shift(2);
           return {
@@ -6129,9 +6125,9 @@
             e: { c: e.read_shift(2), r: r },
           };
         }
-        function nN(e, t) {
+        function nP(e, t) {
           return (
-            t || (t = t1(8)),
+            t || (t = tq(8)),
             t.write_shift(2, e.s.r),
             t.write_shift(2, e.e.r),
             t.write_shift(2, e.s.c),
@@ -6139,7 +6135,7 @@
             t
           );
         }
-        function nM(e) {
+        function nN(e) {
           var t = e.read_shift(2),
             r = e.read_shift(2);
           return {
@@ -6147,29 +6143,29 @@
             e: { c: e.read_shift(1), r: r },
           };
         }
-        function nL(e) {
+        function nM(e) {
           e.l += 4;
           var t = e.read_shift(2),
             r = e.read_shift(2),
             n = e.read_shift(2);
           return (e.l += 12), [r, t, n];
         }
-        function nU(e) {
+        function nL(e) {
           (e.l += 2), (e.l += e.read_shift(2));
         }
-        var nH = {
-          0: nU,
-          4: nU,
-          5: nU,
-          6: nU,
+        var nU = {
+          0: nL,
+          4: nL,
+          5: nL,
+          6: nL,
           7: function (e) {
             return (e.l += 4), (e.cf = e.read_shift(2)), {};
           },
-          8: nU,
-          9: nU,
-          10: nU,
-          11: nU,
-          12: nU,
+          8: nL,
+          9: nL,
+          10: nL,
+          11: nL,
+          12: nL,
           13: function (e) {
             var t = {};
             return (
@@ -6180,16 +6176,16 @@
               t
             );
           },
-          14: nU,
-          15: nU,
-          16: nU,
-          17: nU,
-          18: nU,
-          19: nU,
-          20: nU,
-          21: nL,
+          14: nL,
+          15: nL,
+          16: nL,
+          17: nL,
+          18: nL,
+          19: nL,
+          20: nL,
+          21: nM,
         };
-        function nW(e, t) {
+        function nH(e, t) {
           var r = { BIFFVer: 0, dt: 0 };
           switch (
             ((r.BIFFVer = e.read_shift(2)),
@@ -6209,7 +6205,7 @@
           }
           return e.read_shift(t), r;
         }
-        function nV(e, t, r) {
+        function nW(e, t, r) {
           var n = 1536,
             a = 16;
           switch (r.bookType) {
@@ -6231,7 +6227,7 @@
             default:
               throw Error("unsupported BIFF version");
           }
-          var s = t1(a);
+          var s = tq(a);
           return (
             s.write_shift(2, n),
             s.write_shift(2, t),
@@ -6245,7 +6241,7 @@
             s
           );
         }
-        function nX(e, t, r) {
+        function nV(e, t, r) {
           var n = 0;
           (r && 2 == r.biff) || (n = e.read_shift(2));
           var a = e.read_shift(2);
@@ -6262,7 +6258,7 @@
             ]
           );
         }
-        function nG(e, t, r) {
+        function nX(e, t, r) {
           var n = e.l + t,
             a = 8 != r.biff && r.biff ? 2 : 4,
             s = e.read_shift(a),
@@ -6271,10 +6267,10 @@
             c = e.read_shift(2);
           return (e.l = n), { s: { r: s, c: o }, e: { r: i, c: c } };
         }
-        function nz(e, t, r, n) {
+        function nG(e, t, r, n) {
           var a = r && 5 == r.biff;
           return (
-            n || (n = t1(a ? 16 : 20)),
+            n || (n = tq(a ? 16 : 20)),
             n.write_shift(2, 0),
             e.style
               ? (n.write_shift(2, e.numFmtId || 0), n.write_shift(2, 65524))
@@ -6286,17 +6282,17 @@
             n
           );
         }
-        function nj(e, t, r) {
+        function nz(e, t, r) {
           var n,
-            a = nF(e, 6);
+            a = nR(e, 6);
           2 == r.biff && ++e.l;
           var s = ((n = e.read_shift(1)), 1 === e.read_shift(1) ? n : 1 === n);
           return (a.val = s), (a.t = !0 === s || !1 === s ? "b" : "e"), a;
         }
-        var n$ = function (e, t, r) {
-          return 0 === t ? "" : nk(e, t, r);
+        var nj = function (e, t, r) {
+          return 0 === t ? "" : nx(e, t, r);
         };
-        function nK(e, t, r) {
+        function n$(e, t, r) {
           var n,
             a = e.read_shift(2),
             s = {
@@ -6313,7 +6309,7 @@
               (n = (function (e, t, r) {
                 (e.l += 4), (t -= 4);
                 var n = e.l + t,
-                  a = nT(e, t, r),
+                  a = nC(e, t, r),
                   s = e.read_shift(2);
                 if (s !== (n -= e.l))
                   throw Error(
@@ -6326,7 +6322,7 @@
             s
           );
         }
-        var nY = [
+        var nK = [
           "_xlnm.Consolidate_Area",
           "_xlnm.Auto_Open",
           "_xlnm.Auto_Close",
@@ -6342,7 +6338,7 @@
           "_xlnm.Sheet_Title",
           "_xlnm._FilterDatabase",
         ];
-        function nQ(e, t, r) {
+        function nY(e, t, r) {
           var n,
             a,
             s,
@@ -6358,8 +6354,8 @@
             (u = e.read_shift(2)),
             5 == r.biff && (e.l += 2),
             (e.l += 4));
-          var d = nx(e, f, r);
-          32 & c && (d = nY[d.charCodeAt(0)]);
+          var d = nT(e, f, r);
+          32 & c && (d = nK[d.charCodeAt(0)]);
           var p = o - e.l;
           return (
             r && 2 == r.biff && --p,
@@ -6371,19 +6367,19 @@
                 o != e.l && 0 !== h && p > 0
                   ? ((n = p),
                     (s = e.l + n),
-                    (i = su(e, h, r)),
-                    s !== e.l && (a = sh(e, s - e.l, i, r)),
+                    (i = ss(e, h, r)),
+                    s !== e.l && (a = sa(e, s - e.l, i, r)),
                     [i, a])
                   : [],
             }
           );
         }
-        function nJ(e, t, r) {
+        function nQ(e, t, r) {
           if (r.biff < 8) {
             var n;
             return (
               3 == e[e.l + 1] && e[e.l]++,
-              3 == (n = nT(e, t, r)).charCodeAt(0) ? n.slice(1) : n
+              3 == (n = nC(e, t, r)).charCodeAt(0) ? n.slice(1) : n
             );
           }
           for (
@@ -6403,8 +6399,8 @@
           if (e.l != s) throw Error("Bad ExternSheet: " + e.l + " != " + s);
           return a;
         }
-        function nZ(e, t, r) {
-          var n = nM(e, 6);
+        function nJ(e, t, r) {
+          var n = nN(e, 6);
           switch (r.biff) {
             case 2:
               e.l++, (t -= 7);
@@ -6420,35 +6416,31 @@
             n,
             (function (e, t, r) {
               var n,
-                a,
-                s = e.l + t,
-                i = 2 == r.biff ? 1 : 2,
-                o = e.read_shift(i);
-              if (65535 == o) return [[], ((n = e), void (n.l += t - 2))];
-              var c = su(e, o, r);
+                a = e.l + t,
+                s = 2 == r.biff ? 1 : 2,
+                i = e.read_shift(s);
+              if (65535 == i) return [[], void (e.l += t - 2)];
+              var o = ss(e, i, r);
               return (
-                t !== o + i && (a = sh(e, t - o - i, c, r)), (e.l = s), [c, a]
+                t !== i + s && (n = sa(e, t - i - s, o, r)), (e.l = a), [o, n]
               );
             })(e, t, r, n),
           ];
         }
-        var nq = [];
-        function n1(e, t, r) {
-          if (!r.cellStyles) {
-            var n;
-            return (n = e), void (n.l += t);
-          }
-          var a = r && r.biff >= 12 ? 4 : 2,
-            s = e.read_shift(a),
-            i = e.read_shift(a),
-            o = e.read_shift(a),
-            c = e.read_shift(a),
-            l = e.read_shift(2);
-          2 == a && (e.l += 2);
-          var f = { s: s, e: i, w: o, ixfe: c, flags: l };
-          return (r.biff >= 5 || !r.biff) && (f.level = (l >> 8) & 7), f;
+        var nZ = [];
+        function nq(e, t, r) {
+          if (!r.cellStyles) return void (e.l += t);
+          var n = r && r.biff >= 12 ? 4 : 2,
+            a = e.read_shift(n),
+            s = e.read_shift(n),
+            i = e.read_shift(n),
+            o = e.read_shift(n),
+            c = e.read_shift(2);
+          2 == n && (e.l += 2);
+          var l = { s: a, e: s, w: i, ixfe: o, flags: c };
+          return (r.biff >= 5 || !r.biff) && (l.level = (c >> 8) & 7), l;
         }
-        nq[8] = function (e, t) {
+        nZ[8] = function (e, t) {
           var r = e.l + t;
           e.l += 10;
           var n = e.read_shift(2);
@@ -6456,7 +6448,7 @@
           var a = e.read_shift(1);
           return (e.l += a), (e.l = r), { fmt: n };
         };
-        var n0 = (function () {
+        var n1 = (function () {
             var e = {
                 1: 437,
                 2: 850,
@@ -6528,7 +6520,7 @@
                 204: 1257,
                 255: 16969,
               },
-              t = e_({
+              t = ex({
                 1: 437,
                 2: 850,
                 3: 1252,
@@ -6561,7 +6553,7 @@
               var n = r || {};
               return (
                 n.dateNF || (n.dateNF = "yyyymmdd"),
-                rh(
+                rf(
                   (function (t, r) {
                     var n = [],
                       a = ec(1);
@@ -6576,7 +6568,7 @@
                       case "array":
                         a = t;
                     }
-                    tZ(a, 0);
+                    tJ(a, 0);
                     var s = a.read_shift(1),
                       i = !!(136 & s),
                       o = !1,
@@ -6689,7 +6681,7 @@
                         ++b
                       ) {
                         var E = a.slice(a.l, a.l + d[b].len);
-                        (a.l += d[b].len), tZ(E, 0);
+                        (a.l += d[b].len), tJ(E, 0);
                         var S = cptable.utils.decode(u, E);
                         switch (d[b].type) {
                           case "C":
@@ -6800,7 +6792,7 @@
               versions: [2, 3, 48, 49, 131, 139, 140, 245],
               to_workbook: function (e, t) {
                 try {
-                  return rl(r(e, t), t);
+                  return rc(r(e, t), t);
                 } catch (e) {
                   if (t && t.WTF) throw e;
                 }
@@ -6811,8 +6803,8 @@
                 var a = r || {};
                 if ((+a.codepage >= 0 && Z(+a.codepage), "string" == a.type))
                   throw Error("Cannot write DBF to JS string");
-                var s = t2(),
-                  i = i5(e, { header: 1, raw: !0, cellDates: !0 }),
+                var s = t0(),
+                  i = iK(e, { header: 1, raw: !0, cellDates: !0 }),
                   o = i[0],
                   c = i.slice(1),
                   l = 0,
@@ -6841,7 +6833,7 @@
                         }
                     }
                   }
-                var d = ri(e["!ref"]),
+                var d = rs(e["!ref"]),
                   p = [];
                 for (l = 0; l <= d.e.c - d.s.c; ++l) {
                   var m = [];
@@ -6910,53 +6902,53 @@
                 for (w.write_shift(4, 13), l = 0; l < 65; ++l)
                   w.write_shift(4, 0);
                 for (l = 0; l < c.length; ++l) {
-                  var C = s.next(u);
-                  for (C.write_shift(1, 0), f = 0; f < o.length; ++f)
+                  var B = s.next(u);
+                  for (B.write_shift(1, 0), f = 0; f < o.length; ++f)
                     if (null != o[f])
                       switch (p[f]) {
                         case "L":
-                          C.write_shift(
+                          B.write_shift(
                             1,
                             null == c[l][f] ? 63 : c[l][f] ? 84 : 70
                           );
                           break;
                         case "B":
-                          C.write_shift(8, c[l][f] || 0, "f");
+                          B.write_shift(8, c[l][f] || 0, "f");
                           break;
                         case "D":
                           c[l][f]
-                            ? (C.write_shift(
+                            ? (B.write_shift(
                                 4,
                                 ("0000" + c[l][f].getFullYear()).slice(-4),
                                 "sbcs"
                               ),
-                              C.write_shift(
+                              B.write_shift(
                                 2,
                                 ("00" + (c[l][f].getMonth() + 1)).slice(-2),
                                 "sbcs"
                               ),
-                              C.write_shift(
+                              B.write_shift(
                                 2,
                                 ("00" + c[l][f].getDate()).slice(-2),
                                 "sbcs"
                               ))
-                            : C.write_shift(8, "00000000", "sbcs");
+                            : B.write_shift(8, "00000000", "sbcs");
                           break;
                         case "C":
-                          var B = String(c[l][f] || "");
+                          var C = String(c[l][f] || "");
                           for (
-                            C.write_shift(1, B, "sbcs"), h = 0;
-                            h < 250 - B.length;
+                            B.write_shift(1, C, "sbcs"), h = 0;
+                            h < 250 - C.length;
                             ++h
                           )
-                            C.write_shift(1, 32);
+                            B.write_shift(1, 32);
                       }
                 }
                 return s.next(1).write_shift(1, 26), s.end();
               },
             };
           })(),
-          n2 = (function () {
+          n0 = (function () {
             var e = {
                 AA: "\xc0",
                 BA: "\xc1",
@@ -7090,9 +7082,9 @@
                     .map(function (e) {
                       return e.replace(/\u0000/g, ";");
                     }),
-                  C = w[0];
+                  B = w[0];
                 if (S.length > 0)
-                  switch (C) {
+                  switch (B) {
                     case "ID":
                     case "E":
                     case "B":
@@ -7103,10 +7095,10 @@
                         u.push(S.slice(3).replace(/;;/g, ";"));
                       break;
                     case "C":
-                      var B = !1,
+                      var C = !1,
                         T = !1,
-                        x = !1,
                         _ = !1,
+                        x = !1,
                         k = -1,
                         A = -1;
                       for (f = 1; f < w.length; ++f)
@@ -7145,15 +7137,15 @@
                                 "string" != (a || {}).type &&
                                 (a || {}).codepage &&
                                 (E = cptable.utils.decode(a.codepage, E)),
-                              (B = !0);
+                              (C = !0);
                             break;
                           case "E":
-                            _ = !0;
-                            var I = a2(w[f].slice(1), { r: o, c: c });
+                            x = !0;
+                            var I = aY(w[f].slice(1), { r: o, c: c });
                             h[o][c] = [h[o][c], I];
                             break;
                           case "S":
-                            (x = !0), (h[o][c] = [h[o][c], "S5S"]);
+                            (_ = !0), (h[o][c] = [h[o][c], "S5S"]);
                             break;
                           case "R":
                             k = parseInt(w[f].slice(1)) - 1;
@@ -7165,21 +7157,21 @@
                             if (a && a.WTF) throw Error("SYLK bad record " + S);
                         }
                       if (
-                        (B &&
+                        (C &&
                           (h[o][c] && 2 == h[o][c].length
                             ? (h[o][c][0] = E)
                             : (h[o][c] = E),
                           (d = null)),
-                        x)
+                        _)
                       ) {
-                        if (_)
+                        if (x)
                           throw Error(
                             "SYLK shared formula cannot have own formula"
                           );
                         var y = k > -1 && h[k][A];
                         if (!y || !y[1])
                           throw Error("SYLK shared formula cannot find base");
-                        h[o][c][1] = a5(y[1], { r: o - k, c: c - A });
+                        h[o][c][1] = aZ(y[1], { r: o - k, c: c - A });
                       }
                       break;
                     case "F":
@@ -7221,7 +7213,7 @@
                               (b = parseInt(v[2], 10)),
                                 (g[s - 1] =
                                   0 === b ? { hidden: !0 } : { wch: b }),
-                                ak(g[s - 1]);
+                                aT(g[s - 1]);
                             break;
                           case "C":
                             g[(c = parseInt(w[f].slice(1)) - 1)] || (g[c] = {});
@@ -7229,7 +7221,7 @@
                           case "R":
                             m[(o = parseInt(w[f].slice(1)) - 1)] || (m[o] = {}),
                               b > 0
-                                ? ((m[o].hpt = b), (m[o].hpx = aI(b)))
+                                ? ((m[o].hpt = b), (m[o].hpx = ax(b)))
                                 : 0 === b && (m[o].hidden = !0);
                             break;
                           default:
@@ -7264,7 +7256,7 @@
                 })(e, t),
                 n = r[0],
                 s = r[1],
-                i = rh(n, t);
+                i = rf(n, t);
               return (
                 eT(s).forEach(function (e) {
                   i[e] = s[e];
@@ -7276,14 +7268,14 @@
               (e["|"] = 254),
               {
                 to_workbook: function (e, t) {
-                  return rl(s(e, t), t);
+                  return rc(s(e, t), t);
                 },
                 to_sheet: s,
                 from_sheet: function (e, t) {
                   var r,
                     n = ["ID;PWXL;N;E"],
                     a = [],
-                    s = ri(e["!ref"]),
+                    s = rs(e["!ref"]),
                     i = Array.isArray(e);
                   n.push("P;PGeneral"),
                     n.push("F;P0;DG0G8;M255"),
@@ -7294,8 +7286,8 @@
                           t.hidden
                             ? (n += "0")
                             : ("number" == typeof t.width &&
-                                (t.wpx = aC(t.width)),
-                              "number" == typeof t.wpx && (t.wch = aB(t.wpx)),
+                                (t.wpx = aE(t.width)),
+                              "number" == typeof t.wpx && (t.wch = aS(t.wpx)),
                               "number" == typeof t.wch &&
                                 (n += Math.round(t.wch))),
                             " " != n.charAt(n.length - 1) && e.push(n);
@@ -7309,7 +7301,7 @@
                             ? (n += "M0;")
                             : t.hpt
                               ? (n += "M" + 20 * t.hpt + ";")
-                              : t.hpx && (n += "M" + 20 * aA(t.hpx) + ";"),
+                              : t.hpx && (n += "M" + 20 * a_(t.hpx) + ";"),
                             n.length > 2 && e.push(n + "R" + (r + 1));
                         });
                       })(n, e["!rows"]),
@@ -7323,7 +7315,7 @@
                     );
                   for (var o = s.s.r; o <= s.e.r; ++o)
                     for (var c = s.s.c; c <= s.e.c; ++c) {
-                      var l = rn({ r: o, c: c });
+                      var l = rr({ r: o, c: c });
                       (r = i ? (e[o] || [])[c] : e[l]) &&
                         (null != r.v || (r.f && !r.F)) &&
                         a.push(
@@ -7334,7 +7326,7 @@
                                 (a += e.v || 0),
                                   e.f &&
                                     !e.F &&
-                                    (a += ";E" + a3(e.f, { r: r, c: n }));
+                                    (a += ";E" + aJ(e.f, { r: r, c: n }));
                                 break;
                               case "b":
                                 a += e.v ? "TRUE" : "FALSE";
@@ -7357,7 +7349,7 @@
               }
             );
           })(),
-          n4 = (function () {
+          n2 = (function () {
             var e, t;
             function r(e, t) {
               for (
@@ -7405,7 +7397,7 @@
               return t && t.sheetRows && (i = i.slice(0, t.sheetRows)), i;
             }
             function n(e, t) {
-              return rh(
+              return rf(
                 (function (e, t) {
                   switch (t.type) {
                     case "base64":
@@ -7424,7 +7416,7 @@
             }
             return {
               to_workbook: function (e, t) {
-                return rl(n(e, t), t);
+                return rc(n(e, t), t);
               },
               to_sheet: n,
               from_sheet:
@@ -7440,7 +7432,7 @@
                 function (r) {
                   var n,
                     a = [],
-                    s = ri(r["!ref"]),
+                    s = rs(r["!ref"]),
                     i = Array.isArray(r);
                   e(a, "TABLE", 0, 1, "sheetjs"),
                     e(a, "VECTORS", 0, s.e.r - s.s.r + 1, ""),
@@ -7449,7 +7441,7 @@
                   for (var o = s.s.r; o <= s.e.r; ++o) {
                     t(a, -1, 0, "BOT");
                     for (var c = s.s.c; c <= s.e.c; ++c) {
-                      var l = rn({ r: o, c: c });
+                      var l = rr({ r: o, c: c });
                       if (!(n = i ? (r[o] || [])[c] : r[l])) {
                         t(a, 1, 0, "");
                         continue;
@@ -7487,7 +7479,7 @@
                 }),
             };
           })(),
-          n3 = (function () {
+          n4 = (function () {
             function e(e) {
               return e
                 .replace(/\\/g, "\\b")
@@ -7495,7 +7487,7 @@
                 .replace(/\n/g, "\\n");
             }
             function t(e, t) {
-              return rh(
+              return rf(
                 (function (e, t) {
                   for (
                     var r = e.split("\n"), n = -1, a = -1, s = 0, i = [];
@@ -7504,7 +7496,7 @@
                   ) {
                     var o = r[s].trim().split(":");
                     if ("cell" === o[0]) {
-                      var c = rr(o[1]);
+                      var c = rt(o[1]);
                       if (i.length <= c.r)
                         for (n = i.length; n <= c.r; ++n) i[n] || (i[n] = []);
                       switch (((n = c.r), (a = c.c), o[2])) {
@@ -7536,7 +7528,7 @@
               "--SocialCalcSpreadsheetControlSave\nContent-type: text/plain; charset=UTF-8\n";
             return {
               to_workbook: function (e, r) {
-                return rl(t(e, r), r);
+                return rc(t(e, r), r);
               },
               to_sheet: t,
               from_sheet: function (t) {
@@ -7552,7 +7544,7 @@
                         n = [],
                         a = [],
                         s = "",
-                        i = ra(t["!ref"]),
+                        i = rn(t["!ref"]),
                         o = Array.isArray(t),
                         c = i.s.r;
                       c <= i.e.r;
@@ -7560,7 +7552,7 @@
                     )
                       for (var l = i.s.c; l <= i.e.c; ++l)
                         if (
-                          ((s = rn({ r: c, c: l })),
+                          ((s = rr({ r: c, c: l })),
                           (r = o ? (t[c] || [])[l] : t[s]) &&
                             null != r.v &&
                             "z" !== r.t)
@@ -7614,7 +7606,7 @@
               },
             };
           })(),
-          n5 = (function () {
+          n3 = (function () {
             function e(e, t, r, n, a) {
               a.raw
                 ? (t[r][n] = e)
@@ -7652,7 +7644,7 @@
             function a(t, r) {
               var a,
                 s = "",
-                i = "string" == r.type ? [0, 0, 0, 0] : i$(t, r);
+                i = "string" == r.type ? [0, 0, 0, 0] : iN(t, r);
               switch (r.type) {
                 case "base64":
                   s = ea.decode(t);
@@ -7685,7 +7677,7 @@
                     cptable.utils.encode(28591, s)
                   )),
               "socialcalc:version:" == s.slice(0, 19))
-                ? n3.to_sheet("string" == r.type ? s : ts(s), r)
+                ? n4.to_sheet("string" == r.type ? s : ts(s), r)
                 : ((a = s),
                   !(r && r.PRN) ||
                   "sep=" == a.slice(0, 4) ||
@@ -7759,10 +7751,10 @@
                                 E,
                                 S,
                                 w,
-                                C,
                                 B,
+                                C,
                                 T,
-                                x = 0;
+                                _ = 0;
                               v &&
                                 t.match(v) &&
                                 ((n = a.dateNF),
@@ -7772,7 +7764,7 @@
                                 (E = -1),
                                 (S = -1),
                                 (w = -1),
-                                (C = -1),
+                                (B = -1),
                                 (n.match(ew) || []).forEach(function (e, t) {
                                   var r = parseInt(s[t + 1], 10);
                                   switch (e.toLowerCase().charAt(0)) {
@@ -7786,18 +7778,18 @@
                                       S = r;
                                       break;
                                     case "s":
-                                      C = r;
+                                      B = r;
                                       break;
                                     case "m":
                                       S >= 0 ? (w = r) : (b = r);
                                   }
                                 }),
-                                C >= 0 &&
+                                B >= 0 &&
                                   -1 == w &&
                                   b >= 0 &&
                                   ((w = b), (b = -1)),
                                 7 ==
-                                  (B =
+                                  (C =
                                     (
                                       "" +
                                       (p >= 0 ? p : new Date().getFullYear())
@@ -7806,24 +7798,24 @@
                                     ("00" + (b >= 1 ? b : 1)).slice(-2) +
                                     "-" +
                                     ("00" + (E >= 1 ? E : 1)).slice(-2))
-                                    .length && (B = "0" + B),
-                                8 == B.length && (B = "20" + B),
+                                    .length && (C = "0" + C),
+                                8 == C.length && (C = "20" + C),
                                 (T =
                                   ("00" + (S >= 0 ? S : 0)).slice(-2) +
                                   ":" +
                                   ("00" + (w >= 0 ? w : 0)).slice(-2) +
                                   ":" +
-                                  ("00" + (C >= 0 ? C : 0)).slice(-2)),
+                                  ("00" + (B >= 0 ? B : 0)).slice(-2)),
                                 (t =
-                                  -1 == S && -1 == w && -1 == C
-                                    ? B
+                                  -1 == S && -1 == w && -1 == B
+                                    ? C
                                     : -1 == p && -1 == b && -1 == E
                                       ? T
-                                      : B + "T" + T),
-                                (x = 1)),
+                                      : C + "T" + T),
+                                (_ = 1)),
                                 a.cellDates
-                                  ? ((r.t = "d"), (r.v = eN(t, x)))
-                                  : ((r.t = "n"), (r.v = eI(eN(t, x)))),
+                                  ? ((r.t = "d"), (r.v = eN(t, _)))
+                                  : ((r.t = "n"), (r.v = eI(eN(t, _)))),
                                 !1 !== a.cellText &&
                                   (r.w = ev.format(
                                     r.z,
@@ -7839,7 +7831,7 @@
                             ("z" == r.t ||
                               (a.dense
                                 ? (i[c] || (i[c] = []), (i[c][l] = r))
-                                : (i[rn({ c: l, r: c })] = r)),
+                                : (i[rr({ c: l, r: c })] = r)),
                             (h = u + 1),
                             (g = e.charCodeAt(h)),
                             o.e.c < l && (o.e.c = l),
@@ -7862,9 +7854,9 @@
                             case 13:
                               if (!p && b()) break e;
                           }
-                        return u - h > 0 && b(), (i["!ref"] = rs(o)), i;
+                        return u - h > 0 && b(), (i["!ref"] = ra(o)), i;
                       })(a, r)
-                    : rh(
+                    : rf(
                         (function (t, r) {
                           var n = r || {},
                             a = [];
@@ -7904,27 +7896,27 @@
             }
             return {
               to_workbook: function (e, t) {
-                return rl(a(e, t), t);
+                return rc(a(e, t), t);
               },
               to_sheet: a,
               from_sheet: function (e) {
                 for (
                   var t,
                     r = [],
-                    n = ri(e["!ref"]),
+                    n = rs(e["!ref"]),
                     a = Array.isArray(e),
                     s = n.s.r;
                   s <= n.e.r;
                   ++s
                 ) {
                   for (var i = [], o = n.s.c; o <= n.e.c; ++o) {
-                    var c = rn({ r: s, c: o });
+                    var c = rr({ r: s, c: o });
                     if (!(t = a ? (e[s] || [])[o] : e[c]) || null == t.v) {
                       i.push("          ");
                       continue;
                     }
                     for (
-                      var l = (t.w || (rc(t), t.w) || "").slice(0, 10);
+                      var l = (t.w || (ro(t), t.w) || "").slice(0, 10);
                       l.length < 10;
                     )
                       l += " ";
@@ -7936,7 +7928,7 @@
               },
             };
           })(),
-          n6 = (function () {
+          n5 = (function () {
             function e(e, t) {
               if (!e) return e;
               var r = t || {},
@@ -7954,13 +7946,13 @@
               return (
                 !(function (e, t, r) {
                   if (e) {
-                    tZ(e, e.l || 0);
+                    tJ(e, e.l || 0);
                     for (var n = r.Enum || i; e.l < e.length; ) {
                       var a = e.read_shift(2),
                         s = n[a] || n[255],
                         o = e.read_shift(2),
                         c = e.l + o,
-                        l = (s.f || tq)(e, o, r);
+                        l = (s.f || tZ)(e, o, r);
                       if (((e.l = c), t(l, s.n, a))) return;
                     }
                   }
@@ -7991,7 +7983,7 @@
                             r.dense
                               ? (n[t[0].r] || (n[t[0].r] = []),
                                 (n[t[0].r][t[0].c] = t[1]))
-                              : (n[rn(t[0])] = t[1]);
+                              : (n[rr(t[0])] = t[1]);
                       }
                     else
                       switch (o) {
@@ -8005,7 +7997,7 @@
                         case 40:
                           if (
                             (t[3] > s &&
-                              ((n["!ref"] = rs(f)),
+                              ((n["!ref"] = ra(f)),
                               (c[a] = n),
                               (n = r.dense ? [] : {}),
                               (f = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } }),
@@ -8017,14 +8009,14 @@
                           r.dense
                             ? (n[t[0].r] || (n[t[0].r] = []),
                               (n[t[0].r][t[0].c] = t[1]))
-                            : (n[rn(t[0])] = t[1]),
+                            : (n[rr(t[0])] = t[1]),
                             f.e.c < t[0].c && (f.e.c = t[0].c),
                             f.e.r < t[0].r && (f.e.r = t[0].r);
                       }
                   },
                   r
                 ),
-                (n["!ref"] = rs(f)),
+                (n["!ref"] = ra(f)),
                 (c[a] = n),
                 { SheetNames: l, Sheets: c }
               );
@@ -8086,7 +8078,7 @@
               return (r[1].v = a), r;
             }
             var i = {
-                0: { n: "BOF", f: nw },
+                0: { n: "BOF", f: nS },
                 1: { n: "EOF" },
                 2: { n: "CALCMODE" },
                 3: { n: "CALCORDER" },
@@ -8180,7 +8172,7 @@
                 72: { n: "ACOMM" },
                 73: { n: "AMACRO" },
                 74: { n: "PARSE" },
-                255: { n: "", f: tq },
+                255: { n: "", f: tZ },
               },
               o = {
                 0: { n: "BOF" },
@@ -8270,7 +8262,7 @@
                     return (e.l += t - 10), r;
                   },
                 },
-                255: { n: "", f: tq },
+                255: { n: "", f: tZ },
               };
             return {
               to_workbook: function (t, r) {
@@ -8287,7 +8279,7 @@
               },
             };
           })(),
-          n8 = (function () {
+          n6 = (function () {
             var e = tf("t"),
               t = tf("rPr");
             function r(r) {
@@ -8418,7 +8410,7 @@
                 });
             };
           })(),
-          n7 = (function () {
+          n8 = (function () {
             var e = /(\r\n|\n)/g;
             function t(t) {
               var r,
@@ -8454,10 +8446,10 @@
               return e.map(t).join("");
             };
           })(),
-          n9 = /<(?:\w+:)?t[^>]*>([^<]*)<\/(?:\w+:)?t>/g,
-          ae = /<(?:\w+:)?r>/,
-          at = /<(?:\w+:)?rPh.*?>([\s\S]*?)<\/(?:\w+:)?rPh>/g;
-        function ar(e, t) {
+          n7 = /<(?:\w+:)?t[^>]*>([^<]*)<\/(?:\w+:)?t>/g,
+          n9 = /<(?:\w+:)?r>/,
+          ae = /<(?:\w+:)?rPh.*?>([\s\S]*?)<\/(?:\w+:)?rPh>/g;
+        function at(e, t) {
           var r = !t || t.cellHTML,
             n = {};
           return e
@@ -8470,82 +8462,41 @@
                   )),
                   (n.r = ts(e)),
                   r && (n.h = tr(n.t)))
-                : e.match(ae) &&
+                : e.match(n9) &&
                   ((n.r = ts(e)),
                   (n.t = e6(
                     ts(
-                      (e.replace(at, "").match(n9) || [])
+                      (e.replace(ae, "").match(n7) || [])
                         .join("")
                         .replace(eq, "")
                     )
                   )),
-                  r && (n.h = n7(n8(n.r)))),
+                  r && (n.h = n8(n6(n.r)))),
               n)
             : { t: "" };
         }
-        var an = /<(?:\w+:)?sst([^>]*)>([\s\S]*)<\/(?:\w+:)?sst>/,
-          aa = /<(?:\w+:)?(?:si|sstItem)>/g,
-          as = /<\/(?:\w+:)?(?:si|sstItem)>/;
-        r$.SST =
+        var ar = /<(?:\w+:)?sst([^>]*)>([\s\S]*)<\/(?:\w+:)?sst>/,
+          an = /<(?:\w+:)?(?:si|sstItem)>/g,
+          aa = /<\/(?:\w+:)?(?:si|sstItem)>/;
+        rj.SST =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings";
-        var ai = /^\s|\s$|[\t\n\r]/;
-        function ao(e, t) {
-          if (!t.bookSST) return "";
-          var r = [eJ];
-          r[r.length] = tE("sst", null, {
-            xmlns: tw.main[0],
-            count: e.Count,
-            uniqueCount: e.Unique,
-          });
-          for (var n = 0; n != e.length; ++n)
-            if (null != e[n]) {
-              var a = e[n],
-                s = "<si>";
-              a.r
-                ? (s += a.r)
-                : ((s += "<t"),
-                  a.t || (a.t = ""),
-                  a.t.match(ai) && (s += ' xml:space="preserve"'),
-                  (s += ">" + e9(a.t) + "</t>")),
-                (s += "</si>"),
-                (r[r.length] = s);
-            }
-          return (
-            r.length > 2 &&
-              ((r[r.length] = "</sst>"), (r[1] = r[1].replace("/>", ">"))),
-            r.join("")
-          );
-        }
-        var ac = function (e, t) {
-          var r = !1;
-          return (
-            null == t && ((r = !0), (t = t1(15 + 4 * e.t.length))),
-            t.write_shift(1, 0),
-            rp(e.t, t),
-            r ? t.slice(0, t.l) : t
-          );
-        };
-        function al(e) {
-          var t,
-            r = t2();
-          t4(
-            r,
-            "BrtBeginSst",
-            (t || (t = t1(8)),
-            t.write_shift(4, e.Count),
-            t.write_shift(4, e.Unique),
-            t)
-          );
-          for (var n = 0; n < e.length; ++n) t4(r, "BrtSSTItem", ac(e[n]));
-          return t4(r, "BrtEndSst"), r.end();
-        }
-        function af(e) {
+        var as = /^\s|\s$|[\t\n\r]/,
+          ai = function (e, t) {
+            var r = !1;
+            return (
+              null == t && ((r = !0), (t = tq(15 + 4 * e.t.length))),
+              t.write_shift(1, 0),
+              rd(e.t, t),
+              r ? t.slice(0, t.l) : t
+            );
+          };
+        function ao(e) {
           if ("undefined" != typeof cptable) return cptable.utils.encode(j, e);
           for (var t = [], r = e.split(""), n = 0; n < r.length; ++n)
             t[n] = r[n].charCodeAt(0);
           return t;
         }
-        function ah(e, t) {
+        function ac(e, t) {
           var r = {};
           return (
             (r.Major = e.read_shift(2)),
@@ -8554,7 +8505,7 @@
             r
           );
         }
-        function au(e, t) {
+        function al(e, t) {
           var r = e.l + t,
             n = {};
           (n.Flags = 63 & e.read_shift(4)),
@@ -8587,7 +8538,7 @@
             n
           );
         }
-        function ad(e, t) {
+        function af(e, t) {
           var r = {},
             n = e.l + t;
           return (
@@ -8602,18 +8553,18 @@
             r
           );
         }
-        function ap(e) {
+        function ah(e) {
           var t,
             r,
             n = 0,
-            a = af(e),
+            a = ao(e),
             s = a.length + 1;
           for (r = 1, (t = ec(s))[0] = a.length; r != s; ++r) t[r] = a[r - 1];
           for (r = s - 1; r >= 0; --r)
             n = (((16384 & n) == 0 ? 0 : 1) | ((n << 1) & 32767)) ^ t[r];
           return 52811 ^ n;
         }
-        var am =
+        var au =
             ((m = [
               187, 255, 255, 186, 255, 255, 185, 128, 0, 190, 15, 0, 191, 15, 0,
             ]),
@@ -8654,7 +8605,7 @@
                 var t,
                   r,
                   n,
-                  a = af(e),
+                  a = ao(e),
                   s = E(a),
                   i = a.length,
                   o = ec(16),
@@ -8690,23 +8641,23 @@
                   --n;
               return o;
             }),
-          ag = function (e, t, r, n, a) {
+          ad = function (e, t, r, n, a) {
             var s, i;
-            for (a || (a = t), n || (n = am(e)), s = 0; s != t.length; ++s)
+            for (a || (a = t), n || (n = au(e)), s = 0; s != t.length; ++s)
               (i = (((i = t[s] ^ n[r]) >> 5) | (i << 3)) & 255),
                 (a[s] = i),
                 ++r;
             return [a, r, n];
           },
-          av = function (e) {
+          ap = function (e) {
             var t = 0,
-              r = am(e);
+              r = au(e);
             return function (e) {
-              var n = ag("", e, t, r);
+              var n = ad("", e, t, r);
               return (t = n[1]), n[0];
             };
           },
-          ab = (function () {
+          am = (function () {
             function e(e, r) {
               switch (r.type) {
                 case "base64":
@@ -8724,19 +8675,19 @@
               var r = (t || {}).dense ? [] : {};
               if (!e.match(/\\trowd/)) throw Error("RTF missing table");
               return (
-                (r["!ref"] = rs({ s: { c: 0, r: 0 }, e: { c: 0, r: 0 } })), r
+                (r["!ref"] = ra({ s: { c: 0, r: 0 }, e: { c: 0, r: 0 } })), r
               );
             }
             return {
               to_workbook: function (t, r) {
-                return rl(e(t, r), r);
+                return rc(e(t, r), r);
               },
               to_sheet: e,
               from_sheet: function (e) {
                 for (
                   var t,
                     r = ["{\\rtf1\\ansi"],
-                    n = ri(e["!ref"]),
+                    n = rs(e["!ref"]),
                     a = Array.isArray(e),
                     s = n.s.r;
                   s <= n.e.r;
@@ -8746,10 +8697,10 @@
                   for (var i = n.s.c; i <= n.e.c; ++i)
                     r.push("\\cellx" + (i + 1));
                   for (r.push("\\pard\\intbl"), i = n.s.c; i <= n.e.c; ++i) {
-                    var o = rn({ r: s, c: i });
+                    var o = rr({ r: s, c: i });
                     (t = a ? (e[s] || [])[i] : e[o]) &&
                       (null != t.v || (t.f && !t.F)) &&
-                      (r.push(" " + (t.w || (rc(t), t.w))), r.push("\\cell"));
+                      (r.push(" " + (t.w || (ro(t), t.w))), r.push("\\cell"));
                   }
                   r.push("\\pard\\intbl\\row");
                 }
@@ -8757,12 +8708,12 @@
               },
             };
           })();
-        function aE(e) {
+        function ag(e) {
           for (var t = 0, r = 1; 3 != t; ++t)
             r = 256 * r + (e[t] > 255 ? 255 : e[t] < 0 ? 0 : e[t]);
           return r.toString(16).toUpperCase().slice(1);
         }
-        function aS(e, t) {
+        function av(e, t) {
           if (0 === t) return e;
           var r,
             n = (function (e) {
@@ -8797,7 +8748,7 @@
             ]);
           return (
             t < 0 ? (n[2] = n[2] * (1 + t)) : (n[2] = 1 - (1 - n[2]) * (1 - t)),
-            aE(
+            ag(
               (function (e) {
                 var t,
                   r = e[0],
@@ -8834,43 +8785,43 @@
             )
           );
         }
-        var aw = 6;
-        function aC(e) {
-          return Math.floor((e + Math.round(128 / aw) / 256) * aw);
+        var ab = 6;
+        function aE(e) {
+          return Math.floor((e + Math.round(128 / ab) / 256) * ab);
+        }
+        function aS(e) {
+          return Math.floor(((e - 5) / ab) * 100 + 0.5) / 100;
+        }
+        function aw(e) {
+          return Math.round(((e * ab + 5) / ab) * 256) / 256;
         }
         function aB(e) {
-          return Math.floor(((e - 5) / aw) * 100 + 0.5) / 100;
+          return aw(aS(aE(e)));
+        }
+        function aC(e) {
+          var t = Math.abs(e - aB(e)),
+            r = ab;
+          if (t > 0.005)
+            for (ab = 1; ab < 15; ++ab)
+              Math.abs(e - aB(e)) <= t && ((t = Math.abs(e - aB(e))), (r = ab));
+          ab = r;
         }
         function aT(e) {
-          return Math.round(((e * aw + 5) / aw) * 256) / 256;
-        }
-        function ax(e) {
-          return aT(aB(aC(e)));
-        }
-        function a_(e) {
-          var t = Math.abs(e - ax(e)),
-            r = aw;
-          if (t > 0.005)
-            for (aw = 1; aw < 15; ++aw)
-              Math.abs(e - ax(e)) <= t && ((t = Math.abs(e - ax(e))), (r = aw));
-          aw = r;
-        }
-        function ak(e) {
           e.width
-            ? ((e.wpx = aC(e.width)), (e.wch = aB(e.wpx)), (e.MDW = aw))
+            ? ((e.wpx = aE(e.width)), (e.wch = aS(e.wpx)), (e.MDW = ab))
             : e.wpx
-              ? ((e.wch = aB(e.wpx)), (e.width = aT(e.wch)), (e.MDW = aw))
+              ? ((e.wch = aS(e.wpx)), (e.width = aw(e.wch)), (e.MDW = ab))
               : "number" == typeof e.wch &&
-                ((e.width = aT(e.wch)), (e.wpx = aC(e.width)), (e.MDW = aw)),
+                ((e.width = aw(e.wch)), (e.wpx = aE(e.width)), (e.MDW = ab)),
             e.customWidth && delete e.customWidth;
         }
-        function aA(e) {
+        function a_(e) {
           return (96 * e) / 96;
         }
-        function aI(e) {
+        function ax(e) {
           return (96 * e) / 96;
         }
-        var ay = {
+        var ak = {
             None: "none",
             Solid: "solid",
             Gray50: "mediumGray",
@@ -8887,8 +8838,8 @@
             ThinReverseDiagStripe: "lightDown",
             ThinHorzCross: "lightGrid",
           },
-          aR = ["numFmtId", "fillId", "fontId", "borderId", "xfId"],
-          aF = [
+          aA = ["numFmtId", "fillId", "fontId", "borderId", "xfId"],
+          aI = [
             "applyAlignment",
             "applyBorder",
             "applyFill",
@@ -8898,11 +8849,11 @@
             "pivotButton",
             "quotePrefix",
           ],
-          aD =
+          ay =
             ((S = /<(?:\w+:)?numFmts([^>]*)>[\S\s]*?<\/(?:\w+:)?numFmts>/),
             (w = /<(?:\w+:)?cellXfs([^>]*)>[\S\s]*?<\/(?:\w+:)?cellXfs>/),
-            (C = /<(?:\w+:)?fills([^>]*)>[\S\s]*?<\/(?:\w+:)?fills>/),
-            (B = /<(?:\w+:)?fonts([^>]*)>[\S\s]*?<\/(?:\w+:)?fonts>/),
+            (B = /<(?:\w+:)?fills([^>]*)>[\S\s]*?<\/(?:\w+:)?fills>/),
+            (C = /<(?:\w+:)?fonts([^>]*)>[\S\s]*?<\/(?:\w+:)?fonts>/),
             (T = /<(?:\w+:)?borders([^>]*)>[\S\s]*?<\/(?:\w+:)?borders>/),
             function (e, t, r) {
               var n,
@@ -8950,7 +8901,7 @@
                           }
                         }
                     })(n, a, r),
-                  (n = e.match(B)) &&
+                  (n = e.match(C)) &&
                     (function (e, t, r, n) {
                       t.Fonts = [];
                       var a = {},
@@ -9074,8 +9025,8 @@
                               a.color.rgb = i.rgb.slice(-6);
                             else if (i.indexed) {
                               a.color.index = parseInt(i.indexed, 10);
-                              var o = rL[a.color.index];
-                              if ((81 == a.color.index && (o = rL[1]), !o))
+                              var o = rM[a.color.index];
+                              if ((81 == a.color.index && (o = rM[1]), !o))
                                 throw Error(e);
                               a.color.rgb =
                                 o[0].toString(16) +
@@ -9088,7 +9039,7 @@
                                 i.theme &&
                                   r.themeElements &&
                                   r.themeElements.clrScheme &&
-                                  (a.color.rgb = aS(
+                                  (a.color.rgb = av(
                                     r.themeElements.clrScheme[a.color.theme]
                                       .rgb,
                                     a.color.tint || 0
@@ -9108,7 +9059,7 @@
                         }
                       });
                     })(n, a, t, r),
-                  (n = e.match(C)) &&
+                  (n = e.match(B)) &&
                     (function (e, t, r, n) {
                       t.Fills = [];
                       var a = {},
@@ -9282,10 +9233,10 @@
                             break;
                           case "<xf":
                           case "<xf/>":
-                            for (n = s, delete n[0], i = 0; i < aR.length; ++i)
-                              n[aR[i]] && (n[aR[i]] = parseInt(n[aR[i]], 10));
-                            for (i = 0; i < aF.length; ++i)
-                              n[aF[i]] && (n[aF[i]] = ta(n[aF[i]]));
+                            for (n = s, delete n[0], i = 0; i < aA.length; ++i)
+                              n[aA[i]] && (n[aA[i]] = parseInt(n[aA[i]], 10));
+                            for (i = 0; i < aI.length; ++i)
+                              n[aI[i]] && (n[aI[i]] = ta(n[aI[i]]));
                             if (t.NumberFmt && n.numFmtId > 392) {
                               for (i = 392; i > 60; --i)
                                 if (t.NumberFmt[n.numFmtId] == t.NumberFmt[i]) {
@@ -9325,77 +9276,10 @@
                 a
               );
             }),
-          aO = tE("styleSheet", null, { xmlns: tw.main[0], "xmlns:vt": tw.vt });
-        function aP(e, t) {
-          var r,
-            n,
-            a,
-            s,
-            i,
-            o = [eJ, aO];
-          return (
-            e.SSF &&
-              null !=
-                ((r = e.SSF),
-                (n = ["<numFmts>"]),
-                [
-                  [5, 8],
-                  [23, 26],
-                  [41, 44],
-                  [50, 392],
-                ].forEach(function (e) {
-                  for (var t = e[0]; t <= e[1]; ++t)
-                    null != r[t] &&
-                      (n[n.length] = tE("numFmt", null, {
-                        numFmtId: t,
-                        formatCode: e9(r[t]),
-                      }));
-                }),
-                (i =
-                  1 === n.length
-                    ? ""
-                    : ((n[n.length] = "</numFmts>"),
-                      (n[0] = tE("numFmts", null, {
-                        count: n.length - 2,
-                      }).replace("/>", ">")),
-                      n.join("")))) &&
-              (o[o.length] = i),
-            (o[o.length] =
-              '<fonts count="1"><font><sz val="12"/><color theme="1"/><name val="Calibri"/><family val="2"/><scheme val="minor"/></font></fonts>'),
-            (o[o.length] =
-              '<fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills>'),
-            (o[o.length] =
-              '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>'),
-            (o[o.length] =
-              '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'),
-            (a = t.cellXfs),
-            ((s = [])[s.length] = tE("cellXfs", null)),
-            a.forEach(function (e) {
-              s[s.length] = tE("xf", null, e);
-            }),
-            (s[s.length] = "</cellXfs>"),
-            (i =
-              2 === s.length
-                ? ""
-                : ((s[0] = tE("cellXfs", null, { count: s.length - 2 }).replace(
-                    "/>",
-                    ">"
-                  )),
-                  s.join(""))) && (o[o.length] = i),
-            (o[o.length] =
-              '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'),
-            (o[o.length] = '<dxfs count="0"/>'),
-            (o[o.length] =
-              '<tableStyles count="0" defaultTableStyle="TableStyleMedium9" defaultPivotStyle="PivotStyleMedium4"/>'),
-            o.length > 2 &&
-              ((o[o.length] = "</styleSheet>"),
-              (o[1] = o[1].replace("/>", ">"))),
-            o.join("")
-          );
-        }
-        r$.STY =
+          aR = tE("styleSheet", null, { xmlns: tw.main[0], "xmlns:vt": tw.vt });
+        rj.STY =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles";
-        var aN = e_([
+        var aF = ex([
           "none",
           "solid",
           "mediumGray",
@@ -9416,13 +9300,13 @@
           "gray125",
           "gray0625",
         ]);
-        function aM(e, t) {
-          t || (t = t1(84));
-          var r = aN[e.patternType];
+        function aD(e, t) {
+          t || (t = tq(84));
+          var r = aF[e.patternType];
           null == r && (r = 40), t.write_shift(4, r);
           var n = 0;
           if (40 != r)
-            for (rA({ auto: 1 }, t), rA({ auto: 1 }, t); n < 12; ++n)
+            for (rk({ auto: 1 }, t), rk({ auto: 1 }, t); n < 12; ++n)
               t.write_shift(4, 0);
           else {
             for (; n < 4; ++n) t.write_shift(4, 0);
@@ -9430,9 +9314,9 @@
           }
           return t.length > t.l ? t.slice(0, t.l) : t;
         }
-        function aL(e, t, r) {
+        function aO(e, t, r) {
           return (
-            r || (r = t1(16)),
+            r || (r = tq(16)),
             r.write_shift(2, t || 0),
             r.write_shift(2, e.numFmtId || 0),
             r.write_shift(2, 0),
@@ -9447,9 +9331,9 @@
             r
           );
         }
-        function aU(e, t) {
+        function aP(e, t) {
           return (
-            t || (t = t1(10)),
+            t || (t = tq(10)),
             t.write_shift(1, 0),
             t.write_shift(1, 0),
             t.write_shift(4, 0),
@@ -9457,163 +9341,9 @@
             t
           );
         }
-        function aH(e, t) {
-          var r,
-            n,
-            a,
-            s,
-            i,
-            o,
-            c,
-            l,
-            f,
-            h,
-            u,
-            d,
-            p,
-            m = t2();
-          return (
-            t4(m, "BrtBeginStyleSheet"),
-            !(function (e, t) {
-              if (t) {
-                var r = 0;
-                [
-                  [5, 8],
-                  [23, 26],
-                  [41, 44],
-                  [50, 392],
-                ].forEach(function (e) {
-                  for (var n = e[0]; n <= e[1]; ++n) null != t[n] && ++r;
-                }),
-                  0 != r &&
-                    (t4(e, "BrtBeginFmts", ru(r)),
-                    [
-                      [5, 8],
-                      [23, 26],
-                      [41, 44],
-                      [50, 392],
-                    ].forEach(function (r) {
-                      for (var n = r[0]; n <= r[1]; ++n)
-                        null != t[n] &&
-                          t4(
-                            e,
-                            "BrtFmt",
-                            (function (e, t, r) {
-                              r || (r = t1(6 + 4 * t.length)),
-                                r.write_shift(2, e),
-                                rp(t, r);
-                              var n = r.length > r.l ? r.slice(0, r.l) : r;
-                              return null == r.l && (r.l = r.length), n;
-                            })(n, t[n])
-                          );
-                    }),
-                    t4(e, "BrtEndFmts"));
-              }
-            })(m, e.SSF),
-            t4((r = m), "BrtBeginFonts", ru(1)),
-            t4(
-              r,
-              "BrtFont",
-              ((n = {
-                sz: 12,
-                color: { theme: 1 },
-                name: "Calibri",
-                family: 2,
-                scheme: "minor",
-              }),
-              a || (a = t1(153)),
-              a.write_shift(2, 20 * n.sz),
-              (s = a) || (s = t1(2)),
-              (i =
-                (n.italic ? 2 : 0) |
-                (n.strike ? 8 : 0) |
-                (n.outline ? 16 : 0) |
-                (n.shadow ? 32 : 0) |
-                (n.condense ? 64 : 0) |
-                (n.extend ? 128 : 0)),
-              s.write_shift(1, i),
-              s.write_shift(1, 0),
-              a.write_shift(2, n.bold ? 700 : 400),
-              (o = 0),
-              "superscript" == n.vertAlign
-                ? (o = 1)
-                : "subscript" == n.vertAlign && (o = 2),
-              a.write_shift(2, o),
-              a.write_shift(1, n.underline || 0),
-              a.write_shift(1, n.family || 0),
-              a.write_shift(1, n.charset || 0),
-              a.write_shift(1, 0),
-              rA(n.color, a),
-              (c = 0),
-              "major" == n.scheme && (c = 1),
-              "minor" == n.scheme && (c = 2),
-              a.write_shift(1, c),
-              rp(n.name, a),
-              a.length > a.l ? a.slice(0, a.l) : a)
-            ),
-            t4(r, "BrtEndFonts"),
-            t4(m, "BrtBeginFills", ru(2)),
-            t4(m, "BrtFill", aM({ patternType: "none" })),
-            t4(m, "BrtFill", aM({ patternType: "gray125" })),
-            t4(m, "BrtEndFills"),
-            t4((l = m), "BrtBeginBorders", ru(1)),
-            t4(
-              l,
-              "BrtBorder",
-              (f || (f = t1(51)),
-              f.write_shift(1, 0),
-              aU(null, f),
-              aU(null, f),
-              aU(null, f),
-              aU(null, f),
-              aU(null, f),
-              f.length > f.l ? f.slice(0, f.l) : f)
-            ),
-            t4(l, "BrtEndBorders"),
-            t4(m, "BrtBeginCellStyleXFs", ru(1)),
-            t4(
-              m,
-              "BrtXF",
-              aL({ numFmtId: 0, fontId: 0, fillId: 0, borderId: 0 }, 65535)
-            ),
-            t4(m, "BrtEndCellStyleXFs"),
-            t4(m, "BrtBeginCellXFs", ru((h = t.cellXfs).length)),
-            h.forEach(function (e) {
-              t4(m, "BrtXF", aL(e, 0));
-            }),
-            t4(m, "BrtEndCellXFs"),
-            t4(m, "BrtBeginStyles", ru(1)),
-            t4(
-              m,
-              "BrtStyle",
-              ((u = { xfId: 0, builtinId: 0, name: "Normal" }),
-              d || (d = t1(52)),
-              d.write_shift(4, u.xfId),
-              d.write_shift(2, 1),
-              d.write_shift(1, +u.builtinId),
-              d.write_shift(1, 0),
-              rw(u.name || "", d),
-              d.length > d.l ? d.slice(0, d.l) : d)
-            ),
-            t4(m, "BrtEndStyles"),
-            t4(m, "BrtBeginDXFs", ru(0)),
-            t4(m, "BrtEndDXFs"),
-            t4(
-              m,
-              "BrtBeginTableStyles",
-              ((p = t1(2052)).write_shift(4, 0),
-              rw("TableStyleMedium9", p),
-              rw("PivotStyleMedium4", p),
-              p.length > p.l ? p.slice(0, p.l) : p)
-            ),
-            t4(m, "BrtEndTableStyles"),
-            t4(m, "BrtEndStyleSheet"),
-            m.end()
-          );
-        }
-        r$.THEME =
+        rj.THEME =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme";
-        var aW = [
+        var aN = [
           "</a:lt1>",
           "</a:dk1>",
           "</a:lt2>",
@@ -9627,7 +9357,7 @@
           "</a:hlink>",
           "</a:folHlink>",
         ];
-        function aV(e, t, r) {
+        function aM(e, t, r) {
           t.themeElements.clrScheme = [];
           var n = {};
           (e[0].match(eq) || []).forEach(function (e) {
@@ -9667,7 +9397,7 @@
               case "<a:folHlink>":
               case "</a:folHlink>":
                 "/" === a[0].charAt(1)
-                  ? ((t.themeElements.clrScheme[aW.indexOf(a[0])] = n),
+                  ? ((t.themeElements.clrScheme[aN.indexOf(a[0])] = n),
                     (n = {}))
                   : (n.name = a[0].slice(3, a[0].length - 1));
                 break;
@@ -9677,27 +9407,27 @@
             }
           });
         }
-        function aX() {}
-        function aG() {}
-        var az = /<a:clrScheme([^>]*)>[\s\S]*<\/a:clrScheme>/,
-          aj = /<a:fontScheme([^>]*)>[\s\S]*<\/a:fontScheme>/,
-          a$ = /<a:fmtScheme([^>]*)>[\s\S]*<\/a:fmtScheme>/,
-          aK = /<a:themeElements([^>]*)>[\s\S]*<\/a:themeElements>/;
-        function aY(e, t) {
-          if (!e || 0 === e.length) return aY(aQ());
+        function aL() {}
+        function aU() {}
+        var aH = /<a:clrScheme([^>]*)>[\s\S]*<\/a:clrScheme>/,
+          aW = /<a:fontScheme([^>]*)>[\s\S]*<\/a:fontScheme>/,
+          aV = /<a:fmtScheme([^>]*)>[\s\S]*<\/a:fmtScheme>/,
+          aX = /<a:themeElements([^>]*)>[\s\S]*<\/a:themeElements>/;
+        function aG(e, t) {
+          if (!e || 0 === e.length) return aG(az());
           var r,
             n,
             a,
             s = {};
-          if (!(a = e.match(aK)))
+          if (!(a = e.match(aX)))
             throw Error("themeElements not found in theme");
           return (
             (r = a[0]),
             (s.themeElements = {}),
             [
-              ["clrScheme", az, aV],
-              ["fontScheme", aj, aX],
-              ["fmtScheme", a$, aG],
+              ["clrScheme", aH, aM],
+              ["fontScheme", aW, aL],
+              ["fmtScheme", aV, aU],
             ].forEach(function (e) {
               if (!(n = r.match(e[1])))
                 throw Error(e[0] + " not found in themeElements");
@@ -9707,7 +9437,7 @@
             s
           );
         }
-        function aQ(e, t) {
+        function az(e, t) {
           if (t && t.themeXLSX) return t.themeXLSX;
           if (e && "string" == typeof e.raw) return e.raw;
           var r = [eJ];
@@ -9920,110 +9650,20 @@
             r.join("")
           );
         }
-        (r$.IMG =
+        (rj.IMG =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
-          (r$.DRAW =
+          (rj.DRAW =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing");
-        var aJ = 1024;
-        r$.CMNT =
+        var aj = 1024;
+        rj.CMNT =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments";
-        var aZ = tE("comments", null, { xmlns: tw.main[0] });
-        function aq(e) {
-          var t = [eJ, aZ],
-            r = [];
-          return (
-            t.push("<authors>"),
-            e.forEach(function (e) {
-              e[1].forEach(function (e) {
-                var n = e9(e.a);
-                r.indexOf(n) > -1 ||
-                  (r.push(n), t.push("<author>" + n + "</author>"));
-              });
-            }),
-            t.push("</authors>"),
-            t.push("<commentList>"),
-            e.forEach(function (e) {
-              e[1].forEach(function (n) {
-                t.push(
-                  '<comment ref="' +
-                    e[0] +
-                    '" authorId="' +
-                    r.indexOf(e9(n.a)) +
-                    '"><text>'
-                ),
-                  t.push(tv("t", null == n.t ? "" : e9(n.t))),
-                  t.push("</text></comment>");
-              });
-            }),
-            t.push("</commentList>"),
-            t.length > 2 &&
-              ((t[t.length] = "</comments>"), (t[1] = t[1].replace("/>", ">"))),
-            t.join("")
-          );
-        }
-        function a1(e) {
-          var t = t2(),
-            r = [];
-          return (
-            t4(t, "BrtBeginComments"),
-            t4(t, "BrtBeginCommentAuthors"),
-            e.forEach(function (e) {
-              e[1].forEach(function (e) {
-                r.indexOf(e.a) > -1 ||
-                  (r.push(e.a.slice(0, 54)),
-                  t4(t, "BrtCommentAuthor", rp(e.a.slice(0, 54))));
-              });
-            }),
-            t4(t, "BrtEndCommentAuthors"),
-            t4(t, "BrtBeginCommentList"),
-            e.forEach(function (e) {
-              e[1].forEach(function (n) {
-                var a, s, i, o, c, l;
-                (n.iauthor = r.indexOf(n.a)),
-                  t4(
-                    t,
-                    "BrtBeginComment",
-                    ((a = [{ s: rr(e[0]), e: rr(e[0]) }, n]),
-                    null == s && (s = t1(36)),
-                    s.write_shift(4, a[1].iauthor),
-                    rx(a[0], s),
-                    s.write_shift(4, 0),
-                    s.write_shift(4, 0),
-                    s.write_shift(4, 0),
-                    s.write_shift(4, 0),
-                    s)
-                  ),
-                  n.t &&
-                    n.t.length > 0 &&
-                    t4(
-                      t,
-                      "BrtCommentText",
-                      ((o = !1),
-                      null == i && ((o = !0), (i = t1(23 + 4 * n.t.length))),
-                      i.write_shift(1, 1),
-                      rp(n.t, i),
-                      i.write_shift(4, 1),
-                      (c = { ich: 0, ifnt: 0 }),
-                      (l = i) || (l = t1(4)),
-                      l.write_shift(2, c.ich || 0),
-                      l.write_shift(2, c.ifnt || 0),
-                      o ? i.slice(0, i.l) : i)
-                    ),
-                  t4(t, "BrtEndComment"),
-                  delete n.iauthor;
-              });
-            }),
-            t4(t, "BrtEndCommentList"),
-            t4(t, "BrtEndComments"),
-            t.end()
-          );
-        }
-        var a0 = ["xlsb", "xlsm", "xlam", "biff8", "xla"];
-        (r$.DS =
+        var a$ = tE("comments", null, { xmlns: tw.main[0] }),
+          aK = ["xlsb", "xlsm", "xlam", "biff8", "xla"];
+        (rj.DS =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet"),
-          (r$.MS =
+          (rj.MS =
             "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet");
-        var a2 = (function () {
+        var aY = (function () {
             var e =
                 /(^|[^A-Za-z_])R(\[?-?\d+\]|[1-9]\d*|)C(\[?-?\d+\]|[1-9]\d*|)(?![A-Za-z0-9_])/g,
               t = { r: 0, c: 0 };
@@ -10041,19 +9681,19 @@
               return (
                 s ? (c += t.c) : --c,
                 i ? (o += t.r) : --o,
-                r + (s ? "" : "$") + rt(c) + (i ? "" : "$") + t9(o)
+                r + (s ? "" : "$") + re(c) + (i ? "" : "$") + t7(o)
               );
             }
             return function (n, a) {
               return (t = a), n.replace(e, r);
             };
           })(),
-          a4 =
+          aQ =
             /(^|[^._A-Z0-9])([$]?)([A-Z]{1,2}|[A-W][A-Z]{2}|X[A-E][A-Z]|XF[A-D])([$]?)(10[0-3]\d{4}|104[0-7]\d{3}|1048[0-4]\d{2}|10485[0-6]\d|104857[0-6]|[1-9]\d{0,5})(?![_.\(A-Za-z0-9])/g,
-          a3 = function (e, t) {
-            return e.replace(a4, function (e, r, n, a, s, i) {
-              var o = re(a) - (n ? 0 : t.c),
-                c = t7(i) - (s ? 0 : t.r);
+          aJ = function (e, t) {
+            return e.replace(aQ, function (e, r, n, a, s, i) {
+              var o = t9(a) - (n ? 0 : t.c),
+                c = t8(i) - (s ? 0 : t.r);
               return (
                 r +
                 "R" +
@@ -10063,43 +9703,43 @@
               );
             });
           };
-        function a5(e, t) {
-          return e.replace(a4, function (e, r, n, a, s, i) {
+        function aZ(e, t) {
+          return e.replace(aQ, function (e, r, n, a, s, i) {
             return (
               r +
-              ("$" == n ? n + a : rt(re(a) + t.c)) +
-              ("$" == s ? s + i : t9(t7(i) + t.r))
+              ("$" == n ? n + a : re(t9(a) + t.c)) +
+              ("$" == s ? s + i : t7(t8(i) + t.r))
             );
           });
         }
-        function a6(e) {
+        function aq(e) {
           return e.replace(/_xlfn\./g, "");
         }
-        function a8(e) {
+        function a1(e) {
           e.l += 1;
         }
-        function a7(e, t) {
+        function a0(e, t) {
           var r = e.read_shift(1 == t ? 1 : 2);
           return [16383 & r, (r >> 14) & 1, (r >> 15) & 1];
         }
-        function a9(e, t, r) {
+        function a2(e, t, r) {
           var n = 2;
           if (r) {
-            if (r.biff >= 2 && r.biff <= 5) return se(e, t, r);
+            if (r.biff >= 2 && r.biff <= 5) return a4(e, t, r);
             12 == r.biff && (n = 4);
           }
           var a = e.read_shift(n),
             s = e.read_shift(n),
-            i = a7(e, 2),
-            o = a7(e, 2);
+            i = a0(e, 2),
+            o = a0(e, 2);
           return {
             s: { r: a, c: i[0], cRel: i[1], rRel: i[2] },
             e: { r: s, c: o[0], cRel: o[1], rRel: o[2] },
           };
         }
-        function se(e) {
-          var t = a7(e, 2),
-            r = a7(e, 2),
+        function a4(e) {
+          var t = a0(e, 2),
+            r = a0(e, 2),
             n = e.read_shift(1),
             a = e.read_shift(1);
           return {
@@ -10107,23 +9747,23 @@
             e: { r: r[0], c: a, cRel: r[1], rRel: r[2] },
           };
         }
-        function st(e, t, r) {
+        function a3(e, t, r) {
           if (r && r.biff >= 2 && r.biff <= 5) {
             var n, a;
             return (
-              (n = a7(e, 2)),
+              (n = a0(e, 2)),
               (a = e.read_shift(1)),
               { r: n[0], c: a, cRel: n[1], rRel: n[2] }
             );
           }
           var s = e.read_shift(r && 12 == r.biff ? 4 : 2),
-            i = a7(e, 2);
+            i = a0(e, 2);
           return { r: s, c: i[0], cRel: i[1], rRel: i[2] };
         }
-        function sr(e) {
+        function a5(e) {
           return [e.read_shift(1), e.read_shift(1)];
         }
-        function sn(e, t, r) {
+        function a6(e, t, r) {
           var n;
           return (
             (e.l += 2),
@@ -10138,13 +9778,13 @@
             ]
           );
         }
-        function sa(e) {
+        function a8(e) {
           return (e.l += 6), [];
         }
-        function ss(e) {
-          return (e.l += 2), [nw(e), 1 & e.read_shift(2)];
+        function a7(e) {
+          return (e.l += 2), [nS(e), 1 & e.read_shift(2)];
         }
-        var si = [
+        var a9 = [
             "Data",
             "All",
             "Headers",
@@ -10163,7 +9803,7 @@
             "??",
             "?Current",
           ],
-          so = {
+          se = {
             1: {
               n: "PtgExp",
               f: function (e, t, r) {
@@ -10172,31 +9812,31 @@
                   : [e.read_shift(2), e.read_shift(r && 2 == r.biff ? 1 : 2)];
               },
             },
-            2: { n: "PtgTbl", f: tq },
-            3: { n: "PtgAdd", f: a8 },
-            4: { n: "PtgSub", f: a8 },
-            5: { n: "PtgMul", f: a8 },
-            6: { n: "PtgDiv", f: a8 },
-            7: { n: "PtgPower", f: a8 },
-            8: { n: "PtgConcat", f: a8 },
-            9: { n: "PtgLt", f: a8 },
-            10: { n: "PtgLe", f: a8 },
-            11: { n: "PtgEq", f: a8 },
-            12: { n: "PtgGe", f: a8 },
-            13: { n: "PtgGt", f: a8 },
-            14: { n: "PtgNe", f: a8 },
-            15: { n: "PtgIsect", f: a8 },
-            16: { n: "PtgUnion", f: a8 },
-            17: { n: "PtgRange", f: a8 },
-            18: { n: "PtgUplus", f: a8 },
-            19: { n: "PtgUminus", f: a8 },
-            20: { n: "PtgPercent", f: a8 },
-            21: { n: "PtgParen", f: a8 },
-            22: { n: "PtgMissArg", f: a8 },
+            2: { n: "PtgTbl", f: tZ },
+            3: { n: "PtgAdd", f: a1 },
+            4: { n: "PtgSub", f: a1 },
+            5: { n: "PtgMul", f: a1 },
+            6: { n: "PtgDiv", f: a1 },
+            7: { n: "PtgPower", f: a1 },
+            8: { n: "PtgConcat", f: a1 },
+            9: { n: "PtgLt", f: a1 },
+            10: { n: "PtgLe", f: a1 },
+            11: { n: "PtgEq", f: a1 },
+            12: { n: "PtgGe", f: a1 },
+            13: { n: "PtgGt", f: a1 },
+            14: { n: "PtgNe", f: a1 },
+            15: { n: "PtgIsect", f: a1 },
+            16: { n: "PtgUnion", f: a1 },
+            17: { n: "PtgRange", f: a1 },
+            18: { n: "PtgUplus", f: a1 },
+            19: { n: "PtgUminus", f: a1 },
+            20: { n: "PtgPercent", f: a1 },
+            21: { n: "PtgParen", f: a1 },
+            22: { n: "PtgMissArg", f: a1 },
             23: {
               n: "PtgStr",
               f: function (e, t, r) {
-                return e.l++, nT(e, t - 1, r);
+                return e.l++, nC(e, t - 1, r);
               },
             },
             26: {
@@ -10219,7 +9859,7 @@
             28: {
               n: "PtgErr",
               f: function (e) {
-                return e.l++, rU[e.read_shift(1)];
+                return e.l++, rL[e.read_shift(1)];
               },
             },
             29: {
@@ -10253,7 +9893,7 @@
                 var n = (96 & e[e.l]) >> 5;
                 e.l += 1;
                 var a = e.read_shift(r && r.biff <= 3 ? 1 : 2);
-                return [sC[a], sw[a], n];
+                return [sm[a], sp[a], n];
               },
             },
             34: {
@@ -10265,7 +9905,7 @@
                     r && r.biff <= 3
                       ? [88 == n ? -1 : 0, e.read_shift(1)]
                       : [e[e.l + 1] >> 7, 32767 & e.read_shift(2)];
-                return [a, (0 === s[0] ? sw : sS)[s[1]]];
+                return [a, (0 === s[0] ? sp : sd)[s[1]]];
               },
             },
             35: {
@@ -10292,7 +9932,7 @@
               n: "PtgRef",
               f: function (e, t, r) {
                 var n = (96 & e[e.l]) >> 5;
-                return (e.l += 1), [n, st(e, 0, r)];
+                return (e.l += 1), [n, a3(e, 0, r)];
               },
             },
             37: {
@@ -10300,7 +9940,7 @@
               f: function (e, t, r) {
                 return [
                   (96 & e[e.l++]) >> 5,
-                  a9(e, r.biff >= 2 && r.biff <= 5 ? 6 : 8, r),
+                  a2(e, r.biff >= 2 && r.biff <= 5 ? 6 : 8, r),
                 ];
               },
             },
@@ -10314,8 +9954,8 @@
                 );
               },
             },
-            39: { n: "PtgMemErr", f: tq },
-            40: { n: "PtgMemNoMem", f: tq },
+            39: { n: "PtgMemErr", f: tZ },
+            40: { n: "PtgMemNoMem", f: tZ },
             41: {
               n: "PtgMemFunc",
               f: function (e, t, r) {
@@ -10388,11 +10028,11 @@
                 return [
                   (96 & e[e.l++]) >> 5,
                   (function (e, t, r) {
-                    if (r.biff < 8) return se(e, t, r);
+                    if (r.biff < 8) return a4(e, t, r);
                     var n = e.read_shift(12 == r.biff ? 4 : 2),
                       a = e.read_shift(12 == r.biff ? 4 : 2),
-                      s = a7(e, 2),
-                      i = a7(e, 2);
+                      s = a0(e, 2),
+                      i = a0(e, 2);
                     return {
                       s: { r: n, c: s[0], cRel: s[1], rRel: s[2] },
                       e: { r: a, c: i[0], cRel: i[1], rRel: i[2] },
@@ -10416,14 +10056,14 @@
             57: {
               n: "PtgNameX",
               f: function (e, t, r) {
-                var n, a, s, i;
+                var n, a, s;
                 return 5 == r.biff
-                  ? ((a = ((n = e).read_shift(1) >>> 5) & 3),
-                    (s = n.read_shift(2, "i")),
-                    (n.l += 8),
-                    (i = n.read_shift(2)),
-                    (n.l += 12),
-                    [a, s, i])
+                  ? ((n = (e.read_shift(1) >>> 5) & 3),
+                    (a = e.read_shift(2, "i")),
+                    (e.l += 8),
+                    (s = e.read_shift(2)),
+                    (e.l += 12),
+                    [n, a, s])
                   : [
                       (e.read_shift(1) >>> 5) & 3,
                       e.read_shift(2),
@@ -10437,7 +10077,7 @@
                 var n = (96 & e[e.l]) >> 5;
                 e.l += 1;
                 var a = e.read_shift(2);
-                return r && 5 == r.biff && (e.l += 12), [n, a, st(e, 0, r)];
+                return r && 5 == r.biff && (e.l += 12), [n, a, a3(e, 0, r)];
               },
             },
             59: {
@@ -10454,7 +10094,7 @@
                     case 12:
                       s = 12;
                   }
-                return [n, a, a9(e, s, r)];
+                return [n, a, a2(e, s, r)];
               },
             },
             60: {
@@ -10493,7 +10133,7 @@
             },
             255: {},
           },
-          sc = {
+          st = {
             64: 32,
             96: 32,
             65: 33,
@@ -10540,19 +10180,19 @@
             125: 61,
           };
         !(function () {
-          for (var e in sc) so[e] = so[sc[e]];
+          for (var e in st) se[e] = se[st[e]];
         })();
-        var sl = {
-            1: { n: "PtgElfLel", f: ss },
-            2: { n: "PtgElfRw", f: sn },
-            3: { n: "PtgElfCol", f: sn },
-            6: { n: "PtgElfRwV", f: sn },
-            7: { n: "PtgElfColV", f: sn },
-            10: { n: "PtgElfRadical", f: sn },
-            11: { n: "PtgElfRadicalS", f: sa },
-            13: { n: "PtgElfColS", f: sa },
-            15: { n: "PtgElfColSV", f: sa },
-            16: { n: "PtgElfRadicalLel", f: ss },
+        var sr = {
+            1: { n: "PtgElfLel", f: a7 },
+            2: { n: "PtgElfRw", f: a6 },
+            3: { n: "PtgElfCol", f: a6 },
+            6: { n: "PtgElfRwV", f: a6 },
+            7: { n: "PtgElfColV", f: a6 },
+            10: { n: "PtgElfRadical", f: a6 },
+            11: { n: "PtgElfRadicalS", f: a8 },
+            13: { n: "PtgElfColS", f: a8 },
+            15: { n: "PtgElfColSV", f: a8 },
+            16: { n: "PtgElfRadicalLel", f: a7 },
             25: {
               n: "PtgList",
               f: function (e) {
@@ -10562,7 +10202,7 @@
                   n = e.read_shift(4),
                   a = e.read_shift(2),
                   s = e.read_shift(2),
-                  i = si[(r >> 2) & 31];
+                  i = a9[(r >> 2) & 31];
                 return { ixti: t, coltype: 3 & r, rt: i, idx: n, c: a, C: s };
               },
             },
@@ -10574,7 +10214,7 @@
             },
             255: {},
           },
-          sf = {
+          sn = {
             0: {
               n: "PtgAttrNoop",
               f: function (e) {
@@ -10631,13 +10271,13 @@
             64: {
               n: "PtgAttrSpace",
               f: function (e) {
-                return e.read_shift(2), sr(e, 2);
+                return e.read_shift(2), a5(e, 2);
               },
             },
             65: {
               n: "PtgAttrSpaceSemi",
               f: function (e) {
-                return e.read_shift(2), sr(e, 2);
+                return e.read_shift(2), a5(e, 2);
               },
             },
             128: {
@@ -10649,12 +10289,12 @@
             },
             255: {},
           };
-        function sh(e, t, r, n) {
-          if (n.biff < 8) return (a = e), (s = t), void (a.l += s);
-          for (var a, s, i, o, c = e.l + t, l = [], f = 0; f !== r.length; ++f)
-            switch (r[f][0]) {
+        function sa(e, t, r, n) {
+          if (n.biff < 8) return (a = t), void (e.l += a);
+          for (var a, s, i = e.l + t, o = [], c = 0; c !== r.length; ++c)
+            switch (r[c][0]) {
               case "PtgArray":
-                (r[f][1] = (function (e, t, r) {
+                (r[c][1] = (function (e, t, r) {
                   var n = 0,
                     a = 0;
                   12 == r.biff
@@ -10681,12 +10321,12 @@
                           }
                         switch (r[0]) {
                           case 4:
-                            (r[1] = nE(e, 1) ? "TRUE" : "FALSE"),
+                            (r[1] = nb(e, 1) ? "TRUE" : "FALSE"),
                               12 != t && (e.l += 7);
                             break;
                           case 37:
                           case 16:
-                            (r[1] = rU[e[e.l]]), (e.l += 12 == t ? 4 : 8);
+                            (r[1] = rL[e[e.l]]), (e.l += 12 == t ? 4 : 8);
                             break;
                           case 0:
                             e.l += 8;
@@ -10695,7 +10335,7 @@
                             r[1] = r_(e, 8);
                             break;
                           case 2:
-                            r[1] = nk(e, 0, { biff: t > 0 && t < 8 ? 2 : t });
+                            r[1] = nx(e, 0, { biff: t > 0 && t < 8 ? 2 : t });
                             break;
                           default:
                             throw Error("Bad SerAr: " + r[0]);
@@ -10704,47 +10344,45 @@
                       })(e, r.biff);
                   return i;
                 })(e, 0, n)),
-                  l.push(r[f][1]);
+                  o.push(r[c][1]);
                 break;
               case "PtgMemArea":
-                (r[f][2] = (function (e, t, r) {
+                (r[c][2] = (function (e, t, r) {
                   for (
                     var n = e.read_shift(12 == r.biff ? 4 : 2), a = [], s = 0;
                     s != n;
                     ++s
                   )
-                    a.push((12 == r.biff ? rT : nP)(e, 8));
+                    a.push((12 == r.biff ? rC : nO)(e, 8));
                   return a;
-                })(e, r[f][1], n)),
-                  l.push(r[f][2]);
+                })(e, r[c][1], n)),
+                  o.push(r[c][2]);
                 break;
               case "PtgExp":
                 n &&
                   12 == n.biff &&
-                  ((r[f][1][1] = e.read_shift(4)), l.push(r[f][1]));
+                  ((r[c][1][1] = e.read_shift(4)), o.push(r[c][1]));
                 break;
               case "PtgList":
               case "PtgElfRadicalS":
               case "PtgElfColS":
               case "PtgElfColSV":
-                throw "Unsupported " + r[f][0];
+                throw "Unsupported " + r[c][0];
             }
-          return (
-            0 != (t = c - e.l) && l.push(((i = e), (o = t), void (i.l += o))), l
-          );
+          return 0 != (t = i - e.l) && o.push(((s = t), void (e.l += s))), o;
         }
-        function su(e, t, r) {
-          for (var n, a, s, i, o = e.l + t, c = []; o != e.l; )
-            ((t = o - e.l),
-            (s = so[(i = e[e.l])]),
-            (24 === i || 25 === i) && (s = (24 === i ? sl : sf)[e[e.l + 1]]),
-            s && s.f)
-              ? c.push([s.n, s.f(e, t, r)])
-              : ((n = e), (a = t), (n.l += a));
-          return c;
+        function ss(e, t, r) {
+          for (var n, a, s, i = e.l + t, o = []; i != e.l; )
+            ((t = i - e.l),
+            (a = se[(s = e[e.l])]),
+            (24 === s || 25 === s) && (a = (24 === s ? sr : sn)[e[e.l + 1]]),
+            a && a.f)
+              ? o.push([a.n, a.f(e, t, r)])
+              : ((n = t), (e.l += n));
+          return o;
         }
-        sf[33] = sf[32];
-        var sd = {
+        sn[33] = sn[32];
+        var si = {
             PtgAdd: "+",
             PtgConcat: "&",
             PtgDiv: "/",
@@ -10758,8 +10396,8 @@
             PtgPower: "^",
             PtgSub: "-",
           },
-          sp = new RegExp(/[^\w\u4E00-\u9FFF\u3040-\u30FF]/);
-        function sm(e, t, r) {
+          so = new RegExp(/[^\w\u4E00-\u9FFF\u3040-\u30FF]/);
+        function sc(e, t, r) {
           if (!e) return "SH33TJSERR0";
           if (r.biff > 8 && (!e.XTI || !e.XTI[t])) return e.SheetNames[t];
           if (!e.XTI) return "SH33TJSERR6";
@@ -10807,14 +10445,14 @@
               );
           }
         }
-        function sg(e, t, r) {
+        function sl(e, t, r) {
           return (function (e, t) {
             if (!e && !(t && t.biff <= 5 && t.biff >= 2))
               throw Error("empty sheet name");
-            return sp.test(e) ? "'" + e + "'" : e;
-          })(sm(e, t, r), r);
+            return so.test(e) ? "'" + e + "'" : e;
+          })(sc(e, t, r), r);
         }
-        function sv(e, t, r, n, a) {
+        function sf(e, t, r, n, a) {
           var s,
             i,
             o,
@@ -10866,7 +10504,7 @@
                   }
                   (i += g), (m = -1);
                 }
-                h.push(i + sd[E[0]] + s);
+                h.push(i + si[E[0]] + s);
                 break;
               case "PtgIsect":
                 (s = h.pop()), (i = h.pop()), h.push(i + " " + s);
@@ -10895,26 +10533,26 @@
               case "PtgMemNoMem":
                 break;
               case "PtgRef":
-                (o = t3(E[1][1], f, a)), h.push(t6(o, l));
+                (o = t4(E[1][1], f, a)), h.push(t5(o, l));
                 break;
               case "PtgRefN":
-                (o = r ? t3(E[1][1], r, a) : E[1][1]), h.push(t6(o, l));
+                (o = r ? t4(E[1][1], r, a) : E[1][1]), h.push(t5(o, l));
                 break;
               case "PtgRef3d":
                 (u = E[1][1]),
-                  (o = t3(E[1][2], f, a)),
-                  (p = sg(n, u, a)),
-                  h.push(p + "!" + t6(o, l));
+                  (o = t4(E[1][2], f, a)),
+                  (p = sl(n, u, a)),
+                  h.push(p + "!" + t5(o, l));
                 break;
               case "PtgFunc":
               case "PtgFuncVar":
                 var S = E[1][0],
                   w = E[1][1];
                 S || (S = 0);
-                var C = 0 == (S &= 127) ? [] : h.slice(-S);
+                var B = 0 == (S &= 127) ? [] : h.slice(-S);
                 (h.length -= S),
-                  "User" === w && (w = C.shift()),
-                  h.push(w + "(" + C.join(",") + ")");
+                  "User" === w && (w = B.shift()),
+                  h.push(w + "(" + B.join(",") + ")");
                 break;
               case "PtgBool":
                 h.push(E[1] ? "TRUE" : "FALSE");
@@ -10930,52 +10568,52 @@
                 h.push('"' + E[1].replace(/"/g, '""') + '"');
                 break;
               case "PtgAreaN":
-                (c = t5(E[1][1], r ? { s: r } : f, a)), h.push(t8(c, a));
+                (c = t3(E[1][1], r ? { s: r } : f, a)), h.push(t6(c, a));
                 break;
               case "PtgArea":
-                (c = t5(E[1][1], f, a)), h.push(t8(c, a));
+                (c = t3(E[1][1], f, a)), h.push(t6(c, a));
                 break;
               case "PtgArea3d":
                 (u = E[1][1]),
                   (c = E[1][2]),
-                  (p = sg(n, u, a)),
-                  h.push(p + "!" + t8(c, a));
+                  (p = sl(n, u, a)),
+                  h.push(p + "!" + t6(c, a));
                 break;
               case "PtgAttrSum":
                 h.push("SUM(" + h.pop() + ")");
                 break;
               case "PtgName":
                 d = E[1][2];
-                var B = (n.names || [])[d - 1] || (n[0] || [])[d],
-                  T = B ? B.Name : "SH33TJSNAME" + String(d);
-                T in sB && (T = sB[T]), h.push(T);
+                var C = (n.names || [])[d - 1] || (n[0] || [])[d],
+                  T = C ? C.Name : "SH33TJSNAME" + String(d);
+                T in sg && (T = sg[T]), h.push(T);
                 break;
               case "PtgNameX":
-                var x,
-                  _ = E[1][1];
+                var _,
+                  x = E[1][1];
                 if (((d = E[1][2]), a.biff <= 5))
-                  _ < 0 && (_ = -_), n[_] && (x = n[_][d]);
+                  x < 0 && (x = -x), n[x] && (_ = n[x][d]);
                 else {
                   var k = "";
                   if (
-                    (14849 == ((n[_] || [])[0] || [])[0] ||
-                      (1025 == ((n[_] || [])[0] || [])[0]
-                        ? n[_][d] &&
-                          n[_][d].itab > 0 &&
-                          (k = n.SheetNames[n[_][d].itab - 1] + "!")
+                    (14849 == ((n[x] || [])[0] || [])[0] ||
+                      (1025 == ((n[x] || [])[0] || [])[0]
+                        ? n[x][d] &&
+                          n[x][d].itab > 0 &&
+                          (k = n.SheetNames[n[x][d].itab - 1] + "!")
                         : (k = n.SheetNames[d - 1] + "!")),
-                    n[_] && n[_][d])
+                    n[x] && n[x][d])
                   )
-                    k += n[_][d].Name;
+                    k += n[x][d].Name;
                   else if (n[0] && n[0][d]) k += n[0][d].Name;
                   else {
-                    var A = (sm(n, _, a) || "").split(";;");
+                    var A = (sc(n, x, a) || "").split(";;");
                     A[d - 1] ? (k = A[d - 1]) : (k += "SH33TJSERRX");
                   }
                   h.push(k);
                   break;
                 }
-                x || (x = { Name: "SH33TJSERRY" }), h.push(x.Name);
+                _ || (_ = { Name: "SH33TJSERRY" }), h.push(_.Name);
                 break;
               case "PtgParen":
                 var I = "(",
@@ -11013,9 +10651,9 @@
               case "PtgExp":
                 o = { c: E[1][1], r: E[1][0] };
                 var R = { c: r.c, r: r.r };
-                if (n.sharedf[rn(o)]) {
-                  var F = n.sharedf[rn(o)];
-                  h.push(sv(F, f, R, n, a));
+                if (n.sharedf[rr(o)]) {
+                  var F = n.sharedf[rr(o)];
+                  h.push(sf(F, f, R, n, a));
                 } else {
                   var D = !1;
                   for (s = 0; s != n.arrayf.length; ++s)
@@ -11026,7 +10664,7 @@
                         !(o.r < i[0].s.r) &&
                         !(o.r > i[0].e.r))
                     ) {
-                      h.push(sv(i[1], f, R, n, a)), (D = !0);
+                      h.push(sf(i[1], f, R, n, a)), (D = !0);
                       break;
                     }
                   D || h.push(E[1]);
@@ -11101,9 +10739,9 @@
           if (h.length > 1 && a.WTF) throw Error("bad formula stack");
           return h[0];
         }
-        function sb(e, t, r) {
+        function sh(e, t, r) {
           var n = e.l + t,
-            a = nF(e, 6);
+            a = nR(e, 6);
           2 == r.biff && ++e.l;
           var s = (function (e) {
               var t;
@@ -11124,14 +10762,13 @@
           2 != r.biff && (e.read_shift(1), r.biff >= 5 && e.read_shift(4));
           var o = (function (e, t, r) {
             var n,
-              a,
-              s = e.l + t,
-              i = 2 == r.biff ? 1 : 2,
-              o = e.read_shift(i);
-            if (65535 == o) return [[], ((n = e), void (n.l += t - 2))];
-            var c = su(e, o, r);
+              a = e.l + t,
+              s = 2 == r.biff ? 1 : 2,
+              i = e.read_shift(s);
+            if (65535 == i) return [[], void (e.l += t - 2)];
+            var o = ss(e, i, r);
             return (
-              t !== o + i && (a = sh(e, t - o - i, c, r)), (e.l = s), [c, a]
+              t !== i + s && (n = sa(e, t - i - s, o, r)), (e.l = a), [o, n]
             );
           })(e, n - e.l, r);
           return {
@@ -11142,14 +10779,14 @@
             tt: s[1],
           };
         }
-        function sE(e, t, r) {
+        function su(e, t, r) {
           var n = e.read_shift(4),
-            a = su(e, n, r),
+            a = ss(e, n, r),
             s = e.read_shift(4),
-            i = s > 0 ? sh(e, s, a, r) : null;
+            i = s > 0 ? sa(e, s, a, r) : null;
           return [a, i];
         }
-        var sS = {
+        var sd = {
             0: "BEEP",
             1: "OPEN",
             2: "OPEN.LINKS",
@@ -11547,7 +11184,7 @@
             755: "OPTIONS.SPELL",
             808: "HIDEALL.INKANNOTS",
           },
-          sw = {
+          sp = {
             0: "COUNT",
             1: "IF",
             2: "ISNA",
@@ -12028,7 +11665,7 @@
             483: "AVERAGEIF",
             484: "AVERAGEIFS",
           },
-          sC = {
+          sm = {
             2: 1,
             3: 1,
             10: 0,
@@ -12282,7 +11919,7 @@
             480: 2,
             65535: 0,
           },
-          sB = {
+          sg = {
             "_xlfn.ACOT": "ACOT",
             "_xlfn.ACOTH": "ACOTH",
             "_xlfn.AGGREGATE": "AGGREGATE",
@@ -12413,7 +12050,7 @@
             "_xlfn.XOR": "XOR",
             "_xlfn.Z.TEST": "Z.TEST",
           };
-        function sT(e) {
+        function sv(e) {
           return (
             "of:" == e.slice(0, 3) && (e = e.slice(3)),
             61 == e.charCodeAt(0) &&
@@ -12429,7 +12066,7 @@
               .replace(/\|/g, ";")
           );
         }
-        function sx(e) {
+        function sb(e) {
           var t = e.split(":");
           return [
             t[0].split(".")[0],
@@ -12439,19 +12076,19 @@
                 : ""),
           ];
         }
-        var s_ = {},
-          sk = {};
-        r$.WS = [
+        var sE = {},
+          sS = {};
+        rj.WS = [
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
           "http://purl.oclc.org/ooxml/officeDocument/relationships/worksheet",
         ];
-        var sA = "undefined" != typeof Map;
-        function sI(e, t, r) {
+        var sw = "undefined" != typeof Map;
+        function sB(e, t, r) {
           var n = 0,
             a = e.length;
           if (r) {
-            if (sA ? r.has(t) : Object.prototype.hasOwnProperty.call(r, t)) {
-              for (var s = sA ? r.get(t) : r[t]; n < s.length; ++n)
+            if (sw ? r.has(t) : Object.prototype.hasOwnProperty.call(r, t)) {
+              for (var s = sw ? r.get(t) : r[t]; n < s.length; ++n)
                 if (e[s[n]].t === t) return e.Count++, s[n];
             }
           } else for (; n < a; ++n) if (e[n].t === t) return e.Count++, n;
@@ -12460,31 +12097,31 @@
             e.Count++,
             e.Unique++,
             r &&
-              (sA
+              (sw
                 ? (r.has(t) || r.set(t, []), r.get(t).push(a))
                 : (Object.prototype.hasOwnProperty.call(r, t) || (r[t] = []),
                   r[t].push(a))),
             a
           );
         }
-        function sy(e, t) {
+        function sC(e, t) {
           var r = { min: e + 1, max: e + 1 },
             n = -1;
           return (
-            t.MDW && (aw = t.MDW),
+            t.MDW && (ab = t.MDW),
             null != t.width
               ? (r.customWidth = 1)
               : null != t.wpx
-                ? (n = aB(t.wpx))
+                ? (n = aS(t.wpx))
                 : null != t.wch && (n = t.wch),
             n > -1
-              ? ((r.width = aT(n)), (r.customWidth = 1))
+              ? ((r.width = aw(n)), (r.customWidth = 1))
               : null != t.width && (r.width = t.width),
             t.hidden && (r.hidden = !0),
             r
           );
         }
-        function sR(e, t) {
+        function sT(e, t) {
           if (e) {
             var r = [0.7, 0.7, 0.75, 0.75, 0.3, 0.3];
             "xlml" == t && (r = [1, 1, 1, 1, 0.5, 0.5]),
@@ -12496,7 +12133,7 @@
               null == e.footer && (e.footer = r[5]);
           }
         }
-        function sF(e, t, r) {
+        function s_(e, t, r) {
           var n = r.revssf[null != t.z ? t.z : "General"],
             a = 60,
             s = e.length;
@@ -12520,7 +12157,7 @@
             s
           );
         }
-        function sD(e, t, r, n, a, s) {
+        function sx(e, t, r, n, a, s) {
           try {
             n.cellNF && (e.z = ev._table[t]);
           } catch (e) {
@@ -12536,7 +12173,7 @@
                   (null == ev._table[t] && ev.load(eS[t] || "General", t),
                   "e" === e.t)
                 )
-                  e.w = e.w || rU[e.v];
+                  e.w = e.w || rL[e.v];
                 else if (0 === t) {
                   if ("n" === e.t)
                     (0 | e.v) === e.v
@@ -12549,12 +12186,12 @@
                       : (e.w = ev._general_num(i));
                   } else {
                     if (void 0 === e.v) return "";
-                    e.w = ev._general(e.v, sk);
+                    e.w = ev._general(e.v, sS);
                   }
                 } else
                   "d" === e.t
-                    ? (e.w = ev.format(t, eI(e.v), sk))
-                    : (e.w = ev.format(t, e.v, sk));
+                    ? (e.w = ev.format(t, eI(e.v), sS))
+                    : (e.w = ev.format(t, e.v, sS));
               } catch (e) {
                 if (n.WTF) throw e;
               }
@@ -12564,7 +12201,7 @@
                   e.s.fgColor &&
                     e.s.fgColor.theme &&
                     !e.s.fgColor.rgb &&
-                    ((e.s.fgColor.rgb = aS(
+                    ((e.s.fgColor.rgb = av(
                       a.themeElements.clrScheme[e.s.fgColor.theme].rgb,
                       e.s.fgColor.tint || 0
                     )),
@@ -12573,7 +12210,7 @@
                         a.themeElements.clrScheme[e.s.fgColor.theme].rgb)),
                   e.s.bgColor &&
                     e.s.bgColor.theme &&
-                    ((e.s.bgColor.rgb = aS(
+                    ((e.s.bgColor.rgb = av(
                       a.themeElements.clrScheme[e.s.bgColor.theme].rgb,
                       e.s.bgColor.tint || 0
                     )),
@@ -12585,29 +12222,29 @@
               }
           }
         }
-        var sO = /<(?:\w:)?mergeCell ref="[A-Z0-9:]+"\s*[\/]?>/g,
-          sP = /<(?:\w+:)?sheetData[^>]*>([\s\S]*)<\/(?:\w+:)?sheetData>/,
-          sN = /<(?:\w:)?hyperlink [^>]*>/gm,
-          sM = /"(\w*:\w*)"/,
-          sL = /<(?:\w:)?col\b[^>]*[\/]?>/g,
-          sU =
+        var sk = /<(?:\w:)?mergeCell ref="[A-Z0-9:]+"\s*[\/]?>/g,
+          sA = /<(?:\w+:)?sheetData[^>]*>([\s\S]*)<\/(?:\w+:)?sheetData>/,
+          sI = /<(?:\w:)?hyperlink [^>]*>/gm,
+          sy = /"(\w*:\w*)"/,
+          sR = /<(?:\w:)?col\b[^>]*[\/]?>/g,
+          sF =
             /<(?:\w:)?autoFilter[^>]*([\/]|>([\s\S]*)<\/(?:\w:)?autoFilter)>/g,
-          sH = /<(?:\w:)?pageMargins[^>]*\/>/g,
-          sW = /<(?:\w:)?sheetPr\b(?:[^>a-z][^>]*)?\/>/,
-          sV =
+          sD = /<(?:\w:)?pageMargins[^>]*\/>/g,
+          sO = /<(?:\w:)?sheetPr\b(?:[^>a-z][^>]*)?\/>/,
+          sP =
             /<(?:\w:)?sheetViews[^>]*(?:[\/]|>([\s\S]*)<\/(?:\w:)?sheetViews)>/;
-        function sX(e, t, r, n) {
+        function sN(e, t, r, n) {
           var a = e2(e);
           r.Sheets[n] || (r.Sheets[n] = {}),
             a.codeName && (r.Sheets[n].CodeName = e6(ts(a.codeName)));
         }
-        var sG = [
+        var sM = [
             "objects",
             "scenarios",
             "selectLockedCells",
             "selectUnlockedCells",
           ],
-          sz = [
+          sL = [
             "formatColumns",
             "formatRows",
             "formatCells",
@@ -12620,10 +12257,10 @@
             "autoFilter",
             "pivotTables",
           ],
-          sj = /<(?:\w:)?sheetView(?:[^>a-z][^>]*)?\/?>/,
-          s$ =
-            ((x = /<(?:\w+:)?c[ \/>]/),
-            (_ = /<\/(?:\w+:)?row>/),
+          sU = /<(?:\w:)?sheetView(?:[^>a-z][^>]*)?\/?>/,
+          sH =
+            ((_ = /<(?:\w+:)?c[ \/>]/),
+            (x = /<\/(?:\w+:)?row>/),
             (k = /r=["']([^"']*)["']/),
             (A = /<(?:\w+:)?is>([\S\s]*?)<\/(?:\w+:)?is>/),
             (I = /ref=["']([^"']*)["']/),
@@ -12647,8 +12284,8 @@
                   E = 0,
                   S = 0,
                   w = 0,
-                  C = 0,
-                  B = Array.isArray(s.CellXf),
+                  B = 0,
+                  C = Array.isArray(s.CellXf),
                   T = [],
                   F = [],
                   D = Array.isArray(t),
@@ -12656,7 +12293,7 @@
                   P = {},
                   N = !1,
                   M = !!r.sheetStubs,
-                  L = e.split(_),
+                  L = e.split(x),
                   U = 0,
                   H = L.length;
                 U != H;
@@ -12683,12 +12320,12 @@
                         o.ht &&
                           ((N = !0),
                           (P.hpt = parseFloat(o.ht)),
-                          (P.hpx = aI(P.hpt))),
+                          (P.hpx = ax(P.hpt))),
                         "1" == o.hidden && ((N = !0), (P.hidden = !0)),
                         null != o.outlineLevel &&
                           ((N = !0), (P.level = +o.outlineLevel)),
                         N && (O[E - 1] = P)),
-                      (d = u.slice(h).split(x));
+                      (d = u.slice(h).split(_));
                     for (
                       var V = 0;
                       V != d.length && "<" == d[V].trim().charAt(0);
@@ -12722,7 +12359,7 @@
                         if (
                           (++g,
                           (o = e2(u.slice(0, g), !0)).r ||
-                            (o.r = rn({ r: E - 1, c: S })),
+                            (o.r = rr({ r: E - 1, c: S })),
                           (b = u.slice(g)),
                           (i = { t: "" }),
                           null != (p = b.match(y)) &&
@@ -12733,26 +12370,26 @@
                           if (null != (p = b.match(R)) && "" !== p[1]) {
                             if (
                               ((i.f = e6(ts(p[1])).replace(/\r\n/g, "\n")),
-                              r.xlfn || (i.f = a6(i.f)),
+                              r.xlfn || (i.f = aq(i.f)),
                               p[0].indexOf('t="array"') > -1)
                             )
                               (i.F = (b.match(I) || [])[1]),
-                                i.F.indexOf(":") > -1 && T.push([ri(i.F), i.F]);
+                                i.F.indexOf(":") > -1 && T.push([rs(i.F), i.F]);
                             else if (p[0].indexOf('t="shared"') > -1) {
                               l = e2(p[0]);
                               var X = e6(ts(p[1]));
-                              r.xlfn || (X = a6(X)),
+                              r.xlfn || (X = aq(X)),
                                 (F[parseInt(l.si, 10)] = [l, X, o.r]);
                             }
                           } else
                             (p = b.match(/<f[^>]*\/>/)) &&
                               F[(l = e2(p[0])).si] &&
                               (i.f = (function (e, t, r) {
-                                var n = ra(t).s,
-                                  a = rr(r);
-                                return a5(e, { r: a.r - n.r, c: a.c - n.c });
+                                var n = rn(t).s,
+                                  a = rt(r);
+                                return aZ(e, { r: a.r - n.r, c: a.c - n.c });
                               })(F[l.si][1], F[l.si][2], o.r));
-                          var G = rr(o.r);
+                          var G = rt(o.r);
                           for (g = 0; g < T.length; ++g)
                             G.r >= T[g][0].s.r &&
                               G.r <= T[g][0].e.r &&
@@ -12783,7 +12420,7 @@
                               if (!M) continue;
                               i.t = "z";
                             } else
-                              (c = s_[parseInt(i.v, 10)]),
+                              (c = sE[parseInt(i.v, 10)]),
                                 (i.v = c.t),
                                 (i.r = c.r),
                                 r.cellHTML && (i.h = c.h);
@@ -12796,7 +12433,7 @@
                           case "inlineStr":
                             (p = b.match(A)),
                               (i.t = "s"),
-                              null != p && (c = ar(p[1]))
+                              null != p && (c = at(p[1]))
                                 ? ((i.v = c.t), r.cellHTML && (i.h = c.h))
                                 : (i.v = "");
                             break;
@@ -12810,25 +12447,25 @@
                             break;
                           case "e":
                             (r && !1 === r.cellText) || (i.w = i.v),
-                              (i.v = rH[i.v]);
+                              (i.v = rU[i.v]);
                         }
                         if (
-                          ((w = C = 0),
+                          ((w = B = 0),
                           (f = null),
-                          B &&
+                          C &&
                             void 0 !== o.s &&
                             null != (f = s.CellXf[o.s]) &&
                             (null != f.numFmtId && (w = f.numFmtId),
-                            r.cellStyles && null != f.fillId && (C = f.fillId)),
-                          sD(i, w, C, r, a, s),
+                            r.cellStyles && null != f.fillId && (B = f.fillId)),
+                          sx(i, w, B, r, a, s),
                           r.cellDates &&
-                            B &&
+                            C &&
                             "n" == i.t &&
                             ev.is_date(ev._table[w]) &&
                             ((i.t = "d"), (i.v = eD(i.v))),
                           D)
                         ) {
-                          var z = rr(o.r);
+                          var z = rt(o.r);
                           t[z.r] || (t[z.r] = []), (t[z.r][z.c] = i);
                         } else t[o.r] = i;
                       }
@@ -12837,829 +12474,19 @@
               }
               O.length > 0 && (t["!rows"] = O);
             }),
-          sK = tE("worksheet", null, { xmlns: tw.main[0], "xmlns:r": tw.r });
-        function sY(e, t, r, n) {
-          var a,
-            s = [eJ, sK],
-            i = r.SheetNames[e],
-            o = 0,
-            c = "",
-            l = r.Sheets[i];
-          null == l && (l = {});
-          var f = l["!ref"] || "A1",
-            h = ri(f);
-          if (h.e.c > 16383 || h.e.r > 1048575) {
-            if (t.WTF)
-              throw Error("Range " + f + " exceeds format limit A1:XFD1048576");
-            (h.e.c = Math.min(h.e.c, 16383)),
-              (h.e.r = Math.min(h.e.c, 1048575)),
-              (f = rs(h));
-          }
-          n || (n = {}), (l["!comments"] = []);
-          var u = [];
-          !(function (e, t, r, n, a) {
-            var s = !1,
-              i = {},
-              o = null;
-            if ("xlsx" !== n.bookType && t.vbaraw) {
-              var c = t.SheetNames[r];
-              try {
-                t.Workbook && (c = t.Workbook.Sheets[r].CodeName || c);
-              } catch (e) {}
-              (s = !0), (i.codeName = ti(e9(c)));
-            }
-            if (e && e["!outline"]) {
-              var l = { summaryBelow: 1, summaryRight: 1 };
-              e["!outline"].above && (l.summaryBelow = 0),
-                e["!outline"].left && (l.summaryRight = 0),
-                (o = (o || "") + tE("outlinePr", null, l));
-            }
-            (s || o) && (a[a.length] = tE("sheetPr", o, i));
-          })(l, r, e, t, s),
-            (s[s.length] = tE("dimension", null, { ref: f })),
-            (s[s.length] =
-              ((d = { workbookViewId: "0" }),
-              (((r || {}).Workbook || {}).Views || [])[0] &&
-                (d.rightToLeft = r.Workbook.Views[0].RTL ? "1" : "0"),
-              tE("sheetViews", tE("sheetView", null, d), {}))),
-            t.sheetFormat &&
-              (s[s.length] = tE("sheetFormatPr", null, {
-                defaultRowHeight: t.sheetFormat.defaultRowHeight || "16",
-                baseColWidth: t.sheetFormat.baseColWidth || "10",
-                outlineLevelRow: t.sheetFormat.outlineLevelRow || "7",
-              })),
-            null != l["!cols"] &&
-              l["!cols"].length > 0 &&
-              (s[s.length] = (function (e, t) {
-                for (var r, n = ["<cols>"], a = 0; a != t.length; ++a)
-                  (r = t[a]) && (n[n.length] = tE("col", null, sy(a, r)));
-                return (n[n.length] = "</cols>"), n.join("");
-              })(0, l["!cols"])),
-            (s[(o = s.length)] = "<sheetData/>"),
-            (l["!links"] = []),
-            null != l["!ref"] &&
-              (c = (function (e, t, r, n) {
-                var a,
-                  s,
-                  i = [],
-                  o = [],
-                  c = ri(e["!ref"]),
-                  l = "",
-                  f = "",
-                  h = [],
-                  u = 0,
-                  d = 0,
-                  p = e["!rows"],
-                  m = Array.isArray(e),
-                  g = { r: f },
-                  v = -1;
-                for (d = c.s.c; d <= c.e.c; ++d) h[d] = rt(d);
-                for (u = c.s.r; u <= c.e.r; ++u) {
-                  for (o = [], f = t9(u), d = c.s.c; d <= c.e.c; ++d) {
-                    a = h[d] + f;
-                    var b = m ? (e[u] || [])[d] : e[a];
-                    void 0 !== b &&
-                      null !=
-                        (l = (function (e, t, r, n) {
-                          if (
-                            (void 0 === e.v && "string" != typeof e.f) ||
-                            "z" === e.t
-                          )
-                            return "";
-                          var a = "",
-                            s = e.t,
-                            i = e.v;
-                          if ("z" !== e.t)
-                            switch (e.t) {
-                              case "b":
-                                a = e.v ? "1" : "0";
-                                break;
-                              case "n":
-                                a = "" + e.v;
-                                break;
-                              case "e":
-                                a = rU[e.v];
-                                break;
-                              case "d":
-                                n && n.cellDates
-                                  ? (a = eN(e.v, -1).toISOString())
-                                  : (((e = eL(e)).t = "n"),
-                                    (a = "" + (e.v = eI(eN(e.v))))),
-                                  void 0 === e.z && (e.z = ev._table[14]);
-                                break;
-                              default:
-                                a = e.v;
-                            }
-                          var o = tv("v", e9(a)),
-                            c = { r: t },
-                            l = sF(n.cellXfs, e, n);
-                          switch ((0 !== l && (c.s = l), e.t)) {
-                            case "n":
-                            case "z":
-                              break;
-                            case "d":
-                              c.t = "d";
-                              break;
-                            case "b":
-                              c.t = "b";
-                              break;
-                            case "e":
-                              c.t = "e";
-                              break;
-                            default:
-                              if (null == e.v) {
-                                delete e.t;
-                                break;
-                              }
-                              if (n && n.bookSST) {
-                                (o = tv(
-                                  "v",
-                                  "" + sI(n.Strings, e.v, n.revStrings)
-                                )),
-                                  (c.t = "s");
-                                break;
-                              }
-                              c.t = "str";
-                          }
-                          if (
-                            (e.t != s && ((e.t = s), (e.v = i)),
-                            "string" == typeof e.f && e.f)
-                          ) {
-                            var f =
-                              e.F && e.F.slice(0, t.length) == t
-                                ? { t: "array", ref: e.F }
-                                : null;
-                            o = tE("f", e9(e.f), f) + (null != e.v ? o : "");
-                          }
-                          return (
-                            e.l && r["!links"].push([t, e.l]),
-                            e.c && r["!comments"].push([t, e.c]),
-                            tE("c", o, c)
-                          );
-                        })(b, a, e, t, r, n)) &&
-                      o.push(l);
-                  }
-                  (o.length > 0 || (p && p[u])) &&
-                    ((g = { r: f }),
-                    p &&
-                      p[u] &&
-                      ((s = p[u]).hidden && (g.hidden = 1),
-                      (v = -1),
-                      s.hpx ? (v = aA(s.hpx)) : s.hpt && (v = s.hpt),
-                      v > -1 && ((g.ht = v), (g.customHeight = 1)),
-                      s.level && (g.outlineLevel = s.level)),
-                    (i[i.length] = tE("row", o.join(""), g)));
-                }
-                if (p)
-                  for (; u < p.length; ++u)
-                    p &&
-                      p[u] &&
-                      ((g = { r: u + 1 }),
-                      (s = p[u]).hidden && (g.hidden = 1),
-                      (v = -1),
-                      s.hpx ? (v = aA(s.hpx)) : s.hpt && (v = s.hpt),
-                      v > -1 && ((g.ht = v), (g.customHeight = 1)),
-                      s.level && (g.outlineLevel = s.level),
-                      (i[i.length] = tE("row", "", g)));
-                return i.join("");
-              })(l, t, e, r, n)).length > 0 &&
-              (s[s.length] = c),
-            s.length > o + 1 &&
-              ((s[s.length] = "</sheetData>"),
-              (s[o] = s[o].replace("/>", ">"))),
-            null != l["!protect"] &&
-              (s[s.length] =
-                ((p = l["!protect"]),
-                (m = { sheet: 1 }),
-                sG.forEach(function (e) {
-                  null != p[e] && p[e] && (m[e] = "1");
-                }),
-                sz.forEach(function (e) {
-                  null == p[e] || p[e] || (m[e] = "0");
-                }),
-                p.password &&
-                  (m.password = ap(p.password).toString(16).toUpperCase()),
-                tE("sheetProtection", null, m))),
-            null != l["!autofilter"] &&
-              (s[s.length] = (function (e, t, r, n) {
-                var a = "string" == typeof e.ref ? e.ref : rs(e.ref);
-                r.Workbook || (r.Workbook = { Sheets: [] }),
-                  r.Workbook.Names || (r.Workbook.Names = []);
-                var s = r.Workbook.Names,
-                  i = ra(a);
-                i.s.r == i.e.r && ((i.e.r = ra(t["!ref"]).e.r), (a = rs(i)));
-                for (var o = 0; o < s.length; ++o) {
-                  var c = s[o];
-                  if ("_xlnm._FilterDatabase" == c.Name && c.Sheet == n) {
-                    c.Ref = "'" + r.SheetNames[n] + "'!" + a;
-                    break;
-                  }
-                }
-                return (
-                  o == s.length &&
-                    s.push({
-                      Name: "_xlnm._FilterDatabase",
-                      Sheet: n,
-                      Ref: "'" + r.SheetNames[n] + "'!" + a,
-                    }),
-                  tE("autoFilter", null, { ref: a })
-                );
-              })(l["!autofilter"], l, r, e)),
-            null != l["!merges"] &&
-              l["!merges"].length > 0 &&
-              (s[s.length] = (function (e) {
-                if (0 === e.length) return "";
-                for (
-                  var t = '<mergeCells count="' + e.length + '">', r = 0;
-                  r != e.length;
-                  ++r
-                )
-                  t += '<mergeCell ref="' + rs(e[r]) + '"/>';
-                return t + "</mergeCells>";
-              })(l["!merges"]));
-          var d,
-            p,
-            m,
-            g,
-            v = -1,
-            b = -1;
-          return (
-            l["!links"].length > 0 &&
-              ((s[s.length] = "<hyperlinks>"),
-              l["!links"].forEach(function (e) {
-                e[1].Target &&
-                  ((g = { ref: e[0] }),
-                  "#" != e[1].Target.charAt(0) &&
-                    ((b = rq(
-                      n,
-                      -1,
-                      e9(e[1].Target).replace(/#.*$/, ""),
-                      r$.HLINK
-                    )),
-                    (g["r:id"] = "rId" + b)),
-                  (v = e[1].Target.indexOf("#")) > -1 &&
-                    (g.location = e9(e[1].Target.slice(v + 1))),
-                  e[1].Tooltip && (g.tooltip = e9(e[1].Tooltip)),
-                  (s[s.length] = tE("hyperlink", null, g)));
-              }),
-              (s[s.length] = "</hyperlinks>")),
-            delete l["!links"],
-            null != l["!margins"] &&
-              (s[s.length] =
-                (sR((a = l["!margins"])), tE("pageMargins", null, a))),
-            (!t || t.ignoreEC || void 0 == t.ignoreEC) &&
-              (s[s.length] = tv(
-                "ignoredErrors",
-                tE("ignoredError", null, { numberStoredAsText: 1, sqref: f })
-              )),
-            u.length > 0 &&
-              ((b = rq(
-                n,
-                -1,
-                "../drawings/drawing" + (e + 1) + ".xml",
-                r$.DRAW
-              )),
-              (s[s.length] = tE("drawing", null, { "r:id": "rId" + b })),
-              (l["!drawing"] = u)),
-            l["!comments"].length > 0 &&
-              ((b = rq(
-                n,
-                -1,
-                "../drawings/vmlDrawing" + (e + 1) + ".vml",
-                r$.VML
-              )),
-              (s[s.length] = tE("legacyDrawing", null, { "r:id": "rId" + b })),
-              (l["!legacy"] = b)),
-            s.length > 1 &&
-              ((s[s.length] = "</worksheet>"),
-              (s[1] = s[1].replace("/>", ">"))),
-            s.join("")
-          );
+          sW = tE("worksheet", null, { xmlns: tw.main[0], "xmlns:r": tw.r });
+        function sV(e) {
+          return [rv(e), r_(e), "n"];
         }
-        function sQ(e) {
-          return [rb(e), r_(e), "n"];
-        }
-        var sJ = ["left", "right", "top", "bottom", "header", "footer"];
-        function sZ(e, t, r, n) {
-          var a,
-            s,
-            i,
-            o,
-            c,
-            l,
-            f = t2(),
-            h = r.SheetNames[e],
-            u = r.Sheets[h] || {},
-            d = h;
-          try {
-            r && r.Workbook && (d = r.Workbook.Sheets[e].CodeName || d);
-          } catch (e) {}
-          var p = ri(u["!ref"] || "A1");
-          if (p.e.c > 16383 || p.e.r > 1048575) {
-            if (t.WTF)
-              throw Error(
-                "Range " +
-                  (u["!ref"] || "A1") +
-                  " exceeds format limit A1:XFD1048576"
-              );
-            (p.e.c = Math.min(p.e.c, 16383)),
-              (p.e.r = Math.min(p.e.c, 1048575));
-          }
-          return (
-            (u["!links"] = []),
-            (u["!comments"] = []),
-            t4(f, "BrtBeginSheet"),
-            r.vbaraw &&
-              t4(
-                f,
-                "BrtWsProp",
-                (function (e, t) {
-                  null == t && (t = t1(84 + 4 * e.length));
-                  for (var r = 0; r < 3; ++r) t.write_shift(1, 0);
-                  return (
-                    rA({ auto: 1 }, t),
-                    t.write_shift(-4, -1),
-                    t.write_shift(-4, -1),
-                    rp(e, t),
-                    t.slice(0, t.l)
-                  );
-                })(d)
-              ),
-            t4(f, "BrtWsDim", rx(p)),
-            (a = r.Workbook),
-            t4(f, "BrtBeginWsViews"),
-            t4(
-              f,
-              "BrtBeginWsView",
-              (null == s && (s = t1(30)),
-              (i = 924),
-              (((a || {}).Views || [])[0] || {}).RTL && (i |= 32),
-              s.write_shift(2, i),
-              s.write_shift(4, 0),
-              s.write_shift(4, 0),
-              s.write_shift(4, 0),
-              s.write_shift(1, 0),
-              s.write_shift(1, 0),
-              s.write_shift(2, 0),
-              s.write_shift(2, 100),
-              s.write_shift(2, 0),
-              s.write_shift(2, 0),
-              s.write_shift(2, 0),
-              s.write_shift(4, 0),
-              s)
-            ),
-            t4(f, "BrtEndWsView"),
-            t4(f, "BrtEndWsViews"),
-            u &&
-              u["!cols"] &&
-              (t4(f, "BrtBeginColInfos"),
-              u["!cols"].forEach(function (e, t) {
-                if (e) {
-                  var r, n, a;
-                  t4(
-                    f,
-                    "BrtColInfo",
-                    (null == r && (r = t1(18)),
-                    (n = sy(t, e)),
-                    r.write_shift(-4, t),
-                    r.write_shift(-4, t),
-                    r.write_shift(4, 256 * (n.width || 10)),
-                    r.write_shift(4, 0),
-                    (a = 0),
-                    e.hidden && (a |= 1),
-                    "number" == typeof n.width && (a |= 2),
-                    e.level && (a |= e.level << 8),
-                    r.write_shift(2, a),
-                    r)
-                  );
-                }
-              }),
-              t4(f, "BrtEndColInfos")),
-            !(function (e, t, r, n) {
-              var a,
-                s = ri(t["!ref"] || "A1"),
-                i = "",
-                o = [];
-              t4(e, "BrtBeginSheetData");
-              var c = Array.isArray(t),
-                l = s.e.r;
-              t["!rows"] && (l = Math.max(s.e.r, t["!rows"].length - 1));
-              for (var f = s.s.r; f <= l; ++f) {
-                (i = t9(f)),
-                  (function (e, t, r, n) {
-                    var a = (function (e, t, r) {
-                      var n = t1(145),
-                        a = (r["!rows"] || [])[e] || {};
-                      n.write_shift(4, e), n.write_shift(4, 0);
-                      var s = 320;
-                      a.hpx ? (s = 20 * aA(a.hpx)) : a.hpt && (s = 20 * a.hpt),
-                        n.write_shift(2, s),
-                        n.write_shift(1, 0);
-                      var i = 0;
-                      a.level && (i |= a.level),
-                        a.hidden && (i |= 16),
-                        (a.hpx || a.hpt) && (i |= 32),
-                        n.write_shift(1, i),
-                        n.write_shift(1, 0);
-                      var o = 0,
-                        c = n.l;
-                      n.l += 4;
-                      for (var l = { r: e, c: 0 }, f = 0; f < 16; ++f)
-                        if (!(t.s.c > (f + 1) << 10) && !(t.e.c < f << 10)) {
-                          for (
-                            var h = -1, u = -1, d = f << 10;
-                            d < (f + 1) << 10;
-                            ++d
-                          )
-                            (l.c = d),
-                              (Array.isArray(r)
-                                ? (r[l.r] || [])[l.c]
-                                : r[rn(l)]) && (h < 0 && (h = d), (u = d));
-                          h < 0 ||
-                            (++o, n.write_shift(4, h), n.write_shift(4, u));
-                        }
-                      var p = n.l;
-                      return (
-                        (n.l = c),
-                        n.write_shift(4, o),
-                        (n.l = p),
-                        n.length > n.l ? n.slice(0, n.l) : n
-                      );
-                    })(n, r, t);
-                    (a.length > 17 || (t["!rows"] || [])[n]) &&
-                      t4(e, "BrtRowHdr", a);
-                  })(e, t, s, f);
-                var h = !1;
-                if (f <= s.e.r)
-                  for (var u = s.s.c; u <= s.e.c; ++u) {
-                    f === s.s.r && (o[u] = rt(u)), (a = o[u] + i);
-                    var d = c ? (t[f] || [])[u] : t[a];
-                    if (!d) {
-                      h = !1;
-                      continue;
-                    }
-                    h = (function (e, t, r, n, a, s, i) {
-                      if (void 0 === t.v) return !1;
-                      var o,
-                        c,
-                        l,
-                        f,
-                        h,
-                        u,
-                        d,
-                        p,
-                        m,
-                        g,
-                        v,
-                        b,
-                        E,
-                        S,
-                        w,
-                        C,
-                        B,
-                        T,
-                        x,
-                        _,
-                        k,
-                        A,
-                        I,
-                        y,
-                        R = "";
-                      switch (t.t) {
-                        case "b":
-                          R = t.v ? "1" : "0";
-                          break;
-                        case "d":
-                          ((t = eL(t)).z = t.z || ev._table[14]),
-                            (t.v = eI(eN(t.v))),
-                            (t.t = "n");
-                          break;
-                        case "n":
-                        case "e":
-                          R = "" + t.v;
-                          break;
-                        default:
-                          R = t.v;
-                      }
-                      var F = { r: r, c: n };
-                      switch (
-                        ((F.s = sF(a.cellXfs, t, a)),
-                        t.l && s["!links"].push([rn(F), t.l]),
-                        t.c && s["!comments"].push([rn(F), t.c]),
-                        t.t)
-                      ) {
-                        case "s":
-                        case "str":
-                          return (
-                            a.bookSST
-                              ? ((R = sI(a.Strings, t.v, a.revStrings)),
-                                (F.t = "s"),
-                                (F.v = R),
-                                i)
-                                ? t4(
-                                    e,
-                                    "BrtShortIsst",
-                                    (null == o && (o = t1(8)),
-                                    rE(F, o),
-                                    o.write_shift(4, F.v),
-                                    o)
-                                  )
-                                : t4(
-                                    e,
-                                    "BrtCellIsst",
-                                    (null == c && (c = t1(12)),
-                                    rv(F, c),
-                                    c.write_shift(4, F.v),
-                                    c)
-                                  )
-                              : ((F.t = "str"), i)
-                                ? t4(
-                                    e,
-                                    "BrtShortSt",
-                                    ((l = t),
-                                    null == f && (f = t1(8 + 4 * l.v.length)),
-                                    rE(F, f),
-                                    rp(l.v, f),
-                                    f.length > f.l ? f.slice(0, f.l) : f)
-                                  )
-                                : t4(
-                                    e,
-                                    "BrtCellSt",
-                                    ((h = t),
-                                    null == u && (u = t1(12 + 4 * h.v.length)),
-                                    rv(F, u),
-                                    rp(h.v, u),
-                                    u.length > u.l ? u.slice(0, u.l) : u)
-                                  ),
-                            !0
-                          );
-                        case "n":
-                          return (
-                            t.v == (0 | t.v) && t.v > -1e3 && t.v < 1e3
-                              ? i
-                                ? t4(
-                                    e,
-                                    "BrtShortRk",
-                                    ((d = t),
-                                    null == p && (p = t1(8)),
-                                    rE(F, p),
-                                    rB(d.v, p),
-                                    p)
-                                  )
-                                : t4(
-                                    e,
-                                    "BrtCellRk",
-                                    ((m = t),
-                                    null == g && (g = t1(12)),
-                                    rv(F, g),
-                                    rB(m.v, g),
-                                    g)
-                                  )
-                              : i
-                                ? t4(
-                                    e,
-                                    "BrtShortReal",
-                                    ((v = t),
-                                    null == b && (b = t1(12)),
-                                    rE(F, b),
-                                    rk(v.v, b),
-                                    b)
-                                  )
-                                : t4(
-                                    e,
-                                    "BrtCellReal",
-                                    ((E = t),
-                                    null == S && (S = t1(16)),
-                                    rv(F, S),
-                                    rk(E.v, S),
-                                    S)
-                                  ),
-                            !0
-                          );
-                        case "b":
-                          return (
-                            ((F.t = "b"), i)
-                              ? t4(
-                                  e,
-                                  "BrtShortBool",
-                                  ((w = t),
-                                  null == C && (C = t1(5)),
-                                  rE(F, C),
-                                  C.write_shift(1, w.v ? 1 : 0),
-                                  C)
-                                )
-                              : t4(
-                                  e,
-                                  "BrtCellBool",
-                                  ((B = t),
-                                  null == T && (T = t1(9)),
-                                  rv(F, T),
-                                  T.write_shift(1, B.v ? 1 : 0),
-                                  T)
-                                ),
-                            !0
-                          );
-                        case "e":
-                          return (
-                            ((F.t = "e"), i)
-                              ? t4(
-                                  e,
-                                  "BrtShortError",
-                                  ((x = t),
-                                  null == _ && (_ = t1(8)),
-                                  rE(F, _),
-                                  _.write_shift(1, x.v),
-                                  _.write_shift(2, 0),
-                                  _.write_shift(1, 0),
-                                  _)
-                                )
-                              : t4(
-                                  e,
-                                  "BrtCellError",
-                                  ((k = t),
-                                  null == A && (A = t1(9)),
-                                  rv(F, A),
-                                  A.write_shift(1, k.v),
-                                  A)
-                                ),
-                            !0
-                          );
-                      }
-                      return (
-                        i
-                          ? t4(
-                              e,
-                              "BrtShortBlank",
-                              (null == I && (I = t1(4)), rE(F, I))
-                            )
-                          : t4(
-                              e,
-                              "BrtCellBlank",
-                              (null == y && (y = t1(8)), rv(F, y))
-                            ),
-                        !0
-                      );
-                    })(e, d, f, u, n, t, h);
-                  }
-              }
-              t4(e, "BrtEndSheetData");
-            })(f, u, 0, t, r),
-            !(function (e, t) {
-              if (t["!protect"]) {
-                var r, n;
-                t4(
-                  e,
-                  "BrtSheetProtection",
-                  ((r = t["!protect"]),
-                  null == n && (n = t1(66)),
-                  n.write_shift(2, r.password ? ap(r.password) : 0),
-                  n.write_shift(4, 1),
-                  [
-                    ["objects", !1],
-                    ["scenarios", !1],
-                    ["formatCells", !0],
-                    ["formatColumns", !0],
-                    ["formatRows", !0],
-                    ["insertColumns", !0],
-                    ["insertRows", !0],
-                    ["insertHyperlinks", !0],
-                    ["deleteColumns", !0],
-                    ["deleteRows", !0],
-                    ["selectLockedCells", !1],
-                    ["sort", !0],
-                    ["autoFilter", !0],
-                    ["pivotTables", !0],
-                    ["selectUnlockedCells", !1],
-                  ].forEach(function (e) {
-                    e[1]
-                      ? n.write_shift(4, null == r[e[0]] || r[e[0]] ? 0 : 1)
-                      : n.write_shift(4, null != r[e[0]] && r[e[0]] ? 0 : 1);
-                  }),
-                  n)
-                );
-              }
-            })(f, u),
-            !(function (e, t, r, n) {
-              if (t["!autofilter"]) {
-                var a = t["!autofilter"],
-                  s = "string" == typeof a.ref ? a.ref : rs(a.ref);
-                r.Workbook || (r.Workbook = { Sheets: [] }),
-                  r.Workbook.Names || (r.Workbook.Names = []);
-                var i = r.Workbook.Names,
-                  o = ra(s);
-                o.s.r == o.e.r && ((o.e.r = ra(t["!ref"]).e.r), (s = rs(o)));
-                for (var c = 0; c < i.length; ++c) {
-                  var l = i[c];
-                  if ("_xlnm._FilterDatabase" == l.Name && l.Sheet == n) {
-                    l.Ref = "'" + r.SheetNames[n] + "'!" + s;
-                    break;
-                  }
-                }
-                c == i.length &&
-                  i.push({
-                    Name: "_xlnm._FilterDatabase",
-                    Sheet: n,
-                    Ref: "'" + r.SheetNames[n] + "'!" + s,
-                  }),
-                  t4(e, "BrtBeginAFilter", rx(ri(s))),
-                  t4(e, "BrtEndAFilter");
-              }
-            })(f, u, r, e),
-            !(function (e, t) {
-              if (t && t["!merges"]) {
-                var r, n;
-                t4(
-                  e,
-                  "BrtBeginMergeCells",
-                  ((r = t["!merges"].length),
-                  null == n && (n = t1(4)),
-                  n.write_shift(4, r),
-                  n)
-                ),
-                  t["!merges"].forEach(function (t) {
-                    t4(e, "BrtMergeCell", rx(t));
-                  }),
-                  t4(e, "BrtEndMergeCells");
-              }
-            })(f, u),
-            (o = u)["!links"].forEach(function (e) {
-              if (e[1].Target) {
-                var t,
-                  r,
-                  a = rq(n, -1, e[1].Target.replace(/#.*$/, ""), r$.HLINK);
-                t4(
-                  f,
-                  "BrtHLink",
-                  ((t = t1(
-                    50 + 4 * (e[1].Target.length + (e[1].Tooltip || "").length)
-                  )),
-                  rx({ s: rr(e[0]), e: rr(e[0]) }, t),
-                  rw("rId" + a, t),
-                  rp(
-                    (-1 == (r = e[1].Target.indexOf("#"))
-                      ? ""
-                      : e[1].Target.slice(r + 1)) || "",
-                    t
-                  ),
-                  rp(e[1].Tooltip || "", t),
-                  rp("", t),
-                  t.slice(0, t.l))
-                );
-              }
-            }),
-            delete o["!links"],
-            u["!margins"] &&
-              t4(
-                f,
-                "BrtMargins",
-                ((c = u["!margins"]),
-                null == l && (l = t1(48)),
-                sR(c),
-                sJ.forEach(function (e) {
-                  rk(c[e], l);
-                }),
-                l)
-              ),
-            (!t || t.ignoreEC || void 0 == t.ignoreEC) &&
-              (function (e, t) {
-                if (t && t["!ref"]) {
-                  var r, n;
-                  t4(e, "BrtBeginCellIgnoreECs"),
-                    t4(
-                      e,
-                      "BrtCellIgnoreEC",
-                      ((r = ri(t["!ref"])),
-                      (n = t1(24)).write_shift(4, 4),
-                      n.write_shift(4, 1),
-                      rx(r, n),
-                      n)
-                    ),
-                    t4(e, "BrtEndCellIgnoreECs");
-                }
-              })(f, u),
-            !(function (e, t, r, n) {
-              if (t["!comments"].length > 0) {
-                var a = rq(
-                  n,
-                  -1,
-                  "../drawings/vmlDrawing" + (r + 1) + ".vml",
-                  r$.VML
-                );
-                t4(e, "BrtLegacyDrawing", rw("rId" + a)), (t["!legacy"] = a);
-              }
-            })(f, u, e, n),
-            t4(f, "BrtEndSheet"),
-            f.end()
-          );
-        }
-        (r$.CHART =
+        var sX = ["left", "right", "top", "bottom", "header", "footer"];
+        (rj.CHART =
           "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart"),
-          (r$.CHARTEX =
+          (rj.CHARTEX =
             "http://schemas.microsoft.com/office/2014/relationships/chartEx"),
-          (r$.CS =
+          (rj.CS =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet"),
           tE("chartsheet", null, { xmlns: tw.main[0], "xmlns:r": tw.r });
-        var sq = [
+        var sG = [
             ["allowRefreshQuery", !1, "bool"],
             ["autoCompressPictures", !0, "bool"],
             ["backupFile", !1, "bool"],
@@ -13679,7 +12506,7 @@
             ["showPivotChartFilter", !1, "bool"],
             ["updateLinks", "userSet"],
           ],
-          s1 = [
+          sz = [
             ["activeTab", 0, "int"],
             ["autoFilterDateGrouping", !0, "bool"],
             ["firstSheet", 0, "int"],
@@ -13690,8 +12517,8 @@
             ["tabRatio", 600, "int"],
             ["visibility", "visible"],
           ],
-          s0 = [],
-          s2 = [
+          sj = [],
+          s$ = [
             ["calcCompleted", "true"],
             ["calcMode", "auto"],
             ["calcOnSave", "true"],
@@ -13703,7 +12530,7 @@
             ["iterateDelta", "0.001"],
             ["refMode", "A1"],
           ];
-        function s4(e, t) {
+        function sK(e, t) {
           for (var r = 0; r != e.length; ++r)
             for (var n = e[r], a = 0; a != t.length; ++a) {
               var s = t[a];
@@ -13719,7 +12546,7 @@
                 }
             }
         }
-        function s3(e, t) {
+        function sY(e, t) {
           for (var r = 0; r != t.length; ++r) {
             var n = t[r];
             if (null == e[n[0]]) e[n[0]] = n[1];
@@ -13734,22 +12561,22 @@
               }
           }
         }
-        function s5(e) {
-          s3(e.WBProps, sq),
-            s3(e.CalcPr, s2),
-            s4(e.WBView, s1),
-            s4(e.Sheets, s0),
-            (sk.date1904 = ta(e.WBProps.date1904));
+        function sQ(e) {
+          sY(e.WBProps, sG),
+            sY(e.CalcPr, s$),
+            sK(e.WBView, sz),
+            sK(e.Sheets, sj),
+            (sS.date1904 = ta(e.WBProps.date1904));
         }
-        var s6 = "][*?/\\".split("");
-        function s8(e, t) {
+        var sJ = "][*?/\\".split("");
+        function sZ(e, t) {
           if (e.length > 31) {
             if (t) return !1;
             throw Error("Sheet names cannot exceed 31 chars");
           }
           var r = !0;
           return (
-            s6.forEach(function (n) {
+            sJ.forEach(function (n) {
               if (-1 != e.indexOf(n)) {
                 if (!t) throw Error("Sheet name cannot contain : \\ / ? * [ ]");
                 r = !1;
@@ -13758,182 +12585,27 @@
             r
           );
         }
-        var s7 = /<\w+:workbook/,
-          s9 = tE("workbook", null, { xmlns: tw.main[0], "xmlns:r": tw.r });
-        function ie(e) {
-          var t = [eJ];
-          t[t.length] = s9;
-          var r = e.Workbook && (e.Workbook.Names || []).length > 0,
-            n = { codeName: "ThisWorkbook" };
-          e.Workbook &&
-            e.Workbook.WBProps &&
-            (sq.forEach(function (t) {
-              null != e.Workbook.WBProps[t[0]] &&
-                e.Workbook.WBProps[t[0]] != t[1] &&
-                (n[t[0]] = e.Workbook.WBProps[t[0]]);
-            }),
-            e.Workbook.WBProps.CodeName &&
-              ((n.codeName = e.Workbook.WBProps.CodeName), delete n.CodeName)),
-            (t[t.length] = tE("workbookPr", null, n));
-          var a = (e.Workbook && e.Workbook.Sheets) || [],
-            s = 0;
-          if (a && a[0] && a[0].Hidden) {
-            for (
-              s = 0, t[t.length] = "<bookViews>";
-              s != e.SheetNames.length && a[s] && a[s].Hidden;
-              ++s
-            );
-            s == e.SheetNames.length && (s = 0),
-              (t[t.length] =
-                '<workbookView firstSheet="' + s + '" activeTab="' + s + '"/>'),
-              (t[t.length] = "</bookViews>");
-          }
-          for (s = 0, t[t.length] = "<sheets>"; s != e.SheetNames.length; ++s) {
-            var i = { name: e9(e.SheetNames[s].slice(0, 31)) };
-            if (
-              ((i.sheetId = "" + (s + 1)), (i["r:id"] = "rId" + (s + 1)), a[s])
-            )
-              switch (a[s].Hidden) {
-                case 1:
-                  i.state = "hidden";
-                  break;
-                case 2:
-                  i.state = "veryHidden";
-              }
-            t[t.length] = tE("sheet", null, i);
-          }
-          return (
-            (t[t.length] = "</sheets>"),
-            r &&
-              ((t[t.length] = "<definedNames>"),
-              e.Workbook &&
-                e.Workbook.Names &&
-                e.Workbook.Names.forEach(function (e) {
-                  var r = { name: e.Name };
-                  e.Comment && (r.comment = e.Comment),
-                    null != e.Sheet && (r.localSheetId = "" + e.Sheet),
-                    e.Hidden && (r.hidden = "1"),
-                    e.Ref && (t[t.length] = tE("definedName", e9(e.Ref), r));
-                }),
-              (t[t.length] = "</definedNames>")),
-            t.length > 2 &&
-              ((t[t.length] = "</workbook>"), (t[1] = t[1].replace("/>", ">"))),
-            t.join("")
-          );
-        }
-        function it(e, t) {
+        var sq = /<\w+:workbook/,
+          s1 = tE("workbook", null, { xmlns: tw.main[0], "xmlns:r": tw.r });
+        function s0(e, t) {
           var r = {};
           return (
             e.read_shift(4), (r.ArchID = e.read_shift(4)), (e.l += t - 8), r
           );
         }
-        function ir(e, r) {
-          var n,
-            a,
-            s,
-            i = t2();
-          return (
-            t4(i, "BrtBeginBook"),
-            t4(
-              i,
-              "BrtFileVersion",
-              (function (e, r) {
-                r || (r = t1(127));
-                for (var n = 0; 4 != n; ++n) r.write_shift(4, 0);
-                return (
-                  rp("SheetJS", r),
-                  rp(t.version, r),
-                  rp(t.version, r),
-                  rp("7262", r),
-                  r.length > r.l ? r.slice(0, r.l) : r
-                );
-              })()
-            ),
-            t4(
-              i,
-              "BrtWbProp",
-              ((n = (e.Workbook && e.Workbook.WBProps) || null),
-              a || (a = t1(72)),
-              (s = 0),
-              n && n.filterPrivacy && (s |= 8),
-              a.write_shift(4, s),
-              a.write_shift(4, 0),
-              rp((n && n.CodeName) || "ThisWorkbook", a),
-              a.slice(0, a.l))
-            ),
-            !(function (e, t) {
-              if (t.Workbook && t.Workbook.Sheets) {
-                for (
-                  var r, n, a = t.Workbook.Sheets, s = 0, i = -1, o = -1;
-                  s < a.length;
-                  ++s
-                )
-                  a[s] && (a[s].Hidden || -1 != i)
-                    ? 1 == a[s].Hidden && -1 == o && (o = s)
-                    : (i = s);
-                o > i ||
-                  (t4(e, "BrtBeginBookViews"),
-                  t4(
-                    e,
-                    "BrtBookView",
-                    ((r = i),
-                    n || (n = t1(29)),
-                    n.write_shift(-4, 0),
-                    n.write_shift(-4, 460),
-                    n.write_shift(4, 28800),
-                    n.write_shift(4, 17600),
-                    n.write_shift(4, 500),
-                    n.write_shift(4, r),
-                    n.write_shift(4, r),
-                    n.write_shift(1, 120),
-                    n.length > n.l ? n.slice(0, n.l) : n)
-                  ),
-                  t4(e, "BrtEndBookViews"));
-              }
-            })(i, e, r),
-            !(function (e, t) {
-              t4(e, "BrtBeginBundleShs");
-              for (var r, n, a = 0; a != t.SheetNames.length; ++a)
-                t4(
-                  e,
-                  "BrtBundleSh",
-                  ((r = {
-                    Hidden:
-                      (t.Workbook &&
-                        t.Workbook.Sheets &&
-                        t.Workbook.Sheets[a] &&
-                        t.Workbook.Sheets[a].Hidden) ||
-                      0,
-                    iTabID: a + 1,
-                    strRelID: "rId" + (a + 1),
-                    name: t.SheetNames[a],
-                  }),
-                  n || (n = t1(127)),
-                  n.write_shift(4, r.Hidden),
-                  n.write_shift(4, r.iTabID),
-                  rw(r.strRelID, n),
-                  rp(r.name.slice(0, 31), n),
-                  n.length > n.l ? n.slice(0, n.l) : n)
-                );
-              t4(e, "BrtEndBundleShs");
-            })(i, e, r),
-            t4(i, "BrtEndBook"),
-            i.end()
-          );
-        }
-        var ia = /([\w:]+)=((?:")([^"]*)(?:")|(?:')([^']*)(?:'))/g,
-          is = /([\w:]+)=((?:")(?:[^"]*)(?:")|(?:')(?:[^']*)(?:'))/;
-        function ii(e, t) {
+        var s2 = /([\w:]+)=((?:")([^"]*)(?:")|(?:')([^']*)(?:'))/g,
+          s4 = /([\w:]+)=((?:")(?:[^"]*)(?:")|(?:')(?:[^']*)(?:'))/;
+        function s3(e, t) {
           var r = e.split(/\s+/),
             n = [];
           if ((t || (n[0] = r[0]), 1 === r.length)) return n;
           var a,
             s,
             i,
-            o = e.match(ia);
+            o = e.match(s2);
           if (o)
             for (i = 0; i != o.length; ++i)
-              -1 === (s = (a = o[i].match(is))[1].indexOf(":"))
+              -1 === (s = (a = o[i].match(s4))[1].indexOf(":"))
                 ? (n[a[1]] = a[2].slice(1, a[2].length - 1))
                 : (n[
                     "xmlns:" === a[1].slice(0, 6)
@@ -13942,32 +12614,30 @@
                   ] = a[2].slice(1, a[2].length - 1));
           return n;
         }
-        function io(e) {
+        function s5(e) {
           if (es && n.isBuffer(e)) return e.toString("utf8");
           if ("string" == typeof e) return e;
           if ("undefined" != typeof Uint8Array && e instanceof Uint8Array)
             return ts(eu(ed(e)));
           throw Error("Bad input format: expected Buffer or string");
         }
-        var ic = /<(\/?)([^\s?><!\/:]*:|)([^\s?<>:\/]+)(?:[\s?:\/][^>]*)?>/gm;
-        function il(e, t) {
+        var s6 = /<(\/?)([^\s?><!\/:]*:|)([^\s?<>:\/]+)(?:[\s?:\/][^>]*)?>/gm;
+        function s8(e, t) {
           var r,
             n,
             a,
-            s,
-            i,
-            o = t || {};
+            s = t || {};
           eb(ev);
-          var c = et(io(e));
-          ("binary" == o.type || "array" == o.type || "base64" == o.type) &&
-            (c =
+          var i = et(s5(e));
+          ("binary" == s.type || "array" == s.type || "base64" == s.type) &&
+            (i =
               "undefined" != typeof cptable
-                ? cptable.utils.decode(65001, ee(c))
-                : ts(c));
-          var l = c.slice(0, 1024).toLowerCase(),
-            f = !1;
+                ? cptable.utils.decode(65001, ee(i))
+                : ts(i));
+          var o = i.slice(0, 1024).toLowerCase(),
+            c = !1;
           if (
-            (-1 == l.indexOf("<?xml") &&
+            (-1 == o.indexOf("<?xml") &&
               [
                 "html",
                 "table",
@@ -13977,60 +12647,60 @@
                 "style",
                 "div",
               ].forEach(function (e) {
-                l.indexOf("<" + e) >= 0 && (f = !0);
+                o.indexOf("<" + e) >= 0 && (c = !0);
               }),
-            f)
+            c)
           )
-            return iT.to_workbook(c, o);
-          var h,
-            u,
-            d,
+            return id.to_workbook(i, s);
+          var l,
+            f,
+            h,
+            u = [],
+            d = {},
             p = [],
-            m = {},
-            g = [],
-            v = o.dense ? [] : {},
-            b = "",
-            E = {},
-            S = {},
-            w = ii('<Data ss:Type="String">'),
-            C = 0,
+            m = s.dense ? [] : {},
+            g = "",
+            v = {},
+            b = {},
+            E = s3('<Data ss:Type="String">'),
+            S = 0,
+            w = 0,
             B = 0,
-            T = 0,
-            x = { s: { r: 2e6, c: 2e6 }, e: { r: 0, c: 0 } },
+            C = { s: { r: 2e6, c: 2e6 }, e: { r: 0, c: 0 } },
+            T = {},
             _ = {},
-            k = {},
-            A = "",
-            I = 0,
-            y = [],
-            R = {},
-            F = {},
-            D = 0,
-            O = [],
+            x = "",
+            k = 0,
+            A = [],
+            I = {},
+            y = {},
+            R = 0,
+            F = [],
+            D = [],
+            O = {},
             P = [],
-            N = {},
+            N = !1,
             M = [],
-            L = !1,
-            U = [],
-            H = [],
-            W = {},
-            V = 0,
-            X = 0,
-            G = { Sheets: [], WBProps: { date1904: !1 } },
-            z = {};
-          (ic.lastIndex = 0), (c = c.replace(/<!--([\s\S]*?)-->/gm, ""));
-          for (var j = ""; (h = ic.exec(c)); )
-            switch ((h[3] = (j = h[3]).toLowerCase())) {
+            L = [],
+            U = {},
+            H = 0,
+            W = 0,
+            V = { Sheets: [], WBProps: { date1904: !1 } },
+            X = {};
+          (s6.lastIndex = 0), (i = i.replace(/<!--([\s\S]*?)-->/gm, ""));
+          for (var G = ""; (l = s6.exec(i)); )
+            switch ((l[3] = (G = l[3]).toLowerCase())) {
               case "data":
-                if ("data" == j) {
-                  if ("/" === h[1]) {
-                    if ((u = p.pop())[0] !== h[3])
-                      throw Error("Bad state: " + u.join("|"));
+                if ("data" == G) {
+                  if ("/" === l[1]) {
+                    if ((f = u.pop())[0] !== l[3])
+                      throw Error("Bad state: " + f.join("|"));
                   } else
-                    "/" !== h[0].charAt(h[0].length - 2) && p.push([h[3], !0]);
+                    "/" !== l[0].charAt(l[0].length - 2) && u.push([l[3], !0]);
                   break;
                 }
-                if (p[p.length - 1][1]) break;
-                "/" === h[1]
+                if (u[u.length - 1][1]) break;
+                "/" === l[1]
                   ? (function (e, t, r, n, a, s, i, o, c, l) {
                       var f = "General",
                         h = n.StyleID,
@@ -14073,7 +12743,7 @@
                           break;
                         case "Error":
                           (n.t = "e"),
-                            (n.v = rH[e]),
+                            (n.v = rU[e]),
                             !1 !== l.cellText && (n.w = e);
                           break;
                         default:
@@ -14086,7 +12756,7 @@
                           if ("z" !== e.t) {
                             if (!r || !1 !== r.cellText)
                               try {
-                                if ("e" === e.t) e.w = e.w || rU[e.v];
+                                if ("e" === e.t) e.w = e.w || rL[e.v];
                                 else if ("General" === t)
                                   "n" === e.t
                                     ? (0 | e.v) === e.v
@@ -14135,13 +12805,13 @@
                         if (n.Formula) {
                           var m = e6(n.Formula);
                           61 == m.charCodeAt(0) && (m = m.slice(1)),
-                            (n.f = a2(m, a)),
+                            (n.f = aY(m, a)),
                             delete n.Formula,
                             "RC" == n.ArrayRange
-                              ? (n.F = a2("RC:RC", a))
+                              ? (n.F = aY("RC:RC", a))
                               : n.ArrayRange &&
-                                ((n.F = a2(n.ArrayRange, a)),
-                                c.push([ri(n.F), n.F]));
+                                ((n.F = aY(n.ArrayRange, a)),
+                                c.push([rs(n.F), n.F]));
                         } else
                           for (p = 0; p < c.length; ++p)
                             a.r >= c[p][0].s.r &&
@@ -14159,61 +12829,61 @@
                         (n.s = u)),
                         void 0 !== n.StyleID && (n.ixfe = n.StyleID);
                     })(
-                      c.slice(C, h.index),
-                      A,
-                      w,
-                      "comment" == p[p.length - 1][0] ? N : E,
-                      { c: B, r: T },
-                      _,
-                      M[B],
-                      S,
-                      U,
-                      o
+                      i.slice(S, l.index),
+                      x,
+                      E,
+                      "comment" == u[u.length - 1][0] ? O : v,
+                      { c: w, r: B },
+                      T,
+                      P[w],
+                      b,
+                      M,
+                      s
                     )
-                  : ((A = ""), (w = ii(h[0])), (C = h.index + h[0].length));
+                  : ((x = ""), (E = s3(l[0])), (S = l.index + l[0].length));
                 break;
               case "cell":
-                if ("/" === h[1]) {
+                if ("/" === l[1]) {
                   if (
-                    (P.length > 0 && (E.c = P),
-                    (!o.sheetRows || o.sheetRows > T) &&
-                      void 0 !== E.v &&
-                      (o.dense
-                        ? (v[T] || (v[T] = []), (v[T][B] = E))
-                        : (v[rt(B) + t9(T)] = E)),
-                    E.HRef &&
-                      ((E.l = { Target: E.HRef }),
-                      E.HRefScreenTip && (E.l.Tooltip = E.HRefScreenTip),
-                      delete E.HRef,
-                      delete E.HRefScreenTip),
-                    (E.MergeAcross || E.MergeDown) &&
-                      ((V = B + (0 | parseInt(E.MergeAcross, 10))),
-                      (X = T + (0 | parseInt(E.MergeDown, 10))),
-                      y.push({ s: { c: B, r: T }, e: { c: V, r: X } })),
-                    o.sheetStubs)
+                    (D.length > 0 && (v.c = D),
+                    (!s.sheetRows || s.sheetRows > B) &&
+                      void 0 !== v.v &&
+                      (s.dense
+                        ? (m[B] || (m[B] = []), (m[B][w] = v))
+                        : (m[re(w) + t7(B)] = v)),
+                    v.HRef &&
+                      ((v.l = { Target: v.HRef }),
+                      v.HRefScreenTip && (v.l.Tooltip = v.HRefScreenTip),
+                      delete v.HRef,
+                      delete v.HRefScreenTip),
+                    (v.MergeAcross || v.MergeDown) &&
+                      ((H = w + (0 | parseInt(v.MergeAcross, 10))),
+                      (W = B + (0 | parseInt(v.MergeDown, 10))),
+                      A.push({ s: { c: w, r: B }, e: { c: H, r: W } })),
+                    s.sheetStubs)
                   ) {
-                    if (E.MergeAcross || E.MergeDown) {
-                      for (var K = B; K <= V; ++K)
-                        for (var Y = T; Y <= X; ++Y)
-                          (K > B || Y > T) &&
-                            (o.dense
-                              ? (v[Y] || (v[Y] = []), (v[Y][K] = { t: "z" }))
-                              : (v[rt(K) + t9(Y)] = { t: "z" }));
-                      B = V + 1;
-                    } else ++B;
-                  } else E.MergeAcross ? (B = V + 1) : ++B;
+                    if (v.MergeAcross || v.MergeDown) {
+                      for (var z = w; z <= H; ++z)
+                        for (var j = B; j <= W; ++j)
+                          (z > w || j > B) &&
+                            (s.dense
+                              ? (m[j] || (m[j] = []), (m[j][z] = { t: "z" }))
+                              : (m[re(z) + t7(j)] = { t: "z" }));
+                      w = H + 1;
+                    } else ++w;
+                  } else v.MergeAcross ? (w = H + 1) : ++w;
                 } else
-                  (E = (function (e) {
+                  (v = (function (e) {
                     var t = e.split(/\s+/),
                       r = {};
                     if (1 === t.length) return r;
                     var n,
                       a,
                       s,
-                      i = e.match(ia);
+                      i = e.match(s2);
                     if (i)
                       for (s = 0; s != i.length; ++s)
-                        -1 === (a = (n = i[s].match(is))[1].indexOf(":"))
+                        -1 === (a = (n = i[s].match(s4))[1].indexOf(":"))
                           ? (r[n[1]] = n[2].slice(1, n[2].length - 1))
                           : (r[
                               "xmlns:" === n[1].slice(0, 6)
@@ -14221,113 +12891,113 @@
                                 : n[1].slice(a + 1)
                             ] = n[2].slice(1, n[2].length - 1));
                     return r;
-                  })(h[0])).Index && (B = +E.Index - 1),
-                    B < x.s.c && (x.s.c = B),
-                    B > x.e.c && (x.e.c = B),
-                    "/>" === h[0].slice(-2) && ++B,
-                    (P = []);
+                  })(l[0])).Index && (w = +v.Index - 1),
+                    w < C.s.c && (C.s.c = w),
+                    w > C.e.c && (C.e.c = w),
+                    "/>" === l[0].slice(-2) && ++w,
+                    (D = []);
                 break;
               case "row":
-                "/" === h[1] || "/>" === h[0].slice(-2)
-                  ? (T < x.s.r && (x.s.r = T),
-                    T > x.e.r && (x.e.r = T),
-                    "/>" === h[0].slice(-2) &&
-                      (S = ii(h[0])).Index &&
-                      (T = +S.Index - 1),
-                    (B = 0),
-                    ++T)
-                  : ((S = ii(h[0])).Index && (T = +S.Index - 1),
-                    (W = {}),
-                    ("0" == S.AutoFitHeight || S.Height) &&
-                      ((W.hpx = parseInt(S.Height, 10)),
-                      (W.hpt = aA(W.hpx)),
-                      (H[T] = W)),
-                    "1" == S.Hidden && ((W.hidden = !0), (H[T] = W)));
+                "/" === l[1] || "/>" === l[0].slice(-2)
+                  ? (B < C.s.r && (C.s.r = B),
+                    B > C.e.r && (C.e.r = B),
+                    "/>" === l[0].slice(-2) &&
+                      (b = s3(l[0])).Index &&
+                      (B = +b.Index - 1),
+                    (w = 0),
+                    ++B)
+                  : ((b = s3(l[0])).Index && (B = +b.Index - 1),
+                    (U = {}),
+                    ("0" == b.AutoFitHeight || b.Height) &&
+                      ((U.hpx = parseInt(b.Height, 10)),
+                      (U.hpt = a_(U.hpx)),
+                      (L[B] = U)),
+                    "1" == b.Hidden && ((U.hidden = !0), (L[B] = U)));
                 break;
               case "worksheet":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
-                  g.push(b),
-                    x.s.r <= x.e.r &&
-                      x.s.c <= x.e.c &&
-                      ((v["!ref"] = rs(x)),
-                      o.sheetRows &&
-                        o.sheetRows <= x.e.r &&
-                        ((v["!fullref"] = v["!ref"]),
-                        (x.e.r = o.sheetRows - 1),
-                        (v["!ref"] = rs(x)))),
-                    y.length && (v["!merges"] = y),
-                    M.length > 0 && (v["!cols"] = M),
-                    H.length > 0 && (v["!rows"] = H),
-                    (m[b] = v);
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
+                  p.push(g),
+                    C.s.r <= C.e.r &&
+                      C.s.c <= C.e.c &&
+                      ((m["!ref"] = ra(C)),
+                      s.sheetRows &&
+                        s.sheetRows <= C.e.r &&
+                        ((m["!fullref"] = m["!ref"]),
+                        (C.e.r = s.sheetRows - 1),
+                        (m["!ref"] = ra(C)))),
+                    A.length && (m["!merges"] = A),
+                    P.length > 0 && (m["!cols"] = P),
+                    L.length > 0 && (m["!rows"] = L),
+                    (d[g] = m);
                 } else
-                  (x = { s: { r: 2e6, c: 2e6 }, e: { r: 0, c: 0 } }),
-                    (T = B = 0),
-                    p.push([h[3], !1]),
-                    (b = e6((u = ii(h[0])).Name)),
-                    (v = o.dense ? [] : {}),
-                    (y = []),
-                    (U = []),
-                    (H = []),
-                    (z = { name: b, Hidden: 0 }),
-                    G.Sheets.push(z);
+                  (C = { s: { r: 2e6, c: 2e6 }, e: { r: 0, c: 0 } }),
+                    (B = w = 0),
+                    u.push([l[3], !1]),
+                    (g = e6((f = s3(l[0])).Name)),
+                    (m = s.dense ? [] : {}),
+                    (A = []),
+                    (M = []),
+                    (L = []),
+                    (X = { name: g, Hidden: 0 }),
+                    V.Sheets.push(X);
                 break;
               case "table":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
                 } else
-                  "/>" == h[0].slice(-2) ||
-                    (ii(h[0]), p.push([h[3], !1]), (M = []), (L = !1));
+                  "/>" == l[0].slice(-2) ||
+                    (s3(l[0]), u.push([l[3], !1]), (P = []), (N = !1));
                 break;
               case "style":
-                "/" === h[1]
+                "/" === l[1]
                   ? (function (e, t, r) {
                       if (r.cellStyles && t.Interior) {
                         var n = t.Interior;
                         n.Pattern &&
-                          (n.patternType = ay[n.Pattern] || n.Pattern);
+                          (n.patternType = ak[n.Pattern] || n.Pattern);
                       }
                       e[t.ID] = t;
-                    })(_, k, o)
-                  : (k = ii(h[0]));
+                    })(T, _, s)
+                  : (_ = s3(l[0]));
                 break;
               case "numberformat":
-                (k.nf = e6(ii(h[0]).Format || "General")),
-                  eE[k.nf] && (k.nf = eE[k.nf]);
-                for (var Q = 0; 392 != Q && ev._table[Q] != k.nf; ++Q);
-                if (392 == Q) {
-                  for (Q = 57; 392 != Q; ++Q)
-                    if (null == ev._table[Q]) {
-                      ev.load(k.nf, Q);
+                (_.nf = e6(s3(l[0]).Format || "General")),
+                  eE[_.nf] && (_.nf = eE[_.nf]);
+                for (var K = 0; 392 != K && ev._table[K] != _.nf; ++K);
+                if (392 == K) {
+                  for (K = 57; 392 != K; ++K)
+                    if (null == ev._table[K]) {
+                      ev.load(_.nf, K);
                       break;
                     }
                 }
                 break;
               case "column":
-                if ("table" !== p[p.length - 1][0]) break;
+                if ("table" !== u[u.length - 1][0]) break;
                 if (
-                  ((d = ii(h[0])).Hidden && ((d.hidden = !0), delete d.Hidden),
-                  d.Width && (d.wpx = parseInt(d.Width, 10)),
-                  !L && d.wpx > 10)
+                  ((h = s3(l[0])).Hidden && ((h.hidden = !0), delete h.Hidden),
+                  h.Width && (h.wpx = parseInt(h.Width, 10)),
+                  !N && h.wpx > 10)
                 ) {
-                  (L = !0), (aw = 6);
-                  for (var J = 0; J < M.length; ++J) M[J] && ak(M[J]);
+                  (N = !0), (ab = 6);
+                  for (var Y = 0; Y < P.length; ++Y) P[Y] && aT(P[Y]);
                 }
-                L && ak(d), (M[d.Index - 1 || M.length] = d);
-                for (var Z = 0; Z < +d.Span; ++Z) M[M.length] = eL(d);
+                N && aT(h), (P[h.Index - 1 || P.length] = h);
+                for (var Q = 0; Q < +h.Span; ++Q) P[P.length] = eL(h);
                 break;
               case "namedrange":
-                if ("/" === h[1]) break;
-                G.Names || (G.Names = []);
-                var q = e2(h[0]),
-                  er = {
-                    Name: q.Name,
-                    Ref: a2(q.RefersTo.slice(1), { r: 0, c: 0 }),
+                if ("/" === l[1]) break;
+                V.Names || (V.Names = []);
+                var J = e2(l[0]),
+                  Z = {
+                    Name: J.Name,
+                    Ref: aY(J.RefersTo.slice(1), { r: 0, c: 0 }),
                   };
-                G.Sheets.length > 0 && (er.Sheet = G.Sheets.length - 1),
-                  G.Names.push(er);
+                V.Sheets.length > 0 && (Z.Sheet = V.Sheets.length - 1),
+                  V.Names.push(Z);
                 break;
               case "namedcell":
               case "b":
@@ -14349,14 +13019,14 @@
               case "pixelsperinch":
                 break;
               case "font":
-                "/>" === h[0].slice(-2) ||
-                  ("/" === h[1]
-                    ? (A += c.slice(I, h.index))
-                    : (I = h.index + h[0].length));
+                "/>" === l[0].slice(-2) ||
+                  ("/" === l[1]
+                    ? (x += i.slice(k, l.index))
+                    : (k = l.index + l[0].length));
                 break;
               case "interior":
-                if (!o.cellStyles) break;
-                k.Interior = ii(h[0]);
+                if (!s.cellStyles) break;
+                _.Interior = s3(l[0]);
                 break;
               case "author":
               case "title":
@@ -14378,39 +13048,38 @@
               case "identifier":
               case "language":
               case "appname":
-                "/>" === h[0].slice(-2) ||
-                  ("/" === h[1]
-                    ? ((n = R),
-                      (a = j),
-                      (s = c.slice(D, h.index)),
-                      (n[(a = nn[a] || a)] = s))
-                    : (D = h.index + h[0].length));
+                "/>" === l[0].slice(-2) ||
+                  ("/" === l[1]
+                    ? ((r = G),
+                      (n = i.slice(R, l.index)),
+                      (I[(r = nr[r] || r)] = n))
+                    : (R = l.index + l[0].length));
                 break;
               case "styles":
               case "workbook":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
-                } else p.push([h[3], !1]);
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
+                } else u.push([l[3], !1]);
                 break;
               case "comment":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
-                  ((i = N).t = i.v || ""),
-                    (i.t = i.t.replace(/\r\n/g, "\n").replace(/\r/g, "\n")),
-                    (i.v = i.w = i.ixfe = void 0),
-                    P.push(N);
-                } else p.push([h[3], !1]), (N = { a: (u = ii(h[0])).Author });
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
+                  ((a = O).t = a.v || ""),
+                    (a.t = a.t.replace(/\r\n/g, "\n").replace(/\r/g, "\n")),
+                    (a.v = a.w = a.ixfe = void 0),
+                    D.push(O);
+                } else u.push([l[3], !1]), (O = { a: (f = s3(l[0])).Author });
                 break;
               case "autofilter":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
-                } else if ("/" !== h[0].charAt(h[0].length - 2)) {
-                  var en = ii(h[0]);
-                  (v["!autofilter"] = { ref: a2(en.Range).replace(/\$/g, "") }),
-                    p.push([h[3], !0]);
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
+                } else if ("/" !== l[0].charAt(l[0].length - 2)) {
+                  var q = s3(l[0]);
+                  (m["!autofilter"] = { ref: aY(q.Range).replace(/\$/g, "") }),
+                    u.push([l[3], !0]);
                 }
                 break;
               case "datavalidation":
@@ -14432,22 +13101,22 @@
               case "excelworkbook":
               case "workbookoptions":
               case "worksheetoptions":
-                if ("/" === h[1]) {
-                  if ((u = p.pop())[0] !== h[3])
-                    throw Error("Bad state: " + u.join("|"));
+                if ("/" === l[1]) {
+                  if ((f = u.pop())[0] !== l[3])
+                    throw Error("Bad state: " + f.join("|"));
                 } else
-                  "/" !== h[0].charAt(h[0].length - 2) && p.push([h[3], !0]);
+                  "/" !== l[0].charAt(l[0].length - 2) && u.push([l[3], !0]);
                 break;
               default:
                 if (
-                  (0 == p.length && "document" == h[3]) ||
-                  (0 == p.length && "uof" == h[3])
+                  (0 == u.length && "document" == l[3]) ||
+                  (0 == u.length && "uof" == l[3])
                 )
-                  return iA(c, o);
-                var ea = !0;
-                switch (p[p.length - 1][0]) {
+                  return iv(i, s);
+                var er = !0;
+                switch (u[u.length - 1][0]) {
                   case "officedocumentsettings":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "allowpng":
                       case "removepersonalinformation":
                       case "downloadcomponents":
@@ -14460,11 +13129,11 @@
                       case "readonlyrecommended":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "componentoptions":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "toolbar":
                       case "hideofficelogo":
                       case "spreadsheetautofit":
@@ -14475,13 +13144,13 @@
                       case "nextsheetnumber":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "excelworkbook":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "date1904":
-                        G.WBProps.date1904 = !0;
+                        V.WBProps.date1904 = !0;
                         break;
                       case "windowheight":
                       case "windowwidth":
@@ -14530,53 +13199,53 @@
                       case "embedsavesmarttags":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "workbookoptions":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "owcversion":
                       case "height":
                       case "width":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "worksheetoptions":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "visible":
-                        if ("/>" === h[0].slice(-2));
-                        else if ("/" === h[1])
-                          switch (c.slice(D, h.index)) {
+                        if ("/>" === l[0].slice(-2));
+                        else if ("/" === l[1])
+                          switch (i.slice(R, l.index)) {
                             case "SheetHidden":
-                              z.Hidden = 1;
+                              X.Hidden = 1;
                               break;
                             case "SheetVeryHidden":
-                              z.Hidden = 2;
+                              X.Hidden = 2;
                           }
-                        else D = h.index + h[0].length;
+                        else R = l.index + l[0].length;
                         break;
                       case "header":
-                        v["!margins"] || sR((v["!margins"] = {}), "xlml"),
-                          (v["!margins"].header = e2(h[0]).Margin);
+                        m["!margins"] || sT((m["!margins"] = {}), "xlml"),
+                          (m["!margins"].header = e2(l[0]).Margin);
                         break;
                       case "footer":
-                        v["!margins"] || sR((v["!margins"] = {}), "xlml"),
-                          (v["!margins"].footer = e2(h[0]).Margin);
+                        m["!margins"] || sT((m["!margins"] = {}), "xlml"),
+                          (m["!margins"].footer = e2(l[0]).Margin);
                         break;
                       case "pagemargins":
-                        var es = e2(h[0]);
-                        v["!margins"] || sR((v["!margins"] = {}), "xlml"),
-                          es.Top && (v["!margins"].top = es.Top),
-                          es.Left && (v["!margins"].left = es.Left),
-                          es.Right && (v["!margins"].right = es.Right),
-                          es.Bottom && (v["!margins"].bottom = es.Bottom);
+                        var en = e2(l[0]);
+                        m["!margins"] || sT((m["!margins"] = {}), "xlml"),
+                          en.Top && (m["!margins"].top = en.Top),
+                          en.Left && (m["!margins"].left = en.Left),
+                          en.Right && (m["!margins"].right = en.Right),
+                          en.Bottom && (m["!margins"].bottom = en.Bottom);
                         break;
                       case "displayrighttoleft":
-                        G.Views || (G.Views = []),
-                          G.Views[0] || (G.Views[0] = {}),
-                          (G.Views[0].RTL = !0);
+                        V.Views || (V.Views = []),
+                          V.Views[0] || (V.Views[0] = {}),
+                          (V.Views[0].RTL = !0);
                         break;
                       case "freezepanes":
                       case "frozennosplit":
@@ -14646,12 +13315,12 @@
                       case "protectcontents":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "pivottable":
                   case "pivotcache":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "immediateitemsondrop":
                       case "showpagemultipleitemlabel":
                       case "compactrowindent":
@@ -14699,11 +13368,11 @@
                       case "calculation":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "pagebreaks":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "colbreaks":
                       case "colbreak":
                       case "rowbreaks":
@@ -14713,22 +13382,22 @@
                       case "rowend":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "autofilter":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "autofiltercolumn":
                       case "autofiltercondition":
                       case "autofilterand":
                       case "autofilteror":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "querytable":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "id":
                       case "autoformatfont":
                       case "autoformatpattern":
@@ -14762,11 +13431,11 @@
                       case "versionlastrefresh":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "datavalidation":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "range":
                       case "type":
                       case "min":
@@ -14792,12 +13461,12 @@
                       case "cellrangelist":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "sorting":
                   case "conditionalformatting":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "range":
                       case "type":
                       case "min":
@@ -14823,13 +13492,13 @@
                       case "format":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "mapinfo":
                   case "schema":
                   case "data":
-                    switch (h[3]) {
+                    switch (l[3]) {
                       case "map":
                       case "entry":
                       case "range":
@@ -14850,20 +13519,20 @@
                       case "row":
                         break;
                       default:
-                        ea = !1;
+                        er = !1;
                     }
                     break;
                   case "smarttags":
                     break;
                   default:
-                    ea = !1;
+                    er = !1;
                 }
-                if (ea || h[3].match(/!\[CDATA/)) break;
-                if (!p[p.length - 1][1])
-                  throw "Unrecognized tag: " + h[3] + "|" + p.join("|");
-                if ("customdocumentproperties" === p[p.length - 1][0]) {
-                  "/>" === h[0].slice(-2) ||
-                    ("/" === h[1]
+                if (er || l[3].match(/!\[CDATA/)) break;
+                if (!u[u.length - 1][1])
+                  throw "Unrecognized tag: " + l[3] + "|" + u.join("|");
+                if ("customdocumentproperties" === u[u.length - 1][0]) {
+                  "/>" === l[0].slice(-2) ||
+                    ("/" === l[1]
                       ? (function (e, t, r, n) {
                           var a = n;
                           switch (
@@ -14894,43 +13563,43 @@
                               throw Error("bad custprop:" + r[0]);
                           }
                           e[e6(t)] = a;
-                        })(F, j, O, c.slice(D, h.index))
-                      : ((O = h), (D = h.index + h[0].length)));
+                        })(y, G, F, i.slice(R, l.index))
+                      : ((F = l), (R = l.index + l[0].length)));
                   break;
                 }
-                if (o.WTF)
-                  throw "Unrecognized tag: " + h[3] + "|" + p.join("|");
+                if (s.WTF)
+                  throw "Unrecognized tag: " + l[3] + "|" + u.join("|");
             }
-          var ei = {};
+          var ea = {};
           return (
-            o.bookSheets || o.bookProps || (ei.Sheets = m),
-            (ei.SheetNames = g),
-            (ei.Workbook = G),
-            (ei.SSF = ev.get_table()),
-            (ei.Props = R),
-            (ei.Custprops = F),
-            ei
+            s.bookSheets || s.bookProps || (ea.Sheets = d),
+            (ea.SheetNames = p),
+            (ea.Workbook = V),
+            (ea.SSF = ev.get_table()),
+            (ea.Props = I),
+            (ea.Custprops = y),
+            ea
           );
         }
-        function ih(e, t) {
-          switch ((iX((t = t || {})), t.type || "base64")) {
+        function s7(e, t) {
+          switch ((iF((t = t || {})), t.type || "base64")) {
             case "base64":
-              return il(ea.decode(e), t);
+              return s8(ea.decode(e), t);
             case "binary":
             case "buffer":
             case "file":
-              return il(e, t);
+              return s8(e, t);
             case "array":
-              return il(eu(e), t);
+              return s8(eu(e), t);
           }
         }
-        function iu(e) {
+        function s9(e) {
           return tE("NamedRange", null, {
             "ss:Name": e.Name,
-            "ss:RefersTo": "=" + a3(e.Ref, { r: 0, c: 0 }),
+            "ss:RefersTo": "=" + aJ(e.Ref, { r: 0, c: 0 }),
           });
         }
-        function id(e, t, r) {
+        function ie(e, t, r) {
           if ("z" !== e.t && e.XF) {
             var n = 0;
             try {
@@ -14941,7 +13610,7 @@
             if (!t || !1 !== t.cellText)
               try {
                 "e" === e.t
-                  ? (e.w = e.w || rU[e.v])
+                  ? (e.w = e.w || rL[e.v])
                   : 0 === n || "General" == n
                     ? "n" === e.t
                       ? (0 | e.v) === e.v
@@ -14965,26 +13634,26 @@
             }
           }
         }
-        function ip(e, t, r) {
+        function it(e, t, r) {
           return { v: e, ixfe: t, t: r };
         }
-        var im = {
+        var ir = {
           SI: "e0859ff2f94f6810ab9108002b27b3d9",
           DSI: "02d5cdd59c2e1b10939708002b2cf9ae",
           UDI: "05d5cdd59c2e1b10939708002b2cf9ae",
         };
-        function ig(e, t) {
+        function ia(e, t) {
           if (
             (t || (t = {}),
-            iX(t),
+            iF(t),
             q(),
             t.codepage && J(t.codepage),
             e.FullPaths)
           ) {
-            if (eC.find(e, "/encryption"))
+            if (eB.find(e, "/encryption"))
               throw Error("File is password-protected");
-            (a = eC.find(e, "!CompObj")),
-              (s = eC.find(e, "/Workbook") || eC.find(e, "/Book"));
+            (a = eB.find(e, "!CompObj")),
+              (s = eB.find(e, "/Workbook") || eB.find(e, "/Book"));
           } else {
             switch (t.type) {
               case "base64":
@@ -14998,7 +13667,7 @@
               case "array":
                 Array.isArray(e) || (e = Array.prototype.slice.call(e));
             }
-            tZ(e, 0), (s = { content: e });
+            tJ(e, 0), (s = { content: e });
           }
           if (
             (a &&
@@ -15008,7 +13677,7 @@
                 if (
                   ((r.l = 28),
                   (t.AnsiUserType = r.read_shift(0, "lpstr-ansi")),
-                  (t.AnsiClipboardFormat = rI(r, 1)),
+                  (t.AnsiClipboardFormat = rA(r, 1)),
                   !(r.length - r.l <= 4))
                 ) {
                   var n = r.read_shift(4);
@@ -15018,7 +13687,7 @@
                     (t.Reserved1 = r.read_shift(0, "lpstr-ansi")),
                     !(r.length - r.l <= 4) &&
                       1907505652 === (n = r.read_shift(4))) &&
-                    ((t.UnicodeClipboardFormat = rI(r, 2)),
+                    ((t.UnicodeClipboardFormat = rA(r, 2)),
                     0 != (n = r.read_shift(4)) && !(n > 40)) &&
                     ((r.l -= 4), (t.Reserved2 = r.read_shift(0, "lpwstr")));
                 }
@@ -15056,14 +13725,14 @@
                   E = {},
                   S = "",
                   w = {},
-                  C = [],
-                  B = !0,
+                  B = [],
+                  C = !0,
                   T = [],
-                  x = [],
-                  _ = { Sheets: [], WBProps: { date1904: !1 }, Views: [{}] },
+                  _ = [],
+                  x = { Sheets: [], WBProps: { date1904: !1 }, Views: [{}] },
                   k = {},
                   A = function (e) {
-                    return e < 8 ? rL[e] : (e < 64 && x[e - 8]) || rL[e];
+                    return e < 8 ? rM[e] : (e < 64 && _[e - 8]) || rM[e];
                   },
                   I = function (e, t, r) {
                     var n,
@@ -15074,20 +13743,20 @@
                       r.cellStyles &&
                       ((t.s = {}),
                       (t.s.patternType = a.patternType),
-                      (n = aE(A(a.icvFore))) && (t.s.fgColor = { rgb: n }),
-                      (n = aE(A(a.icvBack))) && (t.s.bgColor = { rgb: n }));
+                      (n = ag(A(a.icvFore))) && (t.s.fgColor = { rgb: n }),
+                      (n = ag(A(a.icvBack))) && (t.s.bgColor = { rgb: n }));
                   },
                   y = function (e, t, r) {
                     if (
                       !(U > 1) &&
-                      (r.sheetRows && e.r >= r.sheetRows && (B = !1), B)
+                      (r.sheetRows && e.r >= r.sheetRows && (C = !1), C)
                     ) {
                       if (
                         (r.cellStyles && t.XF && t.XF.data && I(e, t, r),
                         delete t.ixfe,
                         delete t.XF,
                         (i = e),
-                        (S = rn(e)),
+                        (S = rr(e)),
                         (m && m.s && m.e) ||
                           (m = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } }),
                         e.r < m.s.r && (m.s.r = e.r),
@@ -15096,17 +13765,17 @@
                         e.c + 1 > m.e.c && (m.e.c = e.c + 1),
                         r.cellFormula && t.f)
                       ) {
-                        for (var n = 0; n < C.length; ++n)
+                        for (var n = 0; n < B.length; ++n)
                           if (
-                            !(C[n][0].s.c > e.c) &&
-                            !(C[n][0].s.r > e.r) &&
-                            !(C[n][0].e.c < e.c) &&
-                            !(C[n][0].e.r < e.r)
+                            !(B[n][0].s.c > e.c) &&
+                            !(B[n][0].s.r > e.r) &&
+                            !(B[n][0].e.c < e.c) &&
+                            !(B[n][0].e.r < e.r)
                           ) {
-                            (t.F = rs(C[n][0])),
-                              (C[n][0].s.c != e.c || C[n][0].s.r != e.r) &&
+                            (t.F = ra(B[n][0])),
+                              (B[n][0].s.c != e.c || B[n][0].s.r != e.r) &&
                                 delete t.f,
-                              t.f && (t.f = "" + sv(C[n][1], m, e, M, R));
+                              t.f && (t.f = "" + sf(B[n][1], m, e, M, R));
                             break;
                           }
                       }
@@ -15120,7 +13789,7 @@
                     sbcch: 0,
                     snames: [],
                     sharedf: w,
-                    arrayf: C,
+                    arrayf: B,
                     rrtabid: [],
                     lastuser: "",
                     biff: 8,
@@ -15152,7 +13821,7 @@
                     z = e.read_shift(2);
                   if (0 === z && "EOF" === L) break;
                   var j = e.l === e.length ? 0 : e.read_shift(2),
-                    K = iE[z];
+                    K = io[z];
                   if (K && K.f) {
                     if (
                       t.bookSheets &&
@@ -15196,7 +13865,7 @@
                               }
                             s.push(i), (t.l += a);
                             for (
-                              var o = iE[tW(t, t.l)], c = 0;
+                              var o = io[tW(t, t.l)], c = 0;
                               null != o && "Continue" === o.n.slice(0, 8);
                             )
                               (a = tW(t, t.l + 2)),
@@ -15208,9 +13877,9 @@
                                 (i = t.slice(c, t.l + 4 + a)),
                                 s.push(i),
                                 (t.l += 4 + a),
-                                (o = iE[tW(t, t.l)]);
+                                (o = io[tW(t, t.l)]);
                             var l = ep(s);
-                            tZ(l, 0);
+                            tJ(l, 0);
                             var f = 0;
                             l.lens = [];
                             for (var h = 0; h < s.length; ++h)
@@ -15230,7 +13899,7 @@
                     if (0 == U && "BOF" != J) continue;
                     switch (J) {
                       case "Date1904":
-                        h.opts.Date1904 = _.WBProps.date1904 = Q;
+                        h.opts.Date1904 = x.WBProps.date1904 = Q;
                         break;
                       case "WriteProtect":
                         h.opts.WriteProtect = !0;
@@ -15307,7 +13976,7 @@
                         M[M.length - 1].push(Q);
                         break;
                       case "Lbl":
-                        (s = { Name: Q.Name, Ref: sv(Q.rgce, m, null, M, R) }),
+                        (s = { Name: Q.Name, Ref: sf(Q.rgce, m, null, M, R) }),
                           Q.itab > 0 && (s.Sheet = Q.itab - 1),
                           M.names.push(s),
                           M[0] || ((M[0] = []), (M[0].XTI = [])),
@@ -15318,7 +13987,7 @@
                             Q.rgce[0] &&
                             Q.rgce[0][0] &&
                             "PtgArea3d" == Q.rgce[0][0][0] &&
-                            (V[Q.itab - 1] = { ref: rs(Q.rgce[0][0][1][2]) });
+                            (V[Q.itab - 1] = { ref: ra(Q.rgce[0][0][1][2]) });
                         break;
                       case "ExternCount":
                         R.ExternCount = Q;
@@ -15350,13 +14019,13 @@
                             if (
                               (m.e.r--,
                               m.e.c--,
-                              (d["!ref"] = rs(m)),
+                              (d["!ref"] = ra(m)),
                               t.sheetRows && t.sheetRows <= m.e.r)
                             ) {
                               var ee = m.e.r;
                               (m.e.r = t.sheetRows - 1),
                                 (d["!fullref"] = d["!ref"]),
-                                (d["!ref"] = rs(m)),
+                                (d["!ref"] = ra(m)),
                                 (m.e.r = ee);
                             }
                             m.e.r++, m.e.c++;
@@ -15365,7 +14034,7 @@
                             D.length > 0 && (d["!objects"] = D),
                             O.length > 0 && (d["!cols"] = O),
                             P.length > 0 && (d["!rows"] = P),
-                            _.Sheets.push(k);
+                            x.Sheets.push(k);
                         }
                         "" === b ? (E = d) : (u[b] = d),
                           (d = t.dense ? [] : {});
@@ -15393,7 +14062,7 @@
                         )
                           break;
                         if (
-                          ((B = !0),
+                          ((C = !0),
                           (d = t.dense ? [] : {}),
                           R.biff < 8 &&
                             !X &&
@@ -15409,7 +14078,7 @@
                           64 == Q.dt && (d["!type"] = "macro"),
                           (F = []),
                           (D = []),
-                          (R.arrayf = C = []),
+                          (R.arrayf = B = []),
                           (O = []),
                           (P = []),
                           (N = !1),
@@ -15421,7 +14090,7 @@
                         "chart" == d["!type"] &&
                           (t.dense
                             ? (d[Q.r] || [])[Q.c]
-                            : d[rn({ c: Q.c, r: Q.r })]) &&
+                            : d[rr({ c: Q.c, r: Q.r })]) &&
                           ++Q.c,
                           (r = {
                             ixfe: Q.ixfe,
@@ -15430,13 +14099,13 @@
                             t: "n",
                           }),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t);
                         break;
                       case "BoolErr":
                         (r = { ixfe: Q.ixfe, XF: T[Q.ixfe], v: Q.val, t: Q.t }),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t);
                         break;
                       case "RK":
@@ -15447,7 +14116,7 @@
                           t: "n",
                         }),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t);
                         break;
                       case "MulRk":
@@ -15460,7 +14129,7 @@
                             t: "n",
                           }),
                             H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                            id(r, t, h.opts.Date1904),
+                            ie(r, t, h.opts.Date1904),
                             y({ c: er, r: Q.r }, r, t);
                         }
                         break;
@@ -15470,7 +14139,7 @@
                           break;
                         }
                         if (
-                          (((r = ip(Q.val, Q.cell.ixfe, Q.tt)).XF = T[r.ixfe]),
+                          (((r = it(Q.val, Q.cell.ixfe, Q.tt)).XF = T[r.ixfe]),
                           t.cellFormula)
                         ) {
                           var ea = Q.formula;
@@ -15482,34 +14151,34 @@
                           ) {
                             var es = ea[0][0][1][0],
                               ei = ea[0][0][1][1],
-                              eo = rn({ r: es, c: ei });
+                              eo = rr({ r: es, c: ei });
                             w[eo]
-                              ? (r.f = "" + sv(Q.formula, m, Q.cell, M, R))
+                              ? (r.f = "" + sf(Q.formula, m, Q.cell, M, R))
                               : (r.F = (
                                   (t.dense ? (d[es] || [])[ei] : d[eo]) || {}
                                 ).F);
-                          } else r.f = "" + sv(Q.formula, m, Q.cell, M, R);
+                          } else r.f = "" + sf(Q.formula, m, Q.cell, M, R);
                         }
                         H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y(Q.cell, r, t),
                           (g = Q);
                         break;
                       case "String":
                         if (g)
                           (g.val = Q),
-                            ((r = ip(Q, g.cell.ixfe, "s")).XF = T[r.ixfe]),
+                            ((r = it(Q, g.cell.ixfe, "s")).XF = T[r.ixfe]),
                             t.cellFormula &&
-                              (r.f = "" + sv(g.formula, m, g.cell, M, R)),
+                              (r.f = "" + sf(g.formula, m, g.cell, M, R)),
                             H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                            id(r, t, h.opts.Date1904),
+                            ie(r, t, h.opts.Date1904),
                             y(g.cell, r, t),
                             (g = null);
                         else throw Error("String record expects Formula");
                         break;
                       case "Array":
-                        C.push(Q);
-                        var ec = rn(Q[0].s);
+                        B.push(Q);
+                        var ec = rr(Q[0].s);
                         if (
                           ((o = t.dense
                             ? (d[Q[0].s.r] || [])[Q[0].s.c]
@@ -15517,35 +14186,35 @@
                           t.cellFormula && o)
                         ) {
                           if (!g || !ec || !o) break;
-                          (o.f = "" + sv(Q[1], m, Q[0], M, R)),
-                            (o.F = rs(Q[0]));
+                          (o.f = "" + sf(Q[1], m, Q[0], M, R)),
+                            (o.F = ra(Q[0]));
                         }
                         break;
                       case "ShrFmla":
-                        if (!B || !t.cellFormula) break;
+                        if (!C || !t.cellFormula) break;
                         if (S) {
                           if (!g) break;
-                          (w[rn(g.cell)] = Q[0]),
+                          (w[rr(g.cell)] = Q[0]),
                             ((
                               (o = t.dense
                                 ? (d[g.cell.r] || [])[g.cell.c]
-                                : d[rn(g.cell)]) || {}
-                            ).f = "" + sv(Q[0], m, i, M, R));
+                                : d[rr(g.cell)]) || {}
+                            ).f = "" + sf(Q[0], m, i, M, R));
                         }
                         break;
                       case "LabelSst":
-                        (r = ip(v[Q.isst].t, Q.ixfe, "s")),
+                        (r = it(v[Q.isst].t, Q.ixfe, "s")),
                           v[Q.isst].h && (r.h = v[Q.isst].h),
                           (r.XF = T[r.ixfe]),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t);
                         break;
                       case "Blank":
                         t.sheetStubs &&
                           ((r = { ixfe: Q.ixfe, XF: T[Q.ixfe], t: "z" }),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t));
                         break;
                       case "MulBlank":
@@ -15554,16 +14223,16 @@
                             var ef = Q.ixfe[el - Q.c];
                             (r = { ixfe: ef, XF: T[ef], t: "z" }),
                               H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                              id(r, t, h.opts.Date1904),
+                              ie(r, t, h.opts.Date1904),
                               y({ c: el, r: Q.r }, r, t);
                           }
                         break;
                       case "RString":
                       case "Label":
                       case "BIFF2STR":
-                        ((r = ip(Q.val, Q.ixfe, "s")).XF = T[r.ixfe]),
+                        ((r = it(Q.val, Q.ixfe, "s")).XF = T[r.ixfe]),
                           H > 0 && (r.z = W[(r.ixfe >> 8) & 31]),
-                          id(r, t, h.opts.Date1904),
+                          ie(r, t, h.opts.Date1904),
                           y({ c: Q.c, r: Q.r }, r, t);
                         break;
                       case "Dimensions":
@@ -15609,26 +14278,26 @@
                           for (l = Q[0].s.c; l <= Q[0].e.c; ++l)
                             (o = t.dense
                               ? (d[f] || [])[l]
-                              : d[rn({ c: l, r: f })]) && (o.l = Q[1]);
+                              : d[rr({ c: l, r: f })]) && (o.l = Q[1]);
                         break;
                       case "HLinkTooltip":
                         for (f = Q[0].s.r; f <= Q[0].e.r; ++f)
                           for (l = Q[0].s.c; l <= Q[0].e.c; ++l)
                             (o = t.dense
                               ? (d[f] || [])[l]
-                              : d[rn({ c: l, r: f })]) &&
+                              : d[rr({ c: l, r: f })]) &&
                               o.l &&
                               (o.l.Tooltip = Q[1]);
                         break;
                       case "Note":
                         if (R.biff <= 5 && R.biff >= 2) break;
-                        o = t.dense ? (d[Q[0].r] || [])[Q[0].c] : d[rn(Q[0])];
+                        o = t.dense ? (d[Q[0].r] || [])[Q[0].c] : d[rr(Q[0])];
                         var ed = D[Q[2]];
                         o ||
                           (t.dense
                             ? (d[Q[0].r] || (d[Q[0].r] = []),
                               (o = d[Q[0].r][Q[0].c] = { t: "z" }))
-                            : (o = d[rn(Q[0])] = { t: "z" }),
+                            : (o = d[rr(Q[0])] = { t: "z" }),
                           (m.e.r = Math.max(m.e.r, Q[0].r)),
                           (m.s.r = Math.min(m.s.r, Q[0].r)),
                           (m.e.c = Math.max(m.e.c, Q[0].c)),
@@ -15765,8 +14434,8 @@
                             if (!R.cellStyles) break;
                             for (; Q.e >= Q.s; )
                               (O[Q.e--] = { width: Q.w / 256 }),
-                                N || ((N = !0), a_(Q.w / 256)),
-                                ak(O[Q.e + 1]);
+                                N || ((N = !0), aC(Q.w / 256)),
+                                aT(O[Q.e + 1]);
                             break;
                           case "Row":
                             var em = {};
@@ -15776,28 +14445,28 @@
                               Q.hpt &&
                                 ((P[Q.r] = em),
                                 (em.hpt = Q.hpt),
-                                (em.hpx = aI(Q.hpt)));
+                                (em.hpx = ax(Q.hpt)));
                             break;
                           case "LeftMargin":
                           case "RightMargin":
                           case "TopMargin":
                           case "BottomMargin":
-                            d["!margins"] || sR((d["!margins"] = {})),
+                            d["!margins"] || sT((d["!margins"] = {})),
                               (d["!margins"][J.slice(0, -6).toLowerCase()] = Q);
                             break;
                           case "Setup":
-                            d["!margins"] || sR((d["!margins"] = {})),
+                            d["!margins"] || sT((d["!margins"] = {})),
                               (d["!margins"].header = Q.header),
                               (d["!margins"].footer = Q.footer);
                             break;
                           case "Window2":
-                            Q.RTL && (_.Views[0].RTL = !0);
+                            Q.RTL && (x.Views[0].RTL = !0);
                             break;
                           case "Country":
                             n = Q;
                             break;
                           case "Palette":
-                            x = Q;
+                            _ = Q;
                             break;
                           case "Theme":
                             a = Q;
@@ -15805,7 +14474,7 @@
                           case "CodeName":
                             b
                               ? (k.CodeName = Q || k.name)
-                              : (_.WBProps.CodeName = Q || "ThisWorkbook");
+                              : (x.WBProps.CodeName = Q || "ThisWorkbook");
                             break;
                           default:
                             switch (K.n) {
@@ -15976,55 +14645,55 @@
                   a && (h.Themes = a),
                   (h.Metadata = {}),
                   void 0 !== n && (h.Metadata.Country = n),
-                  M.names.length > 0 && (_.Names = M.names),
-                  (h.Workbook = _),
+                  M.names.length > 0 && (x.Names = M.names),
+                  (h.Workbook = x),
                   h
                 );
               })(s.content, t);
-            else if ((o = eC.find(e, "PerfectOffice_MAIN")) && o.content)
-              i = n6.to_workbook(o.content, ((t.type = c), t));
-            else if ((o = eC.find(e, "NativeContent_MAIN")) && o.content)
-              i = n6.to_workbook(o.content, ((t.type = c), t));
+            else if ((o = eB.find(e, "PerfectOffice_MAIN")) && o.content)
+              i = n5.to_workbook(o.content, ((t.type = c), t));
+            else if ((o = eB.find(e, "NativeContent_MAIN")) && o.content)
+              i = n5.to_workbook(o.content, ((t.type = c), t));
             else throw Error("Cannot find Workbook stream");
             t.bookVBA &&
               e.FullPaths &&
-              eC.find(e, "/_VBA_PROJECT_CUR/VBA/dir") &&
+              eB.find(e, "/_VBA_PROJECT_CUR/VBA/dir") &&
               (i.vbaraw =
                 ((r = e),
-                (n = eC.utils.cfb_new({ root: "R" })),
+                (n = eB.utils.cfb_new({ root: "R" })),
                 r.FullPaths.forEach(function (e, t) {
                   if ("/" !== e.slice(-1) && e.match(/_VBA_PROJECT_CUR/)) {
                     var a = e
                       .replace(/^[^\/]*/, "R")
                       .replace(/\/_VBA_PROJECT_CUR\u0000*/, "");
-                    eC.utils.cfb_add(n, a, r.FileIndex[t].content);
+                    eB.utils.cfb_add(n, a, r.FileIndex[t].content);
                   }
                 }),
-                eC.write(n)));
+                eB.write(n)));
           }
           var l = {};
           return (
             e.FullPaths &&
               (function (e, t, r) {
-                var n = eC.find(e, "!DocumentSummaryInformation");
+                var n = eB.find(e, "!DocumentSummaryInformation");
                 if (n && n.size > 0)
                   try {
-                    var a = ng(n, rR, im.DSI);
+                    var a = nm(n, ry, ir.DSI);
                     for (var s in a) t[s] = a[s];
                   } catch (e) {
                     if (r.WTF) throw e;
                   }
-                var i = eC.find(e, "!SummaryInformation");
+                var i = eB.find(e, "!SummaryInformation");
                 if (i && i.size > 0)
                   try {
-                    var o = ng(i, rF, im.SI);
+                    var o = nm(i, rR, ir.SI);
                     for (var c in o) null == t[c] && (t[c] = o[c]);
                   } catch (e) {
                     if (r.WTF) throw e;
                   }
                 t.HeadingPairs &&
                   t.TitlesOfParts &&
-                  (r7(t.HeadingPairs, t.TitlesOfParts, t, r),
+                  (r8(t.HeadingPairs, t.TitlesOfParts, t, r),
                   delete t.HeadingPairs,
                   delete t.TitlesOfParts);
               })(e, l, t),
@@ -16033,7 +14702,7 @@
             i
           );
         }
-        var iv = {
+        var is = {
             0: {
               n: "BrtRowHdr",
               f: function (e, t) {
@@ -16055,56 +14724,56 @@
             1: {
               n: "BrtCellBlank",
               f: function (e) {
-                return [rg(e)];
+                return [rm(e)];
               },
             },
             2: {
               n: "BrtCellRk",
               f: function (e) {
-                return [rg(e), rC(e), "n"];
+                return [rm(e), rw(e), "n"];
               },
             },
             3: {
               n: "BrtCellError",
               f: function (e) {
-                return [rg(e), e.read_shift(1), "e"];
+                return [rm(e), e.read_shift(1), "e"];
               },
             },
             4: {
               n: "BrtCellBool",
               f: function (e) {
-                return [rg(e), e.read_shift(1), "b"];
+                return [rm(e), e.read_shift(1), "b"];
               },
             },
             5: {
               n: "BrtCellReal",
               f: function (e) {
-                return [rg(e), r_(e), "n"];
+                return [rm(e), r_(e), "n"];
               },
             },
             6: {
               n: "BrtCellSt",
               f: function (e) {
-                return [rg(e), rd(e), "str"];
+                return [rm(e), ru(e), "str"];
               },
             },
             7: {
               n: "BrtCellIsst",
               f: function (e) {
-                return [rg(e), e.read_shift(4), "s"];
+                return [rm(e), e.read_shift(4), "s"];
               },
             },
             8: {
               n: "BrtFmlaString",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = rg(e);
+                  a = rm(e);
                 a.r = r["!row"];
-                var s = [a, rd(e), "str"];
+                var s = [a, ru(e), "str"];
                 if (r.cellFormula) {
                   e.l += 2;
-                  var i = sE(e, n - e.l, r);
-                  s[3] = sv(i, null, a, r.supbooks, r);
+                  var i = su(e, n - e.l, r);
+                  s[3] = sf(i, null, a, r.supbooks, r);
                 } else e.l = n;
                 return s;
               },
@@ -16113,13 +14782,13 @@
               n: "BrtFmlaNum",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = rg(e);
+                  a = rm(e);
                 a.r = r["!row"];
                 var s = [a, r_(e), "n"];
                 if (r.cellFormula) {
                   e.l += 2;
-                  var i = sE(e, n - e.l, r);
-                  s[3] = sv(i, null, a, r.supbooks, r);
+                  var i = su(e, n - e.l, r);
+                  s[3] = sf(i, null, a, r.supbooks, r);
                 } else e.l = n;
                 return s;
               },
@@ -16128,13 +14797,13 @@
               n: "BrtFmlaBool",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = rg(e);
+                  a = rm(e);
                 a.r = r["!row"];
                 var s = [a, e.read_shift(1), "b"];
                 if (r.cellFormula) {
                   e.l += 2;
-                  var i = sE(e, n - e.l, r);
-                  s[3] = sv(i, null, a, r.supbooks, r);
+                  var i = su(e, n - e.l, r);
+                  s[3] = sf(i, null, a, r.supbooks, r);
                 } else e.l = n;
                 return s;
               },
@@ -16143,13 +14812,13 @@
               n: "BrtFmlaError",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = rg(e);
+                  a = rm(e);
                 a.r = r["!row"];
                 var s = [a, e.read_shift(1), "e"];
                 if (r.cellFormula) {
                   e.l += 2;
-                  var i = sE(e, n - e.l, r);
-                  s[3] = sv(i, null, a, r.supbooks, r);
+                  var i = su(e, n - e.l, r);
+                  s[3] = sf(i, null, a, r.supbooks, r);
                 } else e.l = n;
                 return s;
               },
@@ -16157,41 +14826,41 @@
             12: {
               n: "BrtShortBlank",
               f: function (e) {
-                return [rb(e)];
+                return [rv(e)];
               },
             },
             13: {
               n: "BrtShortRk",
               f: function (e) {
-                return [rb(e), rC(e), "n"];
+                return [rv(e), rw(e), "n"];
               },
             },
             14: {
               n: "BrtShortError",
               f: function (e) {
-                return [rb(e), e.read_shift(1), "e"];
+                return [rv(e), e.read_shift(1), "e"];
               },
             },
             15: {
               n: "BrtShortBool",
               f: function (e) {
-                return [rb(e), e.read_shift(1), "b"];
+                return [rv(e), e.read_shift(1), "b"];
               },
             },
-            16: { n: "BrtShortReal", f: sQ },
+            16: { n: "BrtShortReal", f: sV },
             17: {
               n: "BrtShortSt",
               f: function (e) {
-                return [rb(e), rd(e), "str"];
+                return [rv(e), ru(e), "str"];
               },
             },
             18: {
               n: "BrtShortIsst",
               f: function (e) {
-                return [rb(e), e.read_shift(4), "s"];
+                return [rv(e), e.read_shift(4), "s"];
               },
             },
-            19: { n: "BrtSSTItem", f: rm },
+            19: { n: "BrtSSTItem", f: rp },
             20: { n: "BrtPCDIMissing" },
             21: { n: "BrtPCDINumber" },
             22: { n: "BrtPCDIBoolean" },
@@ -16217,9 +14886,9 @@
                 var n = e.l + t;
                 (e.l += 4), (e.l += 1);
                 var a = e.read_shift(4),
-                  s = rd(e),
-                  i = sE(e, 0, r),
-                  o = rS(e);
+                  s = ru(e),
+                  i = su(e, 0, r),
+                  o = rE(e);
                 e.l = n;
                 var c = { Name: s, Ptg: i };
                 return a < 268435455 && (c.Sheet = a), o && (c.Comment = o), c;
@@ -16284,11 +14953,11 @@
                         break;
                       case 1:
                         t.index = n;
-                        var c = rL[n];
-                        c && (t.rgb = aE(c));
+                        var c = rM[n];
+                        c && (t.rgb = ag(c));
                         break;
                       case 2:
-                        t.rgb = aE([s, i, o]);
+                        t.rgb = ag([s, i, o]);
                         break;
                       case 3:
                         t.theme = n;
@@ -16305,17 +14974,17 @@
                   case 2:
                     a.scheme = "minor";
                 }
-                return (a.name = rd(e, t - 21)), a;
+                return (a.name = ru(e, t - 21)), a;
               },
             },
             44: {
               n: "BrtFmt",
               f: function (e, t) {
-                return [e.read_shift(2), rd(e, t - 2)];
+                return [e.read_shift(2), ru(e, t - 2)];
               },
             },
-            45: { n: "BrtFill", f: tq },
-            46: { n: "BrtBorder", f: tq },
+            45: { n: "BrtFill", f: tZ },
+            46: { n: "BrtBorder", f: tZ },
             47: {
               n: "BrtXF",
               f: function (e, t) {
@@ -16337,7 +15006,7 @@
             57: { n: "BrtEndMdxTuple" },
             58: { n: "BrtMdxMbrIstr" },
             59: { n: "BrtStr" },
-            60: { n: "BrtColInfo", f: n1 },
+            60: { n: "BrtColInfo", f: nq },
             62: { n: "BrtCellRString" },
             63: {
               n: "BrtCalcChainItem$",
@@ -16345,7 +15014,7 @@
                 var t = {};
                 t.i = e.read_shift(4);
                 var r = {};
-                (r.r = e.read_shift(4)), (r.c = e.read_shift(4)), (t.r = rn(r));
+                (r.r = e.read_shift(4)), (r.c = e.read_shift(4)), (t.r = rr(r));
                 var n = e.read_shift(1);
                 return 2 & n && (t.l = "1"), 8 & n && (t.a = "1"), t;
               },
@@ -16360,7 +15029,7 @@
             128: { n: "BrtFileVersion" },
             129: { n: "BrtBeginSheet" },
             130: { n: "BrtEndSheet" },
-            131: { n: "BrtBeginBook", f: tq, p: 0 },
+            131: { n: "BrtBeginBook", f: tZ, p: 0 },
             132: { n: "BrtEndBook" },
             133: { n: "BrtBeginWsViews" },
             134: { n: "BrtEndWsViews" },
@@ -16386,10 +15055,10 @@
               n: "BrtWsProp",
               f: function (e, t) {
                 var r = {};
-                return (e.l += 19), (r.name = rd(e, t - 19)), r;
+                return (e.l += 19), (r.name = ru(e, t - 19)), r;
               },
             },
-            148: { n: "BrtWsDim", f: rT, p: 16 },
+            148: { n: "BrtWsDim", f: rC, p: 16 },
             151: { n: "BrtPane", f: function () {} },
             152: { n: "BrtSel" },
             153: {
@@ -16398,7 +15067,7 @@
                 var r = {},
                   n = e.read_shift(4);
                 r.defaultThemeVersion = e.read_shift(4);
-                var a = t > 8 ? rd(e) : "";
+                var a = t > 8 ? ru(e) : "";
                 return (
                   a.length > 0 && (r.CodeName = a),
                   (r.autoCompressPictures = !!(65536 & n)),
@@ -16433,8 +15102,8 @@
                 return (
                   (r.Hidden = e.read_shift(4)),
                   (r.iTabID = e.read_shift(4)),
-                  (r.strRelID = rS(e, t - 8)),
-                  (r.name = rd(e)),
+                  (r.strRelID = rE(e, t - 8)),
+                  (r.name = ru(e)),
                   r
                 );
               },
@@ -16448,7 +15117,7 @@
               },
             },
             160: { n: "BrtEndSst" },
-            161: { n: "BrtBeginAFilter", f: rT },
+            161: { n: "BrtBeginAFilter", f: rC },
             162: { n: "BrtEndAFilter" },
             163: { n: "BrtBeginFilterColumn" },
             164: { n: "BrtEndFilterColumn" },
@@ -16463,7 +15132,7 @@
             173: { n: "BrtEndCustomFilters" },
             174: { n: "BrtCustomFilter" },
             175: { n: "BrtAFilterDateGroupItem" },
-            176: { n: "BrtMergeCell", f: rT },
+            176: { n: "BrtMergeCell", f: rC },
             177: { n: "BrtBeginMergeCells" },
             178: { n: "BrtEndMergeCells" },
             179: { n: "BrtBeginPivotCacheDef" },
@@ -16642,13 +15311,13 @@
             352: { n: "BrtListTrFmla" },
             353: { n: "BrtBeginExternals" },
             354: { n: "BrtEndExternals" },
-            355: { n: "BrtSupBookSrc", f: rS },
+            355: { n: "BrtSupBookSrc", f: rE },
             357: { n: "BrtSupSelf" },
             358: { n: "BrtSupSame" },
             359: { n: "BrtSupTabs" },
             360: { n: "BrtBeginSupBook" },
             361: { n: "BrtPlaceholderName" },
-            362: { n: "BrtExternSheet", f: nJ },
+            362: { n: "BrtExternSheet", f: nQ },
             363: { n: "BrtExternTableStart" },
             364: { n: "BrtExternTableEnd" },
             366: { n: "BrtExternRowHdr" },
@@ -16714,11 +15383,11 @@
               n: "BrtArrFmla",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = rT(e, 16),
+                  a = rC(e, 16),
                   s = e.read_shift(1),
                   i = [a];
                 if (((i[2] = s), r.cellFormula)) {
-                  var o = sE(e, n - e.l, r);
+                  var o = su(e, n - e.l, r);
                   i[1] = o;
                 } else e.l = n;
                 return i;
@@ -16728,9 +15397,9 @@
               n: "BrtShrFmla",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = [rT(e, 16)];
+                  a = [rC(e, 16)];
                 if (r.cellFormula) {
-                  var s = sE(e, n - e.l, r);
+                  var s = su(e, n - e.l, r);
                   (a[1] = s), (e.l = n);
                 } else e.l = n;
                 return a;
@@ -16789,7 +15458,7 @@
               f: function (e) {
                 var t = {};
                 return (
-                  sJ.forEach(function (r) {
+                  sX.forEach(function (r) {
                     t[r] = r_(e, 8);
                   }),
                   t
@@ -16817,11 +15486,11 @@
               n: "BrtHLink",
               f: function (e, t) {
                 var r = e.l + t,
-                  n = rT(e, 16),
-                  a = rS(e),
-                  s = rd(e),
-                  i = rd(e),
-                  o = rd(e);
+                  n = rC(e, 16),
+                  a = rE(e),
+                  s = ru(e),
+                  i = ru(e),
+                  o = ru(e);
                 e.l = r;
                 var c = { rfx: n, relId: a, loc: s, display: o };
                 return i && (c.Tooltip = i), c;
@@ -16877,7 +15546,7 @@
             542: { n: "BrtBeginECTwFldInfo" },
             548: { n: "BrtFileSharing" },
             549: { n: "BrtOleSize" },
-            550: { n: "BrtDrawing", f: rS },
+            550: { n: "BrtDrawing", f: rE },
             551: { n: "BrtLegacyDrawing" },
             552: { n: "BrtLegacyDrawingHF" },
             553: { n: "BrtWebOpt" },
@@ -16949,7 +15618,7 @@
             629: { n: "BrtEndComments" },
             630: { n: "BrtBeginCommentAuthors" },
             631: { n: "BrtEndCommentAuthors" },
-            632: { n: "BrtCommentAuthor", f: rd },
+            632: { n: "BrtCommentAuthor", f: ru },
             633: { n: "BrtBeginCommentList" },
             634: { n: "BrtEndCommentList" },
             635: {
@@ -16957,12 +15626,12 @@
               f: function (e) {
                 var t = {};
                 t.iauthor = e.read_shift(4);
-                var r = rT(e, 16);
-                return (t.rfx = r.s), (t.ref = rn(r.s)), (e.l += 16), t;
+                var r = rC(e, 16);
+                return (t.rfx = r.s), (t.ref = rr(r.s)), (e.l += 16), t;
               },
             },
             636: { n: "BrtEndComment" },
-            637: { n: "BrtCommentText", f: rm },
+            637: { n: "BrtCommentText", f: rp },
             638: { n: "BrtBeginOleObjects" },
             639: { n: "BrtOleObject" },
             640: { n: "BrtEndOleObjects" },
@@ -16978,7 +15647,7 @@
             651: {
               n: "BrtCsProp",
               f: function (e, t) {
-                return (e.l += 10), { name: rd(e, t - 10) };
+                return (e.l += 10), { name: ru(e, t - 10) };
               },
             },
             652: { n: "BrtCsPageSetup" },
@@ -17249,13 +15918,13 @@
             5097: { n: "BrtCalcFeature" },
             65535: { n: "" },
           },
-          ib = ex(iv, "n");
-        ib.BrtFRTArchID$ = 16;
-        var iE = {
+          ii = e_(is, "n");
+        ii.BrtFRTArchID$ = 16;
+        var io = {
             3: {
               n: "BIFF2NUM",
               f: function (e) {
-                var t = nF(e, 6);
+                var t = nR(e, 6);
                 ++e.l;
                 var r = r_(e, 8);
                 return (t.t = "n"), (t.val = r), t;
@@ -17264,28 +15933,28 @@
             4: {
               n: "BIFF2STR",
               f: function (e, t, r) {
-                var n = nF(e, 6);
+                var n = nR(e, 6);
                 ++e.l;
-                var a = nk(e, t - 7, r);
+                var a = nx(e, t - 7, r);
                 return (n.t = "str"), (n.val = a), n;
               },
             },
-            6: { n: "Formula", f: sb },
-            9: { n: "BOF", f: nW },
-            10: { n: "EOF", f: nb },
-            12: { n: "CalcCount", f: nw },
-            13: { n: "CalcMode", f: nw },
-            14: { n: "CalcPrecision", f: nE },
-            15: { n: "CalcRefMode", f: nE },
+            6: { n: "Formula", f: sh },
+            9: { n: "BOF", f: nH },
+            10: { n: "EOF", f: nv },
+            12: { n: "CalcCount", f: nS },
+            13: { n: "CalcMode", f: nS },
+            14: { n: "CalcPrecision", f: nb },
+            15: { n: "CalcRefMode", f: nb },
             16: { n: "CalcDelta", f: r_ },
-            17: { n: "CalcIter", f: nE },
-            18: { n: "Protect", f: nE },
-            19: { n: "Password", f: nw },
-            20: { n: "Header", f: n$ },
-            21: { n: "Footer", f: n$ },
-            23: { n: "ExternSheet", f: nJ },
-            24: { n: "Lbl", f: nQ },
-            25: { n: "WinProtect", f: nE },
+            17: { n: "CalcIter", f: nb },
+            18: { n: "Protect", f: nb },
+            19: { n: "Password", f: nS },
+            20: { n: "Header", f: nj },
+            21: { n: "Footer", f: nj },
+            23: { n: "ExternSheet", f: nQ },
+            24: { n: "Lbl", f: nY },
+            25: { n: "WinProtect", f: nb },
             26: { n: "VerticalPageBreaks" },
             27: { n: "HorizontalPageBreaks" },
             28: {
@@ -17297,7 +15966,7 @@
                       a = e.read_shift(2),
                       s = e.read_shift(2),
                       i = e.read_shift(2),
-                      o = nk(e, 0, r);
+                      o = nx(e, 0, r);
                     return (
                       r.biff < 8 && e.read_shift(1), [{ r: n, c: a }, o, i, s]
                     );
@@ -17306,34 +15975,31 @@
               },
             },
             29: { n: "Selection" },
-            34: { n: "Date1904", f: nE },
-            35: { n: "ExternName", f: nK },
+            34: { n: "Date1904", f: nb },
+            35: { n: "ExternName", f: n$ },
             36: { n: "COLWIDTH" },
             38: { n: "LeftMargin", f: r_ },
             39: { n: "RightMargin", f: r_ },
             40: { n: "TopMargin", f: r_ },
             41: { n: "BottomMargin", f: r_ },
-            42: { n: "PrintRowCol", f: nE },
-            43: { n: "PrintGrid", f: nE },
+            42: { n: "PrintRowCol", f: nb },
+            43: { n: "PrintGrid", f: nb },
             47: {
               n: "FilePass",
               f: function (e, t, r) {
                 var n,
                   a,
                   s,
-                  i,
-                  o,
-                  c = { Type: r.biff >= 8 ? e.read_shift(2) : 0 };
+                  i = { Type: r.biff >= 8 ? e.read_shift(2) : 0 };
                 return (
-                  c.Type
-                    ? ((n = e),
-                      (a = t - 2),
-                      ((s = c || {}).Info = n.read_shift(2)),
-                      (n.l -= 2),
-                      1 === s.Info
-                        ? (s.Data = (function (e) {
+                  i.Type
+                    ? ((n = t - 2),
+                      ((a = i || {}).Info = e.read_shift(2)),
+                      (e.l -= 2),
+                      1 === a.Info
+                        ? (a.Data = (function (e) {
                             var t = {},
-                              r = (t.EncryptionVersionInfo = ah(e, 4));
+                              r = (t.EncryptionVersionInfo = ac(e, 4));
                             if (1 != r.Major || 1 != r.Minor)
                               throw (
                                 "unrecognized version code " +
@@ -17347,10 +16013,10 @@
                               (t.EncryptedVerifierHash = e.read_shift(16)),
                               t
                             );
-                          })(n, a))
-                        : (s.Data = (function (e, t) {
+                          })(e, n))
+                        : (a.Data = (function (e, t) {
                             var r = {},
-                              n = (r.EncryptionVersionInfo = ah(e, 4));
+                              n = (r.EncryptionVersionInfo = ac(e, 4));
                             if (((t -= 4), 2 != n.Minor))
                               throw Error(
                                 "unrecognized minor version code: " + n.Minor
@@ -17363,19 +16029,18 @@
                             var a = e.read_shift(4);
                             return (
                               (t -= 4),
-                              (r.EncryptionHeader = au(e, a)),
+                              (r.EncryptionHeader = al(e, a)),
                               (t -= a),
-                              (r.EncryptionVerifier = ad(e, t)),
+                              (r.EncryptionVerifier = af(e, t)),
                               r
                             );
-                          })(n, a)))
+                          })(e, n)))
                     : (r.biff,
-                      (i = c),
-                      (o = { key: nw(e), verificationBytes: nw(e) }),
-                      r.password && (o.verifier = ap(r.password)),
-                      (i.valid = o.verificationBytes === o.verifier),
-                      i.valid && (i.insitu = av(r.password))),
-                  c
+                      (s = { key: nS(e), verificationBytes: nS(e) }),
+                      r.password && (s.verifier = ah(r.password)),
+                      (i.valid = s.verificationBytes === s.verifier),
+                      i.valid && (i.insitu = ap(r.password))),
+                  i
                 );
               },
             },
@@ -17393,10 +16058,10 @@
                   default:
                     e.l += 10;
                 }
-                return (n.name = nT(e, 0, r)), n;
+                return (n.name = nC(e, 0, r)), n;
               },
             },
-            51: { n: "PrintSize", f: nw },
+            51: { n: "PrintSize", f: nS },
             60: { n: "Continue" },
             61: {
               n: "Window1",
@@ -17412,14 +16077,14 @@
                 };
               },
             },
-            64: { n: "Backup", f: nE },
+            64: { n: "Backup", f: nb },
             65: { n: "Pane", f: function () {} },
-            66: { n: "CodePage", f: nw },
+            66: { n: "CodePage", f: nS },
             77: { n: "Pls" },
             80: { n: "DCon" },
             81: { n: "DConRef" },
             82: { n: "DConName" },
-            85: { n: "DefColWidth", f: nw },
+            85: { n: "DefColWidth", f: nS },
             89: { n: "XCT" },
             90: { n: "CRN" },
             91: { n: "FileSharing" },
@@ -17428,7 +16093,7 @@
               f: function (e, t, r) {
                 if (r.enc) return (e.l += t), "";
                 var n = e.l,
-                  a = nk(e, 0, r);
+                  a = nx(e, 0, r);
                 return e.read_shift(t + n - e.l), a;
               },
             },
@@ -17436,51 +16101,50 @@
               n: "Obj",
               f: function (e, t, r) {
                 if (r && r.biff < 8) {
-                  var n, a, s, i, o, c;
+                  var n, a, s, i, o;
                   return (
-                    (n = e),
-                    (a = t),
-                    (n.l += 4),
-                    (s = n.read_shift(2)),
-                    (i = n.read_shift(2)),
-                    (o = n.read_shift(2)),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 2),
-                    (n.l += 6),
-                    (a -= 36),
-                    (c = []).push((nq[s] || tq)(n, a, r)),
-                    { cmo: [i, s, o], ft: c }
+                    (n = t),
+                    (e.l += 4),
+                    (a = e.read_shift(2)),
+                    (s = e.read_shift(2)),
+                    (i = e.read_shift(2)),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 2),
+                    (e.l += 6),
+                    (n -= 36),
+                    (o = []).push((nZ[a] || tZ)(e, n, r)),
+                    { cmo: [s, a, i], ft: o }
                   );
                 }
-                var l = nL(e, 22),
-                  f = (function (e, t) {
+                var c = nM(e, 22),
+                  l = (function (e, t) {
                     for (var r = e.l + t, n = []; e.l < r; ) {
                       var a = e.read_shift(2);
                       e.l -= 2;
                       try {
-                        n.push(nH[a](e, r - e.l));
+                        n.push(nU[a](e, r - e.l));
                       } catch (t) {
                         return (e.l = r), n;
                       }
                     }
                     return e.l != r && (e.l = r), n;
-                  })(e, t - 22, l[1]);
-                return { cmo: l, ft: f };
+                  })(e, t - 22, c[1]);
+                return { cmo: c, ft: l };
               },
             },
             94: { n: "Uncalced" },
-            95: { n: "CalcSaveRecalc", f: nE },
+            95: { n: "CalcSaveRecalc", f: nb },
             96: { n: "Template" },
             97: { n: "Intl" },
-            99: { n: "ObjProtect", f: nE },
-            125: { n: "ColInfo", f: n1 },
+            99: { n: "ObjProtect", f: nb },
+            125: { n: "ColInfo", f: nq },
             128: {
               n: "Guts",
               f: function (e) {
@@ -17507,9 +16171,9 @@
                 };
               },
             },
-            130: { n: "GridSet", f: nw },
-            131: { n: "HCenter", f: nE },
-            132: { n: "VCenter", f: nE },
+            130: { n: "GridSet", f: nS },
+            131: { n: "HCenter", f: nb },
+            132: { n: "VCenter", f: nb },
             133: {
               n: "BoundSheet8",
               f: function (e, t, r) {
@@ -17529,7 +16193,7 @@
                   case 6:
                     s = "VBAModule";
                 }
-                var i = nT(e, 0, r);
+                var i = nC(e, 0, r);
                 return (
                   0 === i.length && (i = "Sheet1"),
                   { pos: n, hs: a, dt: s, name: i }
@@ -17544,20 +16208,20 @@
                   r = [0, 0];
                 return (
                   (t = e.read_shift(2)),
-                  (r[0] = rN[t] || t),
+                  (r[0] = rP[t] || t),
                   (t = e.read_shift(2)),
-                  (r[1] = rN[t] || t),
+                  (r[1] = rP[t] || t),
                   r
                 );
               },
             },
-            141: { n: "HideObj", f: nw },
+            141: { n: "HideObj", f: nS },
             144: { n: "Sort" },
             146: {
               n: "Palette",
               f: function (e) {
                 for (var t = e.read_shift(2), r = []; t-- > 0; )
-                  r.push(nR(e, 8));
+                  r.push(ny(e, 8));
                 return r;
               },
             },
@@ -17566,7 +16230,7 @@
             153: { n: "DxGCol" },
             154: { n: "FnGroupName" },
             155: { n: "FilterMode" },
-            156: { n: "BuiltInFnGroupCount", f: nw },
+            156: { n: "BuiltInFnGroupCount", f: nS },
             157: { n: "AutoFilterInfo" },
             158: { n: "AutoFilter" },
             160: { n: "Scl", f: nB },
@@ -17604,7 +16268,7 @@
                     s = [];
                   e.l < r;
                 )
-                  s.push(nO(e));
+                  s.push(nD(e));
                 if (e.l !== r) throw Error("MulRK read error");
                 var i = e.read_shift(2);
                 if (s.length != i - a + 1) throw Error("MulRK length mismatch");
@@ -17629,13 +16293,13 @@
                 return { r: n, c: a, C: i, ixfe: s };
               },
             },
-            193: { n: "Mms", f: nb },
+            193: { n: "Mms", f: nv },
             197: { n: "SXDI" },
             198: { n: "SXDB" },
             199: { n: "SXFDB" },
             200: { n: "SXDBB" },
             201: { n: "SXNum" },
-            202: { n: "SxBool", f: nE },
+            202: { n: "SxBool", f: nb },
             203: { n: "SxErr" },
             204: { n: "SXInt" },
             205: { n: "SXString" },
@@ -17649,9 +16313,9 @@
             215: { n: "DBCell" },
             216: { n: "SXRng" },
             217: { n: "SxIsxoper" },
-            218: { n: "BookBool", f: nw },
+            218: { n: "BookBool", f: nS },
             220: { n: "DbOrParamQry" },
-            221: { n: "ScenarioProtect", f: nE },
+            221: { n: "ScenarioProtect", f: nb },
             222: { n: "OleObjectSize" },
             224: {
               n: "XF",
@@ -17674,7 +16338,7 @@
                     (s = e.read_shift(4)),
                     (i = e.read_shift(4)),
                     (o = e.read_shift(2)),
-                    (n.patternType = rM[i >> 26]),
+                    (n.patternType = rN[i >> 26]),
                     r.cellStyles &&
                       ((n.alc = 7 & a),
                       (n.fWrap = (a >> 3) & 1),
@@ -17715,12 +16379,12 @@
                 return 0 === t || e.read_shift(2), 1200;
               },
             },
-            226: { n: "InterfaceEnd", f: nb },
+            226: { n: "InterfaceEnd", f: nv },
             227: { n: "SXVS" },
             229: {
               n: "MergeCells",
               f: function (e, t) {
-                for (var r = [], n = e.read_shift(2); n--; ) r.push(nP(e, t));
+                for (var r = [], n = e.read_shift(2); n--; ) r.push(nO(e, t));
                 return r;
               },
             },
@@ -17786,7 +16450,7 @@
             253: {
               n: "LabelSst",
               f: function (e) {
-                var t = nF(e);
+                var t = nR(e);
                 return (t.isst = e.read_shift(4)), t;
               },
             },
@@ -17818,8 +16482,8 @@
             339: { n: "RRDDefName" },
             340: { n: "RRDRstEtxp" },
             351: { n: "LRng" },
-            352: { n: "UsesELFs", f: nE },
-            353: { n: "DSF", f: nb },
+            352: { n: "UsesELFs", f: nb },
+            353: { n: "DSF", f: nv },
             401: { n: "CUsr" },
             402: { n: "CbUsr" },
             403: { n: "UsrInfo" },
@@ -17842,11 +16506,11 @@
                 if (((r.sbcch = s), 1025 == s || 14849 == s)) return [s, a];
                 if (s < 1 || s > 255)
                   throw Error("Unexpected SupBook type: " + s);
-                for (var i = nx(e, s), o = []; n > e.l; ) o.push(n_(e));
+                for (var i = nT(e, s), o = []; n > e.l; ) o.push(n_(e));
                 return [s, a, i, o];
               },
             },
-            431: { n: "Prot4Rev", f: nE },
+            431: { n: "Prot4Rev", f: nb },
             432: { n: "CondFmt" },
             433: { n: "CF" },
             434: { n: "DVal" },
@@ -17858,38 +16522,34 @@
                   a = "";
                 try {
                   e.l += 4;
-                  var s,
-                    i = (r.lastobj || { cmo: [0, 0] }).cmo[1];
-                  -1 == [0, 5, 7, 11, 12, 14].indexOf(i)
+                  var s = (r.lastobj || { cmo: [0, 0] }).cmo[1];
+                  -1 == [0, 5, 7, 11, 12, 14].indexOf(s)
                     ? (e.l += 6)
-                    : ((s = e).read_shift(1),
-                      s.l++,
-                      s.read_shift(2),
-                      (s.l += 2));
+                    : (e.read_shift(1), e.l++, e.read_shift(2), (e.l += 2));
+                  var i = e.read_shift(2);
+                  e.read_shift(2), nS(e, 2);
                   var o = e.read_shift(2);
-                  e.read_shift(2), nw(e, 2);
-                  var c = e.read_shift(2);
-                  e.l += c;
-                  for (var l = 1; l < e.lens.length - 1; ++l) {
-                    if (e.l - n != e.lens[l])
+                  e.l += o;
+                  for (var c = 1; c < e.lens.length - 1; ++c) {
+                    if (e.l - n != e.lens[c])
                       throw Error("TxO: bad continue record");
-                    var f = e[e.l],
-                      h = nx(e, e.lens[l + 1] - e.lens[l] - 1);
-                    if ((a += h).length >= (f ? o : 2 * o)) break;
+                    var l = e[e.l],
+                      f = nT(e, e.lens[c + 1] - e.lens[c] - 1);
+                    if ((a += f).length >= (l ? i : 2 * i)) break;
                   }
-                  if (a.length !== o && a.length !== 2 * o)
-                    throw Error("cchText: " + o + " != " + a.length);
+                  if (a.length !== i && a.length !== 2 * i)
+                    throw Error("cchText: " + i + " != " + a.length);
                   return (e.l = n + t), { t: a };
                 } catch (r) {
                   return (e.l = n + t), { t: a };
                 }
               },
             },
-            439: { n: "RefreshAll", f: nE },
+            439: { n: "RefreshAll", f: nb },
             440: {
               n: "HLink",
               f: function (e, t) {
-                var r = nP(e, 8);
+                var r = nO(e, 8);
                 return (
                   (e.l += 16),
                   [
@@ -17908,36 +16568,35 @@
                         l,
                         f,
                         h = "";
-                      16 & a && (s = nI(e, r - e.l)),
-                        128 & a && (i = nI(e, r - e.l)),
-                        (257 & a) == 257 && (o = nI(e, r - e.l)),
+                      16 & a && (s = nA(e, r - e.l)),
+                        128 & a && (i = nA(e, r - e.l)),
+                        (257 & a) == 257 && (o = nA(e, r - e.l)),
                         (257 & a) == 1 &&
                           (c = (function (e, t) {
                             var r,
                               n,
                               a,
                               s,
-                              i,
-                              o = e.read_shift(16);
-                            switch (((t -= 16), o)) {
+                              i = e.read_shift(16);
+                            switch (((t -= 16), i)) {
                               case "e0c9ea79f9bace118c8200aa004ba90b":
                                 return (
-                                  (n = (r = e).read_shift(4)),
-                                  (a = r.l),
-                                  (s = !1),
-                                  n > 24 &&
-                                    ((r.l += n - 24),
+                                  (r = e.read_shift(4)),
+                                  (n = e.l),
+                                  (a = !1),
+                                  r > 24 &&
+                                    ((e.l += r - 24),
                                     "795881f43b1d7f48af2c825dc4852763" ===
-                                      r.read_shift(16) && (s = !0),
-                                    (r.l = a)),
-                                  (i = r
+                                      e.read_shift(16) && (a = !0),
+                                    (e.l = n)),
+                                  (s = e
                                     .read_shift(
-                                      (s ? n - 24 : n) >> 1,
+                                      (a ? r - 24 : r) >> 1,
                                       "utf16le"
                                     )
                                     .replace(em, "")),
-                                  s && (r.l += 24),
-                                  i
+                                  a && (e.l += 24),
+                                  s
                                 );
                               case "0303000000000000c000000000000046":
                                 return (function (e) {
@@ -17955,12 +16614,12 @@
                                     .replace(em, "");
                                 })(e, t);
                               default:
-                                throw Error("Unsupported Moniker " + o);
+                                throw Error("Unsupported Moniker " + i);
                             }
                           })(e, r - e.l)),
-                        8 & a && (h = nI(e, r - e.l)),
+                        8 & a && (h = nA(e, r - e.l)),
                         32 & a && (l = e.read_shift(16)),
-                        64 & a && (f = na(e)),
+                        64 & a && (f = nn(e)),
                         (e.l = r);
                       var u = i || o || c || "";
                       u && h && (u += "#" + h), u || (u = "#" + h);
@@ -17979,10 +16638,10 @@
             441: { n: "Lel" },
             442: { n: "CodeName", f: n_ },
             443: { n: "SXFDBType" },
-            444: { n: "Prot4RevPass", f: nw },
+            444: { n: "Prot4RevPass", f: nS },
             445: { n: "ObNoMacros" },
             446: { n: "Dv" },
-            448: { n: "Excel9File", f: nb },
+            448: { n: "Excel9File", f: nv },
             449: {
               n: "RecalcId",
               f: function (e) {
@@ -17990,13 +16649,13 @@
               },
               r: 2,
             },
-            450: { n: "EntExU2", f: nb },
-            512: { n: "Dimensions", f: nG },
-            513: { n: "Blank", f: nF },
+            450: { n: "EntExU2", f: nv },
+            512: { n: "Dimensions", f: nX },
+            513: { n: "Blank", f: nR },
             515: {
               n: "Number",
               f: function (e) {
-                var t = nF(e, 6),
+                var t = nR(e, 6),
                   r = r_(e, 8);
                 return (t.val = r), t;
               },
@@ -18005,14 +16664,14 @@
               n: "Label",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = nF(e, 6);
+                  a = nR(e, 6);
                 2 == r.biff && e.l++;
                 var s = n_(e, n - e.l, r);
                 return (a.val = s), a;
               },
             },
-            517: { n: "BoolErr", f: nj },
-            518: { n: "Formula", f: sb },
+            517: { n: "BoolErr", f: nz },
+            518: { n: "Formula", f: sh },
             519: { n: "String", f: n_ },
             520: {
               n: "Row",
@@ -18034,8 +16693,8 @@
               },
             },
             523: { n: "Index" },
-            545: { n: "Array", f: nZ },
-            549: { n: "DefaultRowHeight", f: nX },
+            545: { n: "Array", f: nJ },
+            549: { n: "DefaultRowHeight", f: nV },
             566: { n: "Table" },
             574: {
               n: "Window2",
@@ -18050,17 +16709,17 @@
               f: function (e) {
                 var t = e.read_shift(2),
                   r = e.read_shift(2),
-                  n = nO(e);
+                  n = nD(e);
                 return { r: t, c: r, ixfe: n[0], rknum: n[1] };
               },
             },
             659: { n: "Style" },
-            1030: { n: "Formula", f: sb },
+            1030: { n: "Formula", f: sh },
             1048: { n: "BigName" },
             1054: {
               n: "Format",
               f: function (e, t, r) {
-                return [e.read_shift(2), nk(e, 0, r)];
+                return [e.read_shift(2), nx(e, 0, r)];
               },
             },
             1084: { n: "ContinueBigName" },
@@ -18073,19 +16732,22 @@
                   i,
                   o,
                   c,
-                  l = nM(e, 6);
-                e.l++;
-                var f = e.read_shift(1);
-                return [
-                  ((n = t -= 8),
-                  (s = e.l + n),
-                  (o = e.read_shift(2)),
-                  (c = su(e, o, r)),
-                  65535 == o
-                    ? [[], ((a = e), void (a.l += n - 2))]
-                    : (n !== o + 2 && (i = sh(e, s - o - 2, c, r)), [c, i])),
-                  f,
                   l,
+                  f = nN(e, 6);
+                e.l++;
+                var h = e.read_shift(1);
+                return [
+                  ((n = e),
+                  (a = t -= 8),
+                  (s = r),
+                  (o = n.l + a),
+                  (c = n.read_shift(2)),
+                  (l = ss(n, c, s)),
+                  65535 == c
+                    ? [[], void (n.l += a - 2)]
+                    : (a !== c + 2 && (i = sa(n, o - c - 2, l, s)), [l, i])),
+                  h,
+                  f,
                 ];
               },
             },
@@ -18093,7 +16755,7 @@
               n: "HLinkTooltip",
               f: function (e, t) {
                 e.read_shift(2);
-                var r = nP(e, 8),
+                var r = nO(e, 8),
                   n = e.read_shift((t - 10) / 2, "dbcs-cont");
                 return [r, (n = n.replace(em, ""))];
               },
@@ -18106,7 +16768,7 @@
             2054: { n: "Qsir" },
             2055: { n: "Qsif" },
             2056: { n: "RRDTQSIF" },
-            2057: { n: "BOF", f: nW },
+            2057: { n: "BOF", f: nH },
             2058: { n: "OleDbConn" },
             2059: { n: "WOpt" },
             2060: { n: "SXViewEx" },
@@ -18132,7 +16794,7 @@
             2148: { n: "SXAddl" },
             2149: { n: "CrErr" },
             2150: { n: "HFPicture" },
-            2151: { n: "FeatHdr", f: nb },
+            2151: { n: "FeatHdr", f: nv },
             2152: { n: "Feat" },
             2154: { n: "DataLabExt" },
             2155: { n: "DataLabExtContents" },
@@ -18166,11 +16828,10 @@
                 for (var a = e.read_shift(2), s = []; a-- > 0; )
                   s.push(
                     (function (e) {
-                      var t,
-                        r = e.read_shift(2),
-                        n = e.read_shift(2) - 4,
-                        a = [r];
-                      switch (r) {
+                      var t = e.read_shift(2),
+                        r = e.read_shift(2) - 4,
+                        n = [t];
+                      switch (t) {
                         case 4:
                         case 5:
                         case 7:
@@ -18179,45 +16840,43 @@
                         case 10:
                         case 11:
                         case 13:
-                          a[1] = (function (e) {
-                            var t = {};
+                          n[1] = (function (e) {
+                            var t,
+                              r = {};
                             switch (
-                              ((t.xclrType = e.read_shift(2)),
-                              (t.nTintShade = e.read_shift(2)),
-                              t.xclrType)
+                              ((r.xclrType = e.read_shift(2)),
+                              (r.nTintShade = e.read_shift(2)),
+                              r.xclrType)
                             ) {
                               case 0:
                               case 4:
                                 e.l += 4;
                                 break;
                               case 1:
-                                t.xclrValue = (function (e, t) {
-                                  var r;
-                                  return (r = e), void (r.l += 4);
-                                })(e, 4);
+                                r.xclrValue = ((t = e), void (t.l += 4));
                                 break;
                               case 2:
-                                t.xclrValue = ny(e, 4);
+                                r.xclrValue = nI(e, 4);
                                 break;
                               case 3:
-                                t.xclrValue = e.read_shift(4);
+                                r.xclrValue = e.read_shift(4);
                             }
-                            return (e.l += 8), t;
-                          })(e, n);
+                            return (e.l += 8), r;
+                          })(e, r);
                           break;
                         case 6:
-                          a[1] = ((t = e), void (t.l += n));
+                          n[1] = void (e.l += r);
                           break;
                         case 14:
                         case 15:
-                          a[1] = e.read_shift(1 === n ? 1 : 2);
+                          n[1] = e.read_shift(1 === r ? 1 : 2);
                           break;
                         default:
                           throw Error(
-                            "Unrecognized ExtProp type: " + r + " " + n
+                            "Unrecognized ExtProp type: " + t + " " + r
                           );
                       }
-                      return a;
+                      return n;
                     })(e, r - e.l)
                   );
                 return { ixfe: n, ext: s };
@@ -18234,7 +16893,7 @@
             2185: { n: "MDXKPI" },
             2186: { n: "MDB" },
             2187: { n: "PLV" },
-            2188: { n: "Compat12", f: nE, r: 12 },
+            2188: { n: "Compat12", f: nb, r: 12 },
             2189: { n: "DXF" },
             2190: { n: "TableStyles", r: 12 },
             2191: { n: "TableStyle" },
@@ -18250,7 +16909,7 @@
                 }
                 var n = e.read_shift(2),
                   a = e.read_shift(2);
-                return [nx(e, n, r), nx(e, a, r)];
+                return [nT(e, n, r), nT(e, a, r)];
               },
               r: 12,
             },
@@ -18273,7 +16932,7 @@
                     return;
                   }
                   var i = e$(n, "theme/theme/theme1.xml", !0);
-                  if (i) return aY(i, r);
+                  if (i) return aG(i, r);
                 }
               },
               r: 12,
@@ -18292,7 +16951,7 @@
               },
               r: 12,
             },
-            2203: { n: "CompressPictures", f: nb },
+            2203: { n: "CompressPictures", f: nv },
             2204: { n: "HeaderFooter" },
             2205: { n: "CrtLayout12" },
             2206: { n: "CrtMlFrt" },
@@ -18302,14 +16961,13 @@
               f: function (e) {
                 var t,
                   r,
-                  n,
-                  a =
-                    ((r = (t = e).read_shift(2)),
-                    (n = t.read_shift(2)),
-                    (t.l += 8),
-                    { type: r, flags: n });
-                if (2211 != a.type)
-                  throw Error("Invalid Future Record " + a.type);
+                  n =
+                    ((t = e.read_shift(2)),
+                    (r = e.read_shift(2)),
+                    (e.l += 8),
+                    { type: t, flags: r });
+                if (2211 != n.type)
+                  throw Error("Invalid Future Record " + n.type);
                 return 0 !== e.read_shift(4);
               },
             },
@@ -18344,7 +17002,7 @@
             4130: { n: "CrtLink" },
             4132: { n: "DefaultText" },
             4133: { n: "Text" },
-            4134: { n: "FontX", f: nw },
+            4134: { n: "FontX", f: nS },
             4135: { n: "ObjectLink" },
             4146: { n: "Frame" },
             4147: { n: "Begin" },
@@ -18381,7 +17039,7 @@
               n: "ClrtClient",
               f: function (e) {
                 for (var t = e.read_shift(2), r = []; t-- > 0; )
-                  r.push(nR(e, 8));
+                  r.push(ny(e, 8));
                 return r;
               },
             },
@@ -18396,17 +17054,17 @@
             4198: { n: "GelFrame" },
             4199: { n: "BopPopCustom" },
             4200: { n: "Fbi2" },
-            0: { n: "Dimensions", f: nG },
+            0: { n: "Dimensions", f: nX },
             2: {
               n: "BIFF2INT",
               f: function (e) {
-                var t = nF(e, 6);
+                var t = nR(e, 6);
                 ++e.l;
                 var r = e.read_shift(2);
                 return (t.t = "n"), (t.val = r), t;
               },
             },
-            5: { n: "BoolErr", f: nj },
+            5: { n: "BoolErr", f: nz },
             7: {
               n: "String",
               f: function (e) {
@@ -18416,12 +17074,12 @@
             },
             8: { n: "BIFF2ROW" },
             11: { n: "Index" },
-            22: { n: "ExternCount", f: nw },
-            30: { n: "BIFF2FORMAT", f: nk },
+            22: { n: "ExternCount", f: nS },
+            30: { n: "BIFF2FORMAT", f: nx },
             31: { n: "BIFF2FMTCNT" },
             32: { n: "BIFF2COLINFO" },
-            33: { n: "Array", f: nZ },
-            37: { n: "DefaultRowHeight", f: nX },
+            33: { n: "Array", f: nJ },
+            37: { n: "DefaultRowHeight", f: nV },
             50: {
               n: "BIFF2FONTXTRA",
               f: function (e, t) {
@@ -18467,9 +17125,9 @@
               n: "RString",
               f: function (e, t, r) {
                 var n = e.l + t,
-                  a = nF(e, 6),
+                  a = nR(e, 6),
                   s = e.read_shift(2),
-                  i = nx(e, s, r);
+                  i = nT(e, s, r);
                 return (e.l = n), (a.t = "str"), (a.val = i), a;
               },
             },
@@ -18477,12 +17135,12 @@
             234: { n: "TabIdConf" },
             354: { n: "XL5Modify" },
             421: { n: "FileSharing2" },
-            521: { n: "BOF", f: nW },
-            536: { n: "Lbl", f: nQ },
-            547: { n: "ExternName", f: nK },
+            521: { n: "BOF", f: nH },
+            536: { n: "Lbl", f: nY },
+            547: { n: "ExternName", f: n$ },
             561: { n: "Font" },
             579: { n: "BIFF3XF" },
-            1033: { n: "BOF", f: nW },
+            1033: { n: "BOF", f: nH },
             1091: { n: "BIFF4XF" },
             2157: { n: "FeatInfo" },
             2163: { n: "FeatInfo11" },
@@ -18502,9 +17160,9 @@
             2262: { n: "FRTArchId$", r: 12 },
             29282: {},
           },
-          iS = ex(iE, "n");
-        function iw(e, t, r, n) {
-          var a = +t || +iS[t];
+          ic = e_(io, "n");
+        function il(e, t, r, n) {
+          var a = +t || +ic[t];
           if (!isNaN(a)) {
             var s = n || (r || []).length || 0,
               i = e.next(4);
@@ -18513,9 +17171,9 @@
               s > 0 && tU(r) && e.push(r);
           }
         }
-        function iC(e, t, r) {
+        function ih(e, t, r) {
           return (
-            e || (e = t1(7)),
+            e || (e = tq(7)),
             e.write_shift(2, t),
             e.write_shift(2, r),
             e.write_shift(2, 0),
@@ -18523,7 +17181,7 @@
             e
           );
         }
-        function iB(e, t) {
+        function iu(e, t) {
           var r = t || {};
           switch (r.biff || 2) {
             case 8:
@@ -18542,9 +17200,9 @@
                   (r.Strings = []),
                   (r.Strings.Count = 0),
                   (r.Strings.Unique = 0),
-                  iG(r),
+                  iD(r),
                   (r.cellXfs = []),
-                  sF(r.cellXfs, {}, { revssf: { General: 0 } }),
+                  s_(r.cellXfs, {}, { revssf: { General: 0 } }),
                   e.Props || (e.Props = {});
                 for (var a = 0; a < e.SheetNames.length; ++a)
                   n[n.length] = (function (e, t, r) {
@@ -18557,7 +17215,7 @@
                       l,
                       f,
                       h,
-                      u = t2(),
+                      u = t0(),
                       d = r.SheetNames[e],
                       p = r.Sheets[d] || {},
                       m = (r || {}).Workbook || {},
@@ -18566,9 +17224,9 @@
                       b = 8 == t.biff,
                       E = "",
                       S = [],
-                      w = ri(p["!ref"] || "A1"),
-                      C = b ? 65536 : 16384;
-                    if (w.e.c > 255 || w.e.r >= C) {
+                      w = rs(p["!ref"] || "A1"),
+                      B = b ? 65536 : 16384;
+                    if (w.e.c > 255 || w.e.r >= B) {
                       if (t.WTF)
                         throw Error(
                           "Range " +
@@ -18576,29 +17234,28 @@
                             " exceeds format limit A1:IV16384"
                         );
                       (w.e.c = Math.min(w.e.c, 255)),
-                        (w.e.r = Math.min(w.e.c, C - 1));
+                        (w.e.r = Math.min(w.e.c, B - 1));
                     }
-                    iw(u, 2057, nV(r, 16, t)),
-                      iw(u, "CalcMode", nC(1)),
-                      iw(u, "CalcCount", nC(100)),
-                      iw(u, "CalcRefMode", nS(!0)),
-                      iw(u, "CalcIter", nS(!1)),
-                      iw(u, "CalcDelta", rk(0.001)),
-                      iw(u, "CalcSaveRecalc", nS(!0)),
-                      iw(u, "PrintRowCol", nS(!1)),
-                      iw(u, "PrintGrid", nS(!1)),
-                      iw(u, "GridSet", nC(1)),
-                      iw(
+                    il(u, 2057, nW(r, 16, t)),
+                      il(u, "CalcMode", nw(1)),
+                      il(u, "CalcCount", nw(100)),
+                      il(u, "CalcRefMode", nE(!0)),
+                      il(u, "CalcIter", nE(!1)),
+                      il(u, "CalcDelta", rx(0.001)),
+                      il(u, "CalcSaveRecalc", nE(!0)),
+                      il(u, "PrintRowCol", nE(!1)),
+                      il(u, "PrintGrid", nE(!1)),
+                      il(u, "GridSet", nw(1)),
+                      il(
                         u,
                         "Guts",
-                        ((n = [0, 0]),
-                        (a = t1(8)).write_shift(4, 0),
-                        a.write_shift(2, n[0] ? n[0] + 1 : 0),
-                        a.write_shift(2, n[1] ? n[1] + 1 : 0),
+                        ((a = tq(8)).write_shift(4, 0),
+                        a.write_shift(2, 0),
+                        a.write_shift(2, 0),
                         a)
                       ),
-                      iw(u, "HCenter", nS(!1)),
-                      iw(u, "VCenter", nS(!1)),
+                      il(u, "HCenter", nE(!1)),
+                      il(u, "VCenter", nE(!1)),
                       b &&
                         (function (e, t, r) {
                           if (t) {
@@ -18606,11 +17263,11 @@
                             t.forEach(function (t, r) {
                               if (++n <= 256 && t) {
                                 var a, s, i;
-                                iw(
+                                il(
                                   e,
                                   "ColInfo",
-                                  ((a = sy(r, t)),
-                                  (s = t1(12)).write_shift(2, r),
+                                  ((a = sC(r, t)),
+                                  (s = tq(12)).write_shift(2, r),
                                   s.write_shift(2, r),
                                   s.write_shift(2, 256 * a.width),
                                   s.write_shift(2, 0),
@@ -18626,10 +17283,10 @@
                             });
                           }
                         })(u, p["!cols"], 0),
-                      iw(
+                      il(
                         u,
                         512,
-                        ((i = t1(
+                        ((i = tq(
                           2 * (s = 8 != t.biff && t.biff ? 2 : 4) + 6
                         )).write_shift(s, w.s.r),
                         i.write_shift(s, w.e.r + 1),
@@ -18639,27 +17296,27 @@
                         i)
                       ),
                       b && (p["!links"] = []);
-                    for (var B = w.s.r; B <= w.e.r; ++B) {
-                      E = t9(B);
+                    for (var C = w.s.r; C <= w.e.r; ++C) {
+                      E = t7(C);
                       for (var T = w.s.c; T <= w.e.c; ++T) {
-                        B === w.s.r && (S[T] = rt(T)), (h = S[T] + E);
-                        var x = v ? (p[B] || [])[T] : p[h];
-                        x &&
+                        C === w.s.r && (S[T] = re(T)), (h = S[T] + E);
+                        var _ = v ? (p[C] || [])[T] : p[h];
+                        _ &&
                           (!(function (e, t, r, n, a) {
-                            var s = 16 + sF(a.cellXfs, t, a);
+                            var s = 16 + s_(a.cellXfs, t, a);
                             if (null == t.v && !t.bf) {
-                              iw(e, "Blank", nD(r, n, s));
+                              il(e, "Blank", nF(r, n, s));
                               return;
                             }
                             if (t.bf)
-                              iw(
+                              il(
                                 e,
                                 "Formula",
                                 (function (e, t, r, n, a) {
-                                  var s = nD(t, r, a),
+                                  var s = nF(t, r, a),
                                     i = (function (e) {
                                       if (null == e) {
-                                        var t = t1(8);
+                                        var t = tq(8);
                                         return (
                                           t.write_shift(1, 3),
                                           t.write_shift(1, 0),
@@ -18670,13 +17327,13 @@
                                         );
                                       }
                                       return "number" == typeof e
-                                        ? rk(e)
-                                        : rk(0);
+                                        ? rx(e)
+                                        : rx(0);
                                     })(e.v),
-                                    o = t1(6);
+                                    o = tq(6);
                                   o.write_shift(2, 33), o.write_shift(4, 0);
                                   for (
-                                    var c = t1(e.bf.length), l = 0;
+                                    var c = tq(e.bf.length), l = 0;
                                     l < e.bf.length;
                                     ++l
                                   )
@@ -18690,21 +17347,21 @@
                                 case "n":
                                   var i,
                                     o = "d" == t.t ? eI(eN(t.v)) : t.v;
-                                  iw(
+                                  il(
                                     e,
                                     "Number",
-                                    (nD(r, n, s, (i = t1(14))), rk(o, i), i)
+                                    (nF(r, n, s, (i = tq(14))), rx(o, i), i)
                                   );
                                   break;
                                 case "b":
                                 case "e":
-                                  iw(
+                                  il(
                                     e,
                                     517,
                                     ((c = t.v),
                                     (l = t.t),
-                                    nD(r, n, s, (f = t1(8))),
-                                    (h = f) || (h = t1(2)),
+                                    nF(r, n, s, (f = tq(8))),
+                                    (h = f) || (h = tq(2)),
                                     h.write_shift(1, +c),
                                     h.write_shift(1, "e" == l ? 1 : 0),
                                     f)
@@ -18721,24 +17378,24 @@
                                       d,
                                       p,
                                       m,
-                                      g = sI(a.Strings, t.v, a.revStrings);
-                                    iw(
+                                      g = sB(a.Strings, t.v, a.revStrings);
+                                    il(
                                       e,
                                       "LabelSst",
-                                      (nD(r, n, s, (m = t1(10))),
+                                      (nF(r, n, s, (m = tq(10))),
                                       m.write_shift(4, g),
                                       m)
                                     );
                                   } else
-                                    iw(
+                                    il(
                                       e,
                                       "Label",
                                       ((u = t.v),
-                                      nD(
+                                      nF(
                                         r,
                                         n,
                                         s,
-                                        (p = t1(
+                                        (p = tq(
                                           8 +
                                             +(d = !a || 8 == a.biff) +
                                             (1 + d) * u.length
@@ -18755,20 +17412,20 @@
                                     );
                                   break;
                                 default:
-                                  iw(e, "Blank", nD(r, n, s));
+                                  il(e, "Blank", nF(r, n, s));
                               }
-                          })(u, x, B, T, t),
-                          b && x.l && p["!links"].push([h, x.l]));
+                          })(u, _, C, T, t),
+                          b && _.l && p["!links"].push([h, _.l]));
                       }
                     }
-                    var _ = g.CodeName || g.name || d;
+                    var x = g.CodeName || g.name || d;
                     return (
                       b &&
-                        iw(
+                        il(
                           u,
                           "Window2",
                           ((o = (m.Views || [])[0]),
-                          (c = t1(18)),
+                          (c = tq(18)),
                           (l = 1718),
                           o && o.RTL && (l |= 64),
                           c.write_shift(2, l),
@@ -18780,13 +17437,13 @@
                         ),
                       b &&
                         (p["!merges"] || []).length &&
-                        iw(
+                        il(
                           u,
                           "MergeCells",
                           (function (e) {
-                            var t = t1(2 + 8 * e.length);
+                            var t = tq(2 + 8 * e.length);
                             t.write_shift(2, e.length);
-                            for (var r = 0; r < e.length; ++r) nN(e[r], t);
+                            for (var r = 0; r < e.length; ++r) nP(e[r], t);
                             return t;
                           })(p["!merges"])
                         ),
@@ -18794,12 +17451,12 @@
                         (function (e, t) {
                           for (var r = 0; r < t["!links"].length; ++r) {
                             var n = t["!links"][r];
-                            iw(
+                            il(
                               e,
                               "HLink",
                               (function (e) {
-                                var t = t1(24),
-                                  r = rr(e[0]);
+                                var t = tq(24),
+                                  r = rt(e[0]);
                                 t.write_shift(2, r.r),
                                   t.write_shift(2, r.r),
                                   t.write_shift(2, r.c),
@@ -18817,7 +17474,7 @@
                                 return ep([
                                   t,
                                   (function (e) {
-                                    var t = t1(512),
+                                    var t = tq(512),
                                       r = 0,
                                       n = e.Target,
                                       a = n.indexOf("#") > -1 ? 31 : 23;
@@ -18902,14 +17559,14 @@
                               })(n)
                             ),
                               n[1].Tooltip &&
-                                iw(
+                                il(
                                   e,
                                   "HLinkTooltip",
                                   (function (e) {
                                     var t = e[1].Tooltip,
-                                      r = t1(10 + 2 * (t.length + 1));
+                                      r = tq(10 + 2 * (t.length + 1));
                                     r.write_shift(2, 2048);
-                                    var n = rr(e[0]);
+                                    var n = rt(e[0]);
                                     r.write_shift(2, n.r),
                                       r.write_shift(2, n.r),
                                       r.write_shift(2, n.c),
@@ -18922,16 +17579,16 @@
                           }
                           delete t["!links"];
                         })(u, p),
-                      iw(u, "CodeName", nA(_, t)),
+                      il(u, "CodeName", nk(x, t)),
                       b &&
-                        ((f = t1(19)).write_shift(4, 2151),
+                        ((f = tq(19)).write_shift(4, 2151),
                         f.write_shift(4, 0),
                         f.write_shift(4, 0),
                         f.write_shift(2, 3),
                         f.write_shift(1, 1),
                         f.write_shift(4, 0),
-                        iw(u, "FeatHdr", f),
-                        (f = t1(39)).write_shift(4, 2152),
+                        il(u, "FeatHdr", f),
+                        (f = tq(39)).write_shift(4, 2152),
                         f.write_shift(4, 0),
                         f.write_shift(4, 0),
                         f.write_shift(2, 3),
@@ -18940,10 +17597,10 @@
                         f.write_shift(2, 1),
                         f.write_shift(4, 4),
                         f.write_shift(2, 0),
-                        nN(ri(p["!ref"] || "A1"), f),
+                        nP(rs(p["!ref"] || "A1"), f),
                         f.write_shift(4, 4),
-                        iw(u, "Feat", f)),
-                      iw(u, "EOF"),
+                        il(u, "Feat", f)),
+                      il(u, "EOF"),
                       u.end()
                     );
                   })(a, r, e);
@@ -18957,33 +17614,33 @@
                         o,
                         c,
                         l,
-                        f = t2(),
+                        f = t0(),
                         h = (e || {}).Workbook || {},
                         u = h.Sheets || [],
                         d = h.WBProps || {},
                         p = 8 == r.biff,
                         m = 5 == r.biff;
-                      iw(f, 2057, nV(e, 5, r)),
-                        "xla" == r.bookType && iw(f, "Addin"),
-                        iw(f, "InterfaceHdr", p ? nC(1200) : null),
-                        iw(
+                      il(f, 2057, nW(e, 5, r)),
+                        "xla" == r.bookType && il(f, "Addin"),
+                        il(f, "InterfaceHdr", p ? nw(1200) : null),
+                        il(
                           f,
                           "Mms",
                           (function (e, t) {
-                            t || (t = t1(e));
+                            t || (t = tq(e));
                             for (var r = 0; r < e; ++r) t.write_shift(1, 0);
                             return t;
                           })(2)
                         ),
-                        m && iw(f, "ToolbarHdr"),
-                        m && iw(f, "ToolbarEnd"),
-                        iw(f, "InterfaceEnd"),
-                        iw(
+                        m && il(f, "ToolbarHdr"),
+                        m && il(f, "ToolbarEnd"),
+                        il(f, "InterfaceEnd"),
+                        il(
                           f,
                           "WriteAccess",
                           (function (e, t) {
                             var r = !t || 8 == t.biff,
-                              n = t1(r ? 112 : 54);
+                              n = tq(r ? 112 : 54);
                             for (
                               n.write_shift(8 == t.biff ? 2 : 1, 7),
                                 r && n.write_shift(1, 0),
@@ -18995,36 +17652,36 @@
                             return n;
                           })(0, r)
                         ),
-                        iw(f, "CodePage", nC(p ? 1200 : 1252)),
-                        p && iw(f, "DSF", nC(0)),
-                        p && iw(f, "Excel9File"),
-                        iw(
+                        il(f, "CodePage", nw(p ? 1200 : 1252)),
+                        p && il(f, "DSF", nw(0)),
+                        p && il(f, "Excel9File"),
+                        il(
                           f,
                           "RRTabId",
                           (function (e) {
-                            for (var t = t1(2 * e), r = 0; r < e; ++r)
+                            for (var t = tq(2 * e), r = 0; r < e; ++r)
                               t.write_shift(2, r + 1);
                             return t;
                           })(e.SheetNames.length)
                         ),
-                        p && e.vbaraw && iw(f, "ObProj"),
+                        p && e.vbaraw && il(f, "ObProj"),
                         p &&
                           e.vbaraw &&
-                          iw(
+                          il(
                             f,
                             "CodeName",
-                            nA(d.CodeName || "ThisWorkbook", r)
+                            nk(d.CodeName || "ThisWorkbook", r)
                           ),
-                        iw(f, "BuiltInFnGroupCount", nC(17)),
-                        iw(f, "WinProtect", nS(!1)),
-                        iw(f, "Protect", nS(!1)),
-                        iw(f, "Password", nC(0)),
-                        p && iw(f, "Prot4Rev", nS(!1)),
-                        p && iw(f, "Prot4RevPass", nC(0)),
-                        iw(
+                        il(f, "BuiltInFnGroupCount", nw(17)),
+                        il(f, "WinProtect", nE(!1)),
+                        il(f, "Protect", nE(!1)),
+                        il(f, "Password", nw(0)),
+                        p && il(f, "Prot4Rev", nE(!1)),
+                        p && il(f, "Prot4RevPass", nw(0)),
+                        il(
                           f,
                           "Window1",
-                          ((n = t1(18)).write_shift(2, 0),
+                          ((n = tq(18)).write_shift(2, 0),
                           n.write_shift(2, 0),
                           n.write_shift(2, 29280),
                           n.write_shift(2, 17600),
@@ -19035,12 +17692,12 @@
                           n.write_shift(2, 500),
                           n)
                         ),
-                        iw(f, "Backup", nS(!1)),
-                        iw(f, "HideObj", nC(0)),
-                        iw(
+                        il(f, "Backup", nE(!1)),
+                        il(f, "HideObj", nw(0)),
+                        il(
                           f,
                           "Date1904",
-                          nS(
+                          nE(
                             "true" ==
                               (e.Workbook &&
                               e.Workbook.WBProps &&
@@ -19049,10 +17706,10 @@
                                 : "false")
                           )
                         ),
-                        iw(f, "CalcPrecision", nS(!0)),
-                        p && iw(f, "RefreshAll", nS(!1)),
-                        iw(f, "BookBool", nC(0)),
-                        iw(
+                        il(f, "CalcPrecision", nE(!0)),
+                        p && il(f, "RefreshAll", nE(!1)),
+                        il(f, "BookBool", nw(0)),
+                        il(
                           f,
                           "Font",
                           ((s =
@@ -19063,7 +17720,7 @@
                               family: 2,
                               scheme: "minor",
                             }).name || "Arial"),
-                          (o = t1(
+                          (o = tq(
                             (i = r && 5 == r.biff)
                               ? 15 + s.length
                               : 16 + 2 * s.length
@@ -19090,13 +17747,13 @@
                           ].forEach(function (e) {
                             for (var t = e[0]; t <= e[1]; ++t)
                               null != c[t] &&
-                                iw(
+                                il(
                                   f,
                                   "Format",
                                   (function (e, t, r, n) {
                                     var a = r && 5 == r.biff;
                                     n ||
-                                      (n = t1(
+                                      (n = tq(
                                         a ? 3 + t.length : 5 + 2 * t.length
                                       )),
                                       n.write_shift(2, e),
@@ -19115,19 +17772,19 @@
                           }),
                         (function (e, t) {
                           for (var r = 0; r < 16; ++r)
-                            iw(e, "XF", nz({ numFmtId: 0, style: !0 }, 0, t));
+                            il(e, "XF", nG({ numFmtId: 0, style: !0 }, 0, t));
                           t.cellXfs.forEach(function (r) {
-                            iw(e, "XF", nz(r, 0, t));
+                            il(e, "XF", nG(r, 0, t));
                           });
                         })(f, r),
-                        p && iw(f, "UsesELFs", nS(!1));
+                        p && il(f, "UsesELFs", nE(!1));
                       var g = f.end(),
-                        v = t2();
+                        v = t0();
                       p &&
-                        iw(
+                        il(
                           v,
                           "Country",
-                          (l || (l = t1(4)),
+                          (l || (l = tq(4)),
                           l.write_shift(2, 1),
                           l.write_shift(2, 1),
                           l)
@@ -19136,8 +17793,8 @@
                           r.Strings &&
                           (function (e, t, r, n) {
                             var a = (r || []).length || 0;
-                            if (a <= 8224) return iw(e, t, r, a);
-                            var s = +t || +iS[t];
+                            if (a <= 8224) return il(e, t, r, a);
+                            var s = +t || +ic[t];
                             if (!isNaN(s)) {
                               for (
                                 var i = r.parts || [], o = 0, c = 0, l = 0;
@@ -19166,16 +17823,16 @@
                             v,
                             "SST",
                             (function (e, t) {
-                              var r = t1(8);
+                              var r = tq(8);
                               r.write_shift(4, e.Count),
                                 r.write_shift(4, e.Unique);
                               for (var n = [], a = 0; a < e.length; ++a)
                                 n[a] = (function (e) {
                                   var t = e.t || "",
-                                    r = t1(3);
+                                    r = tq(3);
                                   r.write_shift(2, t.length),
                                     r.write_shift(1, 1);
-                                  var n = t1(2 * t.length);
+                                  var n = tq(2 * t.length);
                                   return (
                                     n.write_shift(2 * t.length, t, "utf16le"),
                                     ep([r, n])
@@ -19192,22 +17849,22 @@
                               );
                             })(r.Strings, r)
                           ),
-                        iw(v, "EOF");
+                        il(v, "EOF");
                       var b = v.end(),
-                        E = t2(),
+                        E = t0(),
                         S = 0,
                         w = 0;
                       for (w = 0; w < e.SheetNames.length; ++w)
                         S +=
                           (p ? 12 : 11) + (p ? 2 : 1) * e.SheetNames[w].length;
-                      var C = g.length + S + b.length;
+                      var B = g.length + S + b.length;
                       for (w = 0; w < e.SheetNames.length; ++w)
-                        iw(
+                        il(
                           E,
                           "BoundSheet8",
                           (function (e, t) {
                             var r = !t || t.biff >= 8 ? 2 : 1,
-                              n = t1(8 + r * e.name.length);
+                              n = tq(8 + r * e.name.length);
                             n.write_shift(4, e.pos),
                               n.write_shift(1, e.hs || 0),
                               n.write_shift(1, e.dt),
@@ -19222,7 +17879,7 @@
                             return (a.l = n.l), a;
                           })(
                             {
-                              pos: C,
+                              pos: B,
                               hs: (u[w] || {}).Hidden || 0,
                               dt: 0,
                               name: e.SheetNames[w],
@@ -19230,20 +17887,20 @@
                             r
                           )
                         ),
-                          (C += t[w].length);
-                      var B = E.end();
-                      if (S != B.length)
-                        throw Error("BS8 " + S + " != " + B.length);
+                          (B += t[w].length);
+                      var C = E.end();
+                      if (S != C.length)
+                        throw Error("BS8 " + S + " != " + C.length);
                       var T = [];
                       return (
                         g.length && T.push(g),
-                        B.length && T.push(B),
+                        C.length && T.push(C),
                         b.length && T.push(b),
-                        tB([T])
+                        tC([T])
                       );
                     })(e, n, r)
                   ),
-                  tB([n])
+                  tC([n])
                 );
               })(e, t);
             case 4:
@@ -19251,7 +17908,7 @@
             case 2:
               return (function (e, t) {
                 for (
-                  var r = t || {}, n = t2(), a = 0, s = 0;
+                  var r = t || {}, n = t0(), a = 0, s = 0;
                   s < e.SheetNames.length;
                   ++s
                 )
@@ -19259,11 +17916,11 @@
                 if (0 == a && r.sheet && e.SheetNames[0] != r.sheet)
                   throw Error("Sheet not found: " + r.sheet);
                 return (
-                  iw(n, 9, nV(e, 16, r)),
+                  il(n, 9, nW(e, 16, r)),
                   !(function (e, t, r, n) {
                     var a,
                       s = Array.isArray(t),
-                      i = ri(t["!ref"] || "A1"),
+                      i = rs(t["!ref"] || "A1"),
                       o = "",
                       c = [];
                     if (i.e.c > 255 || i.e.r > 16383) {
@@ -19275,12 +17932,12 @@
                         );
                       (i.e.c = Math.min(i.e.c, 255)),
                         (i.e.r = Math.min(i.e.c, 16383)),
-                        (a = rs(i));
+                        (a = ra(i));
                     }
                     for (var l = i.s.r; l <= i.e.r; ++l) {
-                      o = t9(l);
+                      o = t7(l);
                       for (var f = i.s.c; f <= i.e.c; ++f) {
-                        l === i.s.r && (c[f] = rt(f)), (a = c[f] + o);
+                        l === i.s.r && (c[f] = re(f)), (a = c[f] + o);
                         var h = s ? (t[l] || [])[f] : t[a];
                         h &&
                           (function (e, t, r, n) {
@@ -19297,29 +17954,29 @@
                                     f,
                                     h = "d" == t.t ? eI(eN(t.v)) : t.v;
                                   h == (0 | h) && h >= 0 && h < 65536
-                                    ? iw(
+                                    ? il(
                                         e,
                                         2,
-                                        (iC((l = t1(9)), r, n),
+                                        (ih((l = tq(9)), r, n),
                                         l.write_shift(2, h),
                                         l)
                                       )
-                                    : iw(
+                                    : il(
                                         e,
                                         3,
-                                        (iC((f = t1(15)), r, n),
+                                        (ih((f = tq(15)), r, n),
                                         f.write_shift(8, h, "f"),
                                         f)
                                       );
                                   return;
                                 case "b":
                                 case "e":
-                                  iw(
+                                  il(
                                     e,
                                     5,
                                     ((a = t.v),
                                     (s = t.t),
-                                    iC((i = t1(9)), r, n),
+                                    ih((i = tq(9)), r, n),
                                     "e" == s
                                       ? (i.write_shift(1, a),
                                         i.write_shift(1, 1))
@@ -19330,11 +17987,11 @@
                                   return;
                                 case "s":
                                 case "str":
-                                  iw(
+                                  il(
                                     e,
                                     4,
-                                    (iC(
-                                      (c = t1(8 + 2 * (o = t.v).length)),
+                                    (ih(
+                                      (c = tq(8 + 2 * (o = t.v).length)),
                                       r,
                                       n
                                     ),
@@ -19344,19 +18001,19 @@
                                   );
                                   return;
                               }
-                            iw(e, 1, iC(null, r, n));
+                            il(e, 1, ih(null, r, n));
                           })(e, h, l, f, n);
                       }
                     }
                   })(n, e.Sheets[e.SheetNames[a]], 0, r, e),
-                  iw(n, 10),
+                  il(n, 10),
                   n.end()
                 );
               })(e, t);
           }
           throw Error("invalid type " + r.bookType + " for BIFF");
         }
-        var iT = (function () {
+        var id = (function () {
           function e(e, t) {
             var r = t || {},
               n = r.dense ? [] : {},
@@ -19399,20 +18056,20 @@
                     )
                       E = E.slice(S + 1);
                     for (var w = 0; w < p.length; ++w) {
-                      var C = p[w];
-                      C.s.c == f &&
-                        C.s.r < l &&
-                        l <= C.e.r &&
-                        ((f = C.e.c + 1), (w = -1));
+                      var B = p[w];
+                      B.s.c == f &&
+                        B.s.r < l &&
+                        l <= B.e.r &&
+                        ((f = B.e.c + 1), (w = -1));
                     }
-                    var B = e2(b.slice(0, b.indexOf(">")));
-                    (u = B.colspan ? +B.colspan : 1),
-                      ((h = +B.rowspan) > 1 || u > 1) &&
+                    var C = e2(b.slice(0, b.indexOf(">")));
+                    (u = C.colspan ? +C.colspan : 1),
+                      ((h = +C.rowspan) > 1 || u > 1) &&
                         p.push({
                           s: { r: l, c: f },
                           e: { r: l + (h || 1) - 1, c: f + u - 1 },
                         });
-                    var T = B.t || "";
+                    var T = C.t || "";
                     if (!E.length) {
                       f += u;
                       continue;
@@ -19425,30 +18082,30 @@
                       d.e.c < f && (d.e.c = f),
                       E.length)
                     ) {
-                      var x = { t: "s", v: E };
+                      var _ = { t: "s", v: E };
                       !r.raw &&
                         E.trim().length &&
                         "s" != T &&
                         ("TRUE" === E
-                          ? (x = { t: "b", v: !0 })
+                          ? (_ = { t: "b", v: !0 })
                           : "FALSE" === E
-                            ? (x = { t: "b", v: !1 })
+                            ? (_ = { t: "b", v: !1 })
                             : isNaN(eH(E))
                               ? isNaN(eW(E).getDate()) ||
-                                ((x = { t: "d", v: eN(E) }),
-                                r.cellDates || (x = { t: "n", v: eI(x.v) }),
-                                (x.z = r.dateNF || ev._table[14]))
-                              : (x = { t: "n", v: eH(E) })),
+                                ((_ = { t: "d", v: eN(E) }),
+                                r.cellDates || (_ = { t: "n", v: eI(_.v) }),
+                                (_.z = r.dateNF || ev._table[14]))
+                              : (_ = { t: "n", v: eH(E) })),
                         r.dense
-                          ? (n[l] || (n[l] = []), (n[l][f] = x))
-                          : (n[rn({ r: l, c: f })] = x),
+                          ? (n[l] || (n[l] = []), (n[l][f] = _))
+                          : (n[rr({ r: l, c: f })] = _),
                         (f += u);
                     }
                   }
                 }
               }
             }
-            return (n["!ref"] = rs(d)), p.length && (n["!merges"] = p), n;
+            return (n["!ref"] = ra(d)), p.length && (n["!merges"] = p), n;
           }
           function t(e, t, r, n) {
             for (
@@ -19471,12 +18128,12 @@
                   break;
                 }
               if (!(o < 0)) {
-                var f = rn({ r: r, c: i }),
+                var f = rr({ r: r, c: i }),
                   h = n.dense ? (e[r] || [])[i] : e[f],
                   u =
                     (h &&
                       null != h.v &&
-                      (h.h || tr(h.w || (rc(h), h.w) || ""))) ||
+                      (h.h || tr(h.w || (ro(h), h.w) || ""))) ||
                     "",
                   d = {};
                 o > 1 && (d.rowspan = o),
@@ -19499,7 +18156,7 @@
             a = "</body></html>";
           return {
             to_workbook: function (t, r) {
-              return rl(e(t, r), r);
+              return rc(e(t, r), r);
             },
             to_sheet: e,
             _row: t,
@@ -19511,21 +18168,21 @@
                 o = null != i.header ? i.header : n,
                 c = null != i.footer ? i.footer : a,
                 l = [o],
-                f = ra(e["!ref"]);
+                f = rn(e["!ref"]);
               (i.dense = Array.isArray(e)), l.push(r(e, f, i));
               for (var h = f.s.r; h <= f.e.r; ++h) l.push(t(e, f, h, i));
               return l.push("</table>" + c), l.join("");
             },
           };
         })();
-        function ix(e, t, r) {
+        function ip(e, t, r) {
           var n = r || {},
             a = 0,
             s = 0;
           if (null != n.origin) {
             if ("number" == typeof n.origin) a = n.origin;
             else {
-              var i = "string" == typeof n.origin ? rr(n.origin) : n.origin;
+              var i = "string" == typeof n.origin ? rt(n.origin) : n.origin;
               (a = i.r), (s = i.c);
             }
           }
@@ -19533,7 +18190,7 @@
             c = Math.min(n.sheetRows || 1e7, o.length),
             l = { s: { r: 0, c: 0 }, e: { r: a, c: s } };
           if (e["!ref"]) {
-            var f = ra(e["!ref"]);
+            var f = rn(e["!ref"]);
             (l.s.r = Math.min(l.s.r, f.s.r)),
               (l.s.c = Math.min(l.s.c, f.s.c)),
               (l.e.r = Math.max(l.e.r, f.e.r)),
@@ -19551,53 +18208,53 @@
             E = 0;
           for (e["!cols"] || (e["!cols"] = []); p < o.length && m < c; ++p) {
             var S = o[p];
-            if (ik(S)) {
+            if (ig(S)) {
               if (n.display) continue;
               d[m] = { hidden: !0 };
             }
             var w = S.children;
             for (g = v = 0; g < w.length; ++g) {
-              var C = w[g];
-              if (!(n.display && ik(C))) {
-                var B = C.hasAttribute("v")
-                    ? C.getAttribute("v")
-                    : th(C.innerHTML),
-                  T = C.getAttribute("z");
+              var B = w[g];
+              if (!(n.display && ig(B))) {
+                var C = B.hasAttribute("v")
+                    ? B.getAttribute("v")
+                    : th(B.innerHTML),
+                  T = B.getAttribute("z");
                 for (u = 0; u < h.length; ++u) {
-                  var x = h[u];
-                  x.s.c == v + s &&
-                    x.s.r < m + a &&
-                    m + a <= x.e.r &&
-                    ((v = x.e.c + 1 - s), (u = -1));
+                  var _ = h[u];
+                  _.s.c == v + s &&
+                    _.s.r < m + a &&
+                    m + a <= _.e.r &&
+                    ((v = _.e.c + 1 - s), (u = -1));
                 }
-                (E = +C.getAttribute("colspan") || 1),
-                  ((b = +C.getAttribute("rowspan") || 1) > 1 || E > 1) &&
+                (E = +B.getAttribute("colspan") || 1),
+                  ((b = +B.getAttribute("rowspan") || 1) > 1 || E > 1) &&
                     h.push({
                       s: { r: m + a, c: v + s },
                       e: { r: m + a + (b || 1) - 1, c: v + s + (E || 1) - 1 },
                     });
-                var _ = { t: "s", v: B },
-                  k = C.getAttribute("t") || "";
-                null != B &&
-                  (0 == B.length
-                    ? (_.t = k || "z")
+                var x = { t: "s", v: C },
+                  k = B.getAttribute("t") || "";
+                null != C &&
+                  (0 == C.length
+                    ? (x.t = k || "z")
                     : n.raw ||
-                      0 == B.trim().length ||
+                      0 == C.trim().length ||
                       "s" == k ||
-                      ("TRUE" === B
-                        ? (_ = { t: "b", v: !0 })
-                        : "FALSE" === B
-                          ? (_ = { t: "b", v: !1 })
-                          : isNaN(eH(B))
-                            ? isNaN(eW(B).getDate()) ||
-                              ((_ = { t: "d", v: eN(B) }),
-                              n.cellDates || (_ = { t: "n", v: eI(_.v) }),
-                              (_.z = n.dateNF || ev._table[14]))
-                            : (_ = { t: "n", v: eH(B) }))),
-                  void 0 === _.z && null != T && (_.z = T),
+                      ("TRUE" === C
+                        ? (x = { t: "b", v: !0 })
+                        : "FALSE" === C
+                          ? (x = { t: "b", v: !1 })
+                          : isNaN(eH(C))
+                            ? isNaN(eW(C).getDate()) ||
+                              ((x = { t: "d", v: eN(C) }),
+                              n.cellDates || (x = { t: "n", v: eI(x.v) }),
+                              (x.z = n.dateNF || ev._table[14]))
+                            : (x = { t: "n", v: eH(C) }))),
+                  void 0 === x.z && null != T && (x.z = T),
                   n.dense
-                    ? (e[m + a] || (e[m + a] = []), (e[m + a][v + s] = _))
-                    : (e[rn({ c: v + s, r: m + a })] = _),
+                    ? (e[m + a] || (e[m + a] = []), (e[m + a][v + s] = x))
+                    : (e[rr({ c: v + s, r: m + a })] = x),
                   l.e.c < v + s && (l.e.c = v + s),
                   (v += E);
               }
@@ -19607,16 +18264,16 @@
           return (
             h.length && (e["!merges"] = (e["!merges"] || []).concat(h)),
             (l.e.r = Math.max(l.e.r, m - 1 + a)),
-            (e["!ref"] = rs(l)),
+            (e["!ref"] = ra(l)),
             m >= c &&
-              (e["!fullref"] = rs(((l.e.r = o.length - p + m - 1 + a), l))),
+              (e["!fullref"] = ra(((l.e.r = o.length - p + m - 1 + a), l))),
             e
           );
         }
-        function i_(e, t) {
-          return ix((t || {}).dense ? [] : {}, e, t);
+        function im(e, t) {
+          return ip((t || {}).dense ? [] : {}, e, t);
         }
-        function ik(e) {
+        function ig(e) {
           var t = "",
             r =
               e.ownerDocument.defaultView &&
@@ -19631,7 +18288,7 @@
             "none" === t
           );
         }
-        var iA =
+        var iv =
             ((F = {
               day: ["d", "dd"],
               month: ["m", "mm"],
@@ -19652,7 +18309,7 @@
                 i,
                 o,
                 c = t || {},
-                l = io(e),
+                l = s5(e),
                 f = [],
                 h = { name: "" },
                 u = "",
@@ -19665,11 +18322,11 @@
                 E = 0,
                 S = [],
                 w = -1,
-                C = -1,
-                B = { s: { r: 1e6, c: 1e7 }, e: { r: 0, c: 0 } },
+                B = -1,
+                C = { s: { r: 1e6, c: 1e7 }, e: { r: 0, c: 0 } },
                 T = 0,
-                x = {},
-                _ = [],
+                _ = {},
+                x = [],
                 k = {},
                 A = 0,
                 I = [],
@@ -19687,25 +18344,25 @@
                 V = !1,
                 X = 0;
               for (
-                ic.lastIndex = 0,
+                s6.lastIndex = 0,
                   l = l
                     .replace(/<!--([\s\S]*?)-->/gm, "")
                     .replace(/<!DOCTYPE[^\[]*\[[^\]]*\]>/gm, "");
-                (i = ic.exec(l));
+                (i = s6.exec(l));
               )
                 switch ((i[3] = i[3].replace(/_.*$/, ""))) {
                   case "table":
                   case "工作表":
                     "/" === i[1]
-                      ? (B.e.c >= B.s.c && B.e.r >= B.s.r
-                          ? (g["!ref"] = rs(B))
+                      ? (C.e.c >= C.s.c && C.e.r >= C.s.r
+                          ? (g["!ref"] = ra(C))
                           : (g["!ref"] = "A1:A1"),
                         c.sheetRows > 0 &&
-                          c.sheetRows <= B.e.r &&
+                          c.sheetRows <= C.e.r &&
                           ((g["!fullref"] = g["!ref"]),
-                          (B.e.r = c.sheetRows - 1),
-                          (g["!ref"] = rs(B))),
-                        _.length && (g["!merges"] = _),
+                          (C.e.r = c.sheetRows - 1),
+                          (g["!ref"] = ra(C))),
+                        x.length && (g["!merges"] = x),
                         I.length && (g["!rows"] = I),
                         (a.name = a["名称"] || a.name),
                         "undefined" != typeof JSON && JSON.stringify(a),
@@ -19714,11 +18371,11 @@
                         (V = !1))
                       : "/" !== i[0].charAt(i[0].length - 2) &&
                         ((a = e2(i[0], !1)),
-                        (w = C = -1),
-                        (B.s.r = B.s.c = 1e7),
-                        (B.e.r = B.e.c = 0),
+                        (w = B = -1),
+                        (C.s.r = C.s.c = 1e7),
+                        (C.e.r = C.e.c = 0),
                         (g = c.dense ? [] : {}),
-                        (_ = []),
+                        (x = []),
                         (I = []),
                         (V = !0));
                     break;
@@ -19739,21 +18396,21 @@
                     )
                       for (X = 0; X < y; ++X)
                         T > 0 && (I[w + X] = { level: T });
-                    C = -1;
+                    B = -1;
                     break;
                   case "covered-table-cell":
-                    "/" !== i[1] && ++C,
+                    "/" !== i[1] && ++B,
                       c.sheetStubs &&
                         (c.dense
-                          ? (g[w] || (g[w] = []), (g[w][C] = { t: "z" }))
-                          : (g[rn({ r: w, c: C })] = { t: "z" })),
+                          ? (g[w] || (g[w] = []), (g[w][B] = { t: "z" }))
+                          : (g[rr({ r: w, c: B })] = { t: "z" })),
                       (b = ""),
                       (S = []);
                     break;
                   case "table-cell":
                   case "数据":
                     if ("/" === i[0].charAt(i[0].length - 2))
-                      ++C,
+                      ++B,
                         (R = parseInt(
                           (v = e2(i[0], !1))["number-columns-repeated"] || "1",
                           10
@@ -19761,22 +18418,22 @@
                         (o = { t: "z", v: null }),
                         v.formula &&
                           !1 != c.cellFormula &&
-                          (o.f = sT(e6(v.formula))),
+                          (o.f = sv(e6(v.formula))),
                         "string" == (v["数据类型"] || v["value-type"]) &&
                           ((o.t = "s"),
                           (o.v = e6(v["string-value"] || "")),
                           c.dense
-                            ? (g[w] || (g[w] = []), (g[w][C] = o))
-                            : (g[rn({ r: w, c: C })] = o)),
-                        (C += R - 1);
+                            ? (g[w] || (g[w] = []), (g[w][B] = o))
+                            : (g[rr({ r: w, c: B })] = o)),
+                        (B += R - 1);
                     else if ("/" !== i[1]) {
                       R = 1;
                       var G = y ? w + y - 1 : w;
                       if (
-                        (++C > B.e.c && (B.e.c = C),
-                        C < B.s.c && (B.s.c = C),
-                        w < B.s.r && (B.s.r = w),
-                        G > B.e.r && (B.e.r = G),
+                        (++B > C.e.c && (C.e.c = B),
+                        B < C.s.c && (C.s.c = B),
+                        w < C.s.r && (C.s.r = w),
+                        G > C.e.r && (C.e.r = G),
                         (v = e2(i[0], !1)),
                         (M = []),
                         (L = {}),
@@ -19788,7 +18445,7 @@
                           v["number-matrix-columns-spanned"] &&
                             v["number-matrix-rows-spanned"] &&
                             ((k = {
-                              s: { r: w, c: C },
+                              s: { r: w, c: B },
                               e: {
                                 r:
                                   w +
@@ -19798,7 +18455,7 @@
                                   ) || 0) -
                                   1,
                                 c:
-                                  C +
+                                  B +
                                   (parseInt(
                                     v["number-matrix-columns-spanned"],
                                     10
@@ -19806,37 +18463,37 @@
                                   1,
                               },
                             }),
-                            (o.F = rs(k)),
+                            (o.F = ra(k)),
                             D.push([k, o.F])),
                           v.formula)
                         )
-                          o.f = sT(v.formula);
+                          o.f = sv(v.formula);
                         else
                           for (X = 0; X < D.length; ++X)
                             w >= D[X][0].s.r &&
                               w <= D[X][0].e.r &&
-                              C >= D[X][0].s.c &&
-                              C <= D[X][0].e.c &&
+                              B >= D[X][0].s.c &&
+                              B <= D[X][0].e.c &&
                               (o.F = D[X][1]);
                       }
                       switch (
                         ((v["number-columns-spanned"] ||
                           v["number-rows-spanned"]) &&
                           ((k = {
-                            s: { r: w, c: C },
+                            s: { r: w, c: B },
                             e: {
                               r:
                                 w +
                                 (parseInt(v["number-rows-spanned"], 10) || 0) -
                                 1,
                               c:
-                                C +
+                                B +
                                 (parseInt(v["number-columns-spanned"], 10) ||
                                   0) -
                                 1,
                             },
                           }),
-                          _.push(k)),
+                          x.push(k)),
                         v["number-columns-repeated"] &&
                           (R = parseInt(v["number-columns-repeated"], 10)),
                         o.t)
@@ -19931,16 +18588,16 @@
                           )
                             for (
                               g[w + z] || (g[w + z] = []),
-                                g[w + z][C] = 0 == z ? o : eL(o);
+                                g[w + z][B] = 0 == z ? o : eL(o);
                               --R > 0;
                             )
-                              g[w + z][C + R] = eL(o);
+                              g[w + z][B + R] = eL(o);
                           else
-                            for (g[rn({ r: w + z, c: C })] = o; --R > 0; )
-                              g[rn({ r: w + z, c: C + R })] = eL(o);
-                          B.e.c <= C && (B.e.c = C);
+                            for (g[rr({ r: w + z, c: B })] = o; --R > 0; )
+                              g[rr({ r: w + z, c: B + R })] = eL(o);
+                          C.e.c <= B && (C.e.c = B);
                         }
-                      (C +=
+                      (B +=
                         (R = parseInt(
                           v["number-columns-repeated"] || "1",
                           10
@@ -20142,7 +18799,7 @@
                   case "date-style":
                   case "time-style":
                     if ("/" === i[1]) {
-                      if (((x[h.name] = u), (r = f.pop())[0] !== i[3]))
+                      if (((_[h.name] = u), (r = f.pop())[0] !== i[3]))
                         throw "Bad state: " + r;
                     } else
                       "/" !== i[0].charAt(i[0].length - 2) &&
@@ -20179,7 +18836,7 @@
                     else d = i.index + i[0].length;
                     break;
                   case "named-range":
-                    N = sx((n = e2(i[0], !1))["cell-range-address"]);
+                    N = sb((n = e2(i[0], !1))["cell-range-address"]);
                     var j = { Name: n.name, Ref: N[0] + "!" + N[1] };
                     V && (j.Sheet = m.length), O.Names.push(j);
                     break;
@@ -20215,7 +18872,7 @@
                   case "database-range":
                     if ("/" === i[1]) break;
                     try {
-                      p[(N = sx(e2(i[0])["target-range-address"]))[0]][
+                      p[(N = sb(e2(i[0])["target-range-address"]))[0]][
                         "!autofilter"
                       ] = { ref: N[1] };
                     } catch (e) {}
@@ -20227,7 +18884,7 @@
                         delete P.href,
                         "#" == P.Target.charAt(0) &&
                           P.Target.indexOf(".") > -1 &&
-                          ((N = sx(P.Target.slice(1))),
+                          ((N = sb(P.Target.slice(1))),
                           (P.Target = "#" + N[0] + "!" + N[1]));
                     }
                     break;
@@ -20253,7 +18910,7 @@
               var Y = { Sheets: p, SheetNames: m, Workbook: O };
               return c.bookSheets && delete Y.Sheets, Y;
             }),
-          iI =
+          ib =
             ((D =
               "<office:document-styles " +
               tb({
@@ -20281,7 +18938,7 @@
             function () {
               return eJ + D;
             }),
-          iy =
+          iE =
             ((O = "          <table:table-cell />\n"),
             (P = function (e, t, r) {
               var n = [];
@@ -20292,7 +18949,7 @@
               );
               var a = 0,
                 s = 0,
-                i = ra(e["!ref"]),
+                i = rn(e["!ref"]),
                 o = e["!merges"] || [],
                 c = 0,
                 l = Array.isArray(e);
@@ -20327,7 +18984,7 @@
                     n.push("          <table:covered-table-cell/>\n");
                     continue;
                   }
-                  var d = rn({ r: a, c: s }),
+                  var d = rr({ r: a, c: s }),
                     p = l ? (e[a] || [])[s] : e[d];
                   if (
                     p &&
@@ -20335,14 +18992,14 @@
                     ((h["table:formula"] = e9(
                       (
                         "of:=" +
-                        p.f.replace(a4, "$1[.$2$3$4$5]").replace(/\]:\[/g, ":")
+                        p.f.replace(aQ, "$1[.$2$3$4$5]").replace(/\]:\[/g, ":")
                       )
                         .replace(/;/g, "|")
                         .replace(/,/g, ";")
                     )),
                     p.F && p.F.slice(0, d.length) == d)
                   ) {
-                    var m = ra(p.F);
+                    var m = rn(p.F);
                     (h["table:number-matrix-columns-spanned"] =
                       m.e.c - m.s.c + 1),
                       (h["table:number-matrix-rows-spanned"] =
@@ -20510,8 +19167,8 @@
                 r.join("")
               );
             });
-        function iR(e, t) {
-          if ("fods" == t.bookType) return iy(e, t);
+        function iS(e, t) {
+          if ("fods" == t.bookType) return iE(e, t);
           var r = eY(),
             n = "",
             a = [],
@@ -20522,13 +19179,13 @@
               (n = "mimetype"),
               "application/vnd.oasis.opendocument.spreadsheet"
             ),
-            eK(r, (n = "content.xml"), iy(e, t)),
+            eK(r, (n = "content.xml"), iE(e, t)),
             a.push([n, "text/xml"]),
             s.push([n, "ContentFile"]),
-            eK(r, (n = "styles.xml"), iI(e, t)),
+            eK(r, (n = "styles.xml"), ib(e, t)),
             a.push([n, "text/xml"]),
             s.push([n, "StylesFile"]),
-            eK(r, (n = "meta.xml"), r0()),
+            eK(r, (n = "meta.xml"), r1()),
             a.push([n, "text/xml"]),
             s.push([n, "MetadataFile"]),
             eK(
@@ -20540,7 +19197,7 @@
                   '<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n'
                 );
                 for (var r = 0; r != e.length; ++r)
-                  t.push(r1(e[r][0], e[r][1])),
+                  t.push(rq(e[r][0], e[r][1])),
                     t.push(
                       [
                         '  <rdf:Description rdf:about="">\n',
@@ -20551,7 +19208,7 @@
                       ].join("")
                     );
                 return (
-                  t.push(r1("", "Document", "pkg")),
+                  t.push(rq("", "Document", "pkg")),
                   t.push("</rdf:RDF>"),
                   t.join("")
                 );
@@ -20583,7 +19240,7 @@
             r
           );
         }
-        function iF(e) {
+        function iw(e) {
           return function (t, r) {
             var n = (function (e, t) {
               if (!t) return 0;
@@ -20594,16 +19251,16 @@
             return e.from_sheet(t.Sheets[t.SheetNames[n]], r, t);
           };
         }
-        var iD = iF(iT),
-          iO = iF({ from_sheet: i7 }),
-          iP = iF(void 0 !== n2 ? n2 : {}),
-          iN = iF(void 0 !== n4 ? n4 : {}),
-          iM = iF(void 0 !== n5 ? n5 : {}),
-          iL = iF(void 0 !== ab ? ab : {}),
-          iU = iF({ from_sheet: i9 }),
-          iH = iF(void 0 !== n0 ? n0 : {}),
-          iW = iF(void 0 !== n3 ? n3 : {});
-        function iV(e) {
+        var iB = iw(id),
+          iC = iw({ from_sheet: iJ }),
+          iT = iw(void 0 !== n0 ? n0 : {}),
+          i_ = iw(void 0 !== n2 ? n2 : {}),
+          ix = iw(void 0 !== n3 ? n3 : {}),
+          ik = iw(void 0 !== am ? am : {}),
+          iA = iw({ from_sheet: iZ }),
+          iI = iw(void 0 !== n1 ? n1 : {}),
+          iy = iw(void 0 !== n4 ? n4 : {});
+        function iR(e) {
           return function (t) {
             for (var r = 0; r != e.length; ++r) {
               var n = e[r];
@@ -20612,8 +19269,8 @@
             }
           };
         }
-        var iX = function (e) {
-            iV([
+        var iF = function (e) {
+            iR([
               ["cellNF", !1],
               ["cellHTML", !0],
               ["cellFormula", !0],
@@ -20631,20 +19288,20 @@
               ["WTF", !1],
             ])(e);
           },
-          iG = iV([
+          iD = iR([
             ["cellDates", !1],
             ["bookSST", !1],
             ["bookType", "xlsx"],
             ["compression", !1],
             ["WTF", !1],
           ]);
-        function iz(e) {
+        function iO(e) {
           return "/" == e.charAt(0) ? e.slice(1) : e;
         }
-        function ij(e, t) {
+        function iP(e, t) {
           if (
             (eb(ev),
-            iX((t = t || {})),
+            iF((t = t || {})),
             eG(e, "META-INF/manifest.xml") || eG(e, "objectdata.xml"))
           )
             return (function (e, t) {
@@ -20652,7 +19309,7 @@
               var r = !!eG(e, "objectdata");
               r &&
                 (function (e, t) {
-                  for (var r, n, a = io(e); (r = ic.exec(a)); )
+                  for (var r, n, a = s5(e); (r = s6.exec(a)); )
                     switch (r[3]) {
                       case "manifest":
                         break;
@@ -20678,8 +19335,8 @@
                 throw Error(
                   "Missing content.xml in " + (r ? "ODS" : "UOF") + " file"
                 );
-              var a = iA(r ? n : ts(n), t);
-              return eG(e, "meta.xml") && (a.Props = r3(ej(e, "meta.xml"))), a;
+              var a = iv(r ? n : ts(n), t);
+              return eG(e, "meta.xml") && (a.Props = r4(ej(e, "meta.xml"))), a;
             })(e, t);
           if (eG(e, "Index/Document.iwa"))
             throw Error("Unsupported NUMBERS file");
@@ -20706,7 +19363,7 @@
               return r.sort();
             })(e),
             g = (function (e) {
-              var t = rG();
+              var t = rX();
               if (!e || !e.match) return t;
               var r = {};
               if (
@@ -20723,8 +19380,8 @@
                       r[n.Extension] = n.ContentType;
                       break;
                     case "<Override":
-                      void 0 !== t[rW[n.ContentType]] &&
-                        t[rW[n.ContentType]].push(n.PartName);
+                      void 0 !== t[rH[n.ContentType]] &&
+                        t[rH[n.ContentType]].push(n.PartName);
                   }
                 }),
                 t.xmlns !== tw.CT)
@@ -20754,15 +19411,15 @@
           var b = {},
             E = {};
           if (!t.bookSheets && !t.bookProps) {
-            if (((s_ = []), g.sst))
+            if (((sE = []), g.sst))
               try {
-                s_ = (function (e, t, r) {
+                sE = (function (e, t, r) {
                   if (".bin" === t.slice(-4)) {
                     var n, a;
                     return (
                       (n = []),
                       (a = !1),
-                      t0(e, function (e, t, s) {
+                      t1(e, function (e, t, s) {
                         switch (s) {
                           case 159:
                             (n.Count = e[0]), (n.Unique = e[1]);
@@ -20793,11 +19450,11 @@
                     var r = [],
                       n = "";
                     if (!e) return r;
-                    var a = e.match(an);
+                    var a = e.match(ar);
                     if (a) {
-                      n = a[2].replace(aa, "").split(as);
+                      n = a[2].replace(an, "").split(aa);
                       for (var s = 0; s != n.length; ++s) {
-                        var i = ar(n[s].trim(), t);
+                        var i = at(n[s].trim(), t);
                         null != i && (r[r.length] = i);
                       }
                       (a = e2(a[1])),
@@ -20806,7 +19463,7 @@
                     }
                     return r;
                   })(e, r);
-                })(ej(e, iz(g.sst)), g.sst, t);
+                })(ej(e, iO(g.sst)), g.sst, t);
               } catch (e) {
                 if (t.WTF) throw e;
               }
@@ -20814,9 +19471,9 @@
               g.themes.length &&
               ((r = e$(e, g.themes[0].replace(/^\//, ""), !0) || ""),
               g.themes[0],
-              (b = aY(r, t))),
+              (b = aG(r, t))),
               g.style &&
-                ((n = ej(e, iz(g.style))),
+                ((n = ej(e, iO(g.style))),
                 (a = g.style),
                 (s = b),
                 (i = t),
@@ -20830,7 +19487,7 @@
                         var s = [],
                           i = !1;
                         return (
-                          t0(e, function (e, a, o) {
+                          t1(e, function (e, a, o) {
                             switch (o) {
                               case 44:
                                 (n.NumberFmt[e[0]] = e[1]), ev.load(e[1], e[0]);
@@ -20841,7 +19498,7 @@
                                     t &&
                                     t.themeElements &&
                                     t.themeElements.clrScheme &&
-                                    (e.color.rgb = aS(
+                                    (e.color.rgb = av(
                                       t.themeElements.clrScheme[e.color.theme]
                                         .rgb,
                                       e.color.tint || 0
@@ -20892,21 +19549,21 @@
                           n
                         );
                       })(n, s, i)
-                    : aD(n, s, i)));
+                    : ay(n, s, i)));
           }
           g.links.map(function (r) {
             try {
               var n, a;
               return (
-                rY(e$(e, rK(iz(r))), r),
-                (n = ej(e, iz(r))),
+                rK(e$(e, r$(iO(r))), r),
+                (n = ej(e, iO(r))),
                 (a = t),
                 ".bin" === r.slice(-4)
                   ? (function (e, t, r, n) {
                       if (!e) return e;
                       var a = n || {},
                         s = !1;
-                      t0(
+                      t1(
                         e,
                         function (e, t, r) {
                           switch (r) {
@@ -20976,8 +19633,8 @@
                   (o = []),
                   ((c = [[]]).SheetNames = []),
                   (c.XTI = []),
-                  (iv[16] = { n: "BrtFRTArchID$", f: it }),
-                  t0(
+                  (is[16] = { n: "BrtFRTArchID$", f: s0 }),
+                  t1(
                     e,
                     function (e, t, r) {
                       switch (r) {
@@ -20989,7 +19646,7 @@
                           break;
                         case 39:
                           null != e.Sheet && (n.SID = e.Sheet),
-                            (e.Ref = sv(e.Ptg, null, null, c, n)),
+                            (e.Ref = sf(e.Ptg, null, null, c, n)),
                             delete n.SID,
                             delete e.Ptg,
                             o.push(e);
@@ -21063,7 +19720,7 @@
                     },
                     n
                   ),
-                  s5(a),
+                  sQ(a),
                   (a.Names = o),
                   (a.supbooks = c),
                   a
@@ -21147,7 +19804,7 @@
                       case "<revisionPtr":
                         break;
                       case "<workbook":
-                        o.match(s7) && (a = "xmlns" + o.match(/<(\w+):/)[1]),
+                        o.match(sq) && (a = "xmlns" + o.match(/<(\w+):/)[1]),
                           (r.xmlns = l[a]);
                         break;
                       case "<fileVersion":
@@ -21155,7 +19812,7 @@
                         break;
                       case "<workbookPr":
                       case "<workbookPr/>":
-                        sq.forEach(function (e) {
+                        sG.forEach(function (e) {
                           if (null != l[e[0]])
                             switch (e[2]) {
                               case "bool":
@@ -21225,21 +19882,21 @@
                   -1 === tw.main.indexOf(r.xmlns))
                 )
                   throw Error("Unknown Namespace: " + r.xmlns);
-                return s5(r), r;
+                return sQ(r), r;
               })(e, r);
-            })(ej(e, iz(g.workbooks[0])), g.workbooks[0], t),
+            })(ej(e, iO(g.workbooks[0])), g.workbooks[0], t),
             w = {},
-            C = "";
+            B = "";
           g.coreprops.length &&
-            ((C = ej(e, iz(g.coreprops[0]), !0)) && (w = r3(C)),
-            0 !== g.extprops.length && (C = ej(e, iz(g.extprops[0]), !0))) &&
-            ((o = C),
+            ((B = ej(e, iO(g.coreprops[0]), !0)) && (w = r4(B)),
+            0 !== g.extprops.length && (B = ej(e, iO(g.extprops[0]), !0))) &&
+            ((o = B),
             (c = w),
             (l = t),
             (f = {}),
             c || (c = {}),
             (o = ts(o)),
-            r8.forEach(function (e) {
+            r6.forEach(function (e) {
               var t = (o.match(tf(e[0])) || [])[1];
               switch (e[2]) {
                 case "string":
@@ -21257,15 +19914,15 @@
             }),
             f.HeadingPairs &&
               f.TitlesOfParts &&
-              r7(f.HeadingPairs, f.TitlesOfParts, c, l));
-          var B = {};
+              r8(f.HeadingPairs, f.TitlesOfParts, c, l));
+          var C = {};
           (!t.bookSheets || t.bookProps) &&
             0 !== g.custprops.length &&
-            (C = e$(e, iz(g.custprops[0]), !0)) &&
-            (B = (function (e, t) {
+            (B = e$(e, iO(g.custprops[0]), !0)) &&
+            (C = (function (e, t) {
               var r = {},
                 n = "",
-                a = e.match(ne);
+                a = e.match(r9);
               if (a)
                 for (var s = 0; s != a.length; ++s) {
                   var i = a[s],
@@ -21324,7 +19981,7 @@
                   }
                 }
               return r;
-            })(C, t));
+            })(B, t));
           var T = {};
           if (
             (t.bookSheets || t.bookProps) &&
@@ -21333,21 +19990,21 @@
                   return e.name;
                 }))
               : w.Worksheets && w.SheetNames.length > 0 && (h = w.SheetNames),
-            t.bookProps && ((T.Props = w), (T.Custprops = B)),
+            t.bookProps && ((T.Props = w), (T.Custprops = C)),
             t.bookSheets && void 0 !== h && (T.SheetNames = h),
             t.bookSheets ? T.SheetNames : t.bookProps)
           )
             return T;
           h = {};
-          var x = {};
+          var _ = {};
           t.bookDeps &&
             g.calcchain &&
-            (x = (function (e, t, r) {
+            (_ = (function (e, t, r) {
               if (".bin" === t.slice(-4)) {
                 var n;
                 return (
                   (n = []),
-                  t0(e, function (e, t, r) {
+                  t1(e, function (e, t, r) {
                     if (63 === r) n.push(e);
                     else if ((t || "").indexOf("Begin") > 0);
                     else if ((t || "").indexOf("End") > 0);
@@ -21376,8 +20033,8 @@
                   t
                 );
               })(e, t, r);
-            })(ej(e, iz(g.calcchain)), g.calcchain, t));
-          var _ = 0,
+            })(ej(e, iO(g.calcchain)), g.calcchain, t));
+          var x = 0,
             k = {},
             A = S.Sheets;
           (w.Worksheets = A.length), (w.SheetNames = []);
@@ -21391,7 +20048,7 @@
               ".rels"
             ).replace(/^\//, "");
           eG(e, F) || (F = "xl/_rels/workbook." + y + ".rels");
-          var D = rY(e$(e, F, !0), F);
+          var D = rK(e$(e, F, !0), F);
           D &&
             (D = (function (e, t) {
               if (!e) return 0;
@@ -21404,13 +20061,13 @@
                       t.name,
                       e["!id"][t.id].Target,
                       ((r = e["!id"][t.id].Type),
-                      r$.WS.indexOf(r) > -1
+                      rj.WS.indexOf(r) > -1
                         ? "sheet"
-                        : r$.CS && r == r$.CS
+                        : rj.CS && r == rj.CS
                           ? "chart"
-                          : r$.DS && r == r$.DS
+                          : rj.DS && r == rj.DS
                             ? "dialog"
-                            : r$.MS && r == r$.MS
+                            : rj.MS && r == rj.MS
                               ? "macro"
                               : r && r.length
                                 ? r
@@ -21424,16 +20081,16 @@
               return e && 0 !== e.length ? e : null;
             })(D, S.Sheets));
           var O = ej(e, "xl/worksheets/sheet.xml", !0) ? 1 : 0;
-          t: for (_ = 0; _ != w.Worksheets; ++_) {
+          for (x = 0; x != w.Worksheets; ++x) {
             var P = "sheet";
             if (
-              (D && D[_]
-                ? ((d = "xl/" + D[_][1].replace(/[\/]?xl\//, "")),
-                  eG(e, d) || (d = D[_][1]),
-                  eG(e, d) || (d = F.replace(/_rels\/.*$/, "") + D[_][1]),
-                  (P = D[_][2]))
+              (D && D[x]
+                ? (eG(e, (d = "xl/" + D[x][1].replace(/[\/]?xl\//, ""))) ||
+                    (d = D[x][1]),
+                  eG(e, d) || (d = F.replace(/_rels\/.*$/, "") + D[x][1]),
+                  (P = D[x][2]))
                 : (d = (d =
-                    "xl/worksheets/sheet" + (_ + 1 - O) + "." + y).replace(
+                    "xl/worksheets/sheet" + (x + 1 - O) + "." + y).replace(
                     /sheet0\./,
                     "sheet."
                   )),
@@ -21442,36 +20099,34 @@
             )
               switch (typeof t.sheets) {
                 case "number":
-                  if (_ != t.sheets) continue t;
+                  if (x != t.sheets) continue;
                   break;
                 case "string":
-                  if (w.SheetNames[_].toLowerCase() != t.sheets.toLowerCase())
-                    continue t;
+                  if (w.SheetNames[x].toLowerCase() != t.sheets.toLowerCase())
+                    continue;
                   break;
                 default:
                   if (Array.isArray && Array.isArray(t.sheets)) {
                     for (var N = !1, M = 0; M != t.sheets.length; ++M)
                       "number" == typeof t.sheets[M] &&
-                        t.sheets[M] == _ &&
+                        t.sheets[M] == x &&
                         (N = 1),
                         "string" == typeof t.sheets[M] &&
                           t.sheets[M].toLowerCase() ==
-                            w.SheetNames[_].toLowerCase() &&
+                            w.SheetNames[x].toLowerCase() &&
                           (N = 1);
-                    if (!N) continue t;
+                    if (!N) continue;
                   }
               }
             !(function (e, t, r, n, a, s, i, o, c, l, f, h) {
               try {
-                s[n] = rY(e$(e, r, !0), t);
+                s[n] = rK(e$(e, r, !0), t);
                 var u,
-                  d,
-                  p,
-                  m = ej(e, t);
+                  d = ej(e, t);
                 switch (o) {
                   case "sheet":
-                    (g = s[n]),
-                      (p =
+                    (p = s[n]),
+                      (u =
                         ".bin" === t.slice(-4)
                           ? (function (e, t, r, n, a, s, i) {
                               if (!e) return e;
@@ -21494,17 +20149,17 @@
                                 },
                                 S = [],
                                 w = !1,
-                                C = !1,
-                                B = [];
+                                B = !1,
+                                C = [];
                               (v.biff = 12), (v["!row"] = 0);
                               var T = 0,
-                                x = !1,
-                                _ = [],
+                                _ = !1,
+                                x = [],
                                 k = {},
                                 A = v.supbooks || a.supbooks || [[]];
                               if (
                                 ((A.sharedf = k),
-                                (A.arrayf = _),
+                                (A.arrayf = x),
                                 (A.SheetNames =
                                   a.SheetNames ||
                                   a.Sheets.map(function (e) {
@@ -21518,11 +20173,11 @@
                                 R = [],
                                 F = !1;
                               if (
-                                ((iv[16] = { n: "BrtShortReal", f: sQ }),
-                                t0(
+                                ((is[16] = { n: "BrtShortReal", f: sV }),
+                                t1(
                                   e,
                                   function (e, t, I) {
-                                    if (!C)
+                                    if (!B)
                                       switch (I) {
                                         case 148:
                                           o = e;
@@ -21531,13 +20186,13 @@
                                           (c = e),
                                             v.sheetRows &&
                                               v.sheetRows <= c.r &&
-                                              (C = !0),
-                                            (m = t9((h = c.r))),
+                                              (B = !0),
+                                            (m = t7((h = c.r))),
                                             (v["!row"] = c.r),
                                             (e.hidden ||
                                               e.hpt ||
                                               null != e.level) &&
-                                              (e.hpt && (e.hpx = aI(e.hpt)),
+                                              (e.hpt && (e.hpx = ax(e.hpt)),
                                               (R[e.r] = e));
                                           break;
                                         case 2:
@@ -21561,7 +20216,7 @@
                                               l.v = e[1];
                                               break;
                                             case "s":
-                                              (p = s_[e[1]]),
+                                              (p = sE[e[1]]),
                                                 (l.v = p.t),
                                                 (l.r = p.r);
                                               break;
@@ -21571,34 +20226,34 @@
                                             case "e":
                                               (l.v = e[1]),
                                                 !1 !== v.cellText &&
-                                                  (l.w = rU[l.v]);
+                                                  (l.w = rL[l.v]);
                                               break;
                                             case "str":
                                               (l.t = "s"), (l.v = e[1]);
                                           }
                                           if (
                                             ((f = i.CellXf[e[0].iStyleRef]) &&
-                                              sD(l, f.numFmtId, null, v, s, i),
+                                              sx(l, f.numFmtId, null, v, s, i),
                                             (u = -1 == e[0].c ? u + 1 : e[0].c),
                                             v.dense
                                               ? (b[h] || (b[h] = []),
                                                 (b[h][u] = l))
-                                              : (b[rt(u) + m] = l),
+                                              : (b[re(u) + m] = l),
                                             v.cellFormula)
                                           ) {
                                             for (
-                                              T = 0, x = !1;
-                                              T < _.length;
+                                              T = 0, _ = !1;
+                                              T < x.length;
                                               ++T
                                             ) {
-                                              var D = _[T];
+                                              var D = x[T];
                                               c.r >= D[0].s.r &&
                                                 c.r <= D[0].e.r &&
                                                 u >= D[0].s.c &&
                                                 u <= D[0].e.c &&
-                                                ((l.F = rs(D[0])), (x = !0));
+                                                ((l.F = ra(D[0])), (_ = !0));
                                             }
-                                            !x && e.length > 3 && (l.f = e[3]);
+                                            !_ && e.length > 3 && (l.f = e[3]);
                                           }
                                           if (
                                             (E.s.r > c.r && (E.s.r = c.r),
@@ -21632,14 +20287,14 @@
                                             v.dense
                                               ? (b[h] || (b[h] = []),
                                                 (b[h][u] = l))
-                                              : (b[rt(u) + m] = l),
+                                              : (b[re(u) + m] = l),
                                             E.s.r > c.r && (E.s.r = c.r),
                                             E.s.c > u && (E.s.c = u),
                                             E.e.r < c.r && (E.e.r = c.r),
                                             E.e.c < u && (E.e.c = u);
                                           break;
                                         case 176:
-                                          B.push(e);
+                                          C.push(e);
                                           break;
                                         case 494:
                                           var P = n["!id"][e.relId];
@@ -21669,7 +20324,7 @@
                                                     }),
                                                   (b[h][u].l = e))
                                                 : (b[
-                                                    (d = rn({ c: u, r: h }))
+                                                    (d = rr({ c: u, r: h }))
                                                   ] ||
                                                     (b[d] = {
                                                       t: "z",
@@ -21679,24 +20334,24 @@
                                           break;
                                         case 426:
                                           if (!v.cellFormula) break;
-                                          _.push(e),
+                                          x.push(e),
                                             ((g = v.dense
                                               ? b[h][u]
-                                              : b[rt(u) + m]).f = sv(
+                                              : b[re(u) + m]).f = sf(
                                               e[1],
                                               E,
                                               { r: c.r, c: u },
                                               A,
                                               v
                                             )),
-                                            (g.F = rs(e[0]));
+                                            (g.F = ra(e[0]));
                                           break;
                                         case 427:
                                           if (!v.cellFormula) break;
-                                          (k[rn(e[0].s)] = e[1]),
+                                          (k[rr(e[0].s)] = e[1]),
                                             ((g = v.dense
                                               ? b[h][u]
-                                              : b[rt(u) + m]).f = sv(
+                                              : b[re(u) + m]).f = sf(
                                               e[1],
                                               E,
                                               { r: c.r, c: u },
@@ -21712,11 +20367,11 @@
                                               hidden: !!(1 & e.flags),
                                               level: e.level,
                                             }),
-                                              F || ((F = !0), a_(e.w / 256)),
-                                              ak(y[e.e + 1]);
+                                              F || ((F = !0), aC(e.w / 256)),
+                                              aT(y[e.e + 1]);
                                           break;
                                         case 161:
-                                          b["!autofilter"] = { ref: rs(e) };
+                                          b["!autofilter"] = { ref: ra(e) };
                                           break;
                                         case 476:
                                           b["!margins"] = e;
@@ -21821,10 +20476,10 @@
                                         o.e.c > 0 ||
                                         o.s.r > 0 ||
                                         o.s.c > 0))) &&
-                                  (b["!ref"] = rs(o || E)),
+                                  (b["!ref"] = ra(o || E)),
                                 v.sheetRows && b["!ref"])
                               ) {
-                                var D = ri(b["!ref"]);
+                                var D = rs(b["!ref"]);
                                 v.sheetRows <= +D.e.r &&
                                   ((D.e.r = v.sheetRows - 1),
                                   D.e.r > E.e.r && (D.e.r = E.e.r),
@@ -21832,15 +20487,15 @@
                                   D.e.c > E.e.c && (D.e.c = E.e.c),
                                   D.e.c < D.s.c && (D.s.c = D.e.c),
                                   (b["!fullref"] = b["!ref"]),
-                                  (b["!ref"] = rs(D)));
+                                  (b["!ref"] = ra(D)));
                               }
                               return (
-                                B.length > 0 && (b["!merges"] = B),
+                                C.length > 0 && (b["!merges"] = C),
                                 y.length > 0 && (b["!cols"] = y),
                                 R.length > 0 && (b["!rows"] = R),
                                 b
                               );
-                            })(m, c, a, g, l, f, h)
+                            })(d, c, a, p, l, f, h)
                           : (function (e, t, r, n, a, s, i) {
                               if (!e) return e;
                               n || (n = { "!id": {} });
@@ -21851,34 +20506,32 @@
                                 },
                                 l = "",
                                 f = "",
-                                h = e.match(sP);
+                                h = e.match(sA);
                               h
                                 ? ((l = e.slice(0, h.index)),
                                   (f = e.slice(h.index + h[0].length)))
                                 : (l = f = e);
-                              var u = l.match(sW);
-                              u && sX(u[0], o, a, r);
+                              var u = l.match(sO);
+                              u && sN(u[0], o, a, r);
                               var d = (
                                 l.match(/<(?:\w*:)?dimension/) || { index: -1 }
                               ).index;
                               if (d > 0) {
                                 var p,
-                                  m,
-                                  g = l.slice(d, d + 50).match(sM);
-                                g &&
-                                  ((p = o),
-                                  (m = ri(g[1])).s.r <= m.e.r &&
-                                    m.s.c <= m.e.c &&
-                                    m.s.r >= 0 &&
-                                    m.s.c >= 0 &&
-                                    (p["!ref"] = rs(m)));
+                                  m = l.slice(d, d + 50).match(sy);
+                                m &&
+                                  (p = rs(m[1])).s.r <= p.e.r &&
+                                  p.s.c <= p.e.c &&
+                                  p.s.r >= 0 &&
+                                  p.s.c >= 0 &&
+                                  (o["!ref"] = ra(p));
                               }
-                              var v = l.match(sV);
-                              v &&
-                                v[1] &&
+                              var g = l.match(sP);
+                              g &&
+                                g[1] &&
                                 (function (e, t) {
                                   t.Views || (t.Views = [{}]),
-                                    (e.match(sj) || []).forEach(function (
+                                    (e.match(sU) || []).forEach(function (
                                       e,
                                       r
                                     ) {
@@ -21889,11 +20542,11 @@
                                         ta(n.rightToLeft) &&
                                           (t.Views[r].RTL = !0);
                                     });
-                                })(v[1], a);
-                              var b = [];
+                                })(g[1], a);
+                              var v = [];
                               if (t.cellStyles) {
-                                var E = l.match(sL);
-                                E &&
+                                var b = l.match(sR);
+                                b &&
                                   (function (e, t) {
                                     for (
                                       var r = !1, n = 0;
@@ -21910,26 +20563,26 @@
                                           a.width = +a.width,
                                           !r &&
                                             a.width &&
-                                            ((r = !0), a_(a.width)),
-                                          ak(a);
+                                            ((r = !0), aC(a.width)),
+                                          aT(a);
                                         s <= i;
                                       )
                                         e[s++] = eL(a);
                                     }
-                                  })(b, E);
+                                  })(v, b);
                               }
-                              h && s$(h[1], o, t, c, s, i);
-                              var S = f.match(sU);
-                              S &&
+                              h && sH(h[1], o, t, c, s, i);
+                              var E = f.match(sF);
+                              E &&
                                 (o["!autofilter"] = {
-                                  ref: (S[0].match(/ref="([^"]*)"/) || [])[1],
+                                  ref: (E[0].match(/ref="([^"]*)"/) || [])[1],
                                 });
-                              var w = [],
-                                C = f.match(sO);
-                              if (C)
-                                for (d = 0; d != C.length; ++d)
-                                  w[d] = ri(C[d].slice(C[d].indexOf('"') + 1));
-                              var B = f.match(sN);
+                              var S = [],
+                                w = f.match(sk);
+                              if (w)
+                                for (d = 0; d != w.length; ++d)
+                                  S[d] = rs(w[d].slice(w[d].indexOf('"') + 1));
+                              var B = f.match(sI);
                               B &&
                                 (function (e, t, r) {
                                   for (
@@ -21954,12 +20607,12 @@
                                         ((s.Tooltip = s.tooltip),
                                         delete s.tooltip);
                                     for (
-                                      var o = ri(s.ref), c = o.s.r;
+                                      var o = rs(s.ref), c = o.s.r;
                                       c <= o.e.r;
                                       ++c
                                     )
                                       for (var l = o.s.c; l <= o.e.c; ++l) {
-                                        var f = rn({ c: l, r: c });
+                                        var f = rr({ c: l, r: c });
                                         n
                                           ? (e[c] || (e[c] = []),
                                             e[c][l] ||
@@ -21971,9 +20624,9 @@
                                       }
                                   }
                                 })(o, B, n);
-                              var T = f.match(sH);
+                              var C = f.match(sD);
                               if (
-                                (T &&
+                                (C &&
                                   (o["!margins"] = (function (e) {
                                     var t = {};
                                     return (
@@ -21989,34 +20642,34 @@
                                       }),
                                       t
                                     );
-                                  })(e2(T[0]))),
+                                  })(e2(C[0]))),
                                 !o["!ref"] &&
                                   c.e.c >= c.s.c &&
                                   c.e.r >= c.s.r &&
-                                  (o["!ref"] = rs(c)),
+                                  (o["!ref"] = ra(c)),
                                 t.sheetRows > 0 && o["!ref"])
                               ) {
-                                var x = ri(o["!ref"]);
-                                t.sheetRows <= +x.e.r &&
-                                  ((x.e.r = t.sheetRows - 1),
-                                  x.e.r > c.e.r && (x.e.r = c.e.r),
-                                  x.e.r < x.s.r && (x.s.r = x.e.r),
-                                  x.e.c > c.e.c && (x.e.c = c.e.c),
-                                  x.e.c < x.s.c && (x.s.c = x.e.c),
+                                var T = rs(o["!ref"]);
+                                t.sheetRows <= +T.e.r &&
+                                  ((T.e.r = t.sheetRows - 1),
+                                  T.e.r > c.e.r && (T.e.r = c.e.r),
+                                  T.e.r < T.s.r && (T.s.r = T.e.r),
+                                  T.e.c > c.e.c && (T.e.c = c.e.c),
+                                  T.e.c < T.s.c && (T.s.c = T.e.c),
                                   (o["!fullref"] = o["!ref"]),
-                                  (o["!ref"] = rs(x)));
+                                  (o["!ref"] = ra(T)));
                               }
                               return (
-                                b.length > 0 && (o["!cols"] = b),
-                                w.length > 0 && (o["!merges"] = w),
+                                v.length > 0 && (o["!cols"] = v),
+                                S.length > 0 && (o["!merges"] = S),
                                 o
                               );
-                            })(m, c, a, g, l, f, h));
+                            })(d, c, a, p, l, f, h));
                     break;
                   case "chart":
                     if (
-                      ((v = s[n]),
-                      !(p =
+                      ((m = s[n]),
+                      !(u =
                         ".bin" === t.slice(-4)
                           ? (function (e, t, r, n, a) {
                               if (!e) return e;
@@ -22029,7 +20682,7 @@
                                 i = [],
                                 o = !1;
                               return (
-                                t0(
+                                t1(
                                   e,
                                   function (e, n, c) {
                                     switch (c) {
@@ -22079,7 +20732,7 @@
                                   (s["!drawel"] = n["!id"][s["!rel"]]),
                                 s
                               );
-                            })(m, c, a, v, l, f, h)
+                            })(d, c, a, m, l, f, h)
                           : (function (e, t, r, n, a) {
                               if (!e) return e;
                               n || (n = { "!id": {} });
@@ -22089,33 +20742,33 @@
                                   "!drawel": null,
                                   "!rel": "",
                                 },
-                                o = e.match(sW);
+                                o = e.match(sO);
                               return (
-                                o && sX(o[0], i, a, r),
+                                o && sN(o[0], i, a, r),
                                 (s = e.match(/drawing r:id="(.*?)"/)) &&
                                   (i["!rel"] = s[1]),
                                 n["!id"][i["!rel"]] &&
                                   (i["!drawel"] = n["!id"][i["!rel"]]),
                                 i
                               );
-                            })(m, 0, a, v, l, f, h)) || !p["!drawel"])
+                            })(d, 0, a, m, l, f, h)) || !u["!drawel"])
                     )
                       break;
-                    var g,
-                      v,
-                      b = eQ(p["!drawel"].Target, t),
-                      E = rK(b),
-                      S = (function (e, t) {
+                    var p,
+                      m,
+                      g = eQ(u["!drawel"].Target, t),
+                      v = r$(g),
+                      b = (function (e, t) {
                         if (!e) return "??";
                         var r = (e.match(/<c:chart [^>]*r:id="([^"]*)"/) || [
                           "",
                           "",
                         ])[1];
                         return t["!id"][r].Target;
-                      })(e$(e, b, !0), rY(e$(e, E, !0), b)),
-                      w = eQ(S, b),
-                      C = rK(w);
-                    p = (function (e, t, r, n, a, s) {
+                      })(e$(e, g, !0), rK(e$(e, v, !0), g)),
+                      E = eQ(b, g),
+                      S = r$(E);
+                    u = (function (e, t, r, n, a, s) {
                       var i = s || { "!type": "chart" };
                       if (!e) return s;
                       var o = 0,
@@ -22154,36 +20807,36 @@
                           })(e);
                           (f.s.r = f.s.c = 0),
                             (f.e.c = o),
-                            (l = rt(o)),
+                            (l = re(o)),
                             t[0].forEach(function (e, r) {
-                              (i[l + t9(r)] = { t: "n", v: e, z: t[1] }),
+                              (i[l + t7(r)] = { t: "n", v: e, z: t[1] }),
                                 (c = r);
                             }),
                             f.e.r < c && (f.e.r = c),
                             ++o;
                         }),
-                        o > 0 && (i["!ref"] = rs(f)),
+                        o > 0 && (i["!ref"] = ra(f)),
                         i
                       );
-                    })(e$(e, w, !0), 0, 0, rY(e$(e, C, !0), w), 0, p);
+                    })(e$(e, E, !0), 0, 0, rK(e$(e, S, !0), E), 0, u);
                     break;
                   case "macro":
-                    s[n], t.slice(-4), (p = { "!type": "macro" });
+                    s[n], t.slice(-4), (u = { "!type": "macro" });
                     break;
                   case "dialog":
-                    s[n], t.slice(-4), (p = { "!type": "dialog" });
+                    s[n], t.slice(-4), (u = { "!type": "dialog" });
                     break;
                   default:
                     throw Error("Unrecognized sheet type " + o);
                 }
-                i[n] = p;
-                var B = [];
+                i[n] = u;
+                var w = [];
                 s &&
                   s[n] &&
                   eT(s[n]).forEach(function (r) {
-                    if (s[n][r].Type == r$.CMNT) {
+                    if (s[n][r].Type == rj.CMNT) {
                       var a = eQ(s[n][r].Target, t);
-                      (B = (function (e, t, r) {
+                      (w = (function (e, t, r) {
                         if (".bin" === t.slice(-4)) {
                           var n, a, s, i;
                           return (
@@ -22191,7 +20844,7 @@
                             (a = []),
                             (s = {}),
                             (i = !1),
-                            t0(e, function (e, t, o) {
+                            t1(e, function (e, t, o) {
                               switch (o) {
                                 case 632:
                                   a.push(e);
@@ -22270,12 +20923,12 @@
                                         ref: s.ref,
                                         guid: s.guid,
                                       },
-                                      o = rr(s.ref);
+                                      o = rt(s.ref);
                                     if (!t.sheetRows || !(t.sheetRows <= o.r)) {
                                       var c = e.match(
                                           /<(?:\w+:)?text>([\s\S]*)<\/(?:\w+:)?text>/
                                         ),
-                                        l = (!!c && !!c[1] && ar(c[1])) || {
+                                        l = (!!c && !!c[1] && at(c[1])) || {
                                           r: "",
                                           t: "",
                                           h: "",
@@ -22295,12 +20948,12 @@
                           );
                         })(e, r);
                       })(ej(e, a, !0), a, c)) &&
-                        B.length &&
+                        w.length &&
                         (function (e, t) {
                           var r,
                             n = Array.isArray(e);
                           t.forEach(function (t) {
-                            var a = rr(t.ref);
+                            var a = rt(t.ref);
                             if (
                               (n
                                 ? (e[a.r] || (e[a.r] = []), (r = e[a.r][a.c]))
@@ -22309,36 +20962,36 @@
                             ) {
                               (r = { t: "z" }),
                                 n ? (e[a.r][a.c] = r) : (e[t.ref] = r);
-                              var s = ri(e["!ref"] || "BDWGO1000001:A1");
+                              var s = rs(e["!ref"] || "BDWGO1000001:A1");
                               s.s.r > a.r && (s.s.r = a.r),
                                 s.e.r < a.r && (s.e.r = a.r),
                                 s.s.c > a.c && (s.s.c = a.c),
                                 s.e.c < a.c && (s.e.c = a.c);
-                              var i = rs(s);
+                              var i = ra(s);
                               i !== e["!ref"] && (e["!ref"] = i);
                             }
                             r.c || (r.c = []);
                             var o = { a: t.author, t: t.t, r: t.r };
                             t.h && (o.h = t.h), r.c.push(o);
                           });
-                        })(p, B);
+                        })(u, w);
                     }
                   });
               } catch (e) {
                 if (c.WTF) throw e;
               }
-            })(e, d, p, w.SheetNames[_], _, k, h, P, t, S, b, E);
+            })(e, d, p, w.SheetNames[x], x, k, h, P, t, S, b, E);
           }
           return (
             (T = {
               Directory: g,
               Workbook: S,
               Props: w,
-              Custprops: B,
-              Deps: x,
+              Custprops: C,
+              Deps: _,
               Sheets: h,
               SheetNames: w.SheetNames,
-              Strings: s_,
+              Strings: sE,
               Styles: E,
               Themes: b,
               SSF: ev.get_table(),
@@ -22347,14 +21000,14 @@
             t &&
               t.bookVBA &&
               (g.vba.length > 0
-                ? (T.vbaraw = ej(e, iz(g.vba[0]), !0))
+                ? (T.vbaraw = ej(e, iO(g.vba[0]), !0))
                 : g.defaults &&
                   "application/vnd.ms-office.vbaProject" === g.defaults.bin &&
                   (T.vbaraw = ej(e, "xl/vbaProject.bin", !0))),
             T
           );
         }
-        function i$(e, t) {
+        function iN(e, t) {
           var r = "";
           switch ((t || {}).type || "base64") {
             case "buffer":
@@ -22382,9 +21035,9 @@
             r.charCodeAt(7),
           ];
         }
-        function iK(e, t) {
+        function iM(e, t) {
           var r = 0;
-          r: for (; r < e.length; )
+          t: for (; r < e.length; )
             switch (e.charCodeAt(r)) {
               case 10:
               case 13:
@@ -22392,22 +21045,22 @@
                 ++r;
                 break;
               case 60:
-                return ih(e.slice(r), t);
+                return s7(e.slice(r), t);
               default:
-                break r;
+                break t;
             }
-          return n5.to_workbook(e, t);
+          return n3.to_workbook(e, t);
         }
-        function iY(e, t, r, n) {
+        function iL(e, t, r, n) {
           return n
-            ? ((r.type = "string"), n5.to_workbook(e, r))
-            : n5.to_workbook(t, r);
+            ? ((r.type = "string"), n3.to_workbook(e, r))
+            : n3.to_workbook(t, r);
         }
-        function iQ(e, t) {
+        function iU(e, t) {
           if (
             (q(), "undefined" != typeof ArrayBuffer && e instanceof ArrayBuffer)
           )
-            return iQ(new Uint8Array(e), t);
+            return iU(new Uint8Array(e), t);
           var r,
             a,
             s,
@@ -22421,8 +21074,8 @@
             d = t || {};
           if (
             (d.cellStyles && ((d.cellNF = !0), (d.sheetStubs = !0)),
-            (sk = {}),
-            d.dateNF && (sk.dateNF = d.dateNF),
+            (sS = {}),
+            d.dateNF && (sS.dateNF = d.dateNF),
             d.type || (d.type = es && n.isBuffer(e) ? "buffer" : "base64"),
             "file" == d.type &&
               ((d.type = es ? "buffer" : "binary"),
@@ -22456,9 +21109,9 @@
             var p = new ArrayBuffer(3),
               m = new Uint8Array(p);
             if (((m.foo = "bar"), !m.foo))
-              return ((d = eL(d)).type = "array"), iQ(ed(f), d);
+              return ((d = eL(d)).type = "array"), iU(ed(f), d);
           }
-          switch ((h = i$(f, d))[0]) {
+          switch ((h = iN(f, d))[0]) {
             case 208:
               if (
                 207 === h[1] &&
@@ -22470,25 +21123,25 @@
                 225 === h[7]
               )
                 return (
-                  (s = eC.read(f, d)),
+                  (s = eB.read(f, d)),
                   (i = d),
-                  eC.find(s, "EncryptedPackage")
+                  eB.find(s, "EncryptedPackage")
                     ? (function (e, t) {
                         var r = t || {},
                           n = "Workbook",
-                          a = eC.find(e, n);
+                          a = eB.find(e, n);
                         try {
                           if (
                             ((n = "/!DataSpaces/Version"),
-                            !(a = eC.find(e, n)) ||
+                            !(a = eB.find(e, n)) ||
                               !a.content ||
                               ((s = a.content),
                               ((i = {}).id = s.read_shift(0, "lpp4")),
-                              (i.R = ah(s, 4)),
-                              (i.U = ah(s, 4)),
-                              (i.W = ah(s, 4)),
+                              (i.R = ac(s, 4)),
+                              (i.U = ac(s, 4)),
+                              (i.W = ac(s, 4)),
                               (n = "/!DataSpaces/DataSpaceMap"),
-                              !(a = eC.find(e, n)) || !a.content))
+                              !(a = eB.find(e, n)) || !a.content))
                           )
                             throw Error("ECMA-376 Encrypted file missing " + n);
                           var s,
@@ -22538,7 +21191,7 @@
                           if (
                             ((n =
                               "/!DataSpaces/DataSpaceInfo/StrongEncryptionDataSpace"),
-                            !(a = eC.find(e, n)) || !a.content)
+                            !(a = eB.find(e, n)) || !a.content)
                           )
                             throw Error("ECMA-376 Encrypted file missing " + n);
                           var c = (function (e) {
@@ -22556,26 +21209,25 @@
                           if (
                             ((n =
                               "/!DataSpaces/TransformInfo/StrongEncryptionTransform/!Primary"),
-                            !(a = eC.find(e, n)) || !a.content)
+                            !(a = eB.find(e, n)) || !a.content)
                           )
                             throw Error("ECMA-376 Encrypted file missing " + n);
                           !(function (e) {
                             var t,
-                              r,
-                              n =
-                                ((r = {}),
-                                (t = e).read_shift(4),
-                                (t.l += 4),
-                                (r.id = t.read_shift(0, "lpp4")),
-                                (r.name = t.read_shift(0, "lpp4")),
-                                (r.R = ah(t, 4)),
-                                (r.U = ah(t, 4)),
-                                (r.W = ah(t, 4)),
-                                r);
+                              r =
+                                ((t = {}),
+                                e.read_shift(4),
+                                (e.l += 4),
+                                (t.id = e.read_shift(0, "lpp4")),
+                                (t.name = e.read_shift(0, "lpp4")),
+                                (t.R = ac(e, 4)),
+                                (t.U = ac(e, 4)),
+                                (t.W = ac(e, 4)),
+                                t);
                             if (
-                              ((n.ename = e.read_shift(0, "8lpp4")),
-                              (n.blksz = e.read_shift(4)),
-                              (n.cmode = e.read_shift(4)),
+                              ((r.ename = e.read_shift(0, "8lpp4")),
+                              (r.blksz = e.read_shift(4)),
+                              (r.cmode = e.read_shift(4)),
                               4 != e.read_shift(4))
                             )
                               throw Error("Bad !Primary record");
@@ -22583,44 +21235,42 @@
                         } catch (e) {}
                         if (
                           ((n = "/EncryptionInfo"),
-                          !(a = eC.find(e, n)) || !a.content)
+                          !(a = eB.find(e, n)) || !a.content)
                         )
                           throw Error("ECMA-376 Encrypted file missing " + n);
                         var l = (function (e) {
                           var t,
                             r,
                             n,
-                            a,
-                            s = ah(e);
-                          switch (s.Minor) {
+                            a = ac(e);
+                          switch (a.Minor) {
                             case 2:
                               return [
-                                s.Minor,
+                                a.Minor,
                                 (function (e) {
                                   if ((63 & e.read_shift(4)) != 36)
                                     throw Error("EncryptionInfo mismatch");
                                   var t = e.read_shift(4);
                                   return {
                                     t: "Std",
-                                    h: au(e, t),
-                                    v: ad(e, e.length - e.l),
+                                    h: al(e, t),
+                                    v: af(e, e.length - e.l),
                                   };
-                                })(e, s),
+                                })(e, a),
                               ];
                             case 3:
                               return [
-                                s.Minor,
+                                a.Minor,
                                 (function () {
                                   throw Error(
                                     "File is password-protected: ECMA-376 Extensible"
                                   );
-                                })(e, s),
+                                })(e, a),
                               ];
                             case 4:
                               return [
-                                s.Minor,
-                                ((t = e),
-                                (r = [
+                                a.Minor,
+                                ((t = [
                                   "saltSize",
                                   "blockSize",
                                   "keyBits",
@@ -22630,12 +21280,12 @@
                                   "hashAlgorithm",
                                   "saltValue",
                                 ]),
-                                (t.l += 4),
-                                (n = t.read_shift(t.length - t.l, "utf8")),
-                                (a = {}),
-                                n.replace(eq, function (e) {
-                                  var t = e2(e);
-                                  switch (e4(t[0])) {
+                                (e.l += 4),
+                                (r = e.read_shift(e.length - e.l, "utf8")),
+                                (n = {}),
+                                r.replace(eq, function (e) {
+                                  var r = e2(e);
+                                  switch (e4(r[0])) {
                                     case "<?xml":
                                     case "<encryption":
                                     case "</encryption>":
@@ -22643,40 +21293,40 @@
                                     case "</keyEncryptor>":
                                       break;
                                     case "<keyData":
-                                      r.forEach(function (e) {
-                                        a[e] = t[e];
+                                      t.forEach(function (e) {
+                                        n[e] = r[e];
                                       });
                                       break;
                                     case "<dataIntegrity":
-                                      (a.encryptedHmacKey = t.encryptedHmacKey),
-                                        (a.encryptedHmacValue =
-                                          t.encryptedHmacValue);
+                                      (n.encryptedHmacKey = r.encryptedHmacKey),
+                                        (n.encryptedHmacValue =
+                                          r.encryptedHmacValue);
                                       break;
                                     case "<keyEncryptors>":
                                     case "<keyEncryptors":
-                                      a.encs = [];
+                                      n.encs = [];
                                       break;
                                     case "<keyEncryptor":
-                                      a.uri = t.uri;
+                                      n.uri = r.uri;
                                       break;
                                     case "<encryptedKey":
-                                      a.encs.push(t);
+                                      n.encs.push(r);
                                       break;
                                     default:
-                                      throw t[0];
+                                      throw r[0];
                                   }
                                 }),
-                                a),
+                                n),
                               ];
                           }
                           throw Error(
                             "ECMA-376 Encrypted file unrecognized Version: " +
-                              s.Minor
+                              a.Minor
                           );
                         })(a.content);
                         if (
                           ((n = "/EncryptedPackage"),
-                          !(a = eC.find(e, n)) || !a.content)
+                          !(a = eB.find(e, n)) || !a.content)
                         )
                           throw Error("ECMA-376 Encrypted file missing " + n);
                         if (4 == l[0] && "undefined" != typeof decrypt_agile)
@@ -22695,14 +21345,14 @@
                           );
                         throw Error("File is password-protected");
                       })(s, i)
-                    : ig(s, i)
+                    : ia(s, i)
                 );
               break;
             case 9:
-              if (h[1] <= 4) return ig(f, d);
+              if (h[1] <= 4) return ia(f, d);
               break;
             case 60:
-              return ih(f, d);
+              return s7(f, d);
             case 73:
               if (73 === h[1] && 42 === h[2] && 0 === h[3])
                 throw Error("TIFF Image File is not a spreadsheet");
@@ -22712,27 +21362,27 @@
                     n = !!r.WTF;
                   r.WTF = !0;
                   try {
-                    var a = n2.to_workbook(e, r);
+                    var a = n0.to_workbook(e, r);
                     return (r.WTF = n), a;
                   } catch (a) {
                     if (
                       ((r.WTF = n), !a.message.match(/SYLK bad record ID/) && n)
                     )
                       throw a;
-                    return n5.to_workbook(e, t);
+                    return n3.to_workbook(e, t);
                   }
                 })(f, d);
               break;
             case 84:
               if (65 === h[1] && 66 === h[2] && 76 === h[3])
-                return n4.to_workbook(f, d);
+                return n2.to_workbook(f, d);
               break;
             case 80:
               return 75 === h[1] && h[2] < 9 && h[3] < 9
                 ? ((r = f),
                   (a = d || {}).type ||
                     (a.type = es && n.isBuffer(r) ? "buffer" : "base64"),
-                  ij(
+                  iP(
                     (function (e, t) {
                       var r;
                       if (H)
@@ -22753,14 +21403,14 @@
                       else
                         switch (t.type) {
                           case "base64":
-                            r = eC.read(e, { type: "base64" });
+                            r = eB.read(e, { type: "base64" });
                             break;
                           case "binary":
-                            r = eC.read(e, { type: "binary" });
+                            r = eB.read(e, { type: "binary" });
                             break;
                           case "buffer":
                           case "array":
-                            r = eC.read(e, { type: "buffer" });
+                            r = eB.read(e, { type: "buffer" });
                             break;
                           default:
                             throw Error("Unrecognized type " + t.type);
@@ -22769,9 +21419,9 @@
                     })(r, a),
                     a
                   ))
-                : iY(e, f, d, u);
+                : iL(e, f, d, u);
             case 239:
-              return 60 === h[3] ? ih(f, d) : iY(e, f, d, u);
+              return 60 === h[3] ? s7(f, d) : iL(e, f, d, u);
             case 255:
               if (254 === h[1])
                 return (
@@ -22781,28 +21431,28 @@
                   "base64" == c.type && (l = ea.decode(l)),
                   (l = cptable.utils.decode(1200, l.slice(2), "str")),
                   (c.type = "binary"),
-                  iK(l, c)
+                  iM(l, c)
                 );
               break;
             case 0:
               if (0 === h[1] && h[2] >= 2 && 0 === h[3])
-                return n6.to_workbook(f, d);
+                return n5.to_workbook(f, d);
               break;
             case 3:
             case 131:
             case 139:
             case 140:
-              return n0.to_workbook(f, d);
+              return n1.to_workbook(f, d);
             case 123:
               if (92 === h[1] && 114 === h[2] && 116 === h[3])
-                return ab.to_workbook(f, d);
+                return am.to_workbook(f, d);
               break;
             case 10:
             case 13:
             case 32:
               return (function (e, t) {
                 var r = "",
-                  n = i$(e, t);
+                  n = iN(e, t);
                 switch (t.type) {
                   case "base64":
                     r = ea.decode(e);
@@ -22821,19 +21471,19 @@
                 }
                 return (
                   239 == n[0] && 187 == n[1] && 191 == n[2] && (r = ts(r)),
-                  iK(r, t)
+                  iM(r, t)
                 );
               })(f, d);
           }
-          return n0.versions.indexOf(h[0]) > -1 && h[2] <= 12 && h[3] <= 31
-            ? n0.to_workbook(f, d)
-            : iY(e, f, d, u);
+          return n1.versions.indexOf(h[0]) > -1 && h[2] <= 12 && h[3] <= 31
+            ? n1.to_workbook(f, d)
+            : iL(e, f, d, u);
         }
-        function iJ(e, t) {
+        function iH(e, t) {
           var r = t || {};
-          return (r.type = "file"), iQ(e, r);
+          return (r.type = "file"), iU(e, r);
         }
-        function iZ(e, t) {
+        function iW(e, t) {
           switch (t.type) {
             case "base64":
             case "binary":
@@ -22843,7 +21493,7 @@
               t.type = "";
               break;
             case "file":
-              return eB(t.file, eC.write(e, { type: es ? "buffer" : "" }));
+              return eC(t.file, eB.write(e, { type: es ? "buffer" : "" }));
             case "string":
               throw Error(
                 "'string' output type invalid for '" + t.bookType + "' files"
@@ -22851,9 +21501,9 @@
             default:
               throw Error("Unrecognized type " + t.type);
           }
-          return eC.write(e, t);
+          return eB.write(e, t);
         }
-        function iq(e, t, r) {
+        function iV(e, t, r) {
           r || (r = "");
           var n = r + e;
           switch (t.type) {
@@ -22864,10 +21514,10 @@
             case "string":
               return e;
             case "file":
-              return eB(t.file, n, "utf8");
+              return eC(t.file, n, "utf8");
             case "buffer":
               if (es) return ei(n, "utf8");
-              return iq(n, { type: "binary" })
+              return iV(n, { type: "binary" })
                 .split("")
                 .map(function (e) {
                   return e.charCodeAt(0);
@@ -22875,7 +21525,7 @@
           }
           throw Error("Unrecognized type " + t.type);
         }
-        function i1(e, t) {
+        function iX(e, t) {
           switch (t.type) {
             case "string":
             case "base64":
@@ -22888,14 +21538,14 @@
                   ? ts(r)
                   : r;
             case "file":
-              return eB(t.file, e);
+              return eC(t.file, e);
             case "buffer":
               return e;
             default:
               throw Error("Unrecognized type " + t.type);
           }
         }
-        function i0(e, t) {
+        function iG(e, r) {
           q(),
             (function (e) {
               if (!e || !e.SheetNames || !e.Sheets)
@@ -22904,7 +21554,7 @@
               var t = (e.Workbook && e.Workbook.Sheets) || [];
               !(function (e, t, r) {
                 e.forEach(function (n, a) {
-                  s8(n);
+                  sZ(n);
                   for (var s = 0; s < a; ++s)
                     if (n == e[s]) throw Error("Duplicate Sheet Name: " + n);
                   if (r) {
@@ -22917,26 +21567,26 @@
               for (var r = 0; r < e.SheetNames.length; ++r)
                 !(function (e, t, r) {
                   if (e && e["!ref"]) {
-                    var n = ri(e["!ref"]);
+                    var n = rs(e["!ref"]);
                     if (n.e.c < n.s.c || n.e.r < n.s.r)
                       throw Error("Bad range (" + r + "): " + e["!ref"]);
                   }
                 })(e.Sheets[e.SheetNames[r]], e.SheetNames[r], r);
             })(e);
-          var r,
-            n = t || {};
+          var n,
+            a = r || {};
           if (
-            (n.cellStyles && ((n.cellNF = !0), (n.sheetStubs = !0)),
-            "array" == n.type)
+            (a.cellStyles && ((a.cellNF = !0), (a.sheetStubs = !0)),
+            "array" == a.type)
           ) {
-            n.type = "binary";
-            var a = i0(e, n);
-            return (n.type = "array"), eh(a);
+            a.type = "binary";
+            var s = iG(e, a);
+            return (a.type = "array"), eh(s);
           }
-          switch (n.bookType || "xlsb") {
+          switch (a.bookType || "xlsb") {
             case "xml":
             case "xlml":
-              return iq(
+              return iV(
                 (function (e, t) {
                   t || (t = {}),
                     e.SSF || (e.SSF = ev.get_table()),
@@ -22947,7 +21597,7 @@
                       (t.revssf[e.SSF[65535]] = 0),
                       (t.ssf = e.SSF),
                       (t.cellXfs = []),
-                      sF(t.cellXfs, {}, { revssf: { General: 0 } }));
+                      s_(t.cellXfs, {}, { revssf: { General: 0 } }));
                   var r,
                     n,
                     a,
@@ -22968,12 +21618,12 @@
                       h.push(
                         ((a = r.Props),
                         (s = []),
-                        eT(nr)
+                        eT(nt)
                           .map(function (e) {
-                            for (var t = 0; t < r2.length; ++t)
-                              if (r2[t][1] == e) return r2[t];
-                            for (t = 0; t < r8.length; ++t)
-                              if (r8[t][1] == e) return r8[t];
+                            for (var t = 0; t < r0.length; ++t)
+                              if (r0[t][1] == e) return r0[t];
+                            for (t = 0; t < r6.length; ++t)
+                              if (r6[t][1] == e) return r6[t];
                             throw e;
                           })
                           .forEach(function (e) {
@@ -22994,10 +21644,10 @@
                                       (t = new Date(t)
                                         .toISOString()
                                         .replace(/\.\d*Z/, "")),
-                                s.push(tv(nr[e[1]] || e[1], t));
+                                s.push(tv(nt[e[1]] || e[1], t));
                             }
                           }),
-                        tE("DocumentProperties", s.join(""), { xmlns: tC.o }))
+                        tE("DocumentProperties", s.join(""), { xmlns: tB.o }))
                       ),
                     r.Custprops &&
                       h.push(
@@ -23009,10 +21659,10 @@
                         i &&
                           eT(i).forEach(function (e) {
                             if (Object.prototype.hasOwnProperty.call(i, e)) {
-                              for (var t = 0; t < r2.length; ++t)
-                                if (e == r2[t][1]) return;
-                              for (t = 0; t < r8.length; ++t)
-                                if (e == r8[t][1]) return;
+                              for (var t = 0; t < r0.length; ++t)
+                                if (e == r0[t][1]) return;
+                              for (t = 0; t < r6.length; ++t)
+                                if (e == r6[t][1]) return;
                               for (t = 0; t < c.length; ++t)
                                 if (e == c[t]) return;
                               var r = i[e],
@@ -23047,7 +21697,7 @@
                         "<" +
                           l +
                           ' xmlns="' +
-                          tC.o +
+                          tB.o +
                           '">' +
                           f.join("") +
                           "</" +
@@ -23079,7 +21729,7 @@
                                     var o = a[i];
                                     o.Sheet == r &&
                                       (o.Name.match(/^_xlfn\./) ||
-                                        s.push(iu(o)));
+                                        s.push(s9(o)));
                                   }
                                   return s.join("");
                                 })(s, 0, e, r)
@@ -23089,17 +21739,17 @@
                             (i = s
                               ? (function (e, t, r, n) {
                                   if (!e["!ref"]) return "";
-                                  var a = ri(e["!ref"]),
+                                  var a = rs(e["!ref"]),
                                     s = e["!merges"] || [],
                                     i = 0,
                                     o = [];
                                   e["!cols"] &&
                                     e["!cols"].forEach(function (e, t) {
-                                      ak(e);
+                                      aT(e);
                                       var r = !!e.width,
-                                        n = sy(t, e),
+                                        n = sC(t, e),
                                         a = { "ss:Index": t + 1 };
-                                      r && (a["ss:Width"] = aC(n.width)),
+                                      r && (a["ss:Width"] = aE(n.width)),
                                         e.hidden && (a["ss:Hidden"] = "1"),
                                         o.push(tE("Column", null, a));
                                     });
@@ -23117,7 +21767,7 @@
                                               t &&
                                                 (t.hpt &&
                                                   !t.hpx &&
-                                                  (t.hpx = aI(t.hpt)),
+                                                  (t.hpx = ax(t.hpt)),
                                                 t.hpx &&
                                                   (r +=
                                                     ' ss:AutoFitHeight="0" ss:Height="' +
@@ -23147,7 +21797,7 @@
                                         }
                                       if (!u) {
                                         var d = { r: l, c: h },
-                                          p = rn(d),
+                                          p = rr(d),
                                           m = c ? (e[l] || [])[h] : e[p];
                                         f.push(
                                           (function (e, t, r, n, a, s, i) {
@@ -23160,11 +21810,11 @@
                                             if (
                                               (e.f &&
                                                 (o["ss:Formula"] =
-                                                  "=" + e9(a3(e.f, i))),
+                                                  "=" + e9(aJ(e.f, i))),
                                               e.F &&
                                                 e.F.slice(0, t.length) == t)
                                             ) {
-                                              var c = rr(
+                                              var c = rt(
                                                 e.F.slice(t.length + 1)
                                               );
                                               o["ss:ArrayRange"] =
@@ -23217,7 +21867,7 @@
                                                   (u = e.v ? "1" : "0");
                                                 break;
                                               case "e":
-                                                (h = "Error"), (u = rU[e.v]);
+                                                (h = "Error"), (u = rL[e.v]);
                                                 break;
                                               case "d":
                                                 (h = "DateTime"),
@@ -23245,7 +21895,7 @@
                                                       );
                                                     }));
                                             }
-                                            var d = sF(n.cellXfs, e, n);
+                                            var d = s_(n.cellXfs, e, n);
                                             (o["ss:StyleID"] = "s" + (21 + d)),
                                               (o["ss:Index"] = i.c + 1);
                                             var p = null != e.v ? u : "",
@@ -23388,7 +22038,7 @@
                                 0 == a.length)
                                   ? ""
                                   : tE("WorksheetOptions", a.join(""), {
-                                      xmlns: tC.x,
+                                      xmlns: tB.x,
                                     });
                               })(s, 0, e, r)
                             ),
@@ -23424,29 +22074,29 @@
                       ) {
                         var a = t[n];
                         null == a.Sheet &&
-                          (a.Name.match(/^_xlfn\./) || r.push(iu(a)));
+                          (a.Name.match(/^_xlfn\./) || r.push(s9(a)));
                       }
                       return tE("Names", r.join(""));
                     })(e, t)),
                     eJ +
                       tE("Workbook", d.join(""), {
-                        xmlns: tC.ss,
-                        "xmlns:o": tC.o,
-                        "xmlns:x": tC.x,
-                        "xmlns:ss": tC.ss,
-                        "xmlns:dt": tC.dt,
-                        "xmlns:html": tC.html,
+                        xmlns: tB.ss,
+                        "xmlns:o": tB.o,
+                        "xmlns:x": tB.x,
+                        "xmlns:ss": tB.ss,
+                        "xmlns:dt": tB.dt,
+                        "xmlns:html": tB.html,
                       })
                   );
-                })(e, n),
-                n
+                })(e, a),
+                a
               );
             case "slk":
             case "sylk":
-              return iq(iP(e, n), n);
+              return iV(iT(e, a), a);
             case "htm":
             case "html":
-              return iq(iD(e, n), n);
+              return iV(iB(e, a), a);
             case "txt":
               return (function (e, t) {
                 switch (t.type) {
@@ -23456,7 +22106,7 @@
                   case "string":
                     return e;
                   case "file":
-                    return eB(t.file, e, "binary");
+                    return eC(t.file, e, "binary");
                   case "buffer":
                     if (es) return ei(e, "binary");
                     return e.split("").map(function (e) {
@@ -23464,38 +22114,38 @@
                     });
                 }
                 throw Error("Unrecognized type " + t.type);
-              })(iU(e, n), n);
+              })(iA(e, a), a);
             case "csv":
-              return iq(iO(e, n), n, "\uFEFF");
+              return iV(iC(e, a), a, "\uFEFF");
             case "dif":
-              return iq(iN(e, n), n);
+              return iV(i_(e, a), a);
             case "dbf":
-              return i1(iH(e, n), n);
+              return iX(iI(e, a), a);
             case "prn":
-              return iq(iM(e, n), n);
+              return iV(ix(e, a), a);
             case "rtf":
-              return iq(iL(e, n), n);
+              return iV(ik(e, a), a);
             case "eth":
-              return iq(iW(e, n), n);
+              return iV(iy(e, a), a);
             case "fods":
-              return iq(iR(e, n), n);
+              return iV(iS(e, a), a);
             case "biff2":
-              n.biff || (n.biff = 2);
+              a.biff || (a.biff = 2);
             case "biff3":
-              n.biff || (n.biff = 3);
+              a.biff || (a.biff = 3);
             case "biff4":
-              return n.biff || (n.biff = 4), i1(iB(e, n), n);
+              return a.biff || (a.biff = 4), iX(iu(e, a), a);
             case "biff5":
-              n.biff || (n.biff = 5);
+              a.biff || (a.biff = 5);
             case "biff8":
             case "xla":
             case "xls":
               return (
-                n.biff || (n.biff = 8),
-                iZ(
+                a.biff || (a.biff = 8),
+                iW(
                   (function (e, t) {
                     var r = t || {},
-                      n = eC.utils.cfb_new({ root: "R" }),
+                      n = eB.utils.cfb_new({ root: "R" }),
                       a = "/Workbook";
                     switch (r.bookType || "xls") {
                       case "xls":
@@ -23514,7 +22164,7 @@
                         );
                     }
                     return (
-                      eC.utils.cfb_add(n, a, iB(e, r)),
+                      eB.utils.cfb_add(n, a, iu(e, r)),
                       8 == r.biff &&
                         (e.Props || e.Custprops) &&
                         (function (e, t) {
@@ -23525,9 +22175,9 @@
                             i = 0;
                           if (e.Props)
                             for (i = 0, r = eT(e.Props); i < r.length; ++i)
-                              (Object.prototype.hasOwnProperty.call(rO, r[i])
+                              (Object.prototype.hasOwnProperty.call(rD, r[i])
                                 ? n
-                                : Object.prototype.hasOwnProperty.call(rP, r[i])
+                                : Object.prototype.hasOwnProperty.call(rO, r[i])
                                   ? a
                                   : s
                               ).push([r[i], e.Props[r[i]]]);
@@ -23537,10 +22187,10 @@
                                 e.Props || {},
                                 r[i]
                               ) ||
-                                (Object.prototype.hasOwnProperty.call(rO, r[i])
+                                (Object.prototype.hasOwnProperty.call(rD, r[i])
                                   ? n
                                   : Object.prototype.hasOwnProperty.call(
-                                        rP,
+                                        rO,
                                         r[i]
                                       )
                                     ? a
@@ -23548,26 +22198,26 @@
                                 ).push([r[i], e.Custprops[r[i]]]);
                           var o = [];
                           for (i = 0; i < s.length; ++i)
-                            np.indexOf(s[i][0]) > -1 ||
+                            nd.indexOf(s[i][0]) > -1 ||
                               null == s[i][1] ||
                               o.push(s[i]);
                           a.length &&
-                            eC.utils.cfb_add(
+                            eB.utils.cfb_add(
                               t,
                               "/\x05SummaryInformation",
-                              nv(a, im.SI, rP, rF)
+                              ng(a, ir.SI, rO, rR)
                             ),
                             (n.length || o.length) &&
-                              eC.utils.cfb_add(
+                              eB.utils.cfb_add(
                                 t,
                                 "/\x05DocumentSummaryInformation",
-                                nv(
+                                ng(
                                   n,
-                                  im.DSI,
-                                  rO,
-                                  rR,
+                                  ir.DSI,
+                                  rD,
+                                  ry,
                                   o.length ? o : null,
-                                  im.UDI
+                                  ir.UDI
                                 )
                               );
                         })(e, n),
@@ -23581,20 +22231,20 @@
                                 "/_VBA_PROJECT_CUR/"
                               );
                               "/" !== a.slice(-1) &&
-                                eC.utils.cfb_add(e, a, t.FileIndex[n].content);
+                                eB.utils.cfb_add(e, a, t.FileIndex[n].content);
                             }
                           });
                         })(
                           n,
-                          eC.read(e.vbaraw, {
+                          eB.read(e.vbaraw, {
                             type:
                               "string" == typeof e.vbaraw ? "binary" : "buffer",
                           })
                         ),
                       n
                     );
-                  })(e, (r = n || {})),
-                  r
+                  })(e, (n = a || {})),
+                  n
                 )
               );
             case "xlsx":
@@ -23602,30 +22252,29 @@
             case "xlam":
             case "xlsb":
             case "ods":
-              return (function (e, t) {
-                var r = t || {},
-                  n = (function (e, t) {
-                    if (((aJ = 1024), "ods" == t.bookType)) return iR(e, t);
+              return (function (e, r) {
+                var n = r || {},
+                  a = (function (e, r) {
+                    if (((aj = 1024), "ods" == r.bookType)) return iS(e, r);
                     e && !e.SSF && (e.SSF = ev.get_table()),
                       e &&
                         e.SSF &&
                         (eb(ev),
                         ev.load_table(e.SSF),
-                        (t.revssf = ek(e.SSF)),
-                        (t.revssf[e.SSF[65535]] = 0),
-                        (t.ssf = e.SSF)),
-                      (t.rels = {}),
-                      (t.wbrels = {}),
-                      (t.Strings = []),
-                      (t.Strings.Count = 0),
-                      (t.Strings.Unique = 0),
-                      sA
-                        ? (t.revStrings = new Map())
-                        : ((t.revStrings = {}),
-                          (t.revStrings.foo = []),
-                          delete t.revStrings.foo);
-                    var r,
-                      n,
+                        (r.revssf = ek(e.SSF)),
+                        (r.revssf[e.SSF[65535]] = 0),
+                        (r.ssf = e.SSF)),
+                      (r.rels = {}),
+                      (r.wbrels = {}),
+                      (r.Strings = []),
+                      (r.Strings.Count = 0),
+                      (r.Strings.Unique = 0),
+                      sw
+                        ? (r.revStrings = new Map())
+                        : ((r.revStrings = {}),
+                          (r.revStrings.foo = []),
+                          delete r.revStrings.foo);
+                    var n,
                       a,
                       s,
                       i,
@@ -23637,28 +22286,29 @@
                       u,
                       d,
                       p,
-                      m = "xlsb" == t.bookType ? "bin" : "xml",
-                      g = a0.indexOf(t.bookType) > -1,
-                      v = rG();
-                    iG((t = t || {}));
-                    var b = eY(),
-                      E = "",
-                      S = 0;
+                      m,
+                      g = "xlsb" == r.bookType ? "bin" : "xml",
+                      v = aK.indexOf(r.bookType) > -1,
+                      b = rX();
+                    iD((r = r || {}));
+                    var E = eY(),
+                      S = "",
+                      w = 0;
                     if (
-                      ((t.cellXfs = []),
-                      sF(t.cellXfs, {}, { revssf: { General: 0 } }),
+                      ((r.cellXfs = []),
+                      s_(r.cellXfs, {}, { revssf: { General: 0 } }),
                       e.Props || (e.Props = {}),
                       eK(
-                        b,
-                        (E = "docProps/core.xml"),
+                        E,
+                        (S = "docProps/core.xml"),
                         (function (e, t) {
                           var r = t || {},
-                            n = [eJ, r5],
+                            n = [eJ, r3],
                             a = {};
                           if (!e && !r.Props) return n.join("");
                           e &&
                             (null != e.CreatedDate &&
-                              r6(
+                              r5(
                                 "dcterms:created",
                                 "string" == typeof e.CreatedDate
                                   ? e.CreatedDate
@@ -23668,7 +22318,7 @@
                                 a
                               ),
                             null != e.ModifiedDate &&
-                              r6(
+                              r5(
                                 "dcterms:modified",
                                 "string" == typeof e.ModifiedDate
                                   ? e.ModifiedDate
@@ -23677,8 +22327,8 @@
                                 n,
                                 a
                               ));
-                          for (var s = 0; s != r2.length; ++s) {
-                            var i = r2[s],
+                          for (var s = 0; s != r0.length; ++s) {
+                            var i = r0[s],
                               o =
                                 r.Props && null != r.Props[i[1]]
                                   ? r.Props[i[1]]
@@ -23690,7 +22340,7 @@
                               : !1 === o
                                 ? (o = "0")
                                 : "number" == typeof o && (o = String(o)),
-                              null != o && r6(i[0], o, null, n, a);
+                              null != o && r5(i[0], o, null, n, a);
                           }
                           return (
                             n.length > 2 &&
@@ -23698,44 +22348,44 @@
                               (n[1] = n[1].replace("/>", ">"))),
                             n.join("")
                           );
-                        })(e.Props, t)
+                        })(e.Props, r)
                       ),
-                      v.coreprops.push(E),
-                      rq(t.rels, 2, E, r$.CORE_PROPS),
-                      (E = "docProps/app.xml"),
+                      b.coreprops.push(S),
+                      rZ(r.rels, 2, S, rj.CORE_PROPS),
+                      (S = "docProps/app.xml"),
                       e.Props && e.Props.SheetNames)
                     );
                     else if (e.Workbook && e.Workbook.Sheets) {
-                      for (var w = [], C = 0; C < e.SheetNames.length; ++C)
+                      for (var B = [], C = 0; C < e.SheetNames.length; ++C)
                         2 != (e.Workbook.Sheets[C] || {}).Hidden &&
-                          w.push(e.SheetNames[C]);
-                      e.Props.SheetNames = w;
+                          B.push(e.SheetNames[C]);
+                      e.Props.SheetNames = B;
                     } else e.Props.SheetNames = e.SheetNames;
                     for (
                       e.Props.Worksheets = e.Props.SheetNames.length,
                         eK(
-                          b,
                           E,
-                          ((k = e.Props),
-                          (A = []),
-                          k || (k = {}),
-                          (k.Application = "SheetJS"),
-                          (A[A.length] = eJ),
-                          (A[A.length] = r9),
-                          r8.forEach(function (e) {
+                          S,
+                          ((A = e.Props),
+                          (I = []),
+                          A || (A = {}),
+                          (A.Application = "SheetJS"),
+                          (I[I.length] = eJ),
+                          (I[I.length] = r7),
+                          r6.forEach(function (e) {
                             var t;
-                            if (void 0 !== k[e[1]]) {
+                            if (void 0 !== A[e[1]]) {
                               switch (e[2]) {
                                 case "string":
-                                  t = e9(String(k[e[1]]));
+                                  t = e9(String(A[e[1]]));
                                   break;
                                 case "bool":
-                                  t = k[e[1]] ? "true" : "false";
+                                  t = A[e[1]] ? "true" : "false";
                               }
-                              void 0 !== t && (A[A.length] = tE(e[0], t));
+                              void 0 !== t && (I[I.length] = tE(e[0], t));
                             }
                           }),
-                          (A[A.length] = tE(
+                          (I[I.length] = tE(
                             "HeadingPairs",
                             tE(
                               "vt:vector",
@@ -23745,35 +22395,35 @@
                               ) +
                                 tE(
                                   "vt:variant",
-                                  tE("vt:i4", String(k.Worksheets))
+                                  tE("vt:i4", String(A.Worksheets))
                                 ),
                               { size: 2, baseType: "variant" }
                             )
                           )),
-                          (A[A.length] = tE(
+                          (I[I.length] = tE(
                             "TitlesOfParts",
                             tE(
                               "vt:vector",
-                              k.SheetNames.map(function (e) {
+                              A.SheetNames.map(function (e) {
                                 return "<vt:lpstr>" + e9(e) + "</vt:lpstr>";
                               }).join(""),
-                              { size: k.Worksheets, baseType: "lpstr" }
+                              { size: A.Worksheets, baseType: "lpstr" }
                             )
                           )),
-                          A.length > 2 &&
-                            ((A[A.length] = "</Properties>"),
-                            (A[1] = A[1].replace("/>", ">"))),
-                          A.join(""))
+                          I.length > 2 &&
+                            ((I[I.length] = "</Properties>"),
+                            (I[1] = I[1].replace("/>", ">"))),
+                          I.join(""))
                         ),
-                        v.extprops.push(E),
-                        rq(t.rels, 3, E, r$.EXT_PROPS),
+                        b.extprops.push(S),
+                        rZ(r.rels, 3, S, rj.EXT_PROPS),
                         e.Custprops !== e.Props &&
                           eT(e.Custprops || {}).length > 0 &&
                           (eK(
-                            b,
-                            (E = "docProps/custom.xml"),
+                            E,
+                            (S = "docProps/custom.xml"),
                             (function (e) {
-                              var t = [eJ, nt];
+                              var t = [eJ, ne];
                               if (!e) return t.join("");
                               var r = 1;
                               return (
@@ -23821,59 +22471,1198 @@
                                   (t[1] = t[1].replace("/>", ">"))),
                                 t.join("")
                               );
-                            })(e.Custprops, t)
+                            })(e.Custprops, r)
                           ),
-                          v.custprops.push(E),
-                          rq(t.rels, 4, E, r$.CUST_PROPS)),
-                        S = 1;
-                      S <= e.SheetNames.length;
-                      ++S
+                          b.custprops.push(S),
+                          rZ(r.rels, 4, S, rj.CUST_PROPS)),
+                        w = 1;
+                      w <= e.SheetNames.length;
+                      ++w
                     ) {
-                      var B = { "!id": {} },
-                        T = e.Sheets[e.SheetNames[S - 1]];
+                      var T = { "!id": {} },
+                        _ = e.Sheets[e.SheetNames[w - 1]];
                       if (
-                        ((T || {})["!type"],
+                        ((_ || {})["!type"],
                         eK(
-                          b,
-                          (E = "xl/worksheets/sheet" + S + "." + m),
-                          ((I = S - 1),
-                          (y = E),
-                          (R = t),
-                          (".bin" === y.slice(-4) ? sZ : sY)(I, R, e, B))
+                          E,
+                          (S = "xl/worksheets/sheet" + w + "." + g),
+                          ((y = w - 1),
+                          (R = S),
+                          (F = r),
+                          (".bin" === R.slice(-4)
+                            ? function (e, t, r, n) {
+                                var a,
+                                  s,
+                                  i,
+                                  o,
+                                  c,
+                                  l = t0(),
+                                  f = r.SheetNames[e],
+                                  h = r.Sheets[f] || {},
+                                  u = f;
+                                try {
+                                  r &&
+                                    r.Workbook &&
+                                    (u = r.Workbook.Sheets[e].CodeName || u);
+                                } catch (e) {}
+                                var d = rs(h["!ref"] || "A1");
+                                if (d.e.c > 16383 || d.e.r > 1048575) {
+                                  if (t.WTF)
+                                    throw Error(
+                                      "Range " +
+                                        (h["!ref"] || "A1") +
+                                        " exceeds format limit A1:XFD1048576"
+                                    );
+                                  (d.e.c = Math.min(d.e.c, 16383)),
+                                    (d.e.r = Math.min(d.e.c, 1048575));
+                                }
+                                return (
+                                  (h["!links"] = []),
+                                  (h["!comments"] = []),
+                                  t2(l, "BrtBeginSheet"),
+                                  r.vbaraw &&
+                                    t2(
+                                      l,
+                                      "BrtWsProp",
+                                      (function (e, t) {
+                                        null == t &&
+                                          (t = tq(84 + 4 * e.length));
+                                        for (var r = 0; r < 3; ++r)
+                                          t.write_shift(1, 0);
+                                        return (
+                                          rk({ auto: 1 }, t),
+                                          t.write_shift(-4, -1),
+                                          t.write_shift(-4, -1),
+                                          rd(e, t),
+                                          t.slice(0, t.l)
+                                        );
+                                      })(u)
+                                    ),
+                                  t2(l, "BrtWsDim", rT(d)),
+                                  (a = r.Workbook),
+                                  t2(l, "BrtBeginWsViews"),
+                                  t2(
+                                    l,
+                                    "BrtBeginWsView",
+                                    (null == s && (s = tq(30)),
+                                    (i = 924),
+                                    (((a || {}).Views || [])[0] || {}).RTL &&
+                                      (i |= 32),
+                                    s.write_shift(2, i),
+                                    s.write_shift(4, 0),
+                                    s.write_shift(4, 0),
+                                    s.write_shift(4, 0),
+                                    s.write_shift(1, 0),
+                                    s.write_shift(1, 0),
+                                    s.write_shift(2, 0),
+                                    s.write_shift(2, 100),
+                                    s.write_shift(2, 0),
+                                    s.write_shift(2, 0),
+                                    s.write_shift(2, 0),
+                                    s.write_shift(4, 0),
+                                    s)
+                                  ),
+                                  t2(l, "BrtEndWsView"),
+                                  t2(l, "BrtEndWsViews"),
+                                  h &&
+                                    h["!cols"] &&
+                                    (t2(l, "BrtBeginColInfos"),
+                                    h["!cols"].forEach(function (e, t) {
+                                      if (e) {
+                                        var r, n, a;
+                                        t2(
+                                          l,
+                                          "BrtColInfo",
+                                          (null == r && (r = tq(18)),
+                                          (n = sC(t, e)),
+                                          r.write_shift(-4, t),
+                                          r.write_shift(-4, t),
+                                          r.write_shift(
+                                            4,
+                                            256 * (n.width || 10)
+                                          ),
+                                          r.write_shift(4, 0),
+                                          (a = 0),
+                                          e.hidden && (a |= 1),
+                                          "number" == typeof n.width &&
+                                            (a |= 2),
+                                          e.level && (a |= e.level << 8),
+                                          r.write_shift(2, a),
+                                          r)
+                                        );
+                                      }
+                                    }),
+                                    t2(l, "BrtEndColInfos")),
+                                  (function (e, t, r, n) {
+                                    var a,
+                                      s = rs(t["!ref"] || "A1"),
+                                      i = "",
+                                      o = [];
+                                    t2(e, "BrtBeginSheetData");
+                                    var c = Array.isArray(t),
+                                      l = s.e.r;
+                                    t["!rows"] &&
+                                      (l = Math.max(
+                                        s.e.r,
+                                        t["!rows"].length - 1
+                                      ));
+                                    for (var f = s.s.r; f <= l; ++f) {
+                                      (i = t7(f)),
+                                        (function (e, t, r, n) {
+                                          var a = (function (e, t, r) {
+                                            var n = tq(145),
+                                              a = (r["!rows"] || [])[e] || {};
+                                            n.write_shift(4, e),
+                                              n.write_shift(4, 0);
+                                            var s = 320;
+                                            a.hpx
+                                              ? (s = 20 * a_(a.hpx))
+                                              : a.hpt && (s = 20 * a.hpt),
+                                              n.write_shift(2, s),
+                                              n.write_shift(1, 0);
+                                            var i = 0;
+                                            a.level && (i |= a.level),
+                                              a.hidden && (i |= 16),
+                                              (a.hpx || a.hpt) && (i |= 32),
+                                              n.write_shift(1, i),
+                                              n.write_shift(1, 0);
+                                            var o = 0,
+                                              c = n.l;
+                                            n.l += 4;
+                                            for (
+                                              var l = { r: e, c: 0 }, f = 0;
+                                              f < 16;
+                                              ++f
+                                            )
+                                              if (
+                                                !(t.s.c > (f + 1) << 10) &&
+                                                !(t.e.c < f << 10)
+                                              ) {
+                                                for (
+                                                  var h = -1,
+                                                    u = -1,
+                                                    d = f << 10;
+                                                  d < (f + 1) << 10;
+                                                  ++d
+                                                )
+                                                  (l.c = d),
+                                                    (Array.isArray(r)
+                                                      ? (r[l.r] || [])[l.c]
+                                                      : r[rr(l)]) &&
+                                                      (h < 0 && (h = d),
+                                                      (u = d));
+                                                h < 0 ||
+                                                  (++o,
+                                                  n.write_shift(4, h),
+                                                  n.write_shift(4, u));
+                                              }
+                                            var p = n.l;
+                                            return (
+                                              (n.l = c),
+                                              n.write_shift(4, o),
+                                              (n.l = p),
+                                              n.length > n.l
+                                                ? n.slice(0, n.l)
+                                                : n
+                                            );
+                                          })(n, r, t);
+                                          (a.length > 17 ||
+                                            (t["!rows"] || [])[n]) &&
+                                            t2(e, "BrtRowHdr", a);
+                                        })(e, t, s, f);
+                                      var h = !1;
+                                      if (f <= s.e.r)
+                                        for (var u = s.s.c; u <= s.e.c; ++u) {
+                                          f === s.s.r && (o[u] = re(u)),
+                                            (a = o[u] + i);
+                                          var d = c ? (t[f] || [])[u] : t[a];
+                                          if (!d) {
+                                            h = !1;
+                                            continue;
+                                          }
+                                          h = (function (e, t, r, n, a, s, i) {
+                                            if (void 0 === t.v) return !1;
+                                            var o,
+                                              c,
+                                              l,
+                                              f,
+                                              h,
+                                              u,
+                                              d,
+                                              p,
+                                              m,
+                                              g,
+                                              v,
+                                              b,
+                                              E,
+                                              S,
+                                              w,
+                                              B,
+                                              C,
+                                              T,
+                                              _,
+                                              x,
+                                              k,
+                                              A,
+                                              I,
+                                              y,
+                                              R = "";
+                                            switch (t.t) {
+                                              case "b":
+                                                R = t.v ? "1" : "0";
+                                                break;
+                                              case "d":
+                                                ((t = eL(t)).z =
+                                                  t.z || ev._table[14]),
+                                                  (t.v = eI(eN(t.v))),
+                                                  (t.t = "n");
+                                                break;
+                                              case "n":
+                                              case "e":
+                                                R = "" + t.v;
+                                                break;
+                                              default:
+                                                R = t.v;
+                                            }
+                                            var F = { r: r, c: n };
+                                            switch (
+                                              ((F.s = s_(a.cellXfs, t, a)),
+                                              t.l &&
+                                                s["!links"].push([rr(F), t.l]),
+                                              t.c &&
+                                                s["!comments"].push([
+                                                  rr(F),
+                                                  t.c,
+                                                ]),
+                                              t.t)
+                                            ) {
+                                              case "s":
+                                              case "str":
+                                                return (
+                                                  a.bookSST
+                                                    ? ((R = sB(
+                                                        a.Strings,
+                                                        t.v,
+                                                        a.revStrings
+                                                      )),
+                                                      (F.t = "s"),
+                                                      (F.v = R),
+                                                      i)
+                                                      ? t2(
+                                                          e,
+                                                          "BrtShortIsst",
+                                                          (null == o &&
+                                                            (o = tq(8)),
+                                                          rb(F, o),
+                                                          o.write_shift(4, F.v),
+                                                          o)
+                                                        )
+                                                      : t2(
+                                                          e,
+                                                          "BrtCellIsst",
+                                                          (null == c &&
+                                                            (c = tq(12)),
+                                                          rg(F, c),
+                                                          c.write_shift(4, F.v),
+                                                          c)
+                                                        )
+                                                    : ((F.t = "str"), i)
+                                                      ? t2(
+                                                          e,
+                                                          "BrtShortSt",
+                                                          ((l = t),
+                                                          null == f &&
+                                                            (f = tq(
+                                                              8 + 4 * l.v.length
+                                                            )),
+                                                          rb(F, f),
+                                                          rd(l.v, f),
+                                                          f.length > f.l
+                                                            ? f.slice(0, f.l)
+                                                            : f)
+                                                        )
+                                                      : t2(
+                                                          e,
+                                                          "BrtCellSt",
+                                                          ((h = t),
+                                                          null == u &&
+                                                            (u = tq(
+                                                              12 +
+                                                                4 * h.v.length
+                                                            )),
+                                                          rg(F, u),
+                                                          rd(h.v, u),
+                                                          u.length > u.l
+                                                            ? u.slice(0, u.l)
+                                                            : u)
+                                                        ),
+                                                  !0
+                                                );
+                                              case "n":
+                                                return (
+                                                  t.v == (0 | t.v) &&
+                                                  t.v > -1e3 &&
+                                                  t.v < 1e3
+                                                    ? i
+                                                      ? t2(
+                                                          e,
+                                                          "BrtShortRk",
+                                                          ((d = t),
+                                                          null == p &&
+                                                            (p = tq(8)),
+                                                          rb(F, p),
+                                                          rB(d.v, p),
+                                                          p)
+                                                        )
+                                                      : t2(
+                                                          e,
+                                                          "BrtCellRk",
+                                                          ((m = t),
+                                                          null == g &&
+                                                            (g = tq(12)),
+                                                          rg(F, g),
+                                                          rB(m.v, g),
+                                                          g)
+                                                        )
+                                                    : i
+                                                      ? t2(
+                                                          e,
+                                                          "BrtShortReal",
+                                                          ((v = t),
+                                                          null == b &&
+                                                            (b = tq(12)),
+                                                          rb(F, b),
+                                                          rx(v.v, b),
+                                                          b)
+                                                        )
+                                                      : t2(
+                                                          e,
+                                                          "BrtCellReal",
+                                                          ((E = t),
+                                                          null == S &&
+                                                            (S = tq(16)),
+                                                          rg(F, S),
+                                                          rx(E.v, S),
+                                                          S)
+                                                        ),
+                                                  !0
+                                                );
+                                              case "b":
+                                                return (
+                                                  ((F.t = "b"), i)
+                                                    ? t2(
+                                                        e,
+                                                        "BrtShortBool",
+                                                        ((w = t),
+                                                        null == B &&
+                                                          (B = tq(5)),
+                                                        rb(F, B),
+                                                        B.write_shift(
+                                                          1,
+                                                          w.v ? 1 : 0
+                                                        ),
+                                                        B)
+                                                      )
+                                                    : t2(
+                                                        e,
+                                                        "BrtCellBool",
+                                                        ((C = t),
+                                                        null == T &&
+                                                          (T = tq(9)),
+                                                        rg(F, T),
+                                                        T.write_shift(
+                                                          1,
+                                                          C.v ? 1 : 0
+                                                        ),
+                                                        T)
+                                                      ),
+                                                  !0
+                                                );
+                                              case "e":
+                                                return (
+                                                  ((F.t = "e"), i)
+                                                    ? t2(
+                                                        e,
+                                                        "BrtShortError",
+                                                        ((_ = t),
+                                                        null == x &&
+                                                          (x = tq(8)),
+                                                        rb(F, x),
+                                                        x.write_shift(1, _.v),
+                                                        x.write_shift(2, 0),
+                                                        x.write_shift(1, 0),
+                                                        x)
+                                                      )
+                                                    : t2(
+                                                        e,
+                                                        "BrtCellError",
+                                                        ((k = t),
+                                                        null == A &&
+                                                          (A = tq(9)),
+                                                        rg(F, A),
+                                                        A.write_shift(1, k.v),
+                                                        A)
+                                                      ),
+                                                  !0
+                                                );
+                                            }
+                                            return (
+                                              i
+                                                ? t2(
+                                                    e,
+                                                    "BrtShortBlank",
+                                                    (null == I && (I = tq(4)),
+                                                    rb(F, I))
+                                                  )
+                                                : t2(
+                                                    e,
+                                                    "BrtCellBlank",
+                                                    (null == y && (y = tq(8)),
+                                                    rg(F, y))
+                                                  ),
+                                              !0
+                                            );
+                                          })(e, d, f, u, n, t, h);
+                                        }
+                                    }
+                                    t2(e, "BrtEndSheetData");
+                                  })(l, h, 0, t, r),
+                                  (function (e, t) {
+                                    if (t["!protect"]) {
+                                      var r, n;
+                                      t2(
+                                        e,
+                                        "BrtSheetProtection",
+                                        ((r = t["!protect"]),
+                                        null == n && (n = tq(66)),
+                                        n.write_shift(
+                                          2,
+                                          r.password ? ah(r.password) : 0
+                                        ),
+                                        n.write_shift(4, 1),
+                                        [
+                                          ["objects", !1],
+                                          ["scenarios", !1],
+                                          ["formatCells", !0],
+                                          ["formatColumns", !0],
+                                          ["formatRows", !0],
+                                          ["insertColumns", !0],
+                                          ["insertRows", !0],
+                                          ["insertHyperlinks", !0],
+                                          ["deleteColumns", !0],
+                                          ["deleteRows", !0],
+                                          ["selectLockedCells", !1],
+                                          ["sort", !0],
+                                          ["autoFilter", !0],
+                                          ["pivotTables", !0],
+                                          ["selectUnlockedCells", !1],
+                                        ].forEach(function (e) {
+                                          e[1]
+                                            ? n.write_shift(
+                                                4,
+                                                null == r[e[0]] || r[e[0]]
+                                                  ? 0
+                                                  : 1
+                                              )
+                                            : n.write_shift(
+                                                4,
+                                                null != r[e[0]] && r[e[0]]
+                                                  ? 0
+                                                  : 1
+                                              );
+                                        }),
+                                        n)
+                                      );
+                                    }
+                                  })(l, h),
+                                  (function (e, t, r, n) {
+                                    if (t["!autofilter"]) {
+                                      var a = t["!autofilter"],
+                                        s =
+                                          "string" == typeof a.ref
+                                            ? a.ref
+                                            : ra(a.ref);
+                                      r.Workbook ||
+                                        (r.Workbook = { Sheets: [] }),
+                                        r.Workbook.Names ||
+                                          (r.Workbook.Names = []);
+                                      var i = r.Workbook.Names,
+                                        o = rn(s);
+                                      o.s.r == o.e.r &&
+                                        ((o.e.r = rn(t["!ref"]).e.r),
+                                        (s = ra(o)));
+                                      for (var c = 0; c < i.length; ++c) {
+                                        var l = i[c];
+                                        if (
+                                          "_xlnm._FilterDatabase" == l.Name &&
+                                          l.Sheet == n
+                                        ) {
+                                          l.Ref =
+                                            "'" + r.SheetNames[n] + "'!" + s;
+                                          break;
+                                        }
+                                      }
+                                      c == i.length &&
+                                        i.push({
+                                          Name: "_xlnm._FilterDatabase",
+                                          Sheet: n,
+                                          Ref: "'" + r.SheetNames[n] + "'!" + s,
+                                        }),
+                                        t2(e, "BrtBeginAFilter", rT(rs(s))),
+                                        t2(e, "BrtEndAFilter");
+                                    }
+                                  })(l, h, r, e),
+                                  (function (e, t) {
+                                    if (t && t["!merges"]) {
+                                      var r, n;
+                                      t2(
+                                        e,
+                                        "BrtBeginMergeCells",
+                                        ((r = t["!merges"].length),
+                                        null == n && (n = tq(4)),
+                                        n.write_shift(4, r),
+                                        n)
+                                      ),
+                                        t["!merges"].forEach(function (t) {
+                                          t2(e, "BrtMergeCell", rT(t));
+                                        }),
+                                        t2(e, "BrtEndMergeCells");
+                                    }
+                                  })(l, h),
+                                  h["!links"].forEach(function (e) {
+                                    if (e[1].Target) {
+                                      var t,
+                                        r,
+                                        a = rZ(
+                                          n,
+                                          -1,
+                                          e[1].Target.replace(/#.*$/, ""),
+                                          rj.HLINK
+                                        );
+                                      t2(
+                                        l,
+                                        "BrtHLink",
+                                        ((t = tq(
+                                          50 +
+                                            4 *
+                                              (e[1].Target.length +
+                                                (e[1].Tooltip || "").length)
+                                        )),
+                                        rT({ s: rt(e[0]), e: rt(e[0]) }, t),
+                                        rS("rId" + a, t),
+                                        rd(
+                                          (-1 == (r = e[1].Target.indexOf("#"))
+                                            ? ""
+                                            : e[1].Target.slice(r + 1)) || "",
+                                          t
+                                        ),
+                                        rd(e[1].Tooltip || "", t),
+                                        rd("", t),
+                                        t.slice(0, t.l))
+                                      );
+                                    }
+                                  }),
+                                  delete h["!links"],
+                                  h["!margins"] &&
+                                    t2(
+                                      l,
+                                      "BrtMargins",
+                                      ((o = h["!margins"]),
+                                      null == c && (c = tq(48)),
+                                      sT(o),
+                                      sX.forEach(function (e) {
+                                        rx(o[e], c);
+                                      }),
+                                      c)
+                                    ),
+                                  (!t || t.ignoreEC || void 0 == t.ignoreEC) &&
+                                    (function (e, t) {
+                                      if (t && t["!ref"]) {
+                                        var r, n;
+                                        t2(e, "BrtBeginCellIgnoreECs"),
+                                          t2(
+                                            e,
+                                            "BrtCellIgnoreEC",
+                                            ((r = rs(t["!ref"])),
+                                            (n = tq(24)).write_shift(4, 4),
+                                            n.write_shift(4, 1),
+                                            rT(r, n),
+                                            n)
+                                          ),
+                                          t2(e, "BrtEndCellIgnoreECs");
+                                      }
+                                    })(l, h),
+                                  (function (e, t, r, n) {
+                                    if (t["!comments"].length > 0) {
+                                      var a = rZ(
+                                        n,
+                                        -1,
+                                        "../drawings/vmlDrawing" +
+                                          (r + 1) +
+                                          ".vml",
+                                        rj.VML
+                                      );
+                                      t2(e, "BrtLegacyDrawing", rS("rId" + a)),
+                                        (t["!legacy"] = a);
+                                    }
+                                  })(l, h, e, n),
+                                  t2(l, "BrtEndSheet"),
+                                  l.end()
+                                );
+                              }
+                            : function (e, t, r, n) {
+                                var a,
+                                  s = [eJ, sW],
+                                  i = r.SheetNames[e],
+                                  o = 0,
+                                  c = "",
+                                  l = r.Sheets[i];
+                                null == l && (l = {});
+                                var f = l["!ref"] || "A1",
+                                  h = rs(f);
+                                if (h.e.c > 16383 || h.e.r > 1048575) {
+                                  if (t.WTF)
+                                    throw Error(
+                                      "Range " +
+                                        f +
+                                        " exceeds format limit A1:XFD1048576"
+                                    );
+                                  (h.e.c = Math.min(h.e.c, 16383)),
+                                    (h.e.r = Math.min(h.e.c, 1048575)),
+                                    (f = ra(h));
+                                }
+                                n || (n = {}), (l["!comments"] = []);
+                                var u = [];
+                                (function (e, t, r, n, a) {
+                                  var s = !1,
+                                    i = {},
+                                    o = null;
+                                  if ("xlsx" !== n.bookType && t.vbaraw) {
+                                    var c = t.SheetNames[r];
+                                    try {
+                                      t.Workbook &&
+                                        (c =
+                                          t.Workbook.Sheets[r].CodeName || c);
+                                    } catch (e) {}
+                                    (s = !0), (i.codeName = ti(e9(c)));
+                                  }
+                                  if (e && e["!outline"]) {
+                                    var l = {
+                                      summaryBelow: 1,
+                                      summaryRight: 1,
+                                    };
+                                    e["!outline"].above && (l.summaryBelow = 0),
+                                      e["!outline"].left &&
+                                        (l.summaryRight = 0),
+                                      (o =
+                                        (o || "") + tE("outlinePr", null, l));
+                                  }
+                                  (s || o) &&
+                                    (a[a.length] = tE("sheetPr", o, i));
+                                })(l, r, e, t, s),
+                                  (s[s.length] = tE("dimension", null, {
+                                    ref: f,
+                                  })),
+                                  (s[s.length] =
+                                    ((d = { workbookViewId: "0" }),
+                                    (((r || {}).Workbook || {}).Views ||
+                                      [])[0] &&
+                                      (d.rightToLeft = r.Workbook.Views[0].RTL
+                                        ? "1"
+                                        : "0"),
+                                    tE(
+                                      "sheetViews",
+                                      tE("sheetView", null, d),
+                                      {}
+                                    ))),
+                                  t.sheetFormat &&
+                                    (s[s.length] = tE("sheetFormatPr", null, {
+                                      defaultRowHeight:
+                                        t.sheetFormat.defaultRowHeight || "16",
+                                      baseColWidth:
+                                        t.sheetFormat.baseColWidth || "10",
+                                      outlineLevelRow:
+                                        t.sheetFormat.outlineLevelRow || "7",
+                                    })),
+                                  null != l["!cols"] &&
+                                    l["!cols"].length > 0 &&
+                                    (s[s.length] = (function (e, t) {
+                                      for (
+                                        var r, n = ["<cols>"], a = 0;
+                                        a != t.length;
+                                        ++a
+                                      )
+                                        (r = t[a]) &&
+                                          (n[n.length] = tE(
+                                            "col",
+                                            null,
+                                            sC(a, r)
+                                          ));
+                                      return (
+                                        (n[n.length] = "</cols>"), n.join("")
+                                      );
+                                    })(0, l["!cols"])),
+                                  (s[(o = s.length)] = "<sheetData/>"),
+                                  (l["!links"] = []),
+                                  null != l["!ref"] &&
+                                    (c = (function (e, t, r, n) {
+                                      var a,
+                                        s,
+                                        i = [],
+                                        o = [],
+                                        c = rs(e["!ref"]),
+                                        l = "",
+                                        f = "",
+                                        h = [],
+                                        u = 0,
+                                        d = 0,
+                                        p = e["!rows"],
+                                        m = Array.isArray(e),
+                                        g = { r: f },
+                                        v = -1;
+                                      for (d = c.s.c; d <= c.e.c; ++d)
+                                        h[d] = re(d);
+                                      for (u = c.s.r; u <= c.e.r; ++u) {
+                                        for (
+                                          o = [], f = t7(u), d = c.s.c;
+                                          d <= c.e.c;
+                                          ++d
+                                        ) {
+                                          a = h[d] + f;
+                                          var b = m ? (e[u] || [])[d] : e[a];
+                                          void 0 !== b &&
+                                            null !=
+                                              (l = (function (e, t, r, n) {
+                                                if (
+                                                  (void 0 === e.v &&
+                                                    "string" != typeof e.f) ||
+                                                  "z" === e.t
+                                                )
+                                                  return "";
+                                                var a = "",
+                                                  s = e.t,
+                                                  i = e.v;
+                                                if ("z" !== e.t)
+                                                  switch (e.t) {
+                                                    case "b":
+                                                      a = e.v ? "1" : "0";
+                                                      break;
+                                                    case "n":
+                                                      a = "" + e.v;
+                                                      break;
+                                                    case "e":
+                                                      a = rL[e.v];
+                                                      break;
+                                                    case "d":
+                                                      n && n.cellDates
+                                                        ? (a = eN(
+                                                            e.v,
+                                                            -1
+                                                          ).toISOString())
+                                                        : (((e = eL(e)).t =
+                                                            "n"),
+                                                          (a =
+                                                            "" +
+                                                            (e.v = eI(
+                                                              eN(e.v)
+                                                            )))),
+                                                        void 0 === e.z &&
+                                                          (e.z = ev._table[14]);
+                                                      break;
+                                                    default:
+                                                      a = e.v;
+                                                  }
+                                                var o = tv("v", e9(a)),
+                                                  c = { r: t },
+                                                  l = s_(n.cellXfs, e, n);
+                                                switch (
+                                                  (0 !== l && (c.s = l), e.t)
+                                                ) {
+                                                  case "n":
+                                                  case "z":
+                                                    break;
+                                                  case "d":
+                                                    c.t = "d";
+                                                    break;
+                                                  case "b":
+                                                    c.t = "b";
+                                                    break;
+                                                  case "e":
+                                                    c.t = "e";
+                                                    break;
+                                                  default:
+                                                    if (null == e.v) {
+                                                      delete e.t;
+                                                      break;
+                                                    }
+                                                    if (n && n.bookSST) {
+                                                      (o = tv(
+                                                        "v",
+                                                        "" +
+                                                          sB(
+                                                            n.Strings,
+                                                            e.v,
+                                                            n.revStrings
+                                                          )
+                                                      )),
+                                                        (c.t = "s");
+                                                      break;
+                                                    }
+                                                    c.t = "str";
+                                                }
+                                                if (
+                                                  (e.t != s &&
+                                                    ((e.t = s), (e.v = i)),
+                                                  "string" == typeof e.f && e.f)
+                                                ) {
+                                                  var f =
+                                                    e.F &&
+                                                    e.F.slice(0, t.length) == t
+                                                      ? { t: "array", ref: e.F }
+                                                      : null;
+                                                  o =
+                                                    tE("f", e9(e.f), f) +
+                                                    (null != e.v ? o : "");
+                                                }
+                                                return (
+                                                  e.l &&
+                                                    r["!links"].push([t, e.l]),
+                                                  e.c &&
+                                                    r["!comments"].push([
+                                                      t,
+                                                      e.c,
+                                                    ]),
+                                                  tE("c", o, c)
+                                                );
+                                              })(b, a, e, t, r, n)) &&
+                                            o.push(l);
+                                        }
+                                        (o.length > 0 || (p && p[u])) &&
+                                          ((g = { r: f }),
+                                          p &&
+                                            p[u] &&
+                                            ((s = p[u]).hidden &&
+                                              (g.hidden = 1),
+                                            (v = -1),
+                                            s.hpx
+                                              ? (v = a_(s.hpx))
+                                              : s.hpt && (v = s.hpt),
+                                            v > -1 &&
+                                              ((g.ht = v),
+                                              (g.customHeight = 1)),
+                                            s.level &&
+                                              (g.outlineLevel = s.level)),
+                                          (i[i.length] = tE(
+                                            "row",
+                                            o.join(""),
+                                            g
+                                          )));
+                                      }
+                                      if (p)
+                                        for (; u < p.length; ++u)
+                                          p &&
+                                            p[u] &&
+                                            ((g = { r: u + 1 }),
+                                            (s = p[u]).hidden && (g.hidden = 1),
+                                            (v = -1),
+                                            s.hpx
+                                              ? (v = a_(s.hpx))
+                                              : s.hpt && (v = s.hpt),
+                                            v > -1 &&
+                                              ((g.ht = v),
+                                              (g.customHeight = 1)),
+                                            s.level &&
+                                              (g.outlineLevel = s.level),
+                                            (i[i.length] = tE("row", "", g)));
+                                      return i.join("");
+                                    })(l, t, e, r, n)).length > 0 &&
+                                    (s[s.length] = c),
+                                  s.length > o + 1 &&
+                                    ((s[s.length] = "</sheetData>"),
+                                    (s[o] = s[o].replace("/>", ">"))),
+                                  null != l["!protect"] &&
+                                    (s[s.length] =
+                                      ((p = l["!protect"]),
+                                      (m = { sheet: 1 }),
+                                      sM.forEach(function (e) {
+                                        null != p[e] && p[e] && (m[e] = "1");
+                                      }),
+                                      sL.forEach(function (e) {
+                                        null == p[e] || p[e] || (m[e] = "0");
+                                      }),
+                                      p.password &&
+                                        (m.password = ah(p.password)
+                                          .toString(16)
+                                          .toUpperCase()),
+                                      tE("sheetProtection", null, m))),
+                                  null != l["!autofilter"] &&
+                                    (s[s.length] = (function (e, t, r, n) {
+                                      var a =
+                                        "string" == typeof e.ref
+                                          ? e.ref
+                                          : ra(e.ref);
+                                      r.Workbook ||
+                                        (r.Workbook = { Sheets: [] }),
+                                        r.Workbook.Names ||
+                                          (r.Workbook.Names = []);
+                                      var s = r.Workbook.Names,
+                                        i = rn(a);
+                                      i.s.r == i.e.r &&
+                                        ((i.e.r = rn(t["!ref"]).e.r),
+                                        (a = ra(i)));
+                                      for (var o = 0; o < s.length; ++o) {
+                                        var c = s[o];
+                                        if (
+                                          "_xlnm._FilterDatabase" == c.Name &&
+                                          c.Sheet == n
+                                        ) {
+                                          c.Ref =
+                                            "'" + r.SheetNames[n] + "'!" + a;
+                                          break;
+                                        }
+                                      }
+                                      return (
+                                        o == s.length &&
+                                          s.push({
+                                            Name: "_xlnm._FilterDatabase",
+                                            Sheet: n,
+                                            Ref:
+                                              "'" + r.SheetNames[n] + "'!" + a,
+                                          }),
+                                        tE("autoFilter", null, { ref: a })
+                                      );
+                                    })(l["!autofilter"], l, r, e)),
+                                  null != l["!merges"] &&
+                                    l["!merges"].length > 0 &&
+                                    (s[s.length] = (function (e) {
+                                      if (0 === e.length) return "";
+                                      for (
+                                        var t =
+                                            '<mergeCells count="' +
+                                            e.length +
+                                            '">',
+                                          r = 0;
+                                        r != e.length;
+                                        ++r
+                                      )
+                                        t +=
+                                          '<mergeCell ref="' + ra(e[r]) + '"/>';
+                                      return t + "</mergeCells>";
+                                    })(l["!merges"]));
+                                var d,
+                                  p,
+                                  m,
+                                  g,
+                                  v = -1,
+                                  b = -1;
+                                return (
+                                  l["!links"].length > 0 &&
+                                    ((s[s.length] = "<hyperlinks>"),
+                                    l["!links"].forEach(function (e) {
+                                      e[1].Target &&
+                                        ((g = { ref: e[0] }),
+                                        "#" != e[1].Target.charAt(0) &&
+                                          ((b = rZ(
+                                            n,
+                                            -1,
+                                            e9(e[1].Target).replace(/#.*$/, ""),
+                                            rj.HLINK
+                                          )),
+                                          (g["r:id"] = "rId" + b)),
+                                        (v = e[1].Target.indexOf("#")) > -1 &&
+                                          (g.location = e9(
+                                            e[1].Target.slice(v + 1)
+                                          )),
+                                        e[1].Tooltip &&
+                                          (g.tooltip = e9(e[1].Tooltip)),
+                                        (s[s.length] = tE(
+                                          "hyperlink",
+                                          null,
+                                          g
+                                        )));
+                                    }),
+                                    (s[s.length] = "</hyperlinks>")),
+                                  delete l["!links"],
+                                  null != l["!margins"] &&
+                                    (s[s.length] =
+                                      (sT((a = l["!margins"])),
+                                      tE("pageMargins", null, a))),
+                                  (!t || t.ignoreEC || void 0 == t.ignoreEC) &&
+                                    (s[s.length] = tv(
+                                      "ignoredErrors",
+                                      tE("ignoredError", null, {
+                                        numberStoredAsText: 1,
+                                        sqref: f,
+                                      })
+                                    )),
+                                  u.length > 0 &&
+                                    ((b = rZ(
+                                      n,
+                                      -1,
+                                      "../drawings/drawing" + (e + 1) + ".xml",
+                                      rj.DRAW
+                                    )),
+                                    (s[s.length] = tE("drawing", null, {
+                                      "r:id": "rId" + b,
+                                    })),
+                                    (l["!drawing"] = u)),
+                                  l["!comments"].length > 0 &&
+                                    ((b = rZ(
+                                      n,
+                                      -1,
+                                      "../drawings/vmlDrawing" +
+                                        (e + 1) +
+                                        ".vml",
+                                      rj.VML
+                                    )),
+                                    (s[s.length] = tE("legacyDrawing", null, {
+                                      "r:id": "rId" + b,
+                                    })),
+                                    (l["!legacy"] = b)),
+                                  s.length > 1 &&
+                                    ((s[s.length] = "</worksheet>"),
+                                    (s[1] = s[1].replace("/>", ">"))),
+                                  s.join("")
+                                );
+                              })(y, F, e, T))
                         ),
-                        v.sheets.push(E),
-                        rq(
-                          t.wbrels,
+                        b.sheets.push(S),
+                        rZ(
+                          r.wbrels,
                           -1,
-                          "worksheets/sheet" + S + "." + m,
-                          r$.WS[0]
+                          "worksheets/sheet" + w + "." + g,
+                          rj.WS[0]
                         ),
-                        T)
+                        _)
                       ) {
-                        var x = T["!comments"],
-                          _ = !1;
+                        var x = _["!comments"],
+                          k = !1;
                         if (x && x.length > 0) {
-                          var k,
-                            A,
+                          var A,
                             I,
                             y,
                             R,
                             F,
-                            D = "xl/comments" + S + "." + m;
-                          eK(
-                            b,
                             D,
-                            ((F = t), (".bin" === D.slice(-4) ? a1 : aq)(x, F))
-                          ),
-                            v.comments.push(D),
-                            rq(B, -1, "../comments" + S + "." + m, r$.CMNT),
-                            (_ = !0);
-                        }
-                        T["!legacy"] &&
-                          _ &&
+                            O = "xl/comments" + w + "." + g;
                           eK(
-                            b,
-                            "xl/drawings/vmlDrawing" + S + ".vml",
+                            E,
+                            O,
+                            ((D = r),
+                            (".bin" === O.slice(-4)
+                              ? function (e) {
+                                  var t = t0(),
+                                    r = [];
+                                  return (
+                                    t2(t, "BrtBeginComments"),
+                                    t2(t, "BrtBeginCommentAuthors"),
+                                    e.forEach(function (e) {
+                                      e[1].forEach(function (e) {
+                                        r.indexOf(e.a) > -1 ||
+                                          (r.push(e.a.slice(0, 54)),
+                                          t2(
+                                            t,
+                                            "BrtCommentAuthor",
+                                            rd(e.a.slice(0, 54))
+                                          ));
+                                      });
+                                    }),
+                                    t2(t, "BrtEndCommentAuthors"),
+                                    t2(t, "BrtBeginCommentList"),
+                                    e.forEach(function (e) {
+                                      e[1].forEach(function (n) {
+                                        var a, s, i, o, c, l;
+                                        (n.iauthor = r.indexOf(n.a)),
+                                          t2(
+                                            t,
+                                            "BrtBeginComment",
+                                            ((a = [
+                                              { s: rt(e[0]), e: rt(e[0]) },
+                                              n,
+                                            ]),
+                                            null == s && (s = tq(36)),
+                                            s.write_shift(4, a[1].iauthor),
+                                            rT(a[0], s),
+                                            s.write_shift(4, 0),
+                                            s.write_shift(4, 0),
+                                            s.write_shift(4, 0),
+                                            s.write_shift(4, 0),
+                                            s)
+                                          ),
+                                          n.t &&
+                                            n.t.length > 0 &&
+                                            t2(
+                                              t,
+                                              "BrtCommentText",
+                                              ((o = !1),
+                                              null == i &&
+                                                ((o = !0),
+                                                (i = tq(23 + 4 * n.t.length))),
+                                              i.write_shift(1, 1),
+                                              rd(n.t, i),
+                                              i.write_shift(4, 1),
+                                              (c = { ich: 0, ifnt: 0 }),
+                                              (l = i) || (l = tq(4)),
+                                              l.write_shift(2, c.ich || 0),
+                                              l.write_shift(2, c.ifnt || 0),
+                                              o ? i.slice(0, i.l) : i)
+                                            ),
+                                          t2(t, "BrtEndComment"),
+                                          delete n.iauthor;
+                                      });
+                                    }),
+                                    t2(t, "BrtEndCommentList"),
+                                    t2(t, "BrtEndComments"),
+                                    t.end()
+                                  );
+                                }
+                              : function (e) {
+                                  var t = [eJ, a$],
+                                    r = [];
+                                  return (
+                                    t.push("<authors>"),
+                                    e.forEach(function (e) {
+                                      e[1].forEach(function (e) {
+                                        var n = e9(e.a);
+                                        r.indexOf(n) > -1 ||
+                                          (r.push(n),
+                                          t.push("<author>" + n + "</author>"));
+                                      });
+                                    }),
+                                    t.push("</authors>"),
+                                    t.push("<commentList>"),
+                                    e.forEach(function (e) {
+                                      e[1].forEach(function (n) {
+                                        t.push(
+                                          '<comment ref="' +
+                                            e[0] +
+                                            '" authorId="' +
+                                            r.indexOf(e9(n.a)) +
+                                            '"><text>'
+                                        ),
+                                          t.push(
+                                            tv("t", null == n.t ? "" : e9(n.t))
+                                          ),
+                                          t.push("</text></comment>");
+                                      });
+                                    }),
+                                    t.push("</commentList>"),
+                                    t.length > 2 &&
+                                      ((t[t.length] = "</comments>"),
+                                      (t[1] = t[1].replace("/>", ">"))),
+                                    t.join("")
+                                  );
+                                })(x, D))
+                          ),
+                            b.comments.push(O),
+                            rZ(T, -1, "../comments" + w + "." + g, rj.CMNT),
+                            (k = !0);
+                        }
+                        _["!legacy"] &&
+                          k &&
+                          eK(
+                            E,
+                            "xl/drawings/vmlDrawing" + w + ".vml",
                             (function (e, t) {
                               for (
                                 var r = [21600, 21600],
@@ -23887,10 +23676,10 @@
                                   ].join(","),
                                   a = [
                                     tE("xml", null, {
-                                      "xmlns:v": tC.v,
-                                      "xmlns:o": tC.o,
-                                      "xmlns:x": tC.x,
-                                      "xmlns:mv": tC.mv,
+                                      "xmlns:v": tB.v,
+                                      "xmlns:o": tB.o,
+                                      "xmlns:x": tB.x,
+                                      "xmlns:mv": tB.mv,
                                     }).replace(/\/>/, ">"),
                                     tE(
                                       "o:shapelayout",
@@ -23919,12 +23708,12 @@
                                       }
                                     ),
                                   ];
-                                aJ < 1e3 * e;
+                                aj < 1e3 * e;
                               )
-                                aJ += 1e3;
+                                aj += 1e3;
                               return (
                                 t.forEach(function (e) {
-                                  var t = rr(e[0]),
+                                  var t = rt(e[0]),
                                     r = { color2: "#BEFF82", type: "gradient" };
                                   "gradient" == r.type && (r.angle = "-180");
                                   var n =
@@ -23935,11 +23724,11 @@
                                           })
                                         : null,
                                     s = tE("v:fill", n, r);
-                                  ++aJ,
+                                  ++aj,
                                     (a = a.concat([
                                       "<v:shape" +
                                         tb({
-                                          id: "_x0000_s" + aJ,
+                                          id: "_x0000_s" + aj,
                                           type: "#_x0000_t202",
                                           style:
                                             "position:absolute; margin-left:80pt;margin-top:5pt;width:104pt;height:64pt;z-index:10" +
@@ -23986,150 +23775,635 @@
                                 a.push("</xml>"),
                                 a.join("")
                               );
-                            })(S, T["!comments"])
+                            })(w, _["!comments"])
                           ),
-                          delete T["!comments"],
-                          delete T["!legacy"];
+                          delete _["!comments"],
+                          delete _["!legacy"];
                       }
-                      B["!id"].rId1 && eK(b, rK(E), rJ(B));
+                      T["!id"].rId1 && eK(E, r$(S), rQ(T));
                     }
                     return (
-                      null != t.Strings &&
-                        t.Strings.length > 0 &&
+                      null != r.Strings &&
+                        r.Strings.length > 0 &&
                         (eK(
-                          b,
-                          (E = "xl/sharedStrings." + m),
-                          ((r = t.Strings),
-                          (n = E),
-                          (a = t),
-                          (".bin" === n.slice(-4) ? al : ao)(r, a))
+                          E,
+                          (S = "xl/sharedStrings." + g),
+                          ((n = r.Strings),
+                          (a = S),
+                          (s = r),
+                          (".bin" === a.slice(-4)
+                            ? function (e) {
+                                var t,
+                                  r = t0();
+                                t2(
+                                  r,
+                                  "BrtBeginSst",
+                                  (t || (t = tq(8)),
+                                  t.write_shift(4, e.Count),
+                                  t.write_shift(4, e.Unique),
+                                  t)
+                                );
+                                for (var n = 0; n < e.length; ++n)
+                                  t2(r, "BrtSSTItem", ai(e[n]));
+                                return t2(r, "BrtEndSst"), r.end();
+                              }
+                            : function (e, t) {
+                                if (!t.bookSST) return "";
+                                var r = [eJ];
+                                r[r.length] = tE("sst", null, {
+                                  xmlns: tw.main[0],
+                                  count: e.Count,
+                                  uniqueCount: e.Unique,
+                                });
+                                for (var n = 0; n != e.length; ++n)
+                                  if (null != e[n]) {
+                                    var a = e[n],
+                                      s = "<si>";
+                                    a.r
+                                      ? (s += a.r)
+                                      : ((s += "<t"),
+                                        a.t || (a.t = ""),
+                                        a.t.match(as) &&
+                                          (s += ' xml:space="preserve"'),
+                                        (s += ">" + e9(a.t) + "</t>")),
+                                      (s += "</si>"),
+                                      (r[r.length] = s);
+                                  }
+                                return (
+                                  r.length > 2 &&
+                                    ((r[r.length] = "</sst>"),
+                                    (r[1] = r[1].replace("/>", ">"))),
+                                  r.join("")
+                                );
+                              })(n, s))
                         ),
-                        v.strs.push(E),
-                        rq(t.wbrels, -1, "sharedStrings." + m, r$.SST)),
+                        b.strs.push(S),
+                        rZ(r.wbrels, -1, "sharedStrings." + g, rj.SST)),
                       eK(
-                        b,
-                        (E = "xl/workbook." + m),
-                        ((s = E),
-                        (i = t),
-                        (".bin" === s.slice(-4) ? ir : ie)(e, i))
+                        E,
+                        (S = "xl/workbook." + g),
+                        ((i = S),
+                        (o = r),
+                        (".bin" === i.slice(-4)
+                          ? function (e, r) {
+                              var n,
+                                a,
+                                s,
+                                i = t0();
+                              return (
+                                t2(i, "BrtBeginBook"),
+                                t2(
+                                  i,
+                                  "BrtFileVersion",
+                                  (function (e, r) {
+                                    r || (r = tq(127));
+                                    for (var n = 0; 4 != n; ++n)
+                                      r.write_shift(4, 0);
+                                    return (
+                                      rd("SheetJS", r),
+                                      rd(t.version, r),
+                                      rd(t.version, r),
+                                      rd("7262", r),
+                                      r.length > r.l ? r.slice(0, r.l) : r
+                                    );
+                                  })()
+                                ),
+                                t2(
+                                  i,
+                                  "BrtWbProp",
+                                  ((n =
+                                    (e.Workbook && e.Workbook.WBProps) || null),
+                                  a || (a = tq(72)),
+                                  (s = 0),
+                                  n && n.filterPrivacy && (s |= 8),
+                                  a.write_shift(4, s),
+                                  a.write_shift(4, 0),
+                                  rd((n && n.CodeName) || "ThisWorkbook", a),
+                                  a.slice(0, a.l))
+                                ),
+                                (function (e, t) {
+                                  if (t.Workbook && t.Workbook.Sheets) {
+                                    for (
+                                      var r,
+                                        n,
+                                        a = t.Workbook.Sheets,
+                                        s = 0,
+                                        i = -1,
+                                        o = -1;
+                                      s < a.length;
+                                      ++s
+                                    )
+                                      a[s] && (a[s].Hidden || -1 != i)
+                                        ? 1 == a[s].Hidden && -1 == o && (o = s)
+                                        : (i = s);
+                                    o > i ||
+                                      (t2(e, "BrtBeginBookViews"),
+                                      t2(
+                                        e,
+                                        "BrtBookView",
+                                        ((r = i),
+                                        n || (n = tq(29)),
+                                        n.write_shift(-4, 0),
+                                        n.write_shift(-4, 460),
+                                        n.write_shift(4, 28800),
+                                        n.write_shift(4, 17600),
+                                        n.write_shift(4, 500),
+                                        n.write_shift(4, r),
+                                        n.write_shift(4, r),
+                                        n.write_shift(1, 120),
+                                        n.length > n.l ? n.slice(0, n.l) : n)
+                                      ),
+                                      t2(e, "BrtEndBookViews"));
+                                  }
+                                })(i, e, r),
+                                (function (e, t) {
+                                  t2(e, "BrtBeginBundleShs");
+                                  for (
+                                    var r = 0;
+                                    r != t.SheetNames.length;
+                                    ++r
+                                  ) {
+                                    var n = {
+                                        Hidden:
+                                          (t.Workbook &&
+                                            t.Workbook.Sheets &&
+                                            t.Workbook.Sheets[r] &&
+                                            t.Workbook.Sheets[r].Hidden) ||
+                                          0,
+                                        iTabID: r + 1,
+                                        strRelID: "rId" + (r + 1),
+                                        name: t.SheetNames[r],
+                                      },
+                                      a = void 0;
+                                    t2(
+                                      e,
+                                      "BrtBundleSh",
+                                      (a || (a = tq(127)),
+                                      a.write_shift(4, n.Hidden),
+                                      a.write_shift(4, n.iTabID),
+                                      rS(n.strRelID, a),
+                                      rd(n.name.slice(0, 31), a),
+                                      a.length > a.l ? a.slice(0, a.l) : a)
+                                    );
+                                  }
+                                  t2(e, "BrtEndBundleShs");
+                                })(i, e, r),
+                                t2(i, "BrtEndBook"),
+                                i.end()
+                              );
+                            }
+                          : function (e) {
+                              var t = [eJ];
+                              t[t.length] = s1;
+                              var r =
+                                  e.Workbook &&
+                                  (e.Workbook.Names || []).length > 0,
+                                n = { codeName: "ThisWorkbook" };
+                              e.Workbook &&
+                                e.Workbook.WBProps &&
+                                (sG.forEach(function (t) {
+                                  null != e.Workbook.WBProps[t[0]] &&
+                                    e.Workbook.WBProps[t[0]] != t[1] &&
+                                    (n[t[0]] = e.Workbook.WBProps[t[0]]);
+                                }),
+                                e.Workbook.WBProps.CodeName &&
+                                  ((n.codeName = e.Workbook.WBProps.CodeName),
+                                  delete n.CodeName)),
+                                (t[t.length] = tE("workbookPr", null, n));
+                              var a = (e.Workbook && e.Workbook.Sheets) || [],
+                                s = 0;
+                              if (a && a[0] && a[0].Hidden) {
+                                for (
+                                  s = 0, t[t.length] = "<bookViews>";
+                                  s != e.SheetNames.length &&
+                                  a[s] &&
+                                  a[s].Hidden;
+                                  ++s
+                                );
+                                s == e.SheetNames.length && (s = 0),
+                                  (t[t.length] =
+                                    '<workbookView firstSheet="' +
+                                    s +
+                                    '" activeTab="' +
+                                    s +
+                                    '"/>'),
+                                  (t[t.length] = "</bookViews>");
+                              }
+                              for (
+                                s = 0, t[t.length] = "<sheets>";
+                                s != e.SheetNames.length;
+                                ++s
+                              ) {
+                                var i = {
+                                  name: e9(e.SheetNames[s].slice(0, 31)),
+                                };
+                                if (
+                                  ((i.sheetId = "" + (s + 1)),
+                                  (i["r:id"] = "rId" + (s + 1)),
+                                  a[s])
+                                )
+                                  switch (a[s].Hidden) {
+                                    case 1:
+                                      i.state = "hidden";
+                                      break;
+                                    case 2:
+                                      i.state = "veryHidden";
+                                  }
+                                t[t.length] = tE("sheet", null, i);
+                              }
+                              return (
+                                (t[t.length] = "</sheets>"),
+                                r &&
+                                  ((t[t.length] = "<definedNames>"),
+                                  e.Workbook &&
+                                    e.Workbook.Names &&
+                                    e.Workbook.Names.forEach(function (e) {
+                                      var r = { name: e.Name };
+                                      e.Comment && (r.comment = e.Comment),
+                                        null != e.Sheet &&
+                                          (r.localSheetId = "" + e.Sheet),
+                                        e.Hidden && (r.hidden = "1"),
+                                        e.Ref &&
+                                          (t[t.length] = tE(
+                                            "definedName",
+                                            e9(e.Ref),
+                                            r
+                                          ));
+                                    }),
+                                  (t[t.length] = "</definedNames>")),
+                                t.length > 2 &&
+                                  ((t[t.length] = "</workbook>"),
+                                  (t[1] = t[1].replace("/>", ">"))),
+                                t.join("")
+                              );
+                            })(e, o))
                       ),
-                      v.workbooks.push(E),
-                      rq(t.rels, 1, E, r$.WB),
-                      eK(b, (E = "xl/theme/theme1.xml"), aQ(e.Themes, t)),
-                      v.themes.push(E),
-                      rq(t.wbrels, -1, "theme/theme1.xml", r$.THEME),
+                      b.workbooks.push(S),
+                      rZ(r.rels, 1, S, rj.WB),
+                      eK(E, (S = "xl/theme/theme1.xml"), az(e.Themes, r)),
+                      b.themes.push(S),
+                      rZ(r.wbrels, -1, "theme/theme1.xml", rj.THEME),
                       eK(
-                        b,
-                        (E = "xl/styles." + m),
-                        ((o = E),
-                        (c = t),
-                        (".bin" === o.slice(-4) ? aH : aP)(e, c))
+                        E,
+                        (S = "xl/styles." + g),
+                        ((c = S),
+                        (l = r),
+                        (".bin" === c.slice(-4)
+                          ? function (e, t) {
+                              var r,
+                                n,
+                                a,
+                                s,
+                                i,
+                                o,
+                                c,
+                                l,
+                                f,
+                                h,
+                                u,
+                                d,
+                                p,
+                                m = t0();
+                              return (
+                                t2(m, "BrtBeginStyleSheet"),
+                                (function (e, t) {
+                                  if (t) {
+                                    var r = 0;
+                                    [
+                                      [5, 8],
+                                      [23, 26],
+                                      [41, 44],
+                                      [50, 392],
+                                    ].forEach(function (e) {
+                                      for (var n = e[0]; n <= e[1]; ++n)
+                                        null != t[n] && ++r;
+                                    }),
+                                      0 != r &&
+                                        (t2(e, "BrtBeginFmts", rh(r)),
+                                        [
+                                          [5, 8],
+                                          [23, 26],
+                                          [41, 44],
+                                          [50, 392],
+                                        ].forEach(function (r) {
+                                          for (var n = r[0]; n <= r[1]; ++n)
+                                            null != t[n] &&
+                                              t2(
+                                                e,
+                                                "BrtFmt",
+                                                (function (e, t, r) {
+                                                  r ||
+                                                    (r = tq(6 + 4 * t.length)),
+                                                    r.write_shift(2, e),
+                                                    rd(t, r);
+                                                  var n =
+                                                    r.length > r.l
+                                                      ? r.slice(0, r.l)
+                                                      : r;
+                                                  return (
+                                                    null == r.l &&
+                                                      (r.l = r.length),
+                                                    n
+                                                  );
+                                                })(n, t[n])
+                                              );
+                                        }),
+                                        t2(e, "BrtEndFmts"));
+                                  }
+                                })(m, e.SSF),
+                                t2((r = m), "BrtBeginFonts", rh(1)),
+                                t2(
+                                  r,
+                                  "BrtFont",
+                                  ((n = {
+                                    sz: 12,
+                                    color: { theme: 1 },
+                                    name: "Calibri",
+                                    family: 2,
+                                    scheme: "minor",
+                                  }),
+                                  a || (a = tq(153)),
+                                  a.write_shift(2, 20 * n.sz),
+                                  (s = a) || (s = tq(2)),
+                                  (i =
+                                    (n.italic ? 2 : 0) |
+                                    (n.strike ? 8 : 0) |
+                                    (n.outline ? 16 : 0) |
+                                    (n.shadow ? 32 : 0) |
+                                    (n.condense ? 64 : 0) |
+                                    (n.extend ? 128 : 0)),
+                                  s.write_shift(1, i),
+                                  s.write_shift(1, 0),
+                                  a.write_shift(2, n.bold ? 700 : 400),
+                                  (o = 0),
+                                  "superscript" == n.vertAlign
+                                    ? (o = 1)
+                                    : "subscript" == n.vertAlign && (o = 2),
+                                  a.write_shift(2, o),
+                                  a.write_shift(1, n.underline || 0),
+                                  a.write_shift(1, n.family || 0),
+                                  a.write_shift(1, n.charset || 0),
+                                  a.write_shift(1, 0),
+                                  rk(n.color, a),
+                                  (c = 0),
+                                  "major" == n.scheme && (c = 1),
+                                  "minor" == n.scheme && (c = 2),
+                                  a.write_shift(1, c),
+                                  rd(n.name, a),
+                                  a.length > a.l ? a.slice(0, a.l) : a)
+                                ),
+                                t2(r, "BrtEndFonts"),
+                                t2(m, "BrtBeginFills", rh(2)),
+                                t2(m, "BrtFill", aD({ patternType: "none" })),
+                                t2(
+                                  m,
+                                  "BrtFill",
+                                  aD({ patternType: "gray125" })
+                                ),
+                                t2(m, "BrtEndFills"),
+                                t2((l = m), "BrtBeginBorders", rh(1)),
+                                t2(
+                                  l,
+                                  "BrtBorder",
+                                  (f || (f = tq(51)),
+                                  f.write_shift(1, 0),
+                                  aP(null, f),
+                                  aP(null, f),
+                                  aP(null, f),
+                                  aP(null, f),
+                                  aP(null, f),
+                                  f.length > f.l ? f.slice(0, f.l) : f)
+                                ),
+                                t2(l, "BrtEndBorders"),
+                                t2(m, "BrtBeginCellStyleXFs", rh(1)),
+                                t2(
+                                  m,
+                                  "BrtXF",
+                                  aO(
+                                    {
+                                      numFmtId: 0,
+                                      fontId: 0,
+                                      fillId: 0,
+                                      borderId: 0,
+                                    },
+                                    65535
+                                  )
+                                ),
+                                t2(m, "BrtEndCellStyleXFs"),
+                                t2(
+                                  m,
+                                  "BrtBeginCellXFs",
+                                  rh((h = t.cellXfs).length)
+                                ),
+                                h.forEach(function (e) {
+                                  t2(m, "BrtXF", aO(e, 0));
+                                }),
+                                t2(m, "BrtEndCellXFs"),
+                                t2(m, "BrtBeginStyles", rh(1)),
+                                t2(
+                                  m,
+                                  "BrtStyle",
+                                  ((u = {
+                                    xfId: 0,
+                                    builtinId: 0,
+                                    name: "Normal",
+                                  }),
+                                  d || (d = tq(52)),
+                                  d.write_shift(4, u.xfId),
+                                  d.write_shift(2, 1),
+                                  d.write_shift(1, +u.builtinId),
+                                  d.write_shift(1, 0),
+                                  rS(u.name || "", d),
+                                  d.length > d.l ? d.slice(0, d.l) : d)
+                                ),
+                                t2(m, "BrtEndStyles"),
+                                t2(m, "BrtBeginDXFs", rh(0)),
+                                t2(m, "BrtEndDXFs"),
+                                t2(
+                                  m,
+                                  "BrtBeginTableStyles",
+                                  ((p = tq(2052)).write_shift(4, 0),
+                                  rS("TableStyleMedium9", p),
+                                  rS("PivotStyleMedium4", p),
+                                  p.length > p.l ? p.slice(0, p.l) : p)
+                                ),
+                                t2(m, "BrtEndTableStyles"),
+                                t2(m, "BrtEndStyleSheet"),
+                                m.end()
+                              );
+                            }
+                          : function (e, t) {
+                              var r,
+                                n,
+                                a,
+                                s,
+                                i,
+                                o = [eJ, aR];
+                              return (
+                                e.SSF &&
+                                  null !=
+                                    ((r = e.SSF),
+                                    (n = ["<numFmts>"]),
+                                    [
+                                      [5, 8],
+                                      [23, 26],
+                                      [41, 44],
+                                      [50, 392],
+                                    ].forEach(function (e) {
+                                      for (var t = e[0]; t <= e[1]; ++t)
+                                        null != r[t] &&
+                                          (n[n.length] = tE("numFmt", null, {
+                                            numFmtId: t,
+                                            formatCode: e9(r[t]),
+                                          }));
+                                    }),
+                                    (i =
+                                      1 === n.length
+                                        ? ""
+                                        : ((n[n.length] = "</numFmts>"),
+                                          (n[0] = tE("numFmts", null, {
+                                            count: n.length - 2,
+                                          }).replace("/>", ">")),
+                                          n.join("")))) &&
+                                  (o[o.length] = i),
+                                (o[o.length] =
+                                  '<fonts count="1"><font><sz val="12"/><color theme="1"/><name val="Calibri"/><family val="2"/><scheme val="minor"/></font></fonts>'),
+                                (o[o.length] =
+                                  '<fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills>'),
+                                (o[o.length] =
+                                  '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>'),
+                                (o[o.length] =
+                                  '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'),
+                                (a = t.cellXfs),
+                                ((s = [])[s.length] = tE("cellXfs", null)),
+                                a.forEach(function (e) {
+                                  s[s.length] = tE("xf", null, e);
+                                }),
+                                (s[s.length] = "</cellXfs>"),
+                                (i =
+                                  2 === s.length
+                                    ? ""
+                                    : ((s[0] = tE("cellXfs", null, {
+                                        count: s.length - 2,
+                                      }).replace("/>", ">")),
+                                      s.join(""))) && (o[o.length] = i),
+                                (o[o.length] =
+                                  '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'),
+                                (o[o.length] = '<dxfs count="0"/>'),
+                                (o[o.length] =
+                                  '<tableStyles count="0" defaultTableStyle="TableStyleMedium9" defaultPivotStyle="PivotStyleMedium4"/>'),
+                                o.length > 2 &&
+                                  ((o[o.length] = "</styleSheet>"),
+                                  (o[1] = o[1].replace("/>", ">"))),
+                                o.join("")
+                              );
+                            })(e, l))
                       ),
-                      v.styles.push(E),
-                      rq(t.wbrels, -1, "styles." + m, r$.STY),
+                      b.styles.push(S),
+                      rZ(r.wbrels, -1, "styles." + g, rj.STY),
                       e.vbaraw &&
-                        g &&
-                        (eK(b, (E = "xl/vbaProject.bin"), e.vbaraw),
-                        v.vba.push(E),
-                        rq(t.wbrels, -1, "vbaProject.bin", r$.VBA)),
+                        v &&
+                        (eK(E, (S = "xl/vbaProject.bin"), e.vbaraw),
+                        b.vba.push(S),
+                        rZ(r.wbrels, -1, "vbaProject.bin", rj.VBA)),
                       eK(
-                        b,
+                        E,
                         "[Content_Types].xml",
-                        ((l = t),
-                        ((h = [])[h.length] = eJ),
-                        (h[h.length] = rz),
-                        (h = h.concat(rj)),
-                        (u = function (e) {
-                          v[e] &&
-                            v[e].length > 0 &&
-                            ((f = v[e][0]),
-                            (h[h.length] = tE("Override", null, {
-                              PartName: ("/" == f[0] ? "" : "/") + f,
-                              ContentType: rV[e][l.bookType || "xlsx"],
+                        ((f = r),
+                        ((u = [])[u.length] = eJ),
+                        (u[u.length] = rG),
+                        (u = u.concat(rz)),
+                        (d = function (e) {
+                          b[e] &&
+                            b[e].length > 0 &&
+                            ((h = b[e][0]),
+                            (u[u.length] = tE("Override", null, {
+                              PartName: ("/" == h[0] ? "" : "/") + h,
+                              ContentType: rW[e][f.bookType || "xlsx"],
                             })));
                         }),
-                        (d = function (e) {
-                          (v[e] || []).forEach(function (t) {
-                            h[h.length] = tE("Override", null, {
-                              PartName: ("/" == t[0] ? "" : "/") + t,
-                              ContentType: rV[e][l.bookType || "xlsx"],
-                            });
-                          });
-                        }),
                         (p = function (e) {
-                          (v[e] || []).forEach(function (t) {
-                            h[h.length] = tE("Override", null, {
+                          (b[e] || []).forEach(function (t) {
+                            u[u.length] = tE("Override", null, {
                               PartName: ("/" == t[0] ? "" : "/") + t,
-                              ContentType: rX[e][0],
+                              ContentType: rW[e][f.bookType || "xlsx"],
                             });
                           });
                         }),
-                        u("workbooks"),
-                        d("sheets"),
-                        d("charts"),
-                        p("themes"),
-                        ["strs", "styles"].forEach(u),
-                        ["coreprops", "extprops", "custprops"].forEach(p),
-                        p("vba"),
-                        p("comments"),
-                        p("drawings"),
-                        h.length > 2 &&
-                          ((h[h.length] = "</Types>"),
-                          (h[1] = h[1].replace("/>", ">"))),
-                        h.join(""))
+                        (m = function (e) {
+                          (b[e] || []).forEach(function (t) {
+                            u[u.length] = tE("Override", null, {
+                              PartName: ("/" == t[0] ? "" : "/") + t,
+                              ContentType: rV[e][0],
+                            });
+                          });
+                        }),
+                        d("workbooks"),
+                        p("sheets"),
+                        p("charts"),
+                        m("themes"),
+                        ["strs", "styles"].forEach(d),
+                        ["coreprops", "extprops", "custprops"].forEach(m),
+                        m("vba"),
+                        m("comments"),
+                        m("drawings"),
+                        u.length > 2 &&
+                          ((u[u.length] = "</Types>"),
+                          (u[1] = u[1].replace("/>", ">"))),
+                        u.join(""))
                       ),
-                      eK(b, "_rels/.rels", rJ(t.rels)),
-                      eK(b, "xl/_rels/workbook." + m + ".rels", rJ(t.wbrels)),
-                      delete t.revssf,
-                      delete t.ssf,
-                      b
+                      eK(E, "_rels/.rels", rQ(r.rels)),
+                      eK(E, "xl/_rels/workbook." + g + ".rels", rQ(r.wbrels)),
+                      delete r.revssf,
+                      delete r.ssf,
+                      E
                     );
-                  })(e, r),
-                  a = {};
-                if ((r.compression && (a.compression = "DEFLATE"), r.password))
-                  a.type = es ? "nodebuffer" : "string";
+                  })(e, n),
+                  s = {};
+                if ((n.compression && (s.compression = "DEFLATE"), n.password))
+                  s.type = es ? "nodebuffer" : "string";
                 else
-                  switch (r.type) {
+                  switch (n.type) {
                     case "base64":
-                      a.type = "base64";
+                      s.type = "base64";
                       break;
                     case "binary":
-                      a.type = "string";
+                      s.type = "string";
                       break;
                     case "string":
                       throw Error(
                         "'string' output type invalid for '" +
-                          r.bookType +
+                          n.bookType +
                           "' files"
                       );
                     case "buffer":
                     case "file":
-                      a.type = es ? "nodebuffer" : "string";
+                      s.type = es ? "nodebuffer" : "string";
                       break;
                     default:
-                      throw Error("Unrecognized type " + r.type);
+                      throw Error("Unrecognized type " + n.type);
                   }
-                var s = n.FullPaths
-                  ? eC.write(n, {
+                var i = a.FullPaths
+                  ? eB.write(a, {
                       fileType: "zip",
                       type:
-                        { nodebuffer: "buffer", string: "binary" }[a.type] ||
-                        a.type,
+                        { nodebuffer: "buffer", string: "binary" }[s.type] ||
+                        s.type,
                     })
-                  : n.generate(a);
-                return r.password && "undefined" != typeof encrypt_agile
-                  ? iZ(encrypt_agile(s, r.password), r)
-                  : "file" === r.type
-                    ? eB(r.file, s)
-                    : "string" == r.type
-                      ? ts(s)
-                      : s;
-              })(e, n);
+                  : a.generate(s);
+                return n.password && "undefined" != typeof encrypt_agile
+                  ? iW(encrypt_agile(i, n.password), n)
+                  : "file" === n.type
+                    ? eC(n.file, i)
+                    : "string" == n.type
+                      ? ts(i)
+                      : i;
+              })(e, a);
             default:
-              throw Error("Unrecognized bookType |" + n.bookType + "|");
+              throw Error("Unrecognized bookType |" + a.bookType + "|");
           }
         }
-        function i2(e) {
+        function iz(e) {
           if (!e.bookType) {
             var t = e.file.slice(e.file.lastIndexOf(".")).toLowerCase();
             t.match(/^\.[a-z]+$/) && (e.bookType = t.slice(1)),
@@ -24143,12 +24417,12 @@
                 }[e.bookType] || e.bookType);
           }
         }
-        function i4(e, t, r) {
+        function ij(e, t, r) {
           var n = r || {};
-          return (n.type = "file"), (n.file = t), i2(n), i0(e, n);
+          return (n.type = "file"), (n.file = t), iz(n), iG(e, n);
         }
-        function i3(e, t, r, n, a, s, i, o) {
-          var c = t9(r),
+        function i$(e, t, r, n, a, s, i, o) {
+          var c = t7(r),
             l = o.defval,
             f = o.raw || !Object.prototype.hasOwnProperty.call(o, "raw"),
             h = !0,
@@ -24197,13 +24471,13 @@
                     u[s[d]] = null;
                   }
                 } else
-                  u[s[d]] = f || (o.rawNumbers && "n" == p.t) ? m : rc(p, m, o);
+                  u[s[d]] = f || (o.rawNumbers && "n" == p.t) ? m : ro(p, m, o);
                 null != m && (h = !1);
               }
             }
           return { row: u, isempty: h };
         }
-        function i5(e, t) {
+        function iK(e, t) {
           if (null == e || null == e["!ref"]) return [];
           var r = { t: "n", v: 0 },
             n = 0,
@@ -24225,16 +24499,16 @@
             typeof f)
           ) {
             case "string":
-              c = ri(f);
+              c = rs(f);
               break;
             case "number":
-              (c = ri(e["!ref"])).s.r = f;
+              (c = rs(e["!ref"])).s.r = f;
               break;
             default:
               c = f;
           }
           n > 0 && (a = 0);
-          var h = t9(c.s.r),
+          var h = t7(c.s.r),
             u = [],
             d = [],
             p = 0,
@@ -24244,7 +24518,7 @@
             b = 0,
             E = 0;
           for (g && !e[v] && (e[v] = []), b = c.s.c; b <= c.e.c; ++b)
-            switch (((u[b] = rt(b)), (r = g ? e[v][b] : e[u[b] + h]), n)) {
+            switch (((u[b] = re(b)), (r = g ? e[v][b] : e[u[b] + h]), n)) {
               case 1:
                 s[b] = b - c.s.c;
                 break;
@@ -24257,7 +24531,7 @@
               default:
                 for (
                   null == r && (r = { w: "__EMPTY", t: "s" }),
-                    o = i = rc(r, null, l),
+                    o = i = ro(r, null, l),
                     m = 0,
                     E = 0;
                   E < s.length;
@@ -24267,17 +24541,17 @@
                 s[b] = o;
             }
           for (v = c.s.r + a; v <= c.e.r; ++v) {
-            var S = i3(e, c, v, u, n, s, g, l);
+            var S = i$(e, c, v, u, n, s, g, l);
             (!1 === S.isempty ||
               (1 === n ? !1 !== l.blankrows : l.blankrows)) &&
               (d[p++] = S.row);
           }
           return (d.length = p), d;
         }
-        var i6 = /"/g;
-        function i8(e, t, r, n, a, s, i, o) {
+        var iY = /"/g;
+        function iQ(e, t, r, n, a, s, i, o) {
           for (
-            var c = !0, l = [], f = "", h = t9(r), u = t.s.c;
+            var c = !0, l = [], f = "", h = t7(r), u = t.s.c;
             u <= t.e.c;
             ++u
           )
@@ -24287,7 +24561,7 @@
               else if (null != d.v) {
                 (c = !1),
                   (f =
-                    "" + (o.rawNumbers && "n" == d.t ? d.v : rc(d, null, o)));
+                    "" + (o.rawNumbers && "n" == d.t ? d.v : ro(d, null, o)));
                 for (var p = 0, m = 0; p !== f.length; ++p)
                   if (
                     (m = f.charCodeAt(p)) === a ||
@@ -24295,7 +24569,7 @@
                     34 === m ||
                     o.forceQuotes
                   ) {
-                    f = '"' + f.replace(i6, '""') + '"';
+                    f = '"' + f.replace(iY, '""') + '"';
                     break;
                   }
                 "ID" == f && (f = '"ID"');
@@ -24304,16 +24578,16 @@
                   ? (f = "")
                   : ((c = !1),
                     (f = "=" + d.f).indexOf(",") >= 0 &&
-                      (f = '"' + f.replace(i6, '""') + '"'));
+                      (f = '"' + f.replace(iY, '""') + '"'));
               l.push(f);
             }
           return !1 === o.blankrows && c ? null : l.join(i);
         }
-        function i7(e, t) {
+        function iJ(e, t) {
           var r = [],
             n = null == t ? {} : t;
           if (null == e || null == e["!ref"]) return "";
-          var a = ri(e["!ref"]),
+          var a = rs(e["!ref"]),
             s = void 0 !== n.FS ? n.FS : ",",
             i = s.charCodeAt(0),
             o = void 0 !== n.RS ? n.RS : "\n",
@@ -24329,35 +24603,35 @@
             p <= a.e.c;
             ++p
           )
-            (u[p] || {}).hidden || (h[p] = rt(p));
+            (u[p] || {}).hidden || (h[p] = re(p));
           for (var m = a.s.r; m <= a.e.r; ++m)
             if (!(d[m] || {}).hidden) {
-              if (null == (f = i8(e, a, m, h, i, c, s, n))) continue;
+              if (null == (f = iQ(e, a, m, h, i, c, s, n))) continue;
               n.strip && (f = f.replace(l, "")), r.push(f + o);
             }
           return delete n.dense, r.join("");
         }
-        function i9(e, t) {
+        function iZ(e, t) {
           t || (t = {}), (t.FS = "	"), (t.RS = "\n");
-          var r = i7(e, t);
+          var r = iJ(e, t);
           if ("undefined" == typeof cptable || "string" == t.type) return r;
           var n = cptable.utils.encode(1200, r, "str");
           return String.fromCharCode(255) + String.fromCharCode(254) + n;
         }
-        function oe(e) {
+        function iq(e) {
           var t,
             r = "",
             n = "";
           if (null == e || null == e["!ref"]) return [];
           var a,
-            s = ri(e["!ref"]),
+            s = rs(e["!ref"]),
             i = "",
             o = [],
             c = [],
             l = Array.isArray(e);
-          for (a = s.s.c; a <= s.e.c; ++a) o[a] = rt(a);
+          for (a = s.s.c; a <= s.e.c; ++a) o[a] = re(a);
           for (var f = s.s.r; f <= s.e.r; ++f)
-            for (i = t9(f), a = s.s.c; a <= s.e.c; ++a)
+            for (i = t7(f), a = s.s.c; a <= s.e.c; ++a)
               if (
                 ((r = o[a] + i),
                 (t = l ? (e[f] || [])[a] : e[r]),
@@ -24381,7 +24655,7 @@
               }
           return c;
         }
-        function ot(e, t, r) {
+        function i1(e, t, r) {
           var n,
             a = r || {},
             s = +!a.skipHeader,
@@ -24391,13 +24665,13 @@
           if (i && null != a.origin) {
             if ("number" == typeof a.origin) o = a.origin;
             else {
-              var l = "string" == typeof a.origin ? rr(a.origin) : a.origin;
+              var l = "string" == typeof a.origin ? rt(a.origin) : a.origin;
               (o = l.r), (c = l.c);
             }
           }
           var f = { s: { c: 0, r: 0 }, e: { c: c, r: o + t.length - 1 + s } };
           if (i["!ref"]) {
-            var h = ri(i["!ref"]);
+            var h = rs(i["!ref"]);
             (f.e.c = Math.max(f.e.c, h.e.c)),
               (f.e.r = Math.max(f.e.r, h.e.r)),
               -1 == o && ((o = h.e.r + 1), (f.e.r = o + t.length - 1 + s));
@@ -24410,8 +24684,8 @@
               var l = e[r],
                 f = "z",
                 h = "",
-                p = rn({ c: c + d, r: o + t + s });
-              (n = or.sheet_get_cell(i, p)),
+                p = rr({ c: c + d, r: o + t + s });
+              (n = i0.sheet_get_cell(i, p)),
                 !l || "object" != typeof l || l instanceof Date
                   ? ("number" == typeof l
                       ? (f = "n")
@@ -24435,46 +24709,46 @@
             });
           }),
             (f.e.c = Math.max(f.e.c, c + u.length - 1));
-          var p = t9(o);
+          var p = t7(o);
           if (s)
             for (d = 0; d < u.length; ++d)
-              i[rt(d + c) + p] = { t: "s", v: u[d] };
-          return (i["!ref"] = rs(f)), i;
+              i[re(d + c) + p] = { t: "s", v: u[d] };
+          return (i["!ref"] = ra(f)), i;
         }
-        var or = {
-          encode_col: rt,
-          encode_row: t9,
-          encode_cell: rn,
-          encode_range: rs,
-          decode_col: re,
-          decode_row: t7,
+        var i0 = {
+          encode_col: re,
+          encode_row: t7,
+          encode_cell: rr,
+          encode_range: ra,
+          decode_col: t9,
+          decode_row: t8,
           split_cell: function (e) {
             return e.replace(/(\$?[A-Z]*)(\$?\d*)/, "$1,$2").split(",");
           },
-          decode_cell: rr,
-          decode_range: ra,
-          format_cell: rc,
-          get_formulae: oe,
-          make_csv: i7,
-          make_json: i5,
-          make_formulae: oe,
-          sheet_add_aoa: rf,
-          sheet_add_json: ot,
-          sheet_add_dom: ix,
-          aoa_to_sheet: rh,
+          decode_cell: rt,
+          decode_range: rn,
+          format_cell: ro,
+          get_formulae: iq,
+          make_csv: iJ,
+          make_json: iK,
+          make_formulae: iq,
+          sheet_add_aoa: rl,
+          sheet_add_json: i1,
+          sheet_add_dom: ip,
+          aoa_to_sheet: rf,
           json_to_sheet: function (e, t) {
-            return ot(null, e, t);
+            return i1(null, e, t);
           },
-          table_to_sheet: i_,
+          table_to_sheet: im,
           table_to_book: function (e, t) {
-            return rl(i_(e, t), t);
+            return rc(im(e, t), t);
           },
-          sheet_to_csv: i7,
-          sheet_to_txt: i9,
-          sheet_to_json: i5,
-          sheet_to_html: iT.from_sheet,
-          sheet_to_formulae: oe,
-          sheet_to_row_object_array: i5,
+          sheet_to_csv: iJ,
+          sheet_to_txt: iZ,
+          sheet_to_json: iK,
+          sheet_to_html: id.from_sheet,
+          sheet_to_formulae: iq,
+          sheet_to_row_object_array: iK,
         };
         !(function (e) {
           function t(e, t, r) {
@@ -24483,7 +24757,7 @@
           function r(e, t, n) {
             if ("string" == typeof t) {
               if (Array.isArray(e)) {
-                var a = rr(t);
+                var a = rt(t);
                 return (
                   e[a.r] || (e[a.r] = []),
                   e[a.r][a.c] || (e[a.r][a.c] = { t: "z" })
@@ -24492,8 +24766,8 @@
               return e[t] || (e[t] = { t: "z" });
             }
             return "number" != typeof t
-              ? r(e, rn(t))
-              : r(e, rn({ r: t, c: n || 0 }));
+              ? r(e, rr(t))
+              : r(e, rr({ r: t, c: n || 0 }));
           }
           (e.consts = e.consts || {}),
             (e.sheet_get_cell = r),
@@ -24509,7 +24783,7 @@
                 );
               if (!r || e.SheetNames.length >= 65535)
                 throw Error("Too many worksheets");
-              if ((s8(r), e.SheetNames.indexOf(r) >= 0))
+              if ((sZ(r), e.SheetNames.indexOf(r) >= 0))
                 throw Error("Worksheet with name |" + r + "| already exists!");
               e.SheetNames.push(r), (e.Sheets[r] = t);
             }),
@@ -24565,8 +24839,8 @@
             }),
             (e.sheet_set_array_formula = function (e, t, n) {
               for (
-                var a = "string" != typeof t ? t : ri(t),
-                  s = "string" == typeof t ? t : rs(t),
+                var a = "string" != typeof t ? t : rs(t),
+                  s = "string" == typeof t ? t : ra(t),
                   i = a.s.r;
                 i <= a.e.r;
                 ++i
@@ -24580,7 +24854,7 @@
                 }
               return e;
             });
-        })(or),
+        })(i0),
           es &&
             ((M = r(65240).Readable),
             (t.stream = {
@@ -24605,16 +24879,16 @@
                   typeof h)
                 ) {
                   case "string":
-                    l = ri(h);
+                    l = rs(h);
                     break;
                   case "number":
-                    (l = ri(e["!ref"])).s.r = h;
+                    (l = rs(e["!ref"])).s.r = h;
                     break;
                   default:
                     l = h;
                 }
                 a > 0 && (s = 0);
-                var u = t9(l.s.r),
+                var u = t7(l.s.r),
                   d = [],
                   p = 0,
                   m = Array.isArray(e),
@@ -24623,7 +24897,7 @@
                   b = 0;
                 for (m && !e[g] && (e[g] = []), v = l.s.c; v <= l.e.c; ++v)
                   switch (
-                    ((d[v] = rt(v)), (n = m ? e[g][v] : e[d[v] + u]), a)
+                    ((d[v] = re(v)), (n = m ? e[g][v] : e[d[v] + u]), a)
                   ) {
                     case 1:
                       i[v] = v - l.s.c;
@@ -24637,7 +24911,7 @@
                     default:
                       for (
                         null == n && (n = { w: "__EMPTY", t: "s" }),
-                          c = o = rc(n, null, f),
+                          c = o = ro(n, null, f),
                           p = 0,
                           b = 0;
                         b < i.length;
@@ -24651,7 +24925,7 @@
                   (r._read = function () {
                     if (g > l.e.r) return r.push(null);
                     for (; g <= l.e.r; ) {
-                      var t = i3(e, l, g, d, a, i, m, f);
+                      var t = i$(e, l, g, d, a, i, m, f);
                       if (
                         (++g,
                         !1 === t.isempty ||
@@ -24668,11 +24942,11 @@
               to_html: function (e, t) {
                 var r = M(),
                   n = t || {},
-                  a = null != n.header ? n.header : iT.BEGIN,
-                  s = null != n.footer ? n.footer : iT.END;
+                  a = null != n.header ? n.header : id.BEGIN,
+                  s = null != n.footer ? n.footer : id.END;
                 r.push(a);
-                var i = ra(e["!ref"]);
-                (n.dense = Array.isArray(e)), r.push(iT._preamble(e, i, n));
+                var i = rn(e["!ref"]);
+                (n.dense = Array.isArray(e)), r.push(id._preamble(e, i, n));
                 var o = i.s.r,
                   c = !1;
                 return (
@@ -24682,7 +24956,7 @@
                         c || ((c = !0), r.push("</table>" + s)), r.push(null)
                       );
                     for (; o <= i.e.r; ) {
-                      r.push(iT._row(e, i, o, n)), ++o;
+                      r.push(id._row(e, i, o, n)), ++o;
                       break;
                     }
                   }),
@@ -24693,7 +24967,7 @@
                 var r = M(),
                   n = null == t ? {} : t;
                 if (null == e || null == e["!ref"]) return r.push(null), r;
-                var a = ri(e["!ref"]),
+                var a = rs(e["!ref"]),
                   s = void 0 !== n.FS ? n.FS : ",",
                   i = s.charCodeAt(0),
                   o = void 0 !== n.RS ? n.RS : "\n",
@@ -24709,7 +24983,7 @@
                   p <= a.e.c;
                   ++p
                 )
-                  (u[p] || {}).hidden || (h[p] = rt(p));
+                  (u[p] || {}).hidden || (h[p] = re(p));
                 var m = a.s.r,
                   g = !1;
                 return (
@@ -24718,7 +24992,7 @@
                     for (; m <= a.e.r; )
                       if (
                         !(d[++m - 1] || {}).hidden &&
-                        null != (f = i8(e, a, m - 1, h, i, c, s, n))
+                        null != (f = iQ(e, a, m - 1, h, i, c, s, n))
                       ) {
                         n.strip && (f = f.replace(l, "")), r.push(f + o);
                         break;
@@ -24729,27 +25003,27 @@
                 );
               },
             })),
-          (t.parse_xlscfb = ig),
-          (t.parse_zip = ij),
-          (t.read = iQ),
-          (t.readFile = iJ),
-          (t.readFileSync = iJ),
-          (t.write = i0),
-          (t.writeFile = i4),
-          (t.writeFileSync = i4),
+          (t.parse_xlscfb = ia),
+          (t.parse_zip = iP),
+          (t.read = iU),
+          (t.readFile = iH),
+          (t.readFileSync = iH),
+          (t.write = iG),
+          (t.writeFile = ij),
+          (t.writeFileSync = ij),
           (t.writeFileAsync = function (e, t, r, n) {
             var a = r || {};
-            (a.type = "file"), (a.file = e), i2(a), (a.type = "buffer");
+            (a.type = "file"), (a.file = e), iz(a), (a.type = "buffer");
             var s = n;
             return (
-              s instanceof Function || (s = r), U.writeFile(e, i0(t, a), s)
+              s instanceof Function || (s = r), U.writeFile(e, iG(t, a), s)
             );
           }),
-          (t.utils = or),
+          (t.utils = i0),
           (t.SSF = ev),
-          void 0 !== eC && (t.CFB = eC);
+          void 0 !== eB && (t.CFB = eB);
       })(t);
     },
   },
 ]);
-//# sourceMappingURL=9784a43c.b948fcbcc6b375c3.js.map
+//# sourceMappingURL=9784a43c.35c9d0cb5854cadd.js.map

@@ -26,7 +26,7 @@
           return D;
         },
         ki: function () {
-          return k;
+          return S;
         },
         lx: function () {
           return z;
@@ -38,7 +38,7 @@
           return b;
         },
         xR: function () {
-          return S;
+          return k;
         },
       });
       var r = i(99444),
@@ -112,10 +112,13 @@
             else {
               let t = r.lub(() => {
                 let t = c[e],
-                  i = r.luU(r.JpU(t), t),
-                  n = r.IHx(r.dC7(s[0], t), r.dC7(z[0], i)),
-                  l = z.map((e, n) => r.IHx(r.dC7(s[1][n], t), r.dC7(e, i)));
-                return { output: n, newStates: l };
+                  i = r.luU(r.JpU(t), t);
+                return {
+                  output: r.IHx(r.dC7(s[0], t), r.dC7(z[0], i)),
+                  newStates: z.map((e, n) =>
+                    r.IHx(r.dC7(s[1][n], t), r.dC7(e, i))
+                  ),
+                };
               });
               (h = t.output), (z = t.newStates);
             }
@@ -186,11 +189,9 @@
           return r.lub(() => {
             Array.isArray(e) && (e = e[0]);
             let t = this.returnSequences ? e : null;
-            if (!this.returnState) return t;
-            {
-              let e = this.states.map((t) => null);
-              return [t].concat(e);
-            }
+            return this.returnState
+              ? [t].concat(this.states.map((t) => null))
+              : t;
           });
         }
         get states() {
@@ -272,13 +273,15 @@
                 : r.B90(this.states_);
               for (let e = 0; e < this.states_.length; ++e) {
                 let s = t[e],
-                  n = Array.isArray(this.cell.stateSize)
-                    ? this.cell.stateSize[e]
-                    : this.cell.stateSize,
-                  l = [i, n];
-                if (!r.D5U.arraysEqual(s.shape, l))
+                  n = [
+                    i,
+                    Array.isArray(this.cell.stateSize)
+                      ? this.cell.stateSize[e]
+                      : this.cell.stateSize,
+                  ];
+                if (!r.D5U.arraysEqual(s.shape, n))
                   throw new o.nu(
-                    `State ${e} is incompatible with layer ${this.name}: expected shape=${l}, received shape=${s.shape}`
+                    `State ${e} is incompatible with layer ${this.name}: expected shape=${n}, received shape=${s.shape}`
                   );
                 this.states_[e] = s;
               }
@@ -302,12 +305,14 @@
               this.stateSpec.push(new u.Zg({ shape: t.shape }));
             l = l.concat(this.stateSpec);
           }
-          null != r &&
-            ((e.constants = r),
-            (n = n.concat(r)),
-            (this.numConstants = r.length));
-          let a = n[0] instanceof u.Iy;
-          if (!a) return super.apply(t, e);
+          if (
+            (null != r &&
+              ((e.constants = r),
+              (n = n.concat(r)),
+              (this.numConstants = r.length)),
+            !(n[0] instanceof u.Iy))
+          )
+            return super.apply(t, e);
           {
             let i = [t].concat(n),
               r = this.inputSpec.concat(l),
@@ -337,12 +342,11 @@
                 "Ignoring unroll = true for RNN layer, due to imperative backend."
               );
             let l = { training: r },
-              a = (t, e) => {
-                let i = this.cell.call([t].concat(e), l);
-                return [i[0], i.slice(1)];
-              },
-              u = A(
-                a,
+              a = A(
+                (t, e) => {
+                  let i = this.cell.call([t].concat(e), l);
+                  return [i[0], i.slice(1)];
+                },
                 t,
                 s,
                 this.goBackwards,
@@ -351,12 +355,12 @@
                 this.unroll,
                 this.returnSequences
               ),
-              h = u[0],
-              c = u[1],
-              p = u[2];
-            this.stateful && this.resetStates(p, r);
-            let g = this.returnSequences ? c : h;
-            return this.returnState ? [g].concat(p) : g;
+              u = a[0],
+              h = a[1],
+              c = a[2];
+            this.stateful && this.resetStates(c, r);
+            let p = this.returnSequences ? h : u;
+            return this.returnState ? [p].concat(c) : p;
           });
         }
         getInitialState(t) {
@@ -401,14 +405,13 @@
           );
         }
         static fromConfig(t, e, i = {}) {
-          let r = e.cell,
-            s = (0, C.v)(r, i);
-          return new t(Object.assign(e, { cell: s }));
+          let r = e.cell;
+          return new t(Object.assign(e, { cell: (0, C.v)(r, i) }));
         }
       }
       (f.className = "RNN"), r.m7h.registerClass(f);
-      class k extends u.mh {}
-      class S extends k {
+      class S extends u.mh {}
+      class k extends S {
         constructor(t) {
           super(t),
             (this.DEFAULT_ACTIVATION = "tanh"),
@@ -525,31 +528,29 @@
           });
         }
         getConfig() {
-          let t = super.getConfig(),
-            e = {
-              units: this.units,
-              activation: (0, s.GD)(this.activation),
-              useBias: this.useBias,
-              kernelInitializer: (0, h.Cx)(this.kernelInitializer),
-              recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
-              biasInitializer: (0, h.Cx)(this.biasInitializer),
-              kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
-              recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
-              biasRegularizer: (0, c.SG)(this.biasRegularizer),
-              activityRegularizer: (0, c.SG)(this.activityRegularizer),
-              kernelConstraint: (0, a.xF)(this.kernelConstraint),
-              recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
-              biasConstraint: (0, a.xF)(this.biasConstraint),
-              dropout: this.dropout,
-              recurrentDropout: this.recurrentDropout,
-            };
-          return Object.assign({}, t, e);
+          return Object.assign({}, super.getConfig(), {
+            units: this.units,
+            activation: (0, s.GD)(this.activation),
+            useBias: this.useBias,
+            kernelInitializer: (0, h.Cx)(this.kernelInitializer),
+            recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
+            biasInitializer: (0, h.Cx)(this.biasInitializer),
+            kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
+            recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
+            biasRegularizer: (0, c.SG)(this.biasRegularizer),
+            activityRegularizer: (0, c.SG)(this.activityRegularizer),
+            kernelConstraint: (0, a.xF)(this.kernelConstraint),
+            recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
+            biasConstraint: (0, a.xF)(this.biasConstraint),
+            dropout: this.dropout,
+            recurrentDropout: this.recurrentDropout,
+          });
         }
       }
-      (S.className = "SimpleRNNCell"), r.m7h.registerClass(S);
+      (k.className = "SimpleRNNCell"), r.m7h.registerClass(k);
       class b extends f {
         constructor(t) {
-          (t.cell = new S(t)), super(t);
+          (t.cell = new k(t)), super(t);
         }
         call(t, e) {
           return (0, r.lub)(() => {
@@ -569,7 +570,7 @@
         }
       }
       (b.className = "SimpleRNN"), r.m7h.registerClass(b);
-      class R extends k {
+      class R extends S {
         constructor(t) {
           if (
             (super(t),
@@ -624,8 +625,7 @@
             (this.recurrentDropoutMask = null);
         }
         build(t) {
-          t = (0, d.Wf)(t);
-          let e = t[t.length - 1];
+          let e = (t = (0, d.Wf)(t))[t.length - 1];
           (this.kernel = this.addWeight(
             "kernel",
             [e, 3 * this.units],
@@ -699,9 +699,9 @@
               [d, I] = r.Vl2(g, [2 * this.units, this.units], g.rank - 1),
               C = n.AK(u, d),
               [z, A, f] = r.Vl2(p, 3, p.rank - 1),
-              [k, S] = r.Vl2(C, 2, C.rank - 1);
-            (i = this.recurrentActivation.apply(r.IHx(z, k))),
-              (s = this.recurrentActivation.apply(r.IHx(A, S)));
+              [S, k] = r.Vl2(C, 2, C.rank - 1);
+            (i = this.recurrentActivation.apply(r.IHx(z, S))),
+              (s = this.recurrentActivation.apply(r.IHx(A, k)));
             let b = n.AK(r.dC7(s, u), I);
             l = this.activation.apply(r.IHx(f, b));
             let R = r.IHx(r.dC7(i, u), r.dC7(r.IHx(1, r.W76(i)), l));
@@ -709,28 +709,26 @@
           });
         }
         getConfig() {
-          let t = super.getConfig(),
-            e = {
-              units: this.units,
-              activation: (0, s.GD)(this.activation),
-              recurrentActivation: (0, s.GD)(this.recurrentActivation),
-              useBias: this.useBias,
-              kernelInitializer: (0, h.Cx)(this.kernelInitializer),
-              recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
-              biasInitializer: (0, h.Cx)(this.biasInitializer),
-              kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
-              recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
-              biasRegularizer: (0, c.SG)(this.biasRegularizer),
-              activityRegularizer: (0, c.SG)(this.activityRegularizer),
-              kernelConstraint: (0, a.xF)(this.kernelConstraint),
-              recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
-              biasConstraint: (0, a.xF)(this.biasConstraint),
-              dropout: this.dropout,
-              recurrentDropout: this.recurrentDropout,
-              implementation: this.implementation,
-              resetAfter: !1,
-            };
-          return Object.assign({}, t, e);
+          return Object.assign({}, super.getConfig(), {
+            units: this.units,
+            activation: (0, s.GD)(this.activation),
+            recurrentActivation: (0, s.GD)(this.recurrentActivation),
+            useBias: this.useBias,
+            kernelInitializer: (0, h.Cx)(this.kernelInitializer),
+            recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
+            biasInitializer: (0, h.Cx)(this.biasInitializer),
+            kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
+            recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
+            biasRegularizer: (0, c.SG)(this.biasRegularizer),
+            activityRegularizer: (0, c.SG)(this.activityRegularizer),
+            kernelConstraint: (0, a.xF)(this.kernelConstraint),
+            recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
+            biasConstraint: (0, a.xF)(this.biasConstraint),
+            dropout: this.dropout,
+            recurrentDropout: this.recurrentDropout,
+            implementation: this.implementation,
+            resetAfter: !1,
+          });
         }
       }
       (R.className = "GRUCell"), r.m7h.registerClass(R);
@@ -761,7 +759,7 @@
         }
       }
       (m.className = "GRU"), r.m7h.registerClass(m);
-      class E extends k {
+      class E extends S {
         constructor(t) {
           super(t),
             (this.DEFAULT_ACTIVATION = "tanh"),
@@ -813,8 +811,7 @@
         build(t) {
           var e;
           let i;
-          t = (0, d.Wf)(t);
-          let r = t[t.length - 1];
+          let r = (t = (0, d.Wf)(t))[t.length - 1];
           if (
             ((this.kernel = this.addWeight(
               "kernel",
@@ -911,28 +908,26 @@
           });
         }
         getConfig() {
-          let t = super.getConfig(),
-            e = {
-              units: this.units,
-              activation: (0, s.GD)(this.activation),
-              recurrentActivation: (0, s.GD)(this.recurrentActivation),
-              useBias: this.useBias,
-              kernelInitializer: (0, h.Cx)(this.kernelInitializer),
-              recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
-              biasInitializer: (0, h.Cx)(this.biasInitializer),
-              unitForgetBias: this.unitForgetBias,
-              kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
-              recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
-              biasRegularizer: (0, c.SG)(this.biasRegularizer),
-              activityRegularizer: (0, c.SG)(this.activityRegularizer),
-              kernelConstraint: (0, a.xF)(this.kernelConstraint),
-              recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
-              biasConstraint: (0, a.xF)(this.biasConstraint),
-              dropout: this.dropout,
-              recurrentDropout: this.recurrentDropout,
-              implementation: this.implementation,
-            };
-          return Object.assign({}, t, e);
+          return Object.assign({}, super.getConfig(), {
+            units: this.units,
+            activation: (0, s.GD)(this.activation),
+            recurrentActivation: (0, s.GD)(this.recurrentActivation),
+            useBias: this.useBias,
+            kernelInitializer: (0, h.Cx)(this.kernelInitializer),
+            recurrentInitializer: (0, h.Cx)(this.recurrentInitializer),
+            biasInitializer: (0, h.Cx)(this.biasInitializer),
+            unitForgetBias: this.unitForgetBias,
+            kernelRegularizer: (0, c.SG)(this.kernelRegularizer),
+            recurrentRegularizer: (0, c.SG)(this.recurrentRegularizer),
+            biasRegularizer: (0, c.SG)(this.biasRegularizer),
+            activityRegularizer: (0, c.SG)(this.activityRegularizer),
+            kernelConstraint: (0, a.xF)(this.kernelConstraint),
+            recurrentConstraint: (0, a.xF)(this.recurrentConstraint),
+            biasConstraint: (0, a.xF)(this.biasConstraint),
+            dropout: this.dropout,
+            recurrentDropout: this.recurrentDropout,
+            implementation: this.implementation,
+          });
         }
       }
       (E.className = "LSTMCell"), r.m7h.registerClass(E);
@@ -963,7 +958,7 @@
         }
       }
       (N.className = "LSTM"), r.m7h.registerClass(N);
-      class D extends k {
+      class D extends S {
         constructor(t) {
           super(t), (this.cells = t.cells);
         }
@@ -1012,10 +1007,12 @@
             (this.built = !0);
         }
         getConfig() {
-          let t = super.getConfig(),
-            e = (t) => ({ className: t.getClassName(), config: t.getConfig() }),
-            i = this.cells.map(e);
-          return Object.assign({}, t, { cells: i });
+          return Object.assign({}, super.getConfig(), {
+            cells: this.cells.map((t) => ({
+              className: t.getClassName(),
+              config: t.getConfig(),
+            })),
+          });
         }
         static fromConfig(t, e, i = {}) {
           let r = [];
@@ -1064,14 +1061,15 @@
           } = t,
           u = () => (null != a ? a(e(), i) : n.rv(e(), i)),
           o = () => n.KC(u, e, s);
-        if (!l || l <= 1) return r.CnY(o().clone());
-        let h = Array(l)
-          .fill(void 0)
-          .map(o);
-        return h.map((t) => r.CnY(t.clone()));
+        return !l || l <= 1
+          ? r.CnY(o().clone())
+          : Array(l)
+              .fill(void 0)
+              .map(o)
+              .map((t) => r.CnY(t.clone()));
       }
       (D.className = "StackedRNNCells"), r.m7h.registerClass(D);
     },
   },
 ]);
-//# sourceMappingURL=5be645cc.57928d286d288f9f.js.map
+//# sourceMappingURL=5be645cc.d018f6e9a9ebea16.js.map

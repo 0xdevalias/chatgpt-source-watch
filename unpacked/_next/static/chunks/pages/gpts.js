@@ -1,80 +1,74 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [106],
   {
-    42199: function (e, t, n) {
+    82488: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return h;
+            return j;
           },
           default: function () {
-            return p;
+            return g;
           },
         });
-      var r = n(78076),
-        i = n(29124),
+      var r = n(67192),
+        i = n(80483),
         o = n.n(i),
-        s = {
-          src: "https://cdn.oaistatic.com/_next/static/media/gpts-og.772bef1f.jpg",
-          height: 315,
-          width: 600,
-          blurDataURL:
-            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAAnQF//8QAGxAAAgIDAQAAAAAAAAAAAAAAAQIDEQQSQQD/2gAIAQEAAT8AxiZMNmai+wk3ItuCrPPf/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAIAQIBAT8Ar//EABkRAAEFAAAAAAAAAAAAAAAAAAEAAxEhUf/aAAgBAwEBPwBqwZ1f/9k=",
-          blurWidth: 8,
-          blurHeight: 4,
-        },
-        c = n(35250);
-      function u() {
-        var e = "Explore GPTs",
+        s = n(35250);
+      function c() {
+        let e = "Explore GPTs",
           t =
-            "Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills.",
-          n = s.src;
-        return (0, c.jsxs)(o(), {
+            "Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills.";
+        return (0, s.jsxs)(o(), {
           children: [
-            (0, c.jsx)("title", { children: e }),
-            (0, c.jsx)("meta", { name: "title", content: e }, "title"),
-            (0, c.jsx)(
+            (0, s.jsx)("title", { children: e }),
+            (0, s.jsx)("meta", { name: "title", content: e }, "title"),
+            (0, s.jsx)(
               "meta",
               { property: "og:site_name", content: "ChatGPT" },
               "og:site_name"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:type", content: "website" },
               "og:type"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:title", content: e },
               "og:title"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:url", content: "/gpts" },
               "og:url"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { name: "description", content: t },
               "description"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:description", content: t },
               "og:description"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
-              { property: "og:image", content: n },
+              {
+                property: "og:image",
+                content:
+                  "https://cdn.oaistatic.com/_next/static/media/gpts-og.772bef1f.jpg",
+              },
               "og:image"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:image:width", content: "1200" },
               "og:image:width"
             ),
-            (0, c.jsx)(
+            (0, s.jsx)(
               "meta",
               { property: "og:image:height", content: "630" },
               "og:image:height"
@@ -82,78 +76,75 @@
           ],
         });
       }
-      var A = n(61305),
-        a = n(66319),
-        l = n(7144),
-        d = n(1890),
-        f = n(1755),
-        g = n(99893),
-        m = n(70079),
-        x = n(56276),
-        h = !0;
-      function p(e) {
-        var t,
-          n = "store_anon" === e.kind,
-          i = null === (t = (0, l.t)()) || void 0 === t ? void 0 : t.planType;
-        return ((0, m.useEffect)(
-          function () {
-            (i || n) &&
-              f.A.logEvent(g.M.pageView, {
-                page: "gpts/discovery",
-                isAnon: n,
-                referrer: e.referrer,
-                plan_type: i,
-              });
-          },
-          [n, e.referrer, i]
-        ),
+      var l = n(90775),
+        u = n(19111),
+        a = n(24668),
+        d = n(9417),
+        m = n(91128),
+        f = n(53197),
+        p = n(70079),
+        x = n(1705),
+        j = !0;
+      function g(e) {
+        var t;
+        let n = "store_anon" === e.kind,
+          i = null === (t = (0, a.t)()) || void 0 === t ? void 0 : t.planType;
+        return ((0, p.useEffect)(() => {
+          (i || n) &&
+            m.A.logEvent(f.M.pageView, {
+              page: "gpts/discovery",
+              isAnon: n,
+              referrer: e.referrer,
+              plan_type: i,
+            });
+        }, [n, e.referrer, i]),
         n)
-          ? (0, c.jsxs)("div", {
+          ? (0, s.jsxs)("div", {
               className: "relative h-full w-full flex-1 flex-col overflow-auto",
-              children: [(0, c.jsx)(u, {}), (0, c.jsx)(r.fN, { anon: !0 })],
+              children: [(0, s.jsx)(c, {}), (0, s.jsx)(r.fN, { anon: !0 })],
             })
-          : (0, c.jsx)(j, {});
+          : (0, s.jsx)(h, {});
       }
-      function j() {
-        var e = (0, l.hz)();
+      function h() {
+        let e = (0, a.hz)();
         return null == e
           ? null
           : null != e && e.includes(d.L0.GizmoStore)
-            ? (0, c.jsxs)(c.Fragment, {
+            ? (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, c.jsx)(a.r, {}),
-                  (0, c.jsx)(A.Z, { children: (0, c.jsx)(r.fN, {}) }),
+                  (0, s.jsx)(u.r, {}),
+                  (0, s.jsx)(l.Z, { children: (0, s.jsx)(r.fN, {}) }),
                 ],
               })
-            : (0, c.jsx)(x.default, {});
+            : (0, s.jsx)(x.default, {});
       }
     },
-    56276: function (e, t, n) {
+    1705: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return C;
+            return I;
           },
           default: function () {
-            return Q;
+            return z;
           },
         });
-      var r = n(36112),
-        i = n(7144),
-        o = n(1890),
-        s = n(83380),
-        c = n(10721),
-        u = n(70079),
-        A = n(32004),
+      var r = n(39827),
+        i = n(24668),
+        o = n(9417),
+        s = n(84126),
+        c = n(12366),
+        l = n(70079),
+        u = n(32004),
         a = n(94968),
-        l = n(91559),
-        d = n(63866),
-        f = n(56685),
-        g = n(37097),
-        m = n(78076),
-        x = n(35250);
-      function h(e, t) {
+        d = n(7557),
+        m = n(42005),
+        f = n(81595),
+        p = n(89691),
+        x = n(67192),
+        j = n(35250);
+      function g(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -165,61 +156,53 @@
         }
         return n;
       }
-      function p() {
-        var e,
-          t = (0, i.t)(),
+      function h() {
+        var e;
+        let t = (0, i.t)(),
           n = (0, c.useRouter)(),
-          r = (0, g.Yp)(),
-          u = r.data,
-          A = r.isLoading;
+          { data: r, isLoading: l } = (0, p.Yp)();
         if (
           ((0, s.yx)({
-            resetThreadAction: function () {
+            resetThreadAction: () => {
               n.push("/");
             },
           }),
           null == t)
         )
           return null;
-        var a =
+        let u =
           null !==
             (e =
-              null == u
+              null == r
                 ? void 0
-                : u.cuts.map(function (e) {
-                    return {
-                      cutId: e.info.id,
-                      title: e.info.title,
-                      items: e.list.items,
-                      cursor: e.list.cursor,
-                    };
-                  })) && void 0 !== e
+                : r.cuts.map((e) => ({
+                    cutId: e.info.id,
+                    title: e.info.title,
+                    items: e.list.items,
+                    cursor: e.list.cursor,
+                  }))) && void 0 !== e
             ? e
             : [];
         return (
           t.features.includes(o.L0.GizmoStore) &&
-            (a = a.filter(function (e) {
-              return "mine" === e.cutId;
-            })),
-          a.some(function (e) {
-            return "mine" === e.cutId;
-          }) ||
-            a.unshift({
+            (u = u.filter((e) => "mine" === e.cutId)),
+          u.some((e) => "mine" === e.cutId) ||
+            u.unshift({
               cutId: "mine",
               title: "My GPTs",
               items: [],
               cursor: null,
             }),
-          (0, x.jsx)("div", {
+          (0, j.jsx)("div", {
             className: "mx-auto max-w-3xl px-4 py-12",
-            children: A
-              ? (0, x.jsx)("div", {
+            children: l
+              ? (0, j.jsx)("div", {
                   className: "flex justify-center",
-                  children: (0, x.jsx)(d.Z, {}),
+                  children: (0, j.jsx)(m.Z, {}),
                 })
-              : a.map(function (e) {
-                  return (0, x.jsx)(
-                    j,
+              : u.map((e) =>
+                  (0, j.jsx)(
+                    v,
                     {
                       cutId: e.cutId,
                       title: e.title,
@@ -234,31 +217,33 @@
                       canRemoveRecent: "recent" === e.cutId,
                     },
                     e.cutId
-                  );
-                }),
+                  )
+                ),
           })
         );
       }
-      function j(e) {
-        var t = e.cutId,
-          n = e.title,
-          r = e.items,
-          i = e.cursor,
-          o = e.canRemoveRecent,
-          s = e.createRowType;
-        return (0, x.jsxs)(m.b1, {
+      function v(e) {
+        let {
+          cutId: t,
+          title: n,
+          items: r,
+          cursor: i,
+          canRemoveRecent: o,
+          createRowType: s,
+        } = e;
+        return (0, j.jsxs)(x.b1, {
           title: n,
           children: [
-            null != s && (0, x.jsx)(f.at, { type: s }),
-            r.map(function (e) {
-              return (0, x.jsx)(
+            null != s && (0, j.jsx)(f.at, { type: s }),
+            r.map((e) =>
+              (0, j.jsx)(
                 f.r1,
                 { gizmoResource: e.resource, canRemoveRecent: o },
                 e.resource.gizmo.id
-              );
-            }),
+              )
+            ),
             null != i &&
-              (0, x.jsx)(v, {
+              (0, j.jsx)(y, {
                 cutId: t,
                 cursor: i,
                 fetchOnMount: 0 === r.length,
@@ -266,50 +251,47 @@
           ],
         });
       }
-      function v(e) {
-        var t = e.cutId,
-          n = e.cursor,
-          i = e.fetchOnMount,
-          o = (0, u.useState)(i),
-          s = o[0],
-          c = o[1],
-          a = (0, g.Fi)({ cutId: t, limit: 8, cursor: n, enabled: s }),
-          d = a.data,
-          m = a.hasNextPage,
-          p = a.fetchNextPage,
-          j = a.isLoading;
-        return (0, x.jsxs)("div", {
+      function y(e) {
+        let { cutId: t, cursor: n, fetchOnMount: i } = e,
+          { 0: o, 1: s } = (0, l.useState)(i),
+          {
+            data: c,
+            hasNextPage: a,
+            fetchNextPage: m,
+            isLoading: x,
+          } = (0, p.Fi)({ cutId: t, limit: 8, cursor: n, enabled: o });
+        return (0, j.jsxs)("div", {
           children: [
-            (0, x.jsx)("div", {
+            (0, j.jsx)("div", {
               children:
-                null == d
+                null == c
                   ? void 0
-                  : d.pages.flatMap(function (e) {
-                      return e.list.items.map(function (e) {
-                        var t = e.resource;
-                        return (0, x.jsx)(
+                  : c.pages.flatMap((e) =>
+                      e.list.items.map((e) => {
+                        let { resource: t } = e;
+                        return (0, j.jsx)(
                           f.r1,
                           { gizmoResource: t },
                           t.gizmo.id
                         );
-                      });
-                    }),
+                      })
+                    ),
             }),
-            !s || m || j
-              ? (0, x.jsx)(l.z, {
+            !o || a || x
+              ? (0, j.jsx)(d.z, {
                   color: "neutral",
-                  onClick: function () {
-                    s ? p() : c(!0);
+                  onClick: () => {
+                    o ? m() : s(!0);
                   },
-                  loading: j,
+                  loading: x,
                   className: "w-full",
-                  children: (0, x.jsx)(
-                    A.Z,
+                  children: (0, j.jsx)(
+                    u.Z,
                     (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {};
                         t % 2
-                          ? h(Object(n), !0).forEach(function (t) {
+                          ? g(Object(n), !0).forEach(function (t) {
                               (0, r.Z)(e, t, n[t]);
                             })
                           : Object.getOwnPropertyDescriptors
@@ -317,7 +299,7 @@
                                 e,
                                 Object.getOwnPropertyDescriptors(n)
                               )
-                            : h(Object(n)).forEach(function (t) {
+                            : g(Object(n)).forEach(function (t) {
                                 Object.defineProperty(
                                   e,
                                   t,
@@ -326,116 +308,113 @@
                               });
                       }
                       return e;
-                    })({}, y.discoveryLoadMore)
+                    })({}, b.discoveryLoadMore)
                   ),
                 })
               : null,
           ],
         });
       }
-      var y = (0, a.vU)({
-          discoveryLoadMore: {
-            id: "gizmo.mygpts.loadMore",
-            defaultMessage: "Load more",
-          },
-        }),
-        w = n(3359),
-        b = n(31564);
+      let b = (0, a.vU)({
+        discoveryLoadMore: {
+          id: "gizmo.mygpts.loadMore",
+          defaultMessage: "Load more",
+        },
+      });
+      var w = n(55289),
+        _ = n(93496);
       function P(e) {
-        var t = e.children,
+        let { children: t } = e,
           n = (0, i.t)();
         return null == n
           ? null
           : n.canInteractWithGizmos()
-            ? (0, x.jsxs)("div", {
+            ? (0, j.jsxs)("div", {
                 children: [
                   t,
-                  (0, x.jsx)("div", {
+                  (0, j.jsx)("div", {
                     className: "fixed bottom-3 right-3",
-                    children: (0, x.jsx)(w.Z, {}),
+                    children: (0, j.jsx)(w.Z, {}),
                   }),
                 ],
               })
             : n.hasPaidSubscription()
               ? null
-              : (0, x.jsx)(I, {
-                  button: (0, x.jsx)(l.z, {
-                    onClick: function () {
-                      return (0, b.MG)();
-                    },
+              : (0, j.jsx)(O, {
+                  button: (0, j.jsx)(d.z, {
+                    onClick: () => (0, _.MG)(),
                     children: "Upgrade to ChatGPT Plus",
                   }),
                   children: "GPTs are gradually rolling out to Plus users",
                 });
       }
-      function I(e) {
-        var t = e.children,
-          n = e.button;
-        return (0, x.jsx)("div", {
+      function O(e) {
+        let { children: t, button: n } = e;
+        return (0, j.jsx)("div", {
           className: "flex h-full w-full items-center justify-center",
-          children: (0, x.jsxs)("div", {
+          children: (0, j.jsxs)("div", {
             className: "flex max-w-sm flex-col gap-4 p-6 text-center",
             children: [
-              (0, x.jsx)("h2", { children: t }),
-              (0, x.jsx)("div", { className: "m-auto", children: n }),
+              (0, j.jsx)("h2", { children: t }),
+              (0, j.jsx)("div", { className: "m-auto", children: n }),
             ],
           }),
         });
       }
-      var E = n(61305),
-        C = !0;
-      function Q() {
-        return (0, x.jsx)(E.Z, {
-          children: (0, x.jsx)(P, { children: (0, x.jsx)(p, {}) }),
+      var N = n(90775),
+        I = !0;
+      function z() {
+        return (0, j.jsx)(N.Z, {
+          children: (0, j.jsx)(P, { children: (0, j.jsx)(h, {}) }),
         });
       }
     },
-    61305: function (e, t, n) {
+    90775: function (e, t, n) {
       "use strict";
       n.d(t, {
         Z: function () {
           return a;
         },
       });
-      var r = n(49516),
-        i = n(70521),
-        o = n(35212),
-        s = n(10721),
-        c = n(8024),
-        u = n(10318),
-        A = n(35250);
+      var r = n(37229),
+        i = n(95482),
+        o = n(24605),
+        s = n(12366),
+        c = n(81056),
+        l = n(49031),
+        u = n(35250);
       function a(e) {
-        var t = e.children,
+        let { children: t } = e,
           n = (0, s.useRouter)();
-        return (0, A.jsx)(o.Z, {
+        return (0, u.jsx)(o.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, A.jsxs)(i.ZP, {
-            onNewThread: function () {
+          sidebar: (0, u.jsxs)(i.ZP, {
+            onNewThread: () => {
               n.push("/");
             },
             children: [
-              (0, A.jsx)(u.Dy, {}),
-              (0, A.jsx)(r.Z, { activeId: void 0 }),
+              (0, u.jsx)(l.Dy, {}),
+              (0, u.jsx)(r.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, A.jsx)(c.Z, { children: t }),
+          children: (0, u.jsx)(c.Z, { children: t }),
         });
       }
     },
-    5599: function (e, t, n) {
+    44732: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts",
         function () {
-          return n(42199);
+          return n(82488);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 5599));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 44732));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-2c9ed3f17744c8c4.js.map
+//# sourceMappingURL=gpts-f8199af5da23ff36.js.map

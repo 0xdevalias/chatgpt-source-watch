@@ -187,8 +187,7 @@
                 throw new o.nu(
                   `When passing an Array as loss, it should have one entry per model output. The model has ${this.outputs.length} output(s), but you passed loss=${e.loss}.`
                 );
-              let s = e.loss;
-              t = s.map((e) => a.U2(e));
+              t = e.loss.map((e) => a.U2(e));
             } else {
               let s = a.U2(e.loss);
               this.outputs.forEach((e) => {
@@ -259,10 +258,9 @@
                 this.metricsTensors.push([s, e]);
             };
           (0, r.f4)("metric", () => {
-            for (let e = 0; e < this.outputs.length; ++e) {
-              if (-1 !== s.indexOf(e)) continue;
-              let t = n[e],
-                i = (t) => {
+            for (let e = 0; e < this.outputs.length; ++e)
+              -1 === s.indexOf(e) &&
+                ((t) => {
                   let s, i, n;
                   for (let o of t) {
                     let t;
@@ -293,18 +291,13 @@
                             (t = "ce"),
                         (n = i),
                         (s = "" + t);
-                    } else {
-                      let e = h.U2(o);
-                      (n = e), (s = "" + h.aI(o));
-                    }
+                    } else (n = h.U2(o)), (s = "" + h.aI(o));
                     (0, r.f4)(s, () => {
                       t = n;
                     }),
                       l(e, s, t);
                   }
-                };
-              i(t);
-            }
+                })(n[e]);
           }),
             (this.collectedTrainableWeights = this.trainableWeights);
         }
@@ -409,8 +402,8 @@
               throw new o.nj("Verbose predictLoop() is not implemented yet.");
             let r = (0, $.R_)(n, t),
               l = this.outputs.map((e) => []);
-            for (let t = 0; t < r.length; ++t) {
-              let s = i.lub(() => {
+            for (let t = 0; t < r.length; ++t)
+              i.lub(() => {
                 let s = r[t][0],
                   i = r[t][1],
                   n = (0, $.sf)(e, s, i),
@@ -421,9 +414,7 @@
                 else o.push({ key: this.inputs[0], value: n });
                 let l = new w.l2(o);
                 return (0, w.ht)(this.outputs, l);
-              });
-              s.forEach((e, t) => l[t].push(e));
-            }
+              }).forEach((e, t) => l[t].push(e));
             return (0, f.Bq)(l.map((e) => i.zoF(e, 0)));
           });
         }
@@ -449,14 +440,15 @@
             );
           let r = [];
           for (let e = 0; e < this.feedOutputShapes.length; ++e) {
-            let t = this.feedOutputShapes[e],
-              s = this.feedLossFns[e];
-            s === a.KM
+            let t = this.feedOutputShapes[e];
+            this.feedLossFns[e] === a.KM
               ? r.push(t.slice(0, t.length - 1).concat([1]))
               : r.push(t);
           }
           if (
-            (!(function (e, t, s) {
+            ((e = A(e, this.feedInputNames, this.feedInputShapes, !1, "input")),
+            (t = A(t, this.feedOutputNames, r, !1, "target")),
+            !(function (e, t, s) {
               let n = (0, f.Tw)(e.map((e) => e.shape[0]));
               n.sort();
               let r = (0, f.Tw)(t.map((e) => e.shape[0]));
@@ -476,17 +468,7 @@
                 throw new o.nu(
                   `Input Tensors should have the same number of samples as target Tensors. Found ${n[0]} input sample(s) and ${r[0]} target sample(s).`
                 );
-            })(
-              (e = A(
-                e,
-                this.feedInputNames,
-                this.feedInputShapes,
-                !1,
-                "input"
-              )),
-              (t = A(t, this.feedOutputNames, r, !1, "target")),
-              0
-            ),
+            })(e, t, 0),
             !(function (e, t, s) {
               let i = [a.FD, a.fO, a.uq];
               for (let n = 0; n < e.length; ++n) {
@@ -546,12 +528,11 @@
                 let l = r[s][0],
                   a = r[s][1],
                   u = n.c9(o, l, a - l),
-                  p = (0, $.YX)(t, u),
-                  f = e(p);
+                  p = e((0, $.YX)(t, u));
                 if (0 === s)
-                  for (let e = 0; e < f.length; ++e) h.push((0, i.iD$)(0));
-                for (let e = 0; e < f.length; ++e) {
-                  let t = f[e];
+                  for (let e = 0; e < p.length; ++e) h.push((0, i.iD$)(0));
+                for (let e = 0; e < p.length; ++e) {
+                  let t = p[e];
                   h[e] = i.IHx(h[e], i.dC7(a - l, t));
                 }
               }
@@ -587,42 +568,45 @@
                 this.inputs.length + 2 * this.outputs.length
               ),
               o = [],
-              l = () => {
-                let e;
-                let l = [];
-                for (let e = 0; e < this.inputs.length; ++e)
-                  l.push({ key: this.inputs[e], value: s[e] });
-                let a = new w.l2(l),
-                  h = (0, w.ht)(this.outputs, a, { training: !0 });
-                for (let s = 0; s < this.lossFunctions.length; ++s) {
-                  let o = this.lossFunctions[s],
-                    l = o(n[s], h[s]);
-                  null != r[s] && (l = (0, T.mo)(l, r[s]));
-                  let a = i.J69(l);
-                  t.push(a), (e = 0 === s ? l : i.IHx(e, l));
-                }
-                for (let e = 0; e < this.metricsTensors.length; ++e) {
-                  let s;
-                  if (this.outputs.length > 1 && e < this.outputs.length)
-                    s = t[e];
-                  else {
-                    let t = this.metricsTensors[e][0],
-                      r = this.metricsTensors[e][1];
-                    s = i.J69(t(n[r], h[r]));
+              l = this.collectedTrainableWeights.map((e) => e.read());
+            return [
+              this.optimizer_.minimize(
+                () => {
+                  let e;
+                  let l = [];
+                  for (let e = 0; e < this.inputs.length; ++e)
+                    l.push({ key: this.inputs[e], value: s[e] });
+                  let a = new w.l2(l),
+                    h = (0, w.ht)(this.outputs, a, { training: !0 });
+                  for (let s = 0; s < this.lossFunctions.length; ++s) {
+                    let o = (0, this.lossFunctions[s])(n[s], h[s]);
+                    null != r[s] && (o = (0, T.mo)(o, r[s]));
+                    let l = i.J69(o);
+                    t.push(l), (e = 0 === s ? o : i.IHx(e, o));
                   }
-                  i.CnY(s), o.push(s);
-                }
-                return (
-                  (e = i.J69(e)),
-                  this.calculateLosses().forEach((t) => {
-                    e = i.IHx(e, t);
-                  }),
-                  e
-                );
-              },
-              a = this.collectedTrainableWeights.map((e) => e.read()),
-              h = this.optimizer_.minimize(l, !0, a);
-            return [h].concat(o);
+                  for (let e = 0; e < this.metricsTensors.length; ++e) {
+                    let s;
+                    if (this.outputs.length > 1 && e < this.outputs.length)
+                      s = t[e];
+                    else {
+                      let t = this.metricsTensors[e][0],
+                        r = this.metricsTensors[e][1];
+                      s = i.J69(t(n[r], h[r]));
+                    }
+                    i.CnY(s), o.push(s);
+                  }
+                  return (
+                    (e = i.J69(e)),
+                    this.calculateLosses().forEach((t) => {
+                      e = i.IHx(e, t);
+                    }),
+                    e
+                  );
+                },
+                !0,
+                l
+              ),
+            ].concat(o);
           };
         }
         makeTestFunction() {
@@ -664,14 +648,13 @@
           let s = await this.standardizeUserData(e, t),
             n = s[0],
             r = s[1],
-            o = this.makeTrainFunction(),
-            l = o(n.concat(r)),
-            a = [];
-          for (let e of l) {
+            o = this.makeTrainFunction()(n.concat(r)),
+            l = [];
+          for (let e of o) {
             let t = await e.data();
-            a.push(t[0]);
+            l.push(t[0]);
           }
-          return i.B90(l), (0, $.kS)(s[0], e), (0, $.kS)(s[1], t), (0, f.Bq)(a);
+          return i.B90(o), (0, $.kS)(s[0], e), (0, $.kS)(s[1], t), (0, f.Bq)(l);
         }
         getNamedWeights(e) {
           let t = [],
@@ -791,16 +774,14 @@
               "LayersModel.save() cannot proceed because the IOHandler provided does not have the `save` attribute defined."
             );
           let s = await i.io.encodeWeights(this.getNamedWeights(t)),
-            n = this.toJSON(null, !1),
-            r = {
-              modelTopology: n,
+            n = {
+              modelTopology: this.toJSON(null, !1),
               format: "layers-model",
               generatedBy: `TensorFlow.js tfjs-layers v${m.i}`,
               convertedBy: null,
-            },
-            l = null != t && t.includeOptimizer;
-          if (l && null != this.optimizer) {
-            r.trainingConfig = this.getTrainingConfig();
+            };
+          if (null != t && t.includeOptimizer && null != this.optimizer) {
+            n.trainingConfig = this.getTrainingConfig();
             let { data: e, specs: t } = await i.io.encodeWeights(
               await this.optimizer.getWeights(),
               "optimizer"
@@ -811,10 +792,10 @@
           return (
             null != this.userDefinedMetadata &&
               ((0, p.WE)(this.userDefinedMetadata, this.name, !0),
-              (r.userDefinedMetadata = this.userDefinedMetadata)),
-            (r.weightData = s.data),
-            (r.weightSpecs = s.specs),
-            e.save(r)
+              (n.userDefinedMetadata = this.userDefinedMetadata)),
+            (n.weightData = s.data),
+            (n.weightSpecs = s.specs),
+            e.save(n)
           );
         }
         setUserDefinedMetadata(e) {
@@ -830,4 +811,4 @@
     },
   },
 ]);
-//# sourceMappingURL=adb5c70d.ab7964744f7828e4.js.map
+//# sourceMappingURL=adb5c70d.c9cf6b7f26122a2d.js.map

@@ -1,307 +1,144 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6737],
   {
-    49503: function (e, t, r) {
+    76330: function (e, t, n) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      n.r(t),
+        n.d(t, {
           __N_SSP: function () {
-            return P;
+            return b;
           },
           default: function () {
-            return x;
+            return j;
           },
         });
-      var n = r(36112),
-        i = r(50134),
-        o = r(4399),
-        a = r.n(o),
-        u = r(55842),
-        c = r(40670),
-        s = r(63866),
-        f = r(85958),
-        l = r(95412),
-        d = r(22004),
-        p = r(73929),
-        h = r(61236),
-        y = r(82473);
-      r(88654);
-      var v = r(44675);
-      function b(e, t) {
-        (null == t || t > e.length) && (t = e.length);
-        for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
-        return n;
+      var r = n(39827),
+        i = n(80084),
+        a = n(23050),
+        o = n(42005),
+        s = n(19892),
+        c = n(13038),
+        u = n(45772),
+        l = n(28816),
+        d = n(61236),
+        f = n(82473),
+        h = n(44675);
+      let p = "".concat(h.env.INTERNAL_API_URL, "/api");
+      async function _(e) {
+        let { ids: t } = e,
+          n = [];
+        for (let e of t) n.push(["ids", e]);
+        let r = new URLSearchParams(n),
+          i = await fetch("".concat(p, "/public/plugins/by-id?").concat(r), {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          });
+        if (200 === i.status) return i.json();
+        throw Error("Failed to get plugins by id: " + i.status);
       }
-      var g = "".concat(v.env.INTERNAL_API_URL, "/api");
-      function m() {
-        return (m = (0, i.Z)(
-          a().mark(function e(t) {
-            var r, n, i, o, u, c, s;
-            return a().wrap(function (e) {
-              for (;;)
-                switch ((e.prev = e.next)) {
-                  case 0:
-                    (r = t.ids),
-                      (n = []),
-                      (i = (function (e, t) {
-                        var r =
-                          ("undefined" != typeof Symbol &&
-                            e[Symbol.iterator]) ||
-                          e["@@iterator"];
-                        if (!r) {
-                          if (
-                            Array.isArray(e) ||
-                            (r = (function (e, t) {
-                              if (e) {
-                                if ("string" == typeof e) return b(e, t);
-                                var r = Object.prototype.toString
-                                  .call(e)
-                                  .slice(8, -1);
-                                if (
-                                  ("Object" === r &&
-                                    e.constructor &&
-                                    (r = e.constructor.name),
-                                  "Map" === r || "Set" === r)
-                                )
-                                  return Array.from(e);
-                                if (
-                                  "Arguments" === r ||
-                                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-                                    r
-                                  )
-                                )
-                                  return b(e, t);
-                              }
-                            })(e))
-                          ) {
-                            r && (e = r);
-                            var n = 0,
-                              i = function () {};
-                            return {
-                              s: i,
-                              n: function () {
-                                return n >= e.length
-                                  ? { done: !0 }
-                                  : { done: !1, value: e[n++] };
-                              },
-                              e: function (e) {
-                                throw e;
-                              },
-                              f: i,
-                            };
-                          }
-                          throw TypeError(
-                            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
-                          );
-                        }
-                        var o,
-                          a = !0,
-                          u = !1;
-                        return {
-                          s: function () {
-                            r = r.call(e);
-                          },
-                          n: function () {
-                            var e = r.next();
-                            return (a = e.done), e;
-                          },
-                          e: function (e) {
-                            (u = !0), (o = e);
-                          },
-                          f: function () {
-                            try {
-                              a || null == r.return || r.return();
-                            } finally {
-                              if (u) throw o;
-                            }
-                          },
-                        };
-                      })(r));
-                    try {
-                      for (i.s(); !(o = i.n()).done; )
-                        (u = o.value), n.push(["ids", u]);
-                    } catch (e) {
-                      i.e(e);
-                    } finally {
-                      i.f();
-                    }
-                    return (
-                      (c = new URLSearchParams(n)),
-                      (e.next = 7),
-                      fetch("".concat(g, "/public/plugins/by-id?").concat(c), {
-                        method: "GET",
-                        headers: { "Content-Type": "application/json" },
-                      })
-                    );
-                  case 7:
-                    if (200 !== (s = e.sent).status) {
-                      e.next = 10;
-                      break;
-                    }
-                    return e.abrupt("return", s.json());
-                  case 10:
-                    throw Error("Failed to get plugins by id: " + s.status);
-                  case 11:
-                  case "end":
-                    return e.stop();
-                }
-            }, e);
-          })
-        )).apply(this, arguments);
-      }
-      var O = r(70079),
-        _ = r(35250);
-      function w(e, t) {
-        var r = Object.keys(e);
+      var y = n(70079),
+        v = n(35250);
+      function O(e, t) {
+        var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
+          var r = Object.getOwnPropertySymbols(e);
           t &&
-            (n = n.filter(function (t) {
+            (r = r.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            n.push.apply(n, r);
         }
-        return r;
+        return n;
       }
-      function j(e) {
+      function g(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var r = null != arguments[t] ? arguments[t] : {};
+          var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? w(Object(r), !0).forEach(function (t) {
-                (0, n.Z)(e, t, r[t]);
+            ? O(Object(n), !0).forEach(function (t) {
+                (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : w(Object(r)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : O(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(r, t)
+                    Object.getOwnPropertyDescriptor(n, t)
                   );
                 });
         }
         return e;
       }
-      var P = !0;
-      function x(e) {
-        var t = e.sharedConversationId,
-          r = (0, h.a)({
+      var b = !0;
+      function j(e) {
+        let t = e.sharedConversationId,
+          { data: n, isError: r } = (0, d.a)({
             queryKey: ["shared-conversation/".concat(t)],
-            queryFn: function () {
-              return l.Z.getAuthedSharedConversation(t);
-            },
+            queryFn: () => c.Z.getAuthedSharedConversation(t),
           }),
-          n = r.data,
-          o = r.isError,
-          v = (0, O.useState)(function () {
-            return (0, d.OX)();
-          })[0],
-          b = (0, O.useState)(!1),
-          g = b[0],
-          w = b[1],
-          P = (0, y.NL)();
+          { 0: h } = (0, y.useState)(() => (0, u.OX)()),
+          { 0: p, 1: O } = (0, y.useState)(!1),
+          b = (0, f.NL)();
         return (
-          (0, O.useEffect)(
-            function () {
-              o && (window.location.href = (0, f.M5)(f.LT.SHARE_NOT_FOUND));
-            },
-            [o]
-          ),
-          (0, O.useEffect)(
-            function () {
-              function e() {
-                return (e = (0, i.Z)(
-                  a().mark(function e() {
-                    var r, i, o;
-                    return a().wrap(function (e) {
-                      for (;;)
-                        switch ((e.prev = e.next)) {
-                          case 0:
-                            if (!(n && v)) {
-                              e.next = 9;
-                              break;
-                            }
-                            if (
-                              !(
-                                (i =
-                                  null !== (r = n.plugin_ids) && void 0 !== r
-                                    ? r
-                                    : []).length > 0
-                              )
-                            ) {
-                              e.next = 7;
-                              break;
-                            }
-                            return (
-                              (e.next = 5),
-                              (function (e) {
-                                return m.apply(this, arguments);
-                              })({ ids: i })
-                            );
-                          case 5:
-                            (o = e.sent),
-                              P.setQueryData(
-                                o.items.map(function (e) {
-                                  return e.id;
-                                }),
-                                o
-                              );
-                          case 7:
-                            d.tQ.initThreadFromServerData(v, n, !0, t), w(!0);
-                          case 9:
-                          case "end":
-                            return e.stop();
-                        }
-                    }, e);
-                  })
-                )).apply(this, arguments);
+          (0, y.useEffect)(() => {
+            r && (window.location.href = (0, s.M5)(s.LT.SHARE_NOT_FOUND));
+          }, [r]),
+          (0, y.useEffect)(() => {
+            (async function () {
+              if (n && h) {
+                var e;
+                let r = null !== (e = n.plugin_ids) && void 0 !== e ? e : [];
+                if (r.length > 0) {
+                  let e = await _({ ids: r });
+                  b.setQueryData(
+                    e.items.map((e) => e.id),
+                    e
+                  );
+                }
+                u.tQ.initThreadFromServerData(h, n, !0, t), O(!0);
               }
-              !(function () {
-                e.apply(this, arguments);
-              })();
-            },
-            [n, t, v, P]
-          ),
-          g
+            })();
+          }, [n, t, h, b]),
+          p
             ? e.continueMode
-              ? (0, _.jsx)(
-                  u.ZP,
-                  j(j({}, e.chatPageProps), {}, { clientThreadId: v })
+              ? (0, v.jsx)(
+                  i.ZP,
+                  g(g({}, e.chatPageProps), {}, { clientThreadId: h })
                 )
-              : (0, _.jsx)(p.gB.Provider, {
+              : (0, v.jsx)(l.gB.Provider, {
                   value: { serverSharedThreadId: t },
-                  children: (0, _.jsx)(c.Z, {
-                    clientThreadId: v,
-                    setClientThreadId: function () {},
+                  children: (0, v.jsx)(a.Z, {
+                    clientThreadId: h,
+                    setClientThreadId: () => {},
                     initiallyHighlightedMessageId:
                       null == n ? void 0 : n.highlighted_message_id,
                     continueConversationUrl:
                       null == n ? void 0 : n.continue_conversation_url,
                   }),
                 })
-            : (0, _.jsx)("div", {
+            : (0, v.jsx)("div", {
                 className: "flex h-full items-center justify-center",
-                children: (0, _.jsx)(s.Z, {
+                children: (0, v.jsx)(o.Z, {
                   className: "text-token-text-tertiary",
                 }),
               })
         );
       }
     },
-    80027: function (e, t, r) {
+    92447: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/share/e/[[...shareParams]]",
         function () {
-          return r(49503);
+          return n(76330);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 80027));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 92447));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...shareParams]]-15cfe86e19a4388f.js.map
+//# sourceMappingURL=[[...shareParams]]-919e13140a13e17b.js.map

@@ -1,20 +1,20 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9344],
   {
-    60440: function (n, _, u) {
+    94847: function (n, _, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/login",
         function () {
-          return u(63754);
+          return u(90101);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [3975, 3754, 9774, 2888, 179], function () {
-      return n((n.s = 60440));
+    n.O(0, [8756, 101, 2888, 9774, 179], function () {
+      return n((n.s = 94847));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=login-001159e4899e6e7a.js.map
+//# sourceMappingURL=login-492b7885532f369a.js.map

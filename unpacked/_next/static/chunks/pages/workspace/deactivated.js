@@ -1,228 +1,199 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6161],
   {
-    30069: function (e, a, t) {
+    31493: function (e, a, s) {
       "use strict";
-      t.r(a),
-        t.d(a, {
+      s.r(a),
+        s.d(a, {
           default: function () {
-            return D;
+            return M;
           },
         });
-      var s = t(50134),
-        c = t(36112),
-        r = t(4399),
-        l = t.n(r),
-        o = t(43753),
-        i = t(3554),
-        n = t(73700),
-        d = t(95412),
-        u = t(7144),
-        p = t(73582),
-        f = t(40318),
-        v = t(61888),
-        h = t(21988),
-        k = t.n(h),
-        x = t(70079),
-        j = t(70671),
-        m = t(32004),
-        b = t(94968),
-        w = t(90387),
-        g = t(21120),
-        W = t(59963),
-        N = t(35250);
-      function y(e, a) {
-        var t = Object.keys(e);
+      var t = s(39827),
+        c = s(10388),
+        r = s(33925),
+        l = s(28138),
+        i = s(13038),
+        o = s(24668),
+        n = s(78e3),
+        d = s(4635),
+        u = s(61888),
+        p = s(38540),
+        f = s.n(p),
+        h = s(70079),
+        v = s(70671),
+        j = s(32004),
+        k = s(94968),
+        m = s(65375),
+        x = s(16244),
+        b = s(60645),
+        w = s(35250);
+      function g(e, a) {
+        var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
+          var t = Object.getOwnPropertySymbols(e);
           a &&
-            (s = s.filter(function (a) {
+            (t = t.filter(function (a) {
               return Object.getOwnPropertyDescriptor(e, a).enumerable;
             })),
-            t.push.apply(t, s);
+            s.push.apply(s, t);
         }
-        return t;
+        return s;
       }
-      function P(e) {
+      function W(e) {
         for (var a = 1; a < arguments.length; a++) {
-          var t = null != arguments[a] ? arguments[a] : {};
+          var s = null != arguments[a] ? arguments[a] : {};
           a % 2
-            ? y(Object(t), !0).forEach(function (a) {
-                (0, c.Z)(e, a, t[a]);
+            ? g(Object(s), !0).forEach(function (a) {
+                (0, t.Z)(e, a, s[a]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : y(Object(t)).forEach(function (a) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+              : g(Object(s)).forEach(function (a) {
                   Object.defineProperty(
                     e,
                     a,
-                    Object.getOwnPropertyDescriptor(t, a)
+                    Object.getOwnPropertyDescriptor(s, a)
                   );
                 });
         }
         return e;
       }
-      function M() {
-        var e = (0, p.aF)(),
-          a = (0, u.t)(),
-          t = (0, u.rk)().data,
-          c = (0, x.useState)(!1),
-          r = c[0],
-          h = c[1],
-          b = null == t ? void 0 : t.accountItems,
-          y = null == a ? void 0 : a.id,
-          M =
-            null == b
-              ? void 0
-              : b.find(function (e) {
-                  return e.id === y;
-                }),
-          _ =
-            null == b
-              ? void 0
-              : b.filter(function (e) {
-                  return !e.isDeactivated();
-                }),
-          D = (0, j.Z)();
-        return null != a && M && _
-          ? (0, N.jsx)(g.Z, {
+      function y() {
+        let e = (0, n.aF)(),
+          a = (0, o.t)(),
+          { data: s } = (0, o.rk)(),
+          { 0: t, 1: p } = (0, h.useState)(!1),
+          k = null == s ? void 0 : s.accountItems,
+          g = null == a ? void 0 : a.id,
+          y = null == k ? void 0 : k.find((e) => e.id === g),
+          P = null == k ? void 0 : k.filter((e) => !e.isDeactivated()),
+          M = (0, v.Z)();
+        return null != a && y && P
+          ? (0, w.jsx)(x.Z, {
               type: "success",
-              onClose: v.noop,
-              isOpen: null != a || null != t,
+              onClose: u.noop,
+              isOpen: null != a || null != s,
               className: "",
-              title: (0, N.jsx)("span", {
+              title: (0, w.jsx)("span", {
                 className: "text-lg",
-                children: (0, N.jsx)(m.Z, P({}, O.workspaceDeactivated)),
+                children: (0, w.jsx)(j.Z, W({}, N.workspaceDeactivated)),
               }),
-              children: (0, N.jsxs)("div", {
+              children: (0, w.jsxs)("div", {
                 className: "flex flex-col items-center justify-center gap-4",
                 children: [
-                  (0, N.jsxs)("div", {
+                  (0, w.jsxs)("div", {
                     className: "flex w-full items-center gap-4",
                     children: [
-                      (0, N.jsx)(w.B0, {
-                        src: M.data.profilePictureUrl,
+                      (0, w.jsx)(m.B0, {
+                        src: y.data.profilePictureUrl,
                         size: "large",
                       }),
-                      (0, N.jsx)("div", {
+                      (0, w.jsx)("div", {
                         className: "font-medium",
-                        children: M.data.name,
+                        children: y.data.name,
                       }),
                     ],
                   }),
-                  (0, N.jsxs)("div", {
+                  (0, w.jsxs)("div", {
                     children: [
-                      (0, N.jsx)("h3", {
+                      (0, w.jsx)("h3", {
                         className: "mb-2 text-base font-bold",
-                        children: (0, N.jsx)(
-                          m.Z,
-                          P({}, O.workspaceDeactivated)
+                        children: (0, w.jsx)(
+                          j.Z,
+                          W({}, N.workspaceDeactivated)
                         ),
                       }),
-                      (0, N.jsxs)("ul", {
+                      (0, w.jsxs)("ul", {
                         className: "list-disc pl-5",
                         children: [
-                          (0, N.jsx)("li", {
+                          (0, w.jsx)("li", {
                             className: "mb-1",
-                            children: (0, N.jsx)(
-                              m.Z,
-                              P({}, O.chatHistoryUnavailable)
+                            children: (0, w.jsx)(
+                              j.Z,
+                              W({}, N.chatHistoryUnavailable)
                             ),
                           }),
-                          (0, N.jsx)("li", {
-                            children: (0, N.jsx)(
-                              m.Z,
-                              P({}, O.otherWorkspacesAvailable)
+                          (0, w.jsx)("li", {
+                            children: (0, w.jsx)(
+                              j.Z,
+                              W({}, N.otherWorkspacesAvailable)
                             ),
                           }),
                         ],
                       }),
                     ],
                   }),
-                  (0, N.jsx)(W.b, {}),
-                  (0, N.jsx)("div", {
+                  (0, w.jsx)(b.b, {}),
+                  (0, w.jsx)("div", {
                     className: "w-full justify-center",
                     children:
-                      _.length > 0
-                        ? (0, N.jsxs)(N.Fragment, {
+                      P.length > 0
+                        ? (0, w.jsxs)(w.Fragment, {
                             children: [
-                              (0, N.jsx)("h3", {
+                              (0, w.jsx)("h3", {
                                 className: "mb-2 text-base font-bold",
-                                children: (0, N.jsx)(
-                                  m.Z,
-                                  P({}, O.selectWorkspace)
+                                children: (0, w.jsx)(
+                                  j.Z,
+                                  W({}, N.selectWorkspace)
                                 ),
                               }),
-                              (0, N.jsx)(o.b, { data: _ }),
+                              (0, w.jsx)(c.b, { data: P }),
                             ],
                           })
-                        : (0, N.jsxs)("div", {
+                        : (0, w.jsxs)("div", {
                             className: "flex flex-col gap-6",
                             children: [
-                              (0, N.jsxs)("div", {
+                              (0, w.jsxs)("div", {
                                 className: "flex flex-col gap-2",
                                 children: [
-                                  (0, N.jsx)("h3", {
+                                  (0, w.jsx)("h3", {
                                     className: "text-base font-bold",
-                                    children: (0, N.jsx)(
-                                      m.Z,
-                                      P({}, O.createPersonalWorkspace)
+                                    children: (0, w.jsx)(
+                                      j.Z,
+                                      W({}, N.createPersonalWorkspace)
                                     ),
                                   }),
-                                  (0, N.jsx)(
-                                    m.Z,
-                                    P({}, O.deactivatedWorkspaceReason)
+                                  (0, w.jsx)(
+                                    j.Z,
+                                    W({}, N.deactivatedWorkspaceReason)
                                   ),
                                 ],
                               }),
-                              (0, N.jsxs)("div", {
+                              (0, w.jsxs)("div", {
                                 className: "flex w-full items-center gap-4",
                                 children: [
                                   e &&
                                     e.picture &&
-                                    (0, N.jsx)(k(), {
+                                    (0, w.jsx)(f(), {
                                       alt: "Profile",
                                       src: e.picture,
-                                      width: w.EF.medium,
-                                      height: w.EF.medium,
+                                      width: m.EF.medium,
+                                      height: m.EF.medium,
                                       className:
                                         "flex items-center justify-center rounded-sm",
                                     }),
-                                  (0, N.jsx)("span", {
+                                  (0, w.jsx)("span", {
                                     className: "font-medium",
                                     children:
                                       e &&
-                                      (0, N.jsx)("span", { children: e.name }),
+                                      (0, w.jsx)("span", { children: e.name }),
                                   }),
                                 ],
                               }),
-                              (0, N.jsx)("div", {
+                              (0, w.jsx)("div", {
                                 className: "ml-auto",
-                                children: (0, N.jsx)(i.mH, {
-                                  title: D.formatMessage(
-                                    O.createPersonalWorkspaceButton
+                                children: (0, w.jsx)(r.mH, {
+                                  title: M.formatMessage(
+                                    N.createPersonalWorkspaceButton
                                   ),
-                                  loading: r,
-                                  onClick: (0, s.Z)(
-                                    l().mark(function e() {
-                                      return l().wrap(function (e) {
-                                        for (;;)
-                                          switch ((e.prev = e.next)) {
-                                            case 0:
-                                              return (
-                                                h(!0),
-                                                (e.next = 3),
-                                                d.Z.upsertPersonalWorkspace()
-                                              );
-                                            case 3:
-                                              (0, u.eV)(n.b), (0, f.M)();
-                                            case 5:
-                                            case "end":
-                                              return e.stop();
-                                          }
-                                      }, e);
-                                    })
-                                  ),
+                                  loading: t,
+                                  onClick: async () => {
+                                    p(!0),
+                                      await i.Z.upsertPersonalWorkspace(),
+                                      (0, o.eV)(l.b),
+                                      (0, d.M)();
+                                  },
                                   color: "primary",
                                   className: "ml-4",
                                 }),
@@ -233,83 +204,78 @@
                 ],
               }),
             })
-          : (0, N.jsx)(N.Fragment, {});
+          : (0, w.jsx)(w.Fragment, {});
       }
-      var O = (0, b.vU)({
-          workspaceDeactivated: {
-            id: "deactivatedWorkspaceModal.workspaceDeactivated",
-            defaultMessage: "Your workspace has been deactivated",
-          },
-          workspaceDeactivatedDesc: {
-            id: "deactivatedWorkspaceModal.workspaceDeactivatedDesc",
-            defaultMessage: "Your workspace has been deactivated.",
-          },
-          chatHistoryUnavailable: {
-            id: "deactivatedWorkspaceModal.chatHistoryUnavailable",
-            defaultMessage:
-              "Your chat history and settings will not be available.",
-          },
-          otherWorkspacesAvailable: {
-            id: "deactivatedWorkspaceModal.otherWorkspacesAvailable",
-            defaultMessage:
-              "You will still be able to use ChatGPT with the other workspaces associated with this email address.",
-          },
-          selectWorkspace: {
-            id: "deactivatedWorkspaceModal.selectWorkspace",
-            defaultMessage: "Select a workspace to continue",
-          },
-          createPersonalWorkspace: {
-            id: "deactivatedWorkspaceModal.createPersonalWorkspace",
-            defaultMessage: "Create a personal workspace to continue",
-          },
-          deactivatedWorkspaceReason: {
-            id: "deactivatedWorkspaceModal.deactivatedWorkspaceReason",
-            defaultMessage:
-              "Because your workspace has been deactivated, you need to create a personal workspace to continue using ChatGPT.",
-          },
-          profileAlt: {
-            id: "deactivatedWorkspaceModal.profileAlt",
-            defaultMessage: "Profile",
-          },
-          createPersonalWorkspaceButton: {
-            id: "deactivatedWorkspaceModal.createPersonalWorkspaceButton",
-            defaultMessage: "Create a personal workspace",
-          },
-        }),
-        _ = t(10721);
-      function D() {
-        var e = (0, p.ec)(p.F_.workspaces),
-          a = (0, u.t)(),
-          t = (0, p.ec)(p.F_.workspaceId),
-          s = e.find(function (e) {
-            return e.id === t;
-          }),
-          c = (0, _.useRouter)();
-        return ((0, x.useEffect)(
-          function () {
-            null == a || !a.data || (s && s.deactivated) || c.push("/");
-          },
-          [a, s, c]
-        ),
-        null == a || !a.data || (s && s.deactivated))
-          ? (0, N.jsx)(M, {})
-          : (0, N.jsx)("div", {});
+      let N = (0, k.vU)({
+        workspaceDeactivated: {
+          id: "deactivatedWorkspaceModal.workspaceDeactivated",
+          defaultMessage: "Your workspace has been deactivated",
+        },
+        workspaceDeactivatedDesc: {
+          id: "deactivatedWorkspaceModal.workspaceDeactivatedDesc",
+          defaultMessage: "Your workspace has been deactivated.",
+        },
+        chatHistoryUnavailable: {
+          id: "deactivatedWorkspaceModal.chatHistoryUnavailable",
+          defaultMessage:
+            "Your chat history and settings will not be available.",
+        },
+        otherWorkspacesAvailable: {
+          id: "deactivatedWorkspaceModal.otherWorkspacesAvailable",
+          defaultMessage:
+            "You will still be able to use ChatGPT with the other workspaces associated with this email address.",
+        },
+        selectWorkspace: {
+          id: "deactivatedWorkspaceModal.selectWorkspace",
+          defaultMessage: "Select a workspace to continue",
+        },
+        createPersonalWorkspace: {
+          id: "deactivatedWorkspaceModal.createPersonalWorkspace",
+          defaultMessage: "Create a personal workspace to continue",
+        },
+        deactivatedWorkspaceReason: {
+          id: "deactivatedWorkspaceModal.deactivatedWorkspaceReason",
+          defaultMessage:
+            "Because your workspace has been deactivated, you need to create a personal workspace to continue using ChatGPT.",
+        },
+        profileAlt: {
+          id: "deactivatedWorkspaceModal.profileAlt",
+          defaultMessage: "Profile",
+        },
+        createPersonalWorkspaceButton: {
+          id: "deactivatedWorkspaceModal.createPersonalWorkspaceButton",
+          defaultMessage: "Create a personal workspace",
+        },
+      });
+      var P = s(12366);
+      function M() {
+        let e = (0, n.ec)(n.F_.workspaces),
+          a = (0, o.t)(),
+          s = (0, n.ec)(n.F_.workspaceId),
+          t = e.find((e) => e.id === s),
+          c = (0, P.useRouter)();
+        return ((0, h.useEffect)(() => {
+          null == a || !a.data || (t && t.deactivated) || c.push("/");
+        }, [a, t, c]),
+        null == a || !a.data || (t && t.deactivated))
+          ? (0, w.jsx)(y, {})
+          : (0, w.jsx)("div", {});
       }
     },
-    57263: function (e, a, t) {
+    64788: function (e, a, s) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/workspace/deactivated",
         function () {
-          return t(30069);
+          return s(31493);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 57263));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 64788));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=deactivated-3ff3b16d85c87728.js.map
+//# sourceMappingURL=deactivated-fdc88467664bc4ad.js.map

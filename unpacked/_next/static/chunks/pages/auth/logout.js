@@ -1,79 +1,58 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7825],
   {
-    8995: function (t, r, n) {
+    1072: function (t, e, n) {
       "use strict";
-      n.r(r),
-        n.d(r, {
+      n.r(e),
+        n.d(e, {
           __N_SSP: function () {
-            return b;
+            return l;
           },
           default: function () {
-            return w;
+            return a;
           },
         });
-      var e,
-        o = n(36112),
-        c = n(50134),
-        u = n(4399),
-        i = n.n(u),
-        f = n(40318),
-        s = n(26565),
-        a = n(70079),
-        l = n(35250);
-      function p(t, r) {
+      var r = n(39827),
+        o = n(4635),
+        c = n(2722),
+        u = n(70079),
+        i = n(35250);
+      function f(t, e) {
         var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var e = Object.getOwnPropertySymbols(t);
-          r &&
-            (e = e.filter(function (r) {
-              return Object.getOwnPropertyDescriptor(t, r).enumerable;
+          var r = Object.getOwnPropertySymbols(t);
+          e &&
+            (r = r.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
             })),
-            n.push.apply(n, e);
+            n.push.apply(n, r);
         }
         return n;
       }
-      var O =
-          ((e = (0, c.Z)(
-            i().mark(function t(r) {
-              return i().wrap(function (t) {
-                for (;;)
-                  switch ((t.prev = t.next)) {
-                    case 0:
-                      return (t.next = 2), (0, s.signOut)({ callbackUrl: r });
-                    case 2:
-                      (0, f.I)();
-                    case 3:
-                    case "end":
-                      return t.stop();
-                  }
-              }, t);
-            })
-          )),
-          function (t) {
-            return e.apply(this, arguments);
-          }),
-        b = !0;
-      function w(t) {
-        return (0, l.jsx)(
-          _,
+      let s = async (t) => {
+        await (0, c.signOut)({ callbackUrl: t }), (0, o.I)();
+      };
+      var l = !0;
+      function a(t) {
+        return (0, i.jsx)(
+          O,
           (function (t) {
-            for (var r = 1; r < arguments.length; r++) {
-              var n = null != arguments[r] ? arguments[r] : {};
-              r % 2
-                ? p(Object(n), !0).forEach(function (r) {
-                    (0, o.Z)(t, r, n[r]);
+            for (var e = 1; e < arguments.length; e++) {
+              var n = null != arguments[e] ? arguments[e] : {};
+              e % 2
+                ? f(Object(n), !0).forEach(function (e) {
+                    (0, r.Z)(t, e, n[e]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       t,
                       Object.getOwnPropertyDescriptors(n)
                     )
-                  : p(Object(n)).forEach(function (r) {
+                  : f(Object(n)).forEach(function (e) {
                       Object.defineProperty(
                         t,
-                        r,
-                        Object.getOwnPropertyDescriptor(n, r)
+                        e,
+                        Object.getOwnPropertyDescriptor(n, e)
                       );
                     });
             }
@@ -81,35 +60,32 @@
           })({}, t)
         );
       }
-      function _(t) {
-        var r = t.federatedLogoutUri;
+      function O(t) {
+        let { federatedLogoutUri: e } = t;
         return (
-          (0, a.useEffect)(
-            function () {
-              O(null != r ? r : window.location.origin).catch(function (t) {
-                return console.error("Failed to logout", { error: t });
-              });
-            },
-            [r]
-          ),
+          (0, u.useEffect)(() => {
+            s(null != e ? e : window.location.origin).catch((t) =>
+              console.error("Failed to logout", { error: t })
+            );
+          }, [e]),
           null
         );
       }
     },
-    3499: function (t, r, n) {
+    35155: function (t, e, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/logout",
         function () {
-          return n(8995);
+          return n(1072);
         },
       ]);
     },
   },
   function (t) {
-    t.O(0, [9774, 2888, 179], function () {
-      return t((t.s = 3499));
+    t.O(0, [2888, 9774, 179], function () {
+      return t((t.s = 35155));
     }),
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=logout-68394f2869368842.js.map
+//# sourceMappingURL=logout-880cef26c6bfe98b.js.map

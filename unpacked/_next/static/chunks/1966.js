@@ -16,41 +16,43 @@
           n = e.get(i);
         return void 0 === n && ((n = t.apply(this, o)), e.set(i, n)), n;
       }
-      function o(t, o) {
-        var i,
-          n,
-          s = 1 === t.length ? e : r;
-        return (
-          (i = o.cache.create()), (n = o.serializer), s.bind(this, t, i, n)
-        );
-      }
-      function i() {
+      function o() {
         return JSON.stringify(arguments);
       }
-      function n() {
+      function i() {
         this.cache = Object.create(null);
       }
-      (n.prototype.has = function (t) {
+      (i.prototype.has = function (t) {
         return t in this.cache;
       }),
-        (n.prototype.get = function (t) {
+        (i.prototype.get = function (t) {
           return this.cache[t];
         }),
-        (n.prototype.set = function (t, e) {
+        (i.prototype.set = function (t, e) {
           this.cache[t] = e;
         });
-      var s = {
+      var n = {
         create: function () {
-          return new n();
+          return new i();
         },
       };
-      (t.exports = function (t, e) {
-        var r = e && e.cache ? e.cache : s,
-          n = e && e.serializer ? e.serializer : i;
-        return (e && e.strategy ? e.strategy : o)(t, {
-          cache: r,
-          serializer: n,
-        });
+      (t.exports = function (t, i) {
+        var s = i && i.cache ? i.cache : n,
+          a = i && i.serializer ? i.serializer : o;
+        return (
+          i && i.strategy
+            ? i.strategy
+            : function (t, o) {
+                var i,
+                  n,
+                  s = 1 === t.length ? e : r;
+                return (
+                  (i = o.cache.create()),
+                  (n = o.serializer),
+                  s.bind(this, t, i, n)
+                );
+              }
+        )(t, { cache: s, serializer: a });
       }),
         (t.exports.strategies = {
           variadic: function (t, e) {
@@ -778,10 +780,11 @@
             })),
               Object.defineProperty(t, "prototype", { writable: !1 }),
               e && b(t, e);
-          })(u, t);
+          })(h, t);
           var e,
             r,
-            n =
+            n,
+            u =
               ((e = (function () {
                 if (
                   "undefined" == typeof Reflect ||
@@ -803,7 +806,7 @@
               })()),
               function () {
                 var t,
-                  r = m(u);
+                  r = m(h);
                 if (e) {
                   var i = m(this).constructor;
                   t = Reflect.construct(r, arguments, i);
@@ -818,16 +821,16 @@
                   return y(t);
                 })(this, t);
               });
-          function u() {
+          function h() {
             var t;
             !(function (t, e) {
               if (!(t instanceof e))
                 throw TypeError("Cannot call a class as a function");
-            })(this, u);
+            })(this, h);
             for (var e = arguments.length, r = Array(e), o = 0; o < e; o++)
               r[o] = arguments[o];
             return (
-              v(y((t = n.call.apply(n, [this].concat(r)))), "state", {
+              v(y((t = u.call.apply(u, [this].concat(r)))), "state", {
                 dragging: !1,
                 lastX: NaN,
                 lastY: NaN,
@@ -992,7 +995,7 @@
             );
           }
           return (
-            g(u.prototype, [
+            (r = [
               {
                 key: "componentDidMount",
                 value: function () {
@@ -1047,9 +1050,10 @@
                 },
               },
             ]),
-            r && g(u, r),
-            Object.defineProperty(u, "prototype", { writable: !1 }),
-            u
+            g(h.prototype, r),
+            n && g(h, n),
+            Object.defineProperty(h, "prototype", { writable: !1 }),
+            h
           );
         })(i.Component);
       (e.default = x),
@@ -3091,4 +3095,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1966.63f2f6562c459b3e.js.map
+//# sourceMappingURL=1966.8596a5c250b2c4f7.js.map

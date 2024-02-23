@@ -590,14 +590,11 @@
             null == s
               ? void 0
               : s.reduce(function (t, n) {
-                  var i, r;
+                  var i;
                   return (0, e.pi)(
                     (0, e.pi)({}, t),
                     (((i = {})[
-                      ("Integration" in (r = n)
-                        ? r.Integration
-                        : r
-                      ).prototype.name
+                      ("Integration" in n ? n.Integration : n).prototype.name
                     ] = n),
                     i)
                   );
@@ -660,4 +657,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ajs-destination.d9cd2d046a23b656.js.map
+//# sourceMappingURL=ajs-destination.6abd0ae9c08306a9.js.map

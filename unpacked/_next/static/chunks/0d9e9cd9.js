@@ -191,20 +191,19 @@
         }
         getConfig() {
           let i = {
-              kernelSize: this.kernelSize,
-              strides: this.strides,
-              padding: this.padding,
-              dataFormat: this.dataFormat,
-              dilationRate: this.dilationRate,
-              activation: (0, s.GD)(this.activation),
-              useBias: this.useBias,
-              biasInitializer: (0, u.Cx)(this.biasInitializer),
-              biasRegularizer: (0, p.SG)(this.biasRegularizer),
-              activityRegularizer: (0, p.SG)(this.activityRegularizer),
-              biasConstraint: (0, h.xF)(this.biasConstraint),
-            },
-            t = super.getConfig();
-          return Object.assign(i, t), i;
+            kernelSize: this.kernelSize,
+            strides: this.strides,
+            padding: this.padding,
+            dataFormat: this.dataFormat,
+            dilationRate: this.dilationRate,
+            activation: (0, s.GD)(this.activation),
+            useBias: this.useBias,
+            biasInitializer: (0, u.Cx)(this.biasInitializer),
+            biasRegularizer: (0, p.SG)(this.biasRegularizer),
+            activityRegularizer: (0, p.SG)(this.activityRegularizer),
+            biasConstraint: (0, h.xF)(this.biasConstraint),
+          };
+          return Object.assign(i, super.getConfig()), i;
         }
       }
       class z extends w {
@@ -405,13 +404,12 @@
         }
         getConfig() {
           let i = {
-              filters: this.filters,
-              kernelInitializer: (0, u.Cx)(this.kernelInitializer),
-              kernelRegularizer: (0, p.SG)(this.kernelRegularizer),
-              kernelConstraint: (0, h.xF)(this.kernelConstraint),
-            },
-            t = super.getConfig();
-          return Object.assign(i, t), i;
+            filters: this.filters,
+            kernelInitializer: (0, u.Cx)(this.kernelInitializer),
+            kernelRegularizer: (0, p.SG)(this.kernelRegularizer),
+            kernelConstraint: (0, h.xF)(this.kernelConstraint),
+          };
+          return Object.assign(i, super.getConfig()), i;
         }
         static verifyArgs(i) {
           if (
@@ -537,25 +535,27 @@
               p = this.kernelSize[1],
               g = this.strides[0],
               m = this.strides[1],
-              b = (0, c.$U)(h, g, u, this.padding),
-              k = (0, c.$U)(o, m, p, this.padding),
-              w = [l, b, k, this.filters];
+              b = [
+                l,
+                (0, c.$U)(h, g, u, this.padding),
+                (0, c.$U)(o, m, p, this.padding),
+                this.filters,
+              ];
             "channelsLast" !== this.dataFormat && (s = n.p4s(s, [0, 2, 3, 1]));
-            let z = n.bc(s, this.kernel.read(), w, this.strides, this.padding);
+            let k = n.bc(s, this.kernel.read(), b, this.strides, this.padding);
             return (
               "channelsLast" !== this.dataFormat &&
-                (z = n.p4s(z, [0, 3, 1, 2])),
+                (k = n.p4s(k, [0, 3, 1, 2])),
               null != this.bias &&
-                (z = a.a2(z, this.bias.read(), this.dataFormat)),
-              null != this.activation && (z = this.activation.apply(z)),
-              z
+                (k = a.a2(k, this.bias.read(), this.dataFormat)),
+              null != this.activation && (k = this.activation.apply(k)),
+              k
             );
           });
         }
         computeOutputShape(i) {
           let t, e, n;
-          i = (0, f.Wf)(i);
-          let s = i.slice();
+          let s = (i = (0, f.Wf)(i)).slice();
           "channelsFirst" === this.dataFormat
             ? ((t = 1), (e = 2), (n = 3))
             : ((t = 3), (e = 1), (n = 2));
@@ -646,27 +646,29 @@
               k = this.strides[0],
               w = this.strides[1],
               z = this.strides[2],
-              v = (0, c.$U)(o, k, g, this.padding),
-              C = (0, c.$U)(u, w, m, this.padding),
-              S = (0, c.$U)(p, z, b, this.padding),
-              F = [h, v, C, S, this.filters];
+              v = [
+                h,
+                (0, c.$U)(o, k, g, this.padding),
+                (0, c.$U)(u, w, m, this.padding),
+                (0, c.$U)(p, z, b, this.padding),
+                this.filters,
+              ];
             "channelsLast" !== this.dataFormat &&
               (r = n.p4s(r, [0, 2, 3, 4, 1]));
-            let I = n.$QV(r, this.kernel.read(), F, this.strides, this.padding);
+            let C = n.$QV(r, this.kernel.read(), v, this.strides, this.padding);
             return (
               "channelsLast" !== this.dataFormat &&
-                (I = n.p4s(I, [0, 4, 1, 2, 3])),
+                (C = n.p4s(C, [0, 4, 1, 2, 3])),
               null !== this.bias &&
-                (I = a.a2(I, this.bias.read(), this.dataFormat)),
-              null !== this.activation && (I = this.activation.apply(I)),
-              I
+                (C = a.a2(C, this.bias.read(), this.dataFormat)),
+              null !== this.activation && (C = this.activation.apply(C)),
+              C
             );
           });
         }
         computeOutputShape(i) {
           let t, e, n, s;
-          i = (0, f.Wf)(i);
-          let r = i.slice();
+          let r = (i = (0, f.Wf)(i)).slice();
           "channelsFirst" === this.dataFormat
             ? ((t = 1), (e = 2), (n = 3), (s = 4))
             : ((t = 4), (e = 1), (n = 2), (s = 3));
@@ -928,9 +930,8 @@
           });
         }
         getConfig() {
-          let i = { cropping: this.cropping, dataFormat: this.dataFormat },
-            t = super.getConfig();
-          return Object.assign(i, t), i;
+          let i = { cropping: this.cropping, dataFormat: this.dataFormat };
+          return Object.assign(i, super.getConfig()), i;
         }
       }
       (A.className = "Cropping2D"), n.m7h.registerClass(A);
@@ -984,16 +985,15 @@
         }
         getConfig() {
           let i = {
-              size: this.size,
-              dataFormat: this.dataFormat,
-              interpolation: this.interpolation,
-            },
-            t = super.getConfig();
-          return Object.assign(i, t), i;
+            size: this.size,
+            dataFormat: this.dataFormat,
+            interpolation: this.interpolation,
+          };
+          return Object.assign(i, super.getConfig()), i;
         }
       }
       (N.className = "UpSampling2D"), n.m7h.registerClass(N);
     },
   },
 ]);
-//# sourceMappingURL=0d9e9cd9.d91605606adc34f6.js.map
+//# sourceMappingURL=0d9e9cd9.36bb6cb6e7d3b8e4.js.map

@@ -1,44 +1,41 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9442],
   {
-    95879: function (n, u, t) {
+    99187: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
           default: function () {
-            return _;
+            return r;
           },
         });
-      var e = t(10721),
+      var e = t(12366),
         f = t(70079),
-        r = t(35250);
-      function _() {
-        var n = (0, e.useRouter)();
+        _ = t(35250);
+      function r() {
+        let n = (0, e.useRouter)();
         return (
-          (0, f.useEffect)(
-            function () {
-              n.push("/#disable_mfa");
-            },
-            [n]
-          ),
-          (0, r.jsx)(r.Fragment, {})
+          (0, f.useEffect)(() => {
+            n.push("/#disable_mfa");
+          }, [n]),
+          (0, _.jsx)(_.Fragment, {})
         );
       }
     },
-    64082: function (n, u, t) {
+    49921: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/disable_mfa",
         function () {
-          return t(95879);
+          return t(99187);
         },
       ]);
     },
   },
   function (n) {
-    n.O(0, [9774, 2888, 179], function () {
-      return n((n.s = 64082));
+    n.O(0, [2888, 9774, 179], function () {
+      return n((n.s = 49921));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=disable_mfa-d4488527e0a78922.js.map
+//# sourceMappingURL=disable_mfa-b667bb9b80173d16.js.map

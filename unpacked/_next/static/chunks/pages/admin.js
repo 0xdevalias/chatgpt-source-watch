@@ -1,243 +1,213 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6964],
   {
-    78753: function (e, r, t) {
+    994: function (e, t, r) {
       "use strict";
-      t.r(r),
-        t.d(r, {
+      r.r(t),
+        r.d(t, {
           __N_SSP: function () {
-            return em;
+            return eo;
           },
           default: function () {
-            return ef;
+            return ed;
           },
         });
-      var n,
-        s,
-        a,
-        i = t(36112),
-        c = t(35017),
-        o = t(90038),
-        l = t(73797),
-        u = t(7144),
-        d = t(18008),
-        m = t(99715),
-        f = t(18399),
-        p = t(82920),
-        v = t(19841),
-        g = t(61888),
-        j = t(29124),
-        b = t.n(j),
-        h = t(10721),
-        x = t(70079),
-        y = t(1454),
-        k = t(32004),
-        w = t(70671),
-        O = t(94968),
-        I = t(21389),
-        M = t(91559),
-        Z = t(73659),
-        P = t(45634),
-        R = t(34408),
-        q = t(52467),
-        C = t(50134),
-        N = t(4399),
-        E = t.n(N),
-        S = t(95412),
-        U = t(61236),
-        D = t(82473),
-        _ = t(25494),
-        W = t(4748);
-      function T(e) {
-        var r = (0, w.Z)(),
-          t = (0, D.NL)();
-        return (0, _.D)({
-          mutationFn: function (t) {
-            var n = t.inviteId,
-              s = t.role,
-              a = t.acceptRequest;
-            return S.Z.patchWorkspaceInvite(e, n, {
-              role: s,
+      var s,
+        n,
+        a = r(39827),
+        i = r(9112),
+        l = r(73017),
+        c = r(70917),
+        o = r(24668),
+        d = r(18405),
+        u = r(99715),
+        m = r(19816),
+        g = r(82920),
+        p = r(19841),
+        f = r(61888),
+        j = r(80483),
+        v = r.n(j),
+        b = r(12366),
+        x = r(70079),
+        h = r(1454),
+        y = r(32004),
+        k = r(70671),
+        O = r(94968),
+        w = r(21389),
+        M = r(7557),
+        P = r(10060),
+        Z = r(41068),
+        I = r(95250),
+        R = r(52299),
+        q = r(13038),
+        N = r(61236),
+        C = r(82473),
+        E = r(25494),
+        S = r(65455);
+      function D(e) {
+        let t = (0, k.Z)(),
+          r = (0, C.NL)();
+        return (0, E.D)({
+          mutationFn: (r) => {
+            let { inviteId: s, role: n, acceptRequest: a } = r;
+            return q.Z.patchWorkspaceInvite(e, s, {
+              role: n,
               acceptRequest: a,
-            }).catch(function (e) {
-              W.m.danger(
-                r.formatMessage(H.updateInviteError, { error: e.message })
+            }).catch((e) => {
+              S.m.danger(
+                t.formatMessage(U.updateInviteError, { error: e.message })
               );
             });
           },
-          onSuccess: function () {
-            t.invalidateQueries({ queryKey: ["workspace", e, "invites"] }),
-              t.invalidateQueries({
+          onSuccess: () => {
+            r.invalidateQueries({ queryKey: ["workspace", e, "invites"] }),
+              r.invalidateQueries({
                 queryKey: ["workspace", e, "invites", "requests"],
               }),
-              t.invalidateQueries({ queryKey: ["workspace", e] });
+              r.invalidateQueries({ queryKey: ["workspace", e] });
           },
         });
       }
-      function A(e) {
-        var r = (0, w.Z)(),
-          t = (0, D.NL)();
-        return (0, _.D)({
-          mutationFn: function (t) {
-            var n = t.email;
-            return S.Z.deleteWorkspaceInvite(e, n).catch(function (e) {
-              W.m.danger(
-                r.formatMessage(H.deleteInviteError, {
-                  email: n,
+      function _(e) {
+        let t = (0, k.Z)(),
+          r = (0, C.NL)();
+        return (0, E.D)({
+          mutationFn: (r) => {
+            let { email: s } = r;
+            return q.Z.deleteWorkspaceInvite(e, s).catch((e) => {
+              S.m.danger(
+                t.formatMessage(U.deleteInviteError, {
+                  email: s,
                   error: e.message,
                 })
               );
             });
           },
-          onSuccess: function () {
-            t.invalidateQueries({ queryKey: ["workspace", e, "invites"] }),
-              t.invalidateQueries({
+          onSuccess: () => {
+            r.invalidateQueries({ queryKey: ["workspace", e, "invites"] }),
+              r.invalidateQueries({
                 queryKey: ["workspace", e, "invites", "requests"],
               });
           },
         });
       }
-      var H = (0, O.vU)({
-          updateInviteError: {
-            id: "WorkspaceInvites.updateInviteError",
-            defaultMessage: "Unable to update invite from workspace: {error}",
-          },
-          deleteInviteError: {
-            id: "WorkspaceInvites.deleteInviteError",
-            defaultMessage:
-              "Unable to remove user ({email}) from workspace: {error}",
-          },
-          resendInviteSuccess: {
-            id: "WorkspaceInvites.resendInviteSuccess",
-            defaultMessage: "Sent a new invite to {email}",
-          },
-          resendInviteError: {
-            id: "WorkspaceInvites.resendInviteError",
-            defaultMessage:
-              "Unable to resend invite to ({email}) from workspace: {error}",
-          },
-        }),
-        K = t(24020),
-        B = t(218),
-        F = t(35250);
-      function z(e, r) {
-        var t = Object.keys(e);
+      let U = (0, O.vU)({
+        updateInviteError: {
+          id: "WorkspaceInvites.updateInviteError",
+          defaultMessage: "Unable to update invite from workspace: {error}",
+        },
+        deleteInviteError: {
+          id: "WorkspaceInvites.deleteInviteError",
+          defaultMessage:
+            "Unable to remove user ({email}) from workspace: {error}",
+        },
+        resendInviteSuccess: {
+          id: "WorkspaceInvites.resendInviteSuccess",
+          defaultMessage: "Sent a new invite to {email}",
+        },
+        resendInviteError: {
+          id: "WorkspaceInvites.resendInviteError",
+          defaultMessage:
+            "Unable to resend invite to ({email}) from workspace: {error}",
+        },
+      });
+      var W = r(84395),
+        T = r(32163),
+        A = r(35250);
+      function H(e, t) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          r &&
-            (n = n.filter(function (r) {
-              return Object.getOwnPropertyDescriptor(e, r).enumerable;
+          var s = Object.getOwnPropertySymbols(e);
+          t &&
+            (s = s.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            t.push.apply(t, n);
+            r.push.apply(r, s);
         }
-        return t;
+        return r;
       }
-      function Q(e) {
-        for (var r = 1; r < arguments.length; r++) {
-          var t = null != arguments[r] ? arguments[r] : {};
-          r % 2
-            ? z(Object(t), !0).forEach(function (r) {
-                (0, i.Z)(e, r, t[r]);
+      function K(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var r = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? H(Object(r), !0).forEach(function (t) {
+                (0, a.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : z(Object(t)).forEach(function (r) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : H(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r)
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t)
                   );
                 });
         }
         return e;
       }
-      function V(e) {
-        var r,
-          t,
-          n = e.workspaceId,
-          s = e.filterInputValue,
-          a = (0, x.useState)(0),
-          i = a[0],
-          c = a[1],
-          o = (0, B.Gk)(n),
-          l = (0, B.bE)(n),
-          u = o || l,
-          d = ((r = 25 * i),
-          (0, U.a)({
-            queryKey: ["workspace", n, "invites", r, s],
-            queryFn:
-              ((t = (0, C.Z)(
-                E().mark(function e() {
-                  return E().wrap(function (e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            (e.next = 2), S.Z.getWorkspaceInvites(n, r, 25, s)
-                          );
-                        case 2:
-                          return e.abrupt("return", e.sent);
-                        case 3:
-                        case "end":
-                          return e.stop();
-                      }
-                  }, e);
-                })
-              )),
-              function () {
-                return t.apply(this, arguments);
-              }),
-          })).data;
-        if (void 0 === d) return (0, F.jsx)(K.bq, {});
-        var m = d.items,
-          f = Math.ceil(d.total / 25);
+      function B(e) {
+        var t;
+        let { workspaceId: r, filterInputValue: s } = e,
+          { 0: n, 1: a } = (0, x.useState)(0),
+          i = (0, T.Gk)(r),
+          l = (0, T.bE)(r),
+          c = i || l,
+          { data: o } =
+            ((t = 25 * n),
+            (0, N.a)({
+              queryKey: ["workspace", r, "invites", t, s],
+              queryFn: async () => await q.Z.getWorkspaceInvites(r, t, 25, s),
+            }));
+        if (void 0 === o) return (0, A.jsx)(W.bq, {});
+        let d = o.items,
+          u = Math.ceil(o.total / 25);
         return (
-          i >= f && 0 !== f && c(Math.max(f - 1, 0)),
-          (0, F.jsxs)("div", {
+          n >= u && 0 !== u && a(Math.max(u - 1, 0)),
+          (0, A.jsxs)("div", {
             children: [
-              (0, F.jsxs)(R.Z.Root, {
+              (0, A.jsxs)(I.Z.Root, {
                 fixed: !0,
                 size: "normal",
                 children: [
-                  (0, F.jsxs)(R.Z.Header, {
+                  (0, A.jsxs)(I.Z.Header, {
                     children: [
-                      (0, F.jsx)(R.Z.HeaderCell, {
+                      (0, A.jsx)(I.Z.HeaderCell, {
                         className: "bg-token-main-surface-primary",
-                        children: (0, F.jsx)(k.Z, Q({}, J.email)),
+                        children: (0, A.jsx)(y.Z, K({}, Q.email)),
                       }),
-                      (0, F.jsx)(R.Z.HeaderCell, {
+                      (0, A.jsx)(I.Z.HeaderCell, {
                         className: "w-28 bg-token-main-surface-primary",
-                        children: (0, F.jsx)("span", {
-                          className: u ? "pl-3" : "",
-                          children: (0, F.jsx)(k.Z, Q({}, J.role)),
+                        children: (0, A.jsx)("span", {
+                          className: c ? "pl-3" : "",
+                          children: (0, A.jsx)(y.Z, K({}, Q.role)),
                         }),
                       }),
-                      u &&
-                        (0, F.jsx)(R.Z.HeaderCell, {
+                      c &&
+                        (0, A.jsx)(I.Z.HeaderCell, {
                           className: "w-16 bg-token-main-surface-primary",
                         }),
                     ],
                   }),
-                  (0, F.jsxs)(R.Z.Body, {
+                  (0, A.jsxs)(I.Z.Body, {
                     children: [
-                      m.map(function (e) {
-                        return (0, F.jsx)(
-                          L,
+                      d.map((e) =>
+                        (0, A.jsx)(
+                          F,
                           {
-                            workspaceId: n,
+                            workspaceId: r,
                             invite: e,
-                            isCurrentUserOwner: o,
-                            currentUserHasAdminRights: u,
+                            isCurrentUserOwner: i,
+                            currentUserHasAdminRights: c,
                           },
                           e.id
-                        );
-                      }),
-                      0 === m.length &&
-                        (0, F.jsx)(R.Z.Row, {
-                          children: (0, F.jsx)(R.Z.Cell, {
-                            children: (0, F.jsx)("div", {
+                        )
+                      ),
+                      0 === d.length &&
+                        (0, A.jsx)(I.Z.Row, {
+                          children: (0, A.jsx)(I.Z.Cell, {
+                            children: (0, A.jsx)("div", {
                               className: "text-token-text-tertiary",
-                              children: (0, F.jsx)(k.Z, Q({}, J.noResults)),
+                              children: (0, A.jsx)(y.Z, K({}, Q.noResults)),
                             }),
                           }),
                         }),
@@ -245,85 +215,84 @@
                   }),
                 ],
               }),
-              f > 1 &&
-                (0, F.jsx)("div", {
+              u > 1 &&
+                (0, A.jsx)("div", {
                   className: "mt-2 flex justify-center",
-                  children: (0, F.jsx)(q.t, {
-                    currentPage: i,
-                    onChangeIndex: c,
-                    length: f,
+                  children: (0, A.jsx)(R.t, {
+                    currentPage: n,
+                    onChangeIndex: a,
+                    length: u,
                   }),
                 }),
             ],
           })
         );
       }
-      function L(e) {
-        var r,
-          t,
-          n = e.workspaceId,
-          s = e.invite,
-          a = e.isCurrentUserOwner,
-          i = e.currentUserHasAdminRights,
-          c = (0, B.Ap)(),
-          o = T(n),
-          l = A(n),
-          u =
-            ((r = (0, w.Z)()),
-            (t = (0, D.NL)()),
-            (0, _.D)({
-              mutationFn: function (e) {
-                var t = e.role,
-                  s = e.email;
-                return S.Z.addWorkspaceUsers(n, [s], t, !0)
-                  .then(function (e) {
-                    var t = e.account_invites,
-                      n = e.errored_emails;
-                    if (n.length > 0) throw Error(n[0].error);
-                    t.length > 0 &&
-                      W.m.success(
-                        r.formatMessage(H.resendInviteSuccess, { email: s })
+      function F(e) {
+        let {
+            workspaceId: t,
+            invite: r,
+            isCurrentUserOwner: s,
+            currentUserHasAdminRights: n,
+          } = e,
+          a = (0, T.Ap)(),
+          i = D(t),
+          l = _(t),
+          c = (function (e) {
+            let t = (0, k.Z)(),
+              r = (0, C.NL)();
+            return (0, E.D)({
+              mutationFn: (r) => {
+                let { role: s, email: n } = r;
+                return q.Z.addWorkspaceUsers(e, [n], s, !0)
+                  .then((e) => {
+                    let { account_invites: r, errored_emails: s } = e;
+                    if (s.length > 0) throw Error(s[0].error);
+                    r.length > 0 &&
+                      S.m.success(
+                        t.formatMessage(U.resendInviteSuccess, { email: n })
                       );
                   })
-                  .catch(function (e) {
-                    W.m.danger(
-                      r.formatMessage(H.resendInviteError, {
-                        email: s,
+                  .catch((e) => {
+                    S.m.danger(
+                      t.formatMessage(U.resendInviteError, {
+                        email: n,
                         error: e.message,
                       })
                     );
                   });
               },
-              onSuccess: function () {
-                t.invalidateQueries({ queryKey: ["workspace", n, "invites"] }),
-                  t.invalidateQueries({
-                    queryKey: ["workspace", n, "invites", "requests"],
+              onSuccess: () => {
+                r.invalidateQueries({ queryKey: ["workspace", e, "invites"] }),
+                  r.invalidateQueries({
+                    queryKey: ["workspace", e, "invites", "requests"],
                   });
               },
-            }));
-        return (0, F.jsxs)(R.Z.Row, {
-          disabled: o.isPending || l.isPending || l.isSuccess || u.isPending,
+            });
+          })(t);
+        return (0, A.jsxs)(I.Z.Row, {
+          disabled: i.isPending || l.isPending || l.isSuccess || c.isPending,
           children: [
-            (0, F.jsx)(R.Z.Cell, { children: s.email_address }),
-            (0, F.jsx)(R.Z.Cell, {
-              children: a
-                ? (0, F.jsx)(K.mJ, {
-                    currentRole: s.role,
-                    onUpdateUserRole: function (e) {
-                      o.mutate({ inviteId: s.id, role: e });
+            (0, A.jsx)(I.Z.Cell, { children: r.email_address }),
+            (0, A.jsx)(I.Z.Cell, {
+              children: s
+                ? (0, A.jsx)(W.mJ, {
+                    currentRole: r.role,
+                    onUpdateUserRole: (e) => {
+                      i.mutate({ inviteId: r.id, role: e });
                     },
                   })
-                : c[s.role],
+                : a[r.role],
             }),
-            i &&
-              (0, F.jsx)(F.Fragment, {
-                children: (0, F.jsx)(R.Z.Cell, {
-                  children: (0, F.jsx)(G, {
-                    onDeleteUser: function () {
-                      l.mutate({ email: s.email_address });
+            n &&
+              (0, A.jsx)(A.Fragment, {
+                children: (0, A.jsx)(I.Z.Cell, {
+                  children: (0, A.jsx)(z, {
+                    onDeleteUser: () => {
+                      l.mutate({ email: r.email_address });
                     },
-                    onResendInvite: function () {
-                      u.mutate({ email: s.email_address, role: s.role });
+                    onResendInvite: () => {
+                      c.mutate({ email: r.email_address, role: r.role });
                     },
                   }),
                 }),
@@ -331,24 +300,23 @@
           ],
         });
       }
-      function G(e) {
-        var r = e.onDeleteUser,
-          t = e.onResendInvite;
-        return (0, F.jsxs)(l.Z.Root, {
+      function z(e) {
+        let { onDeleteUser: t, onResendInvite: r } = e;
+        return (0, A.jsxs)(c.Z.Root, {
           children: [
-            (0, F.jsx)(l.Z.Trigger, {
-              children: (0, F.jsx)(y.K9M, { className: "icon-sm" }),
+            (0, A.jsx)(c.Z.Trigger, {
+              children: (0, A.jsx)(h.K9M, { className: "icon-sm" }),
             }),
-            (0, F.jsx)(l.Z.Portal, {
-              children: (0, F.jsxs)(l.Z.Content, {
+            (0, A.jsx)(c.Z.Portal, {
+              children: (0, A.jsxs)(c.Z.Content, {
                 children: [
-                  (0, F.jsx)(l.Z.Item, {
-                    onClick: t,
-                    children: (0, F.jsx)(k.Z, Q({}, J.resendInvite)),
-                  }),
-                  (0, F.jsx)(l.Z.Item, {
+                  (0, A.jsx)(c.Z.Item, {
                     onClick: r,
-                    children: (0, F.jsx)(k.Z, Q({}, J.revokeInvite)),
+                    children: (0, A.jsx)(y.Z, K({}, Q.resendInvite)),
+                  }),
+                  (0, A.jsx)(c.Z.Item, {
+                    onClick: t,
+                    children: (0, A.jsx)(y.Z, K({}, Q.revokeInvite)),
                   }),
                 ],
               }),
@@ -356,7 +324,7 @@
           ],
         });
       }
-      var J = (0, O.vU)({
+      let Q = (0, O.vU)({
         email: { id: "InviteManager.email", defaultMessage: "Email" },
         role: { id: "InviteManager.role", defaultMessage: "Role" },
         resendInvite: {
@@ -372,127 +340,103 @@
           defaultMessage: "No results",
         },
       });
-      function X(e, r) {
-        var t = Object.keys(e);
+      function L(e, t) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          r &&
-            (n = n.filter(function (r) {
-              return Object.getOwnPropertyDescriptor(e, r).enumerable;
+          var s = Object.getOwnPropertySymbols(e);
+          t &&
+            (s = s.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            t.push.apply(t, n);
+            r.push.apply(r, s);
         }
-        return t;
+        return r;
       }
-      function Y(e) {
-        for (var r = 1; r < arguments.length; r++) {
-          var t = null != arguments[r] ? arguments[r] : {};
-          r % 2
-            ? X(Object(t), !0).forEach(function (r) {
-                (0, i.Z)(e, r, t[r]);
+      function G(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var r = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? L(Object(r), !0).forEach(function (t) {
+                (0, a.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : X(Object(t)).forEach(function (r) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : L(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r)
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t)
                   );
                 });
         }
         return e;
       }
-      function $(e) {
-        var r,
-          t,
-          n = e.workspaceId,
-          s = e.filterInputValue,
-          a = (0, x.useState)(0),
-          i = a[0],
-          c = a[1],
-          o = ((r = 25 * i),
-          (0, U.a)({
-            queryKey: ["workspace", n, "invites", "requests", r, s],
-            queryFn:
-              ((t = (0, C.Z)(
-                E().mark(function e() {
-                  return E().wrap(function (e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            (e.next = 2),
-                            S.Z.getWorkspaceInviteRequests(n, r, 25, s)
-                          );
-                        case 2:
-                          return e.abrupt("return", e.sent);
-                        case 3:
-                        case "end":
-                          return e.stop();
-                      }
-                  }, e);
-                })
-              )),
-              function () {
-                return t.apply(this, arguments);
-              }),
-          })).data,
-          l = (0, B.Gk)(n),
-          u = (0, B.bE)(n),
-          d = (0, w.Z)(),
-          m = l || u;
-        if (void 0 === o) return (0, F.jsx)(K.bq, {});
-        var f = o.items,
-          p = Math.ceil(o.total / 25);
+      function V(e) {
+        var t;
+        let { workspaceId: r, filterInputValue: s } = e,
+          { 0: n, 1: a } = (0, x.useState)(0),
+          { data: i } =
+            ((t = 25 * n),
+            (0, N.a)({
+              queryKey: ["workspace", r, "invites", "requests", t, s],
+              queryFn: async () =>
+                await q.Z.getWorkspaceInviteRequests(r, t, 25, s),
+            })),
+          l = (0, T.Gk)(r),
+          c = (0, T.bE)(r),
+          o = (0, k.Z)(),
+          d = l || c;
+        if (void 0 === i) return (0, A.jsx)(W.bq, {});
+        let u = i.items,
+          m = Math.ceil(i.total / 25);
         return (
-          i >= p && 0 !== p && c(Math.max(p - 1, 0)),
-          (0, F.jsxs)("div", {
+          n >= m && 0 !== m && a(Math.max(m - 1, 0)),
+          (0, A.jsxs)("div", {
             children: [
-              (0, F.jsxs)(R.Z.Root, {
+              (0, A.jsxs)(I.Z.Root, {
                 fixed: !0,
                 size: "normal",
                 children: [
-                  (0, F.jsxs)(R.Z.Header, {
+                  (0, A.jsxs)(I.Z.Header, {
                     children: [
-                      (0, F.jsx)(R.Z.HeaderCell, {
+                      (0, A.jsx)(I.Z.HeaderCell, {
                         className: "bg-token-main-surface-primary",
-                        children: (0, F.jsx)(k.Z, Y({}, er.email)),
+                        children: (0, A.jsx)(y.Z, G({}, X.email)),
                       }),
-                      (0, F.jsx)(R.Z.HeaderCell, {
+                      (0, A.jsx)(I.Z.HeaderCell, {
                         className: "w-28 bg-token-main-surface-primary",
-                        children: (0, F.jsx)("span", {
-                          className: m ? "pl-3" : "",
-                          children: (0, F.jsx)(k.Z, Y({}, er.role)),
+                        children: (0, A.jsx)("span", {
+                          className: d ? "pl-3" : "",
+                          children: (0, A.jsx)(y.Z, G({}, X.role)),
                         }),
                       }),
-                      m &&
-                        (0, F.jsx)(R.Z.HeaderCell, {
+                      d &&
+                        (0, A.jsx)(I.Z.HeaderCell, {
                           className: "w-40 bg-token-main-surface-primary",
-                          children: d.formatMessage(er.actions),
+                          children: o.formatMessage(X.actions),
                         }),
                     ],
                   }),
-                  (0, F.jsxs)(R.Z.Body, {
+                  (0, A.jsxs)(I.Z.Body, {
                     children: [
-                      f.map(function (e) {
-                        return (0, F.jsx)(
-                          ee,
+                      u.map((e) =>
+                        (0, A.jsx)(
+                          J,
                           {
-                            workspaceId: n,
+                            workspaceId: r,
                             invite: e,
                             isCurrentUserOwner: l,
-                            currentUserHasAdminRights: m,
+                            currentUserHasAdminRights: d,
                           },
                           e.id
-                        );
-                      }),
-                      0 === f.length &&
-                        (0, F.jsx)(R.Z.Row, {
-                          children: (0, F.jsx)(R.Z.Cell, {
-                            children: (0, F.jsx)("div", {
+                        )
+                      ),
+                      0 === u.length &&
+                        (0, A.jsx)(I.Z.Row, {
+                          children: (0, A.jsx)(I.Z.Cell, {
+                            children: (0, A.jsx)("div", {
                               className: "text-token-text-tertiary",
-                              children: (0, F.jsx)(k.Z, Y({}, er.noResults)),
+                              children: (0, A.jsx)(y.Z, G({}, X.noResults)),
                             }),
                           }),
                         }),
@@ -500,63 +444,59 @@
                   }),
                 ],
               }),
-              p > 1 &&
-                (0, F.jsx)("div", {
+              m > 1 &&
+                (0, A.jsx)("div", {
                   className: "mt-2 flex justify-center",
-                  children: (0, F.jsx)(q.t, {
-                    currentPage: i,
-                    onChangeIndex: c,
-                    length: p,
+                  children: (0, A.jsx)(R.t, {
+                    currentPage: n,
+                    onChangeIndex: a,
+                    length: m,
                   }),
                 }),
             ],
           })
         );
       }
-      function ee(e) {
-        var r = e.workspaceId,
-          t = e.invite,
-          n = e.isCurrentUserOwner,
-          s = e.currentUserHasAdminRights,
-          a = (0, B.Ap)(),
-          i = T(r),
-          c = A(r),
-          o = (0, w.Z)();
-        return (0, F.jsxs)(R.Z.Row, {
-          disabled: i.isPending || c.isPending || c.isPending,
+      function J(e) {
+        let {
+            workspaceId: t,
+            invite: r,
+            isCurrentUserOwner: s,
+            currentUserHasAdminRights: n,
+          } = e,
+          a = (0, T.Ap)(),
+          i = D(t),
+          l = _(t),
+          c = (0, k.Z)();
+        return (0, A.jsxs)(I.Z.Row, {
+          disabled: i.isPending || l.isPending || l.isPending,
           children: [
-            (0, F.jsx)(R.Z.Cell, { children: t.email_address }),
-            (0, F.jsx)(R.Z.Cell, {
-              children: n
-                ? (0, F.jsx)(K.mJ, {
-                    currentRole: t.role,
-                    onUpdateUserRole: function (e) {
-                      i.mutate({ inviteId: t.id, role: e });
+            (0, A.jsx)(I.Z.Cell, { children: r.email_address }),
+            (0, A.jsx)(I.Z.Cell, {
+              children: s
+                ? (0, A.jsx)(W.mJ, {
+                    currentRole: r.role,
+                    onUpdateUserRole: (e) => {
+                      i.mutate({ inviteId: r.id, role: e });
                     },
                   })
-                : a[t.role],
+                : a[r.role],
             }),
-            s &&
-              (0, F.jsx)(F.Fragment, {
-                children: (0, F.jsx)(R.Z.Cell, {
-                  children: (0, F.jsxs)("div", {
+            n &&
+              (0, A.jsx)(A.Fragment, {
+                children: (0, A.jsx)(I.Z.Cell, {
+                  children: (0, A.jsxs)("div", {
                     className: "flex gap-2",
                     children: [
-                      (0, F.jsx)(M.z, {
-                        onClick: function () {
-                          return i.mutate({
-                            inviteId: t.id,
-                            acceptRequest: !0,
-                          });
-                        },
-                        children: o.formatMessage(er.accept),
+                      (0, A.jsx)(M.z, {
+                        onClick: () =>
+                          i.mutate({ inviteId: r.id, acceptRequest: !0 }),
+                        children: c.formatMessage(X.accept),
                       }),
-                      (0, F.jsx)(M.z, {
+                      (0, A.jsx)(M.z, {
                         color: "neutral",
-                        onClick: function () {
-                          return c.mutate({ email: t.email_address });
-                        },
-                        children: o.formatMessage(er.reject),
+                        onClick: () => l.mutate({ email: r.email_address }),
+                        children: c.formatMessage(X.reject),
                       }),
                     ],
                   }),
@@ -565,7 +505,7 @@
           ],
         });
       }
-      var er = (0, O.vU)({
+      let X = (0, O.vU)({
         email: { id: "RequestInviteManager.email", defaultMessage: "Email" },
         role: { id: "RequestInviteManager.role", defaultMessage: "Role" },
         actions: {
@@ -579,200 +519,190 @@
           defaultMessage: "No results",
         },
       });
-      function et(e, r) {
-        var t = Object.keys(e);
+      function Y(e, t) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          r &&
-            (n = n.filter(function (r) {
-              return Object.getOwnPropertyDescriptor(e, r).enumerable;
+          var s = Object.getOwnPropertySymbols(e);
+          t &&
+            (s = s.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            t.push.apply(t, n);
+            r.push.apply(r, s);
         }
-        return t;
+        return r;
       }
-      function en(e) {
-        for (var r = 1; r < arguments.length; r++) {
-          var t = null != arguments[r] ? arguments[r] : {};
-          r % 2
-            ? et(Object(t), !0).forEach(function (r) {
-                (0, i.Z)(e, r, t[r]);
+      function $(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var r = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? Y(Object(r), !0).forEach(function (t) {
+                (0, a.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : et(Object(t)).forEach(function (r) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : Y(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r)
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t)
                   );
                 });
         }
         return e;
       }
-      function es(e) {
-        var r = e.tab;
-        switch (r) {
-          case a.Members:
-            return (0, F.jsx)(k.Z, en({}, eu.allMembers));
-          case a.Invites:
-            return (0, F.jsx)(k.Z, en({}, eu.pendingInvites));
-          case a.Requests:
-            return (0, F.jsx)(k.Z, en({}, eu.pendingRequests));
+      var ee =
+        (((s = ee || {}).Members = "members"),
+        (s.Invites = "invites"),
+        (s.Requests = "requests"),
+        s);
+      function et(e) {
+        let { tab: t } = e;
+        switch (t) {
+          case ee.Members:
+            return (0, A.jsx)(y.Z, $({}, el.allMembers));
+          case ee.Invites:
+            return (0, A.jsx)(y.Z, $({}, el.pendingInvites));
+          case ee.Requests:
+            return (0, A.jsx)(y.Z, $({}, el.pendingRequests));
           default:
-            (0, p.vE)(r);
+            (0, g.vE)(t);
         }
       }
-      function ea(e) {
-        var r = e.tab,
-          t = e.filterInputValue,
-          n = e.workspaceId;
-        switch (r) {
-          case a.Members:
-            return (0, F.jsx)(K.ZP, { workspaceId: n, filterInputValue: t });
-          case a.Invites:
-            return (0, F.jsx)(V, { workspaceId: n, filterInputValue: t });
-          case a.Requests:
-            return (0, F.jsx)($, { workspaceId: n, filterInputValue: t });
+      function er(e) {
+        let { tab: t, filterInputValue: r, workspaceId: s } = e;
+        switch (t) {
+          case ee.Members:
+            return (0, A.jsx)(W.ZP, { workspaceId: s, filterInputValue: r });
+          case ee.Invites:
+            return (0, A.jsx)(B, { workspaceId: s, filterInputValue: r });
+          case ee.Requests:
+            return (0, A.jsx)(V, { workspaceId: s, filterInputValue: r });
           default:
-            (0, p.vE)(r);
+            (0, g.vE)(t);
         }
       }
-      ((n = a || (a = {})).Members = "members"),
-        (n.Invites = "invites"),
-        (n.Requests = "requests");
-      var ei = (0, f.b)(a);
-      function ec(e) {
-        var r,
-          t = e.currentWorkspaceId,
-          n = (0, w.Z)(),
-          s = (0, u.t)(),
-          i = null !== (r = (0, K.p5)(t)) && void 0 !== r ? r : "?",
-          o = (0, B.qH)(s),
-          f = null == s ? void 0 : s.isTeam(),
-          p = (0, h.useRouter)(),
-          v =
-            "string" == typeof p.query.tab && ei(p.query.tab)
-              ? p.query.tab
-              : a.Members,
-          j = (0, x.useState)(""),
-          O = j[0],
-          I = j[1],
-          R = (0, x.useState)(""),
-          q = R[0],
-          C = R[1];
-        (0, x.useEffect)(
-          function () {
-            C("");
-          },
-          [v]
-        );
-        var N = (0, x.useCallback)(
-            (0, g.debounce)(function (e) {
-              C(e);
+      let es = (0, m.b)(ee);
+      function en(e) {
+        var t;
+        let { currentWorkspaceId: r } = e,
+          s = (0, k.Z)(),
+          n = (0, o.t)(),
+          a = null !== (t = (0, W.p5)(r)) && void 0 !== t ? t : "?",
+          l = (0, T.qH)(n),
+          m = null == n ? void 0 : n.isTeam(),
+          g = (0, b.useRouter)(),
+          p =
+            "string" == typeof g.query.tab && es(g.query.tab)
+              ? g.query.tab
+              : ee.Members,
+          { 0: j, 1: O } = (0, x.useState)(""),
+          { 0: w, 1: I } = (0, x.useState)("");
+        (0, x.useEffect)(() => {
+          I("");
+        }, [p]);
+        let R = (0, x.useCallback)(
+            (0, f.debounce)((e) => {
+              I(e);
             }, 250),
             []
           ),
-          E = (0, P.Wv)();
-        if (!s) return null;
-        var S = s.isAdminOfAccount(),
-          U = s.isOwnerOfAccount(),
-          D =
-            f || !E
-              ? [a.Members, a.Invites]
-              : [a.Members, a.Invites, a.Requests];
-        return (0, F.jsxs)(F.Fragment, {
+          q = (0, Z.Wv)();
+        if (!n) return null;
+        let N = n.isAdminOfAccount(),
+          C = n.isOwnerOfAccount(),
+          E =
+            m || !q
+              ? [ee.Members, ee.Invites]
+              : [ee.Members, ee.Invites, ee.Requests];
+        return (0, A.jsxs)(A.Fragment, {
           children: [
-            (0, F.jsx)(b(), {
-              children: (0, F.jsx)("title", {
-                children: n.formatMessage(eu.adminBrowserPageTitle),
+            (0, A.jsx)(v(), {
+              children: (0, A.jsx)("title", {
+                children: s.formatMessage(el.adminBrowserPageTitle),
               }),
             }),
-            (0, F.jsx)(c.yG, {
-              title: n.formatMessage(eu.adminPageTitle),
-              subtitle: (0, F.jsx)(
-                k.Z,
-                en(
-                  { values: { totalMembers: i, planName: o } },
-                  eu.totalMembers
-                )
+            (0, A.jsx)(i.yG, {
+              title: s.formatMessage(el.adminPageTitle),
+              subtitle: (0, A.jsx)(
+                y.Z,
+                $({ values: { totalMembers: a, planName: l } }, el.totalMembers)
               ),
             }),
-            (0, F.jsxs)(c.hb, {
+            (0, A.jsxs)(i.hb, {
               children: [
-                (0, F.jsxs)(el, {
+                (0, A.jsxs)(ei, {
                   children: [
-                    (0, F.jsx)("div", {
+                    (0, A.jsx)("div", {
                       className: "mb-6 flex gap-2",
-                      children: D.map(function (e) {
-                        return (0, F.jsx)(
-                          eo,
+                      children: E.map((e) =>
+                        (0, A.jsx)(
+                          ea,
                           {
-                            onClick: function () {
-                              p.push(
+                            onClick: () => {
+                              g.push(
                                 null != e ? "/admin?tab=".concat(e) : "/admin"
                               );
                             },
-                            isSelected: v === e,
-                            children: (0, F.jsx)(es, { tab: e }),
+                            isSelected: p === e,
+                            children: (0, A.jsx)(et, { tab: e }),
                           },
                           e
-                        );
-                      }),
+                        )
+                      ),
                     }),
-                    (0, F.jsxs)("div", {
+                    (0, A.jsxs)("div", {
                       className: "flex gap-2",
                       children: [
-                        (0, F.jsxs)("div", {
+                        (0, A.jsxs)("div", {
                           className: "relative",
                           children: [
-                            (0, F.jsx)(y.jRj, {
+                            (0, A.jsx)(h.jRj, {
                               className:
                                 "icon-sm absolute left-2 top-1/2 -translate-y-1/2 transform text-token-text-tertiary",
                             }),
-                            (0, F.jsx)("input", {
+                            (0, A.jsx)("input", {
                               type: "text",
-                              value: O,
-                              onChange: function (e) {
-                                I(e.target.value), N(e.target.value);
+                              value: j,
+                              onChange: (e) => {
+                                O(e.target.value), R(e.target.value);
                               },
-                              placeholder: n.formatMessage(eu.search),
+                              placeholder: s.formatMessage(el.search),
                               className:
                                 "w-48 rounded-lg border border-token-border-light bg-token-main-surface-primary pl-8 placeholder:text-token-text-tertiary",
                             }),
                           ],
                         }),
-                        (S || U || f) &&
-                          (0, F.jsxs)(M.z, {
-                            onClick: function () {
+                        (N || C || m) &&
+                          (0, A.jsxs)(M.z, {
+                            onClick: () => {
                               d.vm.openModal(d.B.InviteUsersToWorkspace);
                             },
                             children: [
-                              (0, F.jsx)(y.OvN, { className: "icon-sm" }),
-                              (0, F.jsx)(k.Z, en({}, eu.inviteMemberButton)),
+                              (0, A.jsx)(h.OvN, { className: "icon-sm" }),
+                              (0, A.jsx)(y.Z, $({}, el.inviteMemberButton)),
                             ],
                           }),
-                        f
-                          ? (0, F.jsxs)(l.Z.Root, {
+                        m
+                          ? (0, A.jsxs)(c.Z.Root, {
                               children: [
-                                (0, F.jsx)(m.xz, {
+                                (0, A.jsx)(u.xz, {
                                   asChild: !0,
-                                  children: (0, F.jsx)(M.z, {
+                                  children: (0, A.jsx)(M.z, {
                                     color: "neutral",
-                                    children: (0, F.jsx)(y.K9M, {
+                                    children: (0, A.jsx)(h.K9M, {
                                       className: "icon-sm",
                                     }),
                                   }),
                                 }),
-                                (0, F.jsx)(l.Z.Portal, {
-                                  children: (0, F.jsx)(l.Z.Content, {
-                                    children: (0, F.jsx)(l.Z.Item, {
-                                      onClick: function () {
-                                        s && d.vm.setLeaveWorkspaceData(s);
+                                (0, A.jsx)(c.Z.Portal, {
+                                  children: (0, A.jsx)(c.Z.Content, {
+                                    children: (0, A.jsx)(c.Z.Item, {
+                                      onClick: () => {
+                                        n && d.vm.setLeaveWorkspaceData(n);
                                       },
-                                      children: (0, F.jsx)(
-                                        k.Z,
-                                        en({}, eu.leaveWorkspace)
+                                      children: (0, A.jsx)(
+                                        y.Z,
+                                        $({}, el.leaveWorkspace)
                                       ),
                                     }),
                                   }),
@@ -784,35 +714,33 @@
                     }),
                   ],
                 }),
-                (0, F.jsx)(ea, { workspaceId: t, tab: v, filterInputValue: q }),
+                (0, A.jsx)(er, { workspaceId: r, tab: p, filterInputValue: w }),
               ],
             }),
-            null != s ? (0, F.jsx)(Z.Z, { workspace: s }) : null,
+            null != n ? (0, A.jsx)(P.Z, { workspace: n }) : null,
           ],
         });
       }
-      function eo(e) {
-        var r = e.children,
-          t = e.isSelected,
-          n = e.onClick;
-        return (0, F.jsx)(M.z, {
+      function ea(e) {
+        let { children: t, isSelected: r, onClick: s } = e;
+        return (0, A.jsx)(M.z, {
           color: "none",
-          className: (0, v.default)(
-            t
+          className: (0, p.default)(
+            r
               ? "bg-token-main-surface-tertiary"
               : "hover:bg-token-main-surface-tertiary"
           ),
-          onClick: n,
-          children: r,
+          onClick: s,
+          children: t,
         });
       }
-      var el = I.Z.div(
-          s ||
-            (s = (0, o.Z)([
+      let ei = w.Z.div(
+          n ||
+            (n = (0, l.Z)([
               "mb-4 py-6 flex flex-col gap-4 lg:flex-row md:items-start lg:justify-between",
             ]))
         ),
-        eu = (0, O.vU)({
+        el = (0, O.vU)({
           adminBrowserPageTitle: {
             id: "adminPage.adminBrowserPageTitle",
             defaultMessage: "ChatGPT - Member admin",
@@ -857,39 +785,39 @@
           },
           search: { id: "adminPage.search", defaultMessage: "Search" },
         });
-      function ed(e, r) {
-        var t = Object.keys(e);
+      function ec(e, t) {
+        var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
-          r &&
-            (n = n.filter(function (r) {
-              return Object.getOwnPropertyDescriptor(e, r).enumerable;
+          var s = Object.getOwnPropertySymbols(e);
+          t &&
+            (s = s.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            t.push.apply(t, n);
+            r.push.apply(r, s);
         }
-        return t;
+        return r;
       }
-      var em = !0;
-      function ef(e) {
-        return (0, F.jsx)(
-          ec,
+      var eo = !0;
+      function ed(e) {
+        return (0, A.jsx)(
+          en,
           (function (e) {
-            for (var r = 1; r < arguments.length; r++) {
-              var t = null != arguments[r] ? arguments[r] : {};
-              r % 2
-                ? ed(Object(t), !0).forEach(function (r) {
-                    (0, i.Z)(e, r, t[r]);
+            for (var t = 1; t < arguments.length; t++) {
+              var r = null != arguments[t] ? arguments[t] : {};
+              t % 2
+                ? ec(Object(r), !0).forEach(function (t) {
+                    (0, a.Z)(e, t, r[t]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       e,
-                      Object.getOwnPropertyDescriptors(t)
+                      Object.getOwnPropertyDescriptors(r)
                     )
-                  : ed(Object(t)).forEach(function (r) {
+                  : ec(Object(r)).forEach(function (t) {
                       Object.defineProperty(
                         e,
-                        r,
-                        Object.getOwnPropertyDescriptor(t, r)
+                        t,
+                        Object.getOwnPropertyDescriptor(r, t)
                       );
                     });
             }
@@ -897,24 +825,24 @@
           })({}, e)
         );
       }
-      ef.getLayout = function (e) {
-        return (0, F.jsx)(c.ZP, { mobilePageTitle: "Members", children: e });
+      ed.getLayout = function (e) {
+        return (0, A.jsx)(i.ZP, { mobilePageTitle: "Members", children: e });
       };
     },
-    12102: function (e, r, t) {
+    53835: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin",
         function () {
-          return t(78753);
+          return r(994);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [5017, 9774, 2888, 179], function () {
-      return e((e.s = 12102));
+    e.O(0, [9112, 2888, 9774, 179], function () {
+      return e((e.s = 53835));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-0790b301e04e30ad.js.map
+//# sourceMappingURL=admin-03148c6243f033d6.js.map

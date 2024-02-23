@@ -1,10 +1,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [1165],
   {
-    72406: function (e, r, n) {
+    86647: function (e, r, t) {
       "use strict";
-      n.r(r),
-        n.d(r, {
+      t.r(r),
+        t.d(r, {
           __N_SSP: function () {
             return O;
           },
@@ -12,77 +12,79 @@
             return _;
           },
           default: function () {
-            return P;
+            return b;
           },
         });
-      var t = n(36112),
-        i = n(55842),
-        s = n(8024),
-        o = n(73929),
-        a = n(40670),
-        c = n(35250);
-      function u(e) {
-        var r = e.sharedConversationId,
-          n = e.initiallyHighlightedMessageId,
-          t = e.continueConversationUrl;
+      var n = t(39827),
+        i = t(80084),
+        s = t(81056),
+        o = t(28816),
+        a = t(23050),
+        c = t(35250);
+      function l(e) {
+        let {
+          sharedConversationId: r,
+          initiallyHighlightedMessageId: t,
+          continueConversationUrl: n,
+        } = e;
         return (0, c.jsx)(o.gB.Provider, {
           value: { serverSharedThreadId: r },
           children: (0, c.jsx)(a.Z, {
             clientThreadId: r,
-            setClientThreadId: function () {},
-            initiallyHighlightedMessageId: n,
-            continueConversationUrl: t,
+            setClientThreadId: () => {},
+            initiallyHighlightedMessageId: t,
+            continueConversationUrl: n,
           }),
         });
       }
-      var l = n(22004),
-        d = n(82473),
-        h = n(73040),
-        v = n.n(h),
-        f = n(70079),
-        p = n(1454),
-        g = n(94968),
-        m = n(32004);
+      var u = t(45772),
+        d = t(82473),
+        h = t(69483),
+        p = t.n(h),
+        f = t(70079),
+        v = t(1454),
+        m = t(94968),
+        g = t(32004);
       function j(e, r) {
-        var n = Object.keys(e);
+        var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var t = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           r &&
-            (t = t.filter(function (r) {
+            (n = n.filter(function (r) {
               return Object.getOwnPropertyDescriptor(e, r).enumerable;
             })),
-            n.push.apply(n, t);
+            t.push.apply(t, n);
         }
-        return n;
+        return t;
       }
       function x(e) {
         for (var r = 1; r < arguments.length; r++) {
-          var n = null != arguments[r] ? arguments[r] : {};
+          var t = null != arguments[r] ? arguments[r] : {};
           r % 2
-            ? j(Object(n), !0).forEach(function (r) {
-                (0, t.Z)(e, r, n[r]);
+            ? j(Object(t), !0).forEach(function (r) {
+                (0, n.Z)(e, r, t[r]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : j(Object(n)).forEach(function (r) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+              : j(Object(t)).forEach(function (r) {
                   Object.defineProperty(
                     e,
                     r,
-                    Object.getOwnPropertyDescriptor(n, r)
+                    Object.getOwnPropertyDescriptor(t, r)
                   );
                 });
         }
         return e;
       }
-      var O = !0,
-        _ = { runtime: "nodejs" },
-        y = (0, g.vU)({
+      var O = !0;
+      let _ = { runtime: "nodejs" },
+        P = (0, m.vU)({
           home: { id: "sharedConversation.home", defaultMessage: "Home" },
         });
-      function P(e) {
+      function b(e) {
         if ("error" === e.serverResponse.type)
           return (0, c.jsx)(D, { error: e.serverResponse.error });
-        var r = x(
+        let r = x(
           x({}, e),
           {},
           {
@@ -91,27 +93,23 @@
           }
         );
         return e.continueMode
-          ? (0, c.jsx)(b, x({}, r))
+          ? (0, c.jsx)(y, x({}, r))
           : e.moderationMode
             ? (0, c.jsx)(s.Z, { children: (0, c.jsx)(w, x({}, r)) })
             : (0, c.jsx)(w, x({}, r));
       }
-      function b(e) {
-        var r = (0, f.useState)(function () {
-          return (0, l.OX)();
-        })[0];
-        l.tQ.initThreadFromServerData(
+      function y(e) {
+        let { 0: r } = (0, f.useState)(() => (0, u.OX)());
+        u.tQ.initThreadFromServerData(
           r,
           e.conversationData,
           !0,
           e.sharedConversationId
         );
-        var n = (0, d.NL)();
+        let t = (0, d.NL)();
         return (null != e.plugins &&
-          n.setQueryData(
-            e.plugins.map(function (e) {
-              return e.id;
-            }),
+          t.setQueryData(
+            e.plugins.map((e) => e.id),
             e.plugins
           ),
         null != e.chatPageProps)
@@ -122,22 +120,20 @@
           : null;
       }
       function w(e) {
-        l.tQ.initThreadFromServerData(
+        u.tQ.initThreadFromServerData(
           e.sharedConversationId,
           e.conversationData,
           !0
         );
-        var r = (0, d.NL)();
+        let r = (0, d.NL)();
         return (
           null != e.plugins &&
             r.setQueryData(
-              e.plugins.map(function (e) {
-                return e.id;
-              }),
+              e.plugins.map((e) => e.id),
               e.plugins
             ),
           (0, c.jsx)(
-            u,
+            l,
             x(
               x({}, e),
               {},
@@ -152,7 +148,7 @@
         );
       }
       function D(e) {
-        var r = e.error;
+        let { error: r } = e;
         return (0, c.jsx)("div", {
           className: "mx-8 mt-8 flex flex-col items-center sm:mt-16",
           children: (0, c.jsxs)("div", {
@@ -162,12 +158,12 @@
               (0, c.jsx)("div", { children: r }),
               (0, c.jsx)("div", {
                 className: "mt-4",
-                children: (0, c.jsxs)(v(), {
+                children: (0, c.jsxs)(p(), {
                   href: "/",
                   className: "flex items-center gap-2",
                   children: [
-                    (0, c.jsx)(p.m6D, { className: "icon-sm" }),
-                    (0, c.jsx)(m.Z, x({}, y.home)),
+                    (0, c.jsx)(v.m6D, { className: "icon-sm" }),
+                    (0, c.jsx)(g.Z, x({}, P.home)),
                   ],
                 }),
               }),
@@ -176,20 +172,20 @@
         });
       }
     },
-    60388: function (e, r, n) {
+    10485: function (e, r, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/share/[[...shareParams]]",
         function () {
-          return n(72406);
+          return t(86647);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9774, 2888, 179], function () {
-      return e((e.s = 60388));
+    e.O(0, [2888, 9774, 179], function () {
+      return e((e.s = 10485));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...shareParams]]-dad93816b4b19cb7.js.map
+//# sourceMappingURL=[[...shareParams]]-f97a11b7304cf70c.js.map

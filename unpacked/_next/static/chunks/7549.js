@@ -14,7 +14,7 @@
       }
       n.d(e, {
         $: function () {
-          return es;
+          return eh;
         },
         A: function () {
           return tW;
@@ -23,37 +23,37 @@
           return tA;
         },
         C: function () {
-          return ef;
+          return ec;
         },
         D: function () {
           return t_;
         },
         E: function () {
-          return eM;
+          return ek;
         },
         F: function () {
           return q;
         },
         G: function () {
-          return eJ;
+          return eG;
         },
         H: function () {
           return ts;
         },
         I: function () {
-          return eX;
+          return eq;
         },
         J: function () {
-          return e1;
+          return e5;
         },
         K: function () {
-          return e0;
+          return e1;
         },
         L: function () {
           return tH;
         },
         M: function () {
-          return e$;
+          return eX;
         },
         N: function () {
           return tm;
@@ -68,7 +68,7 @@
           return X;
         },
         R: function () {
-          return e_;
+          return eT;
         },
         S: function () {
           return tC;
@@ -80,28 +80,28 @@
           return tk;
         },
         V: function () {
-          return er;
+          return ei;
         },
         W: function () {
           return tj;
         },
         X: function () {
-          return eo;
+          return ea;
         },
         Y: function () {
-          return ec;
+          return es;
         },
         Z: function () {
-          return eg;
+          return ep;
         },
         _: function () {
           return tL;
         },
         a: function () {
-          return eO;
+          return e_;
         },
         a0: function () {
-          return ek;
+          return eO;
         },
         a1: function () {
           return tX;
@@ -132,14 +132,14 @@
               _context: n,
               _subProxy: r,
               _stack: new Set(),
-              _descriptors: eS(e, i),
+              _descriptors: eR(e, i),
               setContext: (n) => t(e, n, r, i),
               override: (o) => t(e.override(o), n, r, i),
             };
             return new Proxy(o, {
               deleteProperty: (t, n) => (delete t[n], delete e[n], !0),
               get: (e, n, r) =>
-                ej(e, n, () =>
+                eI(e, n, () =>
                   (function (e, n, r) {
                     let {
                         _proxy: i,
@@ -169,7 +169,7 @@
                           let u = e(o, a || r);
                           return (
                             l.delete(t),
-                            eC(t, u) && (u = eE(i._scopes, i, t, u)),
+                            ej(t, u) && (u = eA(i._scopes, i, t, u)),
                             u
                           );
                         })(n, u, e, r)),
@@ -188,13 +188,13 @@
                             let r = n,
                               i = o._scopes.filter((t) => t !== r);
                             for (let f of ((n = []), r)) {
-                              let r = eE(i, o, e, f);
+                              let r = eA(i, o, e, f);
                               n.push(t(r, a, l && l[e], u));
                             }
                           }
                           return n;
                         })(n, u, e, l.isIndexable)),
-                      eC(n, u) && (u = t(u, o, a && a[n], l)),
+                      ej(n, u) && (u = t(u, o, a && a[n], l)),
                       u
                     );
                   })(e, n, r)
@@ -213,19 +213,19 @@
           };
         },
         a9: function () {
-          return eP;
+          return eS;
         },
         aA: function () {
-          return e3;
+          return e7;
         },
         aB: function () {
           return tz;
         },
         aC: function () {
-          return e7;
+          return e6;
         },
         aD: function () {
-          return eu;
+          return ef;
         },
         aE: function () {
           return tT;
@@ -255,7 +255,7 @@
           return tg;
         },
         aN: function () {
-          return ei;
+          return eo;
         },
         aO: function () {
           return tF;
@@ -264,7 +264,7 @@
           return tE;
         },
         aa: function () {
-          return eS;
+          return eR;
         },
         ab: function () {
           return U;
@@ -276,10 +276,10 @@
           return t$;
         },
         ae: function () {
-          return eG;
+          return e0;
         },
         af: function () {
-          return ea;
+          return el;
         },
         ag: function () {
           return ti;
@@ -294,52 +294,52 @@
           return tI;
         },
         ak: function () {
-          return ex;
-        },
-        al: function () {
-          return eH;
-        },
-        am: function () {
-          return nn;
-        },
-        an: function () {
-          return ne;
-        },
-        ao: function () {
-          return e2;
-        },
-        ap: function () {
-          return e8;
-        },
-        aq: function () {
-          return e5;
-        },
-        ar: function () {
-          return eh;
-        },
-        as: function () {
-          return ed;
-        },
-        at: function () {
-          return el;
-        },
-        au: function () {
-          return ep;
-        },
-        av: function () {
           return ev;
         },
-        aw: function () {
+        al: function () {
+          return e$;
+        },
+        am: function () {
+          return nr;
+        },
+        an: function () {
+          return nn;
+        },
+        ao: function () {
+          return e8;
+        },
+        ap: function () {
+          return e4;
+        },
+        aq: function () {
+          return e2;
+        },
+        ar: function () {
+          return ed;
+        },
+        as: function () {
+          return eg;
+        },
+        at: function () {
+          return eu;
+        },
+        au: function () {
+          return eb;
+        },
+        av: function () {
           return ew;
         },
+        aw: function () {
+          return eM;
+        },
         ax: function () {
-          return nt;
+          return ne;
         },
         ay: function () {
           return tS;
         },
         az: function () {
-          return e4;
+          return e3;
         },
         b: function () {
           return Y;
@@ -348,7 +348,7 @@
           return t0;
         },
         d: function () {
-          return en;
+          return er;
         },
         e: function () {
           return tJ;
@@ -366,7 +366,7 @@
           return N;
         },
         j: function () {
-          return eT;
+          return eP;
         },
         k: function () {
           return F;
@@ -411,10 +411,10 @@
           return tx;
         },
         y: function () {
-          return eY;
+          return eN;
         },
         z: function () {
-          return eK;
+          return eU;
         },
       });
       let a = (t, e, n) => Math.max(Math.min(t, n), e);
@@ -1031,8 +1031,7 @@
         let i = Y(e) ? e : [e],
           o = i.length;
         if (!N(t)) return t;
-        n = n || {};
-        let a = n.merger || V;
+        let a = (n = n || {}).merger || V;
         for (let e = 0; e < o; ++e) {
           if (!N((r = i[e]))) continue;
           let o = Object.keys(r);
@@ -1053,7 +1052,7 @@
       }
       let G = { "": (t) => t, x: (t) => t.x, y: (t) => t.y };
       function tt(t, e) {
-        let n =
+        return (
           G[e] ||
           (G[e] = (function (t) {
             let e = (function (t) {
@@ -1073,8 +1072,8 @@
               }
               return t;
             };
-          })(e));
-        return n(t);
+          })(e))
+        )(t);
       }
       function te(t) {
         return t.charAt(0).toUpperCase() + t.slice(1);
@@ -1105,9 +1104,8 @@
         return Math.abs(t - e) < n;
       }
       function ty(t) {
-        let e = Math.round(t);
-        t = tb(t, e, t / 1e3) ? e : t;
-        let n = Math.pow(10, Math.floor(tg(t))),
+        let e = Math.round(t),
+          n = Math.pow(10, Math.floor(tg((t = tb(t, e, t / 1e3) ? e : t)))),
           r = t / n;
         return (r <= 1 ? 1 : r <= 2 ? 2 : r <= 5 ? 5 : 10) * n;
       }
@@ -1132,10 +1130,10 @@
             ((e.min = Math.min(e.min, o)), (e.max = Math.max(e.max, o)));
       }
       function tM(t) {
-        return t * (ta / 180);
+        return (ta / 180) * t;
       }
       function tk(t) {
-        return t * (180 / ta);
+        return (180 / ta) * t;
       }
       function tO(t) {
         if (!B(t)) return;
@@ -1388,7 +1386,7 @@
           easeInOutBack(t) {
             let e = 1.70158;
             return (t /= 0.5) < 1
-              ? 0.5 * (t * t * (((e *= 1.525) + 1) * t - e))
+              ? t * t * (((e *= 1.525) + 1) * t - e) * 0.5
               : 0.5 * ((t -= 2) * t * (((e *= 1.525) + 1) * t + e) + 2);
           },
           easeInBounce: (t) => 1 - tJ.easeOutBounce(1 - t),
@@ -1425,8 +1423,7 @@
         t8 = new Map();
       function t4(t, e, n) {
         return (function (t, e) {
-          e = e || {};
-          let n = t + JSON.stringify(e),
+          let n = t + JSON.stringify((e = e || {})),
             r = t8.get(n);
           return r || ((r = new Intl.NumberFormat(t, e)), t8.set(n, r)), r;
         })(e, n).format(t);
@@ -1465,11 +1462,13 @@
           return Object.assign(u, this.options.ticks.format), t4(t, i, u);
         },
         logarithmic(t, e, n) {
-          if (0 === t) return "0";
-          let r = n[e].significand || t / Math.pow(10, Math.floor(tg(t)));
-          return [1, 2, 3, 5, 10, 15].includes(r) || e > 0.8 * n.length
-            ? t3.numeric.call(this, t, e, n)
-            : "";
+          return 0 === t
+            ? "0"
+            : [1, 2, 3, 5, 10, 15].includes(
+                  n[e].significand || t / Math.pow(10, Math.floor(tg(t)))
+                ) || e > 0.8 * n.length
+              ? t3.numeric.call(this, t, e, n)
+              : "";
         },
       };
       var t7 = { formatters: t3 };
@@ -1487,7 +1486,7 @@
       function ee(t, e, n) {
         return "string" == typeof e ? K(et(t, e), n) : K(et(t, ""), e);
       }
-      var en = new (class {
+      class en {
         constructor(t, e) {
           (this.animation = void 0),
             (this.backgroundColor = "rgba(0,0,0,0.1)"),
@@ -1568,7 +1567,8 @@
         apply(t) {
           t.forEach((t) => t(this));
         }
-      })(
+      }
+      var er = new en(
         {
           _scriptable: (t) => !t.startsWith("on"),
           _indexable: (t) => "events" !== t,
@@ -1688,7 +1688,7 @@
           },
         ]
       );
-      function er(t, e, n, r, i) {
+      function ei(t, e, n, r, i) {
         let o = e[i];
         return (
           o || ((o = e[i] = t.measureText(i).width), n.push(i)),
@@ -1696,7 +1696,7 @@
           r
         );
       }
-      function ei(t, e, n, r) {
+      function eo(t, e, n, r) {
         let i, o, a, l, u;
         let f = ((r = r || {}).data = r.data || {}),
           c = (r.garbageCollect = r.garbageCollect || []);
@@ -1710,8 +1710,8 @@
           if (null == (l = n[i]) || Y(l)) {
             if (Y(l))
               for (o = 0, a = l.length; o < a; o++)
-                null == (u = l[o]) || Y(u) || (s = er(t, f, c, s, u));
-          } else s = er(t, f, c, s, l);
+                null == (u = l[o]) || Y(u) || (s = ei(t, f, c, s, u));
+          } else s = ei(t, f, c, s, l);
         t.restore();
         let d = c.length / 2;
         if (d > n.length) {
@@ -1720,21 +1720,21 @@
         }
         return s;
       }
-      function eo(t, e, n) {
+      function ea(t, e, n) {
         let r = t.currentDevicePixelRatio,
           i = 0 !== n ? Math.max(n / 2, 0.5) : 0;
         return Math.round((e - i) * r) / r + i;
       }
-      function ea(t, e) {
+      function el(t, e) {
         (e = e || t.getContext("2d")).save(),
           e.resetTransform(),
           e.clearRect(0, 0, t.width, t.height),
           e.restore();
       }
-      function el(t, e, n, r) {
-        eu(t, e, n, r, null);
+      function eu(t, e, n, r) {
+        ef(t, e, n, r, null);
       }
-      function eu(t, e, n, r, i) {
+      function ef(t, e, n, r, i) {
         let o, a, l, u, f, c, s, h;
         let d = e.pointStyle,
           g = e.rotation,
@@ -1849,7 +1849,7 @@
           t.fill(), e.borderWidth > 0 && t.stroke();
         }
       }
-      function ef(t, e, n) {
+      function ec(t, e, n) {
         return (
           (n = n || 0.5),
           !e ||
@@ -1860,16 +1860,16 @@
               t.y < e.bottom + n)
         );
       }
-      function ec(t, e) {
+      function es(t, e) {
         t.save(),
           t.beginPath(),
           t.rect(e.left, e.top, e.right - e.left, e.bottom - e.top),
           t.clip();
       }
-      function es(t) {
+      function eh(t) {
         t.restore();
       }
-      function eh(t, e, n, r, i) {
+      function ed(t, e, n, r, i) {
         if (!e) return t.lineTo(n.x, n.y);
         if ("middle" === i) {
           let r = (e.x + n.x) / 2;
@@ -1877,7 +1877,7 @@
         } else ("after" === i) != !!r ? t.lineTo(e.x, n.y) : t.lineTo(n.x, e.y);
         t.lineTo(n.x, n.y);
       }
-      function ed(t, e, n, r) {
+      function eg(t, e, n, r) {
         if (!e) return t.lineTo(n.x, n.y);
         t.bezierCurveTo(
           r ? e.cp1x : e.cp2x,
@@ -1888,25 +1888,23 @@
           n.y
         );
       }
-      function eg(t, e, n, r, i, o = {}) {
-        var a;
-        let l, u;
-        let f = Y(e) ? e : [e],
-          c = o.strokeWidth > 0 && "" !== o.strokeColor;
+      function ep(t, e, n, r, i, o = {}) {
+        let a, l;
+        let u = Y(e) ? e : [e],
+          f = o.strokeWidth > 0 && "" !== o.strokeColor;
         for (
           t.save(),
             t.font = i.string,
-            a = t,
-            o.translation && a.translate(o.translation[0], o.translation[1]),
-            F(o.rotation) || a.rotate(o.rotation),
-            o.color && (a.fillStyle = o.color),
-            o.textAlign && (a.textAlign = o.textAlign),
-            o.textBaseline && (a.textBaseline = o.textBaseline),
-            l = 0;
-          l < f.length;
-          ++l
+            o.translation && t.translate(o.translation[0], o.translation[1]),
+            F(o.rotation) || t.rotate(o.rotation),
+            o.color && (t.fillStyle = o.color),
+            o.textAlign && (t.textAlign = o.textAlign),
+            o.textBaseline && (t.textBaseline = o.textBaseline),
+            a = 0;
+          a < u.length;
+          ++a
         )
-          (u = f[l]),
+          (l = u[a]),
             o.backdrop &&
               (function (t, e) {
                 let n = t.fillStyle;
@@ -1914,11 +1912,11 @@
                   t.fillRect(e.left, e.top, e.width, e.height),
                   (t.fillStyle = n);
               })(t, o.backdrop),
-            c &&
+            f &&
               (o.strokeColor && (t.strokeStyle = o.strokeColor),
               F(o.strokeWidth) || (t.lineWidth = o.strokeWidth),
-              t.strokeText(u, n, r, o.maxWidth)),
-            t.fillText(u, n, r, o.maxWidth),
+              t.strokeText(l, n, r, o.maxWidth)),
+            t.fillText(l, n, r, o.maxWidth),
             (function (t, e, n, r, i) {
               if (i.strikethrough || i.underline) {
                 let o = t.measureText(r),
@@ -1934,11 +1932,11 @@
                   t.lineTo(l, c),
                   t.stroke();
               }
-            })(t, n, r, u, o),
+            })(t, n, r, l, o),
             (r += Number(i.lineHeight));
         t.restore();
       }
-      function ep(t, e) {
+      function eb(t, e) {
         let { x: n, y: r, w: i, h: o, radius: a } = e;
         t.arc(n + a.topLeft, r + a.topLeft, a.topLeft, -ts, ta, !0),
           t.lineTo(n, r + o - a.bottomLeft),
@@ -1963,41 +1961,41 @@
           t.arc(n + i - a.topRight, r + a.topRight, a.topRight, 0, -ts, !0),
           t.lineTo(n + a.topLeft, r);
       }
-      let eb = /^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/,
-        ey =
+      let ey = /^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/,
+        em =
           /^(normal|italic|initial|inherit|unset|(oblique( -?[0-9]?[0-9]deg)?))$/,
-        em = (t) => +t || 0;
-      function ex(t, e) {
+        ex = (t) => +t || 0;
+      function ev(t, e) {
         let n = {},
           r = N(e),
           i = r ? Object.keys(e) : e,
           o = N(t) ? (r ? (n) => D(t[n], t[e[n]]) : (e) => t[e]) : () => t;
-        for (let t of i) n[t] = em(o(t));
+        for (let t of i) n[t] = ex(o(t));
         return n;
       }
-      function ev(t) {
-        return ex(t, { top: "y", right: "x", bottom: "y", left: "x" });
-      }
       function ew(t) {
-        return ex(t, ["topLeft", "topRight", "bottomLeft", "bottomRight"]);
+        return ev(t, { top: "y", right: "x", bottom: "y", left: "x" });
       }
       function eM(t) {
-        let e = ev(t);
+        return ev(t, ["topLeft", "topRight", "bottomLeft", "bottomRight"]);
+      }
+      function ek(t) {
+        let e = ew(t);
         return (e.width = e.left + e.right), (e.height = e.top + e.bottom), e;
       }
-      function ek(t, e) {
-        (t = t || {}), (e = e || en.font);
+      function eO(t, e) {
+        (t = t || {}), (e = e || er.font);
         let n = D(t.size, e.size);
         "string" == typeof n && (n = parseInt(n, 10));
         let r = D(t.style, e.style);
         r &&
-          !("" + r).match(ey) &&
+          !("" + r).match(em) &&
           (console.warn('Invalid font style specified: "' + r + '"'),
           (r = void 0));
         let i = {
           family: D(t.family, e.family),
           lineHeight: (function (t, e) {
-            let n = ("" + t).match(eb);
+            let n = ("" + t).match(ey);
             if (!n || "normal" === n[1]) return 1.2 * e;
             switch (((t = +n[2]), n[3])) {
               case "px":
@@ -2024,7 +2022,7 @@
           i
         );
       }
-      function eO(t, e, n, r) {
+      function e_(t, e, n, r) {
         let i,
           o,
           a,
@@ -2038,18 +2036,18 @@
           )
             return r && !l && (r.cacheable = !1), a;
       }
-      function e_(t, e, n) {
+      function eT(t, e, n) {
         let { min: r, max: i } = t,
           o = $(e, (i - r) / 2),
           a = (t, e) => (n && 0 === t ? 0 : t + e);
         return { min: a(r, -Math.abs(o)), max: a(i, o) };
       }
-      function eT(t, e) {
+      function eP(t, e) {
         return Object.assign(Object.create(t), e);
       }
-      function eP(t, e = [""], n, r, i = () => t[0]) {
+      function eS(t, e = [""], n, r, i = () => t[0]) {
         let o = n || t;
-        void 0 === r && (r = eW("_fallback", t));
+        void 0 === r && (r = eF("_fallback", t));
         let a = {
           [Symbol.toStringTag]: "Object",
           _cacheable: !0,
@@ -2057,33 +2055,33 @@
           _rootScopes: o,
           _fallback: r,
           _getTarget: i,
-          override: (n) => eP([n, ...t], e, o, r),
+          override: (n) => eS([n, ...t], e, o, r),
         };
         return new Proxy(a, {
           deleteProperty: (e, n) => (
             delete e[n], delete e._keys, delete t[0][n], !0
           ),
           get: (n, r) =>
-            ej(n, r, () =>
+            eI(n, r, () =>
               (function (t, e, n, r) {
                 let i;
                 for (let o of e)
-                  if (void 0 !== (i = eW(eR(o, t), n)))
-                    return eC(t, i) ? eE(n, r, t, i) : i;
+                  if (void 0 !== (i = eF(eC(o, t), n)))
+                    return ej(t, i) ? eA(n, r, t, i) : i;
               })(r, e, t, n)
             ),
           getOwnPropertyDescriptor: (t, e) =>
             Reflect.getOwnPropertyDescriptor(t._scopes[0], e),
           getPrototypeOf: () => Reflect.getPrototypeOf(t[0]),
-          has: (t, e) => eF(t).includes(e),
-          ownKeys: (t) => eF(t),
+          has: (t, e) => eY(t).includes(e),
+          ownKeys: (t) => eY(t),
           set(t, e, n) {
             let r = t._storage || (t._storage = i());
             return (t[e] = r[e] = n), delete t._keys, !0;
           },
         });
       }
-      function eS(t, e = { scriptable: !0, indexable: !0 }) {
+      function eR(t, e = { scriptable: !0, indexable: !0 }) {
         let {
           _scriptable: n = e.scriptable,
           _indexable: r = e.indexable,
@@ -2097,30 +2095,30 @@
           isIndexable: tr(r) ? r : () => r,
         };
       }
-      let eR = (t, e) => (t ? t + te(e) : e),
-        eC = (t, e) =>
+      let eC = (t, e) => (t ? t + te(e) : e),
+        ej = (t, e) =>
           N(e) &&
           "adapters" !== t &&
           (null === Object.getPrototypeOf(e) || e.constructor === Object);
-      function ej(t, e, n) {
+      function eI(t, e, n) {
         if (Object.prototype.hasOwnProperty.call(t, e)) return t[e];
         let r = n();
         return (t[e] = r), r;
       }
-      let eI = (t, e) =>
+      let eE = (t, e) =>
         !0 === t ? e : "string" == typeof t ? tt(e, t) : void 0;
-      function eE(t, e, n, r) {
+      function eA(t, e, n, r) {
         var i;
         let o = e._rootScopes,
           a = tr((i = e._fallback)) ? i(n, r) : i,
           l = [...t, ...o],
           u = new Set();
         u.add(r);
-        let f = eA(u, l, n, a || n, r);
+        let f = eW(u, l, n, a || n, r);
         return (
           null !== f &&
-          (void 0 === a || a === n || null !== (f = eA(u, l, a, f, r))) &&
-          eP(Array.from(u), [""], o, a, () =>
+          (void 0 === a || a === n || null !== (f = eW(u, l, a, f, r))) &&
+          eS(Array.from(u), [""], o, a, () =>
             (function (t, e, n) {
               let r = t._getTarget();
               e in r || (r[e] = {});
@@ -2130,11 +2128,11 @@
           )
         );
       }
-      function eA(t, e, n, r, i) {
+      function eW(t, e, n, r, i) {
         for (; n; )
           n = (function (t, e, n, r, i) {
             for (let a of e) {
-              let e = eI(n, a);
+              let e = eE(n, a);
               if (e) {
                 var o;
                 t.add(e);
@@ -2146,14 +2144,14 @@
           })(t, e, n, r, i);
         return n;
       }
-      function eW(t, e) {
+      function eF(t, e) {
         for (let n of e) {
           if (!n) continue;
           let e = n[t];
           if (void 0 !== e) return e;
         }
       }
-      function eF(t) {
+      function eY(t) {
         let e = t._keys;
         return (
           e ||
@@ -2170,7 +2168,7 @@
           e
         );
       }
-      function eY(t, e, n, r) {
+      function eN(t, e, n, r) {
         let i, o, a;
         let { iScale: l } = t,
           { key: u = "r" } = this._parsing,
@@ -2179,13 +2177,13 @@
           (a = e[(o = i + n)]), (f[i] = { r: l.parse(tt(a, u), o) });
         return f;
       }
-      let eN = Number.EPSILON || 1e-14,
-        eB = (t, e) => e < t.length && !t[e].skip && t[e],
-        eL = (t) => ("x" === t ? "y" : "x");
-      function eD(t, e, n) {
+      let eB = Number.EPSILON || 1e-14,
+        eL = (t, e) => e < t.length && !t[e].skip && t[e],
+        eD = (t) => ("x" === t ? "y" : "x");
+      function eH(t, e, n) {
         return Math.max(Math.min(t, n), e);
       }
-      function eH(t, e, n, r, i) {
+      function e$(t, e, n, r, i) {
         let o, a, l, u;
         if (
           (e.spanGaps && (t = t.filter((t) => !t.skip)),
@@ -2193,13 +2191,13 @@
         )
           !(function (t, e = "x") {
             let n, r, i;
-            let o = eL(e),
+            let o = eD(e),
               a = t.length,
               l = Array(a).fill(0),
               u = Array(a),
-              f = eB(t, 0);
+              f = eL(t, 0);
             for (n = 0; n < a; ++n)
-              if (((r = i), (i = f), (f = eB(t, n + 1)), i)) {
+              if (((r = i), (i = f), (f = eL(t, n + 1)), i)) {
                 if (f) {
                   let t = f[e] - i[e];
                   l[n] = 0 !== t ? (f[o] - i[o]) / t : 0;
@@ -2215,10 +2213,10 @@
             !(function (t, e, n) {
               let r, i, o, a, l;
               let u = t.length,
-                f = eB(t, 0);
+                f = eL(t, 0);
               for (let c = 0; c < u - 1; ++c)
-                if (((l = f), (f = eB(t, c + 1)), l && f)) {
-                  if (tb(e[c], 0, eN)) {
+                if (((l = f), (f = eL(t, c + 1)), l && f)) {
+                  if (tb(e[c], 0, eB)) {
                     n[c] = n[c + 1] = 0;
                     continue;
                   }
@@ -2232,11 +2230,11 @@
             })(t, l, u),
               (function (t, e, n = "x") {
                 let r, i, o;
-                let a = eL(n),
+                let a = eD(n),
                   l = t.length,
-                  u = eB(t, 0);
+                  u = eL(t, 0);
                 for (let f = 0; f < l; ++f) {
-                  if (((i = o), (o = u), (u = eB(t, f + 1)), !o)) continue;
+                  if (((i = o), (o = u), (u = eL(t, f + 1)), !o)) continue;
                   let l = o[n],
                     c = o[a];
                   i &&
@@ -2285,29 +2283,29 @@
         e.capBezierPoints &&
           (function (t, e) {
             let n, r, i, o, a;
-            let l = ef(t[0], e);
+            let l = ec(t[0], e);
             for (n = 0, r = t.length; n < r; ++n)
               (a = o),
                 (o = l),
-                (l = n < r - 1 && ef(t[n + 1], e)),
+                (l = n < r - 1 && ec(t[n + 1], e)),
                 o &&
                   ((i = t[n]),
                   a &&
-                    ((i.cp1x = eD(i.cp1x, e.left, e.right)),
-                    (i.cp1y = eD(i.cp1y, e.top, e.bottom))),
+                    ((i.cp1x = eH(i.cp1x, e.left, e.right)),
+                    (i.cp1y = eH(i.cp1y, e.top, e.bottom))),
                   l &&
-                    ((i.cp2x = eD(i.cp2x, e.left, e.right)),
-                    (i.cp2y = eD(i.cp2y, e.top, e.bottom))));
+                    ((i.cp2x = eH(i.cp2x, e.left, e.right)),
+                    (i.cp2y = eH(i.cp2y, e.top, e.bottom))));
           })(t, n);
       }
-      function e$() {
+      function eX() {
         return "undefined" != typeof window && "undefined" != typeof document;
       }
-      function eX(t) {
+      function eq(t) {
         let e = t.parentNode;
         return e && "[object ShadowRoot]" === e.toString() && (e = e.host), e;
       }
-      function eq(t, e, n) {
+      function ez(t, e, n) {
         let r;
         return (
           "string" == typeof t
@@ -2317,25 +2315,25 @@
           r
         );
       }
-      let ez = (t) => t.ownerDocument.defaultView.getComputedStyle(t, null),
-        eQ = ["top", "right", "bottom", "left"];
-      function eZ(t, e, n) {
+      let eQ = (t) => t.ownerDocument.defaultView.getComputedStyle(t, null),
+        eZ = ["top", "right", "bottom", "left"];
+      function eV(t, e, n) {
         let r = {};
         n = n ? "-" + n : "";
         for (let i = 0; i < 4; i++) {
-          let o = eQ[i];
+          let o = eZ[i];
           r[o] = parseFloat(t[e + "-" + o + n]) || 0;
         }
         return (r.width = r.left + r.right), (r.height = r.top + r.bottom), r;
       }
-      let eV = (t, e, n) => (t > 0 || e > 0) && (!n || !n.shadowRoot);
-      function eK(t, e) {
+      let eK = (t, e, n) => (t > 0 || e > 0) && (!n || !n.shadowRoot);
+      function eU(t, e) {
         if ("native" in t) return t;
         let { canvas: n, currentDevicePixelRatio: r } = e,
-          i = ez(n),
+          i = eQ(n),
           o = "border-box" === i.boxSizing,
-          a = eZ(i, "padding"),
-          l = eZ(i, "border", "width"),
+          a = eV(i, "padding"),
+          l = eV(i, "border", "width"),
           {
             x: u,
             y: f,
@@ -2346,7 +2344,7 @@
               o = i && i.length ? i[0] : t,
               { offsetX: a, offsetY: l } = o,
               u = !1;
-            if (eV(a, l, t.target)) (n = a), (r = l);
+            if (eK(a, l, t.target)) (n = a), (r = l);
             else {
               let t = e.getBoundingClientRect();
               (n = o.clientX - t.left), (r = o.clientY - t.top), (u = !0);
@@ -2364,25 +2362,25 @@
           }
         );
       }
-      let eU = (t) => Math.round(10 * t) / 10;
-      function eJ(t, e, n, r) {
-        let i = ez(t),
-          o = eZ(i, "margin"),
-          a = eq(i.maxWidth, t, "clientWidth") || tf,
-          l = eq(i.maxHeight, t, "clientHeight") || tf,
+      let eJ = (t) => Math.round(10 * t) / 10;
+      function eG(t, e, n, r) {
+        let i = eQ(t),
+          o = eV(i, "margin"),
+          a = ez(i.maxWidth, t, "clientWidth") || tf,
+          l = ez(i.maxHeight, t, "clientHeight") || tf,
           u = (function (t, e, n) {
             let r, i;
             if (void 0 === e || void 0 === n) {
-              let o = eX(t);
+              let o = eq(t);
               if (o) {
                 let t = o.getBoundingClientRect(),
-                  a = ez(o),
-                  l = eZ(a, "border", "width"),
-                  u = eZ(a, "padding");
+                  a = eQ(o),
+                  l = eV(a, "border", "width"),
+                  u = eV(a, "padding");
                 (e = t.width - u.width - l.width),
                   (n = t.height - u.height - l.height),
-                  (r = eq(a.maxWidth, o, "clientWidth")),
-                  (i = eq(a.maxHeight, o, "clientHeight"));
+                  (r = ez(a.maxWidth, o, "clientWidth")),
+                  (i = ez(a.maxHeight, o, "clientHeight"));
               } else (e = t.clientWidth), (n = t.clientHeight);
             }
             return {
@@ -2394,25 +2392,25 @@
           })(t, e, n),
           { width: f, height: c } = u;
         if ("content-box" === i.boxSizing) {
-          let t = eZ(i, "border", "width"),
-            e = eZ(i, "padding");
+          let t = eV(i, "border", "width"),
+            e = eV(i, "padding");
           (f -= e.width + t.width), (c -= e.height + t.height);
         }
         return (
           (f = Math.max(0, f - o.width)),
           (c = Math.max(0, r ? f / r : c - o.height)),
-          (f = eU(Math.min(f, a, u.maxWidth))),
-          (c = eU(Math.min(c, l, u.maxHeight))),
-          f && !c && (c = eU(f / 2)),
+          (f = eJ(Math.min(f, a, u.maxWidth))),
+          (c = eJ(Math.min(c, l, u.maxHeight))),
+          f && !c && (c = eJ(f / 2)),
           (void 0 !== e || void 0 !== n) &&
             r &&
             u.height &&
             c > u.height &&
-            (f = eU(Math.floor((c = u.height) * r))),
+            (f = eJ(Math.floor((c = u.height) * r))),
           { width: f, height: c }
         );
       }
-      function eG(t, e, n) {
+      function e0(t, e, n) {
         let r = e || 1,
           i = Math.floor(t.height * r),
           o = Math.floor(t.width * r);
@@ -2433,7 +2431,7 @@
             !0)
         );
       }
-      let e0 = (function () {
+      let e1 = (function () {
         let t = !1;
         try {
           let e = {
@@ -2446,15 +2444,15 @@
         } catch (t) {}
         return t;
       })();
-      function e1(t, e) {
-        let n = ez(t).getPropertyValue(e),
+      function e5(t, e) {
+        let n = eQ(t).getPropertyValue(e),
           r = n && n.match(/^(\d+)(\.\d+)?px$/);
         return r ? +r[1] : void 0;
       }
-      function e5(t, e, n, r) {
+      function e2(t, e, n, r) {
         return { x: t.x + n * (e.x - t.x), y: t.y + n * (e.y - t.y) };
       }
-      function e2(t, e, n, r) {
+      function e8(t, e, n, r) {
         return {
           x: t.x + n * (e.x - t.x),
           y:
@@ -2471,17 +2469,17 @@
                   : t.y,
         };
       }
-      function e8(t, e, n, r) {
+      function e4(t, e, n, r) {
         let i = { x: t.cp2x, y: t.cp2y },
           o = { x: e.cp1x, y: e.cp1y },
-          a = e5(t, i, n),
-          l = e5(i, o, n),
-          u = e5(o, e, n),
-          f = e5(a, l, n),
-          c = e5(l, u, n);
-        return e5(f, c, n);
+          a = e2(t, i, n),
+          l = e2(i, o, n),
+          u = e2(o, e, n),
+          f = e2(a, l, n),
+          c = e2(l, u, n);
+        return e2(f, c, n);
       }
-      function e4(t, e, n) {
+      function e3(t, e, n) {
         var r;
         return t
           ? ((r = n),
@@ -2503,7 +2501,7 @@
               leftForLtr: (t, e) => t,
             };
       }
-      function e3(t, e) {
+      function e7(t, e) {
         let n, r;
         ("ltr" === e || "rtl" === e) &&
           ((r = [
@@ -2513,17 +2511,17 @@
           n.setProperty("direction", e, "important"),
           (t.prevTextDirection = r));
       }
-      function e7(t, e) {
+      function e6(t, e) {
         void 0 !== e &&
           (delete t.prevTextDirection,
           t.canvas.style.setProperty("direction", e[0], e[1]));
       }
-      function e6(t) {
+      function e9(t) {
         return "angle" === t
           ? { between: tR, compare: tP, normalize: tS }
           : { between: tI, compare: (t, e) => t - e, normalize: (t) => t };
       }
-      function e9({ start: t, end: e, count: n, loop: r, style: i }) {
+      function nt({ start: t, end: e, count: n, loop: r, style: i }) {
         return {
           start: t % n,
           end: e % n,
@@ -2531,12 +2529,12 @@
           style: i,
         };
       }
-      function nt(t, e, n) {
+      function ne(t, e, n) {
         let r, i, o;
         if (!n) return [t];
         let { property: a, start: l, end: u } = n,
           f = e.length,
-          { compare: c, between: s, normalize: h } = e6(a),
+          { compare: c, between: s, normalize: h } = e9(a),
           {
             start: d,
             end: g,
@@ -2545,7 +2543,7 @@
           } = (function (t, e, n) {
             let r;
             let { property: i, start: o, end: a } = n,
-              { between: l, normalize: u } = e6(i),
+              { between: l, normalize: u } = e9(i),
               f = e.length,
               { start: c, end: s, loop: h } = t;
             if (h) {
@@ -2571,26 +2569,26 @@
             null === x && M() && (x = 0 === c(r, l) ? t : n),
             null !== x &&
               k() &&
-              (y.push(e9({ start: x, end: t, loop: p, count: f, style: b })),
+              (y.push(nt({ start: x, end: t, loop: p, count: f, style: b })),
               (x = null)),
             (n = t),
             (o = r));
         return (
           null !== x &&
-            y.push(e9({ start: x, end: g, loop: p, count: f, style: b })),
+            y.push(nt({ start: x, end: g, loop: p, count: f, style: b })),
           y
         );
       }
-      function ne(t, e) {
+      function nn(t, e) {
         let n = [],
           r = t.segments;
         for (let i = 0; i < r.length; i++) {
-          let o = nt(r[i], t.points, e);
+          let o = ne(r[i], t.points, e);
           o.length && n.push(...o);
         }
         return n;
       }
-      function nn(t, e) {
+      function nr(t, e) {
         let n = t.points,
           r = t.options.spanGaps,
           i = n.length;
@@ -2604,9 +2602,10 @@
             for (i %= e, n && (o += i); o > i && t[o % e].skip; ) o--;
             return { start: i, end: (o %= e) };
           })(n, i, o, r);
-        if (!0 === r) return nr(t, [{ start: a, end: l, loop: o }], n, e);
-        let u = !!t._fullLoop && 0 === a && l === i - 1;
-        return nr(
+        if (!0 === r) return ni(t, [{ start: a, end: l, loop: o }], n, e);
+        let u = l < a ? l + i : l,
+          f = !!t._fullLoop && 0 === a && l === i - 1;
+        return ni(
           t,
           (function (t, e, n, r) {
             let i;
@@ -2627,16 +2626,16 @@
             return (
               null !== l && a.push({ start: e % o, end: l % o, loop: r }), a
             );
-          })(n, a, l < a ? l + i : l, u),
+          })(n, a, u, f),
           n,
           e
         );
       }
-      function nr(t, e, n, r) {
+      function ni(t, e, n, r) {
         return r && r.setContext && n
           ? (function (t, e, n, r) {
               let i = t._chart.getContext(),
-                o = ni(t.options),
+                o = no(t.options),
                 {
                   _datasetIndex: a,
                   options: { spanGaps: l },
@@ -2672,9 +2671,9 @@
                       };
                     return JSON.stringify(t, r) !== JSON.stringify(e, r);
                   })(
-                    (e = ni(
+                    (e = no(
                       r.setContext(
-                        eT(i, {
+                        eP(i, {
                           type: "segment",
                           p0: o,
                           p1: l,
@@ -2695,7 +2694,7 @@
             })(t, e, n, r)
           : e;
       }
-      function ni(t) {
+      function no(t) {
         return {
           backgroundColor: t.backgroundColor,
           borderCapStyle: t.borderCapStyle,
@@ -2752,18 +2751,14 @@
                 ((x.current = new o.kL(m.current, {
                   type: s,
                   data: (function (t) {
-                    var e, n;
-                    let r =
+                    var e;
+                    let n =
                         arguments.length > 1 && void 0 !== arguments[1]
                           ? arguments[1]
                           : a,
-                      i = { labels: [], datasets: [] };
+                      r = { labels: [], datasets: [] };
                     return (
-                      (e = i),
-                      (n = t.labels),
-                      (e.labels = n),
-                      u(i, t.datasets, r),
-                      i
+                      (e = t.labels), (r.labels = e), u(r, t.datasets, n), r
                     );
                   })(h, c),
                   options: d && { ...d },
@@ -2820,4 +2815,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7549-122f729dc49e6850.js.map
+//# sourceMappingURL=7549-9759cffc1974280e.js.map
