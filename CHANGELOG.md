@@ -79,7 +79,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - TODO: This is only partially analysed, and somewhat messy.. can definitely be cleaned up and improved further from here..
-  - **Twitter thread:** TODO
+  - **Twitter thread:** https://twitter.com/_devalias/status/1760992783274561853
 - App release version (Git SHA?): `7bae0a103e062a01132694339bd4bed0fbdfd302`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - New Chunks:
