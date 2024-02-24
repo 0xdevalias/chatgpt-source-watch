@@ -88,7 +88,7 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-b5e0d4fd579cf5dd.js",
     ],
-    "/search": ["static/chunks/pages/search-0e80d04010a299e9.js"],
+    "/search": ["static/chunks/pages/search-237695cb9d35c567.js"],
     "/search/feedback": [
       "static/chunks/pages/search/feedback-728e447318baa8e9.js",
     ],
@@ -96,7 +96,7 @@
       "static/chunks/pages/share/e/[[...shareParams]]-919e13140a13e17b.js",
     ],
     "/share/[[...shareParams]]": [
-      "static/chunks/pages/share/[[...shareParams]]-f97a11b7304cf70c.js",
+      "static/chunks/pages/share/[[...shareParams]]-3975b50771cff1f9.js",
     ],
     "/status": [s, "static/chunks/pages/status-5b558dfe7a4b7361.js"],
     "/workspace/deactivated": [

@@ -30,7 +30,9 @@
       }
       let f = o()(
         () =>
-          Promise.all([r.e(8682), r.e(1393), r.e(9679)]).then(r.bind(r, 87953)),
+          Promise.all([r.e(8682), r.e(560), r.e(1393), r.e(9679)]).then(
+            r.bind(r, 87953)
+          ),
         { ssr: !1, loadableGenerated: { webpack: () => [87953] } }
       );
       var s = !0;
@@ -78,4 +80,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-0e80d04010a299e9.js.map
+//# sourceMappingURL=search-237695cb9d35c567.js.map

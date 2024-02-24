@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-24Z \(`6Amu0NiVNwBcqKI_tQZlu`\)](#2024-02-24z-6amu0nivnwbcqki_tqzlu)
 - [2024-02-24Z \(`WRJHgIqMF1lNwSuszzsvl`\)](#2024-02-24z-wrjhgiqmf1lnwsuszzsvl)
 - [2024-02-23Z \(`CDew-lPM1ewHh4qIpLQqP`\)](#2024-02-23z-cdew-lpm1ewhh4qiplqqp)
 - [2024-02-22Z \(`H3Ik95CB8IbemzYEGBRet`\) `[as well as earlier missing changes]`](#2024-02-22z-h3ik95cb8ibemzyegbret-as-well-as-earlier-missing-changes)
@@ -71,6 +72,132 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-24Z (`6Amu0NiVNwBcqKI_tQZlu`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some changes to `shouldAbortQueuedPlayback`
+  - Some changes to 'Share Public Chat' CTA's (including for free/paid gizmo's (aka GPTs))
+  - `AnonNoAuthMobileLoginButton20240220` changed to `AnonNoAuthMobileLoginButton20240223`
+  - etc
+  - **Twitter thread:** TODO
+- App release version (Git SHA?): `95b20375cb21b774e0b89eff5297db78705b68a7`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- New Chunks:
+  - `560` (`unpacked/_next/static/chunks/1092ac6e.js`)
+- TODO: The CSS style files haven't been downloaded/properly captured/reviewed
+- `unpacked/_next/static/chunks/1092ac6e.js`
+  - SVG Image of an eye with a backslash through it
+- `unpacked/_next/static/chunks/pages/share/[[...shareParams]].js`
+  - ```diff
+    - let r = x(
+    -   x({}, e),
+    -   {},
+    -   {
+    -     conversationData: e.serverResponse.data,
+    -     isGizmoLive: e.isGizmoLive,
+    -   }
+    - );
+    + let r = x(x({}, e), {}, { conversationData: e.serverResponse.data });
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js` (diff: `6066` lines, minimised diff: `791` lines)
+  - Lots of diff churn, making it hard to see what changed specifically
+  - ```js
+    shouldAbortQueuedPlayback: !1,
+    ```
+  - ```js
+    if (o.shouldAbortQueuedPlayback) {
+      o.shouldAbortQueuedPlayback = !1;
+      return;
+    }
+    ```
+  - ```diff
+    - return "MediaSource" in window
+    -   ? window.MediaSource
+    -   : "ManagedMediaSource" in window
+    -     ? window.ManagedMediaSource
+    -     : null;
+    + return "MediaSource" in window ? window.MediaSource : null;
+    ```
+  - ```diff
+    - { config: d } = (0, f.mK)(f.LA.AnonNoAuthMobileLoginButton20240220),
+    + { config: d } = (0, f.mK)(f.LA.AnonNoAuthMobileLoginButton20240223),
+    ```
+  - ```js
+    return (
+      n &&
+        (l = n.isFree()
+          ? i
+            ? C.M.sharedConversationFreeGizmoClicked
+            : C.M.sharedConversationFreeClicked
+          : i
+            ? C.M.sharedConversationPaidGizmoClicked
+            : C.M.sharedConversationPaidClicked),
+    ```
+  - ```js
+    tn = (0, F.vU)({
+      loggedOutCta: {
+        id: "GizmoSharedConversationCTA.loggedOutCta",
+        defaultMessage: "Sign up to chat",
+      },
+      loggedInCtaGizmo: {
+        id: "GizmoSharedConversationCTA.loggedInCtaGizmo",
+        defaultMessage: "Get started with {name}",
+      },
+      loggedInCta: {
+        id: "GizmoSharedConversationCTA.loggedInCta",
+        defaultMessage: "Get started with ChatGPT",
+      },
+    ```
+  - ```js
+    (e.sharedConversationLoggedOutClicked = "Share Public Chat: Logged Out CTA Clicked"),
+    (e.sharedConversationFreeClicked = "Share Public Chat: Free CTA Clicked"),
+    (e.sharedConversationFreeGizmoClicked = "Share Public Chat: Free Gizmo CTA Clicked"),
+    (e.sharedConversationPaidClicked = "Share Public Chat: Paid CTA Clicked"),
+    (e.sharedConversationPaidGizmoClicked = "Share Public Chat: Paid Gizmo CTA Clicked"),
+    ```
+  - ```diff
+    - (e.AnonNoAuthMobileLoginButton20240220 = "chatgpt_no_auth_mobile_login_button_20240220"),
+    + (e.AnonNoAuthMobileLoginButton20240223 = "chatgpt_no_auth_mobile_login_button_20240223"),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-0756ce44084308de.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-d7f558da1f631198.js
+https://cdn.oaistatic.com/_next/static/6Amu0NiVNwBcqKI_tQZlu/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/6Amu0NiVNwBcqKI_tQZlu/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-237695cb9d35c567.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/[[...shareParams]]-3975b50771cff1f9.js
+```
+
+### From `orig/_next/static/chunks/webpack-d7f558da1f631198.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1092ac6e.11bb38d51776e36c.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.cbbca09eae978a72.js
+```
 
 ## 2024-02-24Z (`WRJHgIqMF1lNwSuszzsvl`)
 

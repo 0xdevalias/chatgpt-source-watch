@@ -16,10 +16,10 @@
           },
         });
       var n = t(39827),
-        i = t(80084),
-        s = t(81056),
-        o = t(28816),
-        a = t(23050),
+        s = t(80084),
+        i = t(81056),
+        a = t(28816),
+        o = t(23050),
         c = t(35250);
       function l(e) {
         let {
@@ -27,9 +27,9 @@
           initiallyHighlightedMessageId: t,
           continueConversationUrl: n,
         } = e;
-        return (0, c.jsx)(o.gB.Provider, {
+        return (0, c.jsx)(a.gB.Provider, {
           value: { serverSharedThreadId: r },
-          children: (0, c.jsx)(a.Z, {
+          children: (0, c.jsx)(o.Z, {
             clientThreadId: r,
             setClientThreadId: () => {},
             initiallyHighlightedMessageId: t,
@@ -43,8 +43,8 @@
         p = t.n(h),
         f = t(70079),
         v = t(1454),
-        m = t(94968),
-        g = t(32004);
+        g = t(94968),
+        m = t(32004);
       function j(e, r) {
         var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -78,24 +78,17 @@
       }
       var O = !0;
       let _ = { runtime: "nodejs" },
-        P = (0, m.vU)({
+        P = (0, g.vU)({
           home: { id: "sharedConversation.home", defaultMessage: "Home" },
         });
       function b(e) {
         if ("error" === e.serverResponse.type)
           return (0, c.jsx)(D, { error: e.serverResponse.error });
-        let r = x(
-          x({}, e),
-          {},
-          {
-            conversationData: e.serverResponse.data,
-            isGizmoLive: e.isGizmoLive,
-          }
-        );
+        let r = x(x({}, e), {}, { conversationData: e.serverResponse.data });
         return e.continueMode
           ? (0, c.jsx)(y, x({}, r))
           : e.moderationMode
-            ? (0, c.jsx)(s.Z, { children: (0, c.jsx)(w, x({}, r)) })
+            ? (0, c.jsx)(i.Z, { children: (0, c.jsx)(w, x({}, r)) })
             : (0, c.jsx)(w, x({}, r));
       }
       function y(e) {
@@ -114,7 +107,7 @@
           ),
         null != e.chatPageProps)
           ? (0, c.jsx)(
-              i.ZP,
+              s.ZP,
               x(x({}, e.chatPageProps), {}, { clientThreadId: r })
             )
           : null;
@@ -163,7 +156,7 @@
                   className: "flex items-center gap-2",
                   children: [
                     (0, c.jsx)(v.m6D, { className: "icon-sm" }),
-                    (0, c.jsx)(g.Z, x({}, P.home)),
+                    (0, c.jsx)(m.Z, x({}, P.home)),
                   ],
                 }),
               }),
@@ -188,4 +181,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...shareParams]]-f97a11b7304cf70c.js.map
+//# sourceMappingURL=[[...shareParams]]-3975b50771cff1f9.js.map
