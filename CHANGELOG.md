@@ -80,7 +80,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - Some changes related to the English language/translation file, image generation style images, `workspaceSettings.groups`, `ReadAloud` / `AudioPlayer`, etc
-  - **Twitter thread:** TODO
+  - **Twitter thread:** https://twitter.com/_devalias/status/1761226601591898372
 - App release version (Git SHA?): `84ae512c2f50c9dc7d7efe027f35a294ff253535`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - Chunk IDs Changed:
