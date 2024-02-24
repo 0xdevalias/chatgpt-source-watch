@@ -84,7 +84,7 @@ The following notes are not necessarily comprehensive, but just things of potent
   - Some changes to 'Share Public Chat' CTA's (including for free/paid gizmo's (aka GPTs))
   - `AnonNoAuthMobileLoginButton20240220` changed to `AnonNoAuthMobileLoginButton20240223`
   - etc
-  - **Twitter thread:** TODO
+  - **Twitter thread:** https://twitter.com/_devalias/status/1761248467777916956
 - App release version (Git SHA?): `95b20375cb21b774e0b89eff5297db78705b68a7`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - New Chunks:
