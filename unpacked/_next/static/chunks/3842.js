@@ -394,9 +394,11 @@
                 (async function (e) {
                   let t = _[z(e)];
                   if ("fetching" !== t) {
-                    void 0 != t ? s(t) : (_[z(e)] = "fetching"),
-                      s(void 0),
-                      a(!0);
+                    if (void 0 != t) {
+                      s(t);
+                      return;
+                    }
+                    (_[z(e)] = "fetching"), s(void 0), a(!0);
                     try {
                       let t =
                         "interpreter" === e.type
@@ -752,4 +754,4 @@
     65240: function () {},
   },
 ]);
-//# sourceMappingURL=3842.429edd67fee0e825.js.map
+//# sourceMappingURL=3842.2fad09c9cd727ecc.js.map

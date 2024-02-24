@@ -36,8 +36,8 @@
         });
       }
       var y = r(7557),
-        Z = r(70917),
-        b = r(16244),
+        b = r(70917),
+        Z = r(16244),
         v = r(95250),
         k = r(36607),
         S = r(52299);
@@ -69,8 +69,8 @@
           ],
         });
       }
-      var N = r(42005),
-        M = r(24668),
+      var M = r(42005),
+        N = r(24668),
         O = r(61888),
         P = r(4373),
         D = r(47527);
@@ -83,14 +83,14 @@
             },
             { groupName: s.name }
           ),
-          n = (0, M.t)(),
+          n = (0, N.t)(),
           l = null == n ? void 0 : n.getWorkspaceId(),
           { 0: o, 1: c } = (0, g.useState)(""),
           { 0: u, 1: d } = (0, g.useState)(0),
           { data: p } = (0, P.Z)(l, u * P.I, o, i.Wk),
           { 0: f, 1: w } = (0, g.useState)([]),
-          { 0: Z, 1: k } = (0, g.useState)([]),
-          N = p ? Math.ceil(p.total / P.I) : 0;
+          { 0: b, 1: k } = (0, g.useState)([]),
+          M = p ? Math.ceil(p.total / P.I) : 0;
         async function G(e) {
           k((s) => [...s, e]);
           try {
@@ -101,7 +101,7 @@
             k((s) => s.filter((s) => s !== e));
           }
         }
-        return (0, h.jsx)(b.Z, {
+        return (0, h.jsx)(Z.Z, {
           type: "warning",
           isOpen: r,
           onClose: null != t ? t : O.noop,
@@ -157,7 +157,7 @@
                                     children: (0, h.jsx)(y.z, {
                                       size: "small",
                                       color: "neutral",
-                                      disabled: Z.includes(e.id),
+                                      disabled: b.includes(e.id),
                                       onClick: () => {
                                         f.includes(e.id) || G(e.id);
                                       },
@@ -197,7 +197,7 @@
                   onChangeIndex: (e) => {
                     d(e);
                   },
-                  length: N,
+                  length: M,
                 }),
               }),
             ],
@@ -244,14 +244,14 @@
           t = (0, j.Z)(),
           { 0: a, 1: d } = (0, g.useState)(!1),
           { 0: p, 1: f } = (0, g.useState)(""),
-          { 0: w, 1: b } = (0, g.useState)(0),
+          { 0: w, 1: Z } = (0, g.useState)(0),
           {
             data: k,
             isLoading: C,
-            isPlaceholderData: M,
+            isPlaceholderData: N,
           } = (0, o.a)({
-            queryKey: [s, "groups", r.id, "members-page-".concat(w)],
-            queryFn: () => n.Z.listWorkspaceGroupMembers(s, r.id, "", 10 * w),
+            queryKey: [s, "groups", r.id, p, "members-page-".concat(w)],
+            queryFn: () => n.Z.listWorkspaceGroupMembers(s, r.id, p, 10 * w),
             placeholderData: i.Wk,
           }),
           { 0: O, 1: P } = (0, g.useState)(!1),
@@ -266,7 +266,7 @@
           onMutate: (e) => (
             q.cancelQueries({ queryKey: [s, "groups", r.id] }),
             q.setQueryData(
-              [s, "groups", r.id, "members-page-".concat(w)],
+              [s, "groups", r.id, p, "members-page-".concat(w)],
               (s) =>
                 s
                   ? Q(
@@ -335,7 +335,7 @@
                   value: p,
                   onChange: () => {
                     var e, s;
-                    b(0),
+                    Z(0),
                       f(
                         null !==
                           (e =
@@ -370,23 +370,30 @@
                   ],
                 }),
                 (0, h.jsx)(v.Z.Body, {
-                  className: C || M ? "opacity-50" : void 0,
+                  className: C || N ? "opacity-50" : void 0,
                   children:
                     null == k
                       ? (0, h.jsx)(v.Z.Row, {
                           children: (0, h.jsx)(v.Z.Cell, {
                             colSpan: 3,
-                            children: (0, h.jsx)(N.Z, {}),
+                            children: (0, h.jsx)(M.Z, {}),
                           }),
                         })
                       : 0 === k.items.length
                         ? (0, h.jsx)(v.Z.Row, {
                             children: (0, h.jsx)(v.Z.Cell, {
                               colSpan: 3,
-                              children: (0, h.jsx)(x.Z, {
-                                id: "workspaceSettings.groups.noMembers",
-                                defaultMessage: "No members",
-                              }),
+                              children:
+                                "" === p
+                                  ? (0, h.jsx)(x.Z, {
+                                      id: "workspaceSettings.groups.noMembers",
+                                      defaultMessage: "No members",
+                                    })
+                                  : (0, h.jsx)(x.Z, {
+                                      id: "workspaceSettings.groups.noMembersForSearch",
+                                      defaultMessage:
+                                        "No members matched the filter",
+                                    }),
                             }),
                           })
                         : k.items.map((e) =>
@@ -403,17 +410,17 @@
                                   (0, h.jsx)(v.Z.Cell, { children: e.email }),
                                   (0, h.jsx)(v.Z.Cell, {
                                     textAlign: "right",
-                                    children: (0, h.jsxs)(Z.Z.Root, {
+                                    children: (0, h.jsxs)(b.Z.Root, {
                                       children: [
-                                        (0, h.jsx)(Z.Z.Trigger, {
+                                        (0, h.jsx)(b.Z.Trigger, {
                                           className: "-my-2",
                                           children: (0, h.jsx)(m.K9M, {
                                             className: "icon-sm",
                                           }),
                                         }),
-                                        (0, h.jsx)(Z.Z.Portal, {
-                                          children: (0, h.jsx)(Z.Z.Content, {
-                                            children: (0, h.jsx)(Z.Z.Item, {
+                                        (0, h.jsx)(b.Z.Portal, {
+                                          children: (0, h.jsx)(b.Z.Content, {
+                                            children: (0, h.jsx)(b.Z.Item, {
                                               onClick: () => T(e.id),
                                               children: (0, h.jsx)(x.Z, {
                                                 id: "workspaceSettings.groups.removeMember",
@@ -450,7 +457,7 @@
                   (0, h.jsx)(S.t, {
                     currentPage: w,
                     onChangeIndex: (e) => {
-                      b(e);
+                      Z(e);
                     },
                     length: Math.ceil(k.total / 10),
                   }),
@@ -507,7 +514,7 @@
           {
             data: f,
             isLoading: w,
-            isPlaceholderData: Z,
+            isPlaceholderData: b,
           } = (0, o.a)({
             queryKey:
               "" === a
@@ -517,8 +524,8 @@
               n.Z.getWorkspaceGroups(s, { query: a, offset: 10 * p }),
             placeholderData: i.Wk,
           }),
-          { 0: b, 1: k } = (0, g.useState)(!1),
-          M = (e) => {
+          { 0: Z, 1: k } = (0, g.useState)(!1),
+          N = (e) => {
             e && (m(0), d("")), k(e);
           },
           { mutateAsync: O } = (0, c.D)({
@@ -609,7 +616,7 @@
                   }),
                 }),
                 (0, h.jsx)(y.z, {
-                  onClick: () => M(!0),
+                  onClick: () => N(!0),
                   children: (0, h.jsx)(x.Z, {
                     id: "workspaceSettings.groups.create",
                     defaultMessage: "Create group",
@@ -647,15 +654,15 @@
                       ],
                     }),
                     (0, h.jsxs)(v.Z.Body, {
-                      className: (0, u.default)((w || Z) && "opacity-50"),
+                      className: (0, u.default)((w || b) && "opacity-50"),
                       children: [
-                        b &&
+                        Z &&
                           (0, h.jsx)(I, {
                             group: "new",
                             workspaceId: s,
                             onChangeName: async (e) => {
                               "" !== e.trim() &&
-                                (O({ workspaceId: s, name: e }), M(!1));
+                                (O({ workspaceId: s, name: e }), N(!1));
                             },
                             onDelete: () => null,
                           }),
@@ -664,7 +671,7 @@
                               children: (0, h.jsx)(v.Z.Cell, {
                                 colSpan: 5,
                                 textAlign: "center",
-                                children: (0, h.jsx)(N.Z, {}),
+                                children: (0, h.jsx)(M.Z, {}),
                               }),
                             })
                           : 0 === f.items.length
@@ -734,11 +741,11 @@
           children: [
             (0, h.jsx)(p(), {
               children: (0, h.jsx)("title", {
-                children: r.formatMessage(B.title),
+                children: r.formatMessage(W.title),
               }),
             }),
             (0, h.jsx)(a.yG, {
-              title: r.formatMessage(B.title),
+              title: r.formatMessage(W.title),
               subtitle: (0, h.jsx)(x.Z, {
                 id: "workspaceSettings.groups.subtitle",
                 defaultMessage:
@@ -759,7 +766,7 @@
           { 0: i, 1: c } = (0, g.useState)("new" === s ? "" : s.name),
           { 0: u, 1: d } = (0, g.useState)(!1),
           { 0: p, 1: y } = (0, g.useState)("new" === s),
-          { 0: b, 1: S } = (0, g.useState)(null),
+          { 0: Z, 1: S } = (0, g.useState)(null),
           C = (0, g.useRef)(null);
         (0, g.useEffect)(() => {
           if ("new" === s || p) {
@@ -767,7 +774,7 @@
             null === (e = C.current) || void 0 === e || e.focus();
           }
         }, [s, p]);
-        let N = async () => {
+        let M = async () => {
           if ("" === i.trim()) {
             c("new" === s ? "" : s.name), y(!1), d(!1);
             return;
@@ -797,9 +804,9 @@
                           }),
                           onChange: (e) => c(e.target.value),
                           onBlur: () => {
-                            i !== ("new" === s ? "" : s.name) && N();
+                            i !== ("new" === s ? "" : s.name) && M();
                           },
-                          onPressEnter: N,
+                          onPressEnter: M,
                         })
                       : s.name,
                 }),
@@ -825,16 +832,16 @@
                   textAlign: "right",
                   children:
                     "new" !== s &&
-                    (0, h.jsxs)(Z.Z.Root, {
+                    (0, h.jsxs)(b.Z.Root, {
                       children: [
-                        (0, h.jsx)(Z.Z.Trigger, {
+                        (0, h.jsx)(b.Z.Trigger, {
                           className: "-my-2",
                           children: (0, h.jsx)(m.K9M, { className: "icon-sm" }),
                         }),
-                        (0, h.jsx)(Z.Z.Portal, {
-                          children: (0, h.jsxs)(Z.Z.Content, {
+                        (0, h.jsx)(b.Z.Portal, {
+                          children: (0, h.jsxs)(b.Z.Content, {
                             children: [
-                              (0, h.jsx)(Z.Z.Item, {
+                              (0, h.jsx)(b.Z.Item, {
                                 onClick: (e) => {
                                   y(!0),
                                     setTimeout(() => {
@@ -850,7 +857,7 @@
                                   defaultMessage: "Edit name",
                                 }),
                               }),
-                              (0, h.jsx)(Z.Z.Item, {
+                              (0, h.jsx)(b.Z.Item, {
                                 onClick: (e) => {
                                   S(s), e.stopPropagation();
                                 },
@@ -876,12 +883,12 @@
                   children: (0, h.jsx)(T, { group: s, workspaceId: r }),
                 }),
               }),
-            b &&
-              (0, h.jsx)(W, { group: b, onDelete: a, onClose: () => S(null) }),
+            Z &&
+              (0, h.jsx)(F, { group: Z, onDelete: a, onClose: () => S(null) }),
           ],
         });
       }
-      function W(e) {
+      function F(e) {
         let { group: s, onDelete: r, onClose: t } = e,
           a = (0, j.Z)().formatMessage(
             {
@@ -890,7 +897,7 @@
             },
             { groupName: s.name }
           );
-        return (0, h.jsx)(b.Z, {
+        return (0, h.jsx)(Z.Z, {
           type: "warning",
           isOpen: !0,
           onClose: t,
@@ -924,10 +931,10 @@
           }),
         });
       }
-      let B = (0, f.vU)({
+      let W = (0, f.vU)({
         title: { id: "admin.groupsSettings.title", defaultMessage: "Groups" },
       });
-      function F(e, s) {
+      function B(e, s) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var t = Object.getOwnPropertySymbols(e);
@@ -947,7 +954,7 @@
             for (var s = 1; s < arguments.length; s++) {
               var r = null != arguments[s] ? arguments[s] : {};
               s % 2
-                ? F(Object(r), !0).forEach(function (s) {
+                ? B(Object(r), !0).forEach(function (s) {
                     (0, t.Z)(e, s, r[s]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -955,7 +962,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(r)
                     )
-                  : F(Object(r)).forEach(function (s) {
+                  : B(Object(r)).forEach(function (s) {
                       Object.defineProperty(
                         e,
                         s,
@@ -991,4 +998,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=groups-9574b97b2941ba5c.js.map
+//# sourceMappingURL=groups-1e9f674f6da4d432.js.map

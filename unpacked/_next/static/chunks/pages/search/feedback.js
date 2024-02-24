@@ -18,9 +18,9 @@
       let _ = r()(
         () =>
           Promise.all([t.e(8682), t.e(7665)])
-            .then(t.bind(t, 20079))
+            .then(t.bind(t, 13336))
             .then((n) => n.FeedbackPage),
-        { ssr: !1, loadableGenerated: { webpack: () => [20079] } }
+        { ssr: !1, loadableGenerated: { webpack: () => [13336] } }
       );
       var a = !0;
       function i() {
@@ -43,4 +43,4 @@
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=feedback-b71d35989249581f.js.map
+//# sourceMappingURL=feedback-728e447318baa8e9.js.map

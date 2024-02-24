@@ -479,7 +479,7 @@
         ];
       var eg = i(15193),
         ef = i(61161),
-        ev = i(41064),
+        ev = i(38823),
         ex = i(23340);
       function ey(e) {
         let { clientThreadId: t } = e,
@@ -1675,10 +1675,10 @@
         }
         return e;
       }
-      function e6(e) {
+      function e9(e) {
         window.history.length > 1 ? e.back() : e.push((0, q.L7)());
       }
-      function e9(e) {
+      function e6(e) {
         var t, i, n;
         let {
             gizmo: r,
@@ -1998,7 +1998,7 @@
             "w-60 rounded-lg border border-token-border-medium bg-token-main-surface-primary p-4 text-sm",
           children:
             "privacy" === a.type
-              ? (0, k.jsx)(e9, {
+              ? (0, k.jsx)(e6, {
                   gizmo: t,
                   publishedGizmo: i,
                   promoteGizmo: n,
@@ -2142,7 +2142,7 @@
                 o &&
                   (0, k.jsx)(eQ.b, {
                     gizmoId: t.id,
-                    onSuccess: () => e6(ee()),
+                    onSuccess: () => e9(ee()),
                     onClose: () => {
                       a(!1);
                     },
@@ -2320,7 +2320,7 @@
               children: [
                 (0, k.jsx)("a", {
                   className: "cursor-pointer text-token-text-primary",
-                  onClick: () => e6(ee()),
+                  onClick: () => e9(ee()),
                   children: (0, k.jsx)(eo.L7, { className: "icon-lg" }),
                 }),
                 (0, k.jsx)(tl, { gizmoEditorData: t }),
@@ -5287,4 +5287,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2637-f1cad81fcf9ac3b0.js.map
+//# sourceMappingURL=2637-2b9d4453bf39911d.js.map

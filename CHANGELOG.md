@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-02-24Z \(`WRJHgIqMF1lNwSuszzsvl`\)](#2024-02-24z-wrjhgiqmf1lnwsuszzsvl)
 - [2024-02-23Z \(`CDew-lPM1ewHh4qIpLQqP`\)](#2024-02-23z-cdew-lpm1ewhh4qiplqqp)
 - [2024-02-22Z \(`H3Ik95CB8IbemzYEGBRet`\) `[as well as earlier missing changes]`](#2024-02-22z-h3ik95cb8ibemzyegbret-as-well-as-earlier-missing-changes)
 - [2024-02-12Z \(`FVFs9JMpH-RFaOJJ6VKnB`\) `[as well as earlier missing changes]`](#2024-02-12z-fvfs9jmph-rfaojj6vknb-as-well-as-earlier-missing-changes)
@@ -70,6 +71,173 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-02-24Z (`WRJHgIqMF1lNwSuszzsvl`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - Some changes related to the English language/translation file, image generation style images, `workspaceSettings.groups`, `ReadAloud` / `AudioPlayer`, etc
+  - **Twitter thread:** TODO
+- App release version (Git SHA?): `84ae512c2f50c9dc7d7efe027f35a294ff253535`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Chunk IDs Changed:
+  - `3453` -> `276`
+- Module IDs Changed:
+  - `1376` -> `14313`
+  - `4713` -> `87953` (?)
+  - `20079` -> `13336` (?)
+  - `41064` -> `38823`
+  - ?etc?
+- TODO: The CSS style files haven't been downloaded/properly captured/reviewed
+- The following language/translation files were updated:
+  - `unpacked/_next/static/chunks/9087.js` (English)
+    - <details><summary>Diff of changes to the English language chunk</summary>
+        
+        TODO
+
+      </details>
+
+- `unpacked/_next/static/chunks/276.js`
+  - Renamed from `unpacked/_next/static/chunks/3453.js`
+  - Various images seemingly related to image generation styles or similar.
+- `unpacked/_next/static/chunks/pages/admin/groups.js`
+  - ```diff
+    - children: (0, h.jsx)(x.Z, {
+    -   id: "workspaceSettings.groups.noMembers",
+    -   defaultMessage: "No members",
+    - }),
+    + children:
+    +   "" === p
+    +     ? (0, h.jsx)(x.Z, {
+    +         id: "workspaceSettings.groups.noMembers",
+    +         defaultMessage: "No members",
+    +       })
+    +     : (0, h.jsx)(x.Z, {
+    +         id: "workspaceSettings.groups.noMembersForSearch",
+    +         defaultMessage:
+    +           "No members matched the filter",
+    +       }),
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js` (diff: `9525` lines, minimised diff: `2866` lines)
+  - Lots of diff churn, making it hard to see what changed specifically
+  - Looks like a large section of updated/churned code related to the `date-fns` lib
+  - ```js
+    let eu = ["key"],
+      ec = ["key", "onStreamingError", "onStreamingStart"];
+    ```
+  - ```js
+    o = (0, N.useRef)({
+      isMediaSourceAvailable: ex(),
+      playPromise: null,
+    }).current,
+    ```
+  - ```diff
+    -   onError: (e) => {
+    +   onStreamingError: (e) => {
+          G.w.readAloud.error(e),
+            i(!1),
+            );
+        },
+    -   onStart: () => {
+    +   onStreamingStart: () => {
+          i(!1);
+      },
+    });
+    - u.changeSource(e), (o.current = u.play());
+    + u.changeSource(e), (o.playPromise = u.play());
+    ```
+  - ```js
+    : (G.w.readAloud.click({
+        isMediaSourceAvailable: o.isMediaSourceAvailable,
+      }),
+    ```
+  - ```js
+    async function eh(e) {
+      var t;
+      let { message_id: n, conversation_id: r, voice: i } = e,
+        o = await V.Z.synthesize({
+          message_id: n,
+          conversation_id: r,
+          voice: i,
+        }),
+        a =
+          null !== (t = o.headers.get("content-type")) && void 0 !== t
+            ? t
+            : "audio/aac";
+      return { response: o, format: a };
+    }
+    ```
+  - ```js
+    function ew() {
+      return "MediaSource" in window
+        ? window.MediaSource
+        : "ManagedMediaSource" in window
+          ? window.ManagedMediaSource
+          : null;
+    }
+    let ek = (e) => ep({ id: (0, el.Z)(), segments: [], streaming: !1 }, e),
+      eC = new eo({
+        max: 25,
+        dispose: (e) => {
+          URL.revokeObjectURL(e.src);
+        },
+      });
+    ```
+  - ```js
+    var s = (function (e) {
+      return (
+        (e.AudioPlayer = "audio-player"), (e.ReadAloud = "read-aloud"), e
+      );
+    })(s || {});
+    ```
+  - ```diff
+    - "Accept-Language": this.clientLocale,
+    + "OAI-Language": this.clientLocale,
+    ```
+  - ?etc?
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-783c9d3d0c38be69.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-2e4c364289bb4774.js
+https://cdn.oaistatic.com/_next/static/WRJHgIqMF1lNwSuszzsvl/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/WRJHgIqMF1lNwSuszzsvl/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/groups-1e9f674f6da4d432.js
+https://cdn.oaistatic.com/_next/static/chunks/2637-2b9d4453bf39911d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-0e80d04010a299e9.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/feedback-728e447318baa8e9.js
+```
+
+### From `orig/_next/static/chunks/webpack-2e4c364289bb4774.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/276.f366c884f1a0069d.js
+https://cdn.oaistatic.com/_next/static/chunks/3032.3421eea06995d5df.js
+https://cdn.oaistatic.com/_next/static/chunks/3842.2fad09c9cd727ecc.js
+https://cdn.oaistatic.com/_next/static/chunks/9087.16a1a63dd7d6adcb.js
+https://cdn.oaistatic.com/_next/static/chunks/adb5c70d.550cbb4354158933.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.9a5a7ea024dd39d9.js
+```
 
 ## 2024-02-23Z (`CDew-lPM1ewHh4qIpLQqP`)
 
