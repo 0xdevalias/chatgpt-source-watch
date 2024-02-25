@@ -138,13 +138,13 @@ function main() {
 
   // Extract the values we want from previously found nodes
   const chunkUrlPrefix = extractChunkUrlPrefix(chunkUrlPrefixNode);
-  const miniCssFPath = extractMiniCssFPath(miniCssFNode);
+  const { cssPaths: miniCssFPaths } = extractMiniCssFPaths(miniCssFNode);
   const { chunkPaths, ...chunkExtras } = extractChunkPaths(chunkMappingsNode);
 
   DEBUG &&
     console.log('[DEBUG]', {
       chunkUrlPrefix,
-      miniCssFPath,
+      miniCssFPaths,
       chunkPaths,
       chunkExtras,
     });
@@ -153,12 +153,20 @@ function main() {
   const chunkUrls = chunkPaths.map(
     (chunkPath) => `${chunkUrlPrefix}${chunkPath}`
   );
-  const miniCssFUrl = `${chunkUrlPrefix}${miniCssFPath}`;
 
-  DEBUG && console.log('[DEBUG]', { chunkUrlPrefix, chunkUrls, miniCssFUrl });
+  const miniCssFUrls = miniCssFPaths.map(
+    (cssPath) => `${chunkUrlPrefix}${cssPath}`
+  );
+
+  DEBUG &&
+    console.log('[DEBUG]', {
+      chunkUrlPrefix,
+      chunkUrls,
+      miniCssFUrls,
+    });
 
   // Display the extracted URLS
-  console.log([...chunkUrls, miniCssFUrl].join('\n'));
+  console.log([...chunkUrls, ...miniCssFUrls].join('\n'));
 }
 
 /**
@@ -236,7 +244,7 @@ function findMainIIFEBlockStatement(ast) {
  *     .left -> MemberExpression
  *       .object -> Identifier .name -> functionName
  *       .property -> Identifier .name -> 'miniCssF'
- *     .right -> FunctionExpression .body -> BlockStatement .body[] -> ReturnStatement .argument -> Literal .value
+ *     .right -> FunctionExpression .body -> BlockStatement .body[] -> ReturnStatement .argument -> ...
  *
  * @param {Array} joinedExpressions - The expressions joined in the AST.
  * @param {string} functionName - The name of the function to find.
@@ -256,17 +264,98 @@ function findMiniCssFNode(joinedExpressions, functionName) {
  * Extracts the miniCssF path from a miniCssF node.
  *
  * AST Layout:
- *   @see findMiniCssFNode for AST layout of miniCssFNode
+ *   AssignmentExpression
+ *     .left -> MemberExpression
+ *       .object -> Identifier .name -> functionName
+ *       .property -> Identifier .name -> 'miniCssF'
+ *     .right -> FunctionExpression .body -> BlockStatement .body[] -> ReturnStatement .argument ->
+ *      ... (either be a Single path or a Composite path)
+ *
+ *   Single path:
+ *     -> StringLiteral .value
+ *
+ *   Composite path (string + mapped object + string):
+ *     -> BinaryExpression
+ *       .left -> BinaryExpression ->
+ *         .left -> StringLiteral .value
+ *         .right -> MemberExpression .object -> ObjectExpression .properties[] -> ObjectProperty
+ *           .key -> NumericLiteral .value
+ *           .value -> StringLiteral .value
+ *       .right -> StringLiteral .value
  *
  * @param {Object} miniCssFNode - The MiniCSSF node in the AST.
- * @returns {string} - The extracted MiniCssF path.
+ *
+ * @returns {{
+ *   cssPaths: string[],
+ *   pathPrefix?: string,
+ *   pathSuffix?: string,
+ *   chunkPathMappings?: Object.<number, {chunkHash: string, cssPath: string}>}
+ * } Depending on the node's structure:
+ *   - Single path: { cssPaths: [singlePath] }
+ *   - Composite path: { cssPaths, pathPrefix, pathSuffix, chunkPathMappings }
+ *
+ * @throws {Error} If the MiniCSSF node structure is not recognized.
  */
-function extractMiniCssFPath(miniCssFNode) {
+function extractMiniCssFPaths(miniCssFNode) {
   const returnStatement = miniCssFNode.right.body.body.find(
     (node) => node.type === 'ReturnStatement'
   );
 
-  return returnStatement.argument.value;
+  // This is for a single CSS chunk
+  const isSinglePath = returnStatement.argument.type === 'StringLiteral';
+
+  // This is for multiple CSS chunks
+  const isCompositePath =
+    returnStatement.argument.type === 'BinaryExpression' &&
+    returnStatement.argument.left.type === 'BinaryExpression' &&
+    returnStatement.argument.left.left.type === 'StringLiteral' &&
+    returnStatement.argument.left.operator === '+' &&
+    returnStatement.argument.left.right.type === 'MemberExpression' &&
+    returnStatement.argument.left.right.object.type === 'ObjectExpression' &&
+    returnStatement.argument.operator === '+' &&
+    returnStatement.argument.right.type === 'StringLiteral';
+
+  if (isSinglePath) {
+    return {
+      cssPaths: [returnStatement.argument.value],
+    };
+  } else if (isCompositePath) {
+    const pathPrefix = returnStatement.argument.left.left.value;
+    const pathSuffix = returnStatement.argument.right.value;
+
+    const chunkPathMappings =
+      returnStatement.argument.left.right.object.properties.reduce(
+        (acc, prop) => {
+          const chunkId = prop.key.value;
+          const chunkHash = prop.value.value;
+          const cssPath = `${pathPrefix}${chunkHash}${pathSuffix}`;
+
+          return {
+            ...acc,
+            [chunkId]: {
+              chunkHash,
+              cssPath,
+            },
+          };
+        },
+        {}
+      );
+
+    const cssPaths = Object.values(chunkPathMappings).map(
+      ({ cssPath }) => cssPath
+    );
+
+    return {
+      pathPrefix,
+      pathSuffix,
+      chunkPathMappings,
+      cssPaths,
+    };
+  } else {
+    throw new Error(
+      '[extractMiniCssFPaths] Invalid/unknown miniCssF structure'
+    );
+  }
 }
 
 /**
