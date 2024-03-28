@@ -136,6 +136,9 @@ For additional context and a deeper understanding of the underlying concepts and
 - [**Reverse Engineering Webpack Apps**](https://gist.github.com/0xdevalias/8c621c5d09d780b1d321bfdb86d67cdd#reverse-engineering-webpack-apps): A guide to understanding and reverse engineering applications built with Webpack.
 - [**Deobfuscating/Unminifying Obfuscated Web App Code**](https://gist.github.com/0xdevalias/d8b743efb82c0e9406fc69da0d6c6581#deobfuscating--unminifying-obfuscated-web-app-code): Techniques for deobfuscating and unminifying code to make it more readable and understandable.
 - [**Debugging Electron Apps**](https://gist.github.com/0xdevalias/428e56a146e3c09ec129ee58584583ba#debugging-electron-apps-and-related-memory-issues): A guide focused on debugging Electron applications, including insights on memory issues and how to address them.
+- https://github.com/0xdevalias/poc-ast-tools
+  - > poc-ast-tools
+    > PoC scripts and tools for working with (primarily JavaScript) ASTs.
 
 These resources offer useful insights and should be used with responsibility, adhering to legal and ethical considerations.
 
