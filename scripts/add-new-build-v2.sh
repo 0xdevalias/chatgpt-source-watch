@@ -767,6 +767,7 @@ generate_changelog_and_commit_message() {
   local changelog_entry=""
   local changelog_notes=""
   local commit_message=""
+  local tweet_commit_message=""
 
   echo "Generating CHANGELOG entry + commit message..."
 
@@ -800,6 +801,8 @@ generate_changelog_and_commit_message() {
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`)\n\n"
   fi
+
+  tweet_commit_message="[CHANGELOG] add twitter link to $build_hash from ${build_date}Z"
 
   # Notes
   changelog_notes+="- **tl;dr**\n"
@@ -876,7 +879,8 @@ generate_changelog_and_commit_message() {
 
   # Print the changelog entry and commit message
   echo "$changelog_entry"
-  echo "$commit_message"
+  echo "$commit_message\n"
+  echo "$tweet_commit_message"
 }
 
 # Execute main function
