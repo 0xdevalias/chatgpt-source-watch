@@ -872,7 +872,10 @@ generate_changelog_and_commit_message() {
     if [[ ${#webpack_urls_missing_not_in_changelog[@]} -gt 0 ]]; then
       changelog_entry+="#### Missing\n\n"
       changelog_entry+="\`\`\`\n"
-      changelog_entry+="$(printf "%s\n" "${webpack_urls_missing_not_in_changelog[@]}")\n"
+      # Filter out https://cdn.oaistatic.com/_next/undefined to work around 'miniCssF' extraction bug
+      #   TODO: Remove this hack once resolved: https://github.com/0xdevalias/chatgpt-source-watch/issues/6
+      changelog_entry+="$(printf "%s\n" "${webpack_urls_missing_not_in_changelog[@]}" | grep -v "https://cdn.oaistatic.com/_next/undefined")\n"
+      # changelog_entry+="$(printf "%s\n" "${webpack_urls_missing_not_in_changelog[@]}")\n"
       changelog_entry+="\`\`\`\n"
     fi
   fi
