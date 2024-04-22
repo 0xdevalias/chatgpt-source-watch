@@ -6,7 +6,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return J;
+            return X;
           },
         });
       var r = a(18450),
@@ -29,9 +29,9 @@
         j = a(11335),
         v = a(66452),
         w = a(44151),
-        k = a(26524),
-        N = a(59669),
-        C = a(65998),
+        C = a(26524),
+        k = a(59669),
+        N = a(65998),
         M = a(25771),
         F = a(35250);
       let z = (0, x.forwardRef)((e, t) => {
@@ -89,7 +89,7 @@
         });
       });
       z.displayName = "BarChart";
-      let S = (0, x.forwardRef)((e, t) => {
+      let O = (0, x.forwardRef)((e, t) => {
         let { chart: a } = e,
           r = a.datasets.map((e) => {
             let t = e.data.map((e) => e);
@@ -148,9 +148,9 @@
           data: { labels: a.labels, datasets: r },
         });
       });
-      S.displayName = "LineChart";
-      var O = a(36241);
-      let A = (0, x.forwardRef)((e, t) => {
+      O.displayName = "LineChart";
+      var S = a(36241);
+      let E = (0, x.forwardRef)((e, t) => {
         let { chart: a } = e,
           r = a.datasets.map((e) => {
             let t = e.data.map((e) => e);
@@ -227,12 +227,12 @@
               },
             },
           },
-          plugins: [O.Z],
+          plugins: [S.Z],
           data: { labels: a.labels, datasets: r },
         });
       });
-      A.displayName = "PieChart";
-      let E = (0, x.forwardRef)((e, t) => {
+      E.displayName = "PieChart";
+      let A = (0, x.forwardRef)((e, t) => {
         let { chart: a } = e,
           r = a.datasets.reduce((e, t) => e + t.data.length, 0),
           l = a.datasets.map((e) => {
@@ -287,20 +287,20 @@
           data: { labels: a.labels, datasets: l },
         });
       });
-      (E.displayName = "ScatterChart"),
-        C.kL.register(
-          C.qi,
-          C.uw,
-          C.f$,
-          C.ZL,
-          C.Dx,
-          C.u,
-          C.De,
-          C.ST,
-          C.od,
-          C.jn
+      (A.displayName = "ScatterChart"),
+        N.kL.register(
+          N.qi,
+          N.uw,
+          N.f$,
+          N.ZL,
+          N.Dx,
+          N.u,
+          N.De,
+          N.ST,
+          N.od,
+          N.jn
         );
-      let _ = { bar: z, pie: A, line: S, scatter: E };
+      let _ = { bar: z, pie: E, line: O, scatter: A };
       function P(e) {
         let { item: t } = e;
         return (0, F.jsxs)("div", {
@@ -424,9 +424,9 @@
       D.displayName = "Chart";
       var Z = a(35595),
         R = a(15777),
-        L = a(72003);
+        I = a(72003);
       a(7235);
-      var I = a(41105);
+      var L = a(41105);
       function T(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -439,7 +439,7 @@
         }
         return a;
       }
-      function H(e) {
+      function B(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -458,7 +458,7 @@
         }
         return e;
       }
-      function U(e) {
+      function H(e) {
         let {
             table: t,
             height: a,
@@ -466,7 +466,7 @@
             isInFocusedView: l = !1,
             className: s = "",
           } = e,
-          { targetedContent: n, setTargetedContent: o } = (0, I.Q)(),
+          { targetedContent: n, setTargetedContent: o } = (0, L.Q)(),
           { 0: c, 1: u } = (0, x.useState)([]),
           m = getComputedStyle(document.documentElement),
           p = (0, g.Z)();
@@ -500,8 +500,11 @@
                   }
                 })(t.columnTypes[a]),
                 data: l[a],
-                allowOverlay: !1,
+                allowOverlay: !0,
+                readonly: !0,
                 displayData: String(l[a]),
+                allowWrapping: !0,
+                contentAlignment: "left",
               };
             },
             [t.columnTypes, t.rows]
@@ -536,7 +539,7 @@
                   }),
                   isFocusedViewContent: l,
                   createNewCompletionParams: (e) =>
-                    B(
+                    U(
                       e,
                       "The user has selected the columns:  "
                         .concat(
@@ -577,7 +580,7 @@
                     }),
                     isFocusedViewContent: l,
                     createNewCompletionParams: (e) =>
-                      B(
+                      U(
                         e,
                         "The user has selected rows at the following indices: "
                           .concat(
@@ -622,7 +625,7 @@
                     children: m,
                   }),
                   createNewCompletionParams: (e) =>
-                    B(
+                    U(
                       e,
                       "The user has selected a range at the iloc: "
                         .concat(r, ":")
@@ -647,12 +650,43 @@
             },
             [t.columnNames, o, l, t.rows, p, t.name, t.sheetName]
           );
+        (0, x.useEffect)(() => {
+          void 0 === n && h({ columns: R.EV.empty(), rows: R.EV.empty() });
+        }, [n]);
+        let j = (0, x.useCallback)(
+          (e) => {
+            let a = t.rows[e],
+              r = a.reduce((e, t) =>
+                ((null == e ? void 0 : e.length) || 0) >
+                ((null == t ? void 0 : t.length) || 0)
+                  ? e
+                  : t
+              ),
+              l = c[a.indexOf(r)],
+              s = (null == l ? void 0 : l.width) || 150,
+              n = Math.ceil(r.length / (s / 8));
+            return 24 + (n < 4 ? n : 4) * 20;
+          },
+          [t.rows, c]
+        );
         return (
           (0, x.useEffect)(() => {
-            void 0 === n && h({ columns: R.EV.empty(), rows: R.EV.empty() });
-          }, [n]),
+            if (!document.getElementById("portal")) {
+              let e = document.createElement("div");
+              (e.id = "portal"),
+                (e.style.position = "fixed"),
+                (e.style.left = "0"),
+                (e.style.top = "0"),
+                (e.style.zIndex = "9999"),
+                document.body.appendChild(e);
+            }
+            return () => {
+              let e = document.getElementById("portal");
+              e && document.body.removeChild(e);
+            };
+          }, []),
           (0, F.jsx)(F.Fragment, {
-            children: (0, F.jsx)(L.F, {
+            children: (0, F.jsx)(I.F, {
               getCellContent: b,
               columns: c,
               rows: t.rows.length,
@@ -660,6 +694,7 @@
               onGridSelectionChange: y,
               smoothScrollX: !0,
               smoothScrollY: !0,
+              overscrollX: 50,
               className: s,
               rowMarkers: "clickable-number",
               height: a,
@@ -686,7 +721,7 @@
                   .trim(),
                 accentColor: m.getPropertyValue("--selection").trim(),
                 drilldownBorder: m.getPropertyValue("--selection").trim(),
-                editorFontSize: "400 14px",
+                editorFontSize: "14px",
                 baseFontStyle: "400 14px",
                 markerFontStyle: "400 14px",
                 headerFontStyle: "500 14px",
@@ -695,28 +730,29 @@
                 cellVerticalPadding: 10,
               },
               rowMarkerWidth: 30,
-              rowHeight: 48,
+              rowHeight: j,
               verticalBorder: !0,
               minColumnWidth: 10,
               maxColumnWidth: 500,
+              experimental: { hyperWrapping: !0 },
               onColumnResize: (e, t, a) => {
                 u((r) => {
                   let l = [...r];
-                  return (l[a] = H(H({}, e), {}, { width: t })), l;
+                  return (l[a] = B(B({}, e), {}, { width: t })), l;
                 });
               },
             }),
           })
         );
       }
-      function B(e, t, a) {
+      function U(e, t, a) {
         let r = (0, Z.bm)(t);
-        return H(
-          H({}, e),
+        return B(
+          B({}, e),
           {},
           {
-            messageMetadata: H(
-              H({}, e.messageMetadata),
+            messageMetadata: B(
+              B({}, e.messageMetadata),
               {},
               { targeted_reply: t, targeted_reply_label: a }
             ),
@@ -767,7 +803,7 @@
         }
         return e;
       }
-      function J(e) {
+      function X(e) {
         let { visualization: t, expanded: a = !1 } = e;
         return "chart" === t.type
           ? void 0 == t.fallback_image
@@ -787,7 +823,7 @@
             ? (0, F.jsx)(Y, { visualization: t, expanded: a })
             : (c.U.addError("Unsupported visualization type", t.type), null);
       }
-      let X = function (e) {
+      let J = function (e) {
           let t =
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -805,7 +841,7 @@
           if (a.status === l.KF.Success) {
             let e = await fetch(a.download_url),
               t = await e.blob();
-            X(URL.createObjectURL(t), "output.png");
+            J(URL.createObjectURL(t), "output.png");
           }
         };
       function Y(e) {
@@ -816,7 +852,7 @@
           { isLoading: n, data: o, isError: i } = (0, q.CJ)(a),
           { 0: d, 1: c } = (0, x.useState)(),
           u = (0, x.useCallback)(() => {
-            o && X(o.download_url);
+            o && J(o.download_url);
           }, [o]),
           { 0: m, 1: p } = (0, x.useState)(0),
           { 0: f, 1: g } = (0, x.useState)(0),
@@ -856,7 +892,7 @@
           : (0, F.jsx)("div", {
               ref: b,
               children: (0, F.jsx)(en, {
-                focusObject: { type: k.zG.ADAVisualization, visualization: a },
+                focusObject: { type: C.zG.ADAVisualization, visualization: a },
                 title: (0, F.jsxs)(F.Fragment, {
                   children: [
                     a.title,
@@ -904,7 +940,7 @@
                 children:
                   n || void 0 == t
                     ? (0, F.jsx)(h.Z, {})
-                    : (0, F.jsx)(U, {
+                    : (0, F.jsx)(H, {
                         table: Q(Q({}, t), {}, { name: a.title, sheetName: d }),
                         height: r ? m : 400,
                         width: f,
@@ -1080,7 +1116,7 @@
             if (i && t.fallback_image) await K(t.fallback_image);
             else if (o.current) {
               let e = o.current.getBase64Image();
-              e && X(e, "".concat(t.title, ".png"));
+              e && J(e, "".concat(t.title, ".png"));
             }
           }, [t.fallback_image, i, o, t.title]),
           { 0: u, 1: m } = (0, x.useState)(void 0),
@@ -1113,7 +1149,7 @@
         n)
           ? (0, F.jsx)($, { fileName: t.title })
           : (0, F.jsx)(en, {
-              focusObject: { type: k.zG.ADAVisualization, visualization: t },
+              focusObject: { type: C.zG.ADAVisualization, visualization: t },
               title: t.title,
               onDownload: c,
               settingsDropdownContent: (0, F.jsxs)(F.Fragment, {
@@ -1181,7 +1217,7 @@
                 r || void 0 == u
                   ? (0, F.jsx)(h.Z, {})
                   : i && t.fallback_image
-                    ? (0, F.jsx)(N.Z, { jupyterMessage: t.fallback_image })
+                    ? (0, F.jsx)(k.Z, { jupyterMessage: t.fallback_image })
                     : (0, F.jsx)(D, { ref: o, chart: u }),
             });
       }
@@ -1194,7 +1230,7 @@
         return void 0 == t.fallback_image
           ? null
           : (0, F.jsx)(en, {
-              focusObject: { type: k.zG.ADAVisualization, visualization: t },
+              focusObject: { type: C.zG.ADAVisualization, visualization: t },
               title: t.title,
               onDownload: n,
               expanded: a,
@@ -1206,7 +1242,7 @@
                 onMouseEnter: () => l(!0),
                 onMouseLeave: () => l(!1),
                 children: [
-                  (0, F.jsx)(N.Z, { jupyterMessage: t.fallback_image }),
+                  (0, F.jsx)(k.Z, { jupyterMessage: t.fallback_image }),
                   (0, F.jsx)(m.M, {
                     children:
                       r &&
@@ -1241,20 +1277,20 @@
             children: c,
           } = e,
           m = (0, w.Ex)() && !n,
-          p = (0, k.rE)(),
+          p = (0, C.rE)(),
           g =
             p &&
-            p.type == k.zG.ADAVisualization &&
+            p.type == C.zG.ADAVisualization &&
             p.type == t.type &&
             p.visualization.file_id == t.visualization.file_id,
           { 0: h, 1: b } = (0, x.useState)(!1),
           y = (0, x.useCallback)(() => {
             i.A.logEvent(d.M.adaFocusModeToggled),
-              g ? k.RT.close() : k.RT.setFocusedObject(t);
+              g ? C.RT.close() : C.RT.setFocusedObject(t);
           }, [g, t]),
           v = (m && h) || !m,
-          N = t.visualization.type,
-          C = "chart" === N ? s.X5Q : s.tXQ;
+          k = t.visualization.type,
+          N = "chart" === k ? s.X5Q : s.tXQ;
         return (0, F.jsxs)("div", {
           className: (0, u.default)(
             "relative overflow-hidden text-token-text-primary",
@@ -1284,7 +1320,7 @@
                   ),
                   children: [
                     m &&
-                      (0, F.jsx)(C, {
+                      (0, F.jsx)(N, {
                         className: (0, u.default)(
                           "icon-md flex-shrink-0",
                           g
@@ -1311,7 +1347,7 @@
                         label: (0, F.jsx)(f.Z, {
                           id: "X0SJIT",
                           defaultMessage: "Download {type}",
-                          values: { type: N },
+                          values: { type: k },
                         }),
                         children: (0, F.jsx)("button", {
                           onClick: r,
@@ -1351,7 +1387,7 @@
                         label: (0, F.jsx)(f.Z, {
                           id: "7kLyF5",
                           defaultMessage: "Expand {type}",
-                          values: { type: N },
+                          values: { type: k },
                         }),
                         children: (0, F.jsx)("button", {
                           onClick: y,
@@ -1393,4 +1429,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2967.75033e3ba5aa820c.js.map
+//# sourceMappingURL=2967.2befcd5950bd5d3d.js.map

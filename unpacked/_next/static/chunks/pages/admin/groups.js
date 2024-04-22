@@ -129,7 +129,7 @@
             (0, w.jsx)(T, { onChange: d }),
             c.length > 1e3 &&
               (0, w.jsx)("div", {
-                className: "mt-2 text-sm text-red-500",
+                className: "mt-2 text-sm text-token-text-error",
                 children: (0, w.jsx)(f.Z, {
                   id: "9lp0Tc",
                   defaultMessage:
@@ -1198,4 +1198,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=groups-c1d8c8f898df2440.js.map
+//# sourceMappingURL=groups-e7d1e9fbf11939d9.js.map

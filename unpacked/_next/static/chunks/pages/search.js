@@ -38,8 +38,8 @@
             r.e(8055),
             r.e(5938),
             r.e(1283),
-          ]).then(r.bind(r, 3577)),
-        { ssr: !1, loadableGenerated: { webpack: () => [3577] } }
+          ]).then(r.bind(r, 721)),
+        { ssr: !1, loadableGenerated: { webpack: () => [721] } }
       );
       var s = !0;
       function p(e) {
@@ -86,4 +86,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-116d3ecc79ccc9e6.js.map
+//# sourceMappingURL=search-2e6886b9bd4bc875.js.map
