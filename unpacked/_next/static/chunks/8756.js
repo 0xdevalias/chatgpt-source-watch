@@ -16,9 +16,9 @@
         l = a(19841),
         h = a(70079),
         c = a(1454),
-        u = a(70671),
-        d = a(32004),
-        p = a(94968),
+        u = a(9063),
+        d = a(84692),
+        p = a(68498),
         f = a(21389),
         m = a(138),
         g = a.n(m),
@@ -70,10 +70,9 @@
       var C = a(37482),
         x = a(13574),
         v = a(7557),
-        G = a(65455),
-        j = a(21243),
-        I = a(35250);
-      function O(e) {
+        G = a(21243),
+        j = a(35250);
+      function I(e) {
         let {
             speed: t = 100,
             value: a = "",
@@ -85,7 +84,7 @@
           { 0: i, 1: c } = (0, h.useState)(""),
           u = (0, h.useRef)(),
           d = (0, x.Z)(),
-          { resolvedTheme: p } = (0, j.F)();
+          { resolvedTheme: p } = (0, G.F)();
         return (
           (0, h.useEffect)(
             () => (
@@ -104,16 +103,17 @@
             ),
             [n, a]
           ),
-          (0, I.jsx)("span", {
+          (0, j.jsx)("span", {
             className: (0, l.default)(
               "whitespace-pre-wrap",
               i.length < a.length && "result-streaming",
               "dark" === p ? "dark" : "light"
             ),
-            children: (0, I.jsx)("span", { children: i }),
+            children: (0, j.jsx)("span", { children: i }),
           })
         );
       }
+      var O = a(65455);
       function A(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -164,47 +164,47 @@
               n(!0);
             }, 1e3);
           }, [s]);
-        let j = (0, h.useCallback)((e) => {
+        let G = (0, h.useCallback)((e) => {
           e.preventDefault();
           let t = e.target,
             a = g()(t.email.value);
           b(!0),
             y.Z.getLoginLink(a)
               .catch((e) => {
-                G.m.forError(e);
+                O.m.forError(e);
               })
               .finally(() => {
                 b(!1), f(!0);
               });
         }, []);
         return o
-          ? (0, I.jsx)(N, {
-              children: (0, I.jsxs)("div", {
+          ? (0, j.jsx)(N, {
+              children: (0, j.jsxs)("div", {
                 className: "relative flex h-full w-full overflow-hidden",
                 children: [
-                  (0, I.jsxs)(W, {
+                  (0, j.jsxs)(W, {
                     children: [
-                      (0, I.jsx)("div", {
+                      (0, j.jsx)("div", {
                         className: "text-3xl font-medium",
-                        children: (0, I.jsx)(d.Z, S({}, M.title)),
+                        children: (0, j.jsx)(d.Z, S({}, M.title)),
                       }),
-                      (0, I.jsx)("a", {
+                      (0, j.jsx)("a", {
                         href: "https://share.hsforms.com/13gyIEVN5SrScw-iVvCgIew4sk30",
                         target: "_blank",
                         rel: "noreferrer",
                         className: "underline",
-                        children: (0, I.jsx)(d.Z, S({}, M.getNotified)),
+                        children: (0, j.jsx)(d.Z, S({}, M.getNotified)),
                       }),
-                      (0, I.jsx)("div", {
+                      (0, j.jsx)("div", {
                         className: "flex",
-                        children: (0, I.jsx)("div", {
+                        children: (0, j.jsx)("div", {
                           className: "font-bold",
                           children: i.current.prompt,
                         }),
                       }),
-                      (0, I.jsx)("div", {
+                      (0, j.jsx)("div", {
                         className: "max-w-lg pb-8",
-                        children: (0, I.jsx)(O, {
+                        children: (0, j.jsx)(I, {
                           value: i.current.completion,
                           typing: a,
                           speed: 150,
@@ -214,24 +214,24 @@
                     ],
                   }),
                   t &&
-                    (0, I.jsx)(Z, {
+                    (0, j.jsx)(Z, {
                       $show: w,
-                      children: (0, I.jsxs)("div", {
+                      children: (0, j.jsxs)("div", {
                         className:
                           "relative m-6 flex w-full flex-col justify-center gap-4 text-gray-800 lg:max-w-sm lg:rounded-lg lg:border lg:p-6",
                         children: [
                           k &&
-                            (0, I.jsx)("h3", {
-                              children: (0, I.jsx)(d.Z, S({}, M.chatGPTPlus)),
+                            (0, j.jsx)("h3", {
+                              children: (0, j.jsx)(d.Z, S({}, M.chatGPTPlus)),
                             }),
                           !k &&
-                            (0, I.jsxs)("button", {
+                            (0, j.jsxs)("button", {
                               className:
                                 "text-center text-xl font-semibold lg:text-left",
                               onClick: () => P((e) => !e),
                               children: [
-                                (0, I.jsx)(d.Z, S({}, M.chatGPTPlus)),
-                                (0, I.jsx)(c.bTu, {
+                                (0, j.jsx)(d.Z, S({}, M.chatGPTPlus)),
+                                (0, j.jsx)(c.bTu, {
                                   className: (0, l.default)(
                                     "icon-lg absolute right-0 top-0",
                                     !w && "rotate-180"
@@ -239,24 +239,24 @@
                                 }),
                               ],
                             }),
-                          (0, I.jsxs)("div", {
+                          (0, j.jsxs)("div", {
                             className:
                               "m-auto flex w-full max-w-md flex-col gap-4 rounded-md border p-6 lg:border-0 lg:p-0",
                             children: [
                               !p &&
-                                (0, I.jsx)("p", {
-                                  children: (0, I.jsx)(d.Z, S({}, M.addEmail)),
+                                (0, j.jsx)("p", {
+                                  children: (0, j.jsx)(d.Z, S({}, M.addEmail)),
                                 }),
                               p &&
-                                (0, I.jsx)("p", {
-                                  children: (0, I.jsx)(
+                                (0, j.jsx)("p", {
+                                  children: (0, j.jsx)(
                                     d.Z,
                                     S(
                                       S({}, M.allSet),
                                       {},
                                       {
                                         values: {
-                                          chatGPTPlus: (0, I.jsx)("a", {
+                                          chatGPTPlus: (0, j.jsx)("a", {
                                             className: "underline",
                                             href: "https://openai.com/blog/chatgpt-plus/",
                                             children: "ChatGPT Plus",
@@ -266,25 +266,25 @@
                                     )
                                   ),
                                 }),
-                              (0, I.jsxs)("form", {
-                                onSubmit: j,
+                              (0, j.jsxs)("form", {
+                                onSubmit: G,
                                 children: [
-                                  (0, I.jsx)("label", {
+                                  (0, j.jsx)("label", {
                                     htmlFor: "email",
                                     className:
                                       "hidden text-sm font-medium text-gray-700",
-                                    children: (0, I.jsx)(
+                                    children: (0, j.jsx)(
                                       d.Z,
                                       S({}, M.searchCandidates)
                                     ),
                                   }),
-                                  (0, I.jsxs)("div", {
+                                  (0, j.jsxs)("div", {
                                     className: "mt-1 flex rounded-md shadow-sm",
                                     children: [
-                                      (0, I.jsx)("div", {
+                                      (0, j.jsx)("div", {
                                         className:
                                           "relative flex flex-grow items-stretch focus-within:z-10",
-                                        children: (0, I.jsx)("input", {
+                                        children: (0, j.jsx)("input", {
                                           type: "email",
                                           name: "email",
                                           id: "email",
@@ -299,35 +299,35 @@
                                           ),
                                         }),
                                       }),
-                                      (0, I.jsxs)(v.z, {
+                                      (0, j.jsxs)(v.z, {
                                         as: "button",
                                         color: "primary",
                                         className: "rounded-none rounded-r-md",
                                         type: "submit",
                                         disabled: p,
                                         children: [
-                                          (0, I.jsx)("span", {
+                                          (0, j.jsx)("span", {
                                             className:
                                               "flex flex-row items-center space-x-1.5",
                                             children: p
-                                              ? (0, I.jsxs)(I.Fragment, {
+                                              ? (0, j.jsxs)(j.Fragment, {
                                                   children: [
-                                                    (0, I.jsx)(c._rq, {
+                                                    (0, j.jsx)(c._rq, {
                                                       className: "icon-sm",
                                                     }),
-                                                    (0, I.jsx)(
+                                                    (0, j.jsx)(
                                                       d.Z,
                                                       S({}, M.sent)
                                                     ),
                                                   ],
                                                 })
-                                              : (0, I.jsx)(
+                                              : (0, j.jsx)(
                                                   d.Z,
                                                   S({}, M.sendLink)
                                                 ),
                                           }),
                                           m &&
-                                            (0, I.jsx)(c.dAq, {
+                                            (0, j.jsx)(c.dAq, {
                                               className: "icon-sm animate-spin",
                                             }),
                                         ],
@@ -336,22 +336,22 @@
                                   }),
                                 ],
                               }),
-                              (0, I.jsx)("p", {
+                              (0, j.jsx)("p", {
                                 className: "text-sm",
-                                children: (0, I.jsx)(
+                                children: (0, j.jsx)(
                                   d.Z,
                                   S(
                                     S({}, M.notSubscriber),
                                     {},
                                     {
                                       values: {
-                                        chatGPTPlus: (0, I.jsx)("a", {
+                                        chatGPTPlus: (0, j.jsx)("a", {
                                           className: "underline",
                                           href: "https://openai.com/blog/chatgpt-plus/",
                                           children: "ChatGPT Plus",
                                         }),
                                         waitlist: (e) =>
-                                          (0, I.jsx)("a", {
+                                          (0, j.jsx)("a", {
                                             href: "https://share.hsforms.com/1_-FpF2GTRJORIb83N3aK7Q4sk30",
                                             target: "_blank",
                                             rel: "noreferrer",
@@ -521,4 +521,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8756-07883b71cd34e727.js.map
+//# sourceMappingURL=8756-c3d7d1548a0f953d.js.map

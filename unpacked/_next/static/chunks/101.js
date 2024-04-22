@@ -30,9 +30,9 @@
         f = n(53197),
         h = n(10518),
         x = n(19841),
-        m = n(70671),
-        b = n(32004),
-        v = n(94968),
+        m = n(9063),
+        b = n(84692),
+        v = n(68498),
         j = n(66520),
         y = n(35250);
       function w(e, t) {
@@ -352,7 +352,7 @@
           defaultMessage: "Log in with your OpenAI account to continue",
         },
       });
-      var M = n(53029),
+      var M = n(9015),
         I = n(65455),
         C = n(88565),
         P = n(34777),
@@ -599,8 +599,8 @@
         i = n(39827),
         l = n(73017),
         a = n(18405),
-        o = n(32004),
-        s = n(94968),
+        o = n(84692),
+        s = n(68498),
         c = n(21389),
         u = n(47527),
         d = n(59674),
@@ -709,14 +709,13 @@
           return g;
         },
       });
-      var r = n(70671),
-        i = n(94968),
-        l = n(66520),
-        a = n(39827),
-        o = n(19841),
-        s = n(70079),
-        c = n(35250);
-      function u(e, t) {
+      var r = n(9063),
+        i = n(68498),
+        l = n(39827),
+        a = n(19841),
+        o = n(70079),
+        s = n(35250);
+      function c(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -728,16 +727,16 @@
         }
         return n;
       }
-      function d(e) {
+      function u(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? u(Object(n), !0).forEach(function (t) {
-                (0, a.Z)(e, t, n[t]);
+            ? c(Object(n), !0).forEach(function (t) {
+                (0, l.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : u(Object(n)).forEach(function (t) {
+              : c(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -747,88 +746,88 @@
         }
         return e;
       }
-      function p(e) {
+      function d(e) {
         let { examples: t } = e,
-          { 0: n, 1: r } = (0, s.useState)({
+          { 0: n, 1: r } = (0, o.useState)({
             promptIndex: 0,
             answerIndex: 0,
             tokenStreamIndexList: Array.from({ length: t.length }, () => 0),
           }),
-          i = (0, s.useRef)(null),
-          l = (0, s.useRef)(n),
-          a = () => {
+          i = (0, o.useRef)(null),
+          l = (0, o.useRef)(n),
+          c = () => {
             if (document.hidden) {
-              i.current = setTimeout(a, 1e3);
+              i.current = setTimeout(c, 1e3);
               return;
             }
             let {
                 promptIndex: e,
                 answerIndex: n,
-                tokenStreamIndexList: o,
+                tokenStreamIndexList: a,
               } = l.current,
-              s = t[e].answerTokens[n],
-              c = o[e] + 1,
-              u = 90;
-            if (c === s.length) {
-              let t = [...o];
-              (t[e] = c),
-                (l.current = d(
-                  d({}, l.current),
+              o = t[e].answerTokens[n],
+              s = a[e] + 1,
+              d = 90;
+            if (s === o.length) {
+              let t = [...a];
+              (t[e] = s),
+                (l.current = u(
+                  u({}, l.current),
                   {},
                   { tokenStreamIndexList: t }
                 )),
-                (u = 2500);
-            } else if (c > s.length) {
+                (d = 2500);
+            } else if (s > o.length) {
               let r = n + 1;
               if (r >= t[e].answerTokens.length) {
                 let n = (e + 1) % t.length,
-                  r = [...o];
+                  r = [...a];
                 (r[n] = 0),
                   (l.current = {
                     promptIndex: n,
                     answerIndex: 0,
                     tokenStreamIndexList: r,
                   }),
-                  (u = 900);
+                  (d = 900);
               } else {
-                let t = [...o];
+                let t = [...a];
                 (t[e] = 0),
-                  (l.current = d(
-                    d({}, l.current),
+                  (l.current = u(
+                    u({}, l.current),
                     {},
                     { answerIndex: r, tokenStreamIndexList: t }
                   )),
-                  (u = 500);
+                  (d = 500);
               }
             } else {
-              let t = [...o];
-              (t[e] = c),
-                (l.current = d(
-                  d({}, l.current),
+              let t = [...a];
+              (t[e] = s),
+                (l.current = u(
+                  u({}, l.current),
                   {},
                   { tokenStreamIndexList: t }
                 ));
             }
-            r(l.current), (i.current = setTimeout(a, u));
+            r(l.current), (i.current = setTimeout(c, d));
           };
         return (
-          (0, s.useEffect)(
+          (0, o.useEffect)(
             () => (
-              a(),
+              c(),
               () => {
                 i.current && clearTimeout(i.current);
               }
             ),
             []
           ),
-          (0, c.jsx)(c.Fragment, {
+          (0, s.jsx)(s.Fragment, {
             children: t.map((e, r) => {
               let i = (n.promptIndex + 1) % t.length,
                 l = (r + 1) % t.length === n.promptIndex;
-              return (0, c.jsxs)(
+              return (0, s.jsxs)(
                 "div",
                 {
-                  className: (0, o.default)(
+                  className: (0, a.default)(
                     "absolute left-0 top-1/2 flex w-full flex-col px-5 transition-[transform,opacity] duration-500 md:pl-6 md:pr-8 lg:pl-8 lg:pr-10",
                     {
                       "opacity-100": n.promptIndex === r,
@@ -840,24 +839,24 @@
                     }
                   ),
                   children: [
-                    (0, c.jsx)("div", {
+                    (0, s.jsx)("div", {
                       className: "relative font-bold",
                       children: e.prompt,
                     }),
-                    (0, c.jsx)("div", {
+                    (0, s.jsx)("div", {
                       className: "relative",
                       children: e.answerTokens.map((e, t) =>
-                        (0, c.jsxs)(
+                        (0, s.jsxs)(
                           "div",
                           {
                             className:
                               "absolute left-0 top-0 max-w-[650px] transition-opacity duration-300",
                             children: [
                               e.map((e, r) =>
-                                (0, c.jsx)(
+                                (0, s.jsx)(
                                   "span",
                                   {
-                                    className: (0, o.default)(
+                                    className: (0, a.default)(
                                       "inline transition-opacity duration-300",
                                       {
                                         hidden:
@@ -874,8 +873,8 @@
                                   r
                                 )
                               ),
-                              (0, c.jsxs)("span", {
-                                className: (0, o.default)(
+                              (0, s.jsxs)("span", {
+                                className: (0, a.default)(
                                   "inline-block font-circle delay-[300ms]",
                                   {
                                     "scale-0 transition-transform duration-300":
@@ -887,7 +886,7 @@
                                 ),
                                 children: [
                                   n.tokenStreamIndexList[n.promptIndex] > 0
-                                    ? (0, c.jsx)("span", { children: " " })
+                                    ? (0, s.jsx)("span", { children: " " })
                                     : null,
                                   "●",
                                 ],
@@ -906,30 +905,31 @@
           })
         );
       }
+      var p = n(66520);
       function g(e) {
         let { examples: t } = e,
           n = (0, r.Z)();
-        return (0, c.jsxs)("div", {
+        return (0, s.jsxs)("div", {
           className:
             "relative hidden flex-1 flex-col justify-center px-5 pt-8 text-[#FE7600] dark:text-[#D292FF] md:flex md:px-6 md:py-[22px] lg:px-8",
           children: [
-            (0, c.jsx)("nav", {
+            (0, s.jsx)("nav", {
               className:
                 "left-0 top-8 flex w-full px-6 sm:absolute md:top-[22px] md:px-6 lg:px-8",
-              children: (0, c.jsx)("h1", {
+              children: (0, s.jsx)("h1", {
                 "aria-label": n.formatMessage(f.ariaLabel),
-                children: (0, c.jsx)("div", {
+                children: (0, s.jsx)("div", {
                   className:
                     "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
-                  children: (0, c.jsx)("div", { children: l.L }),
+                  children: (0, s.jsx)("div", { children: p.L }),
                 }),
               }),
             }),
-            (0, c.jsx)("div", {
+            (0, s.jsx)("div", {
               className:
                 "flex flex-col text-[32px] leading-[1.2] md:text-[40px]",
               "aria-hidden": "true",
-              children: t.length > 0 && (0, c.jsx)(p, { examples: t }),
+              children: t.length > 0 && (0, s.jsx)(d, { examples: t }),
             }),
           ],
         });
@@ -957,4 +957,4 @@
     },
   },
 ]);
-//# sourceMappingURL=101-0e42c8a55ae613be.js.map
+//# sourceMappingURL=101-fc91c9ddd15d78dd.js.map

@@ -2,45 +2,45 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3472],
   {
-    93472: function (e, t, s) {
-      s.r(t),
-        s.d(t, {
+    93472: function (e, t, l) {
+      l.r(t),
+        l.d(t, {
           default: function () {
-            return k;
+            return S;
           },
         });
-      var l,
+      var s,
         r,
-        n = s(73017),
-        a = s(16244),
-        i = s(36607),
-        o = s(42005),
-        c = s(24668),
-        u = s(81643),
-        x = s(27282),
-        m = s(34777),
-        d = s(70079),
-        f = s(1454),
-        h = s(6020),
-        p = s(21389),
-        g = s(48044),
-        N = s(35250),
-        j =
-          (((l = j || {}).StatsigUser = "Statsig User"),
-          (l.FeatureGates = "Feature Gates"),
-          (l.Features = "Features"),
-          (l.ExperimentalFeatureGates = "Experimental Gates"),
-          (l.ExperimentalExperiments = "Experimental Experiments"),
-          l);
+        a = l(73017),
+        n = l(16244),
+        i = l(36607),
+        o = l(42005),
+        c = l(24668),
+        u = l(81643),
+        x = l(10518),
+        m = l(34777),
+        d = l(70079),
+        f = l(1454),
+        h = l(6020),
+        p = l(21389),
+        g = l(48044),
+        j = l(35250),
+        N =
+          (((s = N || {}).StatsigUser = "Statsig User"),
+          (s.FeatureGates = "Feature Gates"),
+          (s.Features = "Features"),
+          (s.ExperimentalFeatureGates = "Experimental Gates"),
+          (s.ExperimentalExperiments = "Experimental Experiments"),
+          s);
       function v(e) {
         var t;
-        let { onClose: s, isWidgetVisible: l } = e,
+        let { onClose: l, isWidgetVisible: s } = e,
           r = (0, c.hz)();
-        if (!(0, g.T)()) return null;
-        let n = h.Statsig.getCurrentUser();
-        return (0, N.jsx)(a.Z, {
-          isOpen: l,
-          onClose: s,
+        if (!(0, g.T)() || !h.Statsig.initializeCalled()) return null;
+        let a = h.Statsig.getCurrentUser();
+        return (0, j.jsx)(n.Z, {
+          isOpen: s,
+          onClose: l,
           size: "custom",
           className:
             "flex h-[600px] max-h-[60vh] max-w-2xl flex-col [&>div:nth-child(2)]:overflow-y-hidden",
@@ -48,16 +48,16 @@
           title: "Experimentation DevTools",
           noPadding: !0,
           showCloseButton: !0,
-          children: (0, N.jsxs)(u.fC, {
-            defaultValue: j.StatsigUser,
+          children: (0, j.jsxs)(u.fC, {
+            defaultValue: N.StatsigUser,
             className: "flex h-full flex-row gap-6 p-4",
             orientation: "vertical",
             children: [
-              (0, N.jsx)(u.aV, {
+              (0, j.jsx)(u.aV, {
                 className:
                   "flex min-w-[180px] max-w-[200px] flex-shrink-0 flex-col gap-2",
-                children: Object.values(j).map((e) =>
-                  (0, N.jsx)(
+                children: Object.values(N).map((e) =>
+                  (0, j.jsx)(
                     u.xz,
                     {
                       className:
@@ -69,27 +69,27 @@
                   )
                 ),
               }),
-              (0, N.jsx)(u.VY, {
+              (0, j.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
-                value: j.StatsigUser,
-                children: (0, N.jsx)("pre", {
+                value: N.StatsigUser,
+                children: (0, j.jsx)("pre", {
                   className: "text-sm",
-                  children: JSON.stringify(n, null, 2),
+                  children: JSON.stringify(a, null, 2),
                 }),
               }),
-              (0, N.jsx)(u.VY, {
+              (0, j.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
-                value: j.Features,
+                value: N.Features,
                 children:
                   null !==
                     (t =
                       null == r
                         ? void 0
                         : r.map((e) =>
-                            (0, N.jsx)(
-                              E,
+                            (0, j.jsx)(
+                              k,
                               {
-                                children: (0, N.jsx)("p", {
+                                children: (0, j.jsx)("p", {
                                   children: String(e),
                                 }),
                               },
@@ -99,28 +99,28 @@
                     ? t
                     : null,
               }),
-              (0, N.jsx)(u.VY, {
+              (0, j.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
-                value: j.FeatureGates,
+                value: N.FeatureGates,
                 children: Object.entries(x.tz).map((e) => {
-                  let [t, s] = e;
-                  return (0, N.jsx)(w, { codeName: t, statsigName: s }, t);
+                  let [t, l] = e;
+                  return (0, j.jsx)(w, { codeName: t, statsigName: l }, t);
                 }),
               }),
-              (0, N.jsx)(u.VY, {
+              (0, j.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
-                value: j.ExperimentalFeatureGates,
+                value: N.ExperimentalFeatureGates,
                 children: Object.entries(m.SP).map((e) => {
-                  let [t, s] = e;
-                  return (0, N.jsx)(y, { codeName: t, statsigName: s }, t);
+                  let [t, l] = e;
+                  return (0, j.jsx)(y, { codeName: t, statsigName: l }, t);
                 }),
               }),
-              (0, N.jsx)(u.VY, {
+              (0, j.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
-                value: j.ExperimentalExperiments,
+                value: N.ExperimentalExperiments,
                 children: Object.entries(m.LA).map((e) => {
-                  let [t, s] = e;
-                  return (0, N.jsx)(b, { codeName: t, statsigName: s }, t);
+                  let [t, l] = e;
+                  return (0, j.jsx)(b, { codeName: t, statsigName: l }, t);
                 }),
               }),
             ],
@@ -128,28 +128,28 @@
         });
       }
       function w(e) {
-        let { codeName: t, statsigName: s } = e,
-          l =
+        let { codeName: t, statsigName: l } = e,
+          s =
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
-              s
+              l
             ),
-          { isLoading: r, value: n } = (0, x.sB)(s);
-        return (0, N.jsxs)(E, {
+          { isLoading: r, value: a } = (0, x.sB)(l);
+        return (0, j.jsxs)(k, {
           children: [
-            (0, N.jsx)("a", {
-              href: l,
+            (0, j.jsx)("a", {
+              href: s,
               target: "_blank",
               rel: "noopener noreferrer",
               className: "underline",
               children: t,
             }),
-            (0, N.jsxs)("div", {
+            (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, N.jsx)(o.Z, {}) : null,
-                (0, N.jsx)("p", {
+                r ? (0, j.jsx)(o.Z, {}) : null,
+                (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(n),
+                  children: String(a),
                 }),
               ],
             }),
@@ -157,50 +157,50 @@
         });
       }
       function y(e) {
-        let { codeName: t, statsigName: s } = e,
-          l =
+        let { codeName: t, statsigName: l } = e,
+          s =
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
-              s
+              l
             ),
-          { isLoading: r, value: n } = (0, m.fW)(s),
-          { 0: a, 1: c } = (0, d.useState)(""),
+          { isLoading: r, value: a } = (0, m.fW)(l),
+          { 0: n, 1: c } = (0, d.useState)(""),
           { gates: u } = h.Statsig.getAllOverrides(),
-          x = null != u[s];
-        return (0, N.jsxs)(E, {
+          x = null != u[l];
+        return (0, j.jsxs)(k, {
           children: [
-            (0, N.jsx)("a", {
-              href: l,
+            (0, j.jsx)("a", {
+              href: s,
               target: "_blank",
               rel: "noopener noreferrer",
               className: "underline",
               children: t,
             }),
-            (0, N.jsxs)("div", {
+            (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, N.jsx)(o.Z, {}) : null,
+                r ? (0, j.jsx)(o.Z, {}) : null,
                 x
-                  ? (0, N.jsx)(f.Hov, {
+                  ? (0, j.jsx)(f.Hov, {
                       className: "text-red-500",
                       title: "Local override",
                     })
                   : null,
-                (0, N.jsx)("p", {
+                (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(n),
+                  children: String(a),
                 }),
-                (0, N.jsx)(i.Z, {
+                (0, j.jsx)(i.Z, {
                   name: "override",
                   type: "text",
                   color: "neutral",
                   placeholder: "Override",
-                  value: a,
+                  value: n,
                   onChange: (e) => {
                     c(e.currentTarget.value);
                   },
                   className: "mr-px w-20",
                   onPressEnter: (e) => {
-                    (0, m.Gh)(s, "true" === e || ("false" !== e && null));
+                    (0, m.Gh)(l, "true" === e || ("false" !== e && null));
                   },
                 }),
               ],
@@ -209,40 +209,40 @@
         });
       }
       function b(e) {
-        let { codeName: t, statsigName: s } = e,
-          l =
+        let { codeName: t, statsigName: l } = e,
+          s =
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/experiments/".concat(
-              s
+              l
             ),
-          { isLoading: r, config: n } = (0, m.mK)(s),
-          a = n.get(x.Hy.TREATMENT, x.wA.CONTROL),
+          { isLoading: r, config: a } = (0, m.mK)(l),
+          n = a.get(x.Hy.TREATMENT, x.wA.CONTROL),
           { 0: c, 1: u } = (0, d.useState)(""),
           { configs: p } = h.Statsig.getAllOverrides(),
-          g = null != p[s];
-        return (0, N.jsxs)(E, {
+          g = null != p[l];
+        return (0, j.jsxs)(k, {
           children: [
-            (0, N.jsx)("a", {
-              href: l,
+            (0, j.jsx)("a", {
+              href: s,
               target: "_blank",
               rel: "noopener noreferrer",
               className: "underline",
               children: t,
             }),
-            (0, N.jsxs)("div", {
+            (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, N.jsx)(o.Z, {}) : null,
+                r ? (0, j.jsx)(o.Z, {}) : null,
                 g
-                  ? (0, N.jsx)(f.Hov, {
+                  ? (0, j.jsx)(f.Hov, {
                       className: "text-red-500",
                       title: "Local override",
                     })
                   : null,
-                (0, N.jsx)("p", {
+                (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(a),
+                  children: String(n),
                 }),
-                (0, N.jsx)(i.Z, {
+                (0, j.jsx)(i.Z, {
                   name: "override",
                   type: "text",
                   color: "neutral",
@@ -253,7 +253,7 @@
                   },
                   className: "mr-px w-20",
                   onPressEnter: (e) => {
-                    (0, m.mY)(s, e ? { [x.Hy.TREATMENT]: e } : null);
+                    (0, m.mY)(l, e ? { [x.Hy.TREATMENT]: e } : null);
                   },
                 }),
               ],
@@ -261,60 +261,61 @@
           ],
         });
       }
-      let E = p.Z.div(
+      let k = p.Z.div(
         r ||
-          (r = (0, n.Z)([
+          (r = (0, a.Z)([
             "flex items-center justify-between border-b border-token-border-light py-3 text-sm text-token-text-primary last-of-type:border-b-0",
           ]))
       );
-      function k() {
+      var E = l(61678);
+      function S() {
         let { 0: e, 1: t } = (0, d.useState)(!1);
         return (0, g.T)()
-          ? (0, N.jsxs)(N.Fragment, {
+          ? (0, j.jsxs)(j.Fragment, {
               children: [
-                (0, N.jsx)("button", {
+                (0, j.jsx)("button", {
                   onClick: () => {
                     t((e) => !e);
                   },
                   className:
                     "btn-neutral box-content flex h-6 w-6 items-center justify-center rounded-full text-xs text-token-text-secondary",
-                  children: (0, N.jsx)(f.NNy, { className: "icon-sm" }),
+                  children: (0, j.jsx)(f.NNy, { className: "icon-sm" }),
                 }),
-                (0, N.jsx)(v, {
+                (0, j.jsx)(v, {
                   isWidgetVisible: e,
                   onClose: () => {
                     t(!1);
                   },
                 }),
-                (0, N.jsx)(T, {}),
+                (0, j.jsx)(O, {}),
               ],
             })
           : null;
       }
-      function T() {
-        let { config: e } = (0, m.mK)(m.LA.Hedgehog1A),
-          t = e.get(x.Hy.TREATMENT, x.wA.CONTROL);
+      function O() {
+        let e = m.VG.AnonChatLayer,
+          t = m.yp.ANON_COMPOSER_DISPLAY_VARIANT,
+          { layer: l } = (0, m.AH)(e),
+          s = l.get(t, E.tg.Default);
         return (
           (0, d.useEffect)(() => {
-            let e = (e) => {
-              e.ctrlKey &&
-                "2" === e.key &&
-                (0, m.mY)(m.LA.Hedgehog1A, {
-                  [x.Hy.TREATMENT]:
-                    t === x.wA.CONTROL ? x.wA.TEST : x.wA.CONTROL,
-                });
+            let l = (l) => {
+              if (l.ctrlKey && "2" === l.key) {
+                let l = s === E.tg.Default ? E.tg.Hedgehog : E.tg.Default;
+                (0, m.H9)(e, { [t]: l });
+              }
             };
             return (
-              window.addEventListener("keydown", e),
+              window.addEventListener("keydown", l),
               () => {
-                window.removeEventListener("keydown", e);
+                window.removeEventListener("keydown", l);
               }
             );
-          }, [t]),
+          }, [e, s, t]),
           null
         );
       }
     },
   },
 ]);
-//# sourceMappingURL=3472.c63200a5c100c707.js.map
+//# sourceMappingURL=3472.d3ee6c3b89fde6d7.js.map

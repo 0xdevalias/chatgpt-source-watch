@@ -18,8 +18,8 @@
         c = r(84126),
         l = r(12366),
         u = r(70079),
-        o = r(32004),
-        a = r(94968),
+        o = r(84692),
+        a = r(68498),
         d = r(7557),
         f = r(42005),
         m = r(81595),
@@ -259,18 +259,18 @@
         },
       });
       var n = r(37229),
-        i = r(95482),
-        s = r(24605),
+        i = r(24605),
+        s = r(95482),
         c = r(12366),
         l = r(81056),
-        u = r(49031),
+        u = r(56532),
         o = r(35250);
       function a(e) {
         let { children: t } = e,
           r = (0, c.useRouter)();
-        return (0, o.jsx)(s.Z, {
+        return (0, o.jsx)(i.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, o.jsxs)(i.ZP, {
+          sidebar: (0, o.jsxs)(s.ZP, {
             onNewThread: () => {
               r.push("/");
             },
@@ -299,4 +299,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=mine-dd903b77bccf5018.js.map
+//# sourceMappingURL=mine-08c1b7553485f65c.js.map

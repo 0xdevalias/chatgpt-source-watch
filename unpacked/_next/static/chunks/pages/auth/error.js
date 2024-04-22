@@ -6,15 +6,15 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return h;
+            return y;
           },
         });
       var n = r(39827),
         o = r(66873),
         s = r(7557),
-        i = r(12366),
-        a = r(94968),
-        u = r(32004),
+        a = r(12366),
+        i = r(68498),
+        u = r(84692),
         c = r(35250);
       function l(e, t) {
         var r = Object.keys(e);
@@ -47,7 +47,7 @@
         }
         return e;
       }
-      let p = (0, a.vU)({
+      let p = (0, i.vU)({
           oops: { id: "AuthError.oops", defaultMessage: "Oops!" },
           goBack: { id: "AuthError.goBack", defaultMessage: "Go back" },
           systemBusyError: {
@@ -85,6 +85,11 @@
             defaultMessage:
               "Please use your organization's SSO to access your account.",
           },
+          mfaBypass: {
+            id: "AuthError.mfaBypass",
+            defaultMessage:
+              "Your account is protected with multi-factor authentication. Please log in again using the method you set that up with.",
+          },
           defaultError: {
             id: "AuthError.defaultError",
             defaultMessage:
@@ -92,7 +97,7 @@
           },
         }),
         f = (0, c.jsx)(u.Z, d({}, p.systemBusyError)),
-        y = {
+        h = {
           RequestTimeout: f,
           AuthRateLimit: f,
           identity_provider_mismatch: (0, c.jsx)(
@@ -104,16 +109,17 @@
           unsupported_region: (0, c.jsx)(u.Z, d({}, p.unsupportedRegion)),
           unknown_country: (0, c.jsx)(u.Z, d({}, p.unknownCountry)),
           sso_required: (0, c.jsx)(u.Z, d({}, p.ssoRequired)),
+          mfa_bypass: (0, c.jsx)(u.Z, d({}, p.mfaBypass)),
           default: (0, c.jsx)(u.Z, d({}, p.defaultError)),
         };
-      function h() {
+      function y() {
         return (0, c.jsx)(g, {});
       }
       function g() {
         var e;
-        let t = (0, i.useRouter)(),
+        let t = (0, a.useRouter)(),
           { error: r } = t.query,
-          n = null !== (e = y[String(r)]) && void 0 !== e ? e : y.default;
+          n = null !== (e = h[String(r)]) && void 0 !== e ? e : h.default;
         return (0, c.jsx)(o.Wk, {
           isStorageComplianceEnabled: !1,
           children: (0, c.jsxs)(o.xh, {
@@ -145,18 +151,18 @@
           return g;
         },
         jI: function () {
-          return m;
+          return b;
         },
         xh: function () {
-          return h;
+          return y;
         },
       });
       var n,
         o = r(39827),
         s = r(73017),
-        i = r(18405),
-        a = r(32004),
-        u = r(94968),
+        a = r(18405),
+        i = r(84692),
+        u = r(68498),
         c = r(21389),
         l = r(47527),
         d = r(59674),
@@ -173,7 +179,7 @@
         }
         return r;
       }
-      function y(e) {
+      function h(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -192,7 +198,7 @@
         }
         return e;
       }
-      let h = c.Z.div(
+      let y = c.Z.div(
         n ||
           (n = (0, s.Z)([
             "w-96 flex flex-col flex-auto justify-center items-center",
@@ -219,35 +225,35 @@
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
-              children: (0, p.jsx)(a.Z, y({}, x.terms)),
+              children: (0, p.jsx)(i.Z, h({}, x.terms)),
             }),
-            (0, p.jsx)(b, {}),
+            (0, p.jsx)(m, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
-              children: (0, p.jsx)(a.Z, y({}, x.privacy)),
+              children: (0, p.jsx)(i.Z, h({}, x.privacy)),
             }),
             t &&
               (0, p.jsxs)(p.Fragment, {
                 children: [
-                  (0, p.jsx)(b, {}),
+                  (0, p.jsx)(m, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
-                    onClick: () => i.vm.openModal(i.B.CookieManagement),
-                    children: (0, p.jsx)(a.Z, y({}, x.cookies)),
+                    onClick: () => a.vm.openModal(a.B.CookieManagement),
+                    children: (0, p.jsx)(i.Z, h({}, x.cookies)),
                   }),
                 ],
               }),
           ],
         });
       }
-      let b = () =>
+      let m = () =>
         (0, p.jsx)("span", {
           className: "text-token-text-tertiary",
           children: "|",
         });
-      function m() {
+      function b() {
         return (0, p.jsx)("div", {
           className: "mb-5",
           children: (0, p.jsx)(l.nI, {}),
@@ -275,4 +281,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=error-3f032281e24d4e86.js.map
+//# sourceMappingURL=error-72f0e29fe9def753.js.map

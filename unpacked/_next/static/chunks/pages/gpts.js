@@ -136,8 +136,8 @@
         s = n(84126),
         c = n(12366),
         l = n(70079),
-        u = n(32004),
-        a = n(94968),
+        u = n(84692),
+        a = n(68498),
         d = n(7557),
         m = n(42005),
         f = n(81595),
@@ -377,8 +377,8 @@
         },
       });
       var r = n(37229),
-        i = n(95482),
-        o = n(24605),
+        i = n(24605),
+        o = n(95482),
         s = n(12366),
         c = n(81056),
         l = n(56532),
@@ -386,9 +386,9 @@
       function a(e) {
         let { children: t } = e,
           n = (0, s.useRouter)();
-        return (0, u.jsx)(o.Z, {
+        return (0, u.jsx)(i.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, u.jsxs)(i.ZP, {
+          sidebar: (0, u.jsxs)(o.ZP, {
             onNewThread: () => {
               n.push("/");
             },
@@ -417,4 +417,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-8cad7e919f4955bb.js.map
+//# sourceMappingURL=gpts-651c4f76f173d7b0.js.map

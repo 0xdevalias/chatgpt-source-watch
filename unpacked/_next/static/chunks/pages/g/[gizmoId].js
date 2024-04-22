@@ -29,7 +29,7 @@
         g = r(12366),
         j = r.n(g),
         m = r(70079),
-        p = r(32004),
+        p = r(84692),
         x = r(35250);
       function O(e, t) {
         var r = Object.keys(e);
@@ -148,8 +148,8 @@
         },
       });
       var n = r(37229),
-        i = r(95482),
-        s = r(24605),
+        i = r(24605),
+        s = r(95482),
         o = r(12366),
         c = r(81056),
         u = r(56532),
@@ -157,9 +157,9 @@
       function a(e) {
         let { children: t } = e,
           r = (0, o.useRouter)();
-        return (0, l.jsx)(s.Z, {
+        return (0, l.jsx)(i.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, l.jsxs)(i.ZP, {
+          sidebar: (0, l.jsxs)(s.ZP, {
             onNewThread: () => {
               r.push("/");
             },
@@ -188,4 +188,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-6beb1692f0370904.js.map
+//# sourceMappingURL=[gizmoId]-fadd85cfaafb9732.js.map
