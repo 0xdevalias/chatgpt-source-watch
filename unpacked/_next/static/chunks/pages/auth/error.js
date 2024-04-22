@@ -6,17 +6,18 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return y;
+            return g;
           },
         });
       var n = r(39827),
         o = r(66873),
         s = r(7557),
+        i = r(82585),
         a = r(12366),
-        i = r(68498),
-        u = r(84692),
-        c = r(35250);
-      function l(e, t) {
+        u = r(68498),
+        c = r(84692),
+        l = r(35250);
+      function d(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -28,16 +29,16 @@
         }
         return r;
       }
-      function d(e) {
+      function p(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? l(Object(r), !0).forEach(function (t) {
+            ? d(Object(r), !0).forEach(function (t) {
                 (0, n.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : l(Object(r)).forEach(function (t) {
+              : d(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -47,7 +48,7 @@
         }
         return e;
       }
-      let p = (0, i.vU)({
+      let f = (0, u.vU)({
           oops: { id: "AuthError.oops", defaultMessage: "Oops!" },
           goBack: { id: "AuthError.goBack", defaultMessage: "Go back" },
           systemBusyError: {
@@ -96,45 +97,63 @@
               "We ran into an issue while signing you in, please take a break and try again soon.",
           },
         }),
-        f = (0, c.jsx)(u.Z, d({}, p.systemBusyError)),
-        h = {
-          RequestTimeout: f,
-          AuthRateLimit: f,
-          identity_provider_mismatch: (0, c.jsx)(
-            u.Z,
-            d({}, p.identityProviderMismatch)
+        h = (0, l.jsx)(c.Z, p({}, f.systemBusyError)),
+        y = {
+          RequestTimeout: h,
+          AuthRateLimit: h,
+          identity_provider_mismatch: (0, l.jsx)(
+            c.Z,
+            p({}, f.identityProviderMismatch)
           ),
-          account_deactivated: (0, c.jsx)(u.Z, d({}, p.accountDeactivated)),
-          unsupported_country: (0, c.jsx)(u.Z, d({}, p.unsupportedCountry)),
-          unsupported_region: (0, c.jsx)(u.Z, d({}, p.unsupportedRegion)),
-          unknown_country: (0, c.jsx)(u.Z, d({}, p.unknownCountry)),
-          sso_required: (0, c.jsx)(u.Z, d({}, p.ssoRequired)),
-          mfa_bypass: (0, c.jsx)(u.Z, d({}, p.mfaBypass)),
-          default: (0, c.jsx)(u.Z, d({}, p.defaultError)),
+          account_deactivated: (0, l.jsx)(c.Z, p({}, f.accountDeactivated)),
+          unsupported_country: (0, l.jsx)(c.Z, p({}, f.unsupportedCountry)),
+          unsupported_region: (0, l.jsx)(c.Z, p({}, f.unsupportedRegion)),
+          unknown_country: (0, l.jsx)(c.Z, p({}, f.unknownCountry)),
+          sso_required: (0, l.jsx)(c.Z, p({}, f.ssoRequired)),
+          default: (0, l.jsx)(c.Z, p({}, f.defaultError)),
         };
-      function y() {
-        return (0, c.jsx)(g, {});
-      }
       function g() {
-        var e;
-        let t = (0, a.useRouter)(),
-          { error: r } = t.query,
-          n = null !== (e = h[String(r)]) && void 0 !== e ? e : h.default;
-        return (0, c.jsx)(o.Wk, {
+        return (0, l.jsx)(j, {});
+      }
+      function j() {
+        let e = (0, a.useRouter)(),
+          { error: t } = e.query,
+          r = (function (e) {
+            if (e in y) return y[e];
+            if (!e.startsWith("mfa_bypass")) return y.default;
+            {
+              var t;
+              let r = (function (e) {
+                  let t = e.split("|");
+                  return t.length > 1 ? t[1] : void 0;
+                })(e),
+                n =
+                  null !== (t = void 0 === r ? void 0 : i.w[r]) && void 0 !== t
+                    ? t
+                    : "your other account you set that up with";
+              return (0, l.jsx)(c.Z, {
+                id: "AuthError.mfaBypass",
+                defaultMessage:
+                  "Your account is protected with multi-factor authentication. Please log in with {providerLabel} to provide the verification code.",
+                values: { providerLabel: n },
+              });
+            }
+          })(String(t));
+        return (0, l.jsx)(o.Wk, {
           isStorageComplianceEnabled: !1,
-          children: (0, c.jsxs)(o.xh, {
+          children: (0, l.jsxs)(o.xh, {
             children: [
-              (0, c.jsx)(o.jI, {}),
-              (0, c.jsx)("div", {
+              (0, l.jsx)(o.jI, {}),
+              (0, l.jsx)("div", {
                 className: "mb-2 text-center text-lg",
-                children: (0, c.jsx)(u.Z, d({}, p.oops)),
+                children: (0, l.jsx)(c.Z, p({}, f.oops)),
               }),
-              (0, c.jsx)("div", { className: "mb-5 text-center", children: n }),
-              (0, c.jsx)(s.z, {
+              (0, l.jsx)("div", { className: "mb-5 text-center", children: r }),
+              (0, l.jsx)(s.z, {
                 as: "button",
                 color: "neutral",
-                onClick: () => t.replace("/auth/login"),
-                children: (0, c.jsx)(u.Z, d({}, p.goBack)),
+                onClick: () => e.replace("/auth/login"),
+                children: (0, l.jsx)(c.Z, p({}, f.goBack)),
               }),
             ],
           }),
@@ -160,11 +179,11 @@
       var n,
         o = r(39827),
         s = r(73017),
-        a = r(18405),
-        i = r(84692),
+        i = r(18405),
+        a = r(84692),
         u = r(68498),
         c = r(21389),
-        l = r(47527),
+        l = r(85641),
         d = r(59674),
         p = r(35250);
       function f(e, t) {
@@ -225,14 +244,14 @@
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
-              children: (0, p.jsx)(i.Z, h({}, x.terms)),
+              children: (0, p.jsx)(a.Z, h({}, x.terms)),
             }),
             (0, p.jsx)(m, {}),
             (0, p.jsx)(d.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
-              children: (0, p.jsx)(i.Z, h({}, x.privacy)),
+              children: (0, p.jsx)(a.Z, h({}, x.privacy)),
             }),
             t &&
               (0, p.jsxs)(p.Fragment, {
@@ -240,8 +259,8 @@
                   (0, p.jsx)(m, {}),
                   (0, p.jsx)("button", {
                     className: "underline",
-                    onClick: () => a.vm.openModal(a.B.CookieManagement),
-                    children: (0, p.jsx)(i.Z, h({}, x.cookies)),
+                    onClick: () => i.vm.openModal(i.B.CookieManagement),
+                    children: (0, p.jsx)(a.Z, h({}, x.cookies)),
                   }),
                 ],
               }),
@@ -275,10 +294,10 @@
     },
   },
   function (e) {
-    e.O(0, [2888, 9774, 179], function () {
+    e.O(0, [4736, 2888, 9774, 179], function () {
       return e((e.s = 20702));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=error-72f0e29fe9def753.js.map
+//# sourceMappingURL=error-c323dfec727c3893.js.map

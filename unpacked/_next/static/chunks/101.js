@@ -6,13 +6,13 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return S;
-          },
-          default: function () {
             return T;
           },
+          default: function () {
+            return F;
+          },
           messages: function () {
-            return D;
+            return Z;
           },
         });
       var r = n(39827),
@@ -21,21 +21,24 @@
         a = n(2722);
       n(69483);
       var o = n(12366),
-        s = n(70079),
-        c = n(949),
-        u = n(66873),
-        d = n(47527),
-        p = n(16640),
-        g = n(91128),
-        f = n(53197),
-        h = n(10518),
-        x = n(19841),
-        m = n(9063),
-        b = n(84692),
-        v = n(68498),
-        j = n(66520),
-        y = n(35250);
-      function w(e, t) {
+        s = n.n(o),
+        c = n(70079),
+        d = n(949),
+        u = n(85641),
+        p = n(66873),
+        g = n(16640),
+        f = n(28354),
+        h = n(53197),
+        x = n(88565),
+        m = n(10518),
+        b = n(34777),
+        y = n(19841),
+        j = n(9063),
+        v = n(84692),
+        w = n(68498),
+        O = n(66520),
+        k = n(35250);
+      function L(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -47,16 +50,16 @@
         }
         return n;
       }
-      function O(e) {
+      function I(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? w(Object(n), !0).forEach(function (t) {
+            ? L(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : w(Object(n)).forEach(function (t) {
+              : L(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -66,224 +69,228 @@
         }
         return e;
       }
-      function k(e) {
+      function C(e) {
         let {
             auth0Provider: t,
             enableNewAuthFlow: n,
             nextUrl: r,
             isStorageComplianceEnabled: i,
           } = e,
-          l = (0, m.Z)();
-        return (0, y.jsx)(y.Fragment, {
-          children: (0, y.jsxs)("div", {
+          l = (0, j.Z)(),
+          { layer: o } = (0, b.AH)(b.VG.AnonChatLayer),
+          c = o.get(b.yp.ANON_IS_TRY_IT_FIRST_ON_LOGIN_PAGE_ENABLED, !1);
+        return (0, k.jsx)(k.Fragment, {
+          children: (0, k.jsxs)("div", {
             className:
               "relative flex grow flex-col items-center justify-between bg-white px-5 py-8 text-black dark:bg-black dark:text-white sm:rounded-t-[30px] md:rounded-none md:px-6",
             children: [
-              (0, y.jsx)("nav", {
+              (0, k.jsx)("nav", {
                 className:
                   "flex w-full justify-start px-6 pb-8 md:hidden md:px-6 lg:px-8",
-                children: (0, y.jsx)("h1", {
-                  "aria-label": l.formatMessage(E.ariaLabel),
-                  children: (0, y.jsx)("div", {
+                children: (0, k.jsx)("h1", {
+                  "aria-label": l.formatMessage(P.ariaLabel),
+                  children: (0, k.jsx)("div", {
                     className:
                       "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
-                    children: (0, y.jsx)("div", { children: j.L }),
+                    children: (0, k.jsx)("div", { children: O.L }),
                   }),
                 }),
               }),
-              (0, y.jsxs)("div", {
+              (0, k.jsxs)("div", {
                 className:
                   "relative flex w-full grow flex-col items-center justify-center",
                 children: [
-                  (0, y.jsx)("h2", {
+                  (0, k.jsx)("h2", {
                     className:
                       "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                    children: (0, y.jsx)(b.Z, O({}, E.pageTitle)),
+                    children: (0, k.jsx)(v.Z, I({}, P.pageTitle)),
                   }),
-                  (0, y.jsx)("div", {
+                  (0, k.jsx)("div", {
                     className: "mt-5 w-full max-w-[440px]",
                     children: n
-                      ? (0, y.jsx)(y.Fragment, {
-                          children: (0, y.jsxs)("div", {
+                      ? (0, k.jsx)(k.Fragment, {
+                          children: (0, k.jsxs)("div", {
                             className: "flex w-full flex-col gap-3",
                             children: [
-                              (0, y.jsx)(L, {
+                              (0, k.jsx)(A, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cpath id='a' d='M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z'/%3E%3C/defs%3E%3CclipPath id='b'%3E%3Cuse xlink:href='%23a' overflow='visible'/%3E%3C/clipPath%3E%3Cpath clip-path='url(%23b)' fill='%23FBBC05' d='M0 37V11l17 13z'/%3E%3Cpath clip-path='url(%23b)' fill='%23EA4335' d='M0 11l17 13 7-6.1L48 14V0H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%2334A853' d='M0 37l30-23 7.9 1L48 0v48H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%234285F4' d='M48 48L17 24l-4-3 35-10z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
-                                  h.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  f.A.logLogInButtonClicked({
                                     provider: "google",
+                                    location: "Login page",
                                   }),
-                                    g.A.logEvent(f.M.authLogin, {
-                                      provider: "google",
-                                    }),
                                     (0, a.signIn)(
                                       "openai",
                                       { callbackUrl: r },
                                       {
                                         prompt: "login",
-                                        login_hint: (0, p.W_)({
+                                        login_hint: (0, g.W_)({
                                           idp: "google",
                                         }),
                                       }
                                     );
                                 },
-                                children: (0, y.jsx)(
-                                  b.Z,
-                                  O({}, E.continueWithGoogle)
+                                children: (0, k.jsx)(
+                                  v.Z,
+                                  I({}, P.continueWithGoogle)
                                 ),
                               }),
-                              (0, y.jsx)(L, {
+                              (0, k.jsx)(A, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9h-9z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9h-9z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
-                                  h.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  f.A.logLogInButtonClicked({
                                     provider: "microsoft",
+                                    location: "Login page",
                                   }),
-                                    g.A.logEvent(f.M.authLogin, {
-                                      provider: "microsoft",
-                                    }),
                                     (0, a.signIn)(
                                       "openai",
                                       { callbackUrl: r },
                                       {
                                         prompt: "login",
-                                        login_hint: (0, p.W_)({
+                                        login_hint: (0, g.W_)({
                                           idp: "microsoft",
                                         }),
                                       }
                                     );
                                 },
-                                children: (0, y.jsx)(
-                                  b.Z,
-                                  O({}, E.continueWithMicrosoft)
+                                children: (0, k.jsx)(
+                                  v.Z,
+                                  I({}, P.continueWithMicrosoft)
                                 ),
                               }),
-                              (0, y.jsx)("div", {
+                              (0, k.jsx)("div", {
                                 className:
                                   "my-2 w-full border-t border-black/5",
                               }),
-                              (0, y.jsxs)("div", {
+                              (0, k.jsxs)("div", {
                                 className: "grid grid-cols-2 gap-3",
                                 children: [
-                                  (0, y.jsx)(L, {
+                                  (0, k.jsx)(A, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
-                                      h.m9.logEvent(
-                                        "chatgpt_auth_log_in",
-                                        null,
-                                        { provider: "openai" }
-                                      ),
-                                        g.A.logEvent(f.M.authLogin, {
-                                          provider: "openai",
-                                        }),
+                                      f.A.logLogInButtonClicked({
+                                        provider: "openai",
+                                        location: "Login page",
+                                      }),
                                         (0, a.signIn)(
                                           "openai",
                                           { callbackUrl: r },
                                           {
                                             prompt: "login",
-                                            login_hint: (0, p.W_)({
+                                            login_hint: (0, g.W_)({
                                               idp: "openai",
                                             }),
                                           }
                                         );
                                     },
-                                    children: (0, y.jsx)(b.Z, O({}, E.logIn)),
+                                    children: (0, k.jsx)(v.Z, I({}, P.logIn)),
                                   }),
-                                  (0, y.jsx)(L, {
+                                  (0, k.jsx)(A, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
-                                      h.m9.logEvent(
-                                        "chatgpt_auth_sign_up",
-                                        null,
-                                        { provider: "openai" }
-                                      ),
-                                        g.A.logEvent(f.M.authSignup, {
-                                          provider: "openai",
-                                        }),
+                                      f.A.logSignUpButtonClicked({
+                                        provider: "openai",
+                                        location: "Login page",
+                                      }),
                                         (0, a.signIn)(
                                           "openai",
                                           { callbackUrl: r },
                                           {
                                             prompt: "login",
-                                            login_hint: (0, p.W_)({
+                                            login_hint: (0, g.W_)({
                                               idp: "openai",
                                               screen: "signup",
                                             }),
                                           }
                                         );
                                     },
-                                    children: (0, y.jsx)(b.Z, O({}, E.signUp)),
+                                    children: (0, k.jsx)(v.Z, I({}, P.signUp)),
                                   }),
                                 ],
                               }),
                             ],
                           }),
                         })
-                      : (0, y.jsx)(y.Fragment, {
-                          children: (0, y.jsxs)("div", {
+                      : (0, k.jsx)(k.Fragment, {
+                          children: (0, k.jsxs)("div", {
                             className:
                               "grid gap-x-3 gap-y-2 sm:grid-cols-2 sm:gap-y-0",
                             children: [
-                              (0, y.jsx)(L, {
+                              (0, k.jsx)(A, {
                                 primary: !0,
                                 testid: "login-button",
                                 onClick: () => {
-                                  h.m9.logEvent("chatgpt_auth_log_in", null, {
+                                  f.A.logLogInButtonClicked({
                                     provider: "auth0",
+                                    location: "Login page",
                                   }),
-                                    g.A.logEvent(f.M.authLogin, {
-                                      provider: "auth0",
-                                    }),
                                     (0, a.signIn)(
                                       t,
                                       { callbackUrl: r },
                                       { prompt: "login" }
                                     );
                                 },
-                                children: (0, y.jsx)(b.Z, O({}, E.logIn)),
+                                children: (0, k.jsx)(v.Z, I({}, P.logIn)),
                               }),
-                              (0, y.jsx)(L, {
+                              (0, k.jsx)(A, {
                                 primary: !0,
                                 as: "button",
                                 onClick: () => {
-                                  h.m9.logEvent("chatgpt_auth_sign_up", null, {
+                                  f.A.logSignUpButtonClicked({
                                     provider: "auth0",
+                                    location: "Login page",
                                   }),
-                                    g.A.logEvent(f.M.authSignup, {
-                                      provider: "auth0",
-                                    }),
                                     (0, a.signIn)(
                                       t,
                                       { callbackUrl: r },
                                       { prompt: "login", screen_hint: "signup" }
                                     );
                                 },
-                                children: (0, y.jsx)(b.Z, O({}, E.signUp)),
+                                children: (0, k.jsx)(v.Z, I({}, P.signUp)),
                               }),
                             ],
                           }),
                         }),
                   }),
+                  c
+                    ? (0, k.jsx)("a", {
+                        href: "#",
+                        className: "mt-12 text-token-text-secondary underline",
+                        onClick: (e) => {
+                          e.preventDefault(),
+                            f.A.logEvent(h.M.authTryItFirstLinkClicked),
+                            m.m9.logEvent(
+                              "chatgpt_auth_try_it_first_link_clicked"
+                            ),
+                            x.bX.setCookie(x.cn.HasNoAuthTrial, !0, {
+                              maxAge: 3600,
+                            }),
+                            s().push("/");
+                        },
+                        children: (0, k.jsx)(v.Z, I({}, P.tryItFirst)),
+                      })
+                    : null,
                 ],
               }),
-              (0, y.jsxs)("div", {
+              (0, k.jsxs)("div", {
                 className: "mt-10 flex flex-col justify-center ",
                 children: [
-                  (0, y.jsx)("div", {
+                  (0, k.jsx)("div", {
                     className: "flex justify-center text-gray-300 md:mb-3",
-                    children: (0, y.jsx)(d.nV, {
+                    children: (0, k.jsx)(u.nV, {
                       className: "h-[22px] w-auto",
                     }),
                   }),
-                  (0, y.jsx)(u.VL, { isStorageComplianceEnabled: i }),
+                  (0, k.jsx)(p.VL, { isStorageComplianceEnabled: i }),
                 ],
               }),
             ],
           }),
         });
       }
-      function L(e) {
+      function A(e) {
         let {
           icon: t,
           children: n,
@@ -293,8 +300,8 @@
           style: a = "new",
           primary: o = !1,
         } = e;
-        return (0, y.jsxs)("button", {
-          className: (0, x.default)("relative", r, {
+        return (0, k.jsxs)("button", {
+          className: (0, y.default)("relative", r, {
             "btn-neutral flex items-center justify-center gap-3 rounded p-3 text-center text-base":
               "legacy" === a,
             "flex h-12 items-center justify-center rounded-md text-center text-base font-medium":
@@ -307,21 +314,21 @@
           onClick: i,
           children: [
             t
-              ? (0, y.jsx)("div", {
-                  className: (0, x.default)("h-5 w-5 justify-self-start", {
+              ? (0, k.jsx)("div", {
+                  className: (0, y.default)("h-5 w-5 justify-self-start", {
                     "absolute left-5 top-1/2 -translate-y-1/2": "new" === a,
                   }),
                   style: { backgroundImage: t },
                 })
               : null,
-            (0, y.jsx)("div", {
-              className: (0, x.default)({ "relative -top-[1px]": "new" === a }),
+            (0, k.jsx)("div", {
+              className: (0, y.default)({ "relative -top-[1px]": "new" === a }),
               children: n,
             }),
           ],
         });
       }
-      let E = (0, v.vU)({
+      let P = (0, w.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -351,13 +358,12 @@
           id: "Login.logInWithOpenAI",
           defaultMessage: "Log in with your OpenAI account to continue",
         },
+        tryItFirst: { id: "Login.tryItFirst", defaultMessage: "Try it first" },
       });
-      var M = n(9015),
-        I = n(65455),
-        C = n(88565),
-        P = n(34777),
-        A = n(21243);
-      function N(e, t) {
+      var M = n(28355),
+        N = n(65455),
+        E = n(21243);
+      function S(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -373,12 +379,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? N(Object(n), !0).forEach(function (t) {
+            ? S(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : N(Object(n)).forEach(function (t) {
+              : S(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -388,99 +394,99 @@
         }
         return e;
       }
-      var S = !0;
-      function T(e) {
+      var T = !0;
+      function F(e) {
         var t;
         let {
             serviceStatus: n,
             examples: r,
-            auth0Provider: c,
-            enableNewAuthFlow: u,
-            cfConnectingIp: d,
+            auth0Provider: s,
+            enableNewAuthFlow: d,
+            cfConnectingIp: u,
             isStorageComplianceEnabled: p,
-            statsigShowCapacityGate: h,
+            statsigShowCapacityGate: g,
           } = e,
-          x = (0, o.useRouter)(),
-          { next: b } = x.query,
-          v = "string" == typeof b && b.startsWith("/") ? b : "/";
-        x.asPath.includes("#") && (v += "#" + x.asPath.split("#")[1]);
-        let j = (0, m.Z)(),
-          w = !!(null == n ? void 0 : n.oof) || !0 === h,
-          O = (0, s.useRef)(!1),
-          k =
-            "sso" in x.query &&
-            (null === (t = x.query.sso) || void 0 === t || t),
-          L = k ? x.query.connection : void 0;
-        (0, s.useEffect)(() => {
-          if (k && !w) {
+          m = (0, o.useRouter)(),
+          { next: y } = m.query,
+          v = "string" == typeof y && y.startsWith("/") ? y : "/";
+        m.asPath.includes("#") && (v += "#" + m.asPath.split("#")[1]);
+        let w = (0, j.Z)(),
+          O = !!(null == n ? void 0 : n.oof) || !0 === g,
+          L = (0, c.useRef)(!1),
+          I =
+            "sso" in m.query &&
+            (null === (t = m.query.sso) || void 0 === t || t),
+          C = I ? m.query.connection : void 0;
+        (0, c.useEffect)(() => {
+          if (I && !O) {
             var e;
             let t =
-              null === (e = C.bX.getCookie(C.cn.DeviceId)) || void 0 === e
+              null === (e = x.bX.getCookie(x.cn.DeviceId)) || void 0 === e
                 ? void 0
                 : e.toString();
             (0, a.signIn)(
-              "openai" === k ? "openai" : "auth0",
+              "openai" === I ? "openai" : "auth0",
               { callbackUrl: v },
-              _(_({}, t ? { device_id: t } : {}), L ? { connection: L } : {})
+              _(_({}, t ? { device_id: t } : {}), C ? { connection: C } : {})
             );
           }
-        }, [v, k, L, w]),
-          (0, s.useEffect)(() => {
-            g.A.logEvent(f.M.loggedOutOpenedAuthLogin, { cfConnectingIp: d });
-          }, [d]),
-          (0, s.useEffect)(() => {
+        }, [v, I, C, O]),
+          (0, c.useEffect)(() => {
+            f.A.logEvent(h.M.loggedOutOpenedAuthLogin, { cfConnectingIp: u });
+          }, [u]),
+          (0, c.useEffect)(() => {
             "#pricing" === window.location.hash &&
-              C.bX.setCookie(C.cn.ShowPaymentModal, !0, { maxAge: 21600 });
+              x.bX.setCookie(x.cn.ShowPaymentModal, !0, { maxAge: 21600 });
           }, []),
-          (0, s.useEffect)(() => {
-            if (O.current) return;
-            O.current = !0;
-            let { inv_ws_name: e, inv_email: t } = x.query;
+          (0, c.useEffect)(() => {
+            if (L.current) return;
+            L.current = !0;
+            let { inv_ws_name: e, inv_email: t } = m.query;
             (e = Array.isArray(e) ? e[0] : e),
               (t = Array.isArray(t) ? t[0] : t),
               e &&
                 t &&
-                I.m.success(
-                  j.formatMessage(D.invitedToastMessage, {
+                N.m.success(
+                  w.formatMessage(Z.invitedToastMessage, {
                     workspace_name: e,
                     email: t,
                   }),
                   { hasCloseButton: !0, duration: 600 }
                 );
-          }, [x.query, j]);
-        let E = (function () {
-          let { layer: e } = (0, P.AH)(P.VG.AnonChatLayer),
-            t = e.get(P.yp.ANON_IS_SPANISH_TRANSLATION_ENABLED, !1),
+          }, [m.query, w]);
+        let A = (function () {
+          let { layer: e } = (0, b.AH)(b.VG.AnonChatLayer),
+            t = e.get(b.yp.ANON_IS_SPANISH_TRANSLATION_ENABLED, !1),
             { locale: n, setLocale: r } = (0, M.bU)();
           return (
-            (0, s.useEffect)(() => {
-              !(!t || F(n)) && F(window.navigator.language) && r("es-ES", !1);
+            (0, c.useEffect)(() => {
+              !(!t || D(n)) && D(window.navigator.language) && r("es-ES", !1);
             }, [t, r, n]),
-            F(n) ? "es-ES" : "en-US"
+            D(n) ? "es-ES" : "en-US"
           );
         })();
-        return w
-          ? (0, y.jsx)(i.Z, {})
-          : k
+        return O
+          ? (0, k.jsx)(i.Z, {})
+          : I
             ? null
-            : (0, y.jsxs)(y.Fragment, {
+            : (0, k.jsxs)(k.Fragment, {
                 children: [
-                  (0, y.jsx)(l.Z, {}),
-                  (0, y.jsx)(
-                    W,
+                  (0, k.jsx)(l.Z, {}),
+                  (0, k.jsx)(
+                    U,
                     {
-                      auth0Provider: c,
-                      enableNewAuthFlow: u,
-                      examples: r[E],
+                      auth0Provider: s,
+                      enableNewAuthFlow: d,
+                      examples: r[A],
                       nextUrl: v,
                       isStorageComplianceEnabled: p,
                     },
-                    E
+                    A
                   ),
                 ],
               });
       }
-      let W = (e) => {
+      let U = (e) => {
         let {
           auth0Provider: t,
           enableNewAuthFlow: n,
@@ -488,9 +494,9 @@
           nextUrl: i,
           isStorageComplianceEnabled: l,
         } = e;
-        return (0, y.jsxs)(y.Fragment, {
+        return (0, k.jsxs)(k.Fragment, {
           children: [
-            (0, y.jsx)(U, {
+            (0, k.jsx)(W, {
               auth0Provider: t,
               enableNewAuthFlow: n,
               nextUrl: i,
@@ -501,7 +507,7 @@
           ],
         });
       };
-      function U(e) {
+      function W(e) {
         let {
             auth0Provider: t,
             enableNewAuthFlow: n,
@@ -509,28 +515,28 @@
             examples: i = [],
             isStorageComplianceEnabled: l,
           } = e,
-          { resolvedTheme: a } = (0, A.F)(),
+          { resolvedTheme: a } = (0, E.F)(),
           o = "dark" === a,
-          u = (0, s.useRef)(null);
+          s = (0, c.useRef)(null);
         return (
-          (0, s.useEffect)(() => {
-            null === u.current &&
-              (u.current = document.body.style.backgroundColor);
+          (0, c.useEffect)(() => {
+            null === s.current &&
+              (s.current = document.body.style.backgroundColor);
             let e = o ? "#00002E" : "#FFFFDB";
             return (
               (document.body.style.backgroundColor = e),
               () => {
-                null !== u.current &&
-                  (document.body.style.backgroundColor = u.current);
+                null !== s.current &&
+                  (document.body.style.backgroundColor = s.current);
               }
             );
           }, [o]),
-          (0, y.jsxs)("div", {
+          (0, k.jsxs)("div", {
             className:
               "flex min-h-full w-screen flex-col sm:supports-[min-height:100dvh]:min-h-[100dvh] md:grid md:grid-cols-2 lg:grid-cols-[60%_40%]",
             children: [
-              (0, y.jsx)(c.O, { examples: i }),
-              (0, y.jsx)(k, {
+              (0, k.jsx)(d.O, { examples: i }),
+              (0, k.jsx)(C, {
                 auth0Provider: t,
                 enableNewAuthFlow: n,
                 nextUrl: r,
@@ -540,10 +546,10 @@
           })
         );
       }
-      function F(e) {
+      function D(e) {
         return "es" === e || e.startsWith("es-");
       }
-      let D = (0, v.vU)({
+      let Z = (0, w.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -589,7 +595,7 @@
           return x;
         },
         jI: function () {
-          return v;
+          return y;
         },
         xh: function () {
           return h;
@@ -602,8 +608,8 @@
         o = n(84692),
         s = n(68498),
         c = n(21389),
-        u = n(47527),
-        d = n(59674),
+        d = n(85641),
+        u = n(59674),
         p = n(35250);
       function g(e, t) {
         var n = Object.keys(e);
@@ -659,14 +665,14 @@
         return (0, p.jsxs)("div", {
           className: "flex gap-3 py-3 text-xs text-token-text-tertiary",
           children: [
-            (0, p.jsx)(d.Z, {
+            (0, p.jsx)(u.Z, {
               href: "https://openai.com/policies/terms-of-use",
               type: "neutral",
               openNewTab: !0,
               children: (0, p.jsx)(o.Z, f({}, j.terms)),
             }),
             (0, p.jsx)(b, {}),
-            (0, p.jsx)(d.Z, {
+            (0, p.jsx)(u.Z, {
               href: "https://openai.com/policies/privacy-policy",
               openNewTab: !0,
               type: "neutral",
@@ -691,10 +697,10 @@
           className: "text-token-text-tertiary",
           children: "|",
         });
-      function v() {
+      function y() {
         return (0, p.jsx)("div", {
           className: "mb-5",
-          children: (0, p.jsx)(u.nI, {}),
+          children: (0, p.jsx)(d.nI, {}),
         });
       }
       let j = (0, s.vU)({
@@ -727,7 +733,7 @@
         }
         return n;
       }
-      function u(e) {
+      function d(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -746,7 +752,7 @@
         }
         return e;
       }
-      function d(e) {
+      function u(e) {
         let { examples: t } = e,
           { 0: n, 1: r } = (0, o.useState)({
             promptIndex: 0,
@@ -767,16 +773,16 @@
               } = l.current,
               o = t[e].answerTokens[n],
               s = a[e] + 1,
-              d = 90;
+              u = 90;
             if (s === o.length) {
               let t = [...a];
               (t[e] = s),
-                (l.current = u(
-                  u({}, l.current),
+                (l.current = d(
+                  d({}, l.current),
                   {},
                   { tokenStreamIndexList: t }
                 )),
-                (d = 2500);
+                (u = 2500);
             } else if (s > o.length) {
               let r = n + 1;
               if (r >= t[e].answerTokens.length) {
@@ -788,27 +794,27 @@
                     answerIndex: 0,
                     tokenStreamIndexList: r,
                   }),
-                  (d = 900);
+                  (u = 900);
               } else {
                 let t = [...a];
                 (t[e] = 0),
-                  (l.current = u(
-                    u({}, l.current),
+                  (l.current = d(
+                    d({}, l.current),
                     {},
                     { answerIndex: r, tokenStreamIndexList: t }
                   )),
-                  (d = 500);
+                  (u = 500);
               }
             } else {
               let t = [...a];
               (t[e] = s),
-                (l.current = u(
-                  u({}, l.current),
+                (l.current = d(
+                  d({}, l.current),
                   {},
                   { tokenStreamIndexList: t }
                 ));
             }
-            r(l.current), (i.current = setTimeout(c, d));
+            r(l.current), (i.current = setTimeout(c, u));
           };
         return (
           (0, o.useEffect)(
@@ -929,7 +935,7 @@
               className:
                 "flex flex-col text-[32px] leading-[1.2] md:text-[40px]",
               "aria-hidden": "true",
-              children: t.length > 0 && (0, s.jsx)(d, { examples: t }),
+              children: t.length > 0 && (0, s.jsx)(u, { examples: t }),
             }),
           ],
         });
@@ -957,4 +963,4 @@
     },
   },
 ]);
-//# sourceMappingURL=101-fc91c9ddd15d78dd.js.map
+//# sourceMappingURL=101-58c205119f556099.js.map

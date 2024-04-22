@@ -1,10 +1,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2758],
   {
-    60999: function (t, e, r) {
+    60999: function (t, e, n) {
       "use strict";
-      r.r(e),
-        r.d(e, {
+      n.r(e),
+        n.d(e, {
           __N_SSP: function () {
             return l;
           },
@@ -12,45 +12,46 @@
             return p;
           },
         });
-      var n = r(39827),
-        c = r(19892),
-        u = r(13038),
-        o = r(12366),
-        i = r(70079),
-        s = r(35250);
-      function a(t, e) {
-        var r = Object.keys(t);
+      var r = n(39827),
+        c = n(65455),
+        u = n(19892),
+        o = n(13038),
+        i = n(12366),
+        a = n(70079),
+        s = n(35250);
+      function f(t, e) {
+        var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(t);
+          var r = Object.getOwnPropertySymbols(t);
           e &&
-            (n = n.filter(function (e) {
+            (r = r.filter(function (e) {
               return Object.getOwnPropertyDescriptor(t, e).enumerable;
             })),
-            r.push.apply(r, n);
+            n.push.apply(n, r);
         }
-        return r;
+        return n;
       }
       var l = !0;
       function p(t) {
         return (0, s.jsx)(
-          f,
+          O,
           (function (t) {
             for (var e = 1; e < arguments.length; e++) {
-              var r = null != arguments[e] ? arguments[e] : {};
+              var n = null != arguments[e] ? arguments[e] : {};
               e % 2
-                ? a(Object(r), !0).forEach(function (e) {
-                    (0, n.Z)(t, e, r[e]);
+                ? f(Object(n), !0).forEach(function (e) {
+                    (0, r.Z)(t, e, n[e]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       t,
-                      Object.getOwnPropertyDescriptors(r)
+                      Object.getOwnPropertyDescriptors(n)
                     )
-                  : a(Object(r)).forEach(function (e) {
+                  : f(Object(n)).forEach(function (e) {
                       Object.defineProperty(
                         t,
                         e,
-                        Object.getOwnPropertyDescriptor(r, e)
+                        Object.getOwnPropertyDescriptor(n, e)
                       );
                     });
             }
@@ -58,38 +59,38 @@
           })({}, t)
         );
       }
-      function f(t) {
-        let { pluginId: e, code: r, state: n } = t,
-          a = (0, o.useRouter)(),
-          l = (0, i.useRef)(!1);
+      function O(t) {
+        let { pluginId: e, code: n, state: r, error: f, errorDesc: l } = t,
+          p = (0, i.useRouter)(),
+          O = (0, a.useRef)(!1);
         return (
-          (0, i.useEffect)(() => {
-            !0 !== l.current &&
-              ((l.current = !0),
+          (0, a.useEffect)(() => {
+            !0 !== O.current &&
+              ((O.current = !0),
               (async function () {
                 let t = ""
                   .concat(window.location.origin, "/aip/")
                   .concat(e, "/oauth/callback");
                 try {
-                  let i = await u.Z.pluginOauthCallback(e, r, t, n);
+                  let i = await o.Z.pluginOauthCallback(e, n, t, r);
                   if (i.success) {
                     let t = new URL(
-                      (0, c.M5)(c.LT.OAUTH_SUCCESS, i.redirect_path)
+                      (0, u.M5)(u.LT.OAUTH_SUCCESS, i.redirect_path)
                     );
                     t.searchParams.set("oauth_success", "true"),
-                      a.push(t.toString());
+                      p.push(t.toString());
                   } else {
-                    var o;
-                    a.push(
-                      (0, c.M5)(
-                        c.LT.CUSTOM_ERROR,
+                    var c;
+                    p.push(
+                      (0, u.M5)(
+                        u.LT.CUSTOM_ERROR,
                         i.redirect_path,
-                        null !== (o = i.error) && void 0 !== o ? o : i.message
+                        null !== (c = i.error) && void 0 !== c ? c : i.message
                       )
                     );
                   }
                 } catch (t) {
-                  a.push(
+                  p.push(
                     "/?model=gpt-4-plugins&loginAip=".concat(
                       e,
                       "&loginSuccess=false"
@@ -97,25 +98,31 @@
                   );
                 }
               })());
-          }, [e, r, n, a]),
+          }, [e, n, r, p]),
+          (0, a.useEffect)(() => {
+            f &&
+              c.m.danger("".concat(f).concat(l ? ": ".concat(l) : ""), {
+                duration: 5,
+              });
+          }, [f, l]),
           (0, s.jsx)("div", {})
         );
       }
     },
-    19654: function (t, e, r) {
+    19654: function (t, e, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/aip/[pluginId]/oauth/callback",
         function () {
-          return r(60999);
+          return n(60999);
         },
       ]);
     },
   },
   function (t) {
-    t.O(0, [2888, 9774, 179], function () {
+    t.O(0, [4736, 2888, 9774, 179], function () {
       return t((t.s = 19654));
     }),
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=callback-d767522b53f0239b.js.map
+//# sourceMappingURL=callback-2b19d068846deaca.js.map

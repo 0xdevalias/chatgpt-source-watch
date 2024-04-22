@@ -5,13 +5,13 @@
     9112: function (e, t, a) {
       a.d(t, {
         hb: function () {
-          return ej;
+          return eb;
         },
         yG: function () {
-          return eg;
+          return ex;
         },
         ZP: function () {
-          return ep;
+          return eu;
         },
       });
       var r,
@@ -23,15 +23,18 @@
         c = a(39827),
         d = a(25660),
         u = a(65375),
-        p = a(41098),
-        m = a(87106),
-        f = a(47527),
-        x = a(70079),
-        g = a(76483),
-        b = a(70671),
-        j = a(94968),
-        v = a(35250);
-      function h(e, t) {
+        p = a(85641),
+        m = a(42005),
+        f = a(24605),
+        x = a(26623),
+        g = a(41098),
+        b = a(87106),
+        j = a(70079),
+        v = a(76483),
+        h = a(9063),
+        y = a(68498),
+        w = a(35250);
+      function k(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -43,16 +46,16 @@
         }
         return a;
       }
-      function y(e) {
+      function P(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? h(Object(a), !0).forEach(function (t) {
+            ? k(Object(a), !0).forEach(function (t) {
                 (0, c.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : h(Object(a)).forEach(function (t) {
+              : k(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -62,17 +65,17 @@
         }
         return e;
       }
-      function w(e) {
+      function O(e) {
         let { onFileChange: t, className: a, message: r, mimeTypes: s } = e,
-          n = (0, b.Z)(),
-          i = null != r ? r : n.formatMessage(k.helpText),
+          n = (0, h.Z)(),
+          i = null != r ? r : n.formatMessage(N.helpText),
           {
             open: o,
             getRootProps: l,
             getInputProps: c,
             isDragActive: d,
-          } = (0, g.uI)(
-            y(
+          } = (0, v.uI)(
+            P(
               {
                 disabled: !1,
                 noClick: !0,
@@ -84,15 +87,15 @@
                 },
                 onDropRejected: () => null,
                 multiple: !1,
-                maxSize: p.xC,
+                maxSize: g.xC,
               },
-              (0, m.Z8)(s)
+              (0, b.Z8)(s)
             )
           );
-        return (0, v.jsxs)(
+        return (0, w.jsxs)(
           "div",
-          y(
-            y(
+          P(
+            P(
               {
                 className:
                   "flex flex-col content-center justify-center gap-3 rounded border border-dashed px-6 py-16 text-center" +
@@ -107,32 +110,32 @@
             {},
             {
               children: [
-                (0, v.jsx)("input", y({}, c())),
-                (0, v.jsx)("div", {
+                (0, w.jsx)("input", P({}, c())),
+                (0, w.jsx)("div", {
                   className: "text-center dark:text-white",
-                  children: (0, v.jsx)("div", {
+                  children: (0, w.jsx)("div", {
                     className: "inline-block",
-                    children: (0, v.jsx)(f.tC, {}),
+                    children: (0, w.jsx)(p.tC, {}),
                   }),
                 }),
-                (0, v.jsx)("div", {
+                (0, w.jsx)("div", {
                   className: "text-center text-sm",
                   children: i,
                 }),
-                (0, v.jsx)("div", {
+                (0, w.jsx)("div", {
                   className:
                     "cursor-pointer text-center text-sm font-bold text-green-600",
                   onClick: () => {
                     o();
                   },
-                  children: n.formatMessage(k.openFilePicker),
+                  children: n.formatMessage(N.openFilePicker),
                 }),
               ],
             }
           )
         );
       }
-      let k = (0, j.vU)({
+      let N = (0, y.vU)({
         helpText: {
           id: "FileUploadBox.helpText",
           defaultMessage: "Drop file here to upload",
@@ -142,20 +145,20 @@
           defaultMessage: "Browse files",
         },
       });
-      var P = a(47483),
-        O = a(33925),
-        N = a(16244),
-        M = a(21643),
-        Z = a(82429),
-        E = a(36607),
-        D = a(64085),
-        A = a(65455),
-        S = a(13038),
-        F = a(18405),
-        C = a(82473),
-        B = a(25494),
-        U = a(32004);
-      function W(e, t) {
+      var M = a(47483),
+        Z = a(33925),
+        E = a(16244),
+        D = a(21643),
+        A = a(82429),
+        S = a(36607),
+        F = a(64085),
+        C = a(65455),
+        B = a(13038),
+        U = a(18405),
+        W = a(82473),
+        I = a(25494),
+        _ = a(84692);
+      function z(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -167,16 +170,16 @@
         }
         return a;
       }
-      function I(e) {
+      function R(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? W(Object(a), !0).forEach(function (t) {
+            ? z(Object(a), !0).forEach(function (t) {
                 (0, c.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : W(Object(a)).forEach(function (t) {
+              : z(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -186,13 +189,13 @@
         }
         return e;
       }
-      function _(e) {
+      function T(e) {
         var t, a;
         let { workspace: r } = e,
-          { 0: s, 1: n } = (0, x.useState)(
+          { 0: s, 1: n } = (0, j.useState)(
             null !== (t = null == r ? void 0 : r.name) && void 0 !== t ? t : ""
           ),
-          { 0: i, 1: o } = (0, x.useState)(!1);
+          { 0: i, 1: o } = (0, j.useState)(!1);
         !i &&
           r &&
           (o(!0),
@@ -202,55 +205,55 @@
                 ? a
                 : ""
             ));
-        let { 0: l, 1: c } = (0, x.useState)(r.profilePictureUrl),
-          { 0: p, 1: f } = (0, x.useState)(r.profilePictureId),
-          g = (0, F.EV)(F.B.WorkspaceAppearance),
-          j = (0, b.Z)(),
-          { 0: h, 1: y } = (0, x.useState)(void 0);
-        async function k(e) {
-          let t = await (0, m.WI)(e, 2 * u.EF.workspaceAvatarPreview),
-            a = (0, Z.W7)(t);
-          y({
+        let { 0: l, 1: c } = (0, j.useState)(r.profilePictureUrl),
+          { 0: p, 1: m } = (0, j.useState)(r.profilePictureId),
+          f = (0, U.EV)(U.B.WorkspaceAppearance),
+          x = (0, h.Z)(),
+          { 0: g, 1: v } = (0, j.useState)(void 0);
+        async function y(e) {
+          let t = await (0, b.WI)(e, 2 * u.EF.workspaceAvatarPreview),
+            a = (0, A.W7)(t);
+          v({
             tempId: a,
             file: t,
-            status: M.X.Uploading,
+            status: D.X.Uploading,
             progress: 1,
             fileId: null,
             cdnUrl: null,
           }),
-            (0, Z.lU)(a, t, j, d.Ei.ProfilePicture, {
+            (0, A.lU)(a, t, x, d.Ei.ProfilePicture, {
               onFileCreated(e, t, a) {
-                y((r) =>
+                v((r) =>
                   "initial" !== r &&
                   (null == r ? void 0 : r.tempId) === e &&
-                  r.status === M.X.Uploading
-                    ? I(I({}, r), {}, { progress: 10, fileId: t, cdnUrl: a })
+                  r.status === D.X.Uploading
+                    ? R(R({}, r), {}, { progress: 10, fileId: t, cdnUrl: a })
                     : r
                 );
               },
               onFileUploadProgress(e, t) {
-                y((a) =>
+                v((a) =>
                   "initial" !== a &&
                   (null == a ? void 0 : a.tempId) === e &&
-                  a.status === M.X.Uploading
-                    ? I(I({}, a), {}, { progress: t })
+                  a.status === D.X.Uploading
+                    ? R(R({}, a), {}, { progress: t })
                     : a
                 );
               },
               onFileUploaded(e, t, a) {
-                y((t) =>
+                v((t) =>
                   "initial" !== t && t && t.cdnUrl && t.tempId === e
-                    ? (S.Z.getFileDownloadLink(t.fileId).then((e) => {
+                    ? (B.Z.getFileDownloadLink(t.fileId).then((e) => {
                         e.status === d.KF.Success &&
-                          (f(t.fileId), c(e.download_url));
+                          (m(t.fileId), c(e.download_url));
                       }),
-                      I(
-                        I({}, t),
+                      R(
+                        R({}, t),
                         {},
                         {
-                          status: M.X.Ready,
+                          status: D.X.Ready,
                           progress: 100,
-                          fileSpec: I(
+                          fileSpec: R(
                             {
                               name: t.file.name,
                               id: t.fileId,
@@ -264,12 +267,12 @@
                 );
               },
               onError(e) {
-                y((t) => {
+                v((t) => {
                   if (
                     "initial" !== t &&
                     (null == t ? void 0 : t.tempId) === e
                   ) {
-                    f(void 0), c(void 0), K(null);
+                    m(void 0), c(void 0), T(null);
                     return;
                   }
                   return t;
@@ -277,20 +280,20 @@
               },
             });
         }
-        let W = (function (e) {
-            let t = (0, C.NL)(),
-              a = (0, b.Z)();
-            return (0, B.D)({
+        let k = (function (e) {
+            let t = (0, W.NL)(),
+              a = (0, h.Z)();
+            return (0, I.D)({
               mutationFn: (t) => {
                 let { name: r, profilePictureId: s, profilePictureUrl: n } = t;
-                return S.Z.patchWorkspace({
+                return B.Z.patchWorkspace({
                   workspaceId: e,
                   name: r,
                   profile_picture_id: s,
                   profile_picture_url: n,
                 }).catch((e) => {
-                  A.m.danger(
-                    a.formatMessage(R.saveError, { error: e.message })
+                  C.m.danger(
+                    a.formatMessage(K.saveError, { error: e.message })
                   );
                 });
               },
@@ -299,72 +302,72 @@
               },
             });
           })(r.id),
-          _ = (0, v.jsx)(O.ZP.Button, {
+          P = (0, w.jsx)(Z.ZP.Button, {
             color: "primary",
             disabled:
-              ("initial" !== h && void 0 !== h && h.status !== M.X.Ready) ||
-              ("initial" !== h &&
-                void 0 !== h &&
-                h.status === M.X.Ready &&
+              ("initial" !== g && void 0 !== g && g.status !== D.X.Ready) ||
+              ("initial" !== g &&
+                void 0 !== g &&
+                g.status === D.X.Ready &&
                 !l) ||
-              W.isPending ||
+              k.isPending ||
               0 === s.trim().length,
             onClick: async () => {
-              W.mutate({ name: s, profilePictureId: p, profilePictureUrl: l }),
-                F.vm.closeModal(F.B.WorkspaceAppearance);
+              k.mutate({ name: s, profilePictureId: p, profilePictureUrl: l }),
+                U.vm.closeModal(U.B.WorkspaceAppearance);
             },
-            title: j.formatMessage(R.modalSubmit),
+            title: x.formatMessage(K.modalSubmit),
           }),
-          T = (0, v.jsx)(O.ZP.Button, {
+          N = (0, w.jsx)(Z.ZP.Button, {
             onClick: () => {
-              y(void 0),
-                f(r.profilePictureId),
+              v(void 0),
+                m(r.profilePictureId),
                 c(r.profilePictureUrl),
-                F.vm.closeModal(F.B.WorkspaceAppearance);
+                U.vm.closeModal(U.B.WorkspaceAppearance);
             },
-            title: j.formatMessage(R.modalCancel),
+            title: x.formatMessage(K.modalCancel),
           }),
-          { 0: L, 1: K } = (0, x.useState)(null);
+          { 0: z, 1: T } = (0, j.useState)(null);
         return (
-          (0, x.useEffect)(() => {
-            if ("initial" !== h && void 0 != h && null == L) {
+          (0, j.useEffect)(() => {
+            if ("initial" !== g && void 0 != g && null == z) {
               let e = new FileReader();
               e.addEventListener("load", () => {
                 let t = e.result;
-                "string" == typeof t && K(t);
+                "string" == typeof t && T(t);
               }),
-                e.readAsDataURL(h.file);
+                e.readAsDataURL(g.file);
             }
-          }, [h, L]),
-          (0, v.jsxs)(N.Z, {
-            isOpen: g,
-            onClose: () => F.vm.closeModal(F.B.WorkspaceAppearance),
+          }, [g, z]),
+          (0, w.jsxs)(E.Z, {
+            isOpen: f,
+            onClose: () => U.vm.closeModal(U.B.WorkspaceAppearance),
             showCloseButton: !0,
-            primaryButton: _,
-            secondaryButton: T,
+            primaryButton: P,
+            secondaryButton: N,
             type: "danger",
-            title: j.formatMessage(R.modalTitle),
+            title: x.formatMessage(K.modalTitle),
             children: [
-              (0, v.jsxs)("div", {
+              (0, w.jsxs)("div", {
                 className: "mb-4 flex-wrap",
                 children: [
-                  (0, v.jsx)("label", {
+                  (0, w.jsx)("label", {
                     htmlFor: "workspace-name",
                     className: "block pb-1 font-medium text-token-text-primary",
-                    children: (0, v.jsx)(U.Z, I({}, R.workspaceName)),
+                    children: (0, w.jsx)(_.Z, R({}, K.workspaceName)),
                   }),
-                  (0, v.jsx)("p", {
+                  (0, w.jsx)("p", {
                     className: "font-base text-sm text-token-text-secondary",
-                    children: (0, v.jsx)(
-                      U.Z,
-                      I({}, R.workspaceNameDescription)
+                    children: (0, w.jsx)(
+                      _.Z,
+                      R({}, K.workspaceNameDescription)
                     ),
                   }),
                 ],
               }),
-              (0, v.jsx)("div", {
+              (0, w.jsx)("div", {
                 className: "mb-4",
-                children: (0, v.jsx)(E.Z, {
+                children: (0, w.jsx)(S.Z, {
                   type: "text",
                   name: "workspace-name",
                   value: s,
@@ -372,72 +375,72 @@
                   maxLength: 64,
                 }),
               }),
-              (0, v.jsxs)("div", {
+              (0, w.jsxs)("div", {
                 className: "mb-4 flex-wrap",
                 children: [
-                  (0, v.jsx)("label", {
+                  (0, w.jsx)("label", {
                     htmlFor: "workspace-avatar",
                     className: "block pb-1 font-medium text-token-text-primary",
-                    children: (0, v.jsx)(U.Z, I({}, R.workspaceAvatar)),
+                    children: (0, w.jsx)(_.Z, R({}, K.workspaceAvatar)),
                   }),
-                  (0, v.jsx)("p", {
+                  (0, w.jsx)("p", {
                     className: "font-base text-sm text-token-text-secondary",
-                    children: j.formatMessage(R.workspaceAvatarDescription, {
+                    children: x.formatMessage(K.workspaceAvatarDescription, {
                       size: 2 * u.EF.workspaceAvatarPreview,
                     }),
                   }),
                 ],
               }),
-              (0, v.jsxs)("div", {
+              (0, w.jsxs)("div", {
                 className: "mb-4 flex-wrap text-center",
                 children: [
                   l
-                    ? (0, v.jsxs)("div", {
+                    ? (0, w.jsxs)("div", {
                         className: "relative mb-3 inline-flex",
                         children: [
-                          (0, v.jsx)(u.B0, {
+                          (0, w.jsx)(u.B0, {
                             src: l,
                             size: "workspaceAvatarPreview",
                           }),
-                          (0, v.jsx)("div", {
+                          (0, w.jsx)("div", {
                             className: "absolute -right-1 -top-1",
-                            children: (0, v.jsx)(z, {
+                            children: (0, w.jsx)(L, {
                               onClick: () => {
-                                f(null), c(null), y(void 0), K(null);
+                                m(null), c(null), v(void 0), T(null);
                               },
                             }),
                           }),
                         ],
                       })
-                    : void 0 != h && "initial" !== h && L
-                      ? (0, v.jsx)("div", {
+                    : void 0 != g && "initial" !== g && z
+                      ? (0, w.jsx)("div", {
                           className: "flex flex-col justify-center text-center",
-                          children: (0, v.jsxs)("div", {
+                          children: (0, w.jsxs)("div", {
                             className: "relative mb-3 text-center",
                             children: [
-                              (0, v.jsx)(u.B0, {
-                                src: URL.createObjectURL(h.file),
+                              (0, w.jsx)(u.B0, {
+                                src: URL.createObjectURL(g.file),
                                 size: "workspaceAvatarPreview",
                               }),
-                              (0, v.jsx)("div", {
+                              (0, w.jsx)("div", {
                                 className:
                                   "absolute inset-0 flex items-center justify-center text-white",
-                                children: (0, v.jsx)(P.Z, {
-                                  percentage: h.progress,
+                                children: (0, w.jsx)(M.Z, {
+                                  percentage: g.progress,
                                   className: "h-6 w-6",
                                 }),
                               }),
                             ],
                           }),
                         })
-                      : (0, v.jsx)(w, {
+                      : (0, w.jsx)(O, {
                           onFileChange: (e) => {
-                            k(e);
+                            y(e);
                           },
-                          mimeTypes: m.KL,
+                          mimeTypes: b.KL,
                         }),
-                  (0, v.jsx)(D.Z, {
-                    children: j.formatMessage(R.propagationWarning),
+                  (0, w.jsx)(F.Z, {
+                    children: x.formatMessage(K.propagationWarning),
                   }),
                 ],
               }),
@@ -445,16 +448,16 @@
           })
         );
       }
-      function z(e) {
+      function L(e) {
         let { onClick: t } = e;
-        return (0, v.jsx)("div", {
+        return (0, w.jsx)("div", {
           className:
             " flex h-6 w-6 cursor-pointer flex-row flex-wrap content-center justify-center rounded-full border-2 border-white bg-black text-white",
           onClick: t,
-          children: (0, v.jsx)(f.Ls, { className: "h-3 w-3" }),
+          children: (0, w.jsx)(p.Ls, { className: "h-3 w-3" }),
         });
       }
-      let R = (0, j.vU)({
+      let K = (0, y.vU)({
         modalTitle: {
           id: "workspaceAppearanceModal.title",
           defaultMessage: "Workspace appearance",
@@ -494,23 +497,19 @@
           defaultMessage: "Failed to save workspace appearance",
         },
       });
-      var T = a(68832),
-        L = a(22933),
-        K = a(42005),
-        G = a(24605),
-        X = a(26623),
+      var G = a(68832),
+        X = a(22933),
         q = a(24668),
         Q = a(78e3),
-        J = a(27282),
+        J = a(10518),
         $ = a(19841),
         H = a(12366),
         V = a(1454),
         Y = a(21389),
-        ee = a(48290),
-        et = a(7557),
-        ea = a(82734),
-        er = a(32163);
-      function es(e, t) {
+        ee = a(7557),
+        et = a(82734),
+        ea = a(32163);
+      function er(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -522,16 +521,16 @@
         }
         return a;
       }
-      function en(e) {
+      function es(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? es(Object(a), !0).forEach(function (t) {
+            ? er(Object(a), !0).forEach(function (t) {
                 (0, c.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : es(Object(a)).forEach(function (t) {
+              : er(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -541,55 +540,55 @@
         }
         return e;
       }
-      function ei(e) {
+      function en(e) {
         let { accountId: t, subscription: a } = e,
-          r = (0, b.Z)(),
-          s = (0, ea.wK)(t),
-          { 0: n, 1: i } = (0, x.useState)(!1),
-          o = (0, er.Gk)(t),
+          r = (0, h.Z)(),
+          s = (0, et.wK)(t),
+          { 0: n, 1: i } = (0, j.useState)(!1),
+          o = (0, ea.Gk)(t),
           l = async () => {
             i(!0);
             try {
               await s.mutateAsync(t);
             } catch (e) {
-              A.m.warning(r.formatMessage(eo.errorRenewingSubscription), {
+              C.m.warning(r.formatMessage(ei.errorRenewingSubscription), {
                 hasCloseButton: !0,
               });
             } finally {
               i(!1);
             }
           };
-        return (0, v.jsx)("div", {
+        return (0, w.jsx)("div", {
           className: "bg-token-main-surface-secondary",
-          children: (0, v.jsxs)("div", {
+          children: (0, w.jsxs)("div", {
             className:
               "mx-auto flex w-full max-w-5xl items-center justify-between px-2 py-4 md:px-6 lg:px-10 lg:py-6",
             children: [
-              (0, v.jsxs)("div", {
+              (0, w.jsxs)("div", {
                 className: "mx-2 flex-grow md:mx-4",
                 children: [
-                  (0, v.jsxs)("div", {
+                  (0, w.jsxs)("div", {
                     className: "flex items-center",
                     children: [
-                      (0, v.jsx)(ee.FE, {
+                      (0, w.jsx)(p.FE, {
                         className: "mr-4 hidden text-orange-500 md:block",
                       }),
-                      (0, v.jsx)("p", {
+                      (0, w.jsx)("p", {
                         className: "text-lg font-semibold",
-                        children: (0, v.jsx)(
-                          U.Z,
-                          en({}, eo.workspaceWillBeDeactivated)
+                        children: (0, w.jsx)(
+                          _.Z,
+                          es({}, ei.workspaceWillBeDeactivated)
                         ),
                       }),
                     ],
                   }),
                   null != a.active_until &&
-                    (0, v.jsx)("p", {
+                    (0, w.jsx)("p", {
                       className: "md:ml-8",
-                      children: (0, v.jsx)(
-                        U.Z,
-                        en(
-                          en({}, eo.retainAccessUntil),
+                      children: (0, w.jsx)(
+                        _.Z,
+                        es(
+                          es({}, ei.retainAccessUntil),
                           {},
                           { values: { expiryDate: new Date(a.active_until) } }
                         )
@@ -598,17 +597,17 @@
                 ],
               }),
               o &&
-                (0, v.jsx)(et.z, {
+                (0, w.jsx)(ee.z, {
                   color: "primary",
                   onClick: l,
                   loading: n,
-                  children: (0, v.jsx)(U.Z, en({}, eo.reactivateBtn)),
+                  children: (0, w.jsx)(_.Z, es({}, ei.reactivateBtn)),
                 }),
             ],
           }),
         });
       }
-      let eo = (0, j.vU)({
+      let ei = (0, y.vU)({
         retainAccessUntil: {
           id: "adminPage.retainAccessUntil",
           defaultMessage:
@@ -627,7 +626,7 @@
           defaultMessage: "There was an error reactivating your subscription.",
         },
       });
-      function el(e, t) {
+      function eo(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -639,16 +638,16 @@
         }
         return a;
       }
-      function ec(e) {
+      function el(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? el(Object(a), !0).forEach(function (t) {
+            ? eo(Object(a), !0).forEach(function (t) {
                 (0, c.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : el(Object(a)).forEach(function (t) {
+              : eo(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -658,31 +657,31 @@
         }
         return e;
       }
-      function ed(e) {
+      function ec(e) {
         let { route: t, icon: a, name: r, upsellEnterprise: s = !1 } = e,
           n = (0, H.useRouter)();
         return s
-          ? (0, v.jsx)(T.u, {
-              label: (0, v.jsx)(U.Z, ec({}, ev.availableForEnterprise)),
+          ? (0, w.jsx)(G.u, {
+              label: (0, w.jsx)(_.Z, el({}, ej.availableForEnterprise)),
               side: "right",
-              children: (0, v.jsxs)(L.ZB, {
+              children: (0, w.jsxs)(X.ZB, {
                 $as: "button",
                 className: (0, $.default)(
                   "w-full rounded text-left",
                   "hover:bg-token-sidebar-surface-secondary"
                 ),
                 children: [
-                  (0, v.jsx)(V.UIZ, {
+                  (0, w.jsx)(V.UIZ, {
                     className: "icon-sm shrink-0 text-token-text-secondary",
                   }),
-                  (0, v.jsx)("span", {
+                  (0, w.jsx)("span", {
                     className: "text-token-text-secondary",
-                    children: (0, v.jsx)(U.Z, ec({}, r)),
+                    children: (0, w.jsx)(_.Z, el({}, r)),
                   }),
                 ],
               }),
             })
-          : (0, v.jsxs)(L.ZB, {
+          : (0, w.jsxs)(X.ZB, {
               $as: "button",
               className: (0, $.default)(
                 "w-full rounded text-left hover:bg-token-sidebar-surface-secondary",
@@ -691,60 +690,60 @@
               onClick: (e) => {
                 n.push(t), e.stopPropagation();
               },
-              children: [a, (0, v.jsx)(U.Z, ec({}, r))],
+              children: [a, (0, w.jsx)(_.Z, el({}, r))],
             });
       }
-      function eu(e) {
+      function ed(e) {
         let { workspace: t, hasAdminPrivileges: a, hasOwnerPrivileges: r } = e,
           s = (0, H.useRouter)(),
-          n = (0, x.useCallback)(() => {
+          n = (0, j.useCallback)(() => {
             s.push("/");
           }, [s]),
           i = (0, Q.ec)(Q.F_.isEnterprisePlan),
           o = (0, J.sB)(J.tz.WorkspaceGroupsSettings).value;
-        return (0, v.jsxs)("nav", {
+        return (0, w.jsxs)("nav", {
           className: "p-2",
           children: [
-            (0, v.jsx)("div", {
+            (0, w.jsx)("div", {
               className: "mb-1 flex flex-row gap-2",
-              children: (0, v.jsxs)(X.MP, {
+              children: (0, w.jsxs)(x.MP, {
                 onClick: n,
                 children: [
-                  (0, v.jsx)(V.Ao2, { className: "icon-sm" }),
-                  (0, v.jsx)(U.Z, ec({}, ev.backToChat)),
+                  (0, w.jsx)(V.Ao2, { className: "icon-sm" }),
+                  (0, w.jsx)(_.Z, el({}, ej.backToChat)),
                 ],
               }),
             }),
-            (0, v.jsxs)("div", {
+            (0, w.jsxs)("div", {
               className: "flex flex-col gap-2 py-2",
               children: [
-                (0, v.jsxs)("div", {
+                (0, w.jsxs)("div", {
                   className: "flex flex-col gap-2 rounded px-2 py-2 ".concat(
                     r
                       ? "cursor-pointer hover:bg-token-main-surface-secondary"
                       : ""
                   ),
                   onClick: () => {
-                    r && F.vm.openModal(F.B.WorkspaceAppearance);
+                    r && U.vm.openModal(U.B.WorkspaceAppearance);
                   },
                   children: [
-                    (0, v.jsx)(u.B0, {
+                    (0, w.jsx)(u.B0, {
                       size: "large",
                       src: null == t ? void 0 : t.profilePictureUrl,
                     }),
-                    (0, v.jsxs)("div", {
+                    (0, w.jsxs)("div", {
                       className: "align-center flex flex-row",
                       children: [
-                        (0, v.jsx)("h2", {
+                        (0, w.jsx)("h2", {
                           className:
                             "flex-1 text-lg text-token-text-primary dark:text-white",
                           children: null == t ? void 0 : t.name,
                         }),
                         r
-                          ? (0, v.jsx)("div", {
+                          ? (0, w.jsx)("div", {
                               className:
                                 "my-auto h-4 flex-initial align-middle dark:text-white",
-                              children: (0, v.jsx)(f.Jo, {
+                              children: (0, w.jsx)(p.Jo, {
                                 className: "h:opacity-100 opacity-70",
                               }),
                             })
@@ -753,16 +752,16 @@
                     }),
                   ],
                 }),
-                (0, v.jsx)(ed, {
+                (0, w.jsx)(ec, {
                   route: "/admin",
-                  icon: (0, v.jsx)(f.yj, { className: "icon-sm" }),
-                  name: ev.membersPageTitle,
+                  icon: (0, w.jsx)(p.yj, { className: "icon-sm" }),
+                  name: ej.membersPageTitle,
                 }),
                 a &&
                   o &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/groups",
-                    icon: (0, v.jsx)(f.ww, { className: "icon-sm" }),
+                    icon: (0, w.jsx)(p.ww, { className: "icon-sm" }),
                     upsellEnterprise: !i,
                     name: {
                       id: "adminPage.groupsSidebarItem",
@@ -771,47 +770,47 @@
                     },
                   }),
                 r &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/billing",
-                    icon: (0, v.jsx)(f.L2, { className: "icon-sm" }),
-                    name: ev.billing,
+                    icon: (0, w.jsx)(p.L2, { className: "icon-sm" }),
+                    name: ej.billing,
                   }),
                 r &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/gpts",
-                    icon: (0, v.jsx)(f.fr, { className: "icon-sm" }),
-                    name: ev.gpts,
+                    icon: (0, w.jsx)(p.fr, { className: "icon-sm" }),
+                    name: ej.gpts,
                   }),
                 r &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/settings",
-                    icon: (0, v.jsx)(f.O4, { className: "icon-sm" }),
-                    name: ev.settings,
+                    icon: (0, w.jsx)(p.O4, { className: "icon-sm" }),
+                    name: ej.settings,
                   }),
                 !i &&
-                  (0, v.jsx)("span", {
+                  (0, w.jsx)("span", {
                     className: "mx-3 border-t border-y-token-border-medium",
                   }),
                 a &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/analytics",
-                    icon: (0, v.jsx)(f.Ie, { className: "icon-sm" }),
-                    name: ev.analytics,
+                    icon: (0, w.jsx)(p.Ie, { className: "icon-sm" }),
+                    name: ej.analytics,
                     upsellEnterprise: !i,
                   }),
                 r &&
-                  (0, v.jsx)(ed, {
+                  (0, w.jsx)(ec, {
                     route: "/admin/identity",
                     upsellEnterprise: !i,
-                    icon: (0, v.jsx)(f.Tg, { className: "icon-sm" }),
-                    name: ev.identity,
+                    icon: (0, w.jsx)(p.Tg, { className: "icon-sm" }),
+                    name: ej.identity,
                   }),
               ],
             }),
           ],
         });
       }
-      function ep(e) {
+      function eu(e) {
         var t;
         let {
             mobilePageTitle: a,
@@ -826,84 +825,84 @@
               ? (t = i.role) === d.r3.ADMIN || t === d.r3.OWNER
               : void 0,
           c = null != i ? i.role === d.r3.OWNER : void 0;
-        return ((0, x.useEffect)(() => {
+        return ((0, j.useEffect)(() => {
           r && !1 === l && o.push("/admin"), s && !1 === c && o.push("/admin");
         }, [r, l, o, s, c]),
         null == (0, q.t)())
           ? null
-          : (0, v.jsxs)(v.Fragment, {
+          : (0, w.jsxs)(w.Fragment, {
               children: [
-                (0, v.jsx)(G.Z, {
+                (0, w.jsx)(f.Z, {
                   mobileHeaderContent: a,
-                  sidebar: (0, v.jsx)(eu, {
+                  sidebar: (0, w.jsx)(ed, {
                     workspace: null != i ? i : void 0,
                     hasAdminPrivileges: l,
                     hasOwnerPrivileges: c,
                   }),
                   children: n,
                 }),
-                null == i ? null : (0, v.jsx)(_, { workspace: i }),
+                null == i ? null : (0, w.jsx)(T, { workspace: i }),
               ],
             });
       }
-      let em = Y.Z.div(
+      let ep = Y.Z.div(
           r ||
             (r = (0, l.Z)([
               "border-b border-token-main-surface-tertiary hidden md:block py-6 lg:py-10",
             ]))
         ),
-        ef = Y.Z.h2(
+        em = Y.Z.h2(
           s ||
             (s = (0, l.Z)(["mx-auto w-full max-w-4xl px-2 md:px-6 lg:px-10"]))
         ),
-        ex = (0, Y.Z)(ef)(
+        ef = (0, Y.Z)(em)(
           n ||
             (n = (0, l.Z)(["font-normal text-base text-token-text-secondary"]))
         );
-      function eg(e) {
+      function ex(e) {
         let { title: t, subtitle: a } = e,
-          { data: r } = (0, ea.ZP)(),
+          { data: r } = (0, et.ZP)(),
           s = (0, q.t)(),
           n = s && r && r.plan_type === d.D8.TEAM && !r.will_renew;
-        return (0, v.jsxs)(v.Fragment, {
+        return (0, w.jsxs)(w.Fragment, {
           children: [
-            n && (0, v.jsx)(ei, { accountId: s.id, subscription: r }),
-            (0, v.jsxs)(em, {
+            n && (0, w.jsx)(en, { accountId: s.id, subscription: r }),
+            (0, w.jsxs)(ep, {
               children: [
-                (0, v.jsx)(ef, { children: t }),
-                a && (0, v.jsx)(ex, { children: a }),
+                (0, w.jsx)(em, { children: t }),
+                a && (0, w.jsx)(ef, { children: a }),
               ],
             }),
           ],
         });
       }
       Y.Z.p(i || (i = (0, l.Z)(["text-sm text-token-text-tertiary"])));
-      let eb = Y.Z.div(
+      let eg = Y.Z.div(
         o || (o = (0, l.Z)(["max-w-4xl mx-auto w-full px-2 md:px-6 lg:px-10"]))
       );
-      function ej(e) {
+      function eb(e) {
         let { children: t, showSpinner: a } = e,
           r = (0, q.t)(),
           s = (0, Q.ec)((e) => e.currentWorkspace),
           n = !r || a;
-        return (0, v.jsxs)(eb, {
+        return (0, w.jsxs)(eg, {
           children: [
             n &&
-              (0, v.jsx)("div", {
+              (0, w.jsx)("div", {
                 className: "flex min-h-[80vh] items-center justify-center",
-                children: (0, v.jsx)(K.Z, {}),
+                children: (0, w.jsx)(m.Z, {}),
               }),
             !n &&
               !s &&
-              (0, v.jsx)("div", {
+              (0, w.jsx)("div", {
                 className: "flex min-h-[80vh] items-center justify-center",
-                children: (0, v.jsx)(U.Z, ec({}, ev.workspaceNotFound)),
+                children: (0, w.jsx)(_.Z, el({}, ej.workspaceNotFound)),
               }),
             !n && s && t,
           ],
         });
       }
-      let ev = (0, j.vU)({
+      let ej = (0, y.vU)({
         workspaceNotFound: {
           id: "adminPage.workspaceNotFound",
           defaultMessage: "Workspace not found",
@@ -946,9 +945,9 @@
         s = a(78e3),
         n = a(61236),
         i = a(25494),
-        o = a(81622),
-        l = a(70671),
-        c = a(94968),
+        o = a(92442),
+        l = a(9063),
+        c = a(68498),
         d = a(65455);
       function u() {
         var e;
@@ -1003,4 +1002,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9112-719cb76caa947b78.js.map
+//# sourceMappingURL=9112-30537590918ecbd2.js.map

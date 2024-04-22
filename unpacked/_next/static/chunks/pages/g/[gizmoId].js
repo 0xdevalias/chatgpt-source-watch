@@ -16,7 +16,7 @@
           },
         });
       var n = r(39827),
-        i = r(80084),
+        i = r(54717),
         s = r(41),
         o = r(81421),
         c = r(89691),
@@ -31,7 +31,7 @@
         m = r(70079),
         p = r(84692),
         x = r(35250);
-      function O(e, t) {
+      function b(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -43,16 +43,16 @@
         }
         return r;
       }
-      function b(e) {
+      function O(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? O(Object(r), !0).forEach(function (t) {
+            ? b(Object(r), !0).forEach(function (t) {
                 (0, n.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : O(Object(r)).forEach(function (t) {
+              : b(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -71,7 +71,7 @@
           case "chat_page":
             return (0, m.createElement)(
               P,
-              b(b({}, e), {}, { key: t, gizmoId: t })
+              O(O({}, e), {}, { key: t, gizmoId: t })
             );
           default:
             (0, h.Z)(e);
@@ -85,12 +85,12 @@
           null == t && null != r && j().push((0, d.M5)(d.LT.GIZMO_NOT_FOUND));
         }, [t, r]),
         null != r && s)
-          ? (0, x.jsx)(w, {})
+          ? (0, x.jsx)(z, {})
           : !1 === s
-            ? (0, x.jsx)(z, { gizmo: t })
-            : (0, m.createElement)(i.ZP, b(b({}, e), {}, { key: e.gizmoId }));
+            ? (0, x.jsx)(v, { gizmo: t })
+            : (0, m.createElement)(i.ZP, O(O({}, e), {}, { key: e.gizmoId }));
       }
-      function w() {
+      function z() {
         return (0, x.jsx)(l.Z, {
           children: (0, x.jsxs)("div", {
             className:
@@ -111,12 +111,11 @@
           }),
         });
       }
-      function z(e) {
+      function v(e) {
         let { gizmo: t } = e;
         return (0, x.jsx)(l.Z, {
           children: (0, x.jsx)(u.r, {
             gizmo: t,
-            isOwner: !1,
             children: (0, x.jsxs)("div", {
               className: "mt-7 flex flex-col gap-4",
               children: [
@@ -147,7 +146,7 @@
           return a;
         },
       });
-      var n = r(37229),
+      var n = r(7679),
         i = r(24605),
         s = r(95482),
         o = r(12366),
@@ -182,10 +181,10 @@
     },
   },
   function (e) {
-    e.O(0, [2888, 9774, 179], function () {
+    e.O(0, [4736, 2888, 9774, 179], function () {
       return e((e.s = 27088));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-fadd85cfaafb9732.js.map
+//# sourceMappingURL=[gizmoId]-9afd2f4b5aa23ebc.js.map

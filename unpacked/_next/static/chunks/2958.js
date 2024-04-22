@@ -1,0 +1,5402 @@
+"use strict";
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [2958],
+  {
+    12958: function (e, t, i) {
+      i.r(t),
+        i.d(t, {
+          __N_SSP: function () {
+            return ih;
+          },
+          default: function () {
+            return ig;
+          },
+        });
+      var a,
+        s,
+        r,
+        n,
+        l,
+        o,
+        d,
+        c,
+        u,
+        p,
+        m = i(89691),
+        h = i(39827),
+        g = i(25660),
+        f = i(88128),
+        x = i(73017),
+        v = i(33925),
+        j = i(16244),
+        y = i(49508),
+        b = i(5572),
+        w = i(10518),
+        k = i(91530),
+        N = i.n(k),
+        z = i(70079),
+        P = i(21389),
+        M = i(35250);
+      let Z = P.Z.a(o || (o = (0, x.Z)(["bold underline"]))),
+        _ = P.Z.textarea(
+          d ||
+            (d = (0, x.Z)([
+              "w-full text-sm overflow-y-auto rounded-lg border px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium bg-token-main-surface-primary h-32",
+            ]))
+        ),
+        T =
+          (((a = {})[(a.None = 0)] = "None"),
+          (a[(a.AppealAvailable = 1)] = "AppealAvailable"),
+          (a[(a.AppealSent = 2)] = "AppealSent"),
+          a),
+        C =
+          (((s = {})[(s.None = 0)] = "None"),
+          (s[(s.PublishBlocked = 1)] = "PublishBlocked"),
+          (s[(s.RemovedFromMarketplace = 2)] = "RemovedFromMarketplace"),
+          (s[(s.RemovedFromPublic = 3)] = "RemovedFromPublic"),
+          (s[(s.RemovedFromPrivate = 4)] = "RemovedFromPrivate"),
+          (s[(s.Recategorized = 5)] = "Recategorized"),
+          s),
+        O = {
+          [b.Zz.User]: b.Zz.Private,
+          [b.Zz.Group]: b.Zz.Private,
+          [b.Zz.WorkspaceLink]: b.Zz.Workspace,
+        };
+      var S =
+        (((r = S || {})[(r.Initial = 0)] = "Initial"),
+        (r[(r.AppealForm = 1)] = "AppealForm"),
+        (r[(r.SubmittedConfirmation = 2)] = "SubmittedConfirmation"),
+        r);
+      function I(e) {
+        let {
+            gizmoId: t,
+            sharingRecipient: i,
+            categories: a,
+            moderationType: s,
+            sharingTargets: r,
+            appealAvailable: n,
+            onClose: l,
+            onAppealSubmitted: o,
+          } = e,
+          { 0: d, 1: c } = (0, z.useState)(""),
+          { 0: u, 1: p } = (0, z.useState)(S.Initial),
+          m = async () => {
+            await y.U.postGizmoAppeal(t, d, i, a),
+              p(S.SubmittedConfirmation),
+              null == o || o();
+          };
+        switch (u) {
+          case S.Initial:
+            return (0, M.jsx)(j.Z, {
+              title: (function (e) {
+                switch (e) {
+                  case C.PublishBlocked:
+                    return "Your changes couldn’t be published";
+                  case C.RemovedFromMarketplace:
+                    return "Your GPT has been removed from the marketplace";
+                  case C.RemovedFromPublic:
+                    return "Your GPT has been removed from public view";
+                  case C.Recategorized:
+                    return "Your GPT has been recategorized";
+                }
+              })(s),
+              isOpen: !0,
+              onClose: l,
+              showCloseButton: !0,
+              primaryButton: (0, M.jsx)(v.ZP.Button, {
+                title: "Continue",
+                color: "primary",
+                onClick: l,
+              }),
+              secondaryButton: n
+                ? (0, M.jsx)(v.ZP.Button, {
+                    title: "Appeal",
+                    onClick: () => p(S.AppealForm),
+                  })
+                : void 0,
+              type: "warning",
+              children: (0, M.jsx)("div", {
+                className: "flex flex-col gap-2 text-sm",
+                children: (function (e, t, i) {
+                  var a;
+                  let s = null == t ? void 0 : t.find((t) => t.recipient === e),
+                    r = null == s ? void 0 : s.moderated_fields,
+                    n =
+                      null !== (a = null == r ? void 0 : r.length) &&
+                      void 0 !== a
+                        ? a
+                        : 0;
+                  return (0, M.jsxs)(M.Fragment, {
+                    children: [
+                      (0, M.jsxs)("p", {
+                        children: [
+                          (function (e) {
+                            switch (e) {
+                              case b.Zz.Private:
+                              case b.Zz.Workspace:
+                                return (0, M.jsxs)(M.Fragment, {
+                                  children: [
+                                    "Your GPT can’t be updated because it violates our",
+                                    " ",
+                                    (0, M.jsx)(Z, {
+                                      target: "_blank",
+                                      href: "https://openai.com/policies/usage-policies",
+                                      rel: "noreferrer",
+                                      children: "Usage Policies",
+                                    }),
+                                    ".",
+                                  ],
+                                });
+                              case b.Zz.Link:
+                                return (0, M.jsxs)(M.Fragment, {
+                                  children: [
+                                    "Your GPT can’t be shared publicly because it violates our",
+                                    " ",
+                                    (0, M.jsx)(Z, {
+                                      target: "_blank",
+                                      href: "https://openai.com/policies/usage-policies",
+                                      rel: "noreferrer",
+                                      children: "Usage Policies",
+                                    }),
+                                    ".",
+                                  ],
+                                });
+                              case b.Zz.Marketplace:
+                                return (0, M.jsxs)(M.Fragment, {
+                                  children: [
+                                    "Your GPT can’t appear in the Explore GPTs page because it violates our",
+                                    " ",
+                                    (0, M.jsx)(Z, {
+                                      target: "_blank",
+                                      href: "https://openai.com/policies/usage-policies",
+                                      rel: "noreferrer",
+                                      children: "Usage Policies",
+                                    }),
+                                    ".",
+                                  ],
+                                });
+                            }
+                          })(e),
+                          " ",
+                          n > 1
+                            ? "See below for the specific issues:"
+                            : 1 == n
+                              ? "See below for the specific issue:"
+                              : "",
+                        ],
+                      }),
+                      n > 0 &&
+                        (null == r
+                          ? void 0
+                          : r.map((e) =>
+                              (0, M.jsxs)(M.Fragment, {
+                                children: [
+                                  (0, M.jsx)("p", {
+                                    className: "font-bold",
+                                    children: (function (e) {
+                                      switch (e) {
+                                        case "profile_picture":
+                                          return "Profile Picture";
+                                        case "gizmo_name":
+                                          return "Name";
+                                        case "gizmo_description":
+                                          return "Description";
+                                        case "gizmo_instructions":
+                                          return "Instructions";
+                                        case "gizmo_welcome_message":
+                                          return "Welcome Message";
+                                        case "custom_actions":
+                                          return "Custom Actions";
+                                        case "conversation_starter":
+                                          return "Conversation Starter";
+                                        case "file":
+                                          return "File";
+                                        default:
+                                          return;
+                                      }
+                                    })(e.name),
+                                  }),
+                                  (0, M.jsx)("ul", {
+                                    className: "list-disc pl-5",
+                                    children: e.reasons.map((e) =>
+                                      (0, M.jsxs)(
+                                        "li",
+                                        {
+                                          children: [
+                                            e.description,
+                                            " ",
+                                            e.link
+                                              ? (0, M.jsx)(Z, {
+                                                  href: e.link,
+                                                  target: "_blank",
+                                                  rel: "noreferrer",
+                                                  children: "Learn more",
+                                                })
+                                              : "",
+                                          ],
+                                        },
+                                        e.description
+                                      )
+                                    ),
+                                  }),
+                                ],
+                              })
+                            )),
+                      i &&
+                        (0, M.jsx)("p", {
+                          children:
+                            "Alternatively you may appeal this decision and we will get back to you as soon as possible. Or you can publish to “Only me” and use this GPT privately.",
+                        }),
+                    ],
+                  });
+                })(i, r, n),
+              }),
+            });
+          case S.AppealForm:
+            return (0, M.jsx)(j.Z, {
+              title: "Appeal",
+              isOpen: !0,
+              onClose: l,
+              showCloseButton: !0,
+              shouldIgnoreClickOutside: !0,
+              primaryButton: (0, M.jsx)(v.ZP.Button, {
+                title: "Submit",
+                color: "primary",
+                onClick: m,
+                disabled: 0 === d.trim().length,
+              }),
+              secondaryButton: (0, M.jsx)(v.ZP.Button, {
+                title: "Back",
+                onClick: () => p(S.Initial),
+              }),
+              type: "warning",
+              children: (0, M.jsxs)("div", {
+                className: "flex flex-col gap-2 text-sm",
+                children: [
+                  (0, M.jsx)("p", {
+                    children:
+                      "Please provide a reason for why you believe this GPT doesn’t violate our policies and should be published",
+                  }),
+                  (0, M.jsx)(_, {
+                    value: d,
+                    onChange: (e) => c(e.target.value),
+                  }),
+                ],
+              }),
+            });
+          case S.SubmittedConfirmation:
+            return (0, M.jsx)(M.Fragment, {});
+        }
+      }
+      function A(e) {
+        let { onClose: t } = e;
+        return (0, M.jsx)(j.Z, {
+          title: "Appeal submitted",
+          isOpen: !0,
+          onClose: t,
+          showCloseButton: !0,
+          primaryButton: (0, M.jsx)(v.ZP.Button, {
+            title: "Close",
+            color: "primary",
+            onClick: t,
+          }),
+          type: "success",
+          children: (0, M.jsx)("div", {
+            className: "flex flex-col gap-2 text-sm",
+            children: (0, M.jsx)("div", {
+              children:
+                "Your appeal has been submitted. We will get back to you as soon as possible.",
+            }),
+          }),
+        });
+      }
+      function G(e) {
+        let { gizmoId: t, onClose: i } = e,
+          { data: a } = (0, m.b9)(t, !0),
+          s = async () => {
+            await y.U.postGizmoCancelAppeal(t);
+          };
+        return (0, M.jsx)(j.Z, {
+          isOpen: !0,
+          onClose: N(),
+          primaryButton: (0, M.jsx)(v.ZP.Button, {
+            title: "Cancel appeal",
+            color: "primary",
+            onClick: () => {
+              s(), null == i || i();
+            },
+          }),
+          type: "warning",
+          children: (0, M.jsxs)("div", {
+            className: "flex flex-col gap-2 text-sm",
+            children: [
+              (0, M.jsx)("h2", {
+                className: "text-lg font-semibold",
+                children: "Reviewing your appeal",
+              }),
+              (0, M.jsxs)("p", {
+                children: [
+                  "During the review you can continue using “",
+                  null == a ? void 0 : a.gizmo.display.name,
+                  "” as your private GPT, but won’t be able to update it or share it with others.",
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function E(e) {
+        let { appealState: t, onAppealClose: i, onAppealSubmitted: a } = e,
+          { value: s } = (0, w.sB)(w.tz.GizmoAppeals),
+          { 0: r, 1: n } = (0, z.useState)(!1);
+        return r
+          ? (0, M.jsx)(A, {
+              onClose: () => {
+                n(!1), null == a || a();
+              },
+            })
+          : (0, M.jsxs)(M.Fragment, {
+              children: [
+                (null == t ? void 0 : t.showModal) == T.AppealSent &&
+                  (0, M.jsx)(G, { gizmoId: t.gizmoId, onClose: i }),
+                (null == t ? void 0 : t.showModal) == T.AppealAvailable &&
+                  (0, M.jsx)(I, {
+                    gizmoId: t.gizmoId,
+                    sharingRecipient: t.sharingRecipient,
+                    categories: t.categories,
+                    moderationType: t.moderationType,
+                    sharingTargets: t.sharingTargets,
+                    appealAvailable: s,
+                    onClose: () => (null == i ? void 0 : i()),
+                    onAppealSubmitted: () => n(!0),
+                  }),
+              ],
+            });
+      }
+      var L = i(42005),
+        U = i(65455),
+        R = i(24668),
+        D = i(9417),
+        B = i(99784),
+        V = i(78e3),
+        q = i(30640),
+        F = i(84126),
+        W = i(39496),
+        Y = i(51533),
+        J = i(28354),
+        K = i(53197),
+        H = i(39352),
+        Q = i(92442),
+        X = i(19841),
+        $ = i(61888),
+        ee = i(12366),
+        et = i.n(ee),
+        ei = i(9063),
+        ea = i(99424),
+        es = i(22433),
+        er = i(7557),
+        en = i(8402),
+        el = i(84692),
+        eo = i(68498),
+        ed = i(1703),
+        ec = i(36607),
+        eu = i(66218);
+      function ep(e) {
+        let { onSelectExample: t } = e,
+          i = (0, ei.Z)(),
+          a = (0, z.useRef)(null);
+        return (0, M.jsxs)("select", {
+          onChange: (e) => {
+            "label" !== e.target.value &&
+              (t(eh[parseInt(e.target.value)].spec),
+              (a.current.value = "label"));
+          },
+          className:
+            "h-8 rounded-lg border border-token-border-medium bg-transparent px-2 py-0 text-sm",
+          ref: a,
+          children: [
+            (0, M.jsx)("option", {
+              value: "label",
+              children: i.formatMessage(em.examples),
+            }),
+            eh.map((e, t) =>
+              (0, M.jsx)(
+                "option",
+                { value: t, children: i.formatMessage(e.displayName) },
+                t
+              )
+            ),
+          ],
+        });
+      }
+      let em = (0, eo.vU)({
+          examples: {
+            id: "gizmo.actions.examples",
+            defaultMessage: "Examples",
+          },
+          weatherExampleTitle: {
+            id: "gizmo.actions.weatherExampleTitle",
+            defaultMessage: "Weather (JSON)",
+          },
+          petStoreExampleTitle: {
+            id: "gizmo.actions.petStoreExampleTitle",
+            defaultMessage: "Pet Store (YAML)",
+          },
+          blankExampleTitle: {
+            id: "gizmo.actions.blankExampleTitle",
+            defaultMessage: "Blank Template",
+          },
+        }),
+        eh = [
+          {
+            displayName: em.weatherExampleTitle,
+            spec: JSON.stringify(
+              {
+                openapi: "3.1.0",
+                info: {
+                  title: "Get weather data",
+                  description: "Retrieves current weather data for a location.",
+                  version: "v1.0.0",
+                },
+                servers: [{ url: "https://weather.example.com" }],
+                paths: {
+                  "/location": {
+                    get: {
+                      description: "Get temperature for a specific location",
+                      operationId: "GetCurrentWeather",
+                      parameters: [
+                        {
+                          name: "location",
+                          in: "query",
+                          description:
+                            "The city and state to retrieve the weather for",
+                          required: !0,
+                          schema: { type: "string" },
+                        },
+                      ],
+                      deprecated: !1,
+                    },
+                  },
+                },
+                components: { schemas: {} },
+              },
+              null,
+              2
+            ),
+          },
+          {
+            displayName: em.petStoreExampleTitle,
+            spec: '# Taken from https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml\n\nopenapi: "3.0.0"\ninfo:\n  version: 1.0.0\n  title: Swagger Petstore\n  license:\n    name: MIT\nservers:\n  - url: https://petstore.swagger.io/v1\npaths:\n  /pets:\n    get:\n      summary: List all pets\n      operationId: listPets\n      tags:\n        - pets\n      parameters:\n        - name: limit\n          in: query\n          description: How many items to return at one time (max 100)\n          required: false\n          schema:\n            type: integer\n            maximum: 100\n            format: int32\n      responses:\n        \'200\':\n          description: A paged array of pets\n          headers:\n            x-next:\n              description: A link to the next page of responses\n              schema:\n                type: string\n          content:\n            application/json:    \n              schema:\n                $ref: "#/components/schemas/Pets"\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\n    post:\n      summary: Create a pet\n      operationId: createPets\n      tags:\n        - pets\n      responses:\n        \'201\':\n          description: Null response\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\n  /pets/{petId}:\n    get:\n      summary: Info for a specific pet\n      operationId: showPetById\n      tags:\n        - pets\n      parameters:\n        - name: petId\n          in: path\n          required: true\n          description: The id of the pet to retrieve\n          schema:\n            type: string\n      responses:\n        \'200\':\n          description: Expected response to a valid request\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Pet"\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\ncomponents:\n  schemas:\n    Pet:\n      type: object\n      required:\n        - id\n        - name\n      properties:\n        id:\n          type: integer\n          format: int64\n        name:\n          type: string\n        tag:\n          type: string\n    Pets:\n      type: array\n      maxItems: 100\n      items:\n        $ref: "#/components/schemas/Pet"\n    Error:\n      type: object\n      required:\n        - code\n        - message\n      properties:\n        code:\n          type: integer\n          format: int32\n        message:\n          type: string',
+          },
+          {
+            displayName: em.blankExampleTitle,
+            spec: JSON.stringify(
+              {
+                openapi: "3.1.0",
+                info: {
+                  title: "Untitled",
+                  description: "Your OpenAPI specification",
+                  version: "v1.0.0",
+                },
+                servers: [{ url: "" }],
+                paths: {},
+                components: { schemas: {} },
+              },
+              null,
+              2
+            ),
+          },
+        ];
+      var eg = i(25991),
+        ef = i(88980),
+        ex = i(23340);
+      function ev(e) {
+        let { clientThreadId: t } = e,
+          i = (0, B.oq)(t),
+          a = (0, ex.Bv)(t),
+          s = (0, B.U0)(t, i),
+          r = [...Array(s).keys()].map((e) =>
+            (0, M.jsx)(
+              ef.Z,
+              {
+                isFinalTurn: e === s - 1,
+                turnIndex: e,
+                clientThreadId: t,
+                conversationLeafId: i,
+                onChangeItemInView: $.noop,
+                onChangeRating: $.noop,
+                onRequestMoreCompletions: $.noop,
+                onRequestCompletion: $.noop,
+                currentModelId: null != a ? a : "",
+              },
+              e
+            )
+          );
+        return (0, M.jsx)(M.Fragment, { children: r });
+      }
+      function ej(e) {
+        let { clientThreadIds: t } = e;
+        return (0, M.jsx)(M.Fragment, {
+          children: t.map((e) => (0, M.jsx)(ev, { clientThreadId: e }, e)),
+        });
+      }
+      var ey = i(36932),
+        eb = i(50484),
+        ew = i(61161),
+        ek = i(78623),
+        eN = i(18405),
+        ez = i(4579),
+        eP = i(8869),
+        eM = i(45534),
+        eZ = i(58849),
+        e_ = i(91225),
+        eT = i(83737),
+        eC = i(1454),
+        eO = i(8844),
+        eS = i(3243),
+        eI = i(37345),
+        eA = i(22824);
+      function eG() {
+        return (0, M.jsxs)("div", {
+          className: "flex items-center",
+          children: [
+            (0, M.jsx)("div", {
+              className: "border-token-border-secondary flex-grow border-b",
+            }),
+            (0, M.jsxs)("div", {
+              className:
+                "flex flex-shrink-0 items-center gap-2 px-2 py-6 text-sm text-token-text-tertiary",
+              children: [(0, M.jsx)(eC.V7f, {}), "GPT updated"],
+            }),
+            (0, M.jsx)("div", {
+              className: "border-token-border-secondary flex-grow border-b",
+            }),
+          ],
+        });
+      }
+      let eE = (((n = {}).TestGizmoAction = "test_gizmo_action"), n),
+        eL = new eP.V(),
+        eU = z.memo(function (e) {
+          var t;
+          let { gizmoEditorData: i, isSavingDraft: a, showTitle: s = !0 } = e,
+            { 0: r, 1: n } = (0, z.useState)(() => (0, B.OX)()),
+            { 0: l, 1: o } = (0, z.useState)([]);
+          (0, z.useEffect)(() => {
+            o((e) => (e[e.length - 1] === r ? e : [...e, r]));
+          }, [r]);
+          let d = l.slice(0, -1);
+          (0, B.ax)(r, { kind: es.OL.GizmoTest, gizmo_id: i.id }),
+            (0, z.useEffect)(() => {
+              B.tQ.updateConversationMode(r, {
+                kind: es.OL.GizmoTest,
+                gizmo_id: i.id,
+              });
+            }, [r, i.id]);
+          let c = (0, B.UL)(r),
+            u =
+              null === (t = i.files) || void 0 === t
+                ? void 0
+                : t.map((e) => e.file_id).join();
+          (0, z.useEffect)(() => {
+            null != B.tQ.getServerThreadId(r) && n((0, B.OX)());
+          }, [i.id, i.instructions, i.tools, u, r]),
+            (0, z.useEffect)(() => {
+              (0, B.Zz)(r) &&
+                B.iN.hasThread(r) &&
+                c.lastModelUsed !== ex.mx &&
+                B.tQ.updateInitialThreadDataForNewThread(r, ex.mx, []);
+            }, [r, c, i]);
+          let p = (0, eN.tN)((e) => e.activeSidebar),
+            m = (0, z.useMemo)(
+              () => ({ gizmoEditorData: i, mode: "test" }),
+              [i]
+            ),
+            { 0: h, 1: g } = (0, z.useState)(0),
+            f = () => {
+              g((e) => e - 360);
+            },
+            x = i.id,
+            v = (function (e) {
+              let t = (0, eS.Z)(e, void 0, $.noop, []);
+              return (0, z.useCallback)(
+                async (i, a, s) => {
+                  let r = B.tQ.getThreadCurrentLeafId(e),
+                    n = (0, eO.Z)();
+                  B.tQ.updateTree(e, (e) => {
+                    e.addNodeToEnd(r, {
+                      id: n,
+                      children: [],
+                      parentId: r,
+                      message: {
+                        id: n,
+                        author: { role: es.uU.User },
+                        content: {
+                          content_type: es.PX.Text,
+                          parts: [
+                            "Call the "
+                              .concat(a, " API with the ")
+                              .concat(s, " operation"),
+                          ],
+                        },
+                        recipient: "all",
+                        metadata: {
+                          jit_plugin_data: {
+                            from_client: {
+                              type: "test",
+                              operation: s,
+                              tool_name: (0, ew.VN)(a),
+                            },
+                          },
+                        },
+                      },
+                    });
+                  });
+                  let l = {
+                      conversationMode: { kind: es.OL.GizmoTest, gizmo_id: i },
+                    },
+                    o = await (0, eZ.rS)(es.OL.GizmoTest),
+                    d = await eM.ZP.getEnforcementToken(o),
+                    c = await e_.Z.getEnforcementToken(o);
+                  t({
+                    model: ex.mx,
+                    completionType: es.Os.Next,
+                    parentNodeId: n,
+                    metadata: {},
+                    focusOnNewCompletion: !0,
+                    arkoseToken: d,
+                    turnstileToken: c,
+                    preflightTime: 0,
+                    completionMetadata: l,
+                  });
+                },
+                [e, t]
+              );
+            })(r);
+          return (
+            (0, z.useEffect)(
+              () =>
+                (0, ez.LW)(eL, {
+                  test_gizmo_action: (e) => {
+                    let { rootDomain: t, operationName: i } = e;
+                    x && v(x, t, i);
+                  },
+                }),
+              [v, x]
+            ),
+            (0, M.jsx)(eI.D.Provider, {
+              value: m,
+              children: (0, M.jsxs)("div", {
+                className: (0, X.default)(
+                  "flex h-full w-full",
+                  a && "cursor-wait opacity-80 transition"
+                ),
+                children: [
+                  (0, M.jsxs)("div", {
+                    className: "flex grow flex-col",
+                    children: [
+                      (0, M.jsx)("div", {
+                        className: "relative mb-2 flex-shrink-0",
+                        children: (0, M.jsx)("div", {
+                          className: "flex justify-center py-1",
+                          children:
+                            s &&
+                            (0, M.jsxs)("div", {
+                              className:
+                                "group flex items-center gap-2 text-lg font-medium",
+                              children: [
+                                (0, M.jsx)("div", { className: "icon-md" }),
+                                (0, M.jsxs)("button", {
+                                  onClick: () => {
+                                    f(), o([]), n((0, B.OX)());
+                                  },
+                                  className: "flex items-center gap-2",
+                                  children: [
+                                    "Preview",
+                                    (0, M.jsx)(eT.E.div, {
+                                      className: "text-token-text-primary",
+                                      animate: { rotate: h },
+                                      transition: { duration: 0.3 },
+                                      children: (0, M.jsx)(en.u8, {
+                                        className:
+                                          "icon-md invisible group-hover:visible",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                        }),
+                      }),
+                      (0, M.jsx)("div", {
+                        className: (0, X.default)(
+                          "relative grow overflow-auto px-2",
+                          a && "pointer-events-none"
+                        ),
+                        children: (0, M.jsx)(ey.Z, {
+                          clientThreadId: r,
+                          hideHeader: !0,
+                          renderEmptyState: (0, M.jsxs)("div", {
+                            className: "relative h-full w-full",
+                            children: [
+                              null != d &&
+                                d.length > 0 &&
+                                (0, M.jsx)("div", {
+                                  className: "h-full w-full opacity-20",
+                                  children: (0, M.jsxs)(eb.I, {
+                                    children: [
+                                      (0, M.jsx)(ej, { clientThreadIds: d }),
+                                      (0, M.jsx)(eG, {}),
+                                    ],
+                                  }),
+                                }),
+                              (0, M.jsx)("div", {
+                                className:
+                                  "absolute left-0 top-0 h-full w-full",
+                                children: (0, M.jsx)(eA.r, {
+                                  gizmo: i,
+                                  hideOwner: !0,
+                                }),
+                              }),
+                            ],
+                          }),
+                          prependThreadChildren:
+                            d.length > 0 &&
+                            (0, M.jsxs)(M.Fragment, {
+                              children: [
+                                (0, M.jsx)("div", {
+                                  className: "opacity-50",
+                                  children: (0, M.jsx)(ej, {
+                                    clientThreadIds: d,
+                                  }),
+                                }),
+                                (0, M.jsx)(eG, {}),
+                              ],
+                            }),
+                        }),
+                      }),
+                    ],
+                  }),
+                  "debug" === p &&
+                    (0, M.jsx)(ek.fv, {
+                      clientThreadId: r,
+                      slideOver: !1,
+                      onClose: () => eN.vm.toggleActiveSidebar("debug"),
+                      isOpen: !0,
+                    }),
+                ],
+              }),
+            })
+          );
+        });
+      var eR = i(28373);
+      function eD(e) {
+        let { content: t, button: i, onClick: a } = e;
+        return (0, M.jsxs)("div", {
+          className:
+            "flex rounded-lg border border-token-border-medium text-sm hover:cursor-pointer",
+          onClick: a,
+          children: [
+            (0, M.jsx)("div", { className: "h-9 grow px-3 py-2", children: t }),
+            (0, M.jsx)("div", { className: "w-px bg-token-border-medium" }),
+            i,
+          ],
+        });
+      }
+      let eB = ["oauth_client_id", "oauth_client_secret"],
+        eV = ["api_key"];
+      function eq(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function eF(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? eq(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : eq(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      let eW = "".concat(
+        "https://chat.openai.com",
+        "/g/g-TYEliDU6A-actionsgpt"
+      );
+      function eY(e) {
+        let { children: t } = e;
+        return (0, M.jsx)("label", {
+          className: "mb-1 block text-sm font-medium",
+          children: t,
+        });
+      }
+      function eJ(e) {
+        var t, i, a, s, r, n, l, o, d, c, u, p, m, h;
+        let { jitPluginTool: g, onUpdateTool: f, onClose: x } = e,
+          v = (0, ei.Z)(),
+          { 0: y, 1: b } = (0, z.useState)({
+            apiKeyValue: "",
+            oauthClientIdValue: "",
+            oauthClientSecretValue: "",
+            oauthAuthUrlValue:
+              null !==
+                (t =
+                  null == g ||
+                  null === (i = g.metadata) ||
+                  void 0 === i ||
+                  null === (i = i.auth) ||
+                  void 0 === i
+                    ? void 0
+                    : i.client_url) && void 0 !== t
+                ? t
+                : "",
+            oauthTokenUrlValue:
+              null !==
+                (a =
+                  null == g ||
+                  null === (s = g.metadata) ||
+                  void 0 === s ||
+                  null === (s = s.auth) ||
+                  void 0 === s
+                    ? void 0
+                    : s.authorization_url) && void 0 !== a
+                ? a
+                : "",
+            oauthScopeValue:
+              null !==
+                (r =
+                  null == g ||
+                  null === (n = g.metadata) ||
+                  void 0 === n ||
+                  null === (n = n.auth) ||
+                  void 0 === n
+                    ? void 0
+                    : n.scope) && void 0 !== r
+                ? r
+                : "",
+            authTypeValue:
+              null !==
+                (l =
+                  null == g ||
+                  null === (o = g.metadata) ||
+                  void 0 === o ||
+                  null === (o = o.auth) ||
+                  void 0 === o
+                    ? void 0
+                    : o.type) && void 0 !== l
+                ? l
+                : es.Jv.None,
+            httpAuthTypeValue:
+              null !==
+                (d =
+                  null == g ||
+                  null === (c = g.metadata) ||
+                  void 0 === c ||
+                  null === (c = c.auth) ||
+                  void 0 === c
+                    ? void 0
+                    : c.authorization_type) && void 0 !== d
+                ? d
+                : "basic",
+            customHeaderValue:
+              null !==
+                (u =
+                  null == g ||
+                  null === (p = g.metadata) ||
+                  void 0 === p ||
+                  null === (p = p.auth) ||
+                  void 0 === p
+                    ? void 0
+                    : p.custom_auth_header) && void 0 !== u
+                ? u
+                : "",
+            tokenExchangeMethodValue:
+              null !==
+                (m =
+                  null == g ||
+                  null === (h = g.metadata) ||
+                  void 0 === h ||
+                  null === (h = h.auth) ||
+                  void 0 === h
+                    ? void 0
+                    : h.token_exchange_method) && void 0 !== m
+                ? m
+                : "default_post",
+          });
+        function w(e) {
+          b((t) => eF(eF({}, t), e));
+        }
+        return (0, M.jsxs)(j.Z, {
+          type: "success",
+          isOpen: !0,
+          title: v.formatMessage({
+            id: "kZ040s",
+            defaultMessage: "Authentication",
+          }),
+          primaryButton: (0, M.jsx)(er.z, {
+            color: "dark",
+            onClick: () => {
+              f(
+                y.authTypeValue === es.Jv.None
+                  ? { type: es.Jv.None }
+                  : y.authTypeValue === es.Jv.OAuth
+                    ? {
+                        type: es.Jv.OAuth,
+                        client_url: y.oauthAuthUrlValue,
+                        authorization_url: y.oauthTokenUrlValue,
+                        authorization_content_type:
+                          "application/x-www-form-urlencoded",
+                        scope: y.oauthScopeValue,
+                        token_exchange_method: y.tokenExchangeMethodValue,
+                        oauth_client_id: y.oauthClientIdValue,
+                        oauth_client_secret: y.oauthClientSecretValue,
+                      }
+                    : {
+                        type: es.Jv.ServiceHTTP,
+                        authorization_type: y.httpAuthTypeValue,
+                        custom_auth_header: y.customHeaderValue,
+                        api_key: y.apiKeyValue,
+                      }
+              ),
+                x();
+            },
+            children: (0, M.jsx)(el.Z, {
+              id: "dchvRM",
+              defaultMessage: "Save",
+            }),
+          }),
+          secondaryButton: (0, M.jsx)(er.z, {
+            color: "neutral",
+            onClick: x,
+            children: (0, M.jsx)(el.Z, {
+              id: "xHBR5t",
+              defaultMessage: "Cancel",
+            }),
+          }),
+          onClose: x,
+          children: [
+            (0, M.jsxs)("div", {
+              className: "mb-4",
+              children: [
+                (0, M.jsx)(el.Z, {
+                  id: "la7zPT",
+                  defaultMessage: "Authentication Type",
+                }),
+                (0, M.jsxs)(eu.Z.Root, {
+                  onValueChange: (e) => {
+                    w({ authTypeValue: e });
+                  },
+                  value: y.authTypeValue,
+                  className: "flex gap-4",
+                  children: [
+                    (0, M.jsx)(eR.Xb, {
+                      label: v.formatMessage({
+                        id: "Ml5rNZ",
+                        defaultMessage: "None",
+                      }),
+                      value: es.Jv.None,
+                    }),
+                    (0, M.jsx)(eR.Xb, {
+                      label: v.formatMessage({
+                        id: "rN0uCi",
+                        defaultMessage: "API Key",
+                      }),
+                      value: es.Jv.ServiceHTTP,
+                    }),
+                    (0, M.jsx)(eR.Xb, {
+                      label: v.formatMessage({
+                        id: "qG7Z4O",
+                        defaultMessage: "OAuth",
+                      }),
+                      value: es.Jv.OAuth,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            "service_http" === y.authTypeValue
+              ? (0, M.jsxs)(M.Fragment, {
+                  children: [
+                    (0, M.jsx)(eY, {
+                      children: (0, M.jsx)(el.Z, {
+                        id: "hSd+5k",
+                        defaultMessage: "API Key",
+                      }),
+                    }),
+                    (0, M.jsx)(eg.yt, {
+                      placeholder: v.formatMessage({
+                        id: "9W9lGr",
+                        defaultMessage: "[HIDDEN]",
+                      }),
+                      type: "password",
+                      value: y.apiKeyValue,
+                      onChange: (e) => {
+                        w({ apiKeyValue: e.target.value });
+                      },
+                      className: "mb-2",
+                    }),
+                    (0, M.jsx)(eY, {
+                      children: (0, M.jsx)(el.Z, {
+                        id: "PSnRGf",
+                        defaultMessage: "Auth Type",
+                      }),
+                    }),
+                    (0, M.jsxs)(eu.Z.Root, {
+                      className: "mb-2 flex gap-6 overflow-hidden rounded-lg",
+                      value: y.httpAuthTypeValue,
+                      required: !0,
+                      onValueChange: (e) => {
+                        w({ httpAuthTypeValue: e });
+                      },
+                      children: [
+                        (0, M.jsx)(eR.Xb, { value: "basic", label: "Basic" }),
+                        (0, M.jsx)(eR.Xb, { value: "bearer", label: "Bearer" }),
+                        (0, M.jsx)(eR.Xb, {
+                          value: "custom",
+                          label: v.formatMessage({
+                            id: "6kqx38",
+                            defaultMessage: "Custom",
+                          }),
+                        }),
+                      ],
+                    }),
+                    "custom" === y.httpAuthTypeValue &&
+                      (0, M.jsxs)("div", {
+                        className: "mt-2",
+                        children: [
+                          (0, M.jsx)(eY, {
+                            children: (0, M.jsx)(el.Z, {
+                              id: "XqdT/P",
+                              defaultMessage: "Custom Header Name",
+                            }),
+                          }),
+                          (0, M.jsx)(eg.yt, {
+                            value: y.customHeaderValue,
+                            onChange: (e) => {
+                              w({ customHeaderValue: e.target.value });
+                            },
+                            className: "mb-2",
+                            placeholder: "X-Api-Key",
+                          }),
+                        ],
+                      }),
+                  ],
+                })
+              : "oauth" === y.authTypeValue
+                ? (0, M.jsxs)(M.Fragment, {
+                    children: [
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "lS4nvz",
+                          defaultMessage: "Client ID",
+                        }),
+                      }),
+                      (0, M.jsx)(eg.yt, {
+                        placeholder: "<HIDDEN>",
+                        type: "password",
+                        value: y.oauthClientIdValue,
+                        onChange: (e) => {
+                          w({ oauthClientIdValue: e.target.value });
+                        },
+                        className: "mb-2",
+                      }),
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "OvwGR3",
+                          defaultMessage: "Client Secret",
+                        }),
+                      }),
+                      (0, M.jsx)(eg.yt, {
+                        placeholder: "<HIDDEN>",
+                        type: "password",
+                        value: y.oauthClientSecretValue,
+                        onChange: (e) => {
+                          w({ oauthClientSecretValue: e.target.value });
+                        },
+                        className: "mb-2",
+                      }),
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "I27qZU",
+                          defaultMessage: "Authorization URL",
+                        }),
+                      }),
+                      (0, M.jsx)(eg.yt, {
+                        value: y.oauthAuthUrlValue,
+                        onChange: (e) => {
+                          w({ oauthAuthUrlValue: e.target.value });
+                        },
+                        className: "mb-2",
+                      }),
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "QywIpF",
+                          defaultMessage: "Token URL",
+                        }),
+                      }),
+                      (0, M.jsx)(eg.yt, {
+                        value: y.oauthTokenUrlValue,
+                        onChange: (e) => {
+                          w({ oauthTokenUrlValue: e.target.value });
+                        },
+                        className: "mb-2",
+                      }),
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "1VAJqN",
+                          defaultMessage: "Scope",
+                        }),
+                      }),
+                      (0, M.jsx)(eg.yt, {
+                        value: y.oauthScopeValue,
+                        onChange: (e) => {
+                          w({ oauthScopeValue: e.target.value });
+                        },
+                        className: "mb-2",
+                      }),
+                      (0, M.jsx)(eY, {
+                        children: (0, M.jsx)(el.Z, {
+                          id: "9MvwPc",
+                          defaultMessage: "Token Exchange Method",
+                        }),
+                      }),
+                      (0, M.jsxs)(eu.Z.Root, {
+                        value: y.tokenExchangeMethodValue,
+                        required: !0,
+                        onValueChange: (e) => {
+                          w({ tokenExchangeMethodValue: e });
+                        },
+                        children: [
+                          (0, M.jsx)(eR.Xb, {
+                            value: "default_post",
+                            label: v.formatMessage({
+                              id: "vXIzoE",
+                              defaultMessage: "Default (POST request)",
+                            }),
+                          }),
+                          (0, M.jsx)(eR.Xb, {
+                            value: "basic_auth_header",
+                            label: v.formatMessage({
+                              id: "38o+yX",
+                              defaultMessage: "Basic authorization header",
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  })
+                : null,
+          ],
+        });
+      }
+      function eK(e) {
+        let { onImport: t, onClose: i } = e,
+          { 0: a, 1: s } = (0, z.useState)(""),
+          { 0: r, 1: n } = (0, z.useState)(!1);
+        async function l() {
+          var e;
+          let s;
+          try {
+            s = new URL(a);
+          } catch {
+            return;
+          }
+          if (null !== (e = s) && void 0 !== e && e.hostname) {
+            n(!0);
+            try {
+              let e = await y.U.fetchOpenAPISpec(a);
+              t(e.content), i();
+            } finally {
+              n(!1);
+            }
+          }
+        }
+        return (0, M.jsxs)("div", {
+          className: "flex items-center gap-2",
+          children: [
+            (0, M.jsx)("input", {
+              name: "url",
+              value: a,
+              onChange: (e) => {
+                s(e.target.value);
+              },
+              placeholder: "https://...",
+              className:
+                "h-8 rounded border border-token-border-light px-2 text-sm",
+              autoFocus: !0,
+            }),
+            (0, M.jsx)(eR.cY, {
+              color: "dark",
+              loading: r,
+              onClick: l,
+              children: (0, M.jsx)(el.Z, {
+                id: "7sLuEB",
+                defaultMessage: "Import",
+              }),
+            }),
+            (0, M.jsx)(eR.cY, {
+              color: "neutral",
+              onClick: i,
+              children: (0, M.jsx)(el.Z, {
+                id: "xHBR5t",
+                defaultMessage: "Cancel",
+              }),
+            }),
+          ],
+        });
+      }
+      function eH(e) {
+        let { rootDomain: t, operations: i } = e;
+        return null == i || 0 === i.length
+          ? (0, M.jsx)("div", {
+              className: "text-sm text-token-text-tertiary",
+              children: (0, M.jsx)(el.Z, {
+                id: "L69u6d",
+                defaultMessage: "Operations in your schema will show here",
+              }),
+            })
+          : (0, M.jsx)("table", {
+              className: "w-full text-sm",
+              children: (0, M.jsxs)("tbody", {
+                children: [
+                  (0, M.jsxs)("tr", {
+                    className:
+                      "border-b border-token-border-light text-left text-xs text-token-text-tertiary",
+                    children: [
+                      (0, M.jsx)("th", {
+                        className: "py-1 font-normal",
+                        children: (0, M.jsx)(el.Z, {
+                          id: "JizDcr",
+                          defaultMessage: "Name",
+                        }),
+                      }),
+                      (0, M.jsx)("th", {
+                        className: "py-1 font-normal",
+                        children: (0, M.jsx)(el.Z, {
+                          id: "zN16fd",
+                          defaultMessage: "Method",
+                        }),
+                      }),
+                      (0, M.jsx)("th", {
+                        className: "py-1 font-normal",
+                        children: (0, M.jsx)(el.Z, {
+                          id: "y2WJvt",
+                          defaultMessage: "Path",
+                        }),
+                      }),
+                      (0, M.jsx)("th", { className: "py-1 font-normal" }),
+                    ],
+                  }),
+                  i.map((e) =>
+                    (0, M.jsxs)(
+                      "tr",
+                      {
+                        className: "border-b border-token-border-light",
+                        children: [
+                          (0, M.jsx)("td", {
+                            className: "py-2",
+                            children: e.operationName,
+                          }),
+                          (0, M.jsx)("td", {
+                            className: "py-2 uppercase",
+                            children: e.method,
+                          }),
+                          (0, M.jsx)("td", {
+                            className: "py-2",
+                            children: e.path,
+                          }),
+                          (0, M.jsx)("td", {
+                            className: "py-2",
+                            children: (0, M.jsx)(eR.cY, {
+                              color: "neutral",
+                              onClick: () => {
+                                t &&
+                                  eL.publish({
+                                    kind: eE.TestGizmoAction,
+                                    rootDomain: t,
+                                    operationName: e.operationName,
+                                  });
+                              },
+                              children: (0, M.jsx)(el.Z, {
+                                id: "Ag71GQ",
+                                defaultMessage: "Test",
+                              }),
+                            }),
+                          }),
+                        ],
+                      },
+                      e.operationName
+                    )
+                  ),
+                ],
+              }),
+            });
+      }
+      function eQ(e) {
+        let { validationResponse: t } = e,
+          i = (0, ei.Z)();
+        return (0, M.jsxs)("div", {
+          children: [
+            (0, M.jsx)(eg.lX, {
+              label: i.formatMessage({
+                id: "hKfo5R",
+                defaultMessage: "Available actions",
+              }),
+            }),
+            (0, M.jsx)(eH, {
+              rootDomain: t.success ? t.spec.root_domain : void 0,
+              operations: t.success ? t.spec.operations : void 0,
+            }),
+          ],
+        });
+      }
+      function eX(e) {
+        var t, i, a, s, r, n, l;
+        let {
+            currentlyEditingActionDomain: o,
+            gizmoEditorData: d,
+            updateGizmo: c,
+            onClose: u,
+          } = e,
+          p = (0, ei.Z)(),
+          { 0: m, 1: h } = (0, z.useState)(o),
+          f = (0, z.useRef)(m);
+        (0, z.useEffect)(() => {
+          f.current = m;
+        }, [m]);
+        let x =
+            null == d || null === (t = d.tools) || void 0 === t
+              ? void 0
+              : t.find(
+                  (e) => e.type === g.qK.JIT_PLUGIN && e.metadata.domain === m
+                ),
+          { 0: v } = (0, z.useState)(() => null == x),
+          j =
+            null !==
+              (i =
+                null == x || null === (a = x.metadata) || void 0 === a
+                  ? void 0
+                  : a.raw_spec) && void 0 !== i
+              ? i
+              : "",
+          { 0: b, 1: w } = (0, z.useState)(!1),
+          { 0: k, 1: N } = (0, z.useState)(!1);
+        function P(e) {
+          c((t) =>
+            eF(
+              eF({}, t),
+              {},
+              {
+                tools: x
+                  ? t.tools.map((t) =>
+                      t.type === g.qK.JIT_PLUGIN && t.metadata.domain === m
+                        ? eF(
+                            eF({}, t),
+                            {},
+                            {
+                              metadata: eF(
+                                eF(eF({}, t.metadata), e),
+                                {},
+                                { json_schema: void 0 }
+                              ),
+                            }
+                          )
+                        : t
+                    )
+                  : [
+                      ...t.tools,
+                      {
+                        type: g.qK.JIT_PLUGIN,
+                        metadata: eF(
+                          eF(
+                            {
+                              raw_spec: "",
+                              domain: null != m ? m : "Unknown domain",
+                              action_id: "",
+                            },
+                            e
+                          ),
+                          {},
+                          { json_schema: void 0 }
+                        ),
+                      },
+                    ],
+              }
+            )
+          );
+        }
+        let { 0: Z, 1: _ } = (0, z.useState)(),
+          { 0: T } = (0, z.useState)(() =>
+            (0, $.debounce)(async function (e) {
+              let t = await y.U.validateOpenAPISpec(e);
+              _(t);
+              let i = t.success ? t.spec.root_domain : void 0;
+              if (i) {
+                if (i !== f.current) {
+                  var a;
+                  if (
+                    null == d || null === (a = d.tools) || void 0 === a
+                      ? void 0
+                      : a.find(
+                          (e) =>
+                            e.type === g.qK.JIT_PLUGIN &&
+                            e.metadata.domain === i
+                        )
+                  ) {
+                    _({
+                      success: !1,
+                      errors: [
+                        p.formatMessage(
+                          {
+                            id: "nwBcmJ",
+                            defaultMessage:
+                              "Action sets cannot have duplicate domains - {domain} already exists on another action",
+                          },
+                          { domain: i }
+                        ),
+                      ],
+                    });
+                    return;
+                  }
+                }
+                c((e) =>
+                  eF(
+                    eF({}, e),
+                    {},
+                    {
+                      tools: e.tools.map((e) =>
+                        e.type === g.qK.JIT_PLUGIN &&
+                        e.metadata.domain === f.current
+                          ? eF(
+                              eF({}, e),
+                              {},
+                              {
+                                metadata: eF(
+                                  eF({}, e.metadata),
+                                  {},
+                                  { domain: i }
+                                ),
+                              }
+                            )
+                          : e
+                      ),
+                    }
+                  )
+                ),
+                  h(i);
+              }
+              if (t.success && t.known_auth && t.known_privacy_policy && x) {
+                let e = eF({ type: es.Jv.OAuth }, t.known_auth);
+                (0, $.isEqual)(x.metadata.auth, e) ||
+                  P({ auth: eF({ type: es.Jv.OAuth }, t.known_auth) }),
+                  x.metadata.privacy_policy_url !== t.known_privacy_policy &&
+                    P({ privacy_policy_url: t.known_privacy_policy });
+              }
+            }, 1e3)
+          ),
+          C = null != Z ? (Z.success ? Z.warnings : Z.errors) : void 0;
+        (0, z.useEffect)(() => {
+          "" === j ? (_(void 0), T.cancel()) : T(j);
+        }, [T, j]);
+        let O = (e) => {
+          try {
+            P({ raw_spec: JSON.stringify(JSON.parse(e), null, 2) });
+          } catch {
+            try {
+              P({
+                raw_spec: ed.ZP.stringify(ed.ZP.parse(e), {
+                  lineWidth: 120,
+                  indent: 2,
+                }),
+              });
+            } catch {}
+          }
+        };
+        return (0, M.jsxs)("div", {
+          className: "h-full overflow-auto px-4 pb-12 text-sm",
+          children: [
+            (0, M.jsxs)("div", {
+              className:
+                "relative flex flex-col items-center px-16 py-6 text-center",
+              children: [
+                (0, M.jsx)("div", {
+                  className: "absolute left-0 top-6",
+                  children: (0, M.jsx)(er.z, {
+                    color: "neutral",
+                    onClick: u,
+                    children: (0, M.jsx)(en.L7, { className: "icon-md" }),
+                  }),
+                }),
+                null != x &&
+                  (0, M.jsx)("div", {
+                    className: "absolute right-0 top-6",
+                    children: (0, M.jsx)(er.z, {
+                      color: "neutral",
+                      onClick: () => {
+                        window.confirm(
+                          "Are you sure you want to delete this action?"
+                        ) &&
+                          (c((e) =>
+                            eF(
+                              eF({}, e),
+                              {},
+                              {
+                                tools: e.tools.filter(
+                                  (e) =>
+                                    e.type !== g.qK.JIT_PLUGIN ||
+                                    e.metadata.domain !== m
+                                ),
+                              }
+                            )
+                          ),
+                          u());
+                      },
+                      className: "text-red-500",
+                      children: (0, M.jsx)(en.a_, { className: "icon-md" }),
+                    }),
+                  }),
+                (0, M.jsx)("div", {
+                  className: "text-xl font-medium",
+                  children: v
+                    ? (0, M.jsx)(el.Z, {
+                        id: "LEn2vt",
+                        defaultMessage: "Add actions",
+                      })
+                    : (0, M.jsx)(el.Z, {
+                        id: "WtVYgh",
+                        defaultMessage: "Edit actions",
+                      }),
+                }),
+                (0, M.jsx)("div", {
+                  className: "text-sm text-token-text-tertiary",
+                  children: (0, M.jsx)(el.Z, {
+                    id: "f0WG0Q",
+                    defaultMessage:
+                      "Let your GPT retrieve information or take actions outside of ChatGPT.",
+                  }),
+                }),
+                (0, M.jsx)("div", {
+                  className: "text-sm text-token-text-tertiary",
+                  children: (0, M.jsx)("a", {
+                    href: "https://help.openai.com/en/articles/8554397-creating-a-gpt",
+                    target: "_blank",
+                    rel: "noreferrer",
+                    className: "font-medium",
+                    children: (0, M.jsx)(el.Z, {
+                      id: "44M7/B",
+                      defaultMessage: "Learn more.",
+                    }),
+                  }),
+                }),
+              ],
+            }),
+            (0, M.jsxs)(eg.hj, {
+              className: "relative",
+              children: [
+                (0, M.jsx)(eg.lX, {
+                  label: p.formatMessage({
+                    id: "kZ040s",
+                    defaultMessage: "Authentication",
+                  }),
+                }),
+                (0, M.jsx)(eD, {
+                  onClick: () => {
+                    w(!0);
+                  },
+                  content: p.formatMessage(
+                    (function (e) {
+                      switch (e) {
+                        case es.Jv.None:
+                          return (0, eo.Em)({
+                            id: "G9qfIC",
+                            defaultMessage: "None",
+                          });
+                        case es.Jv.OAuth:
+                          return (0, eo.Em)({
+                            id: "t8MwwT",
+                            defaultMessage: "OAuth",
+                          });
+                        case es.Jv.ServiceHTTP:
+                          return (0, eo.Em)({
+                            id: "rN0uCi",
+                            defaultMessage: "API Key",
+                          });
+                      }
+                    })(
+                      null !==
+                        (s =
+                          null == x ||
+                          null === (r = x.metadata) ||
+                          void 0 === r ||
+                          null === (r = r.auth) ||
+                          void 0 === r
+                            ? void 0
+                            : r.type) && void 0 !== s
+                        ? s
+                        : es.Jv.None
+                    )
+                  ),
+                  button: (0, M.jsx)("button", {
+                    color: "neutral",
+                    className: "flex items-center gap-2 px-3",
+                    children: (0, M.jsx)(en.RR, { className: "icon-sm" }),
+                  }),
+                }),
+                b &&
+                  (0, M.jsx)(eJ, {
+                    jitPluginTool: x,
+                    onUpdateTool: (e) => {
+                      switch (e.type) {
+                        case es.Jv.None:
+                          P({ auth: { type: es.Jv.None } });
+                          break;
+                        case es.Jv.OAuth: {
+                          let { oauth_client_id: t, oauth_client_secret: i } =
+                            e;
+                          P({
+                            auth: (0, ea.Z)(e, eB),
+                            oauth_client_id: t,
+                            oauth_client_secret: i,
+                          });
+                          break;
+                        }
+                        case es.Jv.ServiceHTTP: {
+                          let { api_key: t } = e;
+                          P({ auth: (0, ea.Z)(e, eV), api_key: t });
+                        }
+                      }
+                    },
+                    onClose: () => {
+                      w(!1);
+                    },
+                  }),
+              ],
+            }),
+            (0, M.jsxs)("div", {
+              children: [
+                (0, M.jsxs)("div", {
+                  className: "mb-1 flex h-8 items-center justify-between",
+                  children: [
+                    (0, M.jsx)("label", {
+                      className: "font-medium text-token-text-primary",
+                      children: (0, M.jsx)(el.Z, {
+                        id: "+xKwQg",
+                        defaultMessage: "Schema",
+                      }),
+                    }),
+                    (0, M.jsx)("div", {
+                      className: "flex items-center",
+                      children: k
+                        ? (0, M.jsx)(eK, {
+                            onImport: (e) => {
+                              O(e);
+                            },
+                            onClose: () => {
+                              N(!1);
+                            },
+                          })
+                        : (0, M.jsxs)("div", {
+                            className: "flex items-center gap-2",
+                            children: [
+                              (0, M.jsx)(eR.cY, {
+                                color: "neutral",
+                                onClick: () => {
+                                  N(!0);
+                                },
+                                children: (0, M.jsx)(el.Z, {
+                                  id: "kTR+Ef",
+                                  defaultMessage: "Import from URL",
+                                }),
+                              }),
+                              (0, M.jsx)(ep, {
+                                onSelectExample: (e) => {
+                                  P({ raw_spec: e });
+                                },
+                              }),
+                            ],
+                          }),
+                    }),
+                  ],
+                }),
+                (0, M.jsxs)("div", {
+                  className:
+                    "mb-8 overflow-hidden rounded-lg border border-token-border-light",
+                  children: [
+                    (0, M.jsxs)("div", {
+                      className: "relative",
+                      children: [
+                        (0, M.jsx)("textarea", {
+                          value: j,
+                          onChange: (e) => {
+                            P({ raw_spec: e.target.value });
+                          },
+                          spellCheck: !1,
+                          placeholder: p.formatMessage({
+                            id: "zBM3o0",
+                            defaultMessage: "Enter your OpenAPI schema here",
+                          }),
+                          className:
+                            "block h-96 w-full border-none bg-transparent p-2 font-mono text-xs text-token-text-primary",
+                        }),
+                        (0, M.jsx)("div", {
+                          className: "absolute bottom-2 right-2 flex gap-2",
+                          children:
+                            "" !== j
+                              ? (0, M.jsx)(eR.cY, {
+                                  onClick: () => {
+                                    O(j);
+                                  },
+                                  children: (0, M.jsx)(el.Z, {
+                                    id: "vJWnIM",
+                                    defaultMessage: "Format",
+                                  }),
+                                })
+                              : (0, M.jsxs)(eR.cY, {
+                                  as: "a",
+                                  to: eW,
+                                  openNewTab: !0,
+                                  children: [
+                                    (0, M.jsx)(el.Z, {
+                                      id: "gizmo.actions.actionsGptHelp",
+                                      defaultMessage:
+                                        "Get help from ActionsGPT",
+                                    }),
+                                    (0, M.jsx)(en.fe, { className: "icon-md" }),
+                                  ],
+                                }),
+                        }),
+                      ],
+                    }),
+                    null != C &&
+                      (null == C ? void 0 : C.length) > 0 &&
+                      (0, M.jsx)("div", {
+                        className:
+                          "border-t border-token-border-light p-2 text-red-500",
+                        children: C.map((e, t) =>
+                          (0, M.jsx)("div", { children: e }, t)
+                        ),
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            null != Z && (0, M.jsx)(eQ, { validationResponse: Z }),
+            (0, M.jsxs)("div", {
+              className: "mt-4",
+              children: [
+                (0, M.jsx)(eg.lX, {
+                  label: p.formatMessage({
+                    id: "Pbk0Gp",
+                    defaultMessage: "Privacy policy",
+                  }),
+                  description:
+                    "Privacy policy is required for all public GPTs.",
+                }),
+                (0, M.jsx)(ec.Z, {
+                  name: "privacyPolicyUrl",
+                  value:
+                    null !==
+                      (n =
+                        null == x || null === (l = x.metadata) || void 0 === l
+                          ? void 0
+                          : l.privacy_policy_url) && void 0 !== n
+                      ? n
+                      : "",
+                  placeholder: "https://api.example-weather-app.com/privacy",
+                  onChange: (e) => {
+                    P({ privacy_policy_url: e.target.value });
+                  },
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      var e$ = i(43383),
+        e0 = i(82245),
+        e1 = i(99715),
+        e2 = i(22189),
+        e3 = i(5667),
+        e4 = i(68832),
+        e5 = i(93031),
+        e8 = i(70917),
+        e6 = i(13038),
+        e9 = i(913),
+        e7 = i(82473),
+        te = i(61236),
+        tt = i(4373),
+        ti = i(27160),
+        ta = i(57849),
+        ts = i(98682),
+        tr = i(43803),
+        tn = i(47609),
+        tl = i(74908);
+      function to(e) {
+        return "".concat("https://chat.openai.com").concat((0, m.m_)(e));
+      }
+      function td(e, t) {
+        (0, tl.v)(to(e)), t && U.m.info(t);
+      }
+      function tc(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function tu(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? tc(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : tc(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      let tp = {
+          can_read: !0,
+          can_view_config: !1,
+          can_write: !1,
+          can_delete: !1,
+          can_export: !1,
+          can_share: !1,
+        },
+        tm = {
+          can_read: !0,
+          can_view_config: !0,
+          can_write: !1,
+          can_delete: !1,
+          can_export: !1,
+          can_share: !1,
+        },
+        th = [tp, tm],
+        tg = [b.LA.USER, b.LA.GROUP, b.LA.WORKSPACE, b.LA.ALL],
+        tf = {
+          [b.LA.USER]: b.Zz.User,
+          [b.LA.GROUP]: b.Zz.Group,
+          [b.LA.WORKSPACE]: b.Zz.Workspace,
+          [b.LA.ALL]: b.Zz.Marketplace,
+        };
+      function tx(e) {
+        var t, i, a, s, r, n, l, o, d, c, u;
+        let {
+            gizmo: p,
+            publishedGizmo: h,
+            promoteGizmo: f,
+            appealGizmo: x,
+            showActionsModal: v,
+            workspaceSharing: w,
+            shareOnly: k,
+            onClose: N,
+          } = e,
+          P = (0, ei.Z)(),
+          Z = (0, R.t)(),
+          _ =
+            null !==
+              (t =
+                null == Z || null === (i = Z.data) || void 0 === i
+                  ? void 0
+                  : i.name) && void 0 !== t
+              ? t
+              : "your workspace",
+          T = (0, V.aF)(),
+          C = (0, m.Z1)(),
+          { 0: O, 1: S } = (0, z.useState)(void 0);
+        (0, z.useEffect)(() => {
+          if (void 0 == O) {
+            if (
+              null != h &&
+              h.gizmo.display.categories &&
+              (null == h ? void 0 : h.gizmo.display.categories.length) > 0
+            ) {
+              var e;
+              let t =
+                null === (e = C.data) || void 0 === e
+                  ? void 0
+                  : e.categories.find(
+                      (e) =>
+                        e.id ===
+                        (null == h ? void 0 : h.gizmo.display.categories[0])
+                    );
+              t && S(t);
+            } else
+              void 0 != C.data &&
+                S(C.data.categories[C.data.categories.length - 1]);
+          }
+        }, [C.data, O, h]);
+        let { 0: I, 1: A } = (0, z.useState)(
+            null !== (a = p.sharingRecipient) && void 0 !== a ? a : b.Zz.Private
+          ),
+          { 0: G, 1: E } = (0, z.useState)(
+            null !==
+              (s =
+                null === (r = p.sharing) || void 0 === r
+                  ? void 0
+                  : r.subjects) && void 0 !== s
+              ? s
+              : []
+          ),
+          { 0: L, 1: U } = (0, z.useState)(null),
+          { 0: D, 1: B } = (0, z.useState)(!1),
+          q = (0, e7.NL)(),
+          F = (0, e5.bw)(
+            p,
+            I,
+            null !== (n = null == O ? void 0 : O.id) && void 0 !== n
+              ? n
+              : void 0
+          ),
+          W = F.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
+          Y = p.tools.find(
+            (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
+          );
+        if (L)
+          return (0, M.jsx)(tN, {
+            publishedGizmo: L,
+            sharing: { recipient: I, subjects: G },
+            workspaceSharing: w,
+            workspaceName: _,
+            onClose: N,
+          });
+        let J =
+          0 === G.length
+            ? null
+            : G.reduce(
+                (e, t) => (tg.indexOf(t.type) < tg.indexOf(e.type) ? e : t),
+                G[0]
+              );
+        function K(e) {
+          let t = G.filter(
+            (e) => -1 === [b.LA.WORKSPACE, b.LA.ALL].indexOf(e.type)
+          );
+          null != e && t.push(e), E(t);
+        }
+        function H(e) {
+          switch ((A(e), e)) {
+            case b.Zz.Marketplace:
+            case b.Zz.Link:
+              K({ type: b.LA.ALL, capabilities: tp });
+              break;
+            case b.Zz.Workspace:
+            case b.Zz.WorkspaceLink:
+              K({ type: b.LA.WORKSPACE, capabilities: tp });
+              break;
+            default:
+              K(null);
+          }
+        }
+        function Q(e) {
+          null != J &&
+            E(
+              G.map((t) =>
+                t === J ? tu(tu({}, t), {}, { capabilities: e }) : t
+              )
+            );
+        }
+        function X(e) {
+          let t = tf[e.type];
+          if (!t) throw Error("Unknown sharing subject type: " + e.type);
+          return tu(tu({}, e), {}, { type: t });
+        }
+        function $(e, t, i) {
+          return e.type === b.LA.USER && -1 === e.user_id.indexOf("__")
+            ? tu(
+                tu({}, e),
+                {},
+                {
+                  user_id:
+                    e.user_id +
+                    "__" +
+                    (null == Z ? void 0 : Z.getWorkspaceId()),
+                }
+              )
+            : e;
+        }
+        async function ee(e, t) {
+          var i;
+          if (D) return;
+          if (e && !t)
+            throw Error(
+              "Cannot share a gizmo that hasn't been promoted before"
+            );
+          if (!O) return;
+          if ((B(!0), !e)) {
+            let e = await f({ subjects: G, recipient: I }, O.id);
+            t || (t = null == e ? void 0 : e.gizmo.id), U(null != e ? e : null);
+          }
+          let a = G.map($).map(X);
+          if (
+            ((i = (i = a).filter(
+              (e) => e.type === b.Zz.User || e.type === b.Zz.Group
+            )),
+            (a =
+              I === b.Zz.Private || I === b.Zz.User || I === b.Zz.Group
+                ? [{ type: b.Zz.Private, capabilities: tp }, ...i]
+                : [...i, { type: I, capabilities: tp }]),
+            !t)
+          )
+            throw Error("No gizmo ID to share");
+          await y.U.shareGizmo(t, a),
+            q.invalidateQueries({ queryKey: ["gizmo", t] }),
+            B(!1),
+            e && N();
+        }
+        return (0, M.jsx)(j.Z, {
+          type: "success",
+          className: "w-[555px]",
+          isOpen: !0,
+          onClose: N,
+          primaryButton: (0, M.jsx)(er.z, {
+            onClick: () => ee(k, null == h ? void 0 : h.gizmo.id),
+            loading: D,
+            disabled: F.length > 0,
+            children: k
+              ? (0, M.jsx)(el.Z, { id: "aXKW4G", defaultMessage: "Share" })
+              : (0, M.jsx)(el.Z, { id: "h7gnqc", defaultMessage: "Save" }),
+          }),
+          secondaryButton:
+            h &&
+            (0, M.jsx)(er.z, {
+              color: "neutral",
+              onClick: () =>
+                td(
+                  h,
+                  P.formatMessage({
+                    id: "KdDqMm",
+                    defaultMessage: "Copied link to clipboard",
+                  })
+                ),
+              children: (0, M.jsx)(el.Z, {
+                id: "wvL15a",
+                defaultMessage: "Copy link",
+              }),
+            }),
+          title: P.formatMessage({ id: "7JggXH", defaultMessage: "Share GPT" }),
+          showCloseButton: !0,
+          children: (0, M.jsxs)("div", {
+            className: "flex flex-col space-y-4",
+            children: [
+              (0, M.jsx)(tM, {
+                onAdd: (e) => {
+                  G.find((t) =>
+                    t.type === b.LA.USER
+                      ? t.user_id === e.user_id
+                      : t.type === b.LA.GROUP
+                        ? t.group_id === e.group_id
+                        : t.type === e.type
+                  ) || E([...G, e]);
+                },
+              }),
+              (0, M.jsx)("h3", {
+                className: "text-base font-medium",
+                children: (0, M.jsx)(el.Z, {
+                  id: "bNQXcV",
+                  defaultMessage: "Share with...",
+                }),
+              }),
+              (0, M.jsxs)("div", {
+                className: "max-h-[200px] overflow-y-scroll",
+                children: [
+                  (0, M.jsx)("div", {
+                    className:
+                      "flex flex-row items-center justify-between space-x-3",
+                    children: (0, M.jsxs)("div", {
+                      children: [
+                        (0, M.jsx)("span", {
+                          className: "text-base font-medium",
+                          children: (0, M.jsx)(el.Z, {
+                            id: "U7tzof",
+                            defaultMessage: "{userName} (you)",
+                            values: { userName: null == T ? void 0 : T.name },
+                          }),
+                        }),
+                        (0, M.jsx)("br", {}),
+                        (0, M.jsx)("span", {
+                          className: "text-sm text-token-text-secondary",
+                          children: null == T ? void 0 : T.email,
+                        }),
+                      ],
+                    }),
+                  }),
+                  G.map(
+                    (e, t) =>
+                      (0, b.h)(e) &&
+                      (0, M.jsxs)(
+                        "div",
+                        {
+                          className:
+                            "flex flex-row items-center justify-between space-x-3",
+                          children: [
+                            (0, M.jsxs)("div", {
+                              children: [
+                                (0, M.jsx)("span", {
+                                  className: "text-base font-medium",
+                                  children:
+                                    e.type === b.LA.GROUP
+                                      ? e.group_name
+                                      : e.user_name,
+                                }),
+                                e.type === b.LA.USER &&
+                                  (0, M.jsxs)(M.Fragment, {
+                                    children: [
+                                      (0, M.jsx)("br", {}),
+                                      (0, M.jsx)("span", {
+                                        className:
+                                          "text-sm text-token-text-secondary",
+                                        children: e.user_email,
+                                      }),
+                                    ],
+                                  }),
+                              ],
+                            }),
+                            (0, M.jsxs)(e8.Z.Root, {
+                              children: [
+                                (0, M.jsxs)(e8.Z.Trigger, {
+                                  className: "text-token-text-secondary",
+                                  children: [
+                                    (0, M.jsx)(
+                                      el.Z,
+                                      tu({}, tb(e.capabilities))
+                                    ),
+                                    (0, M.jsx)(eC.bTu, {}),
+                                  ],
+                                }),
+                                (0, M.jsx)(e8.Z.Portal, {
+                                  children: (0, M.jsxs)(e8.Z.Content, {
+                                    children: [
+                                      th.map((t, i) =>
+                                        (0, M.jsx)(
+                                          e8.Z.Item,
+                                          {
+                                            onClick: () => {
+                                              E(
+                                                G.map((i) =>
+                                                  i === e
+                                                    ? tu(
+                                                        tu({}, i),
+                                                        {},
+                                                        { capabilities: t }
+                                                      )
+                                                    : i
+                                                )
+                                              );
+                                            },
+                                            children: (0, M.jsx)(
+                                              el.Z,
+                                              tu({}, tb(t))
+                                            ),
+                                          },
+                                          i
+                                        )
+                                      ),
+                                      (0, M.jsx)(e8.Z.Item, {
+                                        onClick: () =>
+                                          E(G.filter((t) => t !== e)),
+                                        className: "text-red-600",
+                                        children: (0, M.jsx)(el.Z, {
+                                          id: "NU0BOB",
+                                          defaultMessage: "Remove",
+                                        }),
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        },
+                        t
+                      )
+                  ),
+                ],
+              }),
+              (0, M.jsx)("hr", {}),
+              (0, M.jsx)("h3", {
+                className: "text-base font-medium",
+                children: (0, M.jsx)(el.Z, {
+                  id: "uqD7Y8",
+                  defaultMessage: "Access",
+                }),
+              }),
+              (0, M.jsxs)("div", {
+                className:
+                  "flex flex-row items-center justify-between space-x-3",
+                children: [
+                  (0, M.jsx)("span", {
+                    className: "text-base font-medium",
+                    children: (0, M.jsxs)(e8.Z.Root, {
+                      children: [
+                        (0, M.jsxs)(e8.Z.Trigger, {
+                          className: "-ml-3 h-fit pl-2",
+                          children: [
+                            (0, M.jsx)(tk, { shareLevel: I, workspaceName: _ }),
+                            (0, M.jsx)(eC.bTu, { className: "shrink-0" }),
+                          ],
+                        }),
+                        (0, M.jsx)(e8.Z.Portal, {
+                          children: (0, M.jsxs)(e8.Z.Content, {
+                            className: "ml-[-5px]",
+                            children: [
+                              (0, M.jsx)(tv, {
+                                children: (0, M.jsx)(el.Z, {
+                                  id: "YIQwaP",
+                                  defaultMessage: "Private",
+                                }),
+                              }),
+                              (0, M.jsx)(e8.Z.Item, {
+                                className: "h-14",
+                                onClick: () => H(b.Zz.Private),
+                                children: (0, M.jsx)(tk, {
+                                  shareLevel: b.Zz.Private,
+                                  workspaceName: _,
+                                }),
+                              }),
+                              (0, M.jsx)(tv, { children: _ }),
+                              (0, M.jsx)(e8.Z.Item, {
+                                className: "h-14",
+                                onClick: () => H(b.Zz.WorkspaceLink),
+                                disabled:
+                                  (null === (l = p.sharingTargets) ||
+                                  void 0 === l
+                                    ? void 0
+                                    : l.find(
+                                        (e) =>
+                                          "workspace_link" === e.recipient ||
+                                          "workspace" === e.recipient
+                                      )) === void 0,
+                                children: (0, M.jsx)(tk, {
+                                  shareLevel: b.Zz.WorkspaceLink,
+                                  workspaceName: _,
+                                }),
+                              }),
+                              (0, M.jsx)(e8.Z.Item, {
+                                className: "h-14",
+                                onClick: () => H(b.Zz.Workspace),
+                                disabled:
+                                  (null === (o = p.sharingTargets) ||
+                                  void 0 === o
+                                    ? void 0
+                                    : o.find(
+                                        (e) =>
+                                          "workspace_link" === e.recipient ||
+                                          "workspace" === e.recipient
+                                      )) === void 0,
+                                children: (0, M.jsx)(tk, {
+                                  shareLevel: b.Zz.Workspace,
+                                  workspaceName: _,
+                                }),
+                              }),
+                              (0, M.jsx)(tv, {
+                                children: (0, M.jsx)(el.Z, {
+                                  id: "PjY9bi",
+                                  defaultMessage: "Public",
+                                }),
+                              }),
+                              (0, M.jsx)(e8.Z.Item, {
+                                className: "h-14",
+                                onClick: () => H(b.Zz.Link),
+                                disabled:
+                                  (null === (d = p.sharingTargets) ||
+                                  void 0 === d
+                                    ? void 0
+                                    : d.find((e) => "link" === e.recipient)) ===
+                                  void 0,
+                                children: (0, M.jsx)(tk, {
+                                  shareLevel: b.Zz.Link,
+                                  workspaceName: _,
+                                }),
+                              }),
+                              (0, M.jsx)(e8.Z.Item, {
+                                className: "h-14",
+                                disabled:
+                                  (null === (c = p.sharingTargets) ||
+                                  void 0 === c
+                                    ? void 0
+                                    : c.find(
+                                        (e) => "marketplace" === e.recipient
+                                      )) === void 0,
+                                onClick: () => H(b.Zz.Marketplace),
+                                children: (0, M.jsx)(tk, {
+                                  shareLevel: b.Zz.Marketplace,
+                                  workspaceName: _,
+                                }),
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                  }),
+                  I !== b.Zz.Private &&
+                    I !== b.Zz.User &&
+                    (0, M.jsxs)(e8.Z.Root, {
+                      children: [
+                        (0, M.jsxs)(e8.Z.Trigger, {
+                          className: "text-token-text-secondary",
+                          children: [
+                            null == J
+                              ? (0, M.jsx)(el.Z, tu({}, tb(tp)))
+                              : (0, M.jsx)(el.Z, tu({}, tb(J.capabilities))),
+                            (0, M.jsx)(eC.bTu, {}),
+                          ],
+                        }),
+                        (0, M.jsx)(e8.Z.Portal, {
+                          children: (0, M.jsxs)(e8.Z.Content, {
+                            children: [
+                              (0, M.jsx)(e8.Z.Item, {
+                                onClick: () => Q(tp),
+                                children: (0, M.jsx)(el.Z, tu({}, tb(tp))),
+                              }),
+                              I !== b.Zz.Marketplace &&
+                                (0, M.jsx)(e8.Z.Item, {
+                                  onClick: () => Q(tm),
+                                  children: (0, M.jsx)(el.Z, tu({}, tb(tm))),
+                                }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+              W &&
+                (0, M.jsx)("div", {
+                  className: "text-xs text-red-500",
+                  children: (0, M.jsx)(el.Z, {
+                    id: "/iw1Iv",
+                    defaultMessage:
+                      "Public actions require valid privacy policy URLs. Click <fixlink>here</fixlink> to update.",
+                    values: {
+                      fixlink: (e) =>
+                        (0, M.jsx)("button", {
+                          onClick: () => {
+                            v(null == Y ? void 0 : Y.metadata.action_id), N();
+                          },
+                          className: "underline",
+                          children: e,
+                        }),
+                    },
+                  }),
+                }),
+              (I === b.Zz.Marketplace || I === b.Zz.Workspace) &&
+                (0, M.jsx)(tz, {
+                  gizmo: p,
+                  category: null == O ? void 0 : O.id,
+                  categories:
+                    null === (u = C.data) || void 0 === u
+                      ? void 0
+                      : u.categories,
+                  onCategoryChange: (e) => S(e),
+                }),
+            ],
+          }),
+        });
+      }
+      let tv = P.Z.p(
+          c ||
+            (c = (0, x.Z)([
+              "text-base text-token-text-secondary font-medium pl-4 pt-3 pr-4 pb-1",
+            ]))
+        ),
+        tj = (0, eo.vU)({
+          private: { id: "pSXBWQ", defaultMessage: "Invite-only" },
+          workspace_link: {
+            id: "Giaxt1",
+            defaultMessage: "Anyone at {workspaceName} with the link",
+          },
+          workspace: {
+            id: "L2+SyY",
+            defaultMessage: "Publish to {workspaceName}",
+          },
+          link: { id: "uP1+Ri", defaultMessage: "Anyone with the link" },
+          marketplace: { id: "3URUPp", defaultMessage: "Publish to GPT Store" },
+        }),
+        ty = (0, eo.vU)({
+          workspace: {
+            id: "1kpopF",
+            defaultMessage: "Published to {workspaceName}",
+          },
+          marketplace: {
+            id: "hdTRpJ",
+            defaultMessage: "Published to GPT Store",
+          },
+        });
+      function tb(e) {
+        return e.can_write
+          ? (0, eo.Em)({ id: "SubCqD", defaultMessage: "Can edit" })
+          : e.can_view_config
+            ? (0, eo.Em)({ id: "I5rzV3", defaultMessage: "Can view config" })
+            : e.can_read
+              ? (0, eo.Em)({ id: "/0j34W", defaultMessage: "Can chat" })
+              : (0, eo.Em)({ id: "x2E8ET", defaultMessage: "Unknown" });
+      }
+      let tw = {
+        private: ts.Z,
+        user: ts.Z,
+        group: ts.Z,
+        workspace_link: ta.Z,
+        workspace: ti.Z,
+        link: ta.Z,
+        marketplace: en.hk,
+      };
+      function tk(e) {
+        let { shareLevel: t, workspaceName: i } = e;
+        (t === b.Zz.User || t === b.Zz.Group) && (t = b.Zz.Private);
+        let a = tw[t];
+        return (0, M.jsxs)("div", {
+          className:
+            "ml-[3px] flex flex-row items-center py-3 text-left text-base font-medium",
+          children: [
+            (0, M.jsx)(a, { className: "icon-lg mr-3 h-6 w-6 shrink-0" }),
+            (0, M.jsx)(
+              el.Z,
+              tu(tu({}, tj[t]), {}, { values: { workspaceName: i } })
+            ),
+          ],
+        });
+      }
+      function tN(e) {
+        var t, i;
+        let { publishedGizmo: a, sharing: s, workspaceName: r, onClose: n } = e,
+          l = s.recipient,
+          o = tw[l],
+          d = (0, ei.Z)();
+        return (0, M.jsxs)(j.Z, {
+          isOpen: !0,
+          onClose: n,
+          showCloseButton: !0,
+          className: "w-[304px]",
+          title: (0, M.jsx)(el.Z, {
+            id: "5CEceY",
+            defaultMessage: "GPT Updated",
+          }),
+          primaryButton: (0, M.jsx)(er.z, {
+            onClick: () => {
+              window.location.href = "/g/".concat(a.gizmo.id);
+            },
+            children: (0, M.jsx)(el.Z, {
+              id: "RF75o5",
+              defaultMessage: "View GPT",
+            }),
+          }),
+          secondaryButton: (0, M.jsx)(er.z, {
+            color: "neutral",
+            onClick: () =>
+              td(
+                a,
+                d.formatMessage({
+                  id: "KdDqMm",
+                  defaultMessage: "Copied link to clipboard",
+                })
+              ),
+            children: (0, M.jsx)(el.Z, {
+              id: "9hLOl9",
+              defaultMessage: "Copy link",
+            }),
+          }),
+          type: "success",
+          children: [
+            (0, M.jsx)(tz, {
+              gizmo: {
+                profilePictureUrl:
+                  null !== (t = a.gizmo.display.profile_picture_url) &&
+                  void 0 !== t
+                    ? t
+                    : void 0,
+                name: a.gizmo.display.name,
+              },
+            }),
+            s.subjects.filter((e) => (0, b.h)(e)).length > 0 &&
+              (0, M.jsxs)("div", {
+                className: "my-4",
+                children: [
+                  (0, M.jsx)("h4", {
+                    className: "text-xs font-medium text-token-text-secondary",
+                    children: (0, M.jsx)(el.Z, {
+                      id: "/paYH9",
+                      defaultMessage: "Shared with",
+                    }),
+                  }),
+                  s.subjects &&
+                    s.subjects.map(
+                      (e, t) =>
+                        (0, b.h)(e) &&
+                        (0, M.jsxs)(
+                          "div",
+                          {
+                            className:
+                              "flex flex-row items-center justify-between space-x-3 py-2 ",
+                            children: [
+                              (0, M.jsxs)("div", {
+                                children: [
+                                  (0, M.jsx)("span", {
+                                    className: "text-base font-medium",
+                                    children:
+                                      e.type === b.LA.GROUP
+                                        ? e.group_name
+                                        : e.user_name,
+                                  }),
+                                  e.type === b.LA.USER &&
+                                    (0, M.jsxs)(M.Fragment, {
+                                      children: [
+                                        (0, M.jsx)("br", {}),
+                                        (0, M.jsx)("span", {
+                                          className:
+                                            "text-sm text-token-text-secondary",
+                                          children: e.user_email,
+                                        }),
+                                      ],
+                                    }),
+                                ],
+                              }),
+                              (0, M.jsx)("span", {
+                                className: "text-token-text-secondary",
+                                children: (0, M.jsx)(
+                                  el.Z,
+                                  tu({}, tb(e.capabilities))
+                                ),
+                              }),
+                            ],
+                          },
+                          t
+                        )
+                    ),
+                ],
+              }),
+            (0, M.jsxs)("div", {
+              className: "my-4",
+              children: [
+                (0, M.jsx)("h4", {
+                  className: "text-xs font-medium text-token-text-secondary",
+                  children: (0, M.jsx)(el.Z, {
+                    id: "q9XNZ7",
+                    defaultMessage: "Access",
+                  }),
+                }),
+                (0, M.jsxs)("div", {
+                  className:
+                    "ml-[3px] flex flex-row items-center py-3 text-left text-base font-medium",
+                  children: [
+                    (0, M.jsx)(o, {
+                      className: "md:icon-lg mr-3 h-6 w-6 shrink-0",
+                    }),
+                    (0, M.jsxs)("div", {
+                      className: "flex flex-col",
+                      children: [
+                        (0, M.jsx)("span", {
+                          children: (0, M.jsx)(
+                            el.Z,
+                            tu(
+                              tu(
+                                {},
+                                null !== (i = ty[l]) && void 0 !== i ? i : tj[l]
+                              ),
+                              {},
+                              { values: { workspaceName: r } }
+                            )
+                          ),
+                        }),
+                        (l === b.Zz.Workspace || l === b.Zz.Marketplace) &&
+                          (0, M.jsx)("span", {
+                            className: "text-xs text-token-text-secondary",
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function tz(e) {
+        let { gizmo: t, category: i, categories: a, onCategoryChange: s } = e,
+          { data: r, isLoading: n } = (0, m.WL)(),
+          l = null == a ? void 0 : a.find((e) => e.id === i);
+        return (0, M.jsxs)("div", {
+          children: [
+            (0, M.jsxs)("div", {
+              className: (0, X.default)(
+                "mb-[1px] flex flex-row items-center  space-x-2 bg-token-main-surface-secondary p-4",
+                n && "invisible",
+                a ? "rounded-t-lg" : "rounded-lg"
+              ),
+              children: [
+                (0, M.jsx)(e$.Z, {
+                  isFirstParty: !1,
+                  className: "h-11 w-11",
+                  src: t.profilePictureUrl,
+                }),
+                (0, M.jsxs)("div", {
+                  className: "flex grow flex-col space-y-0",
+                  children: [
+                    (0, M.jsx)("span", {
+                      className: "font-medium",
+                      children: t.name,
+                    }),
+                    (0, M.jsx)(tn.ZP, {
+                      builderName: null == r ? void 0 : r.display_name,
+                      builderUrl: null == r ? void 0 : r.website_url,
+                      socials: [
+                        null == r ? void 0 : r.socials.linkedin,
+                        null == r ? void 0 : r.socials.github,
+                        null == r ? void 0 : r.socials.twitter,
+                      ].filter((e) => null != e),
+                      className: "text-xs",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            a &&
+              (0, M.jsxs)("div", {
+                className:
+                  "flex min-h-[56px] flex-row items-center justify-between space-x-2 rounded-b-lg bg-token-main-surface-secondary px-4",
+                children: [
+                  (0, M.jsx)("span", {
+                    className: "text-base font-medium",
+                    children: (0, M.jsx)(el.Z, {
+                      id: "JcA4/t",
+                      defaultMessage: "Category",
+                    }),
+                  }),
+                  s
+                    ? (0, M.jsxs)(e8.Z.Root, {
+                        children: [
+                          (0, M.jsxs)(e8.Z.Trigger, {
+                            className:
+                              "bg-transparent text-token-text-secondary hover:bg-token-main-surface-tertiary",
+                            children: [
+                              null == l ? void 0 : l.title,
+                              (0, M.jsx)(eC.bTu, {}),
+                            ],
+                          }),
+                          (0, M.jsx)(e8.Z.Portal, {
+                            children: (0, M.jsx)(e8.Z.Content, {
+                              className: "text-token-text-secondary",
+                              children: a.map((e, t) =>
+                                (0, M.jsx)(
+                                  e8.Z.Item,
+                                  { onClick: () => s(e), children: e.title },
+                                  t
+                                )
+                              ),
+                            }),
+                          }),
+                        ],
+                      })
+                    : (0, M.jsx)("span", {
+                        className: "text-token-text-secondary",
+                        children: l.title,
+                      }),
+                ],
+              }),
+          ],
+        });
+      }
+      let tP = P.Z.li(
+        u ||
+          (u = (0, x.Z)([
+            "flex flex-col rounded-sm p-1 hover:bg-token-main-surface-secondary",
+          ]))
+      );
+      function tM(e) {
+        var t, i;
+        let { onAdd: a } = e,
+          s = (0, ei.Z)(),
+          r = (0, R.t)(),
+          { 0: n, 1: l } = (0, z.useState)(""),
+          { data: o } = (0, tt.Z)(null == r ? void 0 : r.id, 0, n, 5),
+          { data: d } = (0, te.a)({
+            queryKey: [null == r ? void 0 : r.id, "groups", "filtered", n],
+            queryFn: () => e6.Z.getWorkspaceGroups(r.id, { query: n }),
+            enabled: "" !== n.trim() && null != r && !!r.getWorkspaceId(),
+          }),
+          c =
+            (null !== (t = null == o ? void 0 : o.items.length) && void 0 !== t
+              ? t
+              : 0) > 0 ||
+            (null !== (i = null == d ? void 0 : d.items.length) && void 0 !== i
+              ? i
+              : 0) > 0,
+          { 0: u, 1: p } = (0, z.useState)(!1);
+        return (0, M.jsx)(M.Fragment, {
+          children: (0, M.jsx)("div", {
+            className: "flex w-full flex-row space-x-3",
+            children: (0, M.jsxs)(e9.J, {
+              as: "div",
+              className: "group relative grow",
+              children: [
+                (0, M.jsx)(ec.Z, {
+                  list: "suggested-choices",
+                  name: "share-with-input",
+                  placeholder: s.formatMessage({
+                    id: "HLp5O4",
+                    defaultMessage: "Add people and groups",
+                  }),
+                  value: n,
+                  onChange: (e) => l(e.target.value),
+                  onFocus: () => p(!0),
+                  onBlur: () => p(!1),
+                }),
+                (0, M.jsx)(tr.m, {
+                  show: "" !== n.trim() && c && u,
+                  children: (0, M.jsx)(e9.J.Panel, {
+                    static: !0,
+                    className:
+                      "group-has-[:focus]:border-token-border-xheavy absolute top-8 ml-0 w-full cursor-pointer overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-token-border-light bg-token-main-surface-primary px-1 py-1",
+                    children:
+                      "" !== n.trim() &&
+                      (0, M.jsxs)("ul", {
+                        id: "suggested-choices",
+                        children: [
+                          (null == o ? void 0 : o.items) &&
+                            o.items.map((e) =>
+                              (0, M.jsxs)(
+                                tP,
+                                {
+                                  tabIndex: 0,
+                                  className:
+                                    "rounded-sm p-1 text-sm hover:bg-token-main-surface-secondary",
+                                  onClick: () => {
+                                    var t, i, s;
+                                    return (
+                                      (t = e.id),
+                                      (i = e.name),
+                                      (s = e.email),
+                                      void (
+                                        r &&
+                                        (a({
+                                          type: b.LA.USER,
+                                          user_id:
+                                            t + "__" + r.getWorkspaceId(),
+                                          user_name: i,
+                                          user_email: s,
+                                          capabilities: tu({}, tp),
+                                        }),
+                                        l(""))
+                                      )
+                                    );
+                                  },
+                                  children: [
+                                    (0, M.jsx)("span", {
+                                      className: "w-full font-medium",
+                                      children: e.name,
+                                    }),
+                                    (0, M.jsx)("span", {
+                                      className:
+                                        "text-sm text-token-text-secondary",
+                                      children: e.email,
+                                    }),
+                                  ],
+                                },
+                                e.id
+                              )
+                            ),
+                          (null == d ? void 0 : d.items) &&
+                            d.items.slice(0, 5).map((e) =>
+                              (0, M.jsxs)(
+                                tP,
+                                {
+                                  tabIndex: 0,
+                                  onClick: () => {
+                                    var t, i;
+                                    return (
+                                      (t = e.id),
+                                      (i = e.name),
+                                      void (a({
+                                        type: b.LA.GROUP,
+                                        group_id: t,
+                                        group_name: i,
+                                        capabilities: tu({}, tp),
+                                      }),
+                                      l(""))
+                                    );
+                                  },
+                                  children: [
+                                    (0, M.jsx)("span", {
+                                      className: "font-medium",
+                                      children: e.name,
+                                    }),
+                                    (0, M.jsx)("span", {
+                                      className:
+                                        "text-sm text-token-text-secondary",
+                                      children: (0, M.jsx)(el.Z, {
+                                        id: "r3Rx6X",
+                                        defaultMessage:
+                                          "{numMembers, plural, one {1 member} other {# members}}",
+                                        values: { numMembers: e.num_members },
+                                      }),
+                                    }),
+                                  ],
+                                },
+                                e.id
+                              )
+                            ),
+                        ],
+                      }),
+                  }),
+                }),
+              ],
+            }),
+          }),
+        });
+      }
+      function tZ(e) {
+        let {
+            gizmo: t,
+            publishedGizmo: i,
+            promoteGizmo: a,
+            appealGizmo: s,
+            showActionsModal: r,
+            onClose: n,
+          } = e,
+          { 0: l, 1: o } = (0, z.useState)({ type: "privacy" });
+        return "privacy" === l.type
+          ? (0, M.jsx)(t_, {
+              gizmo: t,
+              publishedGizmo: i,
+              promoteGizmo: a,
+              appealGizmo: s,
+              setStep: o,
+              showActionsModal: r,
+              onClose: n,
+            })
+          : (0, M.jsx)(tT, { publishedGizmo: l.publishedGizmo, onClose: n });
+      }
+      function t_(e) {
+        var t, i, a, s;
+        let {
+            gizmo: r,
+            publishedGizmo: n,
+            promoteGizmo: l,
+            appealGizmo: o,
+            setStep: d,
+            showActionsModal: c,
+            onClose: u,
+          } = e,
+          { 0: p, 1: h } = (0, z.useState)(!1),
+          f = (0, V.ec)(V.F_.isBusinessWorkspace),
+          x = (0, ei.Z)(),
+          { 0: v, 1: k } = (0, z.useState)(
+            (0, m.Sg)(r)
+              ? f
+                ? b.Zz.Workspace
+                : b.Zz.Marketplace
+              : r.sharingRecipient
+          ),
+          N = (0, z.useMemo)(
+            () =>
+              (null == n ? void 0 : n.gizmo.sharing_targets) == null ||
+              n.gizmo.sharing_targets.some(
+                (e) => e.recipient === v && e.allowed
+              ),
+            [null == n ? void 0 : n.gizmo.sharing_targets, v]
+          ),
+          { data: P, isLoading: Z } = (0, m.WL)(),
+          _ = (0, m.Z1)(),
+          { 0: T, 1: C } = (0, z.useState)(
+            null != n && n.gizmo.display.categories.length > 0
+              ? null === (t = _.data) ||
+                void 0 === t ||
+                null ===
+                  (t = t.categories.find(
+                    (e) => e.id === n.gizmo.display.categories[0]
+                  )) ||
+                void 0 === t
+                ? void 0
+                : t.id
+              : void 0
+          );
+        (0, z.useEffect)(() => {
+          C(null == n ? void 0 : n.gizmo.display.categories[0]);
+        }, [null == n ? void 0 : n.gizmo.display.categories]);
+        let { 0: O, 1: S } = (0, z.useState)(void 0),
+          I = (0, z.useRef)(
+            (0, $.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
+          ),
+          A =
+            null != P && P.is_verified
+              ? void 0
+              : x.formatMessage({
+                  id: "qEQtmt",
+                  defaultMessage:
+                    "To publish your GPTs to the Explore GPTs page, set up your builder profile.",
+                });
+        v !== b.Zz.Marketplace || null == A || Z || k(b.Zz.Link);
+        let G =
+            f &&
+            !(
+              null !== (i = r.sharingTargets) &&
+              void 0 !== i &&
+              i.some((e) => e.recipient === b.Zz.Link)
+            ),
+          E = (0, e5.bw)(r, v, T),
+          L = E.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
+          U = r.tools.find(
+            (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
+          ),
+          D = (0, V.ec)((e) => e.currentWorkspace),
+          B = (0, R.hz)();
+        (0, z.useEffect)(() => {
+          let e = !0;
+          return (
+            (async () => {
+              try {
+                if (null != T) return;
+                let t = await I.current(r.name, r.instructions);
+                e && null == T && (t ? C(t.id) : S(!0));
+              } catch (t) {
+                e && null == T && S(!0);
+              }
+            })(),
+            () => {
+              e = !1;
+            }
+          );
+        }, [r.instructions, r.name, B, T]);
+        let { value: q } = (0, w.sB)(w.tz.GizmoAppeals);
+        return (0, M.jsx)(j.Z, {
+          type: "success",
+          isOpen: !0,
+          onClose: u,
+          title: (0, M.jsx)(el.Z, {
+            id: "9viumf",
+            defaultMessage: "Share GPT",
+          }),
+          showCloseButton: !0,
+          primaryButton: N
+            ? (0, M.jsx)(eR.cY, {
+                color: "primary",
+                disabled: E.length > 0,
+                loading: p,
+                onClick: async () => {
+                  try {
+                    h(!0);
+                    let e = await l({ recipient: v, subjects: [] }, T);
+                    if (null == e) return;
+                    1 === e.gizmo.live_version
+                      ? et().push((0, m.m_)(e))
+                      : d({ type: "published", publishedGizmo: e });
+                  } finally {
+                    h(!1);
+                  }
+                },
+                children: (0, M.jsx)(el.Z, {
+                  id: "L6O5TQ",
+                  defaultMessage: "Confirm",
+                }),
+              })
+            : q
+              ? (0, M.jsxs)(M.Fragment, {
+                  children: [
+                    (0, M.jsx)("div", {
+                      className:
+                        "flex items-center justify-between text-sm text-token-text-secondary",
+                      children: (0, M.jsx)(el.Z, {
+                        id: "jLCMMV",
+                        defaultMessage:
+                          "Because this GPT previously may have violated our policies, you will have to submit an appeal to make it available at this level.",
+                      }),
+                    }),
+                    (0, M.jsx)(eR.cY, {
+                      color: "primary",
+                      onClick: async () => {
+                        await o(v, T);
+                      },
+                      className: "w-full",
+                      children: (0, M.jsx)(el.Z, {
+                        id: "bBmLUr",
+                        defaultMessage: "Appeal",
+                      }),
+                    }),
+                  ],
+                })
+              : (0, M.jsx)("div", {
+                  className:
+                    "flex items-center justify-between text-sm text-token-text-secondary",
+                  children: (0, M.jsx)(el.Z, {
+                    id: "PI9mO2",
+                    defaultMessage:
+                      "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
+                  }),
+                }),
+          children: (0, M.jsxs)("div", {
+            className: "flex flex-col gap-3 text-sm",
+            children: [
+              (0, M.jsxs)(Y.fC, {
+                value: v,
+                onValueChange: (e) => k(e),
+                className: "space-y-2",
+                children: [
+                  r.sharingTargets &&
+                    r.sharingTargets.map((e, t) =>
+                      (0, M.jsx)(
+                        tO,
+                        {
+                          value: e.recipient,
+                          disabled:
+                            e.recipient === b.Zz.Marketplace && null != A,
+                          tooltipText:
+                            e.recipient === b.Zz.Marketplace
+                              ? null != A
+                                ? A
+                                : x.formatMessage({
+                                    id: "0Rcb4e",
+                                    defaultMessage:
+                                      "Your GPT will appear in the Explore GPTs page",
+                                  })
+                              : void 0,
+                          shareLevel: e.recipient,
+                        },
+                        t
+                      )
+                    ),
+                  G &&
+                    (0, M.jsxs)(M.Fragment, {
+                      children: [
+                        (0, M.jsx)(tO, {
+                          value: b.Zz.Link,
+                          disabled: !0,
+                          tooltipText: x.formatMessage(
+                            tC.workspaceDisabledHint
+                          ),
+                          shareLevel: b.Zz.Link,
+                          workspaceName: null == D ? void 0 : D.name,
+                        }),
+                        (0, M.jsx)(tO, {
+                          value: b.Zz.Marketplace,
+                          disabled: !0,
+                          tooltipText: x.formatMessage(
+                            tC.workspaceDisabledHint
+                          ),
+                          shareLevel: b.Zz.Marketplace,
+                          workspaceName: null == D ? void 0 : D.name,
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+              L &&
+                (0, M.jsx)("div", {
+                  className: "text-xs text-red-500",
+                  children: (0, M.jsx)(el.Z, {
+                    id: "/iw1Iv",
+                    defaultMessage:
+                      "Public actions require valid privacy policy URLs. Click <fixlink>here</fixlink> to update.",
+                    values: {
+                      fixlink: (e) =>
+                        (0, M.jsx)("button", {
+                          onClick: () => {
+                            c(null == U ? void 0 : U.metadata.action_id);
+                          },
+                          className: "underline",
+                          children: e,
+                        }),
+                    },
+                  }),
+                }),
+              v !== b.Zz.Private &&
+                (0, M.jsx)(tz, {
+                  gizmo: r,
+                  category: T,
+                  categories:
+                    v === b.Zz.Marketplace
+                      ? null !==
+                          (a =
+                            null === (s = _.data) || void 0 === s
+                              ? void 0
+                              : s.categories) && void 0 !== a
+                        ? a
+                        : []
+                      : void 0,
+                  onCategoryChange:
+                    v === b.Zz.Marketplace ? (e) => C(e.id) : void 0,
+                }),
+              v === b.Zz.Marketplace &&
+                (O
+                  ? (0, M.jsx)("div", {
+                      className: "text-xs text-red-500",
+                      children: (0, M.jsx)(el.Z, {
+                        id: "tpC3ui",
+                        defaultMessage:
+                          "There was an error updating the list of categories",
+                      }),
+                    })
+                  : null),
+            ],
+          }),
+        });
+      }
+      function tT(e) {
+        let { publishedGizmo: t, onClose: i } = e,
+          a = to(t),
+          s = (0, ei.Z)();
+        return (0, M.jsx)(j.Z, {
+          type: "success",
+          isOpen: !0,
+          onClose: i,
+          title: (0, M.jsx)(el.Z, {
+            id: "9viumf",
+            defaultMessage: "Share GPT",
+          }),
+          showCloseButton: !0,
+          primaryButton: (0, M.jsx)(eR.cY, {
+            color: "primary",
+            as: "link",
+            to: a,
+            children: (0, M.jsx)(el.Z, {
+              id: "lyZz44",
+              defaultMessage: "View GPT",
+            }),
+          }),
+          children: (0, M.jsxs)("div", {
+            className: "flex flex-col gap-2",
+            children: [
+              (0, M.jsx)("div", {
+                className: "font-medium",
+                children: (0, M.jsx)(el.Z, {
+                  id: "fbcGL6",
+                  defaultMessage: "Published!",
+                }),
+              }),
+              (0, M.jsxs)("div", {
+                className:
+                  "flex gap-1 rounded bg-token-main-surface-secondary px-2 py-1",
+                children: [
+                  (0, M.jsx)("div", {
+                    className: "text-ellipsis break-all line-clamp-1",
+                    children: a,
+                  }),
+                  (0, M.jsx)("button", {
+                    onClick: () => {
+                      td(
+                        t,
+                        s.formatMessage({
+                          id: "KdDqMm",
+                          defaultMessage: "Copied link to clipboard",
+                        })
+                      );
+                    },
+                    className:
+                      "text-token-text-secondary transition hover:text-token-text-primary",
+                    children: (0, M.jsx)(en.dS, { className: "icon-sm" }),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      let tC = (0, eo.vU)({
+        workspaceDisabledHint: {
+          id: "gizmo.workspaceDisabledHint",
+          defaultMessage:
+            "Your workspace administrator has disabled this setting",
+        },
+      });
+      function tO(e) {
+        let {
+            shareLevel: t,
+            workspaceName: i,
+            disabled: a = !1,
+            tooltipText: s,
+            value: r,
+          } = e,
+          n = (0, z.useId)();
+        return (0, M.jsxs)("div", {
+          className: (0, X.default)(
+            "flex h-14 items-center justify-between gap-2 py-[6px] font-medium",
+            a ? "opacity-50" : ""
+          ),
+          children: [
+            (0, M.jsx)(e4.E, {
+              disabled: null == s,
+              label: s,
+              side: "right",
+              children: (0, M.jsx)("label", {
+                htmlFor: n,
+                className: "flex cursor-pointer items-center gap-1",
+                children: (0, M.jsx)(tk, {
+                  shareLevel: t,
+                  workspaceName: null != i ? i : "",
+                }),
+              }),
+            }),
+            (0, M.jsx)(Y.ck, {
+              id: n,
+              value: r,
+              disabled: a,
+              className:
+                "mr-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gray-500 bg-white dark:border-gray-600 dark:bg-gray-700",
+              children: (0, M.jsx)(Y.z$, {
+                className: "h-2 w-2 rounded-full bg-gray-950 dark:bg-white",
+              }),
+            }),
+          ],
+        });
+      }
+      var tS = i(47559);
+      function tI(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function tA(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? tI(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : tI(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      function tG(e) {
+        window.history.length > 1 ? e.back() : e.push((0, W.L7)());
+      }
+      function tE(e) {
+        var t, i, a;
+        let {
+            gizmo: s,
+            publishedGizmo: r,
+            promoteGizmo: n,
+            appealGizmo: l,
+            setStep: o,
+            showActionsModal: d,
+          } = e,
+          { 0: c, 1: u } = (0, z.useState)(!1),
+          p = (0, V.ec)(V.F_.isBusinessWorkspace),
+          h = (0, ei.Z)(),
+          { 0: f, 1: x } = (0, z.useState)(
+            (0, m.Sg)(s)
+              ? p
+                ? b.Zz.Workspace
+                : b.Zz.Marketplace
+              : s.sharingRecipient
+          ),
+          v = (0, z.useMemo)(
+            () =>
+              (null == r ? void 0 : r.gizmo.sharing_targets) == null ||
+              r.gizmo.sharing_targets.some(
+                (e) => e.recipient === f && e.allowed
+              ),
+            [null == r ? void 0 : r.gizmo.sharing_targets, f]
+          ),
+          { data: j, isLoading: k } = (0, m.WL)(),
+          { 0: N, 1: P } = (0, z.useState)(
+            null != r && r.gizmo.display.categories.length > 0
+              ? r.gizmo.display.categories[0]
+              : void 0
+          );
+        (0, z.useEffect)(() => {
+          P(null == r ? void 0 : r.gizmo.display.categories[0]);
+        }, [null == r ? void 0 : r.gizmo.display.categories]);
+        let { 0: Z, 1: _ } = (0, z.useState)(void 0),
+          T = (0, z.useRef)(
+            (0, $.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
+          ),
+          C =
+            null != j && j.is_verified
+              ? void 0
+              : h.formatMessage(tY.displayNameRequiredHint);
+        f !== b.Zz.Marketplace || null == C || k || x(b.Zz.Link);
+        let O =
+            p &&
+            !(
+              null !== (t = s.sharingTargets) &&
+              void 0 !== t &&
+              t.some((e) => e.recipient === b.Zz.Link)
+            ),
+          S = (0, e5.bw)(s, f, N),
+          I = S.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
+          A = s.tools.find(
+            (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
+          ),
+          G = (0, V.ec)((e) => e.currentWorkspace),
+          E = (0, R.hz)(),
+          L = (0, m.Z1)();
+        (0, z.useEffect)(() => {
+          let e = !0;
+          return (
+            (async () => {
+              try {
+                if (null != N) return;
+                let t = await T.current(s.name, s.instructions);
+                e && null == N && (t ? P(t.id) : _(!0));
+              } catch (t) {
+                e && null == N && _(!0);
+              }
+            })(),
+            () => {
+              e = !1;
+            }
+          );
+        }, [s.instructions, s.name, E, N]);
+        let { value: U } = (0, w.sB)(w.tz.GizmoAppeals);
+        return (0, M.jsxs)("div", {
+          children: [
+            (0, M.jsx)("div", {
+              className: "mb-2 text-sm font-medium text-token-text-tertiary",
+              children: (0, M.jsx)(el.Z, tA({}, tY.publishTo)),
+            }),
+            (0, M.jsxs)("div", {
+              className: "flex flex-col gap-3 text-sm",
+              children: [
+                (0, M.jsxs)(Y.fC, {
+                  value: f,
+                  onValueChange: (e) => x(e),
+                  className: "space-y-2",
+                  children: [
+                    s.sharingTargets &&
+                      s.sharingTargets.map((e, t) =>
+                        (0, M.jsx)(
+                          eR.Xb,
+                          {
+                            value: e.recipient,
+                            disabled:
+                              e.recipient === b.Zz.Marketplace && null != C,
+                            tooltipText:
+                              e.recipient === b.Zz.Marketplace
+                                ? null != C
+                                  ? C
+                                  : h.formatMessage(
+                                      tY.publicSharingHintStoreEnabled
+                                    )
+                                : void 0,
+                            label: (0, ew.MI)(e.recipient, G, h),
+                          },
+                          t
+                        )
+                      ),
+                    O &&
+                      (0, M.jsxs)(M.Fragment, {
+                        children: [
+                          (0, M.jsx)(eR.Xb, {
+                            value: b.Zz.Link,
+                            disabled: !0,
+                            tooltipText: h.formatMessage(
+                              tY.workspaceDisabledHint
+                            ),
+                            label: (0, ew.MI)(b.Zz.Link, G, h),
+                          }),
+                          (0, M.jsx)(eR.Xb, {
+                            value: b.Zz.Marketplace,
+                            disabled: !0,
+                            tooltipText: h.formatMessage(
+                              tY.workspaceDisabledHint
+                            ),
+                            label: (0, ew.MI)(b.Zz.Marketplace, G, h),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+                I &&
+                  (0, M.jsx)("div", {
+                    className: "text-xs text-red-500",
+                    children: (0, M.jsx)(
+                      el.Z,
+                      tA(
+                        tA({}, tY.actionNeedsPrivacyPolicyURL),
+                        {},
+                        {
+                          values: {
+                            fixlink: (e) =>
+                              (0, M.jsx)("button", {
+                                onClick: () => {
+                                  d(null == A ? void 0 : A.metadata.action_id);
+                                },
+                                className: "underline",
+                                children: e,
+                              }),
+                          },
+                        }
+                      )
+                    ),
+                  }),
+                f !== b.Zz.Private &&
+                  (0, M.jsx)(tS.QT, {
+                    gizmoAvatar: s.profilePictureUrl,
+                    gizmoName: s.name,
+                    canEdit: !0,
+                  }),
+                f === b.Zz.Marketplace &&
+                  (Z
+                    ? (0, M.jsx)("div", {
+                        className: "text-xs text-red-500",
+                        children: (0, M.jsx)(el.Z, tA({}, tY.categoryError)),
+                      })
+                    : (0, M.jsxs)(M.Fragment, {
+                        children: [
+                          (0, M.jsxs)("div", {
+                            className:
+                              "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
+                            children: [
+                              (0, M.jsx)(el.Z, tA({}, tY.categoryLabel)),
+                              (0, M.jsx)(e4.u, {
+                                label: (0, M.jsx)("span", {
+                                  className: "w-36 text-xs",
+                                  children: (0, M.jsx)(
+                                    el.Z,
+                                    tA({}, tY.categoryLabelTooltip)
+                                  ),
+                                }),
+                                side: "top",
+                                children: (0, M.jsx)(en.VX, {
+                                  className: "icon-sm",
+                                }),
+                              }),
+                            ],
+                          }),
+                          (0, M.jsx)(tF, {
+                            category: null != N ? N : "",
+                            categories:
+                              null !==
+                                (i =
+                                  null === (a = L.data) || void 0 === a
+                                    ? void 0
+                                    : a.categories) && void 0 !== i
+                                ? i
+                                : [],
+                            setCategory: P,
+                          }),
+                        ],
+                      })),
+                v
+                  ? (0, M.jsx)(eR.cY, {
+                      color: "primary",
+                      disabled: S.length > 0,
+                      loading: c,
+                      onClick: async () => {
+                        try {
+                          u(!0);
+                          let e = await n({ recipient: f, subjects: [] }, N);
+                          if (null == e) return;
+                          1 === e.gizmo.live_version
+                            ? et().push((0, m.m_)(e))
+                            : o({ type: "published", publishedGizmo: e });
+                        } finally {
+                          u(!1);
+                        }
+                      },
+                      className: "w-full",
+                      children: (0, M.jsx)(el.Z, tA({}, tY.privacyConfirm)),
+                    })
+                  : U
+                    ? (0, M.jsxs)(M.Fragment, {
+                        children: [
+                          (0, M.jsx)("div", {
+                            className:
+                              "flex items-center justify-between text-sm text-token-text-secondary",
+                            children: (0, M.jsx)(
+                              el.Z,
+                              tA({}, tY.appealNeededLabel)
+                            ),
+                          }),
+                          (0, M.jsx)(eR.cY, {
+                            color: "primary",
+                            onClick: async () => {
+                              await l(f, N);
+                            },
+                            className: "w-full",
+                            children: (0, M.jsx)(el.Z, tA({}, tY.appealButton)),
+                          }),
+                        ],
+                      })
+                    : (0, M.jsx)("div", {
+                        className:
+                          "flex items-center justify-between text-sm text-token-text-secondary",
+                        children: (0, M.jsx)(el.Z, tA({}, tY.recipientBlocked)),
+                      }),
+              ],
+            }),
+          ],
+        });
+      }
+      function tL(e) {
+        let { publishedGizmo: t } = e,
+          i = to(t),
+          a = (0, ei.Z)();
+        return (0, M.jsxs)("div", {
+          className: "flex flex-col gap-2",
+          children: [
+            (0, M.jsx)("div", {
+              className: "font-medium",
+              children: (0, M.jsx)(el.Z, tA({}, tY.publishedTitle)),
+            }),
+            (0, M.jsxs)("div", {
+              className:
+                "flex gap-1 rounded bg-token-main-surface-secondary px-2 py-1",
+              children: [
+                (0, M.jsx)("div", {
+                  className: "text-ellipsis break-all line-clamp-1",
+                  children: i,
+                }),
+                (0, M.jsx)("button", {
+                  onClick: () => {
+                    td(
+                      t,
+                      a.formatMessage({
+                        id: "KdDqMm",
+                        defaultMessage: "Copied link to clipboard",
+                      })
+                    );
+                  },
+                  className:
+                    "text-token-text-secondary transition hover:text-token-text-primary",
+                  children: (0, M.jsx)(en.dS, { className: "icon-sm" }),
+                }),
+              ],
+            }),
+            (0, M.jsx)(eR.cY, {
+              color: "primary",
+              as: "link",
+              to: i,
+              className: "w-full",
+              children: (0, M.jsx)(el.Z, tA({}, tY.viewGPT)),
+            }),
+          ],
+        });
+      }
+      function tU(e) {
+        let {
+            gizmo: t,
+            publishedGizmo: i,
+            promoteGizmo: a,
+            appealGizmo: s,
+            showActionsModal: r,
+          } = e,
+          { 0: n, 1: l } = (0, z.useState)({ type: "privacy" });
+        return (0, M.jsx)("div", {
+          className:
+            "w-60 rounded-lg border border-token-border-medium bg-token-main-surface-primary p-4 text-sm",
+          children:
+            "privacy" === n.type
+              ? (0, M.jsx)(tE, {
+                  gizmo: t,
+                  publishedGizmo: i,
+                  promoteGizmo: a,
+                  appealGizmo: s,
+                  setStep: l,
+                  showActionsModal: r,
+                })
+              : (0, M.jsx)(tL, { publishedGizmo: n.publishedGizmo }),
+        });
+      }
+      function tR(e) {
+        var t;
+        let {
+            gizmo: i,
+            publishedGizmo: a,
+            isLoading: s,
+            isUploadingProfilePic: r,
+            isGeneratingProfilePic: n,
+            promoteGizmo: l,
+            appealGizmo: o,
+            hasUnpublishedChanges: d,
+            showActionsModal: c,
+          } = e,
+          u = (0, R.t)(),
+          p = null != i ? (0, e5.bw)(i) : [],
+          h = (0, ei.Z)();
+        (null == i || s) && p.push(e5.hs.Loading),
+          r && p.push(e5.hs.UploadingProfilePic),
+          n && p.push(e5.hs.GeneratingProfilePic);
+        let { value: g } = (0, w.sB)(w.tz.UpdatedGizmoShare),
+          f = (0, m.Sg)(i),
+          { 0: x, 1: v } = (0, z.useState)(!1),
+          j = i.sharingRecipient ? tw[i.sharingRecipient] : tw.private;
+        return g
+          ? (0, M.jsxs)(M.Fragment, {
+              children: [
+                !f &&
+                  (0, M.jsxs)(eR.cY, {
+                    color: "neutral",
+                    onClick: () => v("share"),
+                    children: [
+                      (0, M.jsx)(j, { className: "icon-md h-6 w-6 shrink-0" }),
+                      (0, M.jsx)(el.Z, {
+                        id: "aXKW4G",
+                        defaultMessage: "Share",
+                      }),
+                    ],
+                  }),
+                (0, M.jsx)(eR.cY, {
+                  color: "primary",
+                  onClick: () => v("promote"),
+                  children: (0, M.jsx)(el.Z, {
+                    id: "MAqc/D",
+                    defaultMessage: "Save",
+                  }),
+                }),
+                x &&
+                  ((null == u ? void 0 : u.getWorkspaceId()) == void 0
+                    ? (0, M.jsx)(tZ, {
+                        gizmo: i,
+                        publishedGizmo: a,
+                        promoteGizmo: l,
+                        appealGizmo: o,
+                        showActionsModal: c,
+                        onClose: () => v(!1),
+                      })
+                    : (0, M.jsx)(tx, {
+                        gizmo: i,
+                        publishedGizmo: a,
+                        promoteGizmo: l,
+                        appealGizmo: o,
+                        showActionsModal: c,
+                        onClose: () => v(!1),
+                        workspaceSharing:
+                          (null == u ? void 0 : u.getWorkspaceId()) != void 0,
+                        shareOnly: !0,
+                      })),
+              ],
+            })
+          : (0, M.jsxs)(e2.fC, {
+              modal: !0,
+              children: [
+                (0, M.jsx)(e2.xz, {
+                  asChild: !0,
+                  children: (0, M.jsx)(eR.cY, {
+                    color: "primary",
+                    className: "cursor-pointer whitespace-nowrap",
+                    disabled: void 0 === i.id,
+                    tooltip: p.length > 0 ? p.map(e5.sw).join("\n") : void 0,
+                    children: (0, M.jsxs)("div", {
+                      className: "flex items-center gap-1",
+                      children: [
+                        d && !f
+                          ? h.formatMessage({
+                              id: "5D5nYS",
+                              defaultMessage: "Update",
+                            })
+                          : h.formatMessage({
+                              id: "MAqc/D",
+                              defaultMessage: "Save",
+                            }),
+                        (0, M.jsx)(en.ud, {}),
+                      ],
+                    }),
+                  }),
+                }),
+                (0, M.jsx)(e2.h_, {
+                  children: (0, M.jsx)(e2.VY, {
+                    side: "bottom",
+                    align: "end",
+                    sideOffset: 8,
+                    children: (0, M.jsx)(tU, {
+                      gizmo: i,
+                      publishedGizmo: a,
+                      promoteGizmo: l,
+                      appealGizmo: o,
+                      showActionsModal: c,
+                    }),
+                  }),
+                }),
+              ],
+            });
+      }
+      function tD(e) {
+        let { gizmoEditorData: t, publishedGizmo: i, revertDraft: a } = e,
+          s = (0, ei.Z)(),
+          { 0: r, 1: n } = (0, z.useState)(!1),
+          l = (0, R.hz)(),
+          { value: o } = (0, w.sB)(w.tz.GizmoVersionHistory);
+        return (null != l && l.includes("debug")) ||
+          (null == t ? void 0 : t.id) != null
+          ? (0, M.jsxs)(M.Fragment, {
+              children: [
+                (0, M.jsxs)(e1.fC, {
+                  children: [
+                    (0, M.jsx)(e1.xz, {
+                      asChild: !0,
+                      children: (0, M.jsx)(eR.cY, {
+                        children: (0, M.jsx)(en.Yr, { className: "icon-md" }),
+                      }),
+                    }),
+                    (0, M.jsx)(e1.Uv, {
+                      children: (0, M.jsxs)(e1.VY, {
+                        className:
+                          "popover min-w-[180px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
+                        side: "top",
+                        align: "end",
+                        sideOffset: 6,
+                        children: [
+                          null != i &&
+                            (0, M.jsxs)(eR.UA, {
+                              onClick: () => {
+                                td(i);
+                              },
+                              children: [
+                                (0, M.jsx)(en.HN, { className: "icon-md" }),
+                                (0, M.jsx)(el.Z, tA({}, tY.copyLink)),
+                              ],
+                            }),
+                          null != a &&
+                            (0, M.jsxs)(eR.UA, {
+                              onClick: () => {
+                                window.confirm(
+                                  s.formatMessage(tY.revertConfirm)
+                                ) && a();
+                              },
+                              children: [
+                                (0, M.jsx)(en.Nt, { className: "icon-md" }),
+                                (0, M.jsx)(el.Z, tA({}, tY.revertMenuItem)),
+                              ],
+                            }),
+                          (null == l ? void 0 : l.includes("debug")) &&
+                            (0, M.jsxs)(eR.UA, {
+                              onClick: () => {
+                                eN.vm.toggleActiveSidebar("debug");
+                              },
+                              children: [
+                                (0, M.jsx)(en.WP, { className: "icon-md" }),
+                                "Debug (Internal only)",
+                              ],
+                            }),
+                          (null == t ? void 0 : t.id) != null &&
+                            o &&
+                            (0, M.jsxs)(M.Fragment, {
+                              children: [
+                                (0, M.jsxs)(eR.UA, {
+                                  onClick: () => {
+                                    et().push("/g/".concat(t.id, "/view"));
+                                  },
+                                  children: [
+                                    (0, M.jsx)(en.Eo, { className: "icon-md" }),
+                                    (0, M.jsx)(el.Z, {
+                                      id: "gizmo.versionHistory",
+                                      defaultMessage: "Version History",
+                                    }),
+                                  ],
+                                }),
+                                (0, M.jsxs)(eR.UA, {
+                                  onClick: async () => {
+                                    let e = await y.U.copyGizmo({
+                                      gizmoId: t.id,
+                                    });
+                                    e.gizmo.id &&
+                                      et().push(
+                                        "/gpts/editor/".concat(e.gizmo.id)
+                                      );
+                                  },
+                                  children: [
+                                    (0, M.jsx)(en.dS, { className: "icon-md" }),
+                                    (0, M.jsx)(el.Z, {
+                                      id: "GizmoInformation.copyGizmoLabel",
+                                      defaultMessage: "Duplicate GPT",
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          (null == t ? void 0 : t.id) != null &&
+                            (0, M.jsxs)(eR.UA, {
+                              color: "danger",
+                              onClick: () => {
+                                n(!0);
+                              },
+                              children: [
+                                (0, M.jsx)(en.a_, { className: "icon-md" }),
+                                (0, M.jsx)(el.Z, tA({}, tY.deleteGPT)),
+                              ],
+                            }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                r &&
+                  (0, M.jsx)(e0.b, {
+                    gizmoId: t.id,
+                    onSuccess: () => tG(et()),
+                    onClose: () => {
+                      n(!1);
+                    },
+                  }),
+              ],
+            })
+          : null;
+      }
+      let tB = P.Z.div(p || (p = (0, x.Z)(["flex items-center gap-1"])));
+      function tV(e) {
+        let { gizmoEditorData: t } = e,
+          i = (0, V.ec)((e) => {
+            var t;
+            return null === (t = e.currentWorkspace) || void 0 === t
+              ? void 0
+              : t.name;
+          });
+        switch (t.sharingRecipient) {
+          case b.Zz.Private:
+            return (0, M.jsxs)(tB, {
+              children: [
+                (0, M.jsx)(en.LX, { className: "icon-xs" }),
+                (0, M.jsx)(el.Z, tA({}, tY.onlyMe)),
+              ],
+            });
+          case b.Zz.Link:
+            return (0, M.jsxs)(tB, {
+              children: [
+                (0, M.jsx)(en.HN, { className: "icon-xs" }),
+                (0, M.jsx)(el.Z, tA({}, tY.anyoneWithLink)),
+              ],
+            });
+          case b.Zz.Workspace:
+            return (0, M.jsxs)(tB, {
+              children: [(0, M.jsx)(en.oq, { className: "icon-xs" }), i],
+            });
+          case b.Zz.Marketplace:
+            return (0, M.jsxs)(tB, {
+              children: [
+                (0, M.jsx)(en.hk, { className: "icon-xs" }),
+                (0, M.jsx)(el.Z, tA({}, tY.public)),
+              ],
+            });
+        }
+        return (0, M.jsx)("div", {});
+      }
+      function tq(e) {
+        let { gizmoEditorData: t } = e;
+        return (0, M.jsxs)("div", {
+          className: "flex items-center gap-2",
+          children: [
+            null != t.profilePictureUrl
+              ? (0, M.jsx)(e$.Z, {
+                  isFirstParty: !1,
+                  src: t.profilePictureUrl,
+                  className: "h-8 w-8",
+                })
+              : (0, M.jsx)("div", {
+                  className:
+                    "h-8 w-8 rounded-full border-2 border-dashed border-token-border-medium",
+                }),
+            (0, M.jsxs)("div", {
+              children: [
+                (0, M.jsx)("div", {
+                  className: "text-sm font-medium",
+                  children: t.name || (0, M.jsx)(el.Z, tA({}, tY.newGPT)),
+                }),
+                (0, M.jsx)("div", {
+                  className: "text-xs text-token-text-secondary",
+                  children: (0, m.Sg)(t)
+                    ? (0, M.jsxs)("div", {
+                        className: "flex items-center gap-1",
+                        children: [
+                          (0, M.jsx)("div", {
+                            className:
+                              "h-1.5 w-1.5 rounded-full bg-token-text-tertiary",
+                          }),
+                          (0, M.jsx)(el.Z, tA({}, tY.draft)),
+                        ],
+                      })
+                    : (0, M.jsxs)("div", {
+                        className: "flex items-center gap-1",
+                        children: [
+                          (0, M.jsx)("div", {
+                            className:
+                              "h-1.5 w-1.5 rounded-full bg-brand-green",
+                          }),
+                          (0, M.jsx)(el.Z, tA({}, tY.published)),
+                          " \xb7 ",
+                          (0, M.jsx)(tV, { gizmoEditorData: t }),
+                        ],
+                      }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function tF(e) {
+        let { category: t, categories: i, setCategory: a } = e;
+        return (0, M.jsxs)(e3.fC, {
+          value: t,
+          onValueChange: (e) => a(e),
+          children: [
+            (0, M.jsx)(e3.xz, {
+              className:
+                "flex justify-between rounded-xl bg-gray-50 p-3 font-medium dark:bg-gray-900",
+              children: t
+                ? (0, M.jsxs)(M.Fragment, {
+                    children: [
+                      (0, M.jsx)(e3.B4, {}),
+                      (0, M.jsx)(e3.JO, { children: (0, M.jsx)(en.ud, {}) }),
+                    ],
+                  })
+                : (0, M.jsx)("div", {
+                    className: "flex w-full justify-center",
+                    children: (0, M.jsx)(L.Z, {}),
+                  }),
+            }),
+            (0, M.jsx)(e3.h_, {
+              children: (0, M.jsx)(e3.VY, {
+                className:
+                  "h-64 w-[var(--radix-select-trigger-width)] rounded-xl border bg-token-main-surface-primary p-1 py-2 dark:border-gray-600",
+                position: "popper",
+                sideOffset: 2,
+                children: (0, M.jsx)("div", {
+                  className: "overflow-y-auto",
+                  children: i.map((e) =>
+                    (0, M.jsxs)(
+                      e3.ck,
+                      {
+                        className:
+                          "flex w-full cursor-pointer justify-between rounded-lg p-2 pl-4 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700",
+                        value: e.id,
+                        children: [
+                          (0, M.jsx)(e3.eT, { children: e.title }),
+                          (0, M.jsx)(e3.wU, {
+                            className: "text-green-600",
+                            children: (0, M.jsx)(en.oS, {}),
+                          }),
+                        ],
+                      },
+                      e.id
+                    )
+                  ),
+                }),
+              }),
+            }),
+          ],
+        });
+      }
+      function tW(e) {
+        let {
+          gizmoEditorData: t,
+          isLoading: i,
+          isUploadingProfilePic: a,
+          isGeneratingProfilePic: s,
+          publishedGizmo: r,
+          promoteGizmo: n,
+          appealGizmo: l,
+          revertDraft: o,
+          draftMessage: d,
+          className: c,
+          hasUnpublishedChanges: u,
+          showActionsModal: p,
+        } = e;
+        return (0, M.jsxs)("div", {
+          className: (0, X.default)(
+            "relative flex h-14 w-full items-center justify-between gap-2 border-b border-token-border-medium px-3",
+            c
+          ),
+          children: [
+            (0, M.jsxs)("div", {
+              className: "flex items-center gap-2",
+              children: [
+                (0, M.jsx)("a", {
+                  className: "cursor-pointer text-token-text-primary",
+                  onClick: () => tG(et()),
+                  children: (0, M.jsx)(en.L7, { className: "icon-lg" }),
+                }),
+                (0, M.jsx)(tq, { gizmoEditorData: t }),
+              ],
+            }),
+            (0, M.jsxs)("div", {
+              className: "flex items-center gap-2",
+              children: [
+                d,
+                (0, M.jsx)(tD, {
+                  gizmoEditorData: t,
+                  publishedGizmo: r,
+                  revertDraft: o,
+                }),
+                (0, M.jsx)(tR, {
+                  gizmo: t,
+                  publishedGizmo: r,
+                  isLoading: i,
+                  isUploadingProfilePic: a,
+                  isGeneratingProfilePic: s,
+                  promoteGizmo: n,
+                  appealGizmo: l,
+                  hasUnpublishedChanges: u,
+                  showActionsModal: p,
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      let tY = (0, eo.vU)({
+        privacyConfirm: {
+          id: "gizmo.confirmPublish",
+          defaultMessage: "Confirm",
+        },
+        recipientBlocked: {
+          id: "gizmo.recipientBlocked",
+          defaultMessage:
+            "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
+        },
+        appealNeededLabel: {
+          id: "gizmo.appealNeededLabel",
+          defaultMessage:
+            "Because this GPT previously may have violated our policies, you will have to submit an appeal to make it available at this level.",
+        },
+        appealButton: { id: "gizmo.appealButton", defaultMessage: "Appeal" },
+        workspaceDisabledHint: {
+          id: "gizmo.workspaceDisabledHint",
+          defaultMessage:
+            "Your workspace administrator has disabled this setting",
+        },
+        publicSharingHintStoreEnabled: {
+          id: "gizmo.publicSharingHintStoreEnabled",
+          defaultMessage: "Your GPT will appear in the Explore GPTs page",
+        },
+        displayNameRequiredHint: {
+          id: "gizmo.displayNameRequiredHint",
+          defaultMessage:
+            "To publish your GPTs to the Explore GPTs page, set up your builder profile.",
+        },
+        deleteGPT: { id: "gizmo.delete", defaultMessage: "Delete GPT" },
+        actionNeedsPrivacyPolicyURL: {
+          id: "gizmo.actionNeedsPrivacyPolicyURL",
+          defaultMessage:
+            "Public actions require valid privacy policy URLs. Click <fixlink>here</fixlink> to update.",
+        },
+        publishTo: { id: "gizmo.publishTo", defaultMessage: "Publish to" },
+        publishedTitle: {
+          id: "gizmo.publishedTitle",
+          defaultMessage: "Published!",
+        },
+        viewGPT: { id: "gizmo.viewGPT", defaultMessage: "View GPT" },
+        revertMenuItem: {
+          id: "gizmo.revertMenuItem",
+          defaultMessage: "Revert...",
+        },
+        onlyMe: { id: "gizmo.onlyMe", defaultMessage: "Only me" },
+        anyoneWithLink: {
+          id: "gizmo.anyoneWithLink",
+          defaultMessage: "Anyone with a link",
+        },
+        public: { id: "gizmo.public", defaultMessage: "Everyone" },
+        newGPT: { id: "gizmo.newGPT", defaultMessage: "New GPT" },
+        draft: { id: "gizmo.draft", defaultMessage: "Draft" },
+        published: { id: "gizmo.published", defaultMessage: "Published" },
+        revertConfirm: {
+          id: "gizmo.revertConfirm",
+          defaultMessage:
+            "Are you sure you want to revert to the last saved version?",
+        },
+        copyLink: { id: "gizmo.copyLink", defaultMessage: "Copy link" },
+        categoryLabel: {
+          id: "gizmo.categoryLabel",
+          defaultMessage: "Category",
+        },
+        categoryLabelTooltip: {
+          id: "gizmo.categoryLabelTooltip",
+          defaultMessage:
+            "Your GPT may appear in this category on the Explore page",
+        },
+        categoryError: {
+          id: "gizmo.categoryError",
+          defaultMessage: "Error generating category",
+        },
+      });
+      function tJ(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function tK(e) {
+        let { upsertDraftError: t } = e,
+          i = (function (e, t) {
+            let i = e.response,
+              a = (0, q.Ot)(e);
+            if (!Array.isArray(i)) return a;
+            let s = (0, $.compact)(
+              i.map((e) => {
+                if ("value_error.any_str.max_length" === e.type)
+                  switch (e.loc[1]) {
+                    case "display":
+                      switch (e.loc[2]) {
+                        case "name":
+                          return t.formatMessage(eg.sY.nameTooLong, {
+                            length: e.ctx.limit_value,
+                          });
+                        case "description":
+                          return t.formatMessage(eg.sY.descriptionTooLong, {
+                            length: e.ctx.limit_value,
+                          });
+                      }
+                      break;
+                    case "instructions":
+                      return t.formatMessage(eg.sY.instructionsTooLong, {
+                        length: e.ctx.limit_value,
+                      });
+                  }
+                if ("string" == typeof e.msg) return e.msg;
+              })
+            );
+            return s.length > 0 ? s.join("\n") : a;
+          })(t, (0, ei.Z)());
+        return (0, M.jsxs)("div", {
+          className: "flex items-center gap-2 text-red-500",
+          children: [
+            (0, M.jsx)("div", {
+              children: (0, M.jsx)(
+                el.Z,
+                (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                    var i = null != arguments[t] ? arguments[t] : {};
+                    t % 2
+                      ? tJ(Object(i), !0).forEach(function (t) {
+                          (0, h.Z)(e, t, i[t]);
+                        })
+                      : Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(
+                            e,
+                            Object.getOwnPropertyDescriptors(i)
+                          )
+                        : tJ(Object(i)).forEach(function (t) {
+                            Object.defineProperty(
+                              e,
+                              t,
+                              Object.getOwnPropertyDescriptor(i, t)
+                            );
+                          });
+                  }
+                  return e;
+                })({}, tQ.errorSavingDraft)
+              ),
+            }),
+            null != i &&
+              (0, M.jsx)(e4.u, {
+                label: i,
+                children: (0, M.jsx)(eC.H33, { className: "icon-sm" }),
+              }),
+          ],
+        });
+      }
+      function tH(e) {
+        let {
+          isSavingDraft: t,
+          hasUnpublishedChanges: i,
+          upsertDraftError: a,
+          className: s,
+        } = e;
+        return a instanceof q.Q0
+          ? (0, M.jsx)(tK, { upsertDraftError: a })
+          : i
+            ? (0, M.jsxs)("div", {
+                className: (0, X.default)("flex items-center gap-2", s),
+                children: [
+                  (0, M.jsx)("span", {
+                    className: "text-token-text-secondary",
+                    children: "Unpublished changes",
+                  }),
+                  (0, M.jsx)("div", {
+                    className: "w-4 text-token-text-tertiary",
+                    children: t && (0, M.jsx)(L.Z, {}),
+                  }),
+                ],
+              })
+            : null;
+      }
+      let tQ = (0, eo.vU)({
+        errorSavingDraft: {
+          id: "gizmo.errorSavingDraft",
+          defaultMessage: "Error saving draft",
+        },
+      });
+      var tX = i(87106),
+        t$ = i(45072);
+      function t0(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function t1(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? t0(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : t0(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      async function t2(e) {
+        let t;
+        for (let i of e)
+          if (
+            "gizmo_editor.generate_profile_pic" === i.author.name &&
+            "multimodal_text" === i.content.content_type
+          )
+            for (let e of i.content.parts)
+              "object" == typeof e && "asset_pointer" in e && (t = e);
+        if (null != t) {
+          let e = (0, tX.Iy)(t.asset_pointer),
+            i = await e6.Z.getFileDownloadLink(e);
+          if (i.status === g.KF.Success)
+            return { id: e, permalink: i.download_url };
+        }
+      }
+      async function t3(e, t, i) {
+        var a, s;
+        let r = (function (e, t) {
+            let i = B.tQ.getThreadCurrentLeafId(e),
+              a = B.tQ.getTree(e),
+              s = [],
+              r = a.getNodeByIdOrMessageId(i);
+            for (; null != r && (null == t || r.id !== t); )
+              s.unshift(r.message),
+                (r =
+                  "" !== r.parentId
+                    ? a.getNodeByIdOrMessageId(r.parentId)
+                    : void 0);
+            return s;
+          })(t, i),
+          n = r
+            .filter((e) => "gizmo_editor.update_behavior" === e.recipient)
+            .flatMap((e) =>
+              "text" === e.content.content_type
+                ? e.content.parts
+                : "code" === e.content.content_type
+                  ? [e.content.text]
+                  : []
+            )
+            .map((e) => JSON.parse(e))
+            .reduce((e, t) => t1(t1({}, e), t), {}),
+          l = await t2(r);
+        if ((0, $.isEmpty)(n) && null == l) return;
+        let {
+          name: o,
+          context: d,
+          description: c,
+          profile_pic_file_id: u,
+          prompt_starters: p,
+        } = n;
+        if (null != u)
+          try {
+            let t = await e6.Z.getFileDownloadLink(u, e.id);
+            t.status === g.KF.Success &&
+              (l = { id: u, permalink: t.download_url });
+          } catch (e) {
+            console.error(
+              "Error while retrieving profile pic in update: ".concat(e)
+            ),
+              U.m.warning(
+                "Something went wrong updating your GPT's profile picture.",
+                { duration: 3 }
+              );
+          }
+        let m = {
+          name: "string" == typeof o ? o : void 0,
+          description: "string" == typeof c ? c : void 0,
+          instructions: "string" == typeof d ? d : void 0,
+          promptStarters: Array.isArray(p) ? p : void 0,
+          profilePictureId: null === (a = l) || void 0 === a ? void 0 : a.id,
+          profilePictureUrl:
+            null === (s = l) || void 0 === s ? void 0 : s.permalink,
+        };
+        return (0, $.pickBy)(m, (e) => null != e);
+      }
+      function t4(e, t, i, a) {
+        var s, r, n, l, o, d, c, u, p, m, h;
+        let g = i.current,
+          f = a.current;
+        if ((0, $.isEqual)(g, f)) return;
+        let x = {};
+        g.name !== (null == f ? void 0 : f.name) && (x.name = g.name),
+          (null !== (s = g.description) && void 0 !== s ? s : "") !==
+            (null !== (r = null == f ? void 0 : f.description) && void 0 !== r
+              ? r
+              : "") &&
+            (x.description =
+              null !== (m = g.description) && void 0 !== m ? m : ""),
+          g.instructions !==
+            (null !== (n = null == f ? void 0 : f.instructions) && void 0 !== n
+              ? n
+              : "") &&
+            (x.context =
+              null !== (h = g.instructions) && void 0 !== h ? h : "");
+        let v = new Set(
+            null !==
+              (l =
+                null == f || null === (o = f.files) || void 0 === o
+                  ? void 0
+                  : o.map((e) => e.file_id)) && void 0 !== l
+              ? l
+              : []
+          ),
+          j = new Set(
+            null !==
+              (d =
+                null === (c = g.files) || void 0 === c
+                  ? void 0
+                  : c.map((e) => e.file_id)) && void 0 !== d
+              ? d
+              : []
+          ),
+          y = (null !== (u = g.files) && void 0 !== u ? u : []).filter(
+            (e) => !v.has(e.file_id)
+          ),
+          b = (
+            null !== (p = null == f ? void 0 : f.files) && void 0 !== p ? p : []
+          ).filter((e) => !j.has(e.file_id));
+        if ((0, $.isEmpty)(x) && 0 === y.length && 0 === b.length) return;
+        let w = [];
+        if (!(0, $.isEmpty)(x)) {
+          let e =
+            "Explicitly update the GPT's behavior to the following exact fields:\n\n    ".concat(
+              JSON.stringify(x, null, 2),
+              '\n\n    "Do not call update_behavior yet. Instead, use these updated fields as the GPT\'s current behavior, and in the next call to update_behavior, incorporate these changes."\n    '
+            );
+          w.push(t$.Cv.getTextAsMessage(e, es.uU.System));
+        }
+        b.length > 0 &&
+          w.push(
+            t$.Cv.getTextAsMessage(
+              "The user has removed the following files from the GPT. You can no longer reference these files: ".concat(
+                b.map((e) => e.file_id).join(", ")
+              ),
+              es.uU.System
+            )
+          ),
+          y.length > 0 &&
+            w.push(
+              t$.Cv.getTextAsMessage(
+                "The user is adding these files to the GPT. The GPT may reference these files. The file IDs are: ".concat(
+                  y.map((e) => e.file_id).join(", ")
+                ),
+                es.uU.System,
+                {
+                  attachments: y.map((e) => ({
+                    id: e.file_id,
+                    name: e.name,
+                    size: e.size,
+                  })),
+                }
+              )
+            ),
+          w.length > 0 &&
+            B.tQ.updateTree(e, (e) => {
+              let i = e.getNodeByIdOrMessageId(t).parentId;
+              for (let a of w) {
+                let s = (0, eO.Z)();
+                e.insertNodeBefore(t, {
+                  id: s,
+                  children: [],
+                  parentId: i,
+                  message: a,
+                  metadata: { isClientCreatedSystemMessage: !0 },
+                }),
+                  (i = s);
+              }
+            });
+      }
+      var t5 = i(21643),
+        t8 = i(47934);
+      function t6(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function t9(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? t6(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : t6(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      let t7 = z.memo(function (e) {
+        let {
+            gizmoEditorData: t,
+            updateGizmo: i,
+            clientThreadId: a,
+            completionCallbackResponse: s,
+            gizmoEditorDataRef: r,
+            magicMakerBehaviorOverrides: n,
+            magicMakerConversationGizmoEditorDataRef: l,
+            requireGizmoId: o,
+          } = e,
+          d = (0, z.useMemo)(
+            () => ({
+              gizmoEditorData: t,
+              gizmoId: t.id,
+              mode: "magic",
+              behaviorOverrides: n,
+              getGizmoId: o,
+            }),
+            [o, t, n]
+          ),
+          c = (0, t8.gF)((e) =>
+            e.files.filter((e) => e.status === t5.X.Ready && null != e.gizmoId)
+          ),
+          u = (0, z.useCallback)(
+            (e, t) => {
+              !(function (e, t, i) {
+                if (0 === i.length) return;
+                let a = (0, eO.Z)(),
+                  s =
+                    "The user is uploading files in their next message. If you need to reference these in calls to update_behavior, you will use the following File ID(s), in order: ".concat(
+                      i.map((e) => '"'.concat(e.fileId, '"')).join(", ")
+                    );
+                B.tQ.updateTree(e, (e) => {
+                  let i = e.getNodeByIdOrMessageId(t).parentId;
+                  e.insertNodeBefore(t, {
+                    id: a,
+                    children: [],
+                    parentId: i,
+                    message: t$.Cv.getTextAsMessage(s, es.uU.System),
+                    metadata: { isClientCreatedSystemMessage: !0 },
+                  });
+                });
+              })(e, t, c),
+                t4(e, t, r, l),
+                (function (e, t) {
+                  let i =
+                      "Remember, you should be calling either update_behavior or generate_profile_pic after most messages from the user. Your personality should be neutral and separate from the GPT you are creating.",
+                    a = B.tQ.getThreadCurrentLeafId(e),
+                    s = B.tQ.getTree(e),
+                    r = s.getNodeByIdOrMessageId(a);
+                  for (; null != r && r.message.author.role !== es.uU.User; ) {
+                    if (
+                      "text" === r.message.content.content_type &&
+                      r.message.content.parts[0] === i
+                    )
+                      return;
+                    r =
+                      "" !== r.parentId
+                        ? s.getNodeByIdOrMessageId(r.parentId)
+                        : void 0;
+                  }
+                  B.tQ.updateTree(e, (e) => {
+                    let a = e.getNodeByIdOrMessageId(t).parentId;
+                    e.insertNodeBefore(t, {
+                      id: (0, eO.Z)(),
+                      children: [],
+                      parentId: a,
+                      message: t$.Cv.getTextAsMessage(i, es.uU.System, {
+                        exclude_after_next_user_message: !0,
+                      }),
+                      metadata: { isClientCreatedSystemMessage: !0 },
+                    });
+                  });
+                })(e, t),
+                i((e) => {
+                  var t;
+                  return t9(
+                    t9({}, e),
+                    {},
+                    {
+                      files: [
+                        ...(null !== (t = e.files) && void 0 !== t ? t : []),
+                        ...(0, $.compact)(
+                          c.map((e) => {
+                            var t;
+                            return (
+                              null != e.fileId && {
+                                file_id: e.fileId,
+                                name: e.file.name,
+                                size: e.file.size,
+                                type: e.file.type,
+                                last_modified: e.file.lastModified,
+                                file_size_tokens:
+                                  null === (t = e.fileSpec) || void 0 === t
+                                    ? void 0
+                                    : t.fileTokenSize,
+                              }
+                            );
+                          })
+                        ),
+                      ],
+                    }
+                  );
+                }),
+                (l.current = (0, $.cloneDeep)(r.current));
+            },
+            [r, l, c, i]
+          ),
+          p = (0, eN.tN)((e) => e.activeSidebar);
+        return (0, M.jsx)(eI.D.Provider, {
+          value: d,
+          children: (0, M.jsxs)("div", {
+            className: "relative flex h-full grow overflow-auto",
+            children: [
+              (0, M.jsx)("div", {
+                className: "grow",
+                children: (0, M.jsx)(ey.Z, {
+                  clientThreadId: a,
+                  onCompletionFinished: s,
+                  preRequestCompletion: u,
+                  hideHeader: !0,
+                  prependThreadChildren: (0, M.jsx)("div", {
+                    className: "h-8",
+                  }),
+                }),
+              }),
+              "debug" === p &&
+                (0, M.jsx)(ek.fv, {
+                  clientThreadId: a,
+                  slideOver: !1,
+                  onClose: () => eN.vm.toggleActiveSidebar("debug"),
+                  isOpen: !0,
+                }),
+            ],
+          }),
+        });
+      });
+      function ie(e, t) {
+        var i = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            i.push.apply(i, a);
+        }
+        return i;
+      }
+      function it(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var i = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? ie(Object(i), !0).forEach(function (t) {
+                (0, h.Z)(e, t, i[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : ie(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t)
+                  );
+                });
+        }
+        return e;
+      }
+      var ii =
+        (((l = ii || {}).MAGIC_MAKER = "magic"),
+        (l.ADVANCED = "advanced"),
+        (l.PREVIEW = "preview"),
+        l);
+      function ia(e) {
+        let { value: t, label: i } = e;
+        return (0, M.jsx)(Y.ck, {
+          value: t,
+          className:
+            "text-md w-1/3 flex-grow rounded-lg border-token-border-light p-1.5 font-medium text-token-text-tertiary transition hover:text-token-text-primary radix-state-checked:border radix-state-checked:bg-token-main-surface-primary radix-state-checked:text-token-text-primary radix-state-checked:shadow-[0_0_2px_rgba(0,0,0,.03)] md:w-1/2",
+          children: i,
+        });
+      }
+      function is(e) {
+        let { className: t, editorTab: i, setEditorTab: a } = e;
+        return (0, M.jsxs)(Y.fC, {
+          className: (0, X.default)(
+            "flex w-full overflow-hidden rounded-xl bg-token-main-surface-secondary p-1.5 md:w-1/2",
+            t
+          ),
+          value: i,
+          onValueChange: (e) => {
+            a(e);
+          },
+          children: [
+            (0, M.jsx)(ia, { value: ii.MAGIC_MAKER, label: "Create" }),
+            (0, M.jsx)(ia, { value: ii.ADVANCED, label: "Configure" }),
+            (0, M.jsx)("div", {
+              className: "flex w-1/3 md:hidden",
+              children: (0, M.jsx)(ia, { value: ii.PREVIEW, label: "Preview" }),
+            }),
+          ],
+        });
+      }
+      let ir = {
+          id: void 0,
+          instructions: "",
+          name: "",
+          description: "",
+          profilePictureId: void 0,
+          profilePictureUrl: void 0,
+          promptStarters: [],
+          sharing: { recipient: b.Zz.Private, subjects: [] },
+          tools: [{ type: g.qK.DALLE }],
+          files: [],
+          trainingDisabled: !1,
+          liveVersion: 0,
+        },
+        il = it(
+          it({}, ir),
+          {},
+          { tools: [...ir.tools, { type: g.qK.BROWSER }] }
+        );
+      function io(e) {
+        var t, i, a, s, r, n, l;
+        return {
+          id: e.gizmo.id,
+          instructions: e.gizmo.instructions,
+          name: e.gizmo.display.name,
+          description:
+            null !== (t = e.gizmo.display.description) && void 0 !== t ? t : "",
+          profilePictureId:
+            null !== (i = e.gizmo.display.profile_pic_id) && void 0 !== i
+              ? i
+              : void 0,
+          profilePictureUrl:
+            null !== (a = e.gizmo.display.profile_picture_url) && void 0 !== a
+              ? a
+              : void 0,
+          promptStarters:
+            null !== (s = e.gizmo.display.prompt_starters) && void 0 !== s
+              ? s
+              : [],
+          tools: e.tools,
+          files: e.files,
+          sharing:
+            null !== (r = e.gizmo.sharing) && void 0 !== r
+              ? r
+              : { subjects: [], recipient: e.gizmo.share_recipient },
+          trainingDisabled:
+            null !== (n = e.gizmo.training_disabled) && void 0 !== n && n,
+          sharingRecipient: e.gizmo.share_recipient,
+          sharingTargets: e.gizmo.sharing_targets,
+          liveVersion:
+            null !== (l = e.gizmo.live_version) && void 0 !== l ? l : 0,
+        };
+      }
+      let id = (e) => {
+        let { gizmo: t, onNewGizmoId: i } = e,
+          a = (0, f.C)(D.L0.BrowseAvailable),
+          s = (0, ei.Z)(),
+          r = (0, z.useRef)(null != t ? io(t) : a ? il : ir),
+          n = (0, z.useRef)(t),
+          l = (0, z.useRef)(r.current),
+          { 0: o, 1: d } = (0, z.useState)(() => r.current),
+          { 0: c, 1: u } = (0, z.useState)(() => (0, B.OX)()),
+          { 0: p } = (0, z.useState)(() => ({
+            context_message: (function (e) {
+              var t, i, a;
+              let s = new Set();
+              for (let t of e.tools) s.add(t.type);
+              let r = null !== (t = e.name) && void 0 !== t ? t : "",
+                n = null !== (i = e.description) && void 0 !== i ? i : "",
+                l = null !== (a = e.instructions) && void 0 !== a ? a : "",
+                o = Array.from(s).join(","),
+                d = "" === r && "" === n && "" === l,
+                c = null != e.profilePictureUrl;
+              return d
+                ? "The GPT you are about to has the following abilities: ".concat(
+                    o,
+                    "."
+                  )
+                : "This is the GPT's current set of fields:\n\nname: "
+                    .concat(r, "\n\ndescription: ")
+                    .concat(n, "\n\ncontext: ")
+                    .concat(l, "\n\nabilities: ")
+                    .concat(o, "\n\n")
+                    .concat(
+                      c
+                        ? "The GPT has a profile picture."
+                        : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
+                      "\n"
+                    );
+            })(r.current),
+            model_slug: "unused",
+            enabled_tools: [
+              { tool_id: null != t ? "gizmo_editor" : "gizmo_creator" },
+            ],
+          }));
+        !(function (e, t, i) {
+          (0, B.ax)(e, {
+            kind: es.OL.GizmoMagicCreate,
+            gizmo_id: t.id,
+            behavior_overrides: i,
+          }),
+            (0, z.useEffect)(() => {
+              B.tQ.updateConversationMode(e, {
+                kind: es.OL.GizmoMagicCreate,
+                gizmo_id: t.id,
+                behavior_overrides: i,
+              });
+            }, [e, t.id, i]);
+          let { 0: a } = (0, z.useState)(() => {
+            let e = null == t.id,
+              i =
+                null != t.id &&
+                "" !== t.name &&
+                null != t.description &&
+                "" !== t.instructions &&
+                null != t.profilePictureUrl;
+            return e
+              ? 'Hi! I\'ll help you build a new GPT. You can say something like, "make a creative who helps generate visuals for new products" or "make a software engineer who helps format my code."\n\nWhat would you like to make?'
+              : i
+                ? "Welcome back! Is there anything ".concat(
+                    t.name,
+                    " should be doing better? Anything you'd like to change?"
+                  )
+                : "You're back! Let's continue where we left off...";
+          });
+          (0, z.useEffect)(() => {
+            let t = B.tQ.getTree(e);
+            if (
+              t.findNode((e) => {
+                var t;
+                return (
+                  e.message.author.role === es.uU.User ||
+                  (null === (t = e.metadata) || void 0 === t
+                    ? void 0
+                    : t.isClientCreatedSystemMessage) === !0
+                );
+              }) ||
+              (B.tQ.deleteNodesByFilter(e, (e) => {
+                var t;
+                return (
+                  (null === (t = e.metadata) || void 0 === t
+                    ? void 0
+                    : t.isPlaceholderTemplateAssistantWelcomeMessage) === !0
+                );
+              }),
+              null == a || 0 === a.length)
+            )
+              return;
+            let i = B.tQ.getThreadCurrentLeafId(e);
+            if (!t.hasNodeOrMessageId(i)) return;
+            let s = (0, eO.Z)();
+            B.tQ.updateTree(e, (e) => {
+              e.addNode(s, a, i, es.uU.Assistant, {
+                isPlaceholderTemplateAssistantWelcomeMessage: !0,
+              });
+            }),
+              B.tQ.setThreadCurrentLeafId(e, s);
+          }, [e, a]);
+          let s = (0, B.UL)(e);
+          (0, z.useEffect)(() => {
+            (0, B.Zz)(e) &&
+              B.iN.hasThread(e) &&
+              s.lastModelUsed !== ex.Mw &&
+              B.tQ.updateInitialThreadDataForNewThread(e, ex.Mw, []);
+          }, [e, s, s.lastModelUsed]);
+        })(c, l.current, p);
+        let { data: h } = (0, m.kg)(r.current.id),
+          x = (0, m.N_)(),
+          { isPending: v, error: j } = x,
+          y = (0, m.ZJ)(),
+          w = (0, z.useMemo)(() => {
+            var e, t, i, a, s, r;
+            return (
+              null != h &&
+              (!(
+                o.name === h.gizmo.display.name &&
+                o.description === h.gizmo.display.description &&
+                o.instructions === h.gizmo.instructions &&
+                ((s = o.tools),
+                (r = h.tools),
+                s.length === r.length &&
+                  s.every((e) => r.some((t) => t.type === e.type))) &&
+                (0, $.isEqual)(
+                  null !==
+                    (e =
+                      null === (t = o.files) || void 0 === t
+                        ? void 0
+                        : t.map((e) => e.file_id)) && void 0 !== e
+                    ? e
+                    : [],
+                  null !==
+                    (i =
+                      null === (a = h.files) || void 0 === a
+                        ? void 0
+                        : a.map((e) => e.file_id)) && void 0 !== i
+                    ? i
+                    : []
+                )
+              ) ||
+                o.profilePictureUrl != h.gizmo.display.profile_picture_url ||
+                o.profilePictureId != h.gizmo.display.profile_pic_id)
+            );
+          }, [o, h]),
+          k = async () => {
+            let e = r.current;
+            try {
+              let t = await x.mutateAsync({ editorData: e, gizmoId: e.id });
+              if (((n.current = t), null == r.current.id)) {
+                let e = t.gizmo.id;
+                (r.current = it(
+                  it({}, r.current),
+                  {},
+                  { id: e, sharingTargets: t.gizmo.sharing_targets }
+                )),
+                  d(r.current),
+                  null == i || i(e);
+              }
+              for (let e of t.tools.filter((e) => e.type === g.qK.JIT_PLUGIN)) {
+                let t = r.current.tools.find(
+                  (t) =>
+                    t.type === g.qK.JIT_PLUGIN &&
+                    t.metadata.domain === e.metadata.domain
+                );
+                t &&
+                  t.metadata.action_id !== e.metadata.action_id &&
+                  ((t.metadata.action_id = e.metadata.action_id), d(r.current));
+              }
+              return t;
+            } catch (i) {
+              var t;
+              let e =
+                null !== (t = (0, q.Ot)(i)) && void 0 !== t
+                  ? t
+                  : s.formatMessage(tQ.errorSavingDraft);
+              throw (U.m.warning(e, { duration: 2 }), i);
+            }
+          },
+          N = (0, z.useRef)(),
+          P = async () =>
+            null != r.current.id
+              ? r.current.id
+              : (null == N.current &&
+                  (N.current = k()
+                    .then((e) => e.gizmo.id)
+                    .catch((e) => {
+                      throw ((N.current = void 0), e);
+                    })),
+                N.current),
+          { 0: Z } = (0, z.useState)(() =>
+            (0, $.debounce)(() => k(), 2e3, { trailing: !0 })
+          );
+        function _(e) {
+          let t =
+            "function" == typeof e ? e(r.current) : (0, e5.x$)(r.current, e);
+          (0, $.isEqual)(t, r.current) || ((r.current = t), d(r.current), Z());
+        }
+        let S = (0, z.useRef)(),
+          I = async (e) => {
+            if (null == e) {
+              er(!1);
+              return;
+            }
+            try {
+              let t = await t3(r.current, e, S.current);
+              null != t && (_(t), (l.current = (0, $.cloneDeep)(r.current)));
+            } catch (e) {
+              console.error(e),
+                U.m.warning("Something went wrong generating your GPT", {
+                  duration: 3,
+                });
+            } finally {
+              (S.current = B.tQ.getThreadCurrentLeafId(e)), er(!1);
+            }
+          },
+          A = (function (e, t, i) {
+            B.tQ.initThread(e, {
+              kind: es.OL.GizmoMagicCreate,
+              gizmo_id: void 0,
+              behavior_overrides: i,
+            });
+            let a = (0, eS.Z)(e, void 0, t, []);
+            return async (t, s, r) => {
+              if (0 === r.length) return;
+              let n = B.tQ.getThreadCurrentLeafId(e);
+              for (let t of r) {
+                let i = (0, eO.Z)();
+                B.tQ.updateTree(e, (e) => {
+                  e.addNodeToEnd(n, {
+                    id: i,
+                    children: [],
+                    parentId: n,
+                    message: t$.Cv.getTextAsMessage(t, es.uU.System),
+                    metadata: { isClientCreatedSystemMessage: !0 },
+                  });
+                }),
+                  B.tQ.setThreadCurrentLeafId(e, i),
+                  (n = i);
+              }
+              let l = n;
+              t4(e, l, t, s);
+              let o = {
+                  conversationMode: {
+                    kind: es.OL.GizmoMagicCreate,
+                    gizmo_id: t.current.id,
+                    behavior_overrides: i,
+                  },
+                },
+                d = await (0, eZ.rS)(es.OL.GizmoMagicCreate),
+                c = await eM.ZP.getEnforcementToken(d),
+                u = await e_.Z.getEnforcementToken(d);
+              a({
+                model: ex.Mw,
+                completionType: es.Os.Next,
+                parentNodeId: l,
+                metadata: {},
+                focusOnNewCompletion: !0,
+                arkoseToken: c,
+                turnstileToken: u,
+                preflightTime: 0,
+                completionMetadata: o,
+              });
+            };
+          })(c, I, p),
+          { 0: G, 1: L } = (0, z.useState)(void 0);
+        (0, z.useEffect)(() => {
+          L(
+            (function (e) {
+              var t;
+              if (!e) return;
+              let i =
+                  (null === (t = e.gizmo.appeal_info) || void 0 === t
+                    ? void 0
+                    : t.state.kind) === "appeal_sent",
+                a = (function (e) {
+                  let t =
+                      arguments.length > 1 && void 0 !== arguments[1]
+                        ? arguments[1]
+                        : [],
+                    i = new Set(
+                      t.filter((e) => e.allowed).map((e) => e.recipient)
+                    );
+                  if (!e || (e in O && (e = O[e]), i.has(e))) return C.None;
+                  let a = i.has(b.Zz.Private) || i.has(b.Zz.Workspace),
+                    s = i.has(b.Zz.Link) || i.has(b.Zz.Marketplace);
+                  return e === b.Zz.Marketplace && s
+                    ? C.RemovedFromMarketplace
+                    : !s && a
+                      ? C.RemovedFromPublic
+                      : C.RemovedFromPrivate;
+                })(e.gizmo.share_recipient, e.gizmo.sharing_targets);
+              return {
+                sharingRecipient: e.gizmo.share_recipient,
+                categories: e.gizmo.categories,
+                gizmoId: e.gizmo.id,
+                moderationType: a,
+                sharingTargets: e.gizmo.sharing_targets,
+                showModal: i
+                  ? T.AppealSent
+                  : a !== C.None
+                    ? T.AppealAvailable
+                    : T.None,
+              };
+            })(t)
+          );
+        }, [null == t ? void 0 : t.gizmo.id]);
+        let R = async (e, t) => {
+            let i = (0, e5.bw)(r.current, e.recipient, t);
+            if (i.length > 0) {
+              U.m.warning(
+                "Could not save GPT:\n\n".concat(
+                  i.map((e) => "- ".concat((0, e5.sw)(e))).join("\n")
+                ),
+                { duration: 3 }
+              );
+              return;
+            }
+            let a = await k(),
+              s = a.gizmo.id;
+            try {
+              return (
+                J.A.logEvent(K.M.promoteGizmo, {
+                  gizmo_id: a.gizmo.id,
+                  sharing_recipient: e.recipient,
+                  editor_tab: F,
+                }),
+                await y.mutateAsync(
+                  {
+                    gizmoId: a.gizmo.id,
+                    data: {
+                      sharingRecipient: e.recipient,
+                      categories: null == t ? void 0 : [t],
+                    },
+                  },
+                  {
+                    onSuccess(e) {
+                      Q.E.setQueryData((0, m.Vw)(s).queryKey, e),
+                        Q.E.invalidateQueries({ queryKey: ["gizmos"] }),
+                        Q.E.invalidateQueries({
+                          queryKey: ["gizmo", { gizmoId: s }],
+                        }),
+                        Q.E.invalidateQueries({
+                          queryKey: [
+                            "gizmo",
+                            "userActionSettings",
+                            { gizmoId: s },
+                          ],
+                        });
+                    },
+                  }
+                )
+              );
+            } catch (t) {
+              t instanceof b.DC
+                ? L({
+                    gizmoId: s,
+                    sharingRecipient: e.recipient,
+                    moderationType: C.PublishBlocked,
+                    sharingTargets: t.response.sharing_targets,
+                    showModal: T.AppealAvailable,
+                  })
+                : (console.error(t),
+                  U.m.warning("Error saving GPT", { duration: 2 }));
+            }
+          },
+          V = x.isPending || y.isPending,
+          { 0: F, 1: W } = (0, z.useState)(() => {
+            let e = H.m.getItem(H.F.GizmoEditorTab);
+            return Object.values(ii).includes(e) ? e : ii.MAGIC_MAKER;
+          }),
+          { width: Y } = (function () {
+            let { 0: e, 1: t } = (0, z.useState)({ width: null, height: null });
+            return (
+              (0, z.useLayoutEffect)(() => {
+                let e = () => {
+                  t({ width: window.innerWidth, height: window.innerHeight });
+                };
+                return (
+                  e(),
+                  window.addEventListener("resize", e),
+                  () => {
+                    window.removeEventListener("resize", e);
+                  }
+                );
+              }, []),
+              e
+            );
+          })();
+        (0, z.useEffect)(() => {
+          null != Y && Y >= 768 && F === ii.PREVIEW && W(ii.MAGIC_MAKER);
+        }, [Y, F]);
+        let { 0: ee, 1: et } = (0, z.useState)(!1),
+          { 0: ea, 1: er } = (0, z.useState)(!1),
+          { 0: en, 1: el } = (0, z.useState)(void 0);
+        return (0, M.jsxs)("div", {
+          className: "flex h-screen w-full flex-col items-center",
+          children: [
+            (0, M.jsx)(tW, {
+              gizmoEditorData: o,
+              isLoading: V,
+              hasUnpublishedChanges: w,
+              isUploadingProfilePic: ee,
+              isGeneratingProfilePic: ea,
+              publishedGizmo: h,
+              promoteGizmo: async (e, t) => {
+                let i = await R(e, t);
+                return (
+                  (r.current = it(
+                    it({}, r.current),
+                    {},
+                    { sharingRecipient: e.recipient }
+                  )),
+                  d(r.current),
+                  H.m.setItem(H.F.GizmoEditorTab, F),
+                  i
+                );
+              },
+              appealGizmo: async (e, t) => {
+                null != G &&
+                  L(
+                    it(
+                      it({}, G),
+                      {},
+                      {
+                        sharingRecipient: e,
+                        categories: null == t ? void 0 : [t],
+                        showModal: T.AppealAvailable,
+                      }
+                    )
+                  );
+              },
+              revertDraft:
+                null != h && w
+                  ? () => {
+                      let e = Q.E.getQueryData(
+                        (0, m.Vw)(r.current.id).queryKey
+                      );
+                      if (null != e) {
+                        let t = io(e);
+                        (r.current = t), d(t), k();
+                      }
+                    }
+                  : void 0,
+              draftMessage: (0, M.jsx)(tH, {
+                hasUnpublishedChanges: w,
+                isSavingDraft: v,
+                upsertDraftError: j,
+                className: "text-sm",
+              }),
+              showActionsModal: (e) => {
+                el(e);
+              },
+              className: "flex-shrink-0",
+            }),
+            G &&
+              (0, M.jsx)(E, {
+                appealState: G,
+                onAppealClose: () =>
+                  L(it(it({}, G), {}, { showModal: T.None })),
+                onAppealSubmitted: () =>
+                  L(it(it({}, G), {}, { showModal: T.AppealSent })),
+              }),
+            (0, M.jsxs)("div", {
+              className: "relative flex w-full grow overflow-hidden",
+              children: [
+                (0, M.jsx)("div", {
+                  className: "flex w-full justify-center md:w-1/2",
+                  children: (0, M.jsx)("div", {
+                    className: "h-full grow overflow-hidden",
+                    children:
+                      void 0 !== en
+                        ? (0, M.jsx)(eX, {
+                            currentlyEditingActionDomain: en,
+                            gizmoEditorData: o,
+                            updateGizmo: _,
+                            onClose: () => {
+                              el(void 0);
+                            },
+                          })
+                        : (0, M.jsxs)("div", {
+                            className: "flex h-full flex-col px-2 pt-2",
+                            children: [
+                              (0, M.jsx)("div", {
+                                className:
+                                  "flex w-full flex-row justify-center",
+                                children: (0, M.jsx)(is, {
+                                  editorTab: F,
+                                  setEditorTab: W,
+                                  className: "mb-2 flex-shrink-0 self-center",
+                                }),
+                              }),
+                              (0, M.jsx)("div", {
+                                className: "grow overflow-hidden",
+                                children:
+                                  F === ii.MAGIC_MAKER
+                                    ? (0, M.jsx)("div", {
+                                        className: "h-full w-full pb-5",
+                                        children: (0, M.jsx)(
+                                          t7,
+                                          {
+                                            gizmoEditorData: o,
+                                            updateGizmo: _,
+                                            completionCallbackResponse: I,
+                                            clientThreadId: c,
+                                            gizmoEditorDataRef: r,
+                                            magicMakerBehaviorOverrides: p,
+                                            magicMakerConversationGizmoEditorDataRef:
+                                              l,
+                                            requireGizmoId: P,
+                                          },
+                                          c
+                                        ),
+                                      })
+                                    : F === ii.ADVANCED
+                                      ? (0, M.jsx)(eg.cK, {
+                                          gizmoEditorData: o,
+                                          updateGizmo: _,
+                                          generateProfilePic: () => {
+                                            er(!0),
+                                              A(r, l, [
+                                                "Generate a new profile picture for this GPT using gizmo_editor generate_profile_pic. Do not prompt the user for any clarification. Do not send extra text outside of the tool function call. DO NOT CALL update_behavior or otherwise update GPT behavior in your response.",
+                                              ]);
+                                          },
+                                          setIsUploadingProfilePic: et,
+                                          isGeneratingProfilePic: ea,
+                                          setIsGeneratingProfilePic: er,
+                                          requireGizmoId: P,
+                                          onShowActionsEditor: (e) => {
+                                            el(e);
+                                          },
+                                        })
+                                      : (0, M.jsx)(eU, {
+                                          gizmoEditorData: o,
+                                          isSavingDraft: v,
+                                          showTitle: !1,
+                                        }),
+                              }),
+                            ],
+                          }),
+                  }),
+                }),
+                (0, M.jsx)("div", {
+                  className: (0, X.default)(
+                    "hidden w-1/2 justify-center border-l border-token-border-medium bg-token-main-surface-secondary pt-4",
+                    F !== ii.PREVIEW && "md:flex"
+                  ),
+                  children: (0, M.jsx)("div", {
+                    className: "flex-grow pb-5",
+                    children: (0, M.jsx)("div", {
+                      className: "h-full",
+                      children: (0, M.jsx)(eU, {
+                        gizmoEditorData: o,
+                        isSavingDraft: v,
+                      }),
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      };
+      function ic(e) {
+        let { gizmoId: t, version: i } = e,
+          { data: a } = (0, m.DC)({ gizmoId: t, draft: !0, version: i }),
+          s = (0, V.ec)(V.F_.accountUserId),
+          r = (0, V.aF)(),
+          n = null == r ? void 0 : r.id,
+          l = null != a && null != s && null != n && (0, ew.k1)(a);
+        return null != a && l ? (0, M.jsx)(id, { gizmo: a }) : null;
+      }
+      function iu(e) {
+        let { onNewGizmoId: t } = e;
+        return (0, M.jsx)(id, { gizmo: void 0, onNewGizmoId: t });
+      }
+      function ip(e) {
+        let { gizmoId: t, remixSourceId: i, version: a } = e,
+          s = (0, ee.useRouter)(),
+          r = (0, R.t)(),
+          n = (0, z.useRef)(void 0),
+          l = t;
+        return (
+          null != t && n.current === t && (l = void 0),
+          (0, F.yx)({
+            resetThreadAction: () => {
+              s.push("/");
+            },
+          }),
+          (0, M.jsx)("div", {
+            children:
+              null != r && r.data
+                ? (0, M.jsx)("div", {
+                    children:
+                      void 0 != l
+                        ? (0, M.jsx)(ic, { gizmoId: l, version: a }, l)
+                        : (0, M.jsx)(iu, {
+                            remixSourceId: i,
+                            onNewGizmoId: (e) => {
+                              (n.current = e),
+                                window.history.replaceState(
+                                  window.history.state,
+                                  "",
+                                  (0, W.AA)(e)
+                                );
+                            },
+                          }),
+                  })
+                : (0, M.jsx)("div", {
+                    className: "flex min-h-screen items-center justify-center",
+                    children: (0, M.jsx)(L.Z, {}),
+                  }),
+          })
+        );
+      }
+      var im = i(19892),
+        ih = !0;
+      function ig() {
+        var e;
+        let t = (0, R.t)();
+        (e = null == t || t.canCreateGizmos()),
+          (0, z.useEffect)(() => {
+            e ||
+              et().replace((0, im.M5)(im.LT.NO_ACCESS), void 0, {
+                shallow: !0,
+              });
+          }, [e]);
+        let i = (0, ee.useRouter)(),
+          a = i.query.slug,
+          s = i.query.version,
+          r = a ? (0, m.CR)(a) : void 0,
+          { remixFrom: n } = i.query;
+        return ((0, z.useEffect)(() => {
+          (0, eZ.rS)().then((e) => {
+            eM.ZP.initializeAndGatherData(e);
+          });
+        }, []),
+        (0, z.useEffect)(() => {
+          null == t || t.canCreateGizmos() || i.push("/");
+        }, [t, i]),
+        null != t && t.canCreateGizmos())
+          ? (0, M.jsx)(ip, { gizmoId: r, remixSourceId: n, version: s })
+          : null;
+      }
+    },
+  },
+]);
+//# sourceMappingURL=2958-180049b30ea44386.js.map
