@@ -6,7 +6,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return J;
+            return X;
           },
         });
       var l = a(18450),
@@ -27,8 +27,8 @@
         b = a(282),
         y = a(88342),
         j = a(11335),
-        w = a(66452),
-        v = a(44151),
+        v = a(66452),
+        w = a(44151),
         k = a(26524),
         C = a(59669),
         N = a(65998),
@@ -685,7 +685,7 @@
             e && document.body.removeChild(e);
           };
         }, []);
-        let w = (0, x.useCallback)(
+        let v = (0, x.useCallback)(
           () =>
             t.rows && t.rows.length > 999
               ? 10 + 10 * String(t.rows.length).length
@@ -700,6 +700,7 @@
           onGridSelectionChange: y,
           smoothScrollX: !0,
           smoothScrollY: !0,
+          overscrollX: 50,
           className: s,
           rowMarkers: "clickable-number",
           height: a,
@@ -736,7 +737,7 @@
             cellHorizontalPadding: 12,
             cellVerticalPadding: 10,
           },
-          rowMarkerWidth: w(),
+          rowMarkerWidth: v(),
           rowHeight: j,
           verticalBorder: !0,
           minColumnWidth: 10,
@@ -807,7 +808,7 @@
         }
         return e;
       }
-      function J(e) {
+      function X(e) {
         let { visualization: t, expanded: a = !1 } = e;
         return "chart" === t.type
           ? void 0 == t.fallback_image
@@ -827,7 +828,7 @@
             ? (0, z.jsx)(Y, { visualization: t, expanded: a })
             : (c.U.addError("Unsupported visualization type", t.type), null);
       }
-      let X = function (e) {
+      let J = function (e) {
           let t =
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -840,23 +841,23 @@
             c.U.addError("No image url provided for download");
             return;
           }
-          let t = (0, w.Iy)(e.image_url),
+          let t = (0, v.Iy)(e.image_url),
             a = await n.Z.getFileDownloadLink(t);
           if (a.status === r.KF.Success) {
             let e = await fetch(a.download_url),
               t = await e.blob();
-            X(URL.createObjectURL(t), "output.png");
+            J(URL.createObjectURL(t), "output.png");
           }
         };
       function Y(e) {
         let t,
           { visualization: a, expanded: l } = e,
-          r = (0, v.Ex)(),
+          r = (0, w.Ex)(),
           s = r && !l,
           { isLoading: n, data: o, isError: i } = (0, G.CJ)(a),
           { 0: d, 1: c } = (0, x.useState)(),
           u = (0, x.useCallback)(() => {
-            o && X(o.download_url);
+            o && J(o.download_url);
           }, [o]),
           { 0: m, 1: p } = (0, x.useState)(0),
           { 0: f, 1: g } = (0, x.useState)(0),
@@ -870,14 +871,14 @@
                 : o.content[0];
           } else t = o.content;
         }
-        let w = () => {
+        let v = () => {
           b.current && g(b.current.offsetWidth);
         };
         return ((0, x.useEffect)(
           () => (
-            w(),
-            window.addEventListener("resize", w),
-            () => window.removeEventListener("resize", w)
+            v(),
+            window.addEventListener("resize", v),
+            () => window.removeEventListener("resize", v)
           ),
           []
         ),
@@ -1134,7 +1135,7 @@
             if (i && t.fallback_image) await K(t.fallback_image);
             else if (o.current) {
               let e = o.current.getBase64Image();
-              e && X(e, "".concat(t.title, ".png"));
+              e && J(e, "".concat(t.title, ".png"));
             }
           }, [t.fallback_image, i, o, t.title]),
           { 0: u, 1: m } = (0, x.useState)(void 0),
@@ -1294,7 +1295,7 @@
             expanded: n = !1,
             children: c,
           } = e,
-          m = (0, v.Ex)() && !n,
+          m = (0, w.Ex)() && !n,
           g = (0, k.rE)(),
           h =
             g &&
@@ -1302,7 +1303,7 @@
             g.type == t.type &&
             g.visualization.file_id == t.visualization.file_id,
           { 0: b, 1: y } = (0, x.useState)(!1),
-          w = (0, x.useCallback)(() => {
+          v = (0, x.useCallback)(() => {
             i.A.logEvent(d.M.adaFocusModeToggled),
               h ? k.RT.close() : k.RT.setFocusedObject(t);
           }, [h, t]),
@@ -1329,10 +1330,10 @@
                   y(!1);
                 },
                 onClick: () => {
-                  m && w();
+                  m && v();
                 },
               },
-              v.ee
+              w.ee
             ),
             {},
             {
@@ -1431,7 +1432,7 @@
                                   values: { type: C },
                                 }),
                           children: (0, z.jsx)("button", {
-                            onClick: w,
+                            onClick: v,
                             className: "flex items-center text-xs",
                             children: h
                               ? (0, z.jsx)(s.W5x, {
@@ -1464,7 +1465,9 @@
                       "flex items-center justify-center bg-token-main-surface-primary"
                     ),
                     style: {
-                      height: n ? "calc(100vh - 48px)" : "".concat(300, "px"),
+                      height: n
+                        ? "calc(100vh - 48px)"
+                        : "".concat("table" == C ? 300 : 350, "px"),
                     },
                     children: c,
                   }),
@@ -1476,4 +1479,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2967.7830b879e1b3e04a.js.map
+//# sourceMappingURL=2967.95129b833e0f8a97.js.map

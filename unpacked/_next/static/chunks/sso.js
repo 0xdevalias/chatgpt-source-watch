@@ -6,54 +6,55 @@
       n.r(t),
         n.d(t, {
           DO_NOT_IMPORT_ContextConnectorCitationCards: function () {
-            return g;
+            return f;
           },
           DO_NOT_IMPORT_ContextConnectorDocumentParser: function () {
-            return O;
+            return N;
           },
           DO_NOT_IMPORT_ContextConnectorPicker: function () {
-            return H;
-          },
-          DO_NOT_IMPORT_ContextConnectorTiles: function () {
             return J;
           },
+          DO_NOT_IMPORT_ContextConnectorTiles: function () {
+            return er;
+          },
           DO_NOT_IMPORT_SyncConnectorPicker: function () {
-            return ei;
+            return em;
           },
         });
       var r,
-        a = n(2946),
-        s = n(61888),
-        i = n(35805),
-        l = n.n(i),
-        o = n(93040),
-        c = n(80615),
-        u = n(80910),
-        d = n(35250);
-      function m(e) {
+        a,
+        s = n(2946),
+        i = n(61888),
+        l = n(35805),
+        o = n.n(l),
+        c = n(93040),
+        u = n(80615),
+        d = n(80910),
+        m = n(35250);
+      function p(e) {
         let t,
           { citationMetadata: n } = e;
         switch (n.text) {
           case "Google Drive":
-            t = c.Z.src;
+            t = u.Z.src;
             break;
           case "Google Docs":
-            t = o.Z.src;
+            t = c.Z.src;
             break;
           case "Notion":
-            t = u.Z.src;
+            t = d.Z.src;
         }
-        return (0, d.jsx)("a", {
+        return (0, m.jsx)("a", {
           href: n.url,
           target: "_blank",
-          children: (0, d.jsxs)("div", {
+          children: (0, m.jsxs)("div", {
             className:
               "flex flex-col gap-[2px] overflow-clip rounded-lg border border-gray-200 px-[16px] py-[12px]",
             children: [
-              (0, d.jsxs)("div", {
+              (0, m.jsxs)("div", {
                 className: "flex items-center gap-2 pb-0.5",
                 children: [
-                  (0, d.jsx)(l(), {
+                  (0, m.jsx)(o(), {
                     className: "h-[16px] w-[16px] object-contain",
                     src: t,
                     width: 16,
@@ -61,14 +62,14 @@
                     objectFit: "contain",
                     alt: n.text,
                   }),
-                  (0, d.jsx)("p", {
+                  (0, m.jsx)("p", {
                     className:
                       "text-xs leading-normal text-token-text-secondary",
                     children: n.text,
                   }),
                 ],
               }),
-              (0, d.jsx)("p", {
+              (0, m.jsx)("p", {
                 className: "text-token -text-primary line-clamp-1 text-sm",
                 children: n.title,
               }),
@@ -76,15 +77,15 @@
           }),
         });
       }
-      let p = ["Google Drive", "Google Docs", "Notion"];
-      function h(e) {
+      let h = ["Google Drive", "Google Docs", "Notion"];
+      function g(e) {
         if (!e) return !1;
         let { type: t, text: n } = e;
-        return "webpage" === t && p.includes(null != n ? n : "");
+        return "webpage" === t && h.includes(null != n ? n : "");
       }
-      function g(e) {
+      function f(e) {
         let { messages: t } = e,
-          n = (0, s.compact)(
+          n = (0, i.compact)(
             t
               .flatMap((e) => {
                 var t, n;
@@ -102,129 +103,123 @@
               })
               .flatMap((e) => e.metadata)
           ),
-          r = (0, s.uniqBy)(
-            n.map((e) => (0, a.gP)(!0, e)).filter(h),
+          r = (0, i.uniqBy)(
+            n.map((e) => (0, s.gP)(!0, e)).filter(g),
             (e) => e.url
           );
-        return (0, d.jsx)("div", {
+        return (0, m.jsx)("div", {
           className: "mt-4 grid w-full grid-cols-[50%,50%] gap-3",
-          children: r.map((e) => (0, d.jsx)(m, { citationMetadata: e }, e.url)),
+          children: r.map((e) => (0, m.jsx)(p, { citationMetadata: e }, e.url)),
         });
       }
-      var f = n(49305),
-        x = n(70079),
-        A = n(53362),
-        v = n(61236);
-      let b = new Map();
-      function y() {
-        let { 0: e, 1: t } = (0, x.useState)(b),
-          { isSuccess: n, data: r } = (0, v.a)({
+      var x = n(49305),
+        A = n(70079);
+      let v = "AIzaSyAOHzpLbFWAcLwrOn1IvQeVd0jHRntTlPk",
+        b =
+          (((r = {}).MY_DRIVE_ITEMS =
+            "https://graph.microsoft.com/v1.0/me/drive/items/"),
+          (r.MY_DRIVE_ROOT = "https://graph.microsoft.com/v1.0/me/drive/root:"),
+          r);
+      var y = n(53362),
+        j = n(61236);
+      let w = new Map();
+      function O() {
+        let { 0: e, 1: t } = (0, A.useState)(w),
+          { isSuccess: n, data: r } = (0, j.a)({
             queryKey: ["fetchConnectorData"],
-            queryFn: j,
+            queryFn: k,
             refetchInterval: 18e5,
           });
         return (
-          (0, x.useEffect)(() => {
+          (0, A.useEffect)(() => {
             n && t(new Map(r.map((e) => [e.type, e])));
           }, [n, r]),
           e
         );
       }
-      function j(e) {
+      function k(e) {
         let { queryKey: t } = e,
           [n] = t;
-        return A.Z.checkConnectorAPI().then((e) => e.connectors.filter(w));
+        return y.Z.checkConnectorAPI().then((e) => e.connectors.filter(S));
       }
-      function w(e) {
-        return e.type === f.PO.GDRIVE || e.type === f.PO.O365;
+      function S(e) {
+        return e.type === x.PO.GDRIVE || e.type === x.PO.O365;
       }
-      function O(e) {
+      function N(e) {
         let { inputValue: t, parsedDocumentHandler: n } = e,
-          r = y();
+          r = O();
         return (
-          (0, x.useEffect)(() => {
+          (0, A.useEffect)(() => {
             n(
               (function (e, t) {
                 let n = [];
                 for (let r of t.values())
                   switch (r.type) {
-                    case f.PO.GDRIVE:
+                    case x.PO.GDRIVE:
                       n.push(
-                        ...[...e.matchAll(k)].map((e) => ({
+                        ...[...e.matchAll(E)].map((e) => ({
                           url: e[0],
                           id: e[2],
-                          type: f.PO.GDRIVE,
+                          type: x.PO.GDRIVE,
                           handler: { type: "prompt" },
                         }))
                       );
                       break;
-                    case f.PO.O365:
+                    case x.PO.O365:
                       if (r.access_token) {
                         let t = (function (e, t) {
-                          return [...e.matchAll(N)].map((e) => {
-                            var n;
-                            let r = new URL(e[0]),
-                              a =
-                                null !== (n = r.searchParams.get("id")) &&
-                                void 0 !== n
-                                  ? n
-                                  : r.searchParams.get("resid");
-                            if (a)
-                              return {
-                                url: e[0],
-                                id: a,
-                                type: f.PO.O365,
-                                handler: {
-                                  type: "fetch",
-                                  tryFetch: (function (e, t) {
-                                    return async () => {
-                                      var n;
-                                      let r =
-                                          "https://graph.microsoft.com/v1.0/me/drive/items/".concat(
-                                            encodeURIComponent(e)
-                                          ),
-                                        a = await fetch(r, {
-                                          method: "GET",
-                                          headers: {
-                                            Authorization: "Bearer ".concat(t),
-                                            "Content-Type": "application/json",
-                                          },
-                                        });
-                                      if (!a.ok)
-                                        return Promise.reject(
-                                          "HTTP "
-                                            .concat(a.status, " for ")
-                                            .concat(e)
-                                        );
-                                      let {
-                                        id: s,
-                                        name: i,
-                                        file: l,
-                                        webUrl: o,
-                                      } = await a.json();
-                                      return {
-                                        connector: f.PO.O365,
-                                        id: s,
-                                        title: null != i ? i : "",
-                                        mimeType:
-                                          null !==
-                                            (n =
-                                              null == l
-                                                ? void 0
-                                                : l.mimeType) && void 0 !== n
-                                            ? n
-                                            : "",
-                                        url: null != o ? o : "",
-                                      };
-                                    };
-                                  })(a, t),
-                                },
-                              };
-                          });
-                        })(e, r.access_token).filter((e) => void 0 !== e);
-                        n.push(...t);
+                            return [...e.matchAll(P)].map((e) => {
+                              var n;
+                              let r = new URL(e[0]),
+                                a =
+                                  null !== (n = r.searchParams.get("id")) &&
+                                  void 0 !== n
+                                    ? n
+                                    : r.searchParams.get("resid");
+                              return a
+                                ? {
+                                    url: e[0],
+                                    id: a,
+                                    type: x.PO.O365,
+                                    handler: {
+                                      type: "fetch",
+                                      tryFetch: C(b.MY_DRIVE_ITEMS, a, t),
+                                    },
+                                  }
+                                : null;
+                            });
+                          })(e, r.access_token).filter((e) => null !== e),
+                          a = (function (e, t) {
+                            return [...e.matchAll(_)].map((e) => {
+                              let n, r;
+                              let a = new URL(e[0]),
+                                s = a.searchParams.get("sourcedoc");
+                              return (
+                                s
+                                  ? ((n = (function (e) {
+                                      let t = e.match(/\{([^}]*)}/);
+                                      return t ? t[1] : null;
+                                    })(s)),
+                                    (r = b.MY_DRIVE_ITEMS))
+                                  : ((n = a.searchParams.get("id")),
+                                    (r = b.MY_DRIVE_ROOT)),
+                                n
+                                  ? {
+                                      url: e[0],
+                                      id: n,
+                                      type: x.PO.O365,
+                                      handler: {
+                                        type: "fetch",
+                                        tryFetch: C(r, n, t),
+                                      },
+                                    }
+                                  : null
+                              );
+                            });
+                          })(e, r.access_token).filter((e) => null !== e);
+                        n.push(...t, ...a);
                       }
-                    case f.PO.GDRIVE_SYNC_CONNECTOR:
+                    case x.PO.GDRIVE_SYNC_CONNECTOR:
                   }
                 return n;
               })(t, r)
@@ -233,32 +228,81 @@
           null
         );
       }
-      let k =
+      let E =
           /\bhttps:\/\/docs\.google\.com\/(document|spreadsheets|presentation)\/d\/([\w-]+)\//gm,
-        N = /\bhttps:\/\/onedrive\.live\.com\/[^\s]*/gm;
-      var S = n(29287),
-        E = n(58819),
-        P = n(14551),
-        C = n(8718),
-        _ = n(36180),
-        D = n(7137),
-        M = n(1454),
-        R = n(9063),
-        T = n(84692),
-        L = n(68498);
-      let U = "AIzaSyBjWFkxENpfA2b0Leq9VtNLumQs4u2VbkA";
-      async function z(e) {
-        await (null == B &&
-          (B = new Promise((e, t) => {
+        P = /\bhttps:\/\/onedrive\.live\.com\/[^\s]*/gm,
+        _ = /\bhttps:\/\/[^\s]+?\.sharepoint\.com\/[^\s]*/gm;
+      function C(e, t, n) {
+        switch (e) {
+          case b.MY_DRIVE_ITEMS:
+            return () => M("".concat(e).concat(encodeURIComponent(t)), n);
+          case b.MY_DRIVE_ROOT:
+            return async () => {
+              let r = await D(n, t);
+              return r
+                ? M("".concat(e).concat(encodeURIComponent(r)), n)
+                : Promise.reject(null);
+            };
+        }
+      }
+      async function D(e, t) {
+        let n = await fetch("https://graph.microsoft.com/v1.0/me/drive/root", {
+          method: "GET",
+          headers: {
+            Authorization: "Bearer ".concat(e),
+            "Content-Type": "application/json",
+          },
+        });
+        if (!n.ok) return null;
+        let { webUrl: r } = await n.json(),
+          a = new URL(r).pathname;
+        return t.startsWith(a) ? t.substring(a.length) : t;
+      }
+      async function M(e, t) {
+        var n;
+        let r = await fetch(e, {
+          method: "GET",
+          headers: {
+            Authorization: "Bearer ".concat(t),
+            "Content-Type": "application/json",
+          },
+        });
+        if (!r.ok)
+          return Promise.reject("HTTP ".concat(r.status, " for ").concat(e));
+        let { id: a, name: s, file: i, webUrl: l } = await r.json();
+        return {
+          connector: x.PO.O365,
+          id: a,
+          title: null != s ? s : "",
+          mimeType:
+            null !== (n = null == i ? void 0 : i.mimeType) && void 0 !== n
+              ? n
+              : "",
+          url: null != l ? l : "",
+        };
+      }
+      var R = n(29287),
+        T = n(58819),
+        L = n(14551),
+        U = n(8718),
+        z = n(36180),
+        I = n(7137),
+        B = n(1454),
+        F = n(9063),
+        Z = n(84692),
+        V = n(68498);
+      async function q(e) {
+        await (null == Q &&
+          (Q = new Promise((e, t) => {
             let n = document.createElement("script");
             (n.src = "https://js.live.net/v7.2/OneDrive.js"),
               (n.onload = e),
               (n.onerror = t),
               document.documentElement.appendChild(n);
           })),
-        B);
-        let t = await F(e),
-          n = await I(e, t);
+        Q);
+        let t = await W(e),
+          n = await H(t);
         return null == n
           ? null
           : Promise.all(
@@ -279,7 +323,7 @@
                   }),
                   o = await l.json();
                 return {
-                  connector: f.PO.O365,
+                  connector: x.PO.O365,
                   id: t.id,
                   title: null !== (n = o.name) && void 0 !== n ? n : "",
                   mimeType:
@@ -295,25 +339,25 @@
               })
             );
       }
-      async function I(e, t) {
-        return new Promise((n, r) => {
+      async function H(e) {
+        return new Promise((t, n) => {
           OneDrive.open({
             clientId: "e0476654-c1d5-430b-ab80-70cbd947616a",
             action: "query",
             multiSelect: !0,
-            advanced: { endpointHint: t, accessToken: e },
-            success: (e) => n(e),
+            advanced: { endpointHint: e },
+            success: (e) => t(e),
             cancel() {
-              n(null);
+              t(null);
             },
             error(e) {
-              r(e);
+              n(e);
             },
           });
         });
       }
-      let B = null;
-      async function F(e) {
+      let Q = null;
+      async function W(e) {
         let t = await fetch("https://graph.microsoft.com/v1.0/me/drive", {
           method: "GET",
           headers: {
@@ -328,20 +372,20 @@
         let n = await t.json();
         return "personal" === n.driveType ? "api.onedrive.com" : n.webUrl;
       }
-      let Z = null;
-      function V(e, t) {
+      let G = null;
+      function X(e, t) {
         switch (e) {
-          case f.PO.GDRIVE:
-          case f.PO.GDRIVE_SYNC_CONNECTOR:
-            return q(t, e);
-          case f.PO.O365:
-            return z(t);
+          case x.PO.GDRIVE:
+          case x.PO.GDRIVE_SYNC_CONNECTOR:
+            return K(t, e);
+          case x.PO.O365:
+            return q(t);
         }
       }
-      async function q(e, t) {
+      async function K(e, t) {
         return (
-          await (null == Z &&
-            (Z = new Promise((e, t) => {
+          await (null == G &&
+            (G = new Promise((e, t) => {
               let n = document.createElement("script");
               (n.src = "https://apis.google.com/js/api.js"),
                 (n.onload = e),
@@ -358,7 +402,7 @@
                 () => (
                   gapi.client.setToken({ access_token: e }),
                   gapi.client.init({
-                    apiKey: U,
+                    apiKey: v,
                     scope: "https://www.googleapis.com/auth/drive.file",
                     discoveryDocs: [
                       "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
@@ -366,7 +410,7 @@
                   })
                 )
               )),
-          Z),
+          G),
           new Promise((n) => {
             async function r(e) {
               switch (e.action) {
@@ -387,25 +431,20 @@
             }
             let a = new google.picker.DocsView(google.picker.ViewId.DOCS)
               .setIncludeFolders(!0)
-              .setSelectFolderEnabled(t == f.PO.GDRIVE_SYNC_CONNECTOR)
+              .setSelectFolderEnabled(t == x.PO.GDRIVE_SYNC_CONNECTOR)
               .setMode(google.picker.DocsViewMode.LIST);
-            t == f.PO.GDRIVE_SYNC_CONNECTOR &&
+            t == x.PO.GDRIVE_SYNC_CONNECTOR &&
               a.setMimeTypes("application/vnd.google-apps.folder"),
               new google.picker.PickerBuilder()
-                .setOrigin(
-                  ""
-                    .concat(window.location.protocol, "//")
-                    .concat(window.location.host)
-                )
                 .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
                 .enableFeature(google.picker.Feature.SUPPORT_DRIVES)
                 .setDeveloperKey(
-                  t == f.PO.GDRIVE_SYNC_CONNECTOR
+                  t == x.PO.GDRIVE_SYNC_CONNECTOR
                     ? "AIzaSyCECDrDXDU460DD1WTHtz8jSkyuGjgsI8w"
-                    : U
+                    : v
                 )
                 .setAppId(
-                  t == f.PO.GDRIVE_SYNC_CONNECTOR
+                  t == x.PO.GDRIVE_SYNC_CONNECTOR
                     ? "203712390664"
                     : "77377267392"
                 )
@@ -417,19 +456,19 @@
           })
         );
       }
-      function H(e) {
+      function J(e) {
         let {
             displayType: t,
             modelSupportedImageMimeTypes: n,
             attachmentsProductFeature: r,
           } = e,
-          a = y(),
-          s = (0, R.Z)(),
-          i = (0, x.useRef)(null),
-          l = (0, x.useCallback)(() => {
+          a = O(),
+          s = (0, F.Z)(),
+          i = (0, A.useRef)(null),
+          l = (0, A.useCallback)(() => {
             i.current && i.current.click();
           }, []),
-          o = (0, x.useCallback)(() => {
+          o = (0, A.useCallback)(() => {
             var e;
             let t = null === (e = i.current) || void 0 === e ? void 0 : e.files;
             Array.from(null != t ? t : []).forEach((e) =>
@@ -440,10 +479,10 @@
                   intl: r,
                   attachmentsProductFeature: a,
                 } = e;
-                _.Dw.uploadFile(
-                  (0, C.W7)(t),
+                z.Dw.uploadFile(
+                  (0, U.W7)(t),
                   t,
-                  P.A.Retrieval,
+                  L.A.Retrieval,
                   n,
                   r,
                   void 0,
@@ -457,36 +496,36 @@
               })
             );
           }, [n, r, s]);
-        return (0, d.jsxs)(d.Fragment, {
+        return (0, m.jsxs)(m.Fragment, {
           children: [
-            (0, d.jsx)("input", {
+            (0, m.jsx)("input", {
               type: "file",
               ref: i,
               onChange: o,
               className: "hidden",
             }),
-            (0, d.jsxs)(E.Z.Root, {
+            (0, m.jsxs)(T.Z.Root, {
               children: [
-                (0, d.jsx)(E.Z.Trigger, {
+                (0, m.jsx)(T.Z.Trigger, {
                   children:
                     "button" === t
-                      ? (0, d.jsx)(S.z, {
+                      ? (0, m.jsx)(R.z, {
                           size: "medium",
-                          children: (0, d.jsx)(M.wzc, {}),
+                          children: (0, m.jsx)(B.wzc, {}),
                         })
-                      : (0, d.jsx)(M.OvN, {
+                      : (0, m.jsx)(B.OvN, {
                           className:
                             "icon-sm md:icon-md rounded-full bg-gray-500 text-white outline-none hover:bg-black",
                         }),
                 }),
-                (0, d.jsx)(E.Z.Portal, {
-                  children: (0, d.jsxs)(E.Z.Content, {
+                (0, m.jsx)(T.Z.Portal, {
+                  children: (0, m.jsxs)(T.Z.Content, {
                     children: [
-                      [f.PO.GDRIVE, f.PO.O365].map((e) => {
+                      [x.PO.GDRIVE, x.PO.O365].map((e) => {
                         let t = a.get(e);
                         return t
-                          ? (0, d.jsx)(
-                              Q,
+                          ? (0, m.jsx)(
+                              Y,
                               {
                                 entry: t,
                                 intl: s,
@@ -497,13 +536,13 @@
                             )
                           : null;
                       }),
-                      (0, d.jsx)(
-                        E.Z.Item,
+                      (0, m.jsx)(
+                        T.Z.Item,
                         {
                           onClick: l,
-                          children: (0, d.jsx)("div", {
+                          children: (0, m.jsx)("div", {
                             className: "flex space-x-2",
-                            children: (0, d.jsx)(T.Z, {
+                            children: (0, m.jsx)(Z.Z, {
                               id: "ContextConnectorPicker.uploadFile",
                               defaultMessage: "Upload local file",
                             }),
@@ -519,27 +558,27 @@
           ],
         });
       }
-      function Q(e) {
+      function Y(e) {
         let {
           entry: t,
           modelSupportedImageMimeTypes: r,
           attachmentsProductFeature: a,
           intl: s,
         } = e;
-        return (0, d.jsx)(
-          E.Z.Item,
+        return (0, m.jsx)(
+          T.Z.Item,
           {
             onClick: async () => {
               let { access_token: e } = t;
               if (e) {
-                let n = await V(t.type, e);
+                let n = await X(t.type, e);
                 null != n &&
                   n.forEach((e) => {
                     null != e &&
-                      _.Dw.uploadFile(
+                      z.Dw.uploadFile(
                         e.id,
                         new File([], e.title, { type: e.mimeType }),
-                        P.A.Retrieval,
+                        L.A.Retrieval,
                         r,
                         s,
                         void 0,
@@ -554,17 +593,17 @@
                 e({ id: t.id }, "#settings");
               }
             },
-            children: (0, d.jsxs)("div", {
+            children: (0, m.jsxs)("div", {
               className: "flex space-x-2",
               children: [
-                t.type === f.PO.GDRIVE && (0, d.jsx)(D.dv9, {}),
-                t.type === f.PO.O365 && (0, d.jsx)(D.oV6, {}),
-                (0, d.jsx)("div", {
+                t.type === x.PO.GDRIVE && (0, m.jsx)(I.dv9, {}),
+                t.type === x.PO.O365 && (0, m.jsx)(I.oV6, {}),
+                (0, m.jsx)("div", {
                   children: t.access_token
-                    ? s.formatMessage(W.uploadFromMessage, {
+                    ? s.formatMessage($.uploadFromMessage, {
                         connector_name: t.name,
                       })
-                    : s.formatMessage(W.signinWithMessage, {
+                    : s.formatMessage($.signinWithMessage, {
                         connector_name: t.name,
                       }),
                 }),
@@ -574,7 +613,7 @@
           t.id
         );
       }
-      let W = (0, L.vU)({
+      let $ = (0, V.vU)({
         signinWithMessage: {
           id: "ContextConnectorPicker.signInWithMessage",
           defaultMessage: "Sign in with {connector_name}",
@@ -584,24 +623,24 @@
           defaultMessage: "Upload from {connector_name}",
         },
       });
-      var G = n(99945),
-        X = n(77022);
-      let K = n(21389).Z.div(
-        r ||
-          (r = (0, G.Z)([
+      var ee = n(99945),
+        et = n(77022);
+      let en = n(21389).Z.div(
+        a ||
+          (a = (0, ee.Z)([
             "p-3 ml-2 mt-2 rounded-md border border-black/10 inline-block",
           ]))
       );
-      function J(e) {
+      function er(e) {
         let { modelSupportedImageMimeTypes: t, attachmentsProductFeature: n } =
             e,
-          { tiles: r } = (0, X.BL)(),
-          a = y();
+          { tiles: r } = (0, et.BL)(),
+          a = O();
         return 0 == r.length
           ? null
-          : (0, d.jsx)("div", {
+          : (0, m.jsx)("div", {
               children: r.map((e) =>
-                (0, d.jsx)(
+                (0, m.jsx)(
                   "div",
                   {
                     children: (function (e, t, n) {
@@ -609,14 +648,14 @@
                       let { type: r, access_token: a } = e;
                       if (null == a) return null;
                       switch (r) {
-                        case f.PO.GDRIVE:
-                          return (0, d.jsx)(Y, {
+                        case x.PO.GDRIVE:
+                          return (0, m.jsx)(ea, {
                             accessToken: a,
                             modelSupportedImageMimeTypes: t,
                             attachmentsProductFeature: n,
                           });
-                        case f.PO.O365:
-                        case f.PO.GDRIVE_SYNC_CONNECTOR:
+                        case x.PO.O365:
+                        case x.PO.GDRIVE_SYNC_CONNECTOR:
                           return null;
                       }
                     })(a.get(e), t, n),
@@ -626,69 +665,69 @@
               ),
             });
       }
-      function Y(e) {
+      function ea(e) {
         let {
             accessToken: t,
             modelSupportedImageMimeTypes: n,
             attachmentsProductFeature: r,
           } = e,
-          a = (0, R.Z)(),
-          s = (0, x.useCallback)(
+          a = (0, F.Z)(),
+          s = (0, A.useCallback)(
             async (e) => {
-              e.preventDefault(), (0, X.yA)(f.PO.GDRIVE);
-              let s = await V(f.PO.GDRIVE, t);
+              e.preventDefault(), (0, et.yA)(x.PO.GDRIVE);
+              let s = await X(x.PO.GDRIVE, t);
               null != s &&
                 s.forEach((e) => {
                   null != e &&
-                    _.Dw.uploadFile(
+                    z.Dw.uploadFile(
                       e.id,
                       new File([], e.title, { type: e.mimeType }),
-                      P.A.Retrieval,
+                      L.A.Retrieval,
                       n,
                       a,
                       void 0,
                       r,
-                      f.PO.GDRIVE
+                      x.PO.GDRIVE
                     );
                 });
             },
             [t, a, n, r]
           ),
-          i = (0, x.useCallback)((e) => {
-            e.preventDefault(), (0, X.yA)(f.PO.GDRIVE);
+          i = (0, A.useCallback)((e) => {
+            e.preventDefault(), (0, et.yA)(x.PO.GDRIVE);
           }, []);
-        return (0, d.jsxs)(K, {
+        return (0, m.jsxs)(en, {
           children: [
-            (0, d.jsx)("div", {
+            (0, m.jsx)("div", {
               className: "font-bold",
-              children: (0, d.jsx)(T.Z, {
+              children: (0, m.jsx)(Z.Z, {
                 id: "ContextConnectorTiles.googleDrive",
                 defaultMessage: "Google Drive",
               }),
             }),
-            (0, d.jsx)("div", {
+            (0, m.jsx)("div", {
               className: "py-1 text-token-text-secondary",
-              children: (0, d.jsx)(T.Z, {
+              children: (0, m.jsx)(Z.Z, {
                 id: "ContextConnectorTiles.googleDriveSubtitle",
                 defaultMessage: "Select the file in Google Drive to attach it",
               }),
             }),
-            (0, d.jsxs)("div", {
+            (0, m.jsxs)("div", {
               children: [
-                (0, d.jsx)(S.z, {
+                (0, m.jsx)(R.z, {
                   as: "button",
                   className: "mr-2",
                   onClick: s,
-                  children: (0, d.jsx)(T.Z, {
+                  children: (0, m.jsx)(Z.Z, {
                     id: "ContextConnectorTiles.selectFile",
                     defaultMessage: "Select File...",
                   }),
                 }),
-                (0, d.jsx)(S.z, {
+                (0, m.jsx)(R.z, {
                   as: "button",
                   color: "neutral",
                   onClick: i,
-                  children: (0, d.jsx)(T.Z, {
+                  children: (0, m.jsx)(Z.Z, {
                     id: "ContextConnectorTiles.notNow",
                     defaultMessage: "Not Now",
                   }),
@@ -698,12 +737,12 @@
           ],
         });
       }
-      var $ = n(18450),
-        ee = n(20140),
-        et = n(89899),
-        en = n(42405),
-        er = n(99715);
-      function ea(e, t) {
+      var es = n(18450),
+        ei = n(20140),
+        el = n(89899),
+        eo = n(42405),
+        ec = n(99715);
+      function eu(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -715,16 +754,16 @@
         }
         return n;
       }
-      function es(e) {
+      function ed(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? ea(Object(n), !0).forEach(function (t) {
-                (0, $.Z)(e, t, n[t]);
+            ? eu(Object(n), !0).forEach(function (t) {
+                (0, es.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : ea(Object(n)).forEach(function (t) {
+              : eu(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -734,52 +773,52 @@
         }
         return e;
       }
-      function ei(e) {
+      function em(e) {
         let { getInputProps: t, openFileDialog: n, gizmoId: r } = e,
-          { gdrive_sync: a, o365: s } = (0, ee.X)();
-        return (0, d.jsx)("div", {
-          children: (0, d.jsxs)(er.fC, {
+          { gdrive_sync: a, o365: s } = (0, ei.X)();
+        return (0, m.jsx)("div", {
+          children: (0, m.jsxs)(ec.fC, {
             children: [
-              (0, d.jsx)(er.xz, {
+              (0, m.jsx)(ec.xz, {
                 asChild: !0,
-                children: (0, d.jsx)(S.z, {
+                children: (0, m.jsx)(R.z, {
                   size: "medium",
-                  children: (0, d.jsx)(T.Z, {
+                  children: (0, m.jsx)(Z.Z, {
                     id: "aC1nyd",
                     defaultMessage: "Upload",
                   }),
                 }),
               }),
-              (0, d.jsxs)(er.VY, {
+              (0, m.jsxs)(ec.VY, {
                 side: "top",
                 align: "start",
                 children: [
-                  (0, d.jsx)(er.ck, {
-                    children: (0, d.jsxs)(et.cY, {
+                  (0, m.jsx)(ec.ck, {
+                    children: (0, m.jsxs)(el.cY, {
                       onClick: n,
                       children: [
-                        (0, d.jsx)("input", es({}, t())),
-                        (0, d.jsx)(T.Z, {
+                        (0, m.jsx)("input", ed({}, t())),
+                        (0, m.jsx)(Z.Z, {
                           id: "fy5xdG",
                           defaultMessage: "Upload files from desktop",
                         }),
                       ],
                     }),
                   }),
-                  (0, d.jsxs)(er.ck, {
+                  (0, m.jsxs)(ec.ck, {
                     children: [
                       a.loaded &&
                         !a.already_oauth &&
-                        (0, d.jsxs)(et.cY, {
+                        (0, m.jsxs)(el.cY, {
                           onClick: () => {
-                            (0, en.doOauthRedirect)(
+                            (0, eo.doOauthRedirect)(
                               { id: a.id },
                               "gpts/editor/" + r
                             );
                           },
                           children: [
-                            (0, d.jsx)("input", es({}, t())),
-                            (0, d.jsx)(T.Z, {
+                            (0, m.jsx)("input", ed({}, t())),
+                            (0, m.jsx)(Z.Z, {
                               id: "MgqCv4",
                               defaultMessage: "Connect To Google Drive",
                             }),
@@ -787,13 +826,13 @@
                         }),
                       a.loaded &&
                         a.already_oauth &&
-                        (0, d.jsxs)(et.cY, {
+                        (0, m.jsxs)(el.cY, {
                           onClick: async () => {
-                            await V(f.PO.GDRIVE_SYNC_CONNECTOR, a.access_token);
+                            await X(x.PO.GDRIVE_SYNC_CONNECTOR, a.access_token);
                           },
                           children: [
-                            (0, d.jsx)("input", es({}, t())),
-                            (0, d.jsx)(T.Z, {
+                            (0, m.jsx)("input", ed({}, t())),
+                            (0, m.jsx)(Z.Z, {
                               id: "/EdQ8p",
                               defaultMessage: "Pick Folders From Google Drive",
                             }),
@@ -801,20 +840,20 @@
                         }),
                     ],
                   }),
-                  (0, d.jsxs)(er.ck, {
+                  (0, m.jsxs)(ec.ck, {
                     children: [
                       s.loaded &&
                         !s.already_oauth &&
-                        (0, d.jsxs)(et.cY, {
+                        (0, m.jsxs)(el.cY, {
                           onClick: () => {
-                            (0, en.doOauthRedirect)(
+                            (0, eo.doOauthRedirect)(
                               { id: s.id },
                               "gpts/editor/" + r
                             );
                           },
                           children: [
-                            (0, d.jsx)("input", es({}, t())),
-                            (0, d.jsx)(T.Z, {
+                            (0, m.jsx)("input", ed({}, t())),
+                            (0, m.jsx)(Z.Z, {
                               id: "dVKP7F",
                               defaultMessage: "Connect To One Drive",
                             }),
@@ -822,11 +861,11 @@
                         }),
                       s.loaded &&
                         s.already_oauth &&
-                        (0, d.jsxs)(et.cY, {
+                        (0, m.jsxs)(el.cY, {
                           onClick: () => {},
                           children: [
-                            (0, d.jsx)("input", es({}, t())),
-                            (0, d.jsx)(T.Z, {
+                            (0, m.jsx)("input", ed({}, t())),
+                            (0, m.jsx)(Z.Z, {
                               id: "mADD8i",
                               defaultMessage:
                                 "Pick Files/Folders From One Drive",
@@ -918,12 +957,12 @@
         w = n(52392),
         O = n(47712),
         k = n(63605),
-        N = n(78253),
-        S = n(99715),
+        S = n(78253),
+        N = n(99715),
         E = n(96056),
         P = n(38801),
-        C = n(67852),
-        _ = n(34594),
+        _ = n(67852),
+        C = n(34594),
         D = n(41409),
         M = n(84692),
         R = n(35250);
@@ -973,7 +1012,7 @@
                   (0, R.jsx)(c.Z.Separator, {}),
                   (0, R.jsx)(c.Z.Item, {
                     onClick: () => {
-                      P.A.logEvent(C.M.clickLogOut, { eventSource: "mouse" }),
+                      P.A.logEvent(_.M.clickLogOut, { eventSource: "mouse" }),
                         (0, E.w7)();
                     },
                     icon: g.N_,
@@ -1057,7 +1096,7 @@
                 }),
                 (0, R.jsx)(A.UA, {
                   onSelect: () => {
-                    s.push((0, N.cy)());
+                    s.push((0, S.cy)());
                   },
                   children: (0, R.jsxs)("div", {
                     className: "flex items-center gap-3",
@@ -1081,19 +1120,21 @@
             gizmoResource: a,
             clientThreadId: s,
           } = e,
-          i = (0, w.Xy)(s).tags.includes(r.S.GPT_4) ? d.X72 : d.stH;
-        return t
+          i = (0, w.Xy)(s),
+          l = (0, o.Vf)(s),
+          c = i.tags.includes(r.S.GPT_4) ? d.X72 : d.stH;
+        return t || !l.length
           ? (0, R.jsx)(R.Fragment, { children: n })
-          : (0, R.jsxs)(S.fC, {
+          : (0, R.jsxs)(N.fC, {
               modal: !1,
               onOpenChange: (e) => {
-                P.A.logEvent(C.M.toggleModelSwitcher, { isOpen: e }),
-                  _.m9.logEvent("toggle_model_switcher", null, {
+                P.A.logEvent(_.M.toggleModelSwitcher, { isOpen: e }),
+                  C.m9.logEvent("toggle_model_switcher", null, {
                     isOpen: String(e),
                   });
               },
               children: [
-                (0, R.jsx)(S.xz, {
+                (0, R.jsx)(N.xz, {
                   asChild: !0,
                   children: (0, R.jsx)("button", {
                     className:
@@ -1107,18 +1148,18 @@
                           isFirstParty: !a,
                           className: "h-8 w-8",
                         })
-                      : (0, R.jsx)(i, {
+                      : (0, R.jsx)(c, {
                           className: "icon-md text-token-text-secondary",
                         }),
                   }),
                 }),
-                (0, R.jsx)(S.Uv, {
-                  children: (0, R.jsx)(S.VY, {
+                (0, R.jsx)(N.Uv, {
+                  children: (0, R.jsx)(N.VY, {
                     collisionPadding: 10,
                     className:
                       "popover rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
                     sideOffset: 4,
-                    children: (0, R.jsx)(o.DS, { clientThreadId: s }),
+                    children: (0, R.jsx)(o.DS, { sections: l }),
                   }),
                 }),
               ],
@@ -1128,7 +1169,7 @@
         let { gizmo: t, isActive: n, clientThreadId: r } = e,
           a = (0, D.useRouter)(),
           s = (0, R.jsxs)(A.tc, {
-            $as: n ? S.fF : S.Xi,
+            $as: n ? N.fF : N.Xi,
             className: "justify-between",
             onSelect: () => a.push((0, h.m_)(t)),
             children: [
@@ -1156,11 +1197,11 @@
             ],
           });
         return n
-          ? (0, R.jsxs)(S.Tr, {
+          ? (0, R.jsxs)(N.Tr, {
               children: [
                 s,
-                (0, R.jsx)(S.Uv, {
-                  children: (0, R.jsx)(S.tu, {
+                (0, R.jsx)(N.Uv, {
+                  children: (0, R.jsx)(N.tu, {
                     className:
                       "mt-2 max-h-[calc(100vh-300px)] min-w-[100px] max-w-xs overflow-auto rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
                     sideOffset: -10,
@@ -1646,10 +1687,10 @@
             return ek;
           },
           EditorModal: function () {
-            return eN;
+            return eS;
           },
           EditorPageBody: function () {
-            return eS;
+            return eN;
           },
         });
       var r,
@@ -1775,7 +1816,7 @@
             }),
             (0, O.jsx)("div", {
               className: "self-start",
-              children: (0, O.jsx)(N, {
+              children: (0, O.jsx)(S, {
                 model:
                   null !== (e = r.model) && void 0 !== e ? e : "gpt-3.5-turbo",
                 onChange: (e) => {
@@ -1814,7 +1855,7 @@
           ],
         });
       }
-      function N(e) {
+      function S(e) {
         let { model: t, onChange: n } = e;
         return (0, O.jsxs)(b.fC, {
           children: [
@@ -1848,11 +1889,11 @@
           ],
         });
       }
-      var S = n(55681),
+      var N = n(55681),
         E = n(79134),
         P = n(3107),
-        C = n.n(P);
-      function _(e, t) {
+        _ = n.n(P);
+      function C(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -1868,12 +1909,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? _(Object(n), !0).forEach(function (t) {
+            ? C(Object(n), !0).forEach(function (t) {
                 (0, a.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : _(Object(n)).forEach(function (t) {
+              : C(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1885,7 +1926,7 @@
       }
       let M = new E.V_({
         nodes: D(
-          D({}, S.fK.spec.nodes.toObject()),
+          D({}, N.fK.spec.nodes.toObject()),
           {},
           {
             generatedText: {
@@ -1894,11 +1935,11 @@
               content: "text*",
               attrs: { class: { default: "generated-text" } },
               parseDOM: [{ tag: "span.generated-text" }],
-              toDOM: () => ["span", { class: C()["generated-text"] }, 0],
+              toDOM: () => ["span", { class: _()["generated-text"] }, 0],
             },
           }
         ),
-        marks: D({}, S.fK.spec.marks.toObject()),
+        marks: D({}, N.fK.spec.marks.toObject()),
       });
       function R(e, t) {
         var n = Object.keys(e);
@@ -1931,8 +1972,8 @@
         }
         return e;
       }
-      let L = new S.xj(M, S.EU.tokenizer, T({}, S.EU.tokens)),
-        U = new S.nZ(T({}, S.Dm.nodes), T({}, S.Dm.marks));
+      let L = new N.xj(M, N.EU.tokenizer, T({}, N.EU.tokens)),
+        U = new N.nZ(T({}, N.Dm.nodes), T({}, N.Dm.marks));
       function z(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -2410,8 +2451,8 @@
                     let a = eg.p.inline(n.from, n.to, {
                       class:
                         "delete" === t.type
-                          ? C()["highlighted-delete"]
-                          : C()["highlighted-edit"],
+                          ? _()["highlighted-delete"]
+                          : _()["highlighted-edit"],
                     });
                     e.push(a);
                   }),
@@ -2482,7 +2523,7 @@
           }),
         });
       }
-      function eN(e) {
+      function eS(e) {
         let { userMessage: t, assistantMessage: n, onClose: r } = e;
         if (
           !n ||
@@ -2512,14 +2553,14 @@
             onClick: r,
             children: "Cancel",
           }),
-          children: (0, O.jsx)(eS, {
+          children: (0, O.jsx)(eN, {
             documentGoal: a,
             initialContent: s,
             classNames: "h-[80vh]",
           }),
         });
       }
-      function eS(e) {
+      function eN(e) {
         let { documentGoal: t, initialContent: n, classNames: r } = e,
           a = (0, j.useRef)(null),
           { 0: s, 1: i } = (0, j.useState)(!1);
@@ -2619,7 +2660,7 @@
               }),
               t = new eg.tk(r.current, {
                 state: e,
-                attributes: { class: C()["jidori-editor"] },
+                attributes: { class: _()["jidori-editor"] },
               });
             return (
               (0, ev.Z)(t),
@@ -3460,7 +3501,7 @@
         o = n.n(l),
         c = n(70079),
         u = n(20735),
-        d = n(91980),
+        d = n(16481),
         m = n(19216),
         p = n(72150),
         h = n(45456),
@@ -3500,8 +3541,8 @@
             );
         }, [j, w]);
         let k = (0, m.nn)(m.LW.turns),
-          N = k.length > 0 ? k[0].user_query : "",
-          S = (0, c.useCallback)(
+          S = k.length > 0 ? k[0].user_query : "",
+          N = (0, c.useCallback)(
             (e) => {
               O((t) => {
                 let n = t + e;
@@ -3513,8 +3554,8 @@
         return (
           (0, c.useEffect)(() => {
             let e = (e) => {
-              "ArrowUp" == e.key && S(-1),
-                "ArrowDown" == e.key && S(1),
+              "ArrowUp" == e.key && N(-1),
+                "ArrowDown" == e.key && N(1),
                 "ArrowLeft" == e.key && y(1),
                 "ArrowRight" == e.key && y(2);
             };
@@ -3524,7 +3565,7 @@
                 document.removeEventListener("keydown", e);
               }
             );
-          }, [S]),
+          }, [N]),
           (0, g.jsxs)("div", {
             className: "flex h-screen w-screen flex-row",
             children: [
@@ -3616,7 +3657,7 @@
               (0, g.jsx)(d.u, {
                 readyState: 1,
                 hasSubmittedInitialQuery: !0,
-                searchQuery: N,
+                searchQuery: S,
                 followupQuery: "",
                 onUpdateSearchQuery: o(),
                 onUpdateFollowupQuery: o(),
@@ -3787,7 +3828,7 @@
           return O;
         },
         Zr: function () {
-          return S;
+          return N;
         },
       });
       var r,
@@ -3863,7 +3904,7 @@
           (0, v.mX)(e.agentSettingsOverrides)
         );
       }
-      function N(e) {
+      function S(e) {
         let { children: t } = e,
           n = (0, i.Z)(e, y);
         return (0, b.jsx)(
@@ -3875,16 +3916,16 @@
           )
         );
       }
-      function S(e) {
-        var t, n, r, a, s, i, g, A, y, j, k, S;
-        let { onClose: P, settings: C, onUpdateSetting: _ } = e,
+      function N(e) {
+        var t, n, r, a, s, i, g, A, y, j, k, N;
+        let { onClose: P, settings: _, onUpdateSetting: C } = e,
           { theme: D, setTheme: M } = (0, f.F)(),
-          { 0: R, 1: T } = (0, x.useState)(C.rewrittenSnippetsPrompt);
+          { 0: R, 1: T } = (0, x.useState)(_.rewrittenSnippetsPrompt);
         return (0, b.jsx)(p.Z, {
           isOpen: !0,
           onClose: () => {
-            R !== C.rewrittenSnippetsPrompt &&
-              _(w(w({}, C), {}, { rewrittenSnippetsPrompt: R })),
+            R !== _.rewrittenSnippetsPrompt &&
+              C(w(w({}, _), {}, { rewrittenSnippetsPrompt: R })),
               P();
           },
           type: "success",
@@ -3913,7 +3954,7 @@
                         ],
                       }),
                       (0, b.jsx)(d.Z.Portal, {
-                        children: (0, b.jsxs)(N, {
+                        children: (0, b.jsxs)(S, {
                           children: [
                             (0, b.jsx)(d.Z.Item, {
                               value: "light",
@@ -3943,9 +3984,9 @@
                   }),
                   (0, b.jsx)(u.Z, {
                     onChange: (e) => {
-                      _(w(w({}, C), {}, { useLocation: e }));
+                      C(w(w({}, _), {}, { useLocation: e }));
                     },
-                    enabled: C.useLocation,
+                    enabled: _.useLocation,
                     label: "Use location from browser",
                   }),
                 ],
@@ -3958,8 +3999,8 @@
                     children: "Enable suggestions",
                   }),
                   (0, b.jsx)(u.Z, {
-                    onChange: (e) => _(w(w({}, C), {}, { suggestions: e })),
-                    enabled: C.suggestions,
+                    onChange: (e) => C(w(w({}, _), {}, { suggestions: e })),
+                    enabled: _.suggestions,
                     label: "Enable suggestions",
                   }),
                 ],
@@ -3975,20 +4016,20 @@
                     value:
                       null !==
                         (t =
-                          null === (n = C.agentSettingsOverrides) ||
+                          null === (n = _.agentSettingsOverrides) ||
                           void 0 === n
                             ? void 0
                             : n.model_family) && void 0 !== t
                         ? t
                         : O.agentSettingsOverrides.model_family,
                     onValueChange: (e) => {
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { model_family: e }
                             ),
@@ -4005,7 +4046,7 @@
                         ],
                       }),
                       (0, b.jsx)(d.Z.Portal, {
-                        children: (0, b.jsxs)(N, {
+                        children: (0, b.jsxs)(S, {
                           children: [
                             (0, b.jsx)(d.Z.Item, {
                               value: v.tQ.GPT_3_5,
@@ -4037,20 +4078,20 @@
                     value:
                       null !==
                         (r =
-                          null === (a = C.agentSettingsOverrides) ||
+                          null === (a = _.agentSettingsOverrides) ||
                           void 0 === a
                             ? void 0
                             : a.search_engine) && void 0 !== r
                         ? r
                         : O.agentSettingsOverrides.search_engine,
                     onValueChange: (e) => {
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { search_engine: e }
                             ),
@@ -4067,7 +4108,7 @@
                         ],
                       }),
                       (0, b.jsx)(d.Z.Portal, {
-                        children: (0, b.jsxs)(N, {
+                        children: (0, b.jsxs)(S, {
                           children: [
                             (0, b.jsx)(d.Z.Item, {
                               value: v.lv.Bing,
@@ -4097,13 +4138,13 @@
                   }),
                   (0, b.jsx)(u.Z, {
                     onChange: (e) =>
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { use_labrador: e }
                             ),
@@ -4113,7 +4154,7 @@
                     enabled:
                       null !==
                         (s =
-                          null === (i = C.agentSettingsOverrides) ||
+                          null === (i = _.agentSettingsOverrides) ||
                           void 0 === i
                             ? void 0
                             : i.use_labrador) && void 0 !== s
@@ -4132,13 +4173,13 @@
                   }),
                   (0, b.jsx)(u.Z, {
                     onChange: (e) =>
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { show_image_to_model: e }
                             ),
@@ -4148,7 +4189,7 @@
                     enabled:
                       null !==
                         (g =
-                          null === (A = C.agentSettingsOverrides) ||
+                          null === (A = _.agentSettingsOverrides) ||
                           void 0 === A
                             ? void 0
                             : A.show_image_to_model) && void 0 !== g
@@ -4169,20 +4210,20 @@
                     value:
                       null !==
                         (y =
-                          null === (j = C.agentSettingsOverrides) ||
+                          null === (j = _.agentSettingsOverrides) ||
                           void 0 === j
                             ? void 0
                             : j.robots_mode) && void 0 !== y
                         ? y
                         : O.agentSettingsOverrides.robots_mode,
                     onValueChange: (e) => {
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { robots_mode: e }
                             ),
@@ -4199,7 +4240,7 @@
                         ],
                       }),
                       (0, b.jsx)(d.Z.Portal, {
-                        children: (0, b.jsxs)(N, {
+                        children: (0, b.jsxs)(S, {
                           children: [
                             (0, b.jsx)(d.Z.Item, {
                               value: v.K1.Conservative,
@@ -4227,18 +4268,18 @@
                     name: "eval_preset",
                     className: "w-64",
                     value:
-                      null !== (k = C.agentSettingsOverrides.eval_preset) &&
+                      null !== (k = _.agentSettingsOverrides.eval_preset) &&
                       void 0 !== k
                         ? k
                         : O.agentSettingsOverrides.eval_preset,
                     onChange: (e) =>
-                      _(
+                      C(
                         w(
-                          w({}, C),
+                          w({}, _),
                           {},
                           {
                             agentSettingsOverrides: w(
-                              w({}, C.agentSettingsOverrides),
+                              w({}, _.agentSettingsOverrides),
                               {},
                               { eval_preset: e.target.value }
                             ),
@@ -4257,16 +4298,16 @@
                   }),
                   (0, b.jsx)(u.Z, {
                     onChange: (e) =>
-                      _(w(w({}, C), {}, { useRewrittenSnippets: e })),
+                      C(w(w({}, _), {}, { useRewrittenSnippets: e })),
                     enabled:
-                      null !== (S = C.useRewrittenSnippets) && void 0 !== S
-                        ? S
+                      null !== (N = _.useRewrittenSnippets) && void 0 !== N
+                        ? N
                         : O.useRewrittenSnippets,
                     label: "Rewrite snippets and titles",
                   }),
                 ],
               }),
-              C.useRewrittenSnippets &&
+              _.useRewrittenSnippets &&
                 (0, b.jsx)(E, {
                   children: (0, b.jsxs)("div", {
                     className: "w-full",
@@ -4286,7 +4327,7 @@
                         value: R,
                         onChange: (e) => T(e.target.value),
                         onBlur: () =>
-                          _(w(w({}, C), {}, { rewrittenSnippetsPrompt: R })),
+                          C(w(w({}, _), {}, { rewrittenSnippetsPrompt: R })),
                         placeholder: "Prompt for rewriting snippets and titles",
                         className: "w-full text-xs !leading-snug",
                         rows: 8,
@@ -4296,7 +4337,7 @@
                 }),
               (0, b.jsx)(l.z, {
                 onClick: () => {
-                  T(O.rewrittenSnippetsPrompt), _(O);
+                  T(O.rewrittenSnippetsPrompt), C(O);
                 },
                 type: "reset",
                 color: "neutral",
@@ -4344,11 +4385,11 @@
         w = n(75388),
         O = n(5224),
         k = n(82555),
-        N = n(1454),
-        S = n(36270),
+        S = n(1454),
+        N = n(36270),
         E = n(10987),
         P = n(35250);
-      function C(e) {
+      function _(e) {
         var t;
         let {
             currentQuery: n,
@@ -4362,7 +4403,7 @@
           l.U.addTiming("sonic.web.home.consolePrimarySearchInput.mounted");
         }, []);
         let { 0: u, 1: d } = (0, g.useState)(null),
-          m = (0, S.o)({ query: i.current });
+          m = (0, N.o)({ query: i.current });
         (0, g.useEffect)(() => {
           0 === m.length && d(null), c(m.length > 0);
         }, [m]),
@@ -4397,7 +4438,7 @@
                 submitButtonIcon: (0, P.jsx)(k.WmV, {
                   className: "rotate-90 text-token-main-surface-tertiary",
                 }),
-                leftIcon: (0, P.jsx)(N.jRj, {
+                leftIcon: (0, P.jsx)(S.jRj, {
                   className: (0, y.default)(
                     "h-5 w-5",
                     (null === (t = i.current) || void 0 === t
@@ -4430,7 +4471,7 @@
                 onMouseLeave: () => h({ value: null, shouldUpdateQuery: !1 }),
                 children: m.map((e, t) =>
                   (0, P.jsx)(
-                    _,
+                    C,
                     {
                       typeahead: e,
                       typedQuery: i.current,
@@ -4445,7 +4486,7 @@
           ],
         });
       }
-      function _(e) {
+      function C(e) {
         let {
             typeahead: t,
             typedQuery: n,
@@ -4517,7 +4558,7 @@
               children: (0, P.jsxs)("div", {
                 className: "relative",
                 children: [
-                  (0, P.jsx)(C, {
+                  (0, P.jsx)(_, {
                     currentQuery: n,
                     onUpdateCurrentQuery: a,
                     onSubmit: (e) => {
@@ -4534,7 +4575,7 @@
           ],
         });
       }
-      var M = n(91980);
+      var M = n(16481);
       function R(e) {
         let {
             readyState: t,
@@ -4713,101 +4754,128 @@
         return e;
       }
       function Y(e) {
+        var t;
         let {
-            user: t,
-            initialQuery: n,
-            initialThreadId: r,
-            socketUrl: u,
-            userMetadata: m,
+            user: n,
+            initialQuery: r,
+            initialThreadId: u,
+            sessionId: m,
+            socketUrl: A,
+            userMetadata: b,
           } = e,
-          A = (0, g.useRef)(n ? { query: n } : null),
-          b = (0, g.useRef)(n ? "url_query" : "search_input"),
-          y = (0, U.W6)(U.bM.isSettingsModalOpen),
-          j = (0, U.W6)(U.bM.isDebugModalOpen),
-          [w, k] = (0, q.r)(),
-          { 0: N, 1: S } = (0, g.useState)(null),
-          { 0: E, 1: C } = (0, g.useState)(),
-          { 0: _, 1: D } = (0, g.useState)(null != n),
-          M = (0, z.nn)(z.LW.threadId),
-          Z = (0, z.nn)(z.LW.lastTurn),
-          K = (0, h.useRouter)(),
-          { 0: Y, 1: ee } = (0, g.useState)(null),
-          et = (0, o.gb)({ namespace: o.dG.SonicHome, opts: { debug: !0 } });
+          y = (0, g.useRef)(r ? { query: r } : null),
+          j = (0, g.useRef)(r ? "url_query" : "search_input"),
+          w = (0, U.W6)(U.bM.isSettingsModalOpen),
+          k = (0, U.W6)(U.bM.isDebugModalOpen),
+          [S, N] = (0, q.r)(),
+          { 0: E, 1: _ } = (0, g.useState)(null),
+          { 0: C, 1: D } = (0, g.useState)(),
+          { 0: M, 1: Z } = (0, g.useState)(null != r),
+          K = null !== (t = (0, z.nn)(z.LW.threadId)) && void 0 !== t ? t : u,
+          Y = (0, z.nn)(z.LW.lastTurn),
+          ee = (0, h.useRouter)(),
+          { 0: et, 1: en } = (0, g.useState)(null),
+          er = (0, o.gb)({ namespace: o.dG.SonicHome, opts: { debug: !0 } });
         (0, g.useEffect)(() => {
           l.U.addTiming("sonic.web.home.mounted");
         }, []),
           (0, H.e)(),
           (0, g.useEffect)(() => {
             (async function () {
-              t && ee((await (0, c.FB)(t.id)).slice(0, 6));
+              n && en((await (0, c.FB)(n.id)).slice(0, 6));
             })();
-          }, [t]);
-        let { readyState: en, postQuery: er } = (function (e) {
-            let { threadId: t, socketUrl: n, onTurnSubmitted: r } = e,
-              { 0: s, 1: i } = (0, g.useState)(!1),
-              { 0: o, 1: c } = (0, g.useState)(!0),
-              { 0: u, 1: d } = (0, g.useState)(!0),
-              m = (0, g.useRef)(0),
-              p = (0, g.useRef)(!1);
+          }, [n]);
+        let { readyState: ea, postQuery: es } = (function (e) {
+            let {
+                threadId: t,
+                sessionId: n,
+                socketUrl: r,
+                onTurnSubmitted: s,
+              } = e,
+              { 0: i, 1: o } = (0, g.useState)(!1),
+              { 0: c, 1: u } = (0, g.useState)(!0),
+              { 0: d, 1: m } = (0, g.useState)(!0),
+              { 0: p, 1: h } = (0, g.useState)(null),
+              x = (0, g.useRef)(0),
+              A = (0, g.useRef)(!1);
             (0, g.useEffect)(
               () => (
-                (p.current = !0),
+                (A.current = !0),
                 () => {
-                  p.current = !1;
+                  A.current = !1;
                 }
               ),
               []
             );
-            let h = (0, g.useCallback)(async () => {
-                if (m.current > 50)
+            let v = (0, g.useCallback)(async () => {
+                if (x.current > 50)
                   return (
                     a.m.danger("Failed to fetch websocket url", {
                       hasCloseButton: !0,
                     }),
                     l.U.addError("Failed to fetch websocket url, giving up", {
-                      attempts: m.current,
+                      attempts: x.current,
                     }),
                     ""
                   );
                 try {
                   let e = await B.c.get("".concat(O.rq, "/register-websocket"));
-                  return (m.current = 0), e.wss_url;
+                  return (x.current = 0), e.wss_url;
                 } catch (e) {
                   throw (
                     (l.U.addError("Failed to fetch websocket url, retrying", {
                       cause: e,
                     }),
-                    (m.current += 1),
+                    (x.current += 1),
                     e)
                   );
                 }
               }, []),
-              { readyState: x } = (0, f.ZP)(
-                !s && n ? n : h,
+              b = (0, g.useCallback)(
+                (e) => {
+                  p &&
+                    L.Y.logEvent(L.M.searchQuerySubmitted, {
+                      thread_id: e,
+                      source: p.querySource,
+                      user_hash: p.userHash,
+                      query: p.query,
+                    });
+                },
+                [p]
+              ),
+              { readyState: y } = (0, f.ZP)(
+                !i && r ? r : v,
                 {
                   retryOnError: !0,
-                  shouldReconnect: () => !0 === p.current && u,
+                  shouldReconnect: () => !0 === A.current && d,
                   reconnectAttempts: 50,
                   reconnectInterval: (e) =>
                     Math.min(1e3 * Math.pow(1.3, e), 5e3),
                   onMessage: (e) => {
-                    !(function (e, t) {
-                      if (e.thread_id !== t) return;
-                      let n =
+                    !(function (e, t, n, r) {
+                      if (
+                        e.thread_id !== t &&
+                        !(
+                          "append_turn" === e.delta.type &&
+                          e.delta.session_id === n
+                        )
+                      )
+                        return;
+                      let a =
                         "append_turn" === e.delta.type ||
                         "set_turn" === e.delta.type
                           ? e.delta.turn.index
                           : e.delta.turn_index;
-                      if (null === n) throw Error();
+                      if (null === a) throw Error();
                       switch (e.delta.type) {
                         case "append_turn": {
-                          let n = e.delta;
-                          z.P3.appendTurn(t, n.turn);
+                          let t = e.delta;
+                          z.P3.appendTurn(e.thread_id, t.turn, r);
                           break;
                         }
                         case "set_search_results": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.search_results = t.search_results;
                           });
                           break;
@@ -4815,14 +4883,14 @@
                         case "set_model_response": {
                           let t = e.delta;
                           z.P3.updateTurn(
-                            n,
+                            a,
                             (e) => (e.model_response = t.model_response)
                           );
                           break;
                         }
                         case "append_model_response_text": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             if (!e.model_response) throw Error();
                             (e.model_response.text += t.text),
                               (e.model_response.citations = [
@@ -4834,35 +4902,35 @@
                         }
                         case "set_weather_widget": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.weather_widget = t.weather_widget;
                           });
                           break;
                         }
                         case "set_calculator_widget": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.calculator_widget = t.calculator_widget;
                           });
                           break;
                         }
                         case "set_sports_widget": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.sports_widget = t.sports_widget;
                           });
                           break;
                         }
                         case "set_finance_widget": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.finance_widget = t.finance_widget;
                           });
                           break;
                         }
                         case "set_finance_widget_histories": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             if (null === e.finance_widget) throw Error();
                             e.finance_widget = V(
                               V({}, e.finance_widget),
@@ -4874,14 +4942,14 @@
                         }
                         case "set_timezone_widget": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.timezone_widget = t.timezone_widget;
                           });
                           break;
                         }
                         case "set_turn_execution_status": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             (e.execution_status = t.execution_status),
                               (e.error = t.error);
                           });
@@ -4889,14 +4957,14 @@
                         }
                         case "set_image_results": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             e.image_results = t.image_results;
                           });
                           break;
                         }
                         case "set_model_response_citation": {
                           let t = e.delta;
-                          z.P3.updateTurn(n, (e) => {
+                          z.P3.updateTurn(a, (e) => {
                             if (!e.model_response) throw Error();
                             e.model_response.citations[t.citation_index] =
                               t.citation;
@@ -4908,13 +4976,13 @@
                             delta: e.delta,
                           });
                       }
-                    })(JSON.parse(e.data), t);
+                    })(JSON.parse(e.data), t, n, b);
                   },
                   onError: (e) => {
                     l.U.addError("Websocket error", { event: e });
                   },
                   onClose: () => {
-                    console.debug("[ws] Connection closed"), i(!0);
+                    console.debug("[ws] Connection closed"), o(!0);
                   },
                   onReconnectStop: () => {
                     a.m.danger(
@@ -4923,73 +4991,77 @@
                     );
                   },
                 },
-                o
+                c
               ),
-              A = (0, g.useCallback)(() => {
-                x !== f.kQ.OPEN &&
-                  (c(!1),
-                  (m.current = 0),
+              j = (0, g.useCallback)(() => {
+                y !== f.kQ.OPEN &&
+                  (u(!1),
+                  (x.current = 0),
                   setTimeout(() => {
-                    c(!0);
+                    u(!0);
                   }, 0));
-              }, [x]);
+              }, [y]);
             return (
               (0, g.useEffect)(
                 () =>
                   (0, I.R)({
                     onHidden: () => {
-                      console.debug("[ws] onHidden"), d(!1);
+                      console.debug("[ws] onHidden"), m(!1);
                     },
                     onVisible: () => {
                       console.debug("[ws] onVisible, set reconnect to true"),
-                        d(!0),
-                        A();
+                        m(!0),
+                        j();
                     },
                   }),
-                [A]
+                [j]
               ),
               {
-                readyState: x,
+                readyState: y,
                 postQuery: (0, g.useCallback)(
                   async (e) => {
-                    var t;
-                    let { threadId: n } = e,
-                      { initialThreadId: a } = e,
-                      s = !!n;
-                    return (
-                      n || (n = null != a ? a : await (0, F.gK)()),
+                    let { threadId: t, sessionId: n, isFollowup: r } = e;
+                    h({
+                      query: e.query,
+                      userHash: e.userHash,
+                      querySource: e.querySource,
+                    }),
                       (0, F.dN)({
-                        threadId: null !== (t = n) && void 0 !== t ? t : "",
+                        threadId: t,
+                        sessionId: n,
                         query: e.query,
                         agentSettingsOverrides: e.agentSettingsOverrides,
                         metadata: e.metadata,
                       })
-                        .then(() => (null == r ? void 0 : r({ isFollowup: s })))
-                        .catch((e) =>
-                          l.U.addError("Failed to postThreadTurn", { cause: e })
-                        ),
-                      { threadId: n }
-                    );
+                        .then(() => {
+                          null == s || s({ isFollowup: r });
+                        })
+                        .catch((e) => {
+                          l.U.addError("Failed to postThreadTurn", {
+                            cause: e,
+                          });
+                        });
                   },
-                  [r]
+                  [s]
                 ),
               }
             );
           })({
-            socketUrl: u,
-            threadId: null != M ? M : r,
+            socketUrl: A,
+            threadId: K,
+            sessionId: m,
             onTurnSubmitted: (0, g.useCallback)(
               (e) => {
                 let { isFollowup: t } = e;
                 t ||
-                  et.logTiming("search_query_submitted", {
-                    context: { source: eo() },
+                  er.logTiming("search_query_submitted", {
+                    context: { source: eu() },
                   });
               },
-              [et]
+              [er]
             ),
           }),
-          { newQueryStarted: ea } = (function (e) {
+          { newQueryStarted: ei } = (function (e) {
             let { profiler: t, querySource: n } = e,
               r = (0, g.useRef)(J({}, $)),
               a = (0, z.nn)(z.LW.firstTurn);
@@ -5041,9 +5113,9 @@
                 }, []),
               }
             );
-          })({ profiler: et, querySource: eo() }),
-          { data: es } = (0, s.a)({
-            queryKey: ["userLocation", w.useLocation],
+          })({ profiler: er, querySource: eu() }),
+          { data: el } = (0, s.a)({
+            queryKey: ["userLocation", S.useLocation],
             queryFn: (e) => {
               let {
                 queryKey: [t, n],
@@ -5059,94 +5131,87 @@
                   G();
                 }
               return Q;
-            })(w.useLocation),
+            })(S.useLocation),
             networkMode: "always",
             refetchOnWindowFocus: "always",
             refetchOnMount: "always",
             staleTime: 0,
           }),
-          ei = (0, g.useMemo)(() => J(J({}, m), es), [m, es]),
-          el = (0, g.useCallback)(
+          eo = (0, g.useMemo)(() => J(J({}, b), el), [b, el]),
+          ec = (0, g.useCallback)(
             async (e, t, n) => {
               try {
-                let r = null === t ? "query" : "followup",
-                  a = eo();
-                "query" === r && (et.reset(), ea(), S(e), C(e));
-                let s = await er({
-                  threadId: t,
-                  initialThreadId: n,
-                  query: e,
-                  agentSettingsOverrides: w.agentSettingsOverrides,
-                  metadata: ei,
-                });
-                if ("query" === r) {
-                  let t = s.threadId;
-                  z.P3.newThread(t),
-                    L.Y.logEvent(L.M.searchQuerySubmitted, {
-                      thread_id: t,
-                      source: a,
-                      user_hash: Y,
-                      query: e,
-                    });
-                } else
+                let r = n ? "followup" : "query",
+                  a = eu();
+                "query" === r && (er.reset(), ei(), _(e), D(e)),
+                  await es({
+                    threadId: t,
+                    sessionId: m,
+                    isFollowup: n,
+                    query: e,
+                    userHash: et,
+                    querySource: a,
+                    agentSettingsOverrides: S.agentSettingsOverrides,
+                    metadata: eo,
+                  }),
                   "followup" === r &&
                     L.Y.logEvent(L.M.searchFollowupSubmitted, {
                       thread_id: t,
-                      turn_index: Z.index,
+                      turn_index: Y.index,
                     });
               } catch (e) {
                 l.U.addError(Error("Error posting user action", { cause: e })),
                   a.m.danger("Failed to submit");
               }
             },
-            [Z, er, et, w.agentSettingsOverrides, ea, Y, ei]
+            [Y, es, er, S.agentSettingsOverrides, ei, et, eo, m]
           );
-        function eo() {
-          return b.current;
+        function eu() {
+          return j.current;
         }
-        let ec = (e, t) => {
+        let ed = (e, t) => {
             let { isFollowup: n = !1 } = t;
-            if (en !== f.kQ.OPEN) {
+            if (ea !== f.kQ.OPEN) {
               a.m.danger("Websocket connection is not open");
               return;
             }
-            el(null != e ? e : "", n ? M : null, r), D(!0);
+            ec(null != e ? e : "", n ? K : null, n), Z(!0);
           },
-          eu = (e) => {
-            z.P3.clearThread(), (b.current = "search_input");
+          em = (e) => {
+            z.P3.clearThread(), (j.current = "search_input");
             let t = new URLSearchParams(window.location.search);
             e ? t.set("q", e) : t.delete("q");
             let n = "/search";
             t.size > 0 && (n += "?".concat(t.toString())),
-              K.replace(n, void 0, { shallow: !0 }),
-              e ? (el(e, null, null), D(!0)) : D(!1);
+              ee.replace(n, void 0, { shallow: !0 }),
+              e ? (ec(e, null, !1), Z(!0)) : Z(!1);
           };
         return (
           (0, g.useEffect)(() => {
             var e;
-            en === f.kQ.OPEN &&
-              (null != n &&
-                (null === (e = A.current) || void 0 === e
+            ea === f.kQ.OPEN &&
+              (null != r &&
+                (null === (e = y.current) || void 0 === e
                   ? void 0
-                  : e.query) !== n &&
-                (z.P3.clearThread(), (A.current = { query: n })),
-              null == A.current ||
-                A.current.submitted ||
+                  : e.query) !== r &&
+                (z.P3.clearThread(), (y.current = { query: r })),
+              null == y.current ||
+                y.current.submitted ||
                 ((async function () {
-                  null == A.current ||
-                    A.current.submitted ||
-                    ((A.current.submitted = !0),
-                    await el(A.current.query, null, r));
+                  null == y.current ||
+                    y.current.submitted ||
+                    ((y.current.submitted = !0),
+                    await ec(y.current.query, u, !1));
                 })(),
-                D(!0)));
-          }, [en, t.id, n, r, el, _]),
+                Z(!0)));
+          }, [ea, n.id, r, ec, M, u]),
           (0, P.jsxs)(P.Fragment, {
             children: [
               (0, P.jsxs)(p(), {
                 children: [
                   (0, P.jsx)("title", {
                     children:
-                      _ && E ? "".concat(E, " - SearchGPT") : "SearchGPT",
+                      M && C ? "".concat(C, " - SearchGPT") : "SearchGPT",
                   }),
                   (0, P.jsx)("link", {
                     rel: "icon",
@@ -5170,41 +5235,41 @@
               }),
               (0, P.jsx)(v.c.Provider, {
                 value: {
-                  searchQuery: null != N ? N : "",
-                  user: t,
-                  userHash: Y,
-                  settings: w,
-                  userMetadata: ei,
+                  searchQuery: null != E ? E : "",
+                  user: n,
+                  userHash: et,
+                  settings: S,
+                  userMetadata: eo,
                 },
                 children: (0, P.jsx)(R, {
-                  initialQuery: n,
-                  readyState: en,
-                  hasSubmittedInitialQuery: _,
-                  onSubmitFollowup: (e) => ec(e, { isFollowup: !0 }),
-                  onReset: eu,
+                  initialQuery: r,
+                  readyState: ea,
+                  hasSubmittedInitialQuery: M,
+                  onSubmitFollowup: (e) => ed(e, { isFollowup: !0 }),
+                  onReset: em,
                   onSubmitSearch: (e) => {
-                    eu(e);
+                    em(e);
                   },
                   onRetryQuery: (e) => {
-                    if (null == E) {
+                    if (null == C) {
                       a.m.danger("No previous query to retry");
                       return;
                     }
-                    e ? ec(e, { isFollowup: !0 }) : eu(E);
+                    e ? ed(e, { isFollowup: !0 }) : em(C);
                   },
-                  onUpdateSetting: k,
+                  onUpdateSetting: N,
                 }),
               }),
-              j &&
+              k &&
                 (0, P.jsx)(x.q, {
                   isOpen: !0,
                   onDebugClose: () => U.vm.toggleDebugModalOpen(),
                 }),
-              y &&
+              w &&
                 (0, P.jsx)(T.Zr, {
                   onClose: () => U.vm.toggleSettingsModalOpen(),
-                  settings: w,
-                  onUpdateSetting: k,
+                  settings: S,
+                  onUpdateSetting: N,
                 }),
             ],
           })
@@ -5225,7 +5290,7 @@
         s = n(91530),
         i = n.n(s),
         l = n(70079),
-        o = n(91980),
+        o = n(16481),
         c = n(34796),
         u = n(45456),
         d = n(29287),
@@ -5243,8 +5308,8 @@
         w = n(67739),
         O = n(8143),
         k = n(35250);
-      let N = ["minHeight", "maxHeight", "className"];
-      function S(e, t) {
+      let S = ["minHeight", "maxHeight", "className"];
+      function N(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -5260,12 +5325,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? S(Object(n), !0).forEach(function (t) {
+            ? N(Object(n), !0).forEach(function (t) {
                 (0, h.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : S(Object(n)).forEach(function (t) {
+              : N(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -5277,7 +5342,7 @@
       }
       let P = (0, l.forwardRef)(function (e, t) {
         let { minHeight: n = 24, maxHeight: r, className: s } = e,
-          i = (0, w.Z)(e, N),
+          i = (0, w.Z)(e, S),
           o = (0, l.useRef)(null),
           c = null != t ? t : o,
           [u] = (0, O.f)(c);
@@ -5307,7 +5372,7 @@
           )
         );
       });
-      function C(e) {
+      function _(e) {
         let { result: t, className: n } = e;
         switch (t) {
           case "waiting":
@@ -5329,7 +5394,7 @@
             });
         }
       }
-      var _ = n(4466),
+      var C = n(4466),
         D = n(82473),
         M = n(61236),
         R = n(25494),
@@ -5378,7 +5443,7 @@
             queryFn: async () => {
               let e = new URLSearchParams();
               if (n) for (let t of n) e.append("tags", t);
-              return _.c
+              return C.c
                 .get("".concat(I.rq, "/evals/evals?").concat(e.toString()))
                 .then((e) => {
                   for (let n of e) t.setQueryData(["eval", n.id], n);
@@ -5391,7 +5456,7 @@
           (0, M.a)({
             queryKey: ["eval", e],
             queryFn: async () =>
-              _.c.get("".concat(I.rq, "/evals/evals/").concat(e)),
+              C.c.get("".concat(I.rq, "/evals/evals/").concat(e)),
           }),
         H = new Map(),
         Q = (e, t) => {
@@ -5401,7 +5466,7 @@
             null == r &&
               ((r = (0, v.debounce)(
                 (t) =>
-                  _.c.post(
+                  C.c.post(
                     "".concat(I.rq, "/evals/evals"),
                     Z(Z({}, t), {}, { id: e })
                   ),
@@ -5447,11 +5512,17 @@
           return (0, R.D)({
             mutationKey: ["eval", e],
             mutationFn: async () =>
-              _.c.delete("".concat(I.rq, "/evals/evals/").concat(e)),
+              C.c.delete("".concat(I.rq, "/evals/evals/").concat(e)),
             onSettled: () => {
-              t.setQueryData(["evals"], (t) =>
-                t ? t.filter((t) => t.id !== e) : t
-              ),
+              t
+                .getQueryCache()
+                .findAll({ queryKey: ["evals"], exact: !1 })
+                .forEach((n) => {
+                  let { queryKey: r } = n;
+                  t.setQueryData(r, (t) =>
+                    t ? t.filter((t) => t.id !== e) : t
+                  );
+                }),
                 t.setQueryData(["eval", e], void 0);
             },
           });
@@ -5465,7 +5536,7 @@
                 ),
                 a = new Date(Date.now()),
                 s = n && (0, B.lw)(n.agentSettingsOverrides),
-                i = _.c.streamedJsonPost(
+                i = C.c.streamedJsonPost(
                   "".concat(I.rq, "/evals/batched_runs"),
                   Z(Z({}, s), {}, { eval_ids: r.map((e) => e.id) })
                 ),
@@ -5523,7 +5594,7 @@
             queryKey: ["eval_run", e, null != t ? t : "latest"],
             queryFn: async () =>
               t
-                ? await _.c.get(
+                ? await C.c.get(
                     ""
                       .concat(I.rq, "/evals/eval_runs/")
                       .concat(e, "/")
@@ -5538,12 +5609,12 @@
         return (0, M.a)({
           queryKey: ["tags"],
           queryFn: async () =>
-            (0, v.sortBy)(await _.c.get("".concat(I.rq, "/evals/tags"))),
+            (0, v.sortBy)(await C.c.get("".concat(I.rq, "/evals/tags"))),
         });
       }
       async function ee(e) {
         try {
-          let t = await _.c.get(
+          let t = await C.c.get(
               "".concat(I.rq, "/evals/batched_runs/").concat(e, "/csv"),
               { skipJsonTransform: !0 }
             ),
@@ -5563,7 +5634,7 @@
           queryKey: ["batched_run", e],
           queryFn: async () => {
             if (e)
-              return await _.c.get(
+              return await C.c.get(
                 "".concat(I.rq, "/evals/batched_runs/").concat(e)
               );
           },
@@ -5735,7 +5806,7 @@
                       className: "flex-grow",
                       children: null == m ? void 0 : m.prompt,
                     }),
-                    (0, k.jsx)(C, {
+                    (0, k.jsx)(_, {
                       className: "mt-1 shrink-0",
                       result: s
                         ? "pending" === s
@@ -5784,7 +5855,7 @@
           s = (0, M.a)({
             queryKey: ["grader_response_fields"],
             queryFn: async () =>
-              await _.c.get("".concat(I.rq, "/evals/grader_response_fields")),
+              await C.c.get("".concat(I.rq, "/evals/grader_response_fields")),
           });
         return (0, k.jsxs)(j.fC, {
           open: n,
@@ -5819,68 +5890,74 @@
                         ? void 0
                         : t.map((e) => {
                             var t, n;
-                            return (0, k.jsxs)(k.Fragment, {
-                              children: [
-                                (0, k.jsx)("div", {
-                                  className: "text-sm font-medium",
-                                  children: e,
-                                }),
-                                (0, k.jsx)("input", {
-                                  type: "checkbox",
-                                  checked:
-                                    null !==
-                                      (t =
-                                        null ===
-                                          (n =
-                                            r.visible_assistant_message_fields) ||
-                                        void 0 === n
-                                          ? void 0
-                                          : n.includes(e)) && void 0 !== t
-                                      ? t
-                                      : es.includes(e),
-                                  onChange: (t) => {
-                                    var n, s;
-                                    if (t.target.checked)
-                                      a(
-                                        ea(
-                                          ea({}, r),
-                                          {},
-                                          {
-                                            visible_assistant_message_fields: [
-                                              ...(null !==
-                                                (n =
-                                                  r.visible_assistant_message_fields) &&
-                                              void 0 !== n
-                                                ? n
-                                                : es),
-                                              e,
-                                            ],
-                                          }
-                                        )
-                                      );
-                                    else {
-                                      let t = (
-                                        null !==
-                                          (s =
-                                            r.visible_assistant_message_fields) &&
-                                        void 0 !== s
-                                          ? s
-                                          : es
-                                      ).filter((t) => t !== e);
-                                      a(
-                                        ea(
-                                          ea({}, r),
-                                          {},
-                                          {
-                                            visible_assistant_message_fields: t,
-                                          }
-                                        )
-                                      );
-                                    }
-                                  },
-                                }),
-                              ],
-                            });
+                            return (0, k.jsxs)(
+                              l.Fragment,
+                              {
+                                children: [
+                                  (0, k.jsx)("div", {
+                                    className: "text-sm font-medium",
+                                    children: e,
+                                  }),
+                                  (0, k.jsx)("input", {
+                                    type: "checkbox",
+                                    checked:
+                                      null !==
+                                        (t =
+                                          null ===
+                                            (n =
+                                              r.visible_assistant_message_fields) ||
+                                          void 0 === n
+                                            ? void 0
+                                            : n.includes(e)) && void 0 !== t
+                                        ? t
+                                        : es.includes(e),
+                                    onChange: (t) => {
+                                      var n, s;
+                                      if (t.target.checked)
+                                        a(
+                                          ea(
+                                            ea({}, r),
+                                            {},
+                                            {
+                                              visible_assistant_message_fields:
+                                                [
+                                                  ...(null !==
+                                                    (n =
+                                                      r.visible_assistant_message_fields) &&
+                                                  void 0 !== n
+                                                    ? n
+                                                    : es),
+                                                  e,
+                                                ],
+                                            }
+                                          )
+                                        );
+                                      else {
+                                        let t = (
+                                          null !==
+                                            (s =
+                                              r.visible_assistant_message_fields) &&
+                                          void 0 !== s
+                                            ? s
+                                            : es
+                                        ).filter((t) => t !== e);
+                                        a(
+                                          ea(
+                                            ea({}, r),
+                                            {},
+                                            {
+                                              visible_assistant_message_fields:
+                                                t,
+                                            }
+                                          )
+                                        );
+                                      }
+                                    },
+                                  }),
+                                ],
+                              },
+                              e
+                            );
                           }),
                     ],
                   }),
@@ -6301,20 +6378,20 @@
             isSelected: w,
             initialEditState: O,
           } = e,
-          N = Y(c, void 0, m),
-          S = (function (e) {
+          S = Y(c, void 0, m),
+          N = (function (e) {
             let t = (0, D.NL)();
             return (0, M.a)({
               queryKey: ["eval_run", e],
               queryFn: async () => {
-                let n = await _.c.get(
+                let n = await C.c.get(
                   "".concat(I.rq, "/evals/eval_runs/").concat(e)
                 );
                 return en(t, n), n;
               },
             });
           })(null != u ? u : ""),
-          E = null != u ? S : N,
+          E = null != u ? N : S,
           { 0: R, 1: T } = (0, l.useState)(null != O && O),
           L = null === (t = q(c)) || void 0 === t ? void 0 : t.data,
           U = (e) => {
@@ -6536,7 +6613,7 @@
                       className: "text-sm italic",
                       children: ["Notes: ", null == F ? void 0 : F.notes],
                     }),
-                (0, k.jsx)(eN, {
+                (0, k.jsx)(eS, {
                   tags:
                     null !== (o = null == F ? void 0 : F.tags) && void 0 !== o
                       ? o
@@ -6598,12 +6675,12 @@
             }),
             (0, k.jsx)("div", {
               className: "flex flex-col gap-2 pt-1 leading-none",
-              children: (0, k.jsx)(C, { result: $, className: "icon-sm" }),
+              children: (0, k.jsx)(_, { result: $, className: "icon-sm" }),
             }),
           ],
         });
       }
-      function eN(e) {
+      function eS(e) {
         let { tags: t, onUpdateTags: n, isEditing: r } = e;
         return r
           ? (0, k.jsx)("div", {
@@ -6619,7 +6696,7 @@
               children: t.map((e) => (0, k.jsx)(eb, { tag: e }, e)),
             });
       }
-      function eS(e) {
+      function eN(e) {
         var t, n, r, s, i;
         let {
             batchId: o,
@@ -6634,7 +6711,7 @@
               queries: e.map((e) => ({
                 queryKey: ["eval_run", e],
                 queryFn: async () => {
-                  let n = await _.c.get(
+                  let n = await C.c.get(
                     "".concat(I.rq, "/evals/eval_runs/").concat(e)
                   );
                   return en(t, n), n;
@@ -6664,7 +6741,7 @@
               queries: i.map((e) => ({
                 queryKey: ["eval", e],
                 queryFn: async () =>
-                  await _.c.get("".concat(I.rq, "/evals/evals/").concat(e)),
+                  await C.c.get("".concat(I.rq, "/evals/evals/").concat(e)),
               })),
               combine: (e) => (0, v.compact)(e.map((e) => e.data)),
             })),
@@ -6797,7 +6874,7 @@
           { data: s } = (0, M.a)({
             queryKey: ["user_batched_runs"],
             queryFn: async () =>
-              (await _.c.get("".concat(I.rq, "/evals/batched_runs"))).items,
+              (await C.c.get("".concat(I.rq, "/evals/batched_runs"))).items,
           });
         return (0, k.jsxs)("div", {
           className: (0, a.default)("w-24 overflow-y-auto", r),
@@ -6855,8 +6932,8 @@
             }),
         });
       }
-      var eC = n(17178);
-      function e_(e) {
+      var e_ = n(17178);
+      function eC(e) {
         let { evalRun: t } = e,
           n = q(t.eval_id).data;
         return (0, k.jsxs)("div", {
@@ -6874,7 +6951,7 @@
                           className:
                             "flex items-center gap-2 text-xl font-medium",
                           children: [
-                            (0, k.jsx)(C, {
+                            (0, k.jsx)(_, {
                               result: r.grading_results.every((e) => e.passed)
                                 ? "passed"
                                 : "failed",
@@ -6898,7 +6975,7 @@
                     className: "flex items-center gap-1 font-medium",
                     children: "Turn Settings",
                   }),
-                  (0, k.jsx)(eC.default, { json: t.turn_template }),
+                  (0, k.jsx)(e_.default, { json: t.turn_template }),
                 ],
               }),
             null != t.batch_id &&
@@ -6918,7 +6995,7 @@
             (0, k.jsxs)("div", {
               className: "flex items-center gap-1",
               children: [
-                (0, k.jsx)(C, { result: t.passed ? "passed" : "failed" }),
+                (0, k.jsx)(_, { result: t.passed ? "passed" : "failed" }),
                 t.criterion.prompt,
                 (0, k.jsx)("button", {
                   onClick: () => r((e) => !e),
@@ -6946,7 +7023,7 @@
                         className: "whitespace-pre-wrap text-sm",
                         children: t.prompt,
                       }),
-                      (0, k.jsx)(eC.default, { json: t.grading_object }),
+                      (0, k.jsx)(e_.default, { json: t.grading_object }),
                     ],
                   }),
                 ],
@@ -7060,11 +7137,11 @@
                       e.user_action.query_fragment.toLowerCase().includes(x)
                   )
                 ),
-          { 0: N, 1: S } = (0, l.useState)([]),
+          { 0: S, 1: N } = (0, l.useState)([]),
           { 0: E, 1: P } = (0, l.useState)(!1),
-          { 0: C, 1: _ } = (0, l.useState)(!1),
+          { 0: _, 1: C } = (0, l.useState)(!1),
           D = J(
-            (null != N ? N : []).map((e) => e.id),
+            (null != S ? S : []).map((e) => e.id),
             i
           );
         function M(e) {
@@ -7195,7 +7272,7 @@
                         side: "top",
                         sideOffset: 4,
                         children: (0, k.jsx)(d.z, {
-                          onClick: () => _(!0),
+                          onClick: () => C(!0),
                           color: "neutral",
                           children: (0, k.jsx)(y.KAl, { className: "icon-sm" }),
                         }),
@@ -7205,10 +7282,10 @@
                         side: "top",
                         sideOffset: 4,
                         children: (0, k.jsx)(d.z, {
-                          disabled: !(null != N && N.length),
+                          disabled: !(null != S && S.length),
                           onClick: () => {
-                            if (!N) return;
-                            let e = N.length;
+                            if (!S) return;
+                            let e = S.length;
                             (!(e > 50) ||
                               window.confirm(
                                 "Are you sure you want to run ".concat(
@@ -7222,13 +7299,13 @@
                             "flex items-center justify-self-end py-1.5",
                           children: (0, k.jsx)(eT.Z, {
                             value:
-                              null !== (r = null == N ? void 0 : N.length) &&
+                              null !== (r = null == S ? void 0 : S.length) &&
                               void 0 !== r
                                 ? r
                                 : 0,
                             one: "Run 1 eval",
                             other: "Run ".concat(
-                              null !== (s = null == N ? void 0 : N.length) &&
+                              null !== (s = null == S ? void 0 : S.length) &&
                               void 0 !== s
                                 ? s
                                 : 0,
@@ -7244,7 +7321,7 @@
               (0, k.jsx)(eR, {
                 isAllSelected: E,
                 setIsAllSelected: (e) => {
-                  P(e), S(e && null != O ? O : []);
+                  P(e), N(e && null != O ? O : []);
                 },
                 children: w.isLoading
                   ? (0, k.jsx)("div", {
@@ -7268,10 +7345,10 @@
                             isActive: e.id === c || M(e),
                             setSelected: (t) => {
                               t
-                                ? S([...N, e])
-                                : S(N.filter((t) => t.id !== e.id));
+                                ? N([...S, e])
+                                : N(S.filter((t) => t.id !== e.id));
                             },
-                            isSelected: N.some((t) => t.id === e.id),
+                            isSelected: S.some((t) => t.id === e.id),
                             initialEditState: M(e),
                           },
                           null !== (n = e.id) && void 0 !== n
@@ -7280,9 +7357,9 @@
                         );
                       }),
               }),
-              C &&
+              _ &&
                 (0, k.jsx)(eU.Zr, {
-                  onClose: () => _(!1),
+                  onClose: () => C(!1),
                   settings: i,
                   onUpdateSetting: o,
                 }),
@@ -7315,7 +7392,7 @@
                   className: "h-full flex-shrink-0 border-r",
                 }),
                 null != a
-                  ? (0, k.jsx)(eS, {
+                  ? (0, k.jsx)(eN, {
                       batchId: a,
                       settings: i,
                       selectedEvalId: n,
@@ -7426,7 +7503,7 @@
             });
             break;
           case "details":
-            t = (0, k.jsx)(e_, { evalRun: a });
+            t = (0, k.jsx)(eC, { evalRun: a });
         }
         return (0, k.jsxs)("div", {
           className: "relative flex h-full flex-col",
@@ -7474,40 +7551,40 @@
         A = n(25617),
         v = n(20735),
         b = n(49593),
-        y = n(91980),
+        y = n(16481),
         j = n(68399),
         w = n(19216),
         O = n(20963),
         k = n(45456),
-        N = n(35250);
-      function S(e) {
+        S = n(35250);
+      function N(e) {
         return m()(e) && ["link", "message", "turn"].includes(e)
           ? e
           : "message";
       }
       function E() {
         (0, k.e)();
-        let e = S((0, g.useRouter)().query.type);
+        let e = N((0, g.useRouter)().query.type);
         return "turn" === e
-          ? (0, N.jsx)(C, {})
+          ? (0, S.jsx)(_, {})
           : "link" === e
-            ? (0, N.jsx)(P, {})
-            : (0, N.jsx)("div", { children: "Unsupported feedback type" });
+            ? (0, S.jsx)(P, {})
+            : (0, S.jsx)("div", { children: "Unsupported feedback type" });
       }
       function P() {
         var e, t;
         let n = (0, w.nn)(w.LW.firstTurn),
           r = (0, g.useRouter)(),
           [a, s] = u()(r.query.ids) ? r.query.ids : [],
-          i = S(r.query.type),
+          i = N(r.query.type),
           { data: l, isLoading: c } = (0, o.a)({
             queryKey: ["searchLinkFeedback", a, s],
             queryFn: () => (0, b.zq)(a, s),
             enabled: !!a && !!s,
           });
         return c || !l
-          ? (0, N.jsx)(M, {})
-          : (0, N.jsx)(_, {
+          ? (0, S.jsx)(M, {})
+          : (0, S.jsx)(C, {
               type: i,
               threadId: l.search_link.thread_id,
               threadUserId: s,
@@ -7524,20 +7601,20 @@
               highlightUrl: l.search_link.url,
             });
       }
-      function C() {
+      function _() {
         var e, t;
         let n = (0, w.nn)(w.LW.firstTurn),
           r = (0, g.useRouter)(),
           [a, s] = u()(r.query.ids) ? r.query.ids : [],
-          i = S(r.query.type),
+          i = N(r.query.type),
           { data: l, isLoading: c } = (0, o.a)({
             queryKey: ["searchTurnFeedback", a, s],
             queryFn: () => (0, b.a2)(a, s),
             enabled: !!a && !!s,
           });
         return c || !l
-          ? (0, N.jsx)(M, {})
-          : (0, N.jsx)(_, {
+          ? (0, S.jsx)(M, {})
+          : (0, S.jsx)(C, {
               type: i,
               threadId: l.search_turn.thread_id,
               threadUserId: s,
@@ -7556,7 +7633,7 @@
               feedbackText: null == l ? void 0 : l.search_turn_to_user.text,
             });
       }
-      function _(e) {
+      function C(e) {
         let {
             type: t,
             threadId: n,
@@ -7581,29 +7658,29 @@
         }, [m, n, r]);
         let g = "thumbsUp" === o ? l.go : l.W2,
           x = (0, j.W6)(j.bM.isDebugModalOpen);
-        return (0, N.jsxs)("div", {
+        return (0, S.jsxs)("div", {
           className: "flex h-screen w-screen flex-col p-5",
           children: [
-            p && (0, N.jsx)(M, {}),
-            (0, N.jsxs)("div", {
+            p && (0, S.jsx)(M, {}),
+            (0, S.jsxs)("div", {
               className: "flex gap-4",
               children: [
-                (0, N.jsx)(D, {
+                (0, S.jsx)(D, {
                   className: "flex flex-col gap-2",
-                  children: (0, N.jsxs)("div", {
+                  children: (0, S.jsxs)("div", {
                     className: "flex items-center gap-2 font-medium",
                     children: [
                       "link" === t
                         ? "\uD83D\uDD17 Link Feedback"
                         : "\uD83D\uDD0D Message Feedback",
                       ":",
-                      (0, N.jsx)(g, { className: "h-5 w-5" }),
+                      (0, S.jsx)(g, { className: "h-5 w-5" }),
                     ],
                   }),
                 }),
-                (0, N.jsxs)(D, {
+                (0, S.jsxs)(D, {
                   children: [
-                    (0, N.jsx)("span", {
+                    (0, S.jsx)("span", {
                       className: "font-medium",
                       children: "Query:",
                     }),
@@ -7611,12 +7688,12 @@
                     a,
                   ],
                 }),
-                (0, N.jsxs)(D, {
+                (0, S.jsxs)(D, {
                   className: "flex flex-col gap-2",
                   children: [
-                    (0, N.jsxs)("div", {
+                    (0, S.jsxs)("div", {
                       children: [
-                        (0, N.jsx)("span", {
+                        (0, S.jsx)("span", {
                           className: "font-medium",
                           children: "Feedback:",
                         }),
@@ -7624,17 +7701,17 @@
                         u,
                       ],
                     }),
-                    (0, N.jsx)("div", {
+                    (0, S.jsx)("div", {
                       className: "flex gap-1",
-                      children: c.map((e) => (0, N.jsx)(R, { children: e }, e)),
+                      children: c.map((e) => (0, S.jsx)(R, { children: e }, e)),
                     }),
                   ],
                 }),
               ],
             }),
-            (0, N.jsx)("div", {
+            (0, S.jsx)("div", {
               className: "mt-4 h-full w-full flex-grow overflow-auto",
-              children: (0, N.jsx)(y.u, {
+              children: (0, S.jsx)(y.u, {
                 readyState: 1,
                 hasSubmittedInitialQuery: !0,
                 searchQuery: a,
@@ -7652,7 +7729,7 @@
               }),
             }),
             x &&
-              (0, N.jsx)(A.q, {
+              (0, S.jsx)(A.q, {
                 isOpen: !0,
                 onDebugClose: () => j.vm.toggleDebugModalOpen(),
               }),
@@ -7666,9 +7743,9 @@
           ]))
       );
       function M() {
-        return (0, N.jsx)("div", {
+        return (0, S.jsx)("div", {
           className: "mt-3 flex justify-center",
-          children: (0, N.jsx)(i.Z, {}),
+          children: (0, S.jsx)(i.Z, {}),
         });
       }
       let R = x.Z.div(
@@ -7750,8 +7827,8 @@
         }, [g]);
         let { 0: y, 1: j } = (0, l.useState)(!1),
           { 0: w, 1: O } = (0, l.useState)(0),
-          { 0: k, 1: N } = (0, l.useState)(0),
-          S = (0, l.useCallback)(() => {
+          { 0: k, 1: S } = (0, l.useState)(0),
+          N = (0, l.useCallback)(() => {
             if (!v.current) return;
             let e = v.current.style.height,
               t = v.current.value,
@@ -7759,17 +7836,17 @@
               r = v.current.selectionEnd;
             (v.current.style.height = "0px"),
               (v.current.value = ""),
-              N(v.current.scrollHeight),
+              S(v.current.scrollHeight),
               (v.current.value = t),
               (v.current.selectionStart = n),
               (v.current.selectionEnd = r),
               O(v.current.scrollHeight),
               (v.current.style.height = e);
           }, []);
-        (0, l.useEffect)(() => (0, s.eR)(window, { resize: S }), [S]),
+        (0, l.useEffect)(() => (0, s.eR)(window, { resize: N }), [N]),
           (0, l.useEffect)(() => {
-            S();
-          }, [t, S]);
+            N();
+          }, [t, N]);
         let E = t.trim().length > 0;
         return (0, o.jsxs)("div", {
           className: (0, i.default)(
@@ -7911,37 +7988,34 @@
       "use strict";
       n.d(t, {
         LC: function () {
-          return v;
-        },
-        NK: function () {
           return A;
         },
+        NK: function () {
+          return x;
+        },
         Nv: function () {
-          return h;
+          return p;
         },
         _l: function () {
-          return b;
+          return v;
         },
         a2: function () {
-          return f;
+          return g;
         },
         dN: function () {
-          return m;
-        },
-        gK: function () {
           return d;
         },
         k4: function () {
-          return g;
+          return h;
         },
         lw: function () {
-          return p;
+          return m;
         },
         mO: function () {
           return u;
         },
         zq: function () {
-          return x;
+          return f;
         },
       });
       var r = n(18450),
@@ -7990,23 +8064,23 @@
           .then((e) => e.suggestions)
           .catch(() => []);
       };
-      async function d() {
-        return (await s.c.post("".concat(i.rq, "/threads"), {})).thread.id;
-      }
-      async function m(e) {
+      async function d(e) {
         let {
             threadId: t,
-            query: n,
-            agentSettingsOverrides: r,
-            metadata: a,
+            sessionId: n,
+            query: r,
+            agentSettingsOverrides: a,
+            metadata: l,
           } = e,
-          l = p(r);
+          o = m(a);
         return s.c.post(
-          "".concat(i.rq, "/threads/").concat(t, "/turns?blocking=false"),
-          c(c({}, l), {}, { turn: { user_query: n }, user_metadata: a })
+          t
+            ? "".concat(i.rq, "/threads/").concat(t, "/turns?blocking=false")
+            : "".concat(i.rq, "/turns?nonce=").concat(n),
+          c(c({}, o), {}, { turn: { user_query: r }, user_metadata: l })
         );
       }
-      function p(e) {
+      function m(e) {
         var t;
         return {
           settings_overrides: {
@@ -8043,7 +8117,7 @@
           eval_preset: e.eval_preset,
         };
       }
-      async function h(e) {
+      async function p(e) {
         let { threadId: t, threadUserId: n, routePrefix: r } = e,
           a = i.rq;
         r && (a += r);
@@ -8053,7 +8127,7 @@
           await s.c.get(l.toString())
         );
       }
-      async function g(e) {
+      async function h(e) {
         let t = new FormData();
         return (
           t.append(
@@ -8078,17 +8152,17 @@
           s.c.post("".concat(i.rq, "/feedback/turns"), t)
         );
       }
-      async function f(e, t) {
+      async function g(e, t) {
         return s.c.get(
           "".concat(i.rq, "/feedback/turns/").concat(e, "/").concat(t)
         );
       }
-      async function x(e, t) {
+      async function f(e, t) {
         return s.c.get(
           "".concat(i.rq, "/feedback/links/").concat(e, "/").concat(t)
         );
       }
-      async function A(e) {
+      async function x(e) {
         let t = new FormData();
         return (
           e.screenshot &&
@@ -8116,14 +8190,14 @@
           s.c.post("".concat(i.rq, "/feedback/links"), t)
         );
       }
-      function v(e) {
+      function A(e) {
         s.c.post("".concat(i.rq, "/pre_search"), {
           query_fragment: e.query,
           metadata: e.metadata,
           type: "text",
         });
       }
-      async function* b(e, t) {
+      async function* v(e, t) {
         for await (let n of s.c.streamedJsonPost("".concat(i.rq, "/snippets"), {
           urls: e,
           prompt: t,
@@ -8131,11 +8205,11 @@
           yield n;
       }
     },
-    91980: function (e, t, n) {
+    16481: function (e, t, n) {
       "use strict";
       n.d(t, {
         u: function () {
-          return ry;
+          return rw;
         },
       });
       var r,
@@ -8161,12 +8235,12 @@
         w,
         O,
         k,
-        N,
         S,
+        N,
         E,
         P,
-        C,
         _,
+        C,
         D,
         M,
         R,
@@ -8357,7 +8431,7 @@
         return (0, ef.jsxs)(ea.Z.Root, {
           children: [
             (0, ef.jsx)(ea.Z.Trigger, {
-              className: "group border-0 bg-transparent p-0",
+              className: "group border-0 !bg-transparent p-0",
               children: (0, ef.jsx)(er.zf, { iconSize: n, className: t }),
             }),
             (0, ef.jsx)(ea.Z.Portal, {
@@ -8393,16 +8467,16 @@
         ew = n(61082),
         eO = n(62456),
         ek = n(5099),
-        eN = n(44260),
-        eS = n(83737),
+        eS = n(44260),
+        eN = n(83737),
         eE = n(24343),
         eP = n(61888);
-      function eC(e) {
+      function e_(e) {
         let {
           downloadedImageUrls: t,
           imageDimensionsByUrl: n,
           erroredImageUrls: r,
-        } = e_((0, eP.compact)([e]));
+        } = eC((0, eP.compact)([e]));
         return null == e
           ? { isErrored: !1, isDownloaded: !1, imageDimensions: void 0 }
           : {
@@ -8411,7 +8485,7 @@
               imageDimensions: n.get(e),
             };
       }
-      function e_(e) {
+      function eC(e) {
         let t = (0, et.useRef)(new Set()),
           { 0: n, 1: r } = (0, et.useState)(new Set()),
           { 0: a, 1: s } = (0, et.useState)(new Map());
@@ -8441,7 +8515,7 @@
       }
       function eD(e) {
         let { image: t, className: n } = e,
-          { isDownloaded: r } = eC(t.thumbnail_url);
+          { isDownloaded: r } = e_(t.thumbnail_url);
         return (0, ef.jsx)("button", {
           className: (0, ee.default)(
             "relative aspect-square overflow-hidden",
@@ -8451,7 +8525,7 @@
             eA.vm.setFocusedImage(t);
           },
           children: r
-            ? (0, ef.jsx)(eS.E.div, {
+            ? (0, ef.jsx)(eN.E.div, {
                 animate: { opacity: 1 },
                 initial: {
                   width: "100%",
@@ -8489,7 +8563,7 @@
           r = (0, ek.d)(
             null !== (e = null == t ? void 0 : t.url) && void 0 !== e ? e : ""
           ),
-          { imageDimensions: a, isErrored: s } = eC(
+          { imageDimensions: a, isErrored: s } = e_(
             null == t ? void 0 : t.content_url
           );
         return (0, ef.jsx)(eE.M, {
@@ -8498,20 +8572,20 @@
             (0, ef.jsx)(eO.ZP.Root, {
               isOpen: !0,
               onClose: n,
-              children: (0, ef.jsx)(eS.E.div, {
+              children: (0, ef.jsx)(eN.E.div, {
                 initial: { opacity: 0 },
                 animate: { opacity: 1 },
                 exit: { opacity: 0 },
-                transition: { duration: 0.1 },
+                transition: { duration: 0.15 },
                 children: (0, ef.jsx)(eO.ZP.Overlay, {
                   className: "flex items-center justify-center bg-black/70",
-                  children: (0, ef.jsx)(eS.E.div, {
+                  children: (0, ef.jsx)(eN.E.div, {
                     initial: { translateY: "100%" },
                     animate: { translateY: 0 },
                     exit: { translateY: "100%" },
-                    transition: { duration: 0.3 },
+                    transition: { type: "spring", stiffness: 900, damping: 56 },
                     className: "flex h-full items-center justify-center",
-                    children: (0, ef.jsxs)(eN.VY, {
+                    children: (0, ef.jsxs)(eS.VY, {
                       className:
                         "relative flex cursor-pointer flex-col overflow-hidden bg-token-main-surface-primary shadow-[0_0_200px_0_rgb(0_0_0_/_0.5)] sm:max-h-[95vh] sm:w-1/3 sm:min-w-[600px]",
                       onClick: () => {
@@ -8536,7 +8610,7 @@
                           ? (0, ef.jsx)("div", {
                               className:
                                 "flex max-h-[calc(100vh-7rem)] justify-center bg-black font-medium text-token-link sm:max-h-[calc(95vh-7rem)]",
-                              children: (0, ef.jsx)(eS.E.img, {
+                              children: (0, ef.jsx)(eN.E.img, {
                                 src: t.content_url,
                                 alt: t.title,
                                 initial: { opacity: 0 },
@@ -9535,15 +9609,15 @@
             },
             e
           ),
-          N ||
-            (N = et.createElement("path", {
+          S ||
+            (S = et.createElement("path", {
               stroke: "currentColor",
               strokeLinecap: "round",
               strokeWidth: 2,
               d: "M19 11a7 7 0 1 0-14 0",
             })),
-          S ||
-            (S = et.createElement("path", {
+          N ||
+            (N = et.createElement("path", {
               fill: "currentColor",
               d: "M6.952 22h-1.18L4.55 17.914V22H2.857v-6.462h2.475l1.053 3.708 1.053-3.708h2.448V22h-1.71v-4.086zm5.579-2.061V22h-1.764v-6.462h2.826c1.593 0 2.574.756 2.574 2.205 0 1.44-.981 2.196-2.574 2.196zm0-1.467h.972c.62 0 .918-.279.918-.729 0-.459-.297-.729-.918-.729h-.972zm6.437 3.636c-1.413 0-2.475-.711-2.646-2.034l1.737-.252c.054.522.414.819.882.819.414 0 .765-.198.765-.648 0-.441-.37-.594-.882-.594h-.567V18.04h.549c.477 0 .8-.162.8-.567 0-.36-.242-.576-.665-.576-.477 0-.765.342-.828.783l-1.638-.153c.144-1.143 1.044-2.097 2.547-2.097 1.43 0 2.322.819 2.322 1.917 0 .648-.396 1.152-.846 1.341.549.252.936.702.936 1.467 0 1.08-.963 1.953-2.466 1.953",
             })),
@@ -9585,16 +9659,16 @@
               fill: "currentColor",
               d: "M6.844 22h-1.08l-1.422-4.473V22H2.91v-6.462h2.097l1.314 4.239 1.314-4.239h2.06V22h-1.43v-4.473zm5.383-2.25V22h-1.503v-6.462h2.727c1.521 0 2.466.72 2.466 2.106 0 1.377-.945 2.106-2.466 2.106zm0-1.26h1.143c.711 0 1.071-.315 1.071-.846s-.36-.837-1.07-.837h-1.144zM20.485 22H19.09v-1.512h-2.97v-1.125l2.493-3.825h1.88v3.744h1.018v1.206h-1.026zm-2.98-2.718h1.549v-2.403z",
             })),
-          C ||
-            (C = et.createElement("path", {
+          _ ||
+            (_ = et.createElement("path", {
               stroke: "currentColor",
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
               d: "M5 11V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5",
             })),
-          _ ||
-            (_ = et.createElement("path", {
+          C ||
+            (C = et.createElement("path", {
               fill: "currentColor",
               d: "M6 5h2l-.862 1.724A.5.5 0 0 1 6.691 7H6zM9 5h3l-.862 1.724a.5.5 0 0 1-.447.276H8.566a.35.35 0 0 1-.313-.507zM13 5h3l-.862 1.724a.5.5 0 0 1-.447.276h-2.125a.35.35 0 0 1-.313-.507zM17 5h1v2h-1.434a.35.35 0 0 1-.313-.507z",
             }))
@@ -9695,7 +9769,7 @@
               return e;
             }).apply(this, arguments);
       }
-      var tN = (e) =>
+      var tS = (e) =>
         et.createElement(
           "svg",
           tk(
@@ -9722,8 +9796,8 @@
               d: "M5 11V6a2 2 0 0 1 2-2h7.172a2 2 0 0 1 1.414.586l2.828 2.828A2 2 0 0 1 19 8.828V11m-4-6v2.5a.5.5 0 0 0 .5.5H18m-2-1 .5-.5",
             }))
         );
-      function tS() {
-        return (tS = Object.assign
+      function tN() {
+        return (tN = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -9737,7 +9811,7 @@
       var tE = (e) =>
         et.createElement(
           "svg",
-          tS(
+          tN(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -9772,7 +9846,7 @@
               return e;
             }).apply(this, arguments);
       }
-      var tC = (e) =>
+      var t_ = (e) =>
         et.createElement(
           "svg",
           tP(
@@ -9805,8 +9879,8 @@
               d: "M14.5 11a2.5 2.5 0 0 0-5 0",
             }))
         );
-      function t_() {
-        return (t_ = Object.assign
+      function tC() {
+        return (tC = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -9820,7 +9894,7 @@
       var tD = (e) =>
         et.createElement(
           "svg",
-          t_(
+          tC(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -9853,7 +9927,7 @@
           case "image/jpeg":
             return (0, ef.jsx)(tm, { className: n });
           case "image/png":
-            return (0, ef.jsx)(tN, { className: n });
+            return (0, ef.jsx)(tS, { className: n });
           case "audio/mpeg":
             return (0, ef.jsx)(tA, { className: n });
           case "audio/m4a":
@@ -9861,7 +9935,7 @@
           case "audio/ogg":
             return (0, ef.jsx)(tj, { className: n });
           case "audio/wav":
-            return (0, ef.jsx)(tC, { className: n });
+            return (0, ef.jsx)(t_, { className: n });
           case "video/mp4":
             return (0, ef.jsx)(tb, { className: n });
           case "video/quicktime":
@@ -9882,7 +9956,7 @@
           case "jpeg":
             return (0, ef.jsx)(tm, { className: n });
           case "png":
-            return (0, ef.jsx)(tN, { className: n });
+            return (0, ef.jsx)(tS, { className: n });
           case "mp3":
             return (0, ef.jsx)(tA, { className: n });
           case "m4a":
@@ -9890,7 +9964,7 @@
           case "ogg":
             return (0, ef.jsx)(tj, { className: n });
           case "wav":
-            return (0, ef.jsx)(tC, { className: n });
+            return (0, ef.jsx)(t_, { className: n });
           case "mp4":
             return (0, ef.jsx)(tb, { className: n });
           case "mov":
@@ -10030,8 +10104,20 @@
             })
           : null;
       }
-      function tH(e) {
-        return { ease: "easeOut", duration: 0.15, delay: (e + 1) * 0.09 };
+      function tH(e, t) {
+        let n = {
+          transition: {
+            ease: "easeOut",
+            duration: 0.15,
+            delay: (t + 1) * 0.09,
+          },
+        };
+        return (
+          e &&
+            ((n.initial = { opacity: 0, translateY: 4 }),
+            (n.animate = { opacity: 1, translateY: 0 })),
+          n
+        );
       }
       function tQ(e) {
         let {
@@ -10041,123 +10127,155 @@
             turnIndex: a,
             showFeedbackButtons: s,
             highlightUrl: i,
+            children: l,
           } = e,
-          l = (0, $.w$)();
-        return (0, ef.jsx)("div", {
+          o = (0, $.w$)();
+        return (0, ef.jsxs)("div", {
           className: "ml-7 mt-snc-1 flex flex-col gap-5",
-          children: t.map((e, t) =>
-            (0, ef.jsx)(
-              eS.E.div,
-              {
-                className: "group relative",
-                initial: l ? { opacity: 0, translateY: 4 } : {},
-                animate: l ? { opacity: 1, translateY: 0 } : {},
-                transition: tH(t),
-                children: (0, ef.jsx)(
-                  tX,
+          children: [
+            t.map((e, t) =>
+              (0, ef.jsx)(
+                eN.E.div,
+                tV(
+                  tV({ className: "group relative" }, tH(o, t)),
+                  {},
                   {
-                    href: e.url,
-                    turnIndex: a,
-                    groupPosition: [r[0], t],
-                    rawPosition: n + t,
-                    target: "_blank",
-                    rel: "noreferrer",
-                    className: "block",
-                    children: (0, ef.jsx)(tG, {
-                      result: e,
-                      showFeedbackButtons: s,
-                      turnIndex: a,
-                      isHighlighted: i === e.url,
-                      isSecondaryResult: !0,
-                    }),
-                  },
-                  t
+                    children: (0, ef.jsx)(
+                      tX,
+                      {
+                        href: e.url,
+                        turnIndex: a,
+                        groupPosition: [r[0], t],
+                        rawPosition: n + t,
+                        target: "_blank",
+                        rel: "noreferrer",
+                        className: "block",
+                        children: (0, ef.jsx)(tG, {
+                          result: e,
+                          showFeedbackButtons: s,
+                          turnIndex: a,
+                          isHighlighted: i === e.url,
+                          isSecondaryResult: !0,
+                        }),
+                      },
+                      t
+                    ),
+                  }
                 ),
-              },
-              t
-            )
-          ),
+                t
+              )
+            ),
+            l,
+          ],
         });
       }
       function tW(e) {
-        var t;
+        var t, n;
         let {
-            searchResult: n,
-            groupPosition: r,
-            rawPosition: a,
-            showFeedbackButtons: s,
-            showUserHash: i,
-            highlightUrl: l,
-            turnIndex: o,
+            searchResult: r,
+            groupPosition: a,
+            rawPosition: s,
+            showFeedbackButtons: i,
+            showUserHash: l,
+            highlightUrl: o,
+            turnIndex: c,
           } = e,
-          [c, u] =
-            "search_result_group" === n.type
-              ? [n.entries[0], n.entries.slice(1)]
-              : [n, []],
-          d = (0, et.useRef)(null),
-          { userHash: m } = (0, e0.A)(),
-          p = i
+          [u, d] =
+            "search_result_group" === r.type
+              ? [r.entries[0], r.entries.slice(1)]
+              : [r, []],
+          { 0: m, 1: p } = (0, et.useState)(d.length <= 4),
+          h = m ? d : d.slice(0, 3),
+          g = (0, $.w$)(),
+          f = (0, et.useRef)(null),
+          { userHash: x } = (0, e0.A)(),
+          A = l
             ? (0, ef.jsx)("div", {
                 className: "mt-0.5 h-4 w-4 flex-shrink-0 rounded",
-                style: { backgroundColor: "#" + m },
+                style: { backgroundColor: "#" + x },
               })
             : (0, ef.jsx)(ew.Z, {
-                url: c.url,
+                url: u.url,
                 className:
                   "mt-0.5 h-4 w-4 rounded bg-token-main-surface-primary object-cover",
                 size: 32,
               }),
-          h =
-            null !== (t = (0, ek.d)(c.url).data) && void 0 !== t
+          v =
+            null !== (t = (0, ek.d)(u.url).data) && void 0 !== t
               ? t
-              : (0, eY.p)(c.url, "short"),
-          g = l === c.url;
+              : (0, eY.p)(u.url, "short"),
+          b = o === u.url;
         return (
           (0, et.useEffect)(() => {
-            g &&
-              d.current &&
-              d.current.scrollIntoView({ behavior: "smooth", block: "center" });
-          }, [g]),
+            b &&
+              f.current &&
+              f.current.scrollIntoView({ behavior: "smooth", block: "center" });
+          }, [b]),
           (0, ef.jsxs)("div", {
-            ref: d,
+            ref: f,
             className: "flex w-full min-w-0 flex-col",
             children: [
               (0, ef.jsxs)(tX, {
-                turnIndex: o,
-                href: c.url,
-                groupPosition: r,
-                rawPosition: a,
+                turnIndex: c,
+                href: u.url,
+                groupPosition: a,
+                rawPosition: s,
                 target: "_blank",
                 rel: "noreferrer",
                 className: "group flex gap-3",
                 children: [
-                  p,
+                  A,
                   (0, ef.jsxs)("div", {
                     children: [
                       (0, ef.jsx)("div", {
                         className:
                           "line-clamp-1 h-5 text-xs text-token-text-tertiary",
-                        children: h,
+                        children: v,
                       }),
                       (0, ef.jsx)(tG, {
-                        result: c,
-                        showFeedbackButtons: s,
-                        turnIndex: o,
-                        isHighlighted: g,
+                        result: u,
+                        showFeedbackButtons: i,
+                        turnIndex: c,
+                        isHighlighted: b,
                       }),
                     ],
                   }),
                 ],
               }),
-              u &&
-                u.length > 0 &&
+              h &&
+                h.length > 0 &&
                 (0, ef.jsx)(tQ, {
-                  secondaryResults: u,
-                  rawPosition: a,
-                  groupPosition: r,
-                  turnIndex: o,
-                  showFeedbackButtons: s,
-                  highlightUrl: l,
+                  secondaryResults: h,
+                  rawPosition: s,
+                  groupPosition: a,
+                  turnIndex: c,
+                  showFeedbackButtons: i,
+                  highlightUrl: o,
+                  children:
+                    !m &&
+                    d.length > 3 &&
+                    (0, ef.jsxs)(
+                      eN.E.button,
+                      tV(
+                        tV({}, tH(g, 3)),
+                        {},
+                        {
+                          className:
+                            "flex text-base font-medium hover:text-token-link md:text-sm",
+                          onClick: () => p(!0),
+                          children: [
+                            "More ",
+                            v,
+                            " (",
+                            (null !== (n = null == d ? void 0 : d.length) &&
+                            void 0 !== n
+                              ? n
+                              : 0) - 3,
+                            ")",
+                          ],
+                        }
+                      )
+                    ),
                 }),
             ],
           })
@@ -10363,38 +10481,39 @@
               ? a.map((e, s) => {
                   var l;
                   return (0, ef.jsx)(
-                    eS.E.div,
-                    {
-                      initial: r ? { opacity: 0, translateY: 4 } : {},
-                      animate: r ? { opacity: 1, translateY: 0 } : {},
-                      transition: tH(s),
-                      children: (0, ef.jsx)(
-                        tW,
-                        {
-                          groupPosition: [s, 0],
-                          rawPosition:
-                            0 === s
-                              ? 0
-                              : a
-                                  .slice(0, s)
-                                  .reduce(
-                                    (e, t) =>
-                                      e +
-                                      ("search_result_group" === t.entry.type
-                                        ? t.entry.entries.length
-                                        : 0),
-                                    0
-                                  ),
-                          searchResult: e.entry,
-                          showUserHash: i.current === s,
-                          showFeedbackButtons: n,
-                          highlightUrl: t,
-                          turnIndex:
-                            null !== (l = e.index) && void 0 !== l ? l : 0,
-                        },
-                        s
-                      ),
-                    },
+                    eN.E.div,
+                    tV(
+                      tV({}, tH(r, s)),
+                      {},
+                      {
+                        children: (0, ef.jsx)(
+                          tW,
+                          {
+                            groupPosition: [s, 0],
+                            rawPosition:
+                              0 === s
+                                ? 0
+                                : a
+                                    .slice(0, s)
+                                    .reduce(
+                                      (e, t) =>
+                                        e +
+                                        ("search_result_group" === t.entry.type
+                                          ? t.entry.entries.length
+                                          : 0),
+                                      0
+                                    ),
+                            searchResult: e.entry,
+                            showUserHash: i.current === s,
+                            showFeedbackButtons: n,
+                            highlightUrl: t,
+                            turnIndex:
+                              null !== (l = e.index) && void 0 !== l ? l : 0,
+                          },
+                          s
+                        ),
+                      }
+                    ),
                     ""
                       .concat(e.index, "-")
                       .concat(
@@ -10413,247 +10532,9 @@
         t0 = n(2946),
         t1 = n(90572),
         t2 = n(66315),
-        t5 = n(47567);
-      function t6(e) {
-        let { children: t, className: n } = e,
-          r = (0, et.useRef)(null),
-          a = (0, et.useRef)(!1),
-          s = (0, et.useRef)(0),
-          i = (0, et.useRef)(0),
-          l = (0, et.useRef)(0),
-          { 0: o, 1: c } = (0, et.useState)(!1),
-          { 0: u, 1: d } = (0, et.useState)(0),
-          { 0: m, 1: p } = (0, et.useState)(0);
-        (0, et.useEffect)(
-          () => () => {
-            window.cancelAnimationFrame(l.current);
-          },
-          []
-        );
-        let h = () => {
-            g(),
-              setTimeout(() => {
-                c(!1), (a.current = !1);
-              });
-          },
-          g = () => {
-            if (!r.current || 0.5 > Math.abs(i.current)) {
-              window.cancelAnimationFrame(l.current);
-              return;
-            }
-            (r.current.scrollLeft -= i.current),
-              (i.current *= 0.95),
-              (l.current = window.requestAnimationFrame(g));
-          };
-        return (0, ef.jsx)("div", {
-          className: (0, ee.default)("overflow-x-auto", n, {
-            "cursor-grab": !o,
-            "cursor-grabbing": o,
-          }),
-          ref: r,
-          onPointerDown: (e) => {
-            r.current &&
-              (e.preventDefault(),
-              d(e.pageX - r.current.offsetLeft),
-              p(r.current.scrollLeft),
-              c(!0),
-              (s.current = e.pageX),
-              (i.current = 0),
-              window.cancelAnimationFrame(l.current));
-          },
-          onPointerMove: (e) => {
-            if (!r.current || !o) return;
-            e.preventDefault();
-            let t = e.pageX - r.current.offsetLeft;
-            (r.current.scrollLeft = m - (t - u)),
-              (a.current = !0),
-              (i.current = e.pageX - s.current),
-              (s.current = e.pageX);
-          },
-          onPointerUp: h,
-          onPointerLeave: h,
-          onClickCapture: (e) => {
-            a.current && (e.stopPropagation(), e.preventDefault());
-          },
-          children: t,
-        });
-      }
+        t5 = n(47567),
+        t6 = n(93686);
       function t4(e) {
-        let { images: t, children: n } = e;
-        return t.length >= 4
-          ? (0, ef.jsx)(t9, {
-              images: t,
-              numVisible: Math.min(4 * Math.floor(t.length / 4), 8),
-              children: n,
-            })
-          : t.length >= 1
-            ? (0, ef.jsx)(t3, { image: t[0], children: n })
-            : (0, ef.jsx)(ef.Fragment, { children: n });
-      }
-      function t3(e) {
-        let { image: t, children: n } = e;
-        return (0, ef.jsxs)("div", {
-          className: "w-full",
-          children: [
-            (0, ef.jsx)(
-              eD,
-              {
-                image: t,
-                className: (0, ee.default)(
-                  "relative float-right mb-snc-2 ml-snc-2 mr-snc-results-content-padding mt-snc-results-content-inset min-w-32 max-w-[22%] overflow-hidden rounded-xl",
-                  "z-10"
-                ),
-              },
-              t.content_url
-            ),
-            n,
-          ],
-        });
-      }
-      function t9(e) {
-        let { images: t, numVisible: n = 8, children: r } = e,
-          { downloadedImageUrls: a } = e_(t.map((e) => e.thumbnail_url)),
-          s = t.filter((e) => a.has(e.thumbnail_url));
-        return (0, ef.jsxs)("div", {
-          className: "flex flex-col",
-          children: [
-            (0, ef.jsx)(t8, {
-              className: "px-snc-results-padding",
-              children: s
-                .slice(0, n)
-                .map((e, t) =>
-                  (0, ef.jsx)(
-                    eD,
-                    {
-                      image: e,
-                      className: (0, ee.default)(
-                        "min-w-full overflow-hidden md:w-[calc((100%-0.25rem*3)/4)] md:min-w-[inherit]",
-                        0 === t && "rounded-tl-xl",
-                        3 === t && "rounded-tr-xl",
-                        t === n - 4 && "rounded-bl-xl",
-                        t === n - 1 && "rounded-br-xl"
-                      ),
-                    },
-                    e.thumbnail_url
-                  )
-                ),
-            }),
-            r,
-          ],
-        });
-      }
-      function t8(e) {
-        let { className: t, children: n } = e;
-        return (0, $.w$)()
-          ? (0, ef.jsx)("div", {
-              className: (0, ee.default)(
-                "mb-6 flex flex-wrap gap-1 overflow-hidden",
-                t
-              ),
-              children: n,
-            })
-          : (0, ef.jsx)(t6, {
-              className: (0, ee.default)(
-                "no-scrollbar -mx-4 flex gap-2 px-4 pb-snc-2",
-                t
-              ),
-              children: n,
-            });
-      }
-      var t7 = n(88366);
-      let ne = ["node", "children"];
-      function nt(e, t) {
-        var n = Object.keys(e);
-        if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(e);
-          t &&
-            (r = r.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-        }
-        return n;
-      }
-      function nn(e) {
-        for (var t = 1; t < arguments.length; t++) {
-          var n = null != arguments[t] ? arguments[t] : {};
-          t % 2
-            ? nt(Object(n), !0).forEach(function (t) {
-                (0, eR.Z)(e, t, n[t]);
-              })
-            : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : nt(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
-                    e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t)
-                  );
-                });
-        }
-        return e;
-      }
-      let nr = et.memo(function (e) {
-        let { src: t, alt: n } = e;
-        return (0, ef.jsx)(eS.E.img, {
-          src: t,
-          className: "h-full w-full object-cover",
-          alt: n,
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          whileHover: { scale: 1.05 },
-        });
-      });
-      function na(e) {
-        let { citation: t, children: n } = e;
-        return (0, ef.jsxs)("div", {
-          className: "inline-image-citation flex gap-snc-2",
-          children: [
-            (0, ef.jsx)("button", {
-              className:
-                "my-2 flex max-h-40 w-1/5 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg",
-              onClick: () =>
-                t.metadata.image && eA.vm.setFocusedImage(t.metadata.image),
-              children: t.metadata.image
-                ? (0, ef.jsx)(nr, {
-                    src: t.metadata.image.thumbnail_url,
-                    alt: t.metadata.image.title,
-                  })
-                : (0, ef.jsx)("div", {
-                    className:
-                      "h-full w-full animate-pulse bg-token-main-surface-tertiary",
-                  }),
-            }),
-            (0, ef.jsx)("div", {
-              className: "flex items-center justify-center",
-              children: n,
-            }),
-          ],
-        });
-      }
-      function ns(e) {
-        let { node: t, children: n } = e,
-          r = (0, eJ.Z)(e, ne),
-          a = et.useContext(t0.h7);
-        if (null != a && null != t) {
-          let e = (0, t7.B)(t),
-            s = (0, t0.jM)(e),
-            { displayedCitations: i } = a,
-            l = i[s];
-          if (l && l.type === t0.Zn.Snc && "inline_image" === l.metadata.type)
-            return (0, ef.jsx)(
-              na,
-              {
-                citation: l,
-                children: (0, ef.jsx)("p", nn(nn({}, r), {}, { children: n })),
-              },
-              "inline-image-".concat(s)
-            );
-        }
-        return (0, ef.jsx)("p", nn(nn({}, r), {}, { children: n }));
-      }
-      var ni = n(93686);
-      function nl(e) {
         let { data: t } = e;
         if (t.expression && void 0 !== t.result && null !== t.result) {
           let e = Number(t.result);
@@ -10665,7 +10546,7 @@
               }),
               (0, ef.jsx)("div", {
                 className: "text-3xl font-medium",
-                children: e.toLocaleString((0, ni.BH)(null, !0), {
+                children: e.toLocaleString((0, t6.BH)(null, !0), {
                   maximumFractionDigits: 6,
                 }),
               }),
@@ -10674,10 +10555,10 @@
         }
         return null;
       }
-      var no = n(11265),
-        nc = n(56115),
-        nu = n(91304);
-      let nd = (
+      var t3 = n(11265),
+        t9 = n(56115),
+        t8 = n(91304);
+      let t7 = (
         (null ===
           (r = Intl.DateTimeFormat(void 0, {
             timeZoneName: "long",
@@ -10688,12 +10569,12 @@
           ? void 0
           : r.value) || Intl.DateTimeFormat().resolvedOptions().timeZone
       ).replace(/Daylight|Standard/g, "");
-      function nm(e) {
+      function ne(e) {
         let [t, n] = e.split(":");
         return "".concat(t.padStart(2, "0"), ":").concat(n);
       }
-      let np = { T: "Top", B: "Bot" };
-      function nh(e) {
+      let nt = { T: "Top", B: "Bot" };
+      function nn(e) {
         let { data: t } = e,
           { 0: n, 1: r } = (0, et.useState)(!0);
         if (!t.games.length) return null;
@@ -10706,7 +10587,7 @@
         return (0, ef.jsxs)(ef.Fragment, {
           children: [
             (0, ef.jsxs)("h2", {
-              className: "text-xl font-medium",
+              className: "text-base font-medium",
               children: [t.league.display_name, " Schedule"],
             }),
             a &&
@@ -10718,21 +10599,21 @@
                 children: a,
               }),
             (0, ef.jsx)("hr", { className: "mt-6 border-token-border-light" }),
-            (0, ef.jsx)(no.Z.Root, {
+            (0, ef.jsx)(t3.Z.Root, {
               size: "compact",
-              children: (0, ef.jsx)(no.Z.Body, {
+              children: (0, ef.jsx)(t3.Z.Body, {
                 children: (0, ef.jsx)(eE.M, {
                   children: t.games.slice(0, n ? 6 : void 0).map((e, n) => {
                     var r;
                     return (0, ef.jsxs)(
-                      nf,
+                      na,
                       {
                         initial: { opacity: 0, y: 30 },
                         animate: { opacity: 1, y: 0 },
                         exit: { opacity: 0, y: -30 },
                         transition: { duration: 0.2 },
                         children: [
-                          (0, ef.jsx)(ng, {
+                          (0, ef.jsx)(nr, {
                             className: "w-[180px]",
                             children: (function (e) {
                               var n, r;
@@ -10742,13 +10623,13 @@
                                     children: [
                                       (function (e) {
                                         let t = new Date(1e3 * e);
-                                        return (0, nu.Z)(t)
+                                        return (0, t8.Z)(t)
                                           ? "Today"
-                                          : (0, nc.Z)(t, "MMMM d");
+                                          : (0, t9.Z)(t, "MMMM d");
                                       })(e.scheduled),
                                       (0, ef.jsx)("br", {}),
                                       ((n = e.scheduled),
-                                      (0, nc.Z)(new Date(1e3 * n), "h:mm a")),
+                                      (0, t9.Z)(new Date(1e3 * n), "h:mm a")),
                                     ],
                                   });
                                 case "live":
@@ -10768,14 +10649,14 @@
                                                 : "Q".concat(n),
                                               " "
                                             )
-                                            .concat(nm(e.time));
+                                            .concat(ne(e.time));
                                         }
                                         if ("mlb" === e) {
                                           let e = t.live_details;
                                           if (e.current_inning_half)
                                             return ""
                                               .concat(
-                                                np[e.current_inning_half],
+                                                nt[e.current_inning_half],
                                                 " "
                                               )
                                               .concat(
@@ -10799,7 +10680,7 @@
                                           let e = t.live_details;
                                           return "P"
                                             .concat(e.period, " ")
-                                            .concat(nm(e.time));
+                                            .concat(ne(e.time));
                                         }
                                         return null;
                                       })(t.league.id, e),
@@ -10815,7 +10696,7 @@
                                         children:
                                           void 0 === (r = e.scheduled)
                                             ? ""
-                                            : (0, nc.Z)(
+                                            : (0, t9.Z)(
                                                 new Date(1e3 * r),
                                                 "EEE, MMM d"
                                               ),
@@ -10825,7 +10706,7 @@
                               }
                             })(e),
                           }),
-                          (0, ef.jsx)(ng, {
+                          (0, ef.jsx)(nr, {
                             children: (0, ef.jsxs)("div", {
                               className: "w-full max-w-[280px]",
                               children: [
@@ -10856,7 +10737,7 @@
                               ],
                             }),
                           }),
-                          (0, ef.jsx)(ng, {
+                          (0, ef.jsx)(nr, {
                             textAlign: "right",
                             className: "text-token-text-secondary",
                             children:
@@ -10900,24 +10781,24 @@
                   }),
                 (0, ef.jsx)("div", {
                   className: "text-xs text-token-text-tertiary",
-                  children: nd,
+                  children: t7,
                 }),
               ],
             }),
           ],
         });
       }
-      let ng = (0, en.Z)(no.Z.Cell)(Q || (Q = (0, J.Z)(["py-5 align-middle"]))),
-        nf = (0, eS.E)(no.Z.Row);
-      var nx = n(28541),
-        nA = n.n(nx);
-      let nv = ["East", "Central", "West"];
-      function nb(e) {
+      let nr = (0, en.Z)(t3.Z.Cell)(Q || (Q = (0, J.Z)(["py-5 align-middle"]))),
+        na = (0, eN.E)(t3.Z.Row);
+      var ns = n(28541),
+        ni = n.n(ns);
+      let nl = ["East", "Central", "West"];
+      function no(e) {
         let { data: t } = e,
           { 0: n, 1: r } = (0, et.useState)(0),
-          a = nA()(t.conferences[n].divisions, (e) => {
+          a = ni()(t.conferences[n].divisions, (e) => {
             var t;
-            let n = nv.indexOf(null !== (t = e.name) && void 0 !== t ? t : "");
+            let n = nl.indexOf(null !== (t = e.name) && void 0 !== t ? t : "");
             return -1 === n ? 1 / 0 : n;
           }),
           s =
@@ -10946,36 +10827,28 @@
               className: "mt-5",
               children: a.map((e) =>
                 e.name
-                  ? (0, ef.jsxs)(
+                  ? (0, ef.jsx)(
                       "div",
                       {
                         className: "mt-5",
-                        children: [
-                          (0, ef.jsx)("div", {
-                            className: "pb-2 text-sm font-medium",
-                            children: e.name,
-                          }),
-                          (0, ef.jsx)(nO, {
-                            league: t.league.id,
-                            teams: e.teams,
-                          }),
-                        ],
+                        children: (0, ef.jsx)(nm, {
+                          league: t.league.id,
+                          teams: e.teams,
+                          teamsColumnHeaderText: e.name,
+                        }),
                       },
                       e.name
                     )
-                  : (0, ef.jsx)(nO, { league: t.league.id, teams: e.teams })
+                  : (0, ef.jsx)(nm, { league: t.league.id, teams: e.teams })
               ),
             }),
           ],
         });
       }
-      let ny = (0, en.Z)(no.Z.HeaderCell)(
-          W ||
-            (W = (0, J.Z)([
-              "text-token-text-tertiary text-xs dark:bg-token-main-surface-tertiary",
-            ]))
+      let nc = (0, en.Z)(t3.Z.HeaderCell)(
+          W || (W = (0, J.Z)(["text-token-text-tertiary text-xs !static"]))
         ),
-        nj = {
+        nu = {
           wins: { column: "W", label: "Wins", format: (e) => e.wins },
           losses: { column: "L", label: "Losses", format: (e) => e.losses },
           ties: { column: "T", label: "Ties", format: (e) => e.ties },
@@ -11055,7 +10928,7 @@
           },
           points: { column: "PTS", label: "Points", format: (e) => e.points },
         },
-        nw = {
+        nd = {
           nba: [
             "wins",
             "losses",
@@ -11090,25 +10963,25 @@
           ncaab: [],
           wncaab: [],
         };
-      function nO(e) {
-        let { league: t, teams: n } = e,
-          r = nw[t];
-        return (0, ef.jsxs)(no.Z.Root, {
+      function nm(e) {
+        let { league: t, teams: n, teamsColumnHeaderText: r } = e,
+          a = nd[t];
+        return (0, ef.jsxs)(t3.Z.Root, {
           size: "compact",
           children: [
-            (0, ef.jsxs)(no.Z.Header, {
+            (0, ef.jsxs)(t3.Z.Header, {
               children: [
-                (0, ef.jsx)(ny, { children: "Team" }),
-                (0, ef.jsx)(ny, {}),
-                r.map((e) =>
+                (0, ef.jsx)(nc, { children: null != r ? r : "Team" }),
+                (0, ef.jsx)(nc, {}),
+                a.map((e) =>
                   (0, ef.jsx)(
-                    ny,
+                    nc,
                     {
                       textAlign: "center",
                       className: "px-1",
                       children: (0, ef.jsx)("span", {
-                        title: nj[e].label,
-                        children: nj[e].column,
+                        title: nu[e].label,
+                        children: nu[e].column,
                       }),
                     },
                     e
@@ -11116,13 +10989,13 @@
                 ),
               ],
             }),
-            (0, ef.jsx)(no.Z.Body, {
+            (0, ef.jsx)(t3.Z.Body, {
               children: n.map((e, t) =>
                 (0, ef.jsxs)(
-                  no.Z.Row,
+                  t3.Z.Row,
                   {
                     children: [
-                      (0, ef.jsxs)(no.Z.Cell, {
+                      (0, ef.jsxs)(t3.Z.Cell, {
                         children: [
                           (0, ef.jsx)("div", {
                             className:
@@ -11135,14 +11008,14 @@
                           }),
                         ],
                       }),
-                      (0, ef.jsx)(no.Z.Cell, { className: "w-full" }),
-                      r.map((t) =>
+                      (0, ef.jsx)(t3.Z.Cell, { className: "w-full" }),
+                      a.map((t) =>
                         (0, ef.jsx)(
-                          no.Z.Cell,
+                          t3.Z.Cell,
                           {
                             textAlign: "center",
                             className: "whitespace-nowrap px-1 tabular-nums",
-                            children: nj[t].format(e),
+                            children: nu[t].format(e),
                           },
                           t
                         )
@@ -11156,10 +11029,10 @@
           ],
         });
       }
-      var nk = n(28294),
-        nN = n(87751),
-        nS = n(72541);
-      function nE(e) {
+      var np = n(28294),
+        nh = n(87751),
+        ng = n(72541);
+      function nf(e) {
         let { data: t } = e,
           {
             targetTime: n,
@@ -11169,24 +11042,24 @@
             humanReadableTimeDifference: i,
           } = (0, et.useMemo)(() => {
             var e;
-            let n = (0, nN.Z)(t.target_time, t.target_location.timezone),
+            let n = (0, nh.Z)(t.target_time, t.target_location.timezone),
               r =
                 t.source_time &&
                 null !== (e = t.source_location) &&
                 void 0 !== e &&
                 e.timezone
-                  ? (0, nN.Z)(t.source_time, t.source_location.timezone)
+                  ? (0, nh.Z)(t.source_time, t.source_location.timezone)
                   : null,
-              a = (0, nS.Z)(n, "h:mmaaa", {
+              a = (0, ng.Z)(n, "h:mmaaa", {
                 timeZone: t.target_location.timezone,
               }),
               s =
                 r && t.source_location
-                  ? (0, nS.Z)(r, "h:mmaaa", {
+                  ? (0, ng.Z)(r, "h:mmaaa", {
                       timeZone: t.source_location.timezone,
                     })
                   : null,
-              i = r ? (0, nk.Z)(n, r) : 0,
+              i = r ? (0, np.Z)(n, r) : 0,
               l = r
                 ? ""
                     .concat(i > 0 ? "+" : "–", " ")
@@ -11211,7 +11084,7 @@
           ? (0, ef.jsxs)("div", {
               className: "flex items-center gap-2",
               children: [
-                (0, ef.jsx)(nP, {
+                (0, ef.jsx)(nx, {
                   humanReadableTime: s,
                   humanReadableLocation: l,
                   compact: !0,
@@ -11231,7 +11104,7 @@
                     }),
                   ],
                 }),
-                (0, ef.jsx)(nP, {
+                (0, ef.jsx)(nx, {
                   className: "text-right",
                   humanReadableTime: a,
                   humanReadableLocation: o,
@@ -11239,9 +11112,9 @@
                 }),
               ],
             })
-          : (0, ef.jsx)(nP, { humanReadableTime: a, humanReadableLocation: o });
+          : (0, ef.jsx)(nx, { humanReadableTime: a, humanReadableLocation: o });
       }
-      function nP(e) {
+      function nx(e) {
         let {
           humanReadableTime: t,
           humanReadableLocation: n,
@@ -11269,83 +11142,83 @@
           ],
         });
       }
-      var nC = n(65998),
-        n_ = n(95430),
-        nD = n(25771);
-      function nM(e) {
+      var nA = n(65998),
+        nv = n(95430),
+        nb = n(25771);
+      function ny(e) {
         let t = new Date(e);
-        return (0, nc.Z)(t, "EEE, MMM d h:mm a");
+        return (0, t9.Z)(t, "EEE, MMM d h:mm a");
       }
-      function nR(e) {
+      function nj(e) {
         let t = new Date(e);
-        return (0, nc.Z)(t, "MMM dd, yyyy");
+        return (0, t9.Z)(t, "MMM dd, yyyy");
       }
-      function nT(e) {
+      function nw(e) {
         let t = new Date(e);
-        return (0, nc.Z)(t, "MMM yyyy");
+        return (0, t9.Z)(t, "MMM yyyy");
       }
-      function nL(e) {
+      function nO(e) {
         let t = new Date(e);
-        return (0, nc.Z)(t, "MMM dd");
+        return (0, t9.Z)(t, "MMM dd");
       }
-      nC.kL.register(
-        nC.qi,
-        nC.uw,
-        nC.f$,
-        nC.ZL,
-        nC.Dx,
-        nC.u,
-        nC.ST,
-        nC.od,
-        nC.jn,
-        n_.ZP
+      nA.kL.register(
+        nA.qi,
+        nA.uw,
+        nA.f$,
+        nA.ZL,
+        nA.Dx,
+        nA.u,
+        nA.ST,
+        nA.od,
+        nA.jn,
+        nv.ZP
       );
-      let nU = {
+      let nk = {
         "1d": {
           label: "1D",
           formatTimestampLabel: function (e) {
             let t = new Date(e);
-            return (0, nc.Z)(t, "h:mm a");
+            return (0, t9.Z)(t, "h:mm a");
           },
-          formatTimestampTooltip: nM,
+          formatTimestampTooltip: ny,
           maxTicksLimit: 6,
           lineTension: 0,
         },
         "5d": {
           label: "5D",
-          formatTimestampLabel: nL,
-          formatTimestampTooltip: nM,
+          formatTimestampLabel: nO,
+          formatTimestampTooltip: ny,
           maxTicksLimit: 6,
           lineTension: 0,
         },
         "1m": {
           label: "1M",
-          formatTimestampLabel: nL,
+          formatTimestampLabel: nO,
           formatTimestampTooltip: function (e) {
             let t = new Date(e);
-            return (0, nc.Z)(t, "EEE, MMM dd");
+            return (0, t9.Z)(t, "EEE, MMM dd");
           },
           maxTicksLimit: 6,
           lineTension: 0.1,
         },
         "6m": {
           label: "6M",
-          formatTimestampLabel: nT,
-          formatTimestampTooltip: nR,
+          formatTimestampLabel: nw,
+          formatTimestampTooltip: nj,
           maxTicksLimit: 5,
           lineTension: 0.1,
         },
         ytd: {
           label: "YTD",
-          formatTimestampLabel: nT,
-          formatTimestampTooltip: nR,
+          formatTimestampLabel: nw,
+          formatTimestampTooltip: nj,
           maxTicksLimit: 5,
           lineTension: 0.1,
         },
         "1y": {
           label: "1Y",
-          formatTimestampLabel: nT,
-          formatTimestampTooltip: nR,
+          formatTimestampLabel: nw,
+          formatTimestampTooltip: nj,
           maxTicksLimit: 5,
           lineTension: 0.2,
         },
@@ -11353,21 +11226,21 @@
           label: "5Y",
           formatTimestampLabel: function (e) {
             let t = new Date(e);
-            return (0, nc.Z)(t, "yyyy");
+            return (0, t9.Z)(t, "yyyy");
           },
-          formatTimestampTooltip: nR,
+          formatTimestampTooltip: nj,
           maxTicksLimit: 5,
           lineTension: 0.2,
         },
       };
-      function nz(e) {
+      function nS(e) {
         let { isUp: t, histories: n, onSelectHistoryInterval: r } = e,
           { 0: a, 1: s } = (0, et.useState)(
             n.quotes["1d"].length > 0 ? "1d" : "5d"
           ),
           i = n.quotes[a],
           l = Object.keys(n.quotes),
-          o = nU[a],
+          o = nk[a],
           { formatTimestampTooltip: c, maxTicksLimit: u } = o,
           d = (0, et.useMemo)(() => {
             let { formatTimestampLabel: e, lineTension: n } = o;
@@ -11401,13 +11274,13 @@
                       "uppercase hover:text-token-text-secondary",
                       { "font-extrabold !text-token-text-primary": a === e }
                     ),
-                    children: nU[e].label,
+                    children: nk[e].label,
                   },
                   e
                 )
               ),
             }),
-            (0, ef.jsx)(nD.x1, {
+            (0, ef.jsx)(nb.x1, {
               options: {
                 responsive: !0,
                 maintainAspectRatio: !1,
@@ -11454,7 +11327,7 @@
           ],
         });
       }
-      let nI = {
+      let nN = {
         "1d": "today",
         "5d": "past 5 days",
         "1m": "past month",
@@ -11463,7 +11336,7 @@
         "1y": "past year",
         "5y": "past 5 years",
       };
-      function nB(e) {
+      function nE(e) {
         var t;
         let { data: n } = e,
           { 0: r, 1: a } = (0, et.useState)();
@@ -11481,7 +11354,7 @@
             ? {
                 changePercentage: ((n.price.price - s.close) / s.close) * 100,
                 changeAmount: n.price.price - s.close,
-                changeLabel: nI[null != r ? r : ""],
+                changeLabel: nN[null != r ? r : ""],
                 isUp: n.price.price > s.close,
               }
             : {
@@ -11492,11 +11365,11 @@
               };
         return (0, ef.jsxs)(ef.Fragment, {
           children: [
-            (0, ef.jsx)(nF, { data: n, priceChange: i }),
+            (0, ef.jsx)(nP, { data: n, priceChange: i }),
             n.histories &&
               (0, ef.jsx)("div", {
                 className: "mt-6",
-                children: (0, ef.jsx)(nz, {
+                children: (0, ef.jsx)(nS, {
                   isUp: i.isUp,
                   histories: n.histories,
                   onSelectHistoryInterval: (e) => a(e),
@@ -11505,7 +11378,7 @@
           ],
         });
       }
-      function nF(e) {
+      function nP(e) {
         let { data: t, priceChange: n } = e;
         if (!t.price || !t.asset) return null;
         let {
@@ -11558,10 +11431,74 @@
           ],
         });
       }
-      var nZ = n(29924),
-        nV = n(68498),
-        nq = n(84692);
-      let nH = {
+      function n_(e) {
+        let { children: t, className: n } = e,
+          r = (0, et.useRef)(null),
+          a = (0, et.useRef)(!1),
+          s = (0, et.useRef)(0),
+          i = (0, et.useRef)(0),
+          l = (0, et.useRef)(0),
+          { 0: o, 1: c } = (0, et.useState)(!1),
+          { 0: u, 1: d } = (0, et.useState)(0),
+          { 0: m, 1: p } = (0, et.useState)(0);
+        (0, et.useEffect)(
+          () => () => {
+            window.cancelAnimationFrame(l.current);
+          },
+          []
+        );
+        let h = () => {
+            g(),
+              setTimeout(() => {
+                c(!1), (a.current = !1);
+              });
+          },
+          g = () => {
+            if (!r.current || 0.5 > Math.abs(i.current)) {
+              window.cancelAnimationFrame(l.current);
+              return;
+            }
+            (r.current.scrollLeft -= i.current),
+              (i.current *= 0.95),
+              (l.current = window.requestAnimationFrame(g));
+          };
+        return (0, ef.jsx)("div", {
+          className: (0, ee.default)("overflow-x-auto", n, {
+            "cursor-grab": !o,
+            "cursor-grabbing": o,
+          }),
+          ref: r,
+          onPointerDown: (e) => {
+            r.current &&
+              (e.preventDefault(),
+              d(e.pageX - r.current.offsetLeft),
+              p(r.current.scrollLeft),
+              c(!0),
+              (s.current = e.pageX),
+              (i.current = 0),
+              window.cancelAnimationFrame(l.current));
+          },
+          onPointerMove: (e) => {
+            if (!r.current || !o) return;
+            e.preventDefault();
+            let t = e.pageX - r.current.offsetLeft;
+            (r.current.scrollLeft = m - (t - u)),
+              (a.current = !0),
+              (i.current = e.pageX - s.current),
+              (s.current = e.pageX);
+          },
+          onPointerUp: h,
+          onPointerLeave: h,
+          onClickCapture: (e) => {
+            a.current && (e.stopPropagation(), e.preventDefault());
+          },
+          children: t,
+        });
+      }
+      var nC = n(29924),
+        nD = n(68498),
+        nM = n(84692);
+      let nR = {
           foggy: {
             default: {
               src: "https://cdn.oaistatic.com/_next/static/media/cloud-foggy.cce9a5f0.png",
@@ -11826,7 +11763,7 @@
             },
           },
         },
-        nQ = {
+        nT = {
           foggy: {
             default: {
               src: "https://cdn.oaistatic.com/_next/static/media/cloud-foggy.dd7950de.png",
@@ -12091,9 +12028,9 @@
             },
           },
         };
-      function nW(e) {
+      function nL(e) {
         let { weatherCode: t, isDarkMode: n, isNight: r } = e,
-          a = (n ? nQ : nH)[
+          a = (n ? nT : nR)[
             (function (e) {
               if (e >= 200 && e < 300)
                 return 211 === e || 212 === e || 221 === e
@@ -12133,7 +12070,7 @@
           ];
         return a.night && r ? a.night : a.default;
       }
-      function nG(e, t) {
+      function nU(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -12145,31 +12082,12 @@
         }
         return n;
       }
-      function nX(e) {
-        for (var t = 1; t < arguments.length; t++) {
-          var n = null != arguments[t] ? arguments[t] : {};
-          t % 2
-            ? nG(Object(n), !0).forEach(function (t) {
-                (0, eR.Z)(e, t, n[t]);
-              })
-            : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : nG(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
-                    e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t)
-                  );
-                });
-        }
-        return e;
-      }
-      function nK(e, t) {
+      function nz(e, t) {
         return "fahrenheit" === e
           ? Math.round((9 * t) / 5 + 32)
           : Math.round(((t - 32) * 5) / 9);
       }
-      function nJ(e) {
+      function nI(e) {
         let { weatherResults: t } = e,
           n = (0, $.Gv)(),
           { daily: r, hourly: a } = t,
@@ -12205,14 +12123,14 @@
                               )
                           );
                           return 1 === t.length || e.hourly.length > 0
-                            ? n0(t[0], { alwaysShowDate: !0 })
+                            ? nV(t[0], { alwaysShowDate: !0 })
                             : 7 === t.length
-                              ? (0, nu.Z)(t[0])
+                              ? (0, t8.Z)(t[0])
                                 ? "This week"
-                                : "Week of ".concat((0, nc.Z)(t[0], "MMM do"))
+                                : "Week of ".concat((0, t9.Z)(t[0], "MMM do"))
                               : ""
-                                  .concat(n0(t[0]), " - ")
-                                  .concat(n0(t[t.length - 1]));
+                                  .concat(nV(t[0]), " - ")
+                                  .concat(nV(t[t.length - 1]));
                         })(t)
                       ),
                     }),
@@ -12228,15 +12146,17 @@
                         children: [
                           (0, ef.jsx)("span", { children: "High" }),
                           (0, ef.jsx)("span", {
+                            className: "font-medium",
                             children: "".concat(
-                              nK("fahrenheit", l.temperature.max),
+                              nz("fahrenheit", l.temperature.max),
                               "\xb0F"
                             ),
                           }),
                           (0, ef.jsx)("span", { children: "Low" }),
                           (0, ef.jsx)("span", {
+                            className: "font-medium",
                             children: "".concat(
-                              nK("fahrenheit", l.temperature.min),
+                              nz("fahrenheit", l.temperature.min),
                               "\xb0F"
                             ),
                           }),
@@ -12245,13 +12165,13 @@
                       (0, ef.jsx)("div", {
                         children: (0, ef.jsx)(em(), {
                           alt: l.description.description,
-                          src: nW({
+                          src: nL({
                             weatherCode: l.description.id,
                             isDarkMode: n,
                             isNight: l.night,
                           }).src,
-                          width: 44,
-                          height: 44,
+                          width: 50,
+                          height: 50,
                         }),
                       }),
                     ],
@@ -12260,24 +12180,24 @@
             }),
             a.length > 0 &&
               i &&
-              (0, ef.jsx)(t6, {
+              (0, ef.jsx)(n_, {
                 className:
                   "no-scrollbar -mx-snc-results-content-padding mt-4 flex select-none gap-2 px-snc-results-content-padding",
                 children: a.map((e) =>
                   (0, ef.jsx)(
-                    n$,
+                    nZ,
                     { weatherData: e, timezone: t.location.timezone },
                     e.timestamp
                   )
                 ),
               }),
             r.length > 1 &&
-              (0, ef.jsx)(t6, {
+              (0, ef.jsx)(n_, {
                 className:
                   "no-scrollbar -mx-snc-results-content-padding mt-4 flex select-none gap-2 px-snc-results-content-padding",
                 children: r.map((e) =>
                   (0, ef.jsx)(
-                    nY,
+                    nB,
                     { weatherData: e, timezone: t.location.timezone },
                     e.timestamp
                   )
@@ -12286,7 +12206,7 @@
           ],
         });
       }
-      function nY(e) {
+      function nB(e) {
         let { weatherData: t, timezone: n } = e,
           r = (0, $.Gv)(),
           a = t.description,
@@ -12295,12 +12215,12 @@
           ? null
           : (0, ef.jsxs)("div", {
               className:
-                "flex min-w-[98px] flex-col items-center rounded-lg border border-token-border-light bg-token-main-surface-primary py-4",
+                "flex min-w-[108px] flex-col items-center rounded-xl bg-token-main-surface-tertiary pb-5 pt-4 dark:bg-white/5",
               children: [
                 (0, ef.jsx)(em(), {
                   draggable: !1,
                   alt: a.description,
-                  src: nW({
+                  src: nL({
                     weatherCode: a.id,
                     isDarkMode: r,
                     isNight: t.night,
@@ -12311,8 +12231,8 @@
                 (0, ef.jsxs)("div", {
                   children: [
                     (0, ef.jsx)("div", {
-                      className: "mt-3 text-center text-sm font-medium",
-                      children: n0(s),
+                      className: "mt-1 pb-1 text-center text-sm font-medium",
+                      children: nV(s),
                     }),
                     (0, ef.jsxs)("div", {
                       className:
@@ -12320,14 +12240,14 @@
                       children: [
                         (0, ef.jsx)("span", {
                           children: " ".concat(
-                            nK("fahrenheit", t.temperature.min),
+                            nz("fahrenheit", t.temperature.min),
                             "\xb0F"
                           ),
                         }),
                         (0, ef.jsx)("span", { children: "/" }),
                         (0, ef.jsx)("span", {
                           children: " ".concat(
-                            nK("fahrenheit", t.temperature.max),
+                            nz("fahrenheit", t.temperature.max),
                             "\xb0F"
                           ),
                         }),
@@ -12338,116 +12258,345 @@
               ],
             });
       }
-      function n$(e) {
+      function nF(e) {
+        let { iconSrc: t, iconAlt: n, main: r, time: a } = e;
+        return (0, ef.jsxs)("div", {
+          className:
+            "flex min-w-[98px] flex-col items-center rounded-xl bg-token-main-surface-tertiary pb-4 pt-3 dark:bg-white/5",
+          children: [
+            (0, ef.jsx)(em(), {
+              draggable: !1,
+              alt: n,
+              src: t,
+              width: 44,
+              height: 44,
+            }),
+            (0, ef.jsx)("div", {
+              className: "mt-1 text-sm font-medium",
+              children: r,
+            }),
+            (0, ef.jsx)("div", {
+              className: "text-xs text-token-text-tertiary",
+              children: a,
+            }),
+          ],
+        });
+      }
+      function nZ(e) {
         let { weatherData: t, timezone: n } = e,
           r = (0, $.Gv)(),
-          a = (0, nV.vU)({
+          a = (0, nD.vU)({
             sunrise: { id: "weatherWidget.sunrise", defaultMessage: "Sunrise" },
             sunset: { id: "weatherWidget.sunset", defaultMessage: "Sunset" },
           });
         if (t.timestamp < Date.now() / 1e3 - 3600) return null;
         if ("type" in t)
           return ["sunrise", "sunset"].includes(t.type)
-            ? (0, ef.jsxs)("div", {
-                className:
-                  "flex min-w-[98px] flex-col items-center rounded-lg border border-token-border-light bg-token-main-surface-primary py-3",
-                children: [
-                  (0, ef.jsx)(em(), {
-                    draggable: !1,
-                    alt: t.type,
-                    src: (function (e) {
-                      let { sunrise: t, isDarkMode: n } = e,
-                        r = n ? nQ : nH;
-                      return t ? r.sunrise.default : r.sunset.default;
-                    })({ sunrise: "sunrise" === t.type, isDarkMode: r }).src,
-                    width: 44,
-                    height: 44,
-                  }),
-                  (0, ef.jsx)("div", {
-                    className: "mt-3 text-sm font-medium",
-                    children:
-                      "sunrise" === t.type
-                        ? (0, ef.jsx)(nq.Z, nX({}, a.sunrise))
-                        : (0, ef.jsx)(nq.Z, nX({}, a.sunset)),
-                  }),
-                  (0, ef.jsx)("div", {
-                    className: "text-xs text-token-text-tertiary",
-                    children: n1(t.timestamp, "h:mma", n),
-                  }),
-                ],
+            ? (0, ef.jsx)(nF, {
+                iconSrc: (function (e) {
+                  let { sunrise: t, isDarkMode: n } = e,
+                    r = n ? nT : nR;
+                  return t ? r.sunrise.default : r.sunset.default;
+                })({ sunrise: "sunrise" === t.type, isDarkMode: r }).src,
+                iconAlt: t.type,
+                main: (0, ef.jsx)(
+                  nM.Z,
+                  (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                      var n = null != arguments[t] ? arguments[t] : {};
+                      t % 2
+                        ? nU(Object(n), !0).forEach(function (t) {
+                            (0, eR.Z)(e, t, n[t]);
+                          })
+                        : Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(
+                              e,
+                              Object.getOwnPropertyDescriptors(n)
+                            )
+                          : nU(Object(n)).forEach(function (t) {
+                              Object.defineProperty(
+                                e,
+                                t,
+                                Object.getOwnPropertyDescriptor(n, t)
+                              );
+                            });
+                    }
+                    return e;
+                  })({}, "sunrise" === t.type ? a.sunrise : a.sunset)
+                ),
+                time: nq(t.timestamp, "h:mma", n),
               })
             : null;
         let s = t.description;
         return null === t.temperature.current
           ? null
-          : (0, ef.jsxs)("div", {
-              className:
-                "flex min-w-[98px] flex-col items-center rounded-lg border border-token-border-light bg-token-main-surface-primary py-3",
-              children: [
-                (0, ef.jsx)(em(), {
-                  draggable: !1,
-                  alt: s.description,
-                  src: nW({
-                    weatherCode: s.id,
-                    isDarkMode: r,
-                    isNight: t.night,
-                  }).src,
-                  width: 44,
-                  height: 44,
-                }),
-                (0, ef.jsx)("div", {
-                  className: "mt-3 text-sm font-medium",
-                  children: "".concat(
-                    nK("fahrenheit", t.temperature.current),
-                    "\xb0F"
-                  ),
-                }),
-                (0, ef.jsx)("div", {
-                  className: "text-xs text-token-text-tertiary",
-                  children: n1(t.timestamp, "ha", n),
-                }),
-              ],
+          : (0, ef.jsx)(nF, {
+              iconSrc: nL({
+                weatherCode: s.id,
+                isDarkMode: r,
+                isNight: t.night,
+              }).src,
+              iconAlt: s.description,
+              main: (0, ef.jsxs)(ef.Fragment, {
+                children: [nz("fahrenheit", t.temperature.current), "\xb0F"],
+              }),
+              time: nq(t.timestamp, "ha", n),
             });
       }
-      function n0(e) {
+      function nV(e) {
         let { alwaysShowDate: t = !1 } =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if ((0, nu.Z)(e)) {
+        if ((0, t8.Z)(e)) {
           let n = "Today";
-          return t ? "".concat(n, ", ").concat((0, nc.Z)(e, "MMM do")) : n;
+          return t ? "".concat(n, ", ").concat((0, t9.Z)(e, "MMM do")) : n;
         }
-        if ((0, nZ.Z)(e)) {
+        if ((0, nC.Z)(e)) {
           let n = "Tomorrow";
-          return t ? "".concat(n, ", ").concat((0, nc.Z)(e, "MMM do")) : n;
+          return t ? "".concat(n, ", ").concat((0, t9.Z)(e, "MMM do")) : n;
         }
-        return (0, nc.Z)(e, "EE");
+        return (0, t9.Z)(e, "EE");
       }
-      function n1(e, t, n) {
+      function nq(e, t, n) {
         let r = new Date(
           1e3 * e + (n - -(60 * new Date().getTimezoneOffset())) * 1e3
         );
-        return (0, nc.Z)(r, t);
+        return (0, t9.Z)(r, t);
       }
-      function n2(e) {
+      function nH(e) {
         let { widget: t } = e;
         switch (null == t ? void 0 : t.type) {
           case "finance":
-            return (0, ef.jsx)(nB, { data: t.data });
-          case "sports-standings":
-            return (0, ef.jsx)(nb, { data: t.data });
-          case "sports-schedule":
-            return (0, ef.jsx)(nh, { data: t.data });
-          case "time-difference":
             return (0, ef.jsx)(nE, { data: t.data });
+          case "sports-standings":
+            return (0, ef.jsx)(no, { data: t.data });
+          case "sports-schedule":
+            return (0, ef.jsx)(nn, { data: t.data });
+          case "time-difference":
+            return (0, ef.jsx)(nf, { data: t.data });
           case "calculator":
-            return (0, ef.jsx)(nl, { data: t.data });
+            return (0, ef.jsx)(t4, { data: t.data });
           case "weather":
-            return (0, ef.jsx)(nJ, { weatherResults: t.data });
+            return (0, ef.jsx)(nI, { weatherResults: t.data });
           default:
             return null;
         }
       }
+      function nQ(e) {
+        let { images: t, children: n } = e;
+        return t.length >= 4
+          ? (0, ef.jsx)(nG, {
+              images: t,
+              numVisible: Math.min(4 * Math.floor(t.length / 4), 8),
+              children: n,
+            })
+          : t.length >= 1
+            ? (0, ef.jsx)(nW, { image: t[0], children: n })
+            : (0, ef.jsx)(ef.Fragment, { children: n });
+      }
+      function nW(e) {
+        let { image: t, children: n } = e;
+        return (0, ef.jsxs)("div", {
+          className: "w-full",
+          children: [
+            (0, ef.jsx)(
+              eD,
+              {
+                image: t,
+                className: (0, ee.default)(
+                  "relative float-right mb-snc-2 ml-snc-2 mr-snc-results-content-padding mt-snc-results-content-inset min-w-32 max-w-[22%] overflow-hidden rounded-xl",
+                  "z-10"
+                ),
+              },
+              t.content_url
+            ),
+            n,
+          ],
+        });
+      }
+      function nG(e) {
+        let { images: t, numVisible: n = 8, children: r } = e,
+          { downloadedImageUrls: a } = eC(t.map((e) => e.thumbnail_url)),
+          s = t.filter((e) => a.has(e.thumbnail_url));
+        return (0, ef.jsxs)("div", {
+          className: "flex flex-col",
+          children: [
+            (0, ef.jsx)(nX, {
+              className: "px-snc-results-padding",
+              children: s
+                .slice(0, n)
+                .map((e, t) =>
+                  (0, ef.jsx)(
+                    eD,
+                    {
+                      image: e,
+                      className: (0, ee.default)(
+                        "min-w-full overflow-hidden md:w-[calc((100%-0.25rem*3)/4)] md:min-w-[inherit]",
+                        0 === t && "rounded-tl-xl",
+                        3 === t && "rounded-tr-xl",
+                        t === n - 4 && "rounded-bl-xl",
+                        t === n - 1 && "rounded-br-xl"
+                      ),
+                    },
+                    e.thumbnail_url
+                  )
+                ),
+            }),
+            r,
+          ],
+        });
+      }
+      function nX(e) {
+        let { className: t, children: n } = e;
+        return (0, $.w$)()
+          ? (0, ef.jsx)("div", {
+              className: (0, ee.default)(
+                "mb-6 flex flex-wrap gap-1 overflow-hidden",
+                t
+              ),
+              children: n,
+            })
+          : (0, ef.jsx)(n_, {
+              className: (0, ee.default)(
+                "no-scrollbar -mx-4 flex gap-2 px-4 pb-snc-2",
+                t
+              ),
+              children: n,
+            });
+      }
+      function nK(e) {
+        let { highlights: t } = e;
+        return 0 === t.length
+          ? null
+          : (0, ef.jsx)("div", {
+              className: "mb-4 mt-snc-1 flex flex-col gap-snc-1",
+              children: t.map((e, t) => (0, ef.jsx)(nJ, { highlight: e }, t)),
+            });
+      }
+      function nJ(e) {
+        var t;
+        let { highlight: n } = e,
+          r =
+            null !== (t = (0, ek.d)(n.url).data) && void 0 !== t
+              ? t
+              : (0, eY.p)(n.url, "short");
+        return (0, ef.jsxs)("a", {
+          className:
+            "group/news-highlight mx-snc-results-padding grid grid-cols-[auto_1fr] grid-rows-[auto_auto] items-center gap-x-2 gap-y-0.5",
+          href: n.url,
+          target: "_blank",
+          rel: "noreferrer",
+          children: [
+            (0, ef.jsx)(ew.Z, {
+              className:
+                "h-5 w-5 rounded bg-token-main-surface-primary object-cover",
+              url: n.url,
+              size: 32,
+            }),
+            (0, ef.jsx)("div", {
+              className: "line-clamp-1 text-sm text-token-text-tertiary",
+              children: r,
+            }),
+            (0, ef.jsx)("div", {
+              className:
+                "col-start-2 line-clamp-2 font-medium text-token-link group-hover/news-highlight:text-token-link-hover",
+              children: n.title,
+            }),
+          ],
+        });
+      }
+      var nY = n(88366);
+      let n$ = ["node", "children"];
+      function n0(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
+      }
+      function n1(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? n0(Object(n), !0).forEach(function (t) {
+                (0, eR.Z)(e, t, n[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : n0(Object(n)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(n, t)
+                  );
+                });
+        }
+        return e;
+      }
+      let n2 = et.memo(function (e) {
+        let { src: t, alt: n } = e;
+        return (0, ef.jsx)(eN.E.img, {
+          src: t,
+          className: "h-full w-full object-cover",
+          alt: n,
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          whileHover: { scale: 1.05 },
+        });
+      });
       function n5(e) {
+        let { citation: t, children: n } = e;
+        return (0, ef.jsxs)("div", {
+          className: "inline-image-citation flex gap-snc-2",
+          children: [
+            (0, ef.jsx)("button", {
+              className:
+                "my-2 flex max-h-40 w-1/5 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg",
+              onClick: () =>
+                t.metadata.image && eA.vm.setFocusedImage(t.metadata.image),
+              children: t.metadata.image
+                ? (0, ef.jsx)(n2, {
+                    src: t.metadata.image.thumbnail_url,
+                    alt: t.metadata.image.title,
+                  })
+                : (0, ef.jsx)("div", {
+                    className:
+                      "h-full w-full animate-pulse bg-token-main-surface-tertiary",
+                  }),
+            }),
+            (0, ef.jsx)("div", {
+              className: "flex items-center justify-center",
+              children: n,
+            }),
+          ],
+        });
+      }
+      function n6(e) {
+        let { node: t, children: n } = e,
+          r = (0, eJ.Z)(e, n$),
+          a = et.useContext(t0.h7);
+        if (null != a && null != t) {
+          let e = (0, nY.B)(t),
+            s = (0, t0.jM)(e),
+            { displayedCitations: i } = a,
+            l = i[s];
+          if (l && l.type === t0.Zn.Snc && "inline_image" === l.metadata.type)
+            return (0, ef.jsx)(
+              n5,
+              {
+                citation: l,
+                children: (0, ef.jsx)("p", n1(n1({}, r), {}, { children: n })),
+              },
+              "inline-image-".concat(s)
+            );
+        }
+        return (0, ef.jsx)("p", n1(n1({}, r), {}, { children: n }));
+      }
+      function n4(e) {
         let t,
           { url: n, className: r } = e,
           a = (function (e) {
@@ -12456,18 +12605,18 @@
             );
             return t ? t[1] : null;
           })(n);
-        a && (t = (0, ef.jsx)(n6, { videoId: a }));
+        a && (t = (0, ef.jsx)(n3, { videoId: a }));
         let s = (function (e) {
           let t = e.match(
             /vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/[^/]+\/videos\/|video\/|)(\d+)/
           );
           return t ? t[1] : null;
         })(n);
-        return (s && (t = (0, ef.jsx)(n4, { videoId: s })), t)
+        return (s && (t = (0, ef.jsx)(n9, { videoId: s })), t)
           ? (0, ef.jsx)("div", { className: r, children: t })
           : null;
       }
-      function n6(e) {
+      function n3(e) {
         let { videoId: t } = e;
         return (0, ef.jsx)("iframe", {
           className: "aspect-video w-full",
@@ -12479,7 +12628,7 @@
           allowFullScreen: !0,
         });
       }
-      function n4(e) {
+      function n9(e) {
         let { videoId: t } = e;
         return (0, ef.jsx)(ef.Fragment, {
           children: (0, ef.jsx)("iframe", {
@@ -12491,12 +12640,12 @@
           }),
         });
       }
-      function n3(e) {
+      function n8(e) {
         let { tldr: t } = e;
         return (0, ef.jsxs)("div", {
           className: "flex flex-col gap-snc-results-padding",
           children: [
-            (0, ef.jsx)(n5, {
+            (0, ef.jsx)(n4, {
               className: "px-snc-results-content-padding",
               url: t.url,
             }),
@@ -12527,10 +12676,10 @@
           ],
         });
       }
-      function n9(e) {
+      function n7(e) {
         return "fatal_system_error" === e.execution_status;
       }
-      function n8(e, t) {
+      function re(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -12542,16 +12691,16 @@
         }
         return n;
       }
-      function n7(e) {
+      function rt(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? n8(Object(n), !0).forEach(function (t) {
+            ? re(Object(n), !0).forEach(function (t) {
                 (0, eR.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : n8(Object(n)).forEach(function (t) {
+              : re(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -12561,7 +12710,7 @@
         }
         return e;
       }
-      let re = (0, et.forwardRef)(function (e, t) {
+      let rn = (0, et.forwardRef)(function (e, t) {
         let {
           turn: n,
           isHighlighted: r,
@@ -12571,9 +12720,9 @@
         if (null === n.index) throw Error();
         let i = n.index > 0;
         return (0, ef.jsxs)(
-          eS.E.div,
-          n7(
-            n7(
+          eN.E.div,
+          rt(
+            rt(
               { ref: t, className: "flex flex-col gap-snc-1" },
               i
                 ? {
@@ -12586,14 +12735,14 @@
             {},
             {
               children: [
-                i && (0, ef.jsx)(rt, { text: n.user_query }),
-                n9(n)
-                  ? (0, ef.jsx)(rn, {
+                i && (0, ef.jsx)(rr, { text: n.user_query }),
+                n7(n)
+                  ? (0, ef.jsx)(ra, {
                       text: "Something went wrong. Please try again.",
                       canRetry: !0,
                       onRetry: () => a(n.user_query),
                     })
-                  : (0, ef.jsx)(rr, {
+                  : (0, ef.jsx)(rs, {
                       turn: n,
                       isHighlighted: r,
                       onInlineSuggestionClicked: s,
@@ -12603,7 +12752,7 @@
           )
         );
       });
-      function rt(e) {
+      function rr(e) {
         let { text: t } = e;
         return (0, ef.jsx)("div", {
           className:
@@ -12611,11 +12760,11 @@
           children: (0, ef.jsx)("div", {
             className:
               "max-w-[calc(100%-5rem)] rounded-3xl rounded-br-lg bg-token-main-surface-tertiary px-snc-1 py-2.5",
-            children: (0, ef.jsx)(rs, { text: t }),
+            children: (0, ef.jsx)(rl, { text: t }),
           }),
         });
       }
-      function rn(e) {
+      function ra(e) {
         let { text: t, onRetry: n, canRetry: r } = e;
         return (0, ef.jsx)("div", {
           children: (0, ef.jsx)(tY.Z, {
@@ -12639,7 +12788,7 @@
           }),
         });
       }
-      function rr(e) {
+      function rs(e) {
         var t, n;
         let { turn: r, isHighlighted: a, onInlineSuggestionClicked: s } = e;
         if (null === r.index) throw Error();
@@ -12657,14 +12806,16 @@
             processedText: c,
             displayedCitations: u,
             imageCitations: d,
-            tldr: m,
+            newsHighlights: m,
+            tldr: p,
           } = (function (e, t) {
             var n, r;
-            let a;
-            let s = "",
-              i = 0,
+            let a = "",
+              s = 0,
+              i = [],
               l = [],
-              o = (
+              o = null,
+              c = (
                 null !==
                   (n =
                     null === (r = t.model_response) || void 0 === r
@@ -12678,44 +12829,54 @@
                 )
                 .map((t, n) => {
                   let r = { type: t0.Zn.Standard };
+                  switch (t.type) {
+                    case "webpage":
+                      r = {
+                        type: t0.Zn.Standard,
+                        metadata: {
+                          title: t.title,
+                          url: t.url,
+                          type: "webpage",
+                        },
+                      };
+                      break;
+                    case "optimistic_image":
+                      r = {
+                        type: t0.Zn.Snc,
+                        metadata: { type: "inline_image", image: t.image },
+                      };
+                      break;
+                    case "image":
+                      i.push(t);
+                      break;
+                    case "news_highlight":
+                      l.push(t);
+                      break;
+                    case "tldr":
+                      o = t;
+                  }
                   return (
-                    "webpage" === t.type
-                      ? (r = {
-                          type: t0.Zn.Standard,
-                          metadata: {
-                            title: t.title,
-                            url: t.url,
-                            type: "webpage",
-                          },
-                        })
-                      : "optimistic_image" === t.type
-                        ? (r = {
-                            type: t0.Zn.Snc,
-                            metadata: { type: "inline_image", image: t.image },
-                          })
-                        : "image" === t.type
-                          ? l.push(t)
-                          : "tldr" === t.type && (a = t),
-                    t.start_idx > i &&
-                      ((s += e.slice(i, t.start_idx)), (i = t.end_idx)),
-                    "" != s && (s += "&#8203;"),
-                    (s += "``【oaicite:".concat(n, "】``&#8203;")),
-                    t.end_idx > i && (i = t.end_idx),
+                    t.start_idx > s &&
+                      ((a += e.slice(s, t.start_idx)), (s = t.end_idx)),
+                    "" != a && (a += "&#8203;"),
+                    (a += "``【oaicite:".concat(n, "】``&#8203;")),
+                    t.end_idx > s && (s = t.end_idx),
                     r
                   );
                 }),
-              c = e.indexOf("【", Math.max(e.lastIndexOf("】"), i));
+              u = e.indexOf("【", Math.max(e.lastIndexOf("】"), s));
             return {
-              processedText: (s += e.slice(i, -1 == c ? void 0 : c)),
-              displayedCitations: o,
-              imageCitations: l,
-              tldr: a,
+              processedText: (a += e.slice(s, -1 == u ? void 0 : u)),
+              displayedCitations: c,
+              imageCitations: i,
+              newsHighlights: l,
+              tldr: o,
             };
           })(o, r),
-          p = (0, e8.K)(r),
-          h =
+          h = (0, e8.K)(r),
+          g =
             "in_progress" === r.execution_status || null === r.execution_status,
-          g = (0, ek.u)(
+          f = (0, ek.u)(
             u.reduce((e, t) => {
               var n, r;
               return t.type === t0.Zn.Standard &&
@@ -12745,69 +12906,70 @@
                 }
               ),
               children: [
-                null != p &&
-                  (0, ef.jsx)(ra, {
-                    children: (0, ef.jsx)("div", {
-                      className: "px-snc-results-content-padding",
-                      children: (0, ef.jsx)(n2, { widget: p }),
-                    }),
+                null != h &&
+                  (0, ef.jsx)("div", {
+                    className: "px-snc-results-content-padding",
+                    children: (0, ef.jsx)(nH, { widget: h }),
                   }),
-                null != m &&
+                null != p &&
                   0 === r.index &&
-                  null == p &&
-                  (0, ef.jsx)(ra, { children: (0, ef.jsx)(n3, { tldr: m }) }),
+                  null == h &&
+                  (0, ef.jsx)(ri, { children: (0, ef.jsx)(n8, { tldr: p }) }),
                 (0, ef.jsxs)("div", {
                   children: [
-                    (0, ef.jsx)(t4, {
+                    (0, ef.jsxs)(nQ, {
                       images: d,
-                      children: (0, ef.jsx)(t0.h7.Provider, {
-                        value: {
-                          clientThreadId: tJ.Zq,
-                          displayType: t0.QU.expandAll,
-                          displayedCitations: u,
-                          isActivelyStreaming: h,
-                          message: {
-                            id: "",
-                            author: { role: tJ.uU.Assistant, name: "Search" },
-                            content: { content_type: tJ.PX.Text, parts: [o] },
+                      children: [
+                        (0, ef.jsx)(t0.h7.Provider, {
+                          value: {
+                            clientThreadId: tJ.Zq,
+                            displayType: t0.QU.expandAll,
+                            displayedCitations: u,
+                            isActivelyStreaming: g,
+                            message: {
+                              id: "",
+                              author: { role: tJ.uU.Assistant, name: "Search" },
+                              content: { content_type: tJ.PX.Text, parts: [o] },
+                            },
+                            attributions: f,
+                            onCitationClicked: (e) => {
+                              if (null === r.index) throw Error();
+                              l &&
+                                "webpage" === e.type &&
+                                e3.Y.logEvent(e3.M.searchCitationClicked, {
+                                  thread_id: l,
+                                  url: e.url,
+                                  title: e.title,
+                                  pub_date: e.pub_date,
+                                  turn_index: r.index,
+                                });
+                            },
+                            onCitationHovered: (e) => {
+                              if (null === r.index) throw Error();
+                              l &&
+                                "webpage" === e.type &&
+                                e3.Y.logEvent(e3.M.searchCitationHovered, {
+                                  thread_id: l,
+                                  url: e.url,
+                                  title: e.title,
+                                  pub_date: e.pub_date,
+                                  turn_index: r.index,
+                                });
+                            },
                           },
-                          attributions: g,
-                          onCitationClicked: (e) => {
-                            if (null === r.index) throw Error();
-                            l &&
-                              "webpage" === e.type &&
-                              e3.Y.logEvent(e3.M.searchCitationClicked, {
-                                thread_id: l,
-                                url: e.url,
-                                title: e.title,
-                                pub_date: e.pub_date,
-                                turn_index: r.index,
-                              });
-                          },
-                          onCitationHovered: (e) => {
-                            if (null === r.index) throw Error();
-                            l &&
-                              "webpage" === e.type &&
-                              e3.Y.logEvent(e3.M.searchCitationHovered, {
-                                thread_id: l,
-                                url: e.url,
-                                title: e.title,
-                                pub_date: e.pub_date,
-                                turn_index: r.index,
-                              });
-                          },
-                        },
-                        children: (0, ef.jsx)("div", {
-                          className: "px-snc-results-content-padding",
-                          children: (0, ef.jsx)(rs, {
-                            text: c,
-                            onInlineSuggestionClicked: s,
-                            isActivelyStreaming: h,
+                          children: (0, ef.jsx)("div", {
+                            className: "px-snc-results-content-padding",
+                            children: (0, ef.jsx)(rl, {
+                              text: c,
+                              onInlineSuggestionClicked: s,
+                              isActivelyStreaming: g,
+                            }),
                           }),
                         }),
-                      }),
+                        (0, ef.jsx)(nK, { highlights: m }),
+                      ],
                     }),
-                    !h &&
+                    !g &&
                       (0, ef.jsx)("div", {
                         className:
                           "hidden px-snc-results-content-padding md:block",
@@ -12820,19 +12982,19 @@
           })
         );
       }
-      let ra = en.Z.div(
+      let ri = en.Z.div(
         G ||
           (G = (0, J.Z)([
-            "md:border-b-[0.5px] border-token-border-medium pb-snc-results-padding",
+            "md:border-b-[0.5px] border-token-border-medium dark:border-x-token-border-xheavy pb-snc-results-padding",
           ]))
       );
-      function rs(e) {
+      function rl(e) {
         let {
           text: t,
           onInlineSuggestionClicked: n,
           isActivelyStreaming: r = !1,
         } = e;
-        return (0, ef.jsx)(ri, {
+        return (0, ef.jsx)(ro, {
           className: (0, ee.default)(
             "relative text-token-text-primary",
             "" === t && r && "result-thinking",
@@ -12842,7 +13004,7 @@
           children: t,
         });
       }
-      function ri(e) {
+      function ro(e) {
         let {
             size: t = "medium",
             children: n,
@@ -12852,11 +13014,11 @@
           { resolvedTheme: s } = (0, el.F)(),
           i = (0, et.useMemo)(
             () =>
-              n7(
-                n7({}, t$.ff),
+              rt(
+                rt({}, t$.ff),
                 {},
                 {
-                  p: ns,
+                  p: n6,
                   a: (e) => {
                     let { href: t, children: r } = e;
                     if (t && /^turn[0-9]+ifs[0-9]+$/.test(t) && null != a) {
@@ -12931,7 +13093,7 @@
           }),
         });
       }
-      function rl(e) {
+      function rc(e) {
         var t;
         let {
             lastFollowupTurnRef: n,
@@ -12941,8 +13103,8 @@
           } = e,
           i = (0, e9.nn)(e9.LW.turns),
           l = (0, e9.nn)(e9.LW.firstTurn);
-        return null != l && n9(l)
-          ? (0, ef.jsx)(rc, { onRetryClick: r })
+        return null != l && n7(l)
+          ? (0, ef.jsx)(rd, { onRetryClick: r })
           : (0, ef.jsx)("div", {
               className: "flex w-full flex-col gap-2",
               children:
@@ -12953,7 +13115,7 @@
                   null != (0, e8.K)(l))
                   ? i.map((e, t) =>
                       (0, ef.jsx)(
-                        re,
+                        rn,
                         {
                           ref: t > 0 && t === i.length - 1 ? n : void 0,
                           turn: e,
@@ -12964,16 +13126,16 @@
                         t
                       )
                     )
-                  : (0, ef.jsx)(ro, {}),
+                  : (0, ef.jsx)(ru, {}),
             });
       }
-      function ro() {
+      function ru() {
         return (0, ef.jsx)("div", {
           className: "px-snc-results-content-padding",
           children: (0, ef.jsx)(e$.H, { lines: 6, variance: 3 }),
         });
       }
-      function rc(e) {
+      function rd(e) {
         let { onRetryClick: t } = e;
         return (0, ef.jsx)("div", {
           className: "flex h-full w-full items-center justify-center",
@@ -12988,9 +13150,9 @@
           }),
         });
       }
-      var ru = n(15118),
-        rd = n(10987);
-      function rm(e) {
+      var rm = n(15118),
+        rp = n(10987);
+      function rh(e) {
         let {
             readyState: t,
             hasSubmittedInitialQuery: n,
@@ -12999,9 +13161,9 @@
             onSubmit: s,
           } = e,
           i = (0, e9.nn)(e9.LW.firstTurn),
-          l = null != i && n9(i),
-          o = t !== ru.kQ.OPEN || !r || l;
-        return (0, ef.jsx)(rd.Q, {
+          l = null != i && n7(i),
+          o = t !== rm.kQ.OPEN || !r || l;
+        return (0, ef.jsx)(rp.Q, {
           value: r,
           expandDirection: "up",
           className:
@@ -13017,7 +13179,7 @@
           },
         });
       }
-      function rp(e) {
+      function rg(e) {
         let { children: t, scrollContainerRef: n, scrollBottomSpacing: r } = e;
         return (0, ef.jsx)("div", {
           ref: n,
@@ -13027,7 +13189,7 @@
           children: t,
         });
       }
-      function rh(e) {
+      function rf(e) {
         let {
             scrollContainerRef: t,
             lastFollowupTurnRef: n,
@@ -13043,10 +13205,10 @@
           d = (0, $.w$)();
         return (0, ef.jsxs)(ef.Fragment, {
           children: [
-            (0, ef.jsx)(rp, {
+            (0, ef.jsx)(rg, {
               scrollContainerRef: d ? t : void 0,
               scrollBottomSpacing: d ? r : 0,
-              children: (0, ef.jsx)(rl, {
+              children: (0, ef.jsx)(rc, {
                 lastFollowupTurnRef: n,
                 onRetryQuery: u,
                 highlightTurnIndex: l,
@@ -13058,7 +13220,7 @@
                 "bottom-0 left-0 right-0 flex flex-col justify-end px-snc-results-padding pb-snc-results-padding pt-8 md:absolute md:block md:pt-0",
               children: [
                 d && (0, ef.jsx)(eq, { side: "bottom" }),
-                (0, ef.jsx)(rm, {
+                (0, ef.jsx)(rh, {
                   readyState: a,
                   hasSubmittedInitialQuery: s,
                   currentQuery: i,
@@ -13070,7 +13232,7 @@
           ],
         });
       }
-      function rg() {
+      function rx() {
         let e = (function () {
             let e = (0, e9.nn)(e9.LW.turns);
             return (0, eP.compact)(
@@ -13082,14 +13244,14 @@
               })
             );
           })(),
-          { downloadedImageUrls: t } = e_(e.map((e) => e.thumbnail_url)),
+          { downloadedImageUrls: t } = eC(e.map((e) => e.thumbnail_url)),
           n = e.filter((e) => t.has(e.thumbnail_url)),
           r = n.length;
         return (
           r > 8
             ? (r = 4 * Math.floor(r / 4))
             : r > 4 && (r = 2 * Math.floor(r / 2)),
-          (0, ef.jsx)(rp, {
+          (0, ef.jsx)(rg, {
             children: (0, ef.jsx)("div", {
               className:
                 "mx-snc-results-padding grid grid-cols-4 items-center justify-center gap-2.5 overflow-hidden rounded-xl",
@@ -13100,45 +13262,45 @@
           })
         );
       }
-      let rf =
+      let rA =
         (((a = {}).Answer = "answer"),
         (a.Images = "images"),
         (a.Sources = "sources"),
         a);
-      function rx(e) {
+      function rv(e) {
         let { selectedTab: t, onChangeTab: n } = e,
           r = (0, $.aj)();
         return (
           (0, et.useEffect)(() => {
-            t === rf.Sources && r && n(rf.Answer);
+            t === rA.Sources && r && n(rA.Answer);
           }, [r, n, t]),
           (0, ef.jsxs)("div", {
             className: "flex gap-6",
             children: [
-              (0, ef.jsx)(rA, {
-                $selected: t === rf.Answer,
-                disabled: t === rf.Answer,
-                onClick: () => n(rf.Answer),
+              (0, ef.jsx)(rb, {
+                $selected: t === rA.Answer,
+                disabled: t === rA.Answer,
+                onClick: () => n(rA.Answer),
                 children: "Answer",
               }),
               !r &&
-                (0, ef.jsx)(rA, {
-                  $selected: t === rf.Sources,
-                  disabled: t === rf.Sources,
-                  onClick: () => n(rf.Sources),
+                (0, ef.jsx)(rb, {
+                  $selected: t === rA.Sources,
+                  disabled: t === rA.Sources,
+                  onClick: () => n(rA.Sources),
                   children: "Sources",
                 }),
-              (0, ef.jsx)(rA, {
-                $selected: t === rf.Images,
-                disabled: t === rf.Images,
-                onClick: () => n(rf.Images),
+              (0, ef.jsx)(rb, {
+                $selected: t === rA.Images,
+                disabled: t === rA.Images,
+                onClick: () => n(rA.Images),
                 children: "Images",
               }),
             ],
           })
         );
       }
-      let rA = en.Z.button(
+      let rb = en.Z.button(
         X ||
           (X = (0, J.Z)([
             "w-full rounded-full py-2 flex justify-center items-center font-medium text-base \n",
@@ -13151,9 +13313,9 @@
             : "text-token-text-tertiary hover:text-token-text-primary";
         }
       );
-      function rv(e) {
+      function ry(e) {
         let { highlightUrl: t } = e;
-        return (0, ef.jsx)(rp, {
+        return (0, ef.jsx)(rg, {
           children: (0, ef.jsx)("div", {
             className: "flex flex-col gap-snc-1 pb-snc-1",
             children: (0, ef.jsx)(tK, {
@@ -13163,8 +13325,8 @@
           }),
         });
       }
-      var rb = n(62014);
-      function ry(e) {
+      var rj = n(62014);
+      function rw(e) {
         let {
             readyState: t,
             hasSubmittedInitialQuery: n,
@@ -13183,7 +13345,7 @@
           } = e,
           g = (0, $.w$)(),
           f = (0, $.aj)(),
-          { 0: x, 1: A } = (0, et.useState)(rf.Answer),
+          { 0: x, 1: A } = (0, et.useState)(rA.Answer),
           {
             scrollContainerRef: v,
             lastFollowupTurnRef: b,
@@ -13193,7 +13355,7 @@
               t = (0, et.useRef)(null),
               { 0: n, 1: r } = (0, et.useState)(null),
               a = (0, e9.nn)(e9.LW.firstTurn),
-              s = null != a && n9(a),
+              s = null != a && n7(a),
               i = (0, e9.nn)(e9.LW.numTurns);
             function l() {
               null != e.current && null != t.current
@@ -13204,7 +13366,7 @@
                         t.current.getBoundingClientRect().height
                     ),
                     followupTurnIndex:
-                      (0, rb.S)(e9.nn.getState().thread).turns.length - 1,
+                      (0, rj.S)(e9.nn.getState().thread).turns.length - 1,
                   })
                 : r(null);
             }
@@ -13252,7 +13414,7 @@
           className:
             "flex h-full w-full justify-center overflow-y-auto bg-token-main-surface-primary dark:bg-black md:overflow-y-hidden dark:md:bg-token-main-surface-primary",
           children: [
-            (0, ef.jsxs)(rj, {
+            (0, ef.jsxs)(rO, {
               children: [
                 (0, ef.jsxs)("button", {
                   onClick: () => u(),
@@ -13279,7 +13441,7 @@
                 children: [
                   (0, ef.jsxs)("div", {
                     className: (0, ee.default)(
-                      "relative flex w-full flex-col md:border-x-[0.5px] md:border-token-border-medium",
+                      "relative flex w-full flex-col md:border-x-[0.5px] md:border-token-border-medium md:dark:border-x-token-border-xheavy",
                       "xl:w-[63%]"
                     ),
                     children: [
@@ -13287,7 +13449,7 @@
                         className:
                           "relative flex flex-shrink-0 flex-col items-center gap-snc-1 overflow-y-visible px-snc-2 pt-snc-1",
                         children: [
-                          (0, ef.jsx)(rx, { selectedTab: x, onChangeTab: A }),
+                          (0, ef.jsx)(rv, { selectedTab: x, onChangeTab: A }),
                           (0, ef.jsxs)("div", {
                             className:
                               "absolute left-0 right-0 top-full z-10 flex px-snc-results-padding pt-4",
@@ -13297,15 +13459,15 @@
                                 currentQuery: r,
                                 onUpdateCurrentQuery: s,
                                 onSubmit: (e) => {
-                                  A(rf.Answer), l(e);
+                                  A(rA.Answer), l(e);
                                 },
                               }),
                             ],
                           }),
                         ],
                       }),
-                      x === rf.Answer &&
-                        (0, ef.jsx)(rh, {
+                      x === rA.Answer &&
+                        (0, ef.jsx)(rf, {
                           scrollContainerRef: v,
                           lastFollowupTurnRef: b,
                           scrollBottomSpacing: y,
@@ -13317,8 +13479,8 @@
                           onUpdateFollowupQuery: i,
                           onRetryQuery: m,
                         }),
-                      x === rf.Images && (0, ef.jsx)(rg, {}),
-                      x === rf.Sources && (0, ef.jsx)(rv, { highlightUrl: p }),
+                      x === rA.Images && (0, ef.jsx)(rx, {}),
+                      x === rA.Sources && (0, ef.jsx)(ry, { highlightUrl: p }),
                     ],
                   }),
                   f &&
@@ -13340,7 +13502,7 @@
                 ],
               }),
             }),
-            (0, ef.jsx)(rj, {
+            (0, ef.jsx)(rO, {
               children: (0, ef.jsx)(ey, {
                 className: "h-8 w-8",
                 searchQuery: r,
@@ -13350,7 +13512,7 @@
           ],
         });
       }
-      let rj = en.Z.div(
+      let rO = en.Z.div(
         K ||
           (K = (0, J.Z)([
             "w-10 m-snc-1 flex-col justify-between items-center hidden md:flex",
@@ -13517,26 +13679,12 @@
           },
         },
         m = {
-          newThread(e) {
-            u.setState((t) => {
-              t.thread = { id: e, turns: [] };
-            });
-          },
-          appendTurn(e, t) {
-            u.setState((n) => {
-              let r = n.thread;
-              if (!r) {
-                s.U.addError("got appendTurn with no current thread");
-                return;
-              }
-              if (r.id !== e) {
-                s.U.addError("got appendTurn for wrong thread", {
-                  threadId: e,
-                  newThreadId: r.id,
-                });
-                return;
-              }
-              r.turns.push(t);
+          appendTurn(e, t, n) {
+            u.setState((r) => {
+              var a;
+              (null === (a = r.thread) || void 0 === a ? void 0 : a.id) !== e &&
+                (null == n || n(e), (r.thread = { id: e, turns: [] })),
+                r.thread.turns.push(t);
             });
           },
           updateTurn(e, t) {
@@ -13882,8 +14030,8 @@
         }
       }
       var k = n(78103),
-        N = n(25229),
-        S = n(51362);
+        S = n(25229),
+        N = n(51362);
       class E {
         log(e) {}
         debug() {
@@ -13898,7 +14046,7 @@
         }
       }
       let P = new E();
-      function C(e, t) {
+      function _(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -13910,16 +14058,16 @@
         }
         return n;
       }
-      function _(e) {
+      function C(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? C(Object(n), !0).forEach(function (t) {
+            ? _(Object(n), !0).forEach(function (t) {
                 (0, y.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : C(Object(n)).forEach(function (t) {
+              : _(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -13942,7 +14090,7 @@
             messages: [],
           },
         },
-        M = (0, k.ZP)((0, N.XR)((0, S.n)(() => D)));
+        M = (0, k.ZP)((0, S.XR)((0, N.n)(() => D)));
       function R() {
         return M(
           (e) =>
@@ -13970,7 +14118,7 @@
                 });
                 try {
                   let a = await O.getVoiceToken(
-                    _({ voice: t, language_code: n }, r)
+                    C({ voice: t, language_code: n }, r)
                   );
                   a &&
                     a.token &&
@@ -13978,7 +14126,7 @@
                     a.e2ee_key &&
                     L({
                       conversationId: e,
-                      credentials: _(_({}, a), {}, { e2eeKey: a.e2ee_key }),
+                      credentials: C(C({}, a), {}, { e2eeKey: a.e2ee_key }),
                     });
                 } catch (e) {
                   throw (
@@ -14995,4 +15143,4 @@
     },
   },
 ]);
-//# sourceMappingURL=sso.d74092545a949ef3.js.map
+//# sourceMappingURL=sso.672e9ca39e8b948d.js.map
