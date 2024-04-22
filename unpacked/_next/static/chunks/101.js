@@ -6,13 +6,13 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return N;
+            return S;
           },
           default: function () {
-            return _;
+            return T;
           },
           messages: function () {
-            return W;
+            return D;
           },
         });
       var r = n(39827),
@@ -83,7 +83,7 @@
                 className:
                   "flex w-full justify-start px-6 pb-8 md:hidden md:px-6 lg:px-8",
                 children: (0, y.jsx)("h1", {
-                  "aria-label": l.formatMessage(C.ariaLabel),
+                  "aria-label": l.formatMessage(E.ariaLabel),
                   children: (0, y.jsx)("div", {
                     className:
                       "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
@@ -98,7 +98,7 @@
                   (0, y.jsx)("h2", {
                     className:
                       "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                    children: (0, y.jsx)(b.Z, O({}, C.pageTitle)),
+                    children: (0, y.jsx)(b.Z, O({}, E.pageTitle)),
                   }),
                   (0, y.jsx)("div", {
                     className: "mt-5 w-full max-w-[440px]",
@@ -107,7 +107,7 @@
                           children: (0, y.jsxs)("div", {
                             className: "flex w-full flex-col gap-3",
                             children: [
-                              (0, y.jsx)(M, {
+                              (0, y.jsx)(L, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cpath id='a' d='M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z'/%3E%3C/defs%3E%3CclipPath id='b'%3E%3Cuse xlink:href='%23a' overflow='visible'/%3E%3C/clipPath%3E%3Cpath clip-path='url(%23b)' fill='%23FBBC05' d='M0 37V11l17 13z'/%3E%3Cpath clip-path='url(%23b)' fill='%23EA4335' d='M0 11l17 13 7-6.1L48 14V0H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%2334A853' d='M0 37l30-23 7.9 1L48 0v48H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%234285F4' d='M48 48L17 24l-4-3 35-10z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
                                   h.m9.logEvent("chatgpt_auth_log_in", null, {
@@ -129,10 +129,10 @@
                                 },
                                 children: (0, y.jsx)(
                                   b.Z,
-                                  O({}, C.continueWithGoogle)
+                                  O({}, E.continueWithGoogle)
                                 ),
                               }),
-                              (0, y.jsx)(M, {
+                              (0, y.jsx)(L, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9h-9z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9h-9z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
                                   h.m9.logEvent("chatgpt_auth_log_in", null, {
@@ -154,7 +154,7 @@
                                 },
                                 children: (0, y.jsx)(
                                   b.Z,
-                                  O({}, C.continueWithMicrosoft)
+                                  O({}, E.continueWithMicrosoft)
                                 ),
                               }),
                               (0, y.jsx)("div", {
@@ -164,7 +164,7 @@
                               (0, y.jsxs)("div", {
                                 className: "grid grid-cols-2 gap-3",
                                 children: [
-                                  (0, y.jsx)(M, {
+                                  (0, y.jsx)(L, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
@@ -187,9 +187,9 @@
                                           }
                                         );
                                     },
-                                    children: (0, y.jsx)(b.Z, O({}, C.logIn)),
+                                    children: (0, y.jsx)(b.Z, O({}, E.logIn)),
                                   }),
-                                  (0, y.jsx)(M, {
+                                  (0, y.jsx)(L, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
@@ -213,7 +213,7 @@
                                           }
                                         );
                                     },
-                                    children: (0, y.jsx)(b.Z, O({}, C.signUp)),
+                                    children: (0, y.jsx)(b.Z, O({}, E.signUp)),
                                   }),
                                 ],
                               }),
@@ -225,7 +225,7 @@
                             className:
                               "grid gap-x-3 gap-y-2 sm:grid-cols-2 sm:gap-y-0",
                             children: [
-                              (0, y.jsx)(M, {
+                              (0, y.jsx)(L, {
                                 primary: !0,
                                 testid: "login-button",
                                 onClick: () => {
@@ -241,9 +241,9 @@
                                       { prompt: "login" }
                                     );
                                 },
-                                children: (0, y.jsx)(b.Z, O({}, C.logIn)),
+                                children: (0, y.jsx)(b.Z, O({}, E.logIn)),
                               }),
-                              (0, y.jsx)(M, {
+                              (0, y.jsx)(L, {
                                 primary: !0,
                                 as: "button",
                                 onClick: () => {
@@ -259,7 +259,7 @@
                                       { prompt: "login", screen_hint: "signup" }
                                     );
                                 },
-                                children: (0, y.jsx)(b.Z, O({}, C.signUp)),
+                                children: (0, y.jsx)(b.Z, O({}, E.signUp)),
                               }),
                             ],
                           }),
@@ -283,7 +283,7 @@
           }),
         });
       }
-      function M(e) {
+      function L(e) {
         let {
           icon: t,
           children: n,
@@ -321,7 +321,7 @@
           ],
         });
       }
-      let C = (0, v.vU)({
+      let E = (0, v.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -352,10 +352,12 @@
           defaultMessage: "Log in with your OpenAI account to continue",
         },
       });
-      var E = n(65455),
-        I = n(88565),
-        P = n(21243);
-      function L(e, t) {
+      var M = n(53029),
+        I = n(65455),
+        C = n(88565),
+        P = n(34777),
+        A = n(21243);
+      function N(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -367,16 +369,16 @@
         }
         return n;
       }
-      function A(e) {
+      function _(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? L(Object(n), !0).forEach(function (t) {
+            ? N(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : L(Object(n)).forEach(function (t) {
+              : N(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -386,12 +388,12 @@
         }
         return e;
       }
-      var N = !0;
-      function _(e) {
+      var S = !0;
+      function T(e) {
         var t;
         let {
             serviceStatus: n,
-            examples: r = [],
+            examples: r,
             auth0Provider: c,
             enableNewAuthFlow: u,
             cfConnectingIp: d,
@@ -408,62 +410,77 @@
           k =
             "sso" in x.query &&
             (null === (t = x.query.sso) || void 0 === t || t),
-          M = k ? x.query.connection : void 0;
-        return ((0, s.useEffect)(() => {
+          L = k ? x.query.connection : void 0;
+        (0, s.useEffect)(() => {
           if (k && !w) {
             var e;
             let t =
-              null === (e = I.bX.getCookie(I.cn.DeviceId)) || void 0 === e
+              null === (e = C.bX.getCookie(C.cn.DeviceId)) || void 0 === e
                 ? void 0
                 : e.toString();
             (0, a.signIn)(
               "openai" === k ? "openai" : "auth0",
               { callbackUrl: v },
-              A(A({}, t ? { device_id: t } : {}), M ? { connection: M } : {})
+              _(_({}, t ? { device_id: t } : {}), L ? { connection: L } : {})
             );
           }
-        }, [v, k, M, w]),
-        (0, s.useEffect)(() => {
-          g.A.logEvent(f.M.loggedOutOpenedAuthLogin, { cfConnectingIp: d });
-        }, [d]),
-        (0, s.useEffect)(() => {
-          "#pricing" === window.location.hash &&
-            I.bX.setCookie(I.cn.ShowPaymentModal, !0, { maxAge: 21600 });
-        }, []),
-        (0, s.useEffect)(() => {
-          if (O.current) return;
-          O.current = !0;
-          let { inv_ws_name: e, inv_email: t } = x.query;
-          (e = Array.isArray(e) ? e[0] : e),
-            (t = Array.isArray(t) ? t[0] : t),
-            e &&
-              t &&
-              E.m.success(
-                j.formatMessage(W.invitedToastMessage, {
-                  workspace_name: e,
-                  email: t,
-                }),
-                { hasCloseButton: !0, duration: 600 }
-              );
-        }, [x.query, j]),
-        w)
+        }, [v, k, L, w]),
+          (0, s.useEffect)(() => {
+            g.A.logEvent(f.M.loggedOutOpenedAuthLogin, { cfConnectingIp: d });
+          }, [d]),
+          (0, s.useEffect)(() => {
+            "#pricing" === window.location.hash &&
+              C.bX.setCookie(C.cn.ShowPaymentModal, !0, { maxAge: 21600 });
+          }, []),
+          (0, s.useEffect)(() => {
+            if (O.current) return;
+            O.current = !0;
+            let { inv_ws_name: e, inv_email: t } = x.query;
+            (e = Array.isArray(e) ? e[0] : e),
+              (t = Array.isArray(t) ? t[0] : t),
+              e &&
+                t &&
+                I.m.success(
+                  j.formatMessage(D.invitedToastMessage, {
+                    workspace_name: e,
+                    email: t,
+                  }),
+                  { hasCloseButton: !0, duration: 600 }
+                );
+          }, [x.query, j]);
+        let E = (function () {
+          let { layer: e } = (0, P.AH)(P.VG.AnonChatLayer),
+            t = e.get(P.yp.ANON_IS_SPANISH_TRANSLATION_ENABLED, !1),
+            { locale: n, setLocale: r } = (0, M.bU)();
+          return (
+            (0, s.useEffect)(() => {
+              !(!t || F(n)) && F(window.navigator.language) && r("es-ES", !1);
+            }, [t, r, n]),
+            F(n) ? "es-ES" : "en-US"
+          );
+        })();
+        return w
           ? (0, y.jsx)(i.Z, {})
           : k
             ? null
             : (0, y.jsxs)(y.Fragment, {
                 children: [
                   (0, y.jsx)(l.Z, {}),
-                  (0, y.jsx)(S, {
-                    auth0Provider: c,
-                    enableNewAuthFlow: u,
-                    examples: r,
-                    nextUrl: v,
-                    isStorageComplianceEnabled: p,
-                  }),
+                  (0, y.jsx)(
+                    W,
+                    {
+                      auth0Provider: c,
+                      enableNewAuthFlow: u,
+                      examples: r[E],
+                      nextUrl: v,
+                      isStorageComplianceEnabled: p,
+                    },
+                    E
+                  ),
                 ],
               });
       }
-      let S = (e) => {
+      let W = (e) => {
         let {
           auth0Provider: t,
           enableNewAuthFlow: n,
@@ -473,7 +490,7 @@
         } = e;
         return (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, y.jsx)(T, {
+            (0, y.jsx)(U, {
               auth0Provider: t,
               enableNewAuthFlow: n,
               nextUrl: i,
@@ -484,7 +501,7 @@
           ],
         });
       };
-      function T(e) {
+      function U(e) {
         let {
             auth0Provider: t,
             enableNewAuthFlow: n,
@@ -492,7 +509,7 @@
             examples: i = [],
             isStorageComplianceEnabled: l,
           } = e,
-          { resolvedTheme: a } = (0, P.F)(),
+          { resolvedTheme: a } = (0, A.F)(),
           o = "dark" === a,
           u = (0, s.useRef)(null);
         return (
@@ -523,7 +540,10 @@
           })
         );
       }
-      let W = (0, v.vU)({
+      function F(e) {
+        return "es" === e || e.startsWith("es-");
+      }
+      let D = (0, v.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -732,7 +752,7 @@
           { 0: n, 1: r } = (0, s.useState)({
             promptIndex: 0,
             answerIndex: 0,
-            tokenStreamIndexes: Array(t.length).fill(0),
+            tokenStreamIndexList: Array.from({ length: t.length }, () => 0),
           }),
           i = (0, s.useRef)(null),
           l = (0, s.useRef)(n),
@@ -744,44 +764,51 @@
             let {
                 promptIndex: e,
                 answerIndex: n,
-                tokenStreamIndexes: o,
+                tokenStreamIndexList: o,
               } = l.current,
               s = t[e].answerTokens[n],
               c = o[e] + 1,
               u = 90;
-            if (c === s.length)
-              (l.current = d(
-                d({}, l.current),
-                {},
-                { tokenStreamIndexes: d(d({}, o), {}, { [e]: c }) }
-              )),
-                (u = 2500);
-            else if (c > s.length) {
-              let r = n + 1;
-              if (r >= t[e].answerTokens.length) {
-                let n = (e + 1) % t.length;
-                (l.current = {
-                  promptIndex: n,
-                  answerIndex: 0,
-                  tokenStreamIndexes: d(d({}, o), {}, { [n]: 0 }),
-                }),
-                  (u = 900);
-              } else
+            if (c === s.length) {
+              let t = [...o];
+              (t[e] = c),
                 (l.current = d(
                   d({}, l.current),
                   {},
-                  {
-                    answerIndex: r,
-                    tokenStreamIndexes: d(d({}, o), {}, { [e]: 0 }),
-                  }
+                  { tokenStreamIndexList: t }
                 )),
+                (u = 2500);
+            } else if (c > s.length) {
+              let r = n + 1;
+              if (r >= t[e].answerTokens.length) {
+                let n = (e + 1) % t.length,
+                  r = [...o];
+                (r[n] = 0),
+                  (l.current = {
+                    promptIndex: n,
+                    answerIndex: 0,
+                    tokenStreamIndexList: r,
+                  }),
+                  (u = 900);
+              } else {
+                let t = [...o];
+                (t[e] = 0),
+                  (l.current = d(
+                    d({}, l.current),
+                    {},
+                    { answerIndex: r, tokenStreamIndexList: t }
+                  )),
                   (u = 500);
-            } else
-              l.current = d(
-                d({}, l.current),
-                {},
-                { tokenStreamIndexes: d(d({}, o), {}, { [e]: c }) }
-              );
+              }
+            } else {
+              let t = [...o];
+              (t[e] = c),
+                (l.current = d(
+                  d({}, l.current),
+                  {},
+                  { tokenStreamIndexList: t }
+                ));
+            }
             r(l.current), (i.current = setTimeout(a, u));
           };
         return (
@@ -836,7 +863,9 @@
                                         hidden:
                                           t === n.answerIndex &&
                                           r >=
-                                            n.tokenStreamIndexes[n.promptIndex],
+                                            n.tokenStreamIndexList[
+                                              n.promptIndex
+                                            ],
                                         "opacity-0": t !== n.answerIndex,
                                       }
                                     ),
@@ -852,12 +881,12 @@
                                     "scale-0 transition-transform duration-300":
                                       l ||
                                       t !== n.answerIndex ||
-                                      n.tokenStreamIndexes[n.promptIndex] ===
+                                      n.tokenStreamIndexList[n.promptIndex] ===
                                         e.length,
                                   }
                                 ),
                                 children: [
-                                  n.tokenStreamIndexes[n.promptIndex] > 0
+                                  n.tokenStreamIndexList[n.promptIndex] > 0
                                     ? (0, c.jsx)("span", { children: " " })
                                     : null,
                                   "●",
@@ -928,4 +957,4 @@
     },
   },
 ]);
-//# sourceMappingURL=101-7a366fc24a0fb662.js.map
+//# sourceMappingURL=101-552b881deb73b8b0.js.map

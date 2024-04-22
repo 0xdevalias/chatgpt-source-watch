@@ -18,13 +18,13 @@
         o = n(42005),
         s = n(19892),
         c = n(13038),
-        u = n(45772),
+        u = n(99784),
         l = n(28816),
         d = n(61236),
         f = n(82473),
-        h = n(44675);
-      let p = "".concat(h.env.INTERNAL_API_URL, "/api");
-      async function _(e) {
+        h = n(59373);
+      let p = "".concat(h.v, "/api");
+      async function y(e) {
         let { ids: t } = e,
           n = [];
         for (let e of t) n.push(["ids", e]);
@@ -36,9 +36,9 @@
         if (200 === i.status) return i.json();
         throw Error("Failed to get plugins by id: " + i.status);
       }
-      var y = n(70079),
-        v = n(35250);
-      function O(e, t) {
+      var v = n(70079),
+        O = n(35250);
+      function _(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? O(Object(n), !0).forEach(function (t) {
+            ? _(Object(n), !0).forEach(function (t) {
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : O(Object(n)).forEach(function (t) {
+              : _(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -76,38 +76,38 @@
             queryKey: ["shared-conversation/".concat(t)],
             queryFn: () => c.Z.getAuthedSharedConversation(t),
           }),
-          { 0: h } = (0, y.useState)(() => (0, u.OX)()),
-          { 0: p, 1: O } = (0, y.useState)(!1),
+          { 0: h } = (0, v.useState)(() => (0, u.OX)()),
+          { 0: p, 1: _ } = (0, v.useState)(!1),
           b = (0, f.NL)();
         return (
-          (0, y.useEffect)(() => {
+          (0, v.useEffect)(() => {
             r && (window.location.href = (0, s.M5)(s.LT.SHARE_NOT_FOUND));
           }, [r]),
-          (0, y.useEffect)(() => {
+          (0, v.useEffect)(() => {
             (async function () {
               if (n && h) {
                 var e;
                 let r = null !== (e = n.plugin_ids) && void 0 !== e ? e : [];
                 if (r.length > 0) {
-                  let e = await _({ ids: r });
+                  let e = await y({ ids: r });
                   b.setQueryData(
                     e.items.map((e) => e.id),
                     e
                   );
                 }
-                u.tQ.initThreadFromServerData(h, n, !0, t), O(!0);
+                u.tQ.initThreadFromServerData(h, n, !0, t), _(!0);
               }
             })();
           }, [n, t, h, b]),
           p
             ? e.continueMode
-              ? (0, v.jsx)(
+              ? (0, O.jsx)(
                   i.ZP,
                   g(g({}, e.chatPageProps), {}, { clientThreadId: h })
                 )
-              : (0, v.jsx)(l.gB.Provider, {
+              : (0, O.jsx)(l.gB.Provider, {
                   value: { serverSharedThreadId: t },
-                  children: (0, v.jsx)(a.Z, {
+                  children: (0, O.jsx)(a.Z, {
                     clientThreadId: h,
                     setClientThreadId: () => {},
                     initiallyHighlightedMessageId:
@@ -116,9 +116,9 @@
                       null == n ? void 0 : n.continue_conversation_url,
                   }),
                 })
-            : (0, v.jsx)("div", {
+            : (0, O.jsx)("div", {
                 className: "flex h-full items-center justify-center",
-                children: (0, v.jsx)(o.Z, {
+                children: (0, O.jsx)(o.Z, {
                   className: "text-token-text-tertiary",
                 }),
               })
@@ -141,4 +141,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...shareParams]]-919e13140a13e17b.js.map
+//# sourceMappingURL=[[...shareParams]]-9d4ee5baaeb92481.js.map

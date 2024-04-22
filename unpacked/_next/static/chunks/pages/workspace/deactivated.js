@@ -6,29 +6,34 @@
       s.r(a),
         s.d(a, {
           default: function () {
-            return M;
+            return Z;
           },
         });
       var t = s(39827),
         c = s(10388),
-        r = s(33925),
-        l = s(28138),
-        i = s(13038),
-        o = s(24668),
-        n = s(78e3),
-        d = s(4635),
-        u = s(61888),
-        p = s(38540),
-        f = s.n(p),
-        h = s(70079),
-        v = s(70671),
-        j = s(32004),
-        k = s(94968),
-        m = s(65375),
-        x = s(16244),
-        b = s(60645),
-        w = s(35250);
-      function g(e, a) {
+        i = s(33925),
+        r = s(65455),
+        o = s(28138),
+        l = s(13038),
+        n = s(24668),
+        d = s(18405),
+        u = s(78e3),
+        p = s(4635),
+        f = s(61888),
+        h = s(38540),
+        v = s.n(h),
+        m = s(12366),
+        b = s(70079),
+        x = s(70671),
+        k = s(32004),
+        j = s(94968),
+        w = s(65375),
+        g = s(16244),
+        M = s(60645),
+        N = s(33514),
+        W = s(84395),
+        y = s(35250);
+      function O(e, a) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var t = Object.getOwnPropertySymbols(e);
@@ -40,16 +45,16 @@
         }
         return s;
       }
-      function W(e) {
+      function P(e) {
         for (var a = 1; a < arguments.length; a++) {
           var s = null != arguments[a] ? arguments[a] : {};
           a % 2
-            ? g(Object(s), !0).forEach(function (a) {
+            ? O(Object(s), !0).forEach(function (a) {
                 (0, t.Z)(e, a, s[a]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
-              : g(Object(s)).forEach(function (a) {
+              : O(Object(s)).forEach(function (a) {
                   Object.defineProperty(
                     e,
                     a,
@@ -59,140 +64,214 @@
         }
         return e;
       }
-      function y() {
-        let e = (0, n.aF)(),
-          a = (0, o.t)(),
-          { data: s } = (0, o.rk)(),
-          { 0: t, 1: p } = (0, h.useState)(!1),
-          k = null == s ? void 0 : s.accountItems,
-          g = null == a ? void 0 : a.id,
-          y = null == k ? void 0 : k.find((e) => e.id === g),
-          P = null == k ? void 0 : k.filter((e) => !e.isDeactivated()),
-          M = (0, v.Z)();
-        return null != a && y && P
-          ? (0, w.jsx)(x.Z, {
-              type: "success",
-              onClose: u.noop,
-              isOpen: null != a || null != s,
-              className: "",
-              title: (0, w.jsx)("span", {
-                className: "text-lg",
-                children: (0, w.jsx)(j.Z, W({}, N.workspaceDeactivated)),
+      function S() {
+        var e;
+        let a = (0, u.aF)(),
+          s = (0, n.t)(),
+          { data: t } = (0, n.rk)(),
+          { 0: h, 1: j } = (0, b.useState)(!1),
+          O = (0, m.useRouter)(),
+          S = null == t ? void 0 : t.accountItems,
+          Z = (0, W.p5)(
+            null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : ""
+          ),
+          _ = null == s ? void 0 : s.id,
+          C = null == S ? void 0 : S.find((e) => e.id === _),
+          B =
+            (null == s ? void 0 : s.isOwnerOfAccount()) &&
+            s.isTeam() &&
+            !s.hasPaidSubscription(),
+          E =
+            (null == s ? void 0 : s.isOwnerOfAccount()) &&
+            s.isTeam() &&
+            s.hasPaidSubscription(),
+          T = null == S ? void 0 : S.filter((e) => !e.isDeactivated()),
+          A = (0, x.Z)(),
+          F = (0, b.useCallback)(() => {
+            j(!0),
+              d.vm.setPurchaseWorkspaceData({
+                minimumSeats: Math.max(Z, N.Y6),
+                existingAccount: C,
               }),
-              children: (0, w.jsxs)("div", {
+              j(!1);
+          }, [Z, C]),
+          U = async () => {
+            j(!0);
+            try {
+              let e = await l.Z.fetchCustomerPortalUrl();
+              O.push(e.url), j(!1);
+            } catch (e) {
+              j(!1),
+                r.m.warning(A.formatMessage(D.unableToOpenStripeDashboard), {
+                  hasCloseButton: !0,
+                });
+            }
+          };
+        return null != s && C && T
+          ? (0, y.jsx)(g.Z, {
+              type: "success",
+              onClose: f.noop,
+              isOpen: null != s || null != t,
+              title: (0, y.jsx)("span", {
+                className: "text-lg",
+                children: (0, y.jsx)(k.Z, P({}, D.workspaceDeactivated)),
+              }),
+              children: (0, y.jsxs)("div", {
                 className: "flex flex-col items-center justify-center gap-4",
                 children: [
-                  (0, w.jsxs)("div", {
+                  (0, y.jsxs)("div", {
                     className: "flex w-full items-center gap-4",
                     children: [
-                      (0, w.jsx)(m.B0, {
-                        src: y.data.profilePictureUrl,
+                      (0, y.jsx)(w.B0, {
+                        src: C.data.profilePictureUrl,
                         size: "large",
                       }),
-                      (0, w.jsx)("div", {
+                      (0, y.jsx)("div", {
                         className: "font-medium",
-                        children: y.data.name,
+                        children: C.data.name,
                       }),
                     ],
                   }),
-                  (0, w.jsxs)("div", {
+                  (0, y.jsxs)("div", {
                     children: [
-                      (0, w.jsx)("h3", {
+                      (0, y.jsx)("h3", {
                         className: "mb-2 text-base font-bold",
-                        children: (0, w.jsx)(
-                          j.Z,
-                          W({}, N.workspaceDeactivated)
+                        children: (0, y.jsx)(
+                          k.Z,
+                          P({}, D.workspaceDeactivated)
                         ),
                       }),
-                      (0, w.jsxs)("ul", {
+                      (0, y.jsxs)("ul", {
                         className: "list-disc pl-5",
                         children: [
-                          (0, w.jsx)("li", {
+                          (0, y.jsx)("li", {
                             className: "mb-1",
-                            children: (0, w.jsx)(
-                              j.Z,
-                              W({}, N.chatHistoryUnavailable)
+                            children: (0, y.jsx)(
+                              k.Z,
+                              P({}, D.chatHistoryUnavailable)
                             ),
                           }),
-                          (0, w.jsx)("li", {
-                            children: (0, w.jsx)(
-                              j.Z,
-                              W({}, N.otherWorkspacesAvailable)
+                          (0, y.jsx)("li", {
+                            children: (0, y.jsx)(
+                              k.Z,
+                              P({}, D.otherWorkspacesAvailable)
                             ),
                           }),
                         ],
                       }),
                     ],
                   }),
-                  (0, w.jsx)(b.b, {}),
-                  (0, w.jsx)("div", {
+                  B &&
+                    (0, y.jsxs)("div", {
+                      className: "flex w-full flex-col",
+                      children: [
+                        (0, y.jsx)("p", {
+                          children: (0, y.jsx)(
+                            k.Z,
+                            P({}, D.purchaseNewSubscription)
+                          ),
+                        }),
+                        (0, y.jsx)(i.mH, {
+                          className: "m-auto mt-2 w-full",
+                          loading: h,
+                          onClick: F,
+                          children: (0, y.jsx)(
+                            k.Z,
+                            P({}, D.purchaseNewSubscriptionButton)
+                          ),
+                        }),
+                      ],
+                    }),
+                  E &&
+                    (0, y.jsxs)("div", {
+                      className: "flex w-full flex-col",
+                      children: [
+                        (0, y.jsx)("p", {
+                          children: (0, y.jsx)(
+                            k.Z,
+                            P({}, D.resolveOutstandingInvoice)
+                          ),
+                        }),
+                        (0, y.jsx)(i.mH, {
+                          className: "m-auto mt-2 w-full",
+                          loading: h,
+                          onClick: U,
+                          children: (0, y.jsx)(
+                            k.Z,
+                            P({}, D.manageSubscriptionButton)
+                          ),
+                        }),
+                      ],
+                    }),
+                  (0, y.jsx)(M.b, {}),
+                  (0, y.jsx)("div", {
                     className: "w-full justify-center",
                     children:
-                      P.length > 0
-                        ? (0, w.jsxs)(w.Fragment, {
+                      T.length > 0
+                        ? (0, y.jsxs)(y.Fragment, {
                             children: [
-                              (0, w.jsx)("h3", {
+                              (0, y.jsx)("h3", {
                                 className: "mb-2 text-base font-bold",
-                                children: (0, w.jsx)(
-                                  j.Z,
-                                  W({}, N.selectWorkspace)
+                                children: (0, y.jsx)(
+                                  k.Z,
+                                  P({}, D.selectWorkspace)
                                 ),
                               }),
-                              (0, w.jsx)(c.b, { data: P }),
+                              (0, y.jsx)(c.b, { data: T }),
                             ],
                           })
-                        : (0, w.jsxs)("div", {
+                        : (0, y.jsxs)("div", {
                             className: "flex flex-col gap-6",
                             children: [
-                              (0, w.jsxs)("div", {
+                              (0, y.jsxs)("div", {
                                 className: "flex flex-col gap-2",
                                 children: [
-                                  (0, w.jsx)("h3", {
+                                  (0, y.jsx)("h3", {
                                     className: "text-base font-bold",
-                                    children: (0, w.jsx)(
-                                      j.Z,
-                                      W({}, N.createPersonalWorkspace)
+                                    children: (0, y.jsx)(
+                                      k.Z,
+                                      P({}, D.createPersonalWorkspace)
                                     ),
                                   }),
-                                  (0, w.jsx)(
-                                    j.Z,
-                                    W({}, N.deactivatedWorkspaceReason)
+                                  (0, y.jsx)(
+                                    k.Z,
+                                    P({}, D.deactivatedWorkspaceReason)
                                   ),
                                 ],
                               }),
-                              (0, w.jsxs)("div", {
+                              (0, y.jsxs)("div", {
                                 className: "flex w-full items-center gap-4",
                                 children: [
-                                  e &&
-                                    e.picture &&
-                                    (0, w.jsx)(f(), {
+                                  a &&
+                                    a.picture &&
+                                    (0, y.jsx)(v(), {
                                       alt: "Profile",
-                                      src: e.picture,
-                                      width: m.EF.medium,
-                                      height: m.EF.medium,
+                                      src: a.picture,
+                                      width: w.EF.medium,
+                                      height: w.EF.medium,
                                       className:
                                         "flex items-center justify-center rounded-sm",
                                     }),
-                                  (0, w.jsx)("span", {
+                                  (0, y.jsx)("span", {
                                     className: "font-medium",
                                     children:
-                                      e &&
-                                      (0, w.jsx)("span", { children: e.name }),
+                                      a &&
+                                      (0, y.jsx)("span", { children: a.name }),
                                   }),
                                 ],
                               }),
-                              (0, w.jsx)("div", {
+                              (0, y.jsx)("div", {
                                 className: "ml-auto",
-                                children: (0, w.jsx)(r.mH, {
-                                  title: M.formatMessage(
-                                    N.createPersonalWorkspaceButton
+                                children: (0, y.jsx)(i.mH, {
+                                  title: A.formatMessage(
+                                    D.createPersonalWorkspaceButton
                                   ),
-                                  loading: t,
+                                  loading: h,
                                   onClick: async () => {
-                                    p(!0),
-                                      await i.Z.upsertPersonalWorkspace(),
-                                      (0, o.eV)(l.b),
-                                      (0, d.M)();
+                                    j(!0),
+                                      await l.Z.upsertPersonalWorkspace(),
+                                      (0, n.eV)(o.b),
+                                      (0, p.M)();
                                   },
                                   color: "primary",
                                   className: "ml-4",
@@ -204,9 +283,9 @@
                 ],
               }),
             })
-          : (0, w.jsx)(w.Fragment, {});
+          : (0, y.jsx)(y.Fragment, {});
       }
-      let N = (0, k.vU)({
+      let D = (0, j.vU)({
         workspaceDeactivated: {
           id: "deactivatedWorkspaceModal.workspaceDeactivated",
           defaultMessage: "Your workspace has been deactivated",
@@ -246,20 +325,41 @@
           id: "deactivatedWorkspaceModal.createPersonalWorkspaceButton",
           defaultMessage: "Create a personal workspace",
         },
+        unableToOpenStripeDashboard: {
+          id: "deactivatedWorkspaceModal.unableToOpenStripeDashboard",
+          defaultMessage: "Unable to open Stripe dashboard",
+        },
+        purchaseNewSubscription: {
+          id: "deactivatedWorkspaceModal.purchaseNewSubscription",
+          defaultMessage:
+            "You can reactivate your workspace by purchasing a new subscription.",
+        },
+        purchaseNewSubscriptionButton: {
+          id: "deactivatedWorkspaceModal.purchaseNewSubscriptionButton",
+          defaultMessage: "Purchase subscription",
+        },
+        resolveOutstandingInvoice: {
+          id: "deactivatedWorkspaceModal.resolveOutstandingInvoice",
+          defaultMessage:
+            "You can reactivate your workspace by resolving an outstanding invoice on your subscription.",
+        },
+        manageSubscriptionButton: {
+          id: "deactivatedWorkspaceModal.manageSubscriptionButton",
+          defaultMessage: "Manage subscription",
+        },
       });
-      var P = s(12366);
-      function M() {
-        let e = (0, n.ec)(n.F_.workspaces),
-          a = (0, o.t)(),
-          s = (0, n.ec)(n.F_.workspaceId),
+      function Z() {
+        let e = (0, u.ec)(u.F_.workspaces),
+          a = (0, n.t)(),
+          s = (0, u.ec)(u.F_.workspaceId),
           t = e.find((e) => e.id === s),
-          c = (0, P.useRouter)();
-        return ((0, h.useEffect)(() => {
+          c = (0, m.useRouter)();
+        return ((0, b.useEffect)(() => {
           null == a || !a.data || (t && t.deactivated) || c.push("/");
         }, [a, t, c]),
         null == a || !a.data || (t && t.deactivated))
-          ? (0, w.jsx)(y, {})
-          : (0, w.jsx)("div", {});
+          ? (0, y.jsx)(S, {})
+          : (0, y.jsx)("div", {});
       }
     },
     64788: function (e, a, s) {
@@ -278,4 +378,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=deactivated-fdc88467664bc4ad.js.map
+//# sourceMappingURL=deactivated-0b4681d0558bdbf5.js.map
