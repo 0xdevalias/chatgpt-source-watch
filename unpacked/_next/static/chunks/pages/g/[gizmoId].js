@@ -6,13 +6,13 @@
       r.r(t),
         r.d(t, {
           GizmoChatWithRedirect: function () {
-            return P;
+            return y;
           },
           __N_SSP: function () {
-            return _;
+            return O;
           },
           default: function () {
-            return y;
+            return _;
           },
         });
       var n = r(18450),
@@ -25,13 +25,12 @@
         a = r(52671),
         d = r(33471),
         f = r(47712),
-        h = r(42607),
-        g = r(41409),
-        j = r.n(g),
-        m = r(70079),
-        p = r(84692),
-        x = r(35250);
-      function b(e, t) {
+        h = r(41409),
+        g = r.n(h),
+        j = r(70079),
+        m = r(84692),
+        p = r(35250);
+      function x(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -43,16 +42,16 @@
         }
         return r;
       }
-      function O(e) {
+      function b(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? b(Object(r), !0).forEach(function (t) {
+            ? x(Object(r), !0).forEach(function (t) {
                 (0, n.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : b(Object(r)).forEach(function (t) {
+              : x(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -62,48 +61,46 @@
         }
         return e;
       }
-      var _ = !0;
-      function y(e) {
-        let t = (0, g.useRouter)().query.gizmoId;
+      var O = !0;
+      function _(e) {
+        let t = (0, h.useRouter)().query.gizmoId;
         switch (e.kind) {
           case "anon_gizmo":
-            return (0, x.jsx)(o.X, { gizmo: e.gizmo }, t);
+            return (0, p.jsx)(o.X, { gizmo: e.gizmo }, t);
           case "chat_page":
-            return (0, m.createElement)(
-              P,
-              O(O({}, e), {}, { key: t, gizmoId: t })
+            return (0, j.createElement)(
+              y,
+              b(b({}, e), {}, { key: t, gizmoId: t })
             );
-          default:
-            (0, h.Z)(e);
         }
       }
-      function P(e) {
+      function y(e) {
         let { data: t, error: r } = (0, c.b9)(e.gizmoId),
           n = (0, f.t)(),
           s = null == n ? void 0 : n.canInteractWithGizmos();
-        return ((0, m.useEffect)(() => {
-          null == t && null != r && j().push((0, d.M5)(d.LT.GIZMO_NOT_FOUND));
+        return ((0, j.useEffect)(() => {
+          null == t && null != r && g().push((0, d.M5)(d.LT.GIZMO_NOT_FOUND));
         }, [t, r]),
         null != r && s)
-          ? (0, x.jsx)(z, {})
+          ? (0, p.jsx)(P, {})
           : !1 === s
-            ? (0, x.jsx)(v, { gizmo: t })
-            : (0, m.createElement)(i.ZP, O(O({}, e), {}, { key: e.gizmoId }));
+            ? (0, p.jsx)(z, { gizmo: t })
+            : (0, j.createElement)(i.ZP, b(b({}, e), {}, { key: e.gizmoId }));
       }
-      function z() {
-        return (0, x.jsx)(l.Z, {
-          children: (0, x.jsxs)("div", {
+      function P() {
+        return (0, p.jsx)(l.Z, {
+          children: (0, p.jsxs)("div", {
             className:
               "flex h-full w-full flex-col items-center justify-center",
             children: [
-              (0, x.jsx)("div", {
+              (0, p.jsx)("div", {
                 className: "font-bold",
-                children: (0, x.jsx)(p.Z, {
+                children: (0, p.jsx)(m.Z, {
                   id: "gizmo.loadError",
                   defaultMessage: "We're having trouble loading this GPT.",
                 }),
               }),
-              (0, x.jsx)(p.Z, {
+              (0, p.jsx)(m.Z, {
                 id: "gizmo.loadErrorRefresh",
                 defaultMessage: "Please refresh the page, or try again later",
               }),
@@ -111,24 +108,24 @@
           }),
         });
       }
-      function v(e) {
+      function z(e) {
         let { gizmo: t } = e;
-        return (0, x.jsx)(l.Z, {
-          children: (0, x.jsx)(u.r, {
+        return (0, p.jsx)(l.Z, {
+          children: (0, p.jsx)(u.r, {
             gizmo: t,
-            children: (0, x.jsxs)("div", {
+            children: (0, p.jsxs)("div", {
               className: "mt-7 flex flex-col gap-4",
               children: [
-                (0, x.jsx)(s.p, {
+                (0, p.jsx)(s.p, {
                   onClick: () => (0, a.MG)(),
-                  children: (0, x.jsx)(p.Z, {
+                  children: (0, p.jsx)(m.Z, {
                     id: "gizmo.upsell",
                     defaultMessage: "Sign up to chat",
                   }),
                 }),
-                (0, x.jsx)("div", {
+                (0, p.jsx)("div", {
                   className: "text-sm text-token-text-tertiary",
-                  children: (0, x.jsx)(p.Z, {
+                  children: (0, p.jsx)(m.Z, {
                     id: "gizmo.upsellSubtext",
                     defaultMessage: "Requires ChatGPT Plus",
                   }),
@@ -187,4 +184,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[gizmoId]-0f0091e602c054c0.js.map
+//# sourceMappingURL=[gizmoId]-9c2e3068a8f33586.js.map

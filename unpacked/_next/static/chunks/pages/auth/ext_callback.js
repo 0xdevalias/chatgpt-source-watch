@@ -5,6 +5,9 @@
       "use strict";
       u.r(t),
         u.d(t, {
+          __N_SSP: function () {
+            return f;
+          },
           default: function () {
             return o;
           },
@@ -12,11 +15,12 @@
       var e = u(69096),
         r = u(41409),
         c = u(70079),
-        f = u(35250);
+        _ = u(35250),
+        f = !0;
       function o() {
-        return (0, f.jsx)(s, {});
+        return (0, _.jsx)(i, {});
       }
-      function s() {
+      function i() {
         let { next: n } = (0, r.useRouter)().query,
           t =
             "/auth/ext_callback_refresh?next=" +
@@ -47,4 +51,4 @@
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=ext_callback-347a13100b2f65a1.js.map
+//# sourceMappingURL=ext_callback-66b8f6ab006b4e97.js.map
