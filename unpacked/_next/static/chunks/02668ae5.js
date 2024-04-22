@@ -4,6 +4,12 @@
   {
     56637: function (e, t, n) {
       n.d(t, {
+        EH: function () {
+          return tg;
+        },
+        p: function () {
+          return tf;
+        },
         tk: function () {
           return tI;
         },
@@ -95,8 +101,8 @@
         x = !!M,
         k = M ? +M[1] : 0,
         T = !O && !!y && /Apple Computer/.test(y.vendor),
-        P = T && (/Mobile\/\w+/.test(v) || (!!y && y.maxTouchPoints > 2)),
-        E = P || (!!y && /Mac/.test(y.platform)),
+        E = T && (/Mobile\/\w+/.test(v) || (!!y && y.maxTouchPoints > 2)),
+        P = E || (!!y && /Mac/.test(y.platform)),
         A = !!y && /Win/.test(y.platform),
         V = /Android \d/.test(v),
         R = !!b && "webkitFontSmoothing" in b.documentElement.style,
@@ -1017,7 +1023,7 @@
                 for (; i; ) (i = ep(i)), (s = !0);
                 s && o.trackWrites == t && (o.trackWrites = null);
               })(this.contentDOM, this.children, e),
-              P &&
+              E &&
                 (function (e) {
                   if ("UL" == e.nodeName || "OL" == e.nodeName) {
                     let t = e.style.cssText;
@@ -1821,7 +1827,7 @@
           return !1;
         }
       }
-      function eP(e, t) {
+      function eE(e, t) {
         let { $anchor: n, $head: i } = e.selection,
           s = t > 0 ? n.max(i) : n.min(i),
           r = s.parent.inlineContent
@@ -1831,7 +1837,7 @@
             : s;
         return r && o.Y1.findFrom(r, t);
       }
-      function eE(e, t) {
+      function eP(e, t) {
         return e.dispatch(e.state.tr.setSelection(t).scrollIntoView()), !0;
       }
       function eA(e, t, n) {
@@ -1842,14 +1848,14 @@
               s = n.textOffset ? null : t < 0 ? n.nodeBefore : n.nodeAfter;
             if (!s || s.isText || !s.isLeaf) return !1;
             let r = e.state.doc.resolve(n.pos + s.nodeSize * (t < 0 ? -1 : 1));
-            return eE(e, new o.Bs(i.$anchor, r));
+            return eP(e, new o.Bs(i.$anchor, r));
           }
           if (!i.empty) return !1;
           if (e.endOfTextblock(t > 0 ? "forward" : "backward")) {
-            let n = eP(e.state, t);
-            return !!n && n instanceof o.qv && eE(e, n);
+            let n = eE(e.state, t);
+            return !!n && n instanceof o.qv && eP(e, n);
           }
-          if (!(E && n.indexOf("m") > -1)) {
+          if (!(P && n.indexOf("m") > -1)) {
             let n = i.$head,
               s = n.textOffset ? null : t < 0 ? n.nodeBefore : n.nodeAfter,
               r;
@@ -1858,14 +1864,14 @@
             return (
               !!(s.isAtom || ((r = e.docView.descAt(l)) && !r.contentDOM)) &&
               (o.qv.isSelectable(s)
-                ? eE(
+                ? eP(
                     e,
                     new o.qv(
                       t < 0 ? e.state.doc.resolve(n.pos - s.nodeSize) : n
                     )
                   )
                 : !!R &&
-                  eE(
+                  eP(
                     e,
                     new o.Bs(e.state.doc.resolve(t < 0 ? l : l + s.nodeSize))
                   ))
@@ -1873,9 +1879,9 @@
           }
         } else {
           if (i instanceof o.qv && i.node.isInline)
-            return eE(e, new o.Bs(t > 0 ? i.$to : i.$from));
-          let n = eP(e.state, t);
-          return !!n && eE(e, n);
+            return eP(e, new o.Bs(t > 0 ? i.$to : i.$from));
+          let n = eE(e.state, t);
+          return !!n && eP(e, n);
         }
       }
       function eV(e) {
@@ -2016,7 +2022,7 @@
         if (
           (i instanceof o.Bs && !i.empty) ||
           n.indexOf("s") > -1 ||
-          (E && n.indexOf("m") > -1)
+          (P && n.indexOf("m") > -1)
         )
           return !1;
         let { $from: s, $to: r } = i;
@@ -2024,13 +2030,13 @@
           !s.parent.inlineContent ||
           e.endOfTextblock(t < 0 ? "up" : "down")
         ) {
-          let n = eP(e.state, t);
-          if (n && n instanceof o.qv) return eE(e, n);
+          let n = eE(e.state, t);
+          if (n && n instanceof o.qv) return eP(e, n);
         }
         if (!s.parent.inlineContent) {
           let n = t < 0 ? s : r,
             l = i instanceof o.C1 ? o.Y1.near(n, t) : o.Y1.findFrom(n, t);
-          return !!l && eE(e, l);
+          return !!l && eP(e, l);
         }
         return !1;
       }
@@ -2453,7 +2459,7 @@
         ) {
           if (
             (229 != t.keyCode && e.domObserver.forceFlush(),
-            !P || 13 != t.keyCode || t.ctrlKey || t.altKey || t.metaKey)
+            !E || 13 != t.keyCode || t.ctrlKey || t.altKey || t.metaKey)
           )
             e.someProp("handleKeyDown", (n) => n(e, t)) ||
             (function (e, t) {
@@ -2466,12 +2472,12 @@
                   t.altKey && (n += "a"),
                   t.shiftKey && (n += "s"),
                   n);
-              if (8 == o || (E && 72 == o && "c" == i))
+              if (8 == o || (P && 72 == o && "c" == i))
                 return eF(e, -1) || eB(e, -1);
-              if ((46 == o && !t.shiftKey) || (E && 68 == o && "c" == i))
+              if ((46 == o && !t.shiftKey) || (P && 68 == o && "c" == i))
                 return eF(e, 1) || eB(e, 1);
               if (13 == o || 27 == o) return !0;
-              if (37 == o || (E && 66 == o && "c" == i)) {
+              if (37 == o || (P && 66 == o && "c" == i)) {
                 let t =
                   37 == o
                     ? "ltr" == eI(e, e.state.selection.from)
@@ -2480,7 +2486,7 @@
                     : -1;
                 return eA(e, t, i) || eB(e, t);
               }
-              if (39 == o || (E && 70 == o && "c" == i)) {
+              if (39 == o || (P && 70 == o && "c" == i)) {
                 let t =
                   39 == o
                     ? "ltr" == eI(e, e.state.selection.from)
@@ -2489,9 +2495,9 @@
                     : 1;
                 return eA(e, t, i) || eB(e, t);
               }
-              if (38 == o || (E && 80 == o && "c" == i))
+              if (38 == o || (P && 80 == o && "c" == i))
                 return eL(e, -1, i) || eB(e, -1);
-              if (40 == o || (E && 78 == o && "c" == i))
+              if (40 == o || (P && 78 == o && "c" == i))
                 return (
                   (function (e) {
                     if (!T || e.state.selection.$head.parentOffset > 0)
@@ -2514,7 +2520,7 @@
                   eB(e, 1)
                 );
               else if (
-                i == (E ? "m" : "c") &&
+                i == (P ? "m" : "c") &&
                 (66 == o || 73 == o || 89 == o || 90 == o)
               )
                 return !0;
@@ -2541,7 +2547,7 @@
             e9(e, t) ||
             !t.charCode ||
             (t.ctrlKey && !t.altKey) ||
-            (E && t.metaKey)
+            (P && t.metaKey)
           )
             return;
           if (e.someProp("handleKeyPress", (n) => n(e, t))) {
@@ -2559,7 +2565,7 @@
               t.preventDefault();
           }
         });
-      let e7 = E ? "metaKey" : "ctrlKey";
+      let e7 = P ? "metaKey" : "ctrlKey";
       eJ.mousedown = (e, t) => {
         var n;
         let i, s;
@@ -2891,7 +2897,7 @@
             e.input.compositionID++,
             tt(e, 20));
         });
-      let ti = (O && S < 15) || (P && B < 604);
+      let ti = (O && S < 15) || (E && B < 604);
       function ts(e, t, n, o, s) {
         let r = e$(e, t, n, o, e.state.selection.$from);
         if (e.someProp("handlePaste", (t) => t(e, s, r || i.p2.empty)))
@@ -2988,7 +2994,7 @@
           (this.slice = e), (this.move = t), (this.node = n);
         }
       }
-      let td = E ? "altKey" : "ctrlKey";
+      let td = P ? "altKey" : "ctrlKey";
       for (let e in ((eJ.dragstart = (e, t) => {
         let n;
         let i = e.input.mouseDown;
@@ -3675,7 +3681,7 @@
           );
         }
       }
-      class tP {
+      class tE {
         constructor(e, t) {
           (this.view = e),
             (this.handleDOMChange = t),
@@ -3857,8 +3863,8 @@
             : (s > -1 || i) &&
               (s > -1 &&
                 (e.docView.markDirty(s, r),
-                tE.has(e) ||
-                  (tE.set(e, null),
+                tP.has(e) ||
+                  (tP.set(e, null),
                   -1 ===
                     ["normal", "nowrap", "pre-line"].indexOf(
                       getComputedStyle(e.dom).whiteSpace
@@ -3925,7 +3931,7 @@
               };
         }
       }
-      let tE = new WeakMap(),
+      let tP = new WeakMap(),
         tA = !1;
       function tV(e) {
         let t = e.pmViewDesc;
@@ -4004,7 +4010,7 @@
               this.dom,
               this
             )),
-            (this.domObserver = new tP(this, (e, t, n, s) =>
+            (this.domObserver = new tE(this, (e, t, n, s) =>
               (function (e, t, n, s, r) {
                 let l,
                   d,
@@ -4133,7 +4139,7 @@
                   return { start: s, endA: r, endB: l };
                 })(D.content, v.doc.content, v.from, l, d);
                 if (
-                  ((P && e.input.lastIOSEnter > Date.now() - 225) || V) &&
+                  ((E && e.input.lastIOSEnter > Date.now() - 225) || V) &&
                   r.some((e) => 1 == e.nodeType && !tR.test(e.nodeName)) &&
                   (!N || N.endA >= N.endB) &&
                   e.someProp("handleKeyDown", (t) => t(e, g(13, "Enter")))
@@ -4204,7 +4210,7 @@
                     C.parent.inlineContent &&
                     k.end() >= N.endA;
                 if (
-                  ((P &&
+                  ((E &&
                     e.input.lastIOSEnter > Date.now() - 225 &&
                     (!T ||
                       r.some(
@@ -4269,7 +4275,7 @@
                         return t(e, g(13, "Enter"));
                       });
                     }, 20));
-                let E = N.start,
+                let P = N.start,
                   A = N.endA;
                 if (T) {
                   if (C.pos == M.pos)
@@ -4278,7 +4284,7 @@
                       0 == C.parentOffset &&
                       (e.domObserver.suppressSelectionUpdates(),
                       setTimeout(() => ew(e), 20)),
-                      (c = e.state.tr.delete(E, A)),
+                      (c = e.state.tr.delete(P, A)),
                       (h = w.resolve(N.start).marksAcross(w.resolve(N.endA)));
                   else if (
                     N.endA == N.endB &&
@@ -4315,8 +4321,8 @@
                   )
                     (c = e.state.tr),
                       "add" == u.type
-                        ? c.addMark(E, A, u.mark)
-                        : c.removeMark(E, A, u.mark);
+                        ? c.addMark(P, A, u.mark)
+                        : c.removeMark(P, A, u.mark);
                   else if (
                     C.parent.child(C.index()).isText &&
                     C.index() == M.index() - (M.textOffset ? 0 : 1)
@@ -4325,15 +4331,15 @@
                       C.parentOffset,
                       M.parentOffset
                     );
-                    if (e.someProp("handleTextInput", (n) => n(e, E, A, t)))
+                    if (e.someProp("handleTextInput", (n) => n(e, P, A, t)))
                       return;
-                    c = e.state.tr.insertText(t, E, A);
+                    c = e.state.tr.insertText(t, P, A);
                   }
                 }
                 if (
                   (c ||
                     (c = e.state.tr.replace(
-                      E,
+                      P,
                       A,
                       v.doc.slice(N.start - v.from, N.endB - v.from)
                     )),
@@ -4348,8 +4354,8 @@
                         t.empty &&
                         (N.start != N.endB ||
                           e.input.lastAndroidDelete < Date.now() - 100) &&
-                        (t.head == E || t.head == c.mapping.map(A) - 1)) ||
-                      (O && t.empty && t.head == E)
+                        (t.head == P || t.head == c.mapping.map(A) - 1)) ||
+                      (O && t.empty && t.head == P)
                     ) &&
                     c.setSelection(t);
                 }
@@ -5121,4 +5127,4 @@
     },
   },
 ]);
-//# sourceMappingURL=02668ae5.6fe4b288685bd945.js.map
+//# sourceMappingURL=02668ae5.49384b6865f60a29.js.map

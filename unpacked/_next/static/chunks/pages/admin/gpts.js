@@ -6,7 +6,7 @@
       s.r(t),
         s.d(t, {
           __N_SSP: function () {
-            return D;
+            return I;
           },
           default: function () {
             return L;
@@ -31,9 +31,9 @@
         x = s(68498),
         y = s(88342),
         m = s(11655),
-        T = s(95407),
+        j = s(95407),
         S = s(7729),
-        j = s(97823),
+        T = s(97823),
         k = s(35250);
       function v(e, t) {
         var s = Object.keys(e);
@@ -85,14 +85,14 @@
           sideOffset: 4,
           disabled: !n,
           className: "max-w-5xl",
-          children: (0, k.jsxs)(j.i9, {
+          children: (0, k.jsxs)(T.i9, {
             className: (0, f.default)(
               n && "text-token-text-tertiary",
               "max-w-4xl",
               r
             ),
             children: [
-              (0, k.jsxs)(j.A4, {
+              (0, k.jsxs)(T.A4, {
                 className: "flex items-center gap-3",
                 children: [
                   (0, k.jsx)(w.Z, P({}, t)),
@@ -105,7 +105,7 @@
                 ],
               }),
               s &&
-                (0, k.jsx)(j.Li, {
+                (0, k.jsx)(T.Li, {
                   className: "py-2 text-token-text-secondary",
                   children: (0, k.jsx)(w.Z, P({}, s)),
                 }),
@@ -136,10 +136,10 @@
                 c.invalidateQueries({ queryKey: ["workspace"] });
             },
             onError: () => {
-              T.m.danger(o.formatMessage(E.featureSettingsUpdateFailed));
+              j.m.danger(o.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
-        return (0, k.jsxs)(j.vi, {
+        return (0, k.jsxs)(T.vi, {
           children: [
             (0, k.jsx)("p", {
               className: "text-md inline-flex items-center",
@@ -196,7 +196,7 @@
               l.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: () => {
-              T.m.danger(a.formatMessage(E.featureSettingsUpdateFailed));
+              j.m.danger(a.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
         return (0, k.jsxs)(y.Z.Root, {
@@ -260,10 +260,10 @@
               g.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: () => {
-              T.m.danger(c.formatMessage(E.featureSettingsUpdateFailed));
+              j.m.danger(c.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
-        return (0, k.jsxs)(j.vi, {
+        return (0, k.jsxs)(T.vi, {
           className: "justify-start py-6",
           children: [
             (0, k.jsx)(m.wy, {
@@ -321,16 +321,16 @@
                 !a && s.allow_third_party_gpts == r.NN.ALLOW_SPECIFIC,
             }),
           });
-        return (0, k.jsxs)(j.$V, {
+        return (0, k.jsxs)(T.$V, {
           className: "max-w-5xl",
           children: [
             a && l,
             a && i.isOwnerOfAccount() && o,
-            a && (0, k.jsx)(j.W8, {}),
+            a && (0, k.jsx)(T.W8, {}),
             (0, k.jsx)(N, {
               title: E.sharingSettingsTitle,
               upsellEnterprise: a,
-              children: (0, k.jsx)(j.qQ, {
+              children: (0, k.jsx)(T.qQ, {
                 children: (0, k.jsx)(M, {
                   workspaceId: t,
                   label: E.gptSharingTitle,
@@ -355,7 +355,7 @@
               title: E.workspaceGPTsTitle,
               description: E.workspaceGPTsDescription,
               upsellEnterprise: a,
-              children: (0, k.jsxs)(j.qQ, {
+              children: (0, k.jsxs)(T.qQ, {
                 children: [
                   (0, k.jsx)(A, {
                     label: E.browseOptionTitle,
@@ -371,14 +371,6 @@
                     value: s.beta_settings.workspace_gpt_custom_actions,
                     workspaceId: t,
                     tooltip: E.customActionsTooltip,
-                    disabled: a,
-                  }),
-                  (0, k.jsx)(A, {
-                    label: E.pluginsOptionTitle,
-                    feature: r.Nh.PLUGINS,
-                    value: s.beta_settings.plugins,
-                    workspaceId: t,
-                    tooltip: E.pluginsTooltip,
                     disabled: a,
                   }),
                 ],
@@ -450,15 +442,6 @@
           id: "workspaceSettingsOld.browseTooltip",
           defaultMessage:
             "Allow ChatGPT and GPTs to browse the internet to answer questions about recent topics and events.",
-        },
-        pluginsTooltip: {
-          id: "workspaceSettingsOld.pluginsTooltip",
-          defaultMessage:
-            "Allow members to install plugins so ChatGPT can use third-party services for tasks such as finding flights.",
-        },
-        pluginsOptionTitle: {
-          id: "workspaceSettingsOld.pluginsOptionTitle",
-          defaultMessage: "Plugins",
         },
         customActionsOptionTitle: {
           id: "workspaceSettingsOld.pluginsOptionTitle.0",
@@ -564,7 +547,7 @@
           defaultMessage: "Public",
         },
       });
-      function I(e, t) {
+      function D(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -576,7 +559,7 @@
         }
         return s;
       }
-      var D = !0;
+      var I = !0;
       function L(e) {
         return (0, k.jsx)(
           C,
@@ -584,7 +567,7 @@
             for (var t = 1; t < arguments.length; t++) {
               var s = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? I(Object(s), !0).forEach(function (t) {
+                ? D(Object(s), !0).forEach(function (t) {
                     (0, i.Z)(e, t, s[t]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -592,7 +575,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(s)
                     )
-                  : I(Object(s)).forEach(function (t) {
+                  : D(Object(s)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -687,4 +670,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-0c11fb7d33463af5.js.map
+//# sourceMappingURL=gpts-5348850d99859fa9.js.map

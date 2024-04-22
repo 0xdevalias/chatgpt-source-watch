@@ -19,8 +19,8 @@
         d = a(70079),
         u = a(84692),
         m = a(85452),
-        p = a(88342),
-        x = a(66452),
+        x = a(88342),
+        p = a(66452),
         f = a(44151),
         g = a(26524),
         h = a(59669),
@@ -129,9 +129,9 @@
       var w = a(18450),
         k = a(35595),
         N = a(15777),
-        _ = a(72003);
+        C = a(72003);
       a(7235);
-      var C = a(47249),
+      var _ = a(47249),
         z = a(41105);
       function E(e, t) {
         var a = Object.keys(e);
@@ -165,12 +165,18 @@
         return e;
       }
       function O(e) {
-        let { table: t, isInFocusedView: a = !1, className: l = "" } = e,
-          { targetedContent: n, setTargetedContent: s } = (0, z.Q)(),
-          { 0: o, 1: c } = (0, d.useState)([]);
+        let {
+            table: t,
+            height: a,
+            width: l,
+            isInFocusedView: n = !1,
+            className: s = "",
+          } = e,
+          { targetedContent: o, setTargetedContent: c } = (0, z.Q)(),
+          { 0: u, 1: m } = (0, d.useState)([]);
         (0, d.useEffect)(() => {
           t.columnNames.length > 0 &&
-            c(
+            m(
               t.columnNames.map((e, t) => ({
                 id: "id:".concat(t),
                 title: e,
@@ -178,11 +184,11 @@
               }))
             );
         }, [t.columnNames]);
-        let { 0: u, 1: m } = (0, d.useState)({
+        let { 0: x, 1: p } = (0, d.useState)({
             columns: N.EV.empty(),
             rows: N.EV.empty(),
           }),
-          p = (0, d.useCallback)(
+          f = (0, d.useCallback)(
             function (e) {
               let [a, l] = e,
                 n = t.rows[l];
@@ -204,14 +210,14 @@
             },
             [t.columnTypes, t.rows]
           ),
-          x = (0, d.useCallback)(
+          g = (0, d.useCallback)(
             (e) => {
               if (e.columns.length > 0) {
-                let l = e.columns.items.flatMap((e) =>
+                let a = e.columns.items.flatMap((e) =>
                   t.columnNames.slice(e[0], e[1])
                 );
                 i.A.logEvent(r.M.adaColumnTargeted),
-                  s({
+                  c({
                     label: (0, j.jsx)("div", {
                       children: (0, j.jsxs)("div", {
                         className: "text-token-text-tertiary",
@@ -219,16 +225,16 @@
                           (0, j.jsxs)("div", {
                             className: "flex items-center gap-2 text-sm",
                             children: [
-                              (0, j.jsx)(C.Mie, { size: 20 }),
+                              (0, j.jsx)(_.Mie, { size: 20 }),
                               " ",
-                              l.length,
+                              a.length,
                               " ",
-                              1 === l.length ? "Column" : "Columns",
+                              1 === a.length ? "Column" : "Columns",
                             ],
                           }),
                           (0, j.jsx)("div", {
                             className: "mt-3 flex gap-3",
-                            children: l.map((e) =>
+                            children: a.map((e) =>
                               (0, j.jsx)(
                                 "div",
                                 {
@@ -244,12 +250,12 @@
                         ],
                       }),
                     }),
-                    isFocusedViewContent: a,
+                    isFocusedViewContent: n,
                     createNewCompletionParams: (e) =>
                       D(
                         e,
                         "The user has selected the columns:  ".concat(
-                          l.map((e) => '"'.concat(e, '"')).join(", ")
+                          a.map((e) => '"'.concat(e, '"')).join(", ")
                         )
                       ),
                   });
@@ -261,14 +267,14 @@
                   return l;
                 });
                 i.A.logEvent(r.M.adaRowTargeted),
-                  s({
+                  c({
                     label: (0, j.jsx)("div", {
                       children: (0, j.jsx)("div", {
                         className: "text-token-text-tertiary",
                         children: (0, j.jsxs)("div", {
                           className: "flex items-center gap-2 text-sm",
                           children: [
-                            (0, j.jsx)(C.Mie, { size: 20 }),
+                            (0, j.jsx)(_.Mie, { size: 20 }),
                             " ",
                             t.length,
                             " ",
@@ -280,7 +286,7 @@
                         }),
                       }),
                     }),
-                    isFocusedViewContent: a,
+                    isFocusedViewContent: n,
                     createNewCompletionParams: (e) =>
                       D(
                         e,
@@ -291,58 +297,60 @@
                   });
               } else if (e.current) {
                 let t = e.current.range.x,
-                  l = e.current.range.y,
-                  n = e.current.range.x + e.current.range.width,
-                  o = e.current.range.y + e.current.range.height,
-                  c = (n - t) * (o - l);
+                  a = e.current.range.y,
+                  l = e.current.range.x + e.current.range.width,
+                  s = e.current.range.y + e.current.range.height,
+                  o = (l - t) * (s - a);
                 i.A.logEvent(r.M.adaRangeTargeted),
-                  s({
+                  c({
                     label: (0, j.jsx)("div", {
                       children: (0, j.jsx)("div", {
                         className: "text-token-text-tertiary",
                         children: (0, j.jsxs)("div", {
                           className: "flex items-center gap-2 text-sm",
                           children: [
-                            (0, j.jsx)(C.Mie, { size: 20 }),
+                            (0, j.jsx)(_.Mie, { size: 20 }),
                             " ",
-                            c,
+                            o,
                             " ",
-                            1 === c ? "Cell" : "Cells",
+                            1 === o ? "Cell" : "Cells",
                           ],
                         }),
                       }),
                     }),
-                    isFocusedViewContent: a,
+                    isFocusedViewContent: n,
                     createNewCompletionParams: (e) =>
                       D(
                         e,
                         "The user has selected a range at the iloc: "
-                          .concat(l, ":")
-                          .concat(o, ", ")
+                          .concat(a, ":")
+                          .concat(s, ", ")
                           .concat(t, ":")
-                          .concat(n, " in the current data")
+                          .concat(l, " in the current data")
                       ),
                   });
               }
-              m(e);
+              p(e);
             },
-            [t.columnNames, s, a]
+            [t.columnNames, c, n]
           );
         return (
           (0, d.useEffect)(() => {
-            void 0 === n && m({ columns: N.EV.empty(), rows: N.EV.empty() });
-          }, [n]),
+            void 0 === o && p({ columns: N.EV.empty(), rows: N.EV.empty() });
+          }, [o]),
           (0, j.jsx)(j.Fragment, {
-            children: (0, j.jsx)(_.F, {
-              getCellContent: p,
-              columns: o,
+            children: (0, j.jsx)(C.F, {
+              getCellContent: f,
+              columns: u,
               rows: t.rows.length,
-              gridSelection: u,
-              onGridSelectionChange: x,
+              gridSelection: x,
+              onGridSelectionChange: g,
               smoothScrollX: !0,
               smoothScrollY: !0,
-              className: l,
+              className: s,
               rowMarkers: "clickable-number",
+              height: a,
+              width: l,
               rowMarkerTheme: { bgCell: "#F7F7F8", textLight: "#0D0D0D" },
               theme: { textHeader: "#0D0D0D", textDark: "#676767" },
               rowMarkerWidth: 30,
@@ -351,7 +359,7 @@
               minColumnWidth: 10,
               maxColumnWidth: 500,
               onColumnResize: (e, t, a) => {
-                c((l) => {
+                m((l) => {
                   let n = [...l];
                   return (n[a] = M(M({}, e), {}, { width: t })), n;
                 });
@@ -391,13 +399,13 @@
                     "No fallback image message provided for fallback chart"
                   ),
                   null)
-                : (0, j.jsx)(P, { visualization: t, expanded: a })
-              : (0, j.jsx)(S, { visualization: t, expanded: a })
+                : (0, j.jsx)(L, { visualization: t, expanded: a })
+              : (0, j.jsx)(Z, { visualization: t, expanded: a })
           : "table" === t.type
-            ? (0, j.jsx)(Z, { visualization: t, expanded: a })
+            ? (0, j.jsx)(F, { visualization: t, expanded: a })
             : (o.U.addError("Unsupported visualization type", t.type), null);
       }
-      let V = function (e) {
+      let S = function (e) {
           let t =
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -405,98 +413,124 @@
             a = document.createElement("a");
           (a.href = e), t && (a.download = t), a.click();
         },
-        F = async (e) => {
+        V = async (e) => {
           if (null == e.image_url) {
             o.U.addError("No image url provided for download");
             return;
           }
-          let t = (0, x.Iy)(e.image_url),
+          let t = (0, p.Iy)(e.image_url),
             a = await s.Z.getFileDownloadLink(t);
           if (a.status === l.KF.Success) {
             let e = await fetch(a.download_url),
               t = await e.blob();
-            V(URL.createObjectURL(t), "output.png");
+            S(URL.createObjectURL(t), "output.png");
           }
         };
-      function Z(e) {
-        var t, a, l;
-        let n;
-        let { visualization: s, expanded: i } = e,
-          r = (0, f.Ex)() && !i,
-          { isLoading: o, data: c, isError: u } = (0, A.CJ)(s),
-          x =
-            null !== (t = null == c ? void 0 : c.file_name.split("/")) &&
-            void 0 !== t
-              ? t
-              : [],
-          h = null !== (a = x[x.length - 1]) && void 0 !== a ? a : "";
-        h = h.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
-        let { 0: b, 1: y } = (0, d.useState)(),
-          v = (0, d.useCallback)(() => {
-            c && V(c.download_url);
-          }, [c]);
-        return (c &&
-          (n = Array.isArray(c.content)
-            ? null !== (l = c.content.find((e) => e.name == b)) && void 0 !== l
-              ? l
-              : c.content[0]
-            : c.content),
-        u)
-          ? (0, j.jsx)(R, { fileName: h })
-          : (0, j.jsx)(U, {
-              focusObject: { type: g.zG.ADAVisualization, visualization: s },
-              title: (0, j.jsxs)(j.Fragment, {
-                children: [
-                  h,
-                  !r &&
-                    Array.isArray(null == c ? void 0 : c.content) &&
-                    (0, j.jsxs)(p.Z.Root, {
-                      defaultValue: b,
-                      onValueChange: (e) => {
-                        y(e);
-                      },
-                      children: [
-                        (0, j.jsxs)(p.Z.Trigger, {
-                          className:
-                            "m-0 h-6 bg-transparent p-1 text-xs font-medium",
-                          children: [
-                            null != b ? b : c.content[0].name,
-                            (0, j.jsx)(p.Z.Icon, {}),
-                          ],
-                        }),
-                        (0, j.jsx)(p.Z.Portal, {
-                          children: (0, j.jsx)(p.Z.Content, {
-                            children: c.content.map((e) => {
-                              var t;
-                              return (0, j.jsx)(
-                                p.Z.Item,
-                                {
-                                  className: "text-xs font-medium",
-                                  value:
-                                    null !== (t = e.name) && void 0 !== t
-                                      ? t
-                                      : "",
-                                  children: e.name,
-                                },
-                                e.name
-                              );
+      function F(e) {
+        let t,
+          { visualization: a, expanded: l } = e,
+          n = (0, f.Ex)() && !l,
+          { isLoading: s, data: i, isError: r } = (0, A.CJ)(a),
+          { 0: o, 1: c } = (0, d.useState)(),
+          u = (0, d.useCallback)(() => {
+            i && S(i.download_url);
+          }, [i]),
+          { 0: p, 1: h } = (0, d.useState)(0),
+          { 0: b, 1: y } = (0, d.useState)(0),
+          v = (0, d.useRef)(null);
+        if (i) {
+          if (Array.isArray(i.content)) {
+            var w;
+            t =
+              null !== (w = i.content.find((e) => e.name == o)) && void 0 !== w
+                ? w
+                : i.content[0];
+          } else t = i.content;
+        }
+        let k = () => {
+          v.current && y(v.current.offsetWidth);
+        };
+        return ((0, d.useEffect)(
+          () => (
+            k(),
+            window.addEventListener("resize", k),
+            () => window.removeEventListener("resize", k)
+          ),
+          []
+        ),
+        (0, d.useEffect)(() => {
+          let e = () => {
+            h(window.innerHeight - 48);
+          };
+          return (
+            e(),
+            window.addEventListener("resize", e),
+            () => window.removeEventListener("resize", e)
+          );
+        }, []),
+        r)
+          ? (0, j.jsx)(R, { fileName: a.title })
+          : (0, j.jsx)("div", {
+              ref: v,
+              children: (0, j.jsx)(P, {
+                focusObject: { type: g.zG.ADAVisualization, visualization: a },
+                title: (0, j.jsxs)(j.Fragment, {
+                  children: [
+                    a.title,
+                    !n &&
+                      Array.isArray(null == i ? void 0 : i.content) &&
+                      (0, j.jsxs)(x.Z.Root, {
+                        defaultValue: o,
+                        onValueChange: (e) => {
+                          c(e);
+                        },
+                        children: [
+                          (0, j.jsxs)(x.Z.Trigger, {
+                            className:
+                              "m-0 h-6 bg-transparent p-1 text-xs font-medium",
+                            children: [
+                              null != o ? o : i.content[0].name,
+                              (0, j.jsx)(x.Z.Icon, {}),
+                            ],
+                          }),
+                          (0, j.jsx)(x.Z.Portal, {
+                            children: (0, j.jsx)(x.Z.Content, {
+                              children: i.content.map((e) => {
+                                var t;
+                                return (0, j.jsx)(
+                                  x.Z.Item,
+                                  {
+                                    className: "text-xs font-medium",
+                                    value:
+                                      null !== (t = e.name) && void 0 !== t
+                                        ? t
+                                        : "",
+                                    children: e.name,
+                                  },
+                                  e.name
+                                );
+                              }),
                             }),
                           }),
-                        }),
-                      ],
-                    }),
-                ],
+                        ],
+                      }),
+                  ],
+                }),
+                onDownload: u,
+                expanded: l,
+                children:
+                  s || void 0 == t
+                    ? (0, j.jsx)(m.Z, {})
+                    : (0, j.jsx)(O, {
+                        table: t,
+                        height: l ? p : 400,
+                        width: b,
+                      }),
               }),
-              onDownload: v,
-              expanded: i,
-              children:
-                o || void 0 == n
-                  ? (0, j.jsx)(m.Z, {})
-                  : (0, j.jsx)(O, { table: n }),
             });
       }
       function R(e) {
-        let { fileName: t } = e;
+        let { fileName: t = "" } = e;
         return (0, j.jsx)("div", {
           className: "w-full rounded-xl border border-red-600 p-3",
           children: (0, j.jsxs)("div", {
@@ -520,89 +554,83 @@
           }),
         });
       }
-      function S(e) {
-        var t, a;
-        let { visualization: l, expanded: n } = e,
-          { isLoading: s, data: i, isError: r } = (0, A.VX)(l),
-          o = (0, d.useRef)(null),
-          { 0: c, 1: u } = (0, d.useState)(!1),
-          p =
-            null !== (t = null == i ? void 0 : i.file_name.split("/")) &&
-            void 0 !== t
-              ? t
-              : [],
-          x = null !== (a = p[p.length - 1]) && void 0 !== a ? a : "";
-        x = x.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
-        let f = (0, d.useCallback)(async () => {
-          if (c && l.fallback_image) await F(l.fallback_image);
-          else if (o.current) {
-            let e = o.current.getBase64Image();
-            e && V(e, "".concat(x, ".png"));
-          }
-        }, [l.fallback_image, c, o, x]);
-        return r
-          ? (0, j.jsx)(R, { fileName: x })
-          : (0, j.jsx)(U, {
-              focusObject: { type: g.zG.ADAVisualization, visualization: l },
-              title: x,
-              onDownload: f,
+      function Z(e) {
+        let { visualization: t, expanded: a } = e,
+          { isLoading: l, data: n, isError: s } = (0, A.VX)(t),
+          i = (0, d.useRef)(null),
+          { 0: r, 1: o } = (0, d.useState)(!1),
+          c = (0, d.useCallback)(async () => {
+            if (r && t.fallback_image) await V(t.fallback_image);
+            else if (i.current) {
+              let e = i.current.getBase64Image();
+              e && S(e, "".concat(t.title, ".png"));
+            }
+          }, [t.fallback_image, r, i, t.title]);
+        return s
+          ? (0, j.jsx)(R, { fileName: t.title })
+          : (0, j.jsx)(P, {
+              focusObject: { type: g.zG.ADAVisualization, visualization: t },
+              title: t.title,
+              onDownload: c,
               onToggleView: () => {
-                u(!c);
+                o(!r);
               },
-              expanded: n,
+              expanded: a,
               children:
-                s || void 0 == i
+                l || void 0 == n
                   ? (0, j.jsx)(m.Z, {})
-                  : c && l.fallback_image
-                    ? (0, j.jsx)(h.Z, { jupyterMessage: l.fallback_image })
-                    : (0, j.jsx)(v, { ref: o, chart: i.content }),
+                  : r && t.fallback_image
+                    ? (0, j.jsx)(h.Z, { jupyterMessage: t.fallback_image })
+                    : (0, j.jsx)(v, { ref: i, chart: n.content }),
             });
       }
-      function P(e) {
+      function L(e) {
         let { visualization: t, expanded: a } = e,
           l = (0, d.useCallback)(async () => {
-            t.fallback_image && (await F(t.fallback_image));
+            t.fallback_image && (await V(t.fallback_image));
           }, [t.fallback_image]);
         return void 0 == t.fallback_image
           ? null
-          : (0, j.jsx)(U, {
+          : (0, j.jsx)(P, {
               focusObject: { type: g.zG.ADAVisualization, visualization: t },
-              title: "",
+              title: t.title,
               onDownload: l,
               expanded: a,
               children: (0, j.jsx)(h.Z, { jupyterMessage: t.fallback_image }),
             });
       }
-      function U(e) {
+      function P(e) {
         let {
             focusObject: t,
-            title: a,
+            title: a = "",
             onDownload: l,
             onToggleView: s,
             expanded: o = !1,
             children: u,
           } = e,
           m = (0, f.Ex)() && !o,
-          p = (0, g.rE)(),
-          x =
-            p &&
-            p.type == g.zG.ADAVisualization &&
-            p.type == t.type &&
-            p.visualization.file_id == t.visualization.file_id,
+          x = (0, g.rE)(),
+          p =
+            x &&
+            x.type == g.zG.ADAVisualization &&
+            x.type == t.type &&
+            x.visualization.file_id == t.visualization.file_id,
           { 0: h, 1: b } = (0, d.useState)(!1),
           y = (0, d.useCallback)(() => {
             i.A.logEvent(r.M.adaFocusModeToggled),
-              x ? g.RT.close() : g.RT.setFocusedObject(t);
-          }, [x, t]),
+              p ? g.RT.close() : g.RT.setFocusedObject(t);
+          }, [p, t]),
           v = (m && h) || !m,
           w = "chart" === t.visualization.type ? n.X5Q : n.tXQ;
         return (0, j.jsxs)("div", {
           className: (0, c.default)(
-            "relative overflow-hidden",
-            !o && "rounded-xl border border-token-border-light",
+            "relative overflow-hidden text-token-text-primary",
+            !o && "rounded-xl border",
             m ? "w-56 cursor-pointer" : "w-full",
-            x && m && "border-blue-selection",
-            m && !x && "text-token-text-secondary"
+            m &&
+              (p
+                ? "border-blue-selection"
+                : "border-token-border-light  text-token-text-secondary")
           ),
           onMouseEnter: () => {
             b(!0);
@@ -636,28 +664,36 @@
                       (0, j.jsx)("button", {
                         onClick: s,
                         className: "flex items-center text-xs",
-                        children: (0, j.jsx)(n.q$4, { className: "icon-md" }),
+                        children: (0, j.jsx)(n.q$4, {
+                          className:
+                            "icon-md text-token-text-tertiary hover:text-token-text-primary",
+                        }),
                       }),
                     !m &&
                       l &&
                       (0, j.jsx)("button", {
                         onClick: l,
                         className: "flex items-center text-xs",
-                        children: (0, j.jsx)(n._8t, { className: "icon-md" }),
+                        children: (0, j.jsx)(n._8t, {
+                          className:
+                            "icon-md text-token-text-tertiary hover:text-token-text-primary",
+                        }),
                       }),
                     v &&
                       (0, j.jsx)("button", {
                         onClick: y,
                         className: "flex items-center text-xs",
-                        children: x
+                        children: p
                           ? (0, j.jsx)(j.Fragment, {
                               children: (0, j.jsx)(n.W5x, {
-                                className: "icon-md",
+                                className:
+                                  "icon-md text-token-text-tertiary hover:text-token-text-primary",
                               }),
                             })
                           : (0, j.jsx)(j.Fragment, {
                               children: (0, j.jsx)(n.Qq, {
-                                className: "icon-md",
+                                className:
+                                  "icon-md text-token-text-tertiary hover:text-token-text-primary",
                               }),
                             }),
                       }),
@@ -666,7 +702,7 @@
                       (0, j.jsx)(w, {
                         className: (0, c.default)(
                           "icon-sm",
-                          x
+                          p
                             ? "text-blue-selection"
                             : "text-token-text-quaternary"
                         ),
@@ -678,9 +714,9 @@
             !m &&
               (0, j.jsx)("div", {
                 className: (0, c.default)(
-                  "flex items-center justify-center overflow-x-auto border-t border-token-border-light bg-token-main-surface-primary"
+                  "flex items-center justify-center border-t border-token-border-light bg-token-main-surface-primary"
                 ),
-                style: { height: o ? "calc(100vh - 48px)" : "400px" },
+                style: o ? { height: "calc(100vh - 48px)" } : {},
                 children: u,
               }),
           ],
@@ -689,4 +725,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9909.c68083e35509da42.js.map
+//# sourceMappingURL=9909.16f784aef7eadc71.js.map

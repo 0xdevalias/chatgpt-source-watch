@@ -6,25 +6,29 @@
       t.r(e),
         t.d(e, {
           __N_SSP: function () {
-            return _;
+            return a;
           },
           default: function () {
             return c;
           },
         });
       var u = t(51018),
-        r = t.n(u),
-        i = t(35250);
-      let o = r()(
+        o = t.n(u),
+        r = t(35250);
+      let i = o()(
         () =>
           Promise.all([t.e(8682), t.e(4367), t.e(9923)])
-            .then(t.bind(t, 11095))
+            .then(t.bind(t, 94556))
             .then((n) => n.EditorPageBody),
-        { ssr: !1, loadableGenerated: { webpack: () => [11095] } }
+        { ssr: !1, loadableGenerated: { webpack: () => [94556] } }
       );
-      var _ = !0;
+      var a = !0;
       function c(n) {
-        return (0, i.jsx)(o, { initialContent: "" });
+        return (0, r.jsx)(i, {
+          documentGoal: "",
+          initialContent: "",
+          classNames: "h-[95vh] mx-16",
+        });
       }
     },
     64120: function (n, e, t) {
@@ -43,4 +47,4 @@
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=docs-6cb44f0610c9dbc3.js.map
+//# sourceMappingURL=docs-25a825d7743a1f22.js.map
