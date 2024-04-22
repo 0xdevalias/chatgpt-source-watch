@@ -87,7 +87,7 @@
                 className:
                   "flex w-full justify-start px-6 pb-8 md:hidden md:px-6 lg:px-8",
                 children: (0, k.jsx)("h1", {
-                  "aria-label": l.formatMessage(P.ariaLabel),
+                  "aria-label": l.formatMessage(A.ariaLabel),
                   children: (0, k.jsx)("div", {
                     className:
                       "flex cursor-default items-center text-[20px] font-bold leading-none lg:text-[22px]",
@@ -102,7 +102,7 @@
                   (0, k.jsx)("h2", {
                     className:
                       "text-center text-[20px] leading-[1.2] md:text-[32px] md:leading-8",
-                    children: (0, k.jsx)(v.Z, I({}, P.pageTitle)),
+                    children: (0, k.jsx)(v.Z, I({}, A.pageTitle)),
                   }),
                   (0, k.jsx)("div", {
                     className: "mt-5 w-full max-w-[440px]",
@@ -111,7 +111,7 @@
                           children: (0, k.jsxs)("div", {
                             className: "flex w-full flex-col gap-3",
                             children: [
-                              (0, k.jsx)(A, {
+                              (0, k.jsx)(P, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cpath id='a' d='M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z'/%3E%3C/defs%3E%3CclipPath id='b'%3E%3Cuse xlink:href='%23a' overflow='visible'/%3E%3C/clipPath%3E%3Cpath clip-path='url(%23b)' fill='%23FBBC05' d='M0 37V11l17 13z'/%3E%3Cpath clip-path='url(%23b)' fill='%23EA4335' d='M0 11l17 13 7-6.1L48 14V0H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%2334A853' d='M0 37l30-23 7.9 1L48 0v48H0z'/%3E%3Cpath clip-path='url(%23b)' fill='%234285F4' d='M48 48L17 24l-4-3 35-10z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
                                   u.A.logLogInButtonClicked({
@@ -131,10 +131,10 @@
                                 },
                                 children: (0, k.jsx)(
                                   v.Z,
-                                  I({}, P.continueWithGoogle)
+                                  I({}, A.continueWithGoogle)
                                 ),
                               }),
-                              (0, k.jsx)(A, {
+                              (0, k.jsx)(P, {
                                 icon: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9h-9z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9h-9z'/%3E%3C/svg%3E\")",
                                 onClick: () => {
                                   u.A.logLogInButtonClicked({
@@ -154,7 +154,7 @@
                                 },
                                 children: (0, k.jsx)(
                                   v.Z,
-                                  I({}, P.continueWithMicrosoft)
+                                  I({}, A.continueWithMicrosoft)
                                 ),
                               }),
                               (0, k.jsx)("div", {
@@ -164,7 +164,7 @@
                               (0, k.jsxs)("div", {
                                 className: "grid grid-cols-2 gap-3",
                                 children: [
-                                  (0, k.jsx)(A, {
+                                  (0, k.jsx)(P, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
@@ -183,9 +183,9 @@
                                           }
                                         );
                                     },
-                                    children: (0, k.jsx)(v.Z, I({}, P.logIn)),
+                                    children: (0, k.jsx)(v.Z, I({}, A.logIn)),
                                   }),
-                                  (0, k.jsx)(A, {
+                                  (0, k.jsx)(P, {
                                     primary: !0,
                                     className: "justify-center",
                                     onClick: () => {
@@ -205,7 +205,7 @@
                                           }
                                         );
                                     },
-                                    children: (0, k.jsx)(v.Z, I({}, P.signUp)),
+                                    children: (0, k.jsx)(v.Z, I({}, A.signUp)),
                                   }),
                                 ],
                               }),
@@ -217,7 +217,7 @@
                             className:
                               "grid gap-x-3 gap-y-2 sm:grid-cols-2 sm:gap-y-0",
                             children: [
-                              (0, k.jsx)(A, {
+                              (0, k.jsx)(P, {
                                 primary: !0,
                                 testid: "login-button",
                                 onClick: () => {
@@ -231,9 +231,9 @@
                                       { prompt: "login" }
                                     );
                                 },
-                                children: (0, k.jsx)(v.Z, I({}, P.logIn)),
+                                children: (0, k.jsx)(v.Z, I({}, A.logIn)),
                               }),
-                              (0, k.jsx)(A, {
+                              (0, k.jsx)(P, {
                                 primary: !0,
                                 as: "button",
                                 onClick: () => {
@@ -247,7 +247,7 @@
                                       { prompt: "login", screen_hint: "signup" }
                                     );
                                 },
-                                children: (0, k.jsx)(v.Z, I({}, P.signUp)),
+                                children: (0, k.jsx)(v.Z, I({}, A.signUp)),
                               }),
                             ],
                           }),
@@ -263,12 +263,14 @@
                             f.m9.logEvent(
                               "chatgpt_auth_try_it_first_link_clicked"
                             ),
-                            g.bX.setCookie(g.cn.HasNoAuthTrial, !0, {
-                              maxAge: 3600,
-                            }),
+                            g.bX.setCookie(
+                              g.cn.HasClickedOnTryItFirstLink,
+                              !0,
+                              { maxAge: 43200 }
+                            ),
                             y().push("/");
                         },
-                        children: (0, k.jsx)(v.Z, I({}, P.tryItFirst)),
+                        children: (0, k.jsx)(v.Z, I({}, A.tryItFirst)),
                       })
                     : null,
                 ],
@@ -289,7 +291,7 @@
           }),
         });
       }
-      function A(e) {
+      function P(e) {
         let {
           icon: t,
           children: n,
@@ -327,7 +329,7 @@
           ],
         });
       }
-      let P = (0, w.vU)({
+      let A = (0, w.vU)({
         pageTitle: { id: "Login.pageTitle", defaultMessage: "Get started" },
         ariaLabel: {
           id: "Login.ariaLabel",
@@ -454,7 +456,7 @@
                   { hasCloseButton: !0, duration: 600 }
                 );
           }, [x.query, w]);
-        let A = (function () {
+        let P = (function () {
           let { layer: e } = (0, h.AH)(h.VG.AnonChatLayer),
             t = e.get(h.yp.ANON_IS_SPANISH_TRANSLATION_ENABLED, !1),
             { locale: n, setLocale: r } = (0, a.bU)();
@@ -477,11 +479,11 @@
                     {
                       auth0Provider: o,
                       enableNewAuthFlow: s,
-                      examples: r[A],
+                      examples: r[P],
                       nextUrl: v,
                       isStorageComplianceEnabled: d,
                     },
-                    A
+                    P
                   ),
                 ],
               });
@@ -963,4 +965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2510-5d4bec1305e4c739.js.map
+//# sourceMappingURL=2510-04f2b8c8a71ec670.js.map

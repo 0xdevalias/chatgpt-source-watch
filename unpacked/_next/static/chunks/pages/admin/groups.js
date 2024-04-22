@@ -70,8 +70,8 @@
         });
       }
       var S = t(85452),
-        N = t(58819),
-        C = t(11265),
+        C = t(58819),
+        N = t(11265),
         O = t(67217),
         P = t(73606),
         D = t(11335),
@@ -196,7 +196,7 @@
           { data: g } = (0, A.Z)(l, d * A.I, i, A.I, c.Wk),
           { 0: m, 1: y } = (0, x.useState)([]),
           { 0: Z, 1: v } = (0, x.useState)([]),
-          { 0: S, 1: N } = (0, x.useState)("interactive"),
+          { 0: S, 1: C } = (0, x.useState)("interactive"),
           D = g ? Math.ceil(g.total / A.I) : 0;
         async function _(e) {
           v((s) => [...s, e]);
@@ -234,7 +234,7 @@
                       (0, w.jsx)("p", { children: a }),
                       (0, w.jsx)(b.z, {
                         onClick: () => {
-                          N("batch");
+                          C("batch");
                         },
                         color: "neutral",
                         children: (0, w.jsx)(f.Z, {
@@ -251,42 +251,42 @@
                       u(e.target.value);
                     },
                   }),
-                  (0, w.jsxs)(C.Z.Root, {
+                  (0, w.jsxs)(N.Z.Root, {
                     className: "min-w-full",
                     children: [
-                      (0, w.jsxs)(C.Z.Header, {
+                      (0, w.jsxs)(N.Z.Header, {
                         children: [
-                          (0, w.jsx)(C.Z.HeaderCell, {
+                          (0, w.jsx)(N.Z.HeaderCell, {
                             children: (0, w.jsx)(f.Z, {
                               id: "workspaceSettings.groups.addMember.name",
                               defaultMessage: "Name",
                             }),
                           }),
-                          (0, w.jsx)(C.Z.HeaderCell, {
+                          (0, w.jsx)(N.Z.HeaderCell, {
                             children: (0, w.jsx)(f.Z, {
                               id: "workspaceSettings.groups.addMember.email",
                               defaultMessage: "Email",
                             }),
                           }),
-                          (0, w.jsx)(C.Z.HeaderCell, {}),
+                          (0, w.jsx)(N.Z.HeaderCell, {}),
                         ],
                       }),
-                      (0, w.jsx)(C.Z.Body, {
+                      (0, w.jsx)(N.Z.Body, {
                         children:
                           null == g
                             ? void 0
                             : g.items.map((e) =>
                                 (0, w.jsxs)(
-                                  C.Z.Row,
+                                  N.Z.Row,
                                   {
                                     children: [
-                                      (0, w.jsx)(C.Z.Cell, {
+                                      (0, w.jsx)(N.Z.Cell, {
                                         children: e.name,
                                       }),
-                                      (0, w.jsx)(C.Z.Cell, {
+                                      (0, w.jsx)(N.Z.Cell, {
                                         children: e.email,
                                       }),
-                                      (0, w.jsx)(C.Z.Cell, {
+                                      (0, w.jsx)(N.Z.Cell, {
                                         textAlign: "right",
                                         className: "pr-1",
                                         children: (0, w.jsx)(b.z, {
@@ -483,39 +483,39 @@
                 }),
               ],
             }),
-            (0, w.jsxs)(C.Z.Root, {
+            (0, w.jsxs)(N.Z.Root, {
               className: "min-w-full",
               children: [
-                (0, w.jsxs)(C.Z.Header, {
+                (0, w.jsxs)(N.Z.Header, {
                   children: [
-                    (0, w.jsx)(C.Z.HeaderCell, {
+                    (0, w.jsx)(N.Z.HeaderCell, {
                       children: (0, w.jsx)(f.Z, {
                         id: "workspaceSettings.groups.memberName",
                         defaultMessage: "Name",
                       }),
                     }),
-                    (0, w.jsx)(C.Z.HeaderCell, {
+                    (0, w.jsx)(N.Z.HeaderCell, {
                       children: (0, w.jsx)(f.Z, {
                         id: "workspaceSettings.groups.email",
                         defaultMessage: "Email",
                       }),
                     }),
-                    (0, w.jsx)(C.Z.HeaderCell, {}),
+                    (0, w.jsx)(N.Z.HeaderCell, {}),
                   ],
                 }),
-                (0, w.jsx)(C.Z.Body, {
+                (0, w.jsx)(N.Z.Body, {
                   className: M || O ? "opacity-50" : void 0,
                   children:
                     null == v
-                      ? (0, w.jsx)(C.Z.Row, {
-                          children: (0, w.jsx)(C.Z.Cell, {
+                      ? (0, w.jsx)(N.Z.Row, {
+                          children: (0, w.jsx)(N.Z.Cell, {
                             colSpan: 3,
                             children: (0, w.jsx)(S.Z, {}),
                           }),
                         })
                       : 0 === v.items.length
-                        ? (0, w.jsx)(C.Z.Row, {
-                            children: (0, w.jsx)(C.Z.Cell, {
+                        ? (0, w.jsx)(N.Z.Row, {
+                            children: (0, w.jsx)(N.Z.Cell, {
                               colSpan: 3,
                               children:
                                 "" === g
@@ -532,31 +532,31 @@
                           })
                         : v.items.map((e) =>
                             (0, w.jsxs)(
-                              C.Z.Row,
+                              N.Z.Row,
                               {
                                 children: [
-                                  (0, w.jsx)(C.Z.Cell, {
+                                  (0, w.jsx)(N.Z.Cell, {
                                     children: (0, w.jsx)("span", {
                                       className: "ml-3",
                                       children: e.name,
                                     }),
                                   }),
-                                  (0, w.jsx)(C.Z.Cell, { children: e.email }),
-                                  (0, w.jsx)(C.Z.Cell, {
+                                  (0, w.jsx)(N.Z.Cell, { children: e.email }),
+                                  (0, w.jsx)(N.Z.Cell, {
                                     textAlign: "right",
                                     children:
                                       !r &&
-                                      (0, w.jsxs)(N.Z.Root, {
+                                      (0, w.jsxs)(C.Z.Root, {
                                         children: [
-                                          (0, w.jsx)(N.Z.Trigger, {
+                                          (0, w.jsx)(C.Z.Trigger, {
                                             className: "-my-2",
                                             children: (0, w.jsx)(j.K9M, {
                                               className: "icon-sm",
                                             }),
                                           }),
-                                          (0, w.jsx)(N.Z.Portal, {
-                                            children: (0, w.jsx)(N.Z.Content, {
-                                              children: (0, w.jsx)(N.Z.Item, {
+                                          (0, w.jsx)(C.Z.Portal, {
+                                            children: (0, w.jsx)(C.Z.Content, {
+                                              children: (0, w.jsx)(C.Z.Item, {
                                                 onClick: () => Q(e.id),
                                                 children: (0, w.jsx)(f.Z, {
                                                   id: "workspaceSettings.groups.removeMember",
@@ -656,7 +656,7 @@
           { 0: y, 1: Z } = (0, x.useState)(0),
           {
             data: v,
-            isLoading: N,
+            isLoading: C,
             isPlaceholderData: O,
           } = (0, u.a)({
             queryKey:
@@ -801,8 +801,7 @@
               className: "mb-3 mt-6 flex flex-row justify-between gap-2",
               children: [
                 (0, w.jsx)(M, {
-                  className: "max-w-12",
-                  inputClassName: "w-full",
+                  inputClassName: "w-[250px]",
                   value: m,
                   onChange: (e) => {
                     j(e.target.value), Z(0);
@@ -824,35 +823,35 @@
             }),
             (0, w.jsxs)("div", {
               children: [
-                (0, w.jsxs)(C.Z.Root, {
+                (0, w.jsxs)(N.Z.Root, {
                   className: "min-w-full",
                   children: [
-                    (0, w.jsxs)(C.Z.Header, {
+                    (0, w.jsxs)(N.Z.Header, {
                       children: [
-                        (0, w.jsx)(C.Z.HeaderCell, {}),
-                        (0, w.jsx)(C.Z.HeaderCell, {
+                        (0, w.jsx)(N.Z.HeaderCell, {}),
+                        (0, w.jsx)(N.Z.HeaderCell, {
                           children: (0, w.jsx)(f.Z, {
                             id: "workspaceSettings.groups.groupName",
                             defaultMessage: "Group name",
                           }),
                         }),
-                        (0, w.jsx)(C.Z.HeaderCell, {
+                        (0, w.jsx)(N.Z.HeaderCell, {
                           children: (0, w.jsx)(f.Z, {
                             id: "workspaceSettings.groups.members",
                             defaultMessage: "Members",
                           }),
                         }),
-                        (0, w.jsx)(C.Z.HeaderCell, {
+                        (0, w.jsx)(N.Z.HeaderCell, {
                           children: (0, w.jsx)(f.Z, {
                             id: "workspaceSettings.groups.created",
                             defaultMessage: "Created",
                           }),
                         }),
-                        (0, w.jsx)(C.Z.HeaderCell, {}),
+                        (0, w.jsx)(N.Z.HeaderCell, {}),
                       ],
                     }),
-                    (0, w.jsxs)(C.Z.Body, {
-                      className: (0, p.default)((N || O) && "opacity-50"),
+                    (0, w.jsxs)(N.Z.Body, {
+                      className: (0, p.default)((C || O) && "opacity-50"),
                       children: [
                         P &&
                           (0, w.jsx)(L, {
@@ -866,16 +865,16 @@
                             readOnly: a,
                           }),
                         null == v
-                          ? (0, w.jsx)(C.Z.Row, {
-                              children: (0, w.jsx)(C.Z.Cell, {
+                          ? (0, w.jsx)(N.Z.Row, {
+                              children: (0, w.jsx)(N.Z.Cell, {
                                 colSpan: 5,
                                 textAlign: "center",
                                 children: (0, w.jsx)(S.Z, {}),
                               }),
                             })
                           : 0 === v.items.length
-                            ? (0, w.jsx)(C.Z.Row, {
-                                children: (0, w.jsx)(C.Z.Cell, {
+                            ? (0, w.jsx)(N.Z.Row, {
+                                children: (0, w.jsx)(N.Z.Cell, {
                                   colSpan: 5,
                                   textAlign: "center",
                                   children:
@@ -983,14 +982,14 @@
         };
         return (0, w.jsxs)(w.Fragment, {
           children: [
-            (0, w.jsxs)(C.Z.Row, {
+            (0, w.jsxs)(N.Z.Row, {
               onClick: () => i((e) => !e),
               className: "hover:bg-token-surface-secondary cursor-pointer",
               children: [
-                (0, w.jsx)(C.Z.Cell, {
+                (0, w.jsx)(N.Z.Cell, {
                   children: (0, w.jsx)(Z, { checked: o }),
                 }),
-                (0, w.jsx)(C.Z.Cell, {
+                (0, w.jsx)(N.Z.Cell, {
                   children:
                     "new" === s || g
                       ? (0, w.jsx)(v.Z, {
@@ -1010,14 +1009,14 @@
                         })
                       : s.name,
                 }),
-                (0, w.jsx)(C.Z.Cell, {
+                (0, w.jsx)(N.Z.Cell, {
                   children: (0, w.jsx)(f.Z, {
                     id: "workspaceSettings.groups.memberCount",
                     defaultMessage: "{count} members",
                     values: { count: "new" === s ? "0" : s.num_members },
                   }),
                 }),
-                (0, w.jsx)(C.Z.Cell, {
+                (0, w.jsx)(N.Z.Cell, {
                   children:
                     "new" !== s && s.created_time
                       ? (0, w.jsx)(y.Ji, {
@@ -1028,21 +1027,21 @@
                         })
                       : "",
                 }),
-                (0, w.jsx)(C.Z.Cell, {
+                (0, w.jsx)(N.Z.Cell, {
                   textAlign: "right",
                   children:
                     "new" !== s &&
                     !n &&
-                    (0, w.jsxs)(N.Z.Root, {
+                    (0, w.jsxs)(C.Z.Root, {
                       children: [
-                        (0, w.jsx)(N.Z.Trigger, {
+                        (0, w.jsx)(C.Z.Trigger, {
                           className: "-my-2",
                           children: (0, w.jsx)(j.K9M, { className: "icon-sm" }),
                         }),
-                        (0, w.jsx)(N.Z.Portal, {
-                          children: (0, w.jsxs)(N.Z.Content, {
+                        (0, w.jsx)(C.Z.Portal, {
+                          children: (0, w.jsxs)(C.Z.Content, {
                             children: [
-                              (0, w.jsx)(N.Z.Item, {
+                              (0, w.jsx)(C.Z.Item, {
                                 onClick: (e) => {
                                   m(!0),
                                     setTimeout(() => {
@@ -1058,7 +1057,7 @@
                                   defaultMessage: "Edit name",
                                 }),
                               }),
-                              (0, w.jsx)(N.Z.Item, {
+                              (0, w.jsx)(C.Z.Item, {
                                 onClick: (e) => {
                                   k(s), e.stopPropagation();
                                 },
@@ -1077,8 +1076,8 @@
             }),
             o &&
               "new" !== s &&
-              (0, w.jsx)(C.Z.Row, {
-                children: (0, w.jsx)(C.Z.Cell, {
+              (0, w.jsx)(N.Z.Row, {
+                children: (0, w.jsx)(N.Z.Cell, {
                   colSpan: 5,
                   className: "pl-8",
                   children: (0, w.jsx)(K, {
@@ -1199,4 +1198,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=groups-3e4670791c14e0e8.js.map
+//# sourceMappingURL=groups-c1d8c8f898df2440.js.map

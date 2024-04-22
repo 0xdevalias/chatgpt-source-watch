@@ -1,56 +1,56 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [401],
   {
-    11790: function (e, t, n) {
+    12075: function (e, t, o) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      o.r(t),
+        o.d(t, {
           __N_SSP: function () {
-            return k;
+            return v;
           },
           default: function () {
             return C;
           },
         });
-      var o = n(18450),
-        r = n(29287),
-        s = n(67217),
-        l = n(21869),
-        i = n(69920),
-        c = n(38801),
-        a = n(67852),
-        u = n(34594),
-        p = n(61888),
-        d = n(70079),
-        f = n(84692),
-        m = n(68498),
-        g = n(35250);
+      var n = o(18450),
+        r = o(29287),
+        c = o(67217),
+        s = o(21869),
+        l = o(69920),
+        a = o(38801),
+        i = o(67852),
+        u = o(34594),
+        d = o(61888),
+        g = o(70079),
+        p = o(84692),
+        f = o(68498),
+        m = o(35250);
       function h(e, t) {
-        var n = Object.keys(e);
+        var o = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var o = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (o = o.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, o);
+            o.push.apply(o, n);
         }
-        return n;
+        return o;
       }
       function O(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var n = null != arguments[t] ? arguments[t] : {};
+          var o = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? h(Object(n), !0).forEach(function (t) {
-                (0, o.Z)(e, t, n[t]);
+            ? h(Object(o), !0).forEach(function (t) {
+                (0, n.Z)(e, t, o[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : h(Object(n)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(o))
+              : h(Object(o)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(n, t)
+                    Object.getOwnPropertyDescriptor(o, t)
                   );
                 });
         }
@@ -58,199 +58,195 @@
       }
       let b = (e) => {
           let { onClose: t } = e,
-            { navigateToAuth: n } = (0, l.E)(),
-            o = (0, i.oc)();
+            { navigateToAuth: o } = (0, s.E)(),
+            n = (0, l.oc)();
           return (
-            (0, d.useEffect)(() => {
-              c.A.logEvent(a.M.noAuthWelcomeModalShown),
-                u.m9.logEvent("chatgpt_no_auth_welcome_modal_shown");
+            (0, g.useEffect)(() => {
+              a.A.logEvent(i.M.noAuthWelcomeBackModalShown),
+                u.m9.logEvent("chatgpt_no_auth_welcome_back_modal_shown");
             }, []),
-            (0, g.jsx)(s.Z, {
+            (0, m.jsx)(c.Z, {
               isOpen: !0,
-              onClose: p.noop,
+              onClose: d.noop,
               shouldIgnoreClickOutside: !0,
               showCloseButton: !1,
               type: "success",
               noPadding: !0,
               size: "custom",
               className: "max-w-[373px] sm:max-w-[400px]",
-              position: o ? "center" : "bottom",
-              children: (0, g.jsxs)("div", {
+              position: n ? "center" : "bottom",
+              children: (0, m.jsxs)("div", {
                 className:
-                  "flex flex-col items-center justify-center px-6 py-8 sm:px-10 sm:pb-10 sm:pt-12",
+                  "flex flex-col items-center justify-center px-6 py-8 sm:p-10",
                 children: [
-                  (0, g.jsx)("p", {
-                    className: "mb-1 text-center text-3xl font-medium",
-                    children: (0, g.jsx)(f.Z, O({}, j.title)),
+                  (0, m.jsx)("p", {
+                    className: "mb-1 text-center text-2xl font-medium",
+                    children: (0, m.jsx)(p.Z, O({}, _.title)),
                   }),
-                  (0, g.jsx)("p", {
+                  (0, m.jsx)("p", {
                     className:
                       "mb-6 text-center text-lg text-token-text-secondary",
-                    children: (0, g.jsx)(f.Z, O({}, j.subtitle)),
+                    children: (0, m.jsx)(p.Z, O({}, _.subtitle)),
                   }),
-                  (0, g.jsx)(r.z, {
+                  (0, m.jsx)(r.z, {
                     as: "button",
                     size: "large",
                     color: "primary",
-                    className: "mb-2 w-full sm:mb-2.5",
+                    className: "mb-2 w-full sm:mb-3",
                     onClick: () => {
-                      let e = n({ authType: "signup" });
-                      c.A.logSignUpButtonClicked({
+                      let e = o({ authType: "login" });
+                      a.A.logLogInButtonClicked({
                         provider: e,
-                        location: "No Auth Welcome Modal",
+                        location: "No Auth Welcome Back Modal",
                       });
                     },
-                    children: (0, g.jsx)(f.Z, O({}, j.signUpCta)),
+                    children: (0, m.jsx)(p.Z, O({}, _.logInCta)),
                   }),
-                  (0, g.jsx)(r.z, {
+                  (0, m.jsx)(r.z, {
                     as: "button",
                     size: "large",
                     color: "neutral",
                     className: "mb-5 w-full",
                     onClick: () => {
-                      let e = n({ authType: "login" });
-                      c.A.logLogInButtonClicked({
+                      let e = o({ authType: "signup" });
+                      a.A.logSignUpButtonClicked({
                         provider: e,
-                        location: "No Auth Welcome Modal",
+                        location: "No Auth Welcome Back Modal",
                       });
                     },
-                    children: (0, g.jsx)(f.Z, O({}, j.logInCta)),
+                    children: (0, m.jsx)(p.Z, O({}, _.signUpCta)),
                   }),
-                  (0, g.jsx)("a", {
+                  (0, m.jsx)("a", {
                     href: "#",
                     className:
-                      "cursor-pointer text-sm font-medium text-token-text-secondary underline",
+                      "cursor-pointer font-medium text-token-text-secondary underline sm:text-sm",
                     onClick: (e) => {
                       e.preventDefault(),
-                        c.A.logEvent(
-                          a.M.noAuthWelcomeModalTryItFirstLinkClicked
+                        a.A.logEvent(
+                          i.M.noAuthWelcomeBackModalStayLoggedOutLinkClicked
                         ),
                         u.m9.logEvent(
-                          "chatgpt_no_auth_welcome_modal_try_it_first_link_clicked"
+                          "chatgpt_no_auth_welcome_back_modal_stay_logged_out_link_clicked"
                         ),
                         t();
                     },
-                    children: (0, g.jsx)(f.Z, O({}, j.tryItFirstLink)),
+                    children: (0, m.jsx)(p.Z, O({}, _.stayLoggedOutLink)),
                   }),
                 ],
               }),
             })
           );
         },
-        j = (0, m.vU)({
+        _ = (0, f.vU)({
           title: {
-            id: "NoAuthWelcomeModal.title",
-            defaultMessage: "Welcome to ChatGPT",
+            id: "NoAuthWelcomeBackModal.title",
+            defaultMessage: "Welcome back",
           },
           subtitle: {
-            id: "NoAuthWelcomeModal.subtitle",
+            id: "NoAuthWelcomeBackModal.subtitle",
             defaultMessage:
-              "Get instant answers, find creative inspiration, learn something new.",
+              "Log in or sign up to access your chat history, share chats, and more.",
           },
           signUpCta: {
-            id: "NoAuthWelcomeModal.signUpCta",
+            id: "NoAuthWelcomeBackModal.signUpCta",
             defaultMessage: "Sign up",
           },
           logInCta: {
-            id: "NoAuthWelcomeModal.logInCta",
+            id: "NoAuthWelcomeBackModal.logInCta",
             defaultMessage: "Log in",
           },
-          tryItFirstLink: {
-            id: "NoAuthWelcomeModal.tryItFirstLink",
-            defaultMessage: "Try it first",
+          stayLoggedOutLink: {
+            id: "NoAuthWelcomeBackModal.stayLoggedOut",
+            defaultMessage: "Stay logged out",
           },
         });
-      var y = n(64612),
-        _ = n(39882);
-      let x = "has-dismissed-welcome-modal",
-        w = () => {
-          let { 0: e, 1: t } = (0, d.useState)(!0),
-            { isUserUnauthenticated: n, isLoading: o } = (0, l.E)(),
-            { layer: r } = (0, _.U3)(_.VG.AnonChatLayer),
-            s = r.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
+      var y = o(39882);
+      let j = "has-dismissed-welcome-back-modal",
+        k = () => {
+          let { 0: e, 1: t } = (0, g.useState)(!0),
+            { layer: o } = (0, y.AH)(y.VG.AnonChatLayer),
+            n = o.get(y.yp.ANON_IS_NO_AUTH_WELCOME_BACK_MODAL_ENABLED, !1);
           return (
-            (0, d.useEffect)(() => {
-              t(null != sessionStorage.getItem(x));
+            (0, g.useEffect)(() => {
+              t(null != sessionStorage.getItem(j));
             }, []),
             {
-              isOpen: n && s && !e && !o,
+              isOpen: n && !e,
               close: () => {
-                t(!0), sessionStorage.setItem(x, "true");
+                t(!0), sessionStorage.setItem(j, "true");
               },
             }
           );
         };
-      var N = n(41409),
-        P = n(29697);
-      function v(e, t) {
-        var n = Object.keys(e);
+      var x = o(41409),
+        w = o(29697);
+      function N(e, t) {
+        var o = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var o = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (o = o.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, o);
+            o.push.apply(o, n);
         }
-        return n;
+        return o;
       }
-      function E(e) {
+      function P(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var n = null != arguments[t] ? arguments[t] : {};
+          var o = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? v(Object(n), !0).forEach(function (t) {
-                (0, o.Z)(e, t, n[t]);
+            ? N(Object(o), !0).forEach(function (t) {
+                (0, n.Z)(e, t, o[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : v(Object(n)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(o))
+              : N(Object(o)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(n, t)
+                    Object.getOwnPropertyDescriptor(o, t)
                   );
                 });
         }
         return e;
       }
-      var k = !0;
+      var v = !0;
       function C(e) {
-        let t = (0, N.useRouter)(),
-          n = (0, P.wS)(t.asPath),
-          o = (0, P.p9)(n),
-          { isOpen: r, close: s } = w(),
-          { shouldShowHardRateLimitModal: l, shouldShowSoftRateLimitModal: i } =
-            (0, y.o)();
-        return ((0, d.useEffect)(() => {
-          o && t.replace("/", void 0, { shallow: !0 });
-        }, [o, t]),
-        o)
+        let t = (0, x.useRouter)(),
+          o = (0, w.wS)(t.asPath),
+          n = (0, w.p9)(o),
+          { isOpen: r, close: c } = k();
+        return ((0, g.useEffect)(() => {
+          n && t.replace("/", void 0, { shallow: !0 });
+        }, [n, t]),
+        n)
           ? null
-          : (0, g.jsxs)(g.Fragment, {
+          : (0, m.jsxs)(m.Fragment, {
               children: [
-                r && !(l || i) ? (0, g.jsx)(b, { onClose: s }) : null,
-                (0, g.jsx)(P.ZP, E(E({}, e), {}, { urlThreadId: n })),
+                r ? (0, m.jsx)(b, { onClose: c }) : null,
+                (0, m.jsx)(w.ZP, P(P({}, e), {}, { urlThreadId: o })),
               ],
             });
       }
     },
-    81765: function (e, t, n) {
+    81765: function (e, t, o) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      o.r(t),
+        o.d(t, {
           __N_SSP: function () {
             return r;
           },
         });
-      let o = n(11790).default;
+      let n = o(12075).default;
       var r = !0;
-      t.default = o;
+      t.default = n;
     },
-    66695: function (e, t, n) {
+    66695: function (e, t, o) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]/c/[convId]",
         function () {
-          return n(81765);
+          return o(81765);
         },
       ]);
     },
@@ -262,4 +258,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[convId]-f7a903dc514903fc.js.map
+//# sourceMappingURL=[convId]-5e21155ab7422287.js.map

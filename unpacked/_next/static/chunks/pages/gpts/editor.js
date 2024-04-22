@@ -13,7 +13,7 @@
           },
         });
       var t = u(9182),
-        r = u(7802),
+        r = u(33979),
         i = u(47712),
         o = u(33471),
         s = u(41409),
@@ -45,7 +45,7 @@
           null == n || n.canCreateGizmos() || u.push("/");
         }, [n, u]),
         null != n && n.canCreateGizmos())
-          ? (0, _.jsx)(r.V, { gizmoId: h, remixSourceId: C, version: E })
+          ? (0, _.jsx)(r.V9, { gizmoId: h, remixSourceId: C, version: E })
           : null;
       }
     },
@@ -77,4 +77,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=editor-226df49095bd8c8e.js.map
+//# sourceMappingURL=editor-051b3362a1d35962.js.map

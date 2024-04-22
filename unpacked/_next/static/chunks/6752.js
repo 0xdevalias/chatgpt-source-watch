@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [6752],
+  [6752, 6940],
   {
     26169: function (n, e, t) {
       var i = t(57398),
@@ -77,4 +77,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6752.1365bead53cb8f91.js.map
+//# sourceMappingURL=6752.d789a5813ec6d9fc.js.map

@@ -17,7 +17,7 @@
         c = t(35250);
       let _ = r()(
         () =>
-          Promise.all([t.e(8682), t.e(5181), t.e(3050), t.e(1561), t.e(6752)])
+          Promise.all([t.e(8682), t.e(5181), t.e(3050), t.e(1950), t.e(6940)])
             .then(t.bind(t, 31863))
             .then((e) => e.FeedbackPage),
         { ssr: !1, loadableGenerated: { webpack: () => [31863] } }
@@ -43,4 +43,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=feedback-a6d5c5d8c914776e.js.map
+//# sourceMappingURL=feedback-da380827ab3ae3eb.js.map
