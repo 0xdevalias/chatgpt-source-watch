@@ -45,6 +45,7 @@ typeset webpack_file_url webpack_file_path
 # Global variables for command-line arguments
 declare skip_filter_changelog=false
 declare skip_filter_already_downloaded=false
+declare historical_build=false
 
 # Function to display usage information
 usage() {
@@ -57,6 +58,7 @@ usage() {
   echo "Options:"
   echo "  --skip-filter-changelog           Skip filtering URLs already in the changelog"
   echo "  --skip-filter-already-downloaded  Skip filtering already downloaded files"
+  echo "  --historical-build                Adjust CHANGELOG notes for historical build that won't be analysed"
   echo "  -h, --help                        Display this help and exit"
   echo ""
   echo "Example:"
@@ -80,6 +82,9 @@ main() {
         ;;
       --skip-filter-already-downloaded)
         skip_filter_already_downloaded=true
+        ;;
+      --historical-build)
+        historical_build=true
         ;;
       -*)
         echo "Unknown option: $1" >&2
@@ -806,14 +811,45 @@ generate_changelog_and_commit_message() {
 
   # Notes
   changelog_notes+="- **tl;dr**\n"
-  changelog_notes+="  - TODO high level summary of the technical changes listed below\n"
-  changelog_notes+="  - **Twitter thread:** TODO\n"
+
+  if $historical_build; then
+    changelog_notes+="  - NOTE: This historical build's diff was not analysed\n"
+  else
+    changelog_notes+="  - TODO high level summary of the technical changes listed below\n"
+    changelog_notes+="  - TODO: This is only partially analysed, and somewhat messy.. can definitely be cleaned up and improved further from here..\n"
+    changelog_notes+="  - **Twitter thread:** TODO\n"
+  fi
+
   changelog_notes+="- App release version (Git SHA?): \`${app_release_version:-TODO}\`\n"
   changelog_notes+="  - Extracted with \`grep -C 3 'service: \"chatgpt-web\",' unpacked/_next/static/chunks/pages/_app.js\`\n"
-  changelog_notes+="- \`TODO unpacked file paths here\`\n"
-  changelog_notes+="  - TODO notes about the file here\n"
-  # changelog_notes+="- The following files had nothing much of note:\n"
-  # changelog_notes+="  - \`TODO unpacked file paths here\`\n"
+
+  if ! $historical_build; then
+    changelog_notes+="- New Chunks:\n"
+    # TODO: Can we process the newly added files in ./unpacked/**/*.js from git to automatically list them here?
+    changelog_notes+="  - \`TODO\`\n"
+    changelog_notes+="  - Couldn't be downloaded (server rendered?):\n"
+    changelog_notes+="    - \`TODO\`\n"
+    changelog_notes+="- Chunk IDs Changed:\n"
+    changelog_notes+="  - \`TODO\` -> \`TODO\`\n"
+    changelog_notes+="- Module IDs Changed:\n"
+    changelog_notes+="  - \`TODO\` -> \`TODO\`\n"
+    changelog_notes+="- TODO: The CSS style files haven't been downloaded/properly captured/reviewed\n"
+    changelog_notes+="- The following language/translation files were updated:\n"
+    changelog_notes+="  - \`unpacked/_next/static/chunks/9087.js\` (English)\n"
+    changelog_notes+="    - <details><summary>Diff of changes to the English language chunk</summary>\n"
+    changelog_notes+="        \n"
+    changelog_notes+="        TODO\n"
+    changelog_notes+="        \n"
+    changelog_notes+="      </details>\n"
+    changelog_notes+="\n"
+    # changelog_notes+="- \`unpacked/_next/static/chunks/pages/_app.js\`\n"
+    changelog_notes+="- \`unpacked/_next/static/chunks/pages/_app.js\` (diff: \`TODO\` lines, minimised diff: \`TODO\` lines)\n"
+    changelog_notes+="  - Lots of diff churn, making it hard to see what changed specifically\n"
+    changelog_notes+="  - TODO\n"
+    # changelog_notes+="- The following files had nothing much of note:\n"
+    # changelog_notes+="  - \`TODO unpacked file paths here\`\n"
+  fi
+
   changelog_notes+="\n"
 
   changelog_entry+="### Notes\n\n"
