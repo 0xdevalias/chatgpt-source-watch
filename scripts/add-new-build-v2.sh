@@ -790,19 +790,31 @@ generate_changelog_and_commit_message() {
 
   # Start building the changelog entry
   if [[ ${#all_found_urls_not_in_changelog[@]} -gt 0 ]] && [[ ${#all_missing_urls_not_in_changelog[@]} -gt 0 ]]; then
-    commit_message="[content-partial] add $build_hash content from ${build_date}Z"
+    if $historical_build; then
+      commit_message="[content-partial] add historical $build_hash content from ${build_date}Z"
+    else
+      commit_message="[content-partial] add $build_hash content from ${build_date}Z"
+    fi
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[partial archive]\`\n\n"
 
     changelog_notes+="- The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.\n"
   elif [[ ${#all_found_urls_not_in_changelog[@]} -eq 0 ]] && [[ ${#all_missing_urls_not_in_changelog[@]} -gt 0 ]]; then
-    commit_message="[content-missing] add $build_hash info from ${build_date}Z"
+    if $historical_build; then
+      commit_message="[content-missing] add historical $build_hash info from ${build_date}Z"
+    else
+      commit_message="[content-missing] add $build_hash info from ${build_date}Z"
+    fi
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`) \`[not archived]\`\n\n"
 
     changelog_notes+="- The assets from this build weren't archived at the time, and couldn't be found via Wayback Machine.\n"
   else
-    commit_message="[content] add $build_hash content from ${build_date}Z"
+    if $historical_build; then
+      commit_message="[content] add historical $build_hash content from ${build_date}Z"
+    else
+      commit_message="[content] add $build_hash content from ${build_date}Z"
+    fi
 
     changelog_entry+="## ${build_date}Z (\`$build_hash\`)\n\n"
   fi
