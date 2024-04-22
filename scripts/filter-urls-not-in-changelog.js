@@ -165,9 +165,11 @@ const processJsonInput = (inputLines, combinedChangelogContent) => {
 };
 
 const processUrl = (inputUrl, combinedChangelogContent) => {
-  const url = inputUrl.trim();
+  if (!isValidUrl(inputUrl)) return null;
 
-  if (!isValidUrl(url) || processedUrls.has(url)) return null;
+  const url = cleanUrl(inputUrl)
+
+  if (processedUrls.has(url)) return null;
 
   const urlExistsInChangelog = generateUrlVariations(url, urlPrefixes).some(
     (variation) => combinedChangelogContent.includes(variation)
@@ -182,8 +184,14 @@ const processUrl = (inputUrl, combinedChangelogContent) => {
 };
 
 const isValidUrl = (url) => {
-  return url && typeof url === "string" && url.startsWith("http");
+  return url && URL.canParse(url) && url.trim().startsWith("http");
 };
+
+const cleanUrl = (url) => {
+  const parsedUrl = new URL(url)
+  parsedUrl.search = ''
+  return parsedUrl.href
+}
 
 const generateUrlVariations = (inputUrl, prefixes) => {
   const url = inputUrl.trim();
