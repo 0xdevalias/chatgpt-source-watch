@@ -6871,7 +6871,7 @@
                                     !A,
                                 }
                               ),
-                              onMouseEnter: () => (A ? () => c(a) : null),
+                              onMouseEnter: () => A && c(a),
                               onMouseLeave: () => A && c(null),
                               disabled: !A,
                               children: [
@@ -13771,6 +13771,11 @@
                                       )
                                     ),
                                   }),
+                                  F &&
+                                    (0, $.jsx)("div", {
+                                      className: "mb-4",
+                                      children: (0, $.jsx)(rL, { messages: E }),
+                                    }),
                                   (eN || e_) &&
                                     (0, $.jsxs)($.Fragment, {
                                       children: [
@@ -13863,7 +13868,6 @@
                                               }),
                                             })
                                           : null,
-                                        F && (0, $.jsx)(rL, { messages: E }),
                                         B &&
                                           es &&
                                           !eH &&
@@ -14754,7 +14758,7 @@
           ? null
           : (0, U.jsxs)(U.Fragment, {
               children: [
-                (0, U.jsx)(K.ni, {
+                (0, U.jsx)(K.GizmoConversationOptionsDropdown, {
                   clientThreadId: t.id,
                   onOpenChange: n,
                   children: (0, U.jsx)("button", {
@@ -15417,10 +15421,10 @@
       "use strict";
       n.d(t, {
         $Q: function () {
-          return ee;
+          return $;
         },
         $i: function () {
-          return G;
+          return U;
         },
         A0: function () {
           return f;
@@ -15428,26 +15432,23 @@
         An: function () {
           return A;
         },
-        Bj: function () {
-          return k;
-        },
         C5: function () {
-          return J;
+          return Y;
         },
         CE: function () {
-          return H;
+          return G;
         },
         CJ: function () {
           return p;
         },
         EW: function () {
-          return Y;
+          return K;
         },
         F3: function () {
-          return ed;
+          return ec;
         },
         FE: function () {
-          return K;
+          return q;
         },
         FK: function () {
           return d;
@@ -15459,25 +15460,25 @@
           return v;
         },
         Ie: function () {
-          return N;
+          return D;
         },
         Ih: function () {
-          return F;
+          return Q;
         },
         Jo: function () {
-          return _;
+          return z;
         },
         K9: function () {
-          return U;
+          return F;
         },
         Kb: function () {
-          return el;
+          return eo;
         },
         L2: function () {
-          return I;
+          return T;
         },
         Ls: function () {
-          return L;
+          return _;
         },
         Ms: function () {
           return c;
@@ -15486,31 +15487,31 @@
           return g;
         },
         O4: function () {
-          return D;
+          return I;
         },
         QF: function () {
           return y;
         },
         Qg: function () {
-          return ei;
-        },
-        TV: function () {
-          return X;
-        },
-        Tg: function () {
-          return z;
-        },
-        WG: function () {
           return es;
         },
+        TV: function () {
+          return J;
+        },
+        Tg: function () {
+          return N;
+        },
+        WG: function () {
+          return er;
+        },
         WJ: function () {
-          return en;
+          return et;
         },
         Wv: function () {
-          return Z;
+          return L;
         },
         XC: function () {
-          return q;
+          return V;
         },
         _V: function () {
           return x;
@@ -15519,61 +15520,61 @@
           return h;
         },
         av: function () {
-          return W;
+          return H;
         },
         fS: function () {
-          return eo;
+          return ei;
         },
         fr: function () {
-          return R;
+          return Z;
         },
         i9: function () {
           return w;
         },
         jE: function () {
-          return M;
+          return O;
         },
         k1: function () {
-          return Q;
+          return R;
         },
         kB: function () {
-          return er;
+          return ea;
         },
         mz: function () {
-          return V;
+          return W;
         },
         n7: function () {
-          return eu;
+          return ed;
         },
         nI: function () {
-          return P;
+          return M;
         },
         nQ: function () {
           return b;
         },
         nV: function () {
-          return B;
+          return P;
         },
         nX: function () {
-          return ec;
+          return el;
         },
         ol: function () {
-          return O;
+          return E;
         },
         pE: function () {
-          return $;
+          return X;
         },
         r4: function () {
           return m;
         },
         rK: function () {
-          return ea;
+          return en;
         },
         tC: function () {
-          return E;
+          return k;
         },
         u2: function () {
-          return et;
+          return ee;
         },
         uf: function () {
           return C;
@@ -15582,10 +15583,10 @@
           return u;
         },
         ww: function () {
-          return T;
+          return S;
         },
         yj: function () {
-          return S;
+          return B;
         },
       });
       var a = n(18450),
@@ -15988,28 +15989,6 @@
             l(
               l(
                 {
-                  width: "16",
-                  height: "16",
-                  viewBox: "0 0 16 16",
-                  fill: "none",
-                },
-                e
-              ),
-              {},
-              {
-                children: (0, s.jsx)("path", {
-                  d: "M12.784 1.442a.8.8 0 0 0-1.569 0l-.191.953a.8.8 0 0 1-.628.628l-.953.19a.8.8 0 0 0 0 1.57l.953.19a.8.8 0 0 1 .628.629l.19.953a.8.8 0 0 0 1.57 0l.19-.953a.8.8 0 0 1 .629-.628l.953-.19a.8.8 0 0 0 0-1.57l-.953-.19a.8.8 0 0 1-.628-.629l-.19-.953h-.002ZM5.559 4.546a.8.8 0 0 0-1.519 0l-.546 1.64a.8.8 0 0 1-.507.507l-1.64.546a.8.8 0 0 0 0 1.519l1.64.547a.8.8 0 0 1 .507.505l.546 1.641a.8.8 0 0 0 1.519 0l.546-1.64a.8.8 0 0 1 .506-.507l1.641-.546a.8.8 0 0 0 0-1.519l-1.64-.546a.8.8 0 0 1-.507-.506L5.56 4.546Zm5.6 6.4a.8.8 0 0 0-1.519 0l-.147.44a.8.8 0 0 1-.505.507l-.441.146a.8.8 0 0 0 0 1.519l.44.146a.8.8 0 0 1 .507.506l.146.441a.8.8 0 0 0 1.519 0l.147-.44a.8.8 0 0 1 .506-.507l.44-.146a.8.8 0 0 0 0-1.519l-.44-.147a.8.8 0 0 1-.507-.505l-.146-.441Z",
-                  fill: "currentColor",
-                }),
-              }
-            )
-          ),
-        E = (e) =>
-          (0, s.jsx)(
-            f,
-            l(
-              l(
-                {
                   width: "24",
                   height: "24",
                   viewBox: "0 0 24 24",
@@ -16028,7 +16007,7 @@
               }
             )
           ),
-        O = (e) =>
+        E = (e) =>
           (0, s.jsxs)(
             f,
             l(
@@ -16062,7 +16041,7 @@
               }
             )
           ),
-        M = (e) =>
+        O = (e) =>
           (0, s.jsxs)(
             f,
             l(
@@ -16347,7 +16326,7 @@
               }
             )
           ),
-        P = (e) => {
+        M = (e) => {
           let { strokeWidth: t, className: n } = e;
           return (0, s.jsxs)("svg", {
             width: "41",
@@ -16371,7 +16350,7 @@
             ],
           });
         },
-        B = (e) => {
+        P = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -16385,7 +16364,7 @@
             }),
           });
         },
-        S = (e) =>
+        B = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16401,7 +16380,7 @@
               }
             )
           ),
-        T = (e) =>
+        S = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16417,7 +16396,7 @@
               }
             )
           ),
-        I = (e) =>
+        T = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16433,7 +16412,7 @@
               }
             )
           ),
-        D = (e) =>
+        I = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16449,7 +16428,7 @@
               }
             )
           ),
-        N = (e) =>
+        D = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16465,7 +16444,7 @@
               }
             )
           ),
-        z = (e) =>
+        N = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16481,7 +16460,7 @@
               }
             )
           ),
-        _ = (e) => {
+        z = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "16",
@@ -16507,7 +16486,7 @@
             ],
           });
         },
-        L = (e) =>
+        _ = (e) =>
           (0, s.jsxs)(
             f,
             l(
@@ -16533,7 +16512,7 @@
               }
             )
           ),
-        Z = (e) =>
+        L = (e) =>
           (0, s.jsxs)(
             f,
             l(
@@ -16557,7 +16536,7 @@
               }
             )
           ),
-        R = (e) =>
+        Z = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16573,7 +16552,7 @@
               }
             )
           ),
-        Q = (e) =>
+        R = (e) =>
           (0, s.jsx)(
             f,
             l(
@@ -16597,7 +16576,7 @@
               }
             )
           ),
-        F = (e) => {
+        Q = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "24",
@@ -16626,7 +16605,7 @@
             ],
           });
         },
-        U = (e) => {
+        F = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "24",
@@ -16643,7 +16622,7 @@
             }),
           });
         },
-        G = (e) => {
+        U = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "20",
@@ -16661,7 +16640,7 @@
             }),
           });
         },
-        H = (e) => {
+        G = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "24",
@@ -16682,7 +16661,7 @@
             ],
           });
         },
-        W = (e) => {
+        H = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "24",
@@ -16699,7 +16678,7 @@
             }),
           });
         },
-        V = (e) => {
+        W = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "24",
@@ -16765,7 +16744,7 @@
             ],
           });
         },
-        q = (e) => {
+        V = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "20",
@@ -16783,7 +16762,7 @@
             }),
           });
         },
-        K = (e) => {
+        q = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -16800,7 +16779,7 @@
             }),
           });
         },
-        Y = (e) => {
+        K = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -16816,7 +16795,7 @@
             }),
           });
         },
-        J = (e) => {
+        Y = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -16832,7 +16811,7 @@
             }),
           });
         },
-        X = (e) => {
+        J = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -16849,7 +16828,7 @@
             }),
           });
         },
-        $ = (e) => {
+        X = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "20",
@@ -16866,7 +16845,7 @@
             }),
           });
         },
-        ee = (e) => {
+        $ = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "20",
@@ -16884,7 +16863,7 @@
             }),
           });
         },
-        et = (e) => {
+        ee = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "18",
@@ -16901,7 +16880,7 @@
             }),
           });
         },
-        en = (e) => {
+        et = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "18",
@@ -16922,7 +16901,7 @@
             }),
           });
         },
-        ea = (e) => {
+        en = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "18",
@@ -16939,7 +16918,7 @@
             }),
           });
         },
-        er = (e) => {
+        ea = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "20",
@@ -16956,7 +16935,7 @@
             }),
           });
         },
-        es = (e) => {
+        er = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "24",
@@ -16995,7 +16974,7 @@
             ],
           });
         },
-        ei = (e) => {
+        es = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "15",
@@ -17012,7 +16991,7 @@
             }),
           });
         },
-        eo = (e) => {
+        ei = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "18",
@@ -17035,7 +17014,7 @@
             ],
           });
         },
-        el = (e) => {
+        eo = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "18",
@@ -17054,7 +17033,7 @@
             }),
           });
         },
-        ec = (e) => {
+        el = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "24",
@@ -17071,7 +17050,7 @@
             }),
           });
         },
-        ed = (e) => {
+        ec = (e) => {
           let { className: t } = e;
           return (0, s.jsx)("svg", {
             width: "24",
@@ -17088,7 +17067,7 @@
             }),
           });
         },
-        eu = (e) => {
+        ed = (e) => {
           let { className: t } = e;
           return (0, s.jsxs)("svg", {
             width: "24",
@@ -22260,13 +22239,25 @@
                 document.removeEventListener("visibilitychange", e);
               }
             );
-          }, [tn]),
+          }, [tn]);
+        let ta = (0, q.XK)(l);
+        (0, Z.useEffect)(() => {
+          let e = () => {
+            j.ut.stopConversation(ta);
+          };
+          return (
+            window.addEventListener("beforeunload", e),
+            () => {
+              window.removeEventListener("beforeunload", e);
+            }
+          );
+        }, [ta]),
           (0, v.M)({
             clientThreadId: l,
             currentLeafId: em,
             handleRequestCompletion: tt,
           });
-        let ta = (0, Z.useCallback)(
+        let tr = (0, Z.useCallback)(
             function (e, t) {
               let n =
                   !(arguments.length > 2) ||
@@ -22293,14 +22284,14 @@
             },
             [tt, l]
           ),
-          tr = (0, Z.useCallback)(
+          to = (0, Z.useCallback)(
             (e) => {
               let t = q.tQ.getTree(l).getLeafFromNode(e);
               q.tQ.setThreadCurrentLeafId(l, t.id);
             },
             [l]
           ),
-          to = (0, Z.useCallback)(
+          tu = (0, Z.useCallback)(
             (e) => {
               let { nodeId: t, messageId: n, rating: a } = e,
                 r = q.tQ.getServerThreadId(l);
@@ -22328,7 +22319,7 @@
               ) {
                 let e = q.tQ.getTree(l).getConversationTurns(t || "root");
                 ew(e[e.length - 1]) &&
-                  ta(
+                  tr(
                     t,
                     { eventSource: "mouse", intent: "comparison" },
                     !1,
@@ -22336,23 +22327,23 @@
                   );
               }
             },
-            [l, eG, ei, ta]
+            [l, eG, ei, tr]
           ),
-          { showEmbeddedPaymentModal: tu, setShowEmbeddedPaymentModal: tx } =
+          { showEmbeddedPaymentModal: tx, setShowEmbeddedPaymentModal: tv } =
             (0, e4.tS)((e) => ({
               showEmbeddedPaymentModal: e.showEmbeddedPaymentModal,
               setShowEmbeddedPaymentModal: e.setShowEmbeddedPaymentModal,
             })),
-          { setShowReferralInviteModal: tv } = (0, eY.C)((e) => ({
+          { setShowReferralInviteModal: tj } = (0, eY.C)((e) => ({
             setShowReferralInviteModal: e.setShowReferralInviteModal,
           })),
-          tj = (0, Z.useCallback)(() => {
-            tx(!1);
-          }, [tx]),
           tC = (0, Z.useCallback)(() => {
             tv(!1);
           }, [tv]),
-          tk = (0, eY.C)((e) => e.showReferralInviteModal);
+          tk = (0, Z.useCallback)(() => {
+            tj(!1);
+          }, [tj]),
+          tO = (0, eY.C)((e) => e.showReferralInviteModal);
         !(function (e) {
           let { clientThreadId: t, currentModelId: n } = e;
           !(function (e, t) {
@@ -22366,7 +22357,7 @@
             });
           })((0, tp.i0)(n, tp.dN.CODE_INTERPRETER), t);
         })({ clientThreadId: l, currentModelId: eG });
-        let tO =
+        let tB =
           (0, p.fI)() &&
           eF &&
           !eA &&
@@ -22424,7 +22415,7 @@
             (0, ey.jsx)(J.OV.Provider, {
               value: tt,
               children: (0, ey.jsx)(p.Ew, {
-                value: tO ? p.tg.Hedgehog : p.tg.Default,
+                value: tB ? p.tg.Hedgehog : p.tg.Default,
                 children: (0, ey.jsxs)(f.b, {
                   children: [
                     null != et && et.includes(V.i) ? (0, ey.jsx)(e2, {}) : null,
@@ -22442,7 +22433,7 @@
                                   ? F
                                   : (0, ey.jsx)(eN.iD, {
                                       clientThreadId: l,
-                                      hedgehogComposerSlot: tO
+                                      hedgehogComposerSlot: tB
                                         ? (0, ey.jsx)(p.az, {
                                             clientThreadId: l,
                                             isNewThread: eQ,
@@ -22459,9 +22450,9 @@
                                         (0, ey.jsx)(
                                           td.Z,
                                           {
-                                            onChangeItemInView: tr,
-                                            onRequestMoreCompletions: ta,
-                                            onChangeRating: to,
+                                            onChangeItemInView: to,
+                                            onRequestMoreCompletions: tr,
+                                            onChangeRating: tu,
                                             onRequestCompletion: tt,
                                             clientThreadId: l,
                                             initiallyHighlightedMessageId: c,
@@ -22500,7 +22491,7 @@
                                         }))
                                   : null,
                           }),
-                        !tO &&
+                        !tB &&
                           (0, ey.jsx)(tP, {
                             style: { paddingLeft: z, paddingRight: z },
                             children: eg
@@ -22568,9 +22559,9 @@
                       clientThreadId: l,
                       currentLeafId: em,
                       currentModelId: eG,
-                      onChangeItemInView: tr,
-                      onRequestMoreCompletions: ta,
-                      onChangeRating: to,
+                      onChangeItemInView: to,
+                      onRequestMoreCompletions: tr,
+                      onChangeRating: tu,
                       onRequestCompletion: tt,
                       ratingModalOpen: eC,
                       ratingModalNodeId: eE,
@@ -22579,9 +22570,9 @@
                       sharedConversationReportModalNodeId: eb,
                       setSharedConversationReportModalNodeId: ej,
                     }),
-                    (0, ey.jsx)(e3, { isOpen: tu, onClose: tj }),
+                    (0, ey.jsx)(e3, { isOpen: tx, onClose: tC }),
                     (null == et ? void 0 : et.includes(V.a3)) &&
-                      (0, ey.jsx)(eH, { isOpen: tk, onClose: tC }),
+                      (0, ey.jsx)(eH, { isOpen: tO, onClose: tk }),
                   ],
                 }),
               }),
@@ -26281,7 +26272,7 @@
                           ey.Dw.uploadConnectorFile(t, n, a, z);
                       })
                       .catch((e) => {
-                        n[s] = "failed";
+                        $.tQ.updateReferencedDocState(j, s, "failed");
                       }));
                 }
             },
@@ -26923,7 +26914,7 @@
           O = (0, f.useCallback)(
             (e, t) => {
               let n = $.tQ.getServerThreadId(r);
-              null != n && Y.ut.stopConversation(n);
+              Y.ut.stopConversation(n);
               let a = $.tQ.getTree(r);
               if (!a.hasReceivedServerCompletion && !(0, ee.YK)()) {
                 var s;
@@ -30158,35 +30149,40 @@
         });
       }
       function nn(e) {
-        var t, n, a, r, s, i, o, l, c;
-        let { clientThreadId: d, inMobileHeader: u, gizmoId: A } = e,
-          m = (0, M.hz)(),
-          g = B.tQ.getServerThreadId(d),
-          p = !!(
+        var t, n, a, r, s, i, o, l, c, d;
+        let { clientThreadId: u, inMobileHeader: A, gizmoId: m } = e,
+          g = (0, M.hz)(),
+          p = B.tQ.getServerThreadId(u),
+          f = !!(
             null !== (t = (0, M.t)()) &&
             void 0 !== t &&
             t.isTemporaryChatAvailable()
           ),
-          f = null == m ? void 0 : m.includes(P.L0.BrowseAvailable),
-          h = !g,
-          { isLoading: x } = (0, t5.Y7)(),
-          { isUserUnauthenticated: v, navigateToAuth: y } = (0, T.E)(),
-          b = (0, $.C)(P.L0.WorkspaceShareLinks),
-          j = g && b && !v,
-          w = (0, t9.ZP)(),
-          C = (0, t5.Xy)(d),
-          k = C.id,
-          Q = w.find((e) => e.categoryId === t9.ft.AUTO),
-          F = w.find((e) => e.categoryId === t9.ft.GPT4),
-          U =
+          h = null == g ? void 0 : g.includes(P.L0.BrowseAvailable),
+          x = !p,
+          { isLoading: v } = (0, t5.Y7)(),
+          { isUserUnauthenticated: y, navigateToAuth: b } = (0, T.E)(),
+          j = (0, $.C)(P.L0.WorkspaceShareLinks),
+          w = p && j && !y,
+          C = (0, t9.ZP)(),
+          k = (0, t5.Xy)(u),
+          Q = k.id,
+          F = C.find((e) => e.categoryId === t9.ft.AUTO),
+          U = C.find((e) => e.categoryId === t9.ft.GPT4),
+          V =
             null === (n = (0, Z.sB)(Z.tz.PluginDisabledInModelPicker)) ||
             void 0 === n
               ? void 0
               : n.value,
-          V =
-            null == F
+          q =
+            null === (a = (0, Z.sB)(Z.tz.PluginConversationsArchived)) ||
+            void 0 === a
               ? void 0
-              : F.options.find((e) => {
+              : a.value,
+          Y =
+            null == U
+              ? void 0
+              : U.options.find((e) => {
                   var t;
                   let { name: n } = e;
                   return (
@@ -30196,80 +30192,80 @@
                       : t.name)
                   );
                 }),
-          q = w.find((e) => e.categoryId === t9.ft.GPT3_5),
-          Y = w.find((e) => e.categoryId === t9.ft.OTHER),
-          J = w.find((e) => e.categoryId === t9.ft.EXPERIMENTS),
-          X = w.find((e) => e.categoryId === t9.ft.MAINLINE),
-          { layer: ea } = (0, R.AH)(R.VG.ModelSwitcherEnhancements),
-          es = ea.get(R.yp.IS_DYNAMIC_MODEL_ENABLED, !1),
-          ei =
-            k === (null == Q ? void 0 : Q.value)
+          J = C.find((e) => e.categoryId === t9.ft.GPT3_5),
+          X = C.find((e) => e.categoryId === t9.ft.OTHER),
+          ea = C.find((e) => e.categoryId === t9.ft.EXPERIMENTS),
+          es = C.find((e) => e.categoryId === t9.ft.MAINLINE),
+          { layer: ei } = (0, R.AH)(R.VG.ModelSwitcherEnhancements),
+          el = ei.get(R.yp.IS_DYNAMIC_MODEL_ENABLED, !1),
+          ec =
+            Q === (null == F ? void 0 : F.value)
               ? t9.ft.AUTO
-              : k === (null == F ? void 0 : F.value)
+              : Q === (null == U ? void 0 : U.value)
                 ? t9.ft.GPT4
-                : k === (null == q ? void 0 : q.value)
+                : Q === (null == J ? void 0 : J.value)
                   ? t9.ft.GPT3_5
-                  : (null == V ? void 0 : V.value) === k
+                  : (null == Y ? void 0 : Y.value) === Q
                     ? "plugins"
-                    : (null == Y
+                    : (null == X
                           ? void 0
-                          : Y.options.find((e) => {
+                          : X.options.find((e) => {
                               let { value: t } = e;
-                              return t === k;
+                              return t === Q;
                             })) != null
                       ? t9.ft.OTHER
-                      : (null == J
+                      : (null == ea
                             ? void 0
-                            : J.options.find((e) => {
+                            : ea.options.find((e) => {
                                 let { value: t } = e;
-                                return t === k;
+                                return t === Q;
                               })) != null
                         ? t9.ft.EXPERIMENTS
-                        : (null == X
+                        : (null == es
                               ? void 0
-                              : X.options.find((e) => {
+                              : es.options.find((e) => {
                                   let { value: t } = e;
-                                  return t === k;
+                                  return t === Q;
                                 })) != null
                           ? t9.ft.MAINLINE
                           : null,
-          el = (0, I.m0)(),
-          ec = "plugins" === ei,
-          ed =
-            (null == Y || null === (a = Y.options) || void 0 === a
-              ? void 0
-              : a.length) && Y.options.length > 0,
-          eu =
-            (null == J || null === (r = J.options) || void 0 === r
-              ? void 0
-              : r.length) && J.options.length > 0,
+          ed = (0, I.m0)(),
+          eu = "plugins" === ec,
           eA =
-            (null == X || null === (s = X.options) || void 0 === s
+            (null == X || null === (r = X.options) || void 0 === r
               ? void 0
-              : s.length) && X.options.length > 0,
-          em = null !== (i = null != ed ? ed : eu) && void 0 !== i ? i : eA,
+              : r.length) && X.options.length > 0,
+          em =
+            (null == ea || null === (s = ea.options) || void 0 === s
+              ? void 0
+              : s.length) && ea.options.length > 0,
           eg =
-            ei === t9.ft.GPT4
+            (null == es || null === (i = es.options) || void 0 === i
+              ? void 0
+              : i.length) && es.options.length > 0,
+          ep = null !== (o = null != eA ? eA : em) && void 0 !== o ? o : eg,
+          ef =
+            ec === t9.ft.GPT4
               ? "4"
-              : ei === t9.ft.GPT3_5
+              : ec === t9.ft.GPT3_5
                 ? "3.5"
-                : ec
+                : eu
                   ? "Plugins"
-                  : ei === t9.ft.OTHER
-                    ? null !== (o = null == Y ? void 0 : Y.name) && void 0 !== o
-                      ? o
+                  : ec === t9.ft.OTHER
+                    ? null !== (l = null == X ? void 0 : X.name) && void 0 !== l
+                      ? l
                       : ""
-                    : ei === t9.ft.EXPERIMENTS
-                      ? null !== (l = null == J ? void 0 : J.name) &&
-                        void 0 !== l
-                        ? l
-                        : ""
-                      : ei === t9.ft.MAINLINE &&
-                          null !== (c = null == X ? void 0 : X.name) &&
-                          void 0 !== c
+                    : ec === t9.ft.EXPERIMENTS
+                      ? null !== (c = null == ea ? void 0 : ea.name) &&
+                        void 0 !== c
                         ? c
+                        : ""
+                      : ec === t9.ft.MAINLINE &&
+                          null !== (d = null == es ? void 0 : es.name) &&
+                          void 0 !== d
+                        ? d
                         : "",
-          ep = (e) =>
+          ex = (e) =>
             (0, eh.jsx)("div", {
               className: "flex shrink-0 grow justify-between gap-2",
               children: (0, eh.jsxs)("div", {
@@ -30281,23 +30277,23 @@
                 ],
               }),
             }),
-          ef = (0, G.useCallback)(() => {
+          ev = (0, G.useCallback)(() => {
             N.A.logEvent(z.M.openModalAccountPaymentfromModelPicker, {
               content: "gizmo-button",
             }),
               (0, t2.MG)();
           }, []),
-          ex = (0, W.Z)();
+          ey = (0, W.Z)();
         return (
           (0, G.useEffect)(() => {
-            if (!x) {
+            if (!v) {
               var e;
               null === (e = (0, L.Ef)({ namespace: L.dG.ChatPageLoad })) ||
                 void 0 === e ||
                 e.logTiming("render_model_switcher");
             }
-          }, [x]),
-          x
+          }, [v]),
+          v
             ? null
             : (0, eh.jsxs)(eh.Fragment, {
                 children: [
@@ -30315,8 +30311,8 @@
                           children: [
                             (0, eh.jsx)("div", {
                               children:
-                                null != A
-                                  ? (0, eh.jsx)(nt, { gizmoId: A })
+                                null != m
+                                  ? (0, eh.jsx)(nt, { gizmoId: m })
                                   : (0, eh.jsxs)(eh.Fragment, {
                                       children: [
                                         et.Dd,
@@ -30324,7 +30320,7 @@
                                         (0, eh.jsx)("span", {
                                           className:
                                             "text-token-text-secondary",
-                                          children: eg,
+                                          children: ef,
                                         }),
                                       ],
                                     }),
@@ -30339,7 +30335,7 @@
                         children: (0, eh.jsxs)(D.VY, {
                           className:
                             "popover mt-2 min-w-[340px] max-w-xs overflow-hidden rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
-                          align: u ? "center" : "start",
+                          align: A ? "center" : "start",
                           children: [
                             (0, eh.jsxs)("div", {
                               className:
@@ -30353,7 +30349,7 @@
                                   }),
                                 }),
                                 (0, eh.jsx)("a", {
-                                  href: es
+                                  href: el
                                     ? "https://help.openai.com/en/articles/9155758-what-is-the-chatgpt-plus-model-selector"
                                     : "https://help.openai.com/en/articles/7102672-how-can-i-access-gpt-4",
                                   target: "_blank",
@@ -30365,10 +30361,10 @@
                                 }),
                               ],
                             }),
-                            Q &&
+                            F &&
                               (0, eh.jsx)(eh.Fragment, {
                                 children: (0, eh.jsx)(en.oI, {
-                                  value: Q.value,
+                                  value: F.value,
                                   name: (0, eh.jsx)(eh.Fragment, {
                                     children: (0, eh.jsxs)("div", {
                                       className: "flex items-center gap-3",
@@ -30401,19 +30397,19 @@
                                       ],
                                     }),
                                   }),
-                                  isSelected: k === Q.value,
-                                  isNewThread: h,
+                                  isSelected: Q === F.value,
+                                  isNewThread: x,
                                 }),
                               }),
-                            F &&
+                            U &&
                               (0, eh.jsx)(eh.Fragment, {
                                 children: (0, eh.jsx)(en.oI, {
-                                  value: F.value,
+                                  value: U.value,
                                   name: (0, eh.jsx)(eh.Fragment, {
                                     children: (0, eh.jsxs)("div", {
                                       className: "flex items-center gap-3",
                                       children: [
-                                        (0, eh.jsx)(er.HV, {
+                                        (0, eh.jsx)(O.Zku, {
                                           className: "icon-md shrink-0",
                                         }),
                                         (0, eh.jsxs)("div", {
@@ -30422,7 +30418,7 @@
                                             (0, eh.jsx)("div", {
                                               className:
                                                 "text-token-text-tertiary",
-                                              children: f
+                                              children: h
                                                 ? (0, eh.jsx)(
                                                     H.Z,
                                                     t4(
@@ -30452,13 +30448,13 @@
                                       ],
                                     }),
                                   }),
-                                  isSelected: k === F.value,
-                                  isNewThread: h,
+                                  isSelected: Q === U.value,
+                                  isNewThread: x,
                                 }),
                               }),
-                            q &&
+                            J &&
                               (0, eh.jsx)(en.oI, {
-                                value: q.value,
+                                value: J.value,
                                 name: (0, eh.jsxs)("div", {
                                   className: "flex items-center gap-3",
                                   children: [
@@ -30479,11 +30475,11 @@
                                     }),
                                   ],
                                 }),
-                                isSelected: k === q.value,
-                                isNewThread: h,
+                                isSelected: Q === J.value,
+                                isNewThread: x,
                               }),
-                            !el &&
-                              !F &&
+                            !ed &&
+                              !U &&
                               (0, eh.jsx)(eh.Fragment, {
                                 children: (0, eh.jsx)(en.oI, {
                                   value: "",
@@ -30496,24 +30492,24 @@
                                         z.M
                                           .modelSwitcherPlusUpgradeButtonClicked
                                       ),
-                                      v)
+                                      y)
                                     ) {
                                       _.bX.setCookie(
                                         _.cn.ShowPaymentModal,
                                         !0,
                                         { maxAge: 21600 }
                                       );
-                                      let e = y();
+                                      let e = b();
                                       N.A.logSignUpButtonClicked({
                                         location: "Model switcher GPT-4 upsell",
                                         provider: e,
                                       });
-                                    } else ef();
+                                    } else ev();
                                   },
                                   name: (0, eh.jsxs)("div", {
                                     className: "flex items-center gap-3",
                                     children: [
-                                      (0, eh.jsx)(er.HV, {
+                                      (0, eh.jsx)(O.Zku, {
                                         className: "icon-md shrink-0",
                                       }),
                                       (0, eh.jsxs)("div", {
@@ -30529,7 +30525,7 @@
                                               ),
                                               (0, eh.jsx)("div", {
                                                 className: "mt-2",
-                                                children: v
+                                                children: y
                                                   ? (0, eh.jsx)(K.z, {
                                                       color: "primary",
                                                       className:
@@ -30562,32 +30558,32 @@
                                   isNewThread: !0,
                                 }),
                               }),
-                            !U &&
-                              null != V &&
+                            !V &&
+                              null != Y &&
                               (0, eh.jsx)(en.oI, {
-                                value: V.value,
+                                value: Y.value,
                                 name: (0, eh.jsxs)("div", {
                                   className: "flex items-center gap-3",
                                   children: [
                                     (0, eh.jsx)(er.TC, {
                                       className: "icon-md",
                                     }),
-                                    V.name,
+                                    Y.name,
                                   ],
                                 }),
-                                isSelected: ec,
-                                isNewThread: h,
+                                isSelected: eu,
+                                isNewThread: x,
                               }),
-                            p &&
+                            f &&
                               (0, eh.jsxs)(eh.Fragment, {
                                 children: [
                                   (0, eh.jsx)(eo.Cl, {}),
-                                  (0, eh.jsx)(ne, { clientThreadId: d }),
+                                  (0, eh.jsx)(ne, { clientThreadId: u }),
                                 ],
                               }),
-                            (0, eh.jsx)(ee.BI, { clientThreadId: d }),
-                            h && em && (0, eh.jsx)(eo.Cl, {}),
-                            h && ed
+                            (0, eh.jsx)(ee.BI, { clientThreadId: u }),
+                            x && ep && (0, eh.jsx)(eo.Cl, {}),
+                            x && eA
                               ? (0, eh.jsxs)(D.Tr, {
                                   children: [
                                     (0, eh.jsx)(t8, {
@@ -30595,81 +30591,81 @@
                                         className:
                                           "flex grow justify-between gap-2 overflow-hidden",
                                         children: [
-                                          ep(Y.name),
-                                          ei === t9.ft.OTHER &&
+                                          ex(X.name),
+                                          ec === t9.ft.OTHER &&
                                             (0, eh.jsx)("div", {
                                               className:
                                                 "truncate text-token-text-tertiary",
-                                              children: C.title,
+                                              children: k.title,
                                             }),
                                         ],
                                       }),
                                     }),
                                     (0, eh.jsx)(en.Ye, {
-                                      currentModel: C,
-                                      categoryOptions: Y.options,
-                                    }),
-                                  ],
-                                })
-                              : null,
-                            h && eu
-                              ? (0, eh.jsxs)(D.Tr, {
-                                  children: [
-                                    (0, eh.jsx)(t8, {
-                                      children: (0, eh.jsxs)("div", {
-                                        className:
-                                          "flex grow justify-between gap-2 overflow-hidden",
-                                        children: [
-                                          ep(J.name),
-                                          ei === t9.ft.EXPERIMENTS &&
-                                            (0, eh.jsx)("div", {
-                                              className:
-                                                "truncate text-token-text-tertiary",
-                                              children: C.title,
-                                            }),
-                                        ],
-                                      }),
-                                    }),
-                                    (0, eh.jsx)(en.Ye, {
-                                      currentModel: C,
-                                      categoryOptions: J.options,
-                                      className: "lg:!max-w-lg",
-                                    }),
-                                  ],
-                                })
-                              : null,
-                            h && eA
-                              ? (0, eh.jsxs)(D.Tr, {
-                                  children: [
-                                    (0, eh.jsx)(t8, {
-                                      children: (0, eh.jsxs)("div", {
-                                        className:
-                                          "flex grow justify-between gap-2 overflow-hidden",
-                                        children: [
-                                          ep(X.name),
-                                          ei === t9.ft.MAINLINE &&
-                                            (0, eh.jsx)("div", {
-                                              className:
-                                                "truncate text-token-text-tertiary",
-                                              children: C.title,
-                                            }),
-                                        ],
-                                      }),
-                                    }),
-                                    (0, eh.jsx)(en.Ye, {
-                                      currentModel: C,
+                                      currentModel: k,
                                       categoryOptions: X.options,
+                                    }),
+                                  ],
+                                })
+                              : null,
+                            x && em
+                              ? (0, eh.jsxs)(D.Tr, {
+                                  children: [
+                                    (0, eh.jsx)(t8, {
+                                      children: (0, eh.jsxs)("div", {
+                                        className:
+                                          "flex grow justify-between gap-2 overflow-hidden",
+                                        children: [
+                                          ex(ea.name),
+                                          ec === t9.ft.EXPERIMENTS &&
+                                            (0, eh.jsx)("div", {
+                                              className:
+                                                "truncate text-token-text-tertiary",
+                                              children: k.title,
+                                            }),
+                                        ],
+                                      }),
+                                    }),
+                                    (0, eh.jsx)(en.Ye, {
+                                      currentModel: k,
+                                      categoryOptions: ea.options,
                                       className: "lg:!max-w-lg",
                                     }),
                                   ],
                                 })
                               : null,
-                            j &&
+                            x && eg
+                              ? (0, eh.jsxs)(D.Tr, {
+                                  children: [
+                                    (0, eh.jsx)(t8, {
+                                      children: (0, eh.jsxs)("div", {
+                                        className:
+                                          "flex grow justify-between gap-2 overflow-hidden",
+                                        children: [
+                                          ex(es.name),
+                                          ec === t9.ft.MAINLINE &&
+                                            (0, eh.jsx)("div", {
+                                              className:
+                                                "truncate text-token-text-tertiary",
+                                              children: k.title,
+                                            }),
+                                        ],
+                                      }),
+                                    }),
+                                    (0, eh.jsx)(en.Ye, {
+                                      currentModel: k,
+                                      categoryOptions: es.options,
+                                      className: "lg:!max-w-lg",
+                                    }),
+                                  ],
+                                })
+                              : null,
+                            w &&
                               (0, eh.jsxs)(eh.Fragment, {
                                 children: [
                                   (0, eh.jsx)(eo.Cl, {}),
                                   (0, eh.jsxs)(eo.UA, {
-                                    onClick: () => S.vm.openSharingModal(g),
+                                    onClick: () => S.vm.openSharingModal(p),
                                     children: [
                                       (0, eh.jsx)(er.Gp, {
                                         className: "icon-md mr-1",
@@ -30684,9 +30680,10 @@
                       }),
                     ],
                   }),
-                  ec &&
+                  !q &&
+                    eu &&
                     (0, eh.jsx)(E.u, {
-                      label: ex.formatMessage(
+                      label: ey.formatMessage(
                         {
                           id: "ModelSwitcher.pluginsDeprecationTooltip",
                           defaultMessage:
@@ -30711,7 +30708,7 @@
           ? null
           : (0, eh.jsxs)(eh.Fragment, {
               children: [
-                (0, eh.jsx)(es.Zj, {
+                (0, eh.jsx)(es.GizmoInformationDropdown, {
                   clientThreadId: n,
                   gizmoResource: o,
                   showReportModal: () => {
@@ -30751,10 +30748,15 @@
           a = (0, B.eV)(t),
           r = (0, ee.Qr)();
         return null == a || r
-          ? (0, eh.jsx)(nn, {
-              clientThreadId: t,
-              inMobileHeader: n,
-              gizmoId: a,
+          ? (0, eh.jsxs)(eh.Fragment, {
+              children: [
+                (0, eh.jsx)(nn, {
+                  clientThreadId: t,
+                  inMobileHeader: n,
+                  gizmoId: a,
+                }),
+                r && a && (0, eh.jsx)(ee.zh, { gizmoId: a }),
+              ],
             })
           : (0, eh.jsx)(na, {
               clientThreadId: t,
@@ -31282,43 +31284,45 @@
       "use strict";
       n.d(t, {
         wm: function () {
-          return G;
+          return W;
         },
         Xu: function () {
-          return F;
+          return G;
         },
       });
       var a = n(18450),
         r = n(47712),
-        s = n(70996),
-        i = n(22189),
-        o = n(82473),
-        l = n(25494),
-        c = n(61236),
-        d = n(38801),
-        u = n(67852),
-        A = n(34594),
-        m = n(19841),
-        g = n(24343),
-        p = n(83737),
-        f = n(61888),
-        h = n(70079),
-        x = n(1454),
-        v = n(9063),
-        y = n(84692),
-        b = n(68498),
-        j = n(53362),
-        w = n(13106),
-        C = n(69920),
-        k = n(7658),
-        E = n(73606),
-        O = n(85452),
-        M = n(282),
-        P = n(93884),
-        B = n(62456),
-        S = n(67217),
-        T = n(35250);
-      function I(e, t) {
+        s = n(19052),
+        i = n(70996),
+        o = n(22189),
+        l = n(82473),
+        c = n(25494),
+        d = n(61236),
+        u = n(96056),
+        A = n(38801),
+        m = n(67852),
+        g = n(34594),
+        p = n(19841),
+        f = n(24343),
+        h = n(83737),
+        x = n(61888),
+        v = n(70079),
+        y = n(1454),
+        b = n(9063),
+        j = n(84692),
+        w = n(68498),
+        C = n(53362),
+        k = n(13106),
+        E = n(69920),
+        O = n(7658),
+        M = n(73606),
+        P = n(85452),
+        B = n(282),
+        S = n(93884),
+        T = n(62456),
+        I = n(67217),
+        D = n(35250);
+      function N(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -31330,16 +31334,16 @@
         }
         return n;
       }
-      function D(e) {
+      function z(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? I(Object(n), !0).forEach(function (t) {
+            ? N(Object(n), !0).forEach(function (t) {
                 (0, a.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : I(Object(n)).forEach(function (t) {
+              : N(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -31349,47 +31353,47 @@
         }
         return e;
       }
-      let N = P.pm.FirstTimeUsingUserContext;
-      var z = (e) => {
+      let _ = S.pm.FirstTimeUsingUserContext;
+      var L = (e) => {
         let { onClose: t } = e,
-          n = (0, v.Z)(),
-          { markAsViewed: a } = (0, P.qg)(N),
-          r = (0, h.useCallback)(() => {
+          n = (0, b.Z)(),
+          { markAsViewed: a } = (0, S.qg)(_),
+          r = (0, v.useCallback)(() => {
             a(), t();
           }, [a, t]);
-        return (0, T.jsxs)(S.Z, {
+        return (0, D.jsxs)(I.Z, {
           isOpen: !0,
-          onClose: f.noop,
+          onClose: x.noop,
           size: "custom",
           className: "max-w-xl",
           type: "success",
-          title: n.formatMessage(_.title),
-          primaryButton: (0, T.jsx)(B.ZP.Button, {
+          title: n.formatMessage(Z.title),
+          primaryButton: (0, D.jsx)(T.ZP.Button, {
             onClick: r,
-            title: n.formatMessage(_.ok),
+            title: n.formatMessage(Z.ok),
             color: "primary",
           }),
           children: [
-            (0, T.jsxs)("div", {
+            (0, D.jsxs)("div", {
               className: "mb-6 flex flex-col gap-3",
               children: [
-                (0, T.jsx)("p", { children: (0, T.jsx)(y.Z, D({}, _.body1)) }),
-                (0, T.jsx)("p", { children: (0, T.jsx)(y.Z, D({}, _.body2)) }),
+                (0, D.jsx)("p", { children: (0, D.jsx)(j.Z, z({}, Z.body1)) }),
+                (0, D.jsx)("p", { children: (0, D.jsx)(j.Z, z({}, Z.body2)) }),
               ],
             }),
-            (0, T.jsx)("div", {
+            (0, D.jsx)("div", {
               className: "flex flex-col gap-3 text-sm text-token-text-tertiary",
-              children: (0, T.jsx)("p", {
-                children: (0, T.jsx)(
-                  y.Z,
-                  D(
-                    D({}, _.legal1),
+              children: (0, D.jsx)("p", {
+                children: (0, D.jsx)(
+                  j.Z,
+                  z(
+                    z({}, Z.legal1),
                     {},
                     {
                       values: {
                         article: (e) =>
-                          (0, T.jsx)("a", {
-                            href: s.i,
+                          (0, D.jsx)("a", {
+                            href: i.i,
                             target: "_blank",
                             className: "underline",
                             rel: "noopener noreferrer",
@@ -31404,7 +31408,7 @@
           ],
         });
       };
-      let _ = (0, b.vU)({
+      let Z = (0, w.vU)({
         title: {
           id: "UserContextFirstTimeModal.title",
           defaultMessage: "Introducing Custom Instructions",
@@ -31426,9 +31430,9 @@
         },
         ok: { id: "UserContextFirstTimeModal.ok", defaultMessage: "OK" },
       });
-      var L = n(11335),
-        Z = n(95407);
-      function R(e, t) {
+      var R = n(11335),
+        Q = n(95407);
+      function F(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -31440,16 +31444,16 @@
         }
         return n;
       }
-      function Q(e) {
+      function U(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? R(Object(n), !0).forEach(function (t) {
+            ? F(Object(n), !0).forEach(function (t) {
                 (0, a.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : R(Object(n)).forEach(function (t) {
+              : F(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -31459,14 +31463,14 @@
         }
         return e;
       }
-      function F(e) {
-        let t = (0, v.Z)();
-        return (0, c.a)({
+      function G(e) {
+        let t = (0, b.Z)();
+        return (0, d.a)({
           queryKey: ["userContext"],
           queryFn: () =>
-            j.Z.getUserSystemMessage().catch((e) => {
+            C.Z.getUserSystemMessage().catch((e) => {
               throw (
-                (Z.m.danger(
+                (Q.m.danger(
                   t.formatMessage({
                     id: "userContextModal.getCustomInstructionsError",
                     defaultMessage: "Failed to get your settings",
@@ -31502,47 +31506,47 @@
           },
         });
       }
-      let U = {
+      let H = {
         aboutUserMessage: void 0,
         aboutModelMessage: void 0,
         disabledTools: void 0,
         enabled: void 0,
       };
-      function G(e) {
+      function W(e) {
         var t, n;
         let { isModalOpen: a } = e,
-          i = (0, v.Z)(),
-          c = (function () {
-            let { eligible: e } = (0, P.qg)(N);
+          o = (0, b.Z)(),
+          d = (function () {
+            let { eligible: e } = (0, S.qg)(_);
             return e;
           })(),
-          { 0: m, 1: g } = (0, h.useState)(!1),
-          { isLoading: p, data: x } = F(a),
+          { 0: p, 1: f } = (0, v.useState)(!1),
+          { isLoading: h, data: y } = G(a),
           {
-            aboutUserMessage: b = "",
-            aboutModelMessage: C = "",
-            disabledTools: k = [],
-            enabled: E,
-          } = null != x ? x : {},
-          { 0: I, 1: D } = (0, h.useState)(U),
+            aboutUserMessage: w = "",
+            aboutModelMessage: E = "",
+            disabledTools: O = [],
+            enabled: M,
+          } = null != y ? y : {},
+          { 0: N, 1: z } = (0, v.useState)(H),
           {
-            aboutUserMessage: _,
-            aboutModelMessage: L,
-            disabledTools: R,
-            enabled: G,
-          } = I,
-          Y = null != G ? G : !!E,
-          { 0: $, 1: ee } = (0, h.useState)(null),
-          et = (0, h.useCallback)(() => {
-            w.vm.closeModal(w.B.UserContext), D(U), ee(null);
+            aboutUserMessage: Z,
+            aboutModelMessage: R,
+            disabledTools: F,
+            enabled: W,
+          } = N,
+          X = null != W ? W : !!M,
+          { 0: et, 1: en } = (0, v.useState)(null),
+          ea = (0, v.useCallback)(() => {
+            k.vm.closeModal(k.B.UserContext), z(H), en(null);
           }, []),
-          { isPending: en, mutate: ea } = (function (e) {
+          { isPending: er, mutate: es } = (function (e) {
             let { onSuccess: t, onError: n } = e,
-              a = (0, o.NL)();
-            return (0, l.D)({
+              a = (0, l.NL)();
+            return (0, c.D)({
               mutationFn: (e) => {
                 let { userContext: t } = e;
-                return j.Z.createOrUpdateUserSystemMessage(t);
+                return C.Z.createOrUpdateUserSystemMessage(t);
               },
               onSettled: (e, t) => {
                 let n = ["userContext"];
@@ -31555,7 +31559,7 @@
             });
           })({
             onSuccess: () => {
-              et();
+              ea();
             },
             onError: (e) => {
               var t, n, a;
@@ -31566,13 +31570,13 @@
                 null !== (n = e.response) &&
                 void 0 !== n &&
                 n.field
-                  ? ee(
+                  ? en(
                       null === (a = e.response) || void 0 === a
                         ? void 0
                         : a.field
                     )
-                  : Z.m.danger(
-                      i.formatMessage({
+                  : Q.m.danger(
+                      o.formatMessage({
                         id: "userContextModal.saveError",
                         defaultMessage: "Failed to update settings",
                       })
@@ -31581,207 +31585,208 @@
               );
             },
           }),
-          { 0: er, 1: es } = (0, h.useState)(!1),
-          ei = (0, r.t)(),
-          eo =
-            null !== (t = null == ei ? void 0 : ei.isPlus()) &&
+          { 0: ei, 1: eo } = (0, v.useState)(!1),
+          el = (0, r.t)(),
+          ec =
+            null !== (t = null == el ? void 0 : el.isPlus()) &&
             void 0 !== t &&
             t,
-          el = (0, A.it)(A.H6.CiGpt4Capabilities).config.get("show_ui", !1),
-          ec = V(null != _ ? _ : "") || V(null != L ? L : ""),
-          ed =
-            (void 0 !== L && L !== C) ||
-            (void 0 !== _ && _ !== b) ||
-            (void 0 !== R && !(0, f.isEqual)(R, k)) ||
-            (void 0 !== G && G !== E),
-          eu = (0, h.useCallback)(() => {
-            ed ? es(!0) : et();
-          }, [et, ed]),
-          eA = (0, h.useCallback)(async () => {
-            en ||
-              (ee(null),
-              ea({
+          ed = (0, s.aF)(),
+          eu = !!ed && (0, u.yl)(ed),
+          eA = (0, g.it)(g.H6.CiGpt4Capabilities).config.get("show_ui", !1),
+          em = K(null != Z ? Z : "") || K(null != R ? R : ""),
+          eg =
+            (void 0 !== R && R !== E) ||
+            (void 0 !== Z && Z !== w) ||
+            (void 0 !== F && !(0, x.isEqual)(F, O)) ||
+            (void 0 !== W && W !== M),
+          ep = (0, v.useCallback)(() => {
+            eg ? eo(!0) : ea();
+          }, [ea, eg]),
+          ef = (0, v.useCallback)(async () => {
+            er ||
+              (en(null),
+              es({
                 userContext: {
-                  aboutUserMessage: null != _ ? _ : "",
-                  aboutModelMessage: null != L ? L : "",
-                  disabledTools: null != R ? R : [],
-                  enabled: !!G,
+                  aboutUserMessage: null != Z ? Z : "",
+                  aboutModelMessage: null != R ? R : "",
+                  disabledTools: null != F ? F : [],
+                  enabled: !!W,
                 },
               }));
-          }, [en, L, _, R, G, ea]),
-          em = (0, h.useCallback)(() => {
-            if (ec) {
+          }, [er, R, Z, F, W, es]),
+          eh = (0, v.useCallback)(() => {
+            if (em) {
               var e, t, n, a;
-              let r = V(null != _ ? _ : ""),
-                s = V(null != L ? L : "");
+              let r = K(null != Z ? Z : ""),
+                s = K(null != R ? R : "");
               r &&
-                (A.m9.logEvent(
+                (g.m9.logEvent(
                   "chatgpt_user_context_modal__message_past_limit",
                   void 0,
                   {
                     type: "about_user_message",
-                    limit: W.toString(),
+                    limit: q.toString(),
                     character_length:
-                      null !== (e = null == _ ? void 0 : _.length.toString()) &&
+                      null !== (e = null == Z ? void 0 : Z.length.toString()) &&
                       void 0 !== e
                         ? e
                         : "",
                   }
                 ),
-                d.A.logEvent(u.M.userContextModelMessagePastLimit, {
+                A.A.logEvent(m.M.userContextModelMessagePastLimit, {
                   type: "about_user_message",
-                  limit: W.toString(),
+                  limit: q.toString(),
                   character_length:
-                    null !== (t = null == _ ? void 0 : _.length.toString()) &&
+                    null !== (t = null == Z ? void 0 : Z.length.toString()) &&
                     void 0 !== t
                       ? t
                       : "",
                 })),
                 s &&
-                  (A.m9.logEvent(
+                  (g.m9.logEvent(
                     "chatgpt_user_context_modal__message_past_limit",
                     void 0,
                     {
                       type: "about_model_message",
-                      limit: W.toString(),
+                      limit: q.toString(),
                       character_length:
                         null !==
-                          (n = null == L ? void 0 : L.length.toString()) &&
+                          (n = null == R ? void 0 : R.length.toString()) &&
                         void 0 !== n
                           ? n
                           : "",
                     }
                   ),
-                  d.A.logEvent(u.M.userContextModelMessagePastLimit, {
+                  A.A.logEvent(m.M.userContextModelMessagePastLimit, {
                     type: "about_model_message",
-                    limit: W.toString(),
+                    limit: q.toString(),
                     character_length:
-                      null !== (a = null == L ? void 0 : L.length.toString()) &&
+                      null !== (a = null == R ? void 0 : R.length.toString()) &&
                       void 0 !== a
                         ? a
                         : "",
                   })),
-                Z.m.danger(i.formatMessage(X.messageLimitError, { limit: W }), {
-                  duration: 4,
-                  hasCloseButton: !0,
-                });
+                Q.m.danger(
+                  o.formatMessage(ee.messageLimitError, { limit: q }),
+                  { duration: 4, hasCloseButton: !0 }
+                );
               return;
             }
-            eA();
-          }, [i, ec, L, _, eA]);
-        if (a && c && !m)
-          return (0, T.jsx)(z, {
+            ef();
+          }, [o, em, R, Z, ef]);
+        if (a && d && !p)
+          return (0, D.jsx)(L, {
             onClose: () => {
-              g(!0);
+              f(!0);
             },
           });
-        if (a && er) {
+        if (a && ei) {
           let e = () => {
-            es(!1);
+            eo(!1);
           };
-          return (0, T.jsx)(
-            S.Z,
+          return (0, D.jsx)(
+            I.Z,
             {
               isOpen: !0,
               onClose: e,
               type: "success",
-              title: i.formatMessage(X.confirmCloseTitle),
-              primaryButton: (0, T.jsx)(B.ZP.Button, {
-                title: i.formatMessage(X.confirmCloseOk),
+              title: o.formatMessage(ee.confirmCloseTitle),
+              primaryButton: (0, D.jsx)(T.ZP.Button, {
+                title: o.formatMessage(ee.confirmCloseOk),
                 color: "danger",
                 onClick: () => {
-                  et(), e();
+                  ea(), e();
                 },
               }),
-              secondaryButton: (0, T.jsx)(B.ZP.Button, {
-                title: i.formatMessage(X.confirmCloseCancel),
+              secondaryButton: (0, D.jsx)(T.ZP.Button, {
+                title: o.formatMessage(ee.confirmCloseCancel),
                 color: "neutral",
                 onClick: e,
               }),
-              children: (0, T.jsx)("div", {
+              children: (0, D.jsx)("div", {
                 className: "text-sm",
-                children: (0, T.jsx)(y.Z, Q({}, X.confirmCloseBody)),
+                children: (0, D.jsx)(j.Z, U({}, ee.confirmCloseBody)),
               }),
             },
             "confirm-close"
           );
         }
-        return (0, T.jsxs)(
-          S.Z,
+        return (0, D.jsxs)(
+          I.Z,
           {
             isOpen: a,
-            onClose: eu,
+            onClose: ep,
             type: "success",
             size: "custom",
             className: "max-w-lg xl:max-w-xl",
-            title: (0, T.jsx)(y.Z, Q({}, X.profileTitle)),
+            title: (0, D.jsx)(j.Z, U({}, ee.profileTitle)),
             children: [
-              p
-                ? (0, T.jsx)("div", {
+              h
+                ? (0, D.jsx)("div", {
                     className: "flex h-14 items-center justify-center",
-                    children: (0, T.jsx)(O.Z, {}),
+                    children: (0, D.jsx)(P.Z, {}),
                   })
-                : (0, T.jsxs)("div", {
+                : (0, D.jsxs)("div", {
                     className:
                       "max-h-[60vh] overflow-y-auto md:max-h-[calc(100vh-300px)]",
                     children: [
-                      eo &&
-                        el &&
-                        (0, T.jsxs)(T.Fragment, {
+                      ((ec && eA) || eu) &&
+                        (0, D.jsxs)(D.Fragment, {
                           children: [
-                            (0, T.jsx)(J, {
+                            (0, D.jsx)($, {
                               disabledTools:
-                                null !== (n = I.disabledTools) && void 0 !== n
+                                null !== (n = N.disabledTools) && void 0 !== n
                                   ? n
-                                  : k,
+                                  : O,
                               onDisabledToolsChanged: (e) =>
-                                D((t) => {
+                                z((t) => {
                                   var n, a, r;
                                   return {
                                     aboutUserMessage:
                                       null !== (n = t.aboutUserMessage) &&
                                       void 0 !== n
                                         ? n
-                                        : b,
+                                        : w,
                                     aboutModelMessage:
                                       null !== (a = t.aboutModelMessage) &&
                                       void 0 !== a
                                         ? a
-                                        : C,
+                                        : E,
                                     enabled:
                                       null !== (r = t.enabled) && void 0 !== r
                                         ? r
-                                        : Y,
+                                        : X,
                                     disabledTools: e,
                                   };
                                 }),
                             }),
-                            (0, T.jsx)("div", {
+                            (0, D.jsx)("div", {
                               className: "my-6 h-px bg-token-border-light",
                             }),
                           ],
                         }),
-                      (0, T.jsxs)("div", {
+                      (0, D.jsxs)("div", {
                         className: "flex items-center gap-1",
                         children: [
-                          (0, T.jsx)("div", {
+                          (0, D.jsx)("div", {
                             className: "text-sm font-medium",
-                            children: (0, T.jsx)(
-                              y.Z,
-                              Q({}, X.customInstructionsTitle)
+                            children: (0, D.jsx)(
+                              j.Z,
+                              U({}, ee.customInstructionsTitle)
                             ),
                           }),
-                          (0, T.jsx)(K, {
-                            label: (0, T.jsx)(
-                              y.Z,
-                              Q(
-                                Q({}, X.customInstructionsTooltip),
+                          (0, D.jsx)(J, {
+                            label: (0, D.jsx)(
+                              j.Z,
+                              U(
+                                U({}, ee.customInstructionsTooltip),
                                 {},
                                 {
                                   values: {
                                     article: (e) =>
-                                      (0, T.jsx)("a", {
-                                        href: s.i,
+                                      (0, D.jsx)("a", {
+                                        href: i.i,
                                         target: "_blank",
                                         className: "underline",
                                         rel: "noreferrer",
@@ -31794,68 +31799,68 @@
                           }),
                         ],
                       }),
-                      (0, T.jsx)("p", {
+                      (0, D.jsx)("p", {
                         className:
                           "text-muted pb-3 pt-2 text-sm text-token-text-primary",
-                        children: (0, T.jsx)(y.Z, Q({}, X.aboutYouHelpText)),
+                        children: (0, D.jsx)(j.Z, U({}, ee.aboutYouHelpText)),
                       }),
-                      (0, T.jsx)(q, {
+                      (0, D.jsx)(Y, {
                         className: "mb-3",
-                        onSubmit: em,
-                        disabled: !Y,
-                        tip: (0, T.jsx)(H, {
-                          children: (0, T.jsxs)("ul", {
+                        onSubmit: eh,
+                        disabled: !X,
+                        tip: (0, D.jsx)(V, {
+                          children: (0, D.jsxs)("ul", {
                             className: "list-disc pl-5",
                             children: [
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(
-                                  y.Z,
-                                  Q({}, X.aboutUserTip1)
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(
+                                  j.Z,
+                                  U({}, ee.aboutUserTip1)
                                 ),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(
-                                  y.Z,
-                                  Q({}, X.aboutUserTip2)
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(
+                                  j.Z,
+                                  U({}, ee.aboutUserTip2)
                                 ),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(
-                                  y.Z,
-                                  Q({}, X.aboutUserTip3)
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(
+                                  j.Z,
+                                  U({}, ee.aboutUserTip3)
                                 ),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(
-                                  y.Z,
-                                  Q({}, X.aboutUserTip4)
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(
+                                  j.Z,
+                                  U({}, ee.aboutUserTip4)
                                 ),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(
-                                  y.Z,
-                                  Q({}, X.aboutUserTip5)
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(
+                                  j.Z,
+                                  U({}, ee.aboutUserTip5)
                                 ),
                               }),
                             ],
                           }),
                         }),
-                        hasModError: "about_user_message" === $,
-                        value: null != _ ? _ : b,
+                        hasModError: "about_user_message" === et,
+                        value: null != Z ? Z : w,
                         onChange: (e) =>
-                          D((t) => {
+                          z((t) => {
                             var n, a, r;
                             return {
                               aboutModelMessage:
                                 null !== (n = t.aboutModelMessage) &&
                                 void 0 !== n
                                   ? n
-                                  : C,
+                                  : E,
                               aboutUserMessage: e.target.value,
                               enabled:
                                 null !== (a = t.enabled) && void 0 !== a
                                   ? a
-                                  : Y,
+                                  : X,
                               disabledTools:
                                 null !== (r = t.disabledTools) && void 0 !== r
                                   ? r
@@ -31863,49 +31868,49 @@
                             };
                           }),
                       }),
-                      (0, T.jsx)("p", {
+                      (0, D.jsx)("p", {
                         className:
                           "text-muted py-3 text-sm text-token-text-primary",
-                        children: (0, T.jsx)(y.Z, Q({}, X.modelHelpText)),
+                        children: (0, D.jsx)(j.Z, U({}, ee.modelHelpText)),
                       }),
-                      (0, T.jsx)(q, {
-                        onSubmit: em,
-                        disabled: !Y,
-                        tip: (0, T.jsx)(H, {
-                          children: (0, T.jsxs)("ul", {
+                      (0, D.jsx)(Y, {
+                        onSubmit: eh,
+                        disabled: !X,
+                        tip: (0, D.jsx)(V, {
+                          children: (0, D.jsxs)("ul", {
                             className: "list-disc pl-5",
                             children: [
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(y.Z, Q({}, X.modelTip1)),
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(j.Z, U({}, ee.modelTip1)),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(y.Z, Q({}, X.modelTip2)),
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(j.Z, U({}, ee.modelTip2)),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(y.Z, Q({}, X.modelTip3)),
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(j.Z, U({}, ee.modelTip3)),
                               }),
-                              (0, T.jsx)("li", {
-                                children: (0, T.jsx)(y.Z, Q({}, X.modelTip4)),
+                              (0, D.jsx)("li", {
+                                children: (0, D.jsx)(j.Z, U({}, ee.modelTip4)),
                               }),
                             ],
                           }),
                         }),
-                        hasModError: "about_model_message" === $,
-                        value: null != L ? L : C,
+                        hasModError: "about_model_message" === et,
+                        value: null != R ? R : E,
                         onChange: (e) =>
-                          D((t) => {
+                          z((t) => {
                             var n, a, r;
                             return {
                               aboutUserMessage:
                                 null !== (n = t.aboutUserMessage) &&
                                 void 0 !== n
                                   ? n
-                                  : b,
+                                  : w,
                               aboutModelMessage: e.target.value,
                               enabled:
                                 null !== (a = t.enabled) && void 0 !== a
                                   ? a
-                                  : Y,
+                                  : X,
                               disabledTools:
                                 null !== (r = t.disabledTools) && void 0 !== r
                                   ? r
@@ -31915,40 +31920,40 @@
                       }),
                     ],
                   }),
-              (0, T.jsx)("div", {
+              (0, D.jsx)("div", {
                 className: "mt-4 md:mt-5",
-                children: (0, T.jsxs)("div", {
+                children: (0, D.jsxs)("div", {
                   className:
                     "flex flex-grow flex-col items-stretch justify-between gap-0 sm:flex-row sm:items-center sm:gap-3",
                   children: [
-                    (0, T.jsxs)("label", {
+                    (0, D.jsxs)("label", {
                       className:
                         "mt-5 flex cursor-pointer flex-row justify-between gap-2 sm:mt-4",
                       children: [
-                        (0, T.jsx)("div", {
+                        (0, D.jsx)("div", {
                           className:
                             "self-center text-sm text-token-text-primary",
-                          children: (0, T.jsx)(
-                            y.Z,
-                            Q({}, X.chatPreferencesEnable)
+                          children: (0, D.jsx)(
+                            j.Z,
+                            U({}, ee.chatPreferencesEnable)
                           ),
                         }),
-                        (0, T.jsx)(M.Z, {
-                          enabled: Y,
+                        (0, D.jsx)(B.Z, {
+                          enabled: X,
                           onChange: (e) => {
-                            D((t) => {
+                            z((t) => {
                               var n, a, r;
                               return {
                                 aboutUserMessage:
                                   null !== (n = t.aboutUserMessage) &&
                                   void 0 !== n
                                     ? n
-                                    : b,
+                                    : w,
                                 aboutModelMessage:
                                   null !== (a = t.aboutModelMessage) &&
                                   void 0 !== a
                                     ? a
-                                    : C,
+                                    : E,
                                 enabled: e,
                                 disabledTools:
                                   null !== (r = t.disabledTools) && void 0 !== r
@@ -31957,24 +31962,24 @@
                               };
                             });
                           },
-                          label: Y
-                            ? i.formatMessage(X.disableToggleLabel)
-                            : i.formatMessage(X.enableToggleLabel),
+                          label: X
+                            ? o.formatMessage(ee.disableToggleLabel)
+                            : o.formatMessage(ee.enableToggleLabel),
                         }),
                       ],
                     }),
-                    (0, T.jsx)(B.ZP.Actions, {
-                      secondaryButton: (0, T.jsx)(B.ZP.Button, {
-                        onClick: eu,
-                        children: (0, T.jsx)(y.Z, Q({}, X.cancel)),
+                    (0, D.jsx)(T.ZP.Actions, {
+                      secondaryButton: (0, D.jsx)(T.ZP.Button, {
+                        onClick: ep,
+                        children: (0, D.jsx)(j.Z, U({}, ee.cancel)),
                       }),
-                      primaryButton: (0, T.jsx)(B.ZP.Button, {
-                        loading: en,
-                        onClick: em,
+                      primaryButton: (0, D.jsx)(T.ZP.Button, {
+                        loading: er,
+                        onClick: eh,
                         color: "primary",
-                        visuallyDisabled: ec,
-                        disabled: !ed,
-                        children: (0, T.jsx)(y.Z, Q({}, X.save)),
+                        visuallyDisabled: em,
+                        disabled: !eg,
+                        children: (0, D.jsx)(j.Z, U({}, ee.save)),
                       }),
                     }),
                   ],
@@ -31985,61 +31990,61 @@
           "user-context"
         );
       }
-      let H = (e) => {
+      let V = (e) => {
           let { children: t } = e;
-          return (0, T.jsx)("div", {
+          return (0, D.jsx)("div", {
             className: "whitespace-pre-line",
             children: t,
           });
         },
-        W = 1500,
-        V = (e) => e.length > W,
-        q = (e) => {
+        q = 1500,
+        K = (e) => e.length > q,
+        Y = (e) => {
           let {
               disabled: t,
               onChange: n,
               onSubmit: a,
               placeholder: r,
               value: s,
-              tip: o,
+              tip: i,
               hasModError: l,
               className: c,
             } = e,
-            d = (0, v.Z)(),
-            u = (0, h.useRef)(null),
-            A = (0, C.x_)(),
-            f = (0, C.aj)(),
-            b = !A,
-            { 0: j, 1: w } = (0, h.useState)(!1),
-            { 0: k, 1: E } = (0, h.useState)(b),
-            O = !b && j && !k,
-            M = b && !k,
-            P = V(s);
-          return (0, T.jsxs)(T.Fragment, {
+            d = (0, b.Z)(),
+            u = (0, v.useRef)(null),
+            A = (0, E.x_)(),
+            m = (0, E.aj)(),
+            g = !A,
+            { 0: x, 1: w } = (0, v.useState)(!1),
+            { 0: C, 1: k } = (0, v.useState)(g),
+            O = !g && x && !C,
+            M = g && !C,
+            P = K(s);
+          return (0, D.jsxs)(D.Fragment, {
             children: [
-              (0, T.jsx)(S.Z, {
+              (0, D.jsx)(I.Z, {
                 isOpen: M,
                 type: "success",
                 size: "custom",
                 className: "max-w-lg",
-                title: d.formatMessage(X.tipsHeader),
+                title: d.formatMessage(ee.tipsHeader),
                 showCloseButton: !0,
                 onClose: () => {
-                  E(!0);
+                  k(!0);
                 },
-                children: o,
+                children: i,
               }),
-              (0, T.jsxs)(i.fC, {
+              (0, D.jsxs)(o.fC, {
                 open: O,
                 children: [
-                  (0, T.jsxs)("div", {
+                  (0, D.jsxs)("div", {
                     className: c,
                     children: [
-                      (0, T.jsx)(i.xz, {
+                      (0, D.jsx)(o.xz, {
                         asChild: !0,
-                        children: (0, T.jsx)("textarea", {
+                        children: (0, D.jsx)("textarea", {
                           ref: u,
-                          className: (0, m.default)(
+                          className: (0, p.default)(
                             "w-full resize-none rounded bg-token-main-surface-primary p-4 placeholder:text-gray-300",
                             {
                               "border-orange-400 focus:border-orange-400": l,
@@ -32059,7 +32064,7 @@
                               e.nativeEvent.isComposing ||
                               (e.preventDefault(), a());
                           },
-                          rows: A && !f ? 6 : 5,
+                          rows: A && !m ? 6 : 5,
                           value: s,
                           onChange: n,
                           onBlur: () => {
@@ -32070,24 +32075,24 @@
                           },
                         }),
                       }),
-                      (0, T.jsx)("div", {
-                        className: (0, m.default)(
+                      (0, D.jsx)("div", {
+                        className: (0, p.default)(
                           "flex items-center justify-between px-1 text-xs tabular-nums",
                           P ? "text-red-600" : "text-token-text-tertiary"
                         ),
                         children: l
-                          ? (0, T.jsx)("div", {
+                          ? (0, D.jsx)("div", {
                               className:
                                 "visible mt-2 text-left text-xs text-orange-400",
-                              children: (0, T.jsx)(
-                                y.Z,
-                                Q(
-                                  Q({}, X.modApiVoilation),
+                              children: (0, D.jsx)(
+                                j.Z,
+                                U(
+                                  U({}, ee.modApiVoilation),
                                   {},
                                   {
                                     values: {
                                       policyLink: (e) =>
-                                        (0, T.jsx)("a", {
+                                        (0, D.jsx)("a", {
                                           href: "https://platform.openai.com/docs/usage-policies/content-policy",
                                           className: "underline",
                                           target: "_blank",
@@ -32095,7 +32100,7 @@
                                           children: e,
                                         }),
                                       feedbackLink: (e) =>
-                                        (0, T.jsx)("a", {
+                                        (0, D.jsx)("a", {
                                           href: "https://forms.gle/3gyAMj5r5rTEcgbs5",
                                           className: "underline",
                                           target: "_blank",
@@ -32107,27 +32112,27 @@
                                 )
                               ),
                             })
-                          : (0, T.jsxs)(T.Fragment, {
+                          : (0, D.jsxs)(D.Fragment, {
                               children: [
-                                (0, T.jsx)("div", {
-                                  children: "".concat(s.length, "/").concat(W),
+                                (0, D.jsx)("div", {
+                                  children: "".concat(s.length, "/").concat(q),
                                 }),
-                                (0, T.jsx)("button", {
+                                (0, D.jsx)("button", {
                                   className: "flex items-center gap-1",
                                   onClick: () => {
                                     var e;
                                     null === (e = u.current) ||
                                       void 0 === e ||
                                       e.focus(),
-                                      E(!k);
+                                      k(!C);
                                   },
                                   tabIndex: -1,
-                                  children: (0, T.jsx)(g.M, {
+                                  children: (0, D.jsx)(f.M, {
                                     initial: !1,
                                     children:
-                                      j &&
-                                      (0, T.jsx)(
-                                        p.E.div,
+                                      x &&
+                                      (0, D.jsx)(
+                                        h.E.div,
                                         {
                                           className: "flex items-center gap-1",
                                           initial: { opacity: 0 },
@@ -32145,25 +32150,25 @@
                                               ease: "easeIn",
                                             },
                                           },
-                                          children: k
-                                            ? (0, T.jsxs)(T.Fragment, {
+                                          children: C
+                                            ? (0, D.jsxs)(D.Fragment, {
                                                 children: [
-                                                  (0, T.jsx)(
-                                                    y.Z,
-                                                    Q({}, X.showTips)
+                                                  (0, D.jsx)(
+                                                    j.Z,
+                                                    U({}, ee.showTips)
                                                   ),
-                                                  (0, T.jsx)(x.rDJ, {
+                                                  (0, D.jsx)(y.rDJ, {
                                                     className: "icon-xs",
                                                   }),
                                                 ],
                                               })
-                                            : (0, T.jsxs)(T.Fragment, {
+                                            : (0, D.jsxs)(D.Fragment, {
                                                 children: [
-                                                  (0, T.jsx)(
-                                                    y.Z,
-                                                    Q({}, X.hideTips)
+                                                  (0, D.jsx)(
+                                                    j.Z,
+                                                    U({}, ee.hideTips)
                                                   ),
-                                                  (0, T.jsx)(x.rzC, {
+                                                  (0, D.jsx)(y.rzC, {
                                                     className: "icon-xs",
                                                   }),
                                                 ],
@@ -32178,8 +32183,8 @@
                       }),
                     ],
                   }),
-                  (0, T.jsx)(i.h_, {
-                    children: (0, T.jsx)(i.VY, {
+                  (0, D.jsx)(o.h_, {
+                    children: (0, D.jsx)(o.VY, {
                       side: "right",
                       align: "start",
                       sideOffset: 12,
@@ -32191,13 +32196,13 @@
                       onCloseAutoFocus: (e) => {
                         e.preventDefault();
                       },
-                      children: (0, T.jsxs)("div", {
+                      children: (0, D.jsxs)("div", {
                         className: "flex flex-col gap-1",
                         children: [
-                          (0, T.jsx)("strong", {
-                            children: (0, T.jsx)(y.Z, Q({}, X.tipsHeader)),
+                          (0, D.jsx)("strong", {
+                            children: (0, D.jsx)(j.Z, U({}, ee.tipsHeader)),
                           }),
-                          o,
+                          i,
                         ],
                       }),
                     }),
@@ -32207,87 +32212,87 @@
             ],
           });
         };
-      function K(e) {
+      function J(e) {
         let { label: t, side: n = "bottom" } = e;
-        return (0, T.jsx)(L.u, {
+        return (0, D.jsx)(R.u, {
           sideOffset: 4,
           interactive: !0,
-          label: (0, T.jsx)("div", { children: t }),
+          label: (0, D.jsx)("div", { children: t }),
           side: n,
-          children: (0, T.jsx)(E.HV, {
+          children: (0, D.jsx)(M.HV, {
             className: "h-4 w-4 text-token-text-tertiary",
           }),
         });
       }
-      let Y = [
+      let X = [
         {
-          title: (0, T.jsx)(y.Z, {
+          title: (0, D.jsx)(j.Z, {
             id: "userContextModal.tools.browse",
             defaultMessage: "Browsing",
           }),
-          Icon: E.Qg,
+          Icon: M.Qg,
           value: "browser",
-          tooltip: (0, T.jsx)(y.Z, {
+          tooltip: (0, D.jsx)(j.Z, {
             id: "userContexModal.tools.browserTooltip",
             defaultMessage: "Browse the internet to find answers",
           }),
         },
         {
-          title: (0, T.jsx)(y.Z, {
+          title: (0, D.jsx)(j.Z, {
             id: "userContextModal.tools.dalle",
             defaultMessage: "DALL\xb7E",
           }),
-          Icon: E.fS,
+          Icon: M.fS,
           value: "dalle",
-          tooltip: (0, T.jsx)(y.Z, {
+          tooltip: (0, D.jsx)(j.Z, {
             id: "userContextModal.tools.dalleTooltip",
             defaultMessage: "Generate images using DALL\xb7E",
           }),
         },
         {
-          title: (0, T.jsx)(y.Z, {
+          title: (0, D.jsx)(j.Z, {
             id: "userContextModal.tools.codeInterpreter.1",
             defaultMessage: "Code",
           }),
-          Icon: E.Kb,
+          Icon: M.Kb,
           value: "python",
-          tooltip: (0, T.jsx)(y.Z, {
+          tooltip: (0, D.jsx)(j.Z, {
             id: "userContextModal.tools.codeInterpreterTooltip",
             defaultMessage: "Execute code using Code Interpreter",
           }),
         },
       ];
-      function J(e) {
+      function $(e) {
         let { disabledTools: t, onDisabledToolsChanged: n } = e;
-        (0, h.useEffect)(() => {
-          d.A.logEvent(u.M.userContextGpt4CapabilitiesShown);
+        (0, v.useEffect)(() => {
+          A.A.logEvent(m.M.userContextGpt4CapabilitiesShown);
         }, []);
         let a = (e) => {
           n(t.includes(e) ? t.filter((t) => t !== e) : [...t, e]);
         };
-        return (0, T.jsxs)("div", {
+        return (0, D.jsxs)("div", {
           className: "flex flex-col gap-2",
           children: [
-            (0, T.jsxs)("div", {
+            (0, D.jsxs)("div", {
               className: "flex items-center gap-1",
               children: [
-                (0, T.jsx)("div", {
+                (0, D.jsx)("div", {
                   className: "text-sm font-medium",
-                  children: (0, T.jsx)(y.Z, {
+                  children: (0, D.jsx)(j.Z, {
                     id: "userContextModal.gpt4CapabilitiesTitle",
                     defaultMessage: "GPT-4 Capabilities",
                   }),
                 }),
-                (0, T.jsx)("div", {
+                (0, D.jsx)("div", {
                   className:
                     "rounded-sm bg-token-main-surface-secondary px-1 py-[2px] text-xs font-medium",
-                  children: (0, T.jsx)(y.Z, {
+                  children: (0, D.jsx)(j.Z, {
                     id: "userContextModal.betaLabel",
                     defaultMessage: "Beta",
                   }),
                 }),
-                (0, T.jsx)(K, {
-                  label: (0, T.jsx)(y.Z, {
+                (0, D.jsx)(J, {
+                  label: (0, D.jsx)(j.Z, {
                     id: "userContextModal.tools.capabilitiesInfo.1",
                     defaultMessage: "Choose which tools can be used with GPT-4",
                   }),
@@ -32295,34 +32300,34 @@
                 }),
               ],
             }),
-            (0, T.jsx)("div", {
+            (0, D.jsx)("div", {
               className: "mt-2 flex flex-col gap-3 md:flex-row",
-              children: Y.map((e) =>
-                (0, T.jsx)(
-                  L.u,
+              children: X.map((e) =>
+                (0, D.jsx)(
+                  R.u,
                   {
                     className: "block flex-1",
                     label: e.tooltip,
                     side: "top",
                     sideOffset: 4,
-                    children: (0, T.jsxs)("button", {
+                    children: (0, D.jsxs)("button", {
                       className:
                         "flex w-full items-center justify-between rounded border border-token-border-medium p-2",
                       onClick: () => a(e.value),
                       children: [
-                        (0, T.jsxs)("div", {
+                        (0, D.jsxs)("div", {
                           className: "flex items-center gap-2",
                           children: [
-                            (0, T.jsx)(e.Icon, {
+                            (0, D.jsx)(e.Icon, {
                               className: "h-4 w-4 text-token-text-tertiary",
                             }),
-                            (0, T.jsx)("div", {
+                            (0, D.jsx)("div", {
                               className: "text-sm font-medium",
                               children: e.title,
                             }),
                           ],
                         }),
-                        (0, T.jsx)(k.Z, {
+                        (0, D.jsx)(O.Z, {
                           id: e.value,
                           checked: !t.includes(e.value),
                           readOnly: !0,
@@ -32337,7 +32342,7 @@
           ],
         });
       }
-      let X = (0, b.vU)({
+      let ee = (0, w.vU)({
         tipsHeader: {
           id: "userContextModal.tipsHeader",
           defaultMessage: "Thought starters",
@@ -37652,7 +37657,10 @@
                   }
                 )
               )
-            : (0, d.jsx)(c.mS, p({ $as: s.ck, ref: t, onSelect: n }, l));
+            : (0, d.jsx)(
+                c.mS,
+                p({ $as: s.ck, ref: t, onSelect: n, className: o }, l)
+              );
         }),
         Separator: function (e) {
           let { className: t } = e,
@@ -38429,127 +38437,133 @@
       "use strict";
       n.d(t, {
         w9k: function () {
-          return Y;
+          return $;
         },
         veu: function () {
-          return X;
+          return et;
         },
         muB: function () {
-          return ee;
+          return ea;
         },
         Hf3: function () {
-          return er;
+          return eo;
         },
         WmV: function () {
-          return en;
+          return es;
         },
         X5Q: function () {
-          return ei;
+          return ec;
         },
         kBi: function () {
-          return el;
+          return eu;
         },
         kvR: function () {
-          return ed;
+          return em;
         },
         nQG: function () {
-          return eA;
+          return ep;
         },
         eOB: function () {
-          return eg;
+          return eh;
         },
         ob9: function () {
-          return ef;
+          return ev;
         },
         BZB: function () {
-          return ex;
+          return eb;
         },
         T39: function () {
-          return ey;
+          return ew;
         },
         W5x: function () {
-          return ej;
+          return ek;
         },
         nWS: function () {
-          return eC;
+          return eO;
         },
         _8t: function () {
-          return eE;
+          return eP;
         },
         Qq: function () {
-          return eM;
+          return eS;
         },
         F_N: function () {
-          return eB;
+          return eI;
+        },
+        X72: function () {
+          return eN;
         },
         Zku: function () {
-          return eT;
+          return e_;
         },
         O8e: function () {
-          return eD;
+          return eZ;
         },
         VWR: function () {
-          return ez;
+          return eQ;
         },
         szr: function () {
-          return eL;
+          return eU;
         },
         D2w: function () {
-          return eR;
+          return eH;
+        },
+        PBQ: function () {
+          return eV;
         },
         Oqj: function () {
-          return eF;
+          return eK;
         },
         ZO8: function () {
-          return eG;
+          return eJ;
         },
         kLh: function () {
-          return eW;
+          return e$;
         },
         on5: function () {
-          return eq;
+          return e1;
         },
         vdY: function () {
-          return eY;
+          return e9;
         },
         o1U: function () {
-          return eX;
+          return e3;
         },
         Ezi: function () {
-          return e0;
+          return e4;
         },
         KAl: function () {
-          return e2;
+          return e8;
         },
         STQ: function () {
-          return e5;
+          return tt;
         },
         NWY: function () {
-          return e7;
+          return ta;
         },
         tXQ: function () {
-          return e6;
+          return ts;
         },
         FxN: function () {
-          return te;
+          return to;
         },
         tZW: function () {
-          return tn;
+          return tc;
         },
         ucG: function () {
-          return tr;
+          return tu;
         },
         tBG: function () {
-          return ti;
+          return tm;
         },
         uAs: function () {
-          return tl;
+          return tp;
         },
         niP: function () {
-          return td;
+          return th;
         },
         tPq: function () {
-          return tA;
+          return tv;
         },
       });
       var a,
@@ -38597,9 +38611,12 @@
         H,
         W,
         V,
-        q = n(70079);
-      function K() {
-        return (K = Object.assign
+        q,
+        K,
+        Y,
+        J = n(70079);
+      function X() {
+        return (X = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38610,10 +38627,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var Y = (e) =>
-        q.createElement(
+      var $ = (e) =>
+        J.createElement(
           "svg",
-          K(
+          X(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38624,15 +38641,15 @@
             e
           ),
           a ||
-            (a = q.createElement("path", {
+            (a = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M5 6a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h9.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L16.586 14H7a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1",
               clipRule: "evenodd",
             }))
         );
-      function J() {
-        return (J = Object.assign
+      function ee() {
+        return (ee = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38643,10 +38660,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var X = (e) =>
-        q.createElement(
+      var et = (e) =>
+        J.createElement(
           "svg",
-          J(
+          ee(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38657,15 +38674,15 @@
             e
           ),
           r ||
-            (r = q.createElement("path", {
+            (r = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M12 21a1 1 0 0 1-.707-.293l-7-7a1 1 0 1 1 1.414-1.414L11 17.586V4a1 1 0 1 1 2 0v13.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-7 7A1 1 0 0 1 12 21",
               clipRule: "evenodd",
             }))
         );
-      function $() {
-        return ($ = Object.assign
+      function en() {
+        return (en = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38676,10 +38693,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ee = (e) =>
-        q.createElement(
+      var ea = (e) =>
+        J.createElement(
           "svg",
-          $(
+          en(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38690,15 +38707,15 @@
             e
           ),
           s ||
-            (s = q.createElement("path", {
+            (s = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M19.53 2.5a1 1 0 0 0-1 1v1.572a9.5 9.5 0 1 0-6.5 16.428c4.87 0 8.882-3.663 9.435-8.384a1 1 0 0 0-1.986-.232A7.501 7.501 0 0 1 4.53 12a7.5 7.5 0 0 1 13.09-5H15.5a1 1 0 1 0 0 2h4.03a1 1 0 0 0 1-1.024V3.5a1 1 0 0 0-1-1",
               clipRule: "evenodd",
             }))
         );
-      function et() {
-        return (et = Object.assign
+      function er() {
+        return (er = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38709,10 +38726,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var en = (e) =>
-        q.createElement(
+      var es = (e) =>
+        J.createElement(
           "svg",
-          et(
+          er(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38723,15 +38740,15 @@
             e
           ),
           i ||
-            (i = q.createElement("path", {
+            (i = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M11.293 5.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L13 8.414V18a1 1 0 1 1-2 0V8.414l-3.293 3.293a1 1 0 0 1-1.414-1.414z",
               clipRule: "evenodd",
             }))
         );
-      function ea() {
-        return (ea = Object.assign
+      function ei() {
+        return (ei = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38742,10 +38759,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var er = (e) =>
-        q.createElement(
+      var eo = (e) =>
+        J.createElement(
           "svg",
-          ea(
+          ei(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38756,15 +38773,15 @@
             e
           ),
           o ||
-            (o = q.createElement("path", {
+            (o = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M12 3a1 1 0 0 1 .707.293l7 7a1 1 0 0 1-1.414 1.414L13 6.414V20a1 1 0 1 1-2 0V6.414l-5.293 5.293a1 1 0 0 1-1.414-1.414l7-7A1 1 0 0 1 12 3",
               clipRule: "evenodd",
             }))
         );
-      function es() {
-        return (es = Object.assign
+      function el() {
+        return (el = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38775,10 +38792,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ei = (e) =>
-        q.createElement(
+      var ec = (e) =>
+        J.createElement(
           "svg",
-          es(
+          el(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38789,13 +38806,13 @@
             e
           ),
           l ||
-            (l = q.createElement("path", {
+            (l = J.createElement("path", {
               fill: "currentColor",
               d: "M2 11.813c0-.933.672-1.688 1.5-1.688h2.33c.828 0 1.5.755 1.5 1.688v9c0 .931-.672 1.687-1.5 1.687H3.5c-.828 0-1.5-.756-1.5-1.687zM16.67 9.563c0-.932.672-1.688 1.5-1.688h2.33c.828 0 1.5.756 1.5 1.688v11.25c0 .931-.672 1.687-1.5 1.687h-2.33c-.828 0-1.5-.756-1.5-1.687zM9.33 5.063c0-.932.672-1.688 1.5-1.688h2.34c.828 0 1.5.756 1.5 1.688v16.312c0 .621-.448 1.125-1 1.125h-3.34c-.552 0-1-.504-1-1.125z",
             }))
         );
-      function eo() {
-        return (eo = Object.assign
+      function ed() {
+        return (ed = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38807,10 +38824,10 @@
             }).apply(this, arguments);
       }
       n(27160);
-      var el = (e) =>
-        q.createElement(
+      var eu = (e) =>
+        J.createElement(
           "svg",
-          eo(
+          ed(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38821,15 +38838,15 @@
             e
           ),
           c ||
-            (c = q.createElement("path", {
+            (c = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M12 4a8 8 0 0 0-5.687 13.627 1 1 0 0 1 .147 1.217L5.766 20H12a8 8 0 1 0 0-16M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10H4a1 1 0 0 1-.857-1.515l1.218-2.03A9.96 9.96 0 0 1 2 12",
               clipRule: "evenodd",
             }))
         );
-      function ec() {
-        return (ec = Object.assign
+      function eA() {
+        return (eA = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38840,10 +38857,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ed = (e) =>
-        q.createElement(
+      var em = (e) =>
+        J.createElement(
           "svg",
-          ec(
+          eA(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38854,15 +38871,15 @@
             e
           ),
           d ||
-            (d = q.createElement("path", {
+            (d = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12m14.076-4.068a1 1 0 0 1 .242 1.393l-4.75 6.75a1 1 0 0 1-1.558.098l-2.5-2.75a1 1 0 0 1 1.48-1.346l1.66 1.827 4.032-5.73a1 1 0 0 1 1.394-.242",
               clipRule: "evenodd",
             }))
         );
-      function eu() {
-        return (eu = Object.assign
+      function eg() {
+        return (eg = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38873,10 +38890,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eA = (e) =>
-        q.createElement(
+      var ep = (e) =>
+        J.createElement(
           "svg",
-          eu(
+          eg(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38887,15 +38904,15 @@
             e
           ),
           u ||
-            (u = q.createElement("path", {
+            (u = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M18.063 5.674a1 1 0 0 1 .263 1.39l-7.5 11a1 1 0 0 1-1.533.143l-4.5-4.5a1 1 0 1 1 1.414-1.414l3.647 3.646 6.82-10.002a1 1 0 0 1 1.39-.263",
               clipRule: "evenodd",
             }))
         );
-      function em() {
-        return (em = Object.assign
+      function ef() {
+        return (ef = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38906,10 +38923,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eg = (e) =>
-        q.createElement(
+      var eh = (e) =>
+        J.createElement(
           "svg",
-          em(
+          ef(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38920,15 +38937,15 @@
             e
           ),
           A ||
-            (A = q.createElement("path", {
+            (A = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M7.293 9.293a1 1 0 0 1 1.414 0L12 12.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414",
               clipRule: "evenodd",
             }))
         );
-      function ep() {
-        return (ep = Object.assign
+      function ex() {
+        return (ex = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38939,10 +38956,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ef = (e) =>
-        q.createElement(
+      var ev = (e) =>
+        J.createElement(
           "svg",
-          ep(
+          ex(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38953,15 +38970,15 @@
             e
           ),
           m ||
-            (m = q.createElement("path", {
+            (m = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M9.293 18.707a1 1 0 0 1 0-1.414L14.586 12 9.293 6.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414 0",
               clipRule: "evenodd",
             }))
         );
-      function eh() {
-        return (eh = Object.assign
+      function ey() {
+        return (ey = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38972,10 +38989,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ex = (e) =>
-        q.createElement(
+      var eb = (e) =>
+        J.createElement(
           "svg",
-          eh(
+          ey(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -38986,15 +39003,15 @@
             e
           ),
           g ||
-            (g = q.createElement("path", {
+            (g = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M11.293 9.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L12 11.414l-3.293 3.293a1 1 0 0 1-1.414-1.414z",
               clipRule: "evenodd",
             }))
         );
-      function ev() {
-        return (ev = Object.assign
+      function ej() {
+        return (ej = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39005,10 +39022,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ey = (e) =>
-        q.createElement(
+      var ew = (e) =>
+        J.createElement(
           "svg",
-          ev(
+          ej(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39019,15 +39036,15 @@
             e
           ),
           p ||
-            (p = q.createElement("path", {
+            (p = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12m10-6a1 1 0 0 1 1 1v5a1 1 0 0 1-.293.707l-2.5 2.5a1 1 0 0 1-1.414-1.414L11 11.586V7a1 1 0 0 1 1-1",
               clipRule: "evenodd",
             }))
         );
-      function eb() {
-        return (eb = Object.assign
+      function eC() {
+        return (eC = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39038,10 +39055,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ej = (e) =>
-        q.createElement(
+      var ek = (e) =>
+        J.createElement(
           "svg",
-          eb(
+          eC(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39052,15 +39069,15 @@
             e
           ),
           f ||
-            (f = q.createElement("path", {
+            (f = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M13 4a1 1 0 1 1 2 0v3.586l4.293-4.293a1 1 0 1 1 1.414 1.414L16.414 9H20a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1zM3 14a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-3.586l-4.293 4.293a1 1 0 0 1-1.414-1.414L7.586 15H4a1 1 0 0 1-1-1",
               clipRule: "evenodd",
             }))
         );
-      function ew() {
-        return (ew = Object.assign
+      function eE() {
+        return (eE = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39071,10 +39088,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eC = (e) =>
-        q.createElement(
+      var eO = (e) =>
+        J.createElement(
           "svg",
-          ew(
+          eE(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39085,15 +39102,15 @@
             e
           ),
           h ||
-            (h = q.createElement("path", {
+            (h = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0m7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0m7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0",
               clipRule: "evenodd",
             }))
         );
-      function ek() {
-        return (ek = Object.assign
+      function eM() {
+        return (eM = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39104,10 +39121,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eE = (e) =>
-        q.createElement(
+      var eP = (e) =>
+        J.createElement(
           "svg",
-          ek(
+          eM(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39118,13 +39135,13 @@
             e
           ),
           x ||
-            (x = q.createElement("path", {
+            (x = J.createElement("path", {
               fill: "currentColor",
               d: "M7.707 10.293a1 1 0 1 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 0 0-1.414-1.414L13 13.586V4a1 1 0 1 0-2 0v9.586zM5 19a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z",
             }))
         );
-      function eO() {
-        return (eO = Object.assign
+      function eB() {
+        return (eB = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39135,10 +39152,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eM = (e) =>
-        q.createElement(
+      var eS = (e) =>
+        J.createElement(
           "svg",
-          eO(
+          eB(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39149,15 +39166,15 @@
             e
           ),
           v ||
-            (v = q.createElement("path", {
+            (v = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M13 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.414l-3.793 3.793a1 1 0 0 1-1.414-1.414L17.586 5H14a1 1 0 0 1-1-1m-9 9a1 1 0 0 1 1 1v3.586l3.793-3.793a1 1 0 0 1 1.414 1.414L6.414 19H10a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1",
               clipRule: "evenodd",
             }))
         );
-      function eP() {
-        return (eP = Object.assign
+      function eT() {
+        return (eT = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39168,10 +39185,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eB = (e) =>
-        q.createElement(
+      var eI = (e) =>
+        J.createElement(
           "svg",
-          eP(
+          eT(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39182,15 +39199,15 @@
             e
           ),
           y ||
-            (y = q.createElement("path", {
+            (y = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M15.24 3.486v.002l-1.056 4.517h5.823c1.726 0 2.596 2.021 1.518 3.3l-.002.003-9.308 10.965-.002.002c-1.397 1.656-3.922.223-3.454-1.761v-.002l1.057-4.517H3.993c-1.726 0-2.596-2.021-1.519-3.3l.003-.003 9.308-10.965.002-.002c1.397-1.656 3.922-.223 3.454 1.76m-1.95-.444-1.34 5.735a.998.998 0 0 0 .973 1.226h7.074l.003.01-.004.005-9.287 10.94 1.341-5.735a.998.998 0 0 0-.973-1.226H4.003L4 13.987l.004-.005z",
               clipRule: "evenodd",
             }))
         );
-      function eS() {
-        return (eS = Object.assign
+      function eD() {
+        return (eD = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39201,10 +39218,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eT = (e) =>
-        q.createElement(
+      var eN = (e) =>
+        J.createElement(
           "svg",
-          eS(
+          eD(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39215,20 +39232,13 @@
             e
           ),
           b ||
-            (b = q.createElement("path", {
+            (b = J.createElement("path", {
               fill: "currentColor",
-              d: "M19.398 1.355a.4.4 0 0 0-.795 0c-.123 1.064-.44 1.802-.943 2.305s-1.241.82-2.306.943a.4.4 0 0 0 .001.794c1.047.119 1.801.436 2.317.942.512.504.836 1.241.93 2.296a.4.4 0 0 0 .796 0c.09-1.038.413-1.792.93-2.308.515-.516 1.269-.839 2.307-.928a.4.4 0 0 0 0-.797c-1.055-.094-1.792-.418-2.296-.93-.506-.516-.823-1.27-.941-2.317",
-            })),
-          j ||
-            (j = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M11 3a1 1 0 0 1 .984.821c.48 2.64 1.295 4.419 2.536 5.66 1.24 1.24 3.02 2.055 5.659 2.535a1 1 0 0 1 0 1.968c-2.64.48-4.419 1.295-5.66 2.536-1.24 1.24-2.055 3.02-2.535 5.659a1 1 0 0 1-1.968 0c-.48-2.64-1.295-4.419-2.536-5.66-1.24-1.24-3.02-2.055-5.659-2.535a1 1 0 0 1 0-1.968c2.64-.48 4.419-1.295 5.66-2.536 1.24-1.24 2.055-3.02 2.535-5.659A1 1 0 0 1 11 3M5.666 13c1.259.523 2.332 1.209 3.229 2.105.896.897 1.582 1.97 2.105 3.229.523-1.259 1.209-2.332 2.105-3.229.897-.896 1.97-1.582 3.229-2.105-1.259-.523-2.332-1.209-3.229-2.105-.896-.897-1.582-1.97-2.105-3.229-.523 1.259-1.209 2.332-2.105 3.229-.897.896-1.97 1.582-3.229 2.105",
-              clipRule: "evenodd",
+              d: "M6.394 4.444c.188-.592 1.024-.592 1.212 0C8.4 8.9 9.1 9.6 13.556 10.394c.592.188.592 1.024 0 1.212C9.1 12.4 8.4 13.1 7.606 17.556c-.188.592-1.024.592-1.212 0C5.6 13.1 4.9 12.4.444 11.606c-.592-.188-.592-1.024 0-1.212C4.9 9.6 5.6 8.9 6.394 4.444m8.716 9.841a.41.41 0 0 1 .78 0c.51 2.865.96 3.315 3.825 3.826.38.12.38.658 0 .778-2.865.511-3.315.961-3.826 3.826a.408.408 0 0 1-.778 0c-.511-2.865-.961-3.315-3.826-3.826a.408.408 0 0 1 0-.778c2.865-.511 3.315-.961 3.826-3.826Zm2.457-12.968a.454.454 0 0 1 .866 0C19 4.5 19.5 5 22.683 5.567a.454.454 0 0 1 0 .866C19.5 7 19 7.5 18.433 10.683a.454.454 0 0 1-.866 0C17 7.5 16.5 7 13.317 6.433a.454.454 0 0 1 0-.866C16.5 5 17 4.5 17.567 1.317",
             }))
         );
-      function eI() {
-        return (eI = Object.assign
+      function ez() {
+        return (ez = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39239,10 +39249,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eD = (e) =>
-        q.createElement(
+      var e_ = (e) =>
+        J.createElement(
           "svg",
-          eI(
+          ez(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39252,16 +39262,21 @@
             },
             e
           ),
+          j ||
+            (j = J.createElement("path", {
+              fill: "currentColor",
+              d: "M15.11 14.285a.41.41 0 0 1 .78 0c.51 2.865.96 3.315 3.825 3.826.38.12.38.658 0 .778-2.865.511-3.315.961-3.826 3.826a.408.408 0 0 1-.778 0c-.511-2.865-.961-3.315-3.826-3.826a.408.408 0 0 1 0-.778c2.865-.511 3.315-.961 3.826-3.826Zm2.457-12.968a.454.454 0 0 1 .866 0C19 4.5 19.5 5 22.683 5.567a.454.454 0 0 1 0 .866C19.5 7 19 7.5 18.433 10.683a.454.454 0 0 1-.866 0C17 7.5 16.5 7 13.317 6.433a.454.454 0 0 1 0-.866C16.5 5 17 4.5 17.567 1.317",
+            })),
           w ||
-            (w = q.createElement("path", {
+            (w = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M12 7.42a22 22 0 0 0-2.453 2.127A22 22 0 0 0 7.42 12a22 22 0 0 0 2.127 2.453c.807.808 1.636 1.52 2.453 2.128a22 22 0 0 0 2.453-2.128A22 22 0 0 0 16.58 12a22 22 0 0 0-2.127-2.453A22 22 0 0 0 12 7.42m1.751-1.154a25 25 0 0 1 2.104 1.88 25 25 0 0 1 1.88 2.103c.316-.55.576-1.085.779-1.59.35-.878.507-1.625.503-2.206-.003-.574-.16-.913-.358-1.111-.199-.199-.537-.356-1.112-.36-.58-.003-1.328.153-2.205.504-.506.203-1.04.464-1.59.78Zm3.983 7.485a25 25 0 0 1-1.88 2.104 25 25 0 0 1-2.103 1.88 13 13 0 0 0 1.59.779c.878.35 1.625.507 2.206.503.574-.003.913-.16 1.111-.358.199-.199.356-.538.36-1.112.003-.58-.154-1.328-.504-2.205a13 13 0 0 0-.78-1.59ZM12 18.99c.89.57 1.768 1.03 2.605 1.364 1.026.41 2.036.652 2.955.646.925-.006 1.828-.267 2.5-.94.673-.672.934-1.575.94-2.5.006-.919-.236-1.929-.646-2.954A15.7 15.7 0 0 0 18.99 12a15.6 15.6 0 0 0 1.364-2.606c.41-1.025.652-2.035.646-2.954-.006-.925-.267-1.828-.94-2.5-.672-.673-1.575-.934-2.5-.94-.919-.006-1.929.235-2.954.646-.838.335-1.716.795-2.606 1.364a15.7 15.7 0 0 0-2.606-1.364C8.37 3.236 7.36 2.994 6.44 3c-.925.006-1.828.267-2.5.94-.673.672-.934 1.575-.94 2.5-.006.919.235 1.929.646 2.955A15.7 15.7 0 0 0 5.01 12c-.57.89-1.03 1.768-1.364 2.605-.41 1.026-.652 2.036-.646 2.955.006.925.267 1.828.94 2.5.672.673 1.575.934 2.5.94.92.006 1.93-.235 2.955-.646A15.7 15.7 0 0 0 12 18.99m-1.751-1.255a25 25 0 0 1-2.104-1.88 25 25 0 0 1-1.88-2.104c-.315.55-.576 1.085-.779 1.59-.35.878-.507 1.625-.503 2.206.003.574.16.913.359 1.111.198.199.537.356 1.111.36.58.003 1.328-.153 2.205-.504.506-.203 1.04-.463 1.59-.78Zm-3.983-7.486a25 25 0 0 1 1.88-2.104 25 25 0 0 1 2.103-1.88 13 13 0 0 0-1.59-.779c-.878-.35-1.625-.507-2.206-.503-.574.003-.913.16-1.111.359-.199.198-.356.537-.36 1.111-.003.58.153 1.328.504 2.205.203.506.464 1.04.78 1.59Z",
+              d: "M7.001 4a1 1 0 0 1 .993.887c.192 1.7.701 2.877 1.476 3.665.768.783 1.913 1.3 3.618 1.452a1 1 0 0 1-.002 1.992c-1.675.145-2.849.662-3.638 1.452-.79.79-1.307 1.963-1.452 3.638a1 1 0 0 1-1.992.003c-.152-1.706-.67-2.851-1.452-3.62-.788-.774-1.965-1.283-3.665-1.475a1 1 0 0 1-.002-1.987c1.73-.2 2.878-.709 3.646-1.476.767-.768 1.276-1.916 1.476-3.646A1 1 0 0 1 7 4Zm-2.472 6.998a6.1 6.1 0 0 1 2.468 2.412 6.2 6.2 0 0 1 1.037-1.376 6.2 6.2 0 0 1 1.376-1.036 6.1 6.1 0 0 1-2.412-2.469 6.2 6.2 0 0 1-1.053 1.416 6.2 6.2 0 0 1-1.416 1.053",
               clipRule: "evenodd",
             }))
         );
-      function eN() {
-        return (eN = Object.assign
+      function eL() {
+        return (eL = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39272,10 +39287,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var ez = (e) =>
-        q.createElement(
+      var eZ = (e) =>
+        J.createElement(
           "svg",
-          eN(
+          eL(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39286,15 +39301,15 @@
             e
           ),
           C ||
-            (C = q.createElement("path", {
+            (C = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M4 15.833v1.334A2.333 2.333 0 0 0 6.333 19.5.667.667 0 0 0 7 18.833v-4.666a.667.667 0 0 0-.667-.667A2.333 2.333 0 0 0 4 15.833M2 12.5c0-5.523 4.477-10 10-10s10 4.477 10 10v4.667a4.333 4.333 0 0 1-4.333 4.333A2.667 2.667 0 0 1 15 18.833v-4.666a2.667 2.667 0 0 1 2.667-2.667c.856 0 1.654.248 2.327.677a8 8 0 0 0-15.988 0 4.3 4.3 0 0 1 2.327-.677A2.667 2.667 0 0 1 9 14.167v4.666A2.667 2.667 0 0 1 6.333 21.5 4.333 4.333 0 0 1 2 17.167zm18 3.333a2.333 2.333 0 0 0-2.333-2.333.667.667 0 0 0-.667.667v4.666c0 .369.299.667.667.667A2.333 2.333 0 0 0 20 17.167z",
+              d: "M12 7.42a22 22 0 0 0-2.453 2.127A22 22 0 0 0 7.42 12a22 22 0 0 0 2.127 2.453c.807.808 1.636 1.52 2.453 2.128a22 22 0 0 0 2.453-2.128A22 22 0 0 0 16.58 12a22 22 0 0 0-2.127-2.453A22 22 0 0 0 12 7.42m1.751-1.154a25 25 0 0 1 2.104 1.88 25 25 0 0 1 1.88 2.103c.316-.55.576-1.085.779-1.59.35-.878.507-1.625.503-2.206-.003-.574-.16-.913-.358-1.111-.199-.199-.537-.356-1.112-.36-.58-.003-1.328.153-2.205.504-.506.203-1.04.464-1.59.78Zm3.983 7.485a25 25 0 0 1-1.88 2.104 25 25 0 0 1-2.103 1.88 13 13 0 0 0 1.59.779c.878.35 1.625.507 2.206.503.574-.003.913-.16 1.111-.358.199-.199.356-.538.36-1.112.003-.58-.154-1.328-.504-2.205a13 13 0 0 0-.78-1.59ZM12 18.99c.89.57 1.768 1.03 2.605 1.364 1.026.41 2.036.652 2.955.646.925-.006 1.828-.267 2.5-.94.673-.672.934-1.575.94-2.5.006-.919-.236-1.929-.646-2.954A15.7 15.7 0 0 0 18.99 12a15.6 15.6 0 0 0 1.364-2.606c.41-1.025.652-2.035.646-2.954-.006-.925-.267-1.828-.94-2.5-.672-.673-1.575-.934-2.5-.94-.919-.006-1.929.235-2.954.646-.838.335-1.716.795-2.606 1.364a15.7 15.7 0 0 0-2.606-1.364C8.37 3.236 7.36 2.994 6.44 3c-.925.006-1.828.267-2.5.94-.673.672-.934 1.575-.94 2.5-.006.919.235 1.929.646 2.955A15.7 15.7 0 0 0 5.01 12c-.57.89-1.03 1.768-1.364 2.605-.41 1.026-.652 2.036-.646 2.955.006.925.267 1.828.94 2.5.672.673 1.575.934 2.5.94.92.006 1.93-.235 2.955-.646A15.7 15.7 0 0 0 12 18.99m-1.751-1.255a25 25 0 0 1-2.104-1.88 25 25 0 0 1-1.88-2.104c-.315.55-.576 1.085-.779 1.59-.35.878-.507 1.625-.503 2.206.003.574.16.913.359 1.111.198.199.537.356 1.111.36.58.003 1.328-.153 2.205-.504.506-.203 1.04-.463 1.59-.78Zm-3.983-7.486a25 25 0 0 1 1.88-2.104 25 25 0 0 1 2.103-1.88 13 13 0 0 0-1.59-.779c-.878-.35-1.625-.507-2.206-.503-.574.003-.913.16-1.111.359-.199.198-.356.537-.36 1.111-.003.58.153 1.328.504 2.205.203.506.464 1.04.78 1.59Z",
               clipRule: "evenodd",
             }))
         );
-      function e_() {
-        return (e_ = Object.assign
+      function eR() {
+        return (eR = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39305,10 +39320,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eL = (e) =>
-        q.createElement(
+      var eQ = (e) =>
+        J.createElement(
           "svg",
-          e_(
+          eR(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39319,20 +39334,15 @@
             e
           ),
           k ||
-            (k = q.createElement("path", {
-              fill: "currentColor",
-              d: "M13 12a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0zM12 9.5A1.25 1.25 0 1 0 12 7a1.25 1.25 0 0 0 0 2.5",
-            })),
-          E ||
-            (E = q.createElement("path", {
+            (k = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0",
+              d: "M4 15.833v1.334A2.333 2.333 0 0 0 6.333 19.5.667.667 0 0 0 7 18.833v-4.666a.667.667 0 0 0-.667-.667A2.333 2.333 0 0 0 4 15.833M2 12.5c0-5.523 4.477-10 10-10s10 4.477 10 10v4.667a4.333 4.333 0 0 1-4.333 4.333A2.667 2.667 0 0 1 15 18.833v-4.666a2.667 2.667 0 0 1 2.667-2.667c.856 0 1.654.248 2.327.677a8 8 0 0 0-15.988 0 4.3 4.3 0 0 1 2.327-.677A2.667 2.667 0 0 1 9 14.167v4.666A2.667 2.667 0 0 1 6.333 21.5 4.333 4.333 0 0 1 2 17.167zm18 3.333a2.333 2.333 0 0 0-2.333-2.333.667.667 0 0 0-.667.667v4.666c0 .369.299.667.667.667A2.333 2.333 0 0 0 20 17.167z",
               clipRule: "evenodd",
             }))
         );
-      function eZ() {
-        return (eZ = Object.assign
+      function eF() {
+        return (eF = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39343,10 +39353,48 @@
               return e;
             }).apply(this, arguments);
       }
-      var eR = (e) =>
-        q.createElement(
+      var eU = (e) =>
+        J.createElement(
           "svg",
-          eZ(
+          eF(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          E ||
+            (E = J.createElement("path", {
+              fill: "currentColor",
+              d: "M13 12a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0zM12 9.5A1.25 1.25 0 1 0 12 7a1.25 1.25 0 0 0 0 2.5",
+            })),
+          O ||
+            (O = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0",
+              clipRule: "evenodd",
+            }))
+        );
+      function eG() {
+        return (eG = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var eH = (e) =>
+        J.createElement(
+          "svg",
+          eG(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 15,
@@ -39356,8 +39404,8 @@
             },
             e
           ),
-          O ||
-            (O = q.createElement("path", {
+          M ||
+            (M = J.createElement("path", {
               stroke: "#B9B9B9",
               strokeLinecap: "round",
               strokeLinejoin: "round",
@@ -39365,8 +39413,8 @@
               d: "M7.5 2.896v9.208m0-9.208L5.738 1.125M7.5 2.895l1.762-1.77M7.5 12.105l-1.762 1.77m1.762-1.77 1.762 1.77m-5.73-8.677 7.935 4.604M3.532 5.198l-2.407.648m2.407-.648-.645-2.42m8.58 7.024.645 2.42m-.645-2.42 2.407-.648m-10.341.648 7.935-4.604M3.533 9.802l-.645 2.419m.645-2.419-2.407-.648m10.342-3.956 2.407.648m-2.407-.648.645-2.42",
             }))
         );
-      function eQ() {
-        return (eQ = Object.assign
+      function eW() {
+        return (eW = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39378,43 +39426,10 @@
             }).apply(this, arguments);
       }
       n(57849);
-      var eF = (e) =>
-        q.createElement(
+      var eV = (e) =>
+        J.createElement(
           "svg",
-          eQ(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-            e
-          ),
-          M ||
-            (M = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M3 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1",
-              clipRule: "evenodd",
-            }))
-        );
-      function eU() {
-        return (eU = Object.assign
-          ? Object.assign.bind()
-          : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n)
-                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }).apply(this, arguments);
-      }
-      var eG = (e) =>
-        q.createElement(
-          "svg",
-          eU(
+          eW(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39425,15 +39440,20 @@
             e
           ),
           P ||
-            (P = q.createElement("path", {
+            (P = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M7 7a5 5 0 1 1 10 0v4a5 5 0 1 1-10 0zm5-3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3m-1 15.945V21a1 1 0 0 0 2 0v-1.055a9.01 9.01 0 0 0 7.346-5.57 1 1 0 0 0-1.854-.75A7 7 0 0 1 12 18h-.003a7 7 0 0 1-6.489-4.375 1 1 0 1 0-1.853.75A9.01 9.01 0 0 0 11 19.945",
+              d: "M2.222 20A1.22 1.22 0 0 1 1 18.786c0-2.055.992-3.622 2.424-4.633 1.395-.985 3.185-1.439 4.91-1.439 1.724 0 3.514.454 4.909 1.44 1.431 1.01 2.424 2.577 2.424 4.632 0 .67-.547 1.214-1.223 1.214z",
               clipRule: "evenodd",
+            })),
+          B ||
+            (B = J.createElement("path", {
+              fill: "currentColor",
+              d: "M17.5 18.786c0-2.36-1.013-4.253-2.502-5.57a6.4 6.4 0 0 1 2.502-.502c1.293 0 2.636.378 3.682 1.2 1.074.842 1.818 2.147 1.818 3.86 0 .559-.41 1.012-.917 1.012zM8.333 3C5.971 3 4.056 4.903 4.056 7.25S5.97 11.5 8.333 11.5s4.278-1.903 4.278-4.25S10.696 3 8.333 3M17.5 5.429a3.046 3.046 0 0 0-3.056 3.035A3.046 3.046 0 0 0 17.5 11.5a3.046 3.046 0 0 0 3.056-3.036A3.046 3.046 0 0 0 17.5 5.43",
             }))
         );
-      function eH() {
-        return (eH = Object.assign
+      function eq() {
+        return (eq = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39444,10 +39464,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eW = (e) =>
-        q.createElement(
+      var eK = (e) =>
+        J.createElement(
           "svg",
-          eH(
+          eq(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39457,16 +39477,16 @@
             },
             e
           ),
-          B ||
-            (B = q.createElement("path", {
+          S ||
+            (S = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M12.784 2.47a1 1 0 0 1 .047.975A8 8 0 0 0 20 15h.057a1 1 0 0 1 .902 1.445A10 10 0 0 1 12 22C6.477 22 2 17.523 2 12c0-5.499 4.438-9.961 9.928-10a1 1 0 0 1 .856.47M10.41 4.158a8 8 0 1 0 7.942 12.707C13.613 16.079 10 11.96 10 7c0-.986.143-1.94.41-2.842",
+              d: "M3 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1",
               clipRule: "evenodd",
             }))
         );
-      function eV() {
-        return (eV = Object.assign
+      function eY() {
+        return (eY = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39477,32 +39497,29 @@
               return e;
             }).apply(this, arguments);
       }
-      var eq = (e) =>
-        q.createElement(
+      var eJ = (e) =>
+        J.createElement(
           "svg",
-          eV(
+          eY(
             {
               xmlns: "http://www.w3.org/2000/svg",
-              width: 18,
-              height: 18,
+              width: 24,
+              height: 24,
               fill: "none",
-              viewBox: "0 0 18 18",
+              viewBox: "0 0 24 24",
             },
             e
           ),
-          S ||
-            (S = q.createElement("path", {
-              fill: "currentColor",
-              d: "M6 3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2zM7 3v12h1.18l.31-1.548a1.5 1.5 0 0 1 .41-.766l3.393-3.393A2.4 2.4 0 0 1 14 8.586V3.5a.5.5 0 0 0-.5-.5z",
-            })),
           T ||
-            (T = q.createElement("path", {
+            (T = J.createElement("path", {
               fill: "currentColor",
-              d: "m11.351 15.53-1.616.323a.5.5 0 0 1-.588-.588l.323-1.617a.5.5 0 0 1 .137-.255L13 10a1.414 1.414 0 1 1 2 2l-3.393 3.393a.5.5 0 0 1-.256.137",
+              fillRule: "evenodd",
+              d: "M7 7a5 5 0 1 1 10 0v4a5 5 0 1 1-10 0zm5-3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3m-1 15.945V21a1 1 0 0 0 2 0v-1.055a9.01 9.01 0 0 0 7.346-5.57 1 1 0 0 0-1.854-.75A7 7 0 0 1 12 18h-.003a7 7 0 0 1-6.489-4.375 1 1 0 1 0-1.853.75A9.01 9.01 0 0 0 11 19.945",
+              clipRule: "evenodd",
             }))
         );
-      function eK() {
-        return (eK = Object.assign
+      function eX() {
+        return (eX = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39513,10 +39530,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var eY = (e) =>
-        q.createElement(
+      var e$ = (e) =>
+        J.createElement(
           "svg",
-          eK(
+          eX(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39527,15 +39544,15 @@
             e
           ),
           I ||
-            (I = q.createElement("path", {
+            (I = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M13.293 4.293a4.536 4.536 0 1 1 6.414 6.414l-1 1-7.094 7.094A5 5 0 0 1 8.9 20.197l-4.736.79a1 1 0 0 1-1.15-1.151l.789-4.736a5 5 0 0 1 1.396-2.713zM13 7.414l-6.386 6.387a3 3 0 0 0-.838 1.628l-.56 3.355 3.355-.56a3 3 0 0 0 1.628-.837L16.586 11zm5 2.172L14.414 6l.293-.293a2.536 2.536 0 0 1 3.586 3.586z",
+              d: "M12.784 2.47a1 1 0 0 1 .047.975A8 8 0 0 0 20 15h.057a1 1 0 0 1 .902 1.445A10 10 0 0 1 12 22C6.477 22 2 17.523 2 12c0-5.499 4.438-9.961 9.928-10a1 1 0 0 1 .856.47M10.41 4.158a8 8 0 1 0 7.942 12.707C13.613 16.079 10 11.96 10 7c0-.986.143-1.94.41-2.842",
               clipRule: "evenodd",
             }))
         );
-      function eJ() {
-        return (eJ = Object.assign
+      function e0() {
+        return (e0 = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39546,34 +39563,32 @@
               return e;
             }).apply(this, arguments);
       }
-      var eX = (e) =>
-        q.createElement(
+      var e1 = (e) =>
+        J.createElement(
           "svg",
-          eJ(
+          e0(
             {
               xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
+              width: 18,
+              height: 18,
               fill: "none",
-              viewBox: "0 0 24 24",
+              viewBox: "0 0 18 18",
             },
             e
           ),
           D ||
-            (D = q.createElement("path", {
-              fill: "currentcolor",
-              fillRule: "evenodd",
-              d: "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12",
-              clipRule: "evenodd",
+            (D = J.createElement("path", {
+              fill: "currentColor",
+              d: "M6 3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2zM7 3v12h1.18l.31-1.548a1.5 1.5 0 0 1 .41-.766l3.393-3.393A2.4 2.4 0 0 1 14 8.586V3.5a.5.5 0 0 0-.5-.5z",
             })),
           N ||
-            (N = q.createElement("path", {
-              fill: "currentcolor",
-              d: "M9.5 14.668V9.332a1 1 0 0 1 1.54-.842l4.152 2.669a1 1 0 0 1 0 1.682L11.04 15.51a1 1 0 0 1-1.541-.842",
+            (N = J.createElement("path", {
+              fill: "currentColor",
+              d: "m11.351 15.53-1.616.323a.5.5 0 0 1-.588-.588l.323-1.617a.5.5 0 0 1 .137-.255L13 10a1.414 1.414 0 1 1 2 2l-3.393 3.393a.5.5 0 0 1-.256.137",
             }))
         );
-      function e$() {
-        return (e$ = Object.assign
+      function e2() {
+        return (e2 = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39584,10 +39599,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var e0 = (e) =>
-        q.createElement(
+      var e9 = (e) =>
+        J.createElement(
           "svg",
-          e$(
+          e2(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39598,15 +39613,15 @@
             e
           ),
           z ||
-            (z = q.createElement("path", {
+            (z = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M3.07 10.876C3.623 6.436 7.41 3 12 3a9.15 9.15 0 0 1 6.012 2.254V4a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1H15a1 1 0 1 1 0-2h1.957A7.15 7.15 0 0 0 12 5a7 7 0 0 0-6.946 6.124 1 1 0 1 1-1.984-.248m16.992 1.132a1 1 0 0 1 .868 1.116C20.377 17.564 16.59 21 12 21a9.15 9.15 0 0 1-6-2.244V20a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H7.043A7.15 7.15 0 0 0 12 19a7 7 0 0 0 6.946-6.124 1 1 0 0 1 1.116-.868",
+              d: "M13.293 4.293a4.536 4.536 0 1 1 6.414 6.414l-1 1-7.094 7.094A5 5 0 0 1 8.9 20.197l-4.736.79a1 1 0 0 1-1.15-1.151l.789-4.736a5 5 0 0 1 1.396-2.713zM13 7.414l-6.386 6.387a3 3 0 0 0-.838 1.628l-.56 3.355 3.355-.56a3 3 0 0 0 1.628-.837L16.586 11zm5 2.172L14.414 6l.293-.293a2.536 2.536 0 0 1 3.586 3.586z",
               clipRule: "evenodd",
             }))
         );
-      function e1() {
-        return (e1 = Object.assign
+      function e5() {
+        return (e5 = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39617,10 +39632,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var e2 = (e) =>
-        q.createElement(
+      var e3 = (e) =>
+        J.createElement(
           "svg",
-          e1(
+          e5(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39631,48 +39646,20 @@
             e
           ),
           _ ||
-            (_ = q.createElement("path", {
-              fill: "currentColor",
+            (_ = J.createElement("path", {
+              fill: "currentcolor",
               fillRule: "evenodd",
-              d: "M14.5 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-3.874 1a4.002 4.002 0 0 1 7.748 0H20a1 1 0 1 1 0 2h-1.626a4.002 4.002 0 0 1-7.748 0H4a1 1 0 0 1 0-2zM9.5 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-3.874 1a4.002 4.002 0 0 1 7.748 0H20a1 1 0 1 1 0 2h-6.626a4.002 4.002 0 0 1-7.748 0H4a1 1 0 1 1 0-2z",
+              d: "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12",
               clipRule: "evenodd",
-            }))
-        );
-      function e9() {
-        return (e9 = Object.assign
-          ? Object.assign.bind()
-          : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n)
-                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }).apply(this, arguments);
-      }
-      var e5 = (e) =>
-        q.createElement(
-          "svg",
-          e9(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-            e
-          ),
+            })),
           L ||
-            (L = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12m7.5-3.5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1z",
-              clipRule: "evenodd",
+            (L = J.createElement("path", {
+              fill: "currentcolor",
+              d: "M9.5 14.668V9.332a1 1 0 0 1 1.54-.842l4.152 2.669a1 1 0 0 1 0 1.682L11.04 15.51a1 1 0 0 1-1.541-.842",
             }))
         );
-      function e3() {
-        return (e3 = Object.assign
+      function e7() {
+        return (e7 = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39683,10 +39670,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var e7 = (e) =>
-        q.createElement(
+      var e4 = (e) =>
+        J.createElement(
           "svg",
-          e3(
+          e7(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39697,15 +39684,15 @@
             e
           ),
           Z ||
-            (Z = q.createElement("path", {
+            (Z = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M12 1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1M4.222 4.222a1 1 0 0 1 1.414 0L7.05 5.636A1 1 0 1 1 5.636 7.05L4.222 5.636a1 1 0 0 1 0-1.414m15.556 0a1 1 0 0 1 0 1.414L18.364 7.05a1 1 0 0 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0m-6 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1m18 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1M7.05 16.95a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0m9.9 0a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 0-1.414M12 19a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1",
+              d: "M3.07 10.876C3.623 6.436 7.41 3 12 3a9.15 9.15 0 0 1 6.012 2.254V4a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1H15a1 1 0 1 1 0-2h1.957A7.15 7.15 0 0 0 12 5a7 7 0 0 0-6.946 6.124 1 1 0 1 1-1.984-.248m16.992 1.132a1 1 0 0 1 .868 1.116C20.377 17.564 16.59 21 12 21a9.15 9.15 0 0 1-6-2.244V20a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H7.043A7.15 7.15 0 0 0 12 19a7 7 0 0 0 6.946-6.124 1 1 0 0 1 1.116-.868",
               clipRule: "evenodd",
             }))
         );
-      function e4() {
-        return (e4 = Object.assign
+      function e6() {
+        return (e6 = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39716,27 +39703,29 @@
               return e;
             }).apply(this, arguments);
       }
-      var e6 = (e) =>
-        q.createElement(
+      var e8 = (e) =>
+        J.createElement(
           "svg",
-          e4(
+          e6(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
-              height: 27,
+              height: 24,
               fill: "none",
-              viewBox: "0 0 24 27",
+              viewBox: "0 0 24 24",
             },
             e
           ),
           R ||
-            (R = q.createElement("path", {
+            (R = J.createElement("path", {
               fill: "currentColor",
-              d: "M2 12.375h9V22.5H5c-1.657 0-3-1.511-3-3.375zM13 12.375h9v6.75c0 1.864-1.343 3.375-3 3.375h-6zM5 4.5c-1.657 0-3 1.511-3 3.375v2.25h20v-2.25C22 6.011 20.657 4.5 19 4.5z",
+              fillRule: "evenodd",
+              d: "M14.5 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-3.874 1a4.002 4.002 0 0 1 7.748 0H20a1 1 0 1 1 0 2h-1.626a4.002 4.002 0 0 1-7.748 0H4a1 1 0 0 1 0-2zM9.5 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-3.874 1a4.002 4.002 0 0 1 7.748 0H20a1 1 0 1 1 0 2h-6.626a4.002 4.002 0 0 1-7.748 0H4a1 1 0 1 1 0-2z",
+              clipRule: "evenodd",
             }))
         );
-      function e8() {
-        return (e8 = Object.assign
+      function te() {
+        return (te = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39747,10 +39736,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var te = (e) =>
-        q.createElement(
+      var tt = (e) =>
+        J.createElement(
           "svg",
-          e8(
+          te(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39761,15 +39750,15 @@
             e
           ),
           Q ||
-            (Q = q.createElement("path", {
+            (Q = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
-              d: "M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm1.293 4.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-2 2a1 1 0 0 1-1.414-1.414L8.586 12l-1.293-1.293a1 1 0 0 1 0-1.414M12 14a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1",
+              d: "M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12m7.5-3.5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1z",
               clipRule: "evenodd",
             }))
         );
-      function tt() {
-        return (tt = Object.assign
+      function tn() {
+        return (tn = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39780,10 +39769,107 @@
               return e;
             }).apply(this, arguments);
       }
-      var tn = (e) =>
-        q.createElement(
+      var ta = (e) =>
+        J.createElement(
           "svg",
-          tt(
+          tn(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          F ||
+            (F = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M12 1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1M4.222 4.222a1 1 0 0 1 1.414 0L7.05 5.636A1 1 0 1 1 5.636 7.05L4.222 5.636a1 1 0 0 1 0-1.414m15.556 0a1 1 0 0 1 0 1.414L18.364 7.05a1 1 0 0 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0m-6 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1m18 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1M7.05 16.95a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0m9.9 0a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 0-1.414M12 19a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1",
+              clipRule: "evenodd",
+            }))
+        );
+      function tr() {
+        return (tr = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var ts = (e) =>
+        J.createElement(
+          "svg",
+          tr(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 27,
+              fill: "none",
+              viewBox: "0 0 24 27",
+            },
+            e
+          ),
+          U ||
+            (U = J.createElement("path", {
+              fill: "currentColor",
+              d: "M2 12.375h9V22.5H5c-1.657 0-3-1.511-3-3.375zM13 12.375h9v6.75c0 1.864-1.343 3.375-3 3.375h-6zM5 4.5c-1.657 0-3 1.511-3 3.375v2.25h20v-2.25C22 6.011 20.657 4.5 19 4.5z",
+            }))
+        );
+      function ti() {
+        return (ti = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var to = (e) =>
+        J.createElement(
+          "svg",
+          ti(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          G ||
+            (G = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm1.293 4.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-2 2a1 1 0 0 1-1.414-1.414L8.586 12l-1.293-1.293a1 1 0 0 1 0-1.414M12 14a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1",
+              clipRule: "evenodd",
+            }))
+        );
+      function tl() {
+        return (tl = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var tc = (e) =>
+        J.createElement(
+          "svg",
+          tl(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 14,
@@ -39793,11 +39879,11 @@
             },
             e
           ),
-          F ||
-            (F = q.createElement(
+          H ||
+            (H = J.createElement(
               "g",
               { id: "icon / user-growth-x" },
-              q.createElement("path", {
+              J.createElement("path", {
                 id: "Subtract",
                 fill: "#5D5D5D",
                 fillRule: "evenodd",
@@ -39806,8 +39892,8 @@
               })
             ))
         );
-      function ta() {
-        return (ta = Object.assign
+      function td() {
+        return (td = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39818,10 +39904,10 @@
               return e;
             }).apply(this, arguments);
       }
-      var tr = (e) =>
-        q.createElement(
+      var tu = (e) =>
+        J.createElement(
           "svg",
-          ta(
+          td(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 14,
@@ -39831,11 +39917,11 @@
             },
             e
           ),
-          U ||
-            (U = q.createElement(
+          W ||
+            (W = J.createElement(
               "g",
               { id: "icon / user-growth-y" },
-              q.createElement("path", {
+              J.createElement("path", {
                 id: "Subtract",
                 fill: "#5D5D5D",
                 fillRule: "evenodd",
@@ -39844,8 +39930,8 @@
               })
             ))
         );
-      function ts() {
-        return (ts = Object.assign
+      function tA() {
+        return (tA = Object.assign
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39857,109 +39943,10 @@
             }).apply(this, arguments);
       }
       n(98682);
-      var ti = (e) =>
-        q.createElement(
+      var tm = (e) =>
+        J.createElement(
           "svg",
-          ts(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-            e
-          ),
-          G ||
-            (G = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M12 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6M7 7a5 5 0 1 1 10 0A5 5 0 0 1 7 7m5 8c-3.656 0-6.5 2.75-6.5 6a1 1 0 1 1-2 0c0-4.482 3.872-8 8.5-8s8.5 3.518 8.5 8a1 1 0 1 1-2 0c0-3.25-2.844-6-6.5-6",
-              clipRule: "evenodd",
-            }))
-        );
-      function to() {
-        return (to = Object.assign
-          ? Object.assign.bind()
-          : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n)
-                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }).apply(this, arguments);
-      }
-      var tl = (e) =>
-        q.createElement(
-          "svg",
-          to(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-            e
-          ),
-          H ||
-            (H = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M8 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1m8 2a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V6a1 1 0 0 1 1-1m-4 2a1 1 0 0 1 1 1v8a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1M4 9a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1m16 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1",
-              clipRule: "evenodd",
-            }))
-        );
-      function tc() {
-        return (tc = Object.assign
-          ? Object.assign.bind()
-          : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n)
-                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }).apply(this, arguments);
-      }
-      var td = (e) =>
-        q.createElement(
-          "svg",
-          tc(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 24,
-              height: 24,
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-            e
-          ),
-          W ||
-            (W = q.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              d: "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2M9.707 8.293a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586z",
-              clipRule: "evenodd",
-            }))
-        );
-      function tu() {
-        return (tu = Object.assign
-          ? Object.assign.bind()
-          : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n)
-                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }).apply(this, arguments);
-      }
-      var tA = (e) =>
-        q.createElement(
-          "svg",
-          tu(
+          tA(
             {
               xmlns: "http://www.w3.org/2000/svg",
               width: 24,
@@ -39970,7 +39957,106 @@
             e
           ),
           V ||
-            (V = q.createElement("path", {
+            (V = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M12 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6M7 7a5 5 0 1 1 10 0A5 5 0 0 1 7 7m5 8c-3.656 0-6.5 2.75-6.5 6a1 1 0 1 1-2 0c0-4.482 3.872-8 8.5-8s8.5 3.518 8.5 8a1 1 0 1 1-2 0c0-3.25-2.844-6-6.5-6",
+              clipRule: "evenodd",
+            }))
+        );
+      function tg() {
+        return (tg = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var tp = (e) =>
+        J.createElement(
+          "svg",
+          tg(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          q ||
+            (q = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M8 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1m8 2a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V6a1 1 0 0 1 1-1m-4 2a1 1 0 0 1 1 1v8a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1M4 9a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1m16 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1",
+              clipRule: "evenodd",
+            }))
+        );
+      function tf() {
+        return (tf = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var th = (e) =>
+        J.createElement(
+          "svg",
+          tf(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          K ||
+            (K = J.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              d: "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2M9.707 8.293a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586z",
+              clipRule: "evenodd",
+            }))
+        );
+      function tx() {
+        return (tx = Object.assign
+          ? Object.assign.bind()
+          : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n)
+                  Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }).apply(this, arguments);
+      }
+      var tv = (e) =>
+        J.createElement(
+          "svg",
+          tx(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: 24,
+              height: 24,
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+            e
+          ),
+          Y ||
+            (Y = J.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               d: "M5.636 5.636a1 1 0 0 1 1.414 0l4.95 4.95 4.95-4.95a1 1 0 0 1 1.414 1.414L13.414 12l4.95 4.95a1 1 0 0 1-1.414 1.414L12 13.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l4.95-4.95-4.95-4.95a1 1 0 0 1 0-1.414",
@@ -44658,50 +44744,54 @@
       "use strict";
       n.d(t, {
         BI: function () {
-          return j;
+          return w;
         },
         Kq: function () {
-          return A;
+          return m;
         },
         Qr: function () {
-          return c;
-        },
-        U0: function () {
           return d;
         },
+        U0: function () {
+          return u;
+        },
         Xf: function () {
-          return x;
+          return v;
         },
         Yw: function () {
-          return g;
+          return p;
         },
         hJ: function () {
-          return y;
+          return b;
         },
         pN: function () {
-          return f;
+          return h;
+        },
+        zh: function () {
+          return k;
         },
       });
       var a = n(34594),
         r = n(51018),
         s = n.n(r),
         i = n(70079),
-        o = n(35250);
-      function l() {
+        o = n(9182),
+        l = n(35250);
+      function c() {
         return (0, a.sB)(a.tz.FruitJuiceC).value;
       }
-      function c() {
+      function d() {
         return (0, a.sB)(a.tz.FruitJuice).value;
       }
-      function d() {
-        let e = c();
+      function u() {
+        let e = d();
         (0, i.useEffect)(() => {
           e
             ? document.documentElement.classList.add("ZnJ1aXRqdWljZQ")
             : document.documentElement.classList.remove("ZnJ1aXRqdWljZQ");
         }, [e]);
       }
-      let u = s()(
+      let A = s()(
         () =>
           n
             .e(8682)
@@ -44709,13 +44799,13 @@
             .then((e) => e.ConversationTurnSender),
         { loadableGenerated: { webpack: () => [13888] } }
       );
-      function A(e) {
+      function m(e) {
         let { isUserTurn: t, children: n } = e;
-        return l()
-          ? (0, o.jsx)(u, { isUserTurn: t, children: n })
-          : (0, o.jsx)(o.Fragment, { children: n });
+        return c()
+          ? (0, l.jsx)(A, { isUserTurn: t, children: n })
+          : (0, l.jsx)(l.Fragment, { children: n });
       }
-      let m = s()(
+      let g = s()(
         () =>
           n
             .e(8682)
@@ -44723,13 +44813,13 @@
             .then((e) => e.ConversationTurnName),
         { loadableGenerated: { webpack: () => [13888] } }
       );
-      function g(e) {
+      function p(e) {
         let { children: t } = e;
-        return l()
-          ? (0, o.jsx)(m, {})
-          : (0, o.jsx)(o.Fragment, { children: t });
+        return c()
+          ? (0, l.jsx)(g, {})
+          : (0, l.jsx)(l.Fragment, { children: t });
       }
-      let p = s()(
+      let f = s()(
         () =>
           n
             .e(8682)
@@ -44737,13 +44827,13 @@
             .then((e) => e.ConversationTurnMessages),
         { loadableGenerated: { webpack: () => [13888] } }
       );
-      function f(e) {
+      function h(e) {
         let { isUserTurn: t, children: n } = e;
-        return l()
-          ? (0, o.jsx)(p, { isUserTurn: t, children: n })
-          : (0, o.jsx)(o.Fragment, { children: n });
+        return c()
+          ? (0, l.jsx)(f, { isUserTurn: t, children: n })
+          : (0, l.jsx)(l.Fragment, { children: n });
       }
-      let h = s()(
+      let x = s()(
         () =>
           n
             .e(8682)
@@ -44751,10 +44841,10 @@
             .then((e) => e.ProfileDropdown),
         { loadableGenerated: { webpack: () => [70173] } }
       );
-      function x() {
-        return c() ? (0, o.jsx)(h, {}) : null;
+      function v() {
+        return d() ? (0, l.jsx)(x, {}) : null;
       }
-      let v = s()(
+      let y = s()(
         () =>
           n
             .e(8682)
@@ -44762,13 +44852,13 @@
             .then((e) => e.HistoryPopover),
         { loadableGenerated: { webpack: () => [70173] } }
       );
-      function y(e) {
+      function b(e) {
         let { children: t, clientThreadId: n } = e;
-        return c()
-          ? (0, o.jsx)(v, { clientThreadId: n })
-          : (0, o.jsx)(o.Fragment, { children: t });
+        return d()
+          ? (0, l.jsx)(y, { clientThreadId: n })
+          : (0, l.jsx)(l.Fragment, { children: t });
       }
-      let b = s()(
+      let j = s()(
         () =>
           n
             .e(8682)
@@ -44776,9 +44866,22 @@
             .then((e) => e.GizmosDropdownItems),
         { loadableGenerated: { webpack: () => [70173] } }
       );
-      function j(e) {
+      function w(e) {
         let { clientThreadId: t } = e;
-        return c() ? (0, o.jsx)(b, { clientThreadId: t }) : null;
+        return d() ? (0, l.jsx)(j, { clientThreadId: t }) : null;
+      }
+      let C = s()(
+        () =>
+          Promise.resolve()
+            .then(n.bind(n, 72207))
+            .then((e) => e.GizmoInformationDropdownModals),
+        { loadableGenerated: { webpack: () => [72207] } }
+      );
+      function k(e) {
+        let { gizmoId: t } = e,
+          n = d(),
+          a = (0, o.b9)(t).data;
+        return n && a ? (0, l.jsx)(C, { gizmoResource: a }) : null;
       }
     },
     35407: function (e, t, n) {
@@ -45007,8 +45110,10 @@
                 className:
                   "z-10 flex w-48 flex-col rounded-xl border border-token-border-light bg-token-main-surface-primary shadow-lg",
                 children: [
-                  (0, _.jsx)(D.dm, { gizmoResource: t }),
-                  (0, _.jsx)(D.Cq, { gizmoResource: t }),
+                  (0, _.jsx)(D.GizmoKeepInSidebarMenuItem, {
+                    gizmoResource: t,
+                  }),
+                  (0, _.jsx)(D.GizmoShareMenuItem, { gizmoResource: t }),
                 ],
               }),
             ],
@@ -56253,43 +56358,40 @@
       "use strict";
       n.d(t, {
         $0: function () {
-          return U;
+          return Q;
         },
         AZ: function () {
           return P;
         },
         Ao: function () {
-          return ea;
+          return et;
         },
         B9: function () {
-          return $;
+          return J;
         },
         ES: function () {
           return s;
         },
         Eo: function () {
-          return eA;
+          return ed;
         },
         FX: function () {
-          return X;
+          return Y;
         },
         Fr: function () {
-          return es;
+          return ea;
         },
         Gb: function () {
-          return J;
+          return K;
         },
         Gi: function () {
-          return F;
+          return R;
         },
         Gp: function () {
           return k;
         },
         HN: function () {
           return l;
-        },
-        HV: function () {
-          return I;
         },
         Hg: function () {
           return C;
@@ -56301,7 +56403,7 @@
           return i;
         },
         M4: function () {
-          return et;
+          return $;
         },
         M9: function () {
           return j;
@@ -56313,16 +56415,16 @@
           return h;
         },
         Oz: function () {
-          return er;
+          return en;
         },
         PK: function () {
-          return L;
+          return z;
         },
         PN: function () {
           return v;
         },
         PQ: function () {
-          return H;
+          return U;
         },
         Q7: function () {
           return g;
@@ -56331,25 +56433,25 @@
           return E;
         },
         Ro: function () {
-          return en;
+          return ee;
         },
         SA: function () {
-          return N;
+          return I;
         },
         Sg: function () {
-          return K;
+          return V;
         },
         Sm: function () {
-          return R;
+          return L;
         },
         TC: function () {
-          return Z;
+          return _;
         },
         Tx: function () {
           return y;
         },
         VX: function () {
-          return G;
+          return F;
         },
         W2: function () {
           return p;
@@ -56358,16 +56460,16 @@
           return T;
         },
         Yr: function () {
-          return W;
+          return G;
         },
         a_: function () {
           return S;
         },
         ao: function () {
-          return ec;
+          return eo;
         },
         bO: function () {
-          return eu;
+          return ec;
         },
         dJ: function () {
           return M;
@@ -56376,7 +56478,7 @@
           return o;
         },
         ec: function () {
-          return el;
+          return ei;
         },
         eu: function () {
           return B;
@@ -56385,7 +56487,7 @@
           return c;
         },
         gf: function () {
-          return q;
+          return W;
         },
         go: function () {
           return m;
@@ -56397,46 +56499,43 @@
           return A;
         },
         j5: function () {
-          return V;
-        },
-        k4: function () {
-          return D;
+          return H;
         },
         ks: function () {
           return r;
         },
         oS: function () {
-          return z;
+          return D;
         },
         oq: function () {
-          return Q;
+          return Z;
         },
         p$: function () {
-          return ei;
+          return er;
         },
         p9: function () {
-          return _;
+          return N;
         },
         pI: function () {
           return d;
         },
         p_: function () {
-          return eo;
+          return es;
         },
         q5: function () {
           return u;
         },
         s5: function () {
-          return ed;
+          return el;
         },
         u8: function () {
-          return ee;
+          return X;
         },
         ud: function () {
           return b;
         },
         v7: function () {
-          return Y;
+          return q;
         },
         vX: function () {
           return f;
@@ -57063,50 +57162,6 @@
             className: t,
             children: [
               (0, a.jsx)("path", {
-                d: "M19.3975 1.35498C19.3746 1.15293 19.2037 1.00021 19.0004 1C18.7971 0.999793 18.6259 1.15217 18.6026 1.35417C18.4798 2.41894 18.1627 3.15692 17.6598 3.65983C17.1569 4.16274 16.4189 4.47983 15.3542 4.60264C15.1522 4.62593 14.9998 4.79707 15 5.00041C15.0002 5.20375 15.1529 5.37457 15.355 5.39746C16.4019 5.51605 17.1562 5.83304 17.6716 6.33906C18.1845 6.84269 18.5078 7.57998 18.6016 8.63539C18.6199 8.84195 18.7931 9.00023 19.0005 9C19.2078 8.99977 19.3806 8.84109 19.3985 8.6345C19.4883 7.59673 19.8114 6.84328 20.3273 6.32735C20.8433 5.81142 21.5967 5.48834 22.6345 5.39851C22.8411 5.38063 22.9998 5.20782 23 5.00045C23.0002 4.79308 22.842 4.61992 22.6354 4.60157C21.58 4.50782 20.8427 4.18447 20.3391 3.67157C19.833 3.15623 19.516 2.40192 19.3975 1.35498Z",
-                fill: "currentColor",
-              }),
-              (0, a.jsx)("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M11 3C11.4833 3 11.8974 3.34562 11.9839 3.82111C12.4637 6.46043 13.279 8.23983 14.5196 9.48039C15.7602 10.721 17.5396 11.5363 20.1789 12.0161C20.6544 12.1026 21 12.5167 21 13C21 13.4833 20.6544 13.8974 20.1789 13.9839C17.5396 14.4637 15.7602 15.279 14.5196 16.5196C13.279 17.7602 12.4637 19.5396 11.9839 22.1789C11.8974 22.6544 11.4833 23 11 23C10.5167 23 10.1026 22.6544 10.0161 22.1789C9.53625 19.5396 8.72096 17.7602 7.48039 16.5196C6.23983 15.279 4.46043 14.4637 1.82111 13.9839C1.34562 13.8974 1 13.4833 1 13C1 12.5167 1.34562 12.1026 1.82111 12.0161C4.46043 11.5363 6.23983 10.721 7.48039 9.48039C8.72096 8.23983 9.53625 6.46043 10.0161 3.82111C10.1026 3.34562 10.5167 3 11 3ZM5.66618 13C6.9247 13.5226 7.99788 14.2087 8.89461 15.1054C9.79134 16.0021 10.4774 17.0753 11 18.3338C11.5226 17.0753 12.2087 16.0021 13.1054 15.1054C14.0021 14.2087 15.0753 13.5226 16.3338 13C15.0753 12.4774 14.0021 11.7913 13.1054 10.8946C12.2087 9.99788 11.5226 8.9247 11 7.66618C10.4774 8.9247 9.79134 9.99788 8.89461 10.8946C7.99788 11.7913 6.9247 12.4774 5.66618 13Z",
-                fill: "currentColor",
-              }),
-            ],
-          });
-        },
-        D = (e) => {
-          let { className: t } = e;
-          return (0, a.jsxs)("svg", {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: t,
-            children: [
-              (0, a.jsx)("path", {
-                d: "M8.78158 8.60266L9.8188 5.49098C10.037 4.83634 10.963 4.83634 11.1812 5.49098L12.2184 8.60266C12.7187 10.1035 13.8965 11.2813 15.3973 11.7816L18.509 12.8188C19.1637 13.037 19.1637 13.963 18.509 14.1812L15.3973 15.2184C13.8965 15.7187 12.7187 16.8965 12.2184 18.3973L11.1812 21.509C10.963 22.1637 10.037 22.1637 9.8188 21.509L8.78158 18.3973C8.28128 16.8965 7.10354 15.7187 5.60266 15.2184L2.49098 14.1812C1.83634 13.963 1.83634 13.037 2.49098 12.8188L5.60266 11.7816C7.10354 11.2813 8.28128 10.1035 8.78158 8.60266Z",
-                fill: "currentColor",
-              }),
-              (0, a.jsx)("path", {
-                d: "M17.1913 3.69537L17.6794 2.23105C17.7821 1.92298 18.2179 1.92298 18.3206 2.23105L18.8087 3.69537C19.0441 4.40167 19.5983 4.9559 20.3046 5.19133L21.769 5.67944C22.077 5.78213 22.077 6.21787 21.769 6.32056L20.3046 6.80867C19.5983 7.0441 19.0441 7.59833 18.8087 8.30463L18.3206 9.76895C18.2179 10.077 17.7821 10.077 17.6794 9.76895L17.1913 8.30463C16.9559 7.59833 16.4017 7.0441 15.6954 6.80867L14.231 6.32056C13.923 6.21787 13.923 5.78213 14.231 5.67944L15.6954 5.19133C16.4017 4.9559 16.9559 4.40167 17.1913 3.69537Z",
-                fill: "currentColor",
-              }),
-            ],
-          });
-        },
-        N = (e) => {
-          let { className: t } = e;
-          return (0, a.jsxs)("svg", {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: t,
-            children: [
-              (0, a.jsx)("path", {
                 d: "M10.663 6.3872C10.8152 6.29068 11 6.40984 11 6.59007V8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8V6.59007C13 6.40984 13.1848 6.29068 13.337 6.3872C14.036 6.83047 14.5 7.61105 14.5 8.5C14.5 9.53284 13.8737 10.4194 12.9801 10.8006C12.9932 10.865 13 10.9317 13 11V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V11C11 10.9317 11.0068 10.865 11.0199 10.8006C10.1263 10.4194 9.5 9.53284 9.5 8.5C9.5 7.61105 9.96397 6.83047 10.663 6.3872Z",
                 fill: "currentColor",
               }),
@@ -57119,7 +57174,7 @@
             ],
           });
         },
-        z = (e) => {
+        D = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57136,7 +57191,7 @@
             }),
           });
         },
-        _ = (e) => {
+        N = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57153,7 +57208,7 @@
             }),
           });
         },
-        L = (e) => {
+        z = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57170,7 +57225,7 @@
             }),
           });
         },
-        Z = (e) => {
+        _ = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57187,7 +57242,7 @@
             }),
           });
         },
-        R = (e) => {
+        L = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -57204,7 +57259,7 @@
             }),
           });
         },
-        Q = (e) => {
+        Z = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57222,7 +57277,7 @@
             }),
           });
         },
-        F = (e) => {
+        R = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "24",
@@ -57249,7 +57304,7 @@
             ],
           });
         },
-        U = (e) => {
+        Q = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57266,7 +57321,7 @@
             }),
           });
         },
-        G = (e) => {
+        F = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "24",
@@ -57293,7 +57348,7 @@
             ],
           });
         },
-        H = (e) => {
+        U = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "24",
@@ -57315,7 +57370,7 @@
             ],
           });
         },
-        W = (e) => {
+        G = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57332,7 +57387,7 @@
             }),
           });
         },
-        V = (e) => {
+        H = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57349,7 +57404,7 @@
             }),
           });
         },
-        q = (e) => {
+        W = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57366,7 +57421,7 @@
             }),
           });
         },
-        K = (e) => {
+        V = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57383,7 +57438,7 @@
             }),
           });
         },
-        Y = (e) => {
+        q = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57401,7 +57456,7 @@
             }),
           });
         },
-        J = (e) => {
+        K = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57418,7 +57473,7 @@
             }),
           });
         },
-        X = (e) => {
+        Y = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57435,7 +57490,7 @@
             }),
           });
         },
-        $ = (e) => {
+        J = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "18",
@@ -57453,7 +57508,7 @@
             }),
           });
         },
-        ee = (e) => {
+        X = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "24",
@@ -57479,7 +57534,7 @@
             ],
           });
         },
-        et = (e) => {
+        $ = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57497,7 +57552,7 @@
             }),
           });
         },
-        en = (e) => {
+        ee = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57515,7 +57570,7 @@
             }),
           });
         },
-        ea = (e) => {
+        et = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "20",
@@ -57541,7 +57596,7 @@
             ],
           });
         },
-        er = (e) => {
+        en = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -57581,7 +57636,7 @@
             ],
           });
         },
-        es = (e) => {
+        ea = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57599,7 +57654,7 @@
             }),
           });
         },
-        ei = (e) => {
+        er = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57614,7 +57669,7 @@
             }),
           });
         },
-        eo = (e) => {
+        es = (e) => {
           let { className: t } = e;
           return (0, a.jsxs)("svg", {
             width: "24",
@@ -57649,7 +57704,7 @@
             ],
           });
         },
-        el = (e) => {
+        ei = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57670,7 +57725,7 @@
             }),
           });
         },
-        ec = (e) => {
+        eo = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "12",
@@ -57685,7 +57740,7 @@
             }),
           });
         },
-        ed = (e) => {
+        el = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "14",
@@ -57700,7 +57755,7 @@
             }),
           });
         },
-        eu = (e) => {
+        ec = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "14",
@@ -57715,7 +57770,7 @@
             }),
           });
         },
-        eA = (e) => {
+        ed = (e) => {
           let { className: t } = e;
           return (0, a.jsx)("svg", {
             width: "24",
@@ -57735,23 +57790,27 @@
     },
     72207: function (e, t, n) {
       "use strict";
-      n.d(t, {
-        ni: function () {
-          return eh;
-        },
-        Zj: function () {
-          return eg;
-        },
-        ys: function () {
-          return ep;
-        },
-        dm: function () {
-          return eA;
-        },
-        Cq: function () {
-          return em;
-        },
-      });
+      n.r(t),
+        n.d(t, {
+          GizmoConversationOptionsDropdown: function () {
+            return ex;
+          },
+          GizmoInformationDropdown: function () {
+            return eg;
+          },
+          GizmoInformationDropdownItems: function () {
+            return ef;
+          },
+          GizmoInformationDropdownModals: function () {
+            return ep;
+          },
+          GizmoKeepInSidebarMenuItem: function () {
+            return eA;
+          },
+          GizmoShareMenuItem: function () {
+            return em;
+          },
+        });
       var a,
         r,
         s = n(18450),
@@ -58420,8 +58479,8 @@
               children: [
                 (0, b.jsx)(E.HN, { className: "icon-md" }),
                 n
-                  ? (0, b.jsx)(v.Z, eu({}, ex.copiedURL))
-                  : (0, b.jsx)(v.Z, eu({}, ex.copyLink)),
+                  ? (0, b.jsx)(v.Z, eu({}, ev.copiedURL))
+                  : (0, b.jsx)(v.Z, eu({}, ev.copyLink)),
               ],
             });
       }
@@ -58433,25 +58492,52 @@
           showReportModal: r,
           inMobileHeader: s,
         } = e;
-        return (0, b.jsxs)($.fC, {
+        return (0, b.jsxs)(b.Fragment, {
           children: [
-            (0, b.jsx)($.xz, { asChild: !0, children: t }),
-            (0, b.jsx)($.Uv, {
-              children: (0, b.jsx)($.VY, {
-                className:
-                  "popover mt-2 min-w-[100px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
-                align: s ? "center" : "start",
-                children: (0, b.jsx)(ep, {
-                  clientThreadId: n,
-                  gizmoResource: a,
-                  showReportModal: r,
+            (0, b.jsxs)($.fC, {
+              children: [
+                (0, b.jsx)($.xz, { asChild: !0, children: t }),
+                (0, b.jsx)($.Uv, {
+                  children: (0, b.jsx)($.VY, {
+                    className:
+                      "popover mt-2 min-w-[100px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
+                    align: s ? "center" : "start",
+                    children: (0, b.jsx)(ef, {
+                      clientThreadId: n,
+                      gizmoResource: a,
+                      showReportModal: r,
+                    }),
+                  }),
                 }),
-              }),
+              ],
             }),
+            (0, b.jsx)(ep, { gizmoResource: a }),
           ],
         });
       }
       function ep(e) {
+        let { gizmoResource: t } = e,
+          n = (0, g.EV)(g.B.GPTRemoveThirdParty),
+          a = (0, V.t)();
+        return (0, b.jsxs)(b.Fragment, {
+          children: [
+            (0, b.jsx)(eo.j4, {
+              gizmoId: t.gizmo.id,
+              creatorId: t.gizmo.author.user_id,
+            }),
+            (0, b.jsx)(U, { gizmo: t }),
+            (0, b.jsx)(k, { gizmo: t }),
+            (0, b.jsx)(el.Z, { gizmo: t }),
+            (0, b.jsx)(ei.Z, {
+              gpt: t,
+              isOpen: n,
+              onClose: () => g.vm.closeModal(g.B.GPTRemoveThirdParty),
+              account: a,
+            }),
+          ],
+        });
+      }
+      function ef(e) {
         var t, n;
         let { clientThreadId: a, gizmoResource: r, showReportModal: s } = e,
           c = (0, er.useRouter)(),
@@ -58463,24 +58549,22 @@
             null === (t = r.gizmo.tags) || void 0 === t
               ? void 0
               : t.includes(W.U9.FirstParty),
-          x =
+          h =
             r.gizmo.share_recipient === W.Zz.Marketplace ||
             r.gizmo.share_recipient === W.Zz.Link,
-          y = (0, ea.sB)(ea.tz.GizmoReviews).value,
-          j = (0, ea.sB)(ea.tz.GizmoVersionHistory).value,
-          w = y && !f,
-          C =
+          x = (0, ea.sB)(ea.tz.GizmoReviews).value,
+          y = (0, ea.sB)(ea.tz.GizmoVersionHistory).value,
+          j = x && !f,
+          w =
             (null == p ? void 0 : p.includes(q.L0.GizmoSupportEmails)) &&
             !f &&
             r.gizmo.author.will_receive_support_emails &&
-            !w,
-          O = (0, V.S0)(),
-          M = (0, K.XK)(a),
-          P = (0, o.C)(q.L0.WorkspaceShareLinks),
-          { isUserUnauthenticated: B } = (0, Y.E)(),
-          S = M && P && !B,
-          { 0: T, 1: D } = (0, h.useState)(!1),
-          N = (0, V.t)();
+            !j,
+          C = (0, V.S0)(),
+          k = (0, K.XK)(a),
+          O = (0, o.C)(q.L0.WorkspaceShareLinks),
+          { isUserUnauthenticated: M } = (0, Y.E)(),
+          P = k && O && !M;
         return (0, b.jsxs)(b.Fragment, {
           children: [
             (0, b.jsxs)(H.UA, {
@@ -58493,14 +58577,14 @@
               },
               children: [
                 (0, b.jsx)(E.ks, { className: "icon-md" }),
-                (0, b.jsx)(v.Z, eu({}, ex.newChat)),
+                (0, b.jsx)(v.Z, eu({}, ev.newChat)),
               ],
             }),
             (0, b.jsxs)(H.UA, {
               onClick: () => g.vm.openModal(g.B.GPTDetails),
               children: [
                 (0, b.jsx)(E.VX, { className: "icon-md" }),
-                (0, b.jsx)(v.Z, eu({}, ex.about)),
+                (0, b.jsx)(v.Z, eu({}, ev.about)),
               ],
             }),
             (null === (n = r.tools) || void 0 === n
@@ -58510,7 +58594,7 @@
                 onClick: () => g.vm.openModal(g.B.GPTPrivacySettings),
                 children: [
                   (0, b.jsx)(E.LX, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.privacySettings)),
+                  (0, b.jsx)(v.Z, eu({}, ev.privacySettings)),
                 ],
               }),
             d &&
@@ -58520,12 +58604,12 @@
                 },
                 children: [
                   (0, b.jsx)(E.RR, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.customize)),
+                  (0, b.jsx)(v.Z, eu({}, ev.customize)),
                 ],
               }),
             !d &&
               u &&
-              j &&
+              y &&
               (0, b.jsxs)(b.Fragment, {
                 children: [
                   (0, b.jsxs)(H.UA, {
@@ -58557,48 +58641,46 @@
               }),
             (0, b.jsx)(eA, { gizmoResource: r }),
             (0, b.jsx)(em, { gizmoResource: r }),
-            C &&
+            w &&
               (0, b.jsxs)(H.UA, {
                 onClick: () => g.vm.openModal(g.B.GPTFeedbackEmail),
                 children: [
                   (0, b.jsx)(I.EQ9, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.feedbackEmail)),
+                  (0, b.jsx)(v.Z, eu({}, ev.feedbackEmail)),
                 ],
               }),
-            w &&
+            j &&
               (0, b.jsxs)(H.UA, {
                 onClick: () => g.vm.openModal(g.B.GPTReview),
                 children: [
                   (0, b.jsx)(I.EQ9, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.reviewGPT)),
+                  (0, b.jsx)(v.Z, eu({}, ev.reviewGPT)),
                 ],
               }),
             !f &&
-              x &&
+              h &&
               (0, b.jsxs)(H.UA, {
                 onClick: s,
                 children: [
                   (0, b.jsx)(E.AZ, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.report)),
+                  (0, b.jsx)(v.Z, eu({}, ev.report)),
                 ],
               }),
-            S &&
+            P &&
               (0, b.jsxs)(H.UA, {
-                onClick: () => g.vm.openSharingModal(M),
+                onClick: () => g.vm.openSharingModal(k),
                 children: [
                   (0, b.jsx)(E.Gp, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.shareChatLong)),
+                  (0, b.jsx)(v.Z, eu({}, ev.shareChatLong)),
                 ],
               }),
-            O &&
+            C &&
               (0, b.jsxs)(b.Fragment, {
                 children: [
                   (0, b.jsx)(H.Cl, {}),
                   (0, b.jsxs)(H.UA, {
                     color: "danger",
-                    onClick: () => {
-                      D(!0);
-                    },
+                    onClick: () => g.vm.openModal(g.B.GPTRemoveThirdParty),
                     children: [
                       (0, b.jsx)(E.v7, { className: "icon-md" }),
                       (0, b.jsx)(v.Z, {
@@ -58621,25 +58703,10 @@
                   }),
                 ],
               }),
-            (0, b.jsx)(eo.j4, {
-              gizmoId: r.gizmo.id,
-              creatorId: r.gizmo.author.user_id,
-            }),
-            (0, b.jsx)(U, { gizmo: r }),
-            (0, b.jsx)(k, { gizmo: r }),
-            (0, b.jsx)(el.Z, { gizmo: r }),
-            (0, b.jsx)(ei.Z, {
-              gpt: r,
-              isOpen: T,
-              onClose: () => {
-                D(!1);
-              },
-              account: N,
-            }),
           ],
         });
       }
-      let ef = (e) => {
+      let eh = (e) => {
           let { clientThreadId: t } = e,
             n = (0, V.hz)(),
             a = null == n ? void 0 : n.includes("debug"),
@@ -58658,7 +58725,7 @@
                   onClick: () => g.vm.openSharingModal(r),
                   children: [
                     (0, b.jsx)(E.Gp, { className: "icon-md" }),
-                    (0, b.jsx)(v.Z, eu({}, ex.shareChat)),
+                    (0, b.jsx)(v.Z, eu({}, ev.shareChat)),
                   ],
                 }),
               a &&
@@ -58666,7 +58733,7 @@
                   onClick: () => g.vm.toggleActiveSidebar("debug"),
                   children: [
                     (0, b.jsx)(E.WP, { className: "icon-md" }),
-                    (0, b.jsx)(v.Z, eu({}, ex.debugChat)),
+                    (0, b.jsx)(v.Z, eu({}, ev.debugChat)),
                   ],
                 }),
               (0, b.jsxs)(H.UA, {
@@ -58678,7 +58745,7 @@
                 },
                 children: [
                   (0, b.jsx)(E.eu, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.renameChat)),
+                  (0, b.jsx)(v.Z, eu({}, ev.renameChat)),
                 ],
               }),
               "dropdown" === c &&
@@ -58690,7 +58757,7 @@
                   },
                   children: [
                     (0, b.jsx)(es.rK, { className: "icon-md mt-[1px]" }),
-                    (0, b.jsx)(v.Z, eu({}, ex.archiveChat)),
+                    (0, b.jsx)(v.Z, eu({}, ev.archiveChat)),
                   ],
                 }),
               (0, b.jsxs)(H.UA, {
@@ -58701,13 +58768,13 @@
                 },
                 children: [
                   (0, b.jsx)(E.a_, { className: "icon-md" }),
-                  (0, b.jsx)(v.Z, eu({}, ex.deleteChat)),
+                  (0, b.jsx)(v.Z, eu({}, ev.deleteChat)),
                 ],
               }),
             ],
           });
         },
-        eh = (e) => {
+        ex = (e) => {
           let { clientThreadId: t, children: n, onOpenChange: a } = e;
           return (0, b.jsxs)($.fC, {
             modal: !1,
@@ -58720,13 +58787,13 @@
                     "popover min-w-[200px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
                   side: "bottom",
                   align: "start",
-                  children: (0, b.jsx)(ef, { clientThreadId: t }),
+                  children: (0, b.jsx)(eh, { clientThreadId: t }),
                 }),
               }),
             ],
           });
         },
-        ex = (0, y.vU)({
+        ev = (0, y.vU)({
           newChat: {
             defaultMessage: "New chat",
             id: "GizmoInformation.newChat",
@@ -67510,7 +67577,7 @@
       "use strict";
       n.d(t, {
         ZP: function () {
-          return ec;
+          return ed;
         },
       });
       var a,
@@ -67689,9 +67756,10 @@
           },
         });
       var U = n(41725),
-        G = n(70187),
-        H = n(47819);
-      function W(e, t) {
+        G = n(86263),
+        H = n(70187),
+        W = n(47819);
+      function V(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -67703,16 +67771,16 @@
         }
         return n;
       }
-      function V(e) {
+      function q(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? W(Object(n), !0).forEach(function (t) {
+            ? V(Object(n), !0).forEach(function (t) {
                 (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : W(Object(n)).forEach(function (t) {
+              : V(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -67722,7 +67790,7 @@
         }
         return e;
       }
-      function q() {
+      function K() {
         var e, t, n, a, r, s, i;
         let o = (0, S.useRouter)(),
           l = (0, m.Z)(),
@@ -67747,7 +67815,7 @@
               let e = await M.Z.getCheckoutLink(c);
               o.push(e.url);
             } catch (e) {
-              D.m.warning(l.formatMessage(X.paymentErrorWarning), {
+              D.m.warning(l.formatMessage($.paymentErrorWarning), {
                 hasCloseButton: !0,
               }),
                 (0, I.Vk)(!1);
@@ -67774,7 +67842,7 @@
               (null !== (s = null == c ? void 0 : c.includes(P.L0.Teams)) &&
                 void 0 !== s &&
                 s)),
-          { setShowReferralInviteModal: T } = (0, H.C)((e) => ({
+          { setShowReferralInviteModal: T } = (0, W.C)((e) => ({
             setShowReferralInviteModal: e.setShowReferralInviteModal,
           })),
           N = (0, u.useCallback)(() => {
@@ -67789,14 +67857,14 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             ((null == c ? void 0 : c.includes(P.a3)) || g) &&
-              (0, _.jsx)(J, { analyticsParams: f, handleReferralInvite: N }),
+              (0, _.jsx)(X, { analyticsParams: f, handleReferralInvite: N }),
             !g &&
               w &&
               (0, _.jsx)(R, {
                 showFreeTrialLoadingPayment: j,
                 handleGetPaymentLink: x,
               }),
-            z && (0, _.jsx)(Y, {}),
+            z && (0, _.jsx)(J, {}),
             O &&
               (0, _.jsx)(U.Vq, {
                 onClick: w
@@ -67814,7 +67882,7 @@
                     "flex w-full flex-row flex-wrap-reverse justify-between",
                   children: (0, _.jsx)("div", {
                     className: "flex items-center gap-2",
-                    children: (0, _.jsx)(K, {
+                    children: (0, _.jsx)(Y, {
                       wasPaidCustomer: C,
                       showFreeTrialLoadingPayment: j,
                       hasPlusSubscription: E,
@@ -67825,7 +67893,7 @@
           ],
         });
       }
-      let K = (e) => {
+      let Y = (e) => {
           let {
             wasPaidCustomer: t,
             showFreeTrialLoadingPayment: n,
@@ -67838,27 +67906,27 @@
                   (0, _.jsx)("span", {
                     className:
                       "flex h-7 w-7 items-center justify-center rounded-full border border-token-border-light",
-                    children: (0, _.jsx)(G.k4, {
+                    children: (0, _.jsx)(G.X72, {
                       className: "icon-sm shrink-0",
                     }),
                   }),
                   (0, _.jsx)("div", {
                     className: "flex flex-col",
                     children: t
-                      ? (0, _.jsx)(g.Z, V({}, X.renewPlus))
+                      ? (0, _.jsx)(g.Z, q({}, $.renewPlus))
                       : (0, _.jsxs)(_.Fragment, {
                           children: [
                             (0, _.jsx)("span", {
                               children: a
-                                ? (0, _.jsx)(g.Z, V({}, X.createATeamWorkspace))
-                                : (0, _.jsx)(g.Z, V({}, X.upgradePlan)),
+                                ? (0, _.jsx)(g.Z, q({}, $.createATeamWorkspace))
+                                : (0, _.jsx)(g.Z, q({}, $.upgradePlan)),
                             }),
                             (0, _.jsx)("span", {
                               className:
                                 "line-clamp-1 text-xs text-token-text-tertiary",
                               children: a
-                                ? (0, _.jsx)(g.Z, V({}, X.upgradeToTeamUpsell))
-                                : (0, _.jsx)(g.Z, V({}, X.upgradeToPlusUpsell)),
+                                ? (0, _.jsx)(g.Z, q({}, $.upgradeToTeamUpsell))
+                                : (0, _.jsx)(g.Z, q({}, $.upgradeToPlusUpsell)),
                             }),
                           ],
                         }),
@@ -67866,7 +67934,7 @@
                 ],
               });
         },
-        Y = () => {
+        J = () => {
           let e = (0, h.t)();
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -67884,11 +67952,11 @@
                       (0, _.jsx)("span", {
                         className:
                           "flex h-7 w-7 items-center justify-center rounded-full border border-token-border-light",
-                        children: (0, _.jsx)(G.Sm, {
+                        children: (0, _.jsx)(H.Sm, {
                           className: "icon-sm shrink-0",
                         }),
                       }),
-                      (0, _.jsx)(g.Z, V({}, X.inviteMembers)),
+                      (0, _.jsx)(g.Z, q({}, $.inviteMembers)),
                     ],
                   }),
                 }),
@@ -67897,7 +67965,7 @@
             ],
           });
         },
-        J = (e) => {
+        X = (e) => {
           var t;
           let { analyticsParams: n, handleReferralInvite: a } = e,
             r = (0, h.hz)(),
@@ -67937,18 +68005,18 @@
                       (0, _.jsx)("span", {
                         className:
                           "flex h-7 w-7 items-center justify-center rounded-full border border-token-border-light",
-                        children: (0, _.jsx)(G.Sm, {
+                        children: (0, _.jsx)(H.Sm, {
                           className: "icon-sm shrink-0",
                         }),
                       }),
-                      (0, _.jsx)(g.Z, V({}, X.inviteReferral)),
+                      (0, _.jsx)(g.Z, q({}, $.inviteReferral)),
                     ],
                   }),
                 }),
               })
             : null;
         },
-        X = (0, p.vU)({
+        $ = (0, p.vU)({
           upgradePlan: {
             id: "PaymentMenuItems.upgradePlan",
             defaultMessage: "Upgrade plan",
@@ -67983,33 +68051,33 @@
               "The payments page encountered an error. Please try again. If the problem continues, please visit help.openai.com.",
           },
         });
-      var $ = n(2343),
-        ee = n(69920),
-        et = n(25494),
-        en = n(88873),
-        ea = n(73606);
-      let er = () =>
+      var ee = n(2343),
+        et = n(69920),
+        en = n(25494),
+        ea = n(88873),
+        er = n(73606);
+      let es = () =>
           (0, z.a)({
             queryKey: ["userSurvey"],
             queryFn: async () => M.Z.getActiveUserSurvey(),
           }),
-        es = () =>
-          (0, et.D)({
+        ei = () =>
+          (0, en.D)({
             mutationFn: async (e) => {
               let { surveyId: t, reason: n } = e;
               return M.Z.completeUserSurvey(t, n);
             },
             onSuccess: async () => {
-              en.E.invalidateQueries({ queryKey: ["userSurvey"] });
+              ea.E.invalidateQueries({ queryKey: ["userSurvey"] });
             },
           });
-      function ei() {
+      function eo() {
         var e;
         let t = (0, m.Z)(),
-          n = (0, ee.w$)(),
+          n = (0, et.w$)(),
           { 0: a, 1: r } = (0, u.useState)(!1),
-          s = null === (e = er().data) || void 0 === e ? void 0 : e.survey,
-          i = es(),
+          s = null === (e = es().data) || void 0 === e ? void 0 : e.survey,
+          i = ei(),
           o = (e) => {
             r(!0), null != s && i.mutate({ surveyId: s.id, reason: e });
           };
@@ -68051,7 +68119,7 @@
                           id: "navigation.survey.dismiss",
                           defaultMessage: "Dismiss survey",
                         }),
-                        children: (0, _.jsx)(ea.QF, {
+                        children: (0, _.jsx)(er.QF, {
                           width: n ? "20px" : "24px",
                           height: n ? "20px" : "24px",
                         }),
@@ -68077,7 +68145,7 @@
               }),
             });
       }
-      function eo(e, t) {
+      function el(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -68089,16 +68157,16 @@
         }
         return n;
       }
-      function el(e) {
+      function ec(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eo(Object(n), !0).forEach(function (t) {
+            ? el(Object(n), !0).forEach(function (t) {
                 (0, i.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eo(Object(n)).forEach(function (t) {
+              : el(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -68108,7 +68176,7 @@
         }
         return e;
       }
-      function ec(e) {
+      function ed(e) {
         let { onNewThread: t, currentGizmoId: n, children: a } = e,
           r = (0, m.Z)(),
           s = (0, h.t)(),
@@ -68143,18 +68211,18 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: "p-1 text-sm text-gray-100",
-                    children: (0, _.jsx)(g.Z, el({}, em.chatHistoryOff)),
+                    children: (0, _.jsx)(g.Z, ec({}, eg.chatHistoryOff)),
                   }),
                   (0, _.jsx)("div", {
                     className: "p-1 text-xs text-token-text-tertiary",
                     children: (0, _.jsx)(
                       g.Z,
-                      el(
-                        el(
+                      ec(
+                        ec(
                           {},
                           i
-                            ? em.chatHistoryOffDescriptionBusiness
-                            : em.chatHistoryOffDescription
+                            ? eg.chatHistoryOffDescriptionBusiness
+                            : eg.chatHistoryOffDescription
                         ),
                         {},
                         {
@@ -68164,7 +68232,7 @@
                               target: "_blank",
                               className: "underline",
                               rel: "noreferrer",
-                              children: (0, _.jsx)(g.Z, el({}, em.learnMore)),
+                              children: (0, _.jsx)(g.Z, ec({}, eg.learnMore)),
                             }),
                             b: (e) => (0, _.jsx)("strong", { children: e }),
                           },
@@ -68179,7 +68247,7 @@
                     size: "medium",
                     children: [
                       (0, _.jsx)(A.$IY, { className: "icon-sm" }),
-                      (0, _.jsx)(g.Z, el({}, em.enableChatHistory)),
+                      (0, _.jsx)(g.Z, ec({}, eg.enableChatHistory)),
                     ],
                   }),
                 ],
@@ -68197,27 +68265,27 @@
               (0, _.jsx)(c.f, {
                 asChild: !0,
                 children: (0, _.jsx)("h2", {
-                  children: (0, _.jsx)(g.Z, el({}, em.chatHistoryLabel)),
+                  children: (0, _.jsx)(g.Z, ec({}, eg.chatHistoryLabel)),
                 }),
               }),
               (0, _.jsxs)("nav", {
                 className: "flex h-full w-full flex-col px-3 pb-3.5",
-                "aria-label": r.formatMessage(em.chatHistoryLabel),
+                "aria-label": r.formatMessage(eg.chatHistoryLabel),
                 children: [
                   s && !y && !v && j,
-                  (0, _.jsx)(eA, {
+                  (0, _.jsx)(em, {
                     ref: o,
                     $disableScroll: p && !y && !v,
                     children: a,
                   }),
-                  (0, _.jsx)(ed, {}),
+                  (0, _.jsx)(eu, {}),
                 ],
               }),
             ],
           }),
         });
       }
-      function ed() {
+      function eu() {
         let { 0: e } = (0, u.useState)(() => {
             let e = y.bX.getCookie(y.cn.Workspace);
             return "string" == typeof e && e !== o.b;
@@ -68230,25 +68298,27 @@
         return (e && n) || !t
           ? null
           : r
-            ? (0, _.jsx)(eu, {})
+            ? (0, _.jsx)(eA, {})
             : (0, _.jsxs)("div", {
                 className:
                   "flex flex-col pt-2 empty:hidden dark:border-white/20",
                 children: [
-                  (0, _.jsx)(ei, {}),
-                  (0, _.jsx)(q, {}),
+                  (0, _.jsx)(eo, {}),
+                  (0, _.jsx)(K, {}),
                   (0, _.jsx)("div", {
                     className: "flex w-full items-center juice:md:hidden",
                     children: (0, _.jsx)("div", {
                       className: "max-w-[100%] grow",
-                      children: (0, _.jsx)($.W, { onClickSettings: () => a() }),
+                      children: (0, _.jsx)(ee.W, {
+                        onClickSettings: () => a(),
+                      }),
                     }),
                   }),
                   s && (0, _.jsx)(C.wm, { isModalOpen: s }),
                 ],
               });
       }
-      let eu = () => {
+      let eA = () => {
           let { navigateToAuth: e } = (0, l.E)();
           return (0, _.jsxs)("div", {
             children: [
@@ -68258,7 +68328,7 @@
                   (0, _.jsx)("p", {
                     className:
                       "mb-1 text-sm font-medium text-token-text-primary",
-                    children: (0, _.jsx)(g.Z, el({}, em.signUpOrLogIn)),
+                    children: (0, _.jsx)(g.Z, ec({}, eg.signUpOrLogIn)),
                   }),
                   (0, _.jsx)("p", {
                     className: "text-sm text-token-text-secondary",
@@ -68285,7 +68355,7 @@
                       }),
                         b.m9.logEvent("chatgpt_sidebar_signup_button_clicked");
                     },
-                    children: (0, _.jsx)(g.Z, el({}, em.unauthSignupCta)),
+                    children: (0, _.jsx)(g.Z, ec({}, eg.unauthSignupCta)),
                   }),
                   (0, _.jsx)(f.z, {
                     as: "button",
@@ -68299,14 +68369,14 @@
                       }),
                         b.m9.logEvent("chatgpt_sidebar_login_button_clicked");
                     },
-                    children: (0, _.jsx)(g.Z, el({}, em.unauthLoginCta)),
+                    children: (0, _.jsx)(g.Z, ec({}, eg.unauthLoginCta)),
                   }),
                 ],
               }),
             ],
           });
         },
-        eA = j.Z.div(
+        em = j.Z.div(
           r ||
             (r = (0, s.Z)([
               "flex-col flex-1 transition-opacity duration-500 -mr-2 pr-2\n  ",
@@ -68319,7 +68389,7 @@
               : "overflow-y-auto";
           }
         ),
-        em = (0, p.vU)({
+        eg = (0, p.vU)({
           chatHistoryLabel: {
             id: "NavigationContent.chatHistoryLabel",
             defaultMessage: "Chat history",
@@ -70119,13 +70189,13 @@
       "use strict";
       n.d(t, {
         M4: function () {
-          return ek;
+          return eC;
         },
         ZP: function () {
-          return eE;
+          return ek;
         },
         MG: function () {
-          return eC;
+          return ew;
         },
       });
       var a,
@@ -70285,7 +70355,7 @@
           },
         });
       var _ = n(11335),
-        L = n(70187),
+        L = n(86263),
         Z = n(95407),
         R = n(53362),
         Q = n(9063),
@@ -70756,7 +70826,7 @@
           return (0, B.jsx)(J, {
             planName: "plus",
             pricingPlan: U,
-            icon: (0, B.jsx)(L.k4, { className: "icon-md text-green-600" }),
+            icon: (0, B.jsx)(L.X72, { className: "icon-md text-green-600" }),
             showForLine: !b,
             size: l,
             callToActionButton: M
@@ -70817,10 +70887,9 @@
               "The account management page encountered an error. Please try again. If the problem continues, please visit help.openai.com.",
           },
         });
-      var eg = n(73606),
-        ep = n(14290),
-        ef = n(13106);
-      function eh(e, t) {
+      var eg = n(14290),
+        ep = n(13106);
+      function ef(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -70832,16 +70901,16 @@
         }
         return n;
       }
-      function ex(e) {
+      function eh(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eh(Object(n), !0).forEach(function (t) {
+            ? ef(Object(n), !0).forEach(function (t) {
                 (0, l.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eh(Object(n)).forEach(function (t) {
+              : ef(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -70851,30 +70920,30 @@
         }
         return e;
       }
-      let ev = M.D8.TEAM,
-        ey = (e) => {
+      let ex = M.D8.TEAM,
+        ev = (e) => {
           let { analyticsParams: t, isPlanLoading: n, size: a } = e,
             r = (0, c.hz)(),
             s = null == r ? void 0 : r.includes("disable_team_upgrade_ui"),
             i = (0, Q.Z)(),
             o = (0, c.t)(),
-            { hasSignedUpForWaitlist: l, signUpForWaitlist: u } = eo(ev),
+            { hasSignedUpForWaitlist: l, signUpForWaitlist: u } = eo(ex),
             A = o && o.isTeam(),
             m = o && o.isPlus(),
-            f = ex(ex({}, t), {}, { planType: ev, isUpgradeUiDisabled: s }),
+            f = eh(eh({}, t), {}, { planType: ex, isUpgradeUiDisabled: s }),
             h = () => {
               g.A.logEvent(p.M.clickAccountPaymentCheckout, f),
                 d.m9.logEvent(
                   "chatgpt_account_payment_modal_upgrade_button_click",
-                  ev
+                  ex
                 ),
-                ef.vm.setPurchaseWorkspaceData({ minimumSeats: ep.Y6 }),
-                ek();
+                ep.vm.setPurchaseWorkspaceData({ minimumSeats: eg.Y6 }),
+                eC();
             };
           return (0, B.jsx)(J, {
             planName: "team",
             pricingPlan: O.S.teams,
-            icon: (0, B.jsx)(eg.Bj, {
+            icon: (0, B.jsx)(L.PBQ, {
               className: "icon-md text-brand-blue-800",
             }),
             size: a,
@@ -70883,7 +70952,7 @@
               children: [
                 A &&
                   (0, B.jsx)(T, {
-                    planType: ev,
+                    planType: ex,
                     isCurrentPlan: !0,
                     disabled: n,
                     onClick: h,
@@ -70900,14 +70969,14 @@
                           O.S.disabledHighDemand.hoverText
                         ),
                         children: (0, B.jsx)(T, {
-                          planType: ev,
+                          planType: ex,
                           isCurrentPlan: !1,
                           disabled: l,
                           onClick: u,
                           testId: "select-plan-button-teams-waitlist",
                           children: (0, B.jsx)(
                             j.Z,
-                            ex(
+                            eh(
                               {},
                               l
                                 ? O.S.signUpForWaitlist.inactive
@@ -70920,7 +70989,7 @@
                   : (0, B.jsx)("div", {
                       className: "w-full",
                       children: (0, B.jsx)(T, {
-                        planType: ev,
+                        planType: ex,
                         isCurrentPlan: !1,
                         disabled: n,
                         onClick: h,
@@ -70935,7 +71004,7 @@
             }),
           });
         };
-      function eb(e, t) {
+      function ey(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -70947,16 +71016,16 @@
         }
         return n;
       }
-      function ej(e) {
+      function eb(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eb(Object(n), !0).forEach(function (t) {
+            ? ey(Object(n), !0).forEach(function (t) {
                 (0, l.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eb(Object(n)).forEach(function (t) {
+              : ey(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -70966,16 +71035,16 @@
         }
         return e;
       }
-      let ew = "pricing";
-      function eC() {
+      let ej = "pricing";
+      function ew() {
         let e = y().asPath.split("#");
-        y().push(e[0] + "#".concat(ew));
+        y().push(e[0] + "#".concat(ej));
       }
-      function ek() {
+      function eC() {
         let e = y().asPath.split("#");
         y().push(e[0]);
       }
-      function eE(e) {
+      function ek(e) {
         var t, n;
         let { initialIsOpen: a } = e,
           { 0: r, 1: s } = (0, u.useState)(!1),
@@ -70998,8 +71067,8 @@
           I = (0, u.useMemo)(
             () =>
               h
-                ? ej(
-                    ej({}, h.subscriptionAnalyticsParams),
+                ? eb(
+                    eb({}, h.subscriptionAnalyticsParams),
                     {},
                     {
                       subscriptionsLayer: {
@@ -71014,7 +71083,7 @@
             [h, S, T]
           ),
           D = () => {
-            g.A.logEvent(p.M.closeAccountPaymentModal, I), ek();
+            g.A.logEvent(p.M.closeAccountPaymentModal, I), eC();
           };
         return ((0, u.useEffect)(() => {
           P && g.A.logEvent(p.M.accountPaymentModalShow, I);
@@ -71022,11 +71091,11 @@
         (0, u.useEffect)(() => {
           !y.startsWith("/auth") &&
             f.bX.getCookie(f.cn.ShowPaymentModal) &&
-            (f.bX.deleteCookie(f.cn.ShowPaymentModal), eC());
+            (f.bX.deleteCookie(f.cn.ShowPaymentModal), ew());
         }, []),
         (0, u.useEffect)(() => {
           void 0 === a &&
-            (y.split("#")[1] === ew && null !== l ? o(!0) : o(!1));
+            (y.split("#")[1] === ej && null !== l ? o(!0) : o(!1));
         }, [y, l, a]),
         P)
           ? (0, B.jsxs)(C.x, {
@@ -71039,7 +71108,7 @@
                   children: [
                     (0, B.jsx)("span", {
                       className: "text-xl font-medium",
-                      children: (0, B.jsx)(j.Z, ej({}, eO.modalTitle)),
+                      children: (0, B.jsx)(j.Z, eb({}, eE.modalTitle)),
                     }),
                     (0, B.jsx)("button", {
                       className:
@@ -71064,7 +71133,7 @@
                         size: k || S ? "small" : "medium",
                       }),
                     S &&
-                      (0, B.jsx)(ey, {
+                      (0, B.jsx)(ev, {
                         analyticsParams: I,
                         isPlanLoading: r,
                         size: w ? "large" : "small",
@@ -71079,8 +71148,8 @@
                       "text-sm text-token-text-primary sm:flex sm:items-center",
                     children: (0, B.jsx)(
                       j.Z,
-                      ej(
-                        ej({}, eO.modalFooterCapabilities),
+                      eb(
+                        eb({}, eE.modalFooterCapabilities),
                         {},
                         {
                           values: {
@@ -71104,7 +71173,7 @@
             })
           : null;
       }
-      let eO = (0, w.vU)({
+      let eE = (0, w.vU)({
         modalTitle: {
           id: "AccountPaymentModal.modalTitle",
           defaultMessage: "Upgrade your plan",
@@ -81891,10 +81960,9 @@
               .concat(n)
           );
         }
-        static async stopWebsocketConversation(e, t) {
+        static async stopWebsocketConversation(e) {
           return w.c.post("".concat(y.B, "/stop_conversation"), {
-            conversation_id: e,
-            websocket_request_id: t,
+            websocket_request_id: e,
           });
         }
       }
@@ -83485,6 +83553,7 @@
           (a.GPTPrivacySettings = "gpt-privacy-settings"),
           (a.GPTFeedbackEmail = "gpt-support-email"),
           (a.GPTReview = "gpt-review"),
+          (a.GPTRemoveThirdParty = "gpt-remove-third-party"),
           (a.SharedConversationModeration = "shared-conversation-moderation"),
           (a.ReportConversation = "report-conversation"),
           a),
@@ -83673,35 +83742,34 @@
       "use strict";
       n.d(t, {
         F_: function () {
-          return h;
-        },
-        KQ: function () {
-          return b;
-        },
-        WY: function () {
-          return x;
-        },
-        aF: function () {
-          return g;
-        },
-        e2: function () {
-          return y;
-        },
-        ec: function () {
           return f;
         },
-        m0: function () {
+        KQ: function () {
+          return y;
+        },
+        WY: function () {
+          return h;
+        },
+        aF: function () {
+          return m;
+        },
+        e2: function () {
           return v;
+        },
+        ec: function () {
+          return p;
+        },
+        m0: function () {
+          return x;
         },
       });
       var a = n(18450),
         r = n(91006),
         s = n(61236),
-        i = n(66315),
-        o = n(49305),
-        l = n(53362),
-        c = n(47712);
-      function d(e, t) {
+        i = n(49305),
+        o = n(53362),
+        l = n(47712);
+      function c(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var a = Object.getOwnPropertySymbols(e);
@@ -83713,16 +83781,16 @@
         }
         return n;
       }
-      function u(e) {
+      function d(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? d(Object(n), !0).forEach(function (t) {
+            ? c(Object(n), !0).forEach(function (t) {
                 (0, a.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : d(Object(n)).forEach(function (t) {
+              : c(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -83732,46 +83800,37 @@
         }
         return e;
       }
-      async function A() {
-        try {
-          let e = await l.Z.getMe();
-          return (
-            null != e &&
-              void 0 === e.email &&
-              i.U.addAction("got_user_email_undefined", { userResponse: e }),
-            {
-              id: e.id,
-              email: e.email,
-              name: e.name,
-              picture: e.picture,
-              created: e.created,
-            }
-          );
-        } catch (e) {
-          throw (i.U.addAction("user_fetch_failed", { error: e }), e);
-        }
+      async function u() {
+        let e = await o.Z.getMe();
+        return {
+          id: e.id,
+          email: e.email,
+          name: e.name,
+          picture: e.picture,
+          created: e.created,
+        };
       }
-      let m = (0, r.C)({ queryKey: ["user"], queryFn: A, staleTime: 1 / 0 });
-      function g() {
-        return (0, s.a)(m).data;
+      let A = (0, r.C)({ queryKey: ["user"], queryFn: u, staleTime: 1 / 0 });
+      function m() {
+        return (0, s.a)(A).data;
       }
-      let p = {
+      let g = {
         currentWorkspace: null,
         subscriptionStatus: null,
         workspaces: [],
       };
-      function f(e) {
+      function p(e) {
         var t;
         let n =
           null !==
             (t = (0, s.a)(
-              u(
-                u({}, (0, c.KP)()),
+              d(
+                d({}, (0, l.KP)()),
                 {},
                 {
                   select: (e) => {
                     var t, n;
-                    let a = (0, c.EI)(e);
+                    let a = (0, l.EI)(e);
                     return {
                       currentWorkspace:
                         null !== (t = null == a ? void 0 : a.data) &&
@@ -83792,37 +83851,37 @@
               )
             ).data) && void 0 !== t
             ? t
-            : p;
+            : g;
         return e ? e(n) : n;
       }
-      let h = {
+      let f = {
         hasMultipleWorkspaces: (e) => {
           let { workspaces: t } = e;
           return t.length > 1;
         },
         isPersonalWorkspace: (e) => {
           let { currentWorkspace: t } = e;
-          return (null == t ? void 0 : t.structure) === o.CZ.PERSONAL;
+          return (null == t ? void 0 : t.structure) === i.CZ.PERSONAL;
         },
         isBusinessWorkspace: (e) => {
           let { currentWorkspace: t } = e;
-          return null != t ? t.structure === o.CZ.WORKSPACE : void 0;
+          return null != t ? t.structure === i.CZ.WORKSPACE : void 0;
         },
         isEnterprisePlan: (e) => {
           let { subscriptionStatus: t } = e;
-          return (null == t ? void 0 : t.planType) === o.D8.ENTERPRISE;
+          return (null == t ? void 0 : t.planType) === i.D8.ENTERPRISE;
         },
         isTeamPlan: (e) => {
           let { subscriptionStatus: t } = e;
-          return (null == t ? void 0 : t.planType) === o.D8.TEAM;
+          return (null == t ? void 0 : t.planType) === i.D8.TEAM;
         },
         isAdmin: (e) => {
           let { currentWorkspace: t } = e;
-          return null != t && t.role === o.r3.ADMIN;
+          return null != t && t.role === i.r3.ADMIN;
         },
         isOwner: (e) => {
           let { currentWorkspace: t } = e;
-          return null != t && t.role === o.r3.OWNER;
+          return null != t && t.role === i.r3.OWNER;
         },
         workspaceId: (e) => {
           let { currentWorkspace: t } = e;
@@ -83830,13 +83889,13 @@
         },
         businessWorkspace: (e) => {
           let { currentWorkspace: t } = e;
-          return (null == t ? void 0 : t.structure) === o.CZ.WORKSPACE
+          return (null == t ? void 0 : t.structure) === i.CZ.WORKSPACE
             ? t
             : void 0;
         },
         businessWorkspaceId: (e) => {
           let { currentWorkspace: t } = e;
-          return (null == t ? void 0 : t.structure) === o.CZ.WORKSPACE
+          return (null == t ? void 0 : t.structure) === i.CZ.WORKSPACE
             ? t.id
             : void 0;
         },
@@ -83872,34 +83931,34 @@
           return null == t ? void 0 : t.accountUserId;
         },
       };
-      function x() {
+      function h() {
         var e, t;
         return (
           null !==
             (e =
-              null === (t = (0, c.t)()) || void 0 === t
+              null === (t = (0, l.t)()) || void 0 === t
                 ? void 0
                 : t.hasPaidSubscription()) &&
           void 0 !== e &&
           e
         );
       }
-      function v() {
-        let e = (0, c.t)();
+      function x() {
+        let e = (0, l.t)();
         if (null != e) return e.hasPlusFeatures();
       }
-      function y() {
+      function v() {
         var e;
-        return null === (e = (0, c.t)()) || void 0 === e
+        return null === (e = (0, l.t)()) || void 0 === e
           ? void 0
           : e.data.subscriptionStatus.lastActiveSubscription;
       }
-      function b() {
+      function y() {
         var e, t;
         return (
           null !==
             (e =
-              null === (t = (0, c.t)()) || void 0 === t
+              null === (t = (0, l.t)()) || void 0 === t
                 ? void 0
                 : t.data.subscriptionStatus.wasPaidCustomer) &&
           void 0 !== e &&
@@ -83996,10 +84055,9 @@
           return this.connected;
         }
         async stop(e) {
-          null != this.conversationId &&
-            this.conversationId === e &&
+          (void 0 === e || this.conversationId === e) &&
             this.websocketRequestId &&
-            (await r.Z.stopWebsocketConversation(e, this.websocketRequestId));
+            (await r.Z.stopWebsocketConversation(this.websocketRequestId));
         }
         setHandler(e, t, n, a) {
           null != this.handler &&
@@ -84106,9 +84164,10 @@
             )
           ),
             i.addEventListener("abort", () => {
-              c.scheduleForTermination(() => {
-                this.activeSocketMap.delete(u);
-              });
+              this.stopConversation(n),
+                c.scheduleForTermination(() => {
+                  this.activeSocketMap.delete(u);
+                });
             });
         }
         async stopConversation(e) {
@@ -84402,9 +84461,6 @@
         },
         s8: function () {
           return W;
-        },
-        Xt: function () {
-          return J;
         },
         jM: function () {
           return U;
@@ -84713,50 +84769,51 @@
               : M.Zq
           ),
           f = G(),
-          { onCitationHovered: h, onCitationClicked: v } = null != m ? m : {},
-          C = c.metadata,
-          E = (null == C ? void 0 : C.type) === "file",
-          O = !E && null != m && !m.isActivelyStreaming,
-          P = O
+          h =
+            null == m || null === (a = m.message.metadata) || void 0 === a
+              ? void 0
+              : a.gizmo_id,
+          v = !!h && f.includes(h),
+          { onCitationHovered: C, onCitationClicked: E } = null != m ? m : {},
+          O = en(v, c.metadata),
+          P = (null == O ? void 0 : O.type) === "file",
+          T = !P && null != m && !m.isActivelyStreaming,
+          I = T
             ? {
                 conversation_id: null == g ? void 0 : g.toString(),
                 model_slug:
-                  null == m || null === (a = m.message.metadata) || void 0 === a
+                  null == m || null === (r = m.message.metadata) || void 0 === r
                     ? void 0
-                    : a.model_slug,
+                    : r.model_slug,
                 message_id: null == m ? void 0 : m.message.id,
-                url: null == C ? void 0 : C.url,
+                url: null == O ? void 0 : O.url,
                 citation_number: l,
                 display_type: u,
               }
             : null;
         (0, k.useEffect)(() => {
-          null != P &&
-            (y.A.logEvent(b.M.browsingDisplayCitation, P),
-            j.m9.logEvent("chatgpt_browsing_display_citation", null, V(P)));
-        }, [O]);
-        let T =
-            null == m || null === (r = m.message.metadata) || void 0 === r
-              ? void 0
-              : r.gizmo_id,
-          I = !!T && f.includes(T),
-          D =
-            (null == p ? void 0 : p.kind) === M.OL.GizmoInteraction ||
-            (null == p ? void 0 : p.kind) == M.OL.GizmoTest ||
-            (null == p ? void 0 : p.kind) == M.OL.GizmoMagicCreate;
-        return ((E || null == C) && ((D && !I) || u === L.expandAll)) ||
-          (E &&
-            null == C &&
+          null != I &&
+            (y.A.logEvent(b.M.browsingDisplayCitation, I),
+            j.m9.logEvent("chatgpt_browsing_display_citation", null, V(I)));
+        }, [T]);
+        let D =
+          (null == p ? void 0 : p.kind) === M.OL.GizmoInteraction ||
+          (null == p ? void 0 : p.kind) == M.OL.GizmoTest ||
+          (null == p ? void 0 : p.kind) == M.OL.GizmoMagicCreate;
+        return (P && ((D && !v) || u === L.expandAll)) ||
+          (null == O && (D || u === L.expandAll)) ||
+          (P &&
+            null == O &&
             j.m9.getExperimentValue({
               experimentName: j.H6.RetrievalSearchModel,
               key: j.Hy.TREATMENT,
               defaultValue: "ba",
             }))
           ? null
-          : u === L.expandAll && null != C
-            ? (0, o.jsx)(Y, { citationMetadata: C })
-            : (u === L.expandLink && C && "webpage" === C.type
-                ? ((s = K(C.url, null == m ? void 0 : m.attributions)),
+          : u === L.expandAll && null != O
+            ? (0, o.jsx)(Y, { citationMetadata: O })
+            : (u === L.expandLink && O && "webpage" === O.type
+                ? ((s = K(O.url, null == m ? void 0 : m.attributions)),
                   (i = !0))
                 : ((s = (0, o.jsx)(d, {
                     className:
@@ -84765,29 +84822,29 @@
                   (i = !1)),
               (0, o.jsx)(B.u, {
                 label: (0, o.jsx)($, {
-                  citationMetadata: en(I, C),
+                  citationMetadata: O,
                   invalidReason: c.invalid_reason,
                   onClick: () => {
-                    null != P &&
-                      (y.A.logEvent(b.M.browsingClickCitation, P),
+                    null != I &&
+                      (y.A.logEvent(b.M.browsingClickCitation, I),
                       j.m9.logEvent(
                         "chatgpt_browsing_click_citation",
                         null,
-                        V(P)
+                        V(I)
                       )),
-                      C && (null == v || v(C));
+                      O && (null == E || E(O));
                   },
                 }),
                 onOpenChange: (e) => {
                   e &&
-                    (null != P &&
-                      (y.A.logEvent(b.M.browsingHoverCitation, P),
+                    (null != I &&
+                      (y.A.logEvent(b.M.browsingHoverCitation, I),
                       j.m9.logEvent(
                         "chatgpt_browsing_hover_citation",
                         null,
-                        V(P)
+                        V(I)
                       )),
-                    C && (null == h || h(C)));
+                    O && (null == C || C(O)));
                 },
                 side: "top",
                 sideOffset: 4,
@@ -84795,9 +84852,9 @@
                 delayDuration: 150,
                 interactive: !0,
                 wide: !0,
-                children: E
+                children: P
                   ? (0, o.jsx)("button", {
-                      onClick: () => A(C.id, C.name),
+                      onClick: () => A(O.id, O.name),
                       className: "px-0.5 text-green-600",
                       children: s,
                     })
@@ -84809,7 +84866,7 @@
                             children: " (",
                           }),
                         (0, o.jsx)("a", {
-                          href: z(null == C ? void 0 : C.url),
+                          href: z(null == O ? void 0 : O.url),
                           target: "_blank",
                           rel: "noreferrer",
                           className: (0, w.default)(
@@ -84817,12 +84874,12 @@
                             !i && "px-0.5"
                           ),
                           onClick: () => {
-                            null != P &&
-                              (y.A.logEvent(b.M.browsingClickCitation, P),
+                            null != I &&
+                              (y.A.logEvent(b.M.browsingClickCitation, I),
                               j.m9.logEvent(
                                 "chatgpt_browsing_click_citation",
                                 null,
-                                V(P)
+                                V(I)
                               ));
                           },
                           children: s,
@@ -84895,28 +84952,34 @@
                   rel: "noreferrer",
                   children: (0, o.jsxs)("div", {
                     className:
-                      "max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-secondary p-1 shadow-xl",
+                      "max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary p-1 shadow-xl",
                     children: [
                       (0, o.jsxs)("div", {
-                        className:
-                          "mb-1 flex items-center gap-2 px-3 pt-2 text-xs text-token-text-secondary",
+                        className: (0, w.default)(
+                          "flex items-center gap-2 text-xs text-token-text-secondary",
+                          null == t.title && null == t.text
+                            ? "mb-1 px-3 pt-2"
+                            : "mb-0.5 px-2 pt-0.5"
+                        ),
                         children: [
                           (0, o.jsx)(P.Z, {
                             url: t.url,
                             size: 32,
-                            className: "icon-sm",
+                            className: "icon-sm rounded",
                           }),
                           i,
                         ],
                       }),
-                      (0, o.jsx)("div", {
-                        className: "mb-2 line-clamp-2 px-3 text-sm font-medium",
-                        children: t.title,
-                      }),
+                      t.title &&
+                        (0, o.jsx)("div", {
+                          className:
+                            "mb-2 line-clamp-2 px-3 text-sm font-medium",
+                          children: t.title,
+                        }),
                       t.text &&
                         (0, o.jsx)("div", {
                           className:
-                            "rounded-md border border-token-border-light bg-token-main-surface-primary p-1",
+                            "rounded-md border border-token-border-light bg-token-main-surface-secondary p-1",
                           children: (0, o.jsx)("div", {
                             className: "m-2 line-clamp-5 text-sm",
                             children: t.text,
@@ -85055,7 +85118,7 @@
           (n = "https://drive.google.com/file/d/".concat(s, "/view")),
             (o = "Google Drive");
         else if ("gdoc" === r)
-          (n = "https://docs.google.com/file/d/".concat(s, "/view")),
+          (n = "https://docs.google.com/document/d/".concat(s)),
             (o = "Google Docs");
         else {
           if ("notion" !== r) return t;
@@ -88017,7 +88080,7 @@
                       var i, o, l, d;
                       let e = performance.now() - this.requestStartTimeMs;
                       c.U.addAction("arkose_get_token_error", {
-                        app_release: "29f22dae08a261ef96c929c3857c983792066699",
+                        app_release: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                         error:
                           null !==
                             (i =
@@ -88044,7 +88107,7 @@
                   }),
                   this.setOnFailed(() => {
                     c.U.addAction("arkose_failed_to_get_challenge", {
-                      app_release: "29f22dae08a261ef96c929c3857c983792066699",
+                      app_release: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                       app: this.app.toString(),
                     }),
                       r(Error("Failed challenge too many times")),
@@ -88131,7 +88194,7 @@
                       ((this.setStatus(m.Error), e)
                         ? (c.U.addAction("arkose_script_load_error", {
                             app_release:
-                              "29f22dae08a261ef96c929c3857c983792066699",
+                              "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                             app: this.app.toString(),
                           }),
                           n("Arkose script failed to load"))
@@ -88153,7 +88216,7 @@
             this.setStatus(m.Error),
               this.status === m.ScriptLoaded &&
                 (c.U.addAction("arkose_script_ready_timeout", {
-                  app_release: "29f22dae08a261ef96c929c3857c983792066699",
+                  app_release: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                   app: this.app.toString(),
                 }),
                 this._showUserError());
@@ -88273,7 +88336,7 @@
           if (null === e) {
             this._showUserError(),
               c.U.addAction("arkose_script_get_enforcement_container_error", {
-                app_release: "29f22dae08a261ef96c929c3857c983792066699",
+                app_release: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
               });
             return;
           }
@@ -89120,7 +89183,7 @@
       }
       let y = (0, r.f3)(),
         b = navigator.language,
-        j = "29f22dae08a261ef96c929c3857c983792066699",
+        j = "ec172702fd926effc33ca3d8025aeb0d3816df1f",
         w = new d({
           appName: "chatgpt",
           appVersion: j,
@@ -89503,7 +89566,7 @@
                   site: "datadoghq.com",
                   service: "chatgpt-web",
                   env: "production",
-                  version: "29f22dae08a261ef96c929c3857c983792066699",
+                  version: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                   sessionSampleRate: 1,
                   sessionReplaySampleRate: 0,
                   trackUserInteractions: !1,
@@ -90721,7 +90784,7 @@
                     if (e) {
                       let e = performance.now() - this.requestStartTimeMs;
                       s.U.addAction("turnstile_get_token_error", {
-                        app_release: "29f22dae08a261ef96c929c3857c983792066699",
+                        app_release: "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                         error: t,
                         app: this.app.toString(),
                         durationMs: e,
@@ -90794,7 +90857,7 @@
                         (this.setStatus(l.Error), e)
                           ? (s.U.addAction("turnstile_instance_missing", {
                               app_release:
-                                "29f22dae08a261ef96c929c3857c983792066699",
+                                "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                               app: this.app.toString(),
                             }),
                             t(new d("Turnstile instance missing")))
@@ -90815,7 +90878,7 @@
                     (this.setStatus(l.Error), e)
                       ? (s.U.addAction("turnstile_script_load_error", {
                           app_release:
-                            "29f22dae08a261ef96c929c3857c983792066699",
+                            "ec172702fd926effc33ca3d8025aeb0d3816df1f",
                           app: this.app.toString(),
                         }),
                         t(new d("Turnstile script failed to load")))
@@ -90983,4 +91046,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=_app-b569ca8877e5a036.js.map
+//# sourceMappingURL=_app-df4ff2962f4f3c24.js.map
