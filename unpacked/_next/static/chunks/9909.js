@@ -2,56 +2,57 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9909],
   {
-    35562: function (e, t, l) {
-      l.r(t),
-        l.d(t, {
+    35562: function (e, t, a) {
+      a.r(t),
+        a.d(t, {
           default: function () {
-            return z;
+            return T;
           },
         });
-      var a = l(49305),
-        s = l(82547),
-        n = l(53362),
-        r = l(38801),
-        i = l(67852),
-        c = l(19841),
-        o = l(70079),
-        d = l(84692),
-        u = l(85452),
-        m = l(66452),
-        p = l(44151),
-        x = l(26524),
-        g = l(59669),
-        h = l(66315),
-        f = l(65998),
-        b = l(25771),
-        y = l(35250);
-      f.kL.register(
-        f.qi,
-        f.uw,
-        f.f$,
-        f.ZL,
-        f.Dx,
-        f.u,
-        f.De,
-        f.ST,
-        f.od,
-        f.jn,
-        f.wL
+      var l = a(49305),
+        n = a(20236),
+        s = a(53362),
+        i = a(38801),
+        r = a(67852),
+        o = a(66315),
+        c = a(19841),
+        d = a(70079),
+        u = a(84692),
+        m = a(85452),
+        p = a(88342),
+        x = a(66452),
+        f = a(44151),
+        g = a(26524),
+        h = a(59669),
+        b = a(65998),
+        y = a(25771),
+        j = a(35250);
+      b.kL.register(
+        b.qi,
+        b.uw,
+        b.f$,
+        b.ZL,
+        b.Dx,
+        b.u,
+        b.De,
+        b.ST,
+        b.od,
+        b.jn,
+        b.wL
       );
-      let j = (0, o.forwardRef)((e, t) => {
-        let { chart: l } = e,
-          a = (0, o.useRef)(null);
-        (0, o.useImperativeHandle)(t, () => ({
+      let v = (0, d.forwardRef)((e, t) => {
+        let { chart: a } = e,
+          l = (0, d.useRef)(null);
+        (0, d.useImperativeHandle)(t, () => ({
           getBase64Image: () => {
-            if (!a.current) {
-              h.U.addError("Chart instance is not yet available.");
+            if (!l.current) {
+              o.U.addError("Chart instance is not yet available.");
               return;
             }
-            return a.current.toBase64Image();
+            return l.current.toBase64Image();
           },
         }));
-        let s = l.datasets.map((e) => {
+        let n = a.datasets.map((e) => {
           let t = { label: e.label, data: e.data };
           return (
             e.colors &&
@@ -60,116 +61,116 @@
             t
           );
         });
-        return "bar" === l.chart_type
-          ? (0, y.jsx)(b.$Q, {
-              ref: a,
+        return "bar" === a.chart_type
+          ? (0, j.jsx)(y.$Q, {
+              ref: l,
               options: {
                 responsive: !0,
                 maintainAspectRatio: !1,
                 plugins: {
-                  legend: { display: (null != s ? s : []).length > 1 },
-                  title: { display: !1, text: l.title },
+                  legend: { display: (null != n ? n : []).length > 1 },
+                  title: { display: !1, text: a.title },
                 },
                 scales: {
-                  x: { title: { display: !0, text: l.x_label } },
-                  y: { title: { display: !0, text: l.y_label } },
+                  x: { title: { display: !0, text: a.x_label } },
+                  y: { title: { display: !0, text: a.y_label } },
                 },
               },
-              data: { labels: l.labels, datasets: null != s ? s : [] },
+              data: { labels: a.labels, datasets: null != n ? n : [] },
             })
-          : "pie" === l.chart_type
-            ? (0, y.jsx)(b.by, {
-                ref: a,
+          : "pie" === a.chart_type
+            ? (0, j.jsx)(y.by, {
+                ref: l,
                 options: {
                   responsive: !0,
                   plugins: {
                     legend: { position: "bottom" },
-                    title: { display: !1, text: l.title },
+                    title: { display: !1, text: a.title },
                   },
                 },
-                data: { labels: l.labels, datasets: null != s ? s : [] },
+                data: { labels: a.labels, datasets: null != n ? n : [] },
               })
-            : "line" === l.chart_type
-              ? (0, y.jsx)(b.x1, {
-                  ref: a,
+            : "line" === a.chart_type
+              ? (0, j.jsx)(y.x1, {
+                  ref: l,
                   options: {
                     scales: {
-                      x: { title: { display: !0, text: l.x_label } },
-                      y: { title: { display: !0, text: l.y_label } },
+                      x: { title: { display: !0, text: a.x_label } },
+                      y: { title: { display: !0, text: a.y_label } },
                     },
                     plugins: {
-                      legend: { display: (null != s ? s : []).length > 1 },
-                      title: { display: !1, text: l.title },
+                      legend: { display: (null != n ? n : []).length > 1 },
+                      title: { display: !1, text: a.title },
                     },
                   },
-                  data: { labels: l.labels, datasets: null != s ? s : [] },
+                  data: { labels: a.labels, datasets: null != n ? n : [] },
                 })
-              : "scatter" === l.chart_type
-                ? (0, y.jsx)(b.bp, {
-                    ref: a,
+              : "scatter" === a.chart_type
+                ? (0, j.jsx)(y.bp, {
+                    ref: l,
                     options: {
                       scales: {
-                        x: { title: { display: !0, text: l.x_label } },
-                        y: { title: { display: !0, text: l.y_label } },
+                        x: { title: { display: !0, text: a.x_label } },
+                        y: { title: { display: !0, text: a.y_label } },
                       },
                       plugins: {
-                        legend: { display: (null != s ? s : []).length > 1 },
-                        title: { display: !1, text: l.title },
+                        legend: { display: (null != n ? n : []).length > 1 },
+                        title: { display: !1, text: a.title },
                       },
                     },
-                    data: { labels: l.labels, datasets: null != s ? s : [] },
+                    data: { labels: a.labels, datasets: null != n ? n : [] },
                   })
-                : (0, y.jsx)(d.Z, {
+                : (0, j.jsx)(u.Z, {
                     id: "Chart.invalidChartType",
                     defaultMessage: "Invalid chart type",
                   });
       });
-      j.displayName = "Chart";
-      var v = l(18450),
-        w = l(35595),
-        N = l(15777),
-        k = l(72003);
-      l(7235);
-      var _ = l(47249),
-        C = l(41105);
-      function M(e, t) {
-        var l = Object.keys(e);
+      v.displayName = "Chart";
+      var w = a(18450),
+        k = a(35595),
+        N = a(15777),
+        _ = a(72003);
+      a(7235);
+      var C = a(47249),
+        z = a(41105);
+      function E(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var l = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (l = l.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            l.push.apply(l, a);
+            a.push.apply(a, l);
         }
-        return l;
+        return a;
       }
-      function O(e) {
+      function M(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var l = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? M(Object(l), !0).forEach(function (t) {
-                (0, v.Z)(e, t, l[t]);
+            ? E(Object(a), !0).forEach(function (t) {
+                (0, w.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(l))
-              : M(Object(l)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : E(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(l, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      function D(e) {
-        let { table: t, isInFocusedView: l = !1, className: a = "" } = e,
-          { targetedContent: s, setTargetedContent: n } = (0, C.Q)(),
-          { 0: c, 1: d } = (0, o.useState)([]);
-        (0, o.useEffect)(() => {
+      function O(e) {
+        let { table: t, isInFocusedView: a = !1, className: l = "" } = e,
+          { targetedContent: n, setTargetedContent: s } = (0, z.Q)(),
+          { 0: o, 1: c } = (0, d.useState)([]);
+        (0, d.useEffect)(() => {
           t.columnNames.length > 0 &&
-            d(
+            c(
               t.columnNames.map((e, t) => ({
                 id: "id:".concat(t),
                 title: e,
@@ -177,14 +178,14 @@
               }))
             );
         }, [t.columnNames]);
-        let { 0: u, 1: m } = (0, o.useState)({
+        let { 0: u, 1: m } = (0, d.useState)({
             columns: N.EV.empty(),
             rows: N.EV.empty(),
           }),
-          p = (0, o.useCallback)(
+          p = (0, d.useCallback)(
             function (e) {
-              let [l, a] = e,
-                s = t.rows[a];
+              let [a, l] = e,
+                n = t.rows[l];
               return {
                 kind: (function (e) {
                   switch (e) {
@@ -195,40 +196,40 @@
                     default:
                       return N.p6.Text;
                   }
-                })(t.columnTypes[l]),
-                data: s[l],
+                })(t.columnTypes[a]),
+                data: n[a],
                 allowOverlay: !1,
-                displayData: String(s[l]),
+                displayData: String(n[a]),
               };
             },
             [t.columnTypes, t.rows]
           ),
-          x = (0, o.useCallback)(
+          x = (0, d.useCallback)(
             (e) => {
               if (e.columns.length > 0) {
-                let a = e.columns.items.flatMap((e) =>
+                let l = e.columns.items.flatMap((e) =>
                   t.columnNames.slice(e[0], e[1])
                 );
-                r.A.logEvent(i.M.adaColumnTargeted),
-                  n({
-                    label: (0, y.jsx)("div", {
-                      children: (0, y.jsxs)("div", {
+                i.A.logEvent(r.M.adaColumnTargeted),
+                  s({
+                    label: (0, j.jsx)("div", {
+                      children: (0, j.jsxs)("div", {
                         className: "text-token-text-tertiary",
                         children: [
-                          (0, y.jsxs)("div", {
+                          (0, j.jsxs)("div", {
                             className: "flex items-center gap-2 text-sm",
                             children: [
-                              (0, y.jsx)(_.Mie, { size: 20 }),
+                              (0, j.jsx)(C.Mie, { size: 20 }),
                               " ",
-                              a.length,
+                              l.length,
                               " ",
-                              1 === a.length ? "Column" : "Columns",
+                              1 === l.length ? "Column" : "Columns",
                             ],
                           }),
-                          (0, y.jsx)("div", {
+                          (0, j.jsx)("div", {
                             className: "mt-3 flex gap-3",
-                            children: a.map((e) =>
-                              (0, y.jsx)(
+                            children: l.map((e) =>
+                              (0, j.jsx)(
                                 "div",
                                 {
                                   className:
@@ -243,31 +244,31 @@
                         ],
                       }),
                     }),
-                    isFocusedViewContent: l,
+                    isFocusedViewContent: a,
                     createNewCompletionParams: (e) =>
-                      E(
+                      D(
                         e,
                         "The user has selected the columns:  ".concat(
-                          a.map((e) => '"'.concat(e, '"')).join(", ")
+                          l.map((e) => '"'.concat(e, '"')).join(", ")
                         )
                       ),
                   });
               } else if (e.rows.length > 0) {
                 let t = e.rows.items.flatMap((e) => {
-                  let [t, l] = e,
-                    a = [];
-                  for (let e = t; e < l; e++) a.push(e);
-                  return a;
+                  let [t, a] = e,
+                    l = [];
+                  for (let e = t; e < a; e++) l.push(e);
+                  return l;
                 });
-                r.A.logEvent(i.M.adaRowTargeted),
-                  n({
-                    label: (0, y.jsx)("div", {
-                      children: (0, y.jsx)("div", {
+                i.A.logEvent(r.M.adaRowTargeted),
+                  s({
+                    label: (0, j.jsx)("div", {
+                      children: (0, j.jsx)("div", {
                         className: "text-token-text-tertiary",
-                        children: (0, y.jsxs)("div", {
+                        children: (0, j.jsxs)("div", {
                           className: "flex items-center gap-2 text-sm",
                           children: [
-                            (0, y.jsx)(_.Mie, { size: 20 }),
+                            (0, j.jsx)(C.Mie, { size: 20 }),
                             " ",
                             t.length,
                             " ",
@@ -279,9 +280,9 @@
                         }),
                       }),
                     }),
-                    isFocusedViewContent: l,
+                    isFocusedViewContent: a,
                     createNewCompletionParams: (e) =>
-                      E(
+                      D(
                         e,
                         "The user has selected rows at the following indices: ".concat(
                           t.map((e) => '"'.concat(e, '"')).join(", ")
@@ -290,57 +291,57 @@
                   });
               } else if (e.current) {
                 let t = e.current.range.x,
-                  a = e.current.range.y,
-                  s = e.current.range.x + e.current.range.width,
-                  c = e.current.range.y + e.current.range.height,
-                  o = (s - t) * (c - a);
-                r.A.logEvent(i.M.adaRangeTargeted),
-                  n({
-                    label: (0, y.jsx)("div", {
-                      children: (0, y.jsx)("div", {
+                  l = e.current.range.y,
+                  n = e.current.range.x + e.current.range.width,
+                  o = e.current.range.y + e.current.range.height,
+                  c = (n - t) * (o - l);
+                i.A.logEvent(r.M.adaRangeTargeted),
+                  s({
+                    label: (0, j.jsx)("div", {
+                      children: (0, j.jsx)("div", {
                         className: "text-token-text-tertiary",
-                        children: (0, y.jsxs)("div", {
+                        children: (0, j.jsxs)("div", {
                           className: "flex items-center gap-2 text-sm",
                           children: [
-                            (0, y.jsx)(_.Mie, { size: 20 }),
+                            (0, j.jsx)(C.Mie, { size: 20 }),
                             " ",
-                            o,
+                            c,
                             " ",
-                            1 === o ? "Cell" : "Cells",
+                            1 === c ? "Cell" : "Cells",
                           ],
                         }),
                       }),
                     }),
-                    isFocusedViewContent: l,
+                    isFocusedViewContent: a,
                     createNewCompletionParams: (e) =>
-                      E(
+                      D(
                         e,
                         "The user has selected a range at the iloc: "
-                          .concat(a, ":")
-                          .concat(c, ", ")
+                          .concat(l, ":")
+                          .concat(o, ", ")
                           .concat(t, ":")
-                          .concat(s, " in the current data")
+                          .concat(n, " in the current data")
                       ),
                   });
               }
               m(e);
             },
-            [t.columnNames, n, l]
+            [t.columnNames, s, a]
           );
         return (
-          (0, o.useEffect)(() => {
-            void 0 === s && m({ columns: N.EV.empty(), rows: N.EV.empty() });
-          }, [s]),
-          (0, y.jsx)(y.Fragment, {
-            children: (0, y.jsx)(k.F, {
+          (0, d.useEffect)(() => {
+            void 0 === n && m({ columns: N.EV.empty(), rows: N.EV.empty() });
+          }, [n]),
+          (0, j.jsx)(j.Fragment, {
+            children: (0, j.jsx)(_.F, {
               getCellContent: p,
-              columns: c,
+              columns: o,
               rows: t.rows.length,
               gridSelection: u,
               onGridSelectionChange: x,
               smoothScrollX: !0,
               smoothScrollY: !0,
-              className: a,
+              className: l,
               rowMarkers: "clickable-number",
               rowMarkerTheme: { bgCell: "#F7F7F8", textLight: "#0D0D0D" },
               theme: { textHeader: "#0D0D0D", textDark: "#676767" },
@@ -349,195 +350,343 @@
               verticalBorder: !0,
               minColumnWidth: 10,
               maxColumnWidth: 500,
-              onColumnResize: (e, t, l) => {
-                d((a) => {
-                  let s = [...a];
-                  return (s[l] = O(O({}, e), {}, { width: t })), s;
+              onColumnResize: (e, t, a) => {
+                c((l) => {
+                  let n = [...l];
+                  return (n[a] = M(M({}, e), {}, { width: t })), n;
                 });
               },
             }),
           })
         );
       }
-      function E(e, t) {
-        let l = (0, w.bm)(t);
-        return O(
-          O({}, e),
+      function D(e, t) {
+        let a = (0, k.bm)(t);
+        return M(
+          M({}, e),
           {},
           {
-            messageMetadata: O(
-              O({}, e.messageMetadata),
+            messageMetadata: M(
+              M({}, e.messageMetadata),
               {},
               { targeted_reply: t }
             ),
             appendMessages:
-              null == e.appendMessages ? [l] : [...e.appendMessages, l],
+              null == e.appendMessages ? [a] : [...e.appendMessages, a],
           }
         );
       }
-      var T = l(33271);
-      function z(e) {
-        var t, l;
-        let { visualization: h, fallbackImageMessage: f, expanded: b = !1 } = e,
-          { isLoading: v, data: w, isError: N } = (0, T.sM)(h),
-          k = (0, o.useRef)(null),
-          _ =
-            null !== (t = null == w ? void 0 : w.file_name.split("/")) &&
+      var A = a(33271);
+      function T(e) {
+        let { visualization: t, expanded: a = !1 } = e;
+        return "chart" === t.type
+          ? void 0 == t.fallback_image
+            ? (o.U.addError(
+                "Chart visualizations require a fallback image message"
+              ),
+              null)
+            : t.fallback_to_image
+              ? void 0 == t.fallback_image
+                ? (o.U.addError(
+                    "No fallback image message provided for fallback chart"
+                  ),
+                  null)
+                : (0, j.jsx)(P, { visualization: t, expanded: a })
+              : (0, j.jsx)(S, { visualization: t, expanded: a })
+          : "table" === t.type
+            ? (0, j.jsx)(Z, { visualization: t, expanded: a })
+            : (o.U.addError("Unsupported visualization type", t.type), null);
+      }
+      let V = function (e) {
+          let t =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : "",
+            a = document.createElement("a");
+          (a.href = e), t && (a.download = t), a.click();
+        },
+        F = async (e) => {
+          if (null == e.image_url) {
+            o.U.addError("No image url provided for download");
+            return;
+          }
+          let t = (0, x.Iy)(e.image_url),
+            a = await s.Z.getFileDownloadLink(t);
+          if (a.status === l.KF.Success) {
+            let e = await fetch(a.download_url),
+              t = await e.blob();
+            V(URL.createObjectURL(t), "output.png");
+          }
+        };
+      function Z(e) {
+        var t, a, l;
+        let n;
+        let { visualization: s, expanded: i } = e,
+          r = (0, f.Ex)() && !i,
+          { isLoading: o, data: c, isError: u } = (0, A.CJ)(s),
+          x =
+            null !== (t = null == c ? void 0 : c.file_name.split("/")) &&
             void 0 !== t
               ? t
               : [],
-          C = (0, x.rE)(),
-          { 0: M, 1: O } = (0, o.useState)(!1),
-          E = null !== (l = _[_.length - 1]) && void 0 !== l ? l : "";
-        E = E.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
-        let z = (0, p.Ex)(),
-          F =
-            (null == C ? void 0 : C.type) === x.zG.ADAVisualization
-              ? C.visualization.file_id
-              : null,
-          R = F && F == h.file_id,
-          S = (0, o.useCallback)(() => {
-            r.A.logEvent(i.M.adaFocusModeToggled),
-              R
-                ? x.RT.close()
-                : x.RT.setFocusedObject({
-                    type: x.zG.ADAVisualization,
-                    visualization: h,
-                  });
-          }, [R, h]),
-          A = (0, o.useCallback)(() => {
-            let e = function (e) {
-              let t =
-                  arguments.length > 1 && void 0 !== arguments[1]
-                    ? arguments[1]
-                    : "",
-                l = document.createElement("a");
-              (l.href = e), t && (l.download = t), l.click();
-            };
-            if ("table" === h.type && w) e(w.download_url);
-            else if ("chart" === h.type) {
-              if (
-                (h.fallback_to_image || M) &&
-                (null == f ? void 0 : f.image_url) != null
-              ) {
-                let t = (0, m.Iy)(f.image_url);
-                n.Z.getFileDownloadLink(t).then((t) => {
-                  t.status === a.KF.Success &&
-                    fetch(t.download_url)
-                      .then((e) => e.blob())
-                      .then((t) => {
-                        e(URL.createObjectURL(t), "output.png");
-                      });
-                });
-              } else if (k.current) {
-                let t = k.current.getBase64Image();
-                t && e(t, "".concat(E, ".png"));
-              }
-            }
-          }, [h.type, w, E, h.fallback_to_image, M, f]);
-        return N
-          ? (0, y.jsx)("div", {
-              className: "max-w-full rounded-lg border border-red-600 p-3",
-              children: (0, y.jsxs)("div", {
-                className: "my-0 flex items-center justify-between font-light",
+          h = null !== (a = x[x.length - 1]) && void 0 !== a ? a : "";
+        h = h.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
+        let { 0: b, 1: y } = (0, d.useState)(),
+          v = (0, d.useCallback)(() => {
+            c && V(c.download_url);
+          }, [c]);
+        return (c &&
+          (n = Array.isArray(c.content)
+            ? null !== (l = c.content.find((e) => e.name == b)) && void 0 !== l
+              ? l
+              : c.content[0]
+            : c.content),
+        u)
+          ? (0, j.jsx)(R, { fileName: h })
+          : (0, j.jsx)(U, {
+              focusObject: { type: g.zG.ADAVisualization, visualization: s },
+              title: (0, j.jsxs)(j.Fragment, {
                 children: [
-                  (0, y.jsx)("div", {
-                    className: "flex items-center gap-2",
-                    children: (0, y.jsx)("p", {
-                      className: "m-0 p-0 text-lg font-medium capitalize",
-                      children: E,
-                    }),
-                  }),
-                  (0, y.jsx)("span", {
-                    className: "text-sm text-red-600",
-                    children: (0, y.jsx)(d.Z, {
-                      id: "ADAVisualzationComponent.unableToLoadOutput",
-                      defaultMessage: "Unable to load visualization",
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : (0, y.jsx)("div", {
-              className: "max-w-full py-2",
-              children: (0, y.jsxs)("div", {
-                className:
-                  "relative overflow-hidden rounded-lg border border-token-border-medium",
-                children: [
-                  (0, y.jsx)("div", {
-                    className: "flex flex-col",
-                    children: (0, y.jsxs)("div", {
-                      className: (0, c.default)(
-                        "flex justify-between p-3",
-                        R && !b
-                          ? "bg-token-main-surface-secondary"
-                          : "bg-token-main-surface-primary"
-                      ),
+                  h,
+                  !r &&
+                    Array.isArray(null == c ? void 0 : c.content) &&
+                    (0, j.jsxs)(p.Z.Root, {
+                      defaultValue: b,
+                      onValueChange: (e) => {
+                        y(e);
+                      },
                       children: [
-                        (0, y.jsx)("div", {
+                        (0, j.jsxs)(p.Z.Trigger, {
                           className:
-                            "my-0 flex min-h-[28px] items-center gap-2 font-light",
-                          children: (0, y.jsx)("p", {
-                            className: "m-0 p-0 text-lg font-medium capitalize",
-                            children: E,
-                          }),
-                        }),
-                        (0, y.jsxs)("div", {
-                          className: (0, c.default)("flex items-center gap-3"),
+                            "m-0 h-6 bg-transparent p-1 text-xs font-medium",
                           children: [
-                            "chart" == h.type &&
-                              !h.fallback_to_image &&
-                              !b &&
-                              (0, y.jsx)("button", {
-                                onClick: () => {
-                                  O(!M);
-                                },
-                                className: "flex items-center text-xs",
-                                children: (0, y.jsx)(s.q$4, {}),
-                              }),
-                            (0, y.jsx)("button", {
-                              onClick: A,
-                              className: "flex items-center text-xs",
-                              children: (0, y.jsx)(s._8t, {}),
-                            }),
-                            !h.fallback_to_image &&
-                              (0, y.jsx)("button", {
-                                onClick: S,
-                                className: "flex items-center text-sm",
-                                children: R
-                                  ? (0, y.jsx)(y.Fragment, {
-                                      children: (0, y.jsx)(s.W5x, {}),
-                                    })
-                                  : (0, y.jsx)(y.Fragment, {
-                                      children: (0, y.jsx)(s.Qq, {}),
-                                    }),
-                              }),
+                            null != b ? b : c.content[0].name,
+                            (0, j.jsx)(p.Z.Icon, {}),
                           ],
+                        }),
+                        (0, j.jsx)(p.Z.Portal, {
+                          children: (0, j.jsx)(p.Z.Content, {
+                            children: c.content.map((e) => {
+                              var t;
+                              return (0, j.jsx)(
+                                p.Z.Item,
+                                {
+                                  className: "text-xs font-medium",
+                                  value:
+                                    null !== (t = e.name) && void 0 !== t
+                                      ? t
+                                      : "",
+                                  children: e.name,
+                                },
+                                e.name
+                              );
+                            }),
+                          }),
                         }),
                       ],
                     }),
-                  }),
-                  !(z && !b) &&
-                    (0, y.jsx)("div", {
-                      className: (0, c.default)(
-                        "flex items-center overflow-x-auto border-t border-token-border-light align-middle",
-                        b ? "h-[80vh]" : "h-[400px]",
-                        v ? "justify-center" : "justify-start",
-                        "table" == h.type ? "justify-start" : "justify-center"
-                      ),
-                      children: v
-                        ? (0, y.jsx)(u.Z, {})
-                        : "table" == h.type
-                          ? (0, y.jsx)(D, { table: w })
-                          : (M || h.fallback_to_image) && void 0 !== f
-                            ? (0, y.jsx)(g.Z, { jupyterMessage: f })
-                            : (0, y.jsx)(j, { ref: k, chart: w }),
-                    }),
                 ],
               }),
+              onDownload: v,
+              expanded: i,
+              children:
+                o || void 0 == n
+                  ? (0, j.jsx)(m.Z, {})
+                  : (0, j.jsx)(O, { table: n }),
             });
+      }
+      function R(e) {
+        let { fileName: t } = e;
+        return (0, j.jsx)("div", {
+          className: "w-full rounded-xl border border-red-600 p-3",
+          children: (0, j.jsxs)("div", {
+            className: "my-0 flex items-center justify-between font-light",
+            children: [
+              (0, j.jsx)("div", {
+                className: "flex items-center gap-2",
+                children: (0, j.jsx)("p", {
+                  className: "m-0 p-0 text-lg font-medium capitalize",
+                  children: t,
+                }),
+              }),
+              (0, j.jsx)("span", {
+                className: "text-sm text-red-600",
+                children: (0, j.jsx)(u.Z, {
+                  id: "ADAVisualzationComponent.unableToLoadOutput",
+                  defaultMessage: "Unable to display visualization",
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      function S(e) {
+        var t, a;
+        let { visualization: l, expanded: n } = e,
+          { isLoading: s, data: i, isError: r } = (0, A.VX)(l),
+          o = (0, d.useRef)(null),
+          { 0: c, 1: u } = (0, d.useState)(!1),
+          p =
+            null !== (t = null == i ? void 0 : i.file_name.split("/")) &&
+            void 0 !== t
+              ? t
+              : [],
+          x = null !== (a = p[p.length - 1]) && void 0 !== a ? a : "";
+        x = x.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
+        let f = (0, d.useCallback)(async () => {
+          if (c && l.fallback_image) await F(l.fallback_image);
+          else if (o.current) {
+            let e = o.current.getBase64Image();
+            e && V(e, "".concat(x, ".png"));
+          }
+        }, [l.fallback_image, c, o, x]);
+        return r
+          ? (0, j.jsx)(R, { fileName: x })
+          : (0, j.jsx)(U, {
+              focusObject: { type: g.zG.ADAVisualization, visualization: l },
+              title: x,
+              onDownload: f,
+              onToggleView: () => {
+                u(!c);
+              },
+              expanded: n,
+              children:
+                s || void 0 == i
+                  ? (0, j.jsx)(m.Z, {})
+                  : c && l.fallback_image
+                    ? (0, j.jsx)(h.Z, { jupyterMessage: l.fallback_image })
+                    : (0, j.jsx)(v, { ref: o, chart: i.content }),
+            });
+      }
+      function P(e) {
+        let { visualization: t, expanded: a } = e,
+          l = (0, d.useCallback)(async () => {
+            t.fallback_image && (await F(t.fallback_image));
+          }, [t.fallback_image]);
+        return void 0 == t.fallback_image
+          ? null
+          : (0, j.jsx)(U, {
+              focusObject: { type: g.zG.ADAVisualization, visualization: t },
+              title: "",
+              onDownload: l,
+              expanded: a,
+              children: (0, j.jsx)(h.Z, { jupyterMessage: t.fallback_image }),
+            });
+      }
+      function U(e) {
+        let {
+            focusObject: t,
+            title: a,
+            onDownload: l,
+            onToggleView: s,
+            expanded: o = !1,
+            children: u,
+          } = e,
+          m = (0, f.Ex)() && !o,
+          p = (0, g.rE)(),
+          x =
+            p &&
+            p.type == g.zG.ADAVisualization &&
+            p.type == t.type &&
+            p.visualization.file_id == t.visualization.file_id,
+          { 0: h, 1: b } = (0, d.useState)(!1),
+          y = (0, d.useCallback)(() => {
+            i.A.logEvent(r.M.adaFocusModeToggled),
+              x ? g.RT.close() : g.RT.setFocusedObject(t);
+          }, [x, t]),
+          v = (m && h) || !m,
+          w = "chart" === t.visualization.type ? n.X5Q : n.tXQ;
+        return (0, j.jsxs)("div", {
+          className: (0, c.default)(
+            "relative overflow-hidden",
+            !o && "rounded-xl border border-token-border-light",
+            m ? "w-56 cursor-pointer" : "w-full",
+            x && m && "border-blue-selection",
+            m && !x && "text-token-text-secondary"
+          ),
+          onMouseEnter: () => {
+            b(!0);
+          },
+          onMouseLeave: () => {
+            b(!1);
+          },
+          onClick: () => {
+            m && y();
+          },
+          children: [
+            (0, j.jsxs)("div", {
+              className: (0, c.default)(
+                "flex justify-between bg-token-main-surface-primary px-4 py-3"
+              ),
+              children: [
+                (0, j.jsx)("div", {
+                  className: (0, c.default)(
+                    "my-0 items-center font-medium capitalize",
+                    m
+                      ? "overflow-hidden overflow-ellipsis whitespace-nowrap text-sm"
+                      : "flex"
+                  ),
+                  children: a,
+                }),
+                (0, j.jsxs)("div", {
+                  className: (0, c.default)("flex items-center gap-3"),
+                  children: [
+                    !m &&
+                      s &&
+                      (0, j.jsx)("button", {
+                        onClick: s,
+                        className: "flex items-center text-xs",
+                        children: (0, j.jsx)(n.q$4, { className: "icon-md" }),
+                      }),
+                    !m &&
+                      l &&
+                      (0, j.jsx)("button", {
+                        onClick: l,
+                        className: "flex items-center text-xs",
+                        children: (0, j.jsx)(n._8t, { className: "icon-md" }),
+                      }),
+                    v &&
+                      (0, j.jsx)("button", {
+                        onClick: y,
+                        className: "flex items-center text-xs",
+                        children: x
+                          ? (0, j.jsx)(j.Fragment, {
+                              children: (0, j.jsx)(n.W5x, {
+                                className: "icon-md",
+                              }),
+                            })
+                          : (0, j.jsx)(j.Fragment, {
+                              children: (0, j.jsx)(n.Qq, {
+                                className: "icon-md",
+                              }),
+                            }),
+                      }),
+                    m &&
+                      !h &&
+                      (0, j.jsx)(w, {
+                        className: (0, c.default)(
+                          "icon-sm",
+                          x
+                            ? "text-blue-selection"
+                            : "text-token-text-quaternary"
+                        ),
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            !m &&
+              (0, j.jsx)("div", {
+                className: (0, c.default)(
+                  "flex items-center justify-center overflow-x-auto border-t border-token-border-light bg-token-main-surface-primary"
+                ),
+                style: { height: o ? "calc(100vh - 48px)" : "400px" },
+                children: u,
+              }),
+          ],
+        });
       }
     },
   },
 ]);
-//# sourceMappingURL=9909.60105fa5ec3c0847.js.map
+//# sourceMappingURL=9909.c68083e35509da42.js.map

@@ -6,15 +6,15 @@
       s.r(t),
         s.d(t, {
           InternalDevToolsEntryPoint: function () {
-            return A;
+            return V;
           },
         });
       var l,
         r,
-        n = s(99945),
-        a = s(67217),
-        i = s(21643),
-        o = s(85452),
+        a = s(99945),
+        n = s(67217),
+        o = s(21643),
+        i = s(85452),
         c = s(47712),
         x = s(81643),
         d = s(34594),
@@ -22,8 +22,8 @@
         m = s(70079),
         h = s(1454),
         f = s(6020),
-        p = s(21389),
-        g = s(27724),
+        g = s(21389),
+        p = s(27724),
         j = s(35250),
         v =
           (((l = v || {}).StatsigUser = "Statsig User"),
@@ -36,9 +36,9 @@
         var t;
         let { onClose: s, isWidgetVisible: l } = e,
           r = (0, c.hz)();
-        if (!(0, g.j)() || !f.Statsig.initializeCalled()) return null;
-        let n = f.Statsig.getCurrentUser();
-        return (0, j.jsx)(a.Z, {
+        if (!(0, p.j)() || !f.Statsig.initializeCalled()) return null;
+        let a = f.Statsig.getCurrentUser();
+        return (0, j.jsx)(n.Z, {
           isOpen: l,
           onClose: s,
           size: "custom",
@@ -74,7 +74,7 @@
                 value: v.StatsigUser,
                 children: (0, j.jsx)("pre", {
                   className: "text-sm",
-                  children: JSON.stringify(n, null, 2),
+                  children: JSON.stringify(a, null, 2),
                 }),
               }),
               (0, j.jsx)(x.VY, {
@@ -104,7 +104,7 @@
                 value: v.FeatureGates,
                 children: Object.entries(d.tz).map((e) => {
                   let [t, s] = e;
-                  return (0, j.jsx)(w, { codeName: t, statsigName: s }, t);
+                  return (0, j.jsx)(y, { codeName: t, statsigName: s }, t);
                 }),
               }),
               (0, j.jsx)(x.VY, {
@@ -112,7 +112,7 @@
                 value: v.ExperimentalFeatureGates,
                 children: Object.entries(u.SP).map((e) => {
                   let [t, s] = e;
-                  return (0, j.jsx)(y, { codeName: t, statsigName: s }, t);
+                  return (0, j.jsx)(w, { codeName: t, statsigName: s }, t);
                 }),
               }),
               (0, j.jsx)(x.VY, {
@@ -127,13 +127,13 @@
           }),
         });
       }
-      function w(e) {
+      function y(e) {
         let { codeName: t, statsigName: s } = e,
           l =
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
               s
             ),
-          { isLoading: r, value: n } = (0, d.sB)(s);
+          { isLoading: r, value: a } = (0, d.sB)(s);
         return (0, j.jsxs)(k, {
           children: [
             (0, j.jsx)("a", {
@@ -146,24 +146,24 @@
             (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, j.jsx)(o.Z, {}) : null,
+                r ? (0, j.jsx)(i.Z, {}) : null,
                 (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(n),
+                  children: String(a),
                 }),
               ],
             }),
           ],
         });
       }
-      function y(e) {
+      function w(e) {
         let { codeName: t, statsigName: s } = e,
           l =
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
               s
             ),
-          { isLoading: r, value: n } = (0, u.fW)(s),
-          { 0: a, 1: c } = (0, m.useState)(""),
+          { isLoading: r, value: a } = (0, u.fW)(s),
+          { 0: n, 1: c } = (0, m.useState)(""),
           { gates: x } = f.Statsig.getAllOverrides(),
           d = null != x[s];
         return (0, j.jsxs)(k, {
@@ -178,7 +178,7 @@
             (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, j.jsx)(o.Z, {}) : null,
+                r ? (0, j.jsx)(i.Z, {}) : null,
                 d
                   ? (0, j.jsx)(h.Hov, {
                       className: "text-red-500",
@@ -187,14 +187,14 @@
                   : null,
                 (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(n),
+                  children: String(a),
                 }),
-                (0, j.jsx)(i.Z, {
+                (0, j.jsx)(o.Z, {
                   name: "override",
                   type: "text",
                   color: "neutral",
                   placeholder: "Override",
-                  value: a,
+                  value: n,
                   onChange: (e) => {
                     c(e.currentTarget.value);
                   },
@@ -214,11 +214,11 @@
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/experiments/".concat(
               s
             ),
-          { isLoading: r, config: n } = (0, u.mK)(s),
-          a = n.get(d.Hy.TREATMENT, d.wA.CONTROL),
+          { isLoading: r, config: a } = (0, u.mK)(s),
+          n = a.get(d.Hy.TREATMENT, d.wA.CONTROL),
           { 0: c, 1: x } = (0, m.useState)(""),
-          { configs: p } = f.Statsig.getAllOverrides(),
-          g = null != p[s];
+          { configs: g } = f.Statsig.getAllOverrides(),
+          p = null != g[s];
         return (0, j.jsxs)(k, {
           children: [
             (0, j.jsx)("a", {
@@ -231,8 +231,8 @@
             (0, j.jsxs)("div", {
               className: "flex items-center justify-between gap-2",
               children: [
-                r ? (0, j.jsx)(o.Z, {}) : null,
-                g
+                r ? (0, j.jsx)(i.Z, {}) : null,
+                p
                   ? (0, j.jsx)(h.Hov, {
                       className: "text-red-500",
                       title: "Local override",
@@ -240,9 +240,9 @@
                   : null,
                 (0, j.jsx)("p", {
                   className: "font-mono",
-                  children: String(a),
+                  children: String(n),
                 }),
-                (0, j.jsx)(i.Z, {
+                (0, j.jsx)(o.Z, {
                   name: "override",
                   type: "text",
                   color: "neutral",
@@ -261,59 +261,69 @@
           ],
         });
       }
-      let k = p.Z.div(
+      let k = g.Z.div(
         r ||
-          (r = (0, n.Z)([
+          (r = (0, a.Z)([
             "flex items-center justify-between border-b border-token-border-light py-3 text-sm text-token-text-primary last-of-type:border-b-0",
           ]))
       );
       var E = s(54225),
         S = s(70853),
-        C = s(70187),
-        O = s(66128);
-      function F() {
-        let e = (0, g.j)(),
+        L = s(70187),
+        _ = s(66128);
+      function O() {
+        let e = (0, p.j)(),
           t = u.VG.AnonChatLayer,
           s = u.yp.ANON_COMPOSER_DISPLAY_VARIANT,
           { layer: l } = (0, u.U3)(t),
-          r = l.get(s, O.tg.Default);
+          r = l.get(s, _.tg.Default),
+          { layer: a } = (0, u.U3)(u.VG.LocalizationLoggedInLayer),
+          n = a.get(u.yp.L10N_SHOULD_ENABLE_ZH_TW, !1);
         return (
           (0, m.useEffect)(() => {
             let l = [
                 {
                   isShortcut: (e) => e.ctrlKey && "2" === e.key,
                   toggle: () => {
-                    let e = r === O.tg.Default ? O.tg.Hedgehog : O.tg.Default;
+                    let e = r === _.tg.Default ? _.tg.Hedgehog : _.tg.Default;
                     (0, u.H9)(t, { [s]: e });
                   },
                 },
+                {
+                  isShortcut: (e) => e.ctrlKey && "3" === e.key,
+                  toggle: () => {
+                    (0, u.H9)(u.VG.LocalizationLoggedInLayer, {
+                      [u.yp.L10N_SHOULD_ENABLE_ZH_TW]: !n,
+                    });
+                  },
+                },
               ],
-              n = (t) => {
+              a = (t) => {
                 if (e) for (let e of l) e.isShortcut(t) && e.toggle();
               };
             return (
-              window.addEventListener("keydown", n),
+              window.addEventListener("keydown", a),
               () => {
-                window.removeEventListener("keydown", n);
+                window.removeEventListener("keydown", a);
               }
             );
-          }, [e, t, r, s]),
+          }, [e, t, r, s, n]),
           null
         );
       }
-      var T = s(13106),
-        V = s(7813);
-      function A() {
-        let e = (0, g.j)(),
+      var C = s(13106),
+        T = s(7813);
+      function V() {
+        let e = (0, p.j)(),
           { 0: t, 1: s } = (0, m.useState)(!1);
         return e
           ? (0, j.jsxs)(j.Fragment, {
               children: [
-                (0, j.jsxs)(V.v, {
+                (0, j.jsxs)(T.v, {
                   as: "div",
                   className: "group relative",
                   children: [
-                    (0, j.jsx)(V.v.Button, {
+                    (0, j.jsx)(T.v.Button, {
                       className:
                         "flex items-center justify-center rounded-full border border-token-border-light text-token-text-secondary",
                       children: (0, j.jsx)("div", {
@@ -323,7 +333,7 @@
                       }),
                     }),
                     (0, j.jsx)(S.m, {
-                      children: (0, j.jsxs)(V.v.Items, {
+                      children: (0, j.jsxs)(T.v.Items, {
                         className:
                           "popover absolute bottom-full right-0 z-20 mb-2 w-full min-w-[200px] overflow-hidden rounded-md border border-token-border-light bg-token-main-surface-primary p-1.5 shadow-lg outline-none",
                         children: [
@@ -338,13 +348,13 @@
                               s((e) => !e);
                             },
                             children: [
-                              (0, j.jsx)(C.Gi, { className: "icon-md" }),
+                              (0, j.jsx)(L.Gi, { className: "icon-md" }),
                               "Experimentation",
                             ],
                           }),
                           (0, j.jsxs)(E.s, {
                             onClick: () => {
-                              T.vm.showLatencyDevTools();
+                              C.vm.showLatencyDevTools();
                             },
                             children: [
                               (0, j.jsx)(h.DKx, { className: "icon-md" }),
@@ -356,7 +366,7 @@
                     }),
                   ],
                 }),
-                (0, j.jsx)(F, {}),
+                (0, j.jsx)(O, {}),
                 (0, j.jsx)(N, {
                   isWidgetVisible: t,
                   onClose: () => {
@@ -370,4 +380,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8990.84e06606bbfa0c1b.js.map
+//# sourceMappingURL=8990.16ff72a4395e0cfb.js.map
