@@ -6454,83 +6454,78 @@
             !l.displayingSideBySideFeedback;
         d && n && i && (d = !1);
         let u = (0, G.ZP)(),
-          A =
-            d && n
-              ? (function (e, t, n) {
-                  var a;
-                  let r = t.find((e) => e.categoryId === G.ft.GPT4),
-                    s = t.find((e) => e.categoryId === G.ft.GPT3_5),
-                    i =
-                      null === (a = e.message.metadata) || void 0 === a
-                        ? void 0
-                        : a.model_switcher_deny,
-                    o = [],
-                    l = {},
-                    c = new Date(),
-                    d = n && n.resetsAfter ? new Date(n.resetsAfter) : void 0;
-                  if (r) {
-                    let e = r.options.find((e) => "Default" === e.name);
-                    e &&
-                      ((l[e.value] = []),
-                      null == i ||
-                        i.forEach((t) => {
-                          t.slug === e.value &&
-                            t.context === Z.UB.REGENERATE &&
-                            l[t.slug].push(t.reason);
-                        }, {}),
-                      n &&
-                        n.modelSlug === e.value &&
-                        0 === n.messagesRemaining &&
-                        d &&
-                        d > c &&
-                        l[e.value].push(Z.iS.RATE_LIMIT),
-                      o.push({
-                        label: r.name,
-                        value: e.value,
-                        subtitle: (0, J.jsx)(Y.Z, {
-                          id: "JavlMu",
-                          defaultMessage: "Smartest",
-                        }),
-                        icon: (0, J.jsx)(R.Zku, {
-                          className: "icon-md h-4 w-4",
-                        }),
-                        modelUnavailableReason: l[e.value][0],
-                        modelUnavailableTooltipProps: $(l[e.value][0], d),
-                      }));
-                  }
-                  if (s) {
-                    let e = s.options.find((e) => "Default" === e.name);
-                    e &&
-                      ((l[e.value] = []),
-                      null == i ||
-                        i.forEach((t) => {
-                          t.slug === e.value &&
-                            t.context === Z.UB.REGENERATE &&
-                            l[t.slug].push(t.reason);
-                        }, {}),
-                      n &&
-                        n.modelSlug === e.value &&
-                        0 === n.messagesRemaining &&
-                        d &&
-                        d > c &&
-                        l[e.value].push(Z.iS.RATE_LIMIT),
-                      o.push({
-                        label: s.name,
-                        value: e.value,
-                        subtitle: (0, J.jsx)(Y.Z, {
-                          id: "jcltnK",
-                          defaultMessage: "Fastest",
-                        }),
-                        icon: (0, J.jsx)(R.F_N, {
-                          className: "icon-md h-4 w-4",
-                        }),
-                        modelUnavailableReason: l[e.value][0],
-                        modelUnavailableTooltipProps: $(l[e.value][0], d),
-                      }));
-                  }
-                  return o;
-                })(t, u, c)
-              : [],
+          A = d
+            ? (function (e, t, n) {
+                var a;
+                let r = t.find((e) => e.categoryId === G.ft.GPT4),
+                  s = t.find((e) => e.categoryId === G.ft.GPT3_5),
+                  i =
+                    null === (a = e.message.metadata) || void 0 === a
+                      ? void 0
+                      : a.model_switcher_deny,
+                  o = [],
+                  l = {},
+                  c = new Date(),
+                  d = n && n.resetsAfter ? new Date(n.resetsAfter) : void 0;
+                if (r) {
+                  let e = r.options.find((e) => "Default" === e.name);
+                  e &&
+                    ((l[e.value] = []),
+                    null == i ||
+                      i.forEach((t) => {
+                        t.slug === e.value &&
+                          t.context === Z.UB.REGENERATE &&
+                          l[t.slug].push(t.reason);
+                      }, {}),
+                    n &&
+                      n.modelSlug === e.value &&
+                      0 === n.messagesRemaining &&
+                      d &&
+                      d > c &&
+                      l[e.value].push(Z.iS.RATE_LIMIT),
+                    o.push({
+                      label: r.name,
+                      value: e.value,
+                      subtitle: (0, J.jsx)(Y.Z, {
+                        id: "JavlMu",
+                        defaultMessage: "Smartest",
+                      }),
+                      icon: (0, J.jsx)(R.Zku, { className: "icon-md h-4 w-4" }),
+                      modelUnavailableReason: l[e.value][0],
+                      modelUnavailableTooltipProps: $(l[e.value][0], d),
+                    }));
+                }
+                if (s) {
+                  let e = s.options.find((e) => "Default" === e.name);
+                  e &&
+                    ((l[e.value] = []),
+                    null == i ||
+                      i.forEach((t) => {
+                        t.slug === e.value &&
+                          t.context === Z.UB.REGENERATE &&
+                          l[t.slug].push(t.reason);
+                      }, {}),
+                    n &&
+                      n.modelSlug === e.value &&
+                      0 === n.messagesRemaining &&
+                      d &&
+                      d > c &&
+                      l[e.value].push(Z.iS.RATE_LIMIT),
+                    o.push({
+                      label: s.name,
+                      value: e.value,
+                      subtitle: (0, J.jsx)(Y.Z, {
+                        id: "jcltnK",
+                        defaultMessage: "Fastest",
+                      }),
+                      icon: (0, J.jsx)(R.F_N, { className: "icon-md h-4 w-4" }),
+                      modelUnavailableReason: l[e.value][0],
+                      modelUnavailableTooltipProps: $(l[e.value][0], d),
+                    }));
+                }
+                return o;
+              })(t, u, c)
+            : [],
           m =
             d && n
               ? (function (e, t) {
@@ -6558,7 +6553,7 @@
           shouldRenderComponent: d,
           modelOptions: A,
           modelSlug: g,
-          showModelLabelOnRender: !!(n && m && g !== m),
+          animateModelLabelOnRender: !!(n && m && g !== m),
         };
       };
       function $(e, t) {
@@ -6624,53 +6619,49 @@
       }
       var er = (((a = er || {}).GPT_3_5 = "gpt-3.5"), (a.GPT_4 = "gpt-4"), a);
       function es(e) {
-        let {
-            modelSlug: t,
-            showModelLabelOnRender: n,
-            isFinalTurn: a,
-            componentHovered: r,
-          } = e,
-          s = null == t ? void 0 : t.includes(er.GPT_4),
-          i = s ? R.Zku : R.F_N,
-          o = {
-            showOnRenderVariant: {
-              initial: { opacity: 1, paddingLeft: 2, width: "100%" },
-              animate: { opacity: 0, paddingLeft: 0, width: "0%" },
-              hover: { opacity: 1, paddingLeft: 2, width: "100%" },
-            },
-            showOnHoverOnlyVariant: {
-              initial: { opacity: 0, paddingLeft: 0, width: "0%" },
-              hover: { opacity: 1, paddingLeft: 2, width: "100%" },
-            },
-          },
-          l = n ? o.showOnRenderVariant : o.showOnHoverOnlyVariant;
-        return (0, J.jsx)(J.Fragment, {
-          children: (0, J.jsxs)(et.E.div, {
-            initial: "initial",
-            animate: "animate",
-            whileHover: "hover",
-            layout: !0,
-            className: "flex items-center pb-0.5",
-            children: [
-              (0, J.jsx)(i, { className: "icon-md h-4 w-4" }),
-              a &&
+        let { modelSlug: t, animateModelLabelOnRender: n } = e,
+          a = null == t ? void 0 : t.includes(er.GPT_4),
+          r = a ? R.Zku : R.F_N,
+          { 0: s, 1: i } = (0, K.useState)("initial");
+        return (
+          (0, K.useEffect)(() => {
+            i("animate");
+            let e = setTimeout(() => {
+              i("exit");
+            }, 2e3);
+            return () => clearTimeout(e);
+          }, []),
+          (0, J.jsx)(J.Fragment, {
+            children: (0, J.jsxs)(et.E.div, {
+              initial: "initial",
+              animate: n ? s : "initial",
+              whileHover: "hover",
+              className: "flex items-center pb-0.5",
+              children: [
+                (0, J.jsx)(r, { className: "icon-md h-4 w-4" }),
                 (0, J.jsx)(et.E.span, {
                   className: "line-clamp-1 text-sm",
-                  variants: l,
-                  transition: {
-                    type: "tween",
-                    duration: 0.18,
-                    delay: r ? 0 : 2,
+                  variants: {
+                    initial: { opacity: 0, paddingLeft: 0, width: "0%" },
+                    animate: {
+                      opacity: 1,
+                      paddingLeft: 2,
+                      width: "100%",
+                      transition: { delay: 0.5 },
+                    },
+                    exit: { opacity: 0, paddingLeft: 0, width: "0%" },
+                    hover: { opacity: 1, paddingLeft: 2, width: "100%" },
                   },
-                  children: s ? "4" : "3.5",
+                  transition: { type: "tween", duration: 0.18 },
+                  children: a ? "4" : "3.5",
                 }),
-              a &&
                 (0, J.jsx)(R.eOB, {
                   className: (0, ee.default)("icon-sm pt-0.5"),
                 }),
-            ],
-          }),
-        });
+              ],
+            }),
+          })
+        );
       }
       let ei = (0, K.memo)(function (e) {
         let {
@@ -6681,176 +6672,176 @@
             onModelSelect: s,
           } = e,
           { 0: i, 1: o } = (0, K.useState)(null),
-          { 0: l, 1: c } = (0, K.useState)(!1),
           {
-            shouldRenderComponent: d,
-            modelOptions: u,
-            modelSlug: A,
-            showModelLabelOnRender: m,
+            shouldRenderComponent: l,
+            modelOptions: c,
+            modelSlug: d,
+            animateModelLabelOnRender: u,
           } = X(n, a, r);
-        return d
+        return l
           ? (0, J.jsxs)(Q.fC, {
               children: [
-                (0, J.jsx)(Q.xz, {
-                  className: (0, ee.default)("cursor-pointer", t),
-                  onMouseEnter: () => c(!0),
-                  children: (0, J.jsx)(en.u, {
-                    label: (0, J.jsx)(Y.Z, {
-                      id: "ConversationTurn.messageModelSelectorDropdownTooltip",
-                      defaultMessage: "Select model",
-                    }),
-                    sideOffset: 0,
+                (0, J.jsx)(en.u, {
+                  label: (0, J.jsx)(Y.Z, {
+                    id: "ConversationTurn.messageModelSelectorDropdownTooltip",
+                    defaultMessage: "Change model",
+                  }),
+                  sideOffset: 0,
+                  children: (0, J.jsx)(Q.xz, {
+                    className: (0, ee.default)("cursor-pointer", t),
                     children: (0, J.jsx)(es, {
-                      modelSlug: A,
-                      showModelLabelOnRender: m,
-                      isFinalTurn: r,
-                      componentHovered: l,
+                      modelSlug: d,
+                      animateModelLabelOnRender: u,
                     }),
                   }),
                 }),
-                r &&
-                  (0, J.jsx)(Q.VY, {
-                    className:
-                      "popover z-10 min-w-[224px] max-w-xs origin-top-right overflow-hidden rounded-lg border border-token-border-light bg-token-main-surface-primary px-2 py-2 text-sm text-token-text-primary shadow-lg",
-                    side: "bottom",
-                    align: "start",
-                    asChild: !0,
-                    children: (0, J.jsx)(et.E.div, {
-                      initial: { opacity: 0 },
-                      animate: { opacity: 1 },
-                      exit: { opacity: 0 },
-                      transition: { duration: 0.2 },
-                      children: u.map((e) => {
-                        var t;
-                        let {
-                            label: n,
-                            value: r,
-                            subtitle: l,
-                            icon: c,
-                            modelUnavailableReason: d,
-                            modelUnavailableTooltipProps: u,
-                          } = e,
-                          A = !d,
-                          m = null;
-                        return (
-                          d && (m = d === Z.iS.RATE_LIMIT ? R.T39 : R.szr),
-                          (0, J.jsxs)(
-                            Q.ck,
-                            {
-                              onSelect: () => {
-                                A && s(r);
-                              },
-                              className: (0, ee.default)(
-                                "relative flex items-center justify-between rounded-lg py-2 pl-4 pr-2",
-                                {
-                                  "cursor-pointer hover:bg-token-main-surface-secondary":
-                                    A,
-                                },
-                                {
-                                  "cursor-not-allowed text-token-text-quaternary":
-                                    !A,
-                                }
-                              ),
-                              onMouseEnter: () => (A ? () => o(r) : null),
-                              onMouseLeave: () => A && o(null),
-                              disabled: !A,
-                              children: [
-                                (0, J.jsxs)("div", {
-                                  className: "flex items-center",
-                                  children: [
-                                    c,
-                                    (0, J.jsxs)("div", {
-                                      className: "flex flex-col pl-4",
-                                      children: [
-                                        (0, J.jsx)("span", { children: n }),
-                                        (0, J.jsx)("span", {
-                                          className:
-                                            "text-sm text-token-text-tertiary",
-                                          children: l,
-                                        }),
-                                      ],
-                                    }),
-                                  ],
-                                }),
-                                (0, J.jsxs)("div", {
-                                  className: "group",
-                                  children: [
-                                    A
-                                      ? (null === (t = a.message.metadata) ||
-                                        void 0 === t ||
-                                        null === (t = t.model_slug) ||
-                                        void 0 === t
-                                          ? void 0
-                                          : t.includes(r)) &&
-                                        (0, J.jsx)(R.nQG, {
-                                          className: (0, ee.default)(
-                                            "text-token-text-primary",
-                                            { "group-hover:hidden": i === r }
-                                          ),
-                                        })
-                                      : (0, J.jsx)(en.u, {
-                                          label: (0, J.jsx)(
-                                            Y.Z,
-                                            (function (e) {
-                                              for (
-                                                var t = 1;
-                                                t < arguments.length;
-                                                t++
-                                              ) {
-                                                var n =
-                                                  null != arguments[t]
-                                                    ? arguments[t]
-                                                    : {};
-                                                t % 2
-                                                  ? ea(Object(n), !0).forEach(
-                                                      function (t) {
-                                                        (0, L.Z)(e, t, n[t]);
-                                                      }
-                                                    )
-                                                  : Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(
-                                                        e,
-                                                        Object.getOwnPropertyDescriptors(
-                                                          n
-                                                        )
-                                                      )
-                                                    : ea(Object(n)).forEach(
-                                                        function (t) {
-                                                          Object.defineProperty(
-                                                            e,
-                                                            t,
-                                                            Object.getOwnPropertyDescriptor(
-                                                              n,
-                                                              t
-                                                            )
-                                                          );
-                                                        }
-                                                      );
-                                              }
-                                              return e;
-                                            })({}, u)
-                                          ),
-                                          sideOffset: 0,
-                                          children: (0, J.jsx)(m, {
-                                            className: "icon-md h-4 w-4",
-                                          }),
-                                        }),
-                                    (0, J.jsx)(R.Ezi, {
-                                      className: (0, ee.default)(
-                                        "hidden text-token-text-tertiary",
-                                        { "group-hover:block": i === r }
-                                      ),
-                                    }),
-                                  ],
-                                }),
-                              ],
+                (0, J.jsx)(Q.VY, {
+                  className:
+                    "z-10 min-w-[224px] max-w-xs origin-top-right overflow-hidden rounded-lg border border-token-border-light bg-token-main-surface-primary px-2 py-2 text-sm text-token-text-primary shadow-lg",
+                  side: "bottom",
+                  align: "start",
+                  asChild: !0,
+                  children: (0, J.jsx)(et.E.div, {
+                    initial: { opacity: 0 },
+                    animate: { opacity: 1 },
+                    exit: { opacity: 0 },
+                    transition: { duration: 0.2 },
+                    children: c.map((e) => {
+                      var t;
+                      let {
+                          label: n,
+                          value: r,
+                          subtitle: l,
+                          icon: c,
+                          modelUnavailableReason: d,
+                          modelUnavailableTooltipProps: u,
+                        } = e,
+                        A = !d,
+                        m = null;
+                      return (
+                        d && (m = d === Z.iS.RATE_LIMIT ? R.T39 : R.szr),
+                        (0, J.jsxs)(
+                          Q.ck,
+                          {
+                            onSelect: () => {
+                              A && s(r);
                             },
-                            r
-                          )
-                        );
-                      }),
+                            className: (0, ee.default)(
+                              "relative flex items-center justify-between rounded-lg py-2 pl-2.5 pr-2",
+                              {
+                                "cursor-pointer hover:bg-token-main-surface-secondary":
+                                  A,
+                              },
+                              {
+                                "cursor-not-allowed text-token-text-quaternary":
+                                  !A,
+                              }
+                            ),
+                            onMouseEnter: () => (A ? () => o(r) : null),
+                            onMouseLeave: () => A && o(null),
+                            disabled: !A,
+                            children: [
+                              (0, J.jsxs)("div", {
+                                className: "flex items-center",
+                                children: [
+                                  c,
+                                  (0, J.jsxs)("div", {
+                                    className: "flex flex-col pl-4",
+                                    children: [
+                                      (0, J.jsx)("span", { children: n }),
+                                      (0, J.jsx)("span", {
+                                        className: (0, ee.default)(
+                                          {
+                                            "text-sm text-token-text-tertiary":
+                                              A,
+                                          },
+                                          { "text-token-text-quaternary": !A }
+                                        ),
+                                        children: l,
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, J.jsxs)("div", {
+                                className: "group",
+                                children: [
+                                  A
+                                    ? (null === (t = a.message.metadata) ||
+                                      void 0 === t ||
+                                      null === (t = t.model_slug) ||
+                                      void 0 === t
+                                        ? void 0
+                                        : t.includes(r)) &&
+                                      (0, J.jsx)(R.nQG, {
+                                        className: (0, ee.default)(
+                                          "text-token-text-primary",
+                                          { "group-hover:hidden": i === r }
+                                        ),
+                                      })
+                                    : (0, J.jsx)(en.u, {
+                                        label: (0, J.jsx)(
+                                          Y.Z,
+                                          (function (e) {
+                                            for (
+                                              var t = 1;
+                                              t < arguments.length;
+                                              t++
+                                            ) {
+                                              var n =
+                                                null != arguments[t]
+                                                  ? arguments[t]
+                                                  : {};
+                                              t % 2
+                                                ? ea(Object(n), !0).forEach(
+                                                    function (t) {
+                                                      (0, L.Z)(e, t, n[t]);
+                                                    }
+                                                  )
+                                                : Object.getOwnPropertyDescriptors
+                                                  ? Object.defineProperties(
+                                                      e,
+                                                      Object.getOwnPropertyDescriptors(
+                                                        n
+                                                      )
+                                                    )
+                                                  : ea(Object(n)).forEach(
+                                                      function (t) {
+                                                        Object.defineProperty(
+                                                          e,
+                                                          t,
+                                                          Object.getOwnPropertyDescriptor(
+                                                            n,
+                                                            t
+                                                          )
+                                                        );
+                                                      }
+                                                    );
+                                            }
+                                            return e;
+                                          })({}, u)
+                                        ),
+                                        sideOffset: 0,
+                                        children: (0, J.jsx)(m, {
+                                          className: "icon-md h-4 w-4",
+                                        }),
+                                      }),
+                                  (0, J.jsx)(R.Ezi, {
+                                    className: (0, ee.default)(
+                                      "hidden text-token-text-tertiary",
+                                      { "group-hover:block": i === r }
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          },
+                          r
+                        )
+                      );
                     }),
                   }),
+                }),
               ],
             })
           : null;
@@ -13433,9 +13424,9 @@
           eM = (0, H.oq)(l),
           eP = (0, K.useCallback)(
             (e) => {
-              eO(eM, { eventSource: "mouse" }, e);
+              eO(es.nodeId, { eventSource: "mouse" }, e);
             },
-            [eM, eO]
+            [es, eO]
           ),
           eB = !f && !ek && !z && O && !N,
           eS = eB && !h,
@@ -23707,7 +23698,7 @@
             }),
             expandedName: (0, v.Em)({
               id: "dalleControls.aspectRatio.widescreenExpanded",
-              defaultMessage: "Widescreen aspect ratio",
+              defaultMessage: "Wide aspect ratio",
             }),
             icon: tn.Mi,
           },
@@ -48211,11 +48202,12 @@
             scrollToDisplayGroup: a,
           } = e,
           r = (0, D.useRef)(null),
-          s = (0, D.useRef)({}),
-          { 0: i, 1: o } = (0, D.useState)(!1);
+          s = (0, _.Z)(),
+          i = (0, D.useRef)({}),
+          { 0: o, 1: l } = (0, D.useState)(!1);
         (0, D.useEffect)(() => {
-          if (i || null == n) return;
-          let e = s.current[n.id];
+          if (o || null == n) return;
+          let e = i.current[n.id];
           if (null == e) return;
           let t = r.current;
           null != t &&
@@ -48234,16 +48226,16 @@
                     20,
                   behavior: "smooth",
                 }));
-        }, [n, i]);
-        let { 0: l, 1: c } = (0, D.useState)(!1),
-          { 0: d, 1: u } = (0, D.useState)(!1);
+        }, [n, o]);
+        let { 0: c, 1: d } = (0, D.useState)(!1),
+          { 0: u, 1: A } = (0, D.useState)(!1);
         return (
           (0, D.useEffect)(() => {
             let e = r.current,
               t = () => {
                 null != e &&
-                  (c(e.scrollLeft > 0),
-                  u(e.scrollLeft + e.clientWidth < e.scrollWidth));
+                  (d(e.scrollLeft > 0),
+                  A(e.scrollLeft + e.clientWidth < e.scrollWidth));
               };
             return (
               null == e || e.addEventListener("scroll", t),
@@ -48259,7 +48251,7 @@
             className:
               "sticky top-14 z-10 -ml-4 mb-12 w-screen bg-token-main-surface-primary py-2 text-sm md:ml-0 md:w-full md:pb-0",
             children: [
-              l &&
+              c &&
                 (0, $.jsx)("div", {
                   className:
                     "absolute left-0 top-2 hidden h-full items-end bg-gradient-to-r from-white from-50% to-transparent pr-8 dark:from-gray-800 md:block",
@@ -48288,25 +48280,31 @@
                           : "bg-token-main-surface-secondary hover:bg-gray-100 hover:text-token-text-primary dark:hover:bg-white/20 md:rounded-lg md:bg-transparent md:text-token-text-tertiary md:hover:bg-gray-50 dark:md:bg-transparent dark:md:hover:bg-gray-700"
                       ),
                       onClick: () => {
-                        o(!0),
+                        l(!0),
                           a(e),
                           setTimeout(() => {
-                            o(!1);
+                            l(!1);
                           }, 1e3),
                           C.A.logEvent(k.M.storeClickCategory, {
                             category: e.id,
                           });
                       },
                       ref: (t) => {
-                        null != t && (s.current[e.id] = t);
+                        null != t && (i.current[e.id] = t);
                       },
-                      children: e.name,
+                      children: (function () {
+                        return s.formatMessage(...arguments);
+                      })({
+                        id: "gizmo.categoryName.".concat(e.name),
+                        defaultMessage: e.name,
+                        description: "store category",
+                      }),
                     },
                     e.id
                   )
                 ),
               }),
-              d &&
+              u &&
                 (0, $.jsx)("div", {
                   className:
                     "absolute right-0 top-2 hidden h-full bg-gradient-to-l from-white from-50% to-transparent pl-8 dark:from-gray-800 md:block",
@@ -49780,6 +49778,32 @@
             return e;
         }
       }
+      (0, L.vU)({
+        Writing: {
+          id: "gizmo.categoryName.Writing",
+          defaultMessage: "Writing",
+        },
+        Productivity: {
+          id: "gizmo.categoryName.Productivity",
+          defaultMessage: "Productivity",
+        },
+        "Research & Analysis": {
+          id: "gizmo.categoryName.Research & Analysis",
+          defaultMessage: "Research & Analysis",
+        },
+        Programming: {
+          id: "gizmo.categoryName.Programming",
+          defaultMessage: "Programming",
+        },
+        Education: {
+          id: "gizmo.categoryName.Education",
+          defaultMessage: "Education",
+        },
+        Lifestyle: {
+          id: "gizmo.categoryName.Lifestyle",
+          defaultMessage: "Lifestyle",
+        },
+      });
       let eL = (0, L.vU)({
         discoveryAllResultsHeader: {
           id: "gizmo.discovery.AllResultsHeader",
@@ -67390,20 +67414,14 @@
       }
       function ex() {
         let e = (0, h.t)(),
-          t = (0, en.aF)(),
-          n = (0, u.useCallback)(() => {
+          t = (0, u.useCallback)(() => {
             v.A.logEvent(S.M.clickSidebarAccountPortalMenuItem), (0, em.MG)();
           }, []);
         return (0, L.jsxs)(L.Fragment, {
           children: [
-            (0, L.jsx)("div", {
-              className: "ml-3 mr-2 py-2 text-sm text-token-text-secondary",
-              children: null == t ? void 0 : t.email,
-            }),
-            (0, L.jsx)("hr", { className: "my-1.5" }),
             (null == e ? void 0 : e.hasPaidSubscription()) &&
               (0, L.jsxs)(G.ZP, {
-                onClick: n,
+                onClick: t,
                 children: [
                   (0, L.jsx)(H.PQ, { className: "icon-md" }),
                   (0, L.jsx)(g.Z, eh({}, ev.myPlan)),
@@ -67585,7 +67603,7 @@
                 "flex items-center justify-between gap-2 py-2 pl-3 pr-2",
               children: [
                 (0, L.jsx)("div", {
-                  className: "text-xs text-token-text-secondary",
+                  className: "text-sm text-token-text-secondary",
                   children: null == n ? void 0 : n.email,
                 }),
                 (null == e ? void 0 : e.includes(B.L0.Teams)) &&
@@ -67800,15 +67818,29 @@
         let { onClickSettings: t } = e,
           { data: n } = (0, h.rk)(),
           a = (0, h.t)(),
-          r = (0, ea.w$)();
+          r = (0, en.aF)(),
+          s = (0, ea.w$)();
         if (!a || !n) return null;
-        let s = a.isWorkspaceAccount(),
-          i = n.accountItems.length > 1;
+        let i = a.isWorkspaceAccount(),
+          o = n.accountItems.length > 1;
         return (0, L.jsxs)("nav", {
           children: [
-            i ? (0, L.jsx)(eT, {}) : s && (0, L.jsx)(eS, {}),
-            s ? (0, L.jsx)(eC, {}) : (0, L.jsx)(ex, {}),
-            !r &&
+            o
+              ? (0, L.jsx)(eT, {})
+              : i
+                ? (0, L.jsx)(eS, {})
+                : (0, L.jsxs)(L.Fragment, {
+                    children: [
+                      (0, L.jsx)("div", {
+                        className:
+                          "ml-3 mr-2 py-2 text-sm text-token-text-secondary",
+                        children: null == r ? void 0 : r.email,
+                      }),
+                      (0, L.jsx)("hr", { className: "my-1.5" }),
+                    ],
+                  }),
+            i ? (0, L.jsx)(eC, {}) : (0, L.jsx)(ex, {}),
+            !s &&
               (0, L.jsxs)(G.ZP, {
                 as: "a",
                 href: "https://help.openai.com/en/collections/3742473-chatgpt",
@@ -87363,7 +87395,7 @@
                       var i, o, l, d;
                       let e = performance.now() - this.requestStartTimeMs;
                       c.U.addAction("arkose_get_token_error", {
-                        app_release: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                        app_release: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                         error:
                           null !==
                             (i =
@@ -87390,7 +87422,7 @@
                   }),
                   this.setOnFailed(() => {
                     c.U.addAction("arkose_failed_to_get_challenge", {
-                      app_release: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                      app_release: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                       app: this.app.toString(),
                     }),
                       r(Error("Failed challenge too many times")),
@@ -87477,7 +87509,7 @@
                       ((this.setStatus(m.Error), e)
                         ? (c.U.addAction("arkose_script_load_error", {
                             app_release:
-                              "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                              "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                             app: this.app.toString(),
                           }),
                           n("Arkose script failed to load"))
@@ -87499,7 +87531,7 @@
             this.setStatus(m.Error),
               this.status === m.ScriptLoaded &&
                 (c.U.addAction("arkose_script_ready_timeout", {
-                  app_release: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                  app_release: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                   app: this.app.toString(),
                 }),
                 this._showUserError());
@@ -87619,7 +87651,7 @@
           if (null === e) {
             this._showUserError(),
               c.U.addAction("arkose_script_get_enforcement_container_error", {
-                app_release: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                app_release: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
               });
             return;
           }
@@ -88466,7 +88498,7 @@
       }
       let y = (0, r.f3)(),
         b = navigator.language,
-        j = "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+        j = "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
         w = new d({
           appName: "chatgpt",
           appVersion: j,
@@ -88849,7 +88881,7 @@
                   site: "datadoghq.com",
                   service: "chatgpt-web",
                   env: "production",
-                  version: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                  version: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                   sessionSampleRate: 1,
                   sessionReplaySampleRate: 0,
                   trackUserInteractions: !1,
@@ -90060,7 +90092,7 @@
                     if (e) {
                       let e = performance.now() - this.requestStartTimeMs;
                       s.U.addAction("turnstile_get_token_error", {
-                        app_release: "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                        app_release: "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                         error: t,
                         app: this.app.toString(),
                         durationMs: e,
@@ -90133,7 +90165,7 @@
                         (this.setStatus(l.Error), e)
                           ? (s.U.addAction("turnstile_instance_missing", {
                               app_release:
-                                "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                                "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                               app: this.app.toString(),
                             }),
                             t(new d("Turnstile instance missing")))
@@ -90154,7 +90186,7 @@
                     (this.setStatus(l.Error), e)
                       ? (s.U.addAction("turnstile_script_load_error", {
                           app_release:
-                            "c9884a73de7e6365f3daaaf9bc0cdfff63c2cc40",
+                            "0ba5f26bc98b23c749ead07bb78a1cdd28d3786e",
                           app: this.app.toString(),
                         }),
                         t(new d("Turnstile script failed to load")))
@@ -90323,4 +90355,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=_app-ed6089da80a5c945.js.map
+//# sourceMappingURL=_app-a2c68d2ff5d61474.js.map

@@ -96,13 +96,13 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-7a197ad1bc85b2ce.js",
     ],
-    "/search": ["static/chunks/pages/search-20f856cbbe3c10bd.js"],
-    "/search/evals": ["static/chunks/pages/search/evals-6382d2abc82607fe.js"],
+    "/search": ["static/chunks/pages/search-7c9eab1b8c2a7506.js"],
+    "/search/evals": ["static/chunks/pages/search/evals-edbc9b0c4f3aa482.js"],
     "/search/feedback": [
-      "static/chunks/pages/search/feedback-da380827ab3ae3eb.js",
+      "static/chunks/pages/search/feedback-b3dfc1dba7b92709.js",
     ],
     "/search/machine": [
-      "static/chunks/pages/search/machine-67000e6e5770cec6.js",
+      "static/chunks/pages/search/machine-594b7c0a0d1f3936.js",
     ],
     "/share/e/[[...shareParams]]": [
       "static/chunks/pages/share/e/[[...shareParams]]-9081fab17b526e44.js",
