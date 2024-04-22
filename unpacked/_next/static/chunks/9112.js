@@ -156,9 +156,9 @@
         B = a(13038),
         U = a(18405),
         W = a(82473),
-        I = a(25494),
-        _ = a(84692);
-      function z(e, t) {
+        _ = a(25494),
+        I = a(84692);
+      function R(e, t) {
         var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -170,16 +170,16 @@
         }
         return a;
       }
-      function R(e) {
+      function z(e) {
         for (var t = 1; t < arguments.length; t++) {
           var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? z(Object(a), !0).forEach(function (t) {
+            ? R(Object(a), !0).forEach(function (t) {
                 (0, c.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : z(Object(a)).forEach(function (t) {
+              : R(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -227,7 +227,7 @@
                   "initial" !== r &&
                   (null == r ? void 0 : r.tempId) === e &&
                   r.status === D.X.Uploading
-                    ? R(R({}, r), {}, { progress: 10, fileId: t, cdnUrl: a })
+                    ? z(z({}, r), {}, { progress: 10, fileId: t, cdnUrl: a })
                     : r
                 );
               },
@@ -236,7 +236,7 @@
                   "initial" !== a &&
                   (null == a ? void 0 : a.tempId) === e &&
                   a.status === D.X.Uploading
-                    ? R(R({}, a), {}, { progress: t })
+                    ? z(z({}, a), {}, { progress: t })
                     : a
                 );
               },
@@ -247,13 +247,13 @@
                         e.status === d.KF.Success &&
                           (m(t.fileId), c(e.download_url));
                       }),
-                      R(
-                        R({}, t),
+                      z(
+                        z({}, t),
                         {},
                         {
                           status: D.X.Ready,
                           progress: 100,
-                          fileSpec: R(
+                          fileSpec: z(
                             {
                               name: t.file.name,
                               id: t.fileId,
@@ -283,7 +283,7 @@
         let k = (function (e) {
             let t = (0, W.NL)(),
               a = (0, h.Z)();
-            return (0, I.D)({
+            return (0, _.D)({
               mutationFn: (t) => {
                 let { name: r, profilePictureId: s, profilePictureUrl: n } = t;
                 return B.Z.patchWorkspace({
@@ -293,7 +293,7 @@
                   profile_picture_url: n,
                 }).catch((e) => {
                   C.m.danger(
-                    a.formatMessage(K.saveError, { error: e.message })
+                    a.formatMessage(G.saveError, { error: e.message })
                   );
                 });
               },
@@ -316,7 +316,7 @@
               k.mutate({ name: s, profilePictureId: p, profilePictureUrl: l }),
                 U.vm.closeModal(U.B.WorkspaceAppearance);
             },
-            title: x.formatMessage(K.modalSubmit),
+            title: x.formatMessage(G.modalSubmit),
           }),
           N = (0, w.jsx)(Z.ZP.Button, {
             onClick: () => {
@@ -325,12 +325,12 @@
                 c(r.profilePictureUrl),
                 U.vm.closeModal(U.B.WorkspaceAppearance);
             },
-            title: x.formatMessage(K.modalCancel),
+            title: x.formatMessage(G.modalCancel),
           }),
-          { 0: z, 1: T } = (0, j.useState)(null);
+          { 0: R, 1: T } = (0, j.useState)(null);
         return (
           (0, j.useEffect)(() => {
-            if ("initial" !== g && void 0 != g && null == z) {
+            if ("initial" !== g && void 0 != g && null == R) {
               let e = new FileReader();
               e.addEventListener("load", () => {
                 let t = e.result;
@@ -338,7 +338,7 @@
               }),
                 e.readAsDataURL(g.file);
             }
-          }, [g, z]),
+          }, [g, R]),
           (0, w.jsxs)(E.Z, {
             isOpen: f,
             onClose: () => U.vm.closeModal(U.B.WorkspaceAppearance),
@@ -346,7 +346,7 @@
             primaryButton: P,
             secondaryButton: N,
             type: "danger",
-            title: x.formatMessage(K.modalTitle),
+            title: x.formatMessage(G.modalTitle),
             children: [
               (0, w.jsxs)("div", {
                 className: "mb-4 flex-wrap",
@@ -354,13 +354,13 @@
                   (0, w.jsx)("label", {
                     htmlFor: "workspace-name",
                     className: "block pb-1 font-medium text-token-text-primary",
-                    children: (0, w.jsx)(_.Z, R({}, K.workspaceName)),
+                    children: (0, w.jsx)(I.Z, z({}, G.workspaceName)),
                   }),
                   (0, w.jsx)("p", {
                     className: "font-base text-sm text-token-text-secondary",
                     children: (0, w.jsx)(
-                      _.Z,
-                      R({}, K.workspaceNameDescription)
+                      I.Z,
+                      z({}, G.workspaceNameDescription)
                     ),
                   }),
                 ],
@@ -381,11 +381,11 @@
                   (0, w.jsx)("label", {
                     htmlFor: "workspace-avatar",
                     className: "block pb-1 font-medium text-token-text-primary",
-                    children: (0, w.jsx)(_.Z, R({}, K.workspaceAvatar)),
+                    children: (0, w.jsx)(I.Z, z({}, G.workspaceAvatar)),
                   }),
                   (0, w.jsx)("p", {
                     className: "font-base text-sm text-token-text-secondary",
-                    children: x.formatMessage(K.workspaceAvatarDescription, {
+                    children: x.formatMessage(G.workspaceAvatarDescription, {
                       size: 2 * u.EF.workspaceAvatarPreview,
                     }),
                   }),
@@ -412,7 +412,7 @@
                           }),
                         ],
                       })
-                    : void 0 != g && "initial" !== g && z
+                    : void 0 != g && "initial" !== g && R
                       ? (0, w.jsx)("div", {
                           className: "flex flex-col justify-center text-center",
                           children: (0, w.jsxs)("div", {
@@ -440,7 +440,7 @@
                           mimeTypes: b.KL,
                         }),
                   (0, w.jsx)(F.Z, {
-                    children: x.formatMessage(K.propagationWarning),
+                    children: x.formatMessage(G.propagationWarning),
                   }),
                 ],
               }),
@@ -457,7 +457,7 @@
           children: (0, w.jsx)(p.Ls, { className: "h-3 w-3" }),
         });
       }
-      let K = (0, y.vU)({
+      let G = (0, y.vU)({
         modalTitle: {
           id: "workspaceAppearanceModal.title",
           defaultMessage: "Workspace appearance",
@@ -497,7 +497,7 @@
           defaultMessage: "Failed to save workspace appearance",
         },
       });
-      var G = a(68832),
+      var K = a(68832),
         X = a(22933),
         q = a(24668),
         Q = a(78e3),
@@ -576,7 +576,7 @@
                       (0, w.jsx)("p", {
                         className: "text-lg font-semibold",
                         children: (0, w.jsx)(
-                          _.Z,
+                          I.Z,
                           es({}, ei.workspaceWillBeDeactivated)
                         ),
                       }),
@@ -586,7 +586,7 @@
                     (0, w.jsx)("p", {
                       className: "md:ml-8",
                       children: (0, w.jsx)(
-                        _.Z,
+                        I.Z,
                         es(
                           es({}, ei.retainAccessUntil),
                           {},
@@ -601,7 +601,7 @@
                   color: "primary",
                   onClick: l,
                   loading: n,
-                  children: (0, w.jsx)(_.Z, es({}, ei.reactivateBtn)),
+                  children: (0, w.jsx)(I.Z, es({}, ei.reactivateBtn)),
                 }),
             ],
           }),
@@ -661,8 +661,8 @@
         let { route: t, icon: a, name: r, upsellEnterprise: s = !1 } = e,
           n = (0, H.useRouter)();
         return s
-          ? (0, w.jsx)(G.u, {
-              label: (0, w.jsx)(_.Z, el({}, ej.availableForEnterprise)),
+          ? (0, w.jsx)(K.u, {
+              label: (0, w.jsx)(I.Z, el({}, ej.availableForEnterprise)),
               side: "right",
               children: (0, w.jsxs)(X.ZB, {
                 $as: "button",
@@ -676,7 +676,7 @@
                   }),
                   (0, w.jsx)("span", {
                     className: "text-token-text-secondary",
-                    children: (0, w.jsx)(_.Z, el({}, r)),
+                    children: (0, w.jsx)(I.Z, el({}, r)),
                   }),
                 ],
               }),
@@ -690,7 +690,7 @@
               onClick: (e) => {
                 n.push(t), e.stopPropagation();
               },
-              children: [a, (0, w.jsx)(_.Z, el({}, r))],
+              children: [a, (0, w.jsx)(I.Z, el({}, r))],
             });
       }
       function ed(e) {
@@ -710,7 +710,7 @@
                 onClick: n,
                 children: [
                   (0, w.jsx)(V.Ao2, { className: "icon-sm" }),
-                  (0, w.jsx)(_.Z, el({}, ej.backToChat)),
+                  (0, w.jsx)(I.Z, el({}, ej.backToChat)),
                 ],
               }),
             }),
@@ -757,17 +757,14 @@
                   icon: (0, w.jsx)(p.yj, { className: "icon-sm" }),
                   name: ej.membersPageTitle,
                 }),
-                a &&
+                i &&
+                  a &&
                   o &&
                   (0, w.jsx)(ec, {
                     route: "/admin/groups",
                     icon: (0, w.jsx)(p.ww, { className: "icon-sm" }),
                     upsellEnterprise: !i,
-                    name: {
-                      id: "adminPage.groupsSidebarItem",
-                      defaultMessage: "Groups",
-                      description: "Item for managing user groups in workspace",
-                    },
+                    name: (0, y.Em)({ id: "aecR1i", defaultMessage: "Groups" }),
                   }),
                 r &&
                   (0, w.jsx)(ec, {
@@ -790,6 +787,14 @@
                 !i &&
                   (0, w.jsx)("span", {
                     className: "mx-3 border-t border-y-token-border-medium",
+                  }),
+                !i &&
+                  o &&
+                  (0, w.jsx)(ec, {
+                    route: "/admin/groups",
+                    icon: (0, w.jsx)(p.ww, { className: "icon-sm" }),
+                    upsellEnterprise: !i,
+                    name: (0, y.Em)({ id: "aecR1i", defaultMessage: "Groups" }),
                   }),
                 a &&
                   (0, w.jsx)(ec, {
@@ -896,7 +901,7 @@
               !s &&
               (0, w.jsx)("div", {
                 className: "flex min-h-[80vh] items-center justify-center",
-                children: (0, w.jsx)(_.Z, el({}, ej.workspaceNotFound)),
+                children: (0, w.jsx)(I.Z, el({}, ej.workspaceNotFound)),
               }),
             !n && s && t,
           ],
@@ -1002,4 +1007,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9112-30537590918ecbd2.js.map
+//# sourceMappingURL=9112-1980f9b39d8fd726.js.map

@@ -6,247 +6,249 @@
       r.r(t),
         r.d(t, {
           __N_SSP: function () {
-            return N;
+            return G;
           },
           default: function () {
-            return I;
+            return S;
           },
         });
-      var n = r(39827),
-        i = r(24668),
-        s = r(84126),
-        c = r(12366),
-        l = r(70079),
-        u = r(84692),
-        o = r(68498),
-        a = r(7557),
-        d = r(42005),
-        f = r(81595),
-        m = r(89691),
-        j = r(7180),
-        x = r(35250);
-      function h(e, t) {
+      var s,
+        n,
+        i = r(39827),
+        l = r(73017),
+        c = r(24668),
+        o = r(84126),
+        a = r(10518),
+        d = r(12366),
+        u = r(70079),
+        x = r(9063),
+        h = r(84692),
+        f = r(68498),
+        j = r(21389),
+        m = r(7557),
+        p = r(42005),
+        b = r(89691),
+        v = r(81595),
+        g = r(35250);
+      function y(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
+          var s = Object.getOwnPropertySymbols(e);
           t &&
-            (n = n.filter(function (t) {
+            (s = s.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            r.push.apply(r, s);
         }
         return r;
       }
-      function p() {
-        var e;
-        let t = (0, i.t)(),
-          r = (0, c.useRouter)(),
-          { data: n, isLoading: l } = (0, m.Yp)();
-        if (
-          ((0, s.yx)({
-            resetThreadAction: () => {
-              r.push("/");
-            },
-          }),
-          null == t)
-        )
-          return null;
-        let u =
-          null !==
-            (e =
-              null == n
-                ? void 0
-                : n.cuts.map((e) => ({
-                    cutId: e.info.id,
-                    title: e.info.title,
-                    items: e.list.items,
-                    cursor: e.list.cursor,
-                  }))) && void 0 !== e
-            ? e
-            : [];
-        return (
-          (u = u.filter((e) => "mine" === e.cutId)).some(
-            (e) => "mine" === e.cutId
-          ) ||
-            u.unshift({
-              cutId: "mine",
-              title: "My GPTs",
-              items: [],
-              cursor: null,
-            }),
-          (0, x.jsx)("div", {
-            className: "mx-auto max-w-3xl px-4 py-12",
-            children: l
-              ? (0, x.jsx)("div", {
-                  className: "flex justify-center",
-                  children: (0, x.jsx)(d.Z, {}),
-                })
-              : u.map((e) =>
-                  (0, x.jsx)(
-                    v,
-                    {
-                      cutId: e.cutId,
-                      title: e.title,
-                      items: e.items,
-                      cursor: e.cursor,
-                      createRowType:
-                        "mine" == e.cutId
-                          ? t.canCreateGizmos()
-                            ? f.a7.Enabled
-                            : f.a7.ComingSoon
-                          : void 0,
-                      canRemoveRecent: "recent" === e.cutId,
-                    },
-                    e.cutId
-                  )
-                ),
-          })
+      let w = j.Z.div(
+          s ||
+            (s = (0, l.Z)([
+              "border-b-2 border-b-black pb-3 dark:border-b-white",
+            ]))
+        ),
+        N = j.Z.div(
+          n ||
+            (n = (0, l.Z)([
+              "cursor-pointer border-b-2 border-b-transparent pb-3 text-token-text-secondary",
+            ]))
         );
-      }
-      function v(e) {
-        let {
-          cutId: t,
-          title: r,
-          items: n,
-          cursor: i,
-          canRemoveRecent: s,
-          createRowType: c,
-        } = e;
-        return (0, x.jsxs)(j.b1, {
-          title: r,
+      function O() {
+        let e = (0, c.t)(),
+          t = (0, d.useRouter)(),
+          r =
+            (0, a.sB)(a.tz.UpdatedGizmoShare) &&
+            (null == e ? void 0 : e.isWorkspaceAccount()),
+          { 0: s, 1: n } = (0, u.useState)("mine");
+        (0, o.yx)({
+          resetThreadAction: () => {
+            t.push("/");
+          },
+        });
+        let i = (0, x.Z)();
+        if (null == e) return null;
+        let l = (0, g.jsx)(h.Z, {
+            id: "1pqG1A",
+            defaultMessage: "Created by me",
+          }),
+          f = (0, g.jsx)(h.Z, {
+            id: "2oQjZs",
+            defaultMessage: "Shared with me",
+          });
+        return (0, g.jsxs)("div", {
+          className: "mx-auto max-w-3xl px-4 py-12",
           children: [
-            null != c && (0, x.jsx)(f.at, { type: c }),
-            n.map((e) =>
-              (0, x.jsx)(
-                f.r1,
-                { gizmoResource: e.resource, canRemoveRecent: s },
-                e.resource.gizmo.id
-              )
-            ),
-            null != i &&
-              (0, x.jsx)(g, {
-                cutId: t,
-                cursor: i,
-                fetchOnMount: 0 === n.length,
+            (0, g.jsx)("h1", {
+              className: "mb-8 text-xl font-medium md:text-2xl",
+              children: (0, g.jsx)(h.Z, {
+                id: "dgQTc/",
+                defaultMessage: "My GPTs",
               }),
-          ],
-        });
-      }
-      function g(e) {
-        let { cutId: t, cursor: r, fetchOnMount: i } = e,
-          { 0: s, 1: c } = (0, l.useState)(i),
-          {
-            data: o,
-            hasNextPage: d,
-            fetchNextPage: j,
-            isLoading: p,
-          } = (0, m.Fi)({ cutId: t, limit: 8, cursor: r, enabled: s });
-        return (0, x.jsxs)("div", {
-          children: [
-            (0, x.jsx)("div", {
-              children:
-                null == o
-                  ? void 0
-                  : o.pages.flatMap((e) =>
-                      e.list.items.map((e) => {
-                        let { resource: t } = e;
-                        return (0, x.jsx)(
-                          f.r1,
-                          { gizmoResource: t },
-                          t.gizmo.id
-                        );
-                      })
-                    ),
             }),
-            !s || d || p
-              ? (0, x.jsx)(a.z, {
-                  color: "neutral",
-                  onClick: () => {
-                    s ? j() : c(!0);
-                  },
-                  loading: p,
-                  className: "w-full",
-                  children: (0, x.jsx)(
-                    u.Z,
-                    (function (e) {
-                      for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {};
-                        t % 2
-                          ? h(Object(r), !0).forEach(function (t) {
-                              (0, n.Z)(e, t, r[t]);
-                            })
-                          : Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(
-                                e,
-                                Object.getOwnPropertyDescriptors(r)
-                              )
-                            : h(Object(r)).forEach(function (t) {
-                                Object.defineProperty(
-                                  e,
-                                  t,
-                                  Object.getOwnPropertyDescriptor(r, t)
-                                );
-                              });
-                      }
-                      return e;
-                    })({}, b.discoveryLoadMore)
-                  ),
-                })
-              : null,
+            r &&
+              ("mine" === s
+                ? (0, g.jsxs)("div", {
+                    className: "mb-4 flex flex-row space-x-4",
+                    children: [
+                      (0, g.jsx)(w, { children: l }),
+                      (0, g.jsx)(N, {
+                        onClick: () => n("shared_with_me"),
+                        children: f,
+                      }),
+                    ],
+                  })
+                : (0, g.jsxs)("div", {
+                    className: "mb-4 flex flex-row space-x-4",
+                    children: [
+                      (0, g.jsx)(N, { onClick: () => n("mine"), children: l }),
+                      (0, g.jsx)(w, { children: f }),
+                    ],
+                  })),
+            "mine" === s && (0, g.jsx)(v.at, { type: v.a7.Enabled }),
+            (0, g.jsx)(
+              P,
+              {
+                emptyMessage:
+                  "shared_with_me" === s
+                    ? i.formatMessage({
+                        id: "zG4NW2",
+                        defaultMessage: "No GPTs have been shared with you yet",
+                      })
+                    : void 0,
+                cutId: s,
+              },
+              s
+            ),
           ],
         });
       }
-      let b = (0, o.vU)({
+      function P(e) {
+        var t;
+        let { cutId: r, emptyMessage: s } = e,
+          { 0: n, 1: l } = (0, u.useState)(!0),
+          {
+            data: c,
+            hasNextPage: o,
+            fetchNextPage: a,
+            isLoading: d,
+          } = (0, b.Fi)({ cutId: r, limit: 8, enabled: n });
+        return d && (null == c || 0 === c.pages.length)
+          ? (0, g.jsx)("div", {
+              className: "my-8 flex justify-center",
+              children: (0, g.jsx)(p.Z, {}),
+            })
+          : d ||
+              (null == c || null === (t = c.pages) || void 0 === t
+                ? void 0
+                : t[0].list.items.length) !== 0
+            ? (0, g.jsxs)("div", {
+                children: [
+                  (0, g.jsx)("div", {
+                    children:
+                      null == c
+                        ? void 0
+                        : c.pages.flatMap((e) =>
+                            e.list.items.map((e) => {
+                              let { resource: t } = e;
+                              return (0, g.jsx)(
+                                v.r1,
+                                { gizmoResource: t },
+                                t.gizmo.id
+                              );
+                            })
+                          ),
+                  }),
+                  !n || o || d
+                    ? (0, g.jsx)(m.z, {
+                        color: "neutral",
+                        onClick: () => {
+                          n ? a() : l(!0);
+                        },
+                        loading: d,
+                        className: "w-full",
+                        children: (0, g.jsx)(
+                          h.Z,
+                          (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                              var r = null != arguments[t] ? arguments[t] : {};
+                              t % 2
+                                ? y(Object(r), !0).forEach(function (t) {
+                                    (0, i.Z)(e, t, r[t]);
+                                  })
+                                : Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(
+                                      e,
+                                      Object.getOwnPropertyDescriptors(r)
+                                    )
+                                  : y(Object(r)).forEach(function (t) {
+                                      Object.defineProperty(
+                                        e,
+                                        t,
+                                        Object.getOwnPropertyDescriptor(r, t)
+                                      );
+                                    });
+                            }
+                            return e;
+                          })({}, Z.discoveryLoadMore)
+                        ),
+                      })
+                    : null,
+                ],
+              })
+            : (0, g.jsx)("span", { children: s });
+      }
+      let Z = (0, f.vU)({
         discoveryLoadMore: {
           id: "gizmo.mygpts.loadMore",
           defaultMessage: "Load more",
         },
       });
-      var y = r(55289),
-        O = r(93496);
-      function w(e) {
+      var _ = r(55289),
+        k = r(93496);
+      function M(e) {
         let { children: t } = e,
-          r = (0, i.t)();
+          r = (0, c.t)();
         return null == r
           ? null
           : r.canInteractWithGizmos()
-            ? (0, x.jsxs)("div", {
+            ? (0, g.jsxs)("div", {
                 children: [
                   t,
-                  (0, x.jsx)("div", {
+                  (0, g.jsx)("div", {
                     className: "fixed bottom-3 right-3",
-                    children: (0, x.jsx)(y.Z, {}),
+                    children: (0, g.jsx)(_.Z, {}),
                   }),
                 ],
               })
             : r.hasPaidSubscription()
               ? null
-              : (0, x.jsx)(P, {
-                  button: (0, x.jsx)(a.z, {
-                    onClick: () => (0, O.MG)(),
+              : (0, g.jsx)(z, {
+                  button: (0, g.jsx)(m.z, {
+                    onClick: () => (0, k.MG)(),
                     children: "Upgrade to ChatGPT Plus",
                   }),
                   children: "GPTs are gradually rolling out to Plus users",
                 });
       }
-      function P(e) {
+      function z(e) {
         let { children: t, button: r } = e;
-        return (0, x.jsx)("div", {
+        return (0, g.jsx)("div", {
           className: "flex h-full w-full items-center justify-center",
-          children: (0, x.jsxs)("div", {
+          children: (0, g.jsxs)("div", {
             className: "flex max-w-sm flex-col gap-4 p-6 text-center",
             children: [
-              (0, x.jsx)("h2", { children: t }),
-              (0, x.jsx)("div", { className: "m-auto", children: r }),
+              (0, g.jsx)("h2", { children: t }),
+              (0, g.jsx)("div", { className: "m-auto", children: r }),
             ],
           }),
         });
       }
-      var _ = r(90775),
-        N = !0;
-      function I() {
-        return (0, x.jsx)(_.Z, {
-          children: (0, x.jsx)(w, { children: (0, x.jsx)(p, {}) }),
+      var C = r(90775),
+        G = !0;
+      function S() {
+        return (0, g.jsx)(C.Z, {
+          children: (0, g.jsx)(M, { children: (0, g.jsx)(O, {}) }),
         });
       }
     },
@@ -254,31 +256,31 @@
       "use strict";
       r.d(t, {
         Z: function () {
-          return a;
+          return d;
         },
       });
-      var n = r(7679),
-        i = r(24605),
-        s = r(95482),
-        c = r(12366),
-        l = r(81056),
-        u = r(56532),
-        o = r(35250);
-      function a(e) {
+      var s = r(7679),
+        n = r(24605),
+        i = r(95482),
+        l = r(12366),
+        c = r(81056),
+        o = r(56532),
+        a = r(35250);
+      function d(e) {
         let { children: t } = e,
-          r = (0, c.useRouter)();
-        return (0, o.jsx)(i.Z, {
+          r = (0, l.useRouter)();
+        return (0, a.jsx)(n.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, o.jsxs)(s.ZP, {
+          sidebar: (0, a.jsxs)(i.ZP, {
             onNewThread: () => {
               r.push("/");
             },
             children: [
-              (0, o.jsx)(u.Dy, {}),
-              (0, o.jsx)(n.Z, { activeId: void 0 }),
+              (0, a.jsx)(o.Dy, {}),
+              (0, a.jsx)(s.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, o.jsx)(l.Z, { children: t }),
+          children: (0, a.jsx)(c.Z, { children: t }),
         });
       }
     },
@@ -298,4 +300,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=mine-dcccd1718c2aad32.js.map
+//# sourceMappingURL=mine-6a18b35f08b6f9f7.js.map

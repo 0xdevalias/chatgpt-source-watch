@@ -9,32 +9,33 @@
             return D;
           },
           default: function () {
-            return I;
+            return L;
           },
         });
       var i = s(39827),
         n = s(9112),
         r = s(25660),
-        a = s(68832),
-        l = s(47527),
+        a = s(85641),
+        l = s(68832),
         o = s(37379),
         d = s(13038),
         c = s(24668),
         u = s(82473),
         p = s(25494),
-        g = s(19841),
-        f = s(80483),
-        h = s.n(f),
-        O = s(32004),
-        w = s(70671),
-        b = s(94968),
-        x = s(60734),
-        y = s(84981),
+        g = s(10518),
+        f = s(19841),
+        O = s(80483),
+        h = s.n(O),
+        w = s(84692),
+        b = s(9063),
+        x = s(68498),
+        y = s(60734),
+        m = s(84981),
         T = s(65455),
-        m = s(41594),
-        j = s(89777),
+        S = s(89777),
+        j = s(41594),
         k = s(35250);
-      function S(e, t) {
+      function v(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -50,12 +51,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var s = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? S(Object(s), !0).forEach(function (t) {
+            ? v(Object(s), !0).forEach(function (t) {
                 (0, i.Z)(e, t, s[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
-              : S(Object(s)).forEach(function (t) {
+              : v(Object(s)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -65,12 +66,12 @@
         }
         return e;
       }
-      function v() {
-        return (0, k.jsx)(l.aU, {
+      function Z() {
+        return (0, k.jsx)(a.aU, {
           className: "icon-sm ml-1 text-token-text-tertiary",
         });
       }
-      function Z(e) {
+      function N(e) {
         let {
           title: t,
           description: s,
@@ -78,42 +79,42 @@
           upsellEnterprise: n = !1,
           className: r = "",
         } = e;
-        return (0, k.jsx)(a.E, {
-          label: (0, k.jsx)(O.Z, P({}, C.enterpriseRequiredMessage)),
+        return (0, k.jsx)(l.E, {
+          label: (0, k.jsx)(w.Z, P({}, E.enterpriseRequiredMessage)),
           side: "top",
           sideOffset: 4,
           disabled: !n,
           className: "max-w-5xl",
-          children: (0, k.jsxs)(m.i9, {
-            className: (0, g.default)(
+          children: (0, k.jsxs)(j.i9, {
+            className: (0, f.default)(
               n && "text-token-text-tertiary",
               "max-w-4xl",
               r
             ),
             children: [
-              (0, k.jsxs)(m.A4, {
+              (0, k.jsxs)(j.A4, {
                 className: "flex items-center gap-3",
                 children: [
-                  (0, k.jsx)(O.Z, P({}, t)),
+                  (0, k.jsx)(w.Z, P({}, t)),
                   n &&
                     (0, k.jsx)("span", {
                       className:
                         "rounded-xl bg-token-main-surface-tertiary px-2 pb-0.5 text-sm",
-                      children: (0, k.jsx)(O.Z, P({}, C.enterpriseUpsellPill)),
+                      children: (0, k.jsx)(w.Z, P({}, E.enterpriseUpsellPill)),
                     }),
                 ],
               }),
               s &&
-                (0, k.jsx)(m.Li, {
+                (0, k.jsx)(j.Li, {
                   className: "py-2 text-token-text-secondary",
-                  children: (0, k.jsx)(O.Z, P({}, s)),
+                  children: (0, k.jsx)(w.Z, P({}, s)),
                 }),
               i,
             ],
           }),
         });
       }
-      function N(e) {
+      function M(e) {
         var t;
         let {
             workspaceId: s,
@@ -123,7 +124,7 @@
             values: a,
             disabled: l = !1,
           } = e,
-          o = (0, w.Z)(),
+          o = (0, b.Z)(),
           c = (0, u.NL)(),
           { variables: g, mutate: f } = (0, p.D)({
             mutationFn: (e) => {
@@ -131,19 +132,20 @@
               return d.Z.setWorkspaceShareSetting(s, t, i);
             },
             onSettled: () => {
-              c.invalidateQueries({ queryKey: ["workspace-settings"] });
+              c.invalidateQueries({ queryKey: ["workspace-settings"] }),
+                c.invalidateQueries({ queryKey: ["workspace"] });
             },
             onError: () => {
-              T.m.danger(o.formatMessage(C.featureSettingsUpdateFailed));
+              T.m.danger(o.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
-        return (0, k.jsxs)(m.vi, {
+        return (0, k.jsxs)(j.vi, {
           children: [
             (0, k.jsx)("p", {
               className: "text-md inline-flex items-center",
-              children: (0, k.jsx)(O.Z, P({}, i)),
+              children: (0, k.jsx)(w.Z, P({}, i)),
             }),
-            (0, k.jsxs)(x.Z.Root, {
+            (0, k.jsxs)(y.Z.Root, {
               defaultValue:
                 null !== (t = null == g ? void 0 : g.value) && void 0 !== t
                   ? t
@@ -153,22 +155,22 @@
               },
               disabled: l,
               children: [
-                (0, k.jsxs)(x.Z.Trigger, {
+                (0, k.jsxs)(y.Z.Trigger, {
                   className: "text-md focus-visible:border-none",
                   children: [
-                    (0, k.jsx)(x.Z.Value, {}),
-                    (0, k.jsx)(x.Z.Icon, {}),
+                    (0, k.jsx)(y.Z.Value, {}),
+                    (0, k.jsx)(y.Z.Icon, {}),
                   ],
                 }),
-                (0, k.jsx)(x.Z.Portal, {
-                  children: (0, k.jsx)(x.Z.Content, {
+                (0, k.jsx)(y.Z.Portal, {
+                  children: (0, k.jsx)(y.Z.Content, {
                     children: a.map((e, t) =>
                       (0, k.jsx)(
-                        x.Z.Item,
+                        y.Z.Item,
                         {
                           className: "text-md",
                           value: e.value,
-                          children: (0, k.jsx)(O.Z, P({}, e.display)),
+                          children: (0, k.jsx)(w.Z, P({}, e.display)),
                         },
                         t
                       )
@@ -180,10 +182,10 @@
           ],
         });
       }
-      function M(e) {
+      function _(e) {
         var t;
         let { workspaceId: s, value: i, upsellEnterprise: n = !1 } = e,
-          a = (0, w.Z)(),
+          a = (0, b.Z)(),
           l = (0, u.NL)(),
           { variables: o, mutate: c } = (0, p.D)({
             mutationFn: (e) => {
@@ -194,42 +196,42 @@
               l.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: () => {
-              T.m.danger(a.formatMessage(C.featureSettingsUpdateFailed));
+              T.m.danger(a.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
-        return (0, k.jsxs)(x.Z.Root, {
+        return (0, k.jsxs)(y.Z.Root, {
           defaultValue:
             null !== (t = null == o ? void 0 : o.value) && void 0 !== t ? t : i,
           onValueChange: (e) => {
             c({ value: e });
           },
           children: [
-            (0, k.jsxs)(x.Z.Trigger, {
+            (0, k.jsxs)(y.Z.Trigger, {
               className:
                 "border border-token-border-light text-base focus-visible:border-token-border-light",
-              children: [(0, k.jsx)(x.Z.Value, {}), (0, k.jsx)(x.Z.Icon, {})],
+              children: [(0, k.jsx)(y.Z.Value, {}), (0, k.jsx)(y.Z.Icon, {})],
             }),
-            (0, k.jsx)(x.Z.Portal, {
-              children: (0, k.jsxs)(x.Z.Content, {
+            (0, k.jsx)(y.Z.Portal, {
+              children: (0, k.jsxs)(y.Z.Content, {
                 children: [
-                  (0, k.jsx)(x.Z.Item, {
+                  (0, k.jsx)(y.Z.Item, {
                     className: "text-base",
                     value: r.NN.ALLOW_ALL,
-                    children: (0, k.jsx)(O.Z, P({}, C.allowAllOption)),
+                    children: (0, k.jsx)(w.Z, P({}, E.allowAllOption)),
                   }),
                   !n &&
-                    (0, k.jsx)(x.Z.Item, {
+                    (0, k.jsx)(y.Z.Item, {
                       className: "text-base",
                       value: r.NN.ALLOW_SPECIFIC,
                       children: (0, k.jsx)(
-                        O.Z,
-                        P({}, C.ownerApprovedOnlyOption)
+                        w.Z,
+                        P({}, E.ownerApprovedOnlyOption)
                       ),
                     }),
-                  (0, k.jsx)(x.Z.Item, {
+                  (0, k.jsx)(y.Z.Item, {
                     className: "text-base",
                     value: r.NN.ALLOW_NONE,
-                    children: (0, k.jsx)(O.Z, P({}, C.dontAllowOption)),
+                    children: (0, k.jsx)(w.Z, P({}, E.dontAllowOption)),
                   }),
                 ],
               }),
@@ -237,19 +239,19 @@
           ],
         });
       }
-      function _(e) {
+      function A(e) {
         var t;
         let {
             workspaceId: s,
             label: i,
             feature: n,
             value: r,
-            tooltip: l,
+            tooltip: a,
             disabled: o = !1,
           } = e,
-          c = (0, w.Z)(),
+          c = (0, b.Z)(),
           g = (0, u.NL)(),
-          { variables: f, mutate: h } = (0, p.D)({
+          { variables: f, mutate: O } = (0, p.D)({
             mutationFn: (e) => {
               let { feature: t, enabled: i } = e;
               return d.Z.setWorkspaceBetaFeature(s, t, i);
@@ -258,13 +260,13 @@
               g.invalidateQueries({ queryKey: ["workspace-settings"] });
             },
             onError: () => {
-              T.m.danger(c.formatMessage(C.featureSettingsUpdateFailed));
+              T.m.danger(c.formatMessage(E.featureSettingsUpdateFailed));
             },
           });
-        return (0, k.jsxs)(m.vi, {
+        return (0, k.jsxs)(j.vi, {
           className: "justify-start py-6",
           children: [
-            (0, k.jsx)(y.wy, {
+            (0, k.jsx)(m.wy, {
               label: "",
               disabled: o,
               enabled:
@@ -272,140 +274,144 @@
                   ? t
                   : r,
               onChange: (e) => {
-                h({ feature: n, enabled: e });
+                O({ feature: n, enabled: e });
               },
             }),
             (0, k.jsxs)("p", {
               className: "text-md inline-flex items-center",
               children: [
-                (0, k.jsx)(O.Z, P({}, i)),
-                l &&
-                  (0, k.jsx)(a.u, {
+                (0, k.jsx)(w.Z, P({}, i)),
+                a &&
+                  (0, k.jsx)(l.u, {
                     sideOffset: 4,
                     interactive: !0,
                     delayDuration: 0,
-                    label: (0, k.jsx)(O.Z, P({}, l)),
+                    label: (0, k.jsx)(w.Z, P({}, a)),
                     side: "top",
-                    children: (0, k.jsx)(v, {}),
+                    children: (0, k.jsx)(Z, {}),
                   }),
               ],
             }),
           ],
         });
       }
-      function A(e) {
+      function G(e) {
         let { workspaceId: t, data: s } = e,
-          i = (0, c.t)();
+          i = (0, c.t)(),
+          { value: n } = (0, g.sB)(g.tz.UpdatedGizmoShare);
         if (null == i) return null;
-        let n = i.isTeam(),
-          a = (0, k.jsx)(Z, {
-            title: C.thirdPartyGPTsTitle,
-            description: C.thirdPartyGPTsDescription,
+        let a = i.isTeam(),
+          l = (0, k.jsx)(N, {
+            title: E.thirdPartyGPTsTitle,
+            description: E.thirdPartyGPTsDescription,
             className: "border-b border-token-border-light pb-4",
             children: (0, k.jsx)("div", {
-              children: (0, k.jsx)(M, {
+              children: (0, k.jsx)(_, {
                 workspaceId: t,
                 value: s.allow_third_party_gpts,
-                upsellEnterprise: n,
+                upsellEnterprise: a,
               }),
             }),
           }),
-          l = (0, k.jsx)(Z, {
-            title: C.sidebarTitle,
-            children: (0, k.jsx)(j.Z, {
+          o = (0, k.jsx)(N, {
+            title: E.sidebarTitle,
+            children: (0, k.jsx)(S.Z, {
               account: i,
               showThirdParty:
-                !n && s.allow_third_party_gpts == r.NN.ALLOW_SPECIFIC,
+                !a && s.allow_third_party_gpts == r.NN.ALLOW_SPECIFIC,
             }),
           });
-        return (0, k.jsxs)(m.$V, {
+        return (0, k.jsxs)(j.$V, {
           className: "max-w-5xl",
           children: [
-            n && a,
-            n && i.isOwnerOfAccount() && l,
-            n && (0, k.jsx)(m.W8, {}),
-            (0, k.jsx)(Z, {
-              title: C.sharingSettingsTitle,
-              upsellEnterprise: n,
-              children: (0, k.jsx)(m.qQ, {
-                children: (0, k.jsx)(N, {
+            a && l,
+            a && i.isOwnerOfAccount() && o,
+            a && (0, k.jsx)(j.W8, {}),
+            (0, k.jsx)(N, {
+              title: E.sharingSettingsTitle,
+              upsellEnterprise: a,
+              children: (0, k.jsx)(j.qQ, {
+                children: (0, k.jsx)(M, {
                   workspaceId: t,
-                  label: C.gptSharingTitle,
-                  disabled: n,
+                  label: E.gptSharingTitle,
+                  disabled: a,
                   setting: r.bb.GPT_SHARE_SETTINGS,
                   defaultValue: s.share_settings.gpt_share_setting,
                   values: [
-                    { display: C.anyOneSelect, value: r.Gz.ANYONE },
+                    { display: E.anyOneSelect, value: r.Gz.ANYONE },
                     {
-                      display: C.workspaceMembersOnlySelect,
+                      display: E.workspaceMembersOnlySelect,
                       value: r.Gz.WORKSPACE_ONLY,
                     },
-                    { display: C.noOneSelect, value: r.Gz.NO_ONE },
+                    {
+                      display: n ? E.inviteOnlySelect : E.noOneSelect,
+                      value: r.Gz.NO_ONE,
+                    },
                   ],
                 }),
               }),
             }),
-            (0, k.jsx)(Z, {
-              title: C.workspaceGPTsTitle,
-              description: C.workspaceGPTsDescription,
-              upsellEnterprise: n,
-              children: (0, k.jsxs)(m.qQ, {
+            (0, k.jsx)(N, {
+              title: E.workspaceGPTsTitle,
+              description: E.workspaceGPTsDescription,
+              upsellEnterprise: a,
+              children: (0, k.jsxs)(j.qQ, {
                 children: [
-                  (0, k.jsx)(_, {
-                    label: C.browseOptionTitle,
+                  (0, k.jsx)(A, {
+                    label: E.browseOptionTitle,
                     feature: r.Nh.BROWSING,
                     value: s.beta_settings.browsing,
                     workspaceId: t,
-                    tooltip: C.browseTooltip,
-                    disabled: n,
+                    tooltip: E.browseTooltip,
+                    disabled: a,
                   }),
-                  (0, k.jsx)(_, {
-                    label: C.customActionsOptionTitle,
+                  (0, k.jsx)(A, {
+                    label: E.customActionsOptionTitle,
                     feature: r.Nh.WORKSPACE_GPT_CUSTOM_ACTIONS,
                     value: s.beta_settings.workspace_gpt_custom_actions,
                     workspaceId: t,
-                    tooltip: C.customActionsTooltip,
-                    disabled: n,
+                    tooltip: E.customActionsTooltip,
+                    disabled: a,
                   }),
-                  (0, k.jsx)(_, {
-                    label: C.pluginsOptionTitle,
+                  (0, k.jsx)(A, {
+                    label: E.pluginsOptionTitle,
                     feature: r.Nh.PLUGINS,
                     value: s.beta_settings.plugins,
                     workspaceId: t,
-                    tooltip: C.pluginsTooltip,
-                    disabled: n,
+                    tooltip: E.pluginsTooltip,
+                    disabled: a,
                   }),
                 ],
               }),
             }),
-            !n && a,
-            !n && i.isOwnerOfAccount() && l,
+            !a && l,
+            !a && i.isOwnerOfAccount() && o,
           ],
         });
       }
-      function G(e) {
+      function C(e) {
         let { currentWorkspaceId: t } = e,
           { data: s, isLoading: i } = (0, o.C)(t),
-          r = (0, w.Z)();
+          r = (0, b.Z)();
         return (0, k.jsxs)(k.Fragment, {
           children: [
             (0, k.jsx)(h(), {
               children: (0, k.jsx)("title", {
-                children: r.formatMessage(C.sidebarTitle),
+                children: r.formatMessage(E.sidebarTitle),
               }),
             }),
-            (0, k.jsx)(n.yG, { title: r.formatMessage(C.sidebarTitle) }),
+            (0, k.jsx)(n.yG, { title: r.formatMessage(E.sidebarTitle) }),
             (0, k.jsx)(n.hb, {
               showSpinner: i,
               children:
                 void 0 === s
                   ? null
-                  : (0, k.jsx)(A, { workspaceId: t, data: s }),
+                  : (0, k.jsx)(G, { workspaceId: t, data: s }),
             }),
           ],
         });
       }
-      let C = (0, b.vU)({
+      let E = (0, x.vU)({
         sidebarTitle: {
           id: "workspaceSettingsOld.sidebarTitle",
           defaultMessage: "GPTs",
@@ -494,6 +500,10 @@
           id: "workspaceSettingsOld.noOneSelect",
           defaultMessage: "No one",
         },
+        inviteOnlySelect: {
+          id: "workspaceSettingsOld.inviteOnlySelect",
+          defaultMessage: "Invite only",
+        },
         featureSettingsUpdateFailed: {
           id: "workspaceSettingsOld.featureSettingsUpdateFailed",
           defaultMessage: "Failed to update feature setting",
@@ -554,7 +564,7 @@
           defaultMessage: "Public",
         },
       });
-      function E(e, t) {
+      function I(e, t) {
         var s = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -567,14 +577,14 @@
         return s;
       }
       var D = !0;
-      function I(e) {
+      function L(e) {
         return (0, k.jsx)(
-          G,
+          C,
           (function (e) {
             for (var t = 1; t < arguments.length; t++) {
               var s = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? E(Object(s), !0).forEach(function (t) {
+                ? I(Object(s), !0).forEach(function (t) {
                     (0, i.Z)(e, t, s[t]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -582,7 +592,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(s)
                     )
-                  : E(Object(s)).forEach(function (t) {
+                  : I(Object(s)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -594,7 +604,7 @@
           })({}, e)
         );
       }
-      I.getLayout = function (e) {
+      L.getLayout = function (e) {
         return (0, k.jsx)(n.ZP, {
           mobilePageTitle: "GPTs",
           requireOwnerPrivileges: !0,
@@ -618,13 +628,13 @@
           return y;
         },
         i$: function () {
-          return h;
+          return O;
         },
         i9: function () {
           return w;
         },
         qQ: function () {
-          return O;
+          return h;
         },
         vi: function () {
           return x;
@@ -647,8 +657,8 @@
             ]))
         ),
         f = p.Z.div(n || (n = (0, u.Z)(["text-xl font-medium"]))),
-        h = p.Z.div(r || (r = (0, u.Z)(["text-base font-medium"]))),
-        O = p.Z.div(
+        O = p.Z.div(r || (r = (0, u.Z)(["text-base font-medium"]))),
+        h = p.Z.div(
           a ||
             (a = (0, u.Z)([
               "flex flex-col divide-y divide-token-border-light border-y border-token-border-light",
@@ -671,10 +681,10 @@
     },
   },
   function (e) {
-    e.O(0, [9112, 2888, 9774, 179], function () {
+    e.O(0, [9112, 4736, 2888, 9774, 179], function () {
       return e((e.s = 80796));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=gpts-f5ab993f7beb3b40.js.map
+//# sourceMappingURL=gpts-e95bb3b712c34cd6.js.map

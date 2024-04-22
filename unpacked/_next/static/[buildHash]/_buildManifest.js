@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, e, c, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-3318511f0e5c1b1f.js"],
@@ -18,7 +18,7 @@
       a,
       "static/chunks/pages/admin/billing-5fe15a26938ef6cb.js",
     ],
-    "/admin/gpts": [a, "static/chunks/pages/admin/gpts-a163bafc6a8cb63b.js"],
+    "/admin/gpts": [a, "static/chunks/pages/admin/gpts-e95bb3b712c34cd6.js"],
     "/admin/groups": [
       a,
       "static/chunks/pages/admin/groups-88de251df5c912ef.js",
@@ -47,7 +47,7 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-af5cf6f0de8c4eae.js",
     ],
-    "/auth/login": [s, c, "static/chunks/pages/auth/login-f8b6f8218db2011e.js"],
+    "/auth/login": [s, e, "static/chunks/pages/auth/login-f8b6f8218db2011e.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-907d164c60969934.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-839acb3ff75e4292.js",
@@ -61,45 +61,38 @@
       "static/chunks/pages/g/[gizmoId]/c/[convId]-92210d3f21d107bf.js",
     ],
     "/g/[gizmoId]/view": [
-      e,
-      "static/chunks/pages/g/[gizmoId]/view-72ae4f99aee37085.js",
+      "static/chunks/pages/g/[gizmoId]/view-529cae1a470f0c57.js",
     ],
     "/gpts": ["static/chunks/pages/gpts-b4093906131dbabf.js"],
     "/gpts/discovery": [
       "static/chunks/pages/gpts/discovery-df7db60bac02081b.js",
     ],
-    "/gpts/editor": [
-      e,
-      t,
-      "static/chunks/pages/gpts/editor-b47a60064c63bb49.js",
-    ],
+    "/gpts/editor": ["static/chunks/pages/gpts/editor-1dcf92080a1d17f6.js"],
     "/gpts/editor/[slug]": [
-      e,
-      t,
-      "static/chunks/pages/gpts/editor/[slug]-70334c41e792b854.js",
+      "static/chunks/pages/gpts/editor/[slug]-6a35077a8e1b5c7a.js",
     ],
-    "/gpts/mine": ["static/chunks/pages/gpts/mine-dcccd1718c2aad32.js"],
+    "/gpts/mine": ["static/chunks/pages/gpts/mine-6a18b35f08b6f9f7.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-5e215bc1f354ddd7.js",
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      c,
+      e,
       "static/chunks/pages/invite/[[...referralCodeParam]]-6aa301ba9c9f3c34.js",
     ],
     "/payments/success": [
-      "static/chunks/pages/payments/success-b198c04f6a1b6021.js",
+      "static/chunks/pages/payments/success-08c6a8ceca34fd11.js",
     ],
     "/payments/success-team": [
-      "static/chunks/pages/payments/success-team-270628f955c749d3.js",
+      "static/chunks/pages/payments/success-team-1e87af5e535da00d.js",
     ],
     "/payments/success-trial": [
-      "static/chunks/pages/payments/success-trial-f9311c214105edf8.js",
+      "static/chunks/pages/payments/success-trial-b9762afd9f3131b3.js",
     ],
-    "/search": ["static/chunks/pages/search-cb2b3b9e9c7e30eb.js"],
-    "/search/evals": ["static/chunks/pages/search/evals-d9f554a42e2f1b18.js"],
+    "/search": ["static/chunks/pages/search-e1ccfb5143817d90.js"],
+    "/search/evals": ["static/chunks/pages/search/evals-9323ca04083d5f44.js"],
     "/search/feedback": [
-      "static/chunks/pages/search/feedback-1e3365456b6f8cef.js",
+      "static/chunks/pages/search/feedback-6df49cbfdd8f2787.js",
     ],
     "/share/e/[[...shareParams]]": [
       "static/chunks/pages/share/e/[[...shareParams]]-e3678e51ef1e175a.js",
@@ -161,10 +154,8 @@
     ],
   };
 })(
-  "static/chunks/9112-30537590918ecbd2.js",
+  "static/chunks/9112-1980f9b39d8fd726.js",
   "static/chunks/8756-c3d7d1548a0f953d.js",
-  "static/chunks/8697-acd9836391672745.js",
-  "static/chunks/101-58c205119f556099.js",
-  "static/chunks/2925-992629b055e7656f.js"
+  "static/chunks/101-58c205119f556099.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
