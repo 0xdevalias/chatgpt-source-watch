@@ -9,7 +9,7 @@
             return e;
           },
         });
-      var _ = t(10874),
+      var _ = t(52925),
         e = !0;
       u.default = _.default;
     },
@@ -23,10 +23,10 @@
     },
   },
   function (n) {
-    n.O(0, [874, 2888, 9774, 179], function () {
+    n.O(0, [8697, 2925, 4736, 2888, 9774, 179], function () {
       return n((n.s = 8732));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=editor-0f91edd18f336b56.js.map
+//# sourceMappingURL=editor-b47a60064c63bb49.js.map

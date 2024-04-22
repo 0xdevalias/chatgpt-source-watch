@@ -6,26 +6,26 @@
       n.r(t),
         n.d(t, {
           __N_SSP: function () {
-            return P;
+            return k;
           },
           default: function () {
-            return k;
+            return C;
           },
         });
       var o = n(39827),
         r = n(7557),
-        l = n(16244),
-        s = n(93760),
-        c = n(37482),
-        i = n(28354),
+        s = n(16244),
+        l = n(93760),
+        i = n(37482),
+        c = n(28354),
         a = n(53197),
         u = n(10518),
-        d = n(61888),
-        p = n(70079),
+        p = n(61888),
+        d = n(70079),
         f = n(84692),
         g = n(68498),
         m = n(35250);
-      function _(e, t) {
+      function h(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -37,16 +37,16 @@
         }
         return n;
       }
-      function h(e) {
+      function O(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? _(Object(n), !0).forEach(function (t) {
+            ? h(Object(n), !0).forEach(function (t) {
                 (0, o.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : _(Object(n)).forEach(function (t) {
+              : h(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -56,18 +56,18 @@
         }
         return e;
       }
-      let O = (e) => {
+      let b = (e) => {
           let { onClose: t } = e,
-            { navigateToAuth: n } = (0, s.E)(),
-            o = (0, c.oc)();
+            { navigateToAuth: n } = (0, l.E)(),
+            o = (0, i.oc)();
           return (
-            (0, p.useEffect)(() => {
-              i.A.logEvent(a.M.noAuthWelcomeModalShown),
+            (0, d.useEffect)(() => {
+              c.A.logEvent(a.M.noAuthWelcomeModalShown),
                 u.m9.logEvent("chatgpt_no_auth_welcome_modal_shown");
             }, []),
-            (0, m.jsx)(l.Z, {
+            (0, m.jsx)(s.Z, {
               isOpen: !0,
-              onClose: d.noop,
+              onClose: p.noop,
               shouldIgnoreClickOutside: !0,
               showCloseButton: !1,
               type: "success",
@@ -78,13 +78,13 @@
                   "flex flex-col items-center justify-center px-6 py-8 sm:px-10 sm:pb-10 sm:pt-12",
                 children: [
                   (0, m.jsx)("p", {
-                    className: "text-3xl font-medium",
-                    children: (0, m.jsx)(f.Z, h({}, b.title)),
+                    className: "mb-1 text-center text-3xl font-medium",
+                    children: (0, m.jsx)(f.Z, O({}, j.title)),
                   }),
                   (0, m.jsx)("p", {
                     className:
-                      "mb-6 px-2 text-center text-token-text-secondary sm:text-lg",
-                    children: (0, m.jsx)(f.Z, h({}, b.body)),
+                      "mb-6 text-center text-lg text-token-text-secondary",
+                    children: (0, m.jsx)(f.Z, O({}, j.subtitle)),
                   }),
                   (0, m.jsx)(r.z, {
                     as: "button",
@@ -93,15 +93,12 @@
                     className: "mb-2 w-full sm:mb-2.5",
                     onClick: () => {
                       let e = n({ authType: "signup" });
-                      i.A.logSignUpButtonClicked({
+                      c.A.logSignUpButtonClicked({
                         provider: e,
                         location: "No Auth Welcome Modal",
-                      }),
-                        u.m9.logEvent(
-                          "chatgpt_no_auth_welcome_modal_sign_up_button_clicked"
-                        );
+                      });
                     },
-                    children: (0, m.jsx)(f.Z, h({}, b.signUpCta)),
+                    children: (0, m.jsx)(f.Z, O({}, j.signUpCta)),
                   }),
                   (0, m.jsx)(r.z, {
                     as: "button",
@@ -110,15 +107,12 @@
                     className: "mb-5 w-full",
                     onClick: () => {
                       let e = n({ authType: "login" });
-                      i.A.logLogInButtonClicked({
+                      c.A.logLogInButtonClicked({
                         provider: e,
                         location: "No Auth Welcome Modal",
-                      }),
-                        u.m9.logEvent(
-                          "chatgpt_no_auth_welcome_modal_log_in_button_clicked"
-                        );
+                      });
                     },
-                    children: (0, m.jsx)(f.Z, h({}, b.logInCta)),
+                    children: (0, m.jsx)(f.Z, O({}, j.logInCta)),
                   }),
                   (0, m.jsx)("a", {
                     href: "#",
@@ -126,7 +120,7 @@
                       "cursor-pointer text-sm font-medium text-token-text-secondary underline",
                     onClick: (e) => {
                       e.preventDefault(),
-                        i.A.logEvent(
+                        c.A.logEvent(
                           a.M.noAuthWelcomeModalTryItFirstLinkClicked
                         ),
                         u.m9.logEvent(
@@ -134,17 +128,17 @@
                         ),
                         t();
                     },
-                    children: (0, m.jsx)(f.Z, h({}, b.tryItFirstLink)),
+                    children: (0, m.jsx)(f.Z, O({}, j.tryItFirstLink)),
                   }),
                 ],
               }),
             })
           );
         },
-        b = (0, g.vU)({
+        j = (0, g.vU)({
           title: { id: "NoAuthWelcomeModal.title", defaultMessage: "ChatGPT" },
-          body: {
-            id: "NoAuthWelcomeModal.body",
+          subtitle: {
+            id: "NoAuthWelcomeModal.subtitle",
             defaultMessage:
               "Get instant answers, find creative inspiration, learn something new.",
           },
@@ -161,28 +155,29 @@
             defaultMessage: "Try it first",
           },
         });
-      var y = n(34777);
-      let j = "has-dismissed-welcome-modal",
-        w = () => {
-          let { 0: e, 1: t } = (0, p.useState)(!0),
-            { isUserUnauthenticated: n } = (0, s.E)(),
-            { layer: o } = (0, y.U3)(y.VG.AnonChatLayer),
-            r = o.get(y.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
+      var y = n(93723),
+        _ = n(34777);
+      let w = "has-dismissed-welcome-modal",
+        x = () => {
+          let { 0: e, 1: t } = (0, d.useState)(!0),
+            { isUserUnauthenticated: n } = (0, l.E)(),
+            { layer: o } = (0, _.U3)(_.VG.AnonChatLayer),
+            r = o.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
           return (
-            (0, p.useEffect)(() => {
-              t(null != sessionStorage.getItem(j));
+            (0, d.useEffect)(() => {
+              t(null != sessionStorage.getItem(w));
             }, []),
             {
               isOpen: n && r && !e,
               close: () => {
-                t(!0), sessionStorage.setItem(j, "true");
+                t(!0), sessionStorage.setItem(w, "true");
               },
             }
           );
         };
-      var x = n(12366),
-        v = n(54717);
-      function E(e, t) {
+      var N = n(12366),
+        P = n(54717);
+      function v(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var o = Object.getOwnPropertySymbols(e);
@@ -194,16 +189,16 @@
         }
         return n;
       }
-      function N(e) {
+      function E(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? E(Object(n), !0).forEach(function (t) {
+            ? v(Object(n), !0).forEach(function (t) {
                 (0, o.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : E(Object(n)).forEach(function (t) {
+              : v(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -213,21 +208,23 @@
         }
         return e;
       }
-      var P = !0;
-      function k(e) {
-        let t = (0, x.useRouter)(),
-          n = (0, v.wS)(t.asPath),
-          o = (0, v.p9)(n),
-          { isOpen: r, close: l } = w();
-        return ((0, p.useEffect)(() => {
+      var k = !0;
+      function C(e) {
+        let t = (0, N.useRouter)(),
+          n = (0, P.wS)(t.asPath),
+          o = (0, P.p9)(n),
+          { isOpen: r, close: s } = x(),
+          { shouldShowHardRateLimitModal: l, shouldShowSoftRateLimitModal: i } =
+            (0, y.o)();
+        return ((0, d.useEffect)(() => {
           o && t.replace("/", void 0, { shallow: !0 });
         }, [o, t]),
         o)
           ? null
           : (0, m.jsxs)(m.Fragment, {
               children: [
-                r ? (0, m.jsx)(O, { onClose: l }) : null,
-                (0, m.jsx)(v.ZP, N(N({}, e), {}, { urlThreadId: n })),
+                r && !(l || i) ? (0, m.jsx)(b, { onClose: s }) : null,
+                (0, m.jsx)(P.ZP, E(E({}, e), {}, { urlThreadId: n })),
               ],
             });
       }
@@ -260,4 +257,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[convId]-5f1c54a7a3cba31d.js.map
+//# sourceMappingURL=[convId]-92210d3f21d107bf.js.map
