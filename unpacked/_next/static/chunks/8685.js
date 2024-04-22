@@ -5,54 +5,79 @@
     20140: function (A, a, t) {
       t.d(a, {
         X: function () {
-          return e;
+          return l;
         },
       });
-      var d = t(49305),
-        i = t(53362),
-        l = t(70079);
-      function e() {
-        let { 0: A, 1: a } = (0, l.useState)({
-          gdrive: { already_oauth: !1, id: "", loaded: !1 },
-          o365: { already_oauth: !1, id: "", loaded: !1 },
+      var e = t(49305),
+        d = t(53362),
+        o = t(70079);
+      function l() {
+        let { 0: A, 1: a } = (0, o.useState)({
+          gdrive_sync: {
+            already_oauth: !1,
+            id: "",
+            loaded: !1,
+            access_token: "",
+          },
+          o365: { already_oauth: !1, id: "", loaded: !1, access_token: "" },
         });
         return (
-          (0, l.useEffect)(() => {
+          (0, o.useEffect)(() => {
             (async () => {
               try {
-                var A, t, l, e;
-                let o = [d.PO.GDRIVE_SYNC_CONNECTOR, d.PO.O365],
-                  [g, n] = await Promise.all(
-                    o.map((A) => i.Z.getConnectorAccessTokenAPI(A))
+                var A, t, o, l, i, c;
+                let n = [e.PO.GDRIVE_SYNC_CONNECTOR, e.PO.O365],
+                  [s, g] = await Promise.all(
+                    n.map((A) => d.Z.getConnectorAccessTokenAPI(A))
                   );
                 a({
-                  gdrive: {
+                  gdrive_sync: {
                     already_oauth:
-                      null !== (A = null == g ? void 0 : g.already_oauthed) &&
+                      null !== (A = null == s ? void 0 : s.already_oauthed) &&
                       void 0 !== A &&
                       A,
                     id:
-                      null !== (t = null == g ? void 0 : g.id) && void 0 !== t
+                      null !== (t = null == s ? void 0 : s.id) && void 0 !== t
                         ? t
                         : "",
                     loaded: !0,
+                    access_token:
+                      null !== (o = null == s ? void 0 : s.access_token) &&
+                      void 0 !== o
+                        ? o
+                        : "",
                   },
                   o365: {
                     already_oauth:
-                      null !== (l = null == n ? void 0 : n.already_oauthed) &&
+                      null !== (l = null == g ? void 0 : g.already_oauthed) &&
                       void 0 !== l &&
                       l,
                     id:
-                      null !== (e = null == n ? void 0 : n.id) && void 0 !== e
-                        ? e
+                      null !== (i = null == g ? void 0 : g.id) && void 0 !== i
+                        ? i
                         : "",
                     loaded: !0,
+                    access_token:
+                      null !== (c = null == g ? void 0 : g.access_token) &&
+                      void 0 !== c
+                        ? c
+                        : "",
                   },
                 });
               } catch (A) {
                 a({
-                  gdrive: { already_oauth: !1, id: "", loaded: !1 },
-                  o365: { already_oauth: !1, id: "", loaded: !1 },
+                  gdrive_sync: {
+                    already_oauth: !1,
+                    id: "",
+                    loaded: !1,
+                    access_token: "",
+                  },
+                  o365: {
+                    already_oauth: !1,
+                    id: "",
+                    loaded: !1,
+                    access_token: "",
+                  },
                 });
               }
             })();
@@ -96,4 +121,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8685.849d0ed1685138f4.js.map
+//# sourceMappingURL=8685.3bd19e67c8f99b9e.js.map

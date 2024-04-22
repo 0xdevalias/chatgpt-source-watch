@@ -57,9 +57,9 @@
     "/domain_migration": [
       "static/chunks/pages/domain_migration-549a82a5a8982c9d.js",
     ],
-    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-9c2e3068a8f33586.js"],
+    "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-f820490e433a2c05.js"],
     "/g/[gizmoId]/about": [
-      "static/chunks/pages/g/[gizmoId]/about-4f139bf17b5cc368.js",
+      "static/chunks/pages/g/[gizmoId]/about-29a273e0341c85ca.js",
     ],
     "/g/[gizmoId]/c/[convId]": [
       "static/chunks/pages/g/[gizmoId]/c/[convId]-5e21155ab7422287.js",
@@ -99,10 +99,10 @@
     "/search": ["static/chunks/pages/search-116d3ecc79ccc9e6.js"],
     "/search/evals": ["static/chunks/pages/search/evals-08e9eade27f2a57c.js"],
     "/search/feedback": [
-      "static/chunks/pages/search/feedback-febd6ba05f6c29c9.js",
+      "static/chunks/pages/search/feedback-ba142391dd4868c6.js",
     ],
     "/search/machine": [
-      "static/chunks/pages/search/machine-953c280435859795.js",
+      "static/chunks/pages/search/machine-774725cac6be4fed.js",
     ],
     "/share/e/[[...shareParams]]": [
       "static/chunks/pages/share/e/[[...shareParams]]-9081fab17b526e44.js",
