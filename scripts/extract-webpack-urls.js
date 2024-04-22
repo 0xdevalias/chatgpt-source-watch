@@ -398,6 +398,8 @@ function extractChunkUrlPrefix(chunkUrlPrefixNode) {
  *   AssignmentExpression
  *     .left -> ...
  *     .right -> FunctionExpression .body -> BlockStatement .body[0] -> ReturnStatement .argument ->
+ *
+ *     OldStyle:
  *       BinaryExpression
  *         .left -> BinaryExpression
  *         |  .left -> BinaryExpression
@@ -414,22 +416,47 @@ function extractChunkUrlPrefix(chunkUrlPrefixNode) {
  *         |    .value -> StringLiteral .value -> the chunk hash
  *         .right -> StringLiteral .value -> '.js'
  *
+ *     NewStyle:
+ *       ConditionalExpression
+ *         .test -> BinaryExpression .left -> NumericLiteral .value -> '6835'
+ *         .consequent -> StringLiteral .value -> 'static/chunks/3a34cc27-680c4c5818883bf2.js'
+ *         .alternate -> BinaryExpression -> <see OldStyle above>
+ *
  * @param {Array} joinedExpressions - The expressions joined in the AST.
  * @returns {Object|null} - The found Chunk Mappings node or null if not found.
  */
 function findChunkMappingsNode(joinedExpressions) {
   return joinedExpressions.find(
-    (expression) =>
-      expression.type === 'AssignmentExpression' &&
-      expression.right.type === 'FunctionExpression' &&
-      expression.right.body.body[0]?.type === 'ReturnStatement' &&
-      expression.right.body.body[0].argument?.type === 'BinaryExpression' &&
-      expression.right.body.body[0].argument.left?.left?.left?.left?.type ===
-        'StringLiteral' &&
-      expression.right.body.body[0].argument.left.left.left.left.value ===
-        'static/chunks/' &&
-      expression.right.body.body[0].argument.right?.type === 'StringLiteral' &&
-      expression.right.body.body[0].argument.right.value === '.js'
+    (expression) => {
+      const firstBit =
+        expression.type === 'AssignmentExpression' &&
+        expression.right.type === 'FunctionExpression' &&
+        expression.right?.body?.body[0]?.type === 'ReturnStatement'
+
+      if (!firstBit) return false
+
+      const returnStatementValue = expression.right?.body?.body[0].argument
+
+      const checkObjectMapping = (baseNode) =>
+        baseNode?.type === 'BinaryExpression' &&
+        baseNode.left?.left?.left?.left?.type === 'StringLiteral' &&
+        baseNode.left.left.left.left.value === 'static/chunks/' &&
+        baseNode.right?.type === 'StringLiteral' &&
+        baseNode.right.value === '.js'
+
+      const oldStyle = checkObjectMapping(returnStatementValue)
+
+      const newStyle =
+        returnStatementValue?.type === 'ConditionalExpression' &&
+        returnStatementValue?.test?.type === 'BinaryExpression' &&
+        returnStatementValue?.test?.left?.type === 'NumericLiteral' &&
+        returnStatementValue?.consequent?.type === 'StringLiteral' &&
+        returnStatementValue?.consequent?.value?.endsWith('.js') &&
+        returnStatementValue?.alternate?.type === 'BinaryExpression' &&
+        checkObjectMapping(returnStatementValue.alternate)
+
+      return firstBit && (oldStyle || newStyle)
+    }
   );
 }
 
@@ -460,15 +487,24 @@ function extractChunkPaths(chunkMappingsNode) {
     );
   }
 
+  const isNewStyle = returnStatementValue?.type === 'ConditionalExpression'
+  const newStyleChunkNumber = returnStatementValue?.test?.left?.value
+  const newStyleChunkPath = returnStatementValue?.consequent?.value
+  if (!isNewStyle && (!newStyleChunkNumber || !newStyleChunkPath)) {
+    throw new Error('Invalid chunkMappingsNode structure: missing newStyleChunkNumber or newStyleChunkPath');
+  }
+
+  const objectMappingBaseNode = isNewStyle ? returnStatementValue?.alternate : returnStatementValue
+
   // Extract base path 'static/chunks/'
-  const basePath = returnStatementValue.left?.left?.left?.left?.value;
+  const basePath = objectMappingBaseNode.left?.left?.left?.left?.value;
   if (!basePath) {
     throw new Error('Invalid chunkMappingsNode structure: missing base path');
   }
 
   // Extract chunk number-name mappings
   const chunkMappingProperties =
-    returnStatementValue.left?.left?.left?.right?.left?.object?.properties;
+    objectMappingBaseNode.left?.left?.left?.right?.left?.object?.properties;
   if (!chunkMappingProperties) {
     throw new Error(
       'Invalid chunkMappingsNode structure: missing chunk mappings'
@@ -480,7 +516,7 @@ function extractChunkPaths(chunkMappingsNode) {
   }, {});
 
   // Extract chunk name/hash joiner '.'
-  const chunkNameHashJoiner = returnStatementValue.left?.left?.right?.value;
+  const chunkNameHashJoiner = objectMappingBaseNode.left?.left?.right?.value;
   if (!chunkNameHashJoiner) {
     throw new Error(
       'Invalid chunkMappingsNode structure: missing chunk name/hash joiner'
@@ -489,7 +525,7 @@ function extractChunkPaths(chunkMappingsNode) {
 
   // Extract chunk number-hash mappings
   const chunkHashProperties =
-    returnStatementValue.left?.right?.object?.properties;
+    objectMappingBaseNode.left?.right?.object?.properties;
   if (!chunkHashProperties) {
     throw new Error(
       'Invalid chunkMappingsNode structure: missing chunk hashes'
@@ -500,7 +536,8 @@ function extractChunkPaths(chunkMappingsNode) {
     return acc;
   }, {});
 
-  const chunkExtension = returnStatementValue.right?.value;
+  // Extract chunk extension '.js'
+  const chunkExtension = objectMappingBaseNode.right?.value;
   if (!chunkExtension) {
     throw new Error(
       'Invalid chunkMappingsNode structure: missing chunk extension'
@@ -508,13 +545,14 @@ function extractChunkPaths(chunkMappingsNode) {
   }
 
   // Combine to form full paths
+  const chunkPathsStarter = isNewStyle ? [newStyleChunkPath] : []
   const chunkPaths = Object.keys(chunkHashes).reduce((acc, chunkNumber) => {
     // Use chunkMappings name if available, otherwise fallback to chunkNumber
     const chunkName = chunkMappings[chunkNumber] || chunkNumber;
     const chunkHash = chunkHashes[chunkNumber];
     const fullPath = `${basePath}${chunkName}${chunkNameHashJoiner}${chunkHash}${chunkExtension}`;
     return [...acc, fullPath];
-  }, []);
+  }, chunkPathsStarter);
 
   return {
     basePath,
