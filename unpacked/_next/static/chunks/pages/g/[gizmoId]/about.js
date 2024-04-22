@@ -15,9 +15,9 @@
       var n = r(39827),
         i = r(37573),
         o = r(89691),
-        c = r(91128),
-        s = r(53197),
-        u = r(12366),
+        c = r(28354),
+        u = r(53197),
+        s = r(12366),
         l = r(70079),
         a = r(49141),
         d = r(35250);
@@ -62,9 +62,10 @@
               (0, d.jsx)(i.Eu, {
                 onClose: () => n(!1),
                 gizmoId: e.gizmoId,
+                creatorId: t.gizmo.author.user_id,
                 children: (0, d.jsx)(i.Bo, {
                   onClick: () => {
-                    c.A.logEvent(s.M.detailClickChat, { gizmo_id: e.gizmoId }),
+                    c.A.logEvent(u.M.detailClickChat, { gizmo_id: e.gizmoId }),
                       n(!1),
                       window.history.pushState({}, "", (0, o.m_)(t));
                   },
@@ -79,7 +80,7 @@
       }
       var j = !0;
       function m(e) {
-        let t = (0, u.useRouter)().query.gizmoId;
+        let t = (0, s.useRouter)().query.gizmoId;
         return "chat_page" === e.kind
           ? (0, l.createElement)(h, g(g({}, e), {}, { key: t, gizmoId: t }))
           : (0, a.default)(e);
@@ -90,21 +91,21 @@
       r.r(t),
         r.d(t, {
           GizmoChatWithRedirect: function () {
-            return z;
+            return P;
           },
           __N_SSP: function () {
             return x;
           },
           default: function () {
-            return P;
+            return z;
           },
         });
       var n = r(39827),
-        i = r(80084),
+        i = r(54717),
         o = r(41),
         c = r(81421),
-        s = r(89691),
-        u = r(22824),
+        u = r(89691),
+        s = r(22824),
         l = r(90775),
         a = r(93496),
         d = r(19892),
@@ -113,7 +114,7 @@
         h = r(12366),
         j = r.n(h),
         m = r(70079),
-        p = r(32004),
+        p = r(84692),
         O = r(35250);
       function b(e, t) {
         var r = Object.keys(e);
@@ -147,22 +148,22 @@
         return e;
       }
       var x = !0;
-      function P(e) {
+      function z(e) {
         let t = (0, h.useRouter)().query.gizmoId;
         switch (e.kind) {
           case "anon_gizmo":
             return (0, O.jsx)(c.X, { gizmo: e.gizmo }, t);
           case "chat_page":
             return (0, m.createElement)(
-              z,
+              P,
               y(y({}, e), {}, { key: t, gizmoId: t })
             );
           default:
             (0, g.Z)(e);
         }
       }
-      function z(e) {
-        let { data: t, error: r } = (0, s.b9)(e.gizmoId),
+      function P(e) {
+        let { data: t, error: r } = (0, u.b9)(e.gizmoId),
           n = (0, f.t)(),
           o = null == n ? void 0 : n.canInteractWithGizmos();
         return ((0, m.useEffect)(() => {
@@ -198,9 +199,8 @@
       function w(e) {
         let { gizmo: t } = e;
         return (0, O.jsx)(l.Z, {
-          children: (0, O.jsx)(u.r, {
+          children: (0, O.jsx)(s.r, {
             gizmo: t,
-            isOwner: !1,
             children: (0, O.jsxs)("div", {
               className: "mt-7 flex flex-col gap-4",
               children: [
@@ -231,28 +231,28 @@
           return a;
         },
       });
-      var n = r(37229),
-        i = r(95482),
-        o = r(24605),
+      var n = r(7679),
+        i = r(24605),
+        o = r(95482),
         c = r(12366),
-        s = r(81056),
-        u = r(49031),
+        u = r(81056),
+        s = r(56532),
         l = r(35250);
       function a(e) {
         let { children: t } = e,
           r = (0, c.useRouter)();
-        return (0, l.jsx)(o.Z, {
+        return (0, l.jsx)(i.Z, {
           mobileHeaderRightContent: null,
-          sidebar: (0, l.jsxs)(i.ZP, {
+          sidebar: (0, l.jsxs)(o.ZP, {
             onNewThread: () => {
               r.push("/");
             },
             children: [
-              (0, l.jsx)(u.Dy, {}),
+              (0, l.jsx)(s.Dy, {}),
               (0, l.jsx)(n.Z, { activeId: void 0 }),
             ],
           }),
-          children: (0, l.jsx)(s.Z, { children: t }),
+          children: (0, l.jsx)(u.Z, { children: t }),
         });
       }
     },
@@ -266,10 +266,10 @@
     },
   },
   function (e) {
-    e.O(0, [2888, 9774, 179], function () {
+    e.O(0, [4736, 2888, 9774, 179], function () {
       return e((e.s = 22738));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=about-1115a60e9730cc3f.js.map
+//# sourceMappingURL=about-2d00d99d85925715.js.map

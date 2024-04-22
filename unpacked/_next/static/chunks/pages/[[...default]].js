@@ -1,71 +1,242 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2223],
   {
-    82854: function (e, t, r) {
+    44911: function (e, t, n) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      n.r(t),
+        n.d(t, {
           __N_SSP: function () {
-            return p;
+            return N;
           },
           default: function () {
-            return a;
+            return P;
           },
         });
-      var n = r(39827),
-        u = r(12366),
-        c = r(70079),
-        o = r(54717),
-        f = r(35250);
-      function i(e, t) {
-        var r = Object.keys(e);
+      var o = n(39827),
+        r = n(7557),
+        l = n(16244),
+        s = n(93760),
+        c = n(37482),
+        i = n(28354),
+        a = n(53197),
+        u = n(10518),
+        p = n(61888),
+        d = n(70079),
+        f = n(84692),
+        m = n(68498),
+        g = n(35250);
+      function h(e, t) {
+        var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
+          var o = Object.getOwnPropertySymbols(e);
           t &&
-            (n = n.filter(function (t) {
+            (o = o.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            n.push.apply(n, o);
         }
-        return r;
+        return n;
       }
-      function s(e) {
+      function _(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var r = null != arguments[t] ? arguments[t] : {};
+          var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? i(Object(r), !0).forEach(function (t) {
-                (0, n.Z)(e, t, r[t]);
+            ? h(Object(n), !0).forEach(function (t) {
+                (0, o.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : i(Object(r)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : h(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(r, t)
+                    Object.getOwnPropertyDescriptor(n, t)
                   );
                 });
         }
         return e;
       }
-      var p = !0;
-      function a(e) {
-        let t = (0, u.useRouter)(),
-          r = (0, o.wS)(t.asPath),
-          n = (0, o.p9)(r);
-        return ((0, c.useEffect)(() => {
-          n && t.replace("/", void 0, { shallow: !0 });
-        }, [n, t]),
-        n)
+      let O = (e) => {
+          let { onClose: t } = e,
+            { navigateToAuth: n } = (0, s.E)(),
+            o = (0, c.oc)();
+          return (
+            (0, d.useEffect)(() => {
+              i.A.logEvent(a.M.noAuthWelcomeModalShown),
+                u.m9.logEvent("chatgpt_no_auth_welcome_modal_shown");
+            }, []),
+            (0, g.jsx)(l.Z, {
+              isOpen: !0,
+              onClose: p.noop,
+              shouldIgnoreClickOutside: !0,
+              showCloseButton: !1,
+              type: "success",
+              noPadding: !0,
+              position: o ? "center" : "bottom",
+              children: (0, g.jsxs)("div", {
+                className:
+                  "flex flex-col items-center justify-center px-6 py-8 sm:px-10 sm:pb-10 sm:pt-12",
+                children: [
+                  (0, g.jsx)("p", {
+                    className: "text-3xl font-medium",
+                    children: (0, g.jsx)(f.Z, _({}, b.title)),
+                  }),
+                  (0, g.jsx)("p", {
+                    className:
+                      "mb-6 px-2 text-center text-token-text-secondary sm:text-lg",
+                    children: (0, g.jsx)(f.Z, _({}, b.body)),
+                  }),
+                  (0, g.jsx)(r.z, {
+                    as: "button",
+                    size: "large",
+                    color: "primary",
+                    className: "mb-2 w-full sm:mb-2.5",
+                    onClick: () => {
+                      let e = n({ authType: "signup" });
+                      i.A.logSignUpButtonClicked({
+                        provider: e,
+                        location: "No Auth Welcome Modal",
+                      }),
+                        u.m9.logEvent(
+                          "chatgpt_no_auth_welcome_modal_sign_up_button_clicked"
+                        );
+                    },
+                    children: (0, g.jsx)(f.Z, _({}, b.signUpCta)),
+                  }),
+                  (0, g.jsx)(r.z, {
+                    as: "button",
+                    size: "large",
+                    color: "neutral",
+                    className: "mb-5 w-full",
+                    onClick: () => {
+                      let e = n({ authType: "login" });
+                      i.A.logLogInButtonClicked({
+                        provider: e,
+                        location: "No Auth Welcome Modal",
+                      }),
+                        u.m9.logEvent(
+                          "chatgpt_no_auth_welcome_modal_log_in_button_clicked"
+                        );
+                    },
+                    children: (0, g.jsx)(f.Z, _({}, b.logInCta)),
+                  }),
+                  (0, g.jsx)("a", {
+                    href: "#",
+                    className:
+                      "cursor-pointer text-sm font-medium text-token-text-secondary underline",
+                    onClick: (e) => {
+                      e.preventDefault(),
+                        i.A.logEvent(
+                          a.M.noAuthWelcomeModalTryItFirstLinkClicked
+                        ),
+                        u.m9.logEvent(
+                          "chatgpt_no_auth_welcome_modal_try_it_first_link_clicked"
+                        ),
+                        t();
+                    },
+                    children: (0, g.jsx)(f.Z, _({}, b.tryItFirstLink)),
+                  }),
+                ],
+              }),
+            })
+          );
+        },
+        b = (0, m.vU)({
+          title: { id: "NoAuthWelcomeModal.title", defaultMessage: "ChatGPT" },
+          body: {
+            id: "NoAuthWelcomeModal.body",
+            defaultMessage:
+              "Get instant answers, find creative inspiration, learn something new.",
+          },
+          signUpCta: {
+            id: "NoAuthWelcomeModal.signUpCta",
+            defaultMessage: "Sign up",
+          },
+          logInCta: {
+            id: "NoAuthWelcomeModal.logInCta",
+            defaultMessage: "Log in",
+          },
+          tryItFirstLink: {
+            id: "NoAuthWelcomeModal.tryItFirstLink",
+            defaultMessage: "Try it first",
+          },
+        });
+      var y = n(34777);
+      let j = "has-dismissed-welcome-modal",
+        w = () => {
+          let { 0: e, 1: t } = (0, d.useState)(!0),
+            { isUserUnauthenticated: n } = (0, s.E)(),
+            { layer: o } = (0, y.U3)(y.VG.AnonChatLayer),
+            r = o.get(y.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
+          return (
+            (0, d.useEffect)(() => {
+              t(null != sessionStorage.getItem(j));
+            }, []),
+            {
+              isOpen: n && r && !e,
+              close: () => {
+                t(!0), sessionStorage.setItem(j, "true");
+              },
+            }
+          );
+        };
+      var x = n(12366),
+        E = n(54717);
+      function k(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var o = Object.getOwnPropertySymbols(e);
+          t &&
+            (o = o.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, o);
+        }
+        return n;
+      }
+      function v(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? k(Object(n), !0).forEach(function (t) {
+                (0, o.Z)(e, t, n[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : k(Object(n)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(n, t)
+                  );
+                });
+        }
+        return e;
+      }
+      var N = !0;
+      function P(e) {
+        let t = (0, x.useRouter)(),
+          n = (0, E.wS)(t.asPath),
+          o = (0, E.p9)(n),
+          { isOpen: r, close: l } = w();
+        return ((0, d.useEffect)(() => {
+          o && t.replace("/", void 0, { shallow: !0 });
+        }, [o, t]),
+        o)
           ? null
-          : (0, f.jsx)(o.ZP, s(s({}, e), {}, { urlThreadId: r }));
+          : (0, g.jsxs)(g.Fragment, {
+              children: [
+                r ? (0, g.jsx)(O, { onClose: l }) : null,
+                (0, g.jsx)(E.ZP, v(v({}, e), {}, { urlThreadId: n })),
+              ],
+            });
       }
     },
-    54378: function (e, t, r) {
+    54378: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/[[...default]]",
         function () {
-          return r(82854);
+          return n(44911);
         },
       ]);
     },
@@ -77,4 +248,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...default]]-2aa9a2caddc265ef.js.map
+//# sourceMappingURL=[[...default]]-28198444b17d1ca2.js.map

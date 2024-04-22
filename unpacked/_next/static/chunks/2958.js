@@ -2,54 +2,89 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2958],
   {
-    12958: function (e, t, i) {
-      i.r(t),
-        i.d(t, {
+    12958: function (e, t, a) {
+      a.r(t),
+        a.d(t, {
           __N_SSP: function () {
-            return ih;
+            return ab;
           },
           default: function () {
-            return ig;
+            return aw;
           },
         });
-      var a,
+      var i,
         s,
+        l,
         r,
         n,
-        l,
         o,
         d,
         c,
         u,
         p,
-        m = i(89691),
-        h = i(39827),
-        g = i(25660),
-        f = i(88128),
-        x = i(73017),
-        v = i(33925),
-        j = i(16244),
-        y = i(49508),
-        b = i(5572),
-        w = i(10518),
-        k = i(91530),
-        N = i.n(k),
-        z = i(70079),
-        P = i(21389),
-        M = i(35250);
-      let Z = P.Z.a(o || (o = (0, x.Z)(["bold underline"]))),
-        _ = P.Z.textarea(
+        m = a(89691),
+        h = a(39827),
+        g = a(25660),
+        f = a(88128),
+        x = a(73017),
+        v = a(33925),
+        j = a(16244),
+        y = a(49508),
+        b = a(5572),
+        w = a(10518),
+        k = a(82920),
+        z = a(91530),
+        N = a.n(z),
+        M = a(70079),
+        P = a(68498),
+        Z = a(84692),
+        _ = a(9063),
+        T = a(21389),
+        C = a(35250);
+      function O(e, t) {
+        var a = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var i = Object.getOwnPropertySymbols(e);
+          t &&
+            (i = i.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            a.push.apply(a, i);
+        }
+        return a;
+      }
+      function S(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var a = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? O(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : O(Object(a)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(a, t)
+                  );
+                });
+        }
+        return e;
+      }
+      let I = T.Z.a(o || (o = (0, x.Z)(["bold underline"]))),
+        A = T.Z.textarea(
           d ||
             (d = (0, x.Z)([
               "w-full text-sm overflow-y-auto rounded-lg border px-3 py-2 focus:ring-2 focus:ring-blue-400 border-token-border-medium bg-token-main-surface-primary h-32",
             ]))
         ),
-        T =
-          (((a = {})[(a.None = 0)] = "None"),
-          (a[(a.AppealAvailable = 1)] = "AppealAvailable"),
-          (a[(a.AppealSent = 2)] = "AppealSent"),
-          a),
-        C =
+        E =
+          (((i = {})[(i.None = 0)] = "None"),
+          (i[(i.AppealAvailable = 1)] = "AppealAvailable"),
+          (i[(i.AppealSent = 2)] = "AppealSent"),
+          i),
+        G =
           (((s = {})[(s.None = 0)] = "None"),
           (s[(s.PublishBlocked = 1)] = "PublishBlocked"),
           (s[(s.RemovedFromMarketplace = 2)] = "RemovedFromMarketplace"),
@@ -57,379 +92,475 @@
           (s[(s.RemovedFromPrivate = 4)] = "RemovedFromPrivate"),
           (s[(s.Recategorized = 5)] = "Recategorized"),
           s),
-        O = {
+        L = {
           [b.Zz.User]: b.Zz.Private,
           [b.Zz.Group]: b.Zz.Private,
           [b.Zz.WorkspaceLink]: b.Zz.Workspace,
         };
-      var S =
-        (((r = S || {})[(r.Initial = 0)] = "Initial"),
-        (r[(r.AppealForm = 1)] = "AppealForm"),
-        (r[(r.SubmittedConfirmation = 2)] = "SubmittedConfirmation"),
-        r);
-      function I(e) {
+      function U(e) {
+        var t;
+        let { sharingRecipient: a, sharingTargets: i, appealAvailable: s } = e,
+          l = null == i ? void 0 : i.find((e) => e.recipient === a),
+          r = null == l ? void 0 : l.moderated_fields,
+          n =
+            null !== (t = null == r ? void 0 : r.length) && void 0 !== t
+              ? t
+              : 0;
+        return (0, C.jsxs)(C.Fragment, {
+          children: [
+            (0, C.jsxs)("p", {
+              children: [
+                (0, C.jsx)(
+                  Z.Z,
+                  S(
+                    S(
+                      {},
+                      (function (e) {
+                        switch (e) {
+                          case b.Zz.Private:
+                          case b.Zz.Workspace:
+                            return (0, P.Em)({
+                              id: "gizmo.appeals.privateRecipientModerationText",
+                              defaultMessage:
+                                "Your GPT can’t be updated because it violates our {usagePolicyLink}Usage Policies{usagePolicyLink}.",
+                            });
+                          case b.Zz.Link:
+                            return (0, P.Em)({
+                              id: "gizmo.appeals.linkRecipientModerationText",
+                              defaultMessage:
+                                "Your GPT can’t be shared publicly because it violates our {usagePolicyLink}Usage Policies{usagePolicyLink}.",
+                            });
+                          case b.Zz.Marketplace:
+                            return (0, P.Em)({
+                              id: "gizmo.appeals.marketplaceRecipientModerationText",
+                              defaultMessage:
+                                "Your GPT can’t appear in the Explore GPTs page because it violates our {usagePolicyLink}Usage Policies{usagePolicyLink}.",
+                            });
+                          default:
+                            (0, k.ZP)(e);
+                        }
+                      })(a)
+                    ),
+                    {},
+                    {
+                      values: {
+                        usagePolicyLink: (e) =>
+                          (0, C.jsx)(I, {
+                            target: "_blank",
+                            href: "https://openai.com/policies/usage-policies",
+                            rel: "noreferrer",
+                            children: e,
+                          }),
+                      },
+                    }
+                  )
+                ),
+                " ",
+                n > 0 &&
+                  (0, C.jsx)(Z.Z, {
+                    id: "gizmo.appeals.seeBelowForSpecificIssues",
+                    defaultMessage:
+                      "{numModeratedFields, plural, one {See below for the specific issue:} other {See below for the specific issues:} }",
+                    values: { numModeratedFields: n },
+                  }),
+              ],
+            }),
+            n > 0 &&
+              (null == r
+                ? void 0
+                : r.map((e) =>
+                    (0, C.jsxs)(C.Fragment, {
+                      children: [
+                        (0, C.jsx)("p", {
+                          className: "font-bold",
+                          children: (0, C.jsx)(
+                            Z.Z,
+                            S(
+                              {},
+                              (function (e) {
+                                switch (e) {
+                                  case "profile_picture":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.profilePictureFieldName",
+                                      defaultMessage: "Profile Picture",
+                                    });
+                                  case "gizmo_name":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.gizmoNameFieldName",
+                                      defaultMessage: "Name",
+                                    });
+                                  case "gizmo_description":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.gizmoDescriptionFieldName",
+                                      defaultMessage: "Description",
+                                    });
+                                  case "gizmo_instructions":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.gizmoInstructionsFieldName",
+                                      defaultMessage: "Instructions",
+                                    });
+                                  case "gizmo_welcome_message":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.gizmoWelcomeMessageFieldName",
+                                      defaultMessage: "Welcome Message",
+                                    });
+                                  case "custom_actions":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.customActionsFieldName",
+                                      defaultMessage: "Custom Actions",
+                                    });
+                                  case "conversation_starter":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.conversationStarterFieldName",
+                                      defaultMessage: "Conversation Starter",
+                                    });
+                                  case "file":
+                                    return (0, P.Em)({
+                                      id: "gizmo.appeals.fileFieldName",
+                                      defaultMessage: "File",
+                                    });
+                                  default:
+                                    (0, k.ZP)(e);
+                                }
+                              })(e.name)
+                            )
+                          ),
+                        }),
+                        (0, C.jsx)("ul", {
+                          className: "list-disc pl-5",
+                          children: e.reasons.map((e) =>
+                            (0, C.jsxs)(
+                              "li",
+                              {
+                                children: [
+                                  e.description,
+                                  " ",
+                                  e.link
+                                    ? (0, C.jsx)(I, {
+                                        href: e.link,
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        children: (0, C.jsx)(Z.Z, {
+                                          id: "gizmo.appeals.learnMore",
+                                          defaultMessage: "Learn more",
+                                        }),
+                                      })
+                                    : "",
+                                ],
+                              },
+                              e.description
+                            )
+                          ),
+                        }),
+                      ],
+                    })
+                  )),
+            s &&
+              (0, C.jsx)("p", {
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.appealAvailableText",
+                  defaultMessage:
+                    "Alternatively you may appeal this decision and we will get back to you as soon as possible. Or you can publish to “Only me” and use this GPT privately.",
+                }),
+              }),
+          ],
+        });
+      }
+      var R =
+        (((l = R || {})[(l.Initial = 0)] = "Initial"),
+        (l[(l.AppealForm = 1)] = "AppealForm"),
+        (l[(l.SubmittedConfirmation = 2)] = "SubmittedConfirmation"),
+        l);
+      function D(e) {
         let {
             gizmoId: t,
-            sharingRecipient: i,
-            categories: a,
+            sharingRecipient: a,
+            categories: i,
             moderationType: s,
-            sharingTargets: r,
-            appealAvailable: n,
-            onClose: l,
+            sharingTargets: l,
+            appealAvailable: r,
+            onClose: n,
             onAppealSubmitted: o,
           } = e,
-          { 0: d, 1: c } = (0, z.useState)(""),
-          { 0: u, 1: p } = (0, z.useState)(S.Initial),
-          m = async () => {
-            await y.U.postGizmoAppeal(t, d, i, a),
-              p(S.SubmittedConfirmation),
+          d = (0, _.Z)(),
+          { 0: c, 1: u } = (0, M.useState)(""),
+          { 0: p, 1: m } = (0, M.useState)(R.Initial),
+          h = async () => {
+            await y.U.postGizmoAppeal(t, c, a, i),
+              m(R.SubmittedConfirmation),
               null == o || o();
           };
-        switch (u) {
-          case S.Initial:
-            return (0, M.jsx)(j.Z, {
-              title: (function (e) {
-                switch (e) {
-                  case C.PublishBlocked:
-                    return "Your changes couldn’t be published";
-                  case C.RemovedFromMarketplace:
-                    return "Your GPT has been removed from the marketplace";
-                  case C.RemovedFromPublic:
-                    return "Your GPT has been removed from public view";
-                  case C.Recategorized:
-                    return "Your GPT has been recategorized";
-                }
-              })(s),
+        switch (p) {
+          case R.Initial:
+            return (0, C.jsx)(j.Z, {
+              title: d.formatMessage(
+                (function (e) {
+                  switch (e) {
+                    case G.None:
+                    case G.PublishBlocked:
+                      return (0, P.Em)({
+                        id: "gizmo.appeals.publishBlockedTitle",
+                        defaultMessage: "Your changes couldn’t be published",
+                      });
+                    case G.RemovedFromMarketplace:
+                      return (0, P.Em)({
+                        id: "gizmo.appeals.removedFromMarketplaceTitle",
+                        defaultMessage:
+                          "Your GPT has been removed from the marketplace",
+                      });
+                    case G.RemovedFromPublic:
+                      return (0, P.Em)({
+                        id: "gizmo.appeals.removedFromPublicTitle",
+                        defaultMessage:
+                          "Your GPT has been removed from public view",
+                      });
+                    case G.Recategorized:
+                      return (0, P.Em)({
+                        id: "gizmo.appeals.recategorizedTitle",
+                        defaultMessage: "Your GPT has been recategorized",
+                      });
+                    default:
+                      (0, k.ZP)(e);
+                  }
+                })(s)
+              ),
               isOpen: !0,
-              onClose: l,
+              onClose: n,
               showCloseButton: !0,
-              primaryButton: (0, M.jsx)(v.ZP.Button, {
-                title: "Continue",
+              primaryButton: (0, C.jsx)(v.ZP.Button, {
                 color: "primary",
-                onClick: l,
+                onClick: n,
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.contunueButton",
+                  defaultMessage: "Continue",
+                }),
               }),
-              secondaryButton: n
-                ? (0, M.jsx)(v.ZP.Button, {
-                    title: "Appeal",
-                    onClick: () => p(S.AppealForm),
+              secondaryButton: r
+                ? (0, C.jsx)(v.ZP.Button, {
+                    onClick: () => m(R.AppealForm),
+                    children: (0, C.jsx)(Z.Z, {
+                      id: "gizmo.appeals.appealButton",
+                      defaultMessage: "Appeal",
+                    }),
                   })
                 : void 0,
               type: "warning",
-              children: (0, M.jsx)("div", {
+              children: (0, C.jsx)("div", {
                 className: "flex flex-col gap-2 text-sm",
-                children: (function (e, t, i) {
-                  var a;
-                  let s = null == t ? void 0 : t.find((t) => t.recipient === e),
-                    r = null == s ? void 0 : s.moderated_fields,
-                    n =
-                      null !== (a = null == r ? void 0 : r.length) &&
-                      void 0 !== a
-                        ? a
-                        : 0;
-                  return (0, M.jsxs)(M.Fragment, {
-                    children: [
-                      (0, M.jsxs)("p", {
-                        children: [
-                          (function (e) {
-                            switch (e) {
-                              case b.Zz.Private:
-                              case b.Zz.Workspace:
-                                return (0, M.jsxs)(M.Fragment, {
-                                  children: [
-                                    "Your GPT can’t be updated because it violates our",
-                                    " ",
-                                    (0, M.jsx)(Z, {
-                                      target: "_blank",
-                                      href: "https://openai.com/policies/usage-policies",
-                                      rel: "noreferrer",
-                                      children: "Usage Policies",
-                                    }),
-                                    ".",
-                                  ],
-                                });
-                              case b.Zz.Link:
-                                return (0, M.jsxs)(M.Fragment, {
-                                  children: [
-                                    "Your GPT can’t be shared publicly because it violates our",
-                                    " ",
-                                    (0, M.jsx)(Z, {
-                                      target: "_blank",
-                                      href: "https://openai.com/policies/usage-policies",
-                                      rel: "noreferrer",
-                                      children: "Usage Policies",
-                                    }),
-                                    ".",
-                                  ],
-                                });
-                              case b.Zz.Marketplace:
-                                return (0, M.jsxs)(M.Fragment, {
-                                  children: [
-                                    "Your GPT can’t appear in the Explore GPTs page because it violates our",
-                                    " ",
-                                    (0, M.jsx)(Z, {
-                                      target: "_blank",
-                                      href: "https://openai.com/policies/usage-policies",
-                                      rel: "noreferrer",
-                                      children: "Usage Policies",
-                                    }),
-                                    ".",
-                                  ],
-                                });
-                            }
-                          })(e),
-                          " ",
-                          n > 1
-                            ? "See below for the specific issues:"
-                            : 1 == n
-                              ? "See below for the specific issue:"
-                              : "",
-                        ],
-                      }),
-                      n > 0 &&
-                        (null == r
-                          ? void 0
-                          : r.map((e) =>
-                              (0, M.jsxs)(M.Fragment, {
-                                children: [
-                                  (0, M.jsx)("p", {
-                                    className: "font-bold",
-                                    children: (function (e) {
-                                      switch (e) {
-                                        case "profile_picture":
-                                          return "Profile Picture";
-                                        case "gizmo_name":
-                                          return "Name";
-                                        case "gizmo_description":
-                                          return "Description";
-                                        case "gizmo_instructions":
-                                          return "Instructions";
-                                        case "gizmo_welcome_message":
-                                          return "Welcome Message";
-                                        case "custom_actions":
-                                          return "Custom Actions";
-                                        case "conversation_starter":
-                                          return "Conversation Starter";
-                                        case "file":
-                                          return "File";
-                                        default:
-                                          return;
-                                      }
-                                    })(e.name),
-                                  }),
-                                  (0, M.jsx)("ul", {
-                                    className: "list-disc pl-5",
-                                    children: e.reasons.map((e) =>
-                                      (0, M.jsxs)(
-                                        "li",
-                                        {
-                                          children: [
-                                            e.description,
-                                            " ",
-                                            e.link
-                                              ? (0, M.jsx)(Z, {
-                                                  href: e.link,
-                                                  target: "_blank",
-                                                  rel: "noreferrer",
-                                                  children: "Learn more",
-                                                })
-                                              : "",
-                                          ],
-                                        },
-                                        e.description
-                                      )
-                                    ),
-                                  }),
-                                ],
-                              })
-                            )),
-                      i &&
-                        (0, M.jsx)("p", {
-                          children:
-                            "Alternatively you may appeal this decision and we will get back to you as soon as possible. Or you can publish to “Only me” and use this GPT privately.",
-                        }),
-                    ],
-                  });
-                })(i, r, n),
+                children: (0, C.jsx)(U, {
+                  sharingRecipient: a,
+                  sharingTargets: l,
+                  appealAvailable: r,
+                }),
               }),
             });
-          case S.AppealForm:
-            return (0, M.jsx)(j.Z, {
-              title: "Appeal",
+          case R.AppealForm:
+            return (0, C.jsx)(j.Z, {
+              title: d.formatMessage({
+                id: "gizmo.appeals.appealModalTitle",
+                defaultMessage: "Appeal",
+              }),
               isOpen: !0,
-              onClose: l,
+              onClose: n,
               showCloseButton: !0,
               shouldIgnoreClickOutside: !0,
-              primaryButton: (0, M.jsx)(v.ZP.Button, {
-                title: "Submit",
+              primaryButton: (0, C.jsx)(v.ZP.Button, {
                 color: "primary",
-                onClick: m,
-                disabled: 0 === d.trim().length,
+                onClick: h,
+                disabled: 0 === c.trim().length,
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.submitAppealButton",
+                  defaultMessage: "Submit",
+                }),
               }),
-              secondaryButton: (0, M.jsx)(v.ZP.Button, {
-                title: "Back",
-                onClick: () => p(S.Initial),
+              secondaryButton: (0, C.jsx)(v.ZP.Button, {
+                onClick: () => m(R.Initial),
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.backButton",
+                  defaultMessage: "Back",
+                }),
               }),
               type: "warning",
-              children: (0, M.jsxs)("div", {
+              children: (0, C.jsxs)("div", {
                 className: "flex flex-col gap-2 text-sm",
                 children: [
-                  (0, M.jsx)("p", {
-                    children:
-                      "Please provide a reason for why you believe this GPT doesn’t violate our policies and should be published",
+                  (0, C.jsx)("p", {
+                    children: (0, C.jsx)(Z.Z, {
+                      id: "gizmo.appeals.appealReasonText",
+                      defaultMessage:
+                        "Please provide a reason for why you believe this GPT doesn’t violate our policies and should be published",
+                    }),
                   }),
-                  (0, M.jsx)(_, {
-                    value: d,
-                    onChange: (e) => c(e.target.value),
+                  (0, C.jsx)(A, {
+                    value: c,
+                    onChange: (e) => u(e.target.value),
                   }),
                 ],
               }),
             });
-          case S.SubmittedConfirmation:
-            return (0, M.jsx)(M.Fragment, {});
+          case R.SubmittedConfirmation:
+            return (0, C.jsx)(C.Fragment, {});
         }
       }
-      function A(e) {
-        let { onClose: t } = e;
-        return (0, M.jsx)(j.Z, {
-          title: "Appeal submitted",
+      function B(e) {
+        let { onClose: t } = e,
+          a = (0, _.Z)();
+        return (0, C.jsx)(j.Z, {
+          title: a.formatMessage({
+            id: "gizmo.appeals.appealSubmittedModalTitle",
+            defaultMessage: "Appeal submitted",
+          }),
           isOpen: !0,
           onClose: t,
           showCloseButton: !0,
-          primaryButton: (0, M.jsx)(v.ZP.Button, {
-            title: "Close",
+          primaryButton: (0, C.jsx)(v.ZP.Button, {
             color: "primary",
             onClick: t,
+            children: (0, C.jsx)(Z.Z, {
+              id: "gizmo.appeals.closeButton",
+              defaultMessage: "Close",
+            }),
           }),
           type: "success",
-          children: (0, M.jsx)("div", {
+          children: (0, C.jsx)("div", {
             className: "flex flex-col gap-2 text-sm",
-            children: (0, M.jsx)("div", {
-              children:
-                "Your appeal has been submitted. We will get back to you as soon as possible.",
+            children: (0, C.jsx)("div", {
+              children: (0, C.jsx)(Z.Z, {
+                id: "gizmo.appeals.appealSubmittedText",
+                defaultMessage:
+                  "Your appeal has been submitted. We will get back to you as soon as possible.",
+              }),
             }),
           }),
         });
       }
-      function G(e) {
-        let { gizmoId: t, onClose: i } = e,
-          { data: a } = (0, m.b9)(t, !0),
+      function F(e) {
+        let { gizmoId: t, onClose: a } = e,
+          { data: i } = (0, m.b9)(t, !0),
           s = async () => {
             await y.U.postGizmoCancelAppeal(t);
           };
-        return (0, M.jsx)(j.Z, {
+        return (0, C.jsx)(j.Z, {
           isOpen: !0,
           onClose: N(),
-          primaryButton: (0, M.jsx)(v.ZP.Button, {
-            title: "Cancel appeal",
+          primaryButton: (0, C.jsx)(v.ZP.Button, {
             color: "primary",
             onClick: () => {
-              s(), null == i || i();
+              s(), null == a || a();
             },
+            children: (0, C.jsx)(Z.Z, {
+              id: "gizmo.appeals.cancelAppealButton",
+              defaultMessage: "Cancel appeal",
+            }),
           }),
           type: "warning",
-          children: (0, M.jsxs)("div", {
+          children: (0, C.jsxs)("div", {
             className: "flex flex-col gap-2 text-sm",
             children: [
-              (0, M.jsx)("h2", {
+              (0, C.jsx)("h2", {
                 className: "text-lg font-semibold",
-                children: "Reviewing your appeal",
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.appealReviewingHeader",
+                  defaultMessage: "Reviewing your appeal",
+                }),
               }),
-              (0, M.jsxs)("p", {
-                children: [
-                  "During the review you can continue using “",
-                  null == a ? void 0 : a.gizmo.display.name,
-                  "” as your private GPT, but won’t be able to update it or share it with others.",
-                ],
+              (0, C.jsx)("p", {
+                children: (0, C.jsx)(Z.Z, {
+                  id: "gizmo.appeals.appealSentModalText",
+                  defaultMessage:
+                    "During the review you can continue using “{gizmoName}” as your private GPT, but won’t be able to update it or share it with others.",
+                  values: {
+                    gizmoName: null == i ? void 0 : i.gizmo.display.name,
+                  },
+                }),
               }),
             ],
           }),
         });
       }
-      function E(e) {
-        let { appealState: t, onAppealClose: i, onAppealSubmitted: a } = e,
+      function V(e) {
+        let { appealState: t, onAppealClose: a, onAppealSubmitted: i } = e,
           { value: s } = (0, w.sB)(w.tz.GizmoAppeals),
-          { 0: r, 1: n } = (0, z.useState)(!1);
-        return r
-          ? (0, M.jsx)(A, {
+          { 0: l, 1: r } = (0, M.useState)(!1);
+        return l
+          ? (0, C.jsx)(B, {
               onClose: () => {
-                n(!1), null == a || a();
+                r(!1), null == i || i();
               },
             })
-          : (0, M.jsxs)(M.Fragment, {
+          : (0, C.jsxs)(C.Fragment, {
               children: [
-                (null == t ? void 0 : t.showModal) == T.AppealSent &&
-                  (0, M.jsx)(G, { gizmoId: t.gizmoId, onClose: i }),
-                (null == t ? void 0 : t.showModal) == T.AppealAvailable &&
-                  (0, M.jsx)(I, {
+                (null == t ? void 0 : t.showModal) == E.AppealSent &&
+                  (0, C.jsx)(F, { gizmoId: t.gizmoId, onClose: a }),
+                (null == t ? void 0 : t.showModal) == E.AppealAvailable &&
+                  (0, C.jsx)(D, {
                     gizmoId: t.gizmoId,
                     sharingRecipient: t.sharingRecipient,
                     categories: t.categories,
                     moderationType: t.moderationType,
                     sharingTargets: t.sharingTargets,
                     appealAvailable: s,
-                    onClose: () => (null == i ? void 0 : i()),
-                    onAppealSubmitted: () => n(!0),
+                    onClose: () => (null == a ? void 0 : a()),
+                    onAppealSubmitted: () => r(!0),
                   }),
               ],
             });
       }
-      var L = i(42005),
-        U = i(65455),
-        R = i(24668),
-        D = i(9417),
-        B = i(99784),
-        V = i(78e3),
-        q = i(30640),
-        F = i(84126),
-        W = i(39496),
-        Y = i(51533),
-        J = i(28354),
-        K = i(53197),
-        H = i(39352),
-        Q = i(92442),
-        X = i(19841),
-        $ = i(61888),
-        ee = i(12366),
-        et = i.n(ee),
-        ei = i(9063),
-        ea = i(99424),
-        es = i(22433),
-        er = i(7557),
-        en = i(8402),
-        el = i(84692),
-        eo = i(68498),
-        ed = i(1703),
-        ec = i(36607),
-        eu = i(66218);
-      function ep(e) {
+      var q = a(42005),
+        W = a(65455),
+        Y = a(24668),
+        K = a(9417),
+        J = a(99784),
+        Q = a(78e3),
+        H = a(30640),
+        X = a(84126),
+        $ = a(39496),
+        ee = a(51533),
+        et = a(28354),
+        ea = a(53197),
+        ei = a(39352),
+        es = a(92442),
+        el = a(19841),
+        er = a(61888),
+        en = a.n(er),
+        eo = a(12366),
+        ed = a.n(eo),
+        ec = a(99424),
+        eu = a(22433),
+        ep = a(7557),
+        em = a(8402),
+        eh = a(1703),
+        eg = a(36607),
+        ef = a(66218);
+      function ex(e) {
         let { onSelectExample: t } = e,
-          i = (0, ei.Z)(),
-          a = (0, z.useRef)(null);
-        return (0, M.jsxs)("select", {
+          a = (0, _.Z)(),
+          i = (0, M.useRef)(null);
+        return (0, C.jsxs)("select", {
           onChange: (e) => {
             "label" !== e.target.value &&
-              (t(eh[parseInt(e.target.value)].spec),
-              (a.current.value = "label"));
+              (t(ej[parseInt(e.target.value)].spec),
+              (i.current.value = "label"));
           },
           className:
             "h-8 rounded-lg border border-token-border-medium bg-transparent px-2 py-0 text-sm",
-          ref: a,
+          ref: i,
           children: [
-            (0, M.jsx)("option", {
+            (0, C.jsx)("option", {
               value: "label",
-              children: i.formatMessage(em.examples),
+              children: a.formatMessage(ev.examples),
             }),
-            eh.map((e, t) =>
-              (0, M.jsx)(
+            ej.map((e, t) =>
+              (0, C.jsx)(
                 "option",
-                { value: t, children: i.formatMessage(e.displayName) },
+                { value: t, children: a.formatMessage(e.displayName) },
                 t
               )
             ),
           ],
         });
       }
-      let em = (0, eo.vU)({
+      let ev = (0, P.vU)({
           examples: {
             id: "gizmo.actions.examples",
             defaultMessage: "Examples",
@@ -447,9 +578,9 @@
             defaultMessage: "Blank Template",
           },
         }),
-        eh = [
+        ej = [
           {
-            displayName: em.weatherExampleTitle,
+            displayName: ev.weatherExampleTitle,
             spec: JSON.stringify(
               {
                 openapi: "3.1.0",
@@ -485,11 +616,11 @@
             ),
           },
           {
-            displayName: em.petStoreExampleTitle,
+            displayName: ev.petStoreExampleTitle,
             spec: '# Taken from https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml\n\nopenapi: "3.0.0"\ninfo:\n  version: 1.0.0\n  title: Swagger Petstore\n  license:\n    name: MIT\nservers:\n  - url: https://petstore.swagger.io/v1\npaths:\n  /pets:\n    get:\n      summary: List all pets\n      operationId: listPets\n      tags:\n        - pets\n      parameters:\n        - name: limit\n          in: query\n          description: How many items to return at one time (max 100)\n          required: false\n          schema:\n            type: integer\n            maximum: 100\n            format: int32\n      responses:\n        \'200\':\n          description: A paged array of pets\n          headers:\n            x-next:\n              description: A link to the next page of responses\n              schema:\n                type: string\n          content:\n            application/json:    \n              schema:\n                $ref: "#/components/schemas/Pets"\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\n    post:\n      summary: Create a pet\n      operationId: createPets\n      tags:\n        - pets\n      responses:\n        \'201\':\n          description: Null response\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\n  /pets/{petId}:\n    get:\n      summary: Info for a specific pet\n      operationId: showPetById\n      tags:\n        - pets\n      parameters:\n        - name: petId\n          in: path\n          required: true\n          description: The id of the pet to retrieve\n          schema:\n            type: string\n      responses:\n        \'200\':\n          description: Expected response to a valid request\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Pet"\n        default:\n          description: unexpected error\n          content:\n            application/json:\n              schema:\n                $ref: "#/components/schemas/Error"\ncomponents:\n  schemas:\n    Pet:\n      type: object\n      required:\n        - id\n        - name\n      properties:\n        id:\n          type: integer\n          format: int64\n        name:\n          type: string\n        tag:\n          type: string\n    Pets:\n      type: array\n      maxItems: 100\n      items:\n        $ref: "#/components/schemas/Pet"\n    Error:\n      type: object\n      required:\n        - code\n        - message\n      properties:\n        code:\n          type: integer\n          format: int32\n        message:\n          type: string',
           },
           {
-            displayName: em.blankExampleTitle,
+            displayName: ev.blankExampleTitle,
             spec: JSON.stringify(
               {
                 openapi: "3.1.0",
@@ -507,134 +638,134 @@
             ),
           },
         ];
-      var eg = i(25991),
-        ef = i(88980),
-        ex = i(23340);
-      function ev(e) {
+      var ey = a(25991),
+        eb = a(88980),
+        ew = a(23340);
+      function ek(e) {
         let { clientThreadId: t } = e,
-          i = (0, B.oq)(t),
-          a = (0, ex.Bv)(t),
-          s = (0, B.U0)(t, i),
-          r = [...Array(s).keys()].map((e) =>
-            (0, M.jsx)(
-              ef.Z,
+          a = (0, J.oq)(t),
+          i = (0, ew.Bv)(t),
+          s = (0, J.U0)(t, a),
+          l = [...Array(s).keys()].map((e) =>
+            (0, C.jsx)(
+              eb.Z,
               {
                 isFinalTurn: e === s - 1,
                 turnIndex: e,
                 clientThreadId: t,
-                conversationLeafId: i,
-                onChangeItemInView: $.noop,
-                onChangeRating: $.noop,
-                onRequestMoreCompletions: $.noop,
-                onRequestCompletion: $.noop,
-                currentModelId: null != a ? a : "",
+                conversationLeafId: a,
+                onChangeItemInView: er.noop,
+                onChangeRating: er.noop,
+                onRequestMoreCompletions: er.noop,
+                onRequestCompletion: er.noop,
+                currentModelId: null != i ? i : "",
               },
               e
             )
           );
-        return (0, M.jsx)(M.Fragment, { children: r });
+        return (0, C.jsx)(C.Fragment, { children: l });
       }
-      function ej(e) {
+      function ez(e) {
         let { clientThreadIds: t } = e;
-        return (0, M.jsx)(M.Fragment, {
-          children: t.map((e) => (0, M.jsx)(ev, { clientThreadId: e }, e)),
+        return (0, C.jsx)(C.Fragment, {
+          children: t.map((e) => (0, C.jsx)(ek, { clientThreadId: e }, e)),
         });
       }
-      var ey = i(36932),
-        eb = i(50484),
-        ew = i(61161),
-        ek = i(78623),
-        eN = i(18405),
-        ez = i(4579),
-        eP = i(8869),
-        eM = i(45534),
-        eZ = i(58849),
-        e_ = i(91225),
-        eT = i(83737),
-        eC = i(1454),
-        eO = i(8844),
-        eS = i(3243),
-        eI = i(37345),
-        eA = i(22824);
-      function eG() {
-        return (0, M.jsxs)("div", {
+      var eN = a(36932),
+        eM = a(50484),
+        eP = a(61161),
+        eZ = a(78623),
+        e_ = a(18405),
+        eT = a(4579),
+        eC = a(8869),
+        eO = a(45534),
+        eS = a(58849),
+        eI = a(91225),
+        eA = a(83737),
+        eE = a(1454),
+        eG = a(8844),
+        eL = a(3243),
+        eU = a(37345),
+        eR = a(22824);
+      function eD() {
+        return (0, C.jsxs)("div", {
           className: "flex items-center",
           children: [
-            (0, M.jsx)("div", {
+            (0, C.jsx)("div", {
               className: "border-token-border-secondary flex-grow border-b",
             }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className:
                 "flex flex-shrink-0 items-center gap-2 px-2 py-6 text-sm text-token-text-tertiary",
-              children: [(0, M.jsx)(eC.V7f, {}), "GPT updated"],
+              children: [(0, C.jsx)(eE.V7f, {}), "GPT updated"],
             }),
-            (0, M.jsx)("div", {
+            (0, C.jsx)("div", {
               className: "border-token-border-secondary flex-grow border-b",
             }),
           ],
         });
       }
-      let eE = (((n = {}).TestGizmoAction = "test_gizmo_action"), n),
-        eL = new eP.V(),
-        eU = z.memo(function (e) {
+      let eB = (((r = {}).TestGizmoAction = "test_gizmo_action"), r),
+        eF = new eC.V(),
+        eV = M.memo(function (e) {
           var t;
-          let { gizmoEditorData: i, isSavingDraft: a, showTitle: s = !0 } = e,
-            { 0: r, 1: n } = (0, z.useState)(() => (0, B.OX)()),
-            { 0: l, 1: o } = (0, z.useState)([]);
-          (0, z.useEffect)(() => {
-            o((e) => (e[e.length - 1] === r ? e : [...e, r]));
-          }, [r]);
-          let d = l.slice(0, -1);
-          (0, B.ax)(r, { kind: es.OL.GizmoTest, gizmo_id: i.id }),
-            (0, z.useEffect)(() => {
-              B.tQ.updateConversationMode(r, {
-                kind: es.OL.GizmoTest,
-                gizmo_id: i.id,
+          let { gizmoEditorData: a, isSavingDraft: i, showTitle: s = !0 } = e,
+            { 0: l, 1: r } = (0, M.useState)(() => (0, J.OX)()),
+            { 0: n, 1: o } = (0, M.useState)([]);
+          (0, M.useEffect)(() => {
+            o((e) => (e[e.length - 1] === l ? e : [...e, l]));
+          }, [l]);
+          let d = n.slice(0, -1);
+          (0, J.ax)(l, { kind: eu.OL.GizmoTest, gizmo_id: a.id }),
+            (0, M.useEffect)(() => {
+              J.tQ.updateConversationMode(l, {
+                kind: eu.OL.GizmoTest,
+                gizmo_id: a.id,
               });
-            }, [r, i.id]);
-          let c = (0, B.UL)(r),
+            }, [l, a.id]);
+          let c = (0, J.UL)(l),
             u =
-              null === (t = i.files) || void 0 === t
+              null === (t = a.files) || void 0 === t
                 ? void 0
                 : t.map((e) => e.file_id).join();
-          (0, z.useEffect)(() => {
-            null != B.tQ.getServerThreadId(r) && n((0, B.OX)());
-          }, [i.id, i.instructions, i.tools, u, r]),
-            (0, z.useEffect)(() => {
-              (0, B.Zz)(r) &&
-                B.iN.hasThread(r) &&
-                c.lastModelUsed !== ex.mx &&
-                B.tQ.updateInitialThreadDataForNewThread(r, ex.mx, []);
-            }, [r, c, i]);
-          let p = (0, eN.tN)((e) => e.activeSidebar),
-            m = (0, z.useMemo)(
-              () => ({ gizmoEditorData: i, mode: "test" }),
-              [i]
+          (0, M.useEffect)(() => {
+            null != J.tQ.getServerThreadId(l) && r((0, J.OX)());
+          }, [a.id, a.instructions, a.tools, u, l]),
+            (0, M.useEffect)(() => {
+              (0, J.Zz)(l) &&
+                J.iN.hasThread(l) &&
+                c.lastModelUsed !== ew.mx &&
+                J.tQ.updateInitialThreadDataForNewThread(l, ew.mx, []);
+            }, [l, c, a]);
+          let p = (0, e_.tN)((e) => e.activeSidebar),
+            m = (0, M.useMemo)(
+              () => ({ gizmoEditorData: a, mode: "test" }),
+              [a]
             ),
-            { 0: h, 1: g } = (0, z.useState)(0),
+            { 0: h, 1: g } = (0, M.useState)(0),
             f = () => {
               g((e) => e - 360);
             },
-            x = i.id,
+            x = a.id,
             v = (function (e) {
-              let t = (0, eS.Z)(e, void 0, $.noop, []);
-              return (0, z.useCallback)(
-                async (i, a, s) => {
-                  let r = B.tQ.getThreadCurrentLeafId(e),
-                    n = (0, eO.Z)();
-                  B.tQ.updateTree(e, (e) => {
-                    e.addNodeToEnd(r, {
-                      id: n,
+              let t = (0, eL.Z)(e, void 0, er.noop, []);
+              return (0, M.useCallback)(
+                async (a, i, s) => {
+                  let l = J.tQ.getThreadCurrentLeafId(e),
+                    r = (0, eG.Z)();
+                  J.tQ.updateTree(e, (e) => {
+                    e.addNodeToEnd(l, {
+                      id: r,
                       children: [],
-                      parentId: r,
+                      parentId: l,
                       message: {
-                        id: n,
-                        author: { role: es.uU.User },
+                        id: r,
+                        author: { role: eu.uU.User },
                         content: {
-                          content_type: es.PX.Text,
+                          content_type: eu.PX.Text,
                           parts: [
                             "Call the "
-                              .concat(a, " API with the ")
+                              .concat(i, " API with the ")
                               .concat(s, " operation"),
                           ],
                         },
@@ -644,79 +775,79 @@
                             from_client: {
                               type: "test",
                               operation: s,
-                              tool_name: (0, ew.VN)(a),
+                              tool_name: (0, eP.VN)(i),
                             },
                           },
                         },
                       },
                     });
                   });
-                  let l = {
-                      conversationMode: { kind: es.OL.GizmoTest, gizmo_id: i },
+                  let n = {
+                      conversationMode: { kind: eu.OL.GizmoTest, gizmo_id: a },
                     },
-                    o = await (0, eZ.rS)(es.OL.GizmoTest),
-                    d = await eM.ZP.getEnforcementToken(o),
-                    c = await e_.Z.getEnforcementToken(o);
+                    o = await (0, eS.rS)(eu.OL.GizmoTest),
+                    d = await eO.ZP.getEnforcementToken(o),
+                    c = await eI.Z.getEnforcementToken(o);
                   t({
-                    model: ex.mx,
-                    completionType: es.Os.Next,
-                    parentNodeId: n,
+                    model: ew.mx,
+                    completionType: eu.Os.Next,
+                    parentNodeId: r,
                     metadata: {},
                     focusOnNewCompletion: !0,
                     arkoseToken: d,
                     turnstileToken: c,
                     preflightTime: 0,
-                    completionMetadata: l,
+                    completionMetadata: n,
                   });
                 },
                 [e, t]
               );
-            })(r);
+            })(l);
           return (
-            (0, z.useEffect)(
+            (0, M.useEffect)(
               () =>
-                (0, ez.LW)(eL, {
+                (0, eT.LW)(eF, {
                   test_gizmo_action: (e) => {
-                    let { rootDomain: t, operationName: i } = e;
-                    x && v(x, t, i);
+                    let { rootDomain: t, operationName: a } = e;
+                    x && v(x, t, a);
                   },
                 }),
               [v, x]
             ),
-            (0, M.jsx)(eI.D.Provider, {
+            (0, C.jsx)(eU.D.Provider, {
               value: m,
-              children: (0, M.jsxs)("div", {
-                className: (0, X.default)(
+              children: (0, C.jsxs)("div", {
+                className: (0, el.default)(
                   "flex h-full w-full",
-                  a && "cursor-wait opacity-80 transition"
+                  i && "cursor-wait opacity-80 transition"
                 ),
                 children: [
-                  (0, M.jsxs)("div", {
+                  (0, C.jsxs)("div", {
                     className: "flex grow flex-col",
                     children: [
-                      (0, M.jsx)("div", {
+                      (0, C.jsx)("div", {
                         className: "relative mb-2 flex-shrink-0",
-                        children: (0, M.jsx)("div", {
+                        children: (0, C.jsx)("div", {
                           className: "flex justify-center py-1",
                           children:
                             s &&
-                            (0, M.jsxs)("div", {
+                            (0, C.jsxs)("div", {
                               className:
                                 "group flex items-center gap-2 text-lg font-medium",
                               children: [
-                                (0, M.jsx)("div", { className: "icon-md" }),
-                                (0, M.jsxs)("button", {
+                                (0, C.jsx)("div", { className: "icon-md" }),
+                                (0, C.jsxs)("button", {
                                   onClick: () => {
-                                    f(), o([]), n((0, B.OX)());
+                                    f(), o([]), r((0, J.OX)());
                                   },
                                   className: "flex items-center gap-2",
                                   children: [
                                     "Preview",
-                                    (0, M.jsx)(eT.E.div, {
+                                    (0, C.jsx)(eA.E.div, {
                                       className: "text-token-text-primary",
                                       animate: { rotate: h },
                                       transition: { duration: 0.3 },
-                                      children: (0, M.jsx)(en.u8, {
+                                      children: (0, C.jsx)(em.u8, {
                                         className:
                                           "icon-md invisible group-hover:visible",
                                       }),
@@ -727,33 +858,33 @@
                             }),
                         }),
                       }),
-                      (0, M.jsx)("div", {
-                        className: (0, X.default)(
+                      (0, C.jsx)("div", {
+                        className: (0, el.default)(
                           "relative grow overflow-auto px-2",
-                          a && "pointer-events-none"
+                          i && "pointer-events-none"
                         ),
-                        children: (0, M.jsx)(ey.Z, {
-                          clientThreadId: r,
+                        children: (0, C.jsx)(eN.Z, {
+                          clientThreadId: l,
                           hideHeader: !0,
-                          renderEmptyState: (0, M.jsxs)("div", {
+                          renderEmptyState: (0, C.jsxs)("div", {
                             className: "relative h-full w-full",
                             children: [
                               null != d &&
                                 d.length > 0 &&
-                                (0, M.jsx)("div", {
+                                (0, C.jsx)("div", {
                                   className: "h-full w-full opacity-20",
-                                  children: (0, M.jsxs)(eb.I, {
+                                  children: (0, C.jsxs)(eM.I, {
                                     children: [
-                                      (0, M.jsx)(ej, { clientThreadIds: d }),
-                                      (0, M.jsx)(eG, {}),
+                                      (0, C.jsx)(ez, { clientThreadIds: d }),
+                                      (0, C.jsx)(eD, {}),
                                     ],
                                   }),
                                 }),
-                              (0, M.jsx)("div", {
+                              (0, C.jsx)("div", {
                                 className:
                                   "absolute left-0 top-0 h-full w-full",
-                                children: (0, M.jsx)(eA.r, {
-                                  gizmo: i,
+                                children: (0, C.jsx)(eR.r, {
+                                  gizmo: a,
                                   hideOwner: !0,
                                 }),
                               }),
@@ -761,15 +892,15 @@
                           }),
                           prependThreadChildren:
                             d.length > 0 &&
-                            (0, M.jsxs)(M.Fragment, {
+                            (0, C.jsxs)(C.Fragment, {
                               children: [
-                                (0, M.jsx)("div", {
+                                (0, C.jsx)("div", {
                                   className: "opacity-50",
-                                  children: (0, M.jsx)(ej, {
+                                  children: (0, C.jsx)(ez, {
                                     clientThreadIds: d,
                                   }),
                                 }),
-                                (0, M.jsx)(eG, {}),
+                                (0, C.jsx)(eD, {}),
                               ],
                             }),
                         }),
@@ -777,10 +908,10 @@
                     ],
                   }),
                   "debug" === p &&
-                    (0, M.jsx)(ek.fv, {
-                      clientThreadId: r,
+                    (0, C.jsx)(eZ.fv, {
+                      clientThreadId: l,
                       slideOver: !1,
-                      onClose: () => eN.vm.toggleActiveSidebar("debug"),
+                      onClose: () => e_.vm.toggleActiveSidebar("debug"),
                       isOpen: !0,
                     }),
                 ],
@@ -788,69 +919,69 @@
             })
           );
         });
-      var eR = i(28373);
-      function eD(e) {
-        let { content: t, button: i, onClick: a } = e;
-        return (0, M.jsxs)("div", {
+      var eq = a(28373);
+      function eW(e) {
+        let { content: t, button: a, onClick: i } = e;
+        return (0, C.jsxs)("div", {
           className:
             "flex rounded-lg border border-token-border-medium text-sm hover:cursor-pointer",
-          onClick: a,
+          onClick: i,
           children: [
-            (0, M.jsx)("div", { className: "h-9 grow px-3 py-2", children: t }),
-            (0, M.jsx)("div", { className: "w-px bg-token-border-medium" }),
-            i,
+            (0, C.jsx)("div", { className: "h-9 grow px-3 py-2", children: t }),
+            (0, C.jsx)("div", { className: "w-px bg-token-border-medium" }),
+            a,
           ],
         });
       }
-      let eB = ["oauth_client_id", "oauth_client_secret"],
-        eV = ["api_key"];
-      function eq(e, t) {
-        var i = Object.keys(e);
+      let eY = ["oauth_client_id", "oauth_client_secret"],
+        eK = ["api_key"];
+      function eJ(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function eF(e) {
+      function eQ(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eq(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? eJ(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : eq(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : eJ(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      let eW = "".concat(
+      let eH = "".concat(
         "https://chat.openai.com",
         "/g/g-TYEliDU6A-actionsgpt"
       );
-      function eY(e) {
+      function eX(e) {
         let { children: t } = e;
-        return (0, M.jsx)("label", {
+        return (0, C.jsx)("label", {
           className: "mb-1 block text-sm font-medium",
           children: t,
         });
       }
-      function eJ(e) {
-        var t, i, a, s, r, n, l, o, d, c, u, p, m, h;
+      function e$(e) {
+        var t, a, i, s, l, r, n, o, d, c, u, p, m, h;
         let { jitPluginTool: g, onUpdateTool: f, onClose: x } = e,
-          v = (0, ei.Z)(),
-          { 0: y, 1: b } = (0, z.useState)({
+          v = (0, _.Z)(),
+          { 0: y, 1: b } = (0, M.useState)({
             apiKeyValue: "",
             oauthClientIdValue: "",
             oauthClientSecretValue: "",
@@ -858,50 +989,50 @@
               null !==
                 (t =
                   null == g ||
-                  null === (i = g.metadata) ||
-                  void 0 === i ||
-                  null === (i = i.auth) ||
-                  void 0 === i
+                  null === (a = g.metadata) ||
+                  void 0 === a ||
+                  null === (a = a.auth) ||
+                  void 0 === a
                     ? void 0
-                    : i.client_url) && void 0 !== t
+                    : a.client_url) && void 0 !== t
                 ? t
                 : "",
             oauthTokenUrlValue:
               null !==
-                (a =
+                (i =
                   null == g ||
                   null === (s = g.metadata) ||
                   void 0 === s ||
                   null === (s = s.auth) ||
                   void 0 === s
                     ? void 0
-                    : s.authorization_url) && void 0 !== a
-                ? a
+                    : s.authorization_url) && void 0 !== i
+                ? i
                 : "",
             oauthScopeValue:
               null !==
-                (r =
+                (l =
                   null == g ||
-                  null === (n = g.metadata) ||
-                  void 0 === n ||
-                  null === (n = n.auth) ||
-                  void 0 === n
+                  null === (r = g.metadata) ||
+                  void 0 === r ||
+                  null === (r = r.auth) ||
+                  void 0 === r
                     ? void 0
-                    : n.scope) && void 0 !== r
-                ? r
+                    : r.scope) && void 0 !== l
+                ? l
                 : "",
             authTypeValue:
               null !==
-                (l =
+                (n =
                   null == g ||
                   null === (o = g.metadata) ||
                   void 0 === o ||
                   null === (o = o.auth) ||
                   void 0 === o
                     ? void 0
-                    : o.type) && void 0 !== l
-                ? l
-                : es.Jv.None,
+                    : o.type) && void 0 !== n
+                ? n
+                : eu.Jv.None,
             httpAuthTypeValue:
               null !==
                 (d =
@@ -940,24 +1071,24 @@
                 : "default_post",
           });
         function w(e) {
-          b((t) => eF(eF({}, t), e));
+          b((t) => eQ(eQ({}, t), e));
         }
-        return (0, M.jsxs)(j.Z, {
+        return (0, C.jsxs)(j.Z, {
           type: "success",
           isOpen: !0,
           title: v.formatMessage({
             id: "kZ040s",
             defaultMessage: "Authentication",
           }),
-          primaryButton: (0, M.jsx)(er.z, {
+          primaryButton: (0, C.jsx)(ep.z, {
             color: "dark",
             onClick: () => {
               f(
-                y.authTypeValue === es.Jv.None
-                  ? { type: es.Jv.None }
-                  : y.authTypeValue === es.Jv.OAuth
+                y.authTypeValue === eu.Jv.None
+                  ? { type: eu.Jv.None }
+                  : y.authTypeValue === eu.Jv.OAuth
                     ? {
-                        type: es.Jv.OAuth,
+                        type: eu.Jv.OAuth,
                         client_url: y.oauthAuthUrlValue,
                         authorization_url: y.oauthTokenUrlValue,
                         authorization_content_type:
@@ -968,7 +1099,7 @@
                         oauth_client_secret: y.oauthClientSecretValue,
                       }
                     : {
-                        type: es.Jv.ServiceHTTP,
+                        type: eu.Jv.ServiceHTTP,
                         authorization_type: y.httpAuthTypeValue,
                         custom_auth_header: y.customHeaderValue,
                         api_key: y.apiKeyValue,
@@ -976,70 +1107,67 @@
               ),
                 x();
             },
-            children: (0, M.jsx)(el.Z, {
-              id: "dchvRM",
-              defaultMessage: "Save",
-            }),
+            children: (0, C.jsx)(Z.Z, { id: "dchvRM", defaultMessage: "Save" }),
           }),
-          secondaryButton: (0, M.jsx)(er.z, {
+          secondaryButton: (0, C.jsx)(ep.z, {
             color: "neutral",
             onClick: x,
-            children: (0, M.jsx)(el.Z, {
+            children: (0, C.jsx)(Z.Z, {
               id: "xHBR5t",
               defaultMessage: "Cancel",
             }),
           }),
           onClose: x,
           children: [
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "mb-4",
               children: [
-                (0, M.jsx)(el.Z, {
+                (0, C.jsx)(Z.Z, {
                   id: "la7zPT",
                   defaultMessage: "Authentication Type",
                 }),
-                (0, M.jsxs)(eu.Z.Root, {
+                (0, C.jsxs)(ef.Z.Root, {
                   onValueChange: (e) => {
                     w({ authTypeValue: e });
                   },
                   value: y.authTypeValue,
                   className: "flex gap-4",
                   children: [
-                    (0, M.jsx)(eR.Xb, {
+                    (0, C.jsx)(eq.Xb, {
                       label: v.formatMessage({
                         id: "Ml5rNZ",
                         defaultMessage: "None",
                       }),
-                      value: es.Jv.None,
+                      value: eu.Jv.None,
                     }),
-                    (0, M.jsx)(eR.Xb, {
+                    (0, C.jsx)(eq.Xb, {
                       label: v.formatMessage({
                         id: "rN0uCi",
                         defaultMessage: "API Key",
                       }),
-                      value: es.Jv.ServiceHTTP,
+                      value: eu.Jv.ServiceHTTP,
                     }),
-                    (0, M.jsx)(eR.Xb, {
+                    (0, C.jsx)(eq.Xb, {
                       label: v.formatMessage({
                         id: "qG7Z4O",
                         defaultMessage: "OAuth",
                       }),
-                      value: es.Jv.OAuth,
+                      value: eu.Jv.OAuth,
                     }),
                   ],
                 }),
               ],
             }),
             "service_http" === y.authTypeValue
-              ? (0, M.jsxs)(M.Fragment, {
+              ? (0, C.jsxs)(C.Fragment, {
                   children: [
-                    (0, M.jsx)(eY, {
-                      children: (0, M.jsx)(el.Z, {
+                    (0, C.jsx)(eX, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "hSd+5k",
                         defaultMessage: "API Key",
                       }),
                     }),
-                    (0, M.jsx)(eg.yt, {
+                    (0, C.jsx)(ey.yt, {
                       placeholder: v.formatMessage({
                         id: "9W9lGr",
                         defaultMessage: "[HIDDEN]",
@@ -1051,13 +1179,13 @@
                       },
                       className: "mb-2",
                     }),
-                    (0, M.jsx)(eY, {
-                      children: (0, M.jsx)(el.Z, {
+                    (0, C.jsx)(eX, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "PSnRGf",
                         defaultMessage: "Auth Type",
                       }),
                     }),
-                    (0, M.jsxs)(eu.Z.Root, {
+                    (0, C.jsxs)(ef.Z.Root, {
                       className: "mb-2 flex gap-6 overflow-hidden rounded-lg",
                       value: y.httpAuthTypeValue,
                       required: !0,
@@ -1065,9 +1193,9 @@
                         w({ httpAuthTypeValue: e });
                       },
                       children: [
-                        (0, M.jsx)(eR.Xb, { value: "basic", label: "Basic" }),
-                        (0, M.jsx)(eR.Xb, { value: "bearer", label: "Bearer" }),
-                        (0, M.jsx)(eR.Xb, {
+                        (0, C.jsx)(eq.Xb, { value: "basic", label: "Basic" }),
+                        (0, C.jsx)(eq.Xb, { value: "bearer", label: "Bearer" }),
+                        (0, C.jsx)(eq.Xb, {
                           value: "custom",
                           label: v.formatMessage({
                             id: "6kqx38",
@@ -1077,16 +1205,16 @@
                       ],
                     }),
                     "custom" === y.httpAuthTypeValue &&
-                      (0, M.jsxs)("div", {
+                      (0, C.jsxs)("div", {
                         className: "mt-2",
                         children: [
-                          (0, M.jsx)(eY, {
-                            children: (0, M.jsx)(el.Z, {
+                          (0, C.jsx)(eX, {
+                            children: (0, C.jsx)(Z.Z, {
                               id: "XqdT/P",
                               defaultMessage: "Custom Header Name",
                             }),
                           }),
-                          (0, M.jsx)(eg.yt, {
+                          (0, C.jsx)(ey.yt, {
                             value: y.customHeaderValue,
                             onChange: (e) => {
                               w({ customHeaderValue: e.target.value });
@@ -1099,15 +1227,15 @@
                   ],
                 })
               : "oauth" === y.authTypeValue
-                ? (0, M.jsxs)(M.Fragment, {
+                ? (0, C.jsxs)(C.Fragment, {
                     children: [
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "lS4nvz",
                           defaultMessage: "Client ID",
                         }),
                       }),
-                      (0, M.jsx)(eg.yt, {
+                      (0, C.jsx)(ey.yt, {
                         placeholder: "<HIDDEN>",
                         type: "password",
                         value: y.oauthClientIdValue,
@@ -1116,13 +1244,13 @@
                         },
                         className: "mb-2",
                       }),
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "OvwGR3",
                           defaultMessage: "Client Secret",
                         }),
                       }),
-                      (0, M.jsx)(eg.yt, {
+                      (0, C.jsx)(ey.yt, {
                         placeholder: "<HIDDEN>",
                         type: "password",
                         value: y.oauthClientSecretValue,
@@ -1131,66 +1259,66 @@
                         },
                         className: "mb-2",
                       }),
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "I27qZU",
                           defaultMessage: "Authorization URL",
                         }),
                       }),
-                      (0, M.jsx)(eg.yt, {
+                      (0, C.jsx)(ey.yt, {
                         value: y.oauthAuthUrlValue,
                         onChange: (e) => {
                           w({ oauthAuthUrlValue: e.target.value });
                         },
                         className: "mb-2",
                       }),
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "QywIpF",
                           defaultMessage: "Token URL",
                         }),
                       }),
-                      (0, M.jsx)(eg.yt, {
+                      (0, C.jsx)(ey.yt, {
                         value: y.oauthTokenUrlValue,
                         onChange: (e) => {
                           w({ oauthTokenUrlValue: e.target.value });
                         },
                         className: "mb-2",
                       }),
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "1VAJqN",
                           defaultMessage: "Scope",
                         }),
                       }),
-                      (0, M.jsx)(eg.yt, {
+                      (0, C.jsx)(ey.yt, {
                         value: y.oauthScopeValue,
                         onChange: (e) => {
                           w({ oauthScopeValue: e.target.value });
                         },
                         className: "mb-2",
                       }),
-                      (0, M.jsx)(eY, {
-                        children: (0, M.jsx)(el.Z, {
+                      (0, C.jsx)(eX, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "9MvwPc",
                           defaultMessage: "Token Exchange Method",
                         }),
                       }),
-                      (0, M.jsxs)(eu.Z.Root, {
+                      (0, C.jsxs)(ef.Z.Root, {
                         value: y.tokenExchangeMethodValue,
                         required: !0,
                         onValueChange: (e) => {
                           w({ tokenExchangeMethodValue: e });
                         },
                         children: [
-                          (0, M.jsx)(eR.Xb, {
+                          (0, C.jsx)(eq.Xb, {
                             value: "default_post",
                             label: v.formatMessage({
                               id: "vXIzoE",
                               defaultMessage: "Default (POST request)",
                             }),
                           }),
-                          (0, M.jsx)(eR.Xb, {
+                          (0, C.jsx)(eq.Xb, {
                             value: "basic_auth_header",
                             label: v.formatMessage({
                               id: "38o+yX",
@@ -1205,34 +1333,34 @@
           ],
         });
       }
-      function eK(e) {
-        let { onImport: t, onClose: i } = e,
-          { 0: a, 1: s } = (0, z.useState)(""),
-          { 0: r, 1: n } = (0, z.useState)(!1);
-        async function l() {
+      function e0(e) {
+        let { onImport: t, onClose: a } = e,
+          { 0: i, 1: s } = (0, M.useState)(""),
+          { 0: l, 1: r } = (0, M.useState)(!1);
+        async function n() {
           var e;
           let s;
           try {
-            s = new URL(a);
+            s = new URL(i);
           } catch {
             return;
           }
           if (null !== (e = s) && void 0 !== e && e.hostname) {
-            n(!0);
+            r(!0);
             try {
-              let e = await y.U.fetchOpenAPISpec(a);
-              t(e.content), i();
+              let e = await y.U.fetchOpenAPISpec(i);
+              t(e.content), a();
             } finally {
-              n(!1);
+              r(!1);
             }
           }
         }
-        return (0, M.jsxs)("div", {
+        return (0, C.jsxs)("div", {
           className: "flex items-center gap-2",
           children: [
-            (0, M.jsx)("input", {
+            (0, C.jsx)("input", {
               name: "url",
-              value: a,
+              value: i,
               onChange: (e) => {
                 s(e.target.value);
               },
@@ -1241,19 +1369,19 @@
                 "h-8 rounded border border-token-border-light px-2 text-sm",
               autoFocus: !0,
             }),
-            (0, M.jsx)(eR.cY, {
+            (0, C.jsx)(eq.cY, {
               color: "dark",
-              loading: r,
-              onClick: l,
-              children: (0, M.jsx)(el.Z, {
+              loading: l,
+              onClick: n,
+              children: (0, C.jsx)(Z.Z, {
                 id: "7sLuEB",
                 defaultMessage: "Import",
               }),
             }),
-            (0, M.jsx)(eR.cY, {
+            (0, C.jsx)(eq.cY, {
               color: "neutral",
-              onClick: i,
-              children: (0, M.jsx)(el.Z, {
+              onClick: a,
+              children: (0, C.jsx)(Z.Z, {
                 id: "xHBR5t",
                 defaultMessage: "Cancel",
               }),
@@ -1261,79 +1389,79 @@
           ],
         });
       }
-      function eH(e) {
-        let { rootDomain: t, operations: i } = e;
-        return null == i || 0 === i.length
-          ? (0, M.jsx)("div", {
+      function e1(e) {
+        let { rootDomain: t, operations: a } = e;
+        return null == a || 0 === a.length
+          ? (0, C.jsx)("div", {
               className: "text-sm text-token-text-tertiary",
-              children: (0, M.jsx)(el.Z, {
+              children: (0, C.jsx)(Z.Z, {
                 id: "L69u6d",
                 defaultMessage: "Operations in your schema will show here",
               }),
             })
-          : (0, M.jsx)("table", {
+          : (0, C.jsx)("table", {
               className: "w-full text-sm",
-              children: (0, M.jsxs)("tbody", {
+              children: (0, C.jsxs)("tbody", {
                 children: [
-                  (0, M.jsxs)("tr", {
+                  (0, C.jsxs)("tr", {
                     className:
                       "border-b border-token-border-light text-left text-xs text-token-text-tertiary",
                     children: [
-                      (0, M.jsx)("th", {
+                      (0, C.jsx)("th", {
                         className: "py-1 font-normal",
-                        children: (0, M.jsx)(el.Z, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "JizDcr",
                           defaultMessage: "Name",
                         }),
                       }),
-                      (0, M.jsx)("th", {
+                      (0, C.jsx)("th", {
                         className: "py-1 font-normal",
-                        children: (0, M.jsx)(el.Z, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "zN16fd",
                           defaultMessage: "Method",
                         }),
                       }),
-                      (0, M.jsx)("th", {
+                      (0, C.jsx)("th", {
                         className: "py-1 font-normal",
-                        children: (0, M.jsx)(el.Z, {
+                        children: (0, C.jsx)(Z.Z, {
                           id: "y2WJvt",
                           defaultMessage: "Path",
                         }),
                       }),
-                      (0, M.jsx)("th", { className: "py-1 font-normal" }),
+                      (0, C.jsx)("th", { className: "py-1 font-normal" }),
                     ],
                   }),
-                  i.map((e) =>
-                    (0, M.jsxs)(
+                  a.map((e) =>
+                    (0, C.jsxs)(
                       "tr",
                       {
                         className: "border-b border-token-border-light",
                         children: [
-                          (0, M.jsx)("td", {
+                          (0, C.jsx)("td", {
                             className: "py-2",
                             children: e.operationName,
                           }),
-                          (0, M.jsx)("td", {
+                          (0, C.jsx)("td", {
                             className: "py-2 uppercase",
                             children: e.method,
                           }),
-                          (0, M.jsx)("td", {
+                          (0, C.jsx)("td", {
                             className: "py-2",
                             children: e.path,
                           }),
-                          (0, M.jsx)("td", {
+                          (0, C.jsx)("td", {
                             className: "py-2",
-                            children: (0, M.jsx)(eR.cY, {
+                            children: (0, C.jsx)(eq.cY, {
                               color: "neutral",
                               onClick: () => {
                                 t &&
-                                  eL.publish({
-                                    kind: eE.TestGizmoAction,
+                                  eF.publish({
+                                    kind: eB.TestGizmoAction,
                                     rootDomain: t,
                                     operationName: e.operationName,
                                   });
                               },
-                              children: (0, M.jsx)(el.Z, {
+                              children: (0, C.jsx)(Z.Z, {
                                 id: "Ag71GQ",
                                 defaultMessage: "Test",
                               }),
@@ -1348,36 +1476,36 @@
               }),
             });
       }
-      function eQ(e) {
+      function e2(e) {
         let { validationResponse: t } = e,
-          i = (0, ei.Z)();
-        return (0, M.jsxs)("div", {
+          a = (0, _.Z)();
+        return (0, C.jsxs)("div", {
           children: [
-            (0, M.jsx)(eg.lX, {
-              label: i.formatMessage({
+            (0, C.jsx)(ey.lX, {
+              label: a.formatMessage({
                 id: "hKfo5R",
                 defaultMessage: "Available actions",
               }),
             }),
-            (0, M.jsx)(eH, {
+            (0, C.jsx)(e1, {
               rootDomain: t.success ? t.spec.root_domain : void 0,
               operations: t.success ? t.spec.operations : void 0,
             }),
           ],
         });
       }
-      function eX(e) {
-        var t, i, a, s, r, n, l;
+      function e3(e) {
+        var t, a, i, s, l, r, n;
         let {
             currentlyEditingActionDomain: o,
             gizmoEditorData: d,
             updateGizmo: c,
             onClose: u,
           } = e,
-          p = (0, ei.Z)(),
-          { 0: m, 1: h } = (0, z.useState)(o),
-          f = (0, z.useRef)(m);
-        (0, z.useEffect)(() => {
+          p = (0, _.Z)(),
+          { 0: m, 1: h } = (0, M.useState)(o),
+          f = (0, M.useRef)(m);
+        (0, M.useEffect)(() => {
           f.current = m;
         }, [m]);
         let x =
@@ -1386,32 +1514,32 @@
               : t.find(
                   (e) => e.type === g.qK.JIT_PLUGIN && e.metadata.domain === m
                 ),
-          { 0: v } = (0, z.useState)(() => null == x),
+          { 0: v } = (0, M.useState)(() => null == x),
           j =
             null !==
-              (i =
-                null == x || null === (a = x.metadata) || void 0 === a
+              (a =
+                null == x || null === (i = x.metadata) || void 0 === i
                   ? void 0
-                  : a.raw_spec) && void 0 !== i
-              ? i
+                  : i.raw_spec) && void 0 !== a
+              ? a
               : "",
-          { 0: b, 1: w } = (0, z.useState)(!1),
-          { 0: k, 1: N } = (0, z.useState)(!1);
-        function P(e) {
+          { 0: b, 1: w } = (0, M.useState)(!1),
+          { 0: k, 1: z } = (0, M.useState)(!1);
+        function N(e) {
           c((t) =>
-            eF(
-              eF({}, t),
+            eQ(
+              eQ({}, t),
               {},
               {
                 tools: x
                   ? t.tools.map((t) =>
                       t.type === g.qK.JIT_PLUGIN && t.metadata.domain === m
-                        ? eF(
-                            eF({}, t),
+                        ? eQ(
+                            eQ({}, t),
                             {},
                             {
-                              metadata: eF(
-                                eF(eF({}, t.metadata), e),
+                              metadata: eQ(
+                                eQ(eQ({}, t.metadata), e),
                                 {},
                                 { json_schema: void 0 }
                               ),
@@ -1423,8 +1551,8 @@
                       ...t.tools,
                       {
                         type: g.qK.JIT_PLUGIN,
-                        metadata: eF(
-                          eF(
+                        metadata: eQ(
+                          eQ(
                             {
                               raw_spec: "",
                               domain: null != m ? m : "Unknown domain",
@@ -1441,25 +1569,25 @@
             )
           );
         }
-        let { 0: Z, 1: _ } = (0, z.useState)(),
-          { 0: T } = (0, z.useState)(() =>
-            (0, $.debounce)(async function (e) {
+        let { 0: T, 1: O } = (0, M.useState)(),
+          { 0: S } = (0, M.useState)(() =>
+            (0, er.debounce)(async function (e) {
               let t = await y.U.validateOpenAPISpec(e);
-              _(t);
-              let i = t.success ? t.spec.root_domain : void 0;
-              if (i) {
-                if (i !== f.current) {
-                  var a;
+              O(t);
+              let a = t.success ? t.spec.root_domain : void 0;
+              if (a) {
+                if (a !== f.current) {
+                  var i;
                   if (
-                    null == d || null === (a = d.tools) || void 0 === a
+                    null == d || null === (i = d.tools) || void 0 === i
                       ? void 0
-                      : a.find(
+                      : i.find(
                           (e) =>
                             e.type === g.qK.JIT_PLUGIN &&
-                            e.metadata.domain === i
+                            e.metadata.domain === a
                         )
                   ) {
-                    _({
+                    O({
                       success: !1,
                       errors: [
                         p.formatMessage(
@@ -1468,7 +1596,7 @@
                             defaultMessage:
                               "Action sets cannot have duplicate domains - {domain} already exists on another action",
                           },
-                          { domain: i }
+                          { domain: a }
                         ),
                       ],
                     });
@@ -1476,21 +1604,21 @@
                   }
                 }
                 c((e) =>
-                  eF(
-                    eF({}, e),
+                  eQ(
+                    eQ({}, e),
                     {},
                     {
                       tools: e.tools.map((e) =>
                         e.type === g.qK.JIT_PLUGIN &&
                         e.metadata.domain === f.current
-                          ? eF(
-                              eF({}, e),
+                          ? eQ(
+                              eQ({}, e),
                               {},
                               {
-                                metadata: eF(
-                                  eF({}, e.metadata),
+                                metadata: eQ(
+                                  eQ({}, e.metadata),
                                   {},
-                                  { domain: i }
+                                  { domain: a }
                                 ),
                               }
                             )
@@ -1499,28 +1627,28 @@
                     }
                   )
                 ),
-                  h(i);
+                  h(a);
               }
               if (t.success && t.known_auth && t.known_privacy_policy && x) {
-                let e = eF({ type: es.Jv.OAuth }, t.known_auth);
-                (0, $.isEqual)(x.metadata.auth, e) ||
-                  P({ auth: eF({ type: es.Jv.OAuth }, t.known_auth) }),
+                let e = eQ({ type: eu.Jv.OAuth }, t.known_auth);
+                (0, er.isEqual)(x.metadata.auth, e) ||
+                  N({ auth: eQ({ type: eu.Jv.OAuth }, t.known_auth) }),
                   x.metadata.privacy_policy_url !== t.known_privacy_policy &&
-                    P({ privacy_policy_url: t.known_privacy_policy });
+                    N({ privacy_policy_url: t.known_privacy_policy });
               }
             }, 1e3)
           ),
-          C = null != Z ? (Z.success ? Z.warnings : Z.errors) : void 0;
-        (0, z.useEffect)(() => {
-          "" === j ? (_(void 0), T.cancel()) : T(j);
-        }, [T, j]);
-        let O = (e) => {
+          I = null != T ? (T.success ? T.warnings : T.errors) : void 0;
+        (0, M.useEffect)(() => {
+          "" === j ? (O(void 0), S.cancel()) : S(j);
+        }, [S, j]);
+        let A = (e) => {
           try {
-            P({ raw_spec: JSON.stringify(JSON.parse(e), null, 2) });
+            N({ raw_spec: JSON.stringify(JSON.parse(e), null, 2) });
           } catch {
             try {
-              P({
-                raw_spec: ed.ZP.stringify(ed.ZP.parse(e), {
+              N({
+                raw_spec: eh.ZP.stringify(eh.ZP.parse(e), {
                   lineWidth: 120,
                   indent: 2,
                 }),
@@ -1528,33 +1656,33 @@
             } catch {}
           }
         };
-        return (0, M.jsxs)("div", {
+        return (0, C.jsxs)("div", {
           className: "h-full overflow-auto px-4 pb-12 text-sm",
           children: [
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className:
                 "relative flex flex-col items-center px-16 py-6 text-center",
               children: [
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "absolute left-0 top-6",
-                  children: (0, M.jsx)(er.z, {
+                  children: (0, C.jsx)(ep.z, {
                     color: "neutral",
                     onClick: u,
-                    children: (0, M.jsx)(en.L7, { className: "icon-md" }),
+                    children: (0, C.jsx)(em.L7, { className: "icon-md" }),
                   }),
                 }),
                 null != x &&
-                  (0, M.jsx)("div", {
+                  (0, C.jsx)("div", {
                     className: "absolute right-0 top-6",
-                    children: (0, M.jsx)(er.z, {
+                    children: (0, C.jsx)(ep.z, {
                       color: "neutral",
                       onClick: () => {
                         window.confirm(
                           "Are you sure you want to delete this action?"
                         ) &&
                           (c((e) =>
-                            eF(
-                              eF({}, e),
+                            eQ(
+                              eQ({}, e),
                               {},
                               {
                                 tools: e.tools.filter(
@@ -1568,37 +1696,37 @@
                           u());
                       },
                       className: "text-red-500",
-                      children: (0, M.jsx)(en.a_, { className: "icon-md" }),
+                      children: (0, C.jsx)(em.a_, { className: "icon-md" }),
                     }),
                   }),
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-xl font-medium",
                   children: v
-                    ? (0, M.jsx)(el.Z, {
+                    ? (0, C.jsx)(Z.Z, {
                         id: "LEn2vt",
                         defaultMessage: "Add actions",
                       })
-                    : (0, M.jsx)(el.Z, {
+                    : (0, C.jsx)(Z.Z, {
                         id: "WtVYgh",
                         defaultMessage: "Edit actions",
                       }),
                 }),
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-sm text-token-text-tertiary",
-                  children: (0, M.jsx)(el.Z, {
+                  children: (0, C.jsx)(Z.Z, {
                     id: "f0WG0Q",
                     defaultMessage:
                       "Let your GPT retrieve information or take actions outside of ChatGPT.",
                   }),
                 }),
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-sm text-token-text-tertiary",
-                  children: (0, M.jsx)("a", {
+                  children: (0, C.jsx)("a", {
                     href: "https://help.openai.com/en/articles/8554397-creating-a-gpt",
                     target: "_blank",
                     rel: "noreferrer",
                     className: "font-medium",
-                    children: (0, M.jsx)(el.Z, {
+                    children: (0, C.jsx)(Z.Z, {
                       id: "44M7/B",
                       defaultMessage: "Learn more.",
                     }),
@@ -1606,34 +1734,34 @@
                 }),
               ],
             }),
-            (0, M.jsxs)(eg.hj, {
+            (0, C.jsxs)(ey.hj, {
               className: "relative",
               children: [
-                (0, M.jsx)(eg.lX, {
+                (0, C.jsx)(ey.lX, {
                   label: p.formatMessage({
                     id: "kZ040s",
                     defaultMessage: "Authentication",
                   }),
                 }),
-                (0, M.jsx)(eD, {
+                (0, C.jsx)(eW, {
                   onClick: () => {
                     w(!0);
                   },
                   content: p.formatMessage(
                     (function (e) {
                       switch (e) {
-                        case es.Jv.None:
-                          return (0, eo.Em)({
+                        case eu.Jv.None:
+                          return (0, P.Em)({
                             id: "G9qfIC",
                             defaultMessage: "None",
                           });
-                        case es.Jv.OAuth:
-                          return (0, eo.Em)({
+                        case eu.Jv.OAuth:
+                          return (0, P.Em)({
                             id: "t8MwwT",
                             defaultMessage: "OAuth",
                           });
-                        case es.Jv.ServiceHTTP:
-                          return (0, eo.Em)({
+                        case eu.Jv.ServiceHTTP:
+                          return (0, P.Em)({
                             id: "rN0uCi",
                             defaultMessage: "API Key",
                           });
@@ -1642,43 +1770,43 @@
                       null !==
                         (s =
                           null == x ||
-                          null === (r = x.metadata) ||
-                          void 0 === r ||
-                          null === (r = r.auth) ||
-                          void 0 === r
+                          null === (l = x.metadata) ||
+                          void 0 === l ||
+                          null === (l = l.auth) ||
+                          void 0 === l
                             ? void 0
-                            : r.type) && void 0 !== s
+                            : l.type) && void 0 !== s
                         ? s
-                        : es.Jv.None
+                        : eu.Jv.None
                     )
                   ),
-                  button: (0, M.jsx)("button", {
+                  button: (0, C.jsx)("button", {
                     color: "neutral",
                     className: "flex items-center gap-2 px-3",
-                    children: (0, M.jsx)(en.RR, { className: "icon-sm" }),
+                    children: (0, C.jsx)(em.RR, { className: "icon-sm" }),
                   }),
                 }),
                 b &&
-                  (0, M.jsx)(eJ, {
+                  (0, C.jsx)(e$, {
                     jitPluginTool: x,
                     onUpdateTool: (e) => {
                       switch (e.type) {
-                        case es.Jv.None:
-                          P({ auth: { type: es.Jv.None } });
+                        case eu.Jv.None:
+                          N({ auth: { type: eu.Jv.None } });
                           break;
-                        case es.Jv.OAuth: {
-                          let { oauth_client_id: t, oauth_client_secret: i } =
+                        case eu.Jv.OAuth: {
+                          let { oauth_client_id: t, oauth_client_secret: a } =
                             e;
-                          P({
-                            auth: (0, ea.Z)(e, eB),
+                          N({
+                            auth: (0, ec.Z)(e, eY),
                             oauth_client_id: t,
-                            oauth_client_secret: i,
+                            oauth_client_secret: a,
                           });
                           break;
                         }
-                        case es.Jv.ServiceHTTP: {
+                        case eu.Jv.ServiceHTTP: {
                           let { api_key: t } = e;
-                          P({ auth: (0, ea.Z)(e, eV), api_key: t });
+                          N({ auth: (0, ec.Z)(e, eK), api_key: t });
                         }
                       }
                     },
@@ -1688,45 +1816,45 @@
                   }),
               ],
             }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               children: [
-                (0, M.jsxs)("div", {
+                (0, C.jsxs)("div", {
                   className: "mb-1 flex h-8 items-center justify-between",
                   children: [
-                    (0, M.jsx)("label", {
+                    (0, C.jsx)("label", {
                       className: "font-medium text-token-text-primary",
-                      children: (0, M.jsx)(el.Z, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "+xKwQg",
                         defaultMessage: "Schema",
                       }),
                     }),
-                    (0, M.jsx)("div", {
+                    (0, C.jsx)("div", {
                       className: "flex items-center",
                       children: k
-                        ? (0, M.jsx)(eK, {
+                        ? (0, C.jsx)(e0, {
                             onImport: (e) => {
-                              O(e);
+                              A(e);
                             },
                             onClose: () => {
-                              N(!1);
+                              z(!1);
                             },
                           })
-                        : (0, M.jsxs)("div", {
+                        : (0, C.jsxs)("div", {
                             className: "flex items-center gap-2",
                             children: [
-                              (0, M.jsx)(eR.cY, {
+                              (0, C.jsx)(eq.cY, {
                                 color: "neutral",
                                 onClick: () => {
-                                  N(!0);
+                                  z(!0);
                                 },
-                                children: (0, M.jsx)(el.Z, {
+                                children: (0, C.jsx)(Z.Z, {
                                   id: "kTR+Ef",
                                   defaultMessage: "Import from URL",
                                 }),
                               }),
-                              (0, M.jsx)(ep, {
+                              (0, C.jsx)(ex, {
                                 onSelectExample: (e) => {
-                                  P({ raw_spec: e });
+                                  N({ raw_spec: e });
                                 },
                               }),
                             ],
@@ -1734,17 +1862,17 @@
                     }),
                   ],
                 }),
-                (0, M.jsxs)("div", {
+                (0, C.jsxs)("div", {
                   className:
                     "mb-8 overflow-hidden rounded-lg border border-token-border-light",
                   children: [
-                    (0, M.jsxs)("div", {
+                    (0, C.jsxs)("div", {
                       className: "relative",
                       children: [
-                        (0, M.jsx)("textarea", {
+                        (0, C.jsx)("textarea", {
                           value: j,
                           onChange: (e) => {
-                            P({ raw_spec: e.target.value });
+                            N({ raw_spec: e.target.value });
                           },
                           spellCheck: !1,
                           placeholder: p.formatMessage({
@@ -1754,53 +1882,53 @@
                           className:
                             "block h-96 w-full border-none bg-transparent p-2 font-mono text-xs text-token-text-primary",
                         }),
-                        (0, M.jsx)("div", {
+                        (0, C.jsx)("div", {
                           className: "absolute bottom-2 right-2 flex gap-2",
                           children:
                             "" !== j
-                              ? (0, M.jsx)(eR.cY, {
+                              ? (0, C.jsx)(eq.cY, {
                                   onClick: () => {
-                                    O(j);
+                                    A(j);
                                   },
-                                  children: (0, M.jsx)(el.Z, {
+                                  children: (0, C.jsx)(Z.Z, {
                                     id: "vJWnIM",
                                     defaultMessage: "Format",
                                   }),
                                 })
-                              : (0, M.jsxs)(eR.cY, {
+                              : (0, C.jsxs)(eq.cY, {
                                   as: "a",
-                                  to: eW,
+                                  to: eH,
                                   openNewTab: !0,
                                   children: [
-                                    (0, M.jsx)(el.Z, {
+                                    (0, C.jsx)(Z.Z, {
                                       id: "gizmo.actions.actionsGptHelp",
                                       defaultMessage:
                                         "Get help from ActionsGPT",
                                     }),
-                                    (0, M.jsx)(en.fe, { className: "icon-md" }),
+                                    (0, C.jsx)(em.fe, { className: "icon-md" }),
                                   ],
                                 }),
                         }),
                       ],
                     }),
-                    null != C &&
-                      (null == C ? void 0 : C.length) > 0 &&
-                      (0, M.jsx)("div", {
+                    null != I &&
+                      (null == I ? void 0 : I.length) > 0 &&
+                      (0, C.jsx)("div", {
                         className:
                           "border-t border-token-border-light p-2 text-red-500",
-                        children: C.map((e, t) =>
-                          (0, M.jsx)("div", { children: e }, t)
+                        children: I.map((e, t) =>
+                          (0, C.jsx)("div", { children: e }, t)
                         ),
                       }),
                   ],
                 }),
               ],
             }),
-            null != Z && (0, M.jsx)(eQ, { validationResponse: Z }),
-            (0, M.jsxs)("div", {
+            null != T && (0, C.jsx)(e2, { validationResponse: T }),
+            (0, C.jsxs)("div", {
               className: "mt-4",
               children: [
-                (0, M.jsx)(eg.lX, {
+                (0, C.jsx)(ey.lX, {
                   label: p.formatMessage({
                     id: "Pbk0Gp",
                     defaultMessage: "Privacy policy",
@@ -1808,19 +1936,19 @@
                   description:
                     "Privacy policy is required for all public GPTs.",
                 }),
-                (0, M.jsx)(ec.Z, {
+                (0, C.jsx)(eg.Z, {
                   name: "privacyPolicyUrl",
                   value:
                     null !==
-                      (n =
-                        null == x || null === (l = x.metadata) || void 0 === l
+                      (r =
+                        null == x || null === (n = x.metadata) || void 0 === n
                           ? void 0
-                          : l.privacy_policy_url) && void 0 !== n
-                      ? n
+                          : n.privacy_policy_url) && void 0 !== r
+                      ? r
                       : "",
                   placeholder: "https://api.example-weather-app.com/privacy",
                   onChange: (e) => {
-                    P({ privacy_policy_url: e.target.value });
+                    N({ privacy_policy_url: e.target.value });
                   },
                 }),
               ],
@@ -1828,63 +1956,64 @@
           ],
         });
       }
-      var e$ = i(43383),
-        e0 = i(82245),
-        e1 = i(99715),
-        e2 = i(22189),
-        e3 = i(5667),
-        e4 = i(68832),
-        e5 = i(93031),
-        e8 = i(70917),
-        e6 = i(13038),
-        e9 = i(913),
-        e7 = i(82473),
-        te = i(61236),
-        tt = i(4373),
-        ti = i(27160),
-        ta = i(57849),
-        ts = i(98682),
-        tr = i(43803),
-        tn = i(47609),
-        tl = i(74908);
-      function to(e) {
+      var e4 = a(43383),
+        e5 = a(82245),
+        e8 = a(99715),
+        e6 = a(22189),
+        e9 = a(5667),
+        e7 = a(68832),
+        te = a(93031),
+        tt = a(70917),
+        ta = a(13038),
+        ti = a(913),
+        ts = a(82473),
+        tl = a(61236),
+        tr = a(4373),
+        tn = a(31828),
+        to = a(27160),
+        td = a(57849),
+        tc = a(98682),
+        tu = a(43803),
+        tp = a(47609),
+        tm = a(74908);
+      function th(e) {
         return "".concat("https://chat.openai.com").concat((0, m.m_)(e));
       }
-      function td(e, t) {
-        (0, tl.v)(to(e)), t && U.m.info(t);
+      function tg(e, t) {
+        (0, tm.v)(th(e)), t && W.m.info(t);
       }
-      function tc(e, t) {
-        var i = Object.keys(e);
+      function tf(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function tu(e) {
+      function tx(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? tc(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? tf(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : tc(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : tf(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      let tp = {
+      let tv = {
           can_read: !0,
           can_view_config: !1,
           can_write: !1,
@@ -1892,7 +2021,7 @@
           can_export: !1,
           can_share: !1,
         },
-        tm = {
+        tj = {
           can_read: !0,
           can_view_config: !0,
           can_write: !1,
@@ -1900,41 +2029,46 @@
           can_export: !1,
           can_share: !1,
         },
-        th = [tp, tm],
-        tg = [b.LA.USER, b.LA.GROUP, b.LA.WORKSPACE, b.LA.ALL],
-        tf = {
+        ty = [tv, tj],
+        tb = [b.LA.USER, b.LA.GROUP, b.LA.WORKSPACE, b.LA.ALL],
+        tw = {
           [b.LA.USER]: b.Zz.User,
           [b.LA.GROUP]: b.Zz.Group,
           [b.LA.WORKSPACE]: b.Zz.Workspace,
           [b.LA.ALL]: b.Zz.Marketplace,
         };
-      function tx(e) {
-        var t, i, a, s, r, n, l, o, d, c, u;
+      function tk(e) {
+        let t = tw[e.type];
+        if (!t) throw Error("Unknown sharing subject type: " + e.type);
+        return tx(tx({}, e), {}, { type: t });
+      }
+      function tz(e) {
+        var t, a, i, s, l, r, n, o, d, c, u;
         let {
             gizmo: p,
             publishedGizmo: h,
-            promoteGizmo: f,
-            appealGizmo: x,
-            showActionsModal: v,
-            workspaceSharing: w,
+            updateGizmo: f,
+            promoteGizmo: x,
+            appealGizmo: v,
+            showActionsModal: w,
             shareOnly: k,
-            onClose: N,
+            onClose: z,
           } = e,
-          P = (0, ei.Z)(),
-          Z = (0, R.t)(),
-          _ =
+          N = (0, _.Z)(),
+          P = (0, Y.t)(),
+          T =
             null !==
               (t =
-                null == Z || null === (i = Z.data) || void 0 === i
+                null == P || null === (a = P.data) || void 0 === a
                   ? void 0
-                  : i.name) && void 0 !== t
+                  : a.name) && void 0 !== t
               ? t
               : "your workspace",
-          T = (0, V.aF)(),
-          C = (0, m.Z1)(),
-          { 0: O, 1: S } = (0, z.useState)(void 0);
-        (0, z.useEffect)(() => {
-          if (void 0 == O) {
+          O = (0, Q.aF)(),
+          S = (0, m.Z1)(),
+          { 0: I, 1: A } = (0, M.useState)(void 0);
+        (0, M.useEffect)(() => {
+          if (void 0 == I) {
             if (
               null != h &&
               h.gizmo.display.categories &&
@@ -1942,225 +2076,231 @@
             ) {
               var e;
               let t =
-                null === (e = C.data) || void 0 === e
+                null === (e = S.data) || void 0 === e
                   ? void 0
                   : e.categories.find(
                       (e) =>
                         e.id ===
                         (null == h ? void 0 : h.gizmo.display.categories[0])
                     );
-              t && S(t);
+              t && A(t);
             } else
-              void 0 != C.data &&
-                S(C.data.categories[C.data.categories.length - 1]);
+              void 0 != S.data &&
+                A(S.data.categories[S.data.categories.length - 1]);
           }
-        }, [C.data, O, h]);
-        let { 0: I, 1: A } = (0, z.useState)(
-            null !== (a = p.sharingRecipient) && void 0 !== a ? a : b.Zz.Private
+        }, [S.data, I, h]);
+        let { 0: E, 1: G } = (0, M.useState)(
+            null !== (i = p.sharingRecipient) && void 0 !== i ? i : b.Zz.Private
           ),
-          { 0: G, 1: E } = (0, z.useState)(
+          { 0: L, 1: U } = (0, M.useState)(
             null !==
               (s =
-                null === (r = p.sharing) || void 0 === r
+                null === (l = p.sharing) || void 0 === l
                   ? void 0
-                  : r.subjects) && void 0 !== s
+                  : l.subjects) && void 0 !== s
               ? s
               : []
           ),
-          { 0: L, 1: U } = (0, z.useState)(null),
-          { 0: D, 1: B } = (0, z.useState)(!1),
-          q = (0, e7.NL)(),
-          F = (0, e5.bw)(
+          { 0: R, 1: D } = (0, M.useState)(null),
+          { 0: B, 1: F } = (0, M.useState)(!1),
+          V = (0, ts.NL)(),
+          q = (0, te.bw)(
             p,
-            I,
-            null !== (n = null == O ? void 0 : O.id) && void 0 !== n
-              ? n
+            E,
+            null !== (r = null == I ? void 0 : I.id) && void 0 !== r
+              ? r
               : void 0
           ),
-          W = F.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
-          Y = p.tools.find(
+          W = q.includes(te.hs.MissingPublicActionPrivacyPolicyURL),
+          K = p.tools.find(
             (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
-          );
-        if (L)
-          return (0, M.jsx)(tN, {
-            publishedGizmo: L,
-            sharing: { recipient: I, subjects: G },
-            workspaceSharing: w,
-            workspaceName: _,
-            onClose: N,
+          ),
+          J = (0, eo.useRouter)();
+        if (R)
+          return (0, C.jsx)(tO, {
+            publishedGizmo: R,
+            sharing: { recipient: E, subjects: L },
+            workspaceName: T,
+            onClose: z,
           });
-        let J =
-          0 === G.length
+        let H =
+          0 === L.length
             ? null
-            : G.reduce(
-                (e, t) => (tg.indexOf(t.type) < tg.indexOf(e.type) ? e : t),
-                G[0]
+            : L.reduce(
+                (e, t) => (tb.indexOf(t.type) < tb.indexOf(e.type) ? e : t),
+                L[0]
               );
-        function K(e) {
-          let t = G.filter(
+        function X(e) {
+          let t = L.filter(
             (e) => -1 === [b.LA.WORKSPACE, b.LA.ALL].indexOf(e.type)
           );
-          null != e && t.push(e), E(t);
+          null != e && t.push(e), U(t);
         }
-        function H(e) {
-          switch ((A(e), e)) {
+        function $(e) {
+          switch ((G(e), e)) {
             case b.Zz.Marketplace:
             case b.Zz.Link:
-              K({ type: b.LA.ALL, capabilities: tp });
+              X({ type: b.LA.ALL, capabilities: tv });
               break;
             case b.Zz.Workspace:
             case b.Zz.WorkspaceLink:
-              K({ type: b.LA.WORKSPACE, capabilities: tp });
+              X({ type: b.LA.WORKSPACE, capabilities: tv });
               break;
             default:
-              K(null);
+              X(null);
           }
         }
-        function Q(e) {
-          null != J &&
-            E(
-              G.map((t) =>
-                t === J ? tu(tu({}, t), {}, { capabilities: e }) : t
+        function ee(e) {
+          null != H &&
+            U(
+              L.map((t) =>
+                t === H ? tx(tx({}, t), {}, { capabilities: e }) : t
               )
             );
         }
-        function X(e) {
-          let t = tf[e.type];
-          if (!t) throw Error("Unknown sharing subject type: " + e.type);
-          return tu(tu({}, e), {}, { type: t });
-        }
-        function $(e, t, i) {
+        function et(e, t, a) {
           return e.type === b.LA.USER && -1 === e.user_id.indexOf("__")
-            ? tu(
-                tu({}, e),
+            ? tx(
+                tx({}, e),
                 {},
                 {
                   user_id:
                     e.user_id +
                     "__" +
-                    (null == Z ? void 0 : Z.getWorkspaceId()),
+                    (null == P ? void 0 : P.getWorkspaceId()),
                 }
               )
             : e;
         }
-        async function ee(e, t) {
-          var i;
-          if (D) return;
+        async function ea(e, t) {
+          var a;
+          if (B) return;
           if (e && !t)
             throw Error(
               "Cannot share a gizmo that hasn't been promoted before"
             );
-          if (!O) return;
-          if ((B(!0), !e)) {
-            let e = await f({ subjects: G, recipient: I }, O.id);
-            t || (t = null == e ? void 0 : e.gizmo.id), U(null != e ? e : null);
-          }
-          let a = G.map($).map(X);
+          if (!I) return;
+          F(!0);
+          let i = !1,
+            s = L.map(et).map(tk);
           if (
-            ((i = (i = a).filter(
+            ((a = (a = s).filter(
               (e) => e.type === b.Zz.User || e.type === b.Zz.Group
             )),
-            (a =
-              I === b.Zz.Private || I === b.Zz.User || I === b.Zz.Group
-                ? [{ type: b.Zz.Private, capabilities: tp }, ...i]
-                : [...i, { type: I, capabilities: tp }]),
-            !t)
-          )
-            throw Error("No gizmo ID to share");
-          await y.U.shareGizmo(t, a),
-            q.invalidateQueries({ queryKey: ["gizmo", t] }),
-            B(!1),
-            e && N();
+            (s =
+              E === b.Zz.Private || E === b.Zz.User || E === b.Zz.Group
+                ? [{ type: b.Zz.Private, capabilities: tv }, ...a]
+                : [...a, { type: E, capabilities: tv }]),
+            e)
+          ) {
+            if (!t) throw Error("No gizmo ID to share");
+            await y.U.shareGizmo(t, s);
+          } else {
+            let e = await x({ subjects: s, recipient: E }, I.id);
+            t || (t = null == e ? void 0 : e.gizmo.id),
+              D(null != e ? e : null),
+              (null == e ? void 0 : e.gizmo.live_version) === 1 &&
+                (i = (0, m.m_)(e));
+          }
+          F(!1),
+            V.invalidateQueries({ queryKey: ["gizmos"] }),
+            V.invalidateQueries({ queryKey: ["gizmo", { gizmoId: t }] }),
+            V.invalidateQueries({
+              queryKey: ["gizmo", "userActionSettings", { gizmoId: t }],
+            }),
+            f({ sharing: { recipient: E, subjects: L } }, !1),
+            e ? z() : i && J.push(i);
         }
-        return (0, M.jsx)(j.Z, {
+        return (0, C.jsx)(j.Z, {
           type: "success",
           className: "w-[555px]",
           isOpen: !0,
-          onClose: N,
-          primaryButton: (0, M.jsx)(er.z, {
-            onClick: () => ee(k, null == h ? void 0 : h.gizmo.id),
-            loading: D,
-            disabled: F.length > 0,
+          onClose: z,
+          primaryButton: (0, C.jsx)(ep.z, {
+            onClick: () => ea(k, null == h ? void 0 : h.gizmo.id),
+            loading: B,
+            disabled: q.length > 0,
             children: k
-              ? (0, M.jsx)(el.Z, { id: "aXKW4G", defaultMessage: "Share" })
-              : (0, M.jsx)(el.Z, { id: "h7gnqc", defaultMessage: "Save" }),
+              ? (0, C.jsx)(Z.Z, { id: "aXKW4G", defaultMessage: "Share" })
+              : (0, C.jsx)(Z.Z, { id: "h7gnqc", defaultMessage: "Save" }),
           }),
           secondaryButton:
             h &&
-            (0, M.jsx)(er.z, {
+            (0, C.jsx)(ep.z, {
               color: "neutral",
               onClick: () =>
-                td(
+                tg(
                   h,
-                  P.formatMessage({
+                  N.formatMessage({
                     id: "KdDqMm",
                     defaultMessage: "Copied link to clipboard",
                   })
                 ),
-              children: (0, M.jsx)(el.Z, {
+              children: (0, C.jsx)(Z.Z, {
                 id: "wvL15a",
                 defaultMessage: "Copy link",
               }),
             }),
-          title: P.formatMessage({ id: "7JggXH", defaultMessage: "Share GPT" }),
+          title: N.formatMessage({ id: "7JggXH", defaultMessage: "Share GPT" }),
           showCloseButton: !0,
-          children: (0, M.jsxs)("div", {
+          children: (0, C.jsxs)("div", {
             className: "flex flex-col space-y-4",
             children: [
-              (0, M.jsx)(tM, {
+              (0, C.jsx)(tA, {
                 onAdd: (e) => {
-                  G.find((t) =>
+                  L.find((t) =>
                     t.type === b.LA.USER
                       ? t.user_id === e.user_id
                       : t.type === b.LA.GROUP
                         ? t.group_id === e.group_id
                         : t.type === e.type
-                  ) || E([...G, e]);
+                  ) || U([...L, e]);
                 },
               }),
-              (0, M.jsx)("h3", {
+              (0, C.jsx)("h3", {
                 className: "text-base font-medium",
-                children: (0, M.jsx)(el.Z, {
+                children: (0, C.jsx)(Z.Z, {
                   id: "bNQXcV",
                   defaultMessage: "Share with...",
                 }),
               }),
-              (0, M.jsxs)("div", {
-                className: "max-h-[200px] overflow-y-scroll",
+              (0, C.jsxs)("div", {
+                className: "max-h-[200px] space-y-2 overflow-y-auto",
                 children: [
-                  (0, M.jsx)("div", {
+                  (0, C.jsx)("div", {
                     className:
                       "flex flex-row items-center justify-between space-x-3",
-                    children: (0, M.jsxs)("div", {
+                    children: (0, C.jsxs)("div", {
                       children: [
-                        (0, M.jsx)("span", {
+                        (0, C.jsx)("span", {
                           className: "text-base font-medium",
-                          children: (0, M.jsx)(el.Z, {
+                          children: (0, C.jsx)(Z.Z, {
                             id: "U7tzof",
                             defaultMessage: "{userName} (you)",
-                            values: { userName: null == T ? void 0 : T.name },
+                            values: { userName: null == O ? void 0 : O.name },
                           }),
                         }),
-                        (0, M.jsx)("br", {}),
-                        (0, M.jsx)("span", {
+                        (0, C.jsx)("br", {}),
+                        (0, C.jsx)("span", {
                           className: "text-sm text-token-text-secondary",
-                          children: null == T ? void 0 : T.email,
+                          children: null == O ? void 0 : O.email,
                         }),
                       ],
                     }),
                   }),
-                  G.map(
+                  L.map(
                     (e, t) =>
                       (0, b.h)(e) &&
-                      (0, M.jsxs)(
+                      (0, C.jsxs)(
                         "div",
                         {
                           className:
                             "flex flex-row items-center justify-between space-x-3",
                           children: [
-                            (0, M.jsxs)("div", {
+                            (0, C.jsxs)("div", {
+                              className: "flex flex-col",
                               children: [
-                                (0, M.jsx)("span", {
+                                (0, C.jsx)("span", {
                                   className: "text-base font-medium",
                                   children:
                                     e.type === b.LA.GROUP
@@ -2168,66 +2308,69 @@
                                       : e.user_name,
                                 }),
                                 e.type === b.LA.USER &&
-                                  (0, M.jsxs)(M.Fragment, {
-                                    children: [
-                                      (0, M.jsx)("br", {}),
-                                      (0, M.jsx)("span", {
-                                        className:
-                                          "text-sm text-token-text-secondary",
-                                        children: e.user_email,
-                                      }),
-                                    ],
+                                  (0, C.jsx)("span", {
+                                    className:
+                                      "text-sm text-token-text-secondary",
+                                    children: e.user_email,
                                   }),
                               ],
                             }),
-                            (0, M.jsxs)(e8.Z.Root, {
+                            (0, C.jsxs)(tt.Z.Root, {
                               children: [
-                                (0, M.jsxs)(e8.Z.Trigger, {
+                                (0, C.jsxs)(tt.Z.Trigger, {
                                   className: "text-token-text-secondary",
                                   children: [
-                                    (0, M.jsx)(
-                                      el.Z,
-                                      tu({}, tb(e.capabilities))
-                                    ),
-                                    (0, M.jsx)(eC.bTu, {}),
+                                    (0, C.jsx)(Z.Z, tx({}, tZ(e.capabilities))),
+                                    (0, C.jsx)(eE.bTu, {}),
                                   ],
                                 }),
-                                (0, M.jsx)(e8.Z.Portal, {
-                                  children: (0, M.jsxs)(e8.Z.Content, {
+                                (0, C.jsx)(tt.Z.Portal, {
+                                  children: (0, C.jsxs)(tt.Z.Content, {
+                                    className: "max-w-[280px]",
                                     children: [
-                                      th.map((t, i) =>
-                                        (0, M.jsx)(
-                                          e8.Z.Item,
+                                      ty.map((t, a) =>
+                                        (0, C.jsx)(
+                                          t_,
                                           {
+                                            caps: t,
+                                            selected: en().isEqual(
+                                              t,
+                                              e.capabilities
+                                            ),
                                             onClick: () => {
-                                              E(
-                                                G.map((i) =>
-                                                  i === e
-                                                    ? tu(
-                                                        tu({}, i),
+                                              U(
+                                                L.map((a) =>
+                                                  a === e
+                                                    ? tx(
+                                                        tx({}, a),
                                                         {},
                                                         { capabilities: t }
                                                       )
-                                                    : i
+                                                    : a
                                                 )
                                               );
                                             },
-                                            children: (0, M.jsx)(
-                                              el.Z,
-                                              tu({}, tb(t))
-                                            ),
                                           },
-                                          i
+                                          a
                                         )
                                       ),
-                                      (0, M.jsx)(e8.Z.Item, {
+                                      (0, C.jsx)("hr", { className: "my-2" }),
+                                      (0, C.jsxs)(tt.Z.Item, {
                                         onClick: () =>
-                                          E(G.filter((t) => t !== e)),
-                                        className: "text-red-600",
-                                        children: (0, M.jsx)(el.Z, {
-                                          id: "NU0BOB",
-                                          defaultMessage: "Remove",
-                                        }),
+                                          U(L.filter((t) => t !== e)),
+                                        className:
+                                          "flex h-auto flex-row space-x-4 px-4 py-3 text-red-600",
+                                        children: [
+                                          (0, C.jsx)(tn.tPq, {
+                                            className: "h-6 w-6 shrink-0",
+                                          }),
+                                          (0, C.jsx)("span", {
+                                            children: (0, C.jsx)(Z.Z, {
+                                              id: "NU0BOB",
+                                              defaultMessage: "Remove",
+                                            }),
+                                          }),
+                                        ],
                                       }),
                                     ],
                                   }),
@@ -2241,68 +2384,68 @@
                   ),
                 ],
               }),
-              (0, M.jsx)("hr", {}),
-              (0, M.jsx)("h3", {
+              (0, C.jsx)("hr", {}),
+              (0, C.jsx)("h3", {
                 className: "text-base font-medium",
-                children: (0, M.jsx)(el.Z, {
+                children: (0, C.jsx)(Z.Z, {
                   id: "uqD7Y8",
                   defaultMessage: "Access",
                 }),
               }),
-              (0, M.jsxs)("div", {
+              (0, C.jsxs)("div", {
                 className:
                   "flex flex-row items-center justify-between space-x-3",
                 children: [
-                  (0, M.jsx)("span", {
+                  (0, C.jsx)("span", {
                     className: "text-base font-medium",
-                    children: (0, M.jsxs)(e8.Z.Root, {
+                    children: (0, C.jsxs)(tt.Z.Root, {
                       children: [
-                        (0, M.jsxs)(e8.Z.Trigger, {
+                        (0, C.jsxs)(tt.Z.Trigger, {
                           className: "-ml-3 h-fit pl-2",
                           children: [
-                            (0, M.jsx)(tk, { shareLevel: I, workspaceName: _ }),
-                            (0, M.jsx)(eC.bTu, { className: "shrink-0" }),
+                            (0, C.jsx)(tC, { shareLevel: E, workspaceName: T }),
+                            (0, C.jsx)(eE.bTu, { className: "shrink-0" }),
                           ],
                         }),
-                        (0, M.jsx)(e8.Z.Portal, {
-                          children: (0, M.jsxs)(e8.Z.Content, {
-                            className: "ml-[-5px]",
+                        (0, C.jsx)(tt.Z.Portal, {
+                          children: (0, C.jsxs)(tt.Z.Content, {
+                            className: "ml-[-5px] max-w-[500px]",
                             children: [
-                              (0, M.jsx)(tv, {
-                                children: (0, M.jsx)(el.Z, {
+                              (0, C.jsx)(tN, {
+                                children: (0, C.jsx)(Z.Z, {
                                   id: "YIQwaP",
                                   defaultMessage: "Private",
                                 }),
                               }),
-                              (0, M.jsx)(e8.Z.Item, {
-                                className: "h-14",
-                                onClick: () => H(b.Zz.Private),
-                                children: (0, M.jsx)(tk, {
+                              (0, C.jsx)(tt.Z.Item, {
+                                className: "h-auto min-h-[48px]",
+                                onClick: () => $(b.Zz.Private),
+                                children: (0, C.jsx)(tC, {
                                   shareLevel: b.Zz.Private,
-                                  workspaceName: _,
+                                  workspaceName: T,
                                 }),
                               }),
-                              (0, M.jsx)(tv, { children: _ }),
-                              (0, M.jsx)(e8.Z.Item, {
-                                className: "h-14",
-                                onClick: () => H(b.Zz.WorkspaceLink),
+                              (0, C.jsx)(tN, { children: T }),
+                              (0, C.jsx)(tt.Z.Item, {
+                                className: "h-auto min-h-[48px]",
+                                onClick: () => $(b.Zz.WorkspaceLink),
                                 disabled:
-                                  (null === (l = p.sharingTargets) ||
-                                  void 0 === l
+                                  (null === (n = p.sharingTargets) ||
+                                  void 0 === n
                                     ? void 0
-                                    : l.find(
+                                    : n.find(
                                         (e) =>
                                           "workspace_link" === e.recipient ||
                                           "workspace" === e.recipient
                                       )) === void 0,
-                                children: (0, M.jsx)(tk, {
+                                children: (0, C.jsx)(tC, {
                                   shareLevel: b.Zz.WorkspaceLink,
-                                  workspaceName: _,
+                                  workspaceName: T,
                                 }),
                               }),
-                              (0, M.jsx)(e8.Z.Item, {
-                                className: "h-14",
-                                onClick: () => H(b.Zz.Workspace),
+                              (0, C.jsx)(tt.Z.Item, {
+                                className: "h-auto min-h-[48px]",
+                                onClick: () => $(b.Zz.Workspace),
                                 disabled:
                                   (null === (o = p.sharingTargets) ||
                                   void 0 === o
@@ -2312,33 +2455,33 @@
                                           "workspace_link" === e.recipient ||
                                           "workspace" === e.recipient
                                       )) === void 0,
-                                children: (0, M.jsx)(tk, {
+                                children: (0, C.jsx)(tC, {
                                   shareLevel: b.Zz.Workspace,
-                                  workspaceName: _,
+                                  workspaceName: T,
                                 }),
                               }),
-                              (0, M.jsx)(tv, {
-                                children: (0, M.jsx)(el.Z, {
+                              (0, C.jsx)(tN, {
+                                children: (0, C.jsx)(Z.Z, {
                                   id: "PjY9bi",
                                   defaultMessage: "Public",
                                 }),
                               }),
-                              (0, M.jsx)(e8.Z.Item, {
-                                className: "h-14",
-                                onClick: () => H(b.Zz.Link),
+                              (0, C.jsx)(tt.Z.Item, {
+                                className: "h-auto min-h-[48px]",
+                                onClick: () => $(b.Zz.Link),
                                 disabled:
                                   (null === (d = p.sharingTargets) ||
                                   void 0 === d
                                     ? void 0
                                     : d.find((e) => "link" === e.recipient)) ===
                                   void 0,
-                                children: (0, M.jsx)(tk, {
+                                children: (0, C.jsx)(tC, {
                                   shareLevel: b.Zz.Link,
-                                  workspaceName: _,
+                                  workspaceName: T,
                                 }),
                               }),
-                              (0, M.jsx)(e8.Z.Item, {
-                                className: "h-14",
+                              (0, C.jsx)(tt.Z.Item, {
+                                className: "h-auto min-h-[48px]",
                                 disabled:
                                   (null === (c = p.sharingTargets) ||
                                   void 0 === c
@@ -2346,10 +2489,10 @@
                                     : c.find(
                                         (e) => "marketplace" === e.recipient
                                       )) === void 0,
-                                onClick: () => H(b.Zz.Marketplace),
-                                children: (0, M.jsx)(tk, {
+                                onClick: () => $(b.Zz.Marketplace),
+                                children: (0, C.jsx)(tC, {
                                   shareLevel: b.Zz.Marketplace,
-                                  workspaceName: _,
+                                  workspaceName: T,
                                 }),
                               }),
                             ],
@@ -2358,30 +2501,39 @@
                       ],
                     }),
                   }),
-                  I !== b.Zz.Private &&
-                    I !== b.Zz.User &&
-                    (0, M.jsxs)(e8.Z.Root, {
+                  E !== b.Zz.Private &&
+                    E !== b.Zz.User &&
+                    (0, C.jsxs)(tt.Z.Root, {
                       children: [
-                        (0, M.jsxs)(e8.Z.Trigger, {
+                        (0, C.jsxs)(tt.Z.Trigger, {
                           className: "text-token-text-secondary",
                           children: [
-                            null == J
-                              ? (0, M.jsx)(el.Z, tu({}, tb(tp)))
-                              : (0, M.jsx)(el.Z, tu({}, tb(J.capabilities))),
-                            (0, M.jsx)(eC.bTu, {}),
+                            null == H
+                              ? (0, C.jsx)(Z.Z, tx({}, tZ(tv)))
+                              : (0, C.jsx)(Z.Z, tx({}, tZ(H.capabilities))),
+                            (0, C.jsx)(eE.bTu, {}),
                           ],
                         }),
-                        (0, M.jsx)(e8.Z.Portal, {
-                          children: (0, M.jsxs)(e8.Z.Content, {
+                        (0, C.jsx)(tt.Z.Portal, {
+                          children: (0, C.jsxs)(tt.Z.Content, {
+                            className: "max-w-[280px]",
                             children: [
-                              (0, M.jsx)(e8.Z.Item, {
-                                onClick: () => Q(tp),
-                                children: (0, M.jsx)(el.Z, tu({}, tb(tp))),
+                              (0, C.jsx)(t_, {
+                                onClick: () => ee(tv),
+                                caps: tv,
+                                selected: en().isEqual(
+                                  null == H ? void 0 : H.capabilities,
+                                  tv
+                                ),
                               }),
-                              I !== b.Zz.Marketplace &&
-                                (0, M.jsx)(e8.Z.Item, {
-                                  onClick: () => Q(tm),
-                                  children: (0, M.jsx)(el.Z, tu({}, tb(tm))),
+                              E !== b.Zz.Marketplace &&
+                                (0, C.jsx)(t_, {
+                                  onClick: () => ee(tj),
+                                  caps: tj,
+                                  selected: en().isEqual(
+                                    null == H ? void 0 : H.capabilities,
+                                    tj
+                                  ),
                                 }),
                             ],
                           }),
@@ -2391,17 +2543,17 @@
                 ],
               }),
               W &&
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-xs text-red-500",
-                  children: (0, M.jsx)(el.Z, {
+                  children: (0, C.jsx)(Z.Z, {
                     id: "/iw1Iv",
                     defaultMessage:
                       "Public actions require valid privacy policy URLs. Click <fixlink>here</fixlink> to update.",
                     values: {
                       fixlink: (e) =>
-                        (0, M.jsx)("button", {
+                        (0, C.jsx)("button", {
                           onClick: () => {
-                            v(null == Y ? void 0 : Y.metadata.action_id), N();
+                            w(null == K ? void 0 : K.metadata.action_id), z();
                           },
                           className: "underline",
                           children: e,
@@ -2409,28 +2561,30 @@
                     },
                   }),
                 }),
-              (I === b.Zz.Marketplace || I === b.Zz.Workspace) &&
-                (0, M.jsx)(tz, {
+              (E === b.Zz.Marketplace || E === b.Zz.Workspace) &&
+                (0, C.jsx)(tS, {
                   gizmo: p,
-                  category: null == O ? void 0 : O.id,
+                  category: null == I ? void 0 : I.id,
                   categories:
-                    null === (u = C.data) || void 0 === u
+                    null === (u = S.data) || void 0 === u
                       ? void 0
                       : u.categories,
-                  onCategoryChange: (e) => S(e),
+                  onCategoryChange: (e) => A(e),
                 }),
             ],
           }),
         });
       }
-      let tv = P.Z.p(
+      let tN = T.Z.p(
           c ||
             (c = (0, x.Z)([
               "text-base text-token-text-secondary font-medium pl-4 pt-3 pr-4 pb-1",
             ]))
         ),
-        tj = (0, eo.vU)({
+        tM = (0, P.vU)({
           private: { id: "pSXBWQ", defaultMessage: "Invite-only" },
+          user: { id: "pSXBWQ", defaultMessage: "Invite-only" },
+          group: { id: "pSXBWQ", defaultMessage: "Invite-only" },
           workspace_link: {
             id: "Giaxt1",
             defaultMessage: "Anyone at {workspaceName} with the link",
@@ -2442,7 +2596,7 @@
           link: { id: "uP1+Ri", defaultMessage: "Anyone with the link" },
           marketplace: { id: "3URUPp", defaultMessage: "Publish to GPT Store" },
         }),
-        ty = (0, eo.vU)({
+        tP = (0, P.vU)({
           workspace: {
             id: "1kpopF",
             defaultMessage: "Published to {workspaceName}",
@@ -2452,98 +2606,180 @@
             defaultMessage: "Published to GPT Store",
           },
         });
-      function tb(e) {
+      function tZ(e) {
         return e.can_write
-          ? (0, eo.Em)({ id: "SubCqD", defaultMessage: "Can edit" })
+          ? (0, P.Em)({ id: "SubCqD", defaultMessage: "Can edit" })
           : e.can_view_config
-            ? (0, eo.Em)({ id: "I5rzV3", defaultMessage: "Can view config" })
+            ? (0, P.Em)({
+                id: "ud3lp4",
+                defaultMessage: "Can view configuration",
+              })
             : e.can_read
-              ? (0, eo.Em)({ id: "/0j34W", defaultMessage: "Can chat" })
-              : (0, eo.Em)({ id: "x2E8ET", defaultMessage: "Unknown" });
+              ? (0, P.Em)({ id: "/0j34W", defaultMessage: "Can chat" })
+              : (0, P.Em)({ id: "x2E8ET", defaultMessage: "Unknown" });
       }
-      let tw = {
-        private: ts.Z,
-        user: ts.Z,
-        group: ts.Z,
-        workspace_link: ta.Z,
-        workspace: ti.Z,
-        link: ta.Z,
-        marketplace: en.hk,
+      function t_(e) {
+        let { caps: t, selected: a, onClick: i } = e;
+        return (0, C.jsx)(tt.Z.Item, {
+          className: "flex h-auto flex-row items-start space-x-4 px-4 py-3",
+          onClick: i,
+          children: t.can_write
+            ? (0, C.jsxs)(C.Fragment, {
+                children: [
+                  (0, C.jsx)(tn.vdY, { className: "h-6 w-6 shrink-0" }),
+                  (0, C.jsx)("div", {
+                    className: "flex grow flex-col",
+                    children: (0, C.jsx)("span", {
+                      className: "text-sm font-medium",
+                      children: (0, C.jsx)(Z.Z, tx({}, tZ(t))),
+                    }),
+                  }),
+                  (0, C.jsx)(tn.kvR, {
+                    className: (0, el.default)("shrink-0", !a && "invisible"),
+                  }),
+                ],
+              })
+            : t.can_view_config
+              ? (0, C.jsxs)(C.Fragment, {
+                  children: [
+                    (0, C.jsx)(tn.KAl, { className: "h-6 w-6 shrink-0" }),
+                    (0, C.jsxs)("div", {
+                      className: "flex grow flex-col",
+                      children: [
+                        (0, C.jsx)("span", {
+                          className: "align-baseline text-sm font-medium",
+                          children: (0, C.jsx)(Z.Z, tx({}, tZ(t))),
+                        }),
+                        (0, C.jsx)("span", {
+                          className: "text-xs text-token-text-secondary",
+                          children: (0, C.jsx)(Z.Z, {
+                            id: "fL1rWw",
+                            defaultMessage:
+                              "View configuration settings, duplicate, and chat",
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, C.jsx)(tn.kvR, {
+                      className: (0, el.default)("shrink-0", !a && "invisible"),
+                    }),
+                  ],
+                })
+              : t.can_read
+                ? (0, C.jsxs)(C.Fragment, {
+                    children: [
+                      (0, C.jsx)(tn.kBi, { className: "h-6 w-6 shrink-0" }),
+                      (0, C.jsxs)("div", {
+                        className: "flex grow flex-col",
+                        children: [
+                          (0, C.jsx)("span", {
+                            className: "text-sm font-medium",
+                            children: (0, C.jsx)(Z.Z, tx({}, tZ(t))),
+                          }),
+                          (0, C.jsx)("span", {
+                            className: "text-xs text-token-text-secondary",
+                            children: (0, C.jsx)(Z.Z, {
+                              id: "tx5q1o",
+                              defaultMessage:
+                                "Users can only chat with this GPT",
+                            }),
+                          }),
+                        ],
+                      }),
+                      (0, C.jsx)(tn.kvR, {
+                        className: (0, el.default)(
+                          "shrink-0",
+                          !a && "invisible"
+                        ),
+                      }),
+                    ],
+                  })
+                : null,
+        });
+      }
+      let tT = {
+        private: tc.Z,
+        user: tc.Z,
+        group: tc.Z,
+        workspace_link: td.Z,
+        workspace: to.Z,
+        link: td.Z,
+        marketplace: em.hk,
       };
-      function tk(e) {
-        let { shareLevel: t, workspaceName: i } = e;
+      function tC(e) {
+        let { shareLevel: t, workspaceName: a } = e;
         (t === b.Zz.User || t === b.Zz.Group) && (t = b.Zz.Private);
-        let a = tw[t];
-        return (0, M.jsxs)("div", {
+        let i = tT[t];
+        return (0, C.jsxs)("div", {
           className:
             "ml-[3px] flex flex-row items-center py-3 text-left text-base font-medium",
           children: [
-            (0, M.jsx)(a, { className: "icon-lg mr-3 h-6 w-6 shrink-0" }),
-            (0, M.jsx)(
-              el.Z,
-              tu(tu({}, tj[t]), {}, { values: { workspaceName: i } })
+            (0, C.jsx)(i, { className: "icon-lg mr-3 h-6 w-6 shrink-0" }),
+            (0, C.jsx)(
+              Z.Z,
+              tx(tx({}, tM[t]), {}, { values: { workspaceName: a } })
             ),
           ],
         });
       }
-      function tN(e) {
-        var t, i;
-        let { publishedGizmo: a, sharing: s, workspaceName: r, onClose: n } = e,
-          l = s.recipient,
-          o = tw[l],
-          d = (0, ei.Z)();
-        return (0, M.jsxs)(j.Z, {
+      function tO(e) {
+        var t, a;
+        let { publishedGizmo: i, sharing: s, workspaceName: l, onClose: r } = e,
+          n = s.recipient,
+          o = tT[n],
+          d = (0, _.Z)();
+        return (0, C.jsxs)(j.Z, {
           isOpen: !0,
-          onClose: n,
+          onClose: r,
           showCloseButton: !0,
           className: "w-[304px]",
-          title: (0, M.jsx)(el.Z, {
+          title: (0, C.jsx)(Z.Z, {
             id: "5CEceY",
             defaultMessage: "GPT Updated",
           }),
-          primaryButton: (0, M.jsx)(er.z, {
+          primaryButton: (0, C.jsx)(ep.z, {
             onClick: () => {
-              window.location.href = "/g/".concat(a.gizmo.id);
+              window.location.href = "/g/".concat(i.gizmo.id);
             },
-            children: (0, M.jsx)(el.Z, {
+            children: (0, C.jsx)(Z.Z, {
               id: "RF75o5",
               defaultMessage: "View GPT",
             }),
           }),
-          secondaryButton: (0, M.jsx)(er.z, {
+          secondaryButton: (0, C.jsx)(ep.z, {
             color: "neutral",
             onClick: () =>
-              td(
-                a,
+              tg(
+                i,
                 d.formatMessage({
                   id: "KdDqMm",
                   defaultMessage: "Copied link to clipboard",
                 })
               ),
-            children: (0, M.jsx)(el.Z, {
+            children: (0, C.jsx)(Z.Z, {
               id: "9hLOl9",
               defaultMessage: "Copy link",
             }),
           }),
           type: "success",
           children: [
-            (0, M.jsx)(tz, {
+            (0, C.jsx)(tS, {
               gizmo: {
                 profilePictureUrl:
-                  null !== (t = a.gizmo.display.profile_picture_url) &&
+                  null !== (t = i.gizmo.display.profile_picture_url) &&
                   void 0 !== t
                     ? t
                     : void 0,
-                name: a.gizmo.display.name,
+                name: i.gizmo.display.name,
               },
             }),
             s.subjects.filter((e) => (0, b.h)(e)).length > 0 &&
-              (0, M.jsxs)("div", {
+              (0, C.jsxs)("div", {
                 className: "my-4",
                 children: [
-                  (0, M.jsx)("h4", {
+                  (0, C.jsx)("h4", {
                     className: "text-xs font-medium text-token-text-secondary",
-                    children: (0, M.jsx)(el.Z, {
+                    children: (0, C.jsx)(Z.Z, {
                       id: "/paYH9",
                       defaultMessage: "Shared with",
                     }),
@@ -2552,15 +2788,15 @@
                     s.subjects.map(
                       (e, t) =>
                         (0, b.h)(e) &&
-                        (0, M.jsxs)(
+                        (0, C.jsxs)(
                           "div",
                           {
                             className:
                               "flex flex-row items-center justify-between space-x-3 py-2 ",
                             children: [
-                              (0, M.jsxs)("div", {
+                              (0, C.jsxs)("div", {
                                 children: [
-                                  (0, M.jsx)("span", {
+                                  (0, C.jsx)("span", {
                                     className: "text-base font-medium",
                                     children:
                                       e.type === b.LA.GROUP
@@ -2568,10 +2804,10 @@
                                         : e.user_name,
                                   }),
                                   e.type === b.LA.USER &&
-                                    (0, M.jsxs)(M.Fragment, {
+                                    (0, C.jsxs)(C.Fragment, {
                                       children: [
-                                        (0, M.jsx)("br", {}),
-                                        (0, M.jsx)("span", {
+                                        (0, C.jsx)("br", {}),
+                                        (0, C.jsx)("span", {
                                           className:
                                             "text-sm text-token-text-secondary",
                                           children: e.user_email,
@@ -2580,11 +2816,11 @@
                                     }),
                                 ],
                               }),
-                              (0, M.jsx)("span", {
+                              (0, C.jsx)("span", {
                                 className: "text-token-text-secondary",
-                                children: (0, M.jsx)(
-                                  el.Z,
-                                  tu({}, tb(e.capabilities))
+                                children: (0, C.jsx)(
+                                  Z.Z,
+                                  tx({}, tZ(e.capabilities))
                                 ),
                               }),
                             ],
@@ -2594,41 +2830,41 @@
                     ),
                 ],
               }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "my-4",
               children: [
-                (0, M.jsx)("h4", {
+                (0, C.jsx)("h4", {
                   className: "text-xs font-medium text-token-text-secondary",
-                  children: (0, M.jsx)(el.Z, {
+                  children: (0, C.jsx)(Z.Z, {
                     id: "q9XNZ7",
                     defaultMessage: "Access",
                   }),
                 }),
-                (0, M.jsxs)("div", {
+                (0, C.jsxs)("div", {
                   className:
                     "ml-[3px] flex flex-row items-center py-3 text-left text-base font-medium",
                   children: [
-                    (0, M.jsx)(o, {
+                    (0, C.jsx)(o, {
                       className: "md:icon-lg mr-3 h-6 w-6 shrink-0",
                     }),
-                    (0, M.jsxs)("div", {
+                    (0, C.jsxs)("div", {
                       className: "flex flex-col",
                       children: [
-                        (0, M.jsx)("span", {
-                          children: (0, M.jsx)(
-                            el.Z,
-                            tu(
-                              tu(
+                        (0, C.jsx)("span", {
+                          children: (0, C.jsx)(
+                            Z.Z,
+                            tx(
+                              tx(
                                 {},
-                                null !== (i = ty[l]) && void 0 !== i ? i : tj[l]
+                                null !== (a = tP[n]) && void 0 !== a ? a : tM[n]
                               ),
                               {},
-                              { values: { workspaceName: r } }
+                              { values: { workspaceName: l } }
                             )
                           ),
                         }),
-                        (l === b.Zz.Workspace || l === b.Zz.Marketplace) &&
-                          (0, M.jsx)("span", {
+                        (n === b.Zz.Workspace || n === b.Zz.Marketplace) &&
+                          (0, C.jsx)("span", {
                             className: "text-xs text-token-text-secondary",
                           }),
                       ],
@@ -2640,38 +2876,38 @@
           ],
         });
       }
-      function tz(e) {
-        let { gizmo: t, category: i, categories: a, onCategoryChange: s } = e,
-          { data: r, isLoading: n } = (0, m.WL)(),
-          l = null == a ? void 0 : a.find((e) => e.id === i);
-        return (0, M.jsxs)("div", {
+      function tS(e) {
+        let { gizmo: t, category: a, categories: i, onCategoryChange: s } = e,
+          { data: l, isLoading: r } = (0, m.WL)(),
+          n = null == i ? void 0 : i.find((e) => e.id === a);
+        return (0, C.jsxs)("div", {
           children: [
-            (0, M.jsxs)("div", {
-              className: (0, X.default)(
+            (0, C.jsxs)("div", {
+              className: (0, el.default)(
                 "mb-[1px] flex flex-row items-center  space-x-2 bg-token-main-surface-secondary p-4",
-                n && "invisible",
-                a ? "rounded-t-lg" : "rounded-lg"
+                r && "invisible",
+                i ? "rounded-t-lg" : "rounded-lg"
               ),
               children: [
-                (0, M.jsx)(e$.Z, {
+                (0, C.jsx)(e4.Z, {
                   isFirstParty: !1,
                   className: "h-11 w-11",
                   src: t.profilePictureUrl,
                 }),
-                (0, M.jsxs)("div", {
+                (0, C.jsxs)("div", {
                   className: "flex grow flex-col space-y-0",
                   children: [
-                    (0, M.jsx)("span", {
+                    (0, C.jsx)("span", {
                       className: "font-medium",
                       children: t.name,
                     }),
-                    (0, M.jsx)(tn.ZP, {
-                      builderName: null == r ? void 0 : r.display_name,
-                      builderUrl: null == r ? void 0 : r.website_url,
+                    (0, C.jsx)(tp.ZP, {
+                      builderName: null == l ? void 0 : l.display_name,
+                      builderUrl: null == l ? void 0 : l.website_url,
                       socials: [
-                        null == r ? void 0 : r.socials.linkedin,
-                        null == r ? void 0 : r.socials.github,
-                        null == r ? void 0 : r.socials.twitter,
+                        null == l ? void 0 : l.socials.linkedin,
+                        null == l ? void 0 : l.socials.github,
+                        null == l ? void 0 : l.socials.twitter,
                       ].filter((e) => null != e),
                       className: "text-xs",
                     }),
@@ -2679,35 +2915,35 @@
                 }),
               ],
             }),
-            a &&
-              (0, M.jsxs)("div", {
+            i &&
+              (0, C.jsxs)("div", {
                 className:
                   "flex min-h-[56px] flex-row items-center justify-between space-x-2 rounded-b-lg bg-token-main-surface-secondary px-4",
                 children: [
-                  (0, M.jsx)("span", {
+                  (0, C.jsx)("span", {
                     className: "text-base font-medium",
-                    children: (0, M.jsx)(el.Z, {
+                    children: (0, C.jsx)(Z.Z, {
                       id: "JcA4/t",
                       defaultMessage: "Category",
                     }),
                   }),
                   s
-                    ? (0, M.jsxs)(e8.Z.Root, {
+                    ? (0, C.jsxs)(tt.Z.Root, {
                         children: [
-                          (0, M.jsxs)(e8.Z.Trigger, {
+                          (0, C.jsxs)(tt.Z.Trigger, {
                             className:
                               "bg-transparent text-token-text-secondary hover:bg-token-main-surface-tertiary",
                             children: [
-                              null == l ? void 0 : l.title,
-                              (0, M.jsx)(eC.bTu, {}),
+                              null == n ? void 0 : n.title,
+                              (0, C.jsx)(eE.bTu, {}),
                             ],
                           }),
-                          (0, M.jsx)(e8.Z.Portal, {
-                            children: (0, M.jsx)(e8.Z.Content, {
+                          (0, C.jsx)(tt.Z.Portal, {
+                            children: (0, C.jsx)(tt.Z.Content, {
                               className: "text-token-text-secondary",
-                              children: a.map((e, t) =>
-                                (0, M.jsx)(
-                                  e8.Z.Item,
+                              children: i.map((e, t) =>
+                                (0, C.jsx)(
+                                  tt.Z.Item,
                                   { onClick: () => s(e), children: e.title },
                                   t
                                 )
@@ -2716,105 +2952,105 @@
                           }),
                         ],
                       })
-                    : (0, M.jsx)("span", {
+                    : (0, C.jsx)("span", {
                         className: "text-token-text-secondary",
-                        children: l.title,
+                        children: n.title,
                       }),
                 ],
               }),
           ],
         });
       }
-      let tP = P.Z.li(
+      let tI = T.Z.li(
         u ||
           (u = (0, x.Z)([
             "flex flex-col rounded-sm p-1 hover:bg-token-main-surface-secondary",
           ]))
       );
-      function tM(e) {
-        var t, i;
-        let { onAdd: a } = e,
-          s = (0, ei.Z)(),
-          r = (0, R.t)(),
-          { 0: n, 1: l } = (0, z.useState)(""),
-          { data: o } = (0, tt.Z)(null == r ? void 0 : r.id, 0, n, 5),
-          { data: d } = (0, te.a)({
-            queryKey: [null == r ? void 0 : r.id, "groups", "filtered", n],
-            queryFn: () => e6.Z.getWorkspaceGroups(r.id, { query: n }),
-            enabled: "" !== n.trim() && null != r && !!r.getWorkspaceId(),
+      function tA(e) {
+        var t, a;
+        let { onAdd: i } = e,
+          s = (0, _.Z)(),
+          l = (0, Y.t)(),
+          { 0: r, 1: n } = (0, M.useState)(""),
+          { data: o } = (0, tr.Z)(null == l ? void 0 : l.id, 0, r, 5),
+          { data: d } = (0, tl.a)({
+            queryKey: [null == l ? void 0 : l.id, "groups", "filtered", r],
+            queryFn: () => ta.Z.getWorkspaceGroups(l.id, { query: r }),
+            enabled: "" !== r.trim() && null != l && !!l.getWorkspaceId(),
           }),
           c =
             (null !== (t = null == o ? void 0 : o.items.length) && void 0 !== t
               ? t
               : 0) > 0 ||
-            (null !== (i = null == d ? void 0 : d.items.length) && void 0 !== i
-              ? i
+            (null !== (a = null == d ? void 0 : d.items.length) && void 0 !== a
+              ? a
               : 0) > 0,
-          { 0: u, 1: p } = (0, z.useState)(!1);
-        return (0, M.jsx)(M.Fragment, {
-          children: (0, M.jsx)("div", {
+          { 0: u, 1: p } = (0, M.useState)(!1);
+        return (0, C.jsx)(C.Fragment, {
+          children: (0, C.jsx)("div", {
             className: "flex w-full flex-row space-x-3",
-            children: (0, M.jsxs)(e9.J, {
+            children: (0, C.jsxs)(ti.J, {
               as: "div",
               className: "group relative grow",
               children: [
-                (0, M.jsx)(ec.Z, {
+                (0, C.jsx)(eg.Z, {
                   list: "suggested-choices",
                   name: "share-with-input",
                   placeholder: s.formatMessage({
                     id: "HLp5O4",
                     defaultMessage: "Add people and groups",
                   }),
-                  value: n,
-                  onChange: (e) => l(e.target.value),
+                  value: r,
+                  onChange: (e) => n(e.target.value),
                   onFocus: () => p(!0),
                   onBlur: () => p(!1),
                 }),
-                (0, M.jsx)(tr.m, {
-                  show: "" !== n.trim() && c && u,
-                  children: (0, M.jsx)(e9.J.Panel, {
+                (0, C.jsx)(tu.m, {
+                  show: "" !== r.trim() && c && u,
+                  children: (0, C.jsx)(ti.J.Panel, {
                     static: !0,
                     className:
                       "group-has-[:focus]:border-token-border-xheavy absolute top-8 ml-0 w-full cursor-pointer overflow-y-auto rounded-lg rounded-t-none border border-t-0 border-token-border-light bg-token-main-surface-primary px-1 py-1",
                     children:
-                      "" !== n.trim() &&
-                      (0, M.jsxs)("ul", {
+                      "" !== r.trim() &&
+                      (0, C.jsxs)("ul", {
                         id: "suggested-choices",
                         children: [
                           (null == o ? void 0 : o.items) &&
                             o.items.map((e) =>
-                              (0, M.jsxs)(
-                                tP,
+                              (0, C.jsxs)(
+                                tI,
                                 {
                                   tabIndex: 0,
                                   className:
                                     "rounded-sm p-1 text-sm hover:bg-token-main-surface-secondary",
                                   onClick: () => {
-                                    var t, i, s;
+                                    var t, a, s;
                                     return (
                                       (t = e.id),
-                                      (i = e.name),
+                                      (a = e.name),
                                       (s = e.email),
                                       void (
-                                        r &&
-                                        (a({
+                                        l &&
+                                        (i({
                                           type: b.LA.USER,
                                           user_id:
-                                            t + "__" + r.getWorkspaceId(),
-                                          user_name: i,
+                                            t + "__" + l.getWorkspaceId(),
+                                          user_name: a,
                                           user_email: s,
-                                          capabilities: tu({}, tp),
+                                          capabilities: tx({}, tv),
                                         }),
-                                        l(""))
+                                        n(""))
                                       )
                                     );
                                   },
                                   children: [
-                                    (0, M.jsx)("span", {
+                                    (0, C.jsx)("span", {
                                       className: "w-full font-medium",
                                       children: e.name,
                                     }),
-                                    (0, M.jsx)("span", {
+                                    (0, C.jsx)("span", {
                                       className:
                                         "text-sm text-token-text-secondary",
                                       children: e.email,
@@ -2826,33 +3062,33 @@
                             ),
                           (null == d ? void 0 : d.items) &&
                             d.items.slice(0, 5).map((e) =>
-                              (0, M.jsxs)(
-                                tP,
+                              (0, C.jsxs)(
+                                tI,
                                 {
                                   tabIndex: 0,
                                   onClick: () => {
-                                    var t, i;
+                                    var t, a;
                                     return (
                                       (t = e.id),
-                                      (i = e.name),
-                                      void (a({
+                                      (a = e.name),
+                                      void (i({
                                         type: b.LA.GROUP,
                                         group_id: t,
-                                        group_name: i,
-                                        capabilities: tu({}, tp),
+                                        group_name: a,
+                                        capabilities: tx({}, tv),
                                       }),
-                                      l(""))
+                                      n(""))
                                     );
                                   },
                                   children: [
-                                    (0, M.jsx)("span", {
+                                    (0, C.jsx)("span", {
                                       className: "font-medium",
                                       children: e.name,
                                     }),
-                                    (0, M.jsx)("span", {
+                                    (0, C.jsx)("span", {
                                       className:
                                         "text-sm text-token-text-secondary",
-                                      children: (0, M.jsx)(el.Z, {
+                                      children: (0, C.jsx)(Z.Z, {
                                         id: "r3Rx6X",
                                         defaultMessage:
                                           "{numMembers, plural, one {1 member} other {# members}}",
@@ -2873,205 +3109,202 @@
           }),
         });
       }
-      function tZ(e) {
+      function tE(e) {
         let {
             gizmo: t,
-            publishedGizmo: i,
-            promoteGizmo: a,
+            publishedGizmo: a,
+            promoteGizmo: i,
             appealGizmo: s,
-            showActionsModal: r,
-            onClose: n,
+            showActionsModal: l,
+            onClose: r,
           } = e,
-          { 0: l, 1: o } = (0, z.useState)({ type: "privacy" });
-        return "privacy" === l.type
-          ? (0, M.jsx)(t_, {
+          { 0: n, 1: o } = (0, M.useState)({ type: "privacy" });
+        return "privacy" === n.type
+          ? (0, C.jsx)(tG, {
               gizmo: t,
-              publishedGizmo: i,
-              promoteGizmo: a,
+              publishedGizmo: a,
+              promoteGizmo: i,
               appealGizmo: s,
               setStep: o,
-              showActionsModal: r,
-              onClose: n,
+              showActionsModal: l,
+              onClose: r,
             })
-          : (0, M.jsx)(tT, { publishedGizmo: l.publishedGizmo, onClose: n });
+          : (0, C.jsx)(tL, { publishedGizmo: n.publishedGizmo, onClose: r });
       }
-      function t_(e) {
-        var t, i, a, s;
+      function tG(e) {
+        var t, a, i, s;
         let {
-            gizmo: r,
-            publishedGizmo: n,
-            promoteGizmo: l,
+            gizmo: l,
+            publishedGizmo: r,
+            promoteGizmo: n,
             appealGizmo: o,
             setStep: d,
             showActionsModal: c,
             onClose: u,
           } = e,
-          { 0: p, 1: h } = (0, z.useState)(!1),
-          f = (0, V.ec)(V.F_.isBusinessWorkspace),
-          x = (0, ei.Z)(),
-          { 0: v, 1: k } = (0, z.useState)(
-            (0, m.Sg)(r)
+          { 0: p, 1: h } = (0, M.useState)(!1),
+          f = (0, Q.ec)(Q.F_.isBusinessWorkspace),
+          x = (0, _.Z)(),
+          { 0: v, 1: k } = (0, M.useState)(
+            (0, m.Sg)(l)
               ? f
                 ? b.Zz.Workspace
                 : b.Zz.Marketplace
-              : r.sharingRecipient
+              : l.sharingRecipient
           ),
-          N = (0, z.useMemo)(
+          z = (0, M.useMemo)(
             () =>
-              (null == n ? void 0 : n.gizmo.sharing_targets) == null ||
-              n.gizmo.sharing_targets.some(
+              (null == r ? void 0 : r.gizmo.sharing_targets) == null ||
+              r.gizmo.sharing_targets.some(
                 (e) => e.recipient === v && e.allowed
               ),
-            [null == n ? void 0 : n.gizmo.sharing_targets, v]
+            [null == r ? void 0 : r.gizmo.sharing_targets, v]
           ),
-          { data: P, isLoading: Z } = (0, m.WL)(),
-          _ = (0, m.Z1)(),
-          { 0: T, 1: C } = (0, z.useState)(
-            null != n && n.gizmo.display.categories.length > 0
-              ? null === (t = _.data) ||
+          { data: N, isLoading: P } = (0, m.WL)(),
+          T = (0, m.Z1)(),
+          { 0: O, 1: S } = (0, M.useState)(
+            null != r && r.gizmo.display.categories.length > 0
+              ? null === (t = T.data) ||
                 void 0 === t ||
                 null ===
                   (t = t.categories.find(
-                    (e) => e.id === n.gizmo.display.categories[0]
+                    (e) => e.id === r.gizmo.display.categories[0]
                   )) ||
                 void 0 === t
                 ? void 0
                 : t.id
               : void 0
           );
-        (0, z.useEffect)(() => {
-          C(null == n ? void 0 : n.gizmo.display.categories[0]);
-        }, [null == n ? void 0 : n.gizmo.display.categories]);
-        let { 0: O, 1: S } = (0, z.useState)(void 0),
-          I = (0, z.useRef)(
-            (0, $.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
+        (0, M.useEffect)(() => {
+          S(null == r ? void 0 : r.gizmo.display.categories[0]);
+        }, [null == r ? void 0 : r.gizmo.display.categories]);
+        let { 0: I, 1: A } = (0, M.useState)(void 0),
+          E = (0, M.useRef)(
+            (0, er.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
           ),
-          A =
-            null != P && P.is_verified
+          G =
+            null != N && N.is_verified
               ? void 0
               : x.formatMessage({
                   id: "qEQtmt",
                   defaultMessage:
                     "To publish your GPTs to the Explore GPTs page, set up your builder profile.",
                 });
-        v !== b.Zz.Marketplace || null == A || Z || k(b.Zz.Link);
-        let G =
+        v !== b.Zz.Marketplace || null == G || P || k(b.Zz.Link);
+        let L =
             f &&
             !(
-              null !== (i = r.sharingTargets) &&
-              void 0 !== i &&
-              i.some((e) => e.recipient === b.Zz.Link)
+              null !== (a = l.sharingTargets) &&
+              void 0 !== a &&
+              a.some((e) => e.recipient === b.Zz.Link)
             ),
-          E = (0, e5.bw)(r, v, T),
-          L = E.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
-          U = r.tools.find(
+          U = (0, te.bw)(l, v, O),
+          R = U.includes(te.hs.MissingPublicActionPrivacyPolicyURL),
+          D = l.tools.find(
             (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
           ),
-          D = (0, V.ec)((e) => e.currentWorkspace),
-          B = (0, R.hz)();
-        (0, z.useEffect)(() => {
+          B = (0, Q.ec)((e) => e.currentWorkspace),
+          F = (0, Y.hz)();
+        (0, M.useEffect)(() => {
           let e = !0;
           return (
             (async () => {
               try {
-                if (null != T) return;
-                let t = await I.current(r.name, r.instructions);
-                e && null == T && (t ? C(t.id) : S(!0));
+                if (null != O) return;
+                let t = await E.current(l.name, l.instructions);
+                e && null == O && (t ? S(t.id) : A(!0));
               } catch (t) {
-                e && null == T && S(!0);
+                e && null == O && A(!0);
               }
             })(),
             () => {
               e = !1;
             }
           );
-        }, [r.instructions, r.name, B, T]);
-        let { value: q } = (0, w.sB)(w.tz.GizmoAppeals);
-        return (0, M.jsx)(j.Z, {
+        }, [l.instructions, l.name, F, O]);
+        let { value: V } = (0, w.sB)(w.tz.GizmoAppeals);
+        return (0, C.jsx)(j.Z, {
           type: "success",
           isOpen: !0,
           onClose: u,
-          title: (0, M.jsx)(el.Z, {
-            id: "9viumf",
-            defaultMessage: "Share GPT",
-          }),
+          title: (0, C.jsx)(Z.Z, { id: "9viumf", defaultMessage: "Share GPT" }),
           showCloseButton: !0,
-          primaryButton: N
-            ? (0, M.jsx)(eR.cY, {
+          primaryButton: z
+            ? (0, C.jsx)(eq.cY, {
                 color: "primary",
-                disabled: E.length > 0,
+                disabled: U.length > 0,
                 loading: p,
                 onClick: async () => {
                   try {
                     h(!0);
-                    let e = await l({ recipient: v, subjects: [] }, T);
+                    let e = await n({ recipient: v, subjects: [] }, O);
                     if (null == e) return;
                     1 === e.gizmo.live_version
-                      ? et().push((0, m.m_)(e))
+                      ? ed().push((0, m.m_)(e))
                       : d({ type: "published", publishedGizmo: e });
                   } finally {
                     h(!1);
                   }
                 },
-                children: (0, M.jsx)(el.Z, {
+                children: (0, C.jsx)(Z.Z, {
                   id: "L6O5TQ",
                   defaultMessage: "Confirm",
                 }),
               })
-            : q
-              ? (0, M.jsxs)(M.Fragment, {
+            : V
+              ? (0, C.jsxs)(C.Fragment, {
                   children: [
-                    (0, M.jsx)("div", {
+                    (0, C.jsx)("div", {
                       className:
                         "flex items-center justify-between text-sm text-token-text-secondary",
-                      children: (0, M.jsx)(el.Z, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "jLCMMV",
                         defaultMessage:
                           "Because this GPT previously may have violated our policies, you will have to submit an appeal to make it available at this level.",
                       }),
                     }),
-                    (0, M.jsx)(eR.cY, {
+                    (0, C.jsx)(eq.cY, {
                       color: "primary",
                       onClick: async () => {
-                        await o(v, T);
+                        await o(v, O);
                       },
                       className: "w-full",
-                      children: (0, M.jsx)(el.Z, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "bBmLUr",
                         defaultMessage: "Appeal",
                       }),
                     }),
                   ],
                 })
-              : (0, M.jsx)("div", {
+              : (0, C.jsx)("div", {
                   className:
                     "flex items-center justify-between text-sm text-token-text-secondary",
-                  children: (0, M.jsx)(el.Z, {
+                  children: (0, C.jsx)(Z.Z, {
                     id: "PI9mO2",
                     defaultMessage:
                       "Because this GPT violates our policies, you will have to submit an appeal for it to be sharable.",
                   }),
                 }),
-          children: (0, M.jsxs)("div", {
+          children: (0, C.jsxs)("div", {
             className: "flex flex-col gap-3 text-sm",
             children: [
-              (0, M.jsxs)(Y.fC, {
+              (0, C.jsxs)(ee.fC, {
                 value: v,
                 onValueChange: (e) => k(e),
                 className: "space-y-2",
                 children: [
-                  r.sharingTargets &&
-                    r.sharingTargets.map((e, t) =>
-                      (0, M.jsx)(
-                        tO,
+                  l.sharingTargets &&
+                    l.sharingTargets.map((e, t) =>
+                      (0, C.jsx)(
+                        tR,
                         {
                           value: e.recipient,
                           disabled:
-                            e.recipient === b.Zz.Marketplace && null != A,
+                            e.recipient === b.Zz.Marketplace && null != G,
                           tooltipText:
                             e.recipient === b.Zz.Marketplace
-                              ? null != A
-                                ? A
+                              ? null != G
+                                ? G
                                 : x.formatMessage({
                                     id: "0Rcb4e",
                                     defaultMessage:
@@ -3083,43 +3316,43 @@
                         t
                       )
                     ),
-                  G &&
-                    (0, M.jsxs)(M.Fragment, {
+                  L &&
+                    (0, C.jsxs)(C.Fragment, {
                       children: [
-                        (0, M.jsx)(tO, {
+                        (0, C.jsx)(tR, {
                           value: b.Zz.Link,
                           disabled: !0,
                           tooltipText: x.formatMessage(
-                            tC.workspaceDisabledHint
+                            tU.workspaceDisabledHint
                           ),
                           shareLevel: b.Zz.Link,
-                          workspaceName: null == D ? void 0 : D.name,
+                          workspaceName: null == B ? void 0 : B.name,
                         }),
-                        (0, M.jsx)(tO, {
+                        (0, C.jsx)(tR, {
                           value: b.Zz.Marketplace,
                           disabled: !0,
                           tooltipText: x.formatMessage(
-                            tC.workspaceDisabledHint
+                            tU.workspaceDisabledHint
                           ),
                           shareLevel: b.Zz.Marketplace,
-                          workspaceName: null == D ? void 0 : D.name,
+                          workspaceName: null == B ? void 0 : B.name,
                         }),
                       ],
                     }),
                 ],
               }),
-              L &&
-                (0, M.jsx)("div", {
+              R &&
+                (0, C.jsx)("div", {
                   className: "text-xs text-red-500",
-                  children: (0, M.jsx)(el.Z, {
+                  children: (0, C.jsx)(Z.Z, {
                     id: "/iw1Iv",
                     defaultMessage:
                       "Public actions require valid privacy policy URLs. Click <fixlink>here</fixlink> to update.",
                     values: {
                       fixlink: (e) =>
-                        (0, M.jsx)("button", {
+                        (0, C.jsx)("button", {
                           onClick: () => {
-                            c(null == U ? void 0 : U.metadata.action_id);
+                            c(null == D ? void 0 : D.metadata.action_id);
                           },
                           className: "underline",
                           children: e,
@@ -3128,27 +3361,27 @@
                   }),
                 }),
               v !== b.Zz.Private &&
-                (0, M.jsx)(tz, {
-                  gizmo: r,
-                  category: T,
+                (0, C.jsx)(tS, {
+                  gizmo: l,
+                  category: O,
                   categories:
                     v === b.Zz.Marketplace
                       ? null !==
-                          (a =
-                            null === (s = _.data) || void 0 === s
+                          (i =
+                            null === (s = T.data) || void 0 === s
                               ? void 0
-                              : s.categories) && void 0 !== a
-                        ? a
+                              : s.categories) && void 0 !== i
+                        ? i
                         : []
                       : void 0,
                   onCategoryChange:
-                    v === b.Zz.Marketplace ? (e) => C(e.id) : void 0,
+                    v === b.Zz.Marketplace ? (e) => S(e.id) : void 0,
                 }),
               v === b.Zz.Marketplace &&
-                (O
-                  ? (0, M.jsx)("div", {
+                (I
+                  ? (0, C.jsx)("div", {
                       className: "text-xs text-red-500",
-                      children: (0, M.jsx)(el.Z, {
+                      children: (0, C.jsx)(Z.Z, {
                         id: "tpC3ui",
                         defaultMessage:
                           "There was an error updating the list of categories",
@@ -3159,49 +3392,46 @@
           }),
         });
       }
-      function tT(e) {
-        let { publishedGizmo: t, onClose: i } = e,
-          a = to(t),
-          s = (0, ei.Z)();
-        return (0, M.jsx)(j.Z, {
+      function tL(e) {
+        let { publishedGizmo: t, onClose: a } = e,
+          i = th(t),
+          s = (0, _.Z)();
+        return (0, C.jsx)(j.Z, {
           type: "success",
           isOpen: !0,
-          onClose: i,
-          title: (0, M.jsx)(el.Z, {
-            id: "9viumf",
-            defaultMessage: "Share GPT",
-          }),
+          onClose: a,
+          title: (0, C.jsx)(Z.Z, { id: "9viumf", defaultMessage: "Share GPT" }),
           showCloseButton: !0,
-          primaryButton: (0, M.jsx)(eR.cY, {
+          primaryButton: (0, C.jsx)(eq.cY, {
             color: "primary",
             as: "link",
-            to: a,
-            children: (0, M.jsx)(el.Z, {
+            to: i,
+            children: (0, C.jsx)(Z.Z, {
               id: "lyZz44",
               defaultMessage: "View GPT",
             }),
           }),
-          children: (0, M.jsxs)("div", {
+          children: (0, C.jsxs)("div", {
             className: "flex flex-col gap-2",
             children: [
-              (0, M.jsx)("div", {
+              (0, C.jsx)("div", {
                 className: "font-medium",
-                children: (0, M.jsx)(el.Z, {
+                children: (0, C.jsx)(Z.Z, {
                   id: "fbcGL6",
                   defaultMessage: "Published!",
                 }),
               }),
-              (0, M.jsxs)("div", {
+              (0, C.jsxs)("div", {
                 className:
                   "flex gap-1 rounded bg-token-main-surface-secondary px-2 py-1",
                 children: [
-                  (0, M.jsx)("div", {
+                  (0, C.jsx)("div", {
                     className: "text-ellipsis break-all line-clamp-1",
-                    children: a,
+                    children: i,
                   }),
-                  (0, M.jsx)("button", {
+                  (0, C.jsx)("button", {
                     onClick: () => {
-                      td(
+                      tg(
                         t,
                         s.formatMessage({
                           id: "KdDqMm",
@@ -3211,7 +3441,7 @@
                     },
                     className:
                       "text-token-text-secondary transition hover:text-token-text-primary",
-                    children: (0, M.jsx)(en.dS, { className: "icon-sm" }),
+                    children: (0, C.jsx)(em.dS, { className: "icon-sm" }),
                   }),
                 ],
               }),
@@ -3219,240 +3449,240 @@
           }),
         });
       }
-      let tC = (0, eo.vU)({
+      let tU = (0, P.vU)({
         workspaceDisabledHint: {
           id: "gizmo.workspaceDisabledHint",
           defaultMessage:
             "Your workspace administrator has disabled this setting",
         },
       });
-      function tO(e) {
+      function tR(e) {
         let {
             shareLevel: t,
-            workspaceName: i,
-            disabled: a = !1,
+            workspaceName: a,
+            disabled: i = !1,
             tooltipText: s,
-            value: r,
+            value: l,
           } = e,
-          n = (0, z.useId)();
-        return (0, M.jsxs)("div", {
-          className: (0, X.default)(
+          r = (0, M.useId)();
+        return (0, C.jsxs)("div", {
+          className: (0, el.default)(
             "flex h-14 items-center justify-between gap-2 py-[6px] font-medium",
-            a ? "opacity-50" : ""
+            i ? "opacity-50" : ""
           ),
           children: [
-            (0, M.jsx)(e4.E, {
+            (0, C.jsx)(e7.E, {
               disabled: null == s,
               label: s,
               side: "right",
-              children: (0, M.jsx)("label", {
-                htmlFor: n,
+              children: (0, C.jsx)("label", {
+                htmlFor: r,
                 className: "flex cursor-pointer items-center gap-1",
-                children: (0, M.jsx)(tk, {
+                children: (0, C.jsx)(tC, {
                   shareLevel: t,
-                  workspaceName: null != i ? i : "",
+                  workspaceName: null != a ? a : "",
                 }),
               }),
             }),
-            (0, M.jsx)(Y.ck, {
-              id: n,
-              value: r,
-              disabled: a,
+            (0, C.jsx)(ee.ck, {
+              id: r,
+              value: l,
+              disabled: i,
               className:
                 "mr-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gray-500 bg-white dark:border-gray-600 dark:bg-gray-700",
-              children: (0, M.jsx)(Y.z$, {
+              children: (0, C.jsx)(ee.z$, {
                 className: "h-2 w-2 rounded-full bg-gray-950 dark:bg-white",
               }),
             }),
           ],
         });
       }
-      var tS = i(47559);
-      function tI(e, t) {
-        var i = Object.keys(e);
+      var tD = a(47559);
+      function tB(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function tA(e) {
+      function tF(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? tI(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? tB(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : tI(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : tB(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      function tG(e) {
-        window.history.length > 1 ? e.back() : e.push((0, W.L7)());
+      function tV(e) {
+        window.history.length > 1 ? e.back() : e.push((0, $.L7)());
       }
-      function tE(e) {
-        var t, i, a;
+      function tq(e) {
+        var t, a, i;
         let {
             gizmo: s,
-            publishedGizmo: r,
-            promoteGizmo: n,
-            appealGizmo: l,
+            publishedGizmo: l,
+            promoteGizmo: r,
+            appealGizmo: n,
             setStep: o,
             showActionsModal: d,
           } = e,
-          { 0: c, 1: u } = (0, z.useState)(!1),
-          p = (0, V.ec)(V.F_.isBusinessWorkspace),
-          h = (0, ei.Z)(),
-          { 0: f, 1: x } = (0, z.useState)(
+          { 0: c, 1: u } = (0, M.useState)(!1),
+          p = (0, Q.ec)(Q.F_.isBusinessWorkspace),
+          h = (0, _.Z)(),
+          { 0: f, 1: x } = (0, M.useState)(
             (0, m.Sg)(s)
               ? p
                 ? b.Zz.Workspace
                 : b.Zz.Marketplace
               : s.sharingRecipient
           ),
-          v = (0, z.useMemo)(
+          v = (0, M.useMemo)(
             () =>
-              (null == r ? void 0 : r.gizmo.sharing_targets) == null ||
-              r.gizmo.sharing_targets.some(
+              (null == l ? void 0 : l.gizmo.sharing_targets) == null ||
+              l.gizmo.sharing_targets.some(
                 (e) => e.recipient === f && e.allowed
               ),
-            [null == r ? void 0 : r.gizmo.sharing_targets, f]
+            [null == l ? void 0 : l.gizmo.sharing_targets, f]
           ),
           { data: j, isLoading: k } = (0, m.WL)(),
-          { 0: N, 1: P } = (0, z.useState)(
-            null != r && r.gizmo.display.categories.length > 0
-              ? r.gizmo.display.categories[0]
+          { 0: z, 1: N } = (0, M.useState)(
+            null != l && l.gizmo.display.categories.length > 0
+              ? l.gizmo.display.categories[0]
               : void 0
           );
-        (0, z.useEffect)(() => {
-          P(null == r ? void 0 : r.gizmo.display.categories[0]);
-        }, [null == r ? void 0 : r.gizmo.display.categories]);
-        let { 0: Z, 1: _ } = (0, z.useState)(void 0),
-          T = (0, z.useRef)(
-            (0, $.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
+        (0, M.useEffect)(() => {
+          N(null == l ? void 0 : l.gizmo.display.categories[0]);
+        }, [null == l ? void 0 : l.gizmo.display.categories]);
+        let { 0: P, 1: T } = (0, M.useState)(void 0),
+          O = (0, M.useRef)(
+            (0, er.throttle)((e, t) => y.U.generateCategory(e, t), 1e3)
           ),
-          C =
+          S =
             null != j && j.is_verified
               ? void 0
-              : h.formatMessage(tY.displayNameRequiredHint);
-        f !== b.Zz.Marketplace || null == C || k || x(b.Zz.Link);
-        let O =
+              : h.formatMessage(t1.displayNameRequiredHint);
+        f !== b.Zz.Marketplace || null == S || k || x(b.Zz.Link);
+        let I =
             p &&
             !(
               null !== (t = s.sharingTargets) &&
               void 0 !== t &&
               t.some((e) => e.recipient === b.Zz.Link)
             ),
-          S = (0, e5.bw)(s, f, N),
-          I = S.includes(e5.hs.MissingPublicActionPrivacyPolicyURL),
-          A = s.tools.find(
+          A = (0, te.bw)(s, f, z),
+          E = A.includes(te.hs.MissingPublicActionPrivacyPolicyURL),
+          G = s.tools.find(
             (e) => e.type === g.qK.JIT_PLUGIN && !e.metadata.privacy_policy_url
           ),
-          G = (0, V.ec)((e) => e.currentWorkspace),
-          E = (0, R.hz)(),
-          L = (0, m.Z1)();
-        (0, z.useEffect)(() => {
+          L = (0, Q.ec)((e) => e.currentWorkspace),
+          U = (0, Y.hz)(),
+          R = (0, m.Z1)();
+        (0, M.useEffect)(() => {
           let e = !0;
           return (
             (async () => {
               try {
-                if (null != N) return;
-                let t = await T.current(s.name, s.instructions);
-                e && null == N && (t ? P(t.id) : _(!0));
+                if (null != z) return;
+                let t = await O.current(s.name, s.instructions);
+                e && null == z && (t ? N(t.id) : T(!0));
               } catch (t) {
-                e && null == N && _(!0);
+                e && null == z && T(!0);
               }
             })(),
             () => {
               e = !1;
             }
           );
-        }, [s.instructions, s.name, E, N]);
-        let { value: U } = (0, w.sB)(w.tz.GizmoAppeals);
-        return (0, M.jsxs)("div", {
+        }, [s.instructions, s.name, U, z]);
+        let { value: D } = (0, w.sB)(w.tz.GizmoAppeals);
+        return (0, C.jsxs)("div", {
           children: [
-            (0, M.jsx)("div", {
+            (0, C.jsx)("div", {
               className: "mb-2 text-sm font-medium text-token-text-tertiary",
-              children: (0, M.jsx)(el.Z, tA({}, tY.publishTo)),
+              children: (0, C.jsx)(Z.Z, tF({}, t1.publishTo)),
             }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "flex flex-col gap-3 text-sm",
               children: [
-                (0, M.jsxs)(Y.fC, {
+                (0, C.jsxs)(ee.fC, {
                   value: f,
                   onValueChange: (e) => x(e),
                   className: "space-y-2",
                   children: [
                     s.sharingTargets &&
                       s.sharingTargets.map((e, t) =>
-                        (0, M.jsx)(
-                          eR.Xb,
+                        (0, C.jsx)(
+                          eq.Xb,
                           {
                             value: e.recipient,
                             disabled:
-                              e.recipient === b.Zz.Marketplace && null != C,
+                              e.recipient === b.Zz.Marketplace && null != S,
                             tooltipText:
                               e.recipient === b.Zz.Marketplace
-                                ? null != C
-                                  ? C
+                                ? null != S
+                                  ? S
                                   : h.formatMessage(
-                                      tY.publicSharingHintStoreEnabled
+                                      t1.publicSharingHintStoreEnabled
                                     )
                                 : void 0,
-                            label: (0, ew.MI)(e.recipient, G, h),
+                            label: (0, eP.MI)(e.recipient, L, h),
                           },
                           t
                         )
                       ),
-                    O &&
-                      (0, M.jsxs)(M.Fragment, {
+                    I &&
+                      (0, C.jsxs)(C.Fragment, {
                         children: [
-                          (0, M.jsx)(eR.Xb, {
+                          (0, C.jsx)(eq.Xb, {
                             value: b.Zz.Link,
                             disabled: !0,
                             tooltipText: h.formatMessage(
-                              tY.workspaceDisabledHint
+                              t1.workspaceDisabledHint
                             ),
-                            label: (0, ew.MI)(b.Zz.Link, G, h),
+                            label: (0, eP.MI)(b.Zz.Link, L, h),
                           }),
-                          (0, M.jsx)(eR.Xb, {
+                          (0, C.jsx)(eq.Xb, {
                             value: b.Zz.Marketplace,
                             disabled: !0,
                             tooltipText: h.formatMessage(
-                              tY.workspaceDisabledHint
+                              t1.workspaceDisabledHint
                             ),
-                            label: (0, ew.MI)(b.Zz.Marketplace, G, h),
+                            label: (0, eP.MI)(b.Zz.Marketplace, L, h),
                           }),
                         ],
                       }),
                   ],
                 }),
-                I &&
-                  (0, M.jsx)("div", {
+                E &&
+                  (0, C.jsx)("div", {
                     className: "text-xs text-red-500",
-                    children: (0, M.jsx)(
-                      el.Z,
-                      tA(
-                        tA({}, tY.actionNeedsPrivacyPolicyURL),
+                    children: (0, C.jsx)(
+                      Z.Z,
+                      tF(
+                        tF({}, t1.actionNeedsPrivacyPolicyURL),
                         {},
                         {
                           values: {
                             fixlink: (e) =>
-                              (0, M.jsx)("button", {
+                              (0, C.jsx)("button", {
                                 onClick: () => {
-                                  d(null == A ? void 0 : A.metadata.action_id);
+                                  d(null == G ? void 0 : G.metadata.action_id);
                                 },
                                 className: "underline",
                                 children: e,
@@ -3463,128 +3693,128 @@
                     ),
                   }),
                 f !== b.Zz.Private &&
-                  (0, M.jsx)(tS.QT, {
+                  (0, C.jsx)(tD.QT, {
                     gizmoAvatar: s.profilePictureUrl,
                     gizmoName: s.name,
                     canEdit: !0,
                   }),
                 f === b.Zz.Marketplace &&
-                  (Z
-                    ? (0, M.jsx)("div", {
+                  (P
+                    ? (0, C.jsx)("div", {
                         className: "text-xs text-red-500",
-                        children: (0, M.jsx)(el.Z, tA({}, tY.categoryError)),
+                        children: (0, C.jsx)(Z.Z, tF({}, t1.categoryError)),
                       })
-                    : (0, M.jsxs)(M.Fragment, {
+                    : (0, C.jsxs)(C.Fragment, {
                         children: [
-                          (0, M.jsxs)("div", {
+                          (0, C.jsxs)("div", {
                             className:
                               "flex items-center justify-between text-sm font-medium text-token-text-tertiary",
                             children: [
-                              (0, M.jsx)(el.Z, tA({}, tY.categoryLabel)),
-                              (0, M.jsx)(e4.u, {
-                                label: (0, M.jsx)("span", {
+                              (0, C.jsx)(Z.Z, tF({}, t1.categoryLabel)),
+                              (0, C.jsx)(e7.u, {
+                                label: (0, C.jsx)("span", {
                                   className: "w-36 text-xs",
-                                  children: (0, M.jsx)(
-                                    el.Z,
-                                    tA({}, tY.categoryLabelTooltip)
+                                  children: (0, C.jsx)(
+                                    Z.Z,
+                                    tF({}, t1.categoryLabelTooltip)
                                   ),
                                 }),
                                 side: "top",
-                                children: (0, M.jsx)(en.VX, {
+                                children: (0, C.jsx)(em.VX, {
                                   className: "icon-sm",
                                 }),
                               }),
                             ],
                           }),
-                          (0, M.jsx)(tF, {
-                            category: null != N ? N : "",
+                          (0, C.jsx)(t$, {
+                            category: null != z ? z : "",
                             categories:
                               null !==
-                                (i =
-                                  null === (a = L.data) || void 0 === a
+                                (a =
+                                  null === (i = R.data) || void 0 === i
                                     ? void 0
-                                    : a.categories) && void 0 !== i
-                                ? i
+                                    : i.categories) && void 0 !== a
+                                ? a
                                 : [],
-                            setCategory: P,
+                            setCategory: N,
                           }),
                         ],
                       })),
                 v
-                  ? (0, M.jsx)(eR.cY, {
+                  ? (0, C.jsx)(eq.cY, {
                       color: "primary",
-                      disabled: S.length > 0,
+                      disabled: A.length > 0,
                       loading: c,
                       onClick: async () => {
                         try {
                           u(!0);
-                          let e = await n({ recipient: f, subjects: [] }, N);
+                          let e = await r({ recipient: f, subjects: [] }, z);
                           if (null == e) return;
                           1 === e.gizmo.live_version
-                            ? et().push((0, m.m_)(e))
+                            ? ed().push((0, m.m_)(e))
                             : o({ type: "published", publishedGizmo: e });
                         } finally {
                           u(!1);
                         }
                       },
                       className: "w-full",
-                      children: (0, M.jsx)(el.Z, tA({}, tY.privacyConfirm)),
+                      children: (0, C.jsx)(Z.Z, tF({}, t1.privacyConfirm)),
                     })
-                  : U
-                    ? (0, M.jsxs)(M.Fragment, {
+                  : D
+                    ? (0, C.jsxs)(C.Fragment, {
                         children: [
-                          (0, M.jsx)("div", {
+                          (0, C.jsx)("div", {
                             className:
                               "flex items-center justify-between text-sm text-token-text-secondary",
-                            children: (0, M.jsx)(
-                              el.Z,
-                              tA({}, tY.appealNeededLabel)
+                            children: (0, C.jsx)(
+                              Z.Z,
+                              tF({}, t1.appealNeededLabel)
                             ),
                           }),
-                          (0, M.jsx)(eR.cY, {
+                          (0, C.jsx)(eq.cY, {
                             color: "primary",
                             onClick: async () => {
-                              await l(f, N);
+                              await n(f, z);
                             },
                             className: "w-full",
-                            children: (0, M.jsx)(el.Z, tA({}, tY.appealButton)),
+                            children: (0, C.jsx)(Z.Z, tF({}, t1.appealButton)),
                           }),
                         ],
                       })
-                    : (0, M.jsx)("div", {
+                    : (0, C.jsx)("div", {
                         className:
                           "flex items-center justify-between text-sm text-token-text-secondary",
-                        children: (0, M.jsx)(el.Z, tA({}, tY.recipientBlocked)),
+                        children: (0, C.jsx)(Z.Z, tF({}, t1.recipientBlocked)),
                       }),
               ],
             }),
           ],
         });
       }
-      function tL(e) {
+      function tW(e) {
         let { publishedGizmo: t } = e,
-          i = to(t),
-          a = (0, ei.Z)();
-        return (0, M.jsxs)("div", {
+          a = th(t),
+          i = (0, _.Z)();
+        return (0, C.jsxs)("div", {
           className: "flex flex-col gap-2",
           children: [
-            (0, M.jsx)("div", {
+            (0, C.jsx)("div", {
               className: "font-medium",
-              children: (0, M.jsx)(el.Z, tA({}, tY.publishedTitle)),
+              children: (0, C.jsx)(Z.Z, tF({}, t1.publishedTitle)),
             }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className:
                 "flex gap-1 rounded bg-token-main-surface-secondary px-2 py-1",
               children: [
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-ellipsis break-all line-clamp-1",
-                  children: i,
+                  children: a,
                 }),
-                (0, M.jsx)("button", {
+                (0, C.jsx)("button", {
                   onClick: () => {
-                    td(
+                    tg(
                       t,
-                      a.formatMessage({
+                      i.formatMessage({
                         id: "KdDqMm",
                         defaultMessage: "Copied link to clipboard",
                       })
@@ -3592,245 +3822,287 @@
                   },
                   className:
                     "text-token-text-secondary transition hover:text-token-text-primary",
-                  children: (0, M.jsx)(en.dS, { className: "icon-sm" }),
+                  children: (0, C.jsx)(em.dS, { className: "icon-sm" }),
                 }),
               ],
             }),
-            (0, M.jsx)(eR.cY, {
+            (0, C.jsx)(eq.cY, {
               color: "primary",
               as: "link",
-              to: i,
+              to: a,
               className: "w-full",
-              children: (0, M.jsx)(el.Z, tA({}, tY.viewGPT)),
+              children: (0, C.jsx)(Z.Z, tF({}, t1.viewGPT)),
             }),
           ],
         });
       }
-      function tU(e) {
+      function tY(e) {
         let {
             gizmo: t,
-            publishedGizmo: i,
-            promoteGizmo: a,
+            publishedGizmo: a,
+            promoteGizmo: i,
             appealGizmo: s,
-            showActionsModal: r,
+            showActionsModal: l,
           } = e,
-          { 0: n, 1: l } = (0, z.useState)({ type: "privacy" });
-        return (0, M.jsx)("div", {
+          { 0: r, 1: n } = (0, M.useState)({ type: "privacy" });
+        return (0, C.jsx)("div", {
           className:
             "w-60 rounded-lg border border-token-border-medium bg-token-main-surface-primary p-4 text-sm",
           children:
-            "privacy" === n.type
-              ? (0, M.jsx)(tE, {
+            "privacy" === r.type
+              ? (0, C.jsx)(tq, {
                   gizmo: t,
-                  publishedGizmo: i,
-                  promoteGizmo: a,
+                  publishedGizmo: a,
+                  promoteGizmo: i,
                   appealGizmo: s,
-                  setStep: l,
-                  showActionsModal: r,
+                  setStep: n,
+                  showActionsModal: l,
                 })
-              : (0, M.jsx)(tL, { publishedGizmo: n.publishedGizmo }),
+              : (0, C.jsx)(tW, { publishedGizmo: r.publishedGizmo }),
         });
       }
-      function tR(e) {
-        var t;
+      function tK(e) {
+        var t, a;
         let {
             gizmo: i,
-            publishedGizmo: a,
-            isLoading: s,
+            publishedGizmo: s,
+            isLoading: l,
             isUploadingProfilePic: r,
             isGeneratingProfilePic: n,
-            promoteGizmo: l,
-            appealGizmo: o,
-            hasUnpublishedChanges: d,
-            showActionsModal: c,
+            updateGizmo: o,
+            promoteGizmo: d,
+            appealGizmo: c,
+            hasUnpublishedChanges: u,
+            showActionsModal: p,
           } = e,
-          u = (0, R.t)(),
-          p = null != i ? (0, e5.bw)(i) : [],
-          h = (0, ei.Z)();
-        (null == i || s) && p.push(e5.hs.Loading),
-          r && p.push(e5.hs.UploadingProfilePic),
-          n && p.push(e5.hs.GeneratingProfilePic);
-        let { value: g } = (0, w.sB)(w.tz.UpdatedGizmoShare),
-          f = (0, m.Sg)(i),
-          { 0: x, 1: v } = (0, z.useState)(!1),
-          j = i.sharingRecipient ? tw[i.sharingRecipient] : tw.private;
-        return g
-          ? (0, M.jsxs)(M.Fragment, {
+          h = (0, Y.t)(),
+          g = null != i ? (0, te.bw)(i) : [],
+          f = (0, _.Z)();
+        (null == i || l) && g.push(te.hs.Loading),
+          r && g.push(te.hs.UploadingProfilePic),
+          n && g.push(te.hs.GeneratingProfilePic);
+        let { value: x } = (0, w.sB)(w.tz.UpdatedGizmoShare),
+          v = (0, m.Sg)(i),
+          { 0: j, 1: y } = (0, M.useState)(!1),
+          { 0: b, 1: k } = (0, M.useState)(!1),
+          z = i.sharingRecipient ? tT[i.sharingRecipient] : tT.private;
+        return x
+          ? (0, C.jsxs)(C.Fragment, {
               children: [
-                !f &&
-                  (0, M.jsxs)(eR.cY, {
-                    color: "neutral",
-                    onClick: () => v("share"),
-                    children: [
-                      (0, M.jsx)(j, { className: "icon-md h-6 w-6 shrink-0" }),
-                      (0, M.jsx)(el.Z, {
-                        id: "aXKW4G",
-                        defaultMessage: "Share",
+                v
+                  ? (0, C.jsx)(eq.cY, {
+                      color: "primary",
+                      onClick: () => y("promote"),
+                      disabled: g.length > 0,
+                      tooltip: g.length > 0 ? g.map(te.sw).join("\n") : void 0,
+                      children: (0, C.jsx)(Z.Z, {
+                        id: "svUGIb",
+                        defaultMessage: "Create",
                       }),
-                    ],
-                  }),
-                (0, M.jsx)(eR.cY, {
-                  color: "primary",
-                  onClick: () => v("promote"),
-                  children: (0, M.jsx)(el.Z, {
-                    id: "MAqc/D",
-                    defaultMessage: "Save",
-                  }),
-                }),
-                x &&
-                  ((null == u ? void 0 : u.getWorkspaceId()) == void 0
-                    ? (0, M.jsx)(tZ, {
+                    })
+                  : (0, C.jsxs)(C.Fragment, {
+                      children: [
+                        (0, C.jsxs)(eq.cY, {
+                          color: "neutral",
+                          onClick: () => y("share"),
+                          children: [
+                            (0, C.jsx)(z, {
+                              className: "icon-md h-6 w-6 shrink-0",
+                            }),
+                            (0, C.jsx)(Z.Z, {
+                              id: "aXKW4G",
+                              defaultMessage: "Share",
+                            }),
+                          ],
+                        }),
+                        (0, C.jsx)(eq.cY, {
+                          color: "primary",
+                          onClick: async () => {
+                            let e = s.gizmo.sharing.subjects.map(tk);
+                            await d(
+                              {
+                                recipient: s.gizmo.sharing.recipient,
+                                subjects: e,
+                              },
+                              null == s ? void 0 : s.gizmo.display.categories[0]
+                            ),
+                              k(!0);
+                          },
+                          loading: l || !s,
+                          disabled: g.length > 0,
+                          tooltip:
+                            g.length > 0 ? g.map(te.sw).join("\n") : void 0,
+                          children: (0, C.jsx)(Z.Z, {
+                            id: "MAqc/D",
+                            defaultMessage: "Save",
+                          }),
+                        }),
+                      ],
+                    }),
+                j &&
+                  ((null == h ? void 0 : h.getWorkspaceId()) == void 0
+                    ? (0, C.jsx)(tE, {
                         gizmo: i,
-                        publishedGizmo: a,
-                        promoteGizmo: l,
-                        appealGizmo: o,
-                        showActionsModal: c,
-                        onClose: () => v(!1),
+                        publishedGizmo: s,
+                        promoteGizmo: d,
+                        appealGizmo: c,
+                        showActionsModal: p,
+                        onClose: () => y(!1),
                       })
-                    : (0, M.jsx)(tx, {
+                    : (0, C.jsx)(tz, {
                         gizmo: i,
-                        publishedGizmo: a,
-                        promoteGizmo: l,
-                        appealGizmo: o,
-                        showActionsModal: c,
-                        onClose: () => v(!1),
-                        workspaceSharing:
-                          (null == u ? void 0 : u.getWorkspaceId()) != void 0,
-                        shareOnly: !0,
+                        publishedGizmo: s,
+                        promoteGizmo: d,
+                        appealGizmo: c,
+                        showActionsModal: p,
+                        updateGizmo: o,
+                        onClose: () => y(!1),
+                        shareOnly: "share" === j,
                       })),
+                b &&
+                  (0, C.jsx)(tO, {
+                    publishedGizmo: s,
+                    sharing: s.gizmo.sharing,
+                    onClose: () => k(!1),
+                    workspaceName:
+                      null !== (t = null == h ? void 0 : h.data.name) &&
+                      void 0 !== t
+                        ? t
+                        : "",
+                  }),
               ],
             })
-          : (0, M.jsxs)(e2.fC, {
+          : (0, C.jsxs)(e6.fC, {
               modal: !0,
               children: [
-                (0, M.jsx)(e2.xz, {
+                (0, C.jsx)(e6.xz, {
                   asChild: !0,
-                  children: (0, M.jsx)(eR.cY, {
+                  children: (0, C.jsx)(eq.cY, {
                     color: "primary",
                     className: "cursor-pointer whitespace-nowrap",
                     disabled: void 0 === i.id,
-                    tooltip: p.length > 0 ? p.map(e5.sw).join("\n") : void 0,
-                    children: (0, M.jsxs)("div", {
+                    tooltip: g.length > 0 ? g.map(te.sw).join("\n") : void 0,
+                    children: (0, C.jsxs)("div", {
                       className: "flex items-center gap-1",
                       children: [
-                        d && !f
-                          ? h.formatMessage({
+                        u && !v
+                          ? f.formatMessage({
                               id: "5D5nYS",
                               defaultMessage: "Update",
                             })
-                          : h.formatMessage({
+                          : f.formatMessage({
                               id: "MAqc/D",
                               defaultMessage: "Save",
                             }),
-                        (0, M.jsx)(en.ud, {}),
+                        (0, C.jsx)(em.ud, {}),
                       ],
                     }),
                   }),
                 }),
-                (0, M.jsx)(e2.h_, {
-                  children: (0, M.jsx)(e2.VY, {
+                (0, C.jsx)(e6.h_, {
+                  children: (0, C.jsx)(e6.VY, {
                     side: "bottom",
                     align: "end",
                     sideOffset: 8,
-                    children: (0, M.jsx)(tU, {
+                    children: (0, C.jsx)(tY, {
                       gizmo: i,
-                      publishedGizmo: a,
-                      promoteGizmo: l,
-                      appealGizmo: o,
-                      showActionsModal: c,
+                      publishedGizmo: s,
+                      promoteGizmo: d,
+                      appealGizmo: c,
+                      showActionsModal: p,
                     }),
                   }),
                 }),
               ],
             });
       }
-      function tD(e) {
-        let { gizmoEditorData: t, publishedGizmo: i, revertDraft: a } = e,
-          s = (0, ei.Z)(),
-          { 0: r, 1: n } = (0, z.useState)(!1),
-          l = (0, R.hz)(),
+      function tJ(e) {
+        let { gizmoEditorData: t, publishedGizmo: a, revertDraft: i } = e,
+          s = (0, _.Z)(),
+          { 0: l, 1: r } = (0, M.useState)(!1),
+          n = (0, Y.hz)(),
           { value: o } = (0, w.sB)(w.tz.GizmoVersionHistory);
-        return (null != l && l.includes("debug")) ||
+        return (null != n && n.includes("debug")) ||
           (null == t ? void 0 : t.id) != null
-          ? (0, M.jsxs)(M.Fragment, {
+          ? (0, C.jsxs)(C.Fragment, {
               children: [
-                (0, M.jsxs)(e1.fC, {
+                (0, C.jsxs)(e8.fC, {
                   children: [
-                    (0, M.jsx)(e1.xz, {
+                    (0, C.jsx)(e8.xz, {
                       asChild: !0,
-                      children: (0, M.jsx)(eR.cY, {
-                        children: (0, M.jsx)(en.Yr, { className: "icon-md" }),
+                      children: (0, C.jsx)(eq.cY, {
+                        children: (0, C.jsx)(em.Yr, { className: "icon-md" }),
                       }),
                     }),
-                    (0, M.jsx)(e1.Uv, {
-                      children: (0, M.jsxs)(e1.VY, {
+                    (0, C.jsx)(e8.Uv, {
+                      children: (0, C.jsxs)(e8.VY, {
                         className:
                           "popover min-w-[180px] max-w-xs rounded-lg border border-token-border-light bg-token-main-surface-primary shadow-lg",
                         side: "top",
                         align: "end",
                         sideOffset: 6,
                         children: [
-                          null != i &&
-                            (0, M.jsxs)(eR.UA, {
+                          null != a &&
+                            (0, C.jsxs)(eq.UA, {
                               onClick: () => {
-                                td(i);
+                                tg(a);
                               },
                               children: [
-                                (0, M.jsx)(en.HN, { className: "icon-md" }),
-                                (0, M.jsx)(el.Z, tA({}, tY.copyLink)),
+                                (0, C.jsx)(em.HN, { className: "icon-md" }),
+                                (0, C.jsx)(Z.Z, tF({}, t1.copyLink)),
                               ],
                             }),
-                          null != a &&
-                            (0, M.jsxs)(eR.UA, {
+                          null != i &&
+                            (0, C.jsxs)(eq.UA, {
                               onClick: () => {
                                 window.confirm(
-                                  s.formatMessage(tY.revertConfirm)
-                                ) && a();
+                                  s.formatMessage(t1.revertConfirm)
+                                ) && i();
                               },
                               children: [
-                                (0, M.jsx)(en.Nt, { className: "icon-md" }),
-                                (0, M.jsx)(el.Z, tA({}, tY.revertMenuItem)),
+                                (0, C.jsx)(em.Nt, { className: "icon-md" }),
+                                (0, C.jsx)(Z.Z, tF({}, t1.revertMenuItem)),
                               ],
                             }),
-                          (null == l ? void 0 : l.includes("debug")) &&
-                            (0, M.jsxs)(eR.UA, {
+                          (null == n ? void 0 : n.includes("debug")) &&
+                            (0, C.jsxs)(eq.UA, {
                               onClick: () => {
-                                eN.vm.toggleActiveSidebar("debug");
+                                e_.vm.toggleActiveSidebar("debug");
                               },
                               children: [
-                                (0, M.jsx)(en.WP, { className: "icon-md" }),
+                                (0, C.jsx)(em.WP, { className: "icon-md" }),
                                 "Debug (Internal only)",
                               ],
                             }),
                           (null == t ? void 0 : t.id) != null &&
                             o &&
-                            (0, M.jsxs)(M.Fragment, {
+                            (0, C.jsxs)(C.Fragment, {
                               children: [
-                                (0, M.jsxs)(eR.UA, {
+                                (0, C.jsxs)(eq.UA, {
                                   onClick: () => {
-                                    et().push("/g/".concat(t.id, "/view"));
+                                    ed().push("/g/".concat(t.id, "/view"));
                                   },
                                   children: [
-                                    (0, M.jsx)(en.Eo, { className: "icon-md" }),
-                                    (0, M.jsx)(el.Z, {
+                                    (0, C.jsx)(em.Eo, { className: "icon-md" }),
+                                    (0, C.jsx)(Z.Z, {
                                       id: "gizmo.versionHistory",
                                       defaultMessage: "Version History",
                                     }),
                                   ],
                                 }),
-                                (0, M.jsxs)(eR.UA, {
+                                (0, C.jsxs)(eq.UA, {
                                   onClick: async () => {
                                     let e = await y.U.copyGizmo({
                                       gizmoId: t.id,
                                     });
                                     e.gizmo.id &&
-                                      et().push(
+                                      ed().push(
                                         "/gpts/editor/".concat(e.gizmo.id)
                                       );
                                   },
                                   children: [
-                                    (0, M.jsx)(en.dS, { className: "icon-md" }),
-                                    (0, M.jsx)(el.Z, {
+                                    (0, C.jsx)(em.dS, { className: "icon-md" }),
+                                    (0, C.jsx)(Z.Z, {
                                       id: "GizmoInformation.copyGizmoLabel",
                                       defaultMessage: "Duplicate GPT",
                                     }),
@@ -3839,14 +4111,14 @@
                               ],
                             }),
                           (null == t ? void 0 : t.id) != null &&
-                            (0, M.jsxs)(eR.UA, {
+                            (0, C.jsxs)(eq.UA, {
                               color: "danger",
                               onClick: () => {
-                                n(!0);
+                                r(!0);
                               },
                               children: [
-                                (0, M.jsx)(en.a_, { className: "icon-md" }),
-                                (0, M.jsx)(el.Z, tA({}, tY.deleteGPT)),
+                                (0, C.jsx)(em.a_, { className: "icon-md" }),
+                                (0, C.jsx)(Z.Z, tF({}, t1.deleteGPT)),
                               ],
                             }),
                         ],
@@ -3854,22 +4126,22 @@
                     }),
                   ],
                 }),
-                r &&
-                  (0, M.jsx)(e0.b, {
+                l &&
+                  (0, C.jsx)(e5.b, {
                     gizmoId: t.id,
-                    onSuccess: () => tG(et()),
+                    onSuccess: () => tV(ed()),
                     onClose: () => {
-                      n(!1);
+                      r(!1);
                     },
                   }),
               ],
             })
           : null;
       }
-      let tB = P.Z.div(p || (p = (0, x.Z)(["flex items-center gap-1"])));
-      function tV(e) {
+      let tQ = T.Z.div(p || (p = (0, x.Z)(["flex items-center gap-1"])));
+      function tH(e) {
         let { gizmoEditorData: t } = e,
-          i = (0, V.ec)((e) => {
+          a = (0, Q.ec)((e) => {
             var t;
             return null === (t = e.currentWorkspace) || void 0 === t
               ? void 0
@@ -3877,77 +4149,77 @@
           });
         switch (t.sharingRecipient) {
           case b.Zz.Private:
-            return (0, M.jsxs)(tB, {
+            return (0, C.jsxs)(tQ, {
               children: [
-                (0, M.jsx)(en.LX, { className: "icon-xs" }),
-                (0, M.jsx)(el.Z, tA({}, tY.onlyMe)),
+                (0, C.jsx)(em.LX, { className: "icon-xs" }),
+                (0, C.jsx)(Z.Z, tF({}, t1.onlyMe)),
               ],
             });
           case b.Zz.Link:
-            return (0, M.jsxs)(tB, {
+            return (0, C.jsxs)(tQ, {
               children: [
-                (0, M.jsx)(en.HN, { className: "icon-xs" }),
-                (0, M.jsx)(el.Z, tA({}, tY.anyoneWithLink)),
+                (0, C.jsx)(em.HN, { className: "icon-xs" }),
+                (0, C.jsx)(Z.Z, tF({}, t1.anyoneWithLink)),
               ],
             });
           case b.Zz.Workspace:
-            return (0, M.jsxs)(tB, {
-              children: [(0, M.jsx)(en.oq, { className: "icon-xs" }), i],
+            return (0, C.jsxs)(tQ, {
+              children: [(0, C.jsx)(em.oq, { className: "icon-xs" }), a],
             });
           case b.Zz.Marketplace:
-            return (0, M.jsxs)(tB, {
+            return (0, C.jsxs)(tQ, {
               children: [
-                (0, M.jsx)(en.hk, { className: "icon-xs" }),
-                (0, M.jsx)(el.Z, tA({}, tY.public)),
+                (0, C.jsx)(em.hk, { className: "icon-xs" }),
+                (0, C.jsx)(Z.Z, tF({}, t1.public)),
               ],
             });
         }
-        return (0, M.jsx)("div", {});
+        return (0, C.jsx)("div", {});
       }
-      function tq(e) {
+      function tX(e) {
         let { gizmoEditorData: t } = e;
-        return (0, M.jsxs)("div", {
+        return (0, C.jsxs)("div", {
           className: "flex items-center gap-2",
           children: [
             null != t.profilePictureUrl
-              ? (0, M.jsx)(e$.Z, {
+              ? (0, C.jsx)(e4.Z, {
                   isFirstParty: !1,
                   src: t.profilePictureUrl,
                   className: "h-8 w-8",
                 })
-              : (0, M.jsx)("div", {
+              : (0, C.jsx)("div", {
                   className:
                     "h-8 w-8 rounded-full border-2 border-dashed border-token-border-medium",
                 }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               children: [
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-sm font-medium",
-                  children: t.name || (0, M.jsx)(el.Z, tA({}, tY.newGPT)),
+                  children: t.name || (0, C.jsx)(Z.Z, tF({}, t1.newGPT)),
                 }),
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "text-xs text-token-text-secondary",
                   children: (0, m.Sg)(t)
-                    ? (0, M.jsxs)("div", {
+                    ? (0, C.jsxs)("div", {
                         className: "flex items-center gap-1",
                         children: [
-                          (0, M.jsx)("div", {
+                          (0, C.jsx)("div", {
                             className:
                               "h-1.5 w-1.5 rounded-full bg-token-text-tertiary",
                           }),
-                          (0, M.jsx)(el.Z, tA({}, tY.draft)),
+                          (0, C.jsx)(Z.Z, tF({}, t1.draft)),
                         ],
                       })
-                    : (0, M.jsxs)("div", {
+                    : (0, C.jsxs)("div", {
                         className: "flex items-center gap-1",
                         children: [
-                          (0, M.jsx)("div", {
+                          (0, C.jsx)("div", {
                             className:
                               "h-1.5 w-1.5 rounded-full bg-brand-green",
                           }),
-                          (0, M.jsx)(el.Z, tA({}, tY.published)),
+                          (0, C.jsx)(Z.Z, tF({}, t1.published)),
                           " \xb7 ",
-                          (0, M.jsx)(tV, { gizmoEditorData: t }),
+                          (0, C.jsx)(tH, { gizmoEditorData: t }),
                         ],
                       }),
                 }),
@@ -3956,47 +4228,47 @@
           ],
         });
       }
-      function tF(e) {
-        let { category: t, categories: i, setCategory: a } = e;
-        return (0, M.jsxs)(e3.fC, {
+      function t$(e) {
+        let { category: t, categories: a, setCategory: i } = e;
+        return (0, C.jsxs)(e9.fC, {
           value: t,
-          onValueChange: (e) => a(e),
+          onValueChange: (e) => i(e),
           children: [
-            (0, M.jsx)(e3.xz, {
+            (0, C.jsx)(e9.xz, {
               className:
                 "flex justify-between rounded-xl bg-gray-50 p-3 font-medium dark:bg-gray-900",
               children: t
-                ? (0, M.jsxs)(M.Fragment, {
+                ? (0, C.jsxs)(C.Fragment, {
                     children: [
-                      (0, M.jsx)(e3.B4, {}),
-                      (0, M.jsx)(e3.JO, { children: (0, M.jsx)(en.ud, {}) }),
+                      (0, C.jsx)(e9.B4, {}),
+                      (0, C.jsx)(e9.JO, { children: (0, C.jsx)(em.ud, {}) }),
                     ],
                   })
-                : (0, M.jsx)("div", {
+                : (0, C.jsx)("div", {
                     className: "flex w-full justify-center",
-                    children: (0, M.jsx)(L.Z, {}),
+                    children: (0, C.jsx)(q.Z, {}),
                   }),
             }),
-            (0, M.jsx)(e3.h_, {
-              children: (0, M.jsx)(e3.VY, {
+            (0, C.jsx)(e9.h_, {
+              children: (0, C.jsx)(e9.VY, {
                 className:
                   "h-64 w-[var(--radix-select-trigger-width)] rounded-xl border bg-token-main-surface-primary p-1 py-2 dark:border-gray-600",
                 position: "popper",
                 sideOffset: 2,
-                children: (0, M.jsx)("div", {
+                children: (0, C.jsx)("div", {
                   className: "overflow-y-auto",
-                  children: i.map((e) =>
-                    (0, M.jsxs)(
-                      e3.ck,
+                  children: a.map((e) =>
+                    (0, C.jsxs)(
+                      e9.ck,
                       {
                         className:
                           "flex w-full cursor-pointer justify-between rounded-lg p-2 pl-4 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700",
                         value: e.id,
                         children: [
-                          (0, M.jsx)(e3.eT, { children: e.title }),
-                          (0, M.jsx)(e3.wU, {
+                          (0, C.jsx)(e9.eT, { children: e.title }),
+                          (0, C.jsx)(e9.wU, {
                             className: "text-green-600",
-                            children: (0, M.jsx)(en.oS, {}),
+                            children: (0, C.jsx)(em.oS, {}),
                           }),
                         ],
                       },
@@ -4009,64 +4281,66 @@
           ],
         });
       }
-      function tW(e) {
+      function t0(e) {
         let {
           gizmoEditorData: t,
-          isLoading: i,
-          isUploadingProfilePic: a,
+          isLoading: a,
+          isUploadingProfilePic: i,
           isGeneratingProfilePic: s,
-          publishedGizmo: r,
+          publishedGizmo: l,
+          updateGizmo: r,
           promoteGizmo: n,
-          appealGizmo: l,
-          revertDraft: o,
-          draftMessage: d,
-          className: c,
-          hasUnpublishedChanges: u,
-          showActionsModal: p,
+          appealGizmo: o,
+          revertDraft: d,
+          draftMessage: c,
+          className: u,
+          hasUnpublishedChanges: p,
+          showActionsModal: m,
         } = e;
-        return (0, M.jsxs)("div", {
-          className: (0, X.default)(
+        return (0, C.jsxs)("div", {
+          className: (0, el.default)(
             "relative flex h-14 w-full items-center justify-between gap-2 border-b border-token-border-medium px-3",
-            c
+            u
           ),
           children: [
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "flex items-center gap-2",
               children: [
-                (0, M.jsx)("a", {
+                (0, C.jsx)("a", {
                   className: "cursor-pointer text-token-text-primary",
-                  onClick: () => tG(et()),
-                  children: (0, M.jsx)(en.L7, { className: "icon-lg" }),
+                  onClick: () => tV(ed()),
+                  children: (0, C.jsx)(em.L7, { className: "icon-lg" }),
                 }),
-                (0, M.jsx)(tq, { gizmoEditorData: t }),
+                (0, C.jsx)(tX, { gizmoEditorData: t }),
               ],
             }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "flex items-center gap-2",
               children: [
-                d,
-                (0, M.jsx)(tD, {
+                c,
+                (0, C.jsx)(tJ, {
                   gizmoEditorData: t,
-                  publishedGizmo: r,
-                  revertDraft: o,
+                  publishedGizmo: l,
+                  revertDraft: d,
                 }),
-                (0, M.jsx)(tR, {
+                (0, C.jsx)(tK, {
                   gizmo: t,
-                  publishedGizmo: r,
-                  isLoading: i,
-                  isUploadingProfilePic: a,
+                  publishedGizmo: l,
+                  isLoading: a,
+                  isUploadingProfilePic: i,
                   isGeneratingProfilePic: s,
+                  updateGizmo: r,
                   promoteGizmo: n,
-                  appealGizmo: l,
-                  hasUnpublishedChanges: u,
-                  showActionsModal: p,
+                  appealGizmo: o,
+                  hasUnpublishedChanges: p,
+                  showActionsModal: m,
                 }),
               ],
             }),
           ],
         });
       }
-      let tY = (0, eo.vU)({
+      let t1 = (0, P.vU)({
         privacyConfirm: {
           id: "gizmo.confirmPublish",
           defaultMessage: "Confirm",
@@ -4141,184 +4415,184 @@
           defaultMessage: "Error generating category",
         },
       });
-      function tJ(e, t) {
-        var i = Object.keys(e);
+      function t2(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function tK(e) {
+      function t3(e) {
         let { upsertDraftError: t } = e,
-          i = (function (e, t) {
-            let i = e.response,
-              a = (0, q.Ot)(e);
-            if (!Array.isArray(i)) return a;
-            let s = (0, $.compact)(
-              i.map((e) => {
+          a = (function (e, t) {
+            let a = e.response,
+              i = (0, H.Ot)(e);
+            if (!Array.isArray(a)) return i;
+            let s = (0, er.compact)(
+              a.map((e) => {
                 if ("value_error.any_str.max_length" === e.type)
                   switch (e.loc[1]) {
                     case "display":
                       switch (e.loc[2]) {
                         case "name":
-                          return t.formatMessage(eg.sY.nameTooLong, {
+                          return t.formatMessage(ey.sY.nameTooLong, {
                             length: e.ctx.limit_value,
                           });
                         case "description":
-                          return t.formatMessage(eg.sY.descriptionTooLong, {
+                          return t.formatMessage(ey.sY.descriptionTooLong, {
                             length: e.ctx.limit_value,
                           });
                       }
                       break;
                     case "instructions":
-                      return t.formatMessage(eg.sY.instructionsTooLong, {
+                      return t.formatMessage(ey.sY.instructionsTooLong, {
                         length: e.ctx.limit_value,
                       });
                   }
                 if ("string" == typeof e.msg) return e.msg;
               })
             );
-            return s.length > 0 ? s.join("\n") : a;
-          })(t, (0, ei.Z)());
-        return (0, M.jsxs)("div", {
+            return s.length > 0 ? s.join("\n") : i;
+          })(t, (0, _.Z)());
+        return (0, C.jsxs)("div", {
           className: "flex items-center gap-2 text-red-500",
           children: [
-            (0, M.jsx)("div", {
-              children: (0, M.jsx)(
-                el.Z,
+            (0, C.jsx)("div", {
+              children: (0, C.jsx)(
+                Z.Z,
                 (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
-                    var i = null != arguments[t] ? arguments[t] : {};
+                    var a = null != arguments[t] ? arguments[t] : {};
                     t % 2
-                      ? tJ(Object(i), !0).forEach(function (t) {
-                          (0, h.Z)(e, t, i[t]);
+                      ? t2(Object(a), !0).forEach(function (t) {
+                          (0, h.Z)(e, t, a[t]);
                         })
                       : Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(
                             e,
-                            Object.getOwnPropertyDescriptors(i)
+                            Object.getOwnPropertyDescriptors(a)
                           )
-                        : tJ(Object(i)).forEach(function (t) {
+                        : t2(Object(a)).forEach(function (t) {
                             Object.defineProperty(
                               e,
                               t,
-                              Object.getOwnPropertyDescriptor(i, t)
+                              Object.getOwnPropertyDescriptor(a, t)
                             );
                           });
                   }
                   return e;
-                })({}, tQ.errorSavingDraft)
+                })({}, t5.errorSavingDraft)
               ),
             }),
-            null != i &&
-              (0, M.jsx)(e4.u, {
-                label: i,
-                children: (0, M.jsx)(eC.H33, { className: "icon-sm" }),
+            null != a &&
+              (0, C.jsx)(e7.u, {
+                label: a,
+                children: (0, C.jsx)(eE.H33, { className: "icon-sm" }),
               }),
           ],
         });
       }
-      function tH(e) {
+      function t4(e) {
         let {
           isSavingDraft: t,
-          hasUnpublishedChanges: i,
-          upsertDraftError: a,
+          hasUnpublishedChanges: a,
+          upsertDraftError: i,
           className: s,
         } = e;
-        return a instanceof q.Q0
-          ? (0, M.jsx)(tK, { upsertDraftError: a })
-          : i
-            ? (0, M.jsxs)("div", {
-                className: (0, X.default)("flex items-center gap-2", s),
+        return i instanceof H.Q0
+          ? (0, C.jsx)(t3, { upsertDraftError: i })
+          : a
+            ? (0, C.jsxs)("div", {
+                className: (0, el.default)("flex items-center gap-2", s),
                 children: [
-                  (0, M.jsx)("span", {
+                  (0, C.jsx)("span", {
                     className: "text-token-text-secondary",
                     children: "Unpublished changes",
                   }),
-                  (0, M.jsx)("div", {
+                  (0, C.jsx)("div", {
                     className: "w-4 text-token-text-tertiary",
-                    children: t && (0, M.jsx)(L.Z, {}),
+                    children: t && (0, C.jsx)(q.Z, {}),
                   }),
                 ],
               })
             : null;
       }
-      let tQ = (0, eo.vU)({
+      let t5 = (0, P.vU)({
         errorSavingDraft: {
           id: "gizmo.errorSavingDraft",
           defaultMessage: "Error saving draft",
         },
       });
-      var tX = i(87106),
-        t$ = i(45072);
-      function t0(e, t) {
-        var i = Object.keys(e);
+      var t8 = a(87106),
+        t6 = a(45072);
+      function t9(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function t1(e) {
+      function t7(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? t0(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? t9(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : t0(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : t9(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      async function t2(e) {
+      async function ae(e) {
         let t;
-        for (let i of e)
+        for (let a of e)
           if (
-            "gizmo_editor.generate_profile_pic" === i.author.name &&
-            "multimodal_text" === i.content.content_type
+            "gizmo_editor.generate_profile_pic" === a.author.name &&
+            "multimodal_text" === a.content.content_type
           )
-            for (let e of i.content.parts)
+            for (let e of a.content.parts)
               "object" == typeof e && "asset_pointer" in e && (t = e);
         if (null != t) {
-          let e = (0, tX.Iy)(t.asset_pointer),
-            i = await e6.Z.getFileDownloadLink(e);
-          if (i.status === g.KF.Success)
-            return { id: e, permalink: i.download_url };
+          let e = (0, t8.Iy)(t.asset_pointer),
+            a = await ta.Z.getFileDownloadLink(e);
+          if (a.status === g.KF.Success)
+            return { id: e, permalink: a.download_url };
         }
       }
-      async function t3(e, t, i) {
-        var a, s;
-        let r = (function (e, t) {
-            let i = B.tQ.getThreadCurrentLeafId(e),
-              a = B.tQ.getTree(e),
+      async function at(e, t, a) {
+        var i, s;
+        let l = (function (e, t) {
+            let a = J.tQ.getThreadCurrentLeafId(e),
+              i = J.tQ.getTree(e),
               s = [],
-              r = a.getNodeByIdOrMessageId(i);
-            for (; null != r && (null == t || r.id !== t); )
-              s.unshift(r.message),
-                (r =
-                  "" !== r.parentId
-                    ? a.getNodeByIdOrMessageId(r.parentId)
+              l = i.getNodeByIdOrMessageId(a);
+            for (; null != l && (null == t || l.id !== t); )
+              s.unshift(l.message),
+                (l =
+                  "" !== l.parentId
+                    ? i.getNodeByIdOrMessageId(l.parentId)
                     : void 0);
             return s;
-          })(t, i),
-          n = r
+          })(t, a),
+          r = l
             .filter((e) => "gizmo_editor.update_behavior" === e.recipient)
             .flatMap((e) =>
               "text" === e.content.content_type
@@ -4328,26 +4602,26 @@
                   : []
             )
             .map((e) => JSON.parse(e))
-            .reduce((e, t) => t1(t1({}, e), t), {}),
-          l = await t2(r);
-        if ((0, $.isEmpty)(n) && null == l) return;
+            .reduce((e, t) => t7(t7({}, e), t), {}),
+          n = await ae(l);
+        if ((0, er.isEmpty)(r) && null == n) return;
         let {
           name: o,
           context: d,
           description: c,
           profile_pic_file_id: u,
           prompt_starters: p,
-        } = n;
+        } = r;
         if (null != u)
           try {
-            let t = await e6.Z.getFileDownloadLink(u, e.id);
+            let t = await ta.Z.getFileDownloadLink(u, e.id);
             t.status === g.KF.Success &&
-              (l = { id: u, permalink: t.download_url });
+              (n = { id: u, permalink: t.download_url });
           } catch (e) {
             console.error(
               "Error while retrieving profile pic in update: ".concat(e)
             ),
-              U.m.warning(
+              W.m.warning(
                 "Something went wrong updating your GPT's profile picture.",
                 { duration: 3 }
               );
@@ -4357,38 +4631,38 @@
           description: "string" == typeof c ? c : void 0,
           instructions: "string" == typeof d ? d : void 0,
           promptStarters: Array.isArray(p) ? p : void 0,
-          profilePictureId: null === (a = l) || void 0 === a ? void 0 : a.id,
+          profilePictureId: null === (i = n) || void 0 === i ? void 0 : i.id,
           profilePictureUrl:
-            null === (s = l) || void 0 === s ? void 0 : s.permalink,
+            null === (s = n) || void 0 === s ? void 0 : s.permalink,
         };
-        return (0, $.pickBy)(m, (e) => null != e);
+        return (0, er.pickBy)(m, (e) => null != e);
       }
-      function t4(e, t, i, a) {
-        var s, r, n, l, o, d, c, u, p, m, h;
-        let g = i.current,
-          f = a.current;
-        if ((0, $.isEqual)(g, f)) return;
+      function aa(e, t, a, i) {
+        var s, l, r, n, o, d, c, u, p, m, h;
+        let g = a.current,
+          f = i.current;
+        if ((0, er.isEqual)(g, f)) return;
         let x = {};
         g.name !== (null == f ? void 0 : f.name) && (x.name = g.name),
           (null !== (s = g.description) && void 0 !== s ? s : "") !==
-            (null !== (r = null == f ? void 0 : f.description) && void 0 !== r
-              ? r
+            (null !== (l = null == f ? void 0 : f.description) && void 0 !== l
+              ? l
               : "") &&
             (x.description =
               null !== (m = g.description) && void 0 !== m ? m : ""),
           g.instructions !==
-            (null !== (n = null == f ? void 0 : f.instructions) && void 0 !== n
-              ? n
+            (null !== (r = null == f ? void 0 : f.instructions) && void 0 !== r
+              ? r
               : "") &&
             (x.context =
               null !== (h = g.instructions) && void 0 !== h ? h : "");
         let v = new Set(
             null !==
-              (l =
+              (n =
                 null == f || null === (o = f.files) || void 0 === o
                   ? void 0
-                  : o.map((e) => e.file_id)) && void 0 !== l
-              ? l
+                  : o.map((e) => e.file_id)) && void 0 !== n
+              ? n
               : []
           ),
           j = new Set(
@@ -4406,32 +4680,32 @@
           b = (
             null !== (p = null == f ? void 0 : f.files) && void 0 !== p ? p : []
           ).filter((e) => !j.has(e.file_id));
-        if ((0, $.isEmpty)(x) && 0 === y.length && 0 === b.length) return;
+        if ((0, er.isEmpty)(x) && 0 === y.length && 0 === b.length) return;
         let w = [];
-        if (!(0, $.isEmpty)(x)) {
+        if (!(0, er.isEmpty)(x)) {
           let e =
             "Explicitly update the GPT's behavior to the following exact fields:\n\n    ".concat(
               JSON.stringify(x, null, 2),
               '\n\n    "Do not call update_behavior yet. Instead, use these updated fields as the GPT\'s current behavior, and in the next call to update_behavior, incorporate these changes."\n    '
             );
-          w.push(t$.Cv.getTextAsMessage(e, es.uU.System));
+          w.push(t6.Cv.getTextAsMessage(e, eu.uU.System));
         }
         b.length > 0 &&
           w.push(
-            t$.Cv.getTextAsMessage(
+            t6.Cv.getTextAsMessage(
               "The user has removed the following files from the GPT. You can no longer reference these files: ".concat(
                 b.map((e) => e.file_id).join(", ")
               ),
-              es.uU.System
+              eu.uU.System
             )
           ),
           y.length > 0 &&
             w.push(
-              t$.Cv.getTextAsMessage(
+              t6.Cv.getTextAsMessage(
                 "The user is adding these files to the GPT. The GPT may reference these files. The file IDs are: ".concat(
                   y.map((e) => e.file_id).join(", ")
                 ),
-                es.uU.System,
+                eu.uU.System,
                 {
                   attachments: y.map((e) => ({
                     id: e.file_id,
@@ -4442,138 +4716,138 @@
               )
             ),
           w.length > 0 &&
-            B.tQ.updateTree(e, (e) => {
-              let i = e.getNodeByIdOrMessageId(t).parentId;
-              for (let a of w) {
-                let s = (0, eO.Z)();
+            J.tQ.updateTree(e, (e) => {
+              let a = e.getNodeByIdOrMessageId(t).parentId;
+              for (let i of w) {
+                let s = (0, eG.Z)();
                 e.insertNodeBefore(t, {
                   id: s,
                   children: [],
-                  parentId: i,
-                  message: a,
+                  parentId: a,
+                  message: i,
                   metadata: { isClientCreatedSystemMessage: !0 },
                 }),
-                  (i = s);
+                  (a = s);
               }
             });
       }
-      var t5 = i(21643),
-        t8 = i(47934);
-      function t6(e, t) {
-        var i = Object.keys(e);
+      var ai = a(21643),
+        as = a(47934);
+      function al(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function t9(e) {
+      function ar(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? t6(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? al(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : t6(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : al(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      let t7 = z.memo(function (e) {
+      let an = M.memo(function (e) {
         let {
             gizmoEditorData: t,
-            updateGizmo: i,
-            clientThreadId: a,
+            updateGizmo: a,
+            clientThreadId: i,
             completionCallbackResponse: s,
-            gizmoEditorDataRef: r,
-            magicMakerBehaviorOverrides: n,
-            magicMakerConversationGizmoEditorDataRef: l,
+            gizmoEditorDataRef: l,
+            magicMakerBehaviorOverrides: r,
+            magicMakerConversationGizmoEditorDataRef: n,
             requireGizmoId: o,
           } = e,
-          d = (0, z.useMemo)(
+          d = (0, M.useMemo)(
             () => ({
               gizmoEditorData: t,
               gizmoId: t.id,
               mode: "magic",
-              behaviorOverrides: n,
+              behaviorOverrides: r,
               getGizmoId: o,
             }),
-            [o, t, n]
+            [o, t, r]
           ),
-          c = (0, t8.gF)((e) =>
-            e.files.filter((e) => e.status === t5.X.Ready && null != e.gizmoId)
+          c = (0, as.gF)((e) =>
+            e.files.filter((e) => e.status === ai.X.Ready && null != e.gizmoId)
           ),
-          u = (0, z.useCallback)(
+          u = (0, M.useCallback)(
             (e, t) => {
-              !(function (e, t, i) {
-                if (0 === i.length) return;
-                let a = (0, eO.Z)(),
+              !(function (e, t, a) {
+                if (0 === a.length) return;
+                let i = (0, eG.Z)(),
                   s =
                     "The user is uploading files in their next message. If you need to reference these in calls to update_behavior, you will use the following File ID(s), in order: ".concat(
-                      i.map((e) => '"'.concat(e.fileId, '"')).join(", ")
+                      a.map((e) => '"'.concat(e.fileId, '"')).join(", ")
                     );
-                B.tQ.updateTree(e, (e) => {
-                  let i = e.getNodeByIdOrMessageId(t).parentId;
+                J.tQ.updateTree(e, (e) => {
+                  let a = e.getNodeByIdOrMessageId(t).parentId;
                   e.insertNodeBefore(t, {
-                    id: a,
+                    id: i,
                     children: [],
-                    parentId: i,
-                    message: t$.Cv.getTextAsMessage(s, es.uU.System),
+                    parentId: a,
+                    message: t6.Cv.getTextAsMessage(s, eu.uU.System),
                     metadata: { isClientCreatedSystemMessage: !0 },
                   });
                 });
               })(e, t, c),
-                t4(e, t, r, l),
+                aa(e, t, l, n),
                 (function (e, t) {
-                  let i =
+                  let a =
                       "Remember, you should be calling either update_behavior or generate_profile_pic after most messages from the user. Your personality should be neutral and separate from the GPT you are creating.",
-                    a = B.tQ.getThreadCurrentLeafId(e),
-                    s = B.tQ.getTree(e),
-                    r = s.getNodeByIdOrMessageId(a);
-                  for (; null != r && r.message.author.role !== es.uU.User; ) {
+                    i = J.tQ.getThreadCurrentLeafId(e),
+                    s = J.tQ.getTree(e),
+                    l = s.getNodeByIdOrMessageId(i);
+                  for (; null != l && l.message.author.role !== eu.uU.User; ) {
                     if (
-                      "text" === r.message.content.content_type &&
-                      r.message.content.parts[0] === i
+                      "text" === l.message.content.content_type &&
+                      l.message.content.parts[0] === a
                     )
                       return;
-                    r =
-                      "" !== r.parentId
-                        ? s.getNodeByIdOrMessageId(r.parentId)
+                    l =
+                      "" !== l.parentId
+                        ? s.getNodeByIdOrMessageId(l.parentId)
                         : void 0;
                   }
-                  B.tQ.updateTree(e, (e) => {
-                    let a = e.getNodeByIdOrMessageId(t).parentId;
+                  J.tQ.updateTree(e, (e) => {
+                    let i = e.getNodeByIdOrMessageId(t).parentId;
                     e.insertNodeBefore(t, {
-                      id: (0, eO.Z)(),
+                      id: (0, eG.Z)(),
                       children: [],
-                      parentId: a,
-                      message: t$.Cv.getTextAsMessage(i, es.uU.System, {
+                      parentId: i,
+                      message: t6.Cv.getTextAsMessage(a, eu.uU.System, {
                         exclude_after_next_user_message: !0,
                       }),
                       metadata: { isClientCreatedSystemMessage: !0 },
                     });
                   });
                 })(e, t),
-                i((e) => {
+                a((e) => {
                   var t;
-                  return t9(
-                    t9({}, e),
+                  return ar(
+                    ar({}, e),
                     {},
                     {
                       files: [
                         ...(null !== (t = e.files) && void 0 !== t ? t : []),
-                        ...(0, $.compact)(
+                        ...(0, er.compact)(
                           c.map((e) => {
                             var t;
                             return (
@@ -4595,106 +4869,106 @@
                     }
                   );
                 }),
-                (l.current = (0, $.cloneDeep)(r.current));
+                (n.current = (0, er.cloneDeep)(l.current));
             },
-            [r, l, c, i]
+            [l, n, c, a]
           ),
-          p = (0, eN.tN)((e) => e.activeSidebar);
-        return (0, M.jsx)(eI.D.Provider, {
+          p = (0, e_.tN)((e) => e.activeSidebar);
+        return (0, C.jsx)(eU.D.Provider, {
           value: d,
-          children: (0, M.jsxs)("div", {
+          children: (0, C.jsxs)("div", {
             className: "relative flex h-full grow overflow-auto",
             children: [
-              (0, M.jsx)("div", {
+              (0, C.jsx)("div", {
                 className: "grow",
-                children: (0, M.jsx)(ey.Z, {
-                  clientThreadId: a,
+                children: (0, C.jsx)(eN.Z, {
+                  clientThreadId: i,
                   onCompletionFinished: s,
                   preRequestCompletion: u,
                   hideHeader: !0,
-                  prependThreadChildren: (0, M.jsx)("div", {
+                  prependThreadChildren: (0, C.jsx)("div", {
                     className: "h-8",
                   }),
                 }),
               }),
               "debug" === p &&
-                (0, M.jsx)(ek.fv, {
-                  clientThreadId: a,
+                (0, C.jsx)(eZ.fv, {
+                  clientThreadId: i,
                   slideOver: !1,
-                  onClose: () => eN.vm.toggleActiveSidebar("debug"),
+                  onClose: () => e_.vm.toggleActiveSidebar("debug"),
                   isOpen: !0,
                 }),
             ],
           }),
         });
       });
-      function ie(e, t) {
-        var i = Object.keys(e);
+      function ao(e, t) {
+        var a = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (a = a.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, a);
+            a.push.apply(a, i);
         }
-        return i;
+        return a;
       }
-      function it(e) {
+      function ad(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var a = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? ie(Object(i), !0).forEach(function (t) {
-                (0, h.Z)(e, t, i[t]);
+            ? ao(Object(a), !0).forEach(function (t) {
+                (0, h.Z)(e, t, a[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : ie(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
+              : ao(Object(a)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t)
+                    Object.getOwnPropertyDescriptor(a, t)
                   );
                 });
         }
         return e;
       }
-      var ii =
-        (((l = ii || {}).MAGIC_MAKER = "magic"),
-        (l.ADVANCED = "advanced"),
-        (l.PREVIEW = "preview"),
-        l);
-      function ia(e) {
-        let { value: t, label: i } = e;
-        return (0, M.jsx)(Y.ck, {
+      var ac =
+        (((n = ac || {}).MAGIC_MAKER = "magic"),
+        (n.ADVANCED = "advanced"),
+        (n.PREVIEW = "preview"),
+        n);
+      function au(e) {
+        let { value: t, label: a } = e;
+        return (0, C.jsx)(ee.ck, {
           value: t,
           className:
             "text-md w-1/3 flex-grow rounded-lg border-token-border-light p-1.5 font-medium text-token-text-tertiary transition hover:text-token-text-primary radix-state-checked:border radix-state-checked:bg-token-main-surface-primary radix-state-checked:text-token-text-primary radix-state-checked:shadow-[0_0_2px_rgba(0,0,0,.03)] md:w-1/2",
-          children: i,
+          children: a,
         });
       }
-      function is(e) {
-        let { className: t, editorTab: i, setEditorTab: a } = e;
-        return (0, M.jsxs)(Y.fC, {
-          className: (0, X.default)(
+      function ap(e) {
+        let { className: t, editorTab: a, setEditorTab: i } = e;
+        return (0, C.jsxs)(ee.fC, {
+          className: (0, el.default)(
             "flex w-full overflow-hidden rounded-xl bg-token-main-surface-secondary p-1.5 md:w-1/2",
             t
           ),
-          value: i,
+          value: a,
           onValueChange: (e) => {
-            a(e);
+            i(e);
           },
           children: [
-            (0, M.jsx)(ia, { value: ii.MAGIC_MAKER, label: "Create" }),
-            (0, M.jsx)(ia, { value: ii.ADVANCED, label: "Configure" }),
-            (0, M.jsx)("div", {
+            (0, C.jsx)(au, { value: ac.MAGIC_MAKER, label: "Create" }),
+            (0, C.jsx)(au, { value: ac.ADVANCED, label: "Configure" }),
+            (0, C.jsx)("div", {
               className: "flex w-1/3 md:hidden",
-              children: (0, M.jsx)(ia, { value: ii.PREVIEW, label: "Preview" }),
+              children: (0, C.jsx)(au, { value: ac.PREVIEW, label: "Preview" }),
             }),
           ],
         });
       }
-      let ir = {
+      let am = {
           id: void 0,
           instructions: "",
           name: "",
@@ -4708,13 +4982,13 @@
           trainingDisabled: !1,
           liveVersion: 0,
         },
-        il = it(
-          it({}, ir),
+        ah = ad(
+          ad({}, am),
           {},
-          { tools: [...ir.tools, { type: g.qK.BROWSER }] }
+          { tools: [...am.tools, { type: g.qK.BROWSER }] }
         );
-      function io(e) {
-        var t, i, a, s, r, n, l;
+      function ag(e) {
+        var t, a, i, s, l, r, n;
         return {
           id: e.gizmo.id,
           instructions: e.gizmo.instructions,
@@ -4722,12 +4996,12 @@
           description:
             null !== (t = e.gizmo.display.description) && void 0 !== t ? t : "",
           profilePictureId:
-            null !== (i = e.gizmo.display.profile_pic_id) && void 0 !== i
-              ? i
+            null !== (a = e.gizmo.display.profile_pic_id) && void 0 !== a
+              ? a
               : void 0,
           profilePictureUrl:
-            null !== (a = e.gizmo.display.profile_picture_url) && void 0 !== a
-              ? a
+            null !== (i = e.gizmo.display.profile_picture_url) && void 0 !== i
+              ? i
               : void 0,
           promptStarters:
             null !== (s = e.gizmo.display.prompt_starters) && void 0 !== s
@@ -4736,36 +5010,36 @@
           tools: e.tools,
           files: e.files,
           sharing:
-            null !== (r = e.gizmo.sharing) && void 0 !== r
-              ? r
+            null !== (l = e.gizmo.sharing) && void 0 !== l
+              ? l
               : { subjects: [], recipient: e.gizmo.share_recipient },
           trainingDisabled:
-            null !== (n = e.gizmo.training_disabled) && void 0 !== n && n,
+            null !== (r = e.gizmo.training_disabled) && void 0 !== r && r,
           sharingRecipient: e.gizmo.share_recipient,
           sharingTargets: e.gizmo.sharing_targets,
           liveVersion:
-            null !== (l = e.gizmo.live_version) && void 0 !== l ? l : 0,
+            null !== (n = e.gizmo.live_version) && void 0 !== n ? n : 0,
         };
       }
-      let id = (e) => {
-        let { gizmo: t, onNewGizmoId: i } = e,
-          a = (0, f.C)(D.L0.BrowseAvailable),
-          s = (0, ei.Z)(),
-          r = (0, z.useRef)(null != t ? io(t) : a ? il : ir),
-          n = (0, z.useRef)(t),
-          l = (0, z.useRef)(r.current),
-          { 0: o, 1: d } = (0, z.useState)(() => r.current),
-          { 0: c, 1: u } = (0, z.useState)(() => (0, B.OX)()),
-          { 0: p } = (0, z.useState)(() => ({
+      let af = (e) => {
+        let { gizmo: t, onNewGizmoId: a } = e,
+          i = (0, f.C)(K.L0.BrowseAvailable),
+          s = (0, _.Z)(),
+          l = (0, M.useRef)(null != t ? ag(t) : i ? ah : am),
+          r = (0, M.useRef)(t),
+          n = (0, M.useRef)(l.current),
+          { 0: o, 1: d } = (0, M.useState)(() => l.current),
+          { 0: c, 1: u } = (0, M.useState)(() => (0, J.OX)()),
+          { 0: p } = (0, M.useState)(() => ({
             context_message: (function (e) {
-              var t, i, a;
+              var t, a, i;
               let s = new Set();
               for (let t of e.tools) s.add(t.type);
-              let r = null !== (t = e.name) && void 0 !== t ? t : "",
-                n = null !== (i = e.description) && void 0 !== i ? i : "",
-                l = null !== (a = e.instructions) && void 0 !== a ? a : "",
+              let l = null !== (t = e.name) && void 0 !== t ? t : "",
+                r = null !== (a = e.description) && void 0 !== a ? a : "",
+                n = null !== (i = e.instructions) && void 0 !== i ? i : "",
                 o = Array.from(s).join(","),
-                d = "" === r && "" === n && "" === l,
+                d = "" === l && "" === r && "" === n,
                 c = null != e.profilePictureUrl;
               return d
                 ? "The GPT you are about to has the following abilities: ".concat(
@@ -4773,9 +5047,9 @@
                     "."
                   )
                 : "This is the GPT's current set of fields:\n\nname: "
-                    .concat(r, "\n\ndescription: ")
-                    .concat(n, "\n\ncontext: ")
-                    .concat(l, "\n\nabilities: ")
+                    .concat(l, "\n\ndescription: ")
+                    .concat(r, "\n\ncontext: ")
+                    .concat(n, "\n\nabilities: ")
                     .concat(o, "\n\n")
                     .concat(
                       c
@@ -4783,28 +5057,28 @@
                         : "This GPT does not have a profile picture. You must generate a profile picture when you next update your behavior.",
                       "\n"
                     );
-            })(r.current),
+            })(l.current),
             model_slug: "unused",
             enabled_tools: [
               { tool_id: null != t ? "gizmo_editor" : "gizmo_creator" },
             ],
           }));
-        !(function (e, t, i) {
-          (0, B.ax)(e, {
-            kind: es.OL.GizmoMagicCreate,
+        !(function (e, t, a) {
+          (0, J.ax)(e, {
+            kind: eu.OL.GizmoMagicCreate,
             gizmo_id: t.id,
-            behavior_overrides: i,
+            behavior_overrides: a,
           }),
-            (0, z.useEffect)(() => {
-              B.tQ.updateConversationMode(e, {
-                kind: es.OL.GizmoMagicCreate,
+            (0, M.useEffect)(() => {
+              J.tQ.updateConversationMode(e, {
+                kind: eu.OL.GizmoMagicCreate,
                 gizmo_id: t.id,
-                behavior_overrides: i,
+                behavior_overrides: a,
               });
-            }, [e, t.id, i]);
-          let { 0: a } = (0, z.useState)(() => {
+            }, [e, t.id, a]);
+          let { 0: i } = (0, M.useState)(() => {
             let e = null == t.id,
-              i =
+              a =
                 null != t.id &&
                 "" !== t.name &&
                 null != t.description &&
@@ -4812,26 +5086,26 @@
                 null != t.profilePictureUrl;
             return e
               ? 'Hi! I\'ll help you build a new GPT. You can say something like, "make a creative who helps generate visuals for new products" or "make a software engineer who helps format my code."\n\nWhat would you like to make?'
-              : i
+              : a
                 ? "Welcome back! Is there anything ".concat(
                     t.name,
                     " should be doing better? Anything you'd like to change?"
                   )
                 : "You're back! Let's continue where we left off...";
           });
-          (0, z.useEffect)(() => {
-            let t = B.tQ.getTree(e);
+          (0, M.useEffect)(() => {
+            let t = J.tQ.getTree(e);
             if (
               t.findNode((e) => {
                 var t;
                 return (
-                  e.message.author.role === es.uU.User ||
+                  e.message.author.role === eu.uU.User ||
                   (null === (t = e.metadata) || void 0 === t
                     ? void 0
                     : t.isClientCreatedSystemMessage) === !0
                 );
               }) ||
-              (B.tQ.deleteNodesByFilter(e, (e) => {
+              (J.tQ.deleteNodesByFilter(e, (e) => {
                 var t;
                 return (
                   (null === (t = e.metadata) || void 0 === t
@@ -4839,33 +5113,33 @@
                     : t.isPlaceholderTemplateAssistantWelcomeMessage) === !0
                 );
               }),
-              null == a || 0 === a.length)
+              null == i || 0 === i.length)
             )
               return;
-            let i = B.tQ.getThreadCurrentLeafId(e);
-            if (!t.hasNodeOrMessageId(i)) return;
-            let s = (0, eO.Z)();
-            B.tQ.updateTree(e, (e) => {
-              e.addNode(s, a, i, es.uU.Assistant, {
+            let a = J.tQ.getThreadCurrentLeafId(e);
+            if (!t.hasNodeOrMessageId(a)) return;
+            let s = (0, eG.Z)();
+            J.tQ.updateTree(e, (e) => {
+              e.addNode(s, i, a, eu.uU.Assistant, {
                 isPlaceholderTemplateAssistantWelcomeMessage: !0,
               });
             }),
-              B.tQ.setThreadCurrentLeafId(e, s);
-          }, [e, a]);
-          let s = (0, B.UL)(e);
-          (0, z.useEffect)(() => {
-            (0, B.Zz)(e) &&
-              B.iN.hasThread(e) &&
-              s.lastModelUsed !== ex.Mw &&
-              B.tQ.updateInitialThreadDataForNewThread(e, ex.Mw, []);
+              J.tQ.setThreadCurrentLeafId(e, s);
+          }, [e, i]);
+          let s = (0, J.UL)(e);
+          (0, M.useEffect)(() => {
+            (0, J.Zz)(e) &&
+              J.iN.hasThread(e) &&
+              s.lastModelUsed !== ew.Mw &&
+              J.tQ.updateInitialThreadDataForNewThread(e, ew.Mw, []);
           }, [e, s, s.lastModelUsed]);
-        })(c, l.current, p);
-        let { data: h } = (0, m.kg)(r.current.id),
+        })(c, n.current, p);
+        let { data: h } = (0, m.kg)(l.current.id),
           x = (0, m.N_)(),
           { isPending: v, error: j } = x,
           y = (0, m.ZJ)(),
-          w = (0, z.useMemo)(() => {
-            var e, t, i, a, s, r;
+          w = (0, M.useMemo)(() => {
+            var e, t, a, i, s, l;
             return (
               null != h &&
               (!(
@@ -4873,10 +5147,10 @@
                 o.description === h.gizmo.display.description &&
                 o.instructions === h.gizmo.instructions &&
                 ((s = o.tools),
-                (r = h.tools),
-                s.length === r.length &&
-                  s.every((e) => r.some((t) => t.type === e.type))) &&
-                (0, $.isEqual)(
+                (l = h.tools),
+                s.length === l.length &&
+                  s.every((e) => l.some((t) => t.type === e.type))) &&
+                (0, er.isEqual)(
                   null !==
                     (e =
                       null === (t = o.files) || void 0 === t
@@ -4885,11 +5159,11 @@
                     ? e
                     : [],
                   null !==
-                    (i =
-                      null === (a = h.files) || void 0 === a
+                    (a =
+                      null === (i = h.files) || void 0 === i
                         ? void 0
-                        : a.map((e) => e.file_id)) && void 0 !== i
-                    ? i
+                        : i.map((e) => e.file_id)) && void 0 !== a
+                    ? a
                     : []
                 )
               ) ||
@@ -4898,116 +5172,121 @@
             );
           }, [o, h]),
           k = async () => {
-            let e = r.current;
+            let e = l.current;
             try {
               let t = await x.mutateAsync({ editorData: e, gizmoId: e.id });
-              if (((n.current = t), null == r.current.id)) {
+              if (((r.current = t), null == l.current.id)) {
                 let e = t.gizmo.id;
-                (r.current = it(
-                  it({}, r.current),
+                (l.current = ad(
+                  ad({}, l.current),
                   {},
                   { id: e, sharingTargets: t.gizmo.sharing_targets }
                 )),
-                  d(r.current),
-                  null == i || i(e);
+                  d(l.current),
+                  null == a || a(e);
               }
               for (let e of t.tools.filter((e) => e.type === g.qK.JIT_PLUGIN)) {
-                let t = r.current.tools.find(
+                let t = l.current.tools.find(
                   (t) =>
                     t.type === g.qK.JIT_PLUGIN &&
                     t.metadata.domain === e.metadata.domain
                 );
                 t &&
                   t.metadata.action_id !== e.metadata.action_id &&
-                  ((t.metadata.action_id = e.metadata.action_id), d(r.current));
+                  ((t.metadata.action_id = e.metadata.action_id), d(l.current));
               }
               return t;
-            } catch (i) {
+            } catch (a) {
               var t;
               let e =
-                null !== (t = (0, q.Ot)(i)) && void 0 !== t
+                null !== (t = (0, H.Ot)(a)) && void 0 !== t
                   ? t
-                  : s.formatMessage(tQ.errorSavingDraft);
-              throw (U.m.warning(e, { duration: 2 }), i);
+                  : s.formatMessage(t5.errorSavingDraft);
+              throw (W.m.warning(e, { duration: 2 }), a);
             }
           },
-          N = (0, z.useRef)(),
-          P = async () =>
-            null != r.current.id
-              ? r.current.id
-              : (null == N.current &&
-                  (N.current = k()
+          z = (0, M.useRef)(),
+          N = async () =>
+            null != l.current.id
+              ? l.current.id
+              : (null == z.current &&
+                  (z.current = k()
                     .then((e) => e.gizmo.id)
                     .catch((e) => {
-                      throw ((N.current = void 0), e);
+                      throw ((z.current = void 0), e);
                     })),
-                N.current),
-          { 0: Z } = (0, z.useState)(() =>
-            (0, $.debounce)(() => k(), 2e3, { trailing: !0 })
+                z.current),
+          { 0: P } = (0, M.useState)(() =>
+            (0, er.debounce)(() => k(), 2e3, { trailing: !0 })
           );
-        function _(e) {
+        function Z(e) {
           let t =
-            "function" == typeof e ? e(r.current) : (0, e5.x$)(r.current, e);
-          (0, $.isEqual)(t, r.current) || ((r.current = t), d(r.current), Z());
+              !(arguments.length > 1) ||
+              void 0 === arguments[1] ||
+              arguments[1],
+            a =
+              "function" == typeof e ? e(l.current) : (0, te.x$)(l.current, e);
+          !(0, er.isEqual)(a, l.current) &&
+            ((l.current = a), d(l.current), t && P());
         }
-        let S = (0, z.useRef)(),
-          I = async (e) => {
+        let T = (0, M.useRef)(),
+          O = async (e) => {
             if (null == e) {
-              er(!1);
+              X(!1);
               return;
             }
             try {
-              let t = await t3(r.current, e, S.current);
-              null != t && (_(t), (l.current = (0, $.cloneDeep)(r.current)));
+              let t = await at(l.current, e, T.current);
+              null != t && (Z(t), (n.current = (0, er.cloneDeep)(l.current)));
             } catch (e) {
               console.error(e),
-                U.m.warning("Something went wrong generating your GPT", {
+                W.m.warning("Something went wrong generating your GPT", {
                   duration: 3,
                 });
             } finally {
-              (S.current = B.tQ.getThreadCurrentLeafId(e)), er(!1);
+              (T.current = J.tQ.getThreadCurrentLeafId(e)), X(!1);
             }
           },
-          A = (function (e, t, i) {
-            B.tQ.initThread(e, {
-              kind: es.OL.GizmoMagicCreate,
+          S = (function (e, t, a) {
+            J.tQ.initThread(e, {
+              kind: eu.OL.GizmoMagicCreate,
               gizmo_id: void 0,
-              behavior_overrides: i,
+              behavior_overrides: a,
             });
-            let a = (0, eS.Z)(e, void 0, t, []);
-            return async (t, s, r) => {
-              if (0 === r.length) return;
-              let n = B.tQ.getThreadCurrentLeafId(e);
-              for (let t of r) {
-                let i = (0, eO.Z)();
-                B.tQ.updateTree(e, (e) => {
-                  e.addNodeToEnd(n, {
-                    id: i,
+            let i = (0, eL.Z)(e, void 0, t, []);
+            return async (t, s, l) => {
+              if (0 === l.length) return;
+              let r = J.tQ.getThreadCurrentLeafId(e);
+              for (let t of l) {
+                let a = (0, eG.Z)();
+                J.tQ.updateTree(e, (e) => {
+                  e.addNodeToEnd(r, {
+                    id: a,
                     children: [],
-                    parentId: n,
-                    message: t$.Cv.getTextAsMessage(t, es.uU.System),
+                    parentId: r,
+                    message: t6.Cv.getTextAsMessage(t, eu.uU.System),
                     metadata: { isClientCreatedSystemMessage: !0 },
                   });
                 }),
-                  B.tQ.setThreadCurrentLeafId(e, i),
-                  (n = i);
+                  J.tQ.setThreadCurrentLeafId(e, a),
+                  (r = a);
               }
-              let l = n;
-              t4(e, l, t, s);
+              let n = r;
+              aa(e, n, t, s);
               let o = {
                   conversationMode: {
-                    kind: es.OL.GizmoMagicCreate,
+                    kind: eu.OL.GizmoMagicCreate,
                     gizmo_id: t.current.id,
-                    behavior_overrides: i,
+                    behavior_overrides: a,
                   },
                 },
-                d = await (0, eZ.rS)(es.OL.GizmoMagicCreate),
-                c = await eM.ZP.getEnforcementToken(d),
-                u = await e_.Z.getEnforcementToken(d);
-              a({
-                model: ex.Mw,
-                completionType: es.Os.Next,
-                parentNodeId: l,
+                d = await (0, eS.rS)(eu.OL.GizmoMagicCreate),
+                c = await eO.ZP.getEnforcementToken(d),
+                u = await eI.Z.getEnforcementToken(d);
+              i({
+                model: ew.Mw,
+                completionType: eu.Os.Next,
+                parentNodeId: n,
                 metadata: {},
                 focusOnNewCompletion: !0,
                 arkoseToken: c,
@@ -5016,85 +5295,86 @@
                 completionMetadata: o,
               });
             };
-          })(c, I, p),
-          { 0: G, 1: L } = (0, z.useState)(void 0);
-        (0, z.useEffect)(() => {
-          L(
+          })(c, O, p),
+          { 0: I, 1: A } = (0, M.useState)(void 0);
+        (0, M.useEffect)(() => {
+          A(
             (function (e) {
               var t;
               if (!e) return;
-              let i =
+              let a =
                   (null === (t = e.gizmo.appeal_info) || void 0 === t
                     ? void 0
                     : t.state.kind) === "appeal_sent",
-                a = (function (e) {
+                i = (function (e) {
                   let t =
                       arguments.length > 1 && void 0 !== arguments[1]
                         ? arguments[1]
                         : [],
-                    i = new Set(
+                    a = new Set(
                       t.filter((e) => e.allowed).map((e) => e.recipient)
                     );
-                  if (!e || (e in O && (e = O[e]), i.has(e))) return C.None;
-                  let a = i.has(b.Zz.Private) || i.has(b.Zz.Workspace),
-                    s = i.has(b.Zz.Link) || i.has(b.Zz.Marketplace);
+                  if (!e || (e in L && (e = L[e]), a.has(e))) return G.None;
+                  let i = a.has(b.Zz.Private) || a.has(b.Zz.Workspace),
+                    s = a.has(b.Zz.Link) || a.has(b.Zz.Marketplace);
                   return e === b.Zz.Marketplace && s
-                    ? C.RemovedFromMarketplace
-                    : !s && a
-                      ? C.RemovedFromPublic
-                      : C.RemovedFromPrivate;
+                    ? G.RemovedFromMarketplace
+                    : !s && i
+                      ? G.RemovedFromPublic
+                      : G.RemovedFromPrivate;
                 })(e.gizmo.share_recipient, e.gizmo.sharing_targets);
               return {
                 sharingRecipient: e.gizmo.share_recipient,
                 categories: e.gizmo.categories,
                 gizmoId: e.gizmo.id,
-                moderationType: a,
+                moderationType: i,
                 sharingTargets: e.gizmo.sharing_targets,
-                showModal: i
-                  ? T.AppealSent
-                  : a !== C.None
-                    ? T.AppealAvailable
-                    : T.None,
+                showModal: a
+                  ? E.AppealSent
+                  : i !== G.None
+                    ? E.AppealAvailable
+                    : E.None,
               };
             })(t)
           );
         }, [null == t ? void 0 : t.gizmo.id]);
-        let R = async (e, t) => {
-            let i = (0, e5.bw)(r.current, e.recipient, t);
-            if (i.length > 0) {
-              U.m.warning(
+        let U = async (e, t) => {
+            let a = (0, te.bw)(l.current, e.recipient, t);
+            if (a.length > 0) {
+              W.m.warning(
                 "Could not save GPT:\n\n".concat(
-                  i.map((e) => "- ".concat((0, e5.sw)(e))).join("\n")
+                  a.map((e) => "- ".concat((0, te.sw)(e))).join("\n")
                 ),
                 { duration: 3 }
               );
               return;
             }
-            let a = await k(),
-              s = a.gizmo.id;
+            let i = await k(),
+              s = i.gizmo.id;
             try {
               return (
-                J.A.logEvent(K.M.promoteGizmo, {
-                  gizmo_id: a.gizmo.id,
+                et.A.logEvent(ea.M.promoteGizmo, {
+                  gizmo_id: i.gizmo.id,
                   sharing_recipient: e.recipient,
-                  editor_tab: F,
+                  editor_tab: D,
                 }),
                 await y.mutateAsync(
                   {
-                    gizmoId: a.gizmo.id,
+                    gizmoId: i.gizmo.id,
                     data: {
+                      sharingSubjects: e.subjects,
                       sharingRecipient: e.recipient,
                       categories: null == t ? void 0 : [t],
                     },
                   },
                   {
                     onSuccess(e) {
-                      Q.E.setQueryData((0, m.Vw)(s).queryKey, e),
-                        Q.E.invalidateQueries({ queryKey: ["gizmos"] }),
-                        Q.E.invalidateQueries({
+                      es.E.setQueryData((0, m.Vw)(s).queryKey, e),
+                        es.E.invalidateQueries({ queryKey: ["gizmos"] }),
+                        es.E.invalidateQueries({
                           queryKey: ["gizmo", { gizmoId: s }],
                         }),
-                        Q.E.invalidateQueries({
+                        es.E.invalidateQueries({
                           queryKey: [
                             "gizmo",
                             "userActionSettings",
@@ -5107,26 +5387,26 @@
               );
             } catch (t) {
               t instanceof b.DC
-                ? L({
+                ? A({
                     gizmoId: s,
                     sharingRecipient: e.recipient,
-                    moderationType: C.PublishBlocked,
+                    moderationType: G.PublishBlocked,
                     sharingTargets: t.response.sharing_targets,
-                    showModal: T.AppealAvailable,
+                    showModal: E.AppealAvailable,
                   })
                 : (console.error(t),
-                  U.m.warning("Error saving GPT", { duration: 2 }));
+                  W.m.warning("Error saving GPT", { duration: 2 }));
             }
           },
-          V = x.isPending || y.isPending,
-          { 0: F, 1: W } = (0, z.useState)(() => {
-            let e = H.m.getItem(H.F.GizmoEditorTab);
-            return Object.values(ii).includes(e) ? e : ii.MAGIC_MAKER;
+          R = x.isPending || y.isPending,
+          { 0: D, 1: B } = (0, M.useState)(() => {
+            let e = ei.m.getItem(ei.F.GizmoEditorTab);
+            return Object.values(ac).includes(e) ? e : ac.MAGIC_MAKER;
           }),
-          { width: Y } = (function () {
-            let { 0: e, 1: t } = (0, z.useState)({ width: null, height: null });
+          { width: F } = (function () {
+            let { 0: e, 1: t } = (0, M.useState)({ width: null, height: null });
             return (
-              (0, z.useLayoutEffect)(() => {
+              (0, M.useLayoutEffect)(() => {
                 let e = () => {
                   t({ width: window.innerWidth, height: window.innerHeight });
                 };
@@ -5141,45 +5421,46 @@
               e
             );
           })();
-        (0, z.useEffect)(() => {
-          null != Y && Y >= 768 && F === ii.PREVIEW && W(ii.MAGIC_MAKER);
-        }, [Y, F]);
-        let { 0: ee, 1: et } = (0, z.useState)(!1),
-          { 0: ea, 1: er } = (0, z.useState)(!1),
-          { 0: en, 1: el } = (0, z.useState)(void 0);
-        return (0, M.jsxs)("div", {
+        (0, M.useEffect)(() => {
+          null != F && F >= 768 && D === ac.PREVIEW && B(ac.MAGIC_MAKER);
+        }, [F, D]);
+        let { 0: q, 1: Y } = (0, M.useState)(!1),
+          { 0: Q, 1: X } = (0, M.useState)(!1),
+          { 0: $, 1: ee } = (0, M.useState)(void 0);
+        return (0, C.jsxs)("div", {
           className: "flex h-screen w-full flex-col items-center",
           children: [
-            (0, M.jsx)(tW, {
+            (0, C.jsx)(t0, {
               gizmoEditorData: o,
-              isLoading: V,
+              isLoading: R,
               hasUnpublishedChanges: w,
-              isUploadingProfilePic: ee,
-              isGeneratingProfilePic: ea,
+              isUploadingProfilePic: q,
+              isGeneratingProfilePic: Q,
               publishedGizmo: h,
+              updateGizmo: Z,
               promoteGizmo: async (e, t) => {
-                let i = await R(e, t);
+                let a = await U(e, t);
                 return (
-                  (r.current = it(
-                    it({}, r.current),
+                  (l.current = ad(
+                    ad({}, l.current),
                     {},
                     { sharingRecipient: e.recipient }
                   )),
-                  d(r.current),
-                  H.m.setItem(H.F.GizmoEditorTab, F),
-                  i
+                  d(l.current),
+                  ei.m.setItem(ei.F.GizmoEditorTab, D),
+                  a
                 );
               },
               appealGizmo: async (e, t) => {
-                null != G &&
-                  L(
-                    it(
-                      it({}, G),
+                null != I &&
+                  A(
+                    ad(
+                      ad({}, I),
                       {},
                       {
                         sharingRecipient: e,
                         categories: null == t ? void 0 : [t],
-                        showModal: T.AppealAvailable,
+                        showModal: E.AppealAvailable,
                       }
                     )
                   );
@@ -5187,104 +5468,104 @@
               revertDraft:
                 null != h && w
                   ? () => {
-                      let e = Q.E.getQueryData(
-                        (0, m.Vw)(r.current.id).queryKey
+                      let e = es.E.getQueryData(
+                        (0, m.Vw)(l.current.id).queryKey
                       );
                       if (null != e) {
-                        let t = io(e);
-                        (r.current = t), d(t), k();
+                        let t = ag(e);
+                        (l.current = t), d(t), k();
                       }
                     }
                   : void 0,
-              draftMessage: (0, M.jsx)(tH, {
+              draftMessage: (0, C.jsx)(t4, {
                 hasUnpublishedChanges: w,
                 isSavingDraft: v,
                 upsertDraftError: j,
                 className: "text-sm",
               }),
               showActionsModal: (e) => {
-                el(e);
+                ee(e);
               },
               className: "flex-shrink-0",
             }),
-            G &&
-              (0, M.jsx)(E, {
-                appealState: G,
+            I &&
+              (0, C.jsx)(V, {
+                appealState: I,
                 onAppealClose: () =>
-                  L(it(it({}, G), {}, { showModal: T.None })),
+                  A(ad(ad({}, I), {}, { showModal: E.None })),
                 onAppealSubmitted: () =>
-                  L(it(it({}, G), {}, { showModal: T.AppealSent })),
+                  A(ad(ad({}, I), {}, { showModal: E.AppealSent })),
               }),
-            (0, M.jsxs)("div", {
+            (0, C.jsxs)("div", {
               className: "relative flex w-full grow overflow-hidden",
               children: [
-                (0, M.jsx)("div", {
+                (0, C.jsx)("div", {
                   className: "flex w-full justify-center md:w-1/2",
-                  children: (0, M.jsx)("div", {
+                  children: (0, C.jsx)("div", {
                     className: "h-full grow overflow-hidden",
                     children:
-                      void 0 !== en
-                        ? (0, M.jsx)(eX, {
-                            currentlyEditingActionDomain: en,
+                      void 0 !== $
+                        ? (0, C.jsx)(e3, {
+                            currentlyEditingActionDomain: $,
                             gizmoEditorData: o,
-                            updateGizmo: _,
+                            updateGizmo: Z,
                             onClose: () => {
-                              el(void 0);
+                              ee(void 0);
                             },
                           })
-                        : (0, M.jsxs)("div", {
+                        : (0, C.jsxs)("div", {
                             className: "flex h-full flex-col px-2 pt-2",
                             children: [
-                              (0, M.jsx)("div", {
+                              (0, C.jsx)("div", {
                                 className:
                                   "flex w-full flex-row justify-center",
-                                children: (0, M.jsx)(is, {
-                                  editorTab: F,
-                                  setEditorTab: W,
+                                children: (0, C.jsx)(ap, {
+                                  editorTab: D,
+                                  setEditorTab: B,
                                   className: "mb-2 flex-shrink-0 self-center",
                                 }),
                               }),
-                              (0, M.jsx)("div", {
+                              (0, C.jsx)("div", {
                                 className: "grow overflow-hidden",
                                 children:
-                                  F === ii.MAGIC_MAKER
-                                    ? (0, M.jsx)("div", {
+                                  D === ac.MAGIC_MAKER
+                                    ? (0, C.jsx)("div", {
                                         className: "h-full w-full pb-5",
-                                        children: (0, M.jsx)(
-                                          t7,
+                                        children: (0, C.jsx)(
+                                          an,
                                           {
                                             gizmoEditorData: o,
-                                            updateGizmo: _,
-                                            completionCallbackResponse: I,
+                                            updateGizmo: Z,
+                                            completionCallbackResponse: O,
                                             clientThreadId: c,
-                                            gizmoEditorDataRef: r,
+                                            gizmoEditorDataRef: l,
                                             magicMakerBehaviorOverrides: p,
                                             magicMakerConversationGizmoEditorDataRef:
-                                              l,
-                                            requireGizmoId: P,
+                                              n,
+                                            requireGizmoId: N,
                                           },
                                           c
                                         ),
                                       })
-                                    : F === ii.ADVANCED
-                                      ? (0, M.jsx)(eg.cK, {
+                                    : D === ac.ADVANCED
+                                      ? (0, C.jsx)(ey.cK, {
                                           gizmoEditorData: o,
-                                          updateGizmo: _,
+                                          updateGizmo: Z,
                                           generateProfilePic: () => {
-                                            er(!0),
-                                              A(r, l, [
+                                            X(!0),
+                                              S(l, n, [
                                                 "Generate a new profile picture for this GPT using gizmo_editor generate_profile_pic. Do not prompt the user for any clarification. Do not send extra text outside of the tool function call. DO NOT CALL update_behavior or otherwise update GPT behavior in your response.",
                                               ]);
                                           },
-                                          setIsUploadingProfilePic: et,
-                                          isGeneratingProfilePic: ea,
-                                          setIsGeneratingProfilePic: er,
-                                          requireGizmoId: P,
+                                          setIsUploadingProfilePic: Y,
+                                          isGeneratingProfilePic: Q,
+                                          setIsGeneratingProfilePic: X,
+                                          requireGizmoId: N,
                                           onShowActionsEditor: (e) => {
-                                            el(e);
+                                            ee(e);
                                           },
                                         })
-                                      : (0, M.jsx)(eU, {
+                                      : (0, C.jsx)(eV, {
                                           gizmoEditorData: o,
                                           isSavingDraft: v,
                                           showTitle: !1,
@@ -5294,16 +5575,16 @@
                           }),
                   }),
                 }),
-                (0, M.jsx)("div", {
-                  className: (0, X.default)(
+                (0, C.jsx)("div", {
+                  className: (0, el.default)(
                     "hidden w-1/2 justify-center border-l border-token-border-medium bg-token-main-surface-secondary pt-4",
-                    F !== ii.PREVIEW && "md:flex"
+                    D !== ac.PREVIEW && "md:flex"
                   ),
-                  children: (0, M.jsx)("div", {
+                  children: (0, C.jsx)("div", {
                     className: "flex-grow pb-5",
-                    children: (0, M.jsx)("div", {
+                    children: (0, C.jsx)("div", {
                       className: "h-full",
-                      children: (0, M.jsx)(eU, {
+                      children: (0, C.jsx)(eV, {
                         gizmoEditorData: o,
                         isSavingDraft: v,
                       }),
@@ -5315,88 +5596,88 @@
           ],
         });
       };
-      function ic(e) {
-        let { gizmoId: t, version: i } = e,
-          { data: a } = (0, m.DC)({ gizmoId: t, draft: !0, version: i }),
-          s = (0, V.ec)(V.F_.accountUserId),
-          r = (0, V.aF)(),
-          n = null == r ? void 0 : r.id,
-          l = null != a && null != s && null != n && (0, ew.k1)(a);
-        return null != a && l ? (0, M.jsx)(id, { gizmo: a }) : null;
+      function ax(e) {
+        let { gizmoId: t, version: a } = e,
+          { data: i } = (0, m.DC)({ gizmoId: t, draft: !0, version: a }),
+          s = (0, Q.ec)(Q.F_.accountUserId),
+          l = (0, Q.aF)(),
+          r = null == l ? void 0 : l.id,
+          n = null != i && null != s && null != r && (0, eP.k1)(i);
+        return null != i && n ? (0, C.jsx)(af, { gizmo: i }) : null;
       }
-      function iu(e) {
+      function av(e) {
         let { onNewGizmoId: t } = e;
-        return (0, M.jsx)(id, { gizmo: void 0, onNewGizmoId: t });
+        return (0, C.jsx)(af, { gizmo: void 0, onNewGizmoId: t });
       }
-      function ip(e) {
-        let { gizmoId: t, remixSourceId: i, version: a } = e,
-          s = (0, ee.useRouter)(),
-          r = (0, R.t)(),
-          n = (0, z.useRef)(void 0),
-          l = t;
+      function aj(e) {
+        let { gizmoId: t, remixSourceId: a, version: i } = e,
+          s = (0, eo.useRouter)(),
+          l = (0, Y.t)(),
+          r = (0, M.useRef)(void 0),
+          n = t;
         return (
-          null != t && n.current === t && (l = void 0),
-          (0, F.yx)({
+          null != t && r.current === t && (n = void 0),
+          (0, X.yx)({
             resetThreadAction: () => {
               s.push("/");
             },
           }),
-          (0, M.jsx)("div", {
+          (0, C.jsx)("div", {
             children:
-              null != r && r.data
-                ? (0, M.jsx)("div", {
+              null != l && l.data
+                ? (0, C.jsx)("div", {
                     children:
-                      void 0 != l
-                        ? (0, M.jsx)(ic, { gizmoId: l, version: a }, l)
-                        : (0, M.jsx)(iu, {
-                            remixSourceId: i,
+                      void 0 != n
+                        ? (0, C.jsx)(ax, { gizmoId: n, version: i }, n)
+                        : (0, C.jsx)(av, {
+                            remixSourceId: a,
                             onNewGizmoId: (e) => {
-                              (n.current = e),
+                              (r.current = e),
                                 window.history.replaceState(
                                   window.history.state,
                                   "",
-                                  (0, W.AA)(e)
+                                  (0, $.AA)(e)
                                 );
                             },
                           }),
                   })
-                : (0, M.jsx)("div", {
+                : (0, C.jsx)("div", {
                     className: "flex min-h-screen items-center justify-center",
-                    children: (0, M.jsx)(L.Z, {}),
+                    children: (0, C.jsx)(q.Z, {}),
                   }),
           })
         );
       }
-      var im = i(19892),
-        ih = !0;
-      function ig() {
+      var ay = a(19892),
+        ab = !0;
+      function aw() {
         var e;
-        let t = (0, R.t)();
+        let t = (0, Y.t)();
         (e = null == t || t.canCreateGizmos()),
-          (0, z.useEffect)(() => {
+          (0, M.useEffect)(() => {
             e ||
-              et().replace((0, im.M5)(im.LT.NO_ACCESS), void 0, {
+              ed().replace((0, ay.M5)(ay.LT.NO_ACCESS), void 0, {
                 shallow: !0,
               });
           }, [e]);
-        let i = (0, ee.useRouter)(),
-          a = i.query.slug,
-          s = i.query.version,
-          r = a ? (0, m.CR)(a) : void 0,
-          { remixFrom: n } = i.query;
-        return ((0, z.useEffect)(() => {
-          (0, eZ.rS)().then((e) => {
-            eM.ZP.initializeAndGatherData(e);
+        let a = (0, eo.useRouter)(),
+          i = a.query.slug,
+          s = a.query.version,
+          l = i ? (0, m.CR)(i) : void 0,
+          { remixFrom: r } = a.query;
+        return ((0, M.useEffect)(() => {
+          (0, eS.rS)().then((e) => {
+            eO.ZP.initializeAndGatherData(e);
           });
         }, []),
-        (0, z.useEffect)(() => {
-          null == t || t.canCreateGizmos() || i.push("/");
-        }, [t, i]),
+        (0, M.useEffect)(() => {
+          null == t || t.canCreateGizmos() || a.push("/");
+        }, [t, a]),
         null != t && t.canCreateGizmos())
-          ? (0, M.jsx)(ip, { gizmoId: r, remixSourceId: n, version: s })
+          ? (0, C.jsx)(aj, { gizmoId: l, remixSourceId: r, version: s })
           : null;
       }
     },
   },
 ]);
-//# sourceMappingURL=2958-180049b30ea44386.js.map
+//# sourceMappingURL=2958-8710d83b305d7bff.js.map

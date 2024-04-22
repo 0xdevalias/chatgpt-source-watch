@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (a, s, c, e, t) {
+(self.__BUILD_MANIFEST = (function (a, s, e, c, t) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     "/_error": ["static/chunks/pages/_error-3318511f0e5c1b1f.js"],
@@ -10,7 +10,7 @@
     ],
     "/admin": [a, "static/chunks/pages/admin-e20488d510ec8f38.js"],
     "/admin/analytics": [
-      "static/chunks/3a34cc27-e8dabfc076a26d2a.js",
+      "static/chunks/3a34cc27-680c4c5818883bf2.js",
       a,
       "static/chunks/pages/admin/analytics-93371c1f3375f528.js",
     ],
@@ -18,7 +18,7 @@
       a,
       "static/chunks/pages/admin/billing-5fe15a26938ef6cb.js",
     ],
-    "/admin/gpts": [a, "static/chunks/pages/admin/gpts-d690ba2c2a91378b.js"],
+    "/admin/gpts": [a, "static/chunks/pages/admin/gpts-a163bafc6a8cb63b.js"],
     "/admin/groups": [
       a,
       "static/chunks/pages/admin/groups-88de251df5c912ef.js",
@@ -47,7 +47,7 @@
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-af5cf6f0de8c4eae.js",
     ],
-    "/auth/login": [s, e, "static/chunks/pages/auth/login-f8b6f8218db2011e.js"],
+    "/auth/login": [s, c, "static/chunks/pages/auth/login-f8b6f8218db2011e.js"],
     "/auth/logout": ["static/chunks/pages/auth/logout-907d164c60969934.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-839acb3ff75e4292.js",
@@ -55,26 +55,26 @@
     "/bypass": ["static/chunks/pages/bypass-b627e2a7042dcc54.js"],
     "/g/[gizmoId]": ["static/chunks/pages/g/[gizmoId]-9afd2f4b5aa23ebc.js"],
     "/g/[gizmoId]/about": [
-      "static/chunks/pages/g/[gizmoId]/about-c20a7d2146b03093.js",
+      "static/chunks/pages/g/[gizmoId]/about-2d00d99d85925715.js",
     ],
     "/g/[gizmoId]/c/[convId]": [
-      "static/chunks/pages/g/[gizmoId]/c/[convId]-c2067874013cb8f2.js",
+      "static/chunks/pages/g/[gizmoId]/c/[convId]-5f1c54a7a3cba31d.js",
     ],
     "/g/[gizmoId]/view": [
-      c,
-      "static/chunks/pages/g/[gizmoId]/view-62a85138c9289a22.js",
+      e,
+      "static/chunks/pages/g/[gizmoId]/view-72ae4f99aee37085.js",
     ],
     "/gpts": ["static/chunks/pages/gpts-924f111208a6f092.js"],
     "/gpts/discovery": [
       "static/chunks/pages/gpts/discovery-df7db60bac02081b.js",
     ],
     "/gpts/editor": [
-      c,
+      e,
       t,
       "static/chunks/pages/gpts/editor-2126f498ec93fd23.js",
     ],
     "/gpts/editor/[slug]": [
-      c,
+      e,
       t,
       "static/chunks/pages/gpts/editor/[slug]-0be5cef2c7c4a1a5.js",
     ],
@@ -84,7 +84,7 @@
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
-      e,
+      c,
       "static/chunks/pages/invite/[[...referralCodeParam]]-6aa301ba9c9f3c34.js",
     ],
     "/payments/success": [
@@ -96,7 +96,7 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-f9311c214105edf8.js",
     ],
-    "/search": ["static/chunks/pages/search-920359f8c429cc73.js"],
+    "/search": ["static/chunks/pages/search-c669e63adac8bd35.js"],
     "/search/evals": ["static/chunks/pages/search/evals-3990969b7a1eb755.js"],
     "/search/feedback": [
       "static/chunks/pages/search/feedback-1e3365456b6f8cef.js",
@@ -112,7 +112,7 @@
       "static/chunks/pages/workspace/deactivated-37f7d004c82b32ad.js",
     ],
     "/[[...default]]": [
-      "static/chunks/pages/[[...default]]-2aa9a2caddc265ef.js",
+      "static/chunks/pages/[[...default]]-28198444b17d1ca2.js",
     ],
     sortedPages: [
       "/_app",
@@ -165,6 +165,6 @@
   "static/chunks/8756-c3d7d1548a0f953d.js",
   "static/chunks/8697-ebbae398669b1442.js",
   "static/chunks/101-58c205119f556099.js",
-  "static/chunks/2958-180049b30ea44386.js"
+  "static/chunks/2958-8710d83b305d7bff.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

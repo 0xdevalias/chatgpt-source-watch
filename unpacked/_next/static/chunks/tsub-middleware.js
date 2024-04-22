@@ -845,7 +845,7 @@
        * See the License for the specific language governing permissions and
        * limitations under the License.
        */
-      var n = e(10775),
+      var n = e(67352),
         o = e(29115);
       t.exports = function () {
         var t, r;
@@ -1225,7 +1225,7 @@
       var r = "function" == typeof Uint8Array ? Uint8Array : null;
       t.exports = r;
     },
-    10775: function (t, r, e) {
+    67352: function (t, r, e) {
       "use strict"; /**
        * @license Apache-2.0
        *
@@ -2613,4 +2613,4 @@
     },
   },
 ]);
-//# sourceMappingURL=tsub-middleware.d028af8c55d386c9.js.map
+//# sourceMappingURL=tsub-middleware.6800f3270c51834b.js.map

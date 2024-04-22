@@ -2,10 +2,1831 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9271],
   {
-    9271: function (e) {
-      e.exports = JSON.parse(
-        '{"AccountPaymentModal.accountErrorWarning":"アカウント管理ページでエラーが発生しました。再度お試しください。問題が続く場合は、help.openai.comを訪れてください。","AccountPaymentModal.modalTitle":"あなたのプラン","AccountPaymentModal.paymentErrorWarning":"支払いページでエラーが発生しました。もう一度お試しください。問題が続く場合は、help.openai.comをご覧ください。","Alert.closeButtonLabel":"閉じる","AppLogo.altText":"{name}のロゴ","BlockingInitialModals.personalOnboardingSubheading":"スタートのためのヒント","CapacityGate.addEmail":"ログインリンクをパーソナライズするためにはメールアドレスを追加してください","CapacityGate.allSet":"全て設定完了です！{chatGPTPlus}の加入者の場合、メールでログインリンクを確認してください。","CapacityGate.chatGPTPlus":"ChatGPT Plusサブスクライバーログイン","CapacityGate.emailPlaceholder":"メールアドレス","CapacityGate.getNotified":"サービス再開後、通知を受け取る","CapacityGate.notSubscriber":"{chatGPTPlus}の加入希望者ですか？<waitlist>待ちリスト</waitlist>に参加しましょう。","CapacityGate.searchCandidates":"候補者を検索","CapacityGate.sendLink":"リンクを送信","CapacityGate.sent":"送信済み！","CapacityGate.title":"ChatGPTは現在、最大容量です","CapacityGate.waitlist":"待ちリスト","Card.imageAlt":"{title}の画像","CompletionDevToolsWidget.closeButton":"閉じる","CompletionDevToolsWidget.dragAndResizeTooltip":"このウィジェットは、ドラッグしてサイズを変更できます","CompletionDevToolsWidget.growButton":"拡大","CompletionDevToolsWidget.initiateCompletionRequest":"この機能を使用するには、完了リクエストを開始してください","CompletionDevToolsWidget.loading":"読み込み中...","CompletionDevToolsWidget.node":"ノード: {focusedNodeId}","CompletionDevToolsWidget.shrinkButton":"縮小","ConversationTurnInlineFeedback.regenBetterLabel":"この応答は前の応答より良かった","ConversationTurnInlineFeedback.regenBetterText":"より良い","ConversationTurnInlineFeedback.regenSameLabel":"この応答は前のと同じ質でした","ConversationTurnInlineFeedback.regenSameText":"同じ","ConversationTurnInlineFeedback.regenSkipLabel":"この比較をスキップする","ConversationTurnInlineFeedback.regenTitle":"この応答は前より良かった、それとも悪かったですか？","ConversationTurnInlineFeedback.regenWorseLabel":"この応答は前の応答よりも悪かった","ConversationTurnInlineFeedback.regenWorseText":"悪化","ConversationTurnTwoUpFeedback.responseNumber":"応答 {responseIndex, number}","ConversationTurnTwoUpFeedback.responsePrompt":"どちらの回答がより好みですか？","ConversationTurnTwoUpFeedback.responsePromptExplanation":"あなたの選択はChatGPTをより良くします。","CopyButton.copied":"コピーしました！","DebugSidebar.closeSidebar":"サイドバーを閉じる","DebugSidebar.copyText":"テキストをコピー","DebugSidebar.debugTitle":"デバッグ","DebugSidebar.downloadRawConversation":"生会話をダウンロード","DevelopPluginModal.accessTokenText":"アクセストークン","DevelopPluginModal.addTokensLaterButtonText":"トークンは後で追加します","DevelopPluginModal.addVerificationTokenTitle":"検証トークンを追加する","DevelopPluginModal.addVerificationTokensText":"以下の検証トークンをマニフェストファイルに追加してください：","DevelopPluginModal.authenticationFileText":"このファイルは認証が必要です","DevelopPluginModal.authenticationTypeText":"認証タイプ","DevelopPluginModal.basicLabel":"基本","DevelopPluginModal.bearerLabel":"持参人","DevelopPluginModal.cancelButtonText":"キャンセル","DevelopPluginModal.domainDisplayName":"ドメイン","DevelopPluginModal.domainInputPlaceholder":"例：openai.com または localhost:3000","DevelopPluginModal.enterOAuthCredentialsLabel":"OAuthの認証情報を入力してください：","DevelopPluginModal.enterServiceAccessTokenLabel":"サービスアクセストークンを入力してください:","DevelopPluginModal.enterWebsiteDomainTitle":"あなたのウェブサイトのドメインを入力してください","DevelopPluginModal.findManifestFileText":"マニフェストファイルを探す","DevelopPluginModal.foundPluginTitle":"プラグインが見つかりました","DevelopPluginModal.installForMeButtonText":"インストールする","DevelopPluginModal.installLaterButtonText":"後でインストールする","DevelopPluginModal.installLocalhostPluginButtonText":"ローカルホストプラグインをインストール","DevelopPluginModal.learnToBuildPlugin":"プラグインの作り方を学ぶため、当社の参照文献をご覧ください。","DevelopPluginModal.nextButtonText":"次へ","DevelopPluginModal.pluginApprovalWarning":"あなたのプラグインがChatGPTプラグインストアに承認され、そのマニフェストに変更を加えた場合、プラグインはストアから削除され、<resubmitLink>再審査のために再提出</resubmitLink>する必要があります。","DevelopPluginModal.readyToInstallTitle":"インストール準備完了","DevelopPluginModal.refetchManifestButtonText":"マニフェストを再取得","DevelopPluginModal.unverifiedPluginText":"あなたの未確認のプラグインは、現在<developersLink>最大15人の開発者</developersLink>によってインストールできます。プラグインを全員に公開する準備ができたら、<submitPluginLink>プラグインのレビューを申請</submitPluginLink>できます。","DevelopPluginModal.verifyTokensButtonText":"トークンを確認する","FileTile.removeFile":"ファイルを削除","InstallPluginModal.cancel":"キャンセル","InstallPluginModal.enterHttpAccessToken":"以下にあなたのHTTPアクセストークンを入力してください:","InstallPluginModal.findPlugin":"プラグインを探す","InstallPluginModal.installPlugin":"プラグインをインストール","InstallPluginModal.installUnverifiedPluginTitle":"未確認のプラグインをインストールする","InstallPluginModal.loginWithPlugin":"{pluginName}でログインする","InstallPluginModal.pleaseProvideDomain":"インストールしたい未確認のプラグインのウェブサイトドメインを提供してください。","InstallPluginModal.unverifiedPluginTitle":"未確認のプラグイン","InstallPluginModal.youWillBeRedirected":"ログインするために{pluginName}にリダイレクトされます。","InstallUnverifiedDisclaimerModal.cancel":"キャンセル","InstallUnverifiedDisclaimerModal.continue":"続ける","InstallUnverifiedDisclaimerModal.title":"未検証のプラグイン","InstallUnverifiedDisclaimerModal.warning":"OpenAIはこのプラグインを審査していません。このプラグインはあなたの情報にリスクをもたらす可能性があります。進む前に、このプラグインを信頼できることを確認してください。","InviteManager.email":"メール","InviteManager.noResults":"招待は見つかりませんでした","InviteManager.resendInvite":"招待を再送する","InviteManager.revokeInvite":"招待を取り消す","InviteManager.role":"役割","KeyboardActionsModal.keyboardActionsModalTitle":"キーボードショートカット","LocaleContextProvider.betaMessage":"あなたの言語でChatGPTの早期プレビューを体験してみてください。","NavigationContent.chatHistoryLabel":"チャット履歴","NavigationContent.chatHistoryOff":"このブラウザではチャット履歴がオフになっています。","NavigationContent.chatHistoryOffDescription":"履歴がオフになっている場合、このブラウザでの新しいチャットは、あなたのどのデバイスの履歴にも表示されず、当社のモデルのトレーニングに使用されることも、30日以上保存されることもありません。<b>この設定はブラウザやデバイス間で同期されません。</b> {learnMore}","NavigationContent.chatHistoryOffDescriptionBusiness":"履歴がオフになっている場合、このブラウザでの新しいチャットは、あなたのどのデバイスの履歴にも表示されず、30日以上保存されません。<b>この設定はブラウザやデバイス間で同期されません。</b> {learnMore}","NavigationContent.enableChatHistory":"チャット履歴を有効にする","NavigationContent.learnMore":"詳細を見る","NodeEditor.cancel":"キャンセル","NodeEditor.saveAndSubmit":"保存して提出","PaginationControls.next":"次へ","PaginationControls.prev":"前へ","PluginChooser.enabledPluginsLimit":"{enabledPlugins}/{maxEnabledPlugins} プラグインが有効化されています","PluginChooser.loading":"読み込み中...","PluginChooser.pluginsEnabled":"{count, plural, =0 {プラグインなし} one {# プラグイン} other {# プラグイン}} が有効化されています","PluginDevtools.enableLocalhostPlugin":"開発ツールを使用するためには、ローカルホストプラグインを有効にしてください。","PluginDevtools.enableLocalhostPluginenableLocalhostPluginWithDevTools":"Devtoolsを使用するためには、localhostプラグイン（またはプラグインレビュアーであれば任意のプラグイン）を有効にしてください。","PluginDevtools.pluginId":"プラグインID：{id}","PluginDevtools.refreshPlugin":"プラグインを更新","PluginDevtools.title":"プラグイン開発ツール","PluginMessage.triedToUse":"{pluginName}を使用しようとしました","PluginMessage.used":"使用した {pluginName}","PluginMessage.using":"{pluginName}を使用中...","PluginStoreModal.aboutPlugins":"プラグインについて","PluginStoreModal.card.developerInfo":"開発者情報","PluginStoreModal.card.install":"インストール","PluginStoreModal.card.installing":"インストール中","PluginStoreModal.card.uninstall":"アンインストール","PluginStoreModal.card.uninstalling":"アンインストール中","PluginStoreModal.developPlugin":"自分だけのプラグインを開発する","PluginStoreModal.installUnverifiedPlugin":"未確認のプラグインをインストールする","PluginStoreModal.noSearchResults":"「{query}」に対するプラグインが見つかりませんでした","PluginStoreModal.noSearchResultsHint":"別のクエリやカテゴリーを試してみてください","PluginStoreModal.searchPlaceholder":"プラグインを検索","PluginStoreModal.title":"プラグインストア","PromptFilePicker.errorFileTooLarge":"ファイルが大きすぎます。最大ファイルサイズは{size}MBです","PromptFilePicker.errorTooManyFiles":"アップロードされたファイルが多すぎます。一度にアップロードできるファイルの最大数は{maxNum}です","PromptTextarea.continueGenerating":"生成を続ける","PromptTextarea.continueSharedConversationPlaceholder":"会話を続けるためにメッセージを送信してください。","PromptTextarea.disabledFeedbackPlaceholder":"続行するには応答を選択してください","PromptTextarea.errorGeneratingResponse":"レスポンスの生成中にエラーが発生しました","PromptTextarea.noModelsAvailablePlaceholder":"利用可能なモデルがありません","PromptTextarea.placeholder":"メッセージを送信","PromptTextarea.regenerateResponse":"再生成","PromptTextarea.sendMessageTooltip":"メッセージを送信","PromptTextarea.stopGenerating":"生成を停止する","PromptTextarea.suggestionTooltip":"クリックして送信","PromptTextarea.unsupportedFileType":"「{file_type}」というファイルタイプのアップロードはサポートされていません。別のファイルを試してください。","RequireMfaForAuthPluginsModal.primaryButtonTitle":"2要素認証を設定する","RequireMfaForAuthPluginsModal.secondaryButtonTitle":"プラグインをオフにする","RequireMfaForAuthPluginsModal.title":"一部のプラグインが2要素認証が必要です。","RequiresMfaModal.cancelButton":"キャンセル","RequiresMfaModal.disclaimer":"このプラグインは、追加のセキュリティのために2要素認証を有効にする必要があります。2要素認証を設定して、再度お試しください。","RequiresMfaModal.enableMfaButton":"2要素認証を有効にする","RequiresMfaModal.title":"2要素認証を有効にする","ResultsSection.error":"エラー","ResultsSection.requestTo":"リクエスト先：{pluginName}","ResultsSection.responseFrom":"{pluginName}からのレスポンス","SandboxDownload.downloadFile":"ファイルをダウンロード","SandboxDownload.downloadUnavailable":"共有チャットではファイルのダウンロードはサポートされていません","SandboxDownload.startingDownload":"ダウンロードを開始","StoreDisclaimerModal.aboutPlugins":"プラグインについて","StoreDisclaimerModal.autoUseWarning":"ChatGPTは、会話中にどのタイミングでプラグインを使用するかを、あなたが有効にしたプラグインに応じて自動的に選択します。","StoreDisclaimerModal.cancelButton":"キャンセル","StoreDisclaimerModal.externalAppsWarning":"プラグインはChatGPTを外部アプリに接続します。プラグインを有効にすると、ChatGPTはあなたの会話、カスタム指示、そしてあなたがいる国または州の情報をプラグインに送信する可能性があります。","StoreDisclaimerModal.okButton":"OK","StoreDisclaimerModal.thirdPartyWarning":"プラグインは、OpenAIが制御していない第三者のアプリケーションによって動作します。インストール前に、プラグインを信頼できることを確認してください。","TagComponents.localhostTag":"ローカルホスト","TagComponents.unapprovedTag":"未確認","TextMessageDisplay.buttonTryAgain":"もう一度試してください","TextMessageDisplay.buttonUseDefaultModel":"デフォルトモデルを使用する","TextMessageDisplay.contentOrTosViolation":"このコンテンツは、当社の<contentPolicyLink>コンテンツポリシー</contentPolicyLink>または<termsLink>利用規約</termsLink>に違反している可能性があります。これが誤りであると思われる場合は、<feedbackLink>フィードバックを提出してください</feedbackLink> — あなたの意見は、この分野の研究に役立ちます。","TextMessageDisplay.contentPolicyViolation":"このコンテンツは、当社の<contentPolicyLink>コンテンツポリシー</contentPolicyLink>に違反している可能性があります。これが誤りであると考える場合は、<feedbackLink>フィードバックを提出してください</feedbackLink> — あなたの意見は、この分野の研究に役立ちます。","TextMessageDisplay.gptUsageCapExceeded":"現在、GPT-4の使用上限に達しました。今すぐデフォルトモデルで続けるか、{formattedTime}に再試行してください。<link>詳細を見る</link>","TextMessageDisplay.gptUsageCapExceededExpired":"以前はGPT-4の使用制限に達していましたが、今はもう一度メッセージを送信することができます","TextMessageDisplay.historyDisabledConversationMissing":"申し訳ありませんが、チャット履歴がオフの状態で作成された会話は、6時間の非活動状態後に失効します。ChatGPTを続けて使用するには、新しい会話を開始してください。","UserContextFirstTimeModal.body1":"チャットの具体的な詳細とガイドラインを提供することで、ChatGPTとのインタラクションをカスタマイズします。","UserContextFirstTimeModal.body2":"カスタム指示を編集すると、新しく作成したチャットすべてに適用されます。既存のチャットは更新されません。","UserContextFirstTimeModal.legal1":"あなたの指示は、オプトアウトしない限り、当社のモデルを改善するために使用され、有効にしたプラグインと共有される場合があります。詳細は、当社の<article>ヘルプセンター</article>をご覧ください。","UserContextFirstTimeModal.ok":"OK","UserContextFirstTimeModal.title":"カスタム指示の紹介","UserManager.dateJoined":"{dateAdded}にワークスペースに参加しました","UserManager.email":"メール","UserManager.inviteMemberButton":"メンバーを招待","UserManager.missingName":"名前が提供されていません","UserManager.name":"名前","UserManager.noResults":"メンバーが見つかりません","UserManager.removeMemberModalCancel":"キャンセル","UserManager.removeMemberModalConfirm":"削除","UserManager.removeMemberModalTitle":"メンバーを削除","UserManager.removeUser":"ワークスペースからユーザーを削除","UserManager.role":"役割","UserManager.youSpecifier":"(あなた)","WorkspaceIdentityPage.ssoToggleActive":"このワークスペースでSSOを有効にする","adminPage.adminBrowserPageTitle":"ChatGPT - メンバー管理","adminPage.allMembers":"全メンバー","adminPage.analytics":"分析","adminPage.backToChat":"チャットに戻る","adminPage.inviteMemberButton":"メンバーを招待","adminPage.pendingInvites":"保留中の招待","adminPage.search":"検索","adminPage.totalMembers":"{planName} \xb7 {totalMembers} {totalMembers, plural, one {人のメンバー} other {人のメンバー}}","adminPage.workspaceNotFound":"ワークスペースが見つかりません","citations.invalid":"無効な引用","domainModal.cancel":"キャンセル","domainModal.check":"確認","domainModal.copiedTXTRecordToClipboard":"DNS TXTレコードをクリップボードにコピーしました","domainModal.domainCheckError":"ドメインが確認できませんでした。上記のTXTレコードが正しく設定されていることを確認してください。","domainModal.done":"完了","domainModal.editTitle":"ドメインを管理する","domainModal.placeholder":"openai.com","domainModal.submit":"送信","domainModal.verificationTokenFooter":"その後、レコードを確認して認証を完了してください。","domainModal.verificationTokenMessage":"{hostname}の所有権を確認するには、DNSプロバイダに移動して、この値を持つTXTレコードを追加してください：","emailsTextarea.clearAllEntries":"すべてのエントリーをクリア","emailsTextarea.membersAdded":"+{count} {count, plural, one {メンバー} other {メンバー}}","emailsTextarea.placeholder":"メールアドレスを入力してエンターを押してください...","emailsTextarea.removeMember":"{member}を削除","emailsTextarea.tooltipInvalidEmail":"\\"{email}\\"は有効なメールアドレスではないかもしれません","feedbackModal.continueWithChosenAnswer":"あなたが選んだ答えで会話が続きます。","feedbackModal.copyrightContent":"このコンテンツは著作権法に違反しています","feedbackModal.dontLikeThis":"これは好まない","feedbackModal.harmfulOffensive":"このコンテンツは有害または攻撃的です","feedbackModal.harmfulUnsafe":"これは有害/安全ではありません","feedbackModal.moderationAccept":"コンテンツを許可する","feedbackModal.moderationReject":"コンテンツをブロック","feedbackModal.neitherAnswerBetter":"どちらの答えも優れていません","feedbackModal.newAnswer":"新しい回答","feedbackModal.newAnswerBetter":"新しい回答の方が良い","feedbackModal.notHelpful":"これは役に立ちません","feedbackModal.notTrue":"これは事実ではありません","feedbackModal.originalAnswer":"元の回答","feedbackModal.originalAnswerBetter":"元の回答の方が良い","feedbackModal.pickBestAnswer":"モデルを改善するために最適な回答を選んでください","feedbackModal.provideAdditionalFeedback":"追加のフィードバックを提供する","feedbackModal.provideReportModalTitle":"このコンテンツを報告する","feedbackModal.reportContentExplanationPlaceholder":"この応答の何が問題ですか？ この応答がなぜ有害なのですか？ 可能な限り具体的に説明してください。また、以下のチェックボックスにない詳細も追加してください。","feedbackModal.reportOtherContent":"その他の理由でこれが好きではありません（詳細を記述してください）","feedbackModal.sexualAbuse":"このコンテンツには性的虐待が含まれています","feedbackModal.skipStep":"このステップをスキップする","feedbackModal.submitFeedback":"フィードバックを送信","feedbackModal.submitReport":"レポートを提出する","feedbackModal.thumbsDownPlaceholder":"応答の問題点は何でしたか？ どのように改善できると思いますか？","feedbackModal.thumbsUpPlaceholder":"その回答に何が気に入りましたか？","fileUpload.codeInterpreterSessionTimeout":"コードインタープリターセッションが期限切れになりました","fileUpload.defaultCreateEntryError":"{fileName} をアップロードできませんでした","fileUpload.defaultDownloadLinkError":"{fileName}のアップロードステータスの取得に失敗しました","fileUpload.fileNotFound":"ファイルが見つかりません","fileUpload.fileTimedOut":"ファイルのアップロードがタイムアウトしました。もう一度お試しください。","fileUpload.fileTooLarge":"ファイルが大きすぎます","fileUpload.overUserQuota":"ユーザーのクォータが超過しました","fileUpload.unknownError":"未知のエラーが発生しました","filesModal.fileDownloadFailed":"ファイルのダウンロードに失敗しました。もう一度お試しください。","history.bucket.lastSeven":"過去7日間","history.bucket.lastThirty":"過去30日間","history.bucket.today":"今日","history.bucket.yesterday":"昨日","history.deleteModalBody":"{title}が削除されます。","history.deleteModalCancel":"キャンセル","history.deleteModalConfirm":"削除","history.deleteModalTitle":"チャットを削除しますか？","history.retryButton":"再試行","history.showMoreButton":"もっと見る","history.unableToLoad":"履歴を読み込むことができません","keyboardActions.copyLastCodeBlock":"最後のコードブロックをコピー","keyboardActions.copyLastResponse":"最後の応答をコピー","keyboardActions.deleteChat":"チャットを削除","keyboardActions.focusPromptTextarea":"チャット入力にフォーカス","keyboardActions.navigationToggle":"ナビゲーションの切り替え","keyboardActions.newChat":"新しいチャットを開く","keyboardActions.toggleCustomInstructions":"カスタム指示を切り替える","keyboardActions.toggleKeyboardActions":"キーボードショートカットを切り替える","navigation.accountSwitcherTitle":"ワークスペース","navigation.closeSidebar":"サイドバーを閉じる","navigation.helpAndFaq":"ヘルプ＆FAQ","navigation.logOut":"ログアウト","navigation.openSidebar":"サイドバーを開く","navigation.settings":"設定","onboarding.accuracy":"事実を確認してください","onboarding.accuracyBody":"セーフガードがあるにもかかわらず、ChatGPTは不正確な情報を提供する可能性があります。アドバイスを提供することを目的としていません。","onboarding.askAway":"何でも聞いてください","onboarding.askAwayBody":"ChatGPTは質問に答えたり、学習を助けたり、コードを書いたり、一緒にブレインストーミングしたり、さらに多くのことができます。","onboarding.gettingStartedButton":"はい、始めましょう","onboarding.warning":"機密情報を共有しないでください","onboarding.warningBody":"チャットの履歴は、当社のサービスの改善のためにレビューされたり使用されたりする可能性があります。あなたの選択肢については、当社の<article>ヘルプセンター</article>で詳しく学びましょう。","onboarding.workUse":"業務用途向けに作成されました","onboarding.workUseBody":"デフォルトでは、このワークスペースのチャットは当社のAIモデルのトレーニングには使用されません。","onboarding.workspaceWelcome":"{workspaceName} ワークスペースへようこそ","onboarding.workspaceWelcomeBody":"ここでは、より高機能で制限の少ない最新のモデルを使用することができます。","onboarding.workspaceWelcomeNoName":"ワークスペースへようこそ","organizationBillingInfo.defaultInvoiceName":"請求書","organizationBillingInfo.inactiveLicense":"非アクティブライセンス","organizationBillingInfo.invoiceName":"請求書：{createdDate, date, long}","organizationBillingInfo.invoicesTitle":"請求書","organizationBillingInfo.licenseExpiry":"{expiryDate, date, long}まで有効","organizationBillingInfo.paidInvoice":"支払済み：{invoiceDate, date, long}","organizationBillingInfo.planTitle":"プラン","organizationBillingInfo.seatsInUse":"使用中の席数：{numSeats} ({numSeatsPct})","organizationBillingInfo.seatsTitle":"席","organizationBillingInfo.upcomingInvoice":"期限: {invoiceDate, date, long}","pluginDisplayParams.generatedImage":"プラグインによって生成されました","popoverNavigation.myPlan":"マイプラン","pricingPlanConstants.business.callToAction":"私のチームのために購入する","pricingPlanConstants.free.costInDollars":"","pricingPlanConstants.free.demandAccess":"私たちのGPT-3.5モデルへのアクセス","pricingPlanConstants.free.modelFeatures":"定期的なモデルの更新","pricingPlanConstants.free.name":"無料プラン","pricingPlanConstants.free.responseSpeed":"標準的なレスポンス速度","pricingPlanConstants.getHelp.callToAction":"請求問題についてのヘルプが必要です","pricingPlanConstants.manageSubscriptionAndroid.callToAction":"ChatGPT Androidアプリでサブスクリプションを管理","pricingPlanConstants.manageSubscriptionIos.callToAction":"ChatGPT iOSアプリでサブスクリプションを管理","pricingPlanConstants.manageSubscriptionWeb.callToAction":"私のサブスクリプションを管理する","pricingPlanConstants.plus.callToAction.active":"あなたの現在のプランへ","pricingPlanConstants.plus.callToAction.inactivePayment":"プラスプランにアップグレード","pricingPlanConstants.plus.costInDollars":"USD $20/月","pricingPlanConstants.plus.demandAccess":"GPT-4、私たちの最も能力のあるモデルへのアクセス","pricingPlanConstants.plus.modelFeatures":"ブラウジング、プラグイン、高度なデータ分析などのベータ機能への独占的なアクセス","pricingPlanConstants.plus.name":"ChatGPT Plus","pricingPlanConstants.plus.responseSpeed":"より高速な応答速度","settingsModal.betaAdvancedDataAnalysisToggleDescription":"Pythonコードの作成と実行、ファイルのアップロードが可能なChatGPTのバージョンを試してみてください。データ分析、画像変換、コードファイルの編集などのヘルプを求めてみてください。注意：ファイルは1セッションを超えて保存されません。","settingsModal.betaAdvancedDataAnalysisToggleLabel":"高度なデータ分析","settingsModal.betaBrowsingToggleDescription":"最新のトピックやイベントについての質問に答えるために、インターネットをいつどのように閲覧するかを理解するChatGPTのバージョンを試してみてください。","settingsModal.betaBrowsingToggleLabel":"Bingで閲覧","settingsModal.betaIntro":"Plusユーザーとして、開発中に変更される可能性のある実験的な新機能への早期アクセスをお楽しみください。","settingsModal.betaPluginToggleDescription":"有効にしたサードパーティのプラグインをいつどのように使用するかを理解するChatGPTのバージョンを試してみてください。","settingsModal.betaPluginToggleLabel":"プラグイン","settingsModal.betaSettingsUpdateFailed":"ベータ設定の更新に失敗しました","settingsModal.betaTab":"ベータ機能","settingsModal.chatHistoryDescription":"このブラウザでの新しいチャットを履歴に保存し、モデルの改善に使用できるようにします。保存されていないチャットは、30日以内にシステムから削除されます。この設定はブラウザやデバイス間で同期されません。<link>詳しくはこちら</link>","settingsModal.chatHistoryLabel":"チャット履歴","settingsModal.chatHistoryOnlyDescription":"このブラウザで新しいチャットを履歴に保存します。保存されていないチャットは、30日以内にシステムから削除されます。この設定はブラウザやデバイス間で同期されません。<link>詳しくはこちら</link>","settingsModal.chatHistoryToggleLabel":"チャット履歴とトレーニング","settingsModal.chatTrainingEnterpriseDescription":"このワークスペースはプライベートで、トレーニングの対象外となっています。","settingsModal.chatTrainingEnterpriseTooltip":"ChatGPT Enterpriseは自動的にトレーニングを無効にします。","settingsModal.chatTrainingLabel":"チャットトレーニング","settingsModal.dark":"ダーク","settingsModal.dataControls":"データ制御","settingsModal.dataExportFailed":"現時点ではエクスポートの処理ができませんでした。後ほど再度お試しください。","settingsModal.dataExportModalCancel":"キャンセル","settingsModal.dataExportModalConfirm":"エクスポートを確定","settingsModal.dataExportModalDescription1":"エクスポートには、あなたのアカウント詳細と会話が含まれます。","settingsModal.dataExportModalDescription2":"データはダウンロード可能なファイルとして登録済みのメールアドレスに送信されます。","settingsModal.dataExportModalDescription3":"ダウンロードリンクは、受け取ってから24時間後に有効期限が切れます。","settingsModal.dataExportModalDescription4":"処理には時間がかかる場合があります。準備ができ次第、お知らせします。","settingsModal.dataExportModalDescription5":"進行するには、下の「エクスポートを確認」をクリックしてください。","settingsModal.dataExportModalTitle":"データエクスポートのリクエスト - 本当によろしいですか？","settingsModal.dataExportRequested":"データのエクスポートに成功しました。まもなくあなたのデータを含むメールが届きます。","settingsModal.deleteAccount":"アカウントを削除","settingsModal.deleteAccountButtonLabel":"私のアカウントを永久に削除する","settingsModal.deleteAccountFailed":"アカウントの削除に失敗しました。後でもう一度お試しください。","settingsModal.deleteAccountSessionTooOld":"ログインセッションが古すぎます。アカウントを削除する前に再度ログインしてください。","settingsModal.deleteAccountTitle":"アカウントを削除 - 本当によろしいですか？","settingsModal.deleteAccountWarning":"アカウントの削除は永久的で、元に戻すことはできません。","settingsModal.deleteButton":"削除","settingsModal.deleteHistoryModalCancel":"キャンセル","settingsModal.deleteHistoryModalConfirm":"削除を確認する","settingsModal.deleteHistoryModalTitle":"会話履歴をクリアします - 本当によろしいですか？","settingsModal.disable":"無効にする","settingsModal.enable":"有効にする","settingsModal.exportButton":"エクスポート","settingsModal.exportData":"データをエクスポート","settingsModal.generalTab":"一般","settingsModal.iapSubscriptionWarning":"Apple App Storeでのアプリ内購入のサブスクリプションをキャンセルする必要があります。当社はあなたのサブスクリプションをキャンセルすることはできません。","settingsModal.light":"ライト","settingsModal.localeAuto":"自動検出","settingsModal.localeDev":"⋆✩★DEV★✩⋆","settingsModal.lockedButtonLabel":"ロック済み","settingsModal.openPluginDevtools":"プラグインの開発者ツールを開く","settingsModal.playStoreSubscriptionWarning":"Google Playストアでアプリ内購入のサブスクリプションをキャンセルする必要があります。当社はあなたのサブスクリプションをキャンセルすることはできません。","settingsModal.recentLoginMessage":"アカウントを削除するには、過去10分以内にログインしている必要があります。再度ログインしてから、ここに戻って続行してください。","settingsModal.refreshLoginButtonLabel":"ログインを更新","settingsModal.settings":"設定","settingsModal.sharedConversations":"共有されたリンク","settingsModal.system":"システム","settingsModal.theme":"テーマ","settingsModal.typeDeleteInputLabel":"続行するには、以下の入力フィールドに「DELETE」と入力してください。","settingsModal.typeEmailLabel":"アカウントのメールアドレスを入力してください。","sharedConversation.advancedDataAnalysisSupportDisclaimer":"このチャットには、Advanced Data Analysisによって生成されたファイルや画像が含まれていますが、まだ共有チャットで表示されていません。","sharedConversationModal.dateShared":"共有日","sharedConversationModal.deleteSharedAllConversations":"すべての共有リンクを削除","sharedConversationModal.deleteSharedAllConversationsConfirm":"すべての共有リンクを削除してもよろしいですか？","sharedConversationModal.deleteSharedAllConversationsFailed":"共有リンクの削除に失敗しました","sharedConversationModal.deleteSharedLink":"共有リンクを削除","sharedConversationModal.deleteSharedLinkFailed":"共有リンクの削除に失敗しました","sharedConversationModal.goToOriginConversation":"元のチャットを見る","sharedConversationModal.loading":"読み込み中...","sharedConversationModal.name":"名前","sharedConversationModal.noSharedConversations":"共有リンクはありません。","sharedConversationModal.retry":"再試行","sharedConversationModal.somethingWentWrong":"何か問題が発生しました...","sharedConversationModal.title":"共有リンク","sharingModal.advancedDataAnalysisSupportDisclaimer":"受信者は、高度なデータ分析の画像を表示したり、ファイルをダウンロードしたりすることはできません。","sharingModal.confirmDeleteLink":"共有リンクを削除してもよろしいですか？","sharingModal.deleteLink":"リンクを削除","sharingModal.description":"リンクを作成した後に送信するメッセージは共有されません。URLを知っている人は誰でも、共有されたチャットを閲覧することができます。","sharingModal.exisitingDescription":"このチャットは<existingLink>以前に</existingLink>共有されています。共有チャットの内容を更新したい場合は、<deleteLink>このリンクを削除</deleteLink>して新しい共有リンクを作成してください。","sharingModal.moderationBlocked":"この共有リンクはモデレーションにより無効化されました。","sharingModal.shareAnonymously":"匿名で共有する","sharingModal.shareYourName":"あなたの名前を共有する","ssoModal.cancelButton":"キャンセル","ssoModal.certLabel":"X.509 署名証明書","ssoModal.createInstructionsManual":"あなたのIDプロバイダからサインインエンドポイント（SSO URL）と公開X.509証明書をコピーしてください。","ssoModal.createInstructionsXML":"あなたのIdentity ProviderがメタデータのURLまたはXMLファイルを提供している場合、ここに追加して最も迅速な設定オプションを利用してください。","ssoModal.createTitle":"SAML SSO設定を作成","ssoModal.deleteButton":"設定を削除","ssoModal.doneButton":"完了","ssoModal.editTitle":"SAML SSO設定の編集","ssoModal.nextButton":"次へ","ssoModal.signInLabel":"SSO URL","ssoModal.ssoMetadataLabel":"アプリ連携メタデータURL","textMessage.errorLoadingImage":"画像を読み込めませんでした","textMessage.imageAltText":"アップロードされた画像","textMessage.loadingImage":"読み込み中...","thread.helpAndFaq":"ヘルプ＆FAQ","thread.keyboardShortcutsMenu":"キーボードショートカット","thread.latencyButton":"レイテンシメニューを開く","thread.modal.onboarding.title":"このアプリケーションに機密資料を共有しないでください","thread.modal.reportModalThankYou.description":"ご報告いただきありがとうございます。","thread.modal.reportModalThankYou.dismissButton":"閉じる","thread.modal.reportModalThankYou.title":"ご報告いただきありがとうございます！","thread.modal.unrecoverableError.description":"申し訳ありませんが、何か問題が発生しました。後ほど再度お試しください。","thread.modal.unrecoverableError.resetThread":"スレッドをリセット","thread.modal.unrecoverableError.title":"何かが間違ってしまいました","thread.privacyPolicy":"プライバシーポリシー","thread.reportSharedConversation":"コンテンツを報告する","thread.sharedConversation.continue":"この会話を続ける","thread.sharedConversation.moderate":"会話を管理する","thread.sharedConversation.report":"会話を報告する","thread.sharingModal.confirmCloseWithChanges":"未保存の変更があります。続けますか？","thread.sharingModal.copied":"コピーしました！","thread.sharingModal.copiedSharedConversationURL":"共有会話のURLをクリップボードにコピーしました！","thread.sharingModal.copyLink":"リンクをコピー","thread.sharingModal.copying":"コピー中...","thread.sharingModal.failedToCopyLink":"クリップボードへのリンクのコピーに失敗しました","thread.sharingModal.failedToDeleteSharedLink":"共有リンクの削除に失敗しました","thread.sharingModal.moreInfo":"詳細情報","thread.sharingModal.title":"チャットのリンクを共有する","thread.sharingModal.updateAndCopyLink":"リンクを更新してコピー","thread.termsOfUse":"利用規約","useFilePickerState.maxUploadsAtATime":"{fileName}をアップロードできません。一度にアップロードできるのは最大{maxUploads}ファイルまでです","useModelSwitcherModels.gpt3_5.disclaimer":"無料及びプラスユーザーに利用可能","useModelSwitcherModels.gpt4.disclaimer":"プラスユーザー専用です","useWorkspaces.adminRoleName":"管理者","useWorkspaces.defaultWorkspaceTitle":"無題のワークスペース","useWorkspaces.enterprisePlanName":"エンタープライズ","useWorkspaces.ownerRoleName":"オーナー","useWorkspaces.personalPlanName":"パーソナル","useWorkspaces.personalWorkspaceTitle":"個人のワークスペース","useWorkspacews.standardRoleName":"メンバー","userContextModal.aboutUserTip1":"あなたはどこに住んでいますか？","userContextModal.aboutUserTip2":"あなたの仕事は何ですか？","userContextModal.aboutUserTip3":"あなたの趣味や興味は何ですか？","userContextModal.aboutUserTip4":"何時間でも話せる話題は何ですか？","userContextModal.aboutUserTip5":"あなたの目標は何ですか？","userContextModal.aboutYouHelpText":"ChatGPTにあなたについて何を知らせれば、より良い応答を提供できると思いますか？","userContextModal.cancel":"キャンセル","userContextModal.chatPreferencesEnable":"新しいチャットで有効にする","userContextModal.confirmCloseBody":"本当に終了しますか？あなたが行ったすべての変更は永久に失われます。","userContextModal.confirmCloseCancel":"キャンセル","userContextModal.confirmCloseOk":"終了","userContextModal.confirmCloseTitle":"保存されていない変更があります。","userContextModal.disableToggleLabel":"チャットの設定を無効にする","userContextModal.enableToggleLabel":"チャット設定を有効にする","userContextModal.hideTips":"ヒントを隠す","userContextModal.messageLimitError":"レスポンスは{limit}文字以下に制限してください。","userContextModal.modApiVoilation":"このコンテンツは、当社の<policyLink>コンテンツポリシー</policyLink>に違反している可能性があります。これが誤りであると思われる場合は、<feedbackLink>フィードバックを提出</feedbackLink>してください - あなたの意見は、この分野の研究に役立ちます。","userContextModal.modelHelpText":"ChatGPTにどのように応答してほしいですか？","userContextModal.modelTip1":"ChatGPTはどの程度正式またはカジュアルであるべきですか？","userContextModal.modelTip2":"一般的に、応答はどの程度の長さが適切でしょうか？","userContextModal.modelTip3":"どのように呼びかけられたいですか？","userContextModal.modelTip4":"ChatGPTはトピックに対して意見を持つべきですか、それとも中立を保つべきですか？","userContextModal.save":"保存","userContextModal.showTips":"ヒントを表示","userContextModal.tipsHeader":"アイデアの誘発","workspaceAnalytics.activeUsersChartLabel":"アクティブユーザー","workspaceAnalytics.activeUsersLastWeek":"先週のアクティブユーザー","workspaceAnalytics.conversationsLabel":"会話数","workspaceAnalytics.messagesChartLabel":"メッセージ","workspaceAnalytics.messagesLabel":"メッセージ","workspaceAnalytics.messagesLast30Days":"過去30日間で処理されたメッセージ：{count, plural, =0 {メッセージなし} one {# 件のメッセージ} other {# 件のメッセージ}}","workspaceAnalytics.messagesLastWeek":"先週処理されたメッセージ","workspaceAnalytics.title":"ワークスペース分析","workspaceAnalytics.totals":"過去30日間の合計","workspaceAnalytics.understand":"あなたのワークスペースがChatGPTをどのように使用しているかを理解する","workspaceAnalytics.usageTitle":"利用状況","workspaceAnalytics.usersLabel":"ユーザー","workspaceAnalytics.usersLast30Days":"過去30日間における{count, plural, =0 {アクティブユーザーなし} one {#人のアクティブユーザー} other {#人のアクティブユーザー}}","workspaceAnalytics.weeklyUsersTitle":"週間ユーザー","workspaceIdentity.acsURLLabel":"アサーションコンシューマーサービス（ACS）URL","workspaceIdentity.autoProvisionBody":"確認済みのドメインでログインする新規ユーザーに対して、自動的にChatGPT Enterpriseアカウントを作成します。","workspaceIdentity.autoProvisionSubtitle":"自動的なアカウント作成","workspaceIdentity.certExtractFailed":"提供されたXMLからX.509証明書が見つかりません","workspaceIdentity.copiedACSToClipboard":"ACS URLをクリップボードにコピーしました","workspaceIdentity.copiedEntityToClipboard":"エンティティIDをクリップボードにコピーしました","workspaceIdentity.copiedIDPUrlToClipboard":"IDP URLをクリップボードにコピーしました","workspaceIdentity.domainSubtitle":"ドメイン管理","workspaceIdentity.enforceSSOBody":"SSOが有効になると、ユーザーはソーシャルログインを使用できなくなり、SSOポータルにリダイレクトされます。","workspaceIdentity.enforceSSOLabel":"SSO強制を有効または無効にするトグル","workspaceIdentity.enforceSSOTitle":"SSOログインを強制","workspaceIdentity.entityIDLabel":"エンティティID","workspaceIdentity.idpSignInURL":"IDPタイルのURL","workspaceIdentity.learnMoreLink":"詳細を学ぶ","workspaceIdentity.orDivider":"または","workspaceIdentity.setupSSOContent":"確認済みドメインのメールアドレスを使用するすべての人は、SAML SSOを通じてログインできます。","workspaceIdentity.ssoAddButton":"SAML SSOを追加","workspaceIdentity.ssoEditButton":"SAML SSOを編集","workspaceIdentity.ssoLearnMoreLink":"もっと詳しく学ぶ","workspaceIdentity.ssoTitle":"シングルサインオン","workspaceIdentity.ssoUrlExtractFailed":"提供されたXMLからエンティティID（サインインエンドポイント）を見つけることができません","workspaceIdentity.title":"アイデンティティとプロビジョニング","workspaceIdentity.toggleAutoProvisionLabel":"自動プロビジョニングを有効または無効にするトグル","workspaceIdentity.verifyDomainInfoText":"シングルサインオンを含む高度なセキュリティ機能にアクセスするために、メールドメインの所有権を確認してください。","workspacePopoverNavigation.chatPreferences":"カスタム指示","workspacePopoverNavigation.myWorkspaceSettings":"ワークスペースの設定","workspaceSettings.conversationRetention":"会話の保持","workspaceSettings.featureSettingsUpdateFailed":"機能設定の更新に失敗しました","workspaceSettings.retentionChange":"この設定を変更するには、アカウントマネージャーに連絡してください。","workspaceSettings.retentionCustomDays":"{num}日","workspaceSettings.retentionInfinite":"無限","workspaceSettings.retentionNinetyDays":"90日間","workspaceSettings.retentionOneYear":"1年","workspaceSettings.title":"管理者設定","workspaceSwitcher.disclaimer":"あなたは{workspaces} {numWorkspaces, plural, one {ワークスペース} other {ワークスペース}}に追加されました。いつでもワークスペースを切り替えることができます。","workspaceSwitcher.title":"ワークスペースを選択","LocaleContextProvider.alphaButton":"アルファに参加する","settingsModal.locale_alpha":"ロケール（アルファ）","ContextConnectorPicker.attachFiles":"ファイルを添付","ContextConnectorPicker.connectOAuth":"接続","ContextConnectorPicker.modalTitle":"Googleドライブからアップロード","ContextConnectorPicker.search":"検索","ContextConnectorPicker.tableNameLabel":"ファイル名","ContextConnectorPicker.tableTypeLabel":"ファイルタイプ","EmbeddedPaymentModal.modalTitle":"あなたのプラン","FileDataView.fileDescDocument":"ドキュメント","FileDataView.fileDescFile":"ファイル","FileDataView.fileDescImage":"画像","FileDataView.fileDescPresentation":"プレゼンテーション","FileDataView.fileDescSpreadsheet":"スプレッドシート","FileDataView.fileDescZip":"Zipアーカイブ","FileTile.userUploadedImage":"ユーザーがアップロードした画像","FreeTrialMenuItem.daysOfBenefit":"{referralTrialDurationDays, plural, one {無料体験1日} other {無料体験#日間}}","FreeTrialMenuItem.monthsOfBenefit":"{referralTrialDurationMonths, plural, one {1ヶ月無料} other {#ヶ月無料}}","InviteReferralModal.activateReferralError":"紹介の招待を受け入れることができませんでした。もう一度お試しください。","InviteReferralModal.clickToActivateString":"chat.openai.com/invite/<codeStyle>•••••••</codeStyle>をクリックして招待を有効にする","InviteReferralModal.clickToCopyString":"クリックしてコピー","InviteReferralModal.copiedReferralToastMessage":"あなたの紹介リンク {referralInviteCode} がクリップボードにコピーされました。友達と共有してください！","InviteReferralModal.inviteDescription":"ChatGPT Plusを友人と共有しましょう！","InviteReferralModal.inviteDescriptionFollowUp":"以下の紹介リンクを有効化してコピーし、ChatGPT Plusを友人と共有しましょう。これにより、彼らは無料トライアルを利用することができます！","InviteReferralModal.inviteFormTitle":"メール","InviteReferralModal.invitePlaceholder":"friend@openai.com, friend2@openai.com...","InviteReferralModal.inviteRemaining":"{remainingInviteCount}件の招待が残っています","InviteReferralModal.modalTitle":"友達を紹介する","InviteReferralModal.referralActivate":"リファラルコードを有効にする","InviteReferralModal.referralClaimed":"請求済み","InviteReferralModal.referralCodeLabel":"紹介コード","InviteReferralModal.referralCopied":"コピー済み","InviteReferralModal.referralCopy":"コピー","InviteReferralModal.sendInviteCta":"招待を送る","InviteReferralModal.usersInvited":"<showcaseValue>{usersInviteCount}</showcaseValue><description>招待したユーザー</description>","Login.ariaLabel":"OpenAIのChatGPT","Login.continueWithGoogle":"Googleで続ける","Login.continueWithMicrosoft":"Microsoftで続ける","Login.logIn":"ログイン","Login.logInWithOpenAI":"続行するには、OpenAIのアカウントでログインしてください","Login.orTryAnotherWay":"または、他の方法を試してみてください","Login.pageTitle":"始めましょう","Login.signUp":"登録する","Login.useDevAuth":"開発認証を使用する","Login.useProdAuth":"プロダクション認証を使用する","Login.welcome":"ChatGPTへようこそ","PaymentMenuItems.freeTrialCta":"{duration}を無料で試す！","PaymentMenuItems.inviteReferral":"友達を紹介する","PaymentMenuItems.paymentErrorWarning":"支払いページでエラーが発生しました。もう一度お試しください。問題が続く場合は、help.openai.comをご覧ください。","PaymentMenuItems.renewPlus":"プラスを更新","PaymentsSuccess.continueButton":"続ける","PaymentsSuccess.pageTitle":"アカウント - 支払い成功","PromptFilePicker.attachFiles":"ファイルを添付する","PromptFilePicker.attachImages":"画像を添付する","PromptTextarea.loading":"読み込み中...","PromptTextarea.requiresPluginsToBeInstalled":"プラグインのインストールが必要です","ReferralInvite.acceptInviteCtaLoggedIn":"招待を受け取る","ReferralInvite.acceptInviteCtaLoggedOut":"始めましょう","ReferralInvite.alreadyPaidUserCta":"ChatGPT Plusのサブスクリプションが見つかりました","ReferralInvite.ariaLabel":"OpenAIのChatGPT","ReferralInvite.benefitPointsHeader":"ChatGPT Plusは、OpenAIの会話型AIへのプレミアムアクセスをサブスクライバーに提供します。これには以下のものが含まれます：","ReferralInvite.claimInviteLoginOrSignUp":"ログインまたはサインアップ後にこの招待を請求することができます。","ReferralInvite.claimReferralError":"問題が発生しました。","ReferralInvite.ctaFollowUpSummary":"{monthsOfService}ヶ月無料、その後は{monthlyCost}/月","ReferralInvite.ctaHeaderDays":"ChatGPT Plusの{referralTrialDurationDays, plural, one {1日} other {# 日間}}を請求してください","ReferralInvite.ctaHeaderMonths":"ChatGPT Plusの{referralTrialDurationMonths, plural, one {1ヶ月} other {#ヶ月}}を請求してください","ReferralInvite.ctaNotice":"<avatar></avatar> <email>{userEmail}</email>との紹介を請求しています。<link>あなたではありませんか？</link>","ReferralInvite.daysOfBenefit":"{referralTrialDurationDays, plural, one {# 無料日} other {# 無料日}}","ReferralInvite.daysOfService":"{referralTrialDurationDays, plural, one {# 日} other {# 日間}}","ReferralInvite.dollarValue":"（{offerDollarValue}ドルの価値）","ReferralInvite.errorDescription":"リダイレクトされます。または、<link>ここをクリックしてください。</link>","ReferralInvite.errorHeader":"招待エラー","ReferralInvite.loadingDescription":"あなたのページがロードされます、または<link>ここをクリックしてホームに戻ってください。</link>","ReferralInvite.loadingHeader":"招待状の読み込み中","ReferralInvite.monthsOfBenefit":"{referralTrialDurationMonths, plural, one {無料の1ヶ月} other {無料の#ヶ月}}","ReferralInvite.monthsOfService":"{referralTrialDurationMonths, plural, one {# ヶ月} other {# ヶ月}}","ReferralInvite.referralCodeContent":"紹介コード：{codeToken}","ReferralInvite.signUpCtaBack":"戻る","ReferralInvite.signUpCtaProceed":"進む","ReferralInvite.signUpExplainDescription":"登録が完了したら、このページに戻って招待を受け取ってください。","ReferralInvite.signUpExplainTitle":"もう少しで完了です！","ReferralInvite.socialProofText":"{referrerName}さんから<highlight>{benefitWithTime}</highlight>の{receivedPlan} {dollarValue}を送られました","ReferralInvite.welcome":"ChatGPTへようこそ","RequestInviteManager.accept":"承認","RequestInviteManager.actions":"操作","RequestInviteManager.email":"メール","RequestInviteManager.noResults":"招待が見つかりません","RequestInviteManager.reject":"拒否","RequestInviteManager.role":"役割","WorkspaceInvites.deleteInviteError":"ワークスペースからユーザー（{email}）を削除できません：{error}","WorkspaceInvites.resendInviteError":"ワークスペースから({email})への招待を再送できません：{error}","WorkspaceInvites.resendInviteSuccess":"新しい招待を{email}に送信しました","WorkspaceInvites.updateInviteError":"ワークスペースからの招待を更新できません：{error}","adminPage.pendingRequests":"保留中のリクエスト","announcementTooltip.new":"新しい","browsingMessage.browsingFailed":"閲覧エラー","browsingMessage.browsingStopped":"閲覧を停止しました","browsingMessage.searching":"Bingを検索中","browsingMessage.searchingForQuery":"「{query}」を検索中","dalleMessage.imageLoadError":"画像の読み込みエラー","dalleMessage.imageViewerMetadataCopyButton":"コピー","dalleMessage.imageViewerMetadataCopyButtonCopied":"コピーしました！","dalleMessage.imageViewerMetadataTitle":"プロンプト","imageViewer.closeModal":"モーダルを閉じる","imageViewer.downloadImage":"画像をダウンロード","imageViewer.nextImage":"次の画像","imageViewer.previousImage":"前の画像","imageViewer.showImage":"画像を表示","imageViewer.toggleSidebar":"サイドバーを切り替える","parallelBrowsingMessage.almostDone":"ほぼ終了","parallelBrowsingMessage.cancelledV2":"調査を停止しました","parallelBrowsingMessage.creatingPlanV2":"調査計画を作成中","parallelBrowsingMessage.running_2":"訪問中 {numTasks, plural, one {# サイト} other {# サイト}}","AccountPaymentModal.modalFooterCapabilities":"さらに高度な機能が必要ですか？<link> ChatGPT Enterprise </link>をご覧ください","AccountPaymentModel.billingHelp":"請求に関する問題で助けが必要です","AgeVerificationInterstitial.description0":"ChatGPTを引き続き使用するには、簡単な年齢確認を完了する必要があります","AgeVerificationInterstitial.description1":"platform.openai.comにリダイレクトされ、ログインする必要があります。","AgeVerificationInterstitial.description1a":"あなたが13歳から17歳の間である場合、保護者または後見人があなたに代わって年齢確認を完了させる必要があります。","AgeVerificationInterstitial.description1b":"このプロセスは迅速かつ安全です。","AgeVerificationInterstitial.description2":"その後、年齢を確認するために、私たちの年齢確認プロバイダーであるYotiにリダイレクトされます。","AgeVerificationInterstitial.description2-v3":"私たちは、イタリアのユーザーがChatGPTを使用するのに十分な年齢であることを確認する必要があります。<learnMoreLink>詳細はこちら</learnMoreLink>。","AgeVerificationInterstitial.redirect":"platform.openai.comでサインインしてください","AgeVerificationInterstitial.title":"あなたの年齢を確認してください","AgeVerificationInterstitial.title1":"次に何が起こりますか？","AgeVerificationInterstitial.title2":"なぜこれを行う必要があるのですか？","BlockingInitialModals.workspaceWelcome":"{workspaceName} ワークスペースへようこそ","CodeExecutionOutputImage.altText":"コード実行出力画像","CodeExecutionOutputImage.imageNotSupported":"共有チャットでは画像出力はサポートされていません","CodeExecutionOutputModal.title":"分析","ContextConnectorPicker.signInWithMessage":"{connector_name}でサインイン","ContextConnectorPicker.uploadWithMessage":"{connector_name}からアップロード","ConversationTurn.anonymousName":"匿名","ConversationTurn.you":"あなた","CookieConsentBanner.accept":"すべてを承認する","CookieConsentBanner.reject":"すべて拒否","CookieConsentBanner.title":"私たちはクッキーを使用して、サービスを提供、改善、保護しています。詳しくは<privacyPolicyLink>プライバシーポリシー</privacyPolicyLink>をご覧ください。あなたのクッキーの設定は<settingsPanel>設定パネル</settingsPanel>で管理できます。<learnMoreLink>詳しくはこちら</learnMoreLink>。","CookieConsentBanner.updateFailure":"クッキーの設定を更新できませんでした。後でもう一度お試しください。","CookieConsentBanner.updateSuccess":"クッキーの設定が正常に更新されました","CopyButton.copy":"コピー","FileDropZone.dragAllAccepted":"ここに任意のファイルをドロップして会話に追加してください","FileDropZone.dragInstructions":"ファイルをドラッグアンドドロップしてアップロードしてください","FileUploadBox.helpText":"ここにファイルをドロップしてアップロード","FileUploadBox.openFilePicker":"ファイルを参照","GizmoConversationOptionsDropdown.debugChat":"チャットをデバッグ","GizmoConversationOptionsDropdown.deleteChat":"チャットを削除","GizmoConversationOptionsDropdown.renameChat":"チャットの名前を変更","GizmoConversationOptionsDropdown.shareChat":"チャットを共有する","GizmoEditorModelPicker.disabledBrowsingToolTip":"あなたのワークスペースではウェブブラウジングが無効になっています。それを有効にするには、管理者に連絡してください。","GizmoInformation.about":"詳細","GizmoInformation.copiedURL":"URLをコピーしました","GizmoInformation.copyLink":"リンクをコピー","GizmoInformation.customize":"GPTをカスタマイズ","GizmoInformation.debugChat":"デバッグ","GizmoInformation.deleteChat":"チャットを削除","GizmoInformation.favorite":"お気に入り","GizmoInformation.newChat":"新しいチャット","GizmoInformation.privacy":"プライバシー","GizmoInformation.privacySettings":"プライバシー設定","GizmoInformation.renameChat":"チャットの名前を変更","GizmoInformation.report":"報告","GizmoInformation.share":"共有","GizmoInformation.shareChat":"チャットを共有する","GizmoInformation.viewDetails":"詳細を見る","GizmoLanding.howCanIHelpYouToday":"今日は何をお手伝いしましょうか？","GizmoLanding.temporaryChat":"一時的なチャット","GizmoPrivacySettings.actions":"アクション","GizmoPrivacySettings.allowedActionsDesc":"{gizmoName}との会話で許可される第三者のアクションを選択してください。","GizmoPrivacySettings.allowedActionsTitle":"GPTのプライバシー設定","GizmoPrivacySettings.alwaysAllowDropdown":"常に許可","GizmoPrivacySettings.askDropdown":"尋ねる","GizmoPrivacySettings.connectedAccounts":"接続済みのアカウント","GizmoPrivacySettings.connectedAccountsDesc":"{gizmoName}によってアクセスできる第三者のアカウントを管理します。","GizmoPrivacySettings.login":"ログイン","GizmoPrivacySettings.logout":"ログアウト","GizmoPrivacySettings.privacyPolicyLink":"プライバシーポリシー","GizmoPrivacySettings.title":"GPTのプライバシー設定","GizmoSharedConversationCTA.gptAvailable":"ChatGPTで<bolded>{gizmoName}</bolded>とチャットしましょう","GizmoSharedConversationCTA.gptDefault":"<bolded>ChatGPT</bolded>を始めましょう","GizmoSharedConversationCTA.gptUnavailable":"自分だけの<bolded>GPT</bolded>を作成してください","GizmoSharedConversationCTA.userUpgrade":"<bolded>{gizmoName}</bolded>とチャットするためにPlusにアップグレードしてください","GizmoSharedConversationCTA.userUpgradeNoGizmo":"自分だけの<bolded>GPT</bolded>を作成するためにPlusにアップグレードしてください","GizmoSocialRow.addDomain":"新しいドメインを確認する","GizmoSocialRow.selectADomain":"ドメインを選択","ManageCookiesModal.accept":"すべて承認する","ManageCookiesModal.description":"OpenAIは、あなたの体験を向上させ、サイトのトラフィックを分析するためにクッキーを使用しています。詳細は、当社の<cookiePolicy>クッキーポリシー</cookiePolicy>をご覧ください。","ManageCookiesModal.preference1title":"必須","ManageCookiesModal.preference1toggle":"必要なクッキーを許可する","ManageCookiesModal.preference2title":"分析","ManageCookiesModal.preference2toggle":"分析用クッキーを許可する","ManageCookiesModal.reject":"すべて拒否","ManageCookiesModal.title":"クッキーの管理","ManageCookiesModal.updateFailure":"クッキーの設定を更新できませんでした。後でもう一度お試しください。","ManageCookiesModal.updateSuccess":"クッキーの設定が正常に更新されました","MemoryOnboardingModal.bulletTitle1":"会話を続けてください","MemoryOnboardingModal.bulletTitle3":"それが覚える内容を管理する","MemoryOnboardingModal.continue":"閉じる","ModelSwitcher.gpt35ShortExplainer":"日常のタスクに最適","ModelSwitcher.gpt4ShortExplainer":"DALL\xb7Eと分析機能付き","ModelSwitcher.gpt4Upsell":"私たちの最も賢く、最も能力のあるモデル。DALL\xb7E、ブラウジングなどが含まれています。","ModelSwitcher.temporaryChat":"一時的なチャット","ModelSwithcer.upgradeButton":"プラスにアップグレード","NavigationContent.closeSidebar":"サイドバーを閉じる","PaymentMenuItems.inviteMembers.0":"メンバーを招待する","PaymentMenuItems.upgradeToPlusUpsell.0":"GPT-4、DALL\xb7Eなどを手に入れましょう","PaymentMenuItems.upgradeToTeamUpsell":"チームプランにアップグレードして共同作業しましょう","PaymentsSuccess.paymentSuccessful":"ChatGPT Plusにアップグレードされました","PaymentsSuccess.trial":"試用期間が開始しました","PluginChooser.pluginsInstalled":"{count, plural, =0 {プラグインなし} one {# プラグイン} other {# プラグイン}}がインストールされています","PrivacyPolicyUpdateBanner.Agree":"同意する","PrivacyPolicyUpdateBanner.content.exeea":"当社の<termsLink>利用規約</termsLink>と<privacyPolicyLink>プライバシーポリシー</privacyPolicyLink>を更新しました。これは2024年1月31日から有効です。引き続き当社のサービスを利用することで、これらの更新された規約に同意したことになります。<faqLink>詳しくはこちら</faqLink>。","PrivacyPolicyUpdateBanner.dismiss":"同意しない","PrivacyPolicyUpdateBanner.title.exeea":"利用規約とプライバシーポリシーを更新しました","PromptTextarea.guidedRegenerateResponse":"改善","PromptTextarea.longer":"長い","PromptTextarea.moreCasual":"もっとカジュアルに","PromptTextarea.moreCreative":"より創造的に","PromptTextarea.moreProfessional":"よりプロフェッショナル","PromptTextarea.placeholderWithName":"{name}にメッセージを送る…","PromptTextarea.regenerate":"再生成","PromptTextarea.shorter":"短い","PromptTextarea.targetedReply":"返信先：","RequestWorkspaceAccessModal.activeRequestMessage":"あなたはこのワークスペースへの招待リクエストを保留中です。ワークスペースの管理者に{email}で連絡して、リクエストを承認してもらってください。","RequestWorkspaceAccessModal.contactWorkspaceAdminEmail":"アクセスをリクエストできませんでした。新しいワークスペースアカウントへのアクセスをリクエストするために、ワークスペースの管理者に{email}で連絡してください。","RequestWorkspaceAccessModal.emailBelongsToWorkspace":"{email}はChatGPTエンタープライズプランに所属していますが、現在アクセスできません。","RequestWorkspaceAccessModal.requestAccessButton":"アクセスをリクエスト","RequestWorkspaceAccessModal.requestWorkspaceAccessMessage":"ワークスペースアカウントへのアクセスをリクエストできます。","RequestWorkspaceAccessModal.requestedWorkspaceAccessMessage":"ワークスペースアカウントへのアクセスリクエストを正常に送信しました。あなたのワークスペース管理者{email}がリクエストを承認するかもしれません。","RequestWorkspaceAccessModal.signOutButton":"サインアウト","RequestWorkspaceAccessModal.subtitle":"あなたのワークスペースでChatGPT Enterpriseが有効になりました","RequestWorkspaceAccessModal.title":"{workspaceName}へのアクセスをリクエスト","Stage.closeSidebar":"サイドバーを閉じる","Stage.openSidebar":"サイドバーを開く","TemporaryChatOnboardingModal.bulletDescription3":"一時的なチャットは、私たちのモデルの改善には使用されません。","TemporaryChatOnboardingModal.bulletTitle1":"オフ・ザ・レコード","TemporaryChatOnboardingModal.bulletTitle3":"モデルのトレーニングなし","TemporaryChatOnboardingModal.continue":"閉じる","TemporaryChatOnboardingModal.title":"一時的なチャット","TextMessageDisplay.gptUsageCapExceededCustomFeature":"GPT-4の現在の使用上限に達しました、{formattedTime}にもう一度お試しください。 <link>詳しくはこちら</link>","UpgradedToTeamSuccess.completeDescription":"あなたはチームのワークスペースを作成しました。ワークスペースにメンバーを招待することができます。これはワークスペースの設定ページからいつでも行うことができます。","UpgradedToTeamSuccess.completeTitle":"ワークスペースの設定が完了しました","UpgradedToTeamSuccess.continue":"続ける","UpgradedToTeamSuccess.continueToChatgpt":"ChatGPTに進む","UpgradedToTeamSuccess.description":"チームが作成されました。メンバーをワークスペースに招待して共同作業を開始できます。","UpgradedToTeamSuccess.inviteTitle":"{workspaceName}にメンバーを招待する","UpgradedToTeamSuccess.setupSubtitle":"ワークスペース名","UpgradedToTeamSuccess.setupTitle":"チームワークスペースを設定する","UpgradedToTeamSuccess.skipAddMembers":"スキップ","UpgradedToTeamSuccess.trial":"支払いが成功しました","adminPage":"ファイルが大きすぎます。{maxSize}より小さいCSVファイルをアップロードしてください。","adminPage.Settings":"設定","adminPage.adminPageTitle.0":"メンバー","adminPage.availableForEnterprise":"エンタープライズプランで利用可能","adminPage.billing.1":"課金","adminPage.errorRenewingSubscription":"サブスクリプションの再活性化中にエラーが発生しました。","adminPage.identity.0":"アイデンティティとプロビジョニング","adminPage.inviteMemberInviteCancelButton":"キャンセル","adminPage.inviteMemberModalDescription":"このワークスペースはプライベートで、選択されたメンバーとロールのみがこのワークスペースを使用できます。このワークスペースはトレーニングから除外されています。","adminPage.inviteMemberModalTitle":"{workspaceName} ワークスペースにメンバーを招待する","adminPage.inviteMemberModalTitleUntitledWorkspace":"このワークスペースにメンバーを招待する","adminPage.leaveWorkspace":"ワークスペースを退出する","adminPage.membersPageTitle":"メンバー","adminPage.reactivateBtn":"再活性化","adminPage.retainAccessUntil":"あなたは{expiryDate, date, long}の請求サイクルの終わりまでワークスペースへのアクセスを保持します。","adminPage.workspaceWillBeDeactivated":"このワークスペースは無効化されます。","ageVerificationBanner.dismiss":"閉じる","ageVerificationBanner.startVerification":"年齢確認を開始する","ageVerificationBanner.title-v1":"次の{deadline, plural, =0 {# 日間} one {# 日} other {# 日間}}であなたの年齢を確認してください。ChatGPTを使用するためには、あなたが十分な年齢であることを確認する必要があります。<learnMoreLink>詳しくはこちら</learnMoreLink>。","browsingMessage.readingDocument":"ドキュメント{filename}を読み込んでいます","browsingMessage.retrievalFailed":"ドキュメントの読み取りエラー","browsingMessage.retrievalStopped":"ドキュメントの読み取りを停止しました","browsingMessage.searchingKnowledge":"私の知識を検索中","browsingMessage.searchingKnowledgeFailed":"知識の検索に失敗しました","browsingMessage.searchingKnowledgeStopped":"知識の検索を停止しました","browsingMessage.startingRetrieval":"ドキュメントを読み込み中","browsingMessage.startingV3":"Bingで調査を開始しています","browsingMessage.visiting":"訪問中 {url}","cancelTeamPlanModal.areYouSure":"本当によろしいですか？","cancelTeamPlanModal.cancelPlan":"チームプランをキャンセル","cancelTeamPlanModal.cancelSubscriptionButton":"サブスクリプションをキャンセル","cancelTeamPlanModal.dataUnavailable":"すべてのワークスペースデータ（チャット履歴や設定を含む）は利用できなくなります。","cancelTeamPlanModal.doneButton":"完了","cancelTeamPlanModal.emailPlaceholder":"abcd@acme.com","cancelTeamPlanModal.enterEmailToConfirm":"確認のためにあなたのメールアドレスを入力してください","cancelTeamPlanModal.errorCancellingSubscription":"あなたのサブスクリプションのキャンセルに問題が発生しました。","cancelTeamPlanModal.keepSubscriptionButton":"サブスクリプションを続ける","cancelTeamPlanModal.retainUntil":"このメールアドレスに関連付けられている他のワークスペースでChatGPTを引き続き使用することができます。","cancelTeamPlanModal.successfullyCanceled":"あなたのサブスクリプションは正常にキャンセルされました。","citations.viewAnalysis":"分析を見る","codeInterpreterMessage.errorV2":"<expander>解析中にエラーが発生しました</expander>","codeInterpreterMessage.finished":"<expander>解析が完了しました</expander>","codeInterpreterMessage.resultLabel":"結果","codeInterpreterMessage.runningV2":"<expander>解析中</expander>","codeInterpreterMessage.stoppedV2":"<expander>解析を停止しました</expander>","components.business.NumSeats.description":"{num}席が使用中","components.business.NumSeats.dividerTooltip":"あなたのチームは{count, plural, =0 {席を購入していません} one {#つの席} other {#つの席}}を購入しました","connectorSettings.connect":"接続","connectorSettings.connectorsTitle":"ChatGPTでアプリの情報にアクセスするためにアプリを接続します。","connectorSettings.googleDriveDesc":"あなたのメッセージにGoogle Docs、Sheets、Slidesを添付するか、会話の文脈として追加してください。","connectorSettings.googleDriveIconAlt":"Google Driveのアイコン","connectorSettings.noConnectorSettings":"接続されたアプリを取得できません","connectorSettings.o365Desc":"メッセージにMicrosoft Word、Excel、Powerpointのファイルを添付したり、会話の文脈として追加してください。","connectorSettings.o365IconAlt":"Microsoft 365のアイコン","createWorkspace.cancel":"キャンセル","createWorkspace.continueToBillingButton":"請求情報へ進む","createWorkspace.exampleTeamWorkspaceName":"アクメ株式会社","createWorkspace.paymentErrorWarning":"支払いページでエラーが発生しました。もう一度お試しください。問題が続く場合は、help.openai.comをご覧ください。","createWorkspace.selectBillingOption":"チームプランを選択","createWorkspace.selectTeamPlan":"チームプランを選択","createWorkspace.selectTeamPlanModalTitle":"チームプランを選択してください","createWorkspace.title":"ワークスペースを作成","createWorkspace.workspaceNameDescription":"チームのワークスペース名を設定してください。名前はいつでも変更可能です。","createWorkspace.workspaceNameLabel":"ワークスペース名","dalleMessage.creatingImagesV2":"画像を作成中","dalleMessage.errorCreatingV2":"画像作成エラー","dalleMessage.stoppedV3":"画像作成を停止しました","deactivatedWorkspaceModal.chatHistoryUnavailable":"あなたのチャット履歴と設定は利用できません。","deactivatedWorkspaceModal.createPersonalWorkspace":"続けるために個人のワークスペースを作成してください","deactivatedWorkspaceModal.createPersonalWorkspaceButton":"パーソナルワークスペースを作成","deactivatedWorkspaceModal.deactivatedWorkspaceReason":"あなたのワークスペースが無効化されたため、ChatGPTを続けて使用するには個人のワークスペースを作成する必要があります。","deactivatedWorkspaceModal.otherWorkspacesAvailable":"このメールアドレスに関連付けられた他のワークスペースでChatGPTを引き続き使用することができます。","deactivatedWorkspaceModal.profileAlt":"プロフィール","deactivatedWorkspaceModal.selectWorkspace":"続けるにはワークスペースを選択してください","deactivatedWorkspaceModal.workspaceDeactivated":"あなたのワークスペースは無効化されました","deactivatedWorkspaceModal.workspaceDeactivatedDesc":"あなたのワークスペースは無効化されました。","domainModal.domainInput.0":"新しいドメインを追加","domainModal.newTitle.0":"新しいドメインを検証する","domainModal.successfulVerification.0":"あなたのドメイン、「{hostname}」は正常に確認されました","domainModal.unverifiedDomainsTableHeader":"あなたの未確認ドメイン","domainModal.verifyDomainButton":"確認","feedbackModal.employeeConsent":"このコンテンツをモデルの評価に使用することを許可します","feedbackModal.employeeConsentExplanation":"あなたのフィードバックと会話をモデルの評価に使用することを許可してください。会話に機密データが含まれていないことを確認してください。","fileUpload.fileCorrupted":"このファイルは破損しています。ファイルが破損していないことを確認して、再度お試しください。","fileUpload.fileEmpty":"このファイルからテキストを抽出できませんでした。","fileUpload.fileEncrypted":"このファイルは暗号化されている/アクセスにパスワードが必要です。暗号化されていないファイルで再度お試しください。","fileUpload.fileTooManyTokens":"このファイルにはテキスト内容が多すぎます。もっと小さいファイルで再試行してください。","fileUpload.fileZeroBytes":"ファイルが空です","fileUpload.permissionError":"ファイルへのアクセス権限がありません","gizmo.actionNeedsPrivacyPolicyURL":"公開アクションには有効なプライバシーポリシーのURLが必要です。更新するには<fixlink>ここ</fixlink>をクリックしてください。","gizmo.actions.blankExampleTitle":"空白のテンプレート","gizmo.actions.examples":"例子","gizmo.actions.petStoreExampleTitle":"ペットストア (YAML)","gizmo.actions.weatherExampleTitle":"天気 (JSON)","gizmo.anyoneWithLink":"リンクを持つ全ての人","gizmo.clearChat":"チャットをクリア","gizmo.confirmPublish":"確認","gizmo.copyLink":"リンクをコピー","gizmo.createActionLabel":"新しいアクションを作成","gizmo.delete":"GPTを削除","gizmo.descriptionTooLong":"GPTの説明文は{length}文字を超えることはできません。","gizmo.disabledCustomActionsTooltip":"あなたのワークスペースではカスタムアクションが無効になっています。それらを有効にするためには、管理者に連絡してください。","gizmo.discovery.createGPT":"GPTを作成する","gizmo.discovery.empty":"何も発見できません","gizmo.discovery.loadMore":"もっと読み込む","gizmo.discovery.myGPTs":"私のGPTs","gizmo.discovery.search":"公開されているGPTを検索","gizmo.discovery.search.empty":"結果が見つかりません","gizmo.discovery.search.recentlyUsed":"最近使用した","gizmo.discovery.search.results":"検索結果","gizmo.discovery.thirdPartyGPTsDisabled":"{workspaceName}の外部で作成されたGPTは管理者によってブロックされています。","gizmo.displayNameRequiredHint":"GPTを公開するには、ビルダープロファイルを設定してください。","gizmo.draft":"ドラフト","gizmo.errorSavingDraft":"ドラフトの保存中にエラーが発生しました","gizmo.explore":"探索する","gizmo.hideFromSidebar":"サイドバーから非表示","gizmo.instructionsTooLong":"GPTの指示は{length}文字を超えることはできません。","gizmo.keepInSidebar":"サイドバーに保持","gizmo.knowledgeExplanation":"このGPTが参照する追加のファイル。","gizmo.knowledgeWarning":"あなたのGPTとの会話にはファイルの内容が含まれる場合があります。コードインタープリタが有効になっていると、ファイルをダウンロードすることができます。","gizmo.maxActionsReached":"GPTは最大で{number}のアクションを持つことができます","gizmo.nameTooLong":"GPTの名前は{length}文字を超えることはできません。","gizmo.newChat":"新しいチャット","gizmo.newGPT":"新しいGPT","gizmo.onlyMe":"私だけ","gizmo.privacyAnyoneWithLink":"リンクを持つ人のみ","gizmo.privacyMarketplace":"公開","gizmo.privacyOnlyMe":"私だけ","gizmo.privacyWorkspace":"{workspaceName}の全員","gizmo.public":"公開","gizmo.publicSharingHint":"このGPTは、近日公開予定のGPTストアに表示される可能性があります","gizmo.publishChanges":"发布更改","gizmo.publishTo":"公開先","gizmo.published":"公開済み","gizmo.publishedTitle":"公開されました！","gizmo.revertConfirm":"最後に保存されたバージョンに戻してもよろしいですか？","gizmo.revertMenuItem":"最後に保存したバージョンに戻す...","gizmo.save":"保存","gizmo.viewGPT":"GPTを表示","gizmo.welcomeMessageTooLong":"GPTのウェルカムメッセージは{length}文字を超えることはできません。","gizmo.workspaceDisabledHint":"あなたのワークスペースの管理者がこの設定を無効にしました","globalToasts.conversationInaccessible":"会話がアクセス不可能または見つかりません","globalToasts.gizmoNotFound":"GPTがアクセスできないか見つかりません","globalToasts.noAccess":"現在、この機能にはアクセスできません","globalToasts.oauthSuccess":"OAuthを通じて正常にサインインしました","jitPluginMessage.allow":"許可","jitPluginMessage.alwaysAllow":"常に許可する","jitPluginMessage.confirmParamsTitleV2":"{gizmoName}はこの情報を{domain}に送信する必要があります","jitPluginMessage.decline":"拒否","jitPluginMessage.declined":"あなたはこのアクションを拒否しました","jitPluginMessage.errorV5":"{domain}との通信エラー","jitPluginMessage.finishedV3":"<params>{domain}と通信しました</params>","jitPluginMessage.privacyPolicyLinkV2":"プライバシーポリシー","jitPluginMessage.ranTest":"テスト実行 {operationName}","jitPluginMessage.runningV4":"{domain}と通信中","jitPluginMessage.sentParamsTitleV2":"{gizmoName}がこの情報を{domain}に送信しました","jitPluginMessage.signInButton":"{domain}でサインイン","jitPluginMessage.starting":"アクションを開始します","jitPluginMessage.stoppedV4":"{domain}との通信をユーザーにより停止しました","leaveWorkspaceModal.cancel":"キャンセル","leaveWorkspaceModal.cantLeaveWorkspace":"{workspaceName} ワークスペースを退出できませんでした","leaveWorkspaceModal.done":"完了","leaveWorkspaceModal.enterYourEmail":"確認のため、メールアドレスを入力してください","leaveWorkspaceModal.lastOwnerWarning":"{workspaceName} ワークスペースではあなたが唯一のオーナーであるため、退出する前に他のメンバーにオーナーの役割を割り当ててください。","leaveWorkspaceModal.leaveAreYouSure":"本当によろしいですか？","leaveWorkspaceModal.leaveButton":"ワークスペースを退出","leaveWorkspaceModal.leaveFailed":"ワークスペースからの退出に失敗しました","leaveWorkspaceModal.leaveWorkspace":"{workspaceName}のワークスペースを退出する","leaveWorkspaceModal.leaveWorkspaceWarning1":"これにより、あなたはワークスペースから削除され、プロフィール、設定、チャット履歴を含むすべてのデータにアクセスできなくなります。","leaveWorkspaceModal.leaveWorkspaceWarning2":"このワークスペース内のすべてのチャンネルとメッセージへのアクセスが失われます。","leaveWorkspaceModal.leftWorkspaceDescription":"あなたは{workspaceName}ワークスペースを正常に退出しました。","leaveWorkspaceModal.leftWorkspaceDescriptionNoOtherWorkspaces":"あなたは{workspaceName}ワークスペースを正常に退出しました。これにより、あなたの個人ワークスペースが自動的に作成されます。","leaveWorkspaceModal.leftWorkspaceTitle":"無事に{workspaceName}ワークスペースを退出しました","leaveWorkspaceModal.memberCount":"{memberCount, plural, one {1人のメンバー} other {{memberCount}人のメンバー} }","leaveWorkspaceModal.ok":"OK","leaveWorkspaceModal.startPersonalAccount":"無料でChatGPTを使用し始める","message.gizmo.failed":"プロフィール画像の生成に失敗しました。","message.gizmo.generatingProfilePic":"プロフィール画像を生成中...","message.gizmo.updating":"GPTを更新中...","modelCapMessaging.shortLimitDays":"制限 {numerator, plural, =0 {# メッセージ} one {# メッセージ} other {# メッセージ}} / {denominator, plural, =0 {# 日} one {# 日} other {# 日}}","navigation.addWorkspaceTooltip":"チームのワークスペースを作成","navigation.disabledWorkspaceTooltip":"このワークスペースは無効化されました","navigation.leaveWorkspace":"ワークスペースを退出する","onboarding.chatgptTitle.0":"{workspaceName} ワークスペースへようこそ","onboarding.continueButton":"続ける","onboarding.departments.administrative":"行政補佐","onboarding.departments.analytics":"データまたはアナリティクス","onboarding.departments.comms":"コミュニケーション","onboarding.departments.customer_experience":"カスタマーエクスペリエンス","onboarding.departments.design":"デザイン","onboarding.departments.education_professional":"教育専門家","onboarding.departments.engineering":"エンジニアリング","onboarding.departments.finance":"財務または会計","onboarding.departments.healthcare":"ヘルスケア専門家","onboarding.departments.human_resources":"人事部","onboarding.departments.it":"情報技術 (IT)","onboarding.departments.legal":"法務","onboarding.departments.marketing":"マーケティング","onboarding.departments.ops":"運用","onboarding.departments.other":"その他","onboarding.departments.partnerships":"パートナーシップ","onboarding.departments.product":"製品管理","onboarding.departments.project_management":"プロジェクトまたはプログラム管理","onboarding.departments.research":"研究開発","onboarding.departments.sales":"営業","onboarding.primaryRoleTitle":"あなたの主な役割は何ですか？","onboarding.role.business_owner":"ビジネスオーナー","onboarding.role.director":"ディレクター","onboarding.role.executive":"エグゼクティブ","onboarding.role.freelancer":"フリーランサー","onboarding.role.manager":"マネージャー","onboarding.role.other":"その他","onboarding.role.student":"学生","onboarding.role.team_member":"チームメンバー/ 個人貢献者","onboarding.selectAll":"該当するすべてを選択してください","onboarding.skipButton":"スキップ","onboarding.tailorChatGPT":"これにより、私たちはあなたのためにChatGPTをカスタマイズするのに役立ちます。","onboarding.workTypeTitle":"あなたはどのような仕事をしていますか？","organizationBillingInfo.cancelSubscriptionBtn":"サブスクリプションをキャンセル","organizationBillingInfo.invoicesLoadError.0":"請求書の読み込みに失敗しました。エラーが続く場合は、support@openai.comまでご連絡ください。","organizationBillingInfo.managePaymentMethodBtn":"支払い方法を管理する","organizationBillingInfo.manageSubscription":"サブスクリプションを管理する","organizationBillingInfo.noInvoices":"請求書が見つかりません","organizationBillingInfo.renewalDate":"{expiryDate, date, long}に無効化されます","organizationBillingInfo.stripeErrorWarning":"アカウント情報の読み込みエラー","organizationBillingInfo.subtitle":"これらの設定はワークスペースの所有者だけが閲覧および変更できます","organizationBillingInfo.teamsAutochargeMessage":"追加の席は次回の請求書に含まれます。","organizationBillingInfo.title.1":"請求情報","personalizationSettings.customInstructions":"カスタム指示","personalizationSettings.off":"オフ","personalizationSettings.on":"オン","popoverNavigation.myGpts":"私のGPTs","pricingPlanConstants.free.callToAction":"あなたの現在の無料プラン","pricingPlanConstants.free.freeAdvertisedFeatures0":"無制限のメッセージ、インタラクション、および履歴","pricingPlanConstants.free.freeAdvertisedFeatures1":"私たちのGPT-3.5モデルへのアクセス","pricingPlanConstants.free.freeAdvertisedFeatures2":"Web、iOS、Androidでのアクセス","pricingPlanConstants.free.freePlanForLine":"ChatGPTを始めて使う人々向け","pricingPlanConstants.highDemandDisabledText":"需要が高いため、一時的にアップグレードを停止しています。","pricingPlanConstants.plus.forLine":"無料プランの全てに加えて：","pricingPlanConstants.plus.plusAdvertisedFeatures0":"私たちの最も優れたモデルであるGPT-4へのアクセス","pricingPlanConstants.plus.plusAdvertisedFeatures1":"GPTを閲覧、作成、利用する","pricingPlanConstants.plus.plusAdvertisedFeatures2":"DALL\xb7E、ブラウジング、高度なデータ分析などの追加ツールへのアクセス","pricingPlanConstants.plusWaitlistSignupSuccess":"Plusへのアップグレード待ちリストに追加されました","pricingPlanConstants.signUpForWaitlistActive":"ウェイトリストに登録する","pricingPlanConstants.signUpForWaitlistInactive":"ウェイトリストに登録済み","pricingPlanConstants.teamWaitlistSignupSuccess":"チームへのアップグレード待ちリストに追加されました","pricingPlanConstants.teams.teamPlanActive":"あなたの現在のプラン","pricingPlanConstants.teams.teamPlanContext":"4倍長いコンテキストでより大きな素材を扱うことができます","pricingPlanConstants.teams.teamPlanCreate":"チームを作成","pricingPlanConstants.teams.teamPlanForLine":"プラスプランの全てに加えて：","pricingPlanConstants.teams.teamPlanInactive":"チームにアップグレード","pricingPlanConstants.teams.teamPlanName":"チーム","pricingPlanConstants.teams.teamPlanSubTitle":"1人あたり月額USD $25*","pricingPlanConstants.teams.teamPlanUsageRates":"無制限の高速GPT-4","pricingPlanConstants.teams.teamPricingDisclaimer":"* 価格は年間で請求され、最低2ユーザーが必要です","pricingPlanConstants.teams.teamsAdvertisedFeatures0":"GPT-4やDALL\xb7E、ブラウジング、高度なデータ分析などのツールへのアクセスが拡大","pricingPlanConstants.teams.teamsAdvertisedFeatures1":"ワークスペースでGPTを作成し、共有する","pricingPlanConstants.teams.teamsAdvertisedFeatures2":"ワークスペース管理のための管理者コンソール","rating.instructions":"これまでの会話は役に立ちましたか？","rating.thanks":"あなたのフィードバックをありがとうございます！","settingsModal.addDomain":"新しいドメインを確認する","settingsModal.apiAccessDeletionWarning-2":"削除すると、ChatGPT、API、DALL\xb7Eを含むOpenAIサービスにアクセスできなくなります。","settingsModal.byName":"{name}による","settingsModal.connectorsTab":"接続済みのアプリ","settingsModal.cookieManagement":"Cookieの設定","settingsModal.cookieManagementButton":"管理する","settingsModal.cookies":"Cookieの設定","settingsModal.creatorProfileDescription":"あなたのGPTのユーザーとつながるために、ビルダープロフィールをパーソナライズします。これらの設定は、公開共有されているGPTに適用されます。","settingsModal.creatorProfileNameLabel":"名前","settingsModal.dataRemovalWarning-2":"お客様のデータは30日以内に削除されますが、法律で要求されるか許可される場合には、限定的なデータセットをより長い期間保持することがあります。","settingsModal.deleteHelpCenter":"詳細については、<article>ヘルプセンターの記事</article>をご覧ください。","settingsModal.gizmoTab":"ビルダープロフィール","settingsModal.hideNameToggle":"ビルダープロフィールであなたの名前を隠す","settingsModal.hideWebsiteToggle":"ビルダープロフィールでウェブサイトを非表示にする","settingsModal.linkDisabledTooltip":"リンクの表示を有効にするには、認証済みのドメインが必要です","settingsModal.nameDisabledTooltip":"名前を表示するには、確認済みの名前が必要です","settingsModal.nameSourceReason":"名前はお客様の請求詳細から取得されます","settingsModal.noCreatorProfile":"ビルダープロフィールを取得できません","settingsModal.personalization":"パーソナライゼーション","settingsModal.placeholderGPT":"PlaceholderGPT","settingsModal.preview":"プレビュー","settingsModal.reset":"リセット","settingsModal.resetModalCancel":"キャンセル","settingsModal.resetModalConfirm":"リセットを確認","settingsModal.resetModalDescription":"あなたの主要なGPTは、これまでのチャットで学んだことをすべて忘れます。これは元に戻すことはできません。","settingsModal.resetModalTitle":"本当によろしいですか？","settingsModal.reuseEmailPhoneWarning-2":"同じメールアドレスを使用して新しいアカウントを作成することはできません。","settingsModal.showNameToggle":"ビルダープロフィールにあなたの名前を表示する","settingsModal.showWebsiteToggle":"ビルダープロフィールにあなたのウェブサイトを表示","sharedConversation.personalizedDataDisclaimer":"この会話は、リンク作成者のパーソナライズされたデータを反映している可能性があります。これは共有されず、モデルの反応を大きく変えることがあります。","sharingModal.bizDescription.1":"URLを持つあなたのワークスペースのメンバーだけが、この会話で送信された最新のメッセージを見ることができます。会話に添付したファイルは共有されませんが、メッセージで参照されたファイルの内容は引き続き表示されます。","sharingModal.personalizedDataDisclaimer":"会話に存在しない個人化されたデータは、視聴者と共有されません（例：カスタム指示）。","targetedReply.replyTooltip":"返信","teamBilling.annualPlan.addUsersWithRenewal":"必要に応じてユーザーを追加し、契約を更新する際のみユーザーを削除します","teamBilling.annualPlan.billedAnnually":"年間料金は年次で請求されます","teamBilling.annualPlan.minBill":"最低料金は2ユーザー、年間請求で月額USD $50です","teamBilling.annualPlan.name":"年間プラン","teamBilling.annualPlanBilled":"{date}から始まる年間請求の価格","teamBilling.annualPlanSelected":"ChatGPTチーム年間プラン","teamBilling.annualPlanTotal":"合計 USD ${totalCost} /年","teamBilling.annualSavingsPercentage":"16.7％オフ","teamBilling.flexiblePlan.addRemoveUsers":"必要に応じてユーザーを追加または削除","teamBilling.flexiblePlan.billedMonthly":"月額請求の価格","teamBilling.flexiblePlan.cost":"USD $30","teamBilling.flexiblePlan.minBill":"最低月額請求額は2ユーザー分で、月額USD $60です","teamBilling.flexiblePlan.name":"フレキシブルプラン","teamBilling.flexiblePlanBilled":"{date}から月額請求されます","teamBilling.flexiblePlanSelected":"ChatGPTチームのフレキシブルプラン","teamBilling.flexiblePlanTotal":"合計 USD ${totalCost} /月","teamBilling.seatsTitle":"席数","teamBilling.summaryTitle":"サマリー","teamBilling.teamsCostStructure":"1人あたり/月","textMessage.targetedReply":"返信先:","thread.businessDisclaimer-oct-30":"{workspaceName} ワークスペースのチャットは、私たちのモデルの訓練には使用されません。ChatGPTは間違いを犯すことがあります。","thread.businessDisclaimerNoName-oct-30":"あなたのワークスペースのチャットは、私たちのモデルの訓練には使用されません。ChatGPTは間違いを犯すことがあります。","thread.chatgptMayProduceInaccurateInformation-oct-30":"ChatGPTは間違いを犯すことがあります。重要な情報は確認をお考えください。","thread.outdatedGptDisclaimer.0":"<bold>新しいバージョンのGPTが利用可能です</bold> - 古いバージョンを使用してチャットを続けるか、<link>新しいチャット</link>を開始して最新バージョンを使用してください。","thread.releaseNotes":"リリースノート","thread.termsAndPolicies":"利用規約とポリシー","toolsUtils.browsingSearchLinkPrefix1":"[素早い検索]({searchLink})の結果、これが見つかりました。","toolsUtils.browsingSearchLinkPrefix10":"詳細情報を求めて[素早く検索]({searchLink})したところ、これが私が見つけたものです。","toolsUtils.browsingSearchLinkPrefix2":"[素早い検索]({searchLink})の後、これが見つけたものです。","toolsUtils.browsingSearchLinkPrefix3":"[クイック検索]({searchLink})から、これが見つけたものです。","toolsUtils.browsingSearchLinkPrefix4":"[素早く検索]({searchLink})を行い、これが見つけたものです。","toolsUtils.browsingSearchLinkPrefix5":"詳細情報のために[クイック検索]({searchLink})を行いました。これが見つけたものです。","toolsUtils.browsingSearchLinkPrefix6":"[素早い検索]({searchLink})の結果、これが私が見つけたものです。","toolsUtils.browsingSearchLinkPrefix7":"[素早い検索]({searchLink})の後、これが私が見つけたものです。","toolsUtils.browsingSearchLinkPrefix8":"[素早い検索]({searchLink})から、これが私が見つけたものです。","toolsUtils.browsingSearchLinkPrefix9":"私は[素早い検索]({searchLink})を行い、これが私が見つけたものです。","useFilePickerState.retrievalSkippedFile":"\\"{fileName}\\"からテキストを抽出できません","useSubscriptionData.subscriptionLoadError":"サブスクリプションの読み込みに失敗しました: {error}。エラーが続く場合は、support@openai.comにお問い合わせください。","useWorkspaces.teamPlanName":"チーム","workspaceAppearanceModal.cancel":"キャンセル","workspaceAppearanceModal.propagationWarning":"ワークスペースの名前と画像の変更には、反映されるまでに時間がかかる場合があります。","workspaceAppearanceModal.saveError":"ワークスペースの外観の保存に失敗しました","workspaceAppearanceModal.submit":"保存","workspaceAppearanceModal.title":"ワークスペースの外観","workspaceAppearanceModal.workspaceAvatar":"ワークスペースの画像","workspaceAppearanceModal.workspaceAvatarDescription":"チーム用のJPEGまたはPNGのワークスペース画像をアップロードしてください。 (最小 {size}\xd7{size}pxが推奨されます。)","workspaceAppearanceModal.workspaceName":"ワークスペース名","workspaceAppearanceModal.workspaceNameDescription":"ワークスペースの名前を更新します。","workspaceIdentity.addDomainButton.0":"ドメインを追加","workspaceIdentity.autoProvisionDisabledToast":"このワークスペースの自動プロビジョニングが無効化されました","workspaceIdentity.autoProvisionEnabledToast":"このワークスペースで自動プロビジョニングが有効になりました","workspaceIdentity.domainTableHeader":"ドメイン","workspaceIdentity.ssoDropdownRemoveButtonText":"ドメインを削除","workspaceIdentity.ssoDropdownVerifyButtonText":"驗證","workspaceIdentity.statusTableHeader":"ステータス","workspacePopoverNavigation.myGpts":"私のGPT","workspaceSettings.chatSharingTitle":"チャットは次のユーザーと共有できます...","workspaceSettings.enterpriseRequiredMessage":"これらの設定を変更できるのはエンタープライズプランのワークスペースのみです","workspaceSettings.enterpriseUpsellPill":"エンタープライズ","workspaceSettings.noOneSelect":"誰も選択しない","workspaceSettings.retentionPolicyTitle":"保持ポリシー","workspaceSettings.retentionSettingTooltip":"この設定を変更するには、アカウントマネージャーに連絡してください","workspaceSettings.sharingSettingsTitle":"共有","workspaceSettings.workspaceMembersOnlySelect":"ワークスペースのメンバーのみ","yourComponent.membersCount":"{count, plural, one {# 人のメンバー} other {# 人のメンバー}}","AccountPaymentModal.haveExistingPlan":"既存のプランはありますか？","AuthPage.cookies":"クッキーの管理","AuthPage.privacy":"プライバシーポリシー","AuthPage.terms":"利用規約","ConfirmModal.cancelLabel":"キャンセル","ConfirmModal.confirmLabel":"確認","ConversationPrivacyIndicator.memoryOff":"メモリーオフ","ConversationPrivacyIndicator.memoryOffTooltip":"この会話で話す内容はChatGPTが記憶しません。","ConversationPrivacyIndicator.temporaryChat":"一時的なチャット","ConversationPrivacyIndicator.temporaryChatTooltip":"一時的なチャットはあなたの履歴に表示されず、ChatGPTはあなたが話す内容を記憶しません。","ConversationTurn.badResponseTooltip":"不適切なレスポンス","ConversationTurn.goodResponseTooltip":"良い反応","ConversationTurn.regenerateTooltip":"再生成","CookieConsentBanner.authedDescription.0":"私たちは、クッキーや類似の技術を使用して、サービスを提供、維持、改善し、セキュリティを確保しています。詳細は<cookiePolicy>クッキーポリシー</cookiePolicy>をご確認ください。\'すべて許可する\'をクリックすると、OpenAIとパートナーがこれらの目的でクッキーを使用することを許可します。\'すべて拒否する\'をクリックすると、厳密に必要なクッキーを除いてクッキーの使用を拒否します。<manageLink>クッキーの管理</manageLink>を選択して、設定を変更できます。","CookieConsentBanner.unauthedDescription.0":"私たちはクッキーや同様の技術を使用して、サービスの提供、維持、改善、そしてセキュリティ目的を達成しています。詳細は<cookiePolicy>クッキーポリシー</cookiePolicy>をご覧ください。\'全て承諾\'をクリックすると、OpenAIとパートナーがこれらの目的のためにクッキーを使用することを許可します。\'全て拒否\'をクリックすると、厳密に必要なクッキーを除いてクッキーの使用を拒否することができます。<manageLink>クッキーの管理</manageLink>を選択して、あなたの好みを変更することができます。","CopyButton.copyTooltip":"コピー","FreeColumn.haveExistingPlan":"すでにプランをお持ちですか？<link>請求に関するヘルプ</link>をご覧ください","GizmoConversationHeader.approveGPTButton":"ワークスペースに承認","GizmoConversationHeader.newChat":"新しいチャット","GizmoConversationHeader.usingAsOwner":"このGPTは、ワークスペースの所有者のみが使用できます。","GizmoFeedbackEmailModal.includeFrom":"私のメールアドレスを含める {email}","GizmoFeedbackEmailModal.sendTo":"{name}に送る","GizmoFeedbackEmailModal.successToast":"フィードバックが送信されました","GizmoFeedbackEmailModal.title":"{name}についてのフィードバック","GizmoInformation.archiveChat":"チャットをアーカイブ","GizmoInformation.feedbackEmail":"フィードバックを送る","GizmoInformation.removeGPT":"ワークスペースからGPTを削除","GizmoInformation.shareChatLong":"チャットを共有する","GizmoLanding.temporaryChatDescription.3":"このチャットは履歴に表示されず、メモリを使用せず、また、私たちのモデルの訓練にも使用されません。安全上の理由から、最大30日間コピーを保持することがあります。","GizmoSidebarList.showLess":"少なく表示","GizmoSidebarList.showMoreItems":"さらに{numMore}つ","HistoryGizmoItem.archiveChatOnboarding":"設定でアーカイブされたチャットを表示することができます","HistoryGizmoItem.archiveTooltip":"アーカイブ","HistoryGizmoItem.leaveTempChatConfirm":"一時的なチャットを退出します","HistoryGizmoItem.moreTooltip":"もっと見る","ManageCookiesModal.preference1desc.0":"これらのクッキーは、私たちのサービスを運営するために必要です。例えば、ユーザーを認証したり、サービス内の特定の機能を有効にしたり、セキュリティ目的で使用したりします。","ManageCookiesModal.preference2desc.0":"これらのクッキーは、私たちがサービスのパフォーマンスと使用方法を分析し理解するのに役立ちます。例えば、ユーザーの数、ユーザーがサービスとどのようにやり取りするか、サービスの使用時間などです。","MemoriesModal.delete":"削除","MemoriesModal.deleteFailed":"削除に失敗しました","MemoriesModal.deleteMemory":"メモリーを削除","MemoriesModal.deleteMemoryDescription":"これによりメモリが削除されます: {title}","MemoriesModal.loading":"読み込み中...","MemoriesModal.resetModalCancel":"キャンセル","MemoriesModal.resetModalConfirm":"メモリーをクリア","MemoriesModal.resetModalTitle":"本当によろしいですか？","MemoriesModal.retry":"再試行","MemoriesModal.somethingWentWrong":"何かがうまくいきませんでした...","MemoriesModal.title":"私の思い出","MemoryOnboardingModal.bulletTitle2.1":"時間とともにより役立つように","ModelSwitcher.gpt4ShortExplainerWithoutBrowse":"DALL\xb7Eと分析を使用","ModelSwitcher.shareChat":"チャットを共有する","ModelSwithcer.signupUpgradeButton2":"プラスにアップグレード","NavigationContent.signInToChat":"ChatGPTにサインイン","NavigationContent.signInToValueProp":"ChatGPTとの会話を保存するためにサインインしてください","NavigationContent.unauthLoginCta":"ログイン","NavigationContent.unauthSignupCta":"登録する","PaymentMenuItems.createATeamWorkspace":"チームワークスペースを追加","PaymentMenuItems.upgradePlan":"プランをアップグレード","PaymentsSuccess.standard":"支払いが成功しました","PrivacyPolicyUpdateBanner.content.eea.0":"私たちは<termsLink>利用規約</termsLink>と<privacyPolicyLink>プライバシーポリシー</privacyPolicyLink>を更新しました。当社のサービスを引き続き利用することで、更新された<termsLink>利用規約</termsLink>に同意したことになります。更新された<termsLink>利用規約</termsLink>に同意できない場合は、アカウントを削除することができます。これらの更新は2024年2月15日に有効となります。<faqLink>詳細はこちら</faqLink>。","PrivacyPolicyUpdateBanner.title.eea.0":"利用規約とプライバシーポリシーを更新しました","PromptTextarea.disallowedByWorkspaceReason":"あなたのワークスペースのオーナーがこのGPTを承認していません。","PromptTextarea.gizmoKnowledgeWarning":"ここにアップロードされたファイルは、あなたのGPTとの会話に含まれる可能性があります。コードインタープリタが有効になっている場合、ファイルをダウンロードすることができます。","ResetMemoriesButton.resetFailed":"GPTのメモリのリセットに失敗しました。","TaggingDropdown.dropdownCreateLabel":"GPTを作成する","TaggingDropdown.searchPlaceholder":"最近のGPTとピン留めされたGPTを検索","TaggingDropdown.talkingTo":"話している相手：","TemporaryChatOnboardingModal.bulletDescription1.1":"一時的なチャットはあなたの履歴に表示されません。安全のため、私たちはあなたのチャットのコピーを最大30日間保持することがあります。","TemporaryChatOnboardingModal.bulletDescription2.1":"ChatGPTは一時的なチャットで記憶を使用したり作成したりしません。カスタム指示がある場合でも、それらは引き続き遵守されます。","TemporaryChatOnboardingModal.bulletTitle2.1":"メモリなし","UpgradeInviteModal.inviteValidUntilFooter":"あなたの招待状は{date}まで有効です","UpgradeInviteModal.title":"あなたはプラスに招待されています","UpgradeInviteModal.upgradeButton":"アップグレード","adminPage.gpts":"GPTs","ageVerificationModal.actionButton":"私はOpenAIの年齢要件を満たしています","ageVerificationModal.description.1":"ChatGPTをご利用いただきありがとうございます。韓国の法律要件を遵守するため、あなたが私たちのサービスを利用するのに十分な年齢であることを確認する必要があります。ChatGPTを続けるためには、あなたが18歳以上、または14歳以上で親または保護者の許可を得てChatGPTを使用していることを確認してください。<deleteAccountLink>年齢要件を満たしていない場合は、アカウントを削除してください。</deleteAccountLink>","ageVerificationModal.logOut":"ログアウト","ageVerificationModal.title":"私たちの年齢要件を満たしていることを確認してください","approveGPTModal.actionsTitle":"アクション","approveGPTModal.approveButtonText":"承認","approveGPTModal.approveGPTTitle":"サードパーティのGPTを承認する","approveGPTModal.cancelButtonText":"キャンセル","approveGPTModal.capabilitiesTitle":"機能","approveGPTModal.gptByLine":"{authorName}による","approveGPTModal.noCapabilitiesEnabled":"有効な機能がありません","approveGPTModal.noCustomActions":"カスタムアクションはありません","archivedConversationsModal.dateCreated":"作成日","archivedConversationsModal.deleteConversation":"共有リンクを削除","archivedConversationsModal.deleteFailed":"削除に失敗しました","archivedConversationsModal.loading":"読み込み中...","archivedConversationsModal.name":"名前","archivedConversationsModal.noArchivedConversations":"アーカイブされた会話はありません。","archivedConversationsModal.retry":"再試行","archivedConversationsModal.somethingWentWrong":"何か問題が発生しました...","archivedConversationsModal.title":"アーカイブされたチャット","archivedConversationsModal.unarchiveConversation":"会話のアーカイブを解除","cancelTeamPlanModal.retainEmailAccess":"このメールアドレスに関連付けられた他のワークスペースでChatGPTを引き続き使用できます。","changeAccessModal.accessModalPrompt":"{gptName}にアクセスできるのは誰ですか","changeAccessModal.accessModalTitle":"アクセス可能なユーザーを変更する","changeAccessModal.cancelButtonText":"キャンセル","changeAccessModal.linkShareOption":"リンクを持つ全ての人","changeAccessModal.marketplaceShareOption":"公開","changeAccessModal.privateShareOption":"その作成者のみ","changeAccessModal.saveButtonText":"保存","changeAccessModal.workspaceShareOption":"{workspaceName}の誰でも","changeOwnerModal.cancelButtonText":"キャンセル","changeOwnerModal.changeModalPrompt":"{gptName}の新しい所有者","changeOwnerModal.changeModalTitle":"オーナーを変更する","changeOwnerModal.changeOwnerButtonText":"所有者を変更","changeOwnerModal.invalidEmail":"このワークスペースのメンバーに所属していない、または無効なメールアドレスです","deleteGPTModal.accessModalPrompt":"{gptName}を削除してもよろしいですか？この操作は元に戻すことができません。","deleteGPTModal.accessModalTitle":"GPTを削除","deleteGPTModal.cancelButtonText":"キャンセル","deleteGPTModal.deleteButtonText":"削除","exportModal.chatDownloadLabel":"データはダウンロード可能なファイルとしてあなたの登録メールに送信されます。ダウンロードリンクは受け取ってから24時間後に有効期限が切れます。","exportModal.chatHistoryLabel":"エクスポートにはチャット履歴が含まれます。","exportModal.confirm":"ワークスペースをエクスポートして削除","exportModal.confirmTitle":"チャット履歴の削除は永久的なもので、元に戻すことはできません。","exportModal.deleteLabel":"あなたのGPT、プラグイン、カスタム指示が削除されます。","exportModal.proceed":"進むには、以下の「ワークスペースをエクスポートして削除」をクリックしてください。","gizmo.actions.actionsGptHelp":"ActionsGPTからヘルプを得る","gizmo.appealButton":"異議申し立て","gizmo.appealNeededLabel":"このGPTは以前に私たちのポリシーに違反した可能性があるため、このレベルで利用可能にするためには異議申し立てを提出する必要があります。","gizmo.categoryError":"カテゴリの生成エラー","gizmo.categoryLabel":"カテゴリー","gizmo.categoryLabelTooltip":"あなたのGPTは、エクスプローラーページのこのカテゴリに表示される可能性があります","gizmo.discovery.browsingAsOwner":"あなたは<b>ワークスペースのメンバー</b>として表示しています","gizmo.discovery.browsingAsOwnerTooltip":"オーナーは、承認されていないサードパーティのGPTすべてにアクセスできます。","gizmo.discovery.browsingMemberRole":"ワークスペースのメンバー","gizmo.discovery.browsingOwnerRole":"ワークスペースのオーナー","gizmo.discovery.createdAgoLabel":"作成された {createdAgo}","gizmo.discovery.error":"GPTの読み込みエラー","gizmo.discovery.globalViewOff":"グローバルビュー オフ","gizmo.discovery.globalViewOn":"グローバルビュー オン","gizmo.discovery.loadMoreError":"さらに読み込むエラー","gizmo.discovery.search.recentlyUsedEmpty":"最近使用したGPTはありません","gizmo.discovery.searchSmall":"検索","gizmo.discovery.splashDescription":"指示、追加知識、そして任意のスキルの組み合わせを用いて、ChatGPTのカスタムバージョンを発見し、作成します。","gizmo.discovery.splashHeader":"GPTs","gizmo.exploreStoreEnabled":"GPTを探索する","gizmo.gpt.grid.conversationCountStrLabel":"{numConvos} チャット","gizmo.mygpts.loadMore":"もっと読み込む","gizmo.publicSharingHintStoreEnabled":"あなたのGPTは「GPTを探索」ページに表示されます","gizmo.recipientBlocked":"このGPTは以前に私たちのポリシーに違反した可能性があるため、このレベルで公開することはできません。","gptExploreGPTs.description":"コミュニティが作成したGPTを発見できるようになりました","gptExploreGPTs.title":"GPTを探索する","initialModal.billing":"有料プランをご利用の場合、このステップを完了するとキャンセルされます。","initialModal.confirm":"続ける","initialModal.dataDelete":"既存のワークスペースのすべてのプラグインとカスタム指示が削除されます。","initialModal.explanation":"あなたの既存のワークスペースをどう扱うべきですか？","initialModal.exportDetail":"既存のワークスペースを削除する","initialModal.exportLabel":"既存のチャット履歴をエクスポートして削除","initialModal.mustChoose":"この新しいワークスペースに参加するためには、既存のチャット履歴を移行するかエクスポートするかを選択する必要があります。","initialModal.title":"あなたはChatGPTエンタープライズワークスペースに追加されました","initialModal.transferDetail":"新しいエンタープライズワークスペースに統合する","initialModal.transferLabel":"既存のチャット履歴とGPTを転送する","jitPluginMessage.confirm":"確認","jitPluginMessage.confirmingV3":"<params><title>{gizmoName}が{domain}と通信したいと考えています</title><subtitle>信頼できるサイトのみを許可してください</subtitle></params>","jitPluginMessage.deny":"拒否","mergerModal.confirm":"マージを確認する","modelCapMessaging.shortLimitHours":"制限 {numerator, plural, =0 {# メッセージ} one {# メッセージ} other {# メッセージ}} / {denominator, plural, =0 {# 時間} one {# 時間} other {# 時間}}","modelCapMessaging.shortLimitMinutes":"制限 {numerator, plural, =0 {# メッセージ} one {# メッセージ} other {# メッセージ}} / {denominator, plural, =0 {# 分} one {# 分} other {# 分}}","navigation.reactivateWorkspace":"ワークスペースを再活性化","organizationBillingInfo.activeEnterpriseLicense":"エンタープライズ ライセンス","organizationBillingInfo.activeTeamLicense":"チームライセンス","organizationBillingInfo.billingLearnMore":"詳細を見る","organizationBillingInfo.deactivateDate":"{expiryDate, date, long}に無効化されます","personalizationSettings.manageMemoriesButton":"管理","pricingPlanConstants.plusYearly.costInDollars":"年間 USD $199.99","removeThirdPartyGPTModal.accessModalPrompt":"あなたのワークスペースで{gptName}の承認を取り消してもよろしいですか？ メンバーはこのGPTともうチャットできなくなります。","removeThirdPartyGPTModal.accessModalTitle":"ワークスペースからGPTを削除","removeThirdPartyGPTModal.cancelButtonText":"キャンセル","removeThirdPartyGPTModal.removeButtonText":"GPTを削除","selectedModal.back":"戻る","selectedModal.title":"本当によろしいですか？","settingsModal.archiveChatsButton":"すべてのチャットをアーカイブ","settingsModal.archiveChatsLabel":"すべてのチャットをアーカイブする","settingsModal.archiveHistoryModalCancel":"キャンセル","settingsModal.archiveHistoryModalConfirm":"アーカイブを確認する","settingsModal.archiveHistoryModalTitle":"チャット履歴をアーカイブしますか - 本当によろしいですか？","settingsModal.archiveHistorySuccess":"チャットのアーカイブに成功しました。設定からアーカイブしたチャットを表示できます。","settingsModal.archivedConversations":"アーカイブされたチャット","settingsModal.chatTrainingTeamsTooltip":"ChatGPTチームは自動的にトレーニングを無効にします。","settingsModal.createrProfileUnverifiedDisclaimer":"全員にGPTを公開するには、確認を完了してください。","settingsModal.creatorProfileBusinessUnverifiedDisclaimer":"ビルダープロファイルを設定するには、ワークスペースの管理者に連絡してください","settingsModal.creatorProfilePersonalUnverifiedDisclaimer":"課金詳細を追加するか、公開ドメイン名の所有権を確認することで、あなたの身元を確認してください。","settingsModal.deleteChatButton":"すべて削除","settingsModal.deleteChatLabel":"すべてのチャットを削除","settingsModal.exampleDescription1.1":"チャットをすることでChatGPTはより役立つようになり、詳細や好みを把握してあなたに合わせた応答を提供します。<link>詳しくはこちら</link>","settingsModal.exampleDescription2.2":"ChatGPTが何を覚えているのかを理解したり、新しいことを教えたりするには、それとチャットしてみてください：","settingsModal.exampleMessage1.1":"私が簡潔な返答を好むことを覚えておいてください。","settingsModal.exampleMessage2.1":"私はちょうど子犬をもらった！","settingsModal.exampleMessage3.2":"私について何を覚えていますか？","settingsModal.exampleMessage4":"私たちの最後のプロジェクトはどこまで進んでいましたか？","settingsModal.feedbackEmailTooltip":"あなたのGPTのユーザーに、あなたのChatGPTログインメールにフィードバックを送信することを許可します。あなたのメールアドレスは決して公に共有されません。","settingsModal.manageButton":"管理","settingsModal.resetFailed":"GPTのメモリをリセットできませんでした。","settingsModal.resetSuccessful":"あなたのGPTのメモリがリセットされました。","settingsModal.trainingAllowedToggleLabel":"すべての人のためにモデルを改善する","teamAccountTransferModal.confirm":"続ける","teamAccountTransferModal.createDetail":"個人アカウントは別に保持してください。Plusプランを利用している場合、キャンセルするまでサブスクリプションは維持されます","teamAccountTransferModal.createLabel":"空のワークスペースから始める","teamAccountTransferModal.explanation":"チャット履歴とGPTをチームのワークスペースに移行しますか？","teamAccountTransferModal.title":"あなたのChatGPTチームワークスペースが準備できました","teamAccountTransferModal.transferDetail":"個人のワークスペースから既存のデータを引き継ぎます","teamAccountTransferModal.transferLabel":"チャット履歴とGPTを転送","teamTransferModal.cancelPlus":"ChatGPT Plusのサブスクリプションをお持ちの場合、統合時にキャンセルおよび返金されます。","teamTransferModal.confirm":"転送を確認する","teamTransferModal.confirmTitle":"既存のデータの転送は永久的であり、元に戻すことはできません。","teamTransferModal.deleteData":"あなたの個人アカウントのプラグインとカスタム指示が削除されます。","teamTransferModal.migrateData":"あなたの個人アカウントのチャット履歴とGPTは、チームのワークスペースに移行されます。","teamTransferModal.personalAccount":"個人アカウント","teamTransferModal.warning":"チームのワークスペースから退出するか、ワークスペースから削除されるか、ワークスペースが無効化された場合、あなたのデータへのアクセスは失われます。<link>詳しく知る</link>","thread.archivedConversationDescription":"この会話はアーカイブされています。続けるには、まずアーカイブを解除してください。","thread.unarchiveButton":"アーカイブ解除","toolsUtils.altBrowsingSearchLink1":"詳細情報については、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink2":"詳しく調べるには、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink3":"詳細については、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink4":"探求を続けるために、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink5":"詳細情報については、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink6":"詳しく調べるために、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink7":"詳細については、これらの[検索結果]({searchLink})をご覧ください。","toolsUtils.altBrowsingSearchLink8":"探索を続けるために、これらの[検索結果]({searchLink})をご覧ください。","transferModal.confirm":"転送を確認する","transferModal.confirmLabel":"あなたのチャット履歴とGPTは新しいワークスペースに転送され、既存のワークスペースは削除されます。","transferModal.confirmTitle":"チャット履歴の移行は永久的で、元に戻すことはできません。","transferModal.proceed":"進行するには、以下の「転送を確認する」をクリックしてください。","workspaceSettings.approveAGPTButton":"GPTを承認する","workspaceSettings.approvedCellTitle":"承認済み","workspaceSettings.builderCellTitle":"ビルダー","workspaceSettings.capabilitiesTitle":"機能","workspaceSettings.changeAccess":"アクセス可能なユーザーを変更する","workspaceSettings.changeOwner":"オーナーを変更","workspaceSettings.chatsCellTitle":"チャット","workspaceSettings.createdCellTitle":"作成済み","workspaceSettings.customActionsCellTitle":"カスタムアクション","workspaceSettings.deleteGPT":"GPTを削除","workspaceSettings.filterByNameOrBuilderPlaceholder":"名前またはビルダーでフィルター...","workspaceSettings.nameCellTitle":"名前","workspaceSettings.noWorkspaceApprovedGPTs":"あなたは第三者のGPTを一つも承認していません","workspaceSettings.noWorkspaceApprovedGPTsFound":"承認済みのサードパーティGPTが見つかりません","workspaceSettings.noWorkspaceGPTs":"このワークスペースにはGPTがありません","workspaceSettings.noWorkspaceGPTsFound":"ワークスペースのGPTが見つかりません","workspaceSettings.removeFromWorkspace":"ワークスペースから削除","workspaceSettings.shareRecipientTitleLink":"リンク","workspaceSettings.shareRecipientTitlePrivate":"プライベート","workspaceSettings.shareRecipientTitlePublic":"公開","workspaceSettings.thirdPartyTab":"サードパーティ","workspaceSettings.whoHasAccessTitle":"アクセス可能なユーザー","workspaceSettings.workspaceTab":"ワークスペース","workspaceSettingsOld.allowAllOption":"すべて許可","workspaceSettingsOld.anyOneSelect":"誰でも","workspaceSettingsOld.appearanceTitle":"外観","workspaceSettingsOld.browseOptionTitle":"Bingでのブラウジング","workspaceSettingsOld.browseTooltip":"ChatGPTとGPTがインターネットを閲覧して、最近の話題やイベントに関する質問に答えることを許可します。","workspaceSettingsOld.chatSharingTitle":"チャットは次のユーザーと共有できます…","workspaceSettingsOld.conversationRetention":"チャットの保持","workspaceSettingsOld.customActionsTooltip":"GPTがフライト検索などのタスクのためにサードパーティのサービスを使用できるようにします。アクションはGPTビルダーによって定義されます。","workspaceSettingsOld.dontAllowOption":"許可しない","workspaceSettingsOld.enterpriseRequiredMessage":"これらの設定を変更できるのは、エンタープライズプランを利用しているワークスペースのみです","workspaceSettingsOld.enterpriseUpsellPill":"エンタープライズ","workspaceSettingsOld.featureSettingsUpdateFailed":"機能設定の更新に失敗しました","workspaceSettingsOld.gptSharingTitle":"GPTは次のユーザーと共有できます...","workspaceSettingsOld.noOneSelect":"誰もいない","workspaceSettingsOld.ownerApprovedOnlyOption":"オーナーの承認のみ","workspaceSettingsOld.pluginsOptionTitle":"プラグイン","workspaceSettingsOld.pluginsOptionTitle.0":"カスタムアクション","workspaceSettingsOld.pluginsTooltip":"メンバーがプラグインをインストールして、ChatGPTがフライト検索などのタスクにサードパーティのサービスを使用できるようにします。","workspaceSettingsOld.retentionChange":"この設定を変更するには、アカウントマネージャーに連絡してください。","workspaceSettingsOld.retentionCustomDays":"{num}日","workspaceSettingsOld.retentionInfinite":"無限","workspaceSettingsOld.retentionNinetyDays":"90日間","workspaceSettingsOld.retentionOneYear":"1年","workspaceSettingsOld.retentionPolicyTitle":"保持ポリシー","workspaceSettingsOld.retentionSettingTooltip":"この設定を変更するには、アカウントマネージャーに連絡してください","workspaceSettingsOld.shareRecipientTitleLink":"リンク","workspaceSettingsOld.shareRecipientTitlePrivate":"プライベート","workspaceSettingsOld.shareRecipientTitlePublic":"公開","workspaceSettingsOld.sharingSettingsTitle":"共有","workspaceSettingsOld.sidebarTitle":"GPT","workspaceSettingsOld.thirdPartyGPTsDescription":"メンバーがワークスペース外で作成されたGPTを使用できるかどうかを管理します。","workspaceSettingsOld.thirdPartyGPTsTitle":"サードパーティ","workspaceSettingsOld.workspaceGPTsDescription":"あなたのワークスペースまたはChatGPTによって構築されたGPTの利用可能な機能を管理します。これはサードパーティのGPTには適用されません。","workspaceSettingsOld.workspaceGPTsTitle":"ワークスペース","workspaceSettingsOld.workspaceMembersOnlySelect":"ワークスペースのメンバーのみ","pricingPlanConstants.teams.teamsAdvertisedFeatures3":"デフォルトでチームのデータはトレーニングから除外されます。<link>詳しくはこちら</link>","teamBilling.annualPlan.cost":"USD $25 <s>$30</s>","GizmoEditorModelPicker.codeInterpreterTooltip":"このGPTにコードの実行を許可します。有効にすると、このGPTはデータを分析したり、アップロードしたファイルを操作したり、数学的な計算をしたり、その他の作業を行うことができます。","GizmoEditorModelPicker.memoryTooltip":"このGPTにユーザーの詳細と好みを把握させ、それに基づいて応答を調整します。有効にすると、ユーザーはこのGPTを使用するためにメモリをオンにする必要があります。","GizmoReviewModal.includeFrom":"私のメールアドレスを含める {email}","GizmoReviewModal.messagePlaceholder":"作成者にオプショナルなプライベートメールを追加してください","GizmoReviewModal.submit":"送信","GizmoReviewModal.subtitle":"このGPTをどう評価しますか？","GizmoReviewModal.subtitleChange":"評価を変更しますか？","GizmoReviewModal.subtitleTooltip":"星は公開され、匿名になります","GizmoReviewModal.successToast":"レビューが送信されました","GizmoReviewModal.title":"フィードバックを残す","MemoriesModal.noMemories.1":"{name}とのチャット内容や、覚えている詳細や設定はここに表示されます。","MemoriesModal.noMemoriesAndDisabled":"メモリが無効化されています。ChatGPTはメモリを使用または作成しません。","MemoriesModal.resetGizmoModalDescription":"{name}はあなたとのチャットで覚えたすべてのことを忘れます。これは元に戻せません。","MemoriesModal.unknownGizmo":"未知のGPT","PromptTextarea.noTestGizmoId":"まず、あなたのGPTを定義してください。","ResetMemoriesButton.resetChatGPT":"ChatGPTのメモリをクリア","ResetMemoriesButton.resetGizmo":"このGPTのメモリをクリアする","ResetMemoriesButton.resetSuccess":"メモリがクリアされました。","YearlyBillingToggle.billAnnuallyToggleLabel":"月額と年額のサブスクリプションを切り替える","YearlyBillingToggle.billedAnnually":"年間請求","YearlyBillingToggle.save40Dollars":"年間で$40節約","announcementTooltip.beta":"ベータ","gizmo.about.capabilitiesHeader":"機能","gizmo.about.ratingsHeader":"評価","gizmo.about.startChat":"チャットを開始","gizmo.about.tools.browsing":"ブラウジング","gizmo.about.tools.dalle":"DALL\xb7E 画像","gizmo.about.tools.dataAnalysis":"データ分析","gizmo.about.tools.memory":"メモリ","gizmo.about.tools.memoryDescription":"以前のチャットから学習して、将来の会話を改善します","gizmo.anonLandingPage.login":"チャットにサインアップしてください","gizmo.anonLandingPage.subtext":"ChatGPT Plusが必要です","history.deleteModalMemoryDisclaimer":"このチャットの記憶を消去するには、<link>設定</link>をご覧ください。","mentionGptsAnnouncement.description":"{key}を入力してGPTをメンションし、直接会話に追加してください","mentionGptsAnnouncement.title":"GPTの探索","pricingPlanConstants.plusYearly.costInDollarsSubtitle":"年間 USD $199.99","settingsModal.alwaysExpandCodeOutput":"コード出力を常に展開する","settingsModal.deleteHistoryModalMemoryDisclaimer":"チャットからすべての記憶を消去するには、<link>設定</link>をご覧ください。","settingsModal.mergeButton":"マージ","settingsModal.mergePersonalData":"個人のワークスペースからデータを統合する","settingsModal.myChagtGptToggleLabel.2":"メモリー","workspaceSettings.stillLoadingData":"お探しのものが見つからないですか？ 一部のGPTはまだ読み込み中です...","ConversationTurnInlineMessageFeedback.feedbackPlaceholder.1":"(任意) 具体的な詳細を自由に追加してください","ConversationTurnInlineMessageFeedback.inlineTitle":"詳しく教えてください：","ConversationTurnInlineMessageFeedback.modalTitle":"追加のフィードバックを提供してください","ConversationTurnInlineMessageFeedback.moreOptions.1":"もっと...","ConversationTurnInlineMessageFeedback.submit":"送信","ConversationTurnInlineMessageFeedback.submitted":"フィードバックありがとうございます！","dalleMessage.imageEditButton":"編集","gizmo.about.category":"カテゴリー","gizmo.about.conversationStartersHeader":"会話のきっかけ","gizmo.about.inCategory":"{category}カテゴリ内","gizmo.about.notFound":"GPTが見つかりません","gizmo.inlineReview.prompt":"これまでのこのGPTの評価はどうですか？","gizmo.inlineReview.reviewLeft":"フィードバックを送信しました","gizmo.inlineReview.reviewLeftSubtext":"評価を更新するには、GPTメニューで「フィードバックを送信」をクリックしてください","imageViewer.dislikeImage":"画像を嫌う","imageViewer.likeImage":"画像をいいねする","mfaDisableConfirmationModal.button":"MFAを無効にする","navigation.survey.description":"少しの時間を割いて短いアンケートにお答えいただけますか？","navigation.survey.dismiss":"アンケートを閉じる","navigation.survey.takeSurvey":"アンケートに回答する","navigation.survey.title":"私たちは少数の人々に意見を求めています","settingsModal.loadingMfa":"読み込み中...","settingsModal.toggleMfa":"多要素認証","settingsModal.trainingAllowedDescription.1":"あなたのコンテンツを使用して、私たちのモデルの改善と訓練を許可し、それによりChatGPTをあなたとそれを使用するすべての人々にとってより良くします。私たちはあなたのプライバシーを保護するための措置を講じています。<link>詳しくはこちら</link>","settingsModal.trainingDisabled":"オフ","settingsModal.trainingEnabled":"オン","settingsModal.trainingToggleModalDoneButton":"完了","settingsModal.trainingToggleModalTitle":"モデルの改善","workspaceSettings.organizationIdLabel":"組織ID：{organizationId}","workspaceSettings.workspaceDetails":"ワークスペースの詳細","GizmoReviewModal.hoverRating1":"悪い","GizmoReviewModal.hoverRating2":"まあまあ","GizmoReviewModal.hoverRating3":"良い","GizmoReviewModal.hoverRating4":"とても良い！","GizmoReviewModal.hoverRating5":"素晴らしい！","NavigationContent.signUpOrLogIn":"サインアップまたはログイン","PromptTextarea.placeholderHedgehogComposer":"何でもお尋ねください","SearchResultMessage.moreResults":"+{number}件の追加結果","gizmo.about.tools.actions":"アクション","gizmo.about.tools.actionsDescription":"ChatGPTの外部で情報を取得したり、アクションを実行します","gizmo.report.conversationModal.emptyConversationError":"空の会話は報告できません","gizmo.report.conversationModal.title":"会話を報告する","gizmo.report.selectorModal.conversation":"会話を報告する","gizmo.report.selectorModal.gpt":"GPTを報告する","gizmo.report.selectorModal.header":"何を報告しますか？","gizmo.report.selectorModal.title":"報告","report.loggedOut.email":"あなたのメールアドレス","report.loggedOut.name":"あなたの名前","report.submitReport":"提出","report.submittedModal.header":"報告が提出されました","report.submittedModal.subHeader":"あなたの報告は送信されました。この問題をお知らせいただきありがとうございます。","thread.report":"違法コンテンツを報告する","GizmoConversationHeader.newChatSmall":"新規","GizmoSocialRow.add":"追加","MemoryOnboardingModal.bulletDescription1.1":"ChatGPTはチャット間で学習した内容を引き継ぎ、より関連性の高い回答を提供します。","MemoryOnboardingModal.bulletDescription2.1":"ChatGPTは、チャットを重ねるごとに詳細や好みを記憶し続け、より役立つようになります。","MemoryOnboardingModal.bulletDescription3.2":"あなたが管理しています。特定の記憶を見直し、削除することも、最初からやり直すことも、設定で機能をオフにすることもできます。","MemoryOnboardingModal.title.1":"ChatGPTは今、チャットを越えた記憶を持っています","disableMfa.success":"多要素認証が無効になりました","disableMfa.timeout":"前回のログインから時間が経ちすぎました。もう一度試してください","gizmo.about.ratings.notEnoughRatings":"まだ評価が足りません","gizmo.about.trendingRank":"#{rank}位","gizmo.anonLandingPage.report":"違法コンテンツを報告する","mfaDisableConfirmationModal.title.0":"多要素認証（MFA）を無効にする","popoverNavigation.chatPreferences.1":"ChatGPTをカスタマイズする","postSigninDisableConfimationModal.description":"多要素認証を無効にしてもよろしいですか？アカウントへのアクセスにはパスワードのみが必要になります。","report.submitError":"報告中にエラーが発生しました","settingsModal.creatorProfileEmailHeader.0":"メール","settingsModal.creatorProfileLinkHeader.1":"リンク","settingsModal.mfaEnabled":"有効","settingsModal.receiveFeedbackEmails.1":"フィードバックメールを受け取る","settingsModal.toggleMfaDescription":"ログイン時には追加のセキュリティチャレンジが必要です。このチャレンジをクリアできない場合、メール経由でアカウントを回復するオプションがあります。","speechSettings.content.autoDetect":"自動検出","speechSettings.content.autoDetectDescription":"最適な結果を得るために、主に話す言語を選択してください。リストにない場合でも、自動検出を通じてサポートされている可能性があります。","speechSettings.content.language":"メイン言語","speechSettings.content.voice":"音声","speechSettings.trigger":"スピーチ","userContexModal.tools.browserTooltip":"インターネットを閲覧して答えを見つける","userContexModal.tools.codeInterpreterTooltip":"コードインタープリターを使用してコードを実行","userContexModal.tools.dalleTooltip":"DALL\xb7Eを使用して画像を生成する","userContextModal.customInstructionsTitle":"カスタム指示書","userContextModal.customInstructionsTooltip":"<article>カスタム指示</article>について学び、それがChatGPTのより良い応答を支援する方法を理解しましょう。","userContextModal.getCustomInstructionsError":"設定の取得に失敗しました","userContextModal.gpt4CapabilitiesTitle":"GPT-4の機能","userContextModal.saveError":"設定の更新に失敗しました","userContextModal.title.1":"ChatGPTをカスタマイズする","userContextModal.tools.browse":"ブラウジング","userContextModal.tools.capabilitiesInfo":"GPT-4を使用する際にChatGPTがアクセスできるツールを選択してください","userContextModal.tools.codeInterpreter":"コードインタープリタ","userContextModal.tools.codeInterpreterTooltip":"コードインタープリターを使用してコードを実行","userContextModal.tools.dalle":"DALL\xb7E","userContextModal.tools.dalleTooltip":"DALL\xb7Eを使用して画像を生成する"}'
+    19271: function (e, t, r) {
+      let n;
+      function o(e, t) {
+        return function () {
+          return e.apply(t, arguments);
+        };
+      }
+      r.r(t),
+        r.d(t, {
+          Axios: function () {
+            return eL;
+          },
+          AxiosError: function () {
+            return ek;
+          },
+          AxiosHeaders: function () {
+            return e$;
+          },
+          Cancel: function () {
+            return eJ;
+          },
+          CancelToken: function () {
+            return ez;
+          },
+          CanceledError: function () {
+            return eq;
+          },
+          HttpStatusCode: function () {
+            return eG;
+          },
+          VERSION: function () {
+            return eM;
+          },
+          all: function () {
+            return eH;
+          },
+          default: function () {
+            return eB;
+          },
+          formToJSON: function () {
+            return eX;
+          },
+          isAxiosError: function () {
+            return eW;
+          },
+          isCancel: function () {
+            return eI;
+          },
+          mergeConfig: function () {
+            return eQ;
+          },
+          spread: function () {
+            return eV;
+          },
+          toFormData: function () {
+            return eK;
+          },
+        });
+      let { toString: i } = Object.prototype,
+        { getPrototypeOf: s } = Object,
+        a =
+          ((B = Object.create(null)),
+          (e) => {
+            let t = i.call(e);
+            return B[t] || (B[t] = t.slice(8, -1).toLowerCase());
+          }),
+        l = (e) => ((e = e.toLowerCase()), (t) => a(t) === e),
+        u = (e) => (t) => typeof t === e,
+        { isArray: c } = Array,
+        f = u("undefined"),
+        d = l("ArrayBuffer"),
+        p = u("string"),
+        h = u("function"),
+        m = u("number"),
+        g = (e) => null !== e && "object" == typeof e,
+        y = (e) => {
+          if ("object" !== a(e)) return !1;
+          let t = s(e);
+          return (
+            (null === t ||
+              t === Object.prototype ||
+              null === Object.getPrototypeOf(t)) &&
+            !(Symbol.toStringTag in e) &&
+            !(Symbol.iterator in e)
+          );
+        },
+        b = l("Date"),
+        E = l("File"),
+        w = l("Blob"),
+        O = l("FileList"),
+        S = l("URLSearchParams");
+      function R(e, t, { allOwnKeys: r = !1 } = {}) {
+        let n, o;
+        if (null != e) {
+          if (("object" != typeof e && (e = [e]), c(e)))
+            for (n = 0, o = e.length; n < o; n++) t.call(null, e[n], n, e);
+          else {
+            let o;
+            let i = r ? Object.getOwnPropertyNames(e) : Object.keys(e),
+              s = i.length;
+            for (n = 0; n < s; n++) (o = i[n]), t.call(null, e[o], o, e);
+          }
+        }
+      }
+      function A(e, t) {
+        let r;
+        t = t.toLowerCase();
+        let n = Object.keys(e),
+          o = n.length;
+        for (; o-- > 0; ) if (t === (r = n[o]).toLowerCase()) return r;
+        return null;
+      }
+      let T =
+          "undefined" != typeof globalThis
+            ? globalThis
+            : "undefined" != typeof self
+              ? self
+              : "undefined" != typeof window
+                ? window
+                : global,
+        C = (e) => !f(e) && e !== T,
+        N =
+          ((L = "undefined" != typeof Uint8Array && s(Uint8Array)),
+          (e) => L && e instanceof L),
+        v = l("HTMLFormElement"),
+        x = (
+          ({ hasOwnProperty: e }) =>
+          (t, r) =>
+            e.call(t, r)
+        )(Object.prototype),
+        j = l("RegExp"),
+        P = (e, t) => {
+          let r = Object.getOwnPropertyDescriptors(e),
+            n = {};
+          R(r, (r, o) => {
+            !1 !== t(r, o, e) && (n[o] = r);
+          }),
+            Object.defineProperties(e, n);
+        },
+        _ = "abcdefghijklmnopqrstuvwxyz",
+        U = "0123456789",
+        F = { DIGIT: U, ALPHA: _, ALPHA_DIGIT: _ + _.toUpperCase() + U },
+        D = l("AsyncFunction");
+      var B,
+        L,
+        k = {
+          isArray: c,
+          isArrayBuffer: d,
+          isBuffer: function (e) {
+            return (
+              null !== e &&
+              !f(e) &&
+              null !== e.constructor &&
+              !f(e.constructor) &&
+              h(e.constructor.isBuffer) &&
+              e.constructor.isBuffer(e)
+            );
+          },
+          isFormData: (e) => {
+            let t;
+            return (
+              e &&
+              (("function" == typeof FormData && e instanceof FormData) ||
+                (h(e.append) &&
+                  ("formdata" === (t = a(e)) ||
+                    ("object" === t &&
+                      h(e.toString) &&
+                      "[object FormData]" === e.toString()))))
+            );
+          },
+          isArrayBufferView: function (e) {
+            return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView
+              ? ArrayBuffer.isView(e)
+              : e && e.buffer && d(e.buffer);
+          },
+          isString: p,
+          isNumber: m,
+          isBoolean: (e) => !0 === e || !1 === e,
+          isObject: g,
+          isPlainObject: y,
+          isUndefined: f,
+          isDate: b,
+          isFile: E,
+          isBlob: w,
+          isRegExp: j,
+          isFunction: h,
+          isStream: (e) => g(e) && h(e.pipe),
+          isURLSearchParams: S,
+          isTypedArray: N,
+          isFileList: O,
+          forEach: R,
+          merge: function e() {
+            let { caseless: t } = (C(this) && this) || {},
+              r = {},
+              n = (n, o) => {
+                let i = (t && A(r, o)) || o;
+                y(r[i]) && y(n)
+                  ? (r[i] = e(r[i], n))
+                  : y(n)
+                    ? (r[i] = e({}, n))
+                    : c(n)
+                      ? (r[i] = n.slice())
+                      : (r[i] = n);
+              };
+            for (let e = 0, t = arguments.length; e < t; e++)
+              arguments[e] && R(arguments[e], n);
+            return r;
+          },
+          extend: (e, t, r, { allOwnKeys: n } = {}) => (
+            R(
+              t,
+              (t, n) => {
+                r && h(t) ? (e[n] = o(t, r)) : (e[n] = t);
+              },
+              { allOwnKeys: n }
+            ),
+            e
+          ),
+          trim: (e) =>
+            e.trim
+              ? e.trim()
+              : e.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ""),
+          stripBOM: (e) => (65279 === e.charCodeAt(0) && (e = e.slice(1)), e),
+          inherits: (e, t, r, n) => {
+            (e.prototype = Object.create(t.prototype, n)),
+              (e.prototype.constructor = e),
+              Object.defineProperty(e, "super", { value: t.prototype }),
+              r && Object.assign(e.prototype, r);
+          },
+          toFlatObject: (e, t, r, n) => {
+            let o, i, a;
+            let l = {};
+            if (((t = t || {}), null == e)) return t;
+            do {
+              for (i = (o = Object.getOwnPropertyNames(e)).length; i-- > 0; )
+                (a = o[i]),
+                  (!n || n(a, e, t)) && !l[a] && ((t[a] = e[a]), (l[a] = !0));
+              e = !1 !== r && s(e);
+            } while (e && (!r || r(e, t)) && e !== Object.prototype);
+            return t;
+          },
+          kindOf: a,
+          kindOfTest: l,
+          endsWith: (e, t, r) => {
+            (e = String(e)),
+              (void 0 === r || r > e.length) && (r = e.length),
+              (r -= t.length);
+            let n = e.indexOf(t, r);
+            return -1 !== n && n === r;
+          },
+          toArray: (e) => {
+            if (!e) return null;
+            if (c(e)) return e;
+            let t = e.length;
+            if (!m(t)) return null;
+            let r = Array(t);
+            for (; t-- > 0; ) r[t] = e[t];
+            return r;
+          },
+          forEachEntry: (e, t) => {
+            let r;
+            let n = (e && e[Symbol.iterator]).call(e);
+            for (; (r = n.next()) && !r.done; ) {
+              let n = r.value;
+              t.call(e, n[0], n[1]);
+            }
+          },
+          matchAll: (e, t) => {
+            let r;
+            let n = [];
+            for (; null !== (r = e.exec(t)); ) n.push(r);
+            return n;
+          },
+          isHTMLForm: v,
+          hasOwnProperty: x,
+          hasOwnProp: x,
+          reduceDescriptors: P,
+          freezeMethods: (e) => {
+            P(e, (t, r) => {
+              if (h(e) && -1 !== ["arguments", "caller", "callee"].indexOf(r))
+                return !1;
+              if (h(e[r])) {
+                if (((t.enumerable = !1), "writable" in t)) {
+                  t.writable = !1;
+                  return;
+                }
+                t.set ||
+                  (t.set = () => {
+                    throw Error("Can not rewrite read-only method '" + r + "'");
+                  });
+              }
+            });
+          },
+          toObjectSet: (e, t) => {
+            let r = {};
+            return (
+              ((e) => {
+                e.forEach((e) => {
+                  r[e] = !0;
+                });
+              })(c(e) ? e : String(e).split(t)),
+              r
+            );
+          },
+          toCamelCase: (e) =>
+            e
+              .toLowerCase()
+              .replace(/[-_\s]([a-z\d])(\w*)/g, function (e, t, r) {
+                return t.toUpperCase() + r;
+              }),
+          noop: () => {},
+          toFiniteNumber: (e, t) => (Number.isFinite((e = +e)) ? e : t),
+          findKey: A,
+          global: T,
+          isContextDefined: C,
+          ALPHABET: F,
+          generateString: (e = 16, t = F.ALPHA_DIGIT) => {
+            let r = "",
+              { length: n } = t;
+            for (; e--; ) r += t[(Math.random() * n) | 0];
+            return r;
+          },
+          isSpecCompliantForm: function (e) {
+            return !!(
+              e &&
+              h(e.append) &&
+              "FormData" === e[Symbol.toStringTag] &&
+              e[Symbol.iterator]
+            );
+          },
+          toJSONObject: (e) => {
+            let t = Array(10),
+              r = (e, n) => {
+                if (g(e)) {
+                  if (t.indexOf(e) >= 0) return;
+                  if (!("toJSON" in e)) {
+                    t[n] = e;
+                    let o = c(e) ? [] : {};
+                    return (
+                      R(e, (e, t) => {
+                        let i = r(e, n + 1);
+                        f(i) || (o[t] = i);
+                      }),
+                      (t[n] = void 0),
+                      o
+                    );
+                  }
+                }
+                return e;
+              };
+            return r(e, 0);
+          },
+          isAsyncFn: D,
+          isThenable: (e) => e && (g(e) || h(e)) && h(e.then) && h(e.catch),
+        };
+      function q(e, t, r, n, o) {
+        Error.call(this),
+          Error.captureStackTrace
+            ? Error.captureStackTrace(this, this.constructor)
+            : (this.stack = Error().stack),
+          (this.message = e),
+          (this.name = "AxiosError"),
+          t && (this.code = t),
+          r && (this.config = r),
+          n && (this.request = n),
+          o && (this.response = o);
+      }
+      k.inherits(q, Error, {
+        toJSON: function () {
+          return {
+            message: this.message,
+            name: this.name,
+            description: this.description,
+            number: this.number,
+            fileName: this.fileName,
+            lineNumber: this.lineNumber,
+            columnNumber: this.columnNumber,
+            stack: this.stack,
+            config: k.toJSONObject(this.config),
+            code: this.code,
+            status:
+              this.response && this.response.status
+                ? this.response.status
+                : null,
+          };
+        },
+      });
+      let I = q.prototype,
+        z = {};
+      [
+        "ERR_BAD_OPTION_VALUE",
+        "ERR_BAD_OPTION",
+        "ECONNABORTED",
+        "ETIMEDOUT",
+        "ERR_NETWORK",
+        "ERR_FR_TOO_MANY_REDIRECTS",
+        "ERR_DEPRECATED",
+        "ERR_BAD_RESPONSE",
+        "ERR_BAD_REQUEST",
+        "ERR_CANCELED",
+        "ERR_NOT_SUPPORT",
+        "ERR_INVALID_URL",
+      ].forEach((e) => {
+        z[e] = { value: e };
+      }),
+        Object.defineProperties(q, z),
+        Object.defineProperty(I, "isAxiosError", { value: !0 }),
+        (q.from = (e, t, r, n, o, i) => {
+          let s = Object.create(I);
+          return (
+            k.toFlatObject(
+              e,
+              s,
+              function (e) {
+                return e !== Error.prototype;
+              },
+              (e) => "isAxiosError" !== e
+            ),
+            q.call(s, e.message, t, r, n, o),
+            (s.cause = e),
+            (s.name = e.name),
+            i && Object.assign(s, i),
+            s
+          );
+        });
+      var M = r(14984).lW;
+      function H(e) {
+        return k.isPlainObject(e) || k.isArray(e);
+      }
+      function J(e) {
+        return k.endsWith(e, "[]") ? e.slice(0, -2) : e;
+      }
+      function W(e, t, r) {
+        return e
+          ? e
+              .concat(t)
+              .map(function (e, t) {
+                return (e = J(e)), !r && t ? "[" + e + "]" : e;
+              })
+              .join(r ? "." : "")
+          : t;
+      }
+      let V = k.toFlatObject(k, {}, null, function (e) {
+        return /^is[A-Z]/.test(e);
+      });
+      var K = function (e, t, r) {
+        if (!k.isObject(e)) throw TypeError("target must be an object");
+        t = t || new FormData();
+        let n = (r = k.toFlatObject(
+            r,
+            { metaTokens: !0, dots: !1, indexes: !1 },
+            !1,
+            function (e, t) {
+              return !k.isUndefined(t[e]);
+            }
+          )).metaTokens,
+          o = r.visitor || u,
+          i = r.dots,
+          s = r.indexes,
+          a =
+            (r.Blob || ("undefined" != typeof Blob && Blob)) &&
+            k.isSpecCompliantForm(t);
+        if (!k.isFunction(o)) throw TypeError("visitor must be a function");
+        function l(e) {
+          if (null === e) return "";
+          if (k.isDate(e)) return e.toISOString();
+          if (!a && k.isBlob(e))
+            throw new q("Blob is not supported. Use a Buffer instead.");
+          return k.isArrayBuffer(e) || k.isTypedArray(e)
+            ? a && "function" == typeof Blob
+              ? new Blob([e])
+              : M.from(e)
+            : e;
+        }
+        function u(e, r, o) {
+          let a = e;
+          if (e && !o && "object" == typeof e) {
+            if (k.endsWith(r, "{}"))
+              (r = n ? r : r.slice(0, -2)), (e = JSON.stringify(e));
+            else {
+              var u;
+              if (
+                (k.isArray(e) && ((u = e), k.isArray(u) && !u.some(H))) ||
+                ((k.isFileList(e) || k.endsWith(r, "[]")) && (a = k.toArray(e)))
+              )
+                return (
+                  (r = J(r)),
+                  a.forEach(function (e, n) {
+                    k.isUndefined(e) ||
+                      null === e ||
+                      t.append(
+                        !0 === s ? W([r], n, i) : null === s ? r : r + "[]",
+                        l(e)
+                      );
+                  }),
+                  !1
+                );
+            }
+          }
+          return !!H(e) || (t.append(W(o, r, i), l(e)), !1);
+        }
+        let c = [],
+          f = Object.assign(V, {
+            defaultVisitor: u,
+            convertValue: l,
+            isVisitable: H,
+          });
+        if (!k.isObject(e)) throw TypeError("data must be an object");
+        return (
+          !(function e(r, n) {
+            if (!k.isUndefined(r)) {
+              if (-1 !== c.indexOf(r))
+                throw Error("Circular reference detected in " + n.join("."));
+              c.push(r),
+                k.forEach(r, function (r, i) {
+                  !0 ===
+                    (!(k.isUndefined(r) || null === r) &&
+                      o.call(t, r, k.isString(i) ? i.trim() : i, n, f)) &&
+                    e(r, n ? n.concat(i) : [i]);
+                }),
+                c.pop();
+            }
+          })(e),
+          t
+        );
+      };
+      function $(e) {
+        let t = {
+          "!": "%21",
+          "'": "%27",
+          "(": "%28",
+          ")": "%29",
+          "~": "%7E",
+          "%20": "+",
+          "%00": "\x00",
+        };
+        return encodeURIComponent(e).replace(/[!'()~]|%20|%00/g, function (e) {
+          return t[e];
+        });
+      }
+      function G(e, t) {
+        (this._pairs = []), e && K(e, this, t);
+      }
+      let X = G.prototype;
+      function Q(e) {
+        return encodeURIComponent(e)
+          .replace(/%3A/gi, ":")
+          .replace(/%24/g, "$")
+          .replace(/%2C/gi, ",")
+          .replace(/%20/g, "+")
+          .replace(/%5B/gi, "[")
+          .replace(/%5D/gi, "]");
+      }
+      function Z(e, t, r) {
+        let n;
+        if (!t) return e;
+        let o = (r && r.encode) || Q,
+          i = r && r.serialize;
+        if (
+          (n = i
+            ? i(t, r)
+            : k.isURLSearchParams(t)
+              ? t.toString()
+              : new G(t, r).toString(o))
+        ) {
+          let t = e.indexOf("#");
+          -1 !== t && (e = e.slice(0, t)),
+            (e += (-1 === e.indexOf("?") ? "?" : "&") + n);
+        }
+        return e;
+      }
+      (X.append = function (e, t) {
+        this._pairs.push([e, t]);
+      }),
+        (X.toString = function (e) {
+          let t = e
+            ? function (t) {
+                return e.call(this, t, $);
+              }
+            : $;
+          return this._pairs
+            .map(function (e) {
+              return t(e[0]) + "=" + t(e[1]);
+            }, "")
+            .join("&");
+        });
+      class Y {
+        constructor() {
+          this.handlers = [];
+        }
+        use(e, t, r) {
+          return (
+            this.handlers.push({
+              fulfilled: e,
+              rejected: t,
+              synchronous: !!r && r.synchronous,
+              runWhen: r ? r.runWhen : null,
+            }),
+            this.handlers.length - 1
+          );
+        }
+        eject(e) {
+          this.handlers[e] && (this.handlers[e] = null);
+        }
+        clear() {
+          this.handlers && (this.handlers = []);
+        }
+        forEach(e) {
+          k.forEach(this.handlers, function (t) {
+            null !== t && e(t);
+          });
+        }
+      }
+      var ee = {
+          silentJSONParsing: !0,
+          forcedJSONParsing: !0,
+          clarifyTimeoutError: !1,
+        },
+        et = {
+          classes: {
+            URLSearchParams:
+              "undefined" != typeof URLSearchParams ? URLSearchParams : G,
+            FormData: "undefined" != typeof FormData ? FormData : null,
+            Blob: "undefined" != typeof Blob ? Blob : null,
+          },
+          isStandardBrowserEnv:
+            ("undefined" == typeof navigator ||
+              ("ReactNative" !== (n = navigator.product) &&
+                "NativeScript" !== n &&
+                "NS" !== n)) &&
+            "undefined" != typeof window &&
+            "undefined" != typeof document,
+          isStandardBrowserWebWorkerEnv:
+            "undefined" != typeof WorkerGlobalScope &&
+            self instanceof WorkerGlobalScope &&
+            "function" == typeof self.importScripts,
+          protocols: ["http", "https", "file", "blob", "url", "data"],
+        },
+        er = function (e) {
+          if (k.isFormData(e) && k.isFunction(e.entries)) {
+            let t = {};
+            return (
+              k.forEachEntry(e, (e, r) => {
+                !(function e(t, r, n, o) {
+                  let i = t[o++],
+                    s = Number.isFinite(+i),
+                    a = o >= t.length;
+                  return (
+                    ((i = !i && k.isArray(n) ? n.length : i), a)
+                      ? k.hasOwnProp(n, i)
+                        ? (n[i] = [n[i], r])
+                        : (n[i] = r)
+                      : ((n[i] && k.isObject(n[i])) || (n[i] = []),
+                        e(t, r, n[i], o) &&
+                          k.isArray(n[i]) &&
+                          (n[i] = (function (e) {
+                            let t, r;
+                            let n = {},
+                              o = Object.keys(e),
+                              i = o.length;
+                            for (t = 0; t < i; t++) n[(r = o[t])] = e[r];
+                            return n;
+                          })(n[i]))),
+                    !s
+                  );
+                })(
+                  k
+                    .matchAll(/\w+|\[(\w*)]/g, e)
+                    .map((e) => ("[]" === e[0] ? "" : e[1] || e[0])),
+                  r,
+                  t,
+                  0
+                );
+              }),
+              t
+            );
+          }
+          return null;
+        };
+      let en = { "Content-Type": void 0 },
+        eo = {
+          transitional: ee,
+          adapter: ["xhr", "http"],
+          transformRequest: [
+            function (e, t) {
+              let r;
+              let n = t.getContentType() || "",
+                o = n.indexOf("application/json") > -1,
+                i = k.isObject(e);
+              if (
+                (i && k.isHTMLForm(e) && (e = new FormData(e)), k.isFormData(e))
+              )
+                return o && o ? JSON.stringify(er(e)) : e;
+              if (
+                k.isArrayBuffer(e) ||
+                k.isBuffer(e) ||
+                k.isStream(e) ||
+                k.isFile(e) ||
+                k.isBlob(e)
+              )
+                return e;
+              if (k.isArrayBufferView(e)) return e.buffer;
+              if (k.isURLSearchParams(e))
+                return (
+                  t.setContentType(
+                    "application/x-www-form-urlencoded;charset=utf-8",
+                    !1
+                  ),
+                  e.toString()
+                );
+              if (i) {
+                if (n.indexOf("application/x-www-form-urlencoded") > -1) {
+                  var s, a;
+                  return ((s = e),
+                  (a = this.formSerializer),
+                  K(
+                    s,
+                    new et.classes.URLSearchParams(),
+                    Object.assign(
+                      {
+                        visitor: function (e, t, r, n) {
+                          return et.isNode && k.isBuffer(e)
+                            ? (this.append(t, e.toString("base64")), !1)
+                            : n.defaultVisitor.apply(this, arguments);
+                        },
+                      },
+                      a
+                    )
+                  )).toString();
+                }
+                if (
+                  (r = k.isFileList(e)) ||
+                  n.indexOf("multipart/form-data") > -1
+                ) {
+                  let t = this.env && this.env.FormData;
+                  return K(
+                    r ? { "files[]": e } : e,
+                    t && new t(),
+                    this.formSerializer
+                  );
+                }
+              }
+              return i || o
+                ? (t.setContentType("application/json", !1),
+                  (function (e, t, r) {
+                    if (k.isString(e))
+                      try {
+                        return (0, JSON.parse)(e), k.trim(e);
+                      } catch (e) {
+                        if ("SyntaxError" !== e.name) throw e;
+                      }
+                    return (0, JSON.stringify)(e);
+                  })(e))
+                : e;
+            },
+          ],
+          transformResponse: [
+            function (e) {
+              let t = this.transitional || eo.transitional,
+                r = t && t.forcedJSONParsing,
+                n = "json" === this.responseType;
+              if (e && k.isString(e) && ((r && !this.responseType) || n)) {
+                let r = t && t.silentJSONParsing;
+                try {
+                  return JSON.parse(e);
+                } catch (e) {
+                  if (!r && n) {
+                    if ("SyntaxError" === e.name)
+                      throw q.from(
+                        e,
+                        q.ERR_BAD_RESPONSE,
+                        this,
+                        null,
+                        this.response
+                      );
+                    throw e;
+                  }
+                }
+              }
+              return e;
+            },
+          ],
+          timeout: 0,
+          xsrfCookieName: "XSRF-TOKEN",
+          xsrfHeaderName: "X-XSRF-TOKEN",
+          maxContentLength: -1,
+          maxBodyLength: -1,
+          env: { FormData: et.classes.FormData, Blob: et.classes.Blob },
+          validateStatus: function (e) {
+            return e >= 200 && e < 300;
+          },
+          headers: { common: { Accept: "application/json, text/plain, */*" } },
+        };
+      k.forEach(["delete", "get", "head"], function (e) {
+        eo.headers[e] = {};
+      }),
+        k.forEach(["post", "put", "patch"], function (e) {
+          eo.headers[e] = k.merge(en);
+        });
+      let ei = k.toObjectSet([
+        "age",
+        "authorization",
+        "content-length",
+        "content-type",
+        "etag",
+        "expires",
+        "from",
+        "host",
+        "if-modified-since",
+        "if-unmodified-since",
+        "last-modified",
+        "location",
+        "max-forwards",
+        "proxy-authorization",
+        "referer",
+        "retry-after",
+        "user-agent",
+      ]);
+      var es = (e) => {
+        let t, r, n;
+        let o = {};
+        return (
+          e &&
+            e.split("\n").forEach(function (e) {
+              (n = e.indexOf(":")),
+                (t = e.substring(0, n).trim().toLowerCase()),
+                (r = e.substring(n + 1).trim()),
+                !t ||
+                  (o[t] && ei[t]) ||
+                  ("set-cookie" === t
+                    ? o[t]
+                      ? o[t].push(r)
+                      : (o[t] = [r])
+                    : (o[t] = o[t] ? o[t] + ", " + r : r));
+            }),
+          o
+        );
+      };
+      let ea = Symbol("internals");
+      function el(e) {
+        return e && String(e).trim().toLowerCase();
+      }
+      function eu(e) {
+        return !1 === e || null == e ? e : k.isArray(e) ? e.map(eu) : String(e);
+      }
+      let ec = (e) => /^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(e.trim());
+      function ef(e, t, r, n, o) {
+        if (k.isFunction(n)) return n.call(this, t, r);
+        if ((o && (t = r), k.isString(t))) {
+          if (k.isString(n)) return -1 !== t.indexOf(n);
+          if (k.isRegExp(n)) return n.test(t);
+        }
+      }
+      class ed {
+        constructor(e) {
+          e && this.set(e);
+        }
+        set(e, t, r) {
+          let n = this;
+          function o(e, t, r) {
+            let o = el(t);
+            if (!o) throw Error("header name must be a non-empty string");
+            let i = k.findKey(n, o);
+            (i &&
+              void 0 !== n[i] &&
+              !0 !== r &&
+              (void 0 !== r || !1 === n[i])) ||
+              (n[i || t] = eu(e));
+          }
+          let i = (e, t) => k.forEach(e, (e, r) => o(e, r, t));
+          return (
+            k.isPlainObject(e) || e instanceof this.constructor
+              ? i(e, t)
+              : k.isString(e) && (e = e.trim()) && !ec(e)
+                ? i(es(e), t)
+                : null != e && o(t, e, r),
+            this
+          );
+        }
+        get(e, t) {
+          if ((e = el(e))) {
+            let r = k.findKey(this, e);
+            if (r) {
+              let e = this[r];
+              if (!t) return e;
+              if (!0 === t)
+                return (function (e) {
+                  let t;
+                  let r = Object.create(null),
+                    n = /([^\s,;=]+)\s*(?:=\s*([^,;]+))?/g;
+                  for (; (t = n.exec(e)); ) r[t[1]] = t[2];
+                  return r;
+                })(e);
+              if (k.isFunction(t)) return t.call(this, e, r);
+              if (k.isRegExp(t)) return t.exec(e);
+              throw TypeError("parser must be boolean|regexp|function");
+            }
+          }
+        }
+        has(e, t) {
+          if ((e = el(e))) {
+            let r = k.findKey(this, e);
+            return !!(
+              r &&
+              void 0 !== this[r] &&
+              (!t || ef(this, this[r], r, t))
+            );
+          }
+          return !1;
+        }
+        delete(e, t) {
+          let r = this,
+            n = !1;
+          function o(e) {
+            if ((e = el(e))) {
+              let o = k.findKey(r, e);
+              o && (!t || ef(r, r[o], o, t)) && (delete r[o], (n = !0));
+            }
+          }
+          return k.isArray(e) ? e.forEach(o) : o(e), n;
+        }
+        clear(e) {
+          let t = Object.keys(this),
+            r = t.length,
+            n = !1;
+          for (; r--; ) {
+            let o = t[r];
+            (!e || ef(this, this[o], o, e, !0)) && (delete this[o], (n = !0));
+          }
+          return n;
+        }
+        normalize(e) {
+          let t = this,
+            r = {};
+          return (
+            k.forEach(this, (n, o) => {
+              let i = k.findKey(r, o);
+              if (i) {
+                (t[i] = eu(n)), delete t[o];
+                return;
+              }
+              let s = e
+                ? o
+                    .trim()
+                    .toLowerCase()
+                    .replace(
+                      /([a-z\d])(\w*)/g,
+                      (e, t, r) => t.toUpperCase() + r
+                    )
+                : String(o).trim();
+              s !== o && delete t[o], (t[s] = eu(n)), (r[s] = !0);
+            }),
+            this
+          );
+        }
+        concat(...e) {
+          return this.constructor.concat(this, ...e);
+        }
+        toJSON(e) {
+          let t = Object.create(null);
+          return (
+            k.forEach(this, (r, n) => {
+              null != r &&
+                !1 !== r &&
+                (t[n] = e && k.isArray(r) ? r.join(", ") : r);
+            }),
+            t
+          );
+        }
+        [Symbol.iterator]() {
+          return Object.entries(this.toJSON())[Symbol.iterator]();
+        }
+        toString() {
+          return Object.entries(this.toJSON())
+            .map(([e, t]) => e + ": " + t)
+            .join("\n");
+        }
+        get [Symbol.toStringTag]() {
+          return "AxiosHeaders";
+        }
+        static from(e) {
+          return e instanceof this ? e : new this(e);
+        }
+        static concat(e, ...t) {
+          let r = new this(e);
+          return t.forEach((e) => r.set(e)), r;
+        }
+        static accessor(e) {
+          let t = (this[ea] = this[ea] = { accessors: {} }).accessors,
+            r = this.prototype;
+          function n(e) {
+            let n = el(e);
+            t[n] ||
+              (!(function (e, t) {
+                let r = k.toCamelCase(" " + t);
+                ["get", "set", "has"].forEach((n) => {
+                  Object.defineProperty(e, n + r, {
+                    value: function (e, r, o) {
+                      return this[n].call(this, t, e, r, o);
+                    },
+                    configurable: !0,
+                  });
+                });
+              })(r, e),
+              (t[n] = !0));
+          }
+          return k.isArray(e) ? e.forEach(n) : n(e), this;
+        }
+      }
+      function ep(e, t) {
+        let r = this || eo,
+          n = t || r,
+          o = ed.from(n.headers),
+          i = n.data;
+        return (
+          k.forEach(e, function (e) {
+            i = e.call(r, i, o.normalize(), t ? t.status : void 0);
+          }),
+          o.normalize(),
+          i
+        );
+      }
+      function eh(e) {
+        return !!(e && e.__CANCEL__);
+      }
+      function em(e, t, r) {
+        q.call(this, null == e ? "canceled" : e, q.ERR_CANCELED, t, r),
+          (this.name = "CanceledError");
+      }
+      ed.accessor([
+        "Content-Type",
+        "Content-Length",
+        "Accept",
+        "Accept-Encoding",
+        "User-Agent",
+        "Authorization",
+      ]),
+        k.freezeMethods(ed.prototype),
+        k.freezeMethods(ed),
+        k.inherits(em, q, { __CANCEL__: !0 });
+      var eg = et.isStandardBrowserEnv
+        ? {
+            write: function (e, t, r, n, o, i) {
+              let s = [];
+              s.push(e + "=" + encodeURIComponent(t)),
+                k.isNumber(r) && s.push("expires=" + new Date(r).toGMTString()),
+                k.isString(n) && s.push("path=" + n),
+                k.isString(o) && s.push("domain=" + o),
+                !0 === i && s.push("secure"),
+                (document.cookie = s.join("; "));
+            },
+            read: function (e) {
+              let t = document.cookie.match(
+                RegExp("(^|;\\s*)(" + e + ")=([^;]*)")
+              );
+              return t ? decodeURIComponent(t[3]) : null;
+            },
+            remove: function (e) {
+              this.write(e, "", Date.now() - 864e5);
+            },
+          }
+        : {
+            write: function () {},
+            read: function () {
+              return null;
+            },
+            remove: function () {},
+          };
+      function ey(e, t) {
+        return e && !/^([a-z][a-z\d+\-.]*:)?\/\//i.test(t)
+          ? t
+            ? e.replace(/\/+$/, "") + "/" + t.replace(/^\/+/, "")
+            : e
+          : t;
+      }
+      var eb = et.isStandardBrowserEnv
+          ? (function () {
+              let e;
+              let t = /(msie|trident)/i.test(navigator.userAgent),
+                r = document.createElement("a");
+              function n(e) {
+                let n = e;
+                return (
+                  t && (r.setAttribute("href", n), (n = r.href)),
+                  r.setAttribute("href", n),
+                  {
+                    href: r.href,
+                    protocol: r.protocol ? r.protocol.replace(/:$/, "") : "",
+                    host: r.host,
+                    search: r.search ? r.search.replace(/^\?/, "") : "",
+                    hash: r.hash ? r.hash.replace(/^#/, "") : "",
+                    hostname: r.hostname,
+                    port: r.port,
+                    pathname:
+                      "/" === r.pathname.charAt(0)
+                        ? r.pathname
+                        : "/" + r.pathname,
+                  }
+                );
+              }
+              return (
+                (e = n(window.location.href)),
+                function (t) {
+                  let r = k.isString(t) ? n(t) : t;
+                  return r.protocol === e.protocol && r.host === e.host;
+                }
+              );
+            })()
+          : function () {
+              return !0;
+            },
+        eE = function (e, t) {
+          let r;
+          let n = Array((e = e || 10)),
+            o = Array(e),
+            i = 0,
+            s = 0;
+          return (
+            (t = void 0 !== t ? t : 1e3),
+            function (a) {
+              let l = Date.now(),
+                u = o[s];
+              r || (r = l), (n[i] = a), (o[i] = l);
+              let c = s,
+                f = 0;
+              for (; c !== i; ) (f += n[c++]), (c %= e);
+              if (((i = (i + 1) % e) === s && (s = (s + 1) % e), l - r < t))
+                return;
+              let d = u && l - u;
+              return d ? Math.round((1e3 * f) / d) : void 0;
+            }
+          );
+        };
+      function ew(e, t) {
+        let r = 0,
+          n = eE(50, 250);
+        return (o) => {
+          let i = o.loaded,
+            s = o.lengthComputable ? o.total : void 0,
+            a = i - r,
+            l = n(a);
+          r = i;
+          let u = {
+            loaded: i,
+            total: s,
+            progress: s ? i / s : void 0,
+            bytes: a,
+            rate: l || void 0,
+            estimated: l && s && i <= s ? (s - i) / l : void 0,
+            event: o,
+          };
+          (u[t ? "download" : "upload"] = !0), e(u);
+        };
+      }
+      let eO = {
+        http: null,
+        xhr:
+          "undefined" != typeof XMLHttpRequest &&
+          function (e) {
+            return new Promise(function (t, r) {
+              let n,
+                o = e.data,
+                i = ed.from(e.headers).normalize(),
+                s = e.responseType;
+              function a() {
+                e.cancelToken && e.cancelToken.unsubscribe(n),
+                  e.signal && e.signal.removeEventListener("abort", n);
+              }
+              k.isFormData(o) &&
+                (et.isStandardBrowserEnv || et.isStandardBrowserWebWorkerEnv
+                  ? i.setContentType(!1)
+                  : i.setContentType("multipart/form-data;", !1));
+              let l = new XMLHttpRequest();
+              if (e.auth) {
+                let t = e.auth.username || "",
+                  r = e.auth.password
+                    ? unescape(encodeURIComponent(e.auth.password))
+                    : "";
+                i.set("Authorization", "Basic " + btoa(t + ":" + r));
+              }
+              let u = ey(e.baseURL, e.url);
+              function c() {
+                if (!l) return;
+                let n = ed.from(
+                  "getAllResponseHeaders" in l && l.getAllResponseHeaders()
+                );
+                !(function (e, t, r) {
+                  let n = r.config.validateStatus;
+                  !r.status || !n || n(r.status)
+                    ? e(r)
+                    : t(
+                        new q(
+                          "Request failed with status code " + r.status,
+                          [q.ERR_BAD_REQUEST, q.ERR_BAD_RESPONSE][
+                            Math.floor(r.status / 100) - 4
+                          ],
+                          r.config,
+                          r.request,
+                          r
+                        )
+                      );
+                })(
+                  function (e) {
+                    t(e), a();
+                  },
+                  function (e) {
+                    r(e), a();
+                  },
+                  {
+                    data:
+                      s && "text" !== s && "json" !== s
+                        ? l.response
+                        : l.responseText,
+                    status: l.status,
+                    statusText: l.statusText,
+                    headers: n,
+                    config: e,
+                    request: l,
+                  }
+                ),
+                  (l = null);
+              }
+              if (
+                (l.open(
+                  e.method.toUpperCase(),
+                  Z(u, e.params, e.paramsSerializer),
+                  !0
+                ),
+                (l.timeout = e.timeout),
+                "onloadend" in l
+                  ? (l.onloadend = c)
+                  : (l.onreadystatechange = function () {
+                      l &&
+                        4 === l.readyState &&
+                        (0 !== l.status ||
+                          (l.responseURL &&
+                            0 === l.responseURL.indexOf("file:"))) &&
+                        setTimeout(c);
+                    }),
+                (l.onabort = function () {
+                  l &&
+                    (r(new q("Request aborted", q.ECONNABORTED, e, l)),
+                    (l = null));
+                }),
+                (l.onerror = function () {
+                  r(new q("Network Error", q.ERR_NETWORK, e, l)), (l = null);
+                }),
+                (l.ontimeout = function () {
+                  let t = e.timeout
+                      ? "timeout of " + e.timeout + "ms exceeded"
+                      : "timeout exceeded",
+                    n = e.transitional || ee;
+                  e.timeoutErrorMessage && (t = e.timeoutErrorMessage),
+                    r(
+                      new q(
+                        t,
+                        n.clarifyTimeoutError ? q.ETIMEDOUT : q.ECONNABORTED,
+                        e,
+                        l
+                      )
+                    ),
+                    (l = null);
+                }),
+                et.isStandardBrowserEnv)
+              ) {
+                let t =
+                  (e.withCredentials || eb(u)) &&
+                  e.xsrfCookieName &&
+                  eg.read(e.xsrfCookieName);
+                t && i.set(e.xsrfHeaderName, t);
+              }
+              void 0 === o && i.setContentType(null),
+                "setRequestHeader" in l &&
+                  k.forEach(i.toJSON(), function (e, t) {
+                    l.setRequestHeader(t, e);
+                  }),
+                k.isUndefined(e.withCredentials) ||
+                  (l.withCredentials = !!e.withCredentials),
+                s && "json" !== s && (l.responseType = e.responseType),
+                "function" == typeof e.onDownloadProgress &&
+                  l.addEventListener("progress", ew(e.onDownloadProgress, !0)),
+                "function" == typeof e.onUploadProgress &&
+                  l.upload &&
+                  l.upload.addEventListener("progress", ew(e.onUploadProgress)),
+                (e.cancelToken || e.signal) &&
+                  ((n = (t) => {
+                    l &&
+                      (r(!t || t.type ? new em(null, e, l) : t),
+                      l.abort(),
+                      (l = null));
+                  }),
+                  e.cancelToken && e.cancelToken.subscribe(n),
+                  e.signal &&
+                    (e.signal.aborted
+                      ? n()
+                      : e.signal.addEventListener("abort", n)));
+              let f = (function (e) {
+                let t = /^([-+\w]{1,25})(:?\/\/|:)/.exec(e);
+                return (t && t[1]) || "";
+              })(u);
+              if (f && -1 === et.protocols.indexOf(f)) {
+                r(
+                  new q("Unsupported protocol " + f + ":", q.ERR_BAD_REQUEST, e)
+                );
+                return;
+              }
+              l.send(o || null);
+            });
+          },
+      };
+      k.forEach(eO, (e, t) => {
+        if (e) {
+          try {
+            Object.defineProperty(e, "name", { value: t });
+          } catch (e) {}
+          Object.defineProperty(e, "adapterName", { value: t });
+        }
+      });
+      var eS = {
+        getAdapter: (e) => {
+          let t, r;
+          let { length: n } = (e = k.isArray(e) ? e : [e]);
+          for (
+            let o = 0;
+            o < n &&
+            ((t = e[o]), !(r = k.isString(t) ? eO[t.toLowerCase()] : t));
+            o++
+          );
+          if (!r) {
+            if (!1 === r)
+              throw new q(
+                `Adapter ${t} is not supported by the environment`,
+                "ERR_NOT_SUPPORT"
+              );
+            throw Error(
+              k.hasOwnProp(eO, t)
+                ? `Adapter '${t}' is not available in the build`
+                : `Unknown adapter '${t}'`
+            );
+          }
+          if (!k.isFunction(r)) throw TypeError("adapter is not a function");
+          return r;
+        },
+        adapters: eO,
+      };
+      function eR(e) {
+        if (
+          (e.cancelToken && e.cancelToken.throwIfRequested(),
+          e.signal && e.signal.aborted)
+        )
+          throw new em(null, e);
+      }
+      function eA(e) {
+        return (
+          eR(e),
+          (e.headers = ed.from(e.headers)),
+          (e.data = ep.call(e, e.transformRequest)),
+          -1 !== ["post", "put", "patch"].indexOf(e.method) &&
+            e.headers.setContentType("application/x-www-form-urlencoded", !1),
+          eS
+            .getAdapter(e.adapter || eo.adapter)(e)
+            .then(
+              function (t) {
+                return (
+                  eR(e),
+                  (t.data = ep.call(e, e.transformResponse, t)),
+                  (t.headers = ed.from(t.headers)),
+                  t
+                );
+              },
+              function (t) {
+                return (
+                  !eh(t) &&
+                    (eR(e),
+                    t &&
+                      t.response &&
+                      ((t.response.data = ep.call(
+                        e,
+                        e.transformResponse,
+                        t.response
+                      )),
+                      (t.response.headers = ed.from(t.response.headers)))),
+                  Promise.reject(t)
+                );
+              }
+            )
+        );
+      }
+      let eT = (e) => (e instanceof ed ? e.toJSON() : e);
+      function eC(e, t) {
+        t = t || {};
+        let r = {};
+        function n(e, t, r) {
+          return k.isPlainObject(e) && k.isPlainObject(t)
+            ? k.merge.call({ caseless: r }, e, t)
+            : k.isPlainObject(t)
+              ? k.merge({}, t)
+              : k.isArray(t)
+                ? t.slice()
+                : t;
+        }
+        function o(e, t, r) {
+          return k.isUndefined(t)
+            ? k.isUndefined(e)
+              ? void 0
+              : n(void 0, e, r)
+            : n(e, t, r);
+        }
+        function i(e, t) {
+          if (!k.isUndefined(t)) return n(void 0, t);
+        }
+        function s(e, t) {
+          return k.isUndefined(t)
+            ? k.isUndefined(e)
+              ? void 0
+              : n(void 0, e)
+            : n(void 0, t);
+        }
+        function a(r, o, i) {
+          return i in t ? n(r, o) : i in e ? n(void 0, r) : void 0;
+        }
+        let l = {
+          url: i,
+          method: i,
+          data: i,
+          baseURL: s,
+          transformRequest: s,
+          transformResponse: s,
+          paramsSerializer: s,
+          timeout: s,
+          timeoutMessage: s,
+          withCredentials: s,
+          adapter: s,
+          responseType: s,
+          xsrfCookieName: s,
+          xsrfHeaderName: s,
+          onUploadProgress: s,
+          onDownloadProgress: s,
+          decompress: s,
+          maxContentLength: s,
+          maxBodyLength: s,
+          beforeRedirect: s,
+          transport: s,
+          httpAgent: s,
+          httpsAgent: s,
+          cancelToken: s,
+          socketPath: s,
+          responseEncoding: s,
+          validateStatus: a,
+          headers: (e, t) => o(eT(e), eT(t), !0),
+        };
+        return (
+          k.forEach(Object.keys(Object.assign({}, e, t)), function (n) {
+            let i = l[n] || o,
+              s = i(e[n], t[n], n);
+            (k.isUndefined(s) && i !== a) || (r[n] = s);
+          }),
+          r
+        );
+      }
+      let eN = "1.4.0",
+        ev = {};
+      ["object", "boolean", "number", "function", "string", "symbol"].forEach(
+        (e, t) => {
+          ev[e] = function (r) {
+            return typeof r === e || "a" + (t < 1 ? "n " : " ") + e;
+          };
+        }
       );
+      let ex = {};
+      ev.transitional = function (e, t, r) {
+        function n(e, t) {
+          return (
+            "[Axios v" +
+            eN +
+            "] Transitional option '" +
+            e +
+            "'" +
+            t +
+            (r ? ". " + r : "")
+          );
+        }
+        return (r, o, i) => {
+          if (!1 === e)
+            throw new q(
+              n(o, " has been removed" + (t ? " in " + t : "")),
+              q.ERR_DEPRECATED
+            );
+          return (
+            t &&
+              !ex[o] &&
+              ((ex[o] = !0),
+              console.warn(
+                n(
+                  o,
+                  " has been deprecated since v" +
+                    t +
+                    " and will be removed in the near future"
+                )
+              )),
+            !e || e(r, o, i)
+          );
+        };
+      };
+      var ej = {
+        assertOptions: function (e, t, r) {
+          if ("object" != typeof e)
+            throw new q("options must be an object", q.ERR_BAD_OPTION_VALUE);
+          let n = Object.keys(e),
+            o = n.length;
+          for (; o-- > 0; ) {
+            let i = n[o],
+              s = t[i];
+            if (s) {
+              let t = e[i],
+                r = void 0 === t || s(t, i, e);
+              if (!0 !== r)
+                throw new q(
+                  "option " + i + " must be " + r,
+                  q.ERR_BAD_OPTION_VALUE
+                );
+              continue;
+            }
+            if (!0 !== r) throw new q("Unknown option " + i, q.ERR_BAD_OPTION);
+          }
+        },
+        validators: ev,
+      };
+      let eP = ej.validators;
+      class e_ {
+        constructor(e) {
+          (this.defaults = e),
+            (this.interceptors = { request: new Y(), response: new Y() });
+        }
+        request(e, t) {
+          let r, n, o;
+          "string" == typeof e ? ((t = t || {}).url = e) : (t = e || {});
+          let {
+            transitional: i,
+            paramsSerializer: s,
+            headers: a,
+          } = (t = eC(this.defaults, t));
+          void 0 !== i &&
+            ej.assertOptions(
+              i,
+              {
+                silentJSONParsing: eP.transitional(eP.boolean),
+                forcedJSONParsing: eP.transitional(eP.boolean),
+                clarifyTimeoutError: eP.transitional(eP.boolean),
+              },
+              !1
+            ),
+            null != s &&
+              (k.isFunction(s)
+                ? (t.paramsSerializer = { serialize: s })
+                : ej.assertOptions(
+                    s,
+                    { encode: eP.function, serialize: eP.function },
+                    !0
+                  )),
+            (t.method = (
+              t.method ||
+              this.defaults.method ||
+              "get"
+            ).toLowerCase()),
+            (r = a && k.merge(a.common, a[t.method])) &&
+              k.forEach(
+                ["delete", "get", "head", "post", "put", "patch", "common"],
+                (e) => {
+                  delete a[e];
+                }
+              ),
+            (t.headers = ed.concat(r, a));
+          let l = [],
+            u = !0;
+          this.interceptors.request.forEach(function (e) {
+            ("function" != typeof e.runWhen || !1 !== e.runWhen(t)) &&
+              ((u = u && e.synchronous), l.unshift(e.fulfilled, e.rejected));
+          });
+          let c = [];
+          this.interceptors.response.forEach(function (e) {
+            c.push(e.fulfilled, e.rejected);
+          });
+          let f = 0;
+          if (!u) {
+            let e = [eA.bind(this), void 0];
+            for (
+              e.unshift.apply(e, l),
+                e.push.apply(e, c),
+                o = e.length,
+                n = Promise.resolve(t);
+              f < o;
+            )
+              n = n.then(e[f++], e[f++]);
+            return n;
+          }
+          o = l.length;
+          let d = t;
+          for (f = 0; f < o; ) {
+            let e = l[f++],
+              t = l[f++];
+            try {
+              d = e(d);
+            } catch (e) {
+              t.call(this, e);
+              break;
+            }
+          }
+          try {
+            n = eA.call(this, d);
+          } catch (e) {
+            return Promise.reject(e);
+          }
+          for (f = 0, o = c.length; f < o; ) n = n.then(c[f++], c[f++]);
+          return n;
+        }
+        getUri(e) {
+          return Z(
+            ey((e = eC(this.defaults, e)).baseURL, e.url),
+            e.params,
+            e.paramsSerializer
+          );
+        }
+      }
+      k.forEach(["delete", "get", "head", "options"], function (e) {
+        e_.prototype[e] = function (t, r) {
+          return this.request(
+            eC(r || {}, { method: e, url: t, data: (r || {}).data })
+          );
+        };
+      }),
+        k.forEach(["post", "put", "patch"], function (e) {
+          function t(t) {
+            return function (r, n, o) {
+              return this.request(
+                eC(o || {}, {
+                  method: e,
+                  headers: t ? { "Content-Type": "multipart/form-data" } : {},
+                  url: r,
+                  data: n,
+                })
+              );
+            };
+          }
+          (e_.prototype[e] = t()), (e_.prototype[e + "Form"] = t(!0));
+        });
+      class eU {
+        constructor(e) {
+          let t;
+          if ("function" != typeof e)
+            throw TypeError("executor must be a function.");
+          this.promise = new Promise(function (e) {
+            t = e;
+          });
+          let r = this;
+          this.promise.then((e) => {
+            if (!r._listeners) return;
+            let t = r._listeners.length;
+            for (; t-- > 0; ) r._listeners[t](e);
+            r._listeners = null;
+          }),
+            (this.promise.then = (e) => {
+              let t;
+              let n = new Promise((e) => {
+                r.subscribe(e), (t = e);
+              }).then(e);
+              return (
+                (n.cancel = function () {
+                  r.unsubscribe(t);
+                }),
+                n
+              );
+            }),
+            e(function (e, n, o) {
+              r.reason || ((r.reason = new em(e, n, o)), t(r.reason));
+            });
+        }
+        throwIfRequested() {
+          if (this.reason) throw this.reason;
+        }
+        subscribe(e) {
+          if (this.reason) {
+            e(this.reason);
+            return;
+          }
+          this._listeners ? this._listeners.push(e) : (this._listeners = [e]);
+        }
+        unsubscribe(e) {
+          if (!this._listeners) return;
+          let t = this._listeners.indexOf(e);
+          -1 !== t && this._listeners.splice(t, 1);
+        }
+        static source() {
+          let e;
+          return {
+            token: new eU(function (t) {
+              e = t;
+            }),
+            cancel: e,
+          };
+        }
+      }
+      let eF = {
+        Continue: 100,
+        SwitchingProtocols: 101,
+        Processing: 102,
+        EarlyHints: 103,
+        Ok: 200,
+        Created: 201,
+        Accepted: 202,
+        NonAuthoritativeInformation: 203,
+        NoContent: 204,
+        ResetContent: 205,
+        PartialContent: 206,
+        MultiStatus: 207,
+        AlreadyReported: 208,
+        ImUsed: 226,
+        MultipleChoices: 300,
+        MovedPermanently: 301,
+        Found: 302,
+        SeeOther: 303,
+        NotModified: 304,
+        UseProxy: 305,
+        Unused: 306,
+        TemporaryRedirect: 307,
+        PermanentRedirect: 308,
+        BadRequest: 400,
+        Unauthorized: 401,
+        PaymentRequired: 402,
+        Forbidden: 403,
+        NotFound: 404,
+        MethodNotAllowed: 405,
+        NotAcceptable: 406,
+        ProxyAuthenticationRequired: 407,
+        RequestTimeout: 408,
+        Conflict: 409,
+        Gone: 410,
+        LengthRequired: 411,
+        PreconditionFailed: 412,
+        PayloadTooLarge: 413,
+        UriTooLong: 414,
+        UnsupportedMediaType: 415,
+        RangeNotSatisfiable: 416,
+        ExpectationFailed: 417,
+        ImATeapot: 418,
+        MisdirectedRequest: 421,
+        UnprocessableEntity: 422,
+        Locked: 423,
+        FailedDependency: 424,
+        TooEarly: 425,
+        UpgradeRequired: 426,
+        PreconditionRequired: 428,
+        TooManyRequests: 429,
+        RequestHeaderFieldsTooLarge: 431,
+        UnavailableForLegalReasons: 451,
+        InternalServerError: 500,
+        NotImplemented: 501,
+        BadGateway: 502,
+        ServiceUnavailable: 503,
+        GatewayTimeout: 504,
+        HttpVersionNotSupported: 505,
+        VariantAlsoNegotiates: 506,
+        InsufficientStorage: 507,
+        LoopDetected: 508,
+        NotExtended: 510,
+        NetworkAuthenticationRequired: 511,
+      };
+      Object.entries(eF).forEach(([e, t]) => {
+        eF[t] = e;
+      });
+      let eD = (function e(t) {
+        let r = new e_(t),
+          n = o(e_.prototype.request, r);
+        return (
+          k.extend(n, e_.prototype, r, { allOwnKeys: !0 }),
+          k.extend(n, r, null, { allOwnKeys: !0 }),
+          (n.create = function (r) {
+            return e(eC(t, r));
+          }),
+          n
+        );
+      })(eo);
+      (eD.Axios = e_),
+        (eD.CanceledError = em),
+        (eD.CancelToken = eU),
+        (eD.isCancel = eh),
+        (eD.VERSION = eN),
+        (eD.toFormData = K),
+        (eD.AxiosError = q),
+        (eD.Cancel = eD.CanceledError),
+        (eD.all = function (e) {
+          return Promise.all(e);
+        }),
+        (eD.spread = function (e) {
+          return function (t) {
+            return e.apply(null, t);
+          };
+        }),
+        (eD.isAxiosError = function (e) {
+          return k.isObject(e) && !0 === e.isAxiosError;
+        }),
+        (eD.mergeConfig = eC),
+        (eD.AxiosHeaders = ed),
+        (eD.formToJSON = (e) => er(k.isHTMLForm(e) ? new FormData(e) : e)),
+        (eD.HttpStatusCode = eF),
+        (eD.default = eD);
+      var eB = eD;
+      let {
+        Axios: eL,
+        AxiosError: ek,
+        CanceledError: eq,
+        isCancel: eI,
+        CancelToken: ez,
+        VERSION: eM,
+        all: eH,
+        Cancel: eJ,
+        isAxiosError: eW,
+        spread: eV,
+        toFormData: eK,
+        AxiosHeaders: e$,
+        HttpStatusCode: eG,
+        formToJSON: eX,
+        mergeConfig: eQ,
+      } = eB;
     },
   },
 ]);
+//# sourceMappingURL=9271.86969cdc0a48bb77.js.map
