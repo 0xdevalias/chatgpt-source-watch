@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [204],
   {
-    25217: function (n, t, u) {
+    73710: function (n, t, u) {
       "use strict";
       u.r(t),
         u.d(t, {
@@ -12,8 +12,8 @@
             return f;
           },
         });
-      var e = u(16640),
-        r = u(2722),
+      var e = u(96056),
+        r = u(69096),
         _ = u(70079),
         c = u(35250),
         i = !0;
@@ -30,20 +30,20 @@
         );
       }
     },
-    68128: function (n, t, u) {
+    40384: function (n, t, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/mocked_login",
         function () {
-          return u(25217);
+          return u(73710);
         },
       ]);
     },
   },
   function (n) {
     n.O(0, [4736, 2888, 9774, 179], function () {
-      return n((n.s = 68128));
+      return n((n.s = 40384));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=mocked_login-839acb3ff75e4292.js.map
+//# sourceMappingURL=mocked_login-2927082d72e9a61b.js.map

@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2758],
   {
-    60999: function (t, e, n) {
+    40005: function (t, e, n) {
       "use strict";
       n.r(e),
         n.d(e, {
@@ -12,11 +12,11 @@
             return p;
           },
         });
-      var r = n(39827),
-        c = n(65455),
-        u = n(19892),
-        o = n(13038),
-        i = n(12366),
+      var r = n(18450),
+        c = n(95407),
+        u = n(33471),
+        o = n(53362),
+        i = n(41409),
         a = n(70079),
         s = n(35250);
       function f(t, e) {
@@ -109,20 +109,20 @@
         );
       }
     },
-    19654: function (t, e, n) {
+    67713: function (t, e, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/aip/[pluginId]/oauth/callback",
         function () {
-          return n(60999);
+          return n(40005);
         },
       ]);
     },
   },
   function (t) {
     t.O(0, [4736, 2888, 9774, 179], function () {
-      return t((t.s = 19654));
+      return t((t.s = 67713));
     }),
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=callback-2b19d068846deaca.js.map
+//# sourceMappingURL=callback-85aebf5648c42c51.js.map

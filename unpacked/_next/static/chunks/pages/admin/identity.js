@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2571],
   {
-    59239: function (e, t, n) {
+    7560: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -13,26 +13,26 @@
           },
         });
       var o,
-        i = n(39827),
-        s = n(9112),
-        r = n(25660),
+        i = n(18450),
+        s = n(72583),
+        r = n(49305),
         a = n(41641),
         l = n(77825),
         d = n(77311),
         c = n(19841),
-        u = n(80483),
+        u = n(47247),
         f = n.n(u),
         p = n(70079),
         g = n(84692),
         m = n(9063),
         b = n(68498),
-        x = n(7557),
-        y = n(6723),
-        j = n(70917),
-        v = n(95250),
+        x = n(29287),
+        y = n(282),
+        j = n(58819),
+        v = n(11265),
         h = n(1454),
-        O = n(62733),
-        w = n(41068),
+        O = n(80801),
+        w = n(37259),
         S = n(35250);
       function M(e, t) {
         var n = Object.keys(e);
@@ -204,12 +204,12 @@
           defaultMessage: "Add domain",
         },
       });
-      var P = n(16931),
-        T = n(36607),
-        D = n(33925),
-        L = n(16244),
-        E = n(65455),
-        A = n(41594);
+      var P = n(68406),
+        T = n(21643),
+        D = n(62456),
+        L = n(67217),
+        E = n(95407),
+        A = n(97823);
       function B(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -844,7 +844,7 @@
         });
       };
     },
-    41594: function (e, t, n) {
+    97823: function (e, t, n) {
       "use strict";
       n.d(t, {
         $V: function () {
@@ -880,7 +880,7 @@
         l,
         d,
         c,
-        u = n(73017),
+        u = n(99945),
         f = n(21389);
       let p = f.Z.div(
           o ||
@@ -903,20 +903,20 @@
         j = f.Z.div(d || (d = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
         v = f.Z.hr(c || (c = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
-    91524: function (e, t, n) {
+    95285: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/identity",
         function () {
-          return n(59239);
+          return n(7560);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [4736, 9112, 2888, 9774, 179], function () {
-      return e((e.s = 91524));
+    e.O(0, [4736, 2583, 2888, 9774, 179], function () {
+      return e((e.s = 95285));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=identity-f9bd13b4d34c43e6.js.map
+//# sourceMappingURL=identity-a7fccc1a29dbf599.js.map

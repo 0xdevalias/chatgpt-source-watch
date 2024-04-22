@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7156],
   {
-    67451: function (n, u, t) {
+    31119: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
@@ -18,20 +18,20 @@
         return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)("div", {}) });
       }
     },
-    62822: function (n, u, t) {
+    70061: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/account/manage",
         function () {
-          return t(67451);
+          return t(31119);
         },
       ]);
     },
   },
   function (n) {
     n.O(0, [4736, 2888, 9774, 179], function () {
-      return n((n.s = 62822));
+      return n((n.s = 70061));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=manage-a3974e7c41b78191.js.map
+//# sourceMappingURL=manage-99d843472104c5da.js.map

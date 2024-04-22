@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9457],
   {
-    85652: function (e, s, t) {
+    16392: function (e, s, t) {
       "use strict";
       t.r(s),
         t.d(s, {
@@ -12,22 +12,22 @@
             return B;
           },
         });
-      var i = t(89691),
-        l = t(25660),
-        n = t(22433),
-        a = t(7557),
-        r = t(16244),
-        o = t(28144),
-        d = t(43383),
-        c = t(25991),
-        u = t(84297),
-        m = t(8402),
-        x = t(49508),
-        g = t(28373),
+      var i = t(9182),
+        l = t(49305),
+        n = t(92226),
+        a = t(29287),
+        r = t(67217),
+        o = t(52075),
+        d = t(5427),
+        c = t(41251),
+        u = t(38511),
+        m = t(70187),
+        x = t(94063),
+        g = t(89899),
         f = t(99715),
         j = t(61236),
-        h = t(10518),
-        y = t(12366),
+        h = t(34594),
+        y = t(41409),
         p = t(70079),
         v = t(68498),
         b = t(84692),
@@ -176,7 +176,7 @@
           }),
         });
       }
-      var M = t(39496),
+      var M = t(78253),
         Z = t(61888);
       let R = (e) => {
           let { gizmoId: s, version: t } = e;
@@ -511,7 +511,7 @@
           }),
         });
       }
-      var L = t(24668),
+      var L = t(47712),
         T = !0;
       function B() {
         var e, s;
@@ -534,20 +534,20 @@
         );
       }
     },
-    41510: function (e, s, t) {
+    48103: function (e, s, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]/view",
         function () {
-          return t(85652);
+          return t(16392);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 41510));
+      return e((e.s = 48103));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=view-c865bb2e41e5ca4e.js.map
+//# sourceMappingURL=view-6e936cb466c00843.js.map

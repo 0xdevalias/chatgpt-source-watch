@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6529],
   {
-    10166: function (e, n, t) {
+    73864: function (e, n, t) {
       "use strict";
       t.r(n),
         t.d(n, {
@@ -12,12 +12,12 @@
             return o;
           },
         });
-      var u = t(83356),
-        c = t(42005),
-        i = t(13038),
-        r = t(24668),
-        s = t(30640),
-        f = t(12366),
+      var u = t(22615),
+        c = t(85452),
+        i = t(53362),
+        r = t(47712),
+        s = t(86268),
+        f = t(41409),
         l = t(70079),
         _ = t(35250),
         a = !0;
@@ -49,20 +49,20 @@
         );
       }
     },
-    37606: function (e, n, t) {
+    30487: function (e, n, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/invite/accepted",
         function () {
-          return t(10166);
+          return t(73864);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 37606));
+      return e((e.s = 30487));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=accepted-5e215bc1f354ddd7.js.map
+//# sourceMappingURL=accepted-f02fc3028f80cd8c.js.map

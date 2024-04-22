@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9603],
   {
-    37979: function (e, t, r) {
+    22591: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -12,8 +12,8 @@
             return p;
           },
         });
-      var n = r(39827),
-        c = r(84261),
+      var n = r(18450),
+        c = r(51018),
         o = r.n(c),
         u = r(35250);
       function i(e, t) {
@@ -35,10 +35,10 @@
             r.e(5181),
             r.e(3050),
             r.e(5558),
-            r.e(3584),
-            r.e(4988),
-          ]).then(r.bind(r, 44922)),
-        { ssr: !1, loadableGenerated: { webpack: () => [44922] } }
+            r.e(2363),
+            r.e(7955),
+          ]).then(r.bind(r, 86441)),
+        { ssr: !1, loadableGenerated: { webpack: () => [86441] } }
       );
       var s = !0;
       function p(e) {
@@ -69,20 +69,20 @@
         );
       }
     },
-    99740: function (e, t, r) {
+    57647: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/search",
         function () {
-          return r(37979);
+          return r(22591);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 99740));
+      return e((e.s = 57647));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-3d40fae279539e2f.js.map
+//# sourceMappingURL=search-c18bf5b3545d09fc.js.map

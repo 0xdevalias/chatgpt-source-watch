@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2223],
   {
-    44911: function (e, t, n) {
+    11790: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -12,14 +12,14 @@
             return C;
           },
         });
-      var o = n(39827),
-        r = n(7557),
-        s = n(16244),
-        l = n(93760),
-        i = n(37482),
-        c = n(28354),
-        a = n(53197),
-        u = n(10518),
+      var o = n(18450),
+        r = n(29287),
+        s = n(67217),
+        l = n(21869),
+        i = n(69920),
+        c = n(38801),
+        a = n(67852),
+        u = n(34594),
         p = n(61888),
         d = n(70079),
         f = n(84692),
@@ -160,28 +160,28 @@
             defaultMessage: "Try it first",
           },
         });
-      var y = n(39255),
-        _ = n(34777);
+      var y = n(64612),
+        _ = n(39882);
       let x = "has-dismissed-welcome-modal",
         w = () => {
           let { 0: e, 1: t } = (0, d.useState)(!0),
-            { isUserUnauthenticated: n } = (0, l.E)(),
-            { layer: o } = (0, _.U3)(_.VG.AnonChatLayer),
-            r = o.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
+            { isUserUnauthenticated: n, isLoading: o } = (0, l.E)(),
+            { layer: r } = (0, _.U3)(_.VG.AnonChatLayer),
+            s = r.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
           return (
             (0, d.useEffect)(() => {
               t(null != sessionStorage.getItem(x));
             }, []),
             {
-              isOpen: n && r && !e,
+              isOpen: n && s && !e && !o,
               close: () => {
                 t(!0), sessionStorage.setItem(x, "true");
               },
             }
           );
         };
-      var N = n(12366),
-        P = n(54717);
+      var N = n(41409),
+        P = n(29697);
       function E(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -234,20 +234,20 @@
             });
       }
     },
-    54378: function (e, t, n) {
+    29876: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/[[...default]]",
         function () {
-          return n(44911);
+          return n(11790);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 54378));
+      return e((e.s = 29876));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...default]]-cc93bc2ac1945bd3.js.map
+//# sourceMappingURL=[[...default]]-834af00b88e31a72.js.map

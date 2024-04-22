@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9148],
   {
-    82885: function (e, n, u) {
+    7007: function (e, n, u) {
       "use strict";
       u.r(n),
         u.d(n, {
@@ -12,15 +12,15 @@
             return E;
           },
         });
-      var t = u(89691),
-        r = u(3358),
-        i = u(24668),
-        o = u(19892),
-        s = u(12366),
+      var t = u(9182),
+        r = u(7802),
+        i = u(47712),
+        o = u(33471),
+        s = u(41409),
         c = u.n(s),
         f = u(70079),
-        a = u(45534),
-        l = u(58849),
+        a = u(48021),
+        l = u(43189),
         _ = u(35250),
         d = !0;
       function E() {
@@ -49,7 +49,7 @@
           : null;
       }
     },
-    69003: function (e, n, u) {
+    93764: function (e, n, u) {
       "use strict";
       u.r(n),
         u.d(n, {
@@ -57,24 +57,24 @@
             return r;
           },
         });
-      var t = u(82885),
+      var t = u(7007),
         r = !0;
       n.default = t.default;
     },
-    8732: function (e, n, u) {
+    2373: function (e, n, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts/editor",
         function () {
-          return u(69003);
+          return u(93764);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 8732));
+      return e((e.s = 2373));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=editor-1dcf92080a1d17f6.js.map
+//# sourceMappingURL=editor-226df49095bd8c8e.js.map

@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [867],
   {
-    80722: function (e, s, t) {
+    7074: function (e, s, t) {
       "use strict";
       t.r(s),
         t.d(s, {
@@ -16,14 +16,14 @@
         r,
         l,
         i,
-        n = t(39827),
-        o = t(9112),
-        c = t(73017),
-        d = t(13038),
+        n = t(18450),
+        o = t(72583),
+        c = t(99945),
+        d = t(53362),
         u = t(61236),
         g = t(65998),
-        y = t(21243),
-        p = t(80483),
+        y = t(85252),
+        p = t(47247),
         f = t.n(p),
         m = t(70079),
         b = t(25771),
@@ -399,20 +399,20 @@
         });
       };
     },
-    54522: function (e, s, t) {
+    65661: function (e, s, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/analytics",
         function () {
-          return t(80722);
+          return t(7074);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [6835, 4736, 9112, 2888, 9774, 179], function () {
-      return e((e.s = 54522));
+    e.O(0, [6835, 4736, 2583, 2888, 9774, 179], function () {
+      return e((e.s = 65661));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=analytics-93371c1f3375f528.js.map
+//# sourceMappingURL=analytics-bb2fc29b6ec67c5e.js.map

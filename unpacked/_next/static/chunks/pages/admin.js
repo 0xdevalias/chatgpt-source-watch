@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6964],
   {
-    994: function (e, t, r) {
+    96788: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -14,35 +14,35 @@
         });
       var s,
         n,
-        a = r(39827),
-        i = r(9112),
-        l = r(73017),
-        c = r(70917),
-        o = r(24668),
-        d = r(18405),
+        a = r(18450),
+        i = r(72583),
+        l = r(99945),
+        c = r(58819),
+        o = r(47712),
+        d = r(13106),
         u = r(99715),
-        m = r(19816),
+        m = r(72179),
         g = r(82920),
         p = r(19841),
         f = r(61888),
-        j = r(80483),
+        j = r(47247),
         v = r.n(j),
-        b = r(12366),
+        b = r(41409),
         x = r(70079),
         h = r(1454),
         y = r(84692),
         k = r(9063),
         O = r(68498),
         w = r(21389),
-        M = r(7557),
-        P = r(10060),
-        Z = r(95250),
-        I = r(52299),
-        R = r(13038),
+        M = r(29287),
+        P = r(56244),
+        Z = r(11265),
+        I = r(79701),
+        R = r(53362),
         q = r(61236),
         N = r(82473),
         C = r(25494),
-        E = r(65455);
+        E = r(95407);
       function S(e) {
         let t = (0, k.Z)(),
           r = (0, N.NL)();
@@ -110,8 +110,8 @@
             "Unable to resend invite to ({email}) from workspace: {error}",
         },
       });
-      var U = r(13711),
-        W = r(32163),
+      var U = r(6002),
+        W = r(19155),
         T = r(35250);
       function A(e, t) {
         var r = Object.keys(e);
@@ -518,7 +518,7 @@
           defaultMessage: "No results",
         },
       });
-      var X = r(41068);
+      var X = r(37259);
       function Y(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -829,20 +829,20 @@
         return (0, T.jsx)(i.ZP, { mobilePageTitle: "Members", children: e });
       };
     },
-    53835: function (e, t, r) {
+    92053: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin",
         function () {
-          return r(994);
+          return r(96788);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9112, 4736, 2888, 9774, 179], function () {
-      return e((e.s = 53835));
+    e.O(0, [2583, 4736, 2888, 9774, 179], function () {
+      return e((e.s = 92053));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=admin-e20488d510ec8f38.js.map
+//# sourceMappingURL=admin-7c872a2468abe4d6.js.map

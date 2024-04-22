@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [4191],
   {
-    39116: function (n, t, u) {
+    1157: function (n, t, u) {
       "use strict";
       u.r(t),
         u.d(t, {
@@ -9,8 +9,8 @@
             return o;
           },
         });
-      var e = u(2722),
-        r = u(12366),
+      var e = u(69096),
+        r = u(41409),
         c = u(70079),
         f = u(35250);
       function o() {
@@ -31,20 +31,20 @@
         );
       }
     },
-    13396: function (n, t, u) {
+    63944: function (n, t, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/ext_callback",
         function () {
-          return u(39116);
+          return u(1157);
         },
       ]);
     },
   },
   function (n) {
     n.O(0, [4736, 2888, 9774, 179], function () {
-      return n((n.s = 13396));
+      return n((n.s = 63944));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=ext_callback-689b8fb324dc87e4.js.map
+//# sourceMappingURL=ext_callback-347a13100b2f65a1.js.map

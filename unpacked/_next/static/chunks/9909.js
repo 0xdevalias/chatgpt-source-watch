@@ -1,0 +1,543 @@
+"use strict";
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [9909],
+  {
+    35562: function (e, t, l) {
+      l.r(t),
+        l.d(t, {
+          default: function () {
+            return z;
+          },
+        });
+      var a = l(49305),
+        s = l(82547),
+        n = l(53362),
+        r = l(38801),
+        i = l(67852),
+        c = l(19841),
+        o = l(70079),
+        d = l(84692),
+        u = l(85452),
+        m = l(66452),
+        p = l(44151),
+        x = l(26524),
+        g = l(59669),
+        h = l(66315),
+        f = l(65998),
+        b = l(25771),
+        y = l(35250);
+      f.kL.register(
+        f.qi,
+        f.uw,
+        f.f$,
+        f.ZL,
+        f.Dx,
+        f.u,
+        f.De,
+        f.ST,
+        f.od,
+        f.jn,
+        f.wL
+      );
+      let j = (0, o.forwardRef)((e, t) => {
+        let { chart: l } = e,
+          a = (0, o.useRef)(null);
+        (0, o.useImperativeHandle)(t, () => ({
+          getBase64Image: () => {
+            if (!a.current) {
+              h.U.addError("Chart instance is not yet available.");
+              return;
+            }
+            return a.current.toBase64Image();
+          },
+        }));
+        let s = l.datasets.map((e) => {
+          let t = { label: e.label, data: e.data };
+          return (
+            e.colors &&
+              e.colors.length > 0 &&
+              ((t.backgroundColor = e.colors), (t.borderColor = e.colors)),
+            t
+          );
+        });
+        return "bar" === l.chart_type
+          ? (0, y.jsx)(b.$Q, {
+              ref: a,
+              options: {
+                responsive: !0,
+                maintainAspectRatio: !1,
+                plugins: {
+                  legend: { display: (null != s ? s : []).length > 1 },
+                  title: { display: !1, text: l.title },
+                },
+                scales: {
+                  x: { title: { display: !0, text: l.x_label } },
+                  y: { title: { display: !0, text: l.y_label } },
+                },
+              },
+              data: { labels: l.labels, datasets: null != s ? s : [] },
+            })
+          : "pie" === l.chart_type
+            ? (0, y.jsx)(b.by, {
+                ref: a,
+                options: {
+                  responsive: !0,
+                  plugins: {
+                    legend: { position: "bottom" },
+                    title: { display: !1, text: l.title },
+                  },
+                },
+                data: { labels: l.labels, datasets: null != s ? s : [] },
+              })
+            : "line" === l.chart_type
+              ? (0, y.jsx)(b.x1, {
+                  ref: a,
+                  options: {
+                    scales: {
+                      x: { title: { display: !0, text: l.x_label } },
+                      y: { title: { display: !0, text: l.y_label } },
+                    },
+                    plugins: {
+                      legend: { display: (null != s ? s : []).length > 1 },
+                      title: { display: !1, text: l.title },
+                    },
+                  },
+                  data: { labels: l.labels, datasets: null != s ? s : [] },
+                })
+              : "scatter" === l.chart_type
+                ? (0, y.jsx)(b.bp, {
+                    ref: a,
+                    options: {
+                      scales: {
+                        x: { title: { display: !0, text: l.x_label } },
+                        y: { title: { display: !0, text: l.y_label } },
+                      },
+                      plugins: {
+                        legend: { display: (null != s ? s : []).length > 1 },
+                        title: { display: !1, text: l.title },
+                      },
+                    },
+                    data: { labels: l.labels, datasets: null != s ? s : [] },
+                  })
+                : (0, y.jsx)(d.Z, {
+                    id: "Chart.invalidChartType",
+                    defaultMessage: "Invalid chart type",
+                  });
+      });
+      j.displayName = "Chart";
+      var v = l(18450),
+        w = l(35595),
+        N = l(15777),
+        k = l(72003);
+      l(7235);
+      var _ = l(47249),
+        C = l(41105);
+      function M(e, t) {
+        var l = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var a = Object.getOwnPropertySymbols(e);
+          t &&
+            (a = a.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            l.push.apply(l, a);
+        }
+        return l;
+      }
+      function O(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var l = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? M(Object(l), !0).forEach(function (t) {
+                (0, v.Z)(e, t, l[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(l))
+              : M(Object(l)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(l, t)
+                  );
+                });
+        }
+        return e;
+      }
+      function D(e) {
+        let { table: t, isInFocusedView: l = !1, className: a = "" } = e,
+          { targetedContent: s, setTargetedContent: n } = (0, C.Q)(),
+          { 0: c, 1: d } = (0, o.useState)([]);
+        (0, o.useEffect)(() => {
+          t.columnNames.length > 0 &&
+            d(
+              t.columnNames.map((e, t) => ({
+                id: "id:".concat(t),
+                title: e,
+                maxWidth: 500,
+              }))
+            );
+        }, [t.columnNames]);
+        let { 0: u, 1: m } = (0, o.useState)({
+            columns: N.EV.empty(),
+            rows: N.EV.empty(),
+          }),
+          p = (0, o.useCallback)(
+            function (e) {
+              let [l, a] = e,
+                s = t.rows[a];
+              return {
+                kind: (function (e) {
+                  switch (e) {
+                    case "number":
+                      return N.p6.Number;
+                    case "imageUrl":
+                      return N.p6.Image;
+                    default:
+                      return N.p6.Text;
+                  }
+                })(t.columnTypes[l]),
+                data: s[l],
+                allowOverlay: !1,
+                displayData: String(s[l]),
+              };
+            },
+            [t.columnTypes, t.rows]
+          ),
+          x = (0, o.useCallback)(
+            (e) => {
+              if (e.columns.length > 0) {
+                let a = e.columns.items.flatMap((e) =>
+                  t.columnNames.slice(e[0], e[1])
+                );
+                r.A.logEvent(i.M.adaColumnTargeted),
+                  n({
+                    label: (0, y.jsx)("div", {
+                      children: (0, y.jsxs)("div", {
+                        className: "text-token-text-tertiary",
+                        children: [
+                          (0, y.jsxs)("div", {
+                            className: "flex items-center gap-2 text-sm",
+                            children: [
+                              (0, y.jsx)(_.Mie, { size: 20 }),
+                              " ",
+                              a.length,
+                              " ",
+                              1 === a.length ? "Column" : "Columns",
+                            ],
+                          }),
+                          (0, y.jsx)("div", {
+                            className: "mt-3 flex gap-3",
+                            children: a.map((e) =>
+                              (0, y.jsx)(
+                                "div",
+                                {
+                                  className:
+                                    "line-clamp-2 rounded-md bg-token-main-surface-secondary px-2 py-1 text-token-text-primary",
+                                  title: e,
+                                  children: e,
+                                },
+                                e
+                              )
+                            ),
+                          }),
+                        ],
+                      }),
+                    }),
+                    isFocusedViewContent: l,
+                    createNewCompletionParams: (e) =>
+                      E(
+                        e,
+                        "The user has selected the columns:  ".concat(
+                          a.map((e) => '"'.concat(e, '"')).join(", ")
+                        )
+                      ),
+                  });
+              } else if (e.rows.length > 0) {
+                let t = e.rows.items.flatMap((e) => {
+                  let [t, l] = e,
+                    a = [];
+                  for (let e = t; e < l; e++) a.push(e);
+                  return a;
+                });
+                r.A.logEvent(i.M.adaRowTargeted),
+                  n({
+                    label: (0, y.jsx)("div", {
+                      children: (0, y.jsx)("div", {
+                        className: "text-token-text-tertiary",
+                        children: (0, y.jsxs)("div", {
+                          className: "flex items-center gap-2 text-sm",
+                          children: [
+                            (0, y.jsx)(_.Mie, { size: 20 }),
+                            " ",
+                            t.length,
+                            " ",
+                            1 === t.length ? "Row" : "Rows",
+                            " (",
+                            t.map((e) => "".concat(e + 1)).join(", "),
+                            ")",
+                          ],
+                        }),
+                      }),
+                    }),
+                    isFocusedViewContent: l,
+                    createNewCompletionParams: (e) =>
+                      E(
+                        e,
+                        "The user has selected rows at the following indices: ".concat(
+                          t.map((e) => '"'.concat(e, '"')).join(", ")
+                        )
+                      ),
+                  });
+              } else if (e.current) {
+                let t = e.current.range.x,
+                  a = e.current.range.y,
+                  s = e.current.range.x + e.current.range.width,
+                  c = e.current.range.y + e.current.range.height,
+                  o = (s - t) * (c - a);
+                r.A.logEvent(i.M.adaRangeTargeted),
+                  n({
+                    label: (0, y.jsx)("div", {
+                      children: (0, y.jsx)("div", {
+                        className: "text-token-text-tertiary",
+                        children: (0, y.jsxs)("div", {
+                          className: "flex items-center gap-2 text-sm",
+                          children: [
+                            (0, y.jsx)(_.Mie, { size: 20 }),
+                            " ",
+                            o,
+                            " ",
+                            1 === o ? "Cell" : "Cells",
+                          ],
+                        }),
+                      }),
+                    }),
+                    isFocusedViewContent: l,
+                    createNewCompletionParams: (e) =>
+                      E(
+                        e,
+                        "The user has selected a range at the iloc: "
+                          .concat(a, ":")
+                          .concat(c, ", ")
+                          .concat(t, ":")
+                          .concat(s, " in the current data")
+                      ),
+                  });
+              }
+              m(e);
+            },
+            [t.columnNames, n, l]
+          );
+        return (
+          (0, o.useEffect)(() => {
+            void 0 === s && m({ columns: N.EV.empty(), rows: N.EV.empty() });
+          }, [s]),
+          (0, y.jsx)(y.Fragment, {
+            children: (0, y.jsx)(k.F, {
+              getCellContent: p,
+              columns: c,
+              rows: t.rows.length,
+              gridSelection: u,
+              onGridSelectionChange: x,
+              smoothScrollX: !0,
+              smoothScrollY: !0,
+              className: a,
+              rowMarkers: "clickable-number",
+              rowMarkerTheme: { bgCell: "#F7F7F8", textLight: "#0D0D0D" },
+              theme: { textHeader: "#0D0D0D", textDark: "#676767" },
+              rowMarkerWidth: 30,
+              rowHeight: 48,
+              verticalBorder: !0,
+              minColumnWidth: 10,
+              maxColumnWidth: 500,
+              onColumnResize: (e, t, l) => {
+                d((a) => {
+                  let s = [...a];
+                  return (s[l] = O(O({}, e), {}, { width: t })), s;
+                });
+              },
+            }),
+          })
+        );
+      }
+      function E(e, t) {
+        let l = (0, w.bm)(t);
+        return O(
+          O({}, e),
+          {},
+          {
+            messageMetadata: O(
+              O({}, e.messageMetadata),
+              {},
+              { targeted_reply: t }
+            ),
+            appendMessages:
+              null == e.appendMessages ? [l] : [...e.appendMessages, l],
+          }
+        );
+      }
+      var T = l(33271);
+      function z(e) {
+        var t, l;
+        let { visualization: h, fallbackImageMessage: f, expanded: b = !1 } = e,
+          { isLoading: v, data: w, isError: N } = (0, T.sM)(h),
+          k = (0, o.useRef)(null),
+          _ =
+            null !== (t = null == w ? void 0 : w.file_name.split("/")) &&
+            void 0 !== t
+              ? t
+              : [],
+          C = (0, x.rE)(),
+          { 0: M, 1: O } = (0, o.useState)(!1),
+          E = null !== (l = _[_.length - 1]) && void 0 !== l ? l : "";
+        E = E.split("__")[0].replace(/[-_]/g, " ").split(".")[0];
+        let z = (0, p.Ex)(),
+          F =
+            (null == C ? void 0 : C.type) === x.zG.ADAVisualization
+              ? C.visualization.file_id
+              : null,
+          R = F && F == h.file_id,
+          S = (0, o.useCallback)(() => {
+            r.A.logEvent(i.M.adaFocusModeToggled),
+              R
+                ? x.RT.close()
+                : x.RT.setFocusedObject({
+                    type: x.zG.ADAVisualization,
+                    visualization: h,
+                  });
+          }, [R, h]),
+          A = (0, o.useCallback)(() => {
+            let e = function (e) {
+              let t =
+                  arguments.length > 1 && void 0 !== arguments[1]
+                    ? arguments[1]
+                    : "",
+                l = document.createElement("a");
+              (l.href = e), t && (l.download = t), l.click();
+            };
+            if ("table" === h.type && w) e(w.download_url);
+            else if ("chart" === h.type) {
+              if (
+                (h.fallback_to_image || M) &&
+                (null == f ? void 0 : f.image_url) != null
+              ) {
+                let t = (0, m.Iy)(f.image_url);
+                n.Z.getFileDownloadLink(t).then((t) => {
+                  t.status === a.KF.Success &&
+                    fetch(t.download_url)
+                      .then((e) => e.blob())
+                      .then((t) => {
+                        e(URL.createObjectURL(t), "output.png");
+                      });
+                });
+              } else if (k.current) {
+                let t = k.current.getBase64Image();
+                t && e(t, "".concat(E, ".png"));
+              }
+            }
+          }, [h.type, w, E, h.fallback_to_image, M, f]);
+        return N
+          ? (0, y.jsx)("div", {
+              className: "max-w-full rounded-lg border border-red-600 p-3",
+              children: (0, y.jsxs)("div", {
+                className: "my-0 flex items-center justify-between font-light",
+                children: [
+                  (0, y.jsx)("div", {
+                    className: "flex items-center gap-2",
+                    children: (0, y.jsx)("p", {
+                      className: "m-0 p-0 text-lg font-medium capitalize",
+                      children: E,
+                    }),
+                  }),
+                  (0, y.jsx)("span", {
+                    className: "text-sm text-red-600",
+                    children: (0, y.jsx)(d.Z, {
+                      id: "ADAVisualzationComponent.unableToLoadOutput",
+                      defaultMessage: "Unable to load visualization",
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : (0, y.jsx)("div", {
+              className: "max-w-full py-2",
+              children: (0, y.jsxs)("div", {
+                className:
+                  "relative overflow-hidden rounded-lg border border-token-border-medium",
+                children: [
+                  (0, y.jsx)("div", {
+                    className: "flex flex-col",
+                    children: (0, y.jsxs)("div", {
+                      className: (0, c.default)(
+                        "flex justify-between p-3",
+                        R && !b
+                          ? "bg-token-main-surface-secondary"
+                          : "bg-token-main-surface-primary"
+                      ),
+                      children: [
+                        (0, y.jsx)("div", {
+                          className:
+                            "my-0 flex min-h-[28px] items-center gap-2 font-light",
+                          children: (0, y.jsx)("p", {
+                            className: "m-0 p-0 text-lg font-medium capitalize",
+                            children: E,
+                          }),
+                        }),
+                        (0, y.jsxs)("div", {
+                          className: (0, c.default)("flex items-center gap-3"),
+                          children: [
+                            "chart" == h.type &&
+                              !h.fallback_to_image &&
+                              !b &&
+                              (0, y.jsx)("button", {
+                                onClick: () => {
+                                  O(!M);
+                                },
+                                className: "flex items-center text-xs",
+                                children: (0, y.jsx)(s.q$4, {}),
+                              }),
+                            (0, y.jsx)("button", {
+                              onClick: A,
+                              className: "flex items-center text-xs",
+                              children: (0, y.jsx)(s._8t, {}),
+                            }),
+                            !h.fallback_to_image &&
+                              (0, y.jsx)("button", {
+                                onClick: S,
+                                className: "flex items-center text-sm",
+                                children: R
+                                  ? (0, y.jsx)(y.Fragment, {
+                                      children: (0, y.jsx)(s.W5x, {}),
+                                    })
+                                  : (0, y.jsx)(y.Fragment, {
+                                      children: (0, y.jsx)(s.Qq, {}),
+                                    }),
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                  !(z && !b) &&
+                    (0, y.jsx)("div", {
+                      className: (0, c.default)(
+                        "flex items-center overflow-x-auto border-t border-token-border-light align-middle",
+                        b ? "h-[80vh]" : "h-[400px]",
+                        v ? "justify-center" : "justify-start",
+                        "table" == h.type ? "justify-start" : "justify-center"
+                      ),
+                      children: v
+                        ? (0, y.jsx)(u.Z, {})
+                        : "table" == h.type
+                          ? (0, y.jsx)(D, { table: w })
+                          : (M || h.fallback_to_image) && void 0 !== f
+                            ? (0, y.jsx)(g.Z, { jupyterMessage: f })
+                            : (0, y.jsx)(j, { ref: k, chart: w }),
+                    }),
+                ],
+              }),
+            });
+      }
+    },
+  },
+]);
+//# sourceMappingURL=9909.60105fa5ec3c0847.js.map

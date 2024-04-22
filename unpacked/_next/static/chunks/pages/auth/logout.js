@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7825],
   {
-    1072: function (t, r, e) {
+    54490: function (t, r, e) {
       "use strict";
       e.r(r),
         e.d(r, {
@@ -12,10 +12,10 @@
             return O;
           },
         });
-      var n = e(39827),
-        o = e(4635),
-        c = e(85548),
-        u = e(2722),
+      var n = e(18450),
+        o = e(50171),
+        c = e(66315),
+        u = e(69096),
         i = e(70079),
         f = e(35250);
       function s(t, r) {
@@ -73,20 +73,20 @@
         );
       }
     },
-    35155: function (t, r, e) {
+    41722: function (t, r, e) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/logout",
         function () {
-          return e(1072);
+          return e(54490);
         },
       ]);
     },
   },
   function (t) {
     t.O(0, [4736, 2888, 9774, 179], function () {
-      return t((t.s = 35155));
+      return t((t.s = 41722));
     }),
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=logout-a7d5619a7dc29c10.js.map
+//# sourceMappingURL=logout-928f02b99db16f87.js.map

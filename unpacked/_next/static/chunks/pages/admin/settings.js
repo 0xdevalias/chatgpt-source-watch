@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [577],
   {
-    8956: function (e, t, n) {
+    27120: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -12,25 +12,25 @@
             return E;
           },
         });
-      var i = n(39827),
-        r = n(9112),
-        s = n(25660),
-        a = n(68832),
-        o = n(37379),
-        l = n(13038),
-        c = n(24668),
-        d = n(78e3),
+      var i = n(18450),
+        r = n(72583),
+        s = n(49305),
+        a = n(11335),
+        o = n(13603),
+        l = n(53362),
+        c = n(47712),
+        d = n(19052),
         u = n(82473),
         g = n(25494),
         p = n(19841),
-        f = n(80483),
+        f = n(47247),
         h = n.n(f),
         x = n(9063),
         j = n(84692),
         m = n(68498),
-        b = n(60734),
-        y = n(65455),
-        w = n(41594),
+        b = n(88342),
+        y = n(95407),
+        w = n(97823),
         S = n(35250);
       function O(e, t) {
         var n = Object.keys(e);
@@ -388,7 +388,7 @@
         });
       };
     },
-    41594: function (e, t, n) {
+    97823: function (e, t, n) {
       "use strict";
       n.d(t, {
         $V: function () {
@@ -424,7 +424,7 @@
         l,
         c,
         d,
-        u = n(73017),
+        u = n(99945),
         g = n(21389);
       let p = g.Z.div(
           i ||
@@ -447,20 +447,20 @@
         b = g.Z.div(c || (c = (0, u.Z)(["flex justify-between py-4 gap-4"]))),
         y = g.Z.hr(d || (d = (0, u.Z)(["max-w-xl border-token-border-light"])));
     },
-    4449: function (e, t, n) {
+    95555: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/settings",
         function () {
-          return n(8956);
+          return n(27120);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9112, 4736, 2888, 9774, 179], function () {
-      return e((e.s = 4449));
+    e.O(0, [2583, 4736, 2888, 9774, 179], function () {
+      return e((e.s = 95555));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=settings-9573c8f86f788bdf.js.map
+//# sourceMappingURL=settings-6e966b51717db440.js.map

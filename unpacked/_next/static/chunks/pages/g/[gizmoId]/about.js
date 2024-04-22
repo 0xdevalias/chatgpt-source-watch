@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [290],
   {
-    44199: function (e, t, r) {
+    87752: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -12,14 +12,14 @@
             return m;
           },
         });
-      var n = r(39827),
-        i = r(37573),
-        o = r(89691),
-        c = r(28354),
-        u = r(53197),
-        s = r(12366),
+      var n = r(18450),
+        i = r(64298),
+        o = r(9182),
+        c = r(38801),
+        u = r(67852),
+        s = r(41409),
         l = r(70079),
-        a = r(49141),
+        a = r(67241),
         d = r(35250);
       function f(e, t) {
         var r = Object.keys(e);
@@ -86,7 +86,7 @@
           : (0, a.default)(e);
       }
     },
-    49141: function (e, t, r) {
+    67241: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -100,18 +100,18 @@
             return z;
           },
         });
-      var n = r(39827),
-        i = r(54717),
-        o = r(41),
-        c = r(81421),
-        u = r(89691),
-        s = r(22824),
-        l = r(90775),
-        a = r(93496),
-        d = r(19892),
-        f = r(24668),
-        g = r(44183),
-        h = r(12366),
+      var n = r(18450),
+        i = r(29697),
+        o = r(40784),
+        c = r(63476),
+        u = r(9182),
+        s = r(11650),
+        l = r(1277),
+        a = r(52671),
+        d = r(33471),
+        f = r(47712),
+        g = r(42607),
+        h = r(41409),
         j = r.n(h),
         m = r(70079),
         p = r(84692),
@@ -224,19 +224,19 @@
         });
       }
     },
-    90775: function (e, t, r) {
+    1277: function (e, t, r) {
       "use strict";
       r.d(t, {
         Z: function () {
           return a;
         },
       });
-      var n = r(7679),
-        i = r(24605),
-        o = r(95482),
-        c = r(12366),
-        u = r(81056),
-        s = r(56532),
+      var n = r(55837),
+        i = r(64349),
+        o = r(18552),
+        c = r(41409),
+        u = r(81264),
+        s = r(74346),
         l = r(35250);
       function a(e) {
         let { children: t } = e,
@@ -256,20 +256,20 @@
         });
       }
     },
-    22738: function (e, t, r) {
+    50160: function (e, t, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]/about",
         function () {
-          return r(44199);
+          return r(87752);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 22738));
+      return e((e.s = 50160));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=about-2d00d99d85925715.js.map
+//# sourceMappingURL=about-42e617e28b9ae5be.js.map

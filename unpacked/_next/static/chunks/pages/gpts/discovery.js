@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3415],
   {
-    33908: function (n, u, t) {
+    60516: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
@@ -17,20 +17,20 @@
         return null;
       }
     },
-    23261: function (n, u, t) {
+    14420: function (n, u, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/gpts/discovery",
         function () {
-          return t(33908);
+          return t(60516);
         },
       ]);
     },
   },
   function (n) {
     n.O(0, [4736, 2888, 9774, 179], function () {
-      return n((n.s = 23261));
+      return n((n.s = 14420));
     }),
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=discovery-df7db60bac02081b.js.map
+//# sourceMappingURL=discovery-98ca4b8b51286d06.js.map

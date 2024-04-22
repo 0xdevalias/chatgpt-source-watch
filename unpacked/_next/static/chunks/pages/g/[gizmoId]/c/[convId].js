@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [401],
   {
-    44911: function (e, t, n) {
+    11790: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -12,14 +12,14 @@
             return C;
           },
         });
-      var o = n(39827),
-        r = n(7557),
-        s = n(16244),
-        l = n(93760),
-        c = n(37482),
-        i = n(28354),
-        a = n(53197),
-        u = n(10518),
+      var o = n(18450),
+        r = n(29287),
+        s = n(67217),
+        l = n(21869),
+        i = n(69920),
+        c = n(38801),
+        a = n(67852),
+        u = n(34594),
         p = n(61888),
         d = n(70079),
         f = n(84692),
@@ -59,10 +59,10 @@
       let b = (e) => {
           let { onClose: t } = e,
             { navigateToAuth: n } = (0, l.E)(),
-            o = (0, c.oc)();
+            o = (0, i.oc)();
           return (
             (0, d.useEffect)(() => {
-              i.A.logEvent(a.M.noAuthWelcomeModalShown),
+              c.A.logEvent(a.M.noAuthWelcomeModalShown),
                 u.m9.logEvent("chatgpt_no_auth_welcome_modal_shown");
             }, []),
             (0, g.jsx)(s.Z, {
@@ -95,7 +95,7 @@
                     className: "mb-2 w-full sm:mb-2.5",
                     onClick: () => {
                       let e = n({ authType: "signup" });
-                      i.A.logSignUpButtonClicked({
+                      c.A.logSignUpButtonClicked({
                         provider: e,
                         location: "No Auth Welcome Modal",
                       });
@@ -109,7 +109,7 @@
                     className: "mb-5 w-full",
                     onClick: () => {
                       let e = n({ authType: "login" });
-                      i.A.logLogInButtonClicked({
+                      c.A.logLogInButtonClicked({
                         provider: e,
                         location: "No Auth Welcome Modal",
                       });
@@ -122,7 +122,7 @@
                       "cursor-pointer text-sm font-medium text-token-text-secondary underline",
                     onClick: (e) => {
                       e.preventDefault(),
-                        i.A.logEvent(
+                        c.A.logEvent(
                           a.M.noAuthWelcomeModalTryItFirstLinkClicked
                         ),
                         u.m9.logEvent(
@@ -160,28 +160,28 @@
             defaultMessage: "Try it first",
           },
         });
-      var y = n(39255),
-        _ = n(34777);
+      var y = n(64612),
+        _ = n(39882);
       let x = "has-dismissed-welcome-modal",
         w = () => {
           let { 0: e, 1: t } = (0, d.useState)(!0),
-            { isUserUnauthenticated: n } = (0, l.E)(),
-            { layer: o } = (0, _.U3)(_.VG.AnonChatLayer),
-            r = o.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
+            { isUserUnauthenticated: n, isLoading: o } = (0, l.E)(),
+            { layer: r } = (0, _.U3)(_.VG.AnonChatLayer),
+            s = r.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
           return (
             (0, d.useEffect)(() => {
               t(null != sessionStorage.getItem(x));
             }, []),
             {
-              isOpen: n && r && !e,
+              isOpen: n && s && !e && !o,
               close: () => {
                 t(!0), sessionStorage.setItem(x, "true");
               },
             }
           );
         };
-      var N = n(12366),
-        P = n(54717);
+      var N = n(41409),
+        P = n(29697);
       function v(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -219,7 +219,7 @@
           n = (0, P.wS)(t.asPath),
           o = (0, P.p9)(n),
           { isOpen: r, close: s } = w(),
-          { shouldShowHardRateLimitModal: l, shouldShowSoftRateLimitModal: c } =
+          { shouldShowHardRateLimitModal: l, shouldShowSoftRateLimitModal: i } =
             (0, y.o)();
         return ((0, d.useEffect)(() => {
           o && t.replace("/", void 0, { shallow: !0 });
@@ -228,13 +228,13 @@
           ? null
           : (0, g.jsxs)(g.Fragment, {
               children: [
-                r && !(l || c) ? (0, g.jsx)(b, { onClose: s }) : null,
+                r && !(l || i) ? (0, g.jsx)(b, { onClose: s }) : null,
                 (0, g.jsx)(P.ZP, E(E({}, e), {}, { urlThreadId: n })),
               ],
             });
       }
     },
-    42342: function (e, t, n) {
+    81765: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -242,24 +242,24 @@
             return r;
           },
         });
-      let o = n(44911).default;
+      let o = n(11790).default;
       var r = !0;
       t.default = o;
     },
-    28868: function (e, t, n) {
+    66695: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/g/[gizmoId]/c/[convId]",
         function () {
-          return n(42342);
+          return n(81765);
         },
       ]);
     },
   },
   function (e) {
     e.O(0, [4736, 2888, 9774, 179], function () {
-      return e((e.s = 28868));
+      return e((e.s = 66695));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[convId]-0b7d1bc8bcea141b.js.map
+//# sourceMappingURL=[convId]-f7a903dc514903fc.js.map
