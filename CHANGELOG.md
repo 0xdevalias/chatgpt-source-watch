@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-03-04Z \(`XlSwjRvDx37Rtl2uQAolc`\)](#2024-03-04z-xlswjrvdx37rtl2uqaolc)
 - [2024-03-02Z \(`CdVKBysnaJNkqh_-wcfYZ`\)](#2024-03-02z-cdvkbysnajnkqh_-wcfyz)
 - [2024-03-01Z \(`WpoHMzPEcK3msY_nf8_gk`\)](#2024-03-01z-wpohmzpeck3msy_nf8_gk)
 - [2024-02-29Z \(`c0cq_5Dd22tX-GDC3Y33A`\)](#2024-02-29z-c0cq_5dd22tx-gdc3y33a)
@@ -75,6 +76,42 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-03-04Z (`XlSwjRvDx37Rtl2uQAolc`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This historical build's diff was not analysed
+- App release version (Git SHA?): `17165b9b880e13d80d7d9c536292229ebb819df3`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-524498571aaf08a0.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-6c260c0e3056b799.js
+https://cdn.oaistatic.com/_next/static/XlSwjRvDx37Rtl2uQAolc/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/XlSwjRvDx37Rtl2uQAolc/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-6c260c0e3056b799.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/01c5d5d007a82cd2.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.f4329c2b5e3c9d47.js
+```
 
 ## 2024-03-02Z (`CdVKBysnaJNkqh_-wcfYZ`)
 
