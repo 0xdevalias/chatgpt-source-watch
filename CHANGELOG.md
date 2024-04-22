@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-16Z \(`_Q8GbC1mhIXxeHX2xTHR-`\)](#2024-04-16z-_q8gbc1mhixxehx2xthr-)
 - [2024-04-15Z \(`4DtybnrborNWeufDD8H-a`\)](#2024-04-15z-4dtybnrbornweufdd8h-a)
 - [2024-04-12Z \(`R5XSYBLMuLNDPrP4ozEeH`\)](#2024-04-12z-r5xsyblmulndprp4ozeeh)
 - [2024-04-09Z \(`HT8siNKCjft6zp5kLmubE`\)](#2024-04-09z-ht8sinkcjft6zp5klmube)
@@ -92,6 +93,38 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-16Z (`_Q8GbC1mhIXxeHX2xTHR-`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This historical build's diff was not analysed
+- App release version (Git SHA?): `d301901cc8e9a2571f097ed58c9c4bbf343d2239`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-e57727df46a814b9.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-6dd150059cfe40f1.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-840caf14ac21a6da.js
+https://cdn.oaistatic.com/_next/static/_Q8GbC1mhIXxeHX2xTHR-/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/_Q8GbC1mhIXxeHX2xTHR-/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-840caf14ac21a6da.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.05840f719bc9c11c.js
+https://cdn.oaistatic.com/_next/static/css/ffa67f9837f3a19f.css
+```
 
 ## 2024-04-15Z (`4DtybnrborNWeufDD8H-a`)
 
