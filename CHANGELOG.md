@@ -19,6 +19,8 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-06Z \(`VN6jgW_ZH_C1kWJRfGzd1`\)](#2024-04-06-vn6jgw_zh_c1kwjrfgzd1)
+- [2024-04-05Z \(`R0EnA1rVi3n7lo9JiCreL`\)](#2024-04-05z-r0ena1rvi3n7lo9jicrel)
 - [2024-04-05Z \(`uoAs62COrJlOJzzhYVa03`\)](#2024-04-05z-uoas62corjlojzzhyva03)
 - [2024-04-04Z \(`__VtdGuo2T55cu1fqCkoX`\)](#2024-04-04z-__vtdguo2t55cu1fqckox)
 - [2024-04-02Z \(`IUIueXDyGptfM3EL5jeHi`\)](#2024-04-02z-iuiuexdygptfm3el5jehi)
@@ -87,6 +89,102 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-06Z (`VN6jgW_ZH_C1kWJRfGzd1`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This historical build's diff was not analysed
+- App release version (Git SHA?): `29f22dae08a261ef96c929c3857c983792066699`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-b569ca8877e5a036.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-0009b6796f0eaa5b.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-847b63c7398f4e0c.js
+https://cdn.oaistatic.com/_next/static/VN6jgW_ZH_C1kWJRfGzd1/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/VN6jgW_ZH_C1kWJRfGzd1/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-847b63c7398f4e0c.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.6f28731a488dcab8.js
+https://cdn.oaistatic.com/_next/static/css/d7b1b4c9fb4862c1.css
+```
+
+## 2024-04-05Z (`R0EnA1rVi3n7lo9JiCreL`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This historical build's diff was not analysed
+- App release version (Git SHA?): `cdeed332f05a1b78522aadfae658adcabe27d584`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-c5205336f621ae17.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-e7b9f6b87cd7e704.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-b2b19dc4b780e406.js
+https://cdn.oaistatic.com/_next/static/R0EnA1rVi3n7lo9JiCreL/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/R0EnA1rVi3n7lo9JiCreL/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]-0f0091e602c054c0.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/about-58d45ba8c7c5c52d.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts-2f1723e4bc885593.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-62c56a06e1ab5995.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-5f247368fc38000c.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/evals-fabdde2630dadc2e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/feedback-87cf31f8d9d98afc.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/machine-9d60c7d4f75285a6.js
+```
+
+### From `orig/_next/static/chunks/webpack-b2b19dc4b780e406.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/676.d97532f669d24737.js
+https://cdn.oaistatic.com/_next/static/chunks/718.2a98534085e3ca39.js
+https://cdn.oaistatic.com/_next/static/chunks/880.3d0c76fc8142e491.js
+https://cdn.oaistatic.com/_next/static/chunks/1288.f0855cf9fefb29b8.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.ce49845ac963304c.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.cf95c280f331419a.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.89abdff625b6edbc.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.9cdbb6086acc6ae9.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.d9a340538f4c172f.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.9a567ca14f4d89ba.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.98f48b3b7f7e77d8.js
+https://cdn.oaistatic.com/_next/static/chunks/7007.60d5c28f95c4e2d3.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.2413b7bed32bbb72.js
+https://cdn.oaistatic.com/_next/static/chunks/7893.03bd69cb6897d72f.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.d984f3db2c405280.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.7db6af939b93778a.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.7e9451ae7616ea7f.js
+https://cdn.oaistatic.com/_next/static/chunks/sso.0e297778ae683a2a.js
+https://cdn.oaistatic.com/_next/static/css/e1dbb7318670d633.css
+```
 
 ## 2024-04-05Z (`uoAs62COrJlOJzzhYVa03`)
 

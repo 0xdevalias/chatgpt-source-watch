@@ -35,8 +35,8 @@
             r.e(5181),
             r.e(3050),
             r.e(5558),
-            r.e(1950),
-            r.e(7955),
+            r.e(1288),
+            r.e(880),
           ]).then(r.bind(r, 78276)),
         { ssr: !1, loadableGenerated: { webpack: () => [78276] } }
       );
@@ -85,4 +85,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-7c9eab1b8c2a7506.js.map
+//# sourceMappingURL=search-5f247368fc38000c.js.map
