@@ -77,7 +77,7 @@
             isStorageComplianceEnabled: i,
           } = e,
           l = (0, j.Z)(),
-          { layer: o } = (0, b.AH)(b.VG.AnonChatLayer),
+          { layer: o } = (0, b.U3)(b.VG.AnonChatLayer),
           c = o.get(b.yp.ANON_IS_TRY_IT_FIRST_ON_LOGIN_PAGE_ENABLED, !1);
         return (0, k.jsx)(k.Fragment, {
           children: (0, k.jsxs)("div", {
@@ -963,4 +963,4 @@
     },
   },
 ]);
-//# sourceMappingURL=101-58c205119f556099.js.map
+//# sourceMappingURL=101-0b56ef967d0c4f61.js.map

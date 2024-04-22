@@ -275,7 +275,7 @@
         let e = (0, g.j)(),
           t = u.VG.AnonChatLayer,
           s = u.yp.ANON_COMPOSER_DISPLAY_VARIANT,
-          { layer: l } = (0, u.AH)(t),
+          { layer: l } = (0, u.U3)(t),
           r = l.get(s, O.tg.Default);
         return (
           (0, m.useEffect)(() => {
@@ -370,4 +370,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9331.89f6aa4c9bac3546.js.map
+//# sourceMappingURL=9331.de1c504e36884da4.js.map
