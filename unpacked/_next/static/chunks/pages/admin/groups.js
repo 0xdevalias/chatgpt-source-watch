@@ -1,81 +1,187 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7705],
   {
-    1024: function (e, s, r) {
+    75508: function (e, s, t) {
       "use strict";
-      r.r(s),
-        r.d(s, {
+      t.r(s),
+        t.d(s, {
           __N_SSP: function () {
-            return z;
+            return Y;
           },
           default: function () {
-            return L;
+            return $;
           },
         });
-      var t = r(39827),
-        a = r(9112),
-        n = r(13038),
-        l = r(82473),
-        o = r(61236),
-        i = r(52134),
-        c = r(25494),
-        u = r(19841),
-        d = r(80483),
-        p = r.n(d),
-        g = r(70079),
-        m = r(1454),
-        j = r(70671),
-        x = r(32004),
-        f = r(94968),
-        h = r(35250);
+      var r = t(39827),
+        a = t(9112),
+        n = t(65455),
+        l = t(13038),
+        o = t(82473),
+        i = t(61236),
+        u = t(52134),
+        c = t(25494),
+        d = t(19841),
+        p = t(80483),
+        g = t.n(p),
+        m = t(70079),
+        x = t(1454),
+        j = t(9063),
+        h = t(84692),
+        f = t(68498),
+        y = t(35250);
       function w(e) {
         let { checked: s } = e;
-        return (0, h.jsx)("div", {
+        return (0, y.jsx)("div", {
           className: "p-2",
-          children: s ? (0, h.jsx)(m.bTu, {}) : (0, h.jsx)(m.Tfp, {}),
+          children: s ? (0, y.jsx)(x.bTu, {}) : (0, y.jsx)(x.Tfp, {}),
         });
       }
-      var y = r(7557),
-        b = r(70917),
-        Z = r(16244),
-        v = r(95250),
-        k = r(36607),
-        S = r(52299);
-      function C(e) {
+      var Z = t(7557),
+        b = t(36607),
+        v = t(52299);
+      function k(e) {
         let {
           className: s,
-          inputClassName: r,
-          value: t,
+          inputClassName: t,
+          value: r,
           onChange: a,
           placeholder: n,
         } = e;
-        return (0, h.jsxs)("div", {
-          className: (0, u.default)("relative", s),
+        return (0, y.jsxs)("div", {
+          className: (0, d.default)("relative", s),
           children: [
-            (0, h.jsx)(m.jRj, {
+            (0, y.jsx)(x.jRj, {
               className:
                 "icon-sm absolute left-2 top-1/2 -translate-y-1/2 transform text-token-text-tertiary",
             }),
-            (0, h.jsx)("input", {
+            (0, y.jsx)("input", {
               type: "text",
-              value: t,
+              value: r,
               onChange: a,
               placeholder: n,
-              className: (0, u.default)(
+              className: (0, d.default)(
                 "rounded-lg border border-gray-200 pl-8 placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700",
-                r
+                t
               ),
+              autoComplete: "off",
             }),
           ],
         });
       }
-      var M = r(42005),
-        N = r(24668),
-        O = r(61888),
-        P = r(4373),
-        D = r(47527);
-      function G(e) {
-        let { group: s, isOpen: r, onClose: t } = e,
+      var M = t(42005),
+        S = t(70917),
+        C = t(95250),
+        N = t(16244),
+        O = t(85641),
+        P = t(68832),
+        D = t(24668),
+        G = t(85548),
+        E = t(61888),
+        _ = t(4373),
+        A = t(93767),
+        Q = t(60375);
+      function q(e) {
+        let { group: s, isOpen: t, onClose: r } = e,
+          a = (0, j.Z)(),
+          o = a.formatMessage(
+            {
+              id: "workspaceSettings.groups.addMember",
+              defaultMessage: "Add members to the {groupName} group",
+            },
+            { groupName: s.name }
+          ),
+          i = (0, D.t)(),
+          { 0: u, 1: c } = (0, m.useState)([]),
+          { 0: d, 1: p } = (0, m.useState)(!1);
+        async function g() {
+          let e = null == i ? void 0 : i.getWorkspaceId();
+          if (!e) throw Error("No workspace ID found");
+          p(!0);
+          let t = await l.Z.bulkAddWorkspaceGroupUsers(e, s.id, u);
+          n.m.success(
+            a.formatMessage(
+              {
+                id: "yU4Zf0",
+                defaultMessage: "Added {numUsers} users to the group",
+              },
+              { numUsers: t.added_group_users.length }
+            )
+          ),
+            null == r || r(),
+            p(!1);
+        }
+        return (0, y.jsxs)(N.Z, {
+          isOpen: t,
+          onClose: null != r ? r : E.noop,
+          title: o,
+          type: "success",
+          showCloseButton: !0,
+          primaryButton: (0, y.jsx)(Z.z, {
+            onClick: g,
+            disabled: 0 === u.length || u.length > 1e3,
+            loading: d,
+            children: (0, y.jsx)(h.Z, {
+              id: "EpbOzA",
+              defaultMessage: "Add users to group",
+            }),
+          }),
+          children: [
+            (0, y.jsx)(T, { onChange: c }),
+            u.length > 1e3 &&
+              (0, y.jsx)("div", {
+                className: "mt-2 text-sm text-red-500",
+                children: (0, y.jsx)(h.Z, {
+                  id: "9lp0Tc",
+                  defaultMessage:
+                    "Email list is limited to {maxEmails} users at once",
+                  values: { maxEmails: 1e3 },
+                }),
+              }),
+          ],
+        });
+      }
+      function T(e) {
+        let { onChange: s } = e,
+          { 0: t, 1: r } = (0, m.useState)("");
+        return (0, y.jsxs)("div", {
+          className: "flex flex-col space-y-4",
+          children: [
+            (0, y.jsxs)("label", {
+              htmlFor: "group-email-paste",
+              children: [
+                (0, y.jsx)(h.Z, { id: "qvGcSC", defaultMessage: "Emails" }),
+                (0, y.jsx)("br", {}),
+                (0, y.jsx)("span", {
+                  className: "text-sm text-token-text-tertiary",
+                  children: (0, y.jsx)(h.Z, {
+                    id: "Fhd+5h",
+                    defaultMessage: "Paste email addresses here, one per line:",
+                  }),
+                }),
+              ],
+            }),
+            (0, y.jsx)(Q.Z, {
+              id: "group-email-paste",
+              className: "h-[250px] text-sm",
+              value: t,
+              onChange: (e) => {
+                r(e.target.value),
+                  s(
+                    e.target.value
+                      .split("\n")
+                      .map((e) => e.trim())
+                      .filter((e) => e.length > 0)
+                      .filter((e) => A.F.test(e))
+                  );
+              },
+              placeholder:
+                "jean@example.com\njoohyun@example.com\nmuhammed@example.com\nsusan@example.com",
+            }),
+          ],
+        });
+      }
+      function I(e) {
+        let { group: s, isOpen: t, onClose: r } = e,
           a = (0, j.Z)().formatMessage(
             {
               id: "workspaceSettings.groups.addMember",
@@ -83,194 +189,222 @@
             },
             { groupName: s.name }
           ),
-          n = (0, N.t)(),
+          n = (0, D.t)(),
           l = null == n ? void 0 : n.getWorkspaceId(),
-          { 0: o, 1: c } = (0, g.useState)(""),
-          { 0: u, 1: d } = (0, g.useState)(0),
-          { data: p } = (0, P.Z)(l, u * P.I, o, i.Wk),
-          { 0: f, 1: w } = (0, g.useState)([]),
-          { 0: b, 1: k } = (0, g.useState)([]),
-          M = p ? Math.ceil(p.total / P.I) : 0;
-        async function G(e) {
-          k((s) => [...s, e]);
+          { 0: o, 1: i } = (0, m.useState)(""),
+          { 0: c, 1: d } = (0, m.useState)(0),
+          { data: p } = (0, _.Z)(l, c * _.I, o, _.I, u.Wk),
+          { 0: g, 1: f } = (0, m.useState)([]),
+          { 0: w, 1: b } = (0, m.useState)([]),
+          { 0: M, 1: S } = (0, m.useState)("interactive"),
+          P = p ? Math.ceil(p.total / _.I) : 0;
+        async function A(e) {
+          b((s) => [...s, e]);
           try {
-            await E(l, s.id, e), w((s) => [...s, e]);
+            await F(l, s.id, e), f((s) => [...s, e]);
           } catch (e) {
-            console.error(e);
+            G.U.addError(e);
           } finally {
-            k((s) => s.filter((s) => s !== e));
+            b((s) => s.filter((s) => s !== e));
           }
         }
-        return (0, h.jsx)(Z.Z, {
-          type: "warning",
-          isOpen: r,
-          onClose: null != t ? t : O.noop,
-          title: a,
-          size: "custom",
-          className: "max-w-screen-md",
-          showCloseButton: !0,
-          children: (0, h.jsxs)("div", {
-            className: "flex flex-col gap-3",
-            children: [
-              (0, h.jsx)("p", { children: a }),
-              (0, h.jsx)(C, {
-                value: o,
-                inputClassName: "w-full",
-                onChange: (e) => {
-                  c(e.target.value);
-                },
+        return "batch" === M
+          ? (0, y.jsx)(q, { group: s, isOpen: t, onClose: r })
+          : (0, y.jsx)(N.Z, {
+              type: "warning",
+              isOpen: t,
+              onClose: null != r ? r : E.noop,
+              title: a,
+              size: "custom",
+              className: "max-w-screen-md",
+              showCloseButton: !0,
+              primaryButton: (0, y.jsx)(Z.z, {
+                onClick: r,
+                children: (0, y.jsx)(h.Z, {
+                  id: "0NAzDq",
+                  defaultMessage: "Done",
+                }),
               }),
-              (0, h.jsxs)(v.Z.Root, {
-                className: "min-w-full",
+              children: (0, y.jsxs)("div", {
+                className: "flex flex-col gap-3",
                 children: [
-                  (0, h.jsxs)(v.Z.Header, {
+                  (0, y.jsxs)("div", {
+                    className: "flex flex-row justify-between",
                     children: [
-                      (0, h.jsx)(v.Z.HeaderCell, {
-                        children: (0, h.jsx)(x.Z, {
-                          id: "workspaceSettings.groups.addMember.name",
-                          defaultMessage: "Name",
+                      (0, y.jsx)("p", { children: a }),
+                      (0, y.jsx)(Z.z, {
+                        onClick: () => {
+                          S("batch");
+                        },
+                        color: "neutral",
+                        children: (0, y.jsx)(h.Z, {
+                          id: "5GPldp",
+                          defaultMessage: "Bulk add users",
                         }),
                       }),
-                      (0, h.jsx)(v.Z.HeaderCell, {
-                        children: (0, h.jsx)(x.Z, {
-                          id: "workspaceSettings.groups.addMember.email",
-                          defaultMessage: "Email",
-                        }),
-                      }),
-                      (0, h.jsx)(v.Z.HeaderCell, {}),
                     ],
                   }),
-                  (0, h.jsx)(v.Z.Body, {
-                    children:
-                      null == p
-                        ? void 0
-                        : p.items.map((e) =>
-                            (0, h.jsxs)(
-                              v.Z.Row,
-                              {
-                                children: [
-                                  (0, h.jsx)(v.Z.Cell, { children: e.name }),
-                                  (0, h.jsx)(v.Z.Cell, { children: e.email }),
-                                  (0, h.jsx)(v.Z.Cell, {
-                                    textAlign: "right",
-                                    className: "pr-1",
-                                    children: (0, h.jsx)(y.z, {
-                                      size: "small",
-                                      color: "neutral",
-                                      disabled: b.includes(e.id),
-                                      onClick: () => {
-                                        f.includes(e.id) || G(e.id);
-                                      },
-                                      children: f.includes(e.id)
-                                        ? (0, h.jsxs)(h.Fragment, {
-                                            children: [
-                                              (0, h.jsx)(D.nQ, {}),
-                                              (0, h.jsx)(x.Z, {
-                                                id: "workspaceSettings.groups.addMember.addButton",
-                                                defaultMessage: "Added",
+                  (0, y.jsx)(k, {
+                    value: o,
+                    inputClassName: "w-full",
+                    onChange: (e) => {
+                      i(e.target.value);
+                    },
+                  }),
+                  (0, y.jsxs)(C.Z.Root, {
+                    className: "min-w-full",
+                    children: [
+                      (0, y.jsxs)(C.Z.Header, {
+                        children: [
+                          (0, y.jsx)(C.Z.HeaderCell, {
+                            children: (0, y.jsx)(h.Z, {
+                              id: "workspaceSettings.groups.addMember.name",
+                              defaultMessage: "Name",
+                            }),
+                          }),
+                          (0, y.jsx)(C.Z.HeaderCell, {
+                            children: (0, y.jsx)(h.Z, {
+                              id: "workspaceSettings.groups.addMember.email",
+                              defaultMessage: "Email",
+                            }),
+                          }),
+                          (0, y.jsx)(C.Z.HeaderCell, {}),
+                        ],
+                      }),
+                      (0, y.jsx)(C.Z.Body, {
+                        children:
+                          null == p
+                            ? void 0
+                            : p.items.map((e) =>
+                                (0, y.jsxs)(
+                                  C.Z.Row,
+                                  {
+                                    children: [
+                                      (0, y.jsx)(C.Z.Cell, {
+                                        children: e.name,
+                                      }),
+                                      (0, y.jsx)(C.Z.Cell, {
+                                        children: e.email,
+                                      }),
+                                      (0, y.jsx)(C.Z.Cell, {
+                                        textAlign: "right",
+                                        className: "pr-1",
+                                        children: (0, y.jsx)(Z.z, {
+                                          size: "small",
+                                          color: "neutral",
+                                          disabled: w.includes(e.id),
+                                          onClick: () => {
+                                            g.includes(e.id) || A(e.id);
+                                          },
+                                          children: g.includes(e.id)
+                                            ? (0, y.jsxs)(y.Fragment, {
+                                                children: [
+                                                  (0, y.jsx)(O.nQ, {}),
+                                                  (0, y.jsx)(h.Z, {
+                                                    id: "workspaceSettings.groups.addMember.addButton",
+                                                    defaultMessage: "Added",
+                                                  }),
+                                                ],
+                                              })
+                                            : (0, y.jsxs)(y.Fragment, {
+                                                children: [
+                                                  (0, y.jsx)(x.OvN, {}),
+                                                  (0, y.jsx)(h.Z, {
+                                                    id: "workspaceSettings.groups.addMember.addedButton",
+                                                    defaultMessage: "Add",
+                                                  }),
+                                                ],
                                               }),
-                                            ],
-                                          })
-                                        : (0, h.jsxs)(h.Fragment, {
-                                            children: [
-                                              (0, h.jsx)(m.OvN, {}),
-                                              (0, h.jsx)(x.Z, {
-                                                id: "workspaceSettings.groups.addMember.addedButton",
-                                                defaultMessage: "Add",
-                                              }),
-                                            ],
-                                          }),
-                                    }),
-                                  }),
-                                ],
-                              },
-                              e.id
-                            )
-                          ),
+                                        }),
+                                      }),
+                                    ],
+                                  },
+                                  e.id
+                                )
+                              ),
+                      }),
+                    ],
+                  }),
+                  (0, y.jsx)("div", {
+                    className: "flex flex-row justify-center",
+                    children: (0, y.jsx)(v.t, {
+                      currentPage: c,
+                      onChangeIndex: (e) => {
+                        d(e);
+                      },
+                      length: P,
+                    }),
                   }),
                 ],
               }),
-              (0, h.jsx)("div", {
-                className: "flex flex-row justify-center",
-                children: (0, h.jsx)(S.t, {
-                  currentPage: u,
-                  onChangeIndex: (e) => {
-                    d(e);
-                  },
-                  length: M,
-                }),
-              }),
-            ],
-          }),
-        });
+            });
       }
-      async function E(e, s, r) {
-        await n.Z.addWorkspaceGroupUser(e, s, r);
+      async function F(e, s, t) {
+        await l.Z.addWorkspaceGroupUser(e, s, t);
       }
-      var _ = r(68832);
-      function q(e, s) {
-        var r = Object.keys(e);
+      function R(e, s) {
+        var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var t = Object.getOwnPropertySymbols(e);
+          var r = Object.getOwnPropertySymbols(e);
           s &&
-            (t = t.filter(function (s) {
+            (r = r.filter(function (s) {
               return Object.getOwnPropertyDescriptor(e, s).enumerable;
             })),
-            r.push.apply(r, t);
+            t.push.apply(t, r);
         }
-        return r;
+        return t;
       }
-      function Q(e) {
+      function B(e) {
         for (var s = 1; s < arguments.length; s++) {
-          var r = null != arguments[s] ? arguments[s] : {};
+          var t = null != arguments[s] ? arguments[s] : {};
           s % 2
-            ? q(Object(r), !0).forEach(function (s) {
-                (0, t.Z)(e, s, r[s]);
+            ? R(Object(t), !0).forEach(function (s) {
+                (0, r.Z)(e, s, t[s]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : q(Object(r)).forEach(function (s) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+              : R(Object(t)).forEach(function (s) {
                   Object.defineProperty(
                     e,
                     s,
-                    Object.getOwnPropertyDescriptor(r, s)
+                    Object.getOwnPropertyDescriptor(t, s)
                   );
                 });
         }
         return e;
       }
-      function T(e) {
-        let { workspaceId: s, group: r } = e,
-          t = (0, j.Z)(),
-          { 0: a, 1: d } = (0, g.useState)(!1),
-          { 0: p, 1: f } = (0, g.useState)(""),
-          { 0: w, 1: Z } = (0, g.useState)(0),
+      function K(e) {
+        let { workspaceId: s, group: t } = e,
+          r = (0, j.Z)(),
+          { 0: a, 1: n } = (0, m.useState)(!1),
+          { 0: p, 1: g } = (0, m.useState)(""),
+          { 0: f, 1: w } = (0, m.useState)(0),
           {
-            data: k,
-            isLoading: C,
+            data: b,
+            isLoading: k,
             isPlaceholderData: N,
-          } = (0, o.a)({
-            queryKey: [s, "groups", r.id, p, "members-page-".concat(w)],
-            queryFn: () => n.Z.listWorkspaceGroupMembers(s, r.id, p, 10 * w),
-            placeholderData: i.Wk,
+          } = (0, i.a)({
+            queryKey: [s, "groups", t.id, p, "members-page-".concat(f)],
+            queryFn: () => l.Z.listWorkspaceGroupMembers(s, t.id, p, 10 * f),
+            placeholderData: u.Wk,
           }),
-          { 0: O, 1: P } = (0, g.useState)(!1),
-          E = (0, g.useRef)(null),
-          q = (0, l.NL)();
-        (0, g.useEffect)(() => {
+          { 0: D, 1: G } = (0, m.useState)(!1),
+          E = (0, m.useRef)(null),
+          _ = (0, o.NL)();
+        (0, m.useEffect)(() => {
           a && E.current && E.current.focus();
         }, [a]);
-        let { mutateAsync: T } = (0, c.D)({
+        let { mutateAsync: A } = (0, c.D)({
           mutationFn: async (e) =>
-            await n.Z.removeWorkspaceGroupMember(s, r.id, e),
+            await l.Z.removeWorkspaceGroupMember(s, t.id, e),
           onMutate: (e) => (
-            q.cancelQueries({ queryKey: [s, "groups", r.id] }),
-            q.setQueryData(
-              [s, "groups", r.id, p, "members-page-".concat(w)],
+            _.cancelQueries({ queryKey: [s, "groups", t.id] }),
+            _.setQueryData(
+              [s, "groups", t.id, p, "members-page-".concat(f)],
               (s) =>
                 s
-                  ? Q(
-                      Q({}, s),
+                  ? B(
+                      B({}, s),
                       {},
                       {
                         items: s.items.filter((s) => s.id !== e),
@@ -279,64 +413,64 @@
                     )
                   : { limit: 10, offset: 0, items: [], total: 0 }
             ),
-            { previousData: k }
+            { previousData: b }
           ),
-          onError: (e, t, a) => {
-            q.setQueryData(
-              [s, "groups", r.id, "members-page-".concat(w)],
+          onError: (e, r, a) => {
+            _.setQueryData(
+              [s, "groups", t.id, "members-page-".concat(f)],
               null == a ? void 0 : a.previousData
             ),
-              q.invalidateQueries({ queryKey: [s, "groups", r.id] });
+              _.invalidateQueries({ queryKey: [s, "groups", t.id] });
           },
           onSettled: async () => {
             await new Promise((e) => setTimeout(e, 1e3)),
-              q.invalidateQueries({ queryKey: [s, "groups"] });
+              _.invalidateQueries({ queryKey: [s, "groups"] });
           },
         });
-        return (0, h.jsxs)("div", {
+        return (0, y.jsxs)("div", {
           className: "flex w-full flex-col",
           children: [
-            (0, h.jsxs)("div", {
+            (0, y.jsxs)("div", {
               className: "flex flex-row items-center ",
               children: [
-                (0, h.jsx)("div", {
+                (0, y.jsx)("div", {
                   className:
                     "border-token-border-dark mt-3 inline-block h-8 grow-0 border-b-2 text-sm font-semibold",
-                  children: (0, h.jsx)(x.Z, {
+                  children: (0, y.jsx)(h.Z, {
                     id: "workspaceSettings.groups.membersTableTitle",
                     defaultMessage: "Group members",
                   }),
                 }),
-                (0, h.jsx)("div", { className: "grow" }),
-                (0, h.jsx)(_.u, {
-                  label: t.formatMessage({
+                (0, y.jsx)("div", { className: "grow" }),
+                (0, y.jsx)(P.u, {
+                  label: r.formatMessage({
                     id: "workspaceSettings.groups.searchButtonTooltip",
                     defaultMessage: "Search members",
                   }),
-                  children: (0, h.jsx)("div", {
+                  children: (0, y.jsx)("div", {
                     className: "cursor-pointer p-2",
                     onClick: () => {
-                      d(!0);
+                      n(!0);
                     },
-                    children: (0, h.jsx)(D.ol, {}),
+                    children: (0, y.jsx)(O.ol, {}),
                   }),
                 }),
-                (0, h.jsx)("input", {
+                (0, y.jsx)("input", {
                   type: "text",
                   ref: E,
-                  placeholder: t.formatMessage({
+                  placeholder: r.formatMessage({
                     id: "workspaceSettings.groups.searchMembers",
                     defaultMessage: "Filter by name or email...",
                   }),
-                  className: (0, u.default)(
+                  className: (0, d.default)(
                     "bg-token-surface-primary dark:bg-token-surface-secondary border-none px-0 transition-width duration-300 ease-in-out focus:ring-0",
                     a ? "w-64" : "w-0"
                   ),
                   value: p,
                   onChange: () => {
                     var e, s;
-                    Z(0),
-                      f(
+                    w(0),
+                      g(
                         null !==
                           (e =
                             null === (s = E.current) || void 0 === s
@@ -349,80 +483,80 @@
                 }),
               ],
             }),
-            (0, h.jsxs)(v.Z.Root, {
+            (0, y.jsxs)(C.Z.Root, {
               className: "min-w-full",
               children: [
-                (0, h.jsxs)(v.Z.Header, {
+                (0, y.jsxs)(C.Z.Header, {
                   children: [
-                    (0, h.jsx)(v.Z.HeaderCell, {
-                      children: (0, h.jsx)(x.Z, {
+                    (0, y.jsx)(C.Z.HeaderCell, {
+                      children: (0, y.jsx)(h.Z, {
                         id: "workspaceSettings.groups.memberName",
                         defaultMessage: "Name",
                       }),
                     }),
-                    (0, h.jsx)(v.Z.HeaderCell, {
-                      children: (0, h.jsx)(x.Z, {
+                    (0, y.jsx)(C.Z.HeaderCell, {
+                      children: (0, y.jsx)(h.Z, {
                         id: "workspaceSettings.groups.email",
                         defaultMessage: "Email",
                       }),
                     }),
-                    (0, h.jsx)(v.Z.HeaderCell, {}),
+                    (0, y.jsx)(C.Z.HeaderCell, {}),
                   ],
                 }),
-                (0, h.jsx)(v.Z.Body, {
-                  className: C || N ? "opacity-50" : void 0,
+                (0, y.jsx)(C.Z.Body, {
+                  className: k || N ? "opacity-50" : void 0,
                   children:
-                    null == k
-                      ? (0, h.jsx)(v.Z.Row, {
-                          children: (0, h.jsx)(v.Z.Cell, {
+                    null == b
+                      ? (0, y.jsx)(C.Z.Row, {
+                          children: (0, y.jsx)(C.Z.Cell, {
                             colSpan: 3,
-                            children: (0, h.jsx)(M.Z, {}),
+                            children: (0, y.jsx)(M.Z, {}),
                           }),
                         })
-                      : 0 === k.items.length
-                        ? (0, h.jsx)(v.Z.Row, {
-                            children: (0, h.jsx)(v.Z.Cell, {
+                      : 0 === b.items.length
+                        ? (0, y.jsx)(C.Z.Row, {
+                            children: (0, y.jsx)(C.Z.Cell, {
                               colSpan: 3,
                               children:
                                 "" === p
-                                  ? (0, h.jsx)(x.Z, {
+                                  ? (0, y.jsx)(h.Z, {
                                       id: "workspaceSettings.groups.noMembers",
                                       defaultMessage: "No members",
                                     })
-                                  : (0, h.jsx)(x.Z, {
+                                  : (0, y.jsx)(h.Z, {
                                       id: "workspaceSettings.groups.noMembersForSearch",
                                       defaultMessage:
                                         "No members matched the filter",
                                     }),
                             }),
                           })
-                        : k.items.map((e) =>
-                            (0, h.jsxs)(
-                              v.Z.Row,
+                        : b.items.map((e) =>
+                            (0, y.jsxs)(
+                              C.Z.Row,
                               {
                                 children: [
-                                  (0, h.jsx)(v.Z.Cell, {
-                                    children: (0, h.jsx)("span", {
+                                  (0, y.jsx)(C.Z.Cell, {
+                                    children: (0, y.jsx)("span", {
                                       className: "ml-3",
                                       children: e.name,
                                     }),
                                   }),
-                                  (0, h.jsx)(v.Z.Cell, { children: e.email }),
-                                  (0, h.jsx)(v.Z.Cell, {
+                                  (0, y.jsx)(C.Z.Cell, { children: e.email }),
+                                  (0, y.jsx)(C.Z.Cell, {
                                     textAlign: "right",
-                                    children: (0, h.jsxs)(b.Z.Root, {
+                                    children: (0, y.jsxs)(S.Z.Root, {
                                       children: [
-                                        (0, h.jsx)(b.Z.Trigger, {
+                                        (0, y.jsx)(S.Z.Trigger, {
                                           className: "-my-2",
-                                          children: (0, h.jsx)(m.K9M, {
+                                          children: (0, y.jsx)(x.K9M, {
                                             className: "icon-sm",
                                           }),
                                         }),
-                                        (0, h.jsx)(b.Z.Portal, {
-                                          children: (0, h.jsx)(b.Z.Content, {
-                                            children: (0, h.jsx)(b.Z.Item, {
-                                              onClick: () => T(e.id),
-                                              children: (0, h.jsx)(x.Z, {
+                                        (0, y.jsx)(S.Z.Portal, {
+                                          children: (0, y.jsx)(S.Z.Content, {
+                                            children: (0, y.jsx)(S.Z.Item, {
+                                              onClick: () => A(e.id),
+                                              children: (0, y.jsx)(h.Z, {
                                                 id: "workspaceSettings.groups.removeMember",
                                                 defaultMessage: "Remove member",
                                               }),
@@ -440,115 +574,115 @@
                 }),
               ],
             }),
-            (0, h.jsxs)("div", {
+            (0, y.jsxs)("div", {
               className: "my-2 flex flex-row justify-center",
               children: [
-                (0, h.jsx)(y.z, {
+                (0, y.jsx)(Z.z, {
                   color: "neutral",
-                  onClick: () => P(!0),
-                  children: (0, h.jsx)(x.Z, {
+                  onClick: () => G(!0),
+                  children: (0, y.jsx)(h.Z, {
                     id: "workspaceSettings.groups.addMemberButton",
                     defaultMessage: "Add member",
                   }),
                 }),
-                (0, h.jsx)("div", { className: "grow" }),
-                k &&
-                  k.items.length > 0 &&
-                  (0, h.jsx)(S.t, {
-                    currentPage: w,
+                (0, y.jsx)("div", { className: "grow" }),
+                b &&
+                  b.items.length > 0 &&
+                  (0, y.jsx)(v.t, {
+                    currentPage: f,
                     onChangeIndex: (e) => {
-                      Z(e);
+                      w(e);
                     },
-                    length: Math.ceil(k.total / 10),
+                    length: Math.ceil(b.total / 10),
                   }),
               ],
             }),
-            O &&
-              (0, h.jsx)(G, {
+            D &&
+              (0, y.jsx)(I, {
                 isOpen: !0,
                 onClose: () => {
-                  q.invalidateQueries({ queryKey: [s, "groups"] }), P(!1);
+                  _.invalidateQueries({ queryKey: [s, "groups"] }), G(!1);
                 },
-                group: r,
+                group: t,
               }),
           ],
         });
       }
-      function R(e, s) {
-        var r = Object.keys(e);
+      function W(e, s) {
+        var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var t = Object.getOwnPropertySymbols(e);
+          var r = Object.getOwnPropertySymbols(e);
           s &&
-            (t = t.filter(function (s) {
+            (r = r.filter(function (s) {
               return Object.getOwnPropertyDescriptor(e, s).enumerable;
             })),
-            r.push.apply(r, t);
+            t.push.apply(t, r);
         }
-        return r;
+        return t;
       }
-      function K(e) {
+      function H(e) {
         for (var s = 1; s < arguments.length; s++) {
-          var r = null != arguments[s] ? arguments[s] : {};
+          var t = null != arguments[s] ? arguments[s] : {};
           s % 2
-            ? R(Object(r), !0).forEach(function (s) {
-                (0, t.Z)(e, s, r[s]);
+            ? W(Object(t), !0).forEach(function (s) {
+                (0, r.Z)(e, s, t[s]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : R(Object(r)).forEach(function (s) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+              : W(Object(t)).forEach(function (s) {
                   Object.defineProperty(
                     e,
                     s,
-                    Object.getOwnPropertyDescriptor(r, s)
+                    Object.getOwnPropertyDescriptor(t, s)
                   );
                 });
         }
         return e;
       }
-      function A(e) {
+      function z(e) {
         let { workspaceId: s } = e,
-          r = (0, j.Z)(),
-          t = (0, l.NL)(),
-          { 0: a, 1: d } = (0, g.useState)(""),
-          { 0: p, 1: m } = (0, g.useState)(0),
+          t = (0, j.Z)(),
+          r = (0, o.NL)(),
+          { 0: a, 1: p } = (0, m.useState)(""),
+          { 0: g, 1: x } = (0, m.useState)(0),
           {
             data: f,
             isLoading: w,
             isPlaceholderData: b,
-          } = (0, o.a)({
+          } = (0, i.a)({
             queryKey:
               "" === a
-                ? [s, "groups", "page-".concat(p)]
-                : [s, "groups", "filtered", a, "page-".concat(p)],
+                ? [s, "groups", "page-".concat(g)]
+                : [s, "groups", "filtered", a, "page-".concat(g)],
             queryFn: () =>
-              n.Z.getWorkspaceGroups(s, { query: a, offset: 10 * p }),
-            placeholderData: i.Wk,
+              l.Z.getWorkspaceGroups(s, { query: a, offset: 10 * g }),
+            placeholderData: u.Wk,
           }),
-          { 0: Z, 1: k } = (0, g.useState)(!1),
-          N = (e) => {
-            e && (m(0), d("")), k(e);
+          { 0: S, 1: N } = (0, m.useState)(!1),
+          O = (e) => {
+            e && (x(0), p("")), N(e);
           },
-          { mutateAsync: O } = (0, c.D)({
+          { mutateAsync: P } = (0, c.D)({
             mutationFn: async (e) => {
-              let { workspaceId: s, name: r } = e;
-              return await n.Z.createWorkspaceGroup(s, r);
+              let { workspaceId: s, name: t } = e;
+              return await l.Z.createWorkspaceGroup(s, t);
             },
             onMutate: (e) => {
-              let { workspaceId: s, name: r } = e;
+              let { workspaceId: s, name: t } = e;
               return (
-                t.cancelQueries({ queryKey: [s, "groups"] }),
-                t.setQueryData(
+                r.cancelQueries({ queryKey: [s, "groups"] }),
+                r.setQueryData(
                   [s, "groups", "page-0"],
                   (e) => (
                     e || (e = { limit: 10, offset: 0, items: [], total: 0 }),
-                    K(
-                      K({}, e),
+                    H(
+                      H({}, e),
                       {},
                       {
                         items: [
                           {
                             id: "new",
-                            name: r,
+                            name: t,
                             num_members: 0,
                             created_time: "",
                           },
@@ -561,131 +695,185 @@
                 { previousGroups: f }
               );
             },
-            onError: (e, r, a) => {
-              t.setQueryData(
+            onError: (e, a, l) => {
+              r.setQueryData(
                 [s, "groups", "page-0"],
-                null == a ? void 0 : a.previousGroups
+                null == l ? void 0 : l.previousGroups
               ),
-                t.invalidateQueries({ queryKey: [s, "groups"] });
+                r.invalidateQueries({ queryKey: [s, "groups"] }),
+                "Group with this name already exists." === e.message &&
+                  n.m.warning(
+                    t.formatMessage({
+                      id: "workspaceSettings.groups.duplicateName",
+                      defaultMessage: "Group with this name already exists",
+                    }),
+                    { duration: 2 }
+                  );
             },
             onSettled: async () => {
-              await new Promise((e) => setTimeout(e, 1500)),
-                t.invalidateQueries({ queryKey: [s, "groups"] });
+              await new Promise((e) => setTimeout(e, 1e3)),
+                r.invalidateQueries({ queryKey: [s, "groups"] });
             },
           }),
-          { mutateAsync: P } = (0, c.D)({
-            mutationFn: async (e) => await n.Z.deleteWorkspaceGroup(s, e),
+          { mutateAsync: D } = (0, c.D)({
+            mutationFn: async (e) => await l.Z.deleteWorkspaceGroup(s, e),
             onMutate: (e) => (
-              t.cancelQueries({ queryKey: [s, "groups", "page-0"] }),
-              t.setQueryData(
+              r.cancelQueries({ queryKey: [s, "groups", "page-0"] }),
+              r.setQueryData(
                 [s, "groups", "page-0"],
                 (s) => (
                   s || (s = { items: [] }),
-                  K(K({}, s), {}, { items: s.items.filter((s) => s.id !== e) })
+                  H(H({}, s), {}, { items: s.items.filter((s) => s.id !== e) })
                 )
               ),
               { previousGroups: f }
             ),
-            onError: (e, r, a) => {
-              t.setQueryData(
+            onError: (e, t, a) => {
+              r.setQueryData(
                 [s, "groups", "page-0"],
                 null == a ? void 0 : a.previousGroups
               ),
-                t.invalidateQueries({ queryKey: [s, "groups"] });
+                r.invalidateQueries({ queryKey: [s, "groups"] });
             },
             onSettled: async () => {
-              await new Promise((e) => setTimeout(e, 1500)),
-                t.invalidateQueries({ queryKey: [s, "groups"] });
+              await new Promise((e) => setTimeout(e, 1e3)),
+                r.invalidateQueries({ queryKey: [s, "groups"] });
+            },
+          }),
+          { mutateAsync: G } = (0, c.D)({
+            mutationFn: async (e) => {
+              let { workspaceId: s, groupID: t, name: r } = e;
+              return await l.Z.updateWorkspaceGroup(s, t, r);
+            },
+            onMutate: (e) => {
+              let { workspaceId: s, groupID: t, name: a } = e,
+                n = r.getQueryData([s, "groups", "page-".concat(g)]);
+              return (
+                r.setQueryData(
+                  [s, "groups", "page-".concat(g)],
+                  (e) => (
+                    e || (e = { items: [] }),
+                    H(
+                      H({}, e),
+                      {},
+                      {
+                        items: e.items.map((e) =>
+                          e.id === t ? H(H({}, e), {}, { name: a }) : e
+                        ),
+                      }
+                    )
+                  )
+                ),
+                { previousGroups: n }
+              );
+            },
+            onError: (e, s, a) => {
+              r.setQueryData(
+                [s, "groups", "page-".concat(g)],
+                null == a ? void 0 : a.previousGroups
+              ),
+                "Group with this name already exists." === e.message &&
+                  n.m.warning(
+                    t.formatMessage({
+                      id: "workspaceSettings.groups.duplicateName",
+                      defaultMessage: "Group with this name already exists",
+                    }),
+                    { duration: 2 }
+                  );
+            },
+            onSettled: async () => {
+              await new Promise((e) => setTimeout(e, 1e3)),
+                r.invalidateQueries({ queryKey: [s, "groups"] });
             },
           });
-        return (0, h.jsxs)(h.Fragment, {
+        return (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, h.jsxs)("div", {
+            (0, y.jsxs)("div", {
               className: "mb-3 mt-6 flex flex-row justify-between gap-2",
               children: [
-                (0, h.jsx)(C, {
+                (0, y.jsx)(k, {
                   className: "max-w-12",
                   inputClassName: "w-full",
                   value: a,
                   onChange: (e) => {
-                    d(e.target.value), m(0);
+                    p(e.target.value), x(0);
                   },
-                  placeholder: r.formatMessage({
+                  placeholder: t.formatMessage({
                     id: "workspaceSettings.groups.search",
                     defaultMessage: "Search group name",
                   }),
                 }),
-                (0, h.jsx)(y.z, {
-                  onClick: () => N(!0),
-                  children: (0, h.jsx)(x.Z, {
+                (0, y.jsx)(Z.z, {
+                  onClick: () => O(!0),
+                  children: (0, y.jsx)(h.Z, {
                     id: "workspaceSettings.groups.create",
                     defaultMessage: "Create group",
                   }),
                 }),
               ],
             }),
-            (0, h.jsxs)("div", {
+            (0, y.jsxs)("div", {
               children: [
-                (0, h.jsxs)(v.Z.Root, {
+                (0, y.jsxs)(C.Z.Root, {
                   className: "min-w-full",
                   children: [
-                    (0, h.jsxs)(v.Z.Header, {
+                    (0, y.jsxs)(C.Z.Header, {
                       children: [
-                        (0, h.jsx)(v.Z.HeaderCell, {}),
-                        (0, h.jsx)(v.Z.HeaderCell, {
-                          children: (0, h.jsx)(x.Z, {
+                        (0, y.jsx)(C.Z.HeaderCell, {}),
+                        (0, y.jsx)(C.Z.HeaderCell, {
+                          children: (0, y.jsx)(h.Z, {
                             id: "workspaceSettings.groups.groupName",
                             defaultMessage: "Group name",
                           }),
                         }),
-                        (0, h.jsx)(v.Z.HeaderCell, {
-                          children: (0, h.jsx)(x.Z, {
+                        (0, y.jsx)(C.Z.HeaderCell, {
+                          children: (0, y.jsx)(h.Z, {
                             id: "workspaceSettings.groups.members",
                             defaultMessage: "Members",
                           }),
                         }),
-                        (0, h.jsx)(v.Z.HeaderCell, {
-                          children: (0, h.jsx)(x.Z, {
+                        (0, y.jsx)(C.Z.HeaderCell, {
+                          children: (0, y.jsx)(h.Z, {
                             id: "workspaceSettings.groups.created",
                             defaultMessage: "Created",
                           }),
                         }),
-                        (0, h.jsx)(v.Z.HeaderCell, {}),
+                        (0, y.jsx)(C.Z.HeaderCell, {}),
                       ],
                     }),
-                    (0, h.jsxs)(v.Z.Body, {
-                      className: (0, u.default)((w || b) && "opacity-50"),
+                    (0, y.jsxs)(C.Z.Body, {
+                      className: (0, d.default)((w || b) && "opacity-50"),
                       children: [
-                        Z &&
-                          (0, h.jsx)(I, {
+                        S &&
+                          (0, y.jsx)(L, {
                             group: "new",
                             workspaceId: s,
                             onChangeName: async (e) => {
                               "" !== e.trim() &&
-                                (O({ workspaceId: s, name: e }), N(!1));
+                                (P({ workspaceId: s, name: e }), O(!1));
                             },
                             onDelete: () => null,
                           }),
                         null == f
-                          ? (0, h.jsx)(v.Z.Row, {
-                              children: (0, h.jsx)(v.Z.Cell, {
+                          ? (0, y.jsx)(C.Z.Row, {
+                              children: (0, y.jsx)(C.Z.Cell, {
                                 colSpan: 5,
                                 textAlign: "center",
-                                children: (0, h.jsx)(M.Z, {}),
+                                children: (0, y.jsx)(M.Z, {}),
                               }),
                             })
                           : 0 === f.items.length
-                            ? (0, h.jsx)(v.Z.Row, {
-                                children: (0, h.jsx)(v.Z.Cell, {
+                            ? (0, y.jsx)(C.Z.Row, {
+                                children: (0, y.jsx)(C.Z.Cell, {
                                   colSpan: 5,
                                   textAlign: "center",
                                   children:
                                     "" === a
-                                      ? (0, h.jsx)(x.Z, {
+                                      ? (0, y.jsx)(h.Z, {
                                           id: "workspaceSettings.groups.noGroups",
                                           defaultMessage: "No groups found.",
                                         })
-                                      : (0, h.jsx)(x.Z, {
+                                      : (0, y.jsx)(h.Z, {
                                           id: "workspaceSettings.groups.noGroupsWithFIlter",
                                           defaultMessage:
                                             "No groups found. Try changing the search query.",
@@ -693,24 +881,18 @@
                                 }),
                               })
                             : f.items.map((e) =>
-                                (0, h.jsx)(
-                                  I,
+                                (0, y.jsx)(
+                                  L,
                                   {
                                     group: e,
                                     workspaceId: s,
-                                    onDelete: P,
-                                    onChangeName: async (r) => {
-                                      await n.Z.updateWorkspaceGroup(
-                                        s,
-                                        e.id,
-                                        r
-                                      ),
-                                        await new Promise((e) =>
-                                          setTimeout(e, 400)
-                                        ),
-                                        t.invalidateQueries({
-                                          queryKey: [s, "groups"],
-                                        });
+                                    onDelete: D,
+                                    onChangeName: async (t) => {
+                                      G({
+                                        workspaceId: s,
+                                        groupID: e.id,
+                                        name: t,
+                                      });
                                     },
                                   },
                                   e.id
@@ -721,12 +903,12 @@
                   ],
                 }),
                 f &&
-                  (0, h.jsx)("div", {
+                  (0, y.jsx)("div", {
                     className: "flex flex-row justify-center",
-                    children: (0, h.jsx)(S.t, {
+                    children: (0, y.jsx)(v.t, {
                       length: Math.ceil(f.total / 10),
-                      currentPage: Math.min(p, Math.ceil(f.total / 10)),
-                      onChangeIndex: (e) => m(e),
+                      currentPage: Math.min(g, Math.ceil(f.total / 10)),
+                      onChangeIndex: (e) => x(e),
                     }),
                   }),
               ],
@@ -734,75 +916,75 @@
           ],
         });
       }
-      function H(e) {
+      function U(e) {
         let { currentWorkspaceId: s } = e,
-          r = (0, j.Z)();
-        return (0, h.jsxs)(h.Fragment, {
+          t = (0, j.Z)();
+        return (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, h.jsx)(p(), {
-              children: (0, h.jsx)("title", {
-                children: r.formatMessage(W.title),
+            (0, y.jsx)(g(), {
+              children: (0, y.jsx)("title", {
+                children: t.formatMessage(J.title),
               }),
             }),
-            (0, h.jsx)(a.yG, {
-              title: r.formatMessage(W.title),
-              subtitle: (0, h.jsx)(x.Z, {
+            (0, y.jsx)(a.yG, {
+              title: t.formatMessage(J.title),
+              subtitle: (0, y.jsx)(h.Z, {
                 id: "workspaceSettings.groups.subtitle",
                 defaultMessage:
                   "Only workspace owners can view and change these settings",
               }),
             }),
-            (0, h.jsx)(a.hb, {
+            (0, y.jsx)(a.hb, {
               showSpinner: !1,
-              children: (0, h.jsx)(A, { workspaceId: s }),
+              children: (0, y.jsx)(z, { workspaceId: s }),
             }),
           ],
         });
       }
-      function I(e) {
-        let { group: s, workspaceId: r, onChangeName: t, onDelete: a } = e,
+      function L(e) {
+        let { group: s, workspaceId: t, onChangeName: r, onDelete: a } = e,
           n = (0, j.Z)(),
-          { 0: l, 1: o } = (0, g.useState)(!1),
-          { 0: i, 1: c } = (0, g.useState)("new" === s ? "" : s.name),
-          { 0: u, 1: d } = (0, g.useState)(!1),
-          { 0: p, 1: y } = (0, g.useState)("new" === s),
-          { 0: Z, 1: S } = (0, g.useState)(null),
-          C = (0, g.useRef)(null);
-        (0, g.useEffect)(() => {
+          { 0: l, 1: o } = (0, m.useState)(!1),
+          { 0: i, 1: u } = (0, m.useState)("new" === s ? "" : s.name),
+          { 0: c, 1: d } = (0, m.useState)(!1),
+          { 0: p, 1: g } = (0, m.useState)("new" === s),
+          { 0: Z, 1: v } = (0, m.useState)(null),
+          k = (0, m.useRef)(null);
+        (0, m.useEffect)(() => {
           if ("new" === s || p) {
             var e;
-            null === (e = C.current) || void 0 === e || e.focus();
+            null === (e = k.current) || void 0 === e || e.focus();
           }
         }, [s, p]);
         let M = async () => {
           if ("" === i.trim()) {
-            c("new" === s ? "" : s.name), y(!1), d(!1);
+            u("new" === s ? "" : s.name), g(!1), d(!1);
             return;
           }
-          t && (d(!0), await t(i)), d(!1), y(!1);
+          r && (d(!0), await r(i)), d(!1), g(!1);
         };
-        return (0, h.jsxs)(h.Fragment, {
+        return (0, y.jsxs)(y.Fragment, {
           children: [
-            (0, h.jsxs)(v.Z.Row, {
+            (0, y.jsxs)(C.Z.Row, {
               onClick: () => o((e) => !e),
               className: "hover:bg-token-surface-secondary cursor-pointer",
               children: [
-                (0, h.jsx)(v.Z.Cell, {
-                  children: (0, h.jsx)(w, { checked: l }),
+                (0, y.jsx)(C.Z.Cell, {
+                  children: (0, y.jsx)(w, { checked: l }),
                 }),
-                (0, h.jsx)(v.Z.Cell, {
+                (0, y.jsx)(C.Z.Cell, {
                   children:
                     "new" === s || p
-                      ? (0, h.jsx)(k.Z, {
-                          ref: C,
+                      ? (0, y.jsx)(b.Z, {
+                          ref: k,
                           name: "newGroupName",
                           value: i,
-                          disabled: u,
+                          disabled: c,
                           placeholder: n.formatMessage({
                             id: "workspaceSettings.groups.groupNamePlaceholder",
                             defaultMessage: "New group name...",
                           }),
-                          onChange: (e) => c(e.target.value),
+                          onChange: (e) => u(e.target.value),
                           onBlur: () => {
                             i !== ("new" === s ? "" : s.name) && M();
                           },
@@ -810,17 +992,17 @@
                         })
                       : s.name,
                 }),
-                (0, h.jsx)(v.Z.Cell, {
-                  children: (0, h.jsx)(x.Z, {
+                (0, y.jsx)(C.Z.Cell, {
+                  children: (0, y.jsx)(h.Z, {
                     id: "workspaceSettings.groups.memberCount",
                     defaultMessage: "{count} members",
                     values: { count: "new" === s ? "0" : s.num_members },
                   }),
                 }),
-                (0, h.jsx)(v.Z.Cell, {
+                (0, y.jsx)(C.Z.Cell, {
                   children:
                     "new" !== s && s.created_time
-                      ? (0, h.jsx)(f.Ji, {
+                      ? (0, y.jsx)(f.Ji, {
                           value: s.created_time,
                           year: "numeric",
                           month: "long",
@@ -828,40 +1010,40 @@
                         })
                       : "",
                 }),
-                (0, h.jsx)(v.Z.Cell, {
+                (0, y.jsx)(C.Z.Cell, {
                   textAlign: "right",
                   children:
                     "new" !== s &&
-                    (0, h.jsxs)(b.Z.Root, {
+                    (0, y.jsxs)(S.Z.Root, {
                       children: [
-                        (0, h.jsx)(b.Z.Trigger, {
+                        (0, y.jsx)(S.Z.Trigger, {
                           className: "-my-2",
-                          children: (0, h.jsx)(m.K9M, { className: "icon-sm" }),
+                          children: (0, y.jsx)(x.K9M, { className: "icon-sm" }),
                         }),
-                        (0, h.jsx)(b.Z.Portal, {
-                          children: (0, h.jsxs)(b.Z.Content, {
+                        (0, y.jsx)(S.Z.Portal, {
+                          children: (0, y.jsxs)(S.Z.Content, {
                             children: [
-                              (0, h.jsx)(b.Z.Item, {
+                              (0, y.jsx)(S.Z.Item, {
                                 onClick: (e) => {
-                                  y(!0),
+                                  g(!0),
                                     setTimeout(() => {
                                       var e;
-                                      null === (e = C.current) ||
+                                      null === (e = k.current) ||
                                         void 0 === e ||
                                         e.focus();
                                     }, 120),
                                     e.stopPropagation();
                                 },
-                                children: (0, h.jsx)(x.Z, {
+                                children: (0, y.jsx)(h.Z, {
                                   id: "workspaceSettings.groups.changeName",
                                   defaultMessage: "Edit name",
                                 }),
                               }),
-                              (0, h.jsx)(b.Z.Item, {
+                              (0, y.jsx)(S.Z.Item, {
                                 onClick: (e) => {
-                                  S(s), e.stopPropagation();
+                                  v(s), e.stopPropagation();
                                 },
-                                children: (0, h.jsx)(x.Z, {
+                                children: (0, y.jsx)(h.Z, {
                                   id: "workspaceSettings.groups.edit",
                                   defaultMessage: "Delete group",
                                 }),
@@ -876,20 +1058,20 @@
             }),
             l &&
               "new" !== s &&
-              (0, h.jsx)(v.Z.Row, {
-                children: (0, h.jsx)(v.Z.Cell, {
+              (0, y.jsx)(C.Z.Row, {
+                children: (0, y.jsx)(C.Z.Cell, {
                   colSpan: 5,
                   className: "pl-8",
-                  children: (0, h.jsx)(T, { group: s, workspaceId: r }),
+                  children: (0, y.jsx)(K, { group: s, workspaceId: t }),
                 }),
               }),
             Z &&
-              (0, h.jsx)(F, { group: Z, onDelete: a, onClose: () => S(null) }),
+              (0, y.jsx)(X, { group: Z, onDelete: a, onClose: () => v(null) }),
           ],
         });
       }
-      function F(e) {
-        let { group: s, onDelete: r, onClose: t } = e,
+      function X(e) {
+        let { group: s, onDelete: t, onClose: r } = e,
           a = (0, j.Z)().formatMessage(
             {
               id: "workspaceSettings.groups.deleteGroupTitle",
@@ -897,32 +1079,32 @@
             },
             { groupName: s.name }
           );
-        return (0, h.jsx)(Z.Z, {
+        return (0, y.jsx)(N.Z, {
           type: "warning",
           isOpen: !0,
-          onClose: t,
+          onClose: r,
           title: a,
           showCloseButton: !0,
-          primaryButton: (0, h.jsx)(y.z, {
+          primaryButton: (0, y.jsx)(Z.z, {
             color: "danger",
             onClick: async () => {
-              r(s.id), t();
+              t(s.id), r();
             },
-            children: (0, h.jsx)(x.Z, {
+            children: (0, y.jsx)(h.Z, {
               id: "workspaceSettings.groups.confirmDelete",
               defaultMessage: "Delete",
             }),
           }),
-          secondaryButton: (0, h.jsx)(y.z, {
-            onClick: t,
+          secondaryButton: (0, y.jsx)(Z.z, {
+            onClick: r,
             color: "neutral",
-            children: (0, h.jsx)(x.Z, {
+            children: (0, y.jsx)(h.Z, {
               id: "workspaceSettings.groups.cancelDelete",
               defaultMessage: "Cancel",
             }),
           }),
-          children: (0, h.jsx)("p", {
-            children: (0, h.jsx)(x.Z, {
+          children: (0, y.jsx)("p", {
+            children: (0, y.jsx)(h.Z, {
               id: "workspaceSettings.groups.deleteGroupWarning",
               defaultMessage:
                 'Are you sure you want to delete the "{groupName}" group? This action cannot be undone.',
@@ -931,42 +1113,42 @@
           }),
         });
       }
-      let W = (0, f.vU)({
+      let J = (0, f.vU)({
         title: { id: "admin.groupsSettings.title", defaultMessage: "Groups" },
       });
-      function B(e, s) {
-        var r = Object.keys(e);
+      function V(e, s) {
+        var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var t = Object.getOwnPropertySymbols(e);
+          var r = Object.getOwnPropertySymbols(e);
           s &&
-            (t = t.filter(function (s) {
+            (r = r.filter(function (s) {
               return Object.getOwnPropertyDescriptor(e, s).enumerable;
             })),
-            r.push.apply(r, t);
+            t.push.apply(t, r);
         }
-        return r;
+        return t;
       }
-      var z = !0;
-      function L(e) {
-        return (0, h.jsx)(
-          H,
+      var Y = !0;
+      function $(e) {
+        return (0, y.jsx)(
+          U,
           (function (e) {
             for (var s = 1; s < arguments.length; s++) {
-              var r = null != arguments[s] ? arguments[s] : {};
+              var t = null != arguments[s] ? arguments[s] : {};
               s % 2
-                ? B(Object(r), !0).forEach(function (s) {
-                    (0, t.Z)(e, s, r[s]);
+                ? V(Object(t), !0).forEach(function (s) {
+                    (0, r.Z)(e, s, t[s]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       e,
-                      Object.getOwnPropertyDescriptors(r)
+                      Object.getOwnPropertyDescriptors(t)
                     )
-                  : B(Object(r)).forEach(function (s) {
+                  : V(Object(t)).forEach(function (s) {
                       Object.defineProperty(
                         e,
                         s,
-                        Object.getOwnPropertyDescriptor(r, s)
+                        Object.getOwnPropertyDescriptor(t, s)
                       );
                     });
             }
@@ -974,28 +1156,28 @@
           })({}, e)
         );
       }
-      L.getLayout = function (e) {
-        return (0, h.jsx)(a.ZP, {
+      $.getLayout = function (e) {
+        return (0, y.jsx)(a.ZP, {
           mobilePageTitle: "Groups",
           requireAdminPrivileges: !0,
           children: e,
         });
       };
     },
-    96654: function (e, s, r) {
+    96654: function (e, s, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/admin/groups",
         function () {
-          return r(1024);
+          return t(75508);
         },
       ]);
     },
   },
   function (e) {
-    e.O(0, [9112, 2888, 9774, 179], function () {
+    e.O(0, [9112, 4736, 2888, 9774, 179], function () {
       return e((e.s = 96654));
     }),
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=groups-1e9f674f6da4d432.js.map
+//# sourceMappingURL=groups-c32b4c7b387df2c1.js.map

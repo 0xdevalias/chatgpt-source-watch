@@ -21,11 +21,11 @@
     "/admin/gpts": [a, "static/chunks/pages/admin/gpts-e95bb3b712c34cd6.js"],
     "/admin/groups": [
       a,
-      "static/chunks/pages/admin/groups-88de251df5c912ef.js",
+      "static/chunks/pages/admin/groups-c32b4c7b387df2c1.js",
     ],
     "/admin/identity": [
       a,
-      "static/chunks/pages/admin/identity-312bb26352af7abf.js",
+      "static/chunks/pages/admin/identity-f9bd13b4d34c43e6.js",
     ],
     "/admin/settings": [
       a,
@@ -48,7 +48,7 @@
       "static/chunks/pages/auth/ext_callback_refresh-af5cf6f0de8c4eae.js",
     ],
     "/auth/login": [s, e, "static/chunks/pages/auth/login-f8b6f8218db2011e.js"],
-    "/auth/logout": ["static/chunks/pages/auth/logout-907d164c60969934.js"],
+    "/auth/logout": ["static/chunks/pages/auth/logout-a7d5619a7dc29c10.js"],
     "/auth/mocked_login": [
       "static/chunks/pages/auth/mocked_login-839acb3ff75e4292.js",
     ],
@@ -58,10 +58,10 @@
       "static/chunks/pages/g/[gizmoId]/about-2d00d99d85925715.js",
     ],
     "/g/[gizmoId]/c/[convId]": [
-      "static/chunks/pages/g/[gizmoId]/c/[convId]-92210d3f21d107bf.js",
+      "static/chunks/pages/g/[gizmoId]/c/[convId]-0b7d1bc8bcea141b.js",
     ],
     "/g/[gizmoId]/view": [
-      "static/chunks/pages/g/[gizmoId]/view-529cae1a470f0c57.js",
+      "static/chunks/pages/g/[gizmoId]/view-c865bb2e41e5ca4e.js",
     ],
     "/gpts": ["static/chunks/pages/gpts-b4093906131dbabf.js"],
     "/gpts/discovery": [
@@ -71,31 +71,32 @@
     "/gpts/editor/[slug]": [
       "static/chunks/pages/gpts/editor/[slug]-6a35077a8e1b5c7a.js",
     ],
-    "/gpts/mine": ["static/chunks/pages/gpts/mine-6a18b35f08b6f9f7.js"],
+    "/gpts/mine": ["static/chunks/pages/gpts/mine-9cfbf62f26a8804a.js"],
     "/invite/accepted": [
       "static/chunks/pages/invite/accepted-5e215bc1f354ddd7.js",
     ],
     "/invite/[[...referralCodeParam]]": [
       s,
       e,
-      "static/chunks/pages/invite/[[...referralCodeParam]]-6aa301ba9c9f3c34.js",
+      "static/chunks/pages/invite/[[...referralCodeParam]]-75edddf1041b64a2.js",
     ],
     "/payments/success": [
-      "static/chunks/pages/payments/success-08c6a8ceca34fd11.js",
+      "static/chunks/pages/payments/success-46cbc5e40d4053be.js",
     ],
     "/payments/success-team": [
-      "static/chunks/pages/payments/success-team-1e87af5e535da00d.js",
+      "static/chunks/pages/payments/success-team-8233a0f359ab0e96.js",
     ],
     "/payments/success-trial": [
-      "static/chunks/pages/payments/success-trial-b9762afd9f3131b3.js",
+      "static/chunks/pages/payments/success-trial-f88b74322c14ec7a.js",
     ],
-    "/search": ["static/chunks/pages/search-e1ccfb5143817d90.js"],
-    "/search/evals": ["static/chunks/pages/search/evals-e9ae2eb3fb0b0761.js"],
+    "/redirect": ["static/chunks/pages/redirect-8460655176aaa9ff.js"],
+    "/search": ["static/chunks/pages/search-3d40fae279539e2f.js"],
+    "/search/evals": ["static/chunks/pages/search/evals-8bd365ce318bad97.js"],
     "/search/feedback": [
       "static/chunks/pages/search/feedback-6df49cbfdd8f2787.js",
     ],
     "/share/e/[[...shareParams]]": [
-      "static/chunks/pages/share/e/[[...shareParams]]-e3678e51ef1e175a.js",
+      "static/chunks/pages/share/e/[[...shareParams]]-e31f61abea795e84.js",
     ],
     "/share/[[...shareParams]]": [
       "static/chunks/pages/share/[[...shareParams]]-f8dbf0ae344f549d.js",
@@ -105,7 +106,7 @@
       "static/chunks/pages/workspace/deactivated-37f7d004c82b32ad.js",
     ],
     "/[[...default]]": [
-      "static/chunks/pages/[[...default]]-c4d6cfb715f6ec2e.js",
+      "static/chunks/pages/[[...default]]-cc93bc2ac1945bd3.js",
     ],
     sortedPages: [
       "/_app",
@@ -143,6 +144,7 @@
       "/payments/success",
       "/payments/success-team",
       "/payments/success-trial",
+      "/redirect",
       "/search",
       "/search/evals",
       "/search/feedback",

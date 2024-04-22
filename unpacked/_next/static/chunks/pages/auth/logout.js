@@ -1,58 +1,59 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7825],
   {
-    1072: function (t, e, n) {
+    1072: function (t, r, e) {
       "use strict";
-      n.r(e),
-        n.d(e, {
+      e.r(r),
+        e.d(r, {
           __N_SSP: function () {
             return l;
           },
           default: function () {
-            return a;
+            return O;
           },
         });
-      var r = n(39827),
-        o = n(4635),
-        c = n(2722),
-        u = n(70079),
-        i = n(35250);
-      function f(t, e) {
-        var n = Object.keys(t);
+      var n = e(39827),
+        o = e(4635),
+        c = e(85548),
+        u = e(2722),
+        i = e(70079),
+        f = e(35250);
+      function s(t, r) {
+        var e = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(t);
-          e &&
-            (r = r.filter(function (e) {
-              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+          var n = Object.getOwnPropertySymbols(t);
+          r &&
+            (n = n.filter(function (r) {
+              return Object.getOwnPropertyDescriptor(t, r).enumerable;
             })),
-            n.push.apply(n, r);
+            e.push.apply(e, n);
         }
-        return n;
+        return e;
       }
-      let s = async (t) => {
-        await (0, c.signOut)({ callbackUrl: t }), (0, o.I)();
+      let a = async (t) => {
+        await (0, u.signOut)({ callbackUrl: t }), (0, o.I)();
       };
       var l = !0;
-      function a(t) {
-        return (0, i.jsx)(
-          O,
+      function O(t) {
+        return (0, f.jsx)(
+          p,
           (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-              var n = null != arguments[e] ? arguments[e] : {};
-              e % 2
-                ? f(Object(n), !0).forEach(function (e) {
-                    (0, r.Z)(t, e, n[e]);
+            for (var r = 1; r < arguments.length; r++) {
+              var e = null != arguments[r] ? arguments[r] : {};
+              r % 2
+                ? s(Object(e), !0).forEach(function (r) {
+                    (0, n.Z)(t, r, e[r]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       t,
-                      Object.getOwnPropertyDescriptors(n)
+                      Object.getOwnPropertyDescriptors(e)
                     )
-                  : f(Object(n)).forEach(function (e) {
+                  : s(Object(e)).forEach(function (r) {
                       Object.defineProperty(
                         t,
-                        e,
-                        Object.getOwnPropertyDescriptor(n, e)
+                        r,
+                        Object.getOwnPropertyDescriptor(e, r)
                       );
                     });
             }
@@ -60,23 +61,23 @@
           })({}, t)
         );
       }
-      function O(t) {
-        let { federatedLogoutUri: e } = t;
+      function p(t) {
+        let { federatedLogoutUri: r } = t;
         return (
-          (0, u.useEffect)(() => {
-            s(null != e ? e : window.location.origin).catch((t) =>
-              console.error("Failed to logout", { error: t })
+          (0, i.useEffect)(() => {
+            a(null != r ? r : window.location.origin).catch((t) =>
+              c.U.addError(Error("Failed to logout", { cause: t }))
             );
-          }, [e]),
+          }, [r]),
           null
         );
       }
     },
-    35155: function (t, e, n) {
+    35155: function (t, r, e) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/auth/logout",
         function () {
-          return n(1072);
+          return e(1072);
         },
       ]);
     },
@@ -88,4 +89,4 @@
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=logout-907d164c60969934.js.map
+//# sourceMappingURL=logout-a7d5619a7dc29c10.js.map

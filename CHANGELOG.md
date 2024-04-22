@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-03-22Z \(`cCOLAGNAOQuNRiOHqq76r`\)](#2024-03-22z-ccolagnaoqunriohqq76r)
 - [2024-03-19Z \(`YGSDwLGlEfZt50ZUBApdx`\)](#2024-03-19z-ygsdwlglefzt50zubapdx)
 - [2024-03-18Z \(`4sRcaf4UsdcjrgtifH4FF`\)](#2024-03-18z-4srcaf4usdcjrgtifh4ff)
 - [2024-03-14Z \(`SlrdNB-ss0XFnBs4tYRwH`\)](#2024-03-14z-slrdnb-ss0xfnbs4tyrwh)
@@ -81,6 +82,90 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-03-22Z (`cCOLAGNAOQuNRiOHqq76r`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- The assets from this build weren't archived at the time, and could only be partially found via Wayback Machine/etc.
+- **tl;dr**
+  - NOTE: This historical build's diff was not analysed
+- App release version (Git SHA?): `7af34587c0507f841be586269e8534c8ae316b81`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-35ca81f35c35c809.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-cc93bc2ac1945bd3.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-54d1df8897a4f10b.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-1f00d1ab5694aa10.js
+https://cdn.oaistatic.com/_next/static/cCOLAGNAOQuNRiOHqq76r/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/cCOLAGNAOQuNRiOHqq76r/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/groups-c32b4c7b387df2c1.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/admin/identity-f9bd13b4d34c43e6.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/logout-a7d5619a7dc29c10.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/c/[convId]-0b7d1bc8bcea141b.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/g/[gizmoId]/view-c865bb2e41e5ca4e.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/gpts/mine-9cfbf62f26a8804a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/invite/[[...referralCodeParam]]-75edddf1041b64a2.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-46cbc5e40d4053be.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-team-8233a0f359ab0e96.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/payments/success-trial-f88b74322c14ec7a.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/redirect-8460655176aaa9ff.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-3d40fae279539e2f.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/share/e/[[...shareParams]]-e31f61abea795e84.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/[[...default]]-cc93bc2ac1945bd3.js
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/evals-8bd365ce318bad97.js
+```
+
+### From `orig/_next/static/chunks/webpack-1f00d1ab5694aa10.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/352.0676116c634fae96.js
+https://cdn.oaistatic.com/_next/static/chunks/676.6ab9d20977798708.js
+https://cdn.oaistatic.com/_next/static/chunks/718.65bc04b8b28c4aec.js
+https://cdn.oaistatic.com/_next/static/chunks/1856.9d5fe805d6e5fac3.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.311c23ad1a4dc898.js
+https://cdn.oaistatic.com/_next/static/chunks/2178.bcd72daec4751976.js
+https://cdn.oaistatic.com/_next/static/chunks/02668ae5.6fe4b288685bd945.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.b4212650c993d2bf.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.136de5f4cc37fcce.js
+https://cdn.oaistatic.com/_next/static/chunks/6332.bc1528e88bdb3ce6.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.4bdb8218e7976393.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.3d70ecbc113ea512.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.451e296e1243cb8b.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.4fd2d414974aab70.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.6eba16346ef8c0c3.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.a65d195fbbfefdbd.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.91b9c59aae824da7.js
+https://cdn.oaistatic.com/_next/static/css/d18608d2f103861c.css
+https://cdn.oaistatic.com/_next/static/css/213cd72b845b16d8.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.16cc0d6839e41dc2.js
+```
 
 ## 2024-03-19Z (`YGSDwLGlEfZt50ZUBApdx`)
 

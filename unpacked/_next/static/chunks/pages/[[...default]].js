@@ -72,6 +72,8 @@
               showCloseButton: !1,
               type: "success",
               noPadding: !0,
+              size: "custom",
+              className: "max-w-[373px] sm:max-w-[400px]",
               position: o ? "center" : "bottom",
               children: (0, g.jsxs)("div", {
                 className:
@@ -136,7 +138,10 @@
           );
         },
         j = (0, m.vU)({
-          title: { id: "NoAuthWelcomeModal.title", defaultMessage: "ChatGPT" },
+          title: {
+            id: "NoAuthWelcomeModal.title",
+            defaultMessage: "Welcome to ChatGPT",
+          },
           subtitle: {
             id: "NoAuthWelcomeModal.subtitle",
             defaultMessage:
@@ -155,22 +160,22 @@
             defaultMessage: "Try it first",
           },
         });
-      var y = n(93723),
+      var y = n(39255),
         _ = n(34777);
-      let w = "has-dismissed-welcome-modal",
-        x = () => {
+      let x = "has-dismissed-welcome-modal",
+        w = () => {
           let { 0: e, 1: t } = (0, d.useState)(!0),
             { isUserUnauthenticated: n } = (0, l.E)(),
             { layer: o } = (0, _.U3)(_.VG.AnonChatLayer),
             r = o.get(_.yp.ANON_IS_NO_AUTH_WELCOME_MODAL_ENABLED, !1);
           return (
             (0, d.useEffect)(() => {
-              t(null != sessionStorage.getItem(w));
+              t(null != sessionStorage.getItem(x));
             }, []),
             {
               isOpen: n && r && !e,
               close: () => {
-                t(!0), sessionStorage.setItem(w, "true");
+                t(!0), sessionStorage.setItem(x, "true");
               },
             }
           );
@@ -213,7 +218,7 @@
         let t = (0, N.useRouter)(),
           n = (0, P.wS)(t.asPath),
           o = (0, P.p9)(n),
-          { isOpen: r, close: s } = x(),
+          { isOpen: r, close: s } = w(),
           { shouldShowHardRateLimitModal: l, shouldShowSoftRateLimitModal: i } =
             (0, y.o)();
         return ((0, d.useEffect)(() => {
@@ -245,4 +250,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=[[...default]]-c4d6cfb715f6ec2e.js.map
+//# sourceMappingURL=[[...default]]-cc93bc2ac1945bd3.js.map
