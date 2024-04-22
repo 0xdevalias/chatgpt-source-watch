@@ -40619,7 +40619,7 @@
               h = arguments.length > 7 ? arguments[7] : void 0,
               { gizmoId: f } = c,
               v = x.getState().files,
-              y = (0, g.xs)(n, t.name, t.type, p),
+              y = (0, g.xs)(n, t.name, t.type, h, p),
               w = {
                 tempId: e,
                 gizmoId: c.gizmoId,
@@ -41018,13 +41018,24 @@
           }[null != n ? n : ""] || ""
         );
       }
-      function j(e, t, n, a) {
-        if (null == a) return e;
-        let r = b(t);
-        r && (n = r);
-        let { accepted_mime_types: s, can_accept_all_mime_types: i } = a;
-        return null != s && 0 !== s.length && i
-          ? s.includes(n)
+      function j(e, t, n, a, r) {
+        if (null == r) return e;
+        let s = b(t);
+        s && (n = s),
+          a &&
+            (n = (function (e) {
+              switch (e) {
+                case "application/vnd.google-apps.spreadsheet":
+                  return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                case "application/vnd.google-apps.document":
+                  return "text/plain";
+                default:
+                  return e;
+              }
+            })(n));
+        let { accepted_mime_types: i, can_accept_all_mime_types: o } = r;
+        return null != i && 0 !== i.length && o
+          ? i.includes(n)
             ? e
             : A.A.Interpreter
           : e;
@@ -41412,21 +41423,20 @@
         i,
         o = n(70079),
         l = n(78103),
-        c = n(83737),
-        d = n(51018),
-        u = n.n(d),
-        A = n(33271),
-        m = n(35250);
-      let g = u()(
+        c = n(51018),
+        d = n.n(c),
+        u = n(33271),
+        A = n(35250);
+      let m = d()(
         () =>
           Promise.all([n.e(6835), n.e(8055), n.e(2144), n.e(2967)])
             .then(n.bind(n, 93062))
             .then((e) => e.default),
         { loadableGenerated: { webpack: () => [93062] } }
       );
-      function p(e) {
+      function g(e) {
         let { clientThreadId: t, visualization: n } = e,
-          a = (0, A.UU)(t),
+          a = (0, u.UU)(t),
           r = (function (e) {
             let t = (0, o.useRef)();
             return (
@@ -41438,7 +41448,7 @@
           })(a);
         return (
           (0, o.useEffect)(() => {
-            if (r && r.length > 0 && r.length < a.length) {
+            if (r && r.length < a.length) {
               let e = a[a.length - 1];
               e &&
                 em.setFocusedObject({
@@ -41447,41 +41457,40 @@
                 });
             }
           }, [a, r, t]),
-          (0, m.jsx)(c.E.div, {
-            children: (0, m.jsx)(g, { visualization: n, expanded: !0 }),
-          })
+          (0, A.jsx)(m, { visualization: n, expanded: !0 })
         );
       }
-      var h = n(92226),
-        f = n(44151),
-        x = n(46119),
-        v = n(50809),
-        y = n(82535),
-        b = n(41105),
-        j = n(63605),
-        w = n(35595),
-        C = n(81954),
-        k = n(66315),
-        E = n(9063),
-        O = n(68498),
-        M = n(84692),
-        P = n(99945),
-        B = n(18450),
-        S = n(29287),
-        T = n(91993),
-        I = n(11335),
-        N = n(82555),
-        D = n(66452),
-        z = n(70187),
-        _ = n(61438),
-        L = n(37483),
-        Z = n(93884),
-        R = n(60455),
-        Q = n(38801),
-        F = n(67852),
-        U = n(13847),
-        G = n(34594),
-        H = n(19841),
+      var p = n(92226),
+        h = n(44151),
+        f = n(46119),
+        x = n(50809),
+        v = n(82535),
+        y = n(41105),
+        b = n(63605),
+        j = n(35595),
+        w = n(81954),
+        C = n(66315),
+        k = n(9063),
+        E = n(68498),
+        O = n(84692),
+        M = n(99945),
+        P = n(18450),
+        B = n(29287),
+        S = n(91993),
+        T = n(11335),
+        I = n(82555),
+        N = n(66452),
+        D = n(70187),
+        z = n(61438),
+        _ = n(37483),
+        L = n(93884),
+        Z = n(60455),
+        R = n(38801),
+        Q = n(67852),
+        F = n(13847),
+        U = n(34594),
+        G = n(19841),
+        H = n(83737),
         V = n(1454),
         W = n(21389);
       function q(e, t) {
@@ -41501,7 +41510,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? q(Object(n), !0).forEach(function (t) {
-                (0, B.Z)(e, t, n[t]);
+                (0, P.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -41525,79 +41534,79 @@
             cursorWidth: i,
             setCursorWidth: o,
             inpaintingDrawingState: l,
-            isLoadingNewImage: d,
+            isLoadingNewImage: c,
           } = e,
-          u = j.tQ.getServerThreadId(r),
+          d = b.tQ.getServerThreadId(r),
           {
-            canUndoDrawing: A,
-            undoDrawing: g,
-            canRedoDrawing: p,
-            redoDrawing: h,
-            clearAllDrawings: x,
+            canUndoDrawing: u,
+            undoDrawing: m,
+            canRedoDrawing: g,
+            redoDrawing: p,
+            clearAllDrawings: f,
           } = l,
-          y = (0, E.Z)();
-        return (0, m.jsxs)(
-          c.E.div,
+          v = (0, k.Z)();
+        return (0, A.jsxs)(
+          H.E.div,
           K(
-            K({ className: "flex h-16 w-full justify-between px-4" }, f.ee),
+            K({ className: "flex h-16 w-full justify-between px-4" }, h.ee),
             {},
             {
               children: [
-                (0, m.jsx)("div", {
+                (0, A.jsx)("div", {
                   className: "flex items-center",
                   children:
                     n === eo.Inpaint &&
-                    (0, m.jsxs)(m.Fragment, {
+                    (0, A.jsxs)(A.Fragment, {
                       children: [
-                        (0, m.jsxs)("div", {
-                          className: (0, H.default)(
+                        (0, A.jsxs)("div", {
+                          className: (0, G.default)(
                             "flex items-center gap-3",
-                            d && "opacity-50"
+                            c && "opacity-50"
                           ),
                           children: [
-                            (0, m.jsx)(et, { className: "h-[11px] w-[11px]" }),
-                            (0, m.jsxs)(R.fC, {
+                            (0, A.jsx)(et, { className: "h-[11px] w-[11px]" }),
+                            (0, A.jsxs)(Z.fC, {
                               className: "relative flex w-[90px] items-center",
                               min: 32,
                               max: 240,
                               step: 0.01,
                               value: [i],
                               onValueChange: (e) => o(e[0]),
-                              disabled: d,
+                              disabled: c,
                               children: [
-                                (0, m.jsx)(R.fQ, {
+                                (0, A.jsx)(Z.fQ, {
                                   className:
                                     "relative h-[2px] grow bg-token-text-quaternary",
-                                  children: (0, m.jsx)(R.e6, {
+                                  children: (0, A.jsx)(Z.e6, {
                                     className:
                                       "absolute h-full bg-token-text-secondary",
                                   }),
                                 }),
-                                (0, m.jsx)(R.bU, {
+                                (0, A.jsx)(Z.bU, {
                                   className:
                                     "block h-[11px] w-[11px] rounded-full bg-token-text-secondary",
                                 }),
                               ],
                             }),
-                            (0, m.jsx)(et, { className: "h-6 w-6" }),
+                            (0, A.jsx)(et, { className: "h-6 w-6" }),
                           ],
                         }),
-                        (0, m.jsx)(ee, {}),
-                        (0, m.jsx)(X, {
-                          disabled: !A || d,
-                          onClick: g,
-                          children: (0, m.jsx)(_.UE, {}),
+                        (0, A.jsx)(ee, {}),
+                        (0, A.jsx)(X, {
+                          disabled: !u || c,
+                          onClick: m,
+                          children: (0, A.jsx)(z.UE, {}),
                         }),
-                        (0, m.jsx)(X, {
-                          disabled: !p || d,
-                          onClick: h,
-                          children: (0, m.jsx)(_.zG, {}),
+                        (0, A.jsx)(X, {
+                          disabled: !g || c,
+                          onClick: p,
+                          children: (0, A.jsx)(z.zG, {}),
                         }),
-                        (0, m.jsx)(ee, {}),
-                        (0, m.jsx)(X, {
-                          disabled: !A || d,
-                          onClick: x,
-                          children: (0, m.jsx)(M.Z, {
+                        (0, A.jsx)(ee, {}),
+                        (0, A.jsx)(X, {
+                          disabled: !u || c,
+                          onClick: f,
+                          children: (0, A.jsx)(O.Z, {
                             id: "imageEditorControls.clearSelectionButtonLabel",
                             defaultMessage: "Clear selection",
                           }),
@@ -41605,51 +41614,51 @@
                       ],
                     }),
                 }),
-                (0, m.jsx)("div", {
+                (0, A.jsx)("div", {
                   className: "flex items-center",
                   children:
                     n === eo.Inpaint
-                      ? (0, m.jsx)(X, {
+                      ? (0, A.jsx)(X, {
                           onClick: () => a(eo.Default),
-                          disabled: d,
-                          children: (0, m.jsx)(M.Z, {
+                          disabled: c,
+                          children: (0, A.jsx)(O.Z, {
                             id: "imageEditorControls.cancelButtonLabel",
                             defaultMessage: "Cancel",
                           }),
                         })
-                      : (0, m.jsxs)(m.Fragment, {
+                      : (0, A.jsxs)(A.Fragment, {
                           children: [
-                            (0, m.jsx)($, {
+                            (0, A.jsx)($, {
                               imageAsset: t,
                               setMode: a,
                               messageId: s,
-                              serverThreadId: u,
+                              serverThreadId: d,
                             }),
-                            (0, m.jsx)(X, {
-                              tooltip: y.formatMessage({
+                            (0, A.jsx)(X, {
+                              tooltip: v.formatMessage({
                                 id: "imageEditorControls.downloadButtonTooltip",
                                 defaultMessage: "Save",
                               }),
-                              onClick: () => (0, v.HR)(t, u, s),
-                              children: (0, m.jsx)(z.Sg, {}),
+                              onClick: () => (0, x.HR)(t, d, s),
+                              children: (0, A.jsx)(D.Sg, {}),
                             }),
-                            (0, m.jsx)(J, {
-                              prompt: (0, v.hG)(t),
-                              children: (0, m.jsx)(X, {
-                                tooltip: y.formatMessage({
+                            (0, A.jsx)(J, {
+                              prompt: (0, x.hG)(t),
+                              children: (0, A.jsx)(X, {
+                                tooltip: v.formatMessage({
                                   id: "imageEditorControls.promptButtonTooltip",
                                   defaultMessage: "Prompt",
                                 }),
-                                children: (0, m.jsx)(N.szr, {}),
+                                children: (0, A.jsx)(I.szr, {}),
                               }),
                             }),
-                            (0, m.jsx)(X, {
-                              tooltip: y.formatMessage({
+                            (0, A.jsx)(X, {
+                              tooltip: v.formatMessage({
                                 id: "imageEditorControls.closeButtonTooltip",
                                 defaultMessage: "Close",
                               }),
                               onClick: em.close,
-                              children: (0, m.jsx)(V.q5L, { size: 24 }),
+                              children: (0, A.jsx)(V.q5L, { size: 24 }),
                             }),
                           ],
                         }),
@@ -41662,34 +41671,34 @@
       function J(e) {
         let { prompt: t, children: n } = e,
           { 0: a, 1: r } = (0, o.useState)(!1),
-          s = (0, E.Z)();
-        return (0, m.jsx)(T.J, {
+          s = (0, k.Z)();
+        return (0, A.jsx)(S.J, {
           sideOffset: 4,
           alignAgainstAnchor: "end",
-          triggerButton: (0, m.jsx)("div", { className: "group", children: n }),
+          triggerButton: (0, A.jsx)("div", { className: "group", children: n }),
           className: "z-10",
           size: "none",
-          children: (0, m.jsxs)("div", {
+          children: (0, A.jsxs)("div", {
             className: "flex max-w-sm flex-col gap-3 p-4",
             children: [
-              (0, m.jsx)("div", {
+              (0, A.jsx)("div", {
                 className: "text-token-text-secondary",
-                children: (0, m.jsx)(M.Z, {
+                children: (0, A.jsx)(O.Z, {
                   id: "imageEditorControls.promptPopoverLabel",
                   defaultMessage: "Prompt",
                 }),
               }),
-              (0, m.jsx)("div", { children: t }),
-              (0, m.jsx)("div", {
-                children: (0, m.jsxs)(S.z, {
+              (0, A.jsx)("div", { children: t }),
+              (0, A.jsx)("div", {
+                children: (0, A.jsxs)(B.z, {
                   className: "focus:ring-0",
                   color: "neutral",
                   disabled: a,
                   onClick: () => {
-                    r(!0), (0, U.v)(t), setTimeout(() => r(!1), 2e3);
+                    r(!0), (0, F.v)(t), setTimeout(() => r(!1), 2e3);
                   },
                   children: [
-                    (0, m.jsx)(V.C3L, { size: 24 }),
+                    (0, A.jsx)(V.C3L, { size: 24 }),
                     a
                       ? s.formatMessage({
                           id: "imageEditorControls.copiedButtonLabel",
@@ -41708,8 +41717,8 @@
       }
       function X(e) {
         let { children: t, tooltip: n, disabled: a, onClick: r } = e,
-          s = (0, m.jsx)("button", {
-            className: (0, H.default)(
+          s = (0, A.jsx)("button", {
+            className: (0, G.default)(
               "rounded p-2 font-medium hover:bg-token-main-surface-tertiary group-radix-state-open:bg-token-main-surface-tertiary",
               a ? "text-token-text-quaternary" : "text-token-text-secondary"
             ),
@@ -41718,7 +41727,7 @@
             children: t,
           });
         return null != n
-          ? (0, m.jsx)(I.u, { label: n, sideOffset: 4, children: s })
+          ? (0, A.jsx)(T.u, { label: n, sideOffset: 4, children: s })
           : s;
       }
       function $(e) {
@@ -41729,10 +41738,10 @@
             serverThreadId: r,
             disabled: s,
           } = e,
-          i = (0, E.Z)(),
-          o = (0, Z.qg)(Z.pm.DalleEditingOnboarding),
+          i = (0, k.Z)(),
+          o = (0, L.qg)(L.pm.DalleEditingOnboarding),
           l = o.eligible && !o.isLoading,
-          c = (0, m.jsx)(X, {
+          c = (0, A.jsx)(X, {
             tooltip: l
               ? void 0
               : i.formatMessage({
@@ -41742,7 +41751,7 @@
             onClick: () => {
               var e, s, i, o, l, c;
               n(eo.Inpaint),
-                G.m9.logEvent("chatgpt_dalle_inpaint_click", null, {
+                U.m9.logEvent("chatgpt_dalle_inpaint_click", null, {
                   sourceOperation:
                     null !==
                       (e =
@@ -41764,7 +41773,7 @@
                       ? "true"
                       : "false",
                 }),
-                Q.A.logEvent(F.M.dalleImageClickInpaint, {
+                R.A.logEvent(Q.M.dalleImageClickInpaint, {
                   conversationId: r,
                   messageId: a,
                   generationId:
@@ -41774,7 +41783,7 @@
                     void 0 === o
                       ? void 0
                       : o.gen_id,
-                  fileId: (0, D.Iy)(t.asset_pointer),
+                  fileId: (0, N.Iy)(t.asset_pointer),
                   parentGenerationId:
                     null === (l = t.metadata) ||
                     void 0 === l ||
@@ -41792,10 +41801,10 @@
                 });
             },
             disabled: s,
-            children: (0, m.jsx)(_.GN, {}),
+            children: (0, A.jsx)(z.GN, {}),
           });
         return l
-          ? (0, m.jsx)(L.Z, {
+          ? (0, A.jsx)(_.Z, {
               show: !0,
               side: "bottom",
               sideOffset: 0,
@@ -41809,16 +41818,16 @@
                   "Highlight the area and describe changes in chat.",
               }),
               onDismiss: o.markAsViewed,
-              children: (0, m.jsx)("div", { children: c }),
+              children: (0, A.jsx)("div", { children: c }),
             })
           : c;
       }
       let ee = W.Z.div(
-          s || (s = (0, P.Z)(["mx-3 w-[1px] h-6 bg-token-border-light"]))
+          s || (s = (0, M.Z)(["mx-3 w-[1px] h-6 bg-token-border-light"]))
         ),
         et = W.Z.div(
           i ||
-            (i = (0, P.Z)([
+            (i = (0, M.Z)([
               "rounded-full border-2 border-token-text-secondary",
             ]))
         );
@@ -41852,48 +41861,48 @@
               }
             );
           }, [t, l, d]),
-          (0, m.jsx)("div", {
+          (0, A.jsx)("div", {
             className:
               "flex h-16 w-full items-center justify-center gap-3 font-medium text-token-text-secondary",
             children:
               t === eo.Inpaint
                 ? !s &&
-                  (0, m.jsxs)("div", {
+                  (0, A.jsxs)("div", {
                     className: "flex items-center gap-1.5",
                     children: [
-                      (0, m.jsx)(M.Z, {
+                      (0, A.jsx)(O.Z, {
                         id: "imageEditor.selectArea",
                         defaultMessage: "Select an area to edit",
                       }),
-                      (0, m.jsx)("a", {
+                      (0, A.jsx)("a", {
                         href: "https://help.openai.com/en/articles/9055440",
                         target: "_blank",
                         rel: "noreferrer",
-                        children: (0, m.jsx)(V.H33, { size: 20 }),
+                        children: (0, A.jsx)(V.H33, { size: 20 }),
                       }),
                     ],
                   })
                 : a.length > 1
-                  ? (0, m.jsxs)(m.Fragment, {
+                  ? (0, A.jsxs)(A.Fragment, {
                       children: [
-                        (0, m.jsx)("button", {
+                        (0, A.jsx)("button", {
                           disabled: !i,
                           className: "disabled:text-token-text-tertiary",
                           onClick: l,
-                          children: (0, m.jsx)(V.YFh, { size: 24 }),
+                          children: (0, A.jsx)(V.YFh, { size: 24 }),
                         }),
-                        (0, m.jsx)("div", {
-                          children: (0, m.jsx)(M.Z, {
+                        (0, A.jsx)("div", {
+                          children: (0, A.jsx)(O.Z, {
                             id: "imageEditor.imageNumber",
                             defaultMessage: "Image {num} of {numImages}",
                             values: { num: n + 1, numImages: a.length },
                           }),
                         }),
-                        (0, m.jsx)("button", {
+                        (0, A.jsx)("button", {
                           disabled: !c,
                           className: "disabled:text-token-text-tertiary",
                           onClick: d,
-                          children: (0, m.jsx)(V.Tfp, { size: 24 }),
+                          children: (0, A.jsx)(V.Tfp, { size: 24 }),
                         }),
                       ],
                     })
@@ -41918,7 +41927,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? ea(Object(n), !0).forEach(function (t) {
-                (0, B.Z)(e, t, n[t]);
+                (0, P.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -41939,8 +41948,8 @@
           containerDimensions: a,
           isLoadingNewImage: r,
         } = e;
-        return (0, m.jsxs)(
-          c.E.div,
+        return (0, A.jsxs)(
+          H.E.div,
           er(
             er(
               {
@@ -41962,14 +41971,14 @@
                   };
                 })(t, a),
               },
-              f.ee
+              h.ee
             ),
             {},
             {
               children: [
                 n,
-                (0, m.jsx)("div", {
-                  className: (0, H.default)(
+                (0, A.jsx)("div", {
+                  className: (0, G.default)(
                     "absolute inset-0 flex items-center justify-center bg-token-main-surface-primary transition-opacity duration-1000",
                     r
                       ? "pointer-events-auto opacity-60"
@@ -41981,7 +41990,7 @@
           )
         );
       }
-      let ei = u()(
+      let ei = d()(
           () =>
             Promise.all([n.e(7806), n.e(345), n.e(2774)])
               .then(n.bind(n, 2208))
@@ -41994,16 +42003,16 @@
           a);
       function el(e) {
         let { clientThreadId: t, messageId: n, image: a, allImages: r } = e,
-          s = (0, j.oq)(t),
-          i = (0, j.U0)(t, s),
-          l = (0, j.GD)(t, i - 1, s),
+          s = (0, b.oq)(t),
+          i = (0, b.U0)(t, s),
+          l = (0, b.GD)(t, i - 1, s),
           c = l.messages[l.messages.length - 1],
-          d = (0, w.rH)(c.message) === w.Cs.Dalle && !(0, y.We)(c.message);
+          d = (0, j.rH)(c.message) === j.Cs.Dalle && !(0, v.We)(c.message);
         return (
           (0, o.useEffect)(() => {
             async function e(e, t) {
               try {
-                let n = await (0, x.Mn)(e);
+                let n = await (0, f.Mn)(e);
                 em.setFocusedObject({
                   type: ed.Image,
                   image: n[0],
@@ -42011,16 +42020,16 @@
                   messageId: t,
                 });
               } catch (e) {
-                k.U.addError(
+                C.U.addError(
                   Error("Failed to load newly created images:", { cause: e })
                 );
               }
             }
-            (0, w.rH)(c.message) === w.Cs.DalleTool &&
-              c.message.content.content_type === h.PX.MultimodalText &&
-              e(C.U.getImageAssetPointers(c.message), c.message.id);
+            (0, j.rH)(c.message) === j.Cs.DalleTool &&
+              c.message.content.content_type === p.PX.MultimodalText &&
+              e(w.U.getImageAssetPointers(c.message), c.message.id);
           }, [c]),
-          (0, m.jsx)(ec, {
+          (0, A.jsx)(ec, {
             image: a,
             allImages: r,
             isLoadingNewImage: d,
@@ -42039,11 +42048,11 @@
           } = e,
           { 0: i, 1: l } = (0, o.useState)(eo.Default),
           { 0: c, 1: d } = (0, o.useState)({
-            width: window.innerWidth - f.Jw,
+            width: window.innerWidth - h.Jw,
             height: window.innerHeight,
           }),
           u = (0, o.useRef)(null),
-          { 0: A, 1: g } = (0, o.useState)(136),
+          { 0: m, 1: g } = (0, o.useState)(136),
           p = (function () {
             let { 0: e, 1: t } = (0, o.useState)({
               undoStack: [],
@@ -42080,10 +42089,10 @@
               },
             };
           })(),
-          { currentDrawnShape: h, onNewDrawnShape: y, clearAllDrawings: j } = p,
+          { currentDrawnShape: v, onNewDrawnShape: b, clearAllDrawings: j } = p,
           w = (0, o.useRef)(null),
-          C = (0, E.Z)(),
-          { setTargetedContent: k } = (0, b.Q)();
+          C = (0, k.Z)(),
+          { setTargetedContent: M } = (0, y.Q)();
         (0, o.useEffect)(() => {
           let e = new ResizeObserver((e) => {
             let { width: t, height: n } = e[0].contentRect;
@@ -42110,20 +42119,20 @@
           }, [i]),
           (0, o.useEffect)(
             () => (
-              null == h
-                ? k({
-                    placeholderTextOverride: (0, O.Em)({
+              null == v
+                ? M({
+                    placeholderTextOverride: (0, E.Em)({
                       id: "imageEditor.transformationTextareaPlaceholder",
                       defaultMessage: "Edit image…",
                     }),
                     shouldPersistAcrossMessages: !0,
                     isFocusedViewContent: !0,
-                    createNewCompletionParams: (e) => (0, v.$K)(e, t),
+                    createNewCompletionParams: (e) => (0, x.$K)(e, t),
                   })
-                : k({
-                    label: (0, m.jsx)("span", {
+                : M({
+                    label: (0, A.jsx)("span", {
                       className: "font-medium",
-                      children: (0, m.jsx)(M.Z, {
+                      children: (0, A.jsx)(O.Z, {
                         id: "imageEditor.inpaintingTargetedContentLabel",
                         defaultMessage: "Edit selection",
                       }),
@@ -42131,7 +42140,7 @@
                     isFocusedViewContent: !0,
                     createNewCompletionParams: async (e) => {
                       var n;
-                      return await (0, v.hx)(
+                      return await (0, x.hx)(
                         e,
                         t,
                         null === (n = w.current) || void 0 === n
@@ -42143,10 +42152,10 @@
                     onCleared: () => l(eo.Default),
                   }),
               () => {
-                k(void 0);
+                M(void 0);
               }
             ),
-            [t, C, k, h]
+            [t, C, M, v]
           ),
           (0, o.useEffect)(() => {
             i !== eo.Inpaint && j();
@@ -42155,22 +42164,22 @@
             l(eo.Default);
           }, [t]);
         let P = n.findIndex((e) => e.asset_pointer === t.asset_pointer);
-        return (0, m.jsxs)("div", {
+        return (0, A.jsxs)("div", {
           ref: u,
           className: "flex h-full w-full flex-col justify-between",
           children: [
-            (0, m.jsx)(Y, {
+            (0, A.jsx)(Y, {
               imageAsset: t,
               mode: i,
               setMode: l,
               clientThreadId: r,
               messageId: s,
-              cursorWidth: A,
+              cursorWidth: m,
               setCursorWidth: g,
               inpaintingDrawingState: p,
               isLoadingNewImage: a,
             }),
-            (0, m.jsx)(en, {
+            (0, A.jsx)(en, {
               mode: i,
               imageIndex: P,
               allImages: n,
@@ -42184,31 +42193,31 @@
               },
               isLoadingNewImage: a,
             }),
-            (0, m.jsxs)(es, {
+            (0, A.jsxs)(es, {
               imageAsset: t,
               containerDimensions: c,
               isLoadingNewImage: a,
               children: [
-                (0, m.jsx)(x.sH, {
+                (0, A.jsx)(f.sH, {
                   className: "h-full w-full",
-                  alt: (0, v.hG)(t),
+                  alt: (0, x.hG)(t),
                   src: t.url,
                   width: t.width,
                   height: t.height,
                   fadeIn: !1,
                 }),
                 i === eo.Inpaint &&
-                  (0, m.jsx)("div", {
+                  (0, A.jsx)("div", {
                     className: "absolute inset-0",
-                    children: (0, m.jsx)(ei, {
+                    children: (0, A.jsx)(ei, {
                       drawingCanvasRef: w,
                       color: "rgba(0, 122, 255, 0.5)",
                       dashedOutlineColor: "rgba(255, 255, 255, 0.65)",
-                      cursorWidth: A,
+                      cursorWidth: m,
                       canvasWidth: t.width,
                       canvasHeight: t.height,
-                      currentDrawnShape: h,
-                      onNewDrawnShape: y,
+                      currentDrawnShape: v,
+                      onNewDrawnShape: b,
                     }),
                   }),
               ],
@@ -42241,12 +42250,12 @@
             em.close();
           }, [n]),
           (null == a ? void 0 : a.type) === ed.ADAVisualization
-            ? (t = (0, m.jsx)(p, {
+            ? (t = (0, A.jsx)(g, {
                 clientThreadId: n,
                 visualization: a.visualization,
               }))
             : (null == a ? void 0 : a.type) === ed.Image &&
-              (t = (0, m.jsx)(
+              (t = (0, A.jsx)(
                 el,
                 {
                   clientThreadId: n,
@@ -42256,7 +42265,7 @@
                 },
                 a.image.asset_pointer
               )),
-          (0, m.jsx)(f.ZP, {
+          (0, A.jsx)(h.ZP, {
             clientThreadId: n,
             isOpen: null != a,
             onClose: em.close,
@@ -64423,16 +64432,16 @@
       "use strict";
       n.d(t, {
         O1: function () {
-          return I;
+          return N;
         },
         XX: function () {
-          return O;
-        },
-        Xt: function () {
           return M;
         },
+        Xt: function () {
+          return P;
+        },
         ZP: function () {
-          return E;
+          return O;
         },
       });
       var a = n(49305),
@@ -64440,146 +64449,149 @@
         s = n(7658),
         i = n(33271),
         o = n(66452),
-        l = n(24102),
-        c = n(70187),
-        d = n(97565),
-        u = n(66315),
-        A = n(19841),
-        m = n(85252),
-        g = n(51018),
-        p = n.n(g),
-        h = n(70079),
-        f = n(9063),
-        x = n(68498),
-        v = n(59669),
-        y = n(95166),
-        b = n(25231),
-        j = n(68842),
-        w = n(82535),
-        C = n(35250);
-      let k = p()(
+        l = n(44151),
+        c = n(24102),
+        d = n(70187),
+        u = n(97565),
+        A = n(66315),
+        m = n(19841),
+        g = n(85252),
+        p = n(51018),
+        h = n.n(p),
+        f = n(70079),
+        x = n(9063),
+        v = n(68498),
+        y = n(59669),
+        b = n(95166),
+        j = n(25231),
+        w = n(68842),
+        C = n(82535),
+        k = n(35250);
+      let E = h()(
         () =>
           Promise.all([n.e(6835), n.e(8055), n.e(2144), n.e(2967)])
             .then(n.bind(n, 93062))
             .then((e) => e.default),
         { loadableGenerated: { webpack: () => [93062] } }
       );
-      function E(e) {
-        var t, n, o, l;
-        let { messages: u, isRequestActive: A, clientThreadId: m } = e,
-          g = (0, f.Z)(),
-          { 0: p, 1: x } = (0, h.useState)(!1),
-          { data: v } = (0, d.R1)(a.sh.ShowExpandedCodeView),
-          E = (0, d.Gt)(),
-          [P, B] = u,
-          { 0: T, 1: D } = (0, h.useState)(!1),
-          { 0: z, 1: _ } = (0, h.useState)(!1),
-          L = (0, w.We)(P.message),
-          Z =
-            null == B || null === (t = B.message.metadata) || void 0 === t
+      function O(e) {
+        var t, n, o, c;
+        let { messages: A, isRequestActive: m, clientThreadId: g } = e,
+          p = (0, x.Z)(),
+          { 0: h, 1: v } = (0, f.useState)(!1),
+          { data: y } = (0, u.R1)(a.sh.ShowExpandedCodeView),
+          O = (0, u.Gt)(),
+          [B, S] = A,
+          { 0: I, 1: z } = (0, f.useState)(!1),
+          { 0: _, 1: L } = (0, f.useState)(!1),
+          Z = (0, C.We)(B.message),
+          R =
+            null == S || null === (t = S.message.metadata) || void 0 === t
               ? void 0
               : t.aggregate_result,
-          R = (0, i.kY)(m),
-          Q = null != B && B.message ? (0, i.y)(B.message) : [],
-          F =
+          Q = (0, i.kY)(g),
+          F = (0, l.Ex)(),
+          U = null != S && S.message ? (0, i.y)(S.message) : [],
+          G =
             null !==
               (n =
-                null == B ||
-                null === (o = B.message.metadata) ||
+                null == S ||
+                null === (o = S.message.metadata) ||
                 void 0 === o ||
                 null === (o = o.aggregate_result) ||
                 void 0 === o
                   ? void 0
-                  : o.messages.filter(I)) && void 0 !== n
+                  : o.messages.filter(N)) && void 0 !== n
               ? n
               : [],
-          U =
-            null !== (l = Q.filter((e) => "chart" === e.type)) && void 0 !== l
-              ? l
+          H =
+            null !== (c = U.filter((e) => "chart" === e.type)) && void 0 !== c
+              ? c
               : [],
-          G = R && B && U.length == F.length,
-          H = y.X.Running,
-          V = N.running;
+          V = Q && S && H.length == G.length,
+          W = b.X.Running,
+          q = D.running;
         return (
-          (null == Z ? void 0 : Z.status) === "success"
-            ? ((H = y.X.Finished), (V = z ? N.finished : void 0))
-            : (null != B &&
-                  B.message.content.content_type !== r.PX.ExecutionOutput) ||
-                (null != Z && "running" !== Z.status)
-              ? ((H = y.X.Error), (V = N.error))
-              : (L || !A) && ((H = y.X.Stopped), (V = N.stopped)),
-          (0, h.useEffect)(() => {
-            x(null != v && v), !0 === v && (D(!0), _(!0));
-          }, [v]),
-          (0, C.jsxs)(C.Fragment, {
+          (null == R ? void 0 : R.status) === "success"
+            ? ((W = b.X.Finished), (q = _ ? D.finished : void 0))
+            : (null != S &&
+                  S.message.content.content_type !== r.PX.ExecutionOutput) ||
+                (null != R && "running" !== R.status)
+              ? ((W = b.X.Error), (q = D.error))
+              : (Z || !m) && ((W = b.X.Stopped), (q = D.stopped)),
+          (0, f.useEffect)(() => {
+            v(null != y && y), !0 === y && (z(!0), L(!0));
+          }, [y]),
+          (0, k.jsxs)(k.Fragment, {
             children: [
-              (0, C.jsxs)("div", {
+              (0, k.jsxs)("div", {
                 className: "flex",
                 children: [
-                  (0, C.jsx)("div", {
+                  (0, k.jsx)("div", {
                     className: "w-full",
-                    children: (0, C.jsx)(y.Z, {
-                      conversationMessages: u,
-                      icon: b.BU,
-                      status: H,
-                      displayMessage: V,
+                    children: (0, k.jsx)(b.Z, {
+                      conversationMessages: A,
+                      icon: j.BU,
+                      status: W,
+                      displayMessage: q,
                       displayMessageValues: {
                         expander: (e) =>
-                          (0, C.jsxs)("button", {
+                          (0, k.jsxs)("button", {
                             className: "inline-flex items-center gap-1",
                             onClick: () => {
-                              D((e) => !e), T || _(!0);
+                              z((e) => !e), I || L(!0);
                             },
-                            children: [e, (0, C.jsx)(c.ud, {})],
+                            children: [e, (0, k.jsx)(d.ud, {})],
                           }),
                       },
-                      estimatedToolDurationMs: j.yF,
-                      shouldPersistAfterFinished: z,
+                      estimatedToolDurationMs: w.yF,
+                      shouldPersistAfterFinished: _,
                     }),
                   }),
-                  T &&
-                    (0, C.jsx)(s.Z, {
+                  I &&
+                    !F &&
+                    (0, k.jsx)(s.Z, {
                       id: "showExpandedCodeView",
                       labelClassName:
                         "whitespace-nowrap text-token-text-secondary",
                       className: "checked:border-token-text-secondary",
-                      checked: p,
+                      checked: h,
                       onChange: (e) => {
-                        x(e.currentTarget.checked),
-                          E.mutate({
+                        v(e.currentTarget.checked),
+                          O.mutate({
                             setting: a.sh.ShowExpandedCodeView,
                             value: e.currentTarget.checked,
                           });
                       },
-                      label: g.formatMessage(N.alwaysExpand),
+                      label: p.formatMessage(D.alwaysExpand),
                       labelSide: "left",
                     }),
                 ],
               }),
-              T &&
-                (0, C.jsxs)("div", {
+              I &&
+                (0, k.jsxs)("div", {
                   className: "mb-3 mt-0.5 overflow-hidden rounded-xl bg-black",
                   children: [
-                    (0, C.jsx)(O, { message: P.message }),
-                    null != B && (0, C.jsx)(M, { message: B.message }),
+                    (0, k.jsx)(M, { message: B.message }),
+                    null != S && (0, k.jsx)(P, { message: S.message }),
                   ],
                 }),
-              R &&
-                Q.map((e) =>
-                  "chart" !== e.type || G
-                    ? (0, C.jsx)(k, { visualization: e }, e.file_id)
+              Q &&
+                U.map((e) =>
+                  "chart" !== e.type || V
+                    ? (0, k.jsx)(E, { visualization: e }, e.file_id)
                     : null
                 ),
-              (!R || !G) && null != B && (0, C.jsx)(S, { message: B.message }),
+              (!Q || !V) && null != S && (0, k.jsx)(T, { message: S.message }),
             ],
           })
         );
       }
-      function O(e) {
+      function M(e) {
         let { message: t } = e,
-          { resolvedTheme: n } = (0, m.F)();
-        return (0, C.jsx)(l.Z, {
-          className: (0, A.default)(
+          { resolvedTheme: n } = (0, g.F)();
+        return (0, k.jsx)(c.Z, {
+          className: (0, m.default)(
             "markdown prose w-full break-words dark:prose-invert",
             "dark" === n ? "dark" : "light"
           ),
@@ -64601,28 +64613,28 @@
           })(t),
         });
       }
-      function M(e) {
+      function P(e) {
         var t;
         let { message: n } = e,
-          a = (0, f.Z)();
+          a = (0, x.Z)();
         if (n.content.content_type !== r.PX.ExecutionOutput) return null;
         let s =
           null === (t = n.metadata) || void 0 === t
             ? void 0
             : t.aggregate_result;
         if (!s)
-          return u.U.addError("Corrupt code execution result message"), null;
-        let i = s.messages.filter(T),
+          return A.U.addError("Corrupt code execution result message"), null;
+        let i = s.messages.filter(I),
           o = i.length > 0,
           l = null != s.final_expression_output,
           c = null != s.in_kernel_exception;
-        return (0, C.jsxs)(C.Fragment, {
+        return (0, k.jsxs)(k.Fragment, {
           children: [
             o &&
-              (0, C.jsx)(P, {
+              (0, k.jsx)(B, {
                 label: "STDOUT/STDERR",
                 output: i.map((e, t) =>
-                  (0, C.jsx)(
+                  (0, k.jsx)(
                     "span",
                     {
                       className:
@@ -64634,26 +64646,26 @@
                 ),
               }),
             l &&
-              (0, C.jsx)(P, {
-                label: a.formatMessage(N.resultLabel),
+              (0, k.jsx)(B, {
+                label: a.formatMessage(D.resultLabel),
                 output: s.final_expression_output,
               }),
             c &&
-              (0, C.jsx)(B, {
+              (0, k.jsx)(S, {
                 traceback: s.in_kernel_exception.traceback.join(""),
               }),
           ],
         });
       }
-      function P(e) {
+      function B(e) {
         let { label: t, output: n } = e;
-        return (0, C.jsxs)("div", {
+        return (0, k.jsxs)("div", {
           className: "bg-gray-700 p-4 text-xs",
           children: [
-            (0, C.jsx)("div", { className: "mb-1 text-gray-400", children: t }),
-            (0, C.jsx)("div", {
+            (0, k.jsx)("div", { className: "mb-1 text-gray-400", children: t }),
+            (0, k.jsx)("div", {
               className: "prose flex flex-col-reverse text-white",
-              children: (0, C.jsx)("pre", {
+              children: (0, k.jsx)("pre", {
                 className: "shrink-0",
                 children: n,
               }),
@@ -64661,16 +64673,16 @@
           ],
         });
       }
-      function B(e) {
+      function S(e) {
         let { traceback: t } = e;
-        return (0, C.jsx)("div", {
+        return (0, k.jsx)("div", {
           className: "overflow-auto border-t border-gray-500 text-white",
-          children: (0, C.jsx)("div", {
+          children: (0, k.jsx)("div", {
             className: "border-l-4 border-red-500 p-2 text-xs",
-            children: (0, C.jsx)("div", {
+            children: (0, k.jsx)("div", {
               className:
                 "scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700 flex max-h-64 flex-col-reverse",
-              children: (0, C.jsx)("pre", {
+              children: (0, k.jsx)("pre", {
                 className: "shrink-0",
                 children: t,
               }),
@@ -64678,7 +64690,7 @@
           }),
         });
       }
-      function S(e) {
+      function T(e) {
         var t;
         let { message: n } = e;
         if (n.content.content_type !== r.PX.ExecutionOutput) return null;
@@ -64687,23 +64699,23 @@
             ? void 0
             : t.aggregate_result;
         return a
-          ? (0, C.jsx)(C.Fragment, {
+          ? (0, k.jsx)(k.Fragment, {
               children: a.messages
-                .filter(I)
-                .map((e, t) => (0, C.jsx)(v.Z, { jupyterMessage: e }, t)),
+                .filter(N)
+                .map((e, t) => (0, k.jsx)(y.Z, { jupyterMessage: e }, t)),
             })
-          : (u.U.addError("Corrupt code execution result message"), null);
-      }
-      function T(e) {
-        return "stream" === e.message_type;
+          : (A.U.addError("Corrupt code execution result message"), null);
       }
       function I(e) {
+        return "stream" === e.message_type;
+      }
+      function N(e) {
         return (
           "image" === e.message_type ||
           ("image_url" in e && (0, o.$H)(e.image_url + ""))
         );
       }
-      let N = (0, x.vU)({
+      let D = (0, v.vU)({
         running: {
           id: "codeInterpreterMessage.runningV2",
           defaultMessage: "<expander>Analyzing</expander>",
@@ -76487,19 +76499,62 @@
       }
       var v = n(60472),
         y = n(49311),
-        b = n(47712),
-        j = n(78103),
-        w = n(51362);
-      let C = (0, j.ZP)((0, w.n)(() => ({ rateLimits: [] }))),
-        k = {
+        b = n(47712);
+      n(52392);
+      var j = n(66315),
+        w = n(78103),
+        C = n(51362);
+      let k = (0, w.ZP)(
+          (0, C.n)(() => ({
+            modelRateLimitsByDefaultModelSlug: {},
+            featureRateLimitsByFeatureName: {},
+            featureRateLimitsByThreadId: {},
+          }))
+        ),
+        E = {
           addRateLimit(e) {
-            C.setState((t) => {
-              t.rateLimits.push(e);
+            let { clientThreadId: t, nodeId: n, rateLimit: a } = e;
+            "feature_limit" === a.limitDetails.type
+              ? E.addFeatureRateLimit({
+                  clientThreadId: t,
+                  featureRateLimit: a,
+                  nodeId: n,
+                })
+              : "model_limit" === a.limitDetails.type
+                ? E.addModelRateLimit(a)
+                : j.U.addError(Error("Unexpected rate limit type"), {
+                    rateLimit: a,
+                  });
+          },
+          addFeatureRateLimit(e) {
+            let { clientThreadId: t, nodeId: n, featureRateLimit: a } = e;
+            k.setState((e) => {
+              var r;
+              e.featureRateLimitsByFeatureName[
+                a.limitDetails.feature_limit_name
+              ] = a;
+              let s =
+                null !== (r = e.featureRateLimitsByThreadId[t]) && void 0 !== r
+                  ? r
+                  : {};
+              (s[n] = a), (e.featureRateLimitsByThreadId[t] = s);
+            });
+          },
+          addModelRateLimit(e) {
+            k.setState((t) => {
+              var n;
+              let { using_default_model_slug: a, model_slug: r } =
+                  e.limitDetails,
+                s =
+                  null !== (n = t.modelRateLimitsByDefaultModelSlug[a]) &&
+                  void 0 !== n
+                    ? n
+                    : {};
+              (s[r] = e), (t.modelRateLimitsByDefaultModelSlug[a] = s);
             });
           },
         };
-      var E = n(86268),
-        O = n(66315),
+      var O = n(86268),
         M = n(8844);
       function P(e, t) {
         var n = Object.keys(e);
@@ -76654,7 +76709,7 @@
           }
         } catch (e) {
           return (
-            O.U.addError(e),
+            j.U.addError(e),
             [
               {
                 id: (0, M.Z)(),
@@ -76801,7 +76856,7 @@
         handleError(e) {
           let t = e.error,
             n = (null == t ? void 0 : t.message) || "Something went wrong",
-            a = (t instanceof E.gK && t.code) || "";
+            a = (t instanceof O.gK && t.code) || "";
           switch (
             (l.tQ.updateTree(this.clientThreadId, (e) => {
               e.updateNodeMessage(
@@ -76820,17 +76875,17 @@
             case D.qS.ContentPolicy:
             case D.qS.ContentOrTos:
             case y.uU:
-            case E.wp:
+            case O.wp:
               break;
             default:
               void 0 !== n &&
                 h.m9.logEvent("chatgpt_conversation_error_web", n);
           }
-          O.U.addError(e.error, { errCode: a }),
+          j.U.addError(e.error, { errCode: a }),
             this.blurDuringCompletionTracker.onMessageError(),
             this.cleanUp(),
             this.onCompletionFinished(this.responseThreadId),
-            t instanceof E.gK &&
+            t instanceof O.gK &&
               (null == t ? void 0 : t.code) === y.uU &&
               null != t &&
               t.clearsIn &&
@@ -76856,7 +76911,11 @@
           );
         }
         handleRateLimitInfo(e) {
-          k.addRateLimit(e);
+          E.addRateLimit({
+            clientThreadId: this.clientThreadId,
+            nodeId: this.currentNodeId,
+            rateLimit: e,
+          });
         }
         handleModeration(e) {
           let {
@@ -77134,7 +77193,7 @@
         f.current = n;
         let x = (0, i.useCallback)(
           async function (n) {
-            var i, v, y, b, j, w, C, k, P;
+            var i, v, y, b, w, C, k, E, P;
             let B;
             let {
               model: S,
@@ -77184,7 +77243,7 @@
               (B =
                 null !==
                   (b =
-                    null === (j = t.message) || void 0 === j ? void 0 : j.id) &&
+                    null === (w = t.message) || void 0 === w ? void 0 : w.id) &&
                 void 0 !== b
                   ? b
                   : t.id),
@@ -77193,14 +77252,14 @@
             if (T === o.Os.Next || T === o.Os.Variant) {
               let t = ea.getNodeByIdOrMessageId(el.parentId);
               if (
-                ((null !== (w = B) && void 0 !== w) ||
+                ((null !== (C = B) && void 0 !== C) ||
                   (B =
                     null !==
-                      (C =
-                        null === (k = t.message) || void 0 === k
+                      (k =
+                        null === (E = t.message) || void 0 === E
                           ? void 0
-                          : k.id) && void 0 !== C
-                      ? C
+                          : E.id) && void 0 !== k
+                      ? k
                       : t.id),
                 ed.push(el.message),
                 J)
@@ -77312,18 +77371,18 @@
                   x && (v = "https://chat.openai.com/backend-anon");
                   let y = "".concat(v, "/conversation"),
                     b = !0,
-                    j = x
+                    w = x
                       ? V.c.getUnauthHeaders().additionalHeaders
                       : await V.c.getAuthedHeaders(),
-                    w = V.c.getSentinelHeaders(
+                    C = V.c.getSentinelHeaders(
                       e.chatReq,
                       null != c ? c : e.arkoseToken,
                       e.turnstileToken,
                       e.proofToken
                     ),
-                    C = X(X({}, j), w),
-                    k = $.startSpan("completion.first_token"),
-                    P = K.g.setSpan(Y.D.active(), k);
+                    k = X(X({}, w), C),
+                    E = $.startSpan("completion.first_token"),
+                    P = K.g.setSpan(Y.D.active(), E);
                   function B(e) {
                     if ("[DONE]" === e.data) u.abort(), t({ type: "done" });
                     else if ("ping" === e.event);
@@ -77331,7 +77390,7 @@
                       try {
                         let n = JSON.parse(e.data);
                         if (n.error) {
-                          let e = new E.Q0(n.error);
+                          let e = new O.Q0(n.error);
                           throw (t({ type: "error", error: e }), e);
                         }
                         "type" in n
@@ -77358,7 +77417,6 @@
                                 : "rate_limit_info" == n.type
                                   ? t({
                                       type: "rate_limit_info",
-                                      name: n.name,
                                       callToAction: n.call_to_action,
                                       resetsAfter: n.resets_after,
                                       displayDescription: n.display_description,
@@ -77395,9 +77453,9 @@
                               message: n.message,
                               conversationId: n.conversation_id,
                             }),
-                            b && ((b = !1), k.end()));
+                            b && ((b = !1), E.end()));
                       } catch (e) {
-                        if (e instanceof E.gK) throw new E.Q0(e.message);
+                        if (e instanceof O.gK) throw new O.Q0(e.message);
                       }
                   }
                   let S = null,
@@ -77413,7 +77471,7 @@
                       (0, q.L)(y, {
                         method: "POST",
                         credentials: "include",
-                        headers: X({ "Content-Type": "application/json" }, C),
+                        headers: X({ "Content-Type": "application/json" }, k),
                         body: JSON.stringify(f),
                         signal: u.signal,
                         openWhenHidden: !0,
@@ -77464,7 +77522,7 @@
                                   T
                                 );
                               } catch (e) {
-                                e instanceof E.Q0 &&
+                                e instanceof O.Q0 &&
                                   t({ type: "error", error: e });
                               }
                               return;
@@ -77488,8 +77546,8 @@
                                     ? o
                                     : "Unknown server error";
                               if (e) {
-                                if (ee(e)) throw new E.gK(t, a.status, e.code);
-                                if (a.status >= 500) throw new E.Q0(t);
+                                if (ee(e)) throw new O.gK(t, a.status, e.code);
+                                if (a.status >= 500) throw new O.Q0(t);
                                 if (
                                   (((null == e ? void 0 : e.code) ===
                                     "expired_session_key" ||
@@ -77512,7 +77570,7 @@
                                       "/workspace/deactivated");
                                   return;
                                 }
-                                throw new E.gK(
+                                throw new O.gK(
                                   t,
                                   a.status,
                                   null == e ? void 0 : e.code,
@@ -77523,10 +77581,10 @@
                               }
                             }
                           }
-                          throw new E.Q0();
+                          throw new O.Q0();
                         },
                         onmessage: (e) => {
-                          if (S) throw new E.Q0();
+                          if (S) throw new O.Q0();
                           T && (clearTimeout(T), (T = null)), B(e);
                         },
                         onerror(e) {
@@ -77536,7 +77594,7 @@
                           if (S || (ee(a) && !d)) throw a;
                           throw (
                             ("Failed to fetch" === a.message &&
-                              (a = new E.Q0(
+                              (a = new O.Q0(
                                 "An error occurred. Either the engine you requested does not exist or there was another issue processing your request. If this issue persists please contact us through our help center at help.openai.com."
                               )),
                             (0, W.LJ)("fetch-error:conversation:new-message", {
@@ -77558,12 +77616,12 @@
                             await r.ZP.getEnforcementToken(e.chatReq),
                             !0
                           );
-                        throw new E.gK(
+                        throw new O.gK(
                           "Failed to complete your call, please try again",
                           t.status
                         );
                       }
-                      O.U.addError(t);
+                      j.U.addError(t);
                     }),
                     u
                   );
@@ -83038,6 +83096,7 @@
       let _ =
           (((a = {})[(a.Standard = 0)] = "Standard"),
           (a[(a.CodeExecution = 1)] = "CodeExecution"),
+          (a[(a.Snc = 2)] = "Snc"),
           a),
         L =
           (((r = {}).default = "default"),
@@ -83128,9 +83187,14 @@
       }
       function V(e) {
         let { index: t, displayInfo: n, displayType: a } = e;
-        return n.type === _.Standard
-          ? (0, o.jsx)(q, { index: t, displayInfo: n, displayType: a })
-          : (0, o.jsx)(X, { displayInfo: n });
+        switch (n.type) {
+          case _.Standard:
+            return (0, o.jsx)(q, { index: t, displayInfo: n, displayType: a });
+          case _.CodeExecution:
+            return (0, o.jsx)(X, { displayInfo: n });
+          case _.Snc:
+            return null;
+        }
       }
       function W(e) {
         return (0, k.pickBy)(e, k.isString);
@@ -86812,7 +86876,7 @@
                       var i, o, l, d;
                       let e = performance.now() - this.requestStartTimeMs;
                       c.U.addAction("arkose_get_token_error", {
-                        app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                        app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                         error:
                           null !==
                             (i =
@@ -86839,7 +86903,7 @@
                   }),
                   this.setOnFailed(() => {
                     c.U.addAction("arkose_failed_to_get_challenge", {
-                      app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                      app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                       app: this.app.toString(),
                     }),
                       r(Error("Failed challenge too many times")),
@@ -86926,7 +86990,7 @@
                       ((this.setStatus(m.Error), e)
                         ? (c.U.addAction("arkose_script_load_error", {
                             app_release:
-                              "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                              "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                             app: this.app.toString(),
                           }),
                           n("Arkose script failed to load"))
@@ -86948,7 +87012,7 @@
             this.setStatus(m.Error),
               this.status === m.ScriptLoaded &&
                 (c.U.addAction("arkose_script_ready_timeout", {
-                  app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                  app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                   app: this.app.toString(),
                 }),
                 this._showUserError());
@@ -87067,7 +87131,7 @@
           if (null === e) {
             this._showUserError(),
               c.U.addAction("arkose_script_get_enforcement_container_error", {
-                app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
               });
             return;
           }
@@ -87922,7 +87986,7 @@
       }
       let y = (0, r.f3)(),
         b = navigator.language,
-        j = "90a729857de972e9707e33507f8e8c3b8ae7f647",
+        j = "5756bde18e9bfb1b18268d9d4009350d3f59b331",
         w = new d({
           appName: "chatgpt",
           appVersion: j,
@@ -88314,7 +88378,7 @@
                   site: "datadoghq.com",
                   service: "chatgpt-web",
                   env: "production",
-                  version: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                  version: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                   sessionSampleRate: 1,
                   sessionReplaySampleRate: 0,
                   trackUserInteractions: !1,
@@ -89669,7 +89733,7 @@
                     if (t) {
                       let e = performance.now() - this.requestStartTimeMs;
                       s.U.addAction("turnstile_get_token_error", {
-                        app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                        app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                         error: n,
                         app: this.app.toString(),
                         durationMs: e,
@@ -89724,7 +89788,7 @@
                     (this.setStatus(l.Error), e)
                       ? (s.U.addAction("turnstile_instance_missing", {
                           app_release:
-                            "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                            "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                           app: this.app.toString(),
                         }),
                         t(new d("Turnstile instance missing")))
@@ -89764,7 +89828,7 @@
                 (m.onerror = () => {
                   (this.setStatus(l.Error), e)
                     ? (s.U.addAction("turnstile_script_load_error", {
-                        app_release: "90a729857de972e9707e33507f8e8c3b8ae7f647",
+                        app_release: "5756bde18e9bfb1b18268d9d4009350d3f59b331",
                         app: this.app.toString(),
                       }),
                       t(new d("Turnstile script failed to load")))
@@ -89915,4 +89979,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=_app-34c1e2b02c1c34f0.js.map
+//# sourceMappingURL=_app-1a3dbdb970c99e0a.js.map
