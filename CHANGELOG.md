@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-23Z \(`-V9mCLzz-QmOZtyakir5o`\)](#2024-04-23z--v9mclzz-qmoztyakir5o)
 - [2024-04-21Z \(`JnfWxLfdK3GGfb1KM9coU`\)](#2024-04-21z-jnfwxlfdk3ggfb1km9cou)
 - [2024-04-19Z \(`PUfPcom_zqFPtum14eYqi`\)](#2024-04-19z-pufpcom_zqfptum14eyqi)
 - [2024-04-19Z \(`D9xQEoo51L3MlinzrBqIT`\)](#2024-04-19z-d9xqeoo51l3mlinzrbqit)
@@ -98,6 +99,43 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-23Z (`-V9mCLzz-QmOZtyakir5o`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This build's diff was not analysed
+- App release version (Git SHA?): `fbb61498fbf3416255234adfde4320b0577c7e49`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6e2438d76c694a2d.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-9a1d7ae664409493.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-61697d54f98ef9fc.js
+https://cdn.oaistatic.com/_next/static/-V9mCLzz-QmOZtyakir5o/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/-V9mCLzz-QmOZtyakir5o/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-61697d54f98ef9fc.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/css/3e2ed98390a710c8.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.ebdb76c1cd80ab18.js
+```
 
 ## 2024-04-21Z (`JnfWxLfdK3GGfb1KM9coU`)
 
