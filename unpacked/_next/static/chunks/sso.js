@@ -1842,13 +1842,11 @@
                 (0, O.jsx)("div", { children: "Last Response" }),
                 (0, O.jsx)("pre", {
                   className: "whitespace-pre-wrap",
-                  children: a.lastResponse
-                    .split("<br/>")
-                    .map((e) =>
-                      (0, O.jsxs)(O.Fragment, {
-                        children: [e, (0, O.jsx)("br", {})],
-                      })
-                    ),
+                  children: a.lastResponse.split("<br/>").map((e) =>
+                    (0, O.jsxs)(O.Fragment, {
+                      children: [e, (0, O.jsx)("br", {})],
+                    })
+                  ),
                 }),
               ],
             }),
@@ -12422,24 +12420,22 @@
           children: [
             (0, ef.jsx)(nX, {
               className: "px-snc-results-padding",
-              children: s
-                .slice(0, n)
-                .map((e, t) =>
-                  (0, ef.jsx)(
-                    eD,
-                    {
-                      image: e,
-                      className: (0, ee.default)(
-                        "min-w-full overflow-hidden md:w-[calc((100%-0.25rem*3)/4)] md:min-w-[inherit]",
-                        0 === t && "rounded-tl-xl",
-                        3 === t && "rounded-tr-xl",
-                        t === n - 4 && "rounded-bl-xl",
-                        t === n - 1 && "rounded-br-xl"
-                      ),
-                    },
-                    e.thumbnail_url
-                  )
-                ),
+              children: s.slice(0, n).map((e, t) =>
+                (0, ef.jsx)(
+                  eD,
+                  {
+                    image: e,
+                    className: (0, ee.default)(
+                      "min-w-full overflow-hidden md:w-[calc((100%-0.25rem*3)/4)] md:min-w-[inherit]",
+                      0 === t && "rounded-tl-xl",
+                      3 === t && "rounded-tr-xl",
+                      t === n - 4 && "rounded-bl-xl",
+                      t === n - 1 && "rounded-br-xl"
+                    ),
+                  },
+                  e.thumbnail_url
+                )
+              ),
             }),
             r,
           ],
