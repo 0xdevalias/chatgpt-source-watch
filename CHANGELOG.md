@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-24Z \(`lQZ-ZfNuAZcLQYk6FxNRg`\)](#2024-04-24z-lqz-zfnuazclqyk6fxnrg)
 - [2024-04-23Z \(`-V9mCLzz-QmOZtyakir5o`\)](#2024-04-23z--v9mclzz-qmoztyakir5o)
 - [2024-04-21Z \(`JnfWxLfdK3GGfb1KM9coU`\)](#2024-04-21z-jnfwxlfdk3ggfb1km9cou)
 - [2024-04-19Z \(`PUfPcom_zqFPtum14eYqi`\)](#2024-04-19z-pufpcom_zqfptum14eyqi)
@@ -99,6 +100,107 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-24Z (`lQZ-ZfNuAZcLQYk6FxNRg`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This build's diff was only minimally analysed
+  - **Twitter thread:** https://twitter.com/_devalias/status/1783014662575194162
+- App release version (Git SHA?): `3ab6595618d8dcb8ea31819a9cc38fb2d800fcf6`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (d.UNSUPPORTED_AUDIO = "unsupported_audio"),
+    (d.UNSUPPORTED_IMAGE = "unsupported_image"),
+    (d.UNSUPPORTED_TOOL_USE = "unsupported_tool_use"),
+    ```
+  - ```diff
+      function i(e) {
+        let { modelSwitcherDeny: t } = e;
+        switch (t.reason) {
+    -     case a.Lt.UNSUPPORTED_ATTACHMENT:
+    -       return (0, s.jsx)(r.Z, {
+    -         id: "s8FaEn",
+    -         defaultMessage: "GPT-4 is required when using file attachments.",
+    -       });
+    +     case a.Lt.UNSUPPORTED_TOOL_USE:
+    +     case a.Lt.UNSUPPORTED_AUDIO:
+    +     case a.Lt.UNSUPPORTED_IMAGE:
+          case a.Lt.UNSUPPORTED_GIZMO:
+    -       return (0, s.jsx)(r.Z, {
+    -         id: "Lqisf8",
+    -         defaultMessage: "GPT-4 is required for custom GPTs.",
+    -       });
+    +     case a.Lt.UNSUPPORTED_ATTACHMENT:
+    +       return (0, s.jsx)(s.Fragment, { children: t.description });
+    ```
+  - ```js
+    defaultFileUploadRateLimited: {
+      id: "U5qAWP",
+      defaultMessage:
+        "You've reached your daily upload limit. Get ChatGPT Plus to unlock more.",
+    },
+    getPlusButton: { id: "TeyLcp", defaultMessage: "Get Plus" },
+    ```
+  - ```diff
+    - (a.ContextConnector = "context_connector_available"),
+    - (a.ContextualAnswer = "contextual_answer_available"),
+    ```
+  - ```diff
+    -   (a.MemoryWrites = "chatgpt_web_memory_writes"),
+        (a.Attributions = "chatgpt_web_attributions"),
+        (a.ArchiveChat = "chatgpt_web_archive_chat"),
+        a),
+      P =
+    -   (((r = {}).ContextConnectorRollout =
+    -     "chatgpt-context-connector-rollout"),
+    +   (((r = {}).ContextConnectorGDriveRollout =
+    +     "chatgpt-context-connector-gdrive-rollout"),
+    +   (r.ContextConnectorO365Rollout =
+    +     "chatgpt-context-connector-o365-rollout"),
+    ```
+  - ?etc?
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-76357458027263e3.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-3c98d37318e1875a.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-bffaac034fbd67c9.js
+https://cdn.oaistatic.com/_next/static/lQZ-ZfNuAZcLQYk6FxNRg/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/lQZ-ZfNuAZcLQYk6FxNRg/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-dc10d7a6939d92b5.js
+```
+
+### From `orig/_next/static/chunks/webpack-bffaac034fbd67c9.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/1109.194eb3792cb8b344.js
+https://cdn.oaistatic.com/_next/static/chunks/2222.d8e947bd70db2e85.js
+https://cdn.oaistatic.com/_next/static/chunks/2967.8427613a97e63243.js
+https://cdn.oaistatic.com/_next/static/css/698b9b919da6f2bd.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.ff3b33df671a26b6.js
+```
 
 ## 2024-04-23Z (`-V9mCLzz-QmOZtyakir5o`)
 

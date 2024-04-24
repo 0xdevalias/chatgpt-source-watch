@@ -1,80 +1,81 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9603],
   {
-    22591: function (e, t, r) {
+    22591: function (e, r, t) {
       "use strict";
-      r.r(t),
-        r.d(t, {
+      t.r(r),
+        t.d(r, {
           __N_SSP: function () {
-            return s;
+            return b;
           },
           default: function () {
             return p;
           },
         });
-      var n = r(18450),
-        c = r(51018),
-        o = r.n(c),
-        u = r(35250);
-      function i(e, t) {
-        var r = Object.keys(e);
+      var n = t(18450),
+        c = t(51018),
+        o = t.n(c),
+        u = t(35250);
+      function i(e, r) {
+        var t = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
-          t &&
-            (n = n.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+          r &&
+            (n = n.filter(function (r) {
+              return Object.getOwnPropertyDescriptor(e, r).enumerable;
             })),
-            r.push.apply(r, n);
+            t.push.apply(t, n);
         }
-        return r;
+        return t;
       }
-      let f = o()(
-        () =>
-          Promise.all([
-            r.e(8682),
-            r.e(6835),
-            r.e(5181),
-            r.e(3050),
-            r.e(8055),
-            r.e(5938),
-            r.e(1283),
-          ]).then(r.bind(r, 721)),
-        { ssr: !1, loadableGenerated: { webpack: () => [721] } }
-      );
-      var s = !0;
+      function s(e) {
+        for (var r = 1; r < arguments.length; r++) {
+          var t = null != arguments[r] ? arguments[r] : {};
+          r % 2
+            ? i(Object(t), !0).forEach(function (r) {
+                (0, n.Z)(e, r, t[r]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+              : i(Object(t)).forEach(function (r) {
+                  Object.defineProperty(
+                    e,
+                    r,
+                    Object.getOwnPropertyDescriptor(t, r)
+                  );
+                });
+        }
+        return e;
+      }
+      let a = o()(
+          () =>
+            Promise.all([
+              t.e(8682),
+              t.e(6835),
+              t.e(5181),
+              t.e(3050),
+              t.e(8055),
+              t.e(5938),
+              t.e(2222),
+            ]).then(t.bind(t, 64676)),
+          { ssr: !1, loadableGenerated: { webpack: () => [64676] } }
+        ),
+        f = o()(() => t.e(8682).then(t.bind(t, 19455)), {
+          ssr: !1,
+          loadableGenerated: { webpack: () => [19455] },
+        });
+      var b = !0;
       function p(e) {
-        return (0, u.jsx)(
-          f,
-          (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var r = null != arguments[t] ? arguments[t] : {};
-              t % 2
-                ? i(Object(r), !0).forEach(function (t) {
-                    (0, n.Z)(e, t, r[t]);
-                  })
-                : Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(
-                      e,
-                      Object.getOwnPropertyDescriptors(r)
-                    )
-                  : i(Object(r)).forEach(function (t) {
-                      Object.defineProperty(
-                        e,
-                        t,
-                        Object.getOwnPropertyDescriptor(r, t)
-                      );
-                    });
-            }
-            return e;
-          })({}, e)
-        );
+        return e.forceLandingPage
+          ? (0, u.jsx)(f, s({}, e))
+          : (0, u.jsx)(a, s({}, e));
       }
     },
-    57647: function (e, t, r) {
+    57647: function (e, r, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/search",
         function () {
-          return r(22591);
+          return t(22591);
         },
       ]);
     },
@@ -86,4 +87,4 @@
       (_N_E = e.O());
   },
 ]);
-//# sourceMappingURL=search-2e6886b9bd4bc875.js.map
+//# sourceMappingURL=search-dc10d7a6939d92b5.js.map
