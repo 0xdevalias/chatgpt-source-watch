@@ -6,7 +6,7 @@
       r.r(t),
         r.d(t, {
           InternalDevToolsEntryPoint: function () {
-            return V;
+            return T;
           },
         });
       var s,
@@ -17,8 +17,8 @@
         i = r(67217),
         c = r(47712),
         u = r(81643),
-        d = r(34594),
-        x = r(39882),
+        x = r(34594),
+        d = r(39882),
         m = r(70079),
         f = r(1454),
         h = r(6020),
@@ -104,7 +104,7 @@
               (0, v.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
                 value: y.FeatureGates,
-                children: Object.entries(d.tz).map((e) => {
+                children: Object.entries(x.tz).map((e) => {
                   let [t, r] = e;
                   return (0, v.jsx)(b, { codeName: t, statsigName: r }, t);
                 }),
@@ -112,7 +112,7 @@
               (0, v.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
                 value: y.DynamicConfigs,
-                children: Object.entries(d.RJ).map((e) => {
+                children: Object.entries(x.RJ).map((e) => {
                   let [t, r] = e;
                   return (0, v.jsx)(w, { codeName: t, statsigName: r }, t);
                 }),
@@ -120,7 +120,7 @@
               (0, v.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
                 value: y.ExperimentalFeatureGates,
-                children: Object.entries(x.SP).map((e) => {
+                children: Object.entries(d.SP).map((e) => {
                   let [t, r] = e;
                   return (0, v.jsx)(O, { codeName: t, statsigName: r }, t);
                 }),
@@ -128,7 +128,7 @@
               (0, v.jsx)(u.VY, {
                 className: "w-full overflow-y-scroll scroll-smooth",
                 value: y.ExperimentalExperiments,
-                children: Object.entries(x.LA).map((e) => {
+                children: Object.entries(d.LA).map((e) => {
                   let [t, r] = e;
                   return (0, v.jsx)(k, { codeName: t, statsigName: r }, t);
                 }),
@@ -143,7 +143,7 @@
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
               r
             ),
-          { isLoading: l, value: n } = (0, d.sB)(r);
+          { isLoading: l, value: n } = (0, x.sB)(r);
         return (0, v.jsxs)(E, {
           children: [
             (0, v.jsx)("a", {
@@ -172,7 +172,7 @@
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
               r
             ),
-          { isLoading: l, config: n } = (0, d.xb)(r),
+          { isLoading: l, config: n } = (0, x.xb)(r),
           { 0: a, 1: o } = (0, m.useState)(!1);
         return (0, v.jsxs)(E, {
           children: [
@@ -209,10 +209,10 @@
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/gates/".concat(
               r
             ),
-          { isLoading: l, value: n } = (0, x.fW)(r),
+          { isLoading: l, value: n } = (0, d.fW)(r),
           { 0: i, 1: c } = (0, m.useState)(""),
           { gates: u } = h.Statsig.getAllOverrides(),
-          d = null != u[r];
+          x = null != u[r];
         return (0, v.jsxs)(E, {
           children: [
             (0, v.jsx)("a", {
@@ -226,7 +226,7 @@
               className: "flex items-center justify-between gap-2",
               children: [
                 l ? (0, v.jsx)(o.Z, {}) : null,
-                d
+                x
                   ? (0, v.jsx)(f.Hov, {
                       className: "text-red-500",
                       title: "Local override",
@@ -247,7 +247,7 @@
                   },
                   className: "mr-px w-20",
                   onPressEnter: (e) => {
-                    (0, x.Gh)(r, "true" === e || ("false" !== e && null));
+                    (0, d.Gh)(r, "true" === e || ("false" !== e && null));
                   },
                 }),
               ],
@@ -261,8 +261,8 @@
             "https://console.statsig.com/50aWbk2p4R76rNX9lN5VUw/experiments/".concat(
               r
             ),
-          { isLoading: l, config: n } = (0, x.mK)(r),
-          i = n.get(d.Hy.TREATMENT, d.wA.CONTROL),
+          { isLoading: l, config: n } = (0, d.mK)(r),
+          i = n.get(x.Hy.TREATMENT, x.wA.CONTROL),
           { 0: c, 1: u } = (0, m.useState)(""),
           { configs: p } = h.Statsig.getAllOverrides(),
           g = null != p[r];
@@ -300,7 +300,7 @@
                   },
                   className: "mr-px w-20",
                   onPressEnter: (e) => {
-                    (0, x.mY)(r, e ? { [d.Hy.TREATMENT]: e } : null);
+                    (0, d.mY)(r, e ? { [x.Hy.TREATMENT]: e } : null);
                   },
                 }),
               ],
@@ -316,31 +316,31 @@
       );
       var S = r(54225),
         C = r(70853),
-        L = r(70187),
-        D = r(66128);
-      function _() {
+        D = r(70187),
+        L = r(66128);
+      function P() {
         let e = (0, g.j)(),
-          t = x.VG.AnonChatLayer,
-          r = x.yp.ANON_COMPOSER_DISPLAY_VARIANT,
-          { layer: s } = (0, x.U3)(t),
-          l = s.get(r, D.tg.Default),
-          { layer: n } = (0, x.U3)(x.VG.LocalizationLoggedInLayer),
-          a = n.get(x.yp.L10N_SHOULD_ENABLE_ZH_TW, !1);
+          t = d.VG.AnonChatLayer,
+          r = d.yp.ANON_COMPOSER_DISPLAY_VARIANT,
+          { layer: s } = (0, d.U3)(t),
+          l = s.get(r, L.tg.Default),
+          { layer: n } = (0, d.U3)(d.VG.AnonLocalizationLayer),
+          a = n.get(d.yp.IS_L10N_ENABLED, !1);
         return (
           (0, m.useEffect)(() => {
             let s = [
                 {
                   isShortcut: (e) => e.ctrlKey && "2" === e.key,
                   toggle: () => {
-                    let e = l === D.tg.Default ? D.tg.Hedgehog : D.tg.Default;
-                    (0, x.H9)(t, { [r]: e });
+                    let e = l === L.tg.Default ? L.tg.Hedgehog : L.tg.Default;
+                    (0, d.H9)(t, { [r]: e });
                   },
                 },
                 {
                   isShortcut: (e) => e.ctrlKey && "3" === e.key,
                   toggle: () => {
-                    (0, x.H9)(x.VG.LocalizationLoggedInLayer, {
-                      [x.yp.L10N_SHOULD_ENABLE_ZH_TW]: !a,
+                    (0, d.H9)(d.VG.AnonLocalizationLayer, {
+                      [d.yp.IS_L10N_ENABLED]: !a,
                     });
                   },
                 },
@@ -358,19 +358,19 @@
           null
         );
       }
-      var P = r(13106),
-        T = r(13968);
-      function V() {
+      var V = r(13106),
+        A = r(13968);
+      function T() {
         let e = (0, g.j)(),
           { 0: t, 1: r } = (0, m.useState)(!1);
         return e
           ? (0, v.jsxs)(v.Fragment, {
               children: [
-                (0, v.jsxs)(T.v, {
+                (0, v.jsxs)(A.v, {
                   as: "div",
                   className: "group relative",
                   children: [
-                    (0, v.jsx)(T.v.Button, {
+                    (0, v.jsx)(A.v.Button, {
                       className:
                         "flex items-center justify-center rounded-full border border-token-border-light text-token-text-secondary",
                       children: (0, v.jsx)("div", {
@@ -380,7 +380,7 @@
                       }),
                     }),
                     (0, v.jsx)(C.m, {
-                      children: (0, v.jsxs)(T.v.Items, {
+                      children: (0, v.jsxs)(A.v.Items, {
                         className:
                           "popover absolute bottom-full right-0 z-20 mb-2 w-full min-w-[200px] overflow-hidden rounded-md border border-token-border-light bg-token-main-surface-primary p-1.5 shadow-lg outline-none",
                         children: [
@@ -395,13 +395,13 @@
                               r((e) => !e);
                             },
                             children: [
-                              (0, v.jsx)(L.Gi, { className: "icon-md" }),
+                              (0, v.jsx)(D.Gi, { className: "icon-md" }),
                               "Experimentation",
                             ],
                           }),
                           (0, v.jsxs)(S.s, {
                             onClick: () => {
-                              P.vm.showLatencyDevTools();
+                              V.vm.showLatencyDevTools();
                             },
                             children: [
                               (0, v.jsx)(f.DKx, { className: "icon-md" }),
@@ -413,7 +413,7 @@
                     }),
                   ],
                 }),
-                (0, v.jsx)(_, {}),
+                (0, v.jsx)(P, {}),
                 (0, v.jsx)(N, {
                   isWidgetVisible: t,
                   onClose: () => {
@@ -492,4 +492,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8990.99569d2109123a91.js.map
+//# sourceMappingURL=8990.2a89f3d48f88a6fc.js.map

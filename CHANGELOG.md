@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-25Z \(`SH6kmVXg8_S7tXyfekSUU`\)](#2024-04-25z-sh6kmvxg8_s7txyfeksuu)
 - [2024-04-24Z \(`lQZ-ZfNuAZcLQYk6FxNRg`\)](#2024-04-24z-lqz-zfnuazclqyk6fxnrg)
 - [2024-04-23Z \(`-V9mCLzz-QmOZtyakir5o`\)](#2024-04-23z--v9mclzz-qmoztyakir5o)
 - [2024-04-21Z \(`JnfWxLfdK3GGfb1KM9coU`\)](#2024-04-21z-jnfwxlfdk3ggfb1km9cou)
@@ -100,6 +101,177 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-25Z (`SH6kmVXg8_S7tXyfekSUU`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This build's diff was only minimally analysed
+- App release version (Git SHA?): `6727a88fdf00084e968108bd6a4e47765a8bde4e`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    C = w.get(u.yp.IS_L10N_ENABLED, !1),
+    ```
+  - ```diff
+    - let L = (0, y.vU)({
+    -   betaMessage: {
+    -     defaultMessage:
+    -       "Experience an early preview of ChatGPT in your language.",
+    -     id: "LocaleContextProvider.betaMessage",
+    -   },
+    -   alphaButton: {
+    -     defaultMessage: "Join alpha",
+    -     id: "LocaleContextProvider.alphaButton",
+    -   },
+    - });
+    ```
+  - ```diff
+      let { fileSpec: t } = e;
+    - c && s.push(t),
+    + c &&
+    +   s.push({
+    +     id: t.id,
+    +     size: t.size,
+    +     name: t.name,
+    +     context_connector: t.contextConnector,
+    +     mime_type: t.mimeType,
+    +     width: "width" in t ? t.width : void 0,
+    +     height: "height" in t ? t.height : void 0,
+    +   }),
+    ```
+  - ```diff
+    - case "message_cap_info":
+    -   this.handleMessageCapInfo(e);
+    -   break;
+    ```
+  - ```diff
+    - handleMessageCapInfo(e) {
+    -   l.tQ.setMessageCapInfo(
+    -     this.clientThreadId,
+    -     e.messagesRemaining,
+    -     e.resetsAfter,
+    -     e.modelMessage,
+    -     e.modelFeature,
+    -     e.feature
+    -   );
+    - }
+    ```
+  - ```diff
+    - i &&
+    -   (function (e) {
+    -     let { resetsAfter: t, messagesRemaining: n } = e,
+    -       a = new Date(t),
+    -       r = new Date();
+    -     return 0 === n && a > r;
+    -   })(i))
+    ```
+  - ```diff
+      static async getWorkspaceGPTs(e, t, n) {
+    +   let a = t === h.RB.THIRD_PARTY ? "true" : "false";
+        return w.c.get(
+          ""
+            .concat(y.B, "/accounts/")
+    -       .concat(e, "/gpts?filter=")
+    -       .concat(t, "&cursor=")
+    +       .concat(e, "/gpts?is_approved=")
+    +       .concat(a, "&cursor=")
+    ```
+  - ```js
+    function i(e) {
+      var t;
+      let n = null !== (t = (0, r.Bv)(e)) && void 0 !== t ? t : "",
+        a = (0, s.pm)((e) => e.modelRateLimitsByDefaultModelSlug)[n];
+      return a ? Object.values(a).filter(s.Ds) : [];
+    }
+    function o(e) {
+      var t, n;
+      let { clientThreadId: a, nodeId: i } = e,
+        o = null !== (t = (0, r.Bv)(a)) && void 0 !== t ? t : "",
+        l =
+          null === (n = (0, s.pm)((e) => e.modelRateLimitsByThreadId)[a]) ||
+          void 0 === n
+            ? void 0
+            : n[i];
+      return l &&
+        (0, s.Ds)(l) &&
+        o === l.limit_details.using_default_model_slug
+        ? l
+        : null;
+    }
+    ```
+  - ```diff
+    - setMessageCapInfo: (e, t, n, a, r, s) => {
+    -   let i = R.resolveThreadId(e);
+    -   null != z().threads[i] &&
+    -     _((e) => {
+    -       e.threads[i].messageCapInfo = {
+    -         messagesRemaining: t,
+    -         resetsAfter: n,
+    -         modelMessage: a,
+    -         modelFeature: r,
+    -         feature: s,
+    -       };
+    -     });
+    - },
+    - getMessageCapInfo: (e) => {
+    -   var t;
+    -   let n = R.resolveThreadId(e);
+    -   return null === (t = z().threads[n]) || void 0 === t
+    -     ? void 0
+    -     : t.messageCapInfo;
+    - },
+    ```
+  - ```js
+    (a.AnonLocalizationPreviewEnabled = "chatgpt-localization-preview"),
+    ```
+  - ```diff
+    - (i.L10N_SHOULD_ENABLE_ZH_TW = "should_enable_zh_tw"),
+      // ..snip..
+    + (i.IS_L10N_ENABLED = "is-enabled"),
+    ```
+  - ?etc?
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6ab2ad72e24e3e24.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-22e9178bcbff65db.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-de2c7a7c6848183b.js
+https://cdn.oaistatic.com/_next/static/SH6kmVXg8_S7tXyfekSUU/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/SH6kmVXg8_S7tXyfekSUU/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/aip/[pluginId]/oauth/callback-13971f7bb8cd9145.js
+https://cdn.oaistatic.com/_next/static/chunks/2510-95fffb90f99a09df.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-0ca23ac9d119b870.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/feedback-5b231491bf9191d8.js
+```
+
+### From `orig/_next/static/chunks/webpack-de2c7a7c6848183b.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/8990.2a89f3d48f88a6fc.js
+https://cdn.oaistatic.com/_next/static/css/f7dd2e34b5e3bb28.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.c8f481c2d80da00e.js
+```
 
 ## 2024-04-24Z (`lQZ-ZfNuAZcLQYk6FxNRg`)
 

@@ -1,57 +1,57 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2758],
   {
-    40005: function (t, e, n) {
+    40005: function (t, e, r) {
       "use strict";
-      n.r(e),
-        n.d(e, {
+      r.r(e),
+        r.d(e, {
           __N_SSP: function () {
-            return l;
+            return f;
           },
           default: function () {
-            return p;
+            return l;
           },
         });
-      var r = n(18450),
-        c = n(95407),
-        u = n(33471),
-        o = n(53362),
-        i = n(41409),
-        a = n(70079),
-        s = n(35250);
-      function f(t, e) {
-        var n = Object.keys(t);
+      var n = r(18450),
+        c = r(95407),
+        u = r(33471),
+        o = r(53362),
+        a = r(41409),
+        s = r(70079),
+        i = r(35250);
+      function p(t, e) {
+        var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
-          var r = Object.getOwnPropertySymbols(t);
+          var n = Object.getOwnPropertySymbols(t);
           e &&
-            (r = r.filter(function (e) {
+            (n = n.filter(function (e) {
               return Object.getOwnPropertyDescriptor(t, e).enumerable;
             })),
-            n.push.apply(n, r);
+            r.push.apply(r, n);
         }
-        return n;
+        return r;
       }
-      var l = !0;
-      function p(t) {
-        return (0, s.jsx)(
+      var f = !0;
+      function l(t) {
+        return (0, i.jsx)(
           O,
           (function (t) {
             for (var e = 1; e < arguments.length; e++) {
-              var n = null != arguments[e] ? arguments[e] : {};
+              var r = null != arguments[e] ? arguments[e] : {};
               e % 2
-                ? f(Object(n), !0).forEach(function (e) {
-                    (0, r.Z)(t, e, n[e]);
+                ? p(Object(r), !0).forEach(function (e) {
+                    (0, n.Z)(t, e, r[e]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(
                       t,
-                      Object.getOwnPropertyDescriptors(n)
+                      Object.getOwnPropertyDescriptors(r)
                     )
-                  : f(Object(n)).forEach(function (e) {
+                  : p(Object(r)).forEach(function (e) {
                       Object.defineProperty(
                         t,
                         e,
-                        Object.getOwnPropertyDescriptor(n, e)
+                        Object.getOwnPropertyDescriptor(r, e)
                       );
                     });
             }
@@ -60,37 +60,37 @@
         );
       }
       function O(t) {
-        let { pluginId: e, code: n, state: r, error: f, errorDesc: l } = t,
-          p = (0, i.useRouter)(),
-          O = (0, a.useRef)(!1);
+        let { pluginId: e, code: r, state: n, error: p, errorDesc: f } = t,
+          l = (0, a.useRouter)(),
+          O = (0, s.useRef)(!1);
         return (
-          (0, a.useEffect)(() => {
+          (0, s.useEffect)(() => {
             !0 !== O.current &&
               ((O.current = !0),
               (async function () {
                 let t = ""
-                  .concat(window.location.origin, "/aip/")
+                  .concat("https://chat.openai.com", "/aip/")
                   .concat(e, "/oauth/callback");
                 try {
-                  let i = await o.Z.pluginOauthCallback(e, n, t, r);
-                  if (i.success) {
+                  let a = await o.Z.pluginOauthCallback(e, r, t, n);
+                  if (a.success) {
                     let t = new URL(
-                      (0, u.M5)(u.LT.OAUTH_SUCCESS, i.redirect_path)
+                      (0, u.M5)(u.LT.OAUTH_SUCCESS, a.redirect_path)
                     );
                     t.searchParams.set("oauth_success", "true"),
-                      p.push(t.toString());
+                      l.push(t.toString());
                   } else {
                     var c;
-                    p.push(
+                    l.push(
                       (0, u.M5)(
                         u.LT.CUSTOM_ERROR,
-                        i.redirect_path,
-                        null !== (c = i.error) && void 0 !== c ? c : i.message
+                        a.redirect_path,
+                        null !== (c = a.error) && void 0 !== c ? c : a.message
                       )
                     );
                   }
                 } catch (t) {
-                  p.push(
+                  l.push(
                     "/?model=gpt-4-plugins&loginAip=".concat(
                       e,
                       "&loginSuccess=false"
@@ -98,22 +98,22 @@
                   );
                 }
               })());
-          }, [e, n, r, p]),
-          (0, a.useEffect)(() => {
-            f &&
-              c.m.danger("".concat(f).concat(l ? ": ".concat(l) : ""), {
+          }, [e, r, n, l]),
+          (0, s.useEffect)(() => {
+            p &&
+              c.m.danger("".concat(p).concat(f ? ": ".concat(f) : ""), {
                 duration: 5,
               });
-          }, [f, l]),
-          (0, s.jsx)("div", {})
+          }, [p, f]),
+          (0, i.jsx)("div", {})
         );
       }
     },
-    67713: function (t, e, n) {
+    67713: function (t, e, r) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/aip/[pluginId]/oauth/callback",
         function () {
-          return n(40005);
+          return r(40005);
         },
       ]);
     },
@@ -125,4 +125,4 @@
       (_N_E = t.O());
   },
 ]);
-//# sourceMappingURL=callback-85aebf5648c42c51.js.map
+//# sourceMappingURL=callback-13971f7bb8cd9145.js.map
