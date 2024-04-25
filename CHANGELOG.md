@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-25Z \(`Qse5Yn4vDxUhP3bD4s5Nq`\)](#2024-04-25z-qse5yn4vdxuhp3bd4s5nq)
 - [2024-04-25Z \(`SH6kmVXg8_S7tXyfekSUU`\)](#2024-04-25z-sh6kmvxg8_s7txyfeksuu)
 - [2024-04-24Z \(`lQZ-ZfNuAZcLQYk6FxNRg`\)](#2024-04-24z-lqz-zfnuazclqyk6fxnrg)
 - [2024-04-23Z \(`-V9mCLzz-QmOZtyakir5o`\)](#2024-04-23z--v9mclzz-qmoztyakir5o)
@@ -101,6 +102,41 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-25Z (`Qse5Yn4vDxUhP3bD4s5Nq`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This historical build's diff was only minimally analysed
+- App release version (Git SHA?): `28a6982d2a3cad3d2b9f3f1480b43a865d72d547`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - ```js
+    (s.O365FilePickerType = "chatgpt-o365-file-picker-type"),
+    ```
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-bd4fd08666508f85.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-7042a3a14717b99c.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-859e336491e78222.js
+https://cdn.oaistatic.com/_next/static/Qse5Yn4vDxUhP3bD4s5Nq/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/Qse5Yn4vDxUhP3bD4s5Nq/_ssgManifest.js
+```
+
+### From `orig/_next/static/chunks/webpack-859e336491e78222.js`
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.2d7a27ac0f098a6d.js
+```
 
 ## 2024-04-25Z (`SH6kmVXg8_S7tXyfekSUU`)
 
