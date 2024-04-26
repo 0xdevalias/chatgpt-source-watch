@@ -19,6 +19,7 @@ You may also like some of the historical insights captured at the following gist
     https://github.com/naokazuterada/MarkdownTOC/pull/170
 -->
 <!-- TOC start (generated with https://derlin.github.io/bitdowntoc/) -->
+- [2024-04-26Z \(`ECms86mbcLyD22FEOzN03`\)](#2024-04-26z-ecms86mbclyd22feozn03)
 - [2024-04-25Z \(`Qse5Yn4vDxUhP3bD4s5Nq`\)](#2024-04-25z-qse5yn4vdxuhp3bd4s5nq)
 - [2024-04-25Z \(`SH6kmVXg8_S7tXyfekSUU`\)](#2024-04-25z-sh6kmvxg8_s7txyfeksuu)
 - [2024-04-24Z \(`lQZ-ZfNuAZcLQYk6FxNRg`\)](#2024-04-24z-lqz-zfnuazclqyk6fxnrg)
@@ -102,6 +103,437 @@ You may also like some of the historical insights captured at the following gist
 <!-- DISABLEDMarkdownTOC levels="1,2" style="unordered" bullets="-" indent="  " -->
 <!-- TODO: Reinstate this after this bug is fixed: https://github.com/naokazuterada/MarkdownTOC/pull/170 -->
 <!-- /MarkdownTOC -->
+
+## 2024-04-26Z (`ECms86mbcLyD22FEOzN03`)
+
+### Notes
+
+The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
+
+- **tl;dr**
+  - NOTE: This build's diff was only minimally analysed
+  - **Twitter thread:** https://twitter.com/_devalias/status/1783695566616326636
+- App release version (Git SHA?): `7b51d800979d7cb7bcab06b7dbbb776975c7df62`
+  - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
+- Looks like all of the language translation files got an update in this build.. might be something new/interesting to be found in there..
+  - `unpacked/_next/static/chunks/236.js`
+  - `unpacked/_next/static/chunks/381.js`
+  - `unpacked/_next/static/chunks/468.js`
+  - `unpacked/_next/static/chunks/676.js`
+  - `unpacked/_next/static/chunks/718.js`
+  - `unpacked/_next/static/chunks/1199.js`
+  - `unpacked/_next/static/chunks/1222.js`
+  - `unpacked/_next/static/chunks/1322.js`
+  - `unpacked/_next/static/chunks/1948.js`
+  - `unpacked/_next/static/chunks/1964.js`
+  - `unpacked/_next/static/chunks/2664.js`
+  - `unpacked/_next/static/chunks/2887.js`
+  - `unpacked/_next/static/chunks/3263.js`
+  - `unpacked/_next/static/chunks/3277.js`
+  - `unpacked/_next/static/chunks/3695.js`
+  - `unpacked/_next/static/chunks/3785.js`
+  - `unpacked/_next/static/chunks/4016.js`
+  - `unpacked/_next/static/chunks/4070.js`
+  - `unpacked/_next/static/chunks/4426.js`
+  - `unpacked/_next/static/chunks/4473.js`
+  - `unpacked/_next/static/chunks/4727.js`
+  - `unpacked/_next/static/chunks/4842.js`
+  - `unpacked/_next/static/chunks/4878.js`
+  - `unpacked/_next/static/chunks/4918.js`
+  - `unpacked/_next/static/chunks/5169.js`
+  - `unpacked/_next/static/chunks/5187.js`
+  - `unpacked/_next/static/chunks/5288.js`
+  - `unpacked/_next/static/chunks/5760.js`
+  - `unpacked/_next/static/chunks/5795.js`
+  - `unpacked/_next/static/chunks/6124.js`
+  - `unpacked/_next/static/chunks/6513.js`
+  - `unpacked/_next/static/chunks/6587.js`
+  - `unpacked/_next/static/chunks/6623.js`
+  - `unpacked/_next/static/chunks/6867.js`
+  - `unpacked/_next/static/chunks/6875.js`
+  - `unpacked/_next/static/chunks/6951.js`
+  - `unpacked/_next/static/chunks/6952.js`
+  - `unpacked/_next/static/chunks/7198.js`
+  - `unpacked/_next/static/chunks/8221.js`
+  - `unpacked/_next/static/chunks/8349.js`
+  - `unpacked/_next/static/chunks/8400.js`
+  - `unpacked/_next/static/chunks/8435.js`
+  - `unpacked/_next/static/chunks/8451.js`
+  - `unpacked/_next/static/chunks/8484.js`
+  - `unpacked/_next/static/chunks/8928.js`
+  - `unpacked/_next/static/chunks/9120.js`
+  - `unpacked/_next/static/chunks/9755.js`
+  - `unpacked/_next/static/chunks/9789.js`
+  - `unpacked/_next/static/chunks/9826.js`
+  - `unpacked/_next/static/chunks/9875.js`
+- `unpacked/_next/static/[buildHash]/_buildManifest.js`
+  - New route `/search/evals/batches/[batchId]`
+- `unpacked/_next/static/chunks/pages/search/evals/batches/[batchId].js`
+  - ```js
+    66486: function (e, n, t) {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/search/evals/batches/[batchId]",
+        function () {
+          return t(28808);
+        },
+      ]);
+    },
+    ```
+  - ```js
+    28808: function (e, n, t) {
+      "use strict";
+      t.r(n),
+        t.d(n, {
+          __N_SSP: function () {
+            return _;
+          },
+          default: function () {
+            return i;
+          },
+        });
+      var u = t(51018),
+        r = t.n(u),
+        c = t(41409),
+        a = t(35250);
+      let s = r()(
+        () =>
+          Promise.all([
+            t.e(8682),
+            t.e(6835),
+            t.e(5181),
+            t.e(8055),
+            t.e(5938),
+            t.e(1170),
+            t.e(9769),
+          ]).then(t.bind(t, 69721)),
+        { ssr: !1, loadableGenerated: { webpack: () => [69721] } }
+      );
+      var _ = !0;
+      function i() {
+        let e = (0, c.useRouter)().query.batchId;
+        return (0, a.jsx)(s, { batchId: e });
+      }
+    },
+    ```
+- `unpacked/_next/static/chunks/1528.js`
+  - This seems to be a ?new? chunk, with a bunch of code related to charts
+  - ```js
+    z.displayName = "BarChart";
+    ```
+  - ```js
+    S.displayName = "LineChart";
+    ```
+  - ```js
+    E.displayName = "PieChart";
+    ```
+  - ```js
+    (_.displayName = "ScatterChart"),
+    ```
+  - ```js
+    if (a.chart_type in P == !1)
+      return (0, F.jsx)(x.Z, {
+        id: "Chart.invalidChartType",
+        defaultMessage: "Invalid chart type",
+      });
+    ```
+  - ```js
+    D.displayName = "Chart";
+    ```
+  - ```js
+    createNewCompletionParams: (e) =>
+      W(
+        e,
+        "The user has selected the columns:  "
+          .concat(
+            a.map((e) => '"'.concat(e, '"')).join(", "),
+            " in the "
+          )
+          .concat(t.name, " table ")
+          .concat(
+            t.sheetName
+              ? " in the ".concat(t.sheetName, " sheet")
+              : ""
+          ),
+        l
+      ),
+    ```
+  - ```js
+    createNewCompletionParams: (e) =>
+      W(
+        e,
+        "The user has selected rows at the following indices: "
+          .concat(
+            a.map((e) => '"'.concat(e, '"')).join(", "),
+            " in the "
+          )
+          .concat(t.name, " table ")
+          .concat(
+            t.sheetName
+              ? " in the ".concat(t.sheetName, " sheet")
+              : ""
+          ),
+        l
+      ),
+    ```
+  - ```js
+    createNewCompletionParams: (e) =>
+      W(
+        e,
+        "The user has selected a range at the iloc: "
+          .concat(l, ":")
+          .concat(n, ", ")
+          .concat(a, ":")
+          .concat(s, " in the ")
+          .concat(t.name, " table ")
+          .concat(
+            t.sheetName
+              ? " in the ".concat(t.sheetName, " sheet")
+              : ""
+          ),
+        m
+      ),
+    ```
+  - ```js
+    return "chart" === t.type
+      ? void 0 == t.fallback_image
+        ? (c.U.addError(
+            "Chart visualizations require a fallback image message"
+          ),
+          null)
+    ```
+  - ```js
+    children: (0, F.jsx)(x.Z, {
+      id: "ADAVisualzationComponent.unableToLoadOutput",
+      defaultMessage: "Unable to display visualization",
+    }),
+    ```
+  - ```js
+    children: i
+      ? (0, F.jsx)(x.Z, {
+          id: "NoxJhh",
+          defaultMessage: "Legacy (static)",
+        })
+      : (0, F.jsx)(x.Z, {
+          id: "UbQJxs",
+          defaultMessage: "Interactive",
+        }),
+    ```
+  - ```js
+    (0, F.jsx)(x.Z, {
+      id: "ILz2tL",
+      defaultMessage:
+        "Interactive charts of this type not yet supported",
+    }),
+    ```
+- `unpacked/_next/static/chunks/2510.js`
+  - ```js
+    p.bX.setCookie(p.cn.SignupRedirectUrl, r, {
+      maxAge: 10800,
+    }),
+    ```
+- `unpacked/_next/static/chunks/2646.js`
+  - ```js
+    let { 0: A, 1: a } = (0, d.useState)({
+      gdrive_sync: {
+        already_oauth: !1,
+        id: "",
+        loaded: !1,
+        access_token: "",
+      },
+      o365: { already_oauth: !1, id: "", loaded: !1, access_token: "" },
+    });
+    ```
+  - ```js
+    let n = [e.PO.GDRIVE_SYNC_CONNECTOR, e.PO.O365],
+      [s, g] = await Promise.all(
+        n.map((A) => i.Z.getConnectorAccessTokenAPI(A))
+      );
+    ```
+  - ```js
+    a.Z = {
+      src: "https://cdn.oaistatic.com/_next/static/media/google_docs.c047218b.png",
+      height: 470,
+      width: 342,
+    ```
+  - ```js
+    a.Z = {
+      src: "https://cdn.oaistatic.com/_next/static/media/google_drive.b2f6c9f4.png",
+      height: 105,
+      width: 118,
+    ```
+  - ```js
+    a.Z = {
+      src: "https://cdn.oaistatic.com/_next/static/media/microsoft_onedrive.a87cea79.png",
+      height: 118,
+      width: 118,
+    ```
+  - ```js
+    a.Z = {
+      src: "https://cdn.oaistatic.com/_next/static/media/notion.9433d9c5.png",
+      height: 250,
+      width: 250,
+    ```
+- `unpacked/_next/static/chunks/pages/_app.js`
+  - There's a whole lot of new/updated svg images in here by the looks of it..
+  - ```js
+    ? (0, ec.jsx)(eo.Z, {
+        id: "JITPluginMessage.params.sharing.present",
+        defaultMessage: "The following will be shared:",
+      })
+    : (0, ec.jsx)(eo.Z, {
+        id: "JITPluginMessage.params.sharing.past",
+        defaultMessage: "The following was shared:",
+      }),
+    ```
+  - ```js
+    confirmingSimple: {
+      id: "jitPluginMessage.confirming.simple",
+      defaultMessage: "{gizmoName} wants to talk to {domain}",
+    },
+    confirmingSubtitle: {
+      id: "jitPluginMessage.confirming.subtitle",
+      defaultMessage: "Only allow sites you trust.",
+    },
+    ```
+  - ```diff
+      return {
+        id: "message.tools.browse.reading",
+    -   defaultMessage: "Reading",
+    +   defaultMessage: "Browsing {domain}",
+        description: "Status message when browsing is starting",
+      };
+    ```
+  - ```diff
+      return {
+        id: "message.tools.browse.searching",
+    -   defaultMessage: "Searching",
+    +   defaultMessage: 'Searching "{query}"',
+        description: "Status message when browsing is starting",
+      };
+    ```
+  - ```diff
+      id: "message.tools.browse.finished",
+    - defaultMessage: "Searched",
+    + defaultMessage:
+    +   "Searched {count, plural, =0 {0 sites} one {# site} other {# sites}}",
+    ```
+  - ```js
+    (a.SonicSidebar = "oai/apps/hasDismissedSonicSidebar"),
+    ```
+  - ```js
+    (a.SignupRedirectUrl = "signup_redirect_url"),
+    ```
+  - ```js
+    [o.SignupRedirectUrl]: {
+      type: "essential",
+      name: o.SignupRedirectUrl,
+    },
+    ```
+  - ?etc?
+
+### Not From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/_app-6537cde1e9c10676.js
+https://cdn.oaistatic.com/_next/static/chunks/vendor-ec9c06e9da3ad48f.js
+https://cdn.oaistatic.com/_next/static/chunks/webpack-64b512f5ebf35d7e.js
+https://cdn.oaistatic.com/_next/static/ECms86mbcLyD22FEOzN03/_buildManifest.js
+https://cdn.oaistatic.com/_next/static/ECms86mbcLyD22FEOzN03/_ssgManifest.js
+```
+
+### From Build Manifest
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/pages/auth/ext_callback-29040f6682e64dc0.js
+https://cdn.oaistatic.com/_next/static/chunks/2510-9c7797724fbc6f96.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search-585efbb14c296466.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/evals-f42abd4b0a7cb9d2.js
+https://cdn.oaistatic.com/_next/static/chunks/pages/search/evals/batches/[batchId]-fa12569381bf9001.js
+```
+
+### From `orig/_next/static/chunks/webpack-64b512f5ebf35d7e.js`
+
+#### Archived
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/236.92ad7b1d8d9adbbf.js
+https://cdn.oaistatic.com/_next/static/chunks/381.32432636278e2c41.js
+https://cdn.oaistatic.com/_next/static/chunks/468.219934d0b31c4e4d.js
+https://cdn.oaistatic.com/_next/static/chunks/676.bed2b92f2aaa98aa.js
+https://cdn.oaistatic.com/_next/static/chunks/718.9855b02c29364144.js
+https://cdn.oaistatic.com/_next/static/chunks/1199.1fda9c4c019dbbcc.js
+https://cdn.oaistatic.com/_next/static/chunks/1222.962968b99a727306.js
+https://cdn.oaistatic.com/_next/static/chunks/1322.5e433b0612328650.js
+https://cdn.oaistatic.com/_next/static/chunks/1351.ccb209585f9c6bac.js
+https://cdn.oaistatic.com/_next/static/chunks/1528.1187ccaa115f8c38.js
+https://cdn.oaistatic.com/_next/static/chunks/1773.b1ac04d6889c53b2.js
+https://cdn.oaistatic.com/_next/static/chunks/1948.30553e9e0c6d4f80.js
+https://cdn.oaistatic.com/_next/static/chunks/1964.68a8fa4fa0cd8221.js
+https://cdn.oaistatic.com/_next/static/chunks/2646.9f24a7f6d69c15a6.js
+https://cdn.oaistatic.com/_next/static/chunks/2664.80b8c67b05e24931.js
+https://cdn.oaistatic.com/_next/static/chunks/2885.16850972cedce452.js
+https://cdn.oaistatic.com/_next/static/chunks/2887.151bd11e1d4e1c2e.js
+https://cdn.oaistatic.com/_next/static/chunks/3263.8855812040a369e9.js
+https://cdn.oaistatic.com/_next/static/chunks/3277.41a0d41be1a12364.js
+https://cdn.oaistatic.com/_next/static/chunks/3551.72e0a3b09f9f1955.js
+https://cdn.oaistatic.com/_next/static/chunks/3695.46872edc69b056cf.js
+https://cdn.oaistatic.com/_next/static/chunks/3785.781e53e02a1b1e09.js
+https://cdn.oaistatic.com/_next/static/chunks/4016.ef28827112d1c296.js
+https://cdn.oaistatic.com/_next/static/chunks/4070.55d8dd657b212bb6.js
+https://cdn.oaistatic.com/_next/static/chunks/4426.bda5d836b21df723.js
+https://cdn.oaistatic.com/_next/static/chunks/4473.e0c9ce6d145fcf7c.js
+https://cdn.oaistatic.com/_next/static/chunks/4570.1c2e4846b3eddad2.js
+https://cdn.oaistatic.com/_next/static/chunks/4727.a37b6557ba2a638b.js
+https://cdn.oaistatic.com/_next/static/chunks/4771.6462d234e2e6edf2.js
+https://cdn.oaistatic.com/_next/static/chunks/4842.6c2569133e1cea52.js
+https://cdn.oaistatic.com/_next/static/chunks/4878.ba84c8b362202d87.js
+https://cdn.oaistatic.com/_next/static/chunks/4918.5daae3c4ccff4333.js
+https://cdn.oaistatic.com/_next/static/chunks/5169.4a02d425a99daf10.js
+https://cdn.oaistatic.com/_next/static/chunks/5187.5ea625a5e7ed48de.js
+https://cdn.oaistatic.com/_next/static/chunks/5288.08b27a098915f8e7.js
+https://cdn.oaistatic.com/_next/static/chunks/5434.5133c852d8276656.js
+https://cdn.oaistatic.com/_next/static/chunks/5760.2f3a2e282479d2b1.js
+https://cdn.oaistatic.com/_next/static/chunks/5795.973bf1143ef4a57d.js
+https://cdn.oaistatic.com/_next/static/chunks/5929.3485774f64da409a.js
+https://cdn.oaistatic.com/_next/static/chunks/6124.cd42c91c58eeb99d.js
+https://cdn.oaistatic.com/_next/static/chunks/6513.26c733bc93a2278f.js
+https://cdn.oaistatic.com/_next/static/chunks/6554.bc6556afe5d47960.js
+https://cdn.oaistatic.com/_next/static/chunks/6587.934ecf548e35c60a.js
+https://cdn.oaistatic.com/_next/static/chunks/6618.88930a1a212c9314.js
+https://cdn.oaistatic.com/_next/static/chunks/6623.51c1f017e6cfd11d.js
+https://cdn.oaistatic.com/_next/static/chunks/6867.161ffebe80348e39.js
+https://cdn.oaistatic.com/_next/static/chunks/6875.850505f0ebf39c61.js
+https://cdn.oaistatic.com/_next/static/chunks/6951.70475a549da4c874.js
+https://cdn.oaistatic.com/_next/static/chunks/6952.fcf241d98749200c.js
+https://cdn.oaistatic.com/_next/static/chunks/7198.56cabe84206f4492.js
+https://cdn.oaistatic.com/_next/static/chunks/8221.a745f1919c714139.js
+https://cdn.oaistatic.com/_next/static/chunks/8349.57e3d9e8d3850ced.js
+https://cdn.oaistatic.com/_next/static/chunks/8400.77e2db8057f0178e.js
+https://cdn.oaistatic.com/_next/static/chunks/8435.a78c0972bc4180af.js
+https://cdn.oaistatic.com/_next/static/chunks/8451.15ef1ba201076f6a.js
+https://cdn.oaistatic.com/_next/static/chunks/8484.760c3c69e78489da.js
+https://cdn.oaistatic.com/_next/static/chunks/8571.c268e957344dec34.js
+https://cdn.oaistatic.com/_next/static/chunks/8928.fd543026029d5a8f.js
+https://cdn.oaistatic.com/_next/static/chunks/8930.207a3d3ba898cb2a.js
+https://cdn.oaistatic.com/_next/static/chunks/9044.b600c7fefae07fbe.js
+https://cdn.oaistatic.com/_next/static/chunks/9120.d8d9ac7e0ca73012.js
+https://cdn.oaistatic.com/_next/static/chunks/9284.85134370d2e889e3.js
+https://cdn.oaistatic.com/_next/static/chunks/9755.675cdc97ca256901.js
+https://cdn.oaistatic.com/_next/static/chunks/9789.fbaab625b881cd44.js
+https://cdn.oaistatic.com/_next/static/chunks/9826.aac5eb274b862344.js
+https://cdn.oaistatic.com/_next/static/chunks/9875.012d0d6b1de865cd.js
+https://cdn.oaistatic.com/_next/static/css/e74c58a6d9152c07.css
+```
+
+#### Missing
+
+```
+https://cdn.oaistatic.com/_next/static/chunks/sso.6dac9e8f6bf20271.js
+```
 
 ## 2024-04-25Z (`Qse5Yn4vDxUhP3bD4s5Nq`)
 

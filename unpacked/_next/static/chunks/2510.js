@@ -240,6 +240,9 @@
                                     provider: "auth0",
                                     location: "Login page",
                                   }),
+                                    p.bX.setCookie(p.cn.SignupRedirectUrl, r, {
+                                      maxAge: 10800,
+                                    }),
                                     (0, x.signIn)(
                                       t,
                                       { callbackUrl: r },
@@ -950,4 +953,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2510-95fffb90f99a09df.js.map
+//# sourceMappingURL=2510-9c7797724fbc6f96.js.map

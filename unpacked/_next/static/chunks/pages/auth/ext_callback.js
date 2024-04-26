@@ -17,16 +17,18 @@
         return (0, f.jsx)(s, {});
       }
       function s() {
-        let { next: n } = (0, r.useRouter)().query,
-          t =
+        let n = (0, r.useRouter)(),
+          { isReady: t } = n,
+          { next: u } = n.query,
+          f =
             "/auth/ext_callback_refresh?next=" +
             encodeURIComponent(
-              "string" == typeof n && n.startsWith("/") ? n : "/"
+              "string" == typeof u && u.startsWith("/") ? u : "/"
             );
         return (
           (0, c.useEffect)(() => {
-            (0, e.signIn)("auth0", { callbackUrl: t || "/" });
-          }, []),
+            t && (0, e.signIn)("auth0", { callbackUrl: f || "/" });
+          }, [t]),
           null
         );
       }
@@ -47,4 +49,4 @@
       (_N_E = n.O());
   },
 ]);
-//# sourceMappingURL=ext_callback-347a13100b2f65a1.js.map
+//# sourceMappingURL=ext_callback-29040f6682e64dc0.js.map

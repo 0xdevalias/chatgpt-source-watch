@@ -42,7 +42,7 @@
     ],
     "/auth/error": ["static/chunks/pages/auth/error-a70e7abe434c96a8.js"],
     "/auth/ext_callback": [
-      "static/chunks/pages/auth/ext_callback-347a13100b2f65a1.js",
+      "static/chunks/pages/auth/ext_callback-29040f6682e64dc0.js",
     ],
     "/auth/ext_callback_refresh": [
       "static/chunks/pages/auth/ext_callback_refresh-26d06457a2476987.js",
@@ -96,8 +96,11 @@
     "/payments/success-trial": [
       "static/chunks/pages/payments/success-trial-7a197ad1bc85b2ce.js",
     ],
-    "/search": ["static/chunks/pages/search-0ca23ac9d119b870.js"],
-    "/search/evals": ["static/chunks/pages/search/evals-be2162395e8aaf85.js"],
+    "/search": ["static/chunks/pages/search-585efbb14c296466.js"],
+    "/search/evals": ["static/chunks/pages/search/evals-f42abd4b0a7cb9d2.js"],
+    "/search/evals/batches/[batchId]": [
+      "static/chunks/pages/search/evals/batches/[batchId]-fa12569381bf9001.js",
+    ],
     "/search/feedback": [
       "static/chunks/pages/search/feedback-5b231491bf9191d8.js",
     ],
@@ -158,6 +161,7 @@
       "/payments/success-trial",
       "/search",
       "/search/evals",
+      "/search/evals/batches/[batchId]",
       "/search/feedback",
       "/search/machine",
       "/share/e/[[...shareParams]]",
@@ -170,6 +174,6 @@
 })(
   "static/chunks/2583-11f2b1d727749652.js",
   "static/chunks/2802-ca809348fbea7a7a.js",
-  "static/chunks/2510-95fffb90f99a09df.js"
+  "static/chunks/2510-9c7797724fbc6f96.js"
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();
