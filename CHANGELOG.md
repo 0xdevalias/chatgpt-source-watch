@@ -542,7 +542,8 @@ https://cdn.oaistatic.com/_next/static/chunks/sso.6dac9e8f6bf20271.js
 The following notes are not necessarily comprehensive, but just things of potential interest that I noted while reviewing the diffs. If you want to see everything that changed, you can look at the diffs of the changed files in the `unpacked/` folder:
 
 - **tl;dr**
-  - NOTE: This historical build's diff was only minimally analysed
+  - NOTE: This build's diff was only minimally analysed
+  - **Twitter thread:** https://twitter.com/_devalias/status/1783330580987568235
 - App release version (Git SHA?): `28a6982d2a3cad3d2b9f3f1480b43a865d72d547`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/pages/_app.js`
@@ -578,6 +579,7 @@ The following notes are not necessarily comprehensive, but just things of potent
 
 - **tl;dr**
   - NOTE: This build's diff was only minimally analysed
+  - **Twitter thread:** https://twitter.com/_devalias/status/1783323719458508809
 - App release version (Git SHA?): `6727a88fdf00084e968108bd6a4e47765a8bde4e`
   - Extracted with `grep -C 3 'service: "chatgpt-web",' unpacked/_next/static/chunks/pages/_app.js`
 - `unpacked/_next/static/chunks/pages/_app.js`
