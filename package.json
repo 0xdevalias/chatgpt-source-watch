@@ -41,6 +41,6 @@
     "@wakaru/cli": "^0.0.10",
     "madge": "^6.1.0",
     "prettier": "^3.1.1",
-    "webcrack": "^2.12.0"
+    "webcrack": "^2.15.1"
   }
 }
